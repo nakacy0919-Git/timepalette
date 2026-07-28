@@ -1,29 +1,44 @@
 import { useState, useEffect, useRef } from 'react';
-import { Maximize, Minimize, ZoomIn, ZoomOut, Palette, Play, Pause, Square, Settings } from 'lucide-react';
+import { Maximize, Minimize, ZoomIn, ZoomOut, Palette, Play, Pause, Square } from 'lucide-react';
 
-export default function Timer() {
-  const [time, setTime] = useState(180);
-  const [initialTime, setInitialTime] = useState(180);
+export default function Stopwatch() {
+  const [elapsedTime, setElapsedTime] = useState(0); // 経過時間（ミリ秒）
   const [isRunning, setIsRunning] = useState(false);
   const [isColor, setIsColor] = useState(true);
   const [scale, setScale] = useState(1);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  
-  const [isEditing, setIsEditing] = useState(false);
-  const [inputMin, setInputMin] = useState(3);
-  const [inputSec, setInputSec] = useState(0);
 
   const containerRef = useRef(null);
+  const requestRef = useRef(null);
+  const startTimeRef = useRef(0);
 
-  useEffect(() => {
-    let interval;
-    if (isRunning && time > 0) {
-      interval = setInterval(() => setTime((prev) => prev - 1), 1000);
-    } else if (time === 0) {
+  // 高精度なカウントアップ処理
+  const updateTime = () => {
+    setElapsedTime(Date.now() - startTimeRef.current);
+    requestRef.current = requestAnimationFrame(updateTime);
+  };
+
+  const handleStartPause = () => {
+    if (isRunning) {
+      cancelAnimationFrame(requestRef.current);
       setIsRunning(false);
+    } else {
+      startTimeRef.current = Date.now() - elapsedTime;
+      requestRef.current = requestAnimationFrame(updateTime);
+      setIsRunning(true);
     }
-    return () => clearInterval(interval);
-  }, [isRunning, time]);
+  };
+
+  const handleReset = () => {
+    cancelAnimationFrame(requestRef.current);
+    setIsRunning(false);
+    setElapsedTime(0);
+  };
+
+  // コンポーネントが破棄される時にアニメーションをクリア
+  useEffect(() => {
+    return () => cancelAnimationFrame(requestRef.current);
+  }, []);
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
@@ -45,31 +60,18 @@ export default function Timer() {
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
   }, []);
 
-  const handleStartPause = () => setIsRunning(!isRunning);
-  
-  const handleReset = () => {
-    setIsRunning(false);
-    setTime(initialTime);
+  // 時間フォーマット (MM:SS.ms)
+  const formatTime = (ms) => {
+    const minutes = Math.floor(ms / 60000).toString().padStart(2, '0');
+    const seconds = Math.floor((ms % 60000) / 1000).toString().padStart(2, '0');
+    const milliseconds = Math.floor((ms % 1000) / 10).toString().padStart(2, '0');
+    return `${minutes}:${seconds}.${milliseconds}`;
   };
 
-  const handleSetTime = () => {
-    const totalSecs = (parseInt(inputMin) || 0) * 60 + (parseInt(inputSec) || 0);
-    if (totalSecs > 0) {
-      setInitialTime(totalSecs);
-      setTime(totalSecs);
-      setIsEditing(false);
-      setIsRunning(false);
-    }
-  };
-
-  const formatTime = (seconds) => {
-    const m = Math.floor(seconds / 60).toString().padStart(2, '0');
-    const s = (seconds % 60).toString().padStart(2, '0');
-    return `${m}:${s}`;
-  };
-
+  // ビジュアルバーの設定 (1分間で満タンになるようにループ)
   const totalSegments = 20;
-  const activeSegments = Math.ceil((time / initialTime) * totalSegments);
+  // 60,000ミリ秒(1分)の進捗率をセグメント数に変換
+  const activeSegments = Math.floor(((elapsedTime % 60000) / 60000) * totalSegments);
 
   const getSegmentColor = (index) => {
     if (!isColor) return 'bg-white';
@@ -102,7 +104,7 @@ export default function Timer() {
         </button>
       </div>
 
-      {/* メインタイマーエリア */}
+      {/* メインディスプレイエリア */}
       <div className="flex-1 flex flex-col items-center justify-center w-full mt-12 mb-8">
         <div 
           className="flex flex-col items-center justify-center w-full transition-all duration-200"
@@ -122,8 +124,8 @@ export default function Timer() {
             {[...Array(totalSegments)].map((_, i) => (
               <div 
                 key={i} 
-                className={`transition-all duration-300 ${
-                  i < activeSegments ? getSegmentColor(i) : 'bg-slate-800 opacity-30'
+                className={`transition-all duration-200 ${
+                  i <= activeSegments ? getSegmentColor(i) : 'bg-slate-800 opacity-30'
                 }`}
                 style={{ width: '1em', height: '4em', borderRadius: '0.1em' }}
               ></div>
@@ -131,62 +133,37 @@ export default function Timer() {
           </div>
 
           {/* デジタル時計 */}
-          {/* ▼ 縁取り（WebkitTextStroke）を削除し、本来の細さに戻しました */}
           <div 
             className="leading-none text-slate-800 tracking-widest drop-shadow-sm select-none"
             style={{ 
               fontFamily: "'Digital-7 Mono', sans-serif", 
-              fontSize: '12em', 
-              transform: 'skewX(-6deg)', /* ゆるやかな斜体は維持 */
+              fontSize: '11em', // ミリ秒があって横長になるため少しだけベースを縮小
+              transform: 'skewX(-6deg)',
               paddingRight: '0.1em' 
             }}
           >
-            {formatTime(time)}
+            {formatTime(elapsedTime)}
           </div>
         </div>
       </div>
 
       {/* 操作ボタン */}
       <div className="flex flex-col items-center gap-6 z-10 bg-slate-50/90 backdrop-blur-sm p-4 rounded-3xl shrink-0">
-        {isEditing ? (
-          <div className="flex items-center gap-2 bg-white p-4 rounded-2xl shadow-sm border border-gray-200">
-            <input 
-              type="number" min="0" value={inputMin} onChange={(e) => setInputMin(e.target.value)}
-              className="w-20 text-center text-2xl font-bold border-b-2 border-blue-500 focus:outline-none"
-            />
-            <span className="text-xl font-bold">分</span>
-            <input 
-              type="number" min="0" max="59" value={inputSec} onChange={(e) => setInputSec(e.target.value)}
-              className="w-20 text-center text-2xl font-bold border-b-2 border-blue-500 focus:outline-none"
-            />
-            <span className="text-xl font-bold">秒</span>
-            <button onClick={handleSetTime} className="ml-4 px-6 py-2 bg-green-500 text-white font-bold rounded-full hover:bg-green-600">
-              設定完了
-            </button>
-          </div>
-        ) : (
-          <div className="flex gap-4">
-            <button 
-              onClick={handleStartPause} 
-              className={`flex items-center gap-2 px-8 py-4 rounded-full font-bold text-lg text-white shadow-md transition-transform hover:scale-105 ${isRunning ? 'bg-orange-500' : 'bg-blue-600'}`}
-            >
-              {isRunning ? <Pause fill="currentColor" /> : <Play fill="currentColor" />}
-              {isRunning ? '一時停止' : 'スタート'}
-            </button>
-            <button 
-              onClick={handleReset} 
-              className="flex items-center gap-2 px-6 py-4 rounded-full font-bold text-lg bg-gray-200 text-gray-700 hover:bg-gray-300 shadow-sm"
-            >
-              <Square fill="currentColor" size={16} /> リセット
-            </button>
-            <button 
-              onClick={() => setIsEditing(true)} 
-              className="flex items-center gap-2 px-6 py-4 rounded-full font-bold text-lg bg-emerald-500 text-white hover:bg-emerald-600 shadow-sm"
-            >
-              <Settings size={20} /> タイマー設定
-            </button>
-          </div>
-        )}
+        <div className="flex gap-4">
+          <button 
+            onClick={handleStartPause} 
+            className={`flex items-center gap-2 px-10 py-4 rounded-full font-bold text-xl text-white shadow-md transition-transform hover:scale-105 ${isRunning ? 'bg-orange-500' : 'bg-blue-600'}`}
+          >
+            {isRunning ? <Pause fill="currentColor" size={24} /> : <Play fill="currentColor" size={24} />}
+            {isRunning ? '一時停止' : 'スタート'}
+          </button>
+          <button 
+            onClick={handleReset} 
+            className="flex items-center gap-2 px-8 py-4 rounded-full font-bold text-xl bg-gray-200 text-gray-700 hover:bg-gray-300 shadow-sm transition-transform hover:scale-105"
+          >
+            <Square fill="currentColor" size={20} /> リセット
+          </button>
+        </div>
       </div>
     </div>
   );

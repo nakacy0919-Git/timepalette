@@ -1,0 +1,432 @@
+{
+  "ht": {
+    "iso": "ht",
+    "nameJa": "ハイチ",
+    "nameEn": "Haiti",
+    "capitalJa": "ポルトープランス",
+    "capitalEn": "Port-au-Prince",
+    "subtitle": "カリブ海の山岳地形、独立の歴史、音楽、芸術、力強い食文化を持つ国です。",
+    "subtitleEn": "A Caribbean nation of mountains, revolutionary history, vibrant music, art, and resilient food traditions.",
+    "flagUrl": "https://flagcdn.com/w320/ht.png",
+    "mapQuery": "Port-au-Prince, Haiti",
+    "timeZone": "America/Port-au-Prince",
+    "currency": {
+      "nameJa": "グールド",
+      "nameEn": "Haitian Gourde",
+      "symbol": "G"
+    },
+    "languages": [
+      {
+        "nameJa": "ハイチ・クレオール語",
+        "nameEn": "Haitian Creole"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約100 m（ポルトープランス）",
+    "elevationEn": "Approx. 100 m (Port-au-Prince)",
+    "weather": {
+      "summary": "一年を通して温暖な熱帯気候で、雨季と乾季があります。ハリケーンや豪雨への備えも重要です。",
+      "summaryEn": "Haiti is tropical and warm year-round, with wet and dry seasons and significant hurricane and flood risks."
+    },
+    "heritage": [
+      {
+        "id": "ht-citadelle",
+        "title": "シタデル・ラフェリエール",
+        "titleEn": "Citadelle Laferrière",
+        "description": "独立後に山頂へ築かれた巨大要塞で、自由を守ろうとした人々の決意を象徴します。",
+        "descriptionEn": "Built high in the mountains after independence, this vast fortress symbolizes the determination to defend freedom.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Citadelle%20La%20Ferri%C3%A8re%20Haiti%20(8070539824).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Citadelle_La_Ferri%C3%A8re_Haiti_(8070539824).jpg",
+        "imageCredit": "Stefan Krasowski",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Citadelle_La_Ferri%C3%A8re_Haiti_(8070539824).jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ht-sans-souci",
+        "title": "サン＝スーシ宮殿",
+        "titleEn": "Sans-Souci Palace",
+        "description": "独立後の国王アンリ・クリストフが築いた宮殿跡で、革命後の国家建設を伝えます。",
+        "descriptionEn": "The palace ruins of King Henri Christophe reveal Haiti's ambitious nation-building after independence.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sans-Souci%20Palace,%20National%20History%20Park,%20Haiti.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sans-Souci_Palace,_National_History_Park,_Haiti.jpg",
+        "imageCredit": "Didier Moïse",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ht-bassin-bleu",
+        "title": "バサン・ブルー",
+        "titleEn": "Bassin Bleu",
+        "description": "深い緑の山あいに青い滝壺が連なり、石灰岩と清流が幻想的な景観を作ります。",
+        "descriptionEn": "Blue pools and waterfalls lie among green mountains, creating a striking limestone and freshwater landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bassin%20Bleu,%20Haiti.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bassin_Bleu,_Haiti.jpg",
+        "imageCredit": "HOPE Art",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bassin_Bleu,_Haiti.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ht-soup-joumou",
+        "title": "スープ・ジュム",
+        "titleEn": "Soup Joumou",
+        "description": "カボチャ、肉、野菜、パスタを煮込む独立記念日の料理で、自由と誇りを象徴します。",
+        "descriptionEn": "This pumpkin soup with meat, vegetables, and pasta is eaten on Independence Day as a symbol of freedom.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Soup%20Joumou.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Soup_Joumou.jpg",
+        "imageCredit": "Aliceba",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Soup_Joumou.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ht-griot",
+        "title": "グリヨ",
+        "titleEn": "Haitian Griot",
+        "description": "豚肉を柑橘や香辛料で下味をつけ、柔らかく煮てから香ばしく揚げる人気料理です。",
+        "descriptionEn": "Pork is marinated with citrus and spices, cooked until tender, and fried until crisp.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Griot%20ha%C3%AFtien.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Griot_ha%C3%AFtien.jpg",
+        "imageCredit": "Lëa-Kim Châteauneuf",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Griot_ha%C3%AFtien.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ht-rara",
+        "title": "ララ音楽",
+        "titleEn": "Rara Music",
+        "description": "竹製ラッパ、太鼓、歌、踊りが街を進む行列音楽で、共同体の声を力強く表します。",
+        "descriptionEn": "Bamboo horns, drums, singing, and dancing form a moving street tradition that expresses community identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rara%20musicians%20rehearsing%20at%20CEDVIG%20(%20Compagnie%20et%20Ecole%20de%20Dance%20Vivianne%20Gauthier%20)%20for%202020%20haitian%20carnaval.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Rara_musicians_rehearsing_at_CEDVIG_(_Compagnie_et_Ecole_de_Dance_Vivianne_Gauthier_)_for_2020_haitian_carnaval.jpg",
+        "imageCredit": "Erwin509",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "音楽・祭礼文化",
+        "categoryEn": "Music and Festival Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "震災復興と保健・教育で協力",
+      "titleEn": "Cooperation in Recovery, Health, and Education",
+      "text": "日本は地震や災害後の復興、保健医療、食料、教育、人材育成などを通じてハイチを支援しています。",
+      "textEn": "Japan supports Haiti through disaster recovery, health care, food assistance, education, and professional training."
+    },
+    "quiz": {
+      "question": "ハイチで1月1日の独立記念日に食べられる特別なスープは何でしょう？",
+      "questionEn": "Which special soup is eaten in Haiti on Independence Day, January 1?",
+      "options": [
+        "スープ・ジュム",
+        "ミネストローネ",
+        "トムヤムクン",
+        "ボルシチ"
+      ],
+      "optionsEn": [
+        "Soup Joumou",
+        "Minestrone",
+        "Tom Yum",
+        "Borscht"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はスープ・ジュムです。かつて抑圧された人々が自由を得た歴史を象徴します。",
+      "explanationEn": "The answer is Soup Joumou. It represents the freedom won by people who had once been denied the dish."
+    }
+  },
+  "hn": {
+    "iso": "hn",
+    "nameJa": "ホンジュラス",
+    "nameEn": "Honduras",
+    "capitalJa": "テグシガルパ",
+    "capitalEn": "Tegucigalpa",
+    "subtitle": "マヤ遺跡、熱帯雨林、カリブ海、山岳文化が共存する中央アメリカの国です。",
+    "subtitleEn": "A Central American country of Maya ruins, rainforest, Caribbean coasts, and highland cultures.",
+    "flagUrl": "https://flagcdn.com/w320/hn.png",
+    "mapQuery": "Tegucigalpa, Honduras",
+    "timeZone": "America/Tegucigalpa",
+    "currency": {
+      "nameJa": "レンピラ",
+      "nameEn": "Lempira",
+      "symbol": "L"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約990 m（テグシガルパ）",
+    "elevationEn": "Approx. 990 m (Tegucigalpa)",
+    "weather": {
+      "summary": "低地は高温の熱帯気候ですが、山地の首都は比較的涼しく、雨季と乾季があります。",
+      "summaryEn": "Lowlands are tropical and hot, while the mountainous capital is cooler with distinct wet and dry seasons."
+    },
+    "heritage": [
+      {
+        "id": "hn-copan",
+        "title": "コパンのマヤ遺跡",
+        "titleEn": "Maya Site of Copán",
+        "description": "精密な石彫と長い碑文が残り、マヤ文明の王朝、天文学、文字文化を伝えます。",
+        "descriptionEn": "Detailed carvings and long inscriptions reveal Maya royal history, astronomy, art, and writing.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/CopanRuins.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:CopanRuins.jpg",
+        "imageCredit": "Odelotj",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:CopanRuins.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "hn-rio-platano",
+        "title": "リオ・プラタノ生物圏保護区",
+        "titleEn": "Río Plátano Biosphere Reserve",
+        "description": "広大な熱帯雨林、川、湿地に多様な動植物と先住民の共同体が暮らしています。",
+        "descriptionEn": "Vast rainforest, rivers, and wetlands support exceptional wildlife and Indigenous communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/R%C3%ADo%20Pl%C3%A1tano%20Biosphere%20Reserve-109063.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:R%C3%ADo_Pl%C3%A1tano_Biosphere_Reserve-109063.jpg",
+        "imageCredit": "Marc Patry / UNESCO",
+        "imageLicense": "CC BY-SA 3.0 IGO",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "hn-lake-yojoa",
+        "title": "ヨホア湖",
+        "titleEn": "Lake Yojoa",
+        "description": "火山地形に囲まれた国内最大の自然湖で、多くの野鳥と漁業、農業を支えています。",
+        "descriptionEn": "Honduras's largest natural lake lies among volcanic landforms and supports birds, fishing, and farming.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Yojoa.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Yojoa.jpg",
+        "imageCredit": "Rick Wunderman",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "hn-baleada",
+        "title": "バレアダ",
+        "titleEn": "Baleada",
+        "description": "小麦のトルティーヤに豆、チーズ、クリームを挟み、卵や肉を加えることもあります。",
+        "descriptionEn": "A flour tortilla is folded around beans, cheese, and cream, with eggs or meat often added.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Baleada%20SPS.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Baleada_SPS.jpg",
+        "imageCredit": "Ronny Medina",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "hn-lenca-pottery",
+        "title": "レンカの陶器",
+        "titleEn": "Lenca Pottery",
+        "description": "手びねりで器を作り、土や植物由来の色で幾何学模様を描く伝統工芸です。",
+        "descriptionEn": "Vessels are shaped by hand and decorated with geometric designs using natural earth and plant colors.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tenampua%20Pottery%20Honduras.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tenampua_Pottery_Honduras.jpg",
+        "imageCredit": "Einkimadu",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "hn-garifuna-dance",
+        "title": "ガリフナの音楽と踊り",
+        "titleEn": "Garifuna Music and Dance",
+        "description": "太鼓、歌、力強い腰の動きで、アフリカ系とカリブ先住民の歴史を表現します。",
+        "descriptionEn": "Drumming, singing, and energetic movement express a history shaped by African and Caribbean Indigenous roots.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Manifestaci%C3%B3n%2012%20de%20abril%20del%20pueblo%20garifuna%20en%20Honduras.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Manifestaci%C3%B3n_12_de_abril_del_pueblo_garifuna_en_Honduras.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Manifestaci%C3%B3n_12_de_abril_del_pueblo_garifuna_en_Honduras.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "橋・防災・教育を通した協力",
+      "titleEn": "Cooperation Through Bridges, Disaster Preparedness, and Education",
+      "text": "日本は橋梁や道路、防災、教育、保健、農業、人材育成などの分野でホンジュラスと協力しています。",
+      "textEn": "Japan supports Honduras through bridges, roads, disaster preparedness, education, health, agriculture, and training."
+    },
+    "quiz": {
+      "question": "ホンジュラスのコパン遺跡を築いた文明は何でしょう？",
+      "questionEn": "Which civilization built the ancient city of Copán in Honduras?",
+      "options": [
+        "マヤ文明",
+        "インカ文明",
+        "古代ローマ文明",
+        "インダス文明"
+      ],
+      "optionsEn": [
+        "Maya civilization",
+        "Inca civilization",
+        "Ancient Roman civilization",
+        "Indus civilization"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はマヤ文明です。コパンは石碑の文字や彫刻の精密さで特に知られています。",
+      "explanationEn": "The answer is the Maya civilization. Copán is especially known for its inscriptions and detailed sculpture."
+    }
+  },
+  "hu": {
+    "iso": "hu",
+    "nameJa": "ハンガリー",
+    "nameEn": "Hungary",
+    "capitalJa": "ブダペスト",
+    "capitalEn": "Budapest",
+    "subtitle": "ドナウ川の都市景観、温泉、音楽、発明、香辛料豊かな料理で知られる国です。",
+    "subtitleEn": "A Central European country known for Danube cityscapes, thermal baths, music, inventions, and paprika-rich cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/hu.png",
+    "mapQuery": "Budapest, Hungary",
+    "timeZone": "Europe/Budapest",
+    "currency": {
+      "nameJa": "フォリント",
+      "nameEn": "Forint",
+      "symbol": "Ft"
+    },
+    "languages": [
+      {
+        "nameJa": "ハンガリー語",
+        "nameEn": "Hungarian"
+      }
+    ],
+    "elevation": "約105 m（ブダペスト）",
+    "elevationEn": "Approx. 105 m (Budapest)",
+    "weather": {
+      "summary": "大陸性の温帯気候で、夏は暑く、冬は寒くなります。春と秋には穏やかな日が増えます。",
+      "summaryEn": "Hungary has a continental climate with hot summers, cold winters, and generally mild spring and autumn seasons."
+    },
+    "heritage": [
+      {
+        "id": "hu-buda-castle",
+        "title": "ブダ城地区",
+        "titleEn": "Buda Castle District",
+        "description": "ドナウ川を見下ろす丘に王宮や歴史的街路が広がり、首都の変遷を伝えます。",
+        "descriptionEn": "The royal palace and historic streets overlook the Danube and preserve centuries of Budapest's history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hungary-0024%20-%20Buda%20Castle%20(7256523556).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hungary-0024_-_Buda_Castle_(7256523556).jpg",
+        "imageCredit": "Dennis G. Jarvis",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hungary-0024_-_Buda_Castle_(7256523556).jpg",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      },
+      {
+        "id": "hu-parliament",
+        "title": "ハンガリー国会議事堂",
+        "titleEn": "Hungarian Parliament Building",
+        "description": "ドナウ川沿いにそびえる大建築で、尖塔、ドーム、左右対称の外観が特徴です。",
+        "descriptionEn": "This vast riverside landmark is recognized by its dome, spires, and highly symmetrical design.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Hungarian%20parliament%20as%20seen%20from%20Buda%20(4888668133).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:The_Hungarian_parliament_as_seen_from_Buda_(4888668133).jpg",
+        "imageCredit": "Filip Maljković",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:The_Hungarian_parliament_as_seen_from_Buda_(4888668133).jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      },
+      {
+        "id": "hu-balaton",
+        "title": "バラトン湖",
+        "titleEn": "Lake Balaton",
+        "description": "中央ヨーロッパ最大の湖で、夏の保養地、漁業、ブドウ栽培を支えています。",
+        "descriptionEn": "Central Europe's largest lake supports summer tourism, fishing, vineyards, and lakeside communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Balaton,%20Hungary.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Balaton,_Hungary.jpg",
+        "imageCredit": "Wolfgang Sebon",
+        "imageLicense": "GFDL 1.2 or later",
+        "imageLicenseUrl": "https://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
+        "category": "自然・文化景観",
+        "categoryEn": "Natural and Cultural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "hu-goulash",
+        "title": "グヤーシュ",
+        "titleEn": "Goulash",
+        "description": "肉、野菜、パプリカを煮込む料理で、もとは平原で働く牛飼いたちの食事でした。",
+        "descriptionEn": "Meat, vegetables, and paprika are simmered in a dish that began as food for cattle herders.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Goulash%20in%20a%20cauldron.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Goulash_in_a_cauldron.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Goulash_in_a_cauldron.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "hu-langos",
+        "title": "ラーンゴシュ",
+        "titleEn": "Lángos",
+        "description": "発酵させた生地を平たく揚げ、ニンニク、サワークリーム、チーズなどをのせます。",
+        "descriptionEn": "Fried yeast dough is topped with garlic, sour cream, cheese, or other savory ingredients.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest,%20B%C3%A9k%C3%A1smegyer,%20piac,%20sajtos-tejf%C3%B6l%C3%B6s%20l%C3%A1ngos.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Budapest,_B%C3%A9k%C3%A1smegyer,_piac,_sajtos-tejf%C3%B6l%C3%B6s_l%C3%A1ngos.jpg",
+        "imageCredit": "Random photos 1989",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Budapest,_B%C3%A9k%C3%A1smegyer,_piac,_sajtos-tejf%C3%B6l%C3%B6s_l%C3%A1ngos.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "hu-folk-dance",
+        "title": "ハンガリーの民俗舞踊",
+        "titleEn": "Hungarian Folk Dance",
+        "description": "地域ごとの衣装と音楽に合わせ、足踏みや回転を組み合わせて力強く踊ります。",
+        "descriptionEn": "Regional costumes and music accompany energetic steps, turns, and partner movements.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/T%C3%A1ncos.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:T%C3%A1ncos.jpg",
+        "imageCredit": "Matyófolk",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "音楽教育・科学・企業交流でつながる",
+      "titleEn": "Connections Through Music Education, Science, and Business",
+      "text": "コダーイ式音楽教育は日本でも学ばれ、両国は大学、科学技術、製造業で交流しています。",
+      "textEn": "Kodály-based music education is studied in Japan, while universities, science, and manufacturing connect the countries."
+    },
+    "quiz": {
+      "question": "世界的な立体パズル「ルービックキューブ」を発明した人物の出身国はどこでしょう？",
+      "questionEn": "From which country was Rubik's Cube inventor Ernő Rubik?",
+      "options": [
+        "ハンガリー",
+        "フランス",
+        "カナダ",
+        "ブラジル"
+      ],
+      "optionsEn": [
+        "Hungary",
+        "France",
+        "Canada",
+        "Brazil"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はハンガリーです。建築家で教授のエルノー・ルービックが1970年代に考案しました。",
+      "explanationEn": "The answer is Hungary. Architect and professor Ernő Rubik created the puzzle in the 1970s."
+    }
+  }
+}

@@ -1,100 +1,432 @@
 {
+  "jm": {
+    "iso": "jm",
+    "nameJa": "ジャマイカ",
+    "nameEn": "Jamaica",
+    "capitalJa": "キングストン",
+    "capitalEn": "Kingston",
+    "subtitle": "カリブ海の山々、滝、音楽、陸上競技、香り豊かな料理で知られる島国です。",
+    "subtitleEn": "A Caribbean island nation known for mountains, waterfalls, music, athletics, and flavorful cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/jm.png",
+    "mapQuery": "Kingston, Jamaica",
+    "timeZone": "America/Jamaica",
+    "currency": {
+      "nameJa": "ジャマイカ・ドル",
+      "nameEn": "Jamaican Dollar",
+      "symbol": "J$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "ジャマイカ・クレオール語",
+        "nameEn": "Jamaican Patois"
+      }
+    ],
+    "elevation": "約9 m（キングストン）",
+    "elevationEn": "Approx. 9 m (Kingston)",
+    "weather": {
+      "summary": "一年を通して温暖な熱帯気候で、山地は比較的涼しく、雨季には降水量が増えます。",
+      "summaryEn": "Jamaica is tropical and warm year-round, while mountain areas are cooler and the wet season brings heavier rainfall."
+    },
+    "heritage": [
+      {
+        "id": "jm-blue-mountains",
+        "title": "ブルー・アンド・ジョン・クロウ・マウンテンズ",
+        "titleEn": "Blue and John Crow Mountains",
+        "description": "深い山岳林に固有の生物が暮らし、逃亡奴隷マルーンの歴史と文化も残されています。",
+        "descriptionEn": "Montane rainforest protects endemic wildlife and preserves the history and culture of Maroon communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue%20Mountains,%20Jamaica.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Blue_Mountains,_Jamaica.jpg",
+        "imageCredit": "Wolmadrian",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      },
+      {
+        "id": "jm-dunns-river",
+        "title": "ダンズ・リバー・フォールズ",
+        "titleEn": "Dunn's River Falls",
+        "description": "石灰岩の段々を水が海へ向かって流れ落ち、滝の中を歩いて登れる景勝地です。",
+        "descriptionEn": "Water cascades over limestone terraces toward the sea, creating a waterfall that visitors can climb.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dunn's%20River%20Falls,%20Ocho%20Rios,%20Jamaica.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dunn's_River_Falls,_Ocho_Rios,_Jamaica.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dunn's_River_Falls,_Ocho_Rios,_Jamaica.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "jm-port-royal",
+        "title": "ポート・ロイヤル",
+        "titleEn": "Port Royal",
+        "description": "かつて海上交易と私掠船で栄え、地震で一部が海中へ沈んだ歴史的港町です。",
+        "descriptionEn": "Once a major trading and privateering port, parts of the town sank during a powerful earthquake.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Port%20Royal%20Jamaica.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Port_Royal_Jamaica.JPG",
+        "imageCredit": "Raychristofer",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Port_Royal_Jamaica.JPG",
+        "category": "歴史港湾",
+        "categoryEn": "Historic Port"
+      }
+    ],
+    "culture": [
+      {
+        "id": "jm-jerk-chicken",
+        "title": "ジャークチキン",
+        "titleEn": "Jerk Chicken",
+        "description": "唐辛子、オールスパイス、香草で鶏肉を味付けし、煙と火で香ばしく焼き上げます。",
+        "descriptionEn": "Chicken is seasoned with hot peppers, allspice, and herbs, then cooked with smoke and fire.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerk%20Chicken%20.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jerk_Chicken_.jpg",
+        "imageCredit": "Cbeanstudies",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "jm-ackee-saltfish",
+        "title": "アキー・アンド・ソルトフィッシュ",
+        "titleEn": "Ackee and Saltfish",
+        "description": "アキーの果肉と塩漬けの魚を玉ねぎや香辛料と炒める、国を代表する料理です。",
+        "descriptionEn": "Ackee fruit and salted fish are cooked with onions, peppers, and seasonings in Jamaica's national dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jamaican%20Ackee%20and%20Saltfish.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jamaican_Ackee_and_Saltfish.jpg",
+        "imageCredit": "Sumit Surai",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Jamaican_Ackee_and_Saltfish.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "jm-reggae",
+        "title": "レゲエ音楽",
+        "titleEn": "Reggae Music",
+        "description": "独特の裏拍リズムと歌詞を通して、社会、信仰、自由、日常生活を表現します。",
+        "descriptionEn": "Offbeat rhythms and expressive lyrics communicate ideas about society, faith, freedom, and daily life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Derajah%20-Jamaican%20Singer.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Derajah_-Jamaican_Singer.jpg",
+        "imageCredit": "Alexandre Domino",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Derajah_-Jamaican_Singer.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "音楽・陸上競技・観光で親しまれる",
+      "titleEn": "Connections Through Music, Athletics, and Tourism",
+      "text": "日本ではレゲエやジャマイカの短距離選手が広く知られ、文化、スポーツ、観光交流が続いています。",
+      "textEn": "Reggae and Jamaican sprinters are widely known in Japan, supporting continuing cultural, sporting, and tourism exchanges."
+    },
+    "quiz": {
+      "question": "ジャマイカで生まれ、世界へ広がった音楽は何でしょう？",
+      "questionEn": "Which music genre originated in Jamaica and spread around the world?",
+      "options": [
+        "レゲエ",
+        "フラメンコ",
+        "タンゴ",
+        "クラシック音楽"
+      ],
+      "optionsEn": [
+        "Reggae",
+        "Flamenco",
+        "Tango",
+        "Classical music"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はレゲエです。キングストンを中心に発展し、世界の音楽文化へ大きな影響を与えました。",
+      "explanationEn": "The answer is reggae. It developed largely in Kingston and strongly influenced global music culture."
+    }
+  },
   "jp": {
     "iso": "jp",
     "nameJa": "日本",
     "nameEn": "Japan",
     "capitalJa": "東京",
     "capitalEn": "Tokyo",
-    "region": "アジア",
-    "subregion": "東アジア",
-    "subtitle": "古くから受け継がれてきた伝統と、世界を驚かせる新しい技術が共存する島国です。",
-    "flagUrl": "https://flagcdn.com/w1280/jp.png",
+    "subtitle": "四季の自然、長い歴史、伝統文化、先端技術が共存する東アジアの島国です。",
+    "subtitleEn": "An East Asian island nation where seasonal nature, long traditions, and advanced technology coexist.",
+    "flagUrl": "https://flagcdn.com/w320/jp.png",
     "mapQuery": "Tokyo, Japan",
     "timeZone": "Asia/Tokyo",
     "currency": {
-      "code": "JPY",
-      "nameJa": "日本円",
+      "nameJa": "円",
       "nameEn": "Japanese Yen",
       "symbol": "¥"
     },
     "languages": [
       {
-        "code": "ja",
         "nameJa": "日本語",
         "nameEn": "Japanese"
       }
     ],
-    "elevation": "約40 m（東京都心部の目安）",
-    "timeDifferenceFromJapan": "日本国内なので時差はありません",
+    "elevation": "約40 m（東京）",
+    "elevationEn": "Approx. 40 m (Tokyo)",
     "weather": {
-      "summary": "南北に長い国なので、地域によって気候が大きく異なります。多くの地域には春・夏・秋・冬の四季があります。",
-      "summer": "多くの地域で高温多湿になります。沖縄などでは台風にも注意が必要です。",
-      "winter": "北海道や日本海側では多くの雪が降りますが、太平洋側は晴れる日が比較的多くなります。",
-      "bestSeason": "春の桜や秋の紅葉の季節が人気です。"
+      "summary": "南北に長いため、北海道の寒冷地から沖縄の亜熱帯まで多様な気候があります。",
+      "summaryEn": "Japan stretches far north to south, producing climates from snowy northern regions to subtropical southern islands."
     },
     "heritage": [
       {
-        "id": "jp-himeji-castle",
+        "id": "jp-himeji",
         "title": "姫路城",
-        "description": "白い壁が羽を広げた鳥のように見えることから、「白鷺城」とも呼ばれています。日本の城の美しさと防御の工夫を学べる場所です。",
-        "image": "https://placehold.co/1200x800/e2e8f0/0f172a?text=Himeji+Castle",
-        "location": "兵庫県姫路市",
-        "category": "世界文化遺産"
+        "titleEn": "Himeji Castle",
+        "description": "白い壁と複雑な防御構造を持ち、「白鷺城」と呼ばれる日本を代表する城郭です。",
+        "descriptionEn": "White walls and complex defensive routes make this elegant fortress one of Japan's finest surviving castles.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himeji%20Castle,%20Hy%C5%8Dgo%20Prefecture%3B%20August%202018%20(04).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Himeji_Castle,_Hy%C5%8Dgo_Prefecture%3B_August_2018_(04).jpg",
+        "imageCredit": "Martin Falbisoner",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Himeji_Castle,_Hy%C5%8Dgo_Prefecture%3B_August_2018_(04).jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
       },
       {
         "id": "jp-itsukushima",
         "title": "厳島神社",
-        "description": "海の上に建っているように見える神社です。潮の満ち引きによって景色が変わり、大きな鳥居も有名です。",
-        "image": "https://placehold.co/1200x800/fecaca/7f1d1d?text=Itsukushima+Shrine",
-        "location": "広島県廿日市市",
-        "category": "世界文化遺産"
+        "titleEn": "Itsukushima Shinto Shrine",
+        "description": "海上に建つ社殿と大鳥居が潮の満ち引きで表情を変え、自然と信仰が調和します。",
+        "descriptionEn": "Shrine buildings and a great torii appear to float at high tide, uniting worship with the surrounding sea.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/20190318%20Itsukushima%20Shrine.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:20190318_Itsukushima_Shrine.jpg",
+        "imageCredit": "Balon Greyjoy",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
       },
       {
-        "id": "jp-mount-fuji",
-        "title": "富士山",
-        "description": "日本で最も高い山です。昔から絵や物語、信仰の対象となり、日本を象徴する存在として親しまれてきました。",
-        "image": "https://placehold.co/1200x800/dbeafe/1e3a8a?text=Mount+Fuji",
-        "location": "山梨県・静岡県",
-        "category": "世界文化遺産"
+        "id": "jp-shirakawago",
+        "title": "白川郷の合掌造り集落",
+        "titleEn": "Historic Village of Shirakawa-go",
+        "description": "豪雪に耐える急勾配の茅葺き屋根が並び、山村の共同生活と知恵を伝えます。",
+        "descriptionEn": "Steep thatched roofs withstand heavy snow and preserve the cooperative traditions of mountain village life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shirakawa-go,%20Japan%2007.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Shirakawa-go,_Japan_07.jpg",
+        "imageCredit": "Bernacle1959",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
       }
     ],
     "culture": [
       {
         "id": "jp-sushi",
-        "title": "すし",
-        "description": "酢を混ぜたご飯に、魚や野菜などを合わせる日本料理です。地域によって形や材料が異なります。",
-        "image": "https://placehold.co/1200x800/fef3c7/78350f?text=Japanese+Sushi",
-        "category": "食文化"
-      },
-      {
-        "id": "jp-matsuri",
-        "title": "日本の祭り",
-        "description": "地域の歴史や自然への感謝を表す行事です。みこし、山車、踊り、花火など、地域ごとにさまざまな特徴があります。",
-        "image": "https://placehold.co/1200x800/fce7f3/831843?text=Japanese+Festival",
-        "category": "伝統行事"
+        "title": "寿司",
+        "titleEn": "Sushi",
+        "description": "酢飯に魚介、卵、野菜などを合わせ、素材の味、季節、見た目の美しさを楽しみます。",
+        "descriptionEn": "Vinegared rice is paired with seafood, egg, or vegetables, emphasizing seasonality, taste, and presentation.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SUSHI.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:SUSHI.jpg",
+        "imageCredit": "Takeshi Hiramatsu",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:SUSHI.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
       },
       {
         "id": "jp-tea-ceremony",
         "title": "茶道",
-        "description": "お茶を入れて客をもてなす日本の文化です。動作や道具だけでなく、相手を大切にする心も重視します。",
-        "image": "https://placehold.co/1200x800/dcfce7/14532d?text=Japanese+Tea+Ceremony",
-        "category": "伝統文化"
+        "titleEn": "Japanese Tea Ceremony",
+        "description": "茶を点てて客をもてなし、道具、所作、季節、空間の調和を大切にします。",
+        "descriptionEn": "Preparing and sharing tea emphasizes hospitality, mindful movement, seasonal detail, and harmony of space.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese%20Tea%20Ceremony%20(277099735).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Japanese_Tea_Ceremony_(277099735).jpg",
+        "imageCredit": "Mark D. Faram",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Japanese_Tea_Ceremony_(277099735).jpg",
+        "category": "生活・芸道文化",
+        "categoryEn": "Living and Artistic Tradition"
+      },
+      {
+        "id": "jp-kimono",
+        "title": "着物",
+        "titleEn": "Kimono",
+        "description": "直線的な布を仕立て、染めや織りの模様で季節、場面、地域の美意識を表します。",
+        "descriptionEn": "Straight-cut textiles and decorative weaving or dyeing express season, occasion, and regional aesthetics.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Local%20Japanese%20in%20their%20traditional%20kimono%20(49494989943).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Local_Japanese_in_their_traditional_kimono_(49494989943).jpg",
+        "imageCredit": "Dan Lundberg",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Local_Japanese_in_their_traditional_kimono_(49494989943).jpg",
+        "category": "服飾文化",
+        "categoryEn": "Clothing Culture"
       }
     ],
     "japanConnection": {
-      "title": "日本の文化は世界とつながっている！",
-      "text": "アニメ、漫画、ゲーム、日本食、武道など、日本で生まれた文化は世界各地で親しまれています。一方で、日本の言葉や食べ物、科学技術にも、外国との交流から生まれたものがたくさんあります。日本の文化は、日本だけで完成したものではなく、世界との長い交流によって発展してきました。"
+      "title": "世界とつながる日本文化と技術",
+      "titleEn": "Japanese Culture and Technology Connect with the World",
+      "text": "日本は自動車、電子機器、アニメ、食文化、教育、防災協力などを通じて世界各国と結ばれています。",
+      "textEn": "Japan connects globally through vehicles, electronics, animation, food culture, education, and disaster cooperation."
     },
     "quiz": {
-      "question": "日本で最も高い山はどれでしょう？",
+      "question": "日本で春の訪れを象徴し、多くの人が花見を楽しむ花は何でしょう？",
+      "questionEn": "Which flower symbolizes spring in Japan and is celebrated through hanami?",
       "options": [
-        "富士山",
-        "高尾山",
-        "六甲山",
-        "阿蘇山"
+        "桜",
+        "ひまわり",
+        "ラベンダー",
+        "チューリップ"
+      ],
+      "optionsEn": [
+        "Cherry blossom",
+        "Sunflower",
+        "Lavender",
+        "Tulip"
       ],
       "correctIndex": 0,
-      "explanation": "正解は富士山です。富士山の標高は3,776 mで、日本で最も高い山です。山梨県と静岡県にまたがっています。"
+      "explanation": "正解は桜です。開花時期には公園や川沿いで花を眺めながら春を祝います。",
+      "explanationEn": "The answer is the cherry blossom. People gather in parks and along rivers to celebrate its seasonal bloom."
+    }
+  },
+  "jo": {
+    "iso": "jo",
+    "nameJa": "ヨルダン",
+    "nameEn": "Jordan",
+    "capitalJa": "アンマン",
+    "capitalEn": "Amman",
+    "subtitle": "砂漠、岩窟都市、古代ローマ遺跡、遊牧文化が交わる中東の国です。",
+    "subtitleEn": "A Middle Eastern country where desert landscapes, rock-cut cities, Roman ruins, and Bedouin culture meet.",
+    "flagUrl": "https://flagcdn.com/w320/jo.png",
+    "mapQuery": "Amman, Jordan",
+    "timeZone": "Asia/Amman",
+    "currency": {
+      "nameJa": "ヨルダン・ディナール",
+      "nameEn": "Jordanian Dinar",
+      "symbol": "JD"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約760 m（アンマン）",
+    "elevationEn": "Approx. 760 m (Amman)",
+    "weather": {
+      "summary": "国土の多くは乾燥しており、夏は暑く、冬は高地で冷え込みます。降水量は西部ほど増えます。",
+      "summaryEn": "Most of Jordan is dry, with hot summers, cold highland winters, and more rainfall in western regions."
+    },
+    "heritage": [
+      {
+        "id": "jo-petra",
+        "title": "ペトラ",
+        "titleEn": "Petra",
+        "description": "赤い岩山を削って神殿や墓を造ったナバテア人の都市で、隊商交易により栄えました。",
+        "descriptionEn": "The Nabataeans carved temples and tombs into red sandstone in a city enriched by caravan trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Petra%20-%20The%20Treasury.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Petra_-_The_Treasury.JPG",
+        "imageCredit": "Berthold Werner",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "jo-wadi-rum",
+        "title": "ワディ・ラム保護区",
+        "titleEn": "Wadi Rum Protected Area",
+        "description": "赤い砂漠に巨大な砂岩の山や天然橋が広がり、岩絵と遊牧文化も残されています。",
+        "descriptionEn": "Red desert, sandstone mountains, natural arches, rock art, and Bedouin traditions shape this vast landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wadi%20Rum%20in%20Jordan.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Wadi_Rum_in_Jordan.JPG",
+        "imageCredit": "High Contrast",
+        "imageLicense": "CC BY 3.0 DE",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/de/",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      },
+      {
+        "id": "jo-jerash",
+        "title": "ジェラシュ遺跡",
+        "titleEn": "Jerash Archaeological Site",
+        "description": "列柱道路、神殿、劇場が残る古代都市で、ローマ時代の都市計画を詳しく見られます。",
+        "descriptionEn": "Colonnaded streets, temples, and theaters preserve the urban design of a major Roman-era city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerash%20Jordan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jerash_Jordan.jpg",
+        "imageCredit": "David Bjorgen",
+        "imageLicense": "CC BY-SA 2.5",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "category": "考古遺産",
+        "categoryEn": "Archaeological Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "jo-mansaf",
+        "title": "マンサフ",
+        "titleEn": "Mansaf",
+        "description": "羊肉を発酵乳のソースで煮込み、米や薄いパンに盛る、祝宴を代表する料理です。",
+        "descriptionEn": "Lamb is cooked in a fermented yogurt sauce and served over rice and thin bread at major gatherings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jordanian%20mansaf.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jordanian_mansaf.jpg",
+        "imageCredit": "Ema445",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Jordanian_mansaf.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "jo-dabke",
+        "title": "ダブケ",
+        "titleEn": "Dabke",
+        "description": "人々が肩や手をつないで列を作り、足を踏み鳴らして踊る共同体の舞踊です。",
+        "descriptionEn": "Dancers form a connected line and stamp rhythmic steps in a communal dance performed at celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jordanian%20Dabkah.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jordanian_Dabkah.jpg",
+        "imageCredit": "Mervat",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      },
+      {
+        "id": "jo-arabic-coffee",
+        "title": "アラビックコーヒーのもてなし",
+        "titleEn": "Arabic Coffee Hospitality",
+        "description": "カルダモン香るコーヒーを小さな杯に注ぎ、客への歓迎と敬意を表します。",
+        "descriptionEn": "Cardamom-scented coffee is poured into small cups as a sign of welcome, generosity, and respect.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%A7%D9%84%D9%82%D9%87%D9%88%D8%A9%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:%D8%A7%D9%84%D9%82%D9%87%D9%88%D8%A9_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9.jpg",
+        "imageCredit": "Randa107",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "生活・もてなし文化",
+        "categoryEn": "Hospitality Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "観光・教育・難民支援で協力",
+      "titleEn": "Cooperation in Tourism, Education, and Refugee Support",
+      "text": "日本は水資源、教育、保健、インフラ、難民支援などを通じてヨルダンと協力しています。",
+      "textEn": "Japan supports Jordan through cooperation in water resources, education, health, infrastructure, and refugee assistance."
+    },
+    "quiz": {
+      "question": "ヨルダンのペトラを築き、隊商交易で栄えた民族は誰でしょう？",
+      "questionEn": "Which people built Petra and prospered through caravan trade?",
+      "options": [
+        "ナバテア人",
+        "バイキング",
+        "マヤ人",
+        "サムライ"
+      ],
+      "optionsEn": [
+        "Nabataeans",
+        "Vikings",
+        "Maya",
+        "Samurai"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はナバテア人です。水を集める技術と交易によって砂漠の都市を発展させました。",
+      "explanationEn": "The answer is the Nabataeans. Water-management skills and trade helped them develop a city in the desert."
     }
   }
 }

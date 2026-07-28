@@ -1,61 +1,52 @@
 import { useState } from 'react';
-import { Map, GitCompare, Calculator, BookOpen, Clock } from 'lucide-react';
+import Header from './components/Header';
+import Timer from './components/Timer';
 import MapClock from './components/MapClock';
-import CompareClock from './components/CompareClock';
-import MultiConverter from './components/MultiConverter'; // コメントアウトを外す
-import CountryInfo from './components/CountryInfo'; // コメントアウトを外す
-// import MultiConverter from './components/MultiConverter'; // 次のステップで作成
-// import CountryInfo from './components/CountryInfo'; // 次のステップで作成
+import Stopwatch from './components/Stopwatch';
 
-function App() {
-  const [activeTab, setActiveTab] = useState('map'); // 'map', 'compare', 'multi', 'info'
-  const [isAmPm, setIsAmPm] = useState(false); // AM/PM表示の切り替えフラグ
+// まだ完成していないタブ用の「仮画面（プレースホルダー）」コンポーネント
+const Placeholder = ({ title }) => (
+  <div className="w-full h-full min-h-[60vh] flex flex-col items-center justify-center bg-white rounded-3xl border border-gray-200 shadow-sm mt-6">
+    <div className="text-6xl mb-4">🚧</div>
+    <h2 className="text-3xl font-black text-slate-400 mb-2">{title}</h2>
+    <p className="text-slate-500 font-medium">現在開発中です！今後のアップデートをお待ちください。</p>
+  </div>
+);
+
+export default function App() {
+  // 初期画面を「タイマー」に設定
+  const [activeTab, setActiveTab] = useState('timer');
+
+  // タブの状態に応じて表示する中身を切り替える関数
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'timer':
+        return <Timer />;
+      case 'stopwatch':
+        return <Stopwatch />;
+      case 'pacemark':
+        return <Placeholder title="PaceMark" />;
+      case 'mapClock':
+        // 現在、MapClockの中に「地図」「マイ時計(複数定刻)」「リスト」が全て入っています
+        return <MapClock isAmPm={false} />; 
+      case 'timeDiff':
+        return <Placeholder title="時差比較" />;
+      case 'myClock':
+        return <Placeholder title="マイ時計（複数定刻）単独ページ" />;
+      default:
+        return <Timer />;
+    }
+  };
 
   return (
-    <div className="min-h-screen flex flex-col items-center py-6 bg-slate-50 bg-[radial-gradient(#cbd5e1_2px,transparent_2px)] bg-[size:24px_24px]">
+    <div className="min-h-screen bg-slate-100 flex flex-col font-sans">
+      {/* 画面上部のナビゲーションヘッダー */}
+      <Header activeTab={activeTab} setActiveTab={setActiveTab} />
       
-      {/* ヘッダーエリア */}
-      <div className="w-full max-w-[98%] px-4 mb-4 flex flex-col md:flex-row justify-between items-end gap-4">
-        <h1 className="text-4xl font-bold text-gray-800 tracking-wider drop-shadow-sm flex items-center gap-2">
-          Time<span className="text-blue-600">Palette</span>
-        </h1>
-        
-        <div className="flex flex-wrap gap-2 bg-white/90 backdrop-blur-md p-1.5 rounded-xl border border-white/60 shadow-sm">
-          {/* AM/PM 切り替えトグル */}
-          <button
-            onClick={() => setIsAmPm(!isAmPm)}
-            className="flex items-center gap-2 px-4 py-2 mr-2 rounded-lg font-bold transition-colors bg-blue-100 text-blue-700 hover:bg-blue-200"
-          >
-            <Clock size={18} />
-            {isAmPm ? "12時間制 (AM/PM)" : "24時間制"}
-          </button>
-          
-          {/* タブメニュー */}
-          <button onClick={() => setActiveTab('map')} className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'map' ? 'bg-white shadow text-blue-600' : 'text-gray-600 hover:bg-white/50'}`}>
-            <Map size={18} /> ①地図時計
-          </button>
-          <button onClick={() => setActiveTab('compare')} className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'compare' ? 'bg-white shadow text-blue-600' : 'text-gray-600 hover:bg-white/50'}`}>
-            <GitCompare size={18} /> ②時差比較
-          </button>
-          <button onClick={() => setActiveTab('multi')} className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'multi' ? 'bg-white shadow text-blue-600' : 'text-gray-600 hover:bg-white/50'}`}>
-            <Calculator size={18} /> ③複数定刻
-          </button>
-          <button onClick={() => setActiveTab('info')} className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'info' ? 'bg-white shadow text-blue-600' : 'text-gray-600 hover:bg-white/50'}`}>
-            <BookOpen size={18} /> ④国別情報
-          </button>
-        </div>
-      </div>
-
-      {/* メインコンテンツエリア */}
-      {/* メインコンテンツエリア */}
-      <main className="w-full max-w-[98%] flex-1 bg-white/90 backdrop-blur-lg border border-white/60 rounded-3xl shadow-xl p-6 flex flex-col">
-        {activeTab === 'map' && <MapClock isAmPm={isAmPm} />}
-        {activeTab === 'compare' && <CompareClock isAmPm={isAmPm} />}
-        {activeTab === 'multi' && <MultiConverter isAmPm={isAmPm} />} {/* ← 追加 */}
-        {activeTab === 'info' && <CountryInfo isAmPm={isAmPm} />} {/* ← 追加 */}
+      {/* 画面の中身（タブに応じて切り替わる部分） */}
+      <main className="flex-1 w-full max-w-[1400px] mx-auto p-4 md:p-6 h-[calc(100vh-80px)]">
+        {renderContent()}
       </main>
     </div>
   );
 }
-
-export default App;

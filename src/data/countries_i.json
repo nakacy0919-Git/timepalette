@@ -1,0 +1,1154 @@
+{
+  "is": {
+    "iso": "is",
+    "nameJa": "アイスランド",
+    "nameEn": "Iceland",
+    "capitalJa": "レイキャビク",
+    "capitalEn": "Reykjavík",
+    "subtitle": "火山、氷河、間欠泉、温泉が共存し、地球の活動を身近に感じられる島国です。",
+    "subtitleEn": "An island nation where volcanoes, glaciers, geysers, and hot springs reveal Earth's active forces.",
+    "flagUrl": "https://flagcdn.com/w320/is.png",
+    "mapQuery": "Reykjavik, Iceland",
+    "timeZone": "Atlantic/Reykjavik",
+    "currency": {
+      "nameJa": "アイスランド・クローナ",
+      "nameEn": "Icelandic Króna",
+      "symbol": "kr"
+    },
+    "languages": [
+      {
+        "nameJa": "アイスランド語",
+        "nameEn": "Icelandic"
+      }
+    ],
+    "elevation": "約15 m（レイキャビク）",
+    "elevationEn": "Approx. 15 m (Reykjavík)",
+    "weather": {
+      "summary": "北極圏に近いものの海流の影響で冬は比較的穏やかです。風が強く、天候が急変します。",
+      "summaryEn": "Although close to the Arctic, ocean currents moderate winter temperatures, while strong winds make weather change quickly."
+    },
+    "heritage": [
+      {
+        "id": "is-thingvellir",
+        "title": "シンクヴェトリル国立公園",
+        "titleEn": "Þingvellir National Park",
+        "description": "大地の裂け目と古い議会の歴史が重なり、地質と民主政治の歩みを同時に学べます。",
+        "descriptionEn": "Rift valleys and the site of an early parliament connect dramatic geology with Iceland's political history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thingvellir,%20Iceland%20landscape.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Thingvellir,_Iceland_landscape.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Thingvellir,_Iceland_landscape.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "is-vatnajokull",
+        "title": "ヴァトナヨークトル国立公園",
+        "titleEn": "Vatnajökull National Park",
+        "description": "巨大氷河の下で火山活動が続き、氷と火が地形を作り変える様子を観察できます。",
+        "descriptionEn": "Volcanoes beneath a vast ice cap show how fire and ice continuously reshape the landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vatnaj%C3%B6kull%20Iceland.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Vatnaj%C3%B6kull_Iceland.jpg",
+        "imageCredit": "Juhászlegeny",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "is-geysir",
+        "title": "ゲイシール地熱地帯",
+        "titleEn": "Geysir Geothermal Area",
+        "description": "地下で熱せられた水が噴き上がり、英語の「geyser」の語源にもなった場所です。",
+        "descriptionEn": "Superheated groundwater erupts from the earth at the site that gave English the word geyser.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Geysir-iceland-1.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Geysir-iceland-1.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Geysir-iceland-1.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "is-skyr",
+        "title": "スキール",
+        "titleEn": "Skyr",
+        "description": "ヨーグルトのように見える高たんぱくな乳製品で、果物や穀物と一緒に食べます。",
+        "descriptionEn": "This thick, protein-rich dairy food resembles yogurt and is often eaten with fruit or grains.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Icelandic%20Skyr.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Icelandic_Skyr.jpg",
+        "imageCredit": "IcelandicProvisions",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "is-lopapeysa",
+        "title": "ロパペイサ",
+        "titleEn": "Lopapeysa",
+        "description": "アイスランド羊毛を使い、肩まわりに円形模様を編み込む伝統的なセーターです。",
+        "descriptionEn": "This wool sweater uses Icelandic fleece and a distinctive circular pattern around the shoulders.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lopapeysa.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lopapeysa.jpg",
+        "imageCredit": "Salvör Gissurardóttir",
+        "imageLicense": "CC BY-SA 2.5",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "is-hakarl",
+        "title": "ハカール",
+        "titleEn": "Hákarl",
+        "description": "サメ肉を発酵・乾燥させる保存食で、強い香りを持つ伝統料理として知られます。",
+        "descriptionEn": "Shark meat is fermented and dried into a traditional preserved food famous for its powerful aroma.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%A1karl.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:H%C3%A1karl.JPG",
+        "imageCredit": "Jóhann Heiðar Árnason",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:H%C3%A1karl.JPG",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "地熱・火山・水産分野で学び合う",
+      "titleEn": "Learning Together in Geothermal, Volcanic, and Marine Fields",
+      "text": "火山国で海洋国家でもある両国は、地熱利用、防災、水産、北極研究などで交流しています。",
+      "textEn": "As volcanic and maritime nations, Iceland and Japan exchange knowledge in geothermal energy, hazards, fisheries, and Arctic research."
+    },
+    "quiz": {
+      "question": "英語の「geyser」という言葉の語源となった場所がある国はどこでしょう？",
+      "questionEn": "Which country contains the place that gave English the word geyser?",
+      "options": [
+        "アイスランド",
+        "エジプト",
+        "ブラジル",
+        "シンガポール"
+      ],
+      "optionsEn": [
+        "Iceland",
+        "Egypt",
+        "Brazil",
+        "Singapore"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はアイスランドです。ゲイシールという地名から、間欠泉を表す言葉が広まりました。",
+      "explanationEn": "The answer is Iceland. The place name Geysir became the general English word for an erupting hot spring."
+    }
+  },
+  "in": {
+    "iso": "in",
+    "nameJa": "インド",
+    "nameEn": "India",
+    "capitalJa": "ニューデリー",
+    "capitalEn": "New Delhi",
+    "subtitle": "多言語・多宗教社会に、古代遺跡、巨大都市、豊かな芸術と食文化が共存する国です。",
+    "subtitleEn": "A vast multilingual and multireligious nation of ancient sites, major cities, arts, and diverse cuisines.",
+    "flagUrl": "https://flagcdn.com/w320/in.png",
+    "mapQuery": "New Delhi, India",
+    "timeZone": "Asia/Kolkata",
+    "currency": {
+      "nameJa": "インド・ルピー",
+      "nameEn": "Indian Rupee",
+      "symbol": "₹"
+    },
+    "languages": [
+      {
+        "nameJa": "ヒンディー語",
+        "nameEn": "Hindi"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約216 m（ニューデリー）",
+    "elevationEn": "Approx. 216 m (New Delhi)",
+    "weather": {
+      "summary": "北部の高山から南部の熱帯まで気候差が大きく、多くの地域でモンスーンが生活を左右します。",
+      "summaryEn": "Climate ranges from Himalayan alpine zones to tropical coasts, while monsoon rains shape life across much of the country."
+    },
+    "heritage": [
+      {
+        "id": "in-taj-mahal",
+        "title": "タージ・マハル",
+        "titleEn": "Taj Mahal",
+        "description": "白大理石の霊廟で、左右対称の建築と庭園が愛と記憶を表現しています。",
+        "descriptionEn": "This white-marble mausoleum uses symmetry, gardens, and fine decoration to express love and remembrance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taj%20Mahal,%20Agra%20India.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra_India.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra_India.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "in-hampi",
+        "title": "ハンピの建造物群",
+        "titleEn": "Group of Monuments at Hampi",
+        "description": "巨岩の大地に宮殿、寺院、市場跡が広がり、南インドの大帝国の繁栄を伝えます。",
+        "descriptionEn": "Palaces, temples, and market ruins spread through a boulder landscape once ruled by a powerful South Indian empire.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hampi,%20India,%20Lotus%20Mahal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hampi,_India,_Lotus_Mahal.jpg",
+        "imageCredit": "Bernard Gagnon",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "in-kaziranga",
+        "title": "カジランガ国立公園",
+        "titleEn": "Kaziranga National Park",
+        "description": "草原と湿地にインドサイ、ゾウ、トラなどが暮らす重要な自然保護区です。",
+        "descriptionEn": "Grasslands and wetlands protect one-horned rhinoceroses, elephants, tigers, and many bird species.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kaziranga%20National%20Park,%20Assam,%20India%2001.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kaziranga_National_Park,_Assam,_India_01.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "in-biryani",
+        "title": "ハイデラバード・ビリヤニ",
+        "titleEn": "Hyderabadi Biryani",
+        "description": "香り高い米、肉、ヨーグルト、香辛料を重ね、密閉した鍋で蒸し上げる料理です。",
+        "descriptionEn": "Fragrant rice, meat, yogurt, and spices are layered and slowly steamed in a sealed pot.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hyderabadi%20Biriyani.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hyderabadi_Biriyani.jpg",
+        "imageCredit": "Shabnam Shamsuddin",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "in-holi",
+        "title": "ホーリー",
+        "titleEn": "Holi",
+        "description": "色粉や色水をかけ合い、春の訪れと善の勝利を祝う活気あふれる祭りです。",
+        "descriptionEn": "People throw colored powder and water to celebrate spring, renewal, and the victory of good over evil.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Holi%20Festival%20of%20Colors,%20India.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Holi_Festival_of_Colors,_India.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Holi_Festival_of_Colors,_India.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "in-bharatanatyam",
+        "title": "バラタナティヤム",
+        "titleEn": "Bharatanatyam",
+        "description": "手の形、表情、足のリズムを組み合わせ、神話や感情を物語る古典舞踊です。",
+        "descriptionEn": "Hand gestures, facial expression, and rhythmic footwork combine to tell stories of mythology and emotion.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bharat-natyam.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bharat-natyam.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "古典舞踊",
+        "categoryEn": "Classical Dance"
+      }
+    ],
+    "japanConnection": {
+      "title": "仏教から高速鉄道まで続く交流",
+      "titleEn": "Connections from Buddhism to High-Speed Rail",
+      "text": "仏教はインドから日本へ伝わり、現在はIT、ものづくり、高速鉄道、教育でも協力しています。",
+      "textEn": "Buddhism traveled from India to Japan, and modern cooperation includes technology, manufacturing, high-speed rail, and education."
+    },
+    "quiz": {
+      "question": "インドの国章にも使われる「アショーカ王の獅子柱頭」にいる動物は何でしょう？",
+      "questionEn": "Which animal appears on the Lion Capital of Ashoka used in India's national emblem?",
+      "options": [
+        "ライオン",
+        "ゾウ",
+        "トラ",
+        "クジャク"
+      ],
+      "optionsEn": [
+        "Lions",
+        "Elephants",
+        "Tigers",
+        "Peacocks"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はライオンです。四頭のライオンが背中合わせに立つ古代の彫刻が元になっています。",
+      "explanationEn": "The answer is lions. The emblem is based on an ancient sculpture of four lions standing back to back."
+    }
+  },
+  "id": {
+    "iso": "id",
+    "nameJa": "インドネシア",
+    "nameEn": "Indonesia",
+    "capitalJa": "ジャカルタ（ヌサンタラへ移転計画中）",
+    "capitalEn": "Jakarta (relocation to Nusantara planned)",
+    "subtitle": "1万を超える島々に、多民族、多言語、火山、熱帯林、海洋文化が広がる国です。",
+    "subtitleEn": "An archipelagic nation of thousands of islands, diverse peoples, volcanoes, rainforest, and maritime cultures.",
+    "flagUrl": "https://flagcdn.com/w320/id.png",
+    "mapQuery": "Jakarta, Indonesia",
+    "timeZone": "Asia/Jakarta",
+    "currency": {
+      "nameJa": "ルピア",
+      "nameEn": "Indonesian Rupiah",
+      "symbol": "Rp"
+    },
+    "languages": [
+      {
+        "nameJa": "インドネシア語",
+        "nameEn": "Indonesian"
+      }
+    ],
+    "elevation": "約8 m（ジャカルタ）",
+    "elevationEn": "Approx. 8 m (Jakarta)",
+    "weather": {
+      "summary": "赤道付近の高温多湿な気候で、雨季と乾季があります。火山や地震も多い地域です。",
+      "summaryEn": "The climate is tropical and humid with wet and dry seasons, while volcanic and seismic activity is common."
+    },
+    "heritage": [
+      {
+        "id": "id-borobudur",
+        "title": "ボロブドゥール寺院遺跡群",
+        "titleEn": "Borobudur Temple Compounds",
+        "description": "巨大な仏教寺院に多数の浮彫と仏塔が並び、巡礼の道を立体的に表現しています。",
+        "descriptionEn": "Reliefs and stupas cover this monumental Buddhist sanctuary, creating a three-dimensional pilgrimage path.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Candi%20Borobudur.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Candi_Borobudur.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Candi_Borobudur.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "id-komodo",
+        "title": "コモド国立公園",
+        "titleEn": "Komodo National Park",
+        "description": "世界最大のトカゲであるコモドオオトカゲと、豊かなサンゴ礁を守る公園です。",
+        "descriptionEn": "The park protects the world's largest lizard, the Komodo dragon, as well as rich coral reef ecosystems.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Komodo%20dragon%20at%20Komodo%20National%20Park.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Komodo_dragon_at_Komodo_National_Park.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Komodo_dragon_at_Komodo_National_Park.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "id-prambanan",
+        "title": "プランバナン寺院群",
+        "titleEn": "Prambanan Temple Compounds",
+        "description": "高い塔が並ぶヒンドゥー寺院群で、神話を描いた精密な浮彫が残っています。",
+        "descriptionEn": "Tall Hindu temple towers contain detailed stone reliefs illustrating epic stories and sacred traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Prambanan%20Temple.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Prambanan_Temple.jpg",
+        "imageCredit": "74Clarasia",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "id-batik",
+        "title": "バティック",
+        "titleEn": "Batik",
+        "description": "ろうで防染しながら布を染め、植物や幾何学の細かな模様を生み出す伝統工芸です。",
+        "descriptionEn": "Wax-resist dyeing creates detailed floral and geometric patterns with strong regional meanings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Indonesian%20batik.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Indonesian_batik.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Indonesian_batik.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "id-nasi-goreng",
+        "title": "ナシゴレン",
+        "titleEn": "Nasi Goreng",
+        "description": "米を香辛料、野菜、肉や魚介と炒め、甘いしょうゆなどで味付けする料理です。",
+        "descriptionEn": "Rice is stir-fried with spices, vegetables, meat, or seafood and often seasoned with sweet soy sauce.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nasi%20Goreng.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nasi_Goreng.jpg",
+        "imageCredit": "Number55",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nasi_Goreng.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "id-wayang",
+        "title": "ワヤン・クリ",
+        "titleEn": "Wayang Kulit",
+        "description": "革製の人形を光にかざし、影と語り、音楽で叙事詩や地域の物語を演じます。",
+        "descriptionEn": "Leather puppets, light, narration, and music bring epic and local stories to life through shadow theatre.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wayang%20Kulit.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Wayang_Kulit.jpg",
+        "imageCredit": "Daffodylblue",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Wayang_Kulit.jpg",
+        "category": "伝統芸能",
+        "categoryEn": "Performing Arts"
+      }
+    ],
+    "japanConnection": {
+      "title": "経済・防災・若い世代の交流が拡大",
+      "titleEn": "Growing Links in Business, Disaster Preparedness, and Youth Exchange",
+      "text": "両国は製造業、エネルギー、防災、留学、技能人材、日本語教育などで深く結ばれています。",
+      "textEn": "Indonesia and Japan are closely connected through manufacturing, energy, disaster preparedness, study, skills, and language education."
+    },
+    "quiz": {
+      "question": "インドネシアの国是「多様性の中の統一」が表す考えはどれでしょう？",
+      "questionEn": "What idea is expressed by Indonesia's motto, Unity in Diversity?",
+      "options": [
+        "違いを認めながら一つになる",
+        "一つの島だけを重視する",
+        "全員が同じ言語だけを話す",
+        "外国との交流をなくす"
+      ],
+      "optionsEn": [
+        "Being united while respecting differences",
+        "Valuing only one island",
+        "Using only one language",
+        "Ending foreign exchange"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は、違いを認めながら一つになることです。多数の民族・言語・宗教を結ぶ理念です。",
+      "explanationEn": "The answer is unity while respecting differences, an important principle in a highly diverse nation."
+    }
+  },
+  "ir": {
+    "iso": "ir",
+    "nameJa": "イラン",
+    "nameEn": "Iran",
+    "capitalJa": "テヘラン",
+    "capitalEn": "Tehran",
+    "subtitle": "古代帝国の遺跡、砂漠、山々、庭園、詩、精密な工芸文化を持つ国です。",
+    "subtitleEn": "A country of ancient empires, deserts, mountains, gardens, poetry, and highly refined crafts.",
+    "flagUrl": "https://flagcdn.com/w320/ir.png",
+    "mapQuery": "Tehran, Iran",
+    "timeZone": "Asia/Tehran",
+    "currency": {
+      "nameJa": "イラン・リアル",
+      "nameEn": "Iranian Rial",
+      "symbol": "﷼"
+    },
+    "languages": [
+      {
+        "nameJa": "ペルシャ語",
+        "nameEn": "Persian"
+      }
+    ],
+    "elevation": "約1,200 m（テヘラン）",
+    "elevationEn": "Approx. 1,200 m (Tehran)",
+    "weather": {
+      "summary": "国土の多くは乾燥していますが、山地は冬に雪が多く、カスピ海沿岸は比較的湿潤です。",
+      "summaryEn": "Much of Iran is dry, while mountains receive winter snow and the Caspian coast is considerably more humid."
+    },
+    "heritage": [
+      {
+        "id": "ir-persepolis",
+        "title": "ペルセポリス",
+        "titleEn": "Persepolis",
+        "description": "アケメネス朝の儀礼都市で、各地の使節を描いた壮大な石の浮彫が残ります。",
+        "descriptionEn": "This ceremonial capital of the Achaemenid Empire preserves monumental reliefs of peoples from across the realm.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Persepolis,1.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Persepolis,1.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ir-naqsh-jahan",
+        "title": "イスファハンのイマーム広場",
+        "titleEn": "Naqsh-e Jahan Square",
+        "description": "モスク、宮殿、市場が巨大広場を囲み、サファヴィー朝の都市設計を伝えます。",
+        "descriptionEn": "Mosques, a palace, and bazaars surround a vast square planned during the Safavid era.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Naqsh-e-jahan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Naqsh-e-jahan.jpg",
+        "imageCredit": "Ebrdarab",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ir-fin-garden",
+        "title": "フィン庭園",
+        "titleEn": "Fin Garden",
+        "description": "水路、樹木、建築を左右対称に配置し、砂漠地域に理想の楽園を表現しています。",
+        "descriptionEn": "Water channels, trees, and architecture create a carefully ordered vision of paradise in a dry landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fin%20Garden.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fin_Garden.jpg",
+        "imageCredit": "Mohsenman70",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Fin_Garden.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ir-nowruz",
+        "title": "ノウルーズ",
+        "titleEn": "Nowruz",
+        "description": "春分の日に新年を祝い、象徴的な品を並べた食卓や家族の訪問を楽しみます。",
+        "descriptionEn": "The new year begins at the spring equinox with symbolic table displays, family visits, and seasonal traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nowruz%20in%20Persepolis.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nowruz_in_Persepolis.jpg",
+        "imageCredit": "Hossein Khosravi / Tasnim",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "季節文化",
+        "categoryEn": "Seasonal Culture"
+      },
+      {
+        "id": "ir-carpet",
+        "title": "ペルシャ絨毯",
+        "titleEn": "Persian Carpets",
+        "description": "細かな結び目で花や幾何学模様を織り、地域ごとの歴史と美意識を表します。",
+        "descriptionEn": "Thousands of hand-tied knots form floral and geometric designs expressing regional history and aesthetics.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iranian%20Carpet.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Iranian_Carpet.jpg",
+        "imageCredit": "Cloud Consciousness",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "ir-chelow-kebab",
+        "title": "チェロウ・キャバーブ",
+        "titleEn": "Chelow Kebab",
+        "description": "サフラン香る米に焼いた肉、トマト、バターなどを添える代表的な料理です。",
+        "descriptionEn": "Grilled meat is served with saffron-scented rice, tomatoes, butter, and regional accompaniments.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chelow%20Kebab.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Chelow_Kebab.jpg",
+        "imageCredit": "Twinkinstar",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "シルクロード・資源・文化研究で交流",
+      "titleEn": "Exchange Through the Silk Road, Resources, and Cultural Research",
+      "text": "日本とイランは長い外交関係を持ち、文化、考古学、医療、人道支援などでも交流しています。",
+      "textEn": "Japan and Iran have long diplomatic ties and exchanges in culture, archaeology, health, and humanitarian assistance."
+    },
+    "quiz": {
+      "question": "イランの伝統的な新年祭で、春分の日に始まるものは何でしょう？",
+      "questionEn": "Which traditional Iranian new year celebration begins at the spring equinox?",
+      "options": [
+        "ノウルーズ",
+        "オクトーバーフェスト",
+        "ソンクラーン",
+        "感謝祭"
+      ],
+      "optionsEn": [
+        "Nowruz",
+        "Oktoberfest",
+        "Songkran",
+        "Thanksgiving"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はノウルーズです。数千年の歴史を持ち、周辺の多くの地域でも祝われます。",
+      "explanationEn": "The answer is Nowruz. It has ancient roots and is celebrated across several countries and cultures."
+    }
+  },
+  "iq": {
+    "iso": "iq",
+    "nameJa": "イラク",
+    "nameEn": "Iraq",
+    "capitalJa": "バグダッド",
+    "capitalEn": "Baghdad",
+    "subtitle": "チグリス・ユーフラテス川流域に古代文明が栄え、多民族文化を受け継ぐ国です。",
+    "subtitleEn": "A country where ancient civilizations flourished between the Tigris and Euphrates, leaving a diverse cultural legacy.",
+    "flagUrl": "https://flagcdn.com/w320/iq.png",
+    "mapQuery": "Baghdad, Iraq",
+    "timeZone": "Asia/Baghdad",
+    "currency": {
+      "nameJa": "イラク・ディナール",
+      "nameEn": "Iraqi Dinar",
+      "symbol": "ع.د"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      },
+      {
+        "nameJa": "クルド語",
+        "nameEn": "Kurdish"
+      }
+    ],
+    "elevation": "約34 m（バグダッド）",
+    "elevationEn": "Approx. 34 m (Baghdad)",
+    "weather": {
+      "summary": "夏は非常に暑く乾燥し、冬は比較的穏やかです。北部山地では雪が降ることもあります。",
+      "summaryEn": "Summers are extremely hot and dry, winters are milder, and northern mountains may receive snow."
+    },
+    "heritage": [
+      {
+        "id": "iq-babylon",
+        "title": "古代都市バビロン",
+        "titleEn": "Babylon",
+        "description": "メソポタミアを代表する都市遺跡で、城壁、宮殿、神殿の歴史を伝えています。",
+        "descriptionEn": "Ruins of walls, palaces, and temples preserve the history of one of Mesopotamia's most famous cities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Babylon%20iraq.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Babylon_iraq.jpg",
+        "imageCredit": "ahmed_macro",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Babylon_iraq.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "iq-erbil",
+        "title": "アルビール城塞",
+        "titleEn": "Erbil Citadel",
+        "description": "長い居住の歴史を持つ高台の城塞都市で、迷路状の街路と伝統家屋が残ります。",
+        "descriptionEn": "This raised fortified settlement preserves winding streets and evidence of a very long history of habitation.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Erbil%20citadel.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Erbil_citadel.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "iq-marshes",
+        "title": "南部イラクの湿地帯",
+        "titleEn": "Mesopotamian Marshes",
+        "description": "葦原と水路が広がり、独特の生態系と水上生活の文化を支えています。",
+        "descriptionEn": "Reed beds and waterways support distinctive wildlife and communities with a long tradition of wetland life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20marshes%20of%20Iraq.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:The_marshes_of_Iraq.jpg",
+        "imageCredit": "Taisir Mahdi",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界複合遺産地域",
+        "categoryEn": "Mixed World Heritage Region"
+      }
+    ],
+    "culture": [
+      {
+        "id": "iq-masgouf",
+        "title": "マスグーフ",
+        "titleEn": "Masgouf",
+        "description": "川魚を開いて立てかけ、薪の火でじっくり焼くイラクを代表する料理です。",
+        "descriptionEn": "A whole river fish is split open and slowly roasted beside a wood fire.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Masgouf.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Masgouf.jpg",
+        "imageCredit": "Hill93",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "iq-kleicha",
+        "title": "クレイチャ",
+        "titleEn": "Kleicha",
+        "description": "デーツやナッツ、香辛料を包む焼き菓子で、祝祭や家族の集まりに作られます。",
+        "descriptionEn": "These festive cookies are filled with dates, nuts, or spices and shared at holidays and family gatherings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iraqi%20kleicha.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Iraqi_kleicha.jpg",
+        "imageCredit": "Smr iron",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Iraqi_kleicha.jpg",
+        "category": "菓子文化",
+        "categoryEn": "Pastry Culture"
+      },
+      {
+        "id": "iq-maqam",
+        "title": "イラク・マカーム",
+        "titleEn": "Iraqi Maqam",
+        "description": "詩と即興的な旋律を組み合わせ、都市の歴史や感情を歌い上げる音楽です。",
+        "descriptionEn": "Poetry and improvised melodic modes combine in a musical tradition expressing history and emotion.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iraqi%20maqam%20musicians.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Iraqi_maqam_musicians.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Iraqi_maqam_musicians.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "復興・医療・教育で協力",
+      "titleEn": "Cooperation in Reconstruction, Health, and Education",
+      "text": "日本はインフラ復旧、医療、教育、人材育成、文化財保護などを通じてイラクを支援しています。",
+      "textEn": "Japan supports Iraq through infrastructure reconstruction, health, education, professional training, and cultural preservation."
+    },
+    "quiz": {
+      "question": "メソポタミア文明が発展した二つの大河はどれでしょう？",
+      "questionEn": "Which two rivers supported the growth of Mesopotamian civilization?",
+      "options": [
+        "チグリス川とユーフラテス川",
+        "ナイル川とコンゴ川",
+        "ガンジス川とインダス川",
+        "ライン川とドナウ川"
+      ],
+      "optionsEn": [
+        "Tigris and Euphrates",
+        "Nile and Congo",
+        "Ganges and Indus",
+        "Rhine and Danube"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はチグリス川とユーフラテス川です。肥沃な土地が都市や農業の発展を支えました。",
+      "explanationEn": "The answer is the Tigris and Euphrates. Their fertile plains supported agriculture and early cities."
+    }
+  },
+  "ie": {
+    "iso": "ie",
+    "nameJa": "アイルランド",
+    "nameEn": "Ireland",
+    "capitalJa": "ダブリン",
+    "capitalEn": "Dublin",
+    "subtitle": "緑の大地、大西洋の断崖、古代遺跡、文学、音楽文化を持つ島国です。",
+    "subtitleEn": "An island nation of green landscapes, Atlantic cliffs, ancient monuments, literature, and music.",
+    "flagUrl": "https://flagcdn.com/w320/ie.png",
+    "mapQuery": "Dublin, Ireland",
+    "timeZone": "Europe/Dublin",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "アイルランド語",
+        "nameEn": "Irish"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約20 m（ダブリン）",
+    "elevationEn": "Approx. 20 m (Dublin)",
+    "weather": {
+      "summary": "海洋性気候で一年を通して比較的穏やかですが、雨や風が多く天候が変わりやすいです。",
+      "summaryEn": "The ocean keeps temperatures mild, but rain, wind, and rapidly changing weather are common."
+    },
+    "heritage": [
+      {
+        "id": "ie-newgrange",
+        "title": "ニューグレンジ",
+        "titleEn": "Newgrange",
+        "description": "約5,000年前の巨大な羨道墳で、冬至の朝日が内部へ差し込むよう設計されています。",
+        "descriptionEn": "This passage tomb, built about 5,000 years ago, aligns with the rising sun at the winter solstice.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Newgrange.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Newgrange.JPG",
+        "imageCredit": "Shira",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      },
+      {
+        "id": "ie-skellig-michael",
+        "title": "スケリッグ・マイケル",
+        "titleEn": "Skellig Michael",
+        "description": "険しい岩島の頂上に初期キリスト教の修道院跡が残る、孤立した文化景観です。",
+        "descriptionEn": "An early Christian monastery survives near the summit of a steep and isolated Atlantic island.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Skellig%20Michael.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Skellig_Michael.jpg",
+        "imageCredit": "Gdr",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ie-cliffs-moher",
+        "title": "モハーの断崖",
+        "titleEn": "Cliffs of Moher",
+        "description": "大西洋から約200 m立ち上がる断崖で、海鳥と地層の壮大な景観が広がります。",
+        "descriptionEn": "Sea cliffs rise about 200 meters above the Atlantic, revealing dramatic geology and important seabird habitat.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cliffs%20of%20Moher%20(27262979577).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cliffs_of_Moher_(27262979577).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ie-soda-bread",
+        "title": "ソーダブレッド",
+        "titleEn": "Irish Soda Bread",
+        "description": "酵母の代わりに重曹を使って膨らませる素朴なパンで、家庭で手軽に焼けます。",
+        "descriptionEn": "Baking soda replaces yeast in this simple bread, making it quick and practical to prepare at home.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wiki%20loves%20folklore%20Irish%20soda%20bread.png?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Wiki_loves_folklore_Irish_soda_bread.png",
+        "imageCredit": "Aoife Cawley / Wikimedia Community Ireland",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Wiki_loves_folklore_Irish_soda_bread.png",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ie-dance",
+        "title": "アイリッシュ・ダンス",
+        "titleEn": "Irish Dance",
+        "description": "上半身をまっすぐ保ち、速く正確な足の動きでリズムを刻む舞踊です。",
+        "descriptionEn": "Dancers keep the upper body controlled while performing rapid and precise rhythmic footwork.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Irish%20dancers.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Irish_dancers.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Irish_dancers.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      },
+      {
+        "id": "ie-hurling",
+        "title": "ハーリング",
+        "titleEn": "Hurling",
+        "description": "木製スティックで小球を操る高速の伝統競技で、地域の誇りと強く結びつきます。",
+        "descriptionEn": "Players use wooden sticks to control a small ball in a fast traditional sport linked to local identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hurling%20match.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hurling_match.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hurling_match.jpg",
+        "category": "伝統スポーツ",
+        "categoryEn": "Traditional Sport"
+      }
+    ],
+    "japanConnection": {
+      "title": "文学・音楽・IT産業で交流",
+      "titleEn": "Connections Through Literature, Music, and Technology",
+      "text": "アイルランド文学や音楽は日本でも親しまれ、企業、大学、観光の交流も広がっています。",
+      "textEn": "Irish literature and music are appreciated in Japan, while business, university, and tourism links continue to grow."
+    },
+    "quiz": {
+      "question": "ニューグレンジの内部に冬至の朝日が届くのは、何が工夫されているからでしょう？",
+      "questionEn": "Why does winter-solstice sunlight enter the chamber at Newgrange?",
+      "options": [
+        "入口と通路が日の出に合わせて設計されたから",
+        "屋根が毎年外されるから",
+        "鏡が自動で回るから",
+        "電気照明が使われるから"
+      ],
+      "optionsEn": [
+        "The entrance and passage align with sunrise",
+        "The roof is removed yearly",
+        "Mirrors rotate automatically",
+        "Electric lights are used"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は入口と通路の配置です。古代の人々が太陽の動きを正確に観察していたことが分かります。",
+      "explanationEn": "The answer is its solar alignment, showing that ancient builders carefully observed the sun's movement."
+    }
+  },
+  "il": {
+    "iso": "il",
+    "nameJa": "イスラエル",
+    "nameEn": "Israel",
+    "capitalJa": "エルサレム（国際的地位には議論があります）",
+    "capitalEn": "Jerusalem (international status disputed)",
+    "subtitle": "地中海、砂漠、古代都市が近接し、複数の宗教と文化が重なる国です。",
+    "subtitleEn": "A country where Mediterranean coasts, desert landscapes, ancient cities, religions, and cultures meet.",
+    "flagUrl": "https://flagcdn.com/w320/il.png",
+    "mapQuery": "Jerusalem",
+    "timeZone": "Asia/Jerusalem",
+    "currency": {
+      "nameJa": "新シェケル",
+      "nameEn": "New Israeli Shekel",
+      "symbol": "₪"
+    },
+    "languages": [
+      {
+        "nameJa": "ヘブライ語",
+        "nameEn": "Hebrew"
+      },
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約750 m（エルサレム）",
+    "elevationEn": "Approx. 750 m (Jerusalem)",
+    "weather": {
+      "summary": "沿岸部は地中海性気候で、南部は乾燥した砂漠です。冬は地域によって雨が増えます。",
+      "summaryEn": "Coastal areas have a Mediterranean climate, while the south is desert and winter brings most rainfall."
+    },
+    "heritage": [
+      {
+        "id": "il-jerusalem",
+        "title": "エルサレム旧市街",
+        "titleEn": "Old City of Jerusalem",
+        "description": "城壁内にユダヤ教、キリスト教、イスラム教の重要な聖地が近接しています。",
+        "descriptionEn": "Sacred places important to Judaism, Christianity, and Islam stand close together within the walled city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Old%20City%20of%20Jerusalem.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Old_City_of_Jerusalem.jpg",
+        "imageCredit": "Yazan Jwailes",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Old_City_of_Jerusalem.jpg",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      },
+      {
+        "id": "il-masada",
+        "title": "マサダ",
+        "titleEn": "Masada",
+        "description": "死海を見下ろす岩山に宮殿と要塞跡が残り、ローマ時代の歴史を伝えます。",
+        "descriptionEn": "Palaces and fortifications stand on a desert plateau overlooking the Dead Sea.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Masada%20Israel.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Masada_Israel.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Masada_Israel.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "il-bahai-gardens",
+        "title": "ハイファのバハーイー庭園",
+        "titleEn": "Bahá'í Gardens in Haifa",
+        "description": "カルメル山の斜面に左右対称の段々庭園が広がり、海と都市を見下ろします。",
+        "descriptionEn": "Symmetrical garden terraces descend Mount Carmel and overlook the city and Mediterranean Sea.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Baha'i%20Gardens.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Baha'i_Gardens.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Baha'i_Gardens.jpg",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      }
+    ],
+    "culture": [
+      {
+        "id": "il-shakshuka",
+        "title": "シャクシュカ",
+        "titleEn": "Shakshuka",
+        "description": "トマトとピーマンのソースに卵を落として煮込み、パンと一緒に食べます。",
+        "descriptionEn": "Eggs are gently cooked in a tomato and pepper sauce and commonly served with bread.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ShakshukaIsrael.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:ShakshukaIsrael.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:ShakshukaIsrael.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "il-hummus",
+        "title": "フムス",
+        "titleEn": "Hummus",
+        "description": "ひよこ豆、練りごま、レモン、油などをなめらかに混ぜ、パンや野菜と味わいます。",
+        "descriptionEn": "Chickpeas, tahini, lemon, and oil are blended into a smooth dish eaten with bread or vegetables.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hummus%20from%20Israel.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hummus_from_Israel.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hummus_from_Israel.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "il-challah",
+        "title": "ハッラー",
+        "titleEn": "Challah",
+        "description": "編み目の美しい柔らかなパンで、安息日や祝日の食卓で家族と分かち合います。",
+        "descriptionEn": "This soft braided bread is shared at Sabbath and holiday meals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Challah%20Bread%20Six%20Braid%201.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Challah_Bread_Six_Braid_1.JPG",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Challah_Bread_Six_Braid_1.JPG",
+        "category": "食文化・宗教文化",
+        "categoryEn": "Food and Religious Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "科学技術・農業・文化で交流",
+      "titleEn": "Exchange in Technology, Agriculture, and Culture",
+      "text": "日本とイスラエルは研究、スタートアップ、農業技術、観光、文化などで交流しています。",
+      "textEn": "Japan and Israel maintain exchanges in research, startups, agricultural technology, tourism, and culture."
+    },
+    "quiz": {
+      "question": "死海について正しい説明はどれでしょう？",
+      "questionEn": "Which statement about the Dead Sea is correct?",
+      "options": [
+        "塩分濃度が非常に高い",
+        "北極にある",
+        "淡水だけでできている",
+        "世界最大の海洋である"
+      ],
+      "optionsEn": [
+        "Its salinity is extremely high",
+        "It is in the Arctic",
+        "It contains only fresh water",
+        "It is the world's largest ocean"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は塩分濃度が非常に高いことです。そのため人の体が浮きやすくなります。",
+      "explanationEn": "The answer is its very high salinity, which makes people unusually buoyant in the water."
+    }
+  },
+  "it": {
+    "iso": "it",
+    "nameJa": "イタリア",
+    "nameEn": "Italy",
+    "capitalJa": "ローマ",
+    "capitalEn": "Rome",
+    "subtitle": "古代遺跡、芸術都市、アルプス、地中海、地方色豊かな料理が集まる国です。",
+    "subtitleEn": "A country of ancient ruins, artistic cities, Alpine landscapes, Mediterranean coasts, and regional cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/it.png",
+    "mapQuery": "Rome, Italy",
+    "timeZone": "Europe/Rome",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "イタリア語",
+        "nameEn": "Italian"
+      }
+    ],
+    "elevation": "約21 m（ローマ）",
+    "elevationEn": "Approx. 21 m (Rome)",
+    "weather": {
+      "summary": "北部山地は冬に寒く雪が多く、南部と沿岸部は夏が暑く乾燥する地中海性気候です。",
+      "summaryEn": "Northern mountains have cold snowy winters, while southern and coastal areas have hot, dry Mediterranean summers."
+    },
+    "heritage": [
+      {
+        "id": "it-colosseum",
+        "title": "コロッセオ",
+        "titleEn": "Colosseum",
+        "description": "古代ローマの巨大円形闘技場で、観客動線や建築技術の高さを今に伝えています。",
+        "descriptionEn": "This enormous Roman amphitheater reveals sophisticated engineering, crowd movement, and public entertainment.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum%20italy.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Colosseum_italy.jpg",
+        "imageCredit": "Jsalatas",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Colosseum_italy.jpg",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      },
+      {
+        "id": "it-venice",
+        "title": "ヴェネツィアと潟",
+        "titleEn": "Venice and Its Lagoon",
+        "description": "運河と橋で結ばれた島々に宮殿や教会が並び、海と共に築かれた都市です。",
+        "descriptionEn": "Palaces and churches rise across islands linked by canals and bridges in a city built with the sea.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Venezia%20Venice%20Italy%20-%20Creative%20Commons%20by%20gnuckx.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Venezia_Venice_Italy_-_Creative_Commons_by_gnuckx.jpg",
+        "imageCredit": "gnuckx",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Venezia_Venice_Italy_-_Creative_Commons_by_gnuckx.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "it-dolomites",
+        "title": "ドロミーティ",
+        "titleEn": "The Dolomites",
+        "description": "淡い色の岩峰が夕日に赤く染まり、独特の地質と高山生態系を見せます。",
+        "descriptionEn": "Pale limestone peaks glow red at sunset, creating a distinctive geological and alpine landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dolomites%20Italy.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dolomites_Italy.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dolomites_Italy.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "it-pizza",
+        "title": "ナポリピッツァ",
+        "titleEn": "Neapolitan Pizza",
+        "description": "高温の窯で短時間に焼き、柔らかな生地、トマト、チーズの調和を楽しみます。",
+        "descriptionEn": "Soft dough, tomato, and cheese are baked quickly in a very hot oven for a light, blistered crust.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza%20Margherita.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pizza_Margherita.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pizza_Margherita.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "it-pasta",
+        "title": "地方ごとのパスタ文化",
+        "titleEn": "Regional Pasta Culture",
+        "description": "形やソースが地方ごとに異なり、土地の小麦、魚介、肉、野菜を生かします。",
+        "descriptionEn": "Shapes and sauces vary by region, reflecting local wheat, seafood, meat, vegetables, and history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Italian%20pasta.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Italian_pasta.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Italian_pasta.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "it-venetian-mask",
+        "title": "ヴェネツィアの仮面",
+        "titleEn": "Venetian Masks",
+        "description": "カーニバルで身分や日常の役割を隠し、幻想的な衣装とともに用いられます。",
+        "descriptionEn": "Carnival masks hide everyday identity and transform wearers through elaborate design and costume.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Venetian%20Carnival%20Mask%20-%20Maschera%20di%20Carnevale%20-%20Venice%20Italy%20-%20Creative%20Commons%20by%20gnuckx%20(4820456037).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Venetian_Carnival_Mask_-_Maschera_di_Carnevale_-_Venice_Italy_-_Creative_Commons_by_gnuckx_(4820456037).jpg",
+        "imageCredit": "gnuckx",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Venetian_Carnival_Mask_-_Maschera_di_Carnevale_-_Venice_Italy_-_Creative_Commons_by_gnuckx_(4820456037).jpg",
+        "category": "伝統工芸・祭礼文化",
+        "categoryEn": "Traditional Craft and Festival Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "芸術・食・デザインで強い親しみ",
+      "titleEn": "Strong Connections Through Art, Food, and Design",
+      "text": "イタリアの美術、音楽、料理、ファッションは日本で人気が高く、産業や文化交流も盛んです。",
+      "textEn": "Italian art, music, food, and fashion are highly popular in Japan, alongside active industrial and cultural exchange."
+    },
+    "quiz": {
+      "question": "古代ローマの円形闘技場として世界的に知られる建築は何でしょう？",
+      "questionEn": "Which building is world-famous as an amphitheater of ancient Rome?",
+      "options": [
+        "コロッセオ",
+        "ピサの斜塔",
+        "ドゥオーモ",
+        "サン・マルコ寺院"
+      ],
+      "optionsEn": [
+        "Colosseum",
+        "Leaning Tower of Pisa",
+        "Duomo",
+        "St. Mark's Basilica"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はコロッセオです。数万人の観客を収容できる高度な設計を持っていました。",
+      "explanationEn": "The answer is the Colosseum. Its advanced design allowed tens of thousands of spectators to enter and leave."
+    }
+  }
+}
