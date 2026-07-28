@@ -1,99 +1,440 @@
 {
-  "fr": {
-    "iso": "fr",
-    "nameJa": "フランス",
-    "nameEn": "France",
-    "capitalJa": "パリ",
-    "capitalEn": "Paris",
-    "region": "ヨーロッパ",
-    "subregion": "西ヨーロッパ",
-    "subtitle": "芸術、建築、料理、ファッションなど、世界の文化に大きな影響を与えてきた国です。",
-    "flagUrl": "https://flagcdn.com/w1280/fr.png",
-    "mapQuery": "Paris, France",
-    "timeZone": "Europe/Paris",
+  "fj": {
+    "iso": "fj",
+    "nameJa": "フィジー",
+    "nameEn": "Fiji",
+    "capitalJa": "スバ",
+    "capitalEn": "Suva",
+    "subtitle": "南太平洋の島々に、サンゴ礁、熱帯林、多民族の文化が広がる国です。",
+    "subtitleEn": "A South Pacific island nation of coral reefs, tropical forests, and multicultural traditions.",
+    "flagUrl": "https://flagcdn.com/w320/fj.png",
+    "mapQuery": "Suva, Fiji",
+    "timeZone": "Pacific/Fiji",
     "currency": {
-      "code": "EUR",
+      "nameJa": "フィジー・ドル",
+      "nameEn": "Fijian Dollar",
+      "symbol": "FJ$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "フィジー語",
+        "nameEn": "Fijian"
+      },
+      {
+        "nameJa": "フィジー・ヒンディー語",
+        "nameEn": "Fiji Hindi"
+      }
+    ],
+    "elevation": "約15 m（スバ）",
+    "elevationEn": "Approx. 15 m (Suva)",
+    "weather": {
+      "summary": "一年を通して温暖な熱帯気候で、雨季には雨が増えます。サイクロンへの備えも重要です。",
+      "summaryEn": "Fiji is warm and tropical year-round, with a wetter season and an important need for cyclone preparedness."
+    },
+    "heritage": [
+      {
+        "id": "fj-levuka",
+        "title": "レブカ歴史的港町",
+        "titleEn": "Levuka Historical Port Town",
+        "description": "海沿いに木造建築や教会が残り、太平洋の交易と植民地時代の歴史を伝えます。",
+        "descriptionEn": "Wooden buildings and churches preserve the history of Pacific trade and Fiji's early colonial capital.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/BeachStreetLevuka.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:BeachStreetLevuka.jpg",
+        "imageCredit": "Anton Leddin",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "fj-sigatoka-dunes",
+        "title": "シンガトカ砂丘国立公園",
+        "titleEn": "Sigatoka Sand Dunes National Park",
+        "description": "風で形を変える砂丘に古い土器や人骨が見つかり、自然と考古学を同時に学べます。",
+        "descriptionEn": "Shifting dunes contain archaeological remains, linking coastal geology with thousands of years of human history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SigatokaDunesFiji.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:SigatokaDunesFiji.jpg",
+        "imageCredit": "RodBland",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "国立公園・考古遺産",
+        "categoryEn": "National Park and Archaeological Heritage"
+      },
+      {
+        "id": "fj-bouma-falls",
+        "title": "ボウマ滝",
+        "titleEn": "Bouma Falls",
+        "description": "タベウニ島の深い熱帯林に三段の滝が流れ、島固有の生態系を支えています。",
+        "descriptionEn": "Three waterfalls flow through Taveuni's rainforest, supporting rich island biodiversity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/BoumaFalls.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:BoumaFalls.jpg",
+        "imageCredit": "Doron",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "fj-lovo",
+        "title": "ロボ",
+        "titleEn": "Lovo",
+        "description": "地面に掘った炉で、肉、魚、タロイモなどを熱した石と葉で包んで蒸し焼きにします。",
+        "descriptionEn": "Meat, fish, and root vegetables are wrapped in leaves and slow-cooked over hot stones in an earth oven.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lovo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lovo.jpg",
+        "imageCredit": "Jaejay77",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "fj-kava",
+        "title": "カバの儀式",
+        "titleEn": "Kava Ceremony",
+        "description": "植物の根から作る飲み物を回し飲みし、客を歓迎して敬意や信頼を表します。",
+        "descriptionEn": "A drink made from kava root is shared to welcome guests and express respect, trust, and community.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fijian%20kava%20ceremony.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fijian_kava_ceremony.jpg",
+        "imageCredit": "Jaejay77",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "伝統儀礼",
+        "categoryEn": "Traditional Ceremony"
+      },
+      {
+        "id": "fj-masi",
+        "title": "マシ（樹皮布）",
+        "titleEn": "Masi Barkcloth",
+        "description": "木の内皮をたたいて布状にし、幾何学模様を描いて衣装や贈り物に使います。",
+        "descriptionEn": "Inner bark is beaten into cloth and decorated with geometric patterns for clothing, ceremonies, and gifts.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tapa,%20asset%20G1ejUDBXecRYZQSYBP6Y8Tmw.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tapa,_asset_G1ejUDBXecRYZQSYBP6Y8Tmw.jpg",
+        "imageCredit": "Unknown Fijian textile maker / MAS Museum",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "太平洋の島国同士で防災協力",
+      "titleEn": "Pacific Island Partners in Disaster Preparedness",
+      "text": "日本はフィジーと、防災、気候変動、漁業、教育、人材育成などの分野で協力しています。",
+      "textEn": "Japan and Fiji cooperate in disaster preparedness, climate action, fisheries, education, and professional training."
+    },
+    "quiz": {
+      "question": "フィジーがオリンピックで初めて金メダルを獲得した競技は何でしょう？",
+      "questionEn": "In which sport did Fiji win its first Olympic gold medal?",
+      "options": [
+        "7人制ラグビー",
+        "サッカー",
+        "水泳",
+        "バレーボール"
+      ],
+      "optionsEn": [
+        "Rugby sevens",
+        "Football",
+        "Swimming",
+        "Volleyball"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は7人制ラグビーです。2016年のリオデジャネイロ大会で男子代表が優勝しました。",
+      "explanationEn": "The answer is rugby sevens. Fiji's men's team won gold at the 2016 Rio Olympic Games."
+    }
+  },
+  "fi": {
+    "iso": "fi",
+    "nameJa": "フィンランド",
+    "nameEn": "Finland",
+    "capitalJa": "ヘルシンキ",
+    "capitalEn": "Helsinki",
+    "subtitle": "森林と湖、北極圏の自然、デザイン、教育、デジタル技術で知られる北欧の国です。",
+    "subtitleEn": "A Nordic country known for forests, lakes, Arctic nature, design, education, and digital technology.",
+    "flagUrl": "https://flagcdn.com/w320/fi.png",
+    "mapQuery": "Helsinki, Finland",
+    "timeZone": "Europe/Helsinki",
+    "currency": {
       "nameJa": "ユーロ",
       "nameEn": "Euro",
       "symbol": "€"
     },
     "languages": [
       {
-        "code": "fr",
+        "nameJa": "フィンランド語",
+        "nameEn": "Finnish"
+      },
+      {
+        "nameJa": "スウェーデン語",
+        "nameEn": "Swedish"
+      }
+    ],
+    "elevation": "約25 m（ヘルシンキ）",
+    "elevationEn": "Approx. 25 m (Helsinki)",
+    "weather": {
+      "summary": "冬は寒く雪が降り、北部では極夜もあります。夏は涼しく、日照時間が非常に長くなります。",
+      "summaryEn": "Winters are cold and snowy, while summers are mild with very long daylight, especially in the north."
+    },
+    "heritage": [
+      {
+        "id": "fi-suomenlinna",
+        "title": "スオメンリンナの要塞",
+        "titleEn": "Fortress of Suomenlinna",
+        "description": "ヘルシンキ沖の島々に築かれた海上要塞で、北欧の軍事と海洋史を伝えます。",
+        "descriptionEn": "This sea fortress spread across islands near Helsinki preserves centuries of Nordic military and maritime history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Suomenlinna.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Suomenlinna.jpg",
+        "imageCredit": "Michal Pise",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "fi-old-rauma",
+        "title": "ラウマ旧市街",
+        "titleEn": "Old Rauma",
+        "description": "色彩豊かな木造住宅と石畳の道が残り、北欧の伝統的な町の姿を伝えます。",
+        "descriptionEn": "Colorful wooden houses and cobbled streets preserve the character of a traditional Nordic trading town.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wanhaa%20Raumaa%20Old%20Rauma.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Wanhaa_Raumaa_Old_Rauma.JPG",
+        "imageCredit": "Pöllö",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "fi-petajavesi",
+        "title": "ペタヤヴェシの古い教会",
+        "titleEn": "Petäjävesi Old Church",
+        "description": "丸太を組んで建てられた18世紀の教会で、北欧木造建築の技術が凝縮されています。",
+        "descriptionEn": "Built from logs in the eighteenth century, this church displays exceptional Nordic wooden construction.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pet%C3%A4j%C3%A4vesi%20Old%20Church.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pet%C3%A4j%C3%A4vesi_Old_Church.jpg",
+        "imageCredit": "Tiia Monto",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "fi-sauna",
+        "title": "フィンランド式サウナ",
+        "titleEn": "Finnish Sauna",
+        "description": "蒸気と熱で心身を整え、家族や友人と静かな時間を共有する生活文化です。",
+        "descriptionEn": "Heat and steam provide relaxation, while the sauna also serves as a quiet social space for family and friends.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Traditional%20Finnish%20smoke%20sauna.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Traditional_Finnish_smoke_sauna.jpg",
+        "imageCredit": "JP Korpi-Vartiainen",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "生活文化",
+        "categoryEn": "Living Culture"
+      },
+      {
+        "id": "fi-karelian-pasty",
+        "title": "カレリア・パイ",
+        "titleEn": "Karelian Pasty",
+        "description": "薄いライ麦の皮に米やジャガイモの具を詰め、卵バターをのせて食べます。",
+        "descriptionEn": "A thin rye crust holds rice or potato filling and is commonly served with egg butter.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Karelian%20pasties%20and%20egg%20butter.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Karelian_pasties_and_egg_butter.jpg",
+        "imageCredit": "kahvikisu",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "fi-rye-bread",
+        "title": "ライ麦パン",
+        "titleEn": "Finnish Rye Bread",
+        "description": "酸味と深い香りを持つ黒いパンで、毎日の食卓を支えるフィンランドの主食です。",
+        "descriptionEn": "Dense, tangy rye bread is an everyday staple and a strong symbol of Finnish home cooking.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rye%20bread.png?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Rye_bread.png",
+        "imageCredit": "Tiia Monto",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "ムーミン、デザイン、教育で身近な国",
+      "titleEn": "A Familiar Country Through Moomins, Design, and Education",
+      "text": "フィンランドの物語やデザインは日本で人気が高く、教育、デジタル技術、環境分野でも交流があります。",
+      "textEn": "Finnish stories and design are popular in Japan, alongside exchanges in education, digital technology, and sustainability."
+    },
+    "quiz": {
+      "question": "ムーミンの物語を生み出した作家トーベ・ヤンソンの出身国はどこでしょう？",
+      "questionEn": "Which country was Moomin creator Tove Jansson from?",
+      "options": [
+        "フィンランド",
+        "デンマーク",
+        "アイスランド",
+        "カナダ"
+      ],
+      "optionsEn": [
+        "Finland",
+        "Denmark",
+        "Iceland",
+        "Canada"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はフィンランドです。トーベ・ヤンソンはスウェーデン語でムーミン物語を書きました。",
+      "explanationEn": "The answer is Finland. Tove Jansson wrote the Moomin stories in Swedish."
+    }
+  },
+  "fr": {
+    "iso": "fr",
+    "nameJa": "フランス",
+    "nameEn": "France",
+    "capitalJa": "パリ",
+    "capitalEn": "Paris",
+    "subtitle": "芸術、歴史、地方ごとの食文化、多様な地形が共存する西ヨーロッパの国です。",
+    "subtitleEn": "A Western European country of art, history, regional cuisines, and highly varied landscapes.",
+    "flagUrl": "https://flagcdn.com/w320/fr.png",
+    "mapQuery": "Paris, France",
+    "timeZone": "Europe/Paris",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
         "nameJa": "フランス語",
         "nameEn": "French"
       }
     ],
-    "elevation": "約35 m（パリ中心部の目安）",
+    "elevation": "約35 m（パリ）",
+    "elevationEn": "Approx. 35 m (Paris)",
     "weather": {
-      "summary": "パリ周辺は一年を通して比較的穏やかな気候ですが、天気が変わりやすく、雨が降る日もあります。",
-      "summer": "暑くなる日もありますが、朝や夜は涼しく感じることがあります。",
-      "winter": "気温が低くなり、曇りや雨の日が多くなります。雪は多くありません。",
-      "bestSeason": "春から初夏、または秋が街歩きに適しています。"
+      "summary": "西部は海洋性、南部は地中海性、山地は寒冷です。地域によって気温や降水量が大きく異なります。",
+      "summaryEn": "Western France is oceanic, the south is Mediterranean, and mountain regions have colder alpine conditions."
     },
     "heritage": [
       {
         "id": "fr-mont-saint-michel",
-        "title": "モン・サン・ミシェル",
-        "description": "海に浮かんでいるように見える小さな島と修道院です。潮の満ち引きによって周囲の景色が大きく変わります。",
-        "image": "https://placehold.co/1200x800/dbeafe/1e3a8a?text=Mont-Saint-Michel",
-        "location": "ノルマンディー地方",
-        "category": "世界文化遺産"
+        "title": "モン・サン＝ミシェル",
+        "titleEn": "Mont-Saint-Michel",
+        "description": "潮の満ち引きで海に浮かぶ島のように見え、頂上には中世の修道院がそびえます。",
+        "descriptionEn": "Tides transform this rocky island, crowned by a medieval abbey rising above the surrounding bay.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mont-saint-Michel%20(France).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mont-saint-Michel_(France).jpg",
+        "imageCredit": "Freddy de Hosdent",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
       },
       {
         "id": "fr-versailles",
         "title": "ヴェルサイユ宮殿",
-        "description": "フランス王たちが暮らした巨大な宮殿です。豪華な鏡の間や、広大な庭園で知られています。",
-        "image": "https://placehold.co/1200x800/fef3c7/78350f?text=Palace+of+Versailles",
-        "location": "ヴェルサイユ",
-        "category": "世界文化遺産"
+        "titleEn": "Palace of Versailles",
+        "description": "豪華な鏡の間と幾何学的な庭園が、フランス王政の権力と芸術を伝えます。",
+        "descriptionEn": "The Hall of Mirrors and formal gardens display the power, ceremony, and artistic ambition of the French monarchy.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Versailles%20Palace.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Versailles_Palace.jpg",
+        "imageCredit": "Eric Pouhier",
+        "imageLicense": "CC BY-SA 2.5",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
       },
       {
-        "id": "fr-paris-seine",
-        "title": "パリのセーヌ河岸",
-        "description": "セーヌ川の周辺には、歴史的な建物や橋、美術館が集まっています。歩きながらパリの歴史を感じられます。",
-        "image": "https://placehold.co/1200x800/e0e7ff/312e81?text=Seine+River+Paris",
-        "location": "パリ",
-        "category": "世界文化遺産"
+        "id": "fr-pont-du-gard",
+        "title": "ポン・デュ・ガール",
+        "titleEn": "Pont du Gard",
+        "description": "古代ローマの水道橋で、三層のアーチが谷を越えて水を運んだ技術を示します。",
+        "descriptionEn": "This three-level Roman aqueduct bridge demonstrates how ancient engineers carried water across a deep valley.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pont%20du%20Gard%20..jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pont_du_Gard_..jpg",
+        "imageCredit": "Victor Grigas",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
       }
     ],
     "culture": [
       {
         "id": "fr-baguette",
         "title": "バゲット",
-        "description": "外側が香ばしく、中がやわらかい細長いパンです。フランスの人々の日常の食卓に欠かせません。",
-        "image": "https://placehold.co/1200x800/fef3c7/92400e?text=French+Baguette",
-        "category": "食文化"
+        "titleEn": "Baguette",
+        "description": "小麦粉、水、塩、酵母から作る細長いパンで、外は香ばしく中は柔らかいのが特徴です。",
+        "descriptionEn": "Made from flour, water, salt, and yeast, this long loaf has a crisp crust and soft interior.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Baguette.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Baguette.jpg",
+        "imageCredit": "Lionel Allorge",
+        "imageLicense": "GFDL 1.2 or later",
+        "imageLicenseUrl": "https://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
       },
       {
         "id": "fr-cheese",
-        "title": "フランスのチーズ",
-        "description": "地域ごとに異なる種類のチーズがあります。使う乳や作り方、熟成期間によって味や香りが変わります。",
-        "image": "https://placehold.co/1200x800/fef9c3/713f12?text=French+Cheese",
-        "category": "食文化"
+        "title": "地方ごとのチーズ文化",
+        "titleEn": "Regional Cheese Culture",
+        "description": "牛、山羊、羊の乳を使い、気候や熟成法の違いから多彩な味と香りが生まれます。",
+        "descriptionEn": "Cow, goat, and sheep milk are transformed through regional climates and aging methods into diverse cheeses.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheese%20platter,%20french%20style%20(42231088730).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cheese_platter,_french_style_(42231088730).jpg",
+        "imageCredit": "Ella Olsson",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
       },
       {
-        "id": "fr-art",
-        "title": "美術館と芸術",
-        "description": "フランスには多くの美術館があり、世界各地の絵画や彫刻を見ることができます。芸術家が集まった街としても有名です。",
-        "image": "https://placehold.co/1200x800/fae8ff/701a75?text=French+Art",
-        "category": "芸術文化"
+        "id": "fr-macarons",
+        "title": "マカロン",
+        "titleEn": "Macarons",
+        "description": "アーモンド生地の焼き菓子で、二枚の間にクリームを挟み、色や風味を楽しみます。",
+        "descriptionEn": "Two delicate almond-meringue shells hold a flavored filling in a colorful French pastry.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colorful%20French%20Macaroons.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Colorful_French_Macaroons.jpg",
+        "imageCredit": "C.a.ciliberto",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "菓子文化",
+        "categoryEn": "Pastry Culture"
       }
     ],
     "japanConnection": {
-      "title": "フランスの芸術家は日本の浮世絵に夢中だった！",
-      "text": "19世紀のフランスでは、日本の浮世絵や工芸品が芸術家たちに大きな影響を与えました。この動きは「ジャポニスム」と呼ばれています。反対に、日本でもフランス料理、ファッション、美術、建築などが広く親しまれています。"
+      "title": "芸術・食・高速交通で深い交流",
+      "titleEn": "Strong Exchange in Art, Food, and High-Speed Transport",
+      "text": "日本ではフランス文化が広く親しまれ、両国は芸術、研究、産業、鉄道、観光で交流しています。",
+      "textEn": "French culture is widely appreciated in Japan, while the countries cooperate in art, research, industry, rail, and tourism."
     },
     "quiz": {
-      "question": "フランスの首都はどこでしょう？",
+      "question": "エッフェル塔は、もともと何のために建てられたでしょう？",
+      "questionEn": "For what event was the Eiffel Tower originally built?",
       "options": [
-        "パリ",
-        "ローマ",
-        "マドリード",
-        "ベルリン"
+        "1889年の万国博覧会",
+        "オリンピック",
+        "王の戴冠式",
+        "映画祭"
+      ],
+      "optionsEn": [
+        "The 1889 World's Fair",
+        "The Olympic Games",
+        "A royal coronation",
+        "A film festival"
       ],
       "correctIndex": 0,
-      "explanation": "正解はパリです。パリにはエッフェル塔、ルーヴル美術館、凱旋門などの有名な場所があります。"
+      "explanation": "正解は1889年の万国博覧会です。フランス革命100周年の年にパリで開催されました。",
+      "explanationEn": "The answer is the 1889 World's Fair, held in Paris during the centenary year of the French Revolution."
     }
   }
 }

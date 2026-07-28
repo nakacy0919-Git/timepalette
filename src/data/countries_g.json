@@ -1,0 +1,1572 @@
+{
+  "ga": {
+    "iso": "ga",
+    "nameJa": "ガボン",
+    "nameEn": "Gabon",
+    "capitalJa": "リーブルヴィル",
+    "capitalEn": "Libreville",
+    "subtitle": "大西洋岸の熱帯雨林に、森林ゾウ、ゴリラ、多彩な伝統文化が息づく国です。",
+    "subtitleEn": "A Central African country of Atlantic rainforest, forest elephants, gorillas, and rich cultural traditions.",
+    "flagUrl": "https://flagcdn.com/w320/ga.png",
+    "mapQuery": "Libreville, Gabon",
+    "timeZone": "Africa/Libreville",
+    "currency": {
+      "nameJa": "中央アフリカCFAフラン",
+      "nameEn": "Central African CFA Franc",
+      "symbol": "FCFA"
+    },
+    "languages": [
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約12 m（リーブルヴィル）",
+    "elevationEn": "Approx. 12 m (Libreville)",
+    "weather": {
+      "summary": "一年を通して高温多湿で雨が多く、赤道付近には深い熱帯雨林が広がります。",
+      "summaryEn": "The climate is hot, humid, and rainy year-round, supporting extensive equatorial rainforest."
+    },
+    "heritage": [
+      {
+        "id": "ga-loango",
+        "title": "ロアンゴ国立公園",
+        "titleEn": "Loango National Park",
+        "description": "熱帯雨林と海岸が接し、森林ゾウや水牛が砂浜に現れる珍しい景観で知られます。",
+        "descriptionEn": "Rainforest meets the Atlantic coast, where forest elephants and buffalo may appear on the beach.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Loango%20National%20Park.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Loango_National_Park.jpg",
+        "imageCredit": "Emailsson",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      },
+      {
+        "id": "ga-lope",
+        "title": "ロペ＝オカンダの生態系と文化的景観",
+        "titleEn": "Ecosystem and Relict Cultural Landscape of Lopé-Okanda",
+        "description": "熱帯雨林とサバンナが交わり、野生動物と古代からの人間活動の痕跡が共存します。",
+        "descriptionEn": "Rainforest and savanna meet in a landscape containing wildlife and evidence of ancient human activity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/La-lop%C3%A9-gabon.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:La-lop%C3%A9-gabon.jpg",
+        "imageCredit": "Vincent.vaquin",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      },
+      {
+        "id": "ga-lope-rock-art",
+        "title": "ロペの岩刻画",
+        "titleEn": "Rock Engravings of Lopé",
+        "description": "岩の表面に動物や記号が刻まれ、長い時代にわたる人々の暮らしを伝えています。",
+        "descriptionEn": "Engraved animals and symbols preserve evidence of communities that lived in the region long ago.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20lop%C3%A9-rupestre1.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:La_lop%C3%A9-rupestre1.jpg",
+        "imageCredit": "Vincent.vaquin",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "考古遺産",
+        "categoryEn": "Archaeological Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ga-nyembwe",
+        "title": "鶏肉のニェンブウェ",
+        "titleEn": "Poulet Nyembwe",
+        "description": "鶏肉をパームナッツの濃厚なソースで煮込み、キャッサバや米と味わいます。",
+        "descriptionEn": "Chicken is simmered in a rich palm-nut sauce and served with cassava, plantain, or rice.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plat%20de%20Nyembwe.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Plat_de_Nyembwe.jpg",
+        "imageCredit": "Mabiala serge",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Plat_de_Nyembwe.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ga-punu-mask",
+        "title": "プヌの白い仮面",
+        "titleEn": "Punu White Masks",
+        "description": "白い顔と細い目が特徴で、祖先や女性の美しさを表す儀礼に用いられます。",
+        "descriptionEn": "White faces and narrow eyes symbolize ancestors and ideals of feminine beauty in ceremonial performance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Punu%20mask%20Gabon.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Punu_mask_Gabon.JPG",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Punu_mask_Gabon.JPG",
+        "category": "伝統芸術",
+        "categoryEn": "Traditional Art"
+      },
+      {
+        "id": "ga-bwiti",
+        "title": "ブウィティの信仰文化",
+        "titleEn": "Bwiti Spiritual Tradition",
+        "description": "音楽、踊り、語り、共同体の儀礼を通して、祖先や自然とのつながりを表します。",
+        "descriptionEn": "Music, dance, storytelling, and ceremony express connections among community, ancestors, and nature.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mimongo-case-bwiti.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mimongo-case-bwiti.jpg",
+        "imageCredit": "Vincent.vaquin",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "精神文化",
+        "categoryEn": "Spiritual Tradition"
+      }
+    ],
+    "japanConnection": {
+      "title": "森林保全と環境研究で協力",
+      "titleEn": "Cooperation in Forest Conservation and Research",
+      "text": "日本はコンゴ盆地の森林保全、生物多様性、保健、人材育成などの分野で協力しています。",
+      "textEn": "Japan supports Gabon through cooperation in Congo Basin conservation, biodiversity, health, and professional training."
+    },
+    "quiz": {
+      "question": "ガボンの国土の多くを覆う自然環境は何でしょう？",
+      "questionEn": "Which natural environment covers much of Gabon?",
+      "options": [
+        "熱帯雨林",
+        "氷床",
+        "砂漠",
+        "ツンドラ"
+      ],
+      "optionsEn": [
+        "Tropical rainforest",
+        "Ice sheet",
+        "Desert",
+        "Tundra"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は熱帯雨林です。森林にはゴリラ、チンパンジー、森林ゾウなどが生息します。",
+      "explanationEn": "The answer is tropical rainforest, home to gorillas, chimpanzees, and forest elephants."
+    }
+  },
+  "gm": {
+    "iso": "gm",
+    "nameJa": "ガンビア",
+    "nameEn": "The Gambia",
+    "capitalJa": "バンジュール",
+    "capitalEn": "Banjul",
+    "subtitle": "ガンビア川に沿って東西に細長く伸びる、アフリカ大陸で最も小さな国の一つです。",
+    "subtitleEn": "One of mainland Africa's smallest countries, stretching narrowly along the Gambia River.",
+    "flagUrl": "https://flagcdn.com/w320/gm.png",
+    "mapQuery": "Banjul, The Gambia",
+    "timeZone": "Africa/Banjul",
+    "currency": {
+      "nameJa": "ダラシ",
+      "nameEn": "Dalasi",
+      "symbol": "D"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約5 m（バンジュール）",
+    "elevationEn": "Approx. 5 m (Banjul)",
+    "weather": {
+      "summary": "一年を通して温暖で、雨季と乾季があります。川沿いには湿地やマングローブが広がります。",
+      "summaryEn": "The climate is warm with wet and dry seasons, while wetlands and mangroves line the river."
+    },
+    "heritage": [
+      {
+        "id": "gm-kunta-kinteh",
+        "title": "クンタ・キンテ島",
+        "titleEn": "Kunta Kinteh Island",
+        "description": "ガンビア川に残る要塞跡で、大西洋奴隷貿易の重い歴史を今に伝えています。",
+        "descriptionEn": "Ruins on this river island preserve a painful history connected to the Atlantic slave trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/JamesIsland.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:JamesIsland.jpg",
+        "imageCredit": "Niels Elgaard Larsen",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:JamesIsland.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "gm-abuko",
+        "title": "アブコ自然保護区",
+        "titleEn": "Abuko Nature Reserve",
+        "description": "小さな保護区に森林、湿地、サル、レイヨウ、多彩な鳥類が集まっています。",
+        "descriptionEn": "This compact reserve protects forest, wetlands, monkeys, antelopes, and a remarkable variety of birds.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gambia%20abuko%20004.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gambia_abuko_004.jpg",
+        "imageCredit": "Atamari",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "自然保護区",
+        "categoryEn": "Nature Reserve"
+      },
+      {
+        "id": "gm-river",
+        "title": "ガンビア川",
+        "titleEn": "Gambia River",
+        "description": "国土の中心を流れ、交通、漁業、農業、マングローブの生態系を支える大河です。",
+        "descriptionEn": "The river supports transport, fishing, farming, wetlands, and everyday life across the country.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/River%20Gambia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:River_Gambia.jpg",
+        "imageCredit": "Gayobah13",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:River_Gambia.jpg",
+        "category": "自然・生活景観",
+        "categoryEn": "Natural and Living Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "gm-domoda",
+        "title": "ドモダ",
+        "titleEn": "Domoda",
+        "description": "落花生の濃厚なソースに肉や野菜を加え、米と一緒に食べる人気料理です。",
+        "descriptionEn": "A rich peanut stew with meat or vegetables is served over rice as a popular family meal.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Domoda.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Domoda.jpg",
+        "imageCredit": "Piki-photow",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Domoda.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "gm-kora",
+        "title": "コラ",
+        "titleEn": "Kora",
+        "description": "ひょうたんと弦で作る西アフリカの楽器で、語り部が歴史や家系を歌い継ぎます。",
+        "descriptionEn": "This harp-like instrument accompanies storytellers who preserve history, genealogy, and community memory.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gambia%20kora%20havard.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gambia_kora_havard.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gambia_kora_havard.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      },
+      {
+        "id": "gm-wrestling",
+        "title": "伝統レスリング",
+        "titleEn": "Traditional Wrestling",
+        "description": "太鼓や歌に包まれて力と技を競う人気競技で、地域の祭りでも行われます。",
+        "descriptionEn": "Wrestlers compete in strength and technique amid drumming, singing, and lively community festivals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gambian%20wrestlers%20on%20the%20beach%20(11135266145).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gambian_wrestlers_on_the_beach_(11135266145).jpg",
+        "imageCredit": "David Stanley",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "伝統スポーツ",
+        "categoryEn": "Traditional Sport"
+      }
+    ],
+    "japanConnection": {
+      "title": "漁業と教育で暮らしを支援",
+      "titleEn": "Supporting Livelihoods Through Fisheries and Education",
+      "text": "日本は漁業施設、学校、保健、農業、人材育成などを通じてガンビアを支援しています。",
+      "textEn": "Japan supports The Gambia through cooperation in fisheries, schools, health, agriculture, and training."
+    },
+    "quiz": {
+      "question": "ガンビアの国土の形に最も大きな影響を与えたものは何でしょう？",
+      "questionEn": "What geographical feature most strongly shaped the form of The Gambia?",
+      "options": [
+        "ガンビア川",
+        "大きな砂漠",
+        "巨大な湖",
+        "氷河"
+      ],
+      "optionsEn": [
+        "The Gambia River",
+        "A large desert",
+        "A huge lake",
+        "A glacier"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はガンビア川です。国土は川の両岸に沿って細長く広がっています。",
+      "explanationEn": "The answer is the Gambia River. The country's narrow territory follows both sides of the river."
+    }
+  },
+  "ge": {
+    "iso": "ge",
+    "nameJa": "ジョージア",
+    "nameEn": "Georgia",
+    "capitalJa": "トビリシ",
+    "capitalEn": "Tbilisi",
+    "subtitle": "コーカサス山脈の大自然、古い教会、独自の文字と食文化を持つ国です。",
+    "subtitleEn": "A Caucasus nation of high mountains, ancient churches, a unique alphabet, and celebrated cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/ge.png",
+    "mapQuery": "Tbilisi, Georgia",
+    "timeZone": "Asia/Tbilisi",
+    "currency": {
+      "nameJa": "ラリ",
+      "nameEn": "Lari",
+      "symbol": "₾"
+    },
+    "languages": [
+      {
+        "nameJa": "ジョージア語",
+        "nameEn": "Georgian"
+      }
+    ],
+    "elevation": "約450 m（トビリシ）",
+    "elevationEn": "Approx. 450 m (Tbilisi)",
+    "weather": {
+      "summary": "黒海沿岸は温暖湿潤で、内陸部は乾燥しています。コーカサス山地では冬に雪が積もります。",
+      "summaryEn": "The Black Sea coast is mild and humid, inland areas are drier, and mountain winters are snowy."
+    },
+    "heritage": [
+      {
+        "id": "ge-mtskheta",
+        "title": "ムツヘタの歴史的建造物群",
+        "titleEn": "Historical Monuments of Mtskheta",
+        "description": "古都に大聖堂や修道院が残り、ジョージアのキリスト教文化の中心を伝えます。",
+        "descriptionEn": "Cathedrals and monasteries in the ancient capital preserve the heart of Georgian Christian history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mtskheta,%20Svetitskhoveli,%20Georgia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mtskheta,_Svetitskhoveli,_Georgia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mtskheta,_Svetitskhoveli,_Georgia.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ge-svaneti",
+        "title": "上スヴァネティ",
+        "titleEn": "Upper Svaneti",
+        "description": "山岳の村々に石造りの防御塔が並び、厳しい環境で培われた暮らしを伝えます。",
+        "descriptionEn": "Stone defensive towers rise among mountain villages, preserving a distinctive highland way of life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ushguli%20towers%20in%20Svaneti,%20Georgia.png?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ushguli_towers_in_Svaneti,_Georgia.png",
+        "imageCredit": "Dito1993",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ge-gelati",
+        "title": "ゲラティ修道院",
+        "titleEn": "Gelati Monastery",
+        "description": "中世の学問と信仰の中心で、美しいモザイクや壁画が今も残されています。",
+        "descriptionEn": "A medieval center of learning and faith, the monastery preserves important mosaics and frescoes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gelati%2001.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gelati_01.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gelati_01.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ge-khachapuri",
+        "title": "ハチャプリ",
+        "titleEn": "Khachapuri",
+        "description": "パン生地にチーズをたっぷり入れる料理で、地域ごとに形や材料が異なります。",
+        "descriptionEn": "Cheese-filled bread appears in many regional forms, including boat-shaped versions topped with egg.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tbilisi,%20Khachapuri%20and%20khinkali,%20Georgian%20traditional%20food,%20Georgia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tbilisi,_Khachapuri_and_khinkali,_Georgian_traditional_food,_Georgia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tbilisi,_Khachapuri_and_khinkali,_Georgian_traditional_food,_Georgia.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ge-khinkali",
+        "title": "ヒンカリ",
+        "titleEn": "Khinkali",
+        "description": "ひだを寄せた皮の中に肉汁たっぷりの具を包む、大きな水ギョーザです。",
+        "descriptionEn": "These large twisted dumplings hold seasoned meat and flavorful broth inside the dough.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Khinkali.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Khinkali.jpg",
+        "imageCredit": "Themightyquill",
+        "imageLicense": "CC BY-SA 2.5",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ge-polyphony",
+        "title": "ジョージアの多声合唱",
+        "titleEn": "Georgian Polyphonic Singing",
+        "description": "異なる旋律を重ねて力強い響きを生み、地域の歴史や感情を歌い継ぎます。",
+        "descriptionEn": "Independent vocal lines combine into powerful harmonies that carry regional history and emotion.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Georgian-folk-music.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Georgian-folk-music.jpg",
+        "imageCredit": "Ditrix0690",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "ワイン・柔道・文化交流で身近に",
+      "titleEn": "Connections Through Wine, Judo, and Culture",
+      "text": "ジョージアのワインや料理は日本でも知られ、柔道、観光、教育を通じた交流も広がっています。",
+      "textEn": "Georgian wine and cuisine are gaining attention in Japan, alongside exchanges in judo, tourism, and education."
+    },
+    "quiz": {
+      "question": "ジョージアで長い歴史を持つ、土中に埋めて使うワイン造りの壺は何でしょう？",
+      "questionEn": "What traditional clay vessel is buried underground for Georgian winemaking?",
+      "options": [
+        "クヴェヴリ",
+        "タジン",
+        "サモワール",
+        "トーテム"
+      ],
+      "optionsEn": [
+        "Qvevri",
+        "Tagine",
+        "Samovar",
+        "Totem"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はクヴェヴリです。ブドウを果皮や種とともに発酵させる伝統があります。",
+      "explanationEn": "The answer is qvevri. Grapes may ferment with their skins and seeds inside the buried clay vessel."
+    }
+  },
+  "de": {
+    "iso": "de",
+    "nameJa": "ドイツ",
+    "nameEn": "Germany",
+    "capitalJa": "ベルリン",
+    "capitalEn": "Berlin",
+    "subtitle": "歴史都市、森林、産業技術、音楽、地方色豊かな食文化を持つ欧州の国です。",
+    "subtitleEn": "A European country of historic cities, forests, engineering, music, and strong regional traditions.",
+    "flagUrl": "https://flagcdn.com/w320/de.png",
+    "mapQuery": "Berlin, Germany",
+    "timeZone": "Europe/Berlin",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "ドイツ語",
+        "nameEn": "German"
+      }
+    ],
+    "elevation": "約34 m（ベルリン）",
+    "elevationEn": "Approx. 34 m (Berlin)",
+    "weather": {
+      "summary": "温帯気候で四季があり、西部は海洋の影響を受け、東部や南部は寒暖差が大きくなります。",
+      "summaryEn": "Germany has four seasons, with milder maritime influence in the west and greater temperature variation inland."
+    },
+    "heritage": [
+      {
+        "id": "de-cologne",
+        "title": "ケルン大聖堂",
+        "titleEn": "Cologne Cathedral",
+        "description": "二本の高い塔が街を見下ろすゴシック建築で、完成まで600年以上を要しました。",
+        "descriptionEn": "Twin towers dominate the city skyline, and construction of this Gothic cathedral spanned more than six centuries.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/West%20facade%20of%20Cologne%20cathedral.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:West_facade_of_Cologne_cathedral.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:West_facade_of_Cologne_cathedral.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "de-neuschwanstein",
+        "title": "ノイシュヴァンシュタイン城",
+        "titleEn": "Neuschwanstein Castle",
+        "description": "山と湖に囲まれた幻想的な城で、中世への憧れを込めて19世紀に建てられました。",
+        "descriptionEn": "Surrounded by mountains and lakes, this nineteenth-century castle was inspired by an idealized medieval world.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Neuschwanstein%20Castle,%20Schwangau.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle,_Schwangau.jpg",
+        "imageCredit": "Endrjuch",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle,_Schwangau.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      },
+      {
+        "id": "de-wadden-sea",
+        "title": "ワッデン海",
+        "titleEn": "Wadden Sea",
+        "description": "潮が引くと広大な干潟が現れ、渡り鳥、アザラシ、底生生物を育む生態系です。",
+        "descriptionEn": "Vast tidal flats appear at low tide, supporting migratory birds, seals, and rich marine life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wadden%20Sea%20Landscape.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Wadden_Sea_Landscape.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Wadden_Sea_Landscape.jpg",
+        "category": "世界自然遺産地域",
+        "categoryEn": "World Heritage Region"
+      }
+    ],
+    "culture": [
+      {
+        "id": "de-pretzel",
+        "title": "プレッツェル",
+        "titleEn": "Pretzel",
+        "description": "結び目の形をしたパンで、アルカリ液による香ばしい茶色の表面が特徴です。",
+        "descriptionEn": "This knot-shaped bread is known for its glossy brown crust created by an alkaline treatment before baking.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Muenchner%20Brezn.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Muenchner_Brezn.jpg",
+        "imageCredit": "Sochin EN",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "de-currywurst",
+        "title": "カリーヴルスト",
+        "titleEn": "Currywurst",
+        "description": "焼いたソーセージにケチャップとカレー粉のソースをかける、都市の定番軽食です。",
+        "descriptionEn": "Sliced sausage is covered with a curry-spiced tomato sauce in a popular German street food.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Original%20Berliner%20Currywurst.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Original_Berliner_Currywurst.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Original_Berliner_Currywurst.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "de-christmas-market",
+        "title": "クリスマスマーケット",
+        "titleEn": "Christmas Markets",
+        "description": "冬の広場に屋台と光が並び、工芸品、菓子、温かい飲み物を楽しみます。",
+        "descriptionEn": "Winter squares fill with lights and stalls selling crafts, sweets, and warm seasonal drinks.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Christkindlesmarkt%20nuernberg.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Christkindlesmarkt_nuernberg.jpg",
+        "imageCredit": "Roland Berger",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "季節文化",
+        "categoryEn": "Seasonal Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "医学・音楽・ものづくりで長い交流",
+      "titleEn": "Longstanding Ties in Medicine, Music, and Manufacturing",
+      "text": "日本はドイツから医学、法制度、音楽などを学び、現在も自動車や研究分野で協力しています。",
+      "textEn": "Japan historically learned from German medicine, law, and music, and today cooperates in industry and research."
+    },
+    "quiz": {
+      "question": "活版印刷をヨーロッパで大きく発展させたドイツ出身の人物は誰でしょう？",
+      "questionEn": "Which German inventor greatly advanced movable-type printing in Europe?",
+      "options": [
+        "グーテンベルク",
+        "ニュートン",
+        "ガリレオ",
+        "エジソン"
+      ],
+      "optionsEn": [
+        "Gutenberg",
+        "Newton",
+        "Galileo",
+        "Edison"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はグーテンベルクです。印刷技術は本と知識の普及を大きく加速させました。",
+      "explanationEn": "The answer is Gutenberg. His printing system greatly accelerated the spread of books and knowledge."
+    }
+  },
+  "gh": {
+    "iso": "gh",
+    "nameJa": "ガーナ",
+    "nameEn": "Ghana",
+    "capitalJa": "アクラ",
+    "capitalEn": "Accra",
+    "subtitle": "大西洋岸の歴史的要塞、熱帯林、サバンナ、色鮮やかな工芸文化を持つ国です。",
+    "subtitleEn": "A West African country of coastal forts, rainforest, savanna, and vibrant artistic traditions.",
+    "flagUrl": "https://flagcdn.com/w320/gh.png",
+    "mapQuery": "Accra, Ghana",
+    "timeZone": "Africa/Accra",
+    "currency": {
+      "nameJa": "セディ",
+      "nameEn": "Ghanaian Cedi",
+      "symbol": "GH₵"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約61 m（アクラ）",
+    "elevationEn": "Approx. 61 m (Accra)",
+    "weather": {
+      "summary": "南部は高温多湿で、北部ほど乾燥したサバンナ気候になります。雨季と乾季があります。",
+      "summaryEn": "The south is humid and tropical, while the north is drier and more savanna-like."
+    },
+    "heritage": [
+      {
+        "id": "gh-cape-coast",
+        "title": "ケープ・コースト城",
+        "titleEn": "Cape Coast Castle",
+        "description": "大西洋奴隷貿易の拠点だった城で、地下牢と「帰らざる扉」が歴史を伝えます。",
+        "descriptionEn": "The castle's dungeons and Door of No Return preserve the painful history of the Atlantic slave trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape%20Coast%20castle.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cape_Coast_castle.jpg",
+        "imageCredit": "Kodex",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cape_Coast_castle.jpg",
+        "category": "世界文化遺産群",
+        "categoryEn": "World Heritage Group"
+      },
+      {
+        "id": "gh-kakum",
+        "title": "カクム国立公園",
+        "titleEn": "Kakum National Park",
+        "description": "熱帯林の樹冠をつなぐ吊り橋から、地上では見えない森林の世界を観察できます。",
+        "descriptionEn": "A canopy walkway offers a rare view of rainforest life high above the forest floor.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kakum%20National%20Park,%20Ghana.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kakum_National_Park,_Ghana.jpg",
+        "imageCredit": "ZSM",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kakum_National_Park,_Ghana.jpg",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      },
+      {
+        "id": "gh-larabanga",
+        "title": "ララバンガ・モスク",
+        "titleEn": "Larabanga Mosque",
+        "description": "白い土壁と木材で造られた西アフリカの歴史的モスクで、独特の外観を持ちます。",
+        "descriptionEn": "White earthen walls and projecting wooden beams give this historic mosque its distinctive form.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Larabanga%20Mosque%20Ghana.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Larabanga_Mosque_Ghana.jpg",
+        "imageCredit": "Sathyan Velumani",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Larabanga_Mosque_Ghana.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "gh-jollof",
+        "title": "ガーナ風ジョロフライス",
+        "titleEn": "Ghanaian Jollof Rice",
+        "description": "米をトマト、香辛料、肉や野菜と炊き込み、祝い事にも登場する人気料理です。",
+        "descriptionEn": "Rice is cooked with tomato, spices, meat, or vegetables for celebrations and everyday meals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jollof%20in%20Ghana.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jollof_in_Ghana.jpg",
+        "imageCredit": "Fquasie",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Jollof_in_Ghana.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "gh-kente",
+        "title": "ケンテ織",
+        "titleEn": "Kente Cloth",
+        "description": "細い布を色鮮やかな幾何学模様に織り、地位、歴史、ことわざを表現します。",
+        "descriptionEn": "Bright woven strips use geometric designs to communicate status, history, values, and proverbs.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kentecloth.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kentecloth.jpg",
+        "imageCredit": "Amoahrex2002",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kentecloth.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "gh-adowa",
+        "title": "アドワ・ダンス",
+        "titleEn": "Adowa Dance",
+        "description": "手や足の繊細な動きと太鼓のリズムで、感情や社会的なメッセージを表します。",
+        "descriptionEn": "Subtle hand and foot movements communicate emotion and social messages to the rhythms of drums.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Adowa%20Dance%20in%20Ghana.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Adowa_Dance_in_Ghana.jpg",
+        "imageCredit": "Fquasie",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Adowa_Dance_in_Ghana.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "野口英世博士が結ぶ医学の歴史",
+      "titleEn": "Dr. Hideyo Noguchi Connects the Countries Through Medical History",
+      "text": "野口英世博士はガーナで黄熱病を研究しました。現在も日本は保健、教育、農業で協力しています。",
+      "textEn": "Dr. Hideyo Noguchi researched yellow fever in Ghana, and Japan continues cooperation in health, education, and agriculture."
+    },
+    "quiz": {
+      "question": "ガーナの独立運動を率い、初代首相・大統領となった人物は誰でしょう？",
+      "questionEn": "Who led Ghana's independence movement and became its first prime minister and president?",
+      "options": [
+        "クワメ・エンクルマ",
+        "ネルソン・マンデラ",
+        "ジュリウス・ニエレレ",
+        "ジョモ・ケニヤッタ"
+      ],
+      "optionsEn": [
+        "Kwame Nkrumah",
+        "Nelson Mandela",
+        "Julius Nyerere",
+        "Jomo Kenyatta"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はクワメ・エンクルマです。ガーナは1957年に独立しました。",
+      "explanationEn": "The answer is Kwame Nkrumah. Ghana gained independence in 1957."
+    }
+  },
+  "gr": {
+    "iso": "gr",
+    "nameJa": "ギリシャ",
+    "nameEn": "Greece",
+    "capitalJa": "アテネ",
+    "capitalEn": "Athens",
+    "subtitle": "古代文明の遺跡、エーゲ海の島々、地中海の食文化を持つ南ヨーロッパの国です。",
+    "subtitleEn": "A southern European country of ancient sites, Aegean islands, and Mediterranean food traditions.",
+    "flagUrl": "https://flagcdn.com/w320/gr.png",
+    "mapQuery": "Athens, Greece",
+    "timeZone": "Europe/Athens",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "ギリシャ語",
+        "nameEn": "Greek"
+      }
+    ],
+    "elevation": "約70 m（アテネ）",
+    "elevationEn": "Approx. 70 m (Athens)",
+    "weather": {
+      "summary": "夏は暑く乾燥し、冬は比較的穏やかで雨が増えます。山地では冬に雪も降ります。",
+      "summaryEn": "Summers are hot and dry, winters are milder and wetter, and mountain regions may receive snow."
+    },
+    "heritage": [
+      {
+        "id": "gr-acropolis",
+        "title": "アテネのアクロポリス",
+        "titleEn": "Acropolis of Athens",
+        "description": "丘の上にパルテノン神殿などが立ち、古代ギリシャの建築と思想を伝えます。",
+        "descriptionEn": "The Parthenon and other temples crown the hill, representing ancient Greek architecture and civic ideals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Acropolis,%20Athens.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Acropolis,_Athens.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "gr-meteora",
+        "title": "メテオラ",
+        "titleEn": "Meteora",
+        "description": "巨大な奇岩の頂上に修道院が建ち、自然景観と信仰文化が一体となっています。",
+        "descriptionEn": "Monasteries stand on towering rock pillars, uniting dramatic geology with centuries of religious life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Meteora%20-Greece-%20Kalambaka.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Meteora_-Greece-_Kalambaka.jpg",
+        "imageCredit": "Dimitris9444",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Meteora_-Greece-_Kalambaka.jpg",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      },
+      {
+        "id": "gr-santorini",
+        "title": "サントリーニ島",
+        "titleEn": "Santorini",
+        "description": "火山のカルデラを囲む断崖に白い家々が並び、青い海との対比が広がります。",
+        "descriptionEn": "White villages cling to volcanic cliffs above a deep blue caldera in the Aegean Sea.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Oia,%20Santorini,%20Aegean%20Sea,%20Greece.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Oia,_Santorini,_Aegean_Sea,_Greece.jpg",
+        "imageCredit": "Nikoscaldera",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "文化・自然景観",
+        "categoryEn": "Cultural and Natural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "gr-moussaka",
+        "title": "ムサカ",
+        "titleEn": "Moussaka",
+        "description": "ナス、ひき肉、ソースを重ねて焼き、表面をクリーミーに仕上げる料理です。",
+        "descriptionEn": "Layers of eggplant, seasoned meat, and creamy sauce are baked into a rich casserole.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Moussaka%20and%20Greek%20Salad%20at%20a%20taverna%20in%20Greece.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Moussaka_and_Greek_Salad_at_a_taverna_in_Greece.jpg",
+        "imageCredit": "Vouliagmeni",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Moussaka_and_Greek_Salad_at_a_taverna_in_Greece.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "gr-souvlaki",
+        "title": "スブラキ",
+        "titleEn": "Souvlaki",
+        "description": "肉を串焼きにし、パン、野菜、ヨーグルトソースなどと一緒に食べます。",
+        "descriptionEn": "Grilled meat skewers are served with bread, vegetables, and often a yogurt-based sauce.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Greek%20souvlaki.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Greek_souvlaki.jpg",
+        "imageCredit": "NikosLikomitros",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Greek_souvlaki.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "gr-folk-dance",
+        "title": "ギリシャの民俗舞踊",
+        "titleEn": "Greek Folk Dance",
+        "description": "輪や列を作り、地域ごとに異なるステップを音楽に合わせて踊ります。",
+        "descriptionEn": "Dancers form circles or lines and perform regional steps to traditional music.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Greek%20folk%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Greek_folk_dance.jpg",
+        "imageCredit": "Kwstas pastras",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "オリンピックが両国を結ぶ",
+      "titleEn": "The Olympic Movement Connects Greece and Japan",
+      "text": "近代オリンピック発祥のギリシャと開催経験を持つ日本は、スポーツや文化交流を続けています。",
+      "textEn": "Greece, birthplace of the modern Olympics, and Japan, a multiple host nation, share sporting and cultural ties."
+    },
+    "quiz": {
+      "question": "古代オリンピックが行われた場所はどこでしょう？",
+      "questionEn": "Where were the ancient Olympic Games held?",
+      "options": [
+        "オリンピア",
+        "アテネ",
+        "スパルタ",
+        "デルフィ"
+      ],
+      "optionsEn": [
+        "Olympia",
+        "Athens",
+        "Sparta",
+        "Delphi"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はオリンピアです。競技会は神々への祭典として行われました。",
+      "explanationEn": "The answer is Olympia. The games were held as part of a religious festival."
+    }
+  },
+  "gd": {
+    "iso": "gd",
+    "nameJa": "グレナダ",
+    "nameEn": "Grenada",
+    "capitalJa": "セントジョージズ",
+    "capitalEn": "St. George's",
+    "subtitle": "火山島の緑、青い海、香辛料、音楽文化から「スパイスの島」と呼ばれる国です。",
+    "subtitleEn": "A volcanic Caribbean nation of green hills, blue seas, spices, and lively music.",
+    "flagUrl": "https://flagcdn.com/w320/gd.png",
+    "mapQuery": "St. George's, Grenada",
+    "timeZone": "America/Grenada",
+    "currency": {
+      "nameJa": "東カリブ・ドル",
+      "nameEn": "East Caribbean Dollar",
+      "symbol": "EC$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約30 m（セントジョージズ）",
+    "elevationEn": "Approx. 30 m (St. George's)",
+    "weather": {
+      "summary": "一年を通して温暖な熱帯気候で、雨季には雨が増えます。ハリケーンへの備えも必要です。",
+      "summaryEn": "Grenada is warm and tropical year-round, with a wetter season and a risk of hurricanes."
+    },
+    "heritage": [
+      {
+        "id": "gd-grand-anse",
+        "title": "グランド・アンス・ビーチ",
+        "titleEn": "Grand Anse Beach",
+        "description": "白い砂浜と穏やかな青い海が続く、グレナダを代表する海岸景観です。",
+        "descriptionEn": "A long curve of pale sand and calm blue water forms one of Grenada's best-known coastal landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand%20Anse%20beach,%20Grenada.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Grand_Anse_beach,_Grenada.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Grand_Anse_beach,_Grenada.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "gd-underwater-park",
+        "title": "モリネール海中彫刻公園",
+        "titleEn": "Molinere Underwater Sculpture Park",
+        "description": "海底に人間像などの作品が設置され、芸術とサンゴ礁の再生を結びつけています。",
+        "descriptionEn": "Human figures and other artworks rest underwater, linking contemporary art with reef restoration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grenada%20Underwater%20Sculpture%20Park%20(Boris%20Kasimov)%20-%20Flickr.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Grenada_Underwater_Sculpture_Park_(Boris_Kasimov)_-_Flickr.jpg",
+        "imageCredit": "Boris Kasimov",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Grenada_Underwater_Sculpture_Park_(Boris_Kasimov)_-_Flickr.jpg",
+        "category": "海洋芸術",
+        "categoryEn": "Marine Art"
+      },
+      {
+        "id": "gd-fort-george",
+        "title": "フォート・ジョージ",
+        "titleEn": "Fort George",
+        "description": "港を見下ろす丘に築かれた要塞で、植民地時代と島の政治史を伝えます。",
+        "descriptionEn": "This hilltop fortress overlooks the harbor and preserves important colonial and political history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grenada%20Fort%20George%2011%20(2138544263).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Grenada_Fort_George_11_(2138544263).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Grenada_Fort_George_11_(2138544263).jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "gd-oil-down",
+        "title": "オイル・ダウン",
+        "titleEn": "Oil Down",
+        "description": "パンノキ、肉、野菜をココナツミルクと香辛料で煮込む、国を代表する料理です。",
+        "descriptionEn": "Breadfruit, meat, vegetables, coconut milk, and spices are slowly cooked together in the national dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cooking%20oil%20down%2001.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cooking_oil_down_01.jpg",
+        "imageCredit": "U.S. Embassy Grenada / Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cooking_oil_down_01.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "gd-nutmeg",
+        "title": "ナツメグ文化",
+        "titleEn": "Nutmeg Culture",
+        "description": "果実からナツメグとメースを取り出し、料理、菓子、飲み物などに利用します。",
+        "descriptionEn": "The fruit provides both nutmeg and mace, which are used in cooking, baking, drinks, and local products.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nutmeg%20grenada.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nutmeg_grenada.jpg",
+        "imageCredit": "Lee Edwin Coursey",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nutmeg_grenada.jpg",
+        "category": "農業・香辛料文化",
+        "categoryEn": "Agricultural and Spice Culture"
+      },
+      {
+        "id": "gd-carnival",
+        "title": "カーニバル文化",
+        "titleEn": "Grenadian Carnival",
+        "description": "色鮮やかな衣装、鉄の打楽器、踊りが街を満たし、島の歴史と創造性を表します。",
+        "descriptionEn": "Colorful costumes, percussion, and dance fill the streets and express the island's history and creativity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GrenadaCanival1965Dancers.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:GrenadaCanival1965Dancers.jpg",
+        "imageCredit": "Infrogmation family archive",
+        "imageLicense": "CC BY-SA 2.5",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "漁業と防災で島国同士が協力",
+      "titleEn": "Island Nations Cooperate in Fisheries and Disaster Preparedness",
+      "text": "日本は漁業施設、防災、気候変動対策などを通じてグレナダの持続可能な発展を支援しています。",
+      "textEn": "Japan supports Grenada through fisheries, disaster preparedness, and climate-resilience cooperation."
+    },
+    "quiz": {
+      "question": "グレナダが「スパイスの島」と呼ばれる理由に関係する作物は何でしょう？",
+      "questionEn": "Which crop is closely connected to Grenada's nickname, the Spice Island?",
+      "options": [
+        "ナツメグ",
+        "ワサビ",
+        "サフラン",
+        "バニラだけ"
+      ],
+      "optionsEn": [
+        "Nutmeg",
+        "Wasabi",
+        "Saffron",
+        "Only vanilla"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はナツメグです。国旗にもナツメグの実が描かれています。",
+      "explanationEn": "The answer is nutmeg. A nutmeg fruit even appears on the national flag."
+    }
+  },
+  "gt": {
+    "iso": "gt",
+    "nameJa": "グアテマラ",
+    "nameEn": "Guatemala",
+    "capitalJa": "グアテマラシティ",
+    "capitalEn": "Guatemala City",
+    "subtitle": "マヤ文明の遺跡、火山、高原湖、色鮮やかな織物文化を持つ中米の国です。",
+    "subtitleEn": "A Central American country of Maya sites, volcanoes, highland lakes, and colorful textile traditions.",
+    "flagUrl": "https://flagcdn.com/w320/gt.png",
+    "mapQuery": "Guatemala City, Guatemala",
+    "timeZone": "America/Guatemala",
+    "currency": {
+      "nameJa": "ケツァル",
+      "nameEn": "Quetzal",
+      "symbol": "Q"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      },
+      {
+        "nameJa": "マヤ諸語",
+        "nameEn": "Mayan languages"
+      }
+    ],
+    "elevation": "約1,500 m（グアテマラシティ）",
+    "elevationEn": "Approx. 1,500 m (Guatemala City)",
+    "weather": {
+      "summary": "低地は高温多湿ですが、高原は一年を通して比較的涼しく、雨季と乾季があります。",
+      "summaryEn": "Lowlands are hot and humid, while the highlands are milder with distinct wet and dry seasons."
+    },
+    "heritage": [
+      {
+        "id": "gt-tikal",
+        "title": "ティカル国立公園",
+        "titleEn": "Tikal National Park",
+        "description": "熱帯雨林からマヤ文明の神殿がそびえ、古代都市と豊かな生態系が共存します。",
+        "descriptionEn": "Maya temples rise above rainforest canopy in a site combining ancient urban history with biodiversity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tikal%20-%20Guatemala,%20Guatemala.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tikal_-_Guatemala,_Guatemala.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tikal_-_Guatemala,_Guatemala.jpg",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      },
+      {
+        "id": "gt-antigua",
+        "title": "アンティグア・グアテマラ",
+        "titleEn": "Antigua Guatemala",
+        "description": "石畳の道と教会跡が火山に囲まれ、植民都市の歴史と地震の記憶を伝えます。",
+        "descriptionEn": "Cobblestone streets and ruined churches stand beneath volcanoes, preserving colonial history and earthquake memory.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Antigua%20Guatemala%20-%20Volc%C3%A1n%20de%20Agua.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Antigua_Guatemala_-_Volc%C3%A1n_de_Agua.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Antigua_Guatemala_-_Volc%C3%A1n_de_Agua.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "gt-atitlan",
+        "title": "アティトラン湖",
+        "titleEn": "Lake Atitlán",
+        "description": "火山に囲まれた高原湖の周辺に、異なるマヤ文化を持つ町々が点在します。",
+        "descriptionEn": "Volcanoes surround this highland lake, whose shoreline communities preserve diverse Maya traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Atitlan%20in%20Guatemala.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Atitlan_in_Guatemala.jpg",
+        "imageCredit": "Nanhosen",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "文化・自然景観",
+        "categoryEn": "Cultural and Natural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "gt-pepian",
+        "title": "ペピアン",
+        "titleEn": "Pepián",
+        "description": "肉と野菜を、炒った種、トマト、香辛料から作る濃厚なソースで煮込みます。",
+        "descriptionEn": "Meat and vegetables are simmered in a rich sauce made from roasted seeds, tomatoes, and spices.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ingredientes-comida-guatemala.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ingredientes-comida-guatemala.jpg",
+        "imageCredit": "Alefarfan",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "gt-textiles",
+        "title": "マヤの織物",
+        "titleEn": "Maya Textiles",
+        "description": "地域ごとに異なる色と模様を織り込み、共同体、自然、歴史を衣服に表します。",
+        "descriptionEn": "Regional colors and patterns woven into clothing express community identity, nature, and history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Guatemalan%20textiles.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Guatemalan_textiles.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Guatemalan_textiles.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "gt-marimba",
+        "title": "マリンバ",
+        "titleEn": "Marimba",
+        "description": "木の鍵盤をたたく楽器で、祭り、式典、街角の演奏に欠かせない存在です。",
+        "descriptionEn": "This wooden-key percussion instrument is central to festivals, ceremonies, and public performances.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tocadores%20de%20marimba%2004.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tocadores_de_marimba_04.JPG",
+        "imageCredit": "Alfredobi",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tocadores_de_marimba_04.JPG",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "マヤ遺跡・防災・農村開発で協力",
+      "titleEn": "Cooperation in Maya Heritage, Disaster Preparedness, and Rural Development",
+      "text": "日本は考古学研究、地震防災、教育、保健、農業などを通じてグアテマラと協力しています。",
+      "textEn": "Japan cooperates with Guatemala in archaeology, earthquake preparedness, education, health, and agriculture."
+    },
+    "quiz": {
+      "question": "グアテマラの通貨名にも使われている美しい鳥は何でしょう？",
+      "questionEn": "Which colorful bird also gives its name to Guatemala's currency?",
+      "options": [
+        "ケツァール",
+        "コンドル",
+        "フラミンゴ",
+        "ペンギン"
+      ],
+      "optionsEn": [
+        "Quetzal",
+        "Condor",
+        "Flamingo",
+        "Penguin"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はケツァールです。古代マヤでも羽が貴重なものとして大切にされました。",
+      "explanationEn": "The answer is the quetzal. Its feathers were highly valued in ancient Maya culture."
+    }
+  },
+  "gn": {
+    "iso": "gn",
+    "nameJa": "ギニア",
+    "nameEn": "Guinea",
+    "capitalJa": "コナクリ",
+    "capitalEn": "Conakry",
+    "subtitle": "大西洋岸から高原、森林地帯へと広がり、西アフリカの大河の源を持つ国です。",
+    "subtitleEn": "A West African country of Atlantic coast, highlands, forests, and headwaters of major rivers.",
+    "flagUrl": "https://flagcdn.com/w320/gn.png",
+    "mapQuery": "Conakry, Guinea",
+    "timeZone": "Africa/Conakry",
+    "currency": {
+      "nameJa": "ギニア・フラン",
+      "nameEn": "Guinean Franc",
+      "symbol": "FG"
+    },
+    "languages": [
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約10 m（コナクリ）",
+    "elevationEn": "Approx. 10 m (Conakry)",
+    "weather": {
+      "summary": "沿岸部は高温多湿で雨が多く、内陸高地は比較的涼しくなります。地域差が大きいです。",
+      "summaryEn": "The coast is hot and very rainy, while inland highlands are cooler and climates vary greatly by region."
+    },
+    "heritage": [
+      {
+        "id": "gn-nimba",
+        "title": "ニンバ山厳正自然保護区",
+        "titleEn": "Mount Nimba Strict Nature Reserve",
+        "description": "草原と森林が標高に沿って変化し、固有のカエルやチンパンジーなどが生息します。",
+        "descriptionEn": "Grasslands and forests change with elevation, supporting rare frogs, chimpanzees, and endemic species.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mont%20Nimba%20landscape.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mont_Nimba_landscape.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mont_Nimba_landscape.jpg",
+        "category": "世界自然遺産地域",
+        "categoryEn": "World Heritage Region"
+      },
+      {
+        "id": "gn-fouta-djallon",
+        "title": "フータ・ジャロン高地",
+        "titleEn": "Fouta Djallon Highlands",
+        "description": "滝と谷が広がる高原で、ニジェール川やセネガル川など多くの河川の源流です。",
+        "descriptionEn": "Waterfalls and valleys mark a highland region that feeds major West African rivers.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fouta%20Djallon.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fouta_Djallon.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Fouta_Djallon.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "gn-los-islands",
+        "title": "ロス諸島",
+        "titleEn": "Îles de Los",
+        "description": "コナクリ沖に浮かぶ島々で、砂浜、マングローブ、植民地史の痕跡が残ります。",
+        "descriptionEn": "These islands off Conakry combine beaches, mangroves, fishing communities, and traces of colonial history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Los%20Islands,%20Guinea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Los_Islands,_Guinea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Los_Islands,_Guinea.jpg",
+        "category": "島嶼景観",
+        "categoryEn": "Island Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "gn-djembe",
+        "title": "ジャンベ",
+        "titleEn": "Djembe",
+        "description": "一本の木をくり抜き、動物の皮を張る太鼓で、踊りや儀礼のリズムを支えます。",
+        "descriptionEn": "Carved from a single piece of wood and covered with skin, this drum drives dance and ceremony.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Historical%20djembe.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Historical_djembe.jpg",
+        "imageCredit": "Musée de l'Homme / Wikimedia Commons contributor",
+        "imageLicense": "CC BY 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/1.0/",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      },
+      {
+        "id": "gn-nimba-mask",
+        "title": "バガのニンバ仮面",
+        "titleEn": "Baga Nimba Mask",
+        "description": "巨大な肩乗せ型の仮面で、豊穣、農業、女性の力を象徴する舞踊に用います。",
+        "descriptionEn": "This monumental shoulder mask represents fertility, agriculture, and female strength in ceremonial dance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nimba%20mask,%20Baga%20people,%20Republic%20of%20Guinea,%20West%20Africa%20(6339138402).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nimba_mask,_Baga_people,_Republic_of_Guinea,_West_Africa_(6339138402).jpg",
+        "imageCredit": "Cliff1066",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "伝統芸術",
+        "categoryEn": "Traditional Art"
+      },
+      {
+        "id": "gn-yassa",
+        "title": "チキン・ヤッサ",
+        "titleEn": "Chicken Yassa",
+        "description": "鶏肉をレモンと玉ねぎで漬け込み、酸味と甘みのあるソースで煮込みます。",
+        "descriptionEn": "Chicken is marinated with lemon and onions, then cooked in a tangy, savory sauce.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Poulet%20yassa.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Poulet_yassa.jpg",
+        "imageCredit": "InspiFood",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Poulet_yassa.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "漁業・保健・農業で協力",
+      "titleEn": "Cooperation in Fisheries, Health, and Agriculture",
+      "text": "日本は漁業施設、保健医療、農業、教育、人材育成などを通してギニアを支援しています。",
+      "textEn": "Japan supports Guinea through cooperation in fisheries, health care, agriculture, education, and training."
+    },
+    "quiz": {
+      "question": "ギニアのフータ・ジャロン高地を源流とする西アフリカの大河はどれでしょう？",
+      "questionEn": "Which major West African river has headwaters in Guinea's Fouta Djallon highlands?",
+      "options": [
+        "ニジェール川",
+        "ナイル川",
+        "ライン川",
+        "ミシシッピ川"
+      ],
+      "optionsEn": [
+        "Niger River",
+        "Nile River",
+        "Rhine River",
+        "Mississippi River"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はニジェール川です。セネガル川やガンビア川などの源流もギニアにあります。",
+      "explanationEn": "The answer is the Niger River. The Senegal and Gambia rivers also have headwaters in Guinea."
+    }
+  },
+  "gw": {
+    "iso": "gw",
+    "nameJa": "ギニアビサウ",
+    "nameEn": "Guinea-Bissau",
+    "capitalJa": "ビサウ",
+    "capitalEn": "Bissau",
+    "subtitle": "マングローブ、河口、ビジャゴ諸島、多民族の祭り文化を持つ西アフリカの国です。",
+    "subtitleEn": "A West African country of mangroves, estuaries, the Bijagós Islands, and multicultural festivals.",
+    "flagUrl": "https://flagcdn.com/w320/gw.png",
+    "mapQuery": "Bissau, Guinea-Bissau",
+    "timeZone": "Africa/Bissau",
+    "currency": {
+      "nameJa": "西アフリカCFAフラン",
+      "nameEn": "West African CFA Franc",
+      "symbol": "CFA"
+    },
+    "languages": [
+      {
+        "nameJa": "ポルトガル語",
+        "nameEn": "Portuguese"
+      },
+      {
+        "nameJa": "ギニアビサウ・クレオール語",
+        "nameEn": "Guinea-Bissau Creole"
+      }
+    ],
+    "elevation": "約5 m（ビサウ）",
+    "elevationEn": "Approx. 5 m (Bissau)",
+    "weather": {
+      "summary": "高温の熱帯気候で、雨季と乾季があります。沿岸部には広いマングローブが発達します。",
+      "summaryEn": "The climate is tropical with wet and dry seasons, and extensive mangroves grow along the coast."
+    },
+    "heritage": [
+      {
+        "id": "gw-bijagos",
+        "title": "ビジャゴ諸島",
+        "titleEn": "Bijagós Archipelago",
+        "description": "多数の島と干潟、マングローブが広がり、ウミガメや海鳥を支える生態系です。",
+        "descriptionEn": "Islands, tidal flats, and mangroves support sea turtles, birds, fish, and traditional communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ilhas%20Bijagos,%20GUine%20Bissau.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ilhas_Bijagos,_GUine_Bissau.jpg",
+        "imageCredit": "Mailsonribeiro",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ilhas_Bijagos,_GUine_Bissau.jpg",
+        "category": "生物圏保護区",
+        "categoryEn": "Biosphere Reserve"
+      },
+      {
+        "id": "gw-orango",
+        "title": "オランゴ国立公園",
+        "titleEn": "Orango National Park",
+        "description": "マングローブと浅い海にカバが暮らす珍しい環境で、島の文化も守られています。",
+        "descriptionEn": "Mangroves and shallow coastal waters support rare saltwater-adapted hippos and island communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ilha%20de%20Orango,Guin%C3%A9%20Bissau,2018.png?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ilha_de_Orango,Guin%C3%A9_Bissau,2018.png",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ilha_de_Orango,Guin%C3%A9_Bissau,2018.png",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      },
+      {
+        "id": "gw-cacheu",
+        "title": "カシェウの歴史地区",
+        "titleEn": "Historic Cacheu",
+        "description": "古い要塞や港の跡が残り、ポルトガル交易と奴隷貿易の歴史を伝えています。",
+        "descriptionEn": "Fort and port remains preserve the history of Portuguese trade and the Atlantic slave trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/DC%20-%20Guin%C3%A9%20-%20Fortaleza%20de%20Cacheu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:DC_-_Guin%C3%A9_-_Fortaleza_de_Cacheu.jpg",
+        "imageCredit": "Unknown historical photographer",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "歴史遺産",
+        "categoryEn": "Historic Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "gw-caldo-mancarra",
+        "title": "カルド・デ・マンカラ",
+        "titleEn": "Caldo de Mancarra",
+        "description": "落花生の濃厚なソースに肉や魚、野菜を加え、米と一緒に味わう料理です。",
+        "descriptionEn": "A rich peanut sauce is cooked with meat, fish, or vegetables and served with rice.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Caldo%20de%20Mancarra%20da%20Guin%C3%A9-Bissau.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Caldo_de_Mancarra_da_Guin%C3%A9-Bissau.jpg",
+        "imageCredit": "Jesica Luis Mendes",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Caldo_de_Mancarra_da_Guin%C3%A9-Bissau.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "gw-carnival",
+        "title": "ビサウのカーニバル",
+        "titleEn": "Bissau Carnival",
+        "description": "各民族の仮面、衣装、踊り、太鼓が首都に集まり、文化の多様性を祝います。",
+        "descriptionEn": "Masks, costumes, dance, and drumming from many communities celebrate the country's diversity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carnaval%20Guin%C3%A9-Bissau.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Carnaval_Guin%C3%A9-Bissau.jpg",
+        "imageCredit": "Bnhamadjo",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Carnaval_Guin%C3%A9-Bissau.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "gw-bijago-dance",
+        "title": "ビジャゴの仮面舞踊",
+        "titleEn": "Bijagó Masked Dance",
+        "description": "動物を表す仮面と力強い動きで、島の物語、儀礼、自然との関係を表します。",
+        "descriptionEn": "Animal-inspired masks and powerful movement express island stories, ceremonies, and relationships with nature.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dan%C3%A7a%20de%20Bijag%C3%B3s%20Carnaval%20de%20Bissau%202023%2003.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dan%C3%A7a_de_Bijag%C3%B3s_Carnaval_de_Bissau_2023_03.jpg",
+        "imageCredit": "Bnhamadjo",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dan%C3%A7a_de_Bijag%C3%B3s_Carnaval_de_Bissau_2023_03.jpg",
+        "category": "伝統舞踊",
+        "categoryEn": "Traditional Dance"
+      }
+    ],
+    "japanConnection": {
+      "title": "漁業と食料安全保障を支援",
+      "titleEn": "Supporting Fisheries and Food Security",
+      "text": "日本は漁業、農業、食料支援、保健、教育などを通じてギニアビサウの暮らしを支えています。",
+      "textEn": "Japan supports Guinea-Bissau through cooperation in fisheries, agriculture, food security, health, and education."
+    },
+    "quiz": {
+      "question": "ギニアビサウ沖に広がる島々は何と呼ばれるでしょう？",
+      "questionEn": "What is the name of the island group off the coast of Guinea-Bissau?",
+      "options": [
+        "ビジャゴ諸島",
+        "ガラパゴス諸島",
+        "カナリア諸島",
+        "ハワイ諸島"
+      ],
+      "optionsEn": [
+        "Bijagós Archipelago",
+        "Galápagos Islands",
+        "Canary Islands",
+        "Hawaiian Islands"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はビジャゴ諸島です。マングローブやウミガメなど豊かな自然で知られます。",
+      "explanationEn": "The answer is the Bijagós Archipelago, known for mangroves, sea turtles, and rich marine life."
+    }
+  },
+  "gy": {
+    "iso": "gy",
+    "nameJa": "ガイアナ",
+    "nameEn": "Guyana",
+    "capitalJa": "ジョージタウン",
+    "capitalEn": "Georgetown",
+    "subtitle": "南米にありながら英語を公用語とし、巨大な滝と熱帯雨林を持つ国です。",
+    "subtitleEn": "An English-speaking South American country of immense waterfalls, rainforest, and multicultural traditions.",
+    "flagUrl": "https://flagcdn.com/w320/gy.png",
+    "mapQuery": "Georgetown, Guyana",
+    "timeZone": "America/Guyana",
+    "currency": {
+      "nameJa": "ガイアナ・ドル",
+      "nameEn": "Guyanese Dollar",
+      "symbol": "G$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約1 m（ジョージタウン）",
+    "elevationEn": "Approx. 1 m (Georgetown)",
+    "weather": {
+      "summary": "一年を通して高温多湿で、沿岸部には雨季があります。内陸の大部分は熱帯雨林です。",
+      "summaryEn": "The climate is hot and humid, with rainy seasons along the coast and vast rainforest inland."
+    },
+    "heritage": [
+      {
+        "id": "gy-kaieteur",
+        "title": "カイエトゥール滝",
+        "titleEn": "Kaieteur Falls",
+        "description": "熱帯雨林の川が約226 mを一気に落下する、世界有数の迫力を持つ滝です。",
+        "descriptionEn": "A rainforest river plunges about 226 meters in a powerful single drop.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kaieteur%20Falls,%20Guyana%20(23294865279).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kaieteur_Falls,_Guyana_(23294865279).jpg",
+        "imageCredit": "Dan Sloan",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "gy-iwokrama",
+        "title": "イウォクラマ森林",
+        "titleEn": "Iwokrama Forest",
+        "description": "熱帯雨林を守りながら研究と持続可能な利用を進める国際的な実験地域です。",
+        "descriptionEn": "This rainforest combines conservation, scientific research, and experiments in sustainable forest use.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iwokrama%20Rainforest,%20Guyana%20(12178909973).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Iwokrama_Rainforest,_Guyana_(12178909973).jpg",
+        "imageCredit": "David Stanley",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "森林保全地域",
+        "categoryEn": "Forest Conservation Area"
+      },
+      {
+        "id": "gy-st-george",
+        "title": "セント・ジョージ大聖堂",
+        "titleEn": "St. George's Cathedral",
+        "description": "白く高い木造建築がジョージタウンにそびえ、都市の歴史を象徴しています。",
+        "descriptionEn": "This tall white wooden cathedral is a landmark of Georgetown's architectural and religious history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/St.%20Georges%20Cathedral%20Georgetown,%20Guyana.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:St._Georges_Cathedral_Georgetown,_Guyana.jpg",
+        "imageCredit": "Ian Mackenzie",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "gy-pepperpot",
+        "title": "ペッパーポット",
+        "titleEn": "Guyanese Pepperpot",
+        "description": "肉をキャッサリープという濃いソースと香辛料で煮込む、祝いの定番料理です。",
+        "descriptionEn": "Meat is slowly cooked with cassareep and spices in a dish strongly associated with celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pepperpot%20(16135006279).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pepperpot_(16135006279).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "gy-roti",
+        "title": "ガイアナ式ロティ",
+        "titleEn": "Guyanese Roti",
+        "description": "薄いパンを焼いて手でほぐし、カレーや煮込み料理を包んだり添えたりして食べます。",
+        "descriptionEn": "This soft flatbread is clapped into flaky layers and served with curries and stews.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GuyaneseRoti.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:GuyaneseRoti.JPG",
+        "imageCredit": "DJLYX",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "gy-mashramani",
+        "title": "マシュラマニ",
+        "titleEn": "Mashramani",
+        "description": "共和国記念日に衣装、山車、音楽、踊りで「よくできた仕事」を祝う祭りです。",
+        "descriptionEn": "Costumes, floats, music, and dance celebrate Republic Day and the idea of work well done.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mashramani-in-Guyana-2007-by-GuyaneseTavern.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mashramani-in-Guyana-2007-by-GuyaneseTavern.jpg",
+        "imageCredit": "GuyaneseTavern",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mashramani-in-Guyana-2007-by-GuyaneseTavern.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "森林保全と防災で協力",
+      "titleEn": "Cooperation in Forest Conservation and Disaster Preparedness",
+      "text": "日本は森林、環境、防災、エネルギー、保健などの分野でガイアナと交流しています。",
+      "textEn": "Japan and Guyana cooperate in forestry, environmental protection, disaster preparedness, energy, and health."
+    },
+    "quiz": {
+      "question": "南アメリカで英語を公用語とする主権国家はどこでしょう？",
+      "questionEn": "Which sovereign South American country has English as its official language?",
+      "options": [
+        "ガイアナ",
+        "ブラジル",
+        "チリ",
+        "ペルー"
+      ],
+      "optionsEn": [
+        "Guyana",
+        "Brazil",
+        "Chile",
+        "Peru"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はガイアナです。歴史的にイギリスの統治を受けたため英語が公用語です。",
+      "explanationEn": "The answer is Guyana. English became official through the country's history under British rule."
+    }
+  }
+}

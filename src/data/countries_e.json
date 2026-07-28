@@ -1,0 +1,1174 @@
+{
+  "ec": {
+    "iso": "ec",
+    "nameJa": "エクアドル",
+    "nameEn": "Ecuador",
+    "capitalJa": "キト",
+    "capitalEn": "Quito",
+    "subtitle": "赤道直下にあり、アンデス、アマゾン、太平洋、ガラパゴス諸島を持つ国です。",
+    "subtitleEn": "An equatorial nation containing the Andes, Amazon rainforest, Pacific coast, and Galápagos Islands.",
+    "flagUrl": "https://flagcdn.com/w320/ec.png",
+    "mapQuery": "Quito, Ecuador",
+    "timeZone": "America/Guayaquil",
+    "currency": {
+      "nameJa": "米ドル",
+      "nameEn": "United States Dollar",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      },
+      {
+        "nameJa": "キチュア語",
+        "nameEn": "Kichwa"
+      }
+    ],
+    "elevation": "約2,850 m（キト）",
+    "elevationEn": "Approx. 2,850 m (Quito)",
+    "weather": {
+      "summary": "赤道直下でも高地は涼しく、沿岸部は高温多湿です。標高によって気候が大きく変化します。",
+      "summaryEn": "Despite its equatorial location, highland areas are cool while the coast is warmer and more humid."
+    },
+    "heritage": [
+      {
+        "id": "ec-galapagos",
+        "title": "ガラパゴス諸島",
+        "titleEn": "Galápagos Islands",
+        "description": "独自に進化した動植物が多く、ダーウィンの進化論にも大きな影響を与えた島々です。",
+        "descriptionEn": "These volcanic islands host uniquely evolved wildlife and strongly influenced Darwin's ideas on evolution.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gal%C3%A1pagos%20Islands%20(Ecuador).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gal%C3%A1pagos_Islands_(Ecuador).jpg",
+        "imageCredit": "Francesco Bandarin / UNESCO",
+        "imageLicense": "CC BY-SA 3.0 IGO",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ec-quito",
+        "title": "キト歴史地区",
+        "titleEn": "Historic Centre of Quito",
+        "description": "アンデス高地に教会や広場が残り、ヨーロッパと先住民文化が融合した街並みです。",
+        "descriptionEn": "Churches and plazas in the Andean highlands reflect a blend of European and Indigenous artistic traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Historic%20Center%20of%20Quito,%20Calle%20Gal%C3%A1pagos,%20Quito,%20Ecuador.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Historic_Center_of_Quito,_Calle_Gal%C3%A1pagos,_Quito,_Ecuador.jpg",
+        "imageCredit": "David Adam Kess",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ec-cotopaxi",
+        "title": "コトパクシ山",
+        "titleEn": "Cotopaxi Volcano",
+        "description": "雪を頂く円すい形の活火山で、標高約5,900 mの山体がアンデスにそびえます。",
+        "descriptionEn": "This snow-capped active volcano rises nearly 5,900 meters above the Ecuadorian Andes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Volc%C3%A1n%20Cotopaxi,%20Ecuador.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_Cotopaxi,_Ecuador.JPG",
+        "imageCredit": "David C.",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_Cotopaxi,_Ecuador.JPG",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ec-ceviche",
+        "title": "エクアドル風セビーチェ",
+        "titleEn": "Ecuadorian Ceviche",
+        "description": "魚介を柑橘果汁やトマトで味付けし、ポップコーンや焼きバナナを添えることもあります。",
+        "descriptionEn": "Seafood is flavored with citrus and tomato and may be served with popcorn or fried plantain.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ceviche%20from%20Ecuador.jpeg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ceviche_from_Ecuador.jpeg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ceviche_from_Ecuador.jpeg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ec-hornado",
+        "title": "オルナード",
+        "titleEn": "Hornado",
+        "description": "豚肉を香ばしく焼き、トウモロコシ、ジャガイモ、サラダなどと盛り付ける料理です。",
+        "descriptionEn": "Slow-roasted pork is served with corn, potatoes, salad, and regional sauces.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hornado%20en%20I%C3%B1aquito.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hornado_en_I%C3%B1aquito.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ec-panama-hat",
+        "title": "パナマハットの手仕事",
+        "titleEn": "Traditional Panama Hat Weaving",
+        "description": "名前はパナマハットですが発祥はエクアドルで、トキヤ草を細かく編んで作ります。",
+        "descriptionEn": "Despite the name, Panama hats originated in Ecuador and are finely woven from toquilla straw.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Panama%20Hat%20factory%20in%20Cuenca,%20Ecuador.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Panama_Hat_factory_in_Cuenca,_Ecuador.jpg",
+        "imageCredit": "David Brossard",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Panama_Hat_factory_in_Cuenca,_Ecuador.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "火山国同士で防災の知恵を共有",
+      "titleEn": "Sharing Disaster Knowledge Between Volcanic Nations",
+      "text": "日本とエクアドルは、地震・津波・火山防災、環境保全、漁業などの分野で協力しています。",
+      "textEn": "Japan and Ecuador cooperate in earthquake, tsunami, and volcano preparedness, as well as conservation and fisheries."
+    },
+    "quiz": {
+      "question": "「パナマハット」が本来生まれた国はどこでしょう？",
+      "questionEn": "In which country did the Panama hat actually originate?",
+      "options": [
+        "エクアドル",
+        "パナマ",
+        "メキシコ",
+        "スペイン"
+      ],
+      "optionsEn": [
+        "Ecuador",
+        "Panama",
+        "Mexico",
+        "Spain"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はエクアドルです。パナマ経由で世界へ輸出されたため、この名前が広まりました。",
+      "explanationEn": "The answer is Ecuador. The hats became associated with Panama because they were exported through it."
+    }
+  },
+  "eg": {
+    "iso": "eg",
+    "nameJa": "エジプト",
+    "nameEn": "Egypt",
+    "capitalJa": "カイロ",
+    "capitalEn": "Cairo",
+    "subtitle": "ナイル川と砂漠の間に古代文明が栄え、巨大建築と多彩な食文化が残る国です。",
+    "subtitleEn": "A country where ancient civilization flourished beside the Nile, leaving monumental architecture and rich traditions.",
+    "flagUrl": "https://flagcdn.com/w320/eg.png",
+    "mapQuery": "Cairo, Egypt",
+    "timeZone": "Africa/Cairo",
+    "currency": {
+      "nameJa": "エジプト・ポンド",
+      "nameEn": "Egyptian Pound",
+      "symbol": "E£"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約23 m（カイロ）",
+    "elevationEn": "Approx. 23 m (Cairo)",
+    "weather": {
+      "summary": "国土の大半は乾燥した砂漠で、夏は非常に暑くなります。地中海沿岸は比較的穏やかです。",
+      "summaryEn": "Most of Egypt is dry desert with very hot summers, while the Mediterranean coast is somewhat milder."
+    },
+    "heritage": [
+      {
+        "id": "eg-giza",
+        "title": "ギザのピラミッド群",
+        "titleEn": "Pyramids of Giza",
+        "description": "約4,500年前に築かれた巨大墓で、石材運搬や測量技術の高さに今も驚かされます。",
+        "descriptionEn": "Built about 4,500 years ago, these monumental tombs reveal extraordinary engineering and surveying skill.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20pyramids%20of%20Giza.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:The_pyramids_of_Giza.jpg",
+        "imageCredit": "Myousry6666",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "eg-abu-simbel",
+        "title": "アブ・シンベル神殿",
+        "titleEn": "Abu Simbel Temples",
+        "description": "岩山を彫って造られた巨大神殿で、ダム建設時には国際協力で高台へ移されました。",
+        "descriptionEn": "Carved into rock, the temples were relocated to higher ground through a major international rescue project.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu%20Simbel%20Temple%20Egypt.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Abu_Simbel_Temple_Egypt.jpg",
+        "imageCredit": "Myousry6666",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Abu_Simbel_Temple_Egypt.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "eg-white-desert",
+        "title": "白砂漠",
+        "titleEn": "White Desert",
+        "description": "風に削られた白い石灰岩がキノコや動物のような形となり、幻想的な景観を作ります。",
+        "descriptionEn": "Wind-shaped white limestone formations resemble mushrooms and animals across a surreal desert landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/White%20Desert%20(1).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:White_Desert_(1).jpg",
+        "imageCredit": "Myousry6666",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:White_Desert_(1).jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "eg-koshari",
+        "title": "コシャリ",
+        "titleEn": "Koshari",
+        "description": "米、パスタ、レンズ豆、豆を重ね、トマトソースと揚げ玉ねぎをかける国民食です。",
+        "descriptionEn": "Rice, pasta, lentils, and chickpeas are topped with tomato sauce and crispy onions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Egyptian%20Koshari.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Egyptian_Koshari.jpg",
+        "imageCredit": "Basma",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Egyptian_Koshari.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "eg-ful-medames",
+        "title": "フール・メダミス",
+        "titleEn": "Ful Medames",
+        "description": "そら豆を柔らかく煮て、レモン、香辛料、油などで味付けする定番の朝食です。",
+        "descriptionEn": "Slow-cooked fava beans are seasoned with lemon, oil, herbs, and spices for a popular breakfast.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ful%20medames.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ful_medames.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "eg-taameya",
+        "title": "ターメイヤ",
+        "titleEn": "Taameya",
+        "description": "そら豆をつぶして香草と混ぜ、丸く揚げるエジプト式のファラフェルです。",
+        "descriptionEn": "Egyptian falafel is made from fava beans mixed with herbs and fried until crisp.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tameya%20Karoleen%20Lindberg.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tameya_Karoleen_Lindberg.jpg",
+        "imageCredit": "Losttraveller",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tameya_Karoleen_Lindberg.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "大エジプト博物館を日本が支援",
+      "titleEn": "Japan Supports the Grand Egyptian Museum",
+      "text": "日本は博物館建設、文化財保存、人材育成に協力し、古代遺産を未来へ伝える活動を支えています。",
+      "textEn": "Japan has supported museum development, conservation, and professional training to preserve Egypt's ancient heritage."
+    },
+    "quiz": {
+      "question": "古代エジプト文明の発展を支えた大河は何でしょう？",
+      "questionEn": "Which great river supported the development of ancient Egyptian civilization?",
+      "options": [
+        "ナイル川",
+        "アマゾン川",
+        "ドナウ川",
+        "メコン川"
+      ],
+      "optionsEn": [
+        "The Nile",
+        "The Amazon",
+        "The Danube",
+        "The Mekong"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はナイル川です。定期的な増水が農地へ栄養豊かな土を運びました。",
+      "explanationEn": "The answer is the Nile. Its seasonal flooding deposited fertile soil for agriculture."
+    }
+  },
+  "sv": {
+    "iso": "sv",
+    "nameJa": "エルサルバドル",
+    "nameEn": "El Salvador",
+    "capitalJa": "サンサルバドル",
+    "capitalEn": "San Salvador",
+    "subtitle": "火山、湖、太平洋岸、マヤ遺跡が近い範囲に集まる中米で最も小さな国です。",
+    "subtitleEn": "Central America's smallest country, with volcanoes, lakes, Pacific beaches, and Maya archaeology.",
+    "flagUrl": "https://flagcdn.com/w320/sv.png",
+    "mapQuery": "San Salvador, El Salvador",
+    "timeZone": "America/El_Salvador",
+    "currency": {
+      "nameJa": "米ドル",
+      "nameEn": "United States Dollar",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約660 m（サンサルバドル）",
+    "elevationEn": "Approx. 660 m (San Salvador)",
+    "weather": {
+      "summary": "一年を通して温暖で、雨季と乾季があります。火山地帯の高地は低地より涼しくなります。",
+      "summaryEn": "The climate is warm with wet and dry seasons, while volcanic highlands are cooler than coastal areas."
+    },
+    "heritage": [
+      {
+        "id": "sv-joya-ceren",
+        "title": "ホヤ・デ・セレン遺跡",
+        "titleEn": "Joya de Cerén Archaeological Site",
+        "description": "火山灰に埋もれたマヤの村落跡で、王宮ではなく庶民の日常生活を詳しく伝えます。",
+        "descriptionEn": "A Maya village buried by volcanic ash preserves rare evidence of ordinary homes, tools, and daily life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ES%20Joya%20Ceren%2005%202012%20Estructura%203%20Area%203%201470.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:ES_Joya_Ceren_05_2012_Estructura_3_Area_3_1470.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:ES_Joya_Ceren_05_2012_Estructura_3_Area_3_1470.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sv-santa-ana",
+        "title": "サンタ・アナ火山",
+        "titleEn": "Santa Ana Volcano",
+        "description": "国内最高峰の火山で、火口には鮮やかな青緑色の酸性湖が広がっています。",
+        "descriptionEn": "The country's highest volcano contains a striking blue-green acidic crater lake.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Section%20of%20Santa%20Ana%20Volcano,%20El%20Salvador.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Section_of_Santa_Ana_Volcano,_El_Salvador.jpg",
+        "imageCredit": "Bobjgalindo",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Section_of_Santa_Ana_Volcano,_El_Salvador.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "sv-suchitoto",
+        "title": "スチトト",
+        "titleEn": "Suchitoto",
+        "description": "石畳の道や白い教会が残り、芸術祭や工芸でも知られる歴史的な町です。",
+        "descriptionEn": "Cobblestone streets and a white church define this historic town, also known for arts and crafts.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia%20de%20Suchitoto.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Suchitoto.jpg",
+        "imageCredit": "L. Marroquín",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Suchitoto.jpg",
+        "category": "歴史都市",
+        "categoryEn": "Historic Town"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sv-pupusas",
+        "title": "ププサ",
+        "titleEn": "Pupusas",
+        "description": "厚いトウモロコシ生地にチーズ、豆、肉などを詰めて焼く国を代表する料理です。",
+        "descriptionEn": "Thick corn cakes are filled with cheese, beans, or meat and cooked on a hot griddle.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dos%20Pupusas%20en%20El%20Salvador.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dos_Pupusas_en_El_Salvador.jpg",
+        "imageCredit": "Ll1324",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dos_Pupusas_en_El_Salvador.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "sv-yuca-frita",
+        "title": "ユカ・フリタ",
+        "titleEn": "Yuca Frita",
+        "description": "キャッサバを揚げ、豚肉、キャベツの酢漬け、ソースなどと一緒に食べます。",
+        "descriptionEn": "Fried cassava is served with pork, pickled cabbage, and tomato sauce.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Empanada%20y%20yuca%20frita%20salvadore%C3%B1a.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Empanada_y_yuca_frita_salvadore%C3%B1a.jpg",
+        "imageCredit": "Levystarr",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Empanada_y_yuca_frita_salvadore%C3%B1a.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "sv-coffee",
+        "title": "高地のコーヒー文化",
+        "titleEn": "Highland Coffee Culture",
+        "description": "火山性の土壌を生かしてコーヒーを育て、収穫後は豆を天日で乾燥させます。",
+        "descriptionEn": "Coffee grows in volcanic highlands, and harvested beans are carefully processed and dried in the sun.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Drying%20coffee%20on%20a%20plantation%20in%20El%20Salvador(GN03500).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Drying_coffee_on_a_plantation_in_El_Salvador(GN03500).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "農業文化",
+        "categoryEn": "Agricultural Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "防災と地熱で火山国同士が協力",
+      "titleEn": "Volcanic Nations Cooperate in Disaster Prevention and Geothermal Energy",
+      "text": "日本は地震・火山防災、地熱発電、教育、人材育成などの分野で協力しています。",
+      "textEn": "Japan supports cooperation in earthquake and volcano preparedness, geothermal energy, education, and training."
+    },
+    "quiz": {
+      "question": "エルサルバドルを代表する、具入りの厚いトウモロコシ料理は何でしょう？",
+      "questionEn": "What filled corn cake is considered a national dish of El Salvador?",
+      "options": [
+        "ププサ",
+        "タコス",
+        "パエリア",
+        "クスクス"
+      ],
+      "optionsEn": [
+        "Pupusa",
+        "Taco",
+        "Paella",
+        "Couscous"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はププサです。チーズ、豆、豚肉などを生地の中に包んで焼きます。",
+      "explanationEn": "The answer is pupusa. Cheese, beans, or pork are enclosed inside the dough before cooking."
+    }
+  },
+  "gq": {
+    "iso": "gq",
+    "nameJa": "赤道ギニア",
+    "nameEn": "Equatorial Guinea",
+    "capitalJa": "マラボ",
+    "capitalEn": "Malabo",
+    "subtitle": "大陸部と火山島からなり、熱帯雨林、石油資源、スペイン語文化を持つ国です。",
+    "subtitleEn": "A country of mainland rainforest and volcanic islands, shaped by energy resources and Spanish-language heritage.",
+    "flagUrl": "https://flagcdn.com/w320/gq.png",
+    "mapQuery": "Malabo, Equatorial Guinea",
+    "timeZone": "Africa/Malabo",
+    "currency": {
+      "nameJa": "中央アフリカCFAフラン",
+      "nameEn": "Central African CFA Franc",
+      "symbol": "FCFA"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "ポルトガル語",
+        "nameEn": "Portuguese"
+      }
+    ],
+    "elevation": "約20 m（マラボ）",
+    "elevationEn": "Approx. 20 m (Malabo)",
+    "weather": {
+      "summary": "高温多湿の熱帯気候で雨が多く、島の山地ではさらに降水量が増えます。",
+      "summaryEn": "The climate is hot, humid, and rainy, with especially heavy rainfall on the islands' mountain slopes."
+    },
+    "heritage": [
+      {
+        "id": "gq-pico-basile",
+        "title": "ピコ・バシレ",
+        "titleEn": "Pico Basilé",
+        "description": "ビオコ島にそびえる国内最高峰の火山で、山麓から熱帯林と海を見渡せます。",
+        "descriptionEn": "The country's highest mountain is a volcanic peak rising above Bioko Island's rainforest and coast.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pico%20Basil%C3%A9.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pico_Basil%C3%A9.jpg",
+        "imageCredit": "Serge Moons",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pico_Basil%C3%A9.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "gq-monte-alen",
+        "title": "モンテ・アレン国立公園",
+        "titleEn": "Monte Alén National Park",
+        "description": "大陸部の熱帯雨林を守る公園で、ゴリラ、チンパンジー、森林ゾウなどが暮らします。",
+        "descriptionEn": "Mainland rainforest protects gorillas, chimpanzees, forest elephants, and many other species.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nationalpark%20Monte%20Al%C3%A9n.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nationalpark_Monte_Al%C3%A9n.jpg",
+        "imageCredit": "Mehlauge",
+        "imageLicense": "GFDL / See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nationalpark_Monte_Al%C3%A9n.jpg",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      },
+      {
+        "id": "gq-malabo",
+        "title": "マラボの街並み",
+        "titleEn": "Malabo Cityscape",
+        "description": "火山を背景に市場や植民地期の建築が並び、島の歴史と現代生活が交差します。",
+        "descriptionEn": "Markets and historic buildings stand beneath a volcanic mountain, linking island history with modern life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado%20Central,%20Malabo%20City,%20Equatorial%20Guinea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mercado_Central,_Malabo_City,_Equatorial_Guinea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mercado_Central,_Malabo_City,_Equatorial_Guinea.jpg",
+        "category": "都市文化景観",
+        "categoryEn": "Urban Cultural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "gq-benga-dance",
+        "title": "ベンガの伝統祭",
+        "titleEn": "Benga Traditional Festival",
+        "description": "コリスコ島のベンガの人々が、衣装、音楽、踊りを通して共同体の歴史を伝えます。",
+        "descriptionEn": "Benga communities on Corisco Island express history and identity through dress, music, and dance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiesta%20tradicional%20de%20los%20Benga,%20Isla%20Corisco%20-%20Guinea%20Ecuatorial%2001.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fiesta_tradicional_de_los_Benga,_Isla_Corisco_-_Guinea_Ecuatorial_01.jpg",
+        "imageCredit": "Rafael Toledano",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Fiesta_tradicional_de_los_Benga,_Isla_Corisco_-_Guinea_Ecuatorial_01.jpg",
+        "category": "伝統文化",
+        "categoryEn": "Traditional Culture"
+      },
+      {
+        "id": "gq-fish-cassava",
+        "title": "魚とキャッサバ",
+        "titleEn": "Fish with Cassava",
+        "description": "沿岸でとれた魚を焼いたり煮たりし、キャッサバや香辛料と組み合わせて食べます。",
+        "descriptionEn": "Coastal fish is grilled or stewed and served with cassava and local seasonings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20plate%20of%20cassava%20chips%20with%20fish.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:A_plate_of_cassava_chips_with_fish.jpg",
+        "imageCredit": "Sunday Glory",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:A_plate_of_cassava_chips_with_fish.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "gq-plantain",
+        "title": "プランテン料理",
+        "titleEn": "Plantain Dishes",
+        "description": "甘くないバナナの一種を揚げたり焼いたりし、魚や豆、ソースと合わせます。",
+        "descriptionEn": "Starchy plantains are fried or roasted and paired with fish, beans, or spicy sauces.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/FRIED%20PLANTAIN%20FISH.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:FRIED_PLANTAIN_FISH.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "天然ガスと国際協力でつながる",
+      "titleEn": "Connections Through Natural Gas and International Cooperation",
+      "text": "日本とはエネルギー貿易の接点があり、保健や人材育成などの国際協力も行われています。",
+      "textEn": "Japan has energy trade links with Equatorial Guinea and supports cooperation in health and professional training."
+    },
+    "quiz": {
+      "question": "赤道ギニアで公用語として広く使われるヨーロッパの言語は何でしょう？",
+      "questionEn": "Which European language is widely used as an official language in Equatorial Guinea?",
+      "options": [
+        "スペイン語",
+        "ドイツ語",
+        "オランダ語",
+        "デンマーク語"
+      ],
+      "optionsEn": [
+        "Spanish",
+        "German",
+        "Dutch",
+        "Danish"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はスペイン語です。アフリカでは珍しく、スペイン語が主要な公用語です。",
+      "explanationEn": "The answer is Spanish, which is unusual as a major official language in Africa."
+    }
+  },
+  "er": {
+    "iso": "er",
+    "nameJa": "エリトリア",
+    "nameEn": "Eritrea",
+    "capitalJa": "アスマラ",
+    "capitalEn": "Asmara",
+    "subtitle": "紅海の海岸、高原都市、砂漠、島々が広がり、アフリカとアラブ文化が交わる国です。",
+    "subtitleEn": "A country of Red Sea coasts, highland cities, deserts, and islands where African and Arab influences meet.",
+    "flagUrl": "https://flagcdn.com/w320/er.png",
+    "mapQuery": "Asmara, Eritrea",
+    "timeZone": "Africa/Asmara",
+    "currency": {
+      "nameJa": "ナクファ",
+      "nameEn": "Nakfa",
+      "symbol": "Nfk"
+    },
+    "languages": [
+      {
+        "nameJa": "ティグリニャ語",
+        "nameEn": "Tigrinya"
+      },
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約2,325 m（アスマラ）",
+    "elevationEn": "Approx. 2,325 m (Asmara)",
+    "weather": {
+      "summary": "高原のアスマラは比較的涼しく、紅海沿岸は非常に暑く乾燥しています。",
+      "summaryEn": "Highland Asmara is relatively cool, while the Red Sea coast is extremely hot and dry."
+    },
+    "heritage": [
+      {
+        "id": "er-asmara",
+        "title": "アスマラの近代建築",
+        "titleEn": "Modernist Asmara",
+        "description": "20世紀前半の映画館、集合住宅、商店などが残り、独特の都市景観を作っています。",
+        "descriptionEn": "Cinemas, apartments, shops, and civic buildings preserve a distinctive twentieth-century modernist cityscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asmara%20City%20Eritrea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Asmara_City_Eritrea.jpg",
+        "imageCredit": "Robel Weldeab",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Asmara_City_Eritrea.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "er-massawa",
+        "title": "マッサワ旧市街",
+        "titleEn": "Historic Massawa",
+        "description": "サンゴ石の建物や港が残り、紅海交易を通じたアフリカ、アラブ、欧州の交流を伝えます。",
+        "descriptionEn": "Coral-stone buildings and the old port reflect centuries of African, Arab, and European exchange.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Massawa%20Eritrea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Massawa_Eritrea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Massawa_Eritrea.jpg",
+        "category": "歴史都市",
+        "categoryEn": "Historic City"
+      },
+      {
+        "id": "er-dahlak",
+        "title": "ダフラク諸島",
+        "titleEn": "Dahlak Archipelago",
+        "description": "紅海に多数の島とサンゴ礁が点在し、海鳥、魚、ジュゴンなどの生息地となっています。",
+        "descriptionEn": "Islands and coral reefs in the Red Sea provide habitat for seabirds, fish, and dugongs.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dahlak%20Archipelago,%20Red%20Sea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dahlak_Archipelago,_Red_Sea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "海洋自然",
+        "categoryEn": "Marine Nature"
+      }
+    ],
+    "culture": [
+      {
+        "id": "er-zigni-injera",
+        "title": "ズィグニとインジェラ",
+        "titleEn": "Zigni with Injera",
+        "description": "香辛料を効かせた肉の煮込みを、発酵させた酸味のある薄いパンと一緒に食べます。",
+        "descriptionEn": "A spicy meat stew is eaten with tangy fermented flatbread used to scoop up the food.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eritrean%20food%20on%20an%20injeera.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Eritrean_food_on_an_injeera.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "er-coffee-ceremony",
+        "title": "コーヒー・セレモニー",
+        "titleEn": "Coffee Ceremony",
+        "description": "生豆を煎るところから始め、香りや会話を楽しみながら小さな杯で何度も味わいます。",
+        "descriptionEn": "Coffee beans are roasted, brewed, and served in small cups during a long social ritual.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coffee%20ceremony.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Coffee_ceremony.jpg",
+        "imageCredit": "Hans van der Splinter",
+        "imageLicense": "CC BY-SA 2.5",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "category": "生活文化",
+        "categoryEn": "Living Culture"
+      },
+      {
+        "id": "er-cafe-culture",
+        "title": "アスマラのカフェ文化",
+        "titleEn": "Asmara Café Culture",
+        "description": "高原の街にはエスプレッソを楽しむカフェが多く、都市建築と食文化が結びついています。",
+        "descriptionEn": "Asmara's cafés connect espresso traditions with the city's modernist architecture and social life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Espresso%20in%20Asmara.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Espresso_in_Asmara.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Espresso_in_Asmara.jpg",
+        "category": "都市文化",
+        "categoryEn": "Urban Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "食料・保健分野で人々を支援",
+      "titleEn": "Supporting Communities Through Food and Health Assistance",
+      "text": "日本は国際機関を通じて、食料安全保障、母子保健、水衛生などの支援を行っています。",
+      "textEn": "Japan supports food security, maternal health, water, and sanitation through international organizations."
+    },
+    "quiz": {
+      "question": "エリトリアが長い海岸線を持つ海はどこでしょう？",
+      "questionEn": "Along which sea does Eritrea have a long coastline?",
+      "options": [
+        "紅海",
+        "黒海",
+        "カリブ海",
+        "バルト海"
+      ],
+      "optionsEn": [
+        "The Red Sea",
+        "The Black Sea",
+        "The Caribbean Sea",
+        "The Baltic Sea"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は紅海です。紅海を通る航路は、ヨーロッパとアジアを結ぶ重要な海上交通路です。",
+      "explanationEn": "The answer is the Red Sea, part of a major shipping route connecting Europe and Asia."
+    }
+  },
+  "ee": {
+    "iso": "ee",
+    "nameJa": "エストニア",
+    "nameEn": "Estonia",
+    "capitalJa": "タリン",
+    "capitalEn": "Tallinn",
+    "subtitle": "中世都市、森林、島々を持ち、電子政府とデジタル社会で知られるバルトの国です。",
+    "subtitleEn": "A Baltic country of medieval cities, forests, and islands, known for e-government and digital society.",
+    "flagUrl": "https://flagcdn.com/w320/ee.png",
+    "mapQuery": "Tallinn, Estonia",
+    "timeZone": "Europe/Tallinn",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "エストニア語",
+        "nameEn": "Estonian"
+      }
+    ],
+    "elevation": "約40 m（タリン）",
+    "elevationEn": "Approx. 40 m (Tallinn)",
+    "weather": {
+      "summary": "冬は寒く雪が降り、夏は涼しく日が長くなります。海の影響で天気は変わりやすいです。",
+      "summaryEn": "Winters are cold and snowy, while summers are mild with long daylight hours."
+    },
+    "heritage": [
+      {
+        "id": "ee-tallinn",
+        "title": "タリン旧市街",
+        "titleEn": "Tallinn Old Town",
+        "description": "城壁、塔、石畳の道が残り、ハンザ同盟時代の商業都市の姿を今に伝えます。",
+        "descriptionEn": "Walls, towers, and cobbled streets preserve the character of a medieval Hanseatic trading city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn,%20Old%20Town.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tallinn,_Old_Town.jpg",
+        "imageCredit": "Hei1972",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tallinn,_Old_Town.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ee-lahemaa",
+        "title": "ラヘマー国立公園",
+        "titleEn": "Lahemaa National Park",
+        "description": "森、湿地、海岸、歴史的な邸宅が集まり、バルト海沿岸の自然を観察できます。",
+        "descriptionEn": "Forests, bogs, coastlines, and historic manor houses reveal the diversity of the Baltic landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lahemaa%20010.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lahemaa_010.JPG",
+        "imageCredit": "Dmitry G",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      },
+      {
+        "id": "ee-kuressaare",
+        "title": "クレサーレ城",
+        "titleEn": "Kuressaare Castle",
+        "description": "サーレマー島に残る中世の城塞で、堀と厚い石壁が良好な状態で保存されています。",
+        "descriptionEn": "This medieval fortress on Saaremaa Island retains its moat, towers, and massive stone walls.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuressaare%20Castle.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kuressaare_Castle.jpg",
+        "imageCredit": "Stefan Hiienurm",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kuressaare_Castle.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ee-song-festival",
+        "title": "歌の祭典",
+        "titleEn": "Estonian Song Festival",
+        "description": "数万人が合唱に参加し、歌を通して民族文化や社会の結びつきを表現します。",
+        "descriptionEn": "Tens of thousands gather to sing, expressing national identity and community through choral music.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinna%20song%20festival.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tallinna_song_festival.jpg",
+        "imageCredit": "MaSii",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      },
+      {
+        "id": "ee-kama",
+        "title": "カマ",
+        "titleEn": "Kama",
+        "description": "大麦、ライ麦、オーツ麦、豆などの粉を乳製品に混ぜて食べる伝統食品です。",
+        "descriptionEn": "A roasted grain and pea flour mixture is blended with yogurt, kefir, or milk.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kama.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kama.jpg",
+        "imageCredit": "Mmh",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ee-rye-bread",
+        "title": "黒いライ麦パン",
+        "titleEn": "Dark Rye Bread",
+        "description": "酸味と深い香りを持つライ麦パンは、家庭の食卓や祝いの場に欠かせません。",
+        "descriptionEn": "Dense, tangy rye bread is a staple of everyday meals and an important symbol of home.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rye%20bread.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Rye_bread.jpg",
+        "imageCredit": "Kulmalukko",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Rye_bread.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "デジタル社会とサイバー分野で協力",
+      "titleEn": "Cooperation in Digital Society and Cybersecurity",
+      "text": "日本とエストニアは電子政府、スタートアップ、サイバーセキュリティ分野で交流を深めています。",
+      "textEn": "Japan and Estonia cooperate in e-government, startups, digital services, and cybersecurity."
+    },
+    "quiz": {
+      "question": "エストニアが世界的に知られる行政の特徴は何でしょう？",
+      "questionEn": "Which feature of public administration is Estonia especially known for?",
+      "options": [
+        "電子政府",
+        "紙だけの手続き",
+        "移動式宮殿",
+        "砂漠農業"
+      ],
+      "optionsEn": [
+        "E-government",
+        "Paper-only procedures",
+        "A mobile palace",
+        "Desert agriculture"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は電子政府です。多くの行政サービスをデジタルIDを使ってオンラインで利用できます。",
+      "explanationEn": "The answer is e-government. Many public services can be accessed online using a digital identity."
+    }
+  },
+  "sz": {
+    "iso": "sz",
+    "nameJa": "エスワティニ",
+    "nameEn": "Eswatini",
+    "capitalJa": "ムババーネ（行政）／ロバンバ（王室・立法）",
+    "capitalEn": "Mbabane (administrative) / Lobamba (royal and legislative)",
+    "subtitle": "山地とサバンナが広がり、王国の伝統儀礼と野生動物保護が息づく国です。",
+    "subtitleEn": "A southern African kingdom of mountains and savanna, known for royal traditions and wildlife conservation.",
+    "flagUrl": "https://flagcdn.com/w320/sz.png",
+    "mapQuery": "Mbabane, Eswatini",
+    "timeZone": "Africa/Mbabane",
+    "currency": {
+      "nameJa": "リランゲニ",
+      "nameEn": "Lilangeni",
+      "symbol": "L"
+    },
+    "languages": [
+      {
+        "nameJa": "スワジ語",
+        "nameEn": "Swati"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約1,240 m（ムババーネ）",
+    "elevationEn": "Approx. 1,240 m (Mbabane)",
+    "weather": {
+      "summary": "西部高地は涼しく雨が多く、東部低地は暑く乾燥しています。地域で気候差が大きいです。",
+      "summaryEn": "Western highlands are cooler and wetter, while eastern lowlands are hotter and drier."
+    },
+    "heritage": [
+      {
+        "id": "sz-mlilwane",
+        "title": "ムリルワネ野生生物保護区",
+        "titleEn": "Mlilwane Wildlife Sanctuary",
+        "description": "シマウマやレイヨウが暮らす国内最古の保護区で、地域の自然保護を支えてきました。",
+        "descriptionEn": "The country's oldest wildlife sanctuary protects zebras, antelopes, birds, and varied landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mlilwane%20Wildlife%20Sanctuary%20in%20Eswatini%2001.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mlilwane_Wildlife_Sanctuary_in_Eswatini_01.jpg",
+        "imageCredit": "Bgag",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mlilwane_Wildlife_Sanctuary_in_Eswatini_01.jpg",
+        "category": "自然保護区",
+        "categoryEn": "Wildlife Sanctuary"
+      },
+      {
+        "id": "sz-sibebe",
+        "title": "シベベ・ロック",
+        "titleEn": "Sibebe Rock",
+        "description": "巨大な花こう岩の一枚岩で、斜面から周囲の山地と谷を見渡せます。",
+        "descriptionEn": "This enormous granite formation rises above nearby valleys and is a major hiking landmark.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Granite%20monolith.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Granite_monolith.jpg",
+        "imageCredit": "Nozlim",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Granite_monolith.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "sz-mantenga",
+        "title": "マンテンガ文化村",
+        "titleEn": "Mantenga Cultural Village",
+        "description": "伝統家屋、工芸、歌、踊りを通して、スワジの共同体生活を体験的に学べます。",
+        "descriptionEn": "Traditional homes, crafts, songs, and dances introduce visitors to Swati community life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mantenga%20Cultural%20Village%20(7045494313)%20(8).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mantenga_Cultural_Village_(7045494313)_(8).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mantenga_Cultural_Village_(7045494313)_(8).jpg",
+        "category": "文化施設",
+        "categoryEn": "Cultural Site"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sz-umhlanga",
+        "title": "ウムランガ（リード・ダンス）",
+        "titleEn": "Umhlanga Reed Dance",
+        "description": "若い女性たちが葦を運び、歌と踊りで共同体や王国への敬意を表す大規模な行事です。",
+        "descriptionEn": "Young women carry reeds and perform songs and dances in a major ceremony of community and identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Swazi%20Reed%20Dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Swazi_Reed_Dance.jpg",
+        "imageCredit": "AjarnRichard",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "伝統祭礼",
+        "categoryEn": "Traditional Festival"
+      },
+      {
+        "id": "sz-incwala",
+        "title": "インクワラ",
+        "titleEn": "Incwala",
+        "description": "収穫、王権、祈りを結びつける重要な国家儀礼で、歌や踊りが行われます。",
+        "descriptionEn": "This national ceremony links harvest, kingship, prayer, music, and dance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Incwala%20ceremony.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Incwala_ceremony.jpg",
+        "imageCredit": "Sphiwe Clememtine Mkhabela",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "伝統祭礼",
+        "categoryEn": "Traditional Festival"
+      },
+      {
+        "id": "sz-sishwala",
+        "title": "シシュワラ",
+        "titleEn": "Sishwala",
+        "description": "トウモロコシ粉を固めに煮た主食で、野菜、豆、肉、魚の料理と一緒に食べます。",
+        "descriptionEn": "A thick maize porridge is served with vegetables, beans, meat, or fish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Isitshwala%20esilamacimbi.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Isitshwala_esilamacimbi.jpg",
+        "imageCredit": "Hope A Ncube",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Isitshwala_esilamacimbi.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "教育・農業・保健で協力",
+      "titleEn": "Cooperation in Education, Agriculture, and Health",
+      "text": "日本は学校教育、農業技術、保健医療、人材育成などを通じてエスワティニを支援しています。",
+      "textEn": "Japan supports Eswatini through cooperation in education, agricultural skills, health care, and training."
+    },
+    "quiz": {
+      "question": "エスワティニが2018年まで国際的に呼ばれていた名前は何でしょう？",
+      "questionEn": "What was Eswatini internationally called until 2018?",
+      "options": [
+        "スワジランド",
+        "ローデシア",
+        "ベチュアナランド",
+        "バストランド"
+      ],
+      "optionsEn": [
+        "Swaziland",
+        "Rhodesia",
+        "Bechuanaland",
+        "Basutoland"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はスワジランドです。独立50周年の年に国名をエスワティニへ変更しました。",
+      "explanationEn": "The answer is Swaziland. The country adopted the name Eswatini in 2018."
+    }
+  },
+  "et": {
+    "iso": "et",
+    "nameJa": "エチオピア",
+    "nameEn": "Ethiopia",
+    "capitalJa": "アディスアベバ",
+    "capitalEn": "Addis Ababa",
+    "subtitle": "高原、地溝帯、古代王国の遺跡、多言語社会を持つアフリカ有数の歴史国です。",
+    "subtitleEn": "A historic African nation of highlands, the Rift Valley, ancient kingdoms, and great linguistic diversity.",
+    "flagUrl": "https://flagcdn.com/w320/et.png",
+    "mapQuery": "Addis Ababa, Ethiopia",
+    "timeZone": "Africa/Addis_Ababa",
+    "currency": {
+      "nameJa": "ブル",
+      "nameEn": "Birr",
+      "symbol": "Br"
+    },
+    "languages": [
+      {
+        "nameJa": "アムハラ語",
+        "nameEn": "Amharic"
+      },
+      {
+        "nameJa": "オロモ語",
+        "nameEn": "Oromo"
+      },
+      {
+        "nameJa": "ティグリニャ語",
+        "nameEn": "Tigrinya"
+      },
+      {
+        "nameJa": "ソマリ語",
+        "nameEn": "Somali"
+      }
+    ],
+    "elevation": "約2,350 m（アディスアベバ）",
+    "elevationEn": "Approx. 2,350 m (Addis Ababa)",
+    "weather": {
+      "summary": "高原は赤道付近でも涼しく、低地は暑く乾燥しています。標高で気温と降水量が変化します。",
+      "summaryEn": "Highlands are cool despite the tropical latitude, while lowlands are hotter and often much drier."
+    },
+    "heritage": [
+      {
+        "id": "et-lalibela",
+        "title": "ラリベラの岩窟教会群",
+        "titleEn": "Rock-Hewn Churches of Lalibela",
+        "description": "巨大な岩盤を上から掘り下げて造られた教会群で、現在も礼拝が続いています。",
+        "descriptionEn": "These churches were carved downward from solid rock and remain active places of worship.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rock-Hewn%20Churches,%20Lalibela%20Ethiopia%20(1).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Rock-Hewn_Churches,_Lalibela_Ethiopia_(1).jpg",
+        "imageCredit": "Radosław Botev",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Rock-Hewn_Churches,_Lalibela_Ethiopia_(1).jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "et-simien",
+        "title": "シミエン国立公園",
+        "titleEn": "Simien National Park",
+        "description": "深い谷と断崖が広がり、ゲラダヒヒやワリアアイベックスなどの固有動物が暮らします。",
+        "descriptionEn": "Deep valleys and cliffs support endemic wildlife such as geladas and Walia ibex.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Simien%20National%20Park-139421.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Simien_National_Park-139421.jpg",
+        "imageCredit": "UNESCO / Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Simien_National_Park-139421.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "et-fasil-ghebbi",
+        "title": "ファジル・ゲビ",
+        "titleEn": "Fasil Ghebbi",
+        "description": "ゴンダールの城塞都市で、アフリカ、アラブ、インド、欧州の建築要素が融合しています。",
+        "descriptionEn": "This royal fortress complex blends African, Arab, Indian, and European architectural influences.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fasil%20Ghebbi,%20Gondar%20Region-107586.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fasil_Ghebbi,_Gondar_Region-107586.jpg",
+        "imageCredit": "UNESCO",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Fasil_Ghebbi,_Gondar_Region-107586.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "et-injera",
+        "title": "インジェラ",
+        "titleEn": "Injera",
+        "description": "テフを発酵させて焼く酸味のある薄いパンで、料理を盛る皿と食具の役割も果たします。",
+        "descriptionEn": "This fermented teff flatbread serves as food, plate, and utensil for shared meals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Injera%2002.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Injera_02.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "et-coffee-ceremony",
+        "title": "エチオピアのコーヒー・セレモニー",
+        "titleEn": "Ethiopian Coffee Ceremony",
+        "description": "豆を煎り、香りを共有し、何杯もゆっくり飲みながら会話を深める習慣です。",
+        "descriptionEn": "Beans are roasted and brewed while guests share aroma, conversation, and several rounds of coffee.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coffee%20ceremony,%20Lalibela.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Coffee_ceremony,_Lalibela.jpg",
+        "imageCredit": "Niels Van Iperen",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "生活文化",
+        "categoryEn": "Living Culture"
+      },
+      {
+        "id": "et-doro-wat",
+        "title": "ドロ・ワット",
+        "titleEn": "Doro Wat",
+        "description": "鶏肉とゆで卵をベルベレという香辛料で煮込む、祝いの食卓を代表する料理です。",
+        "descriptionEn": "Chicken and boiled eggs are simmered with berbere spices in a celebrated festive stew.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian%20wat.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ethiopian_wat.jpg",
+        "imageCredit": "Stu Spivack",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "日本式「カイゼン」が工場へ",
+      "titleEn": "Japanese Kaizen Reaches Ethiopian Workplaces",
+      "text": "日本は製造業の改善手法「カイゼン」の普及、農業、教育、保健などで協力しています。",
+      "textEn": "Japan supports Ethiopia through Kaizen management, agriculture, education, health, and professional training."
+    },
+    "quiz": {
+      "question": "エチオピア暦は通常、一年を何か月に分けるでしょう？",
+      "questionEn": "How many months are normally counted in the Ethiopian calendar?",
+      "options": [
+        "13か月",
+        "10か月",
+        "11か月",
+        "15か月"
+      ],
+      "optionsEn": [
+        "13 months",
+        "10 months",
+        "11 months",
+        "15 months"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は13か月です。12か月は各30日で、最後に5日または6日の短い月があります。",
+      "explanationEn": "The answer is 13 months. Twelve have 30 days, followed by a short month of five or six days."
+    }
+  }
+}

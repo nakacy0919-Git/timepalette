@@ -1,0 +1,1504 @@
+{
+  "kh": {
+    "iso": "kh",
+    "nameJa": "カンボジア",
+    "nameEn": "Cambodia",
+    "capitalJa": "プノンペン",
+    "capitalEn": "Phnom Penh",
+    "subtitle": "アンコール遺跡とメコン川流域の暮らしが息づく、東南アジアの国です。",
+    "subtitleEn": "A Southeast Asian country shaped by Angkor's legacy and life along the Mekong River.",
+    "flagUrl": "https://flagcdn.com/w320/kh.png",
+    "mapQuery": "Phnom Penh, Cambodia",
+    "timeZone": "Asia/Phnom_Penh",
+    "currency": {
+      "nameJa": "リエル",
+      "nameEn": "Riel",
+      "symbol": "៛"
+    },
+    "languages": [
+      {
+        "nameJa": "クメール語",
+        "nameEn": "Khmer"
+      }
+    ],
+    "elevation": "約12 m（プノンペン）",
+    "elevationEn": "Approx. 12 m (Phnom Penh)",
+    "weather": {
+      "summary": "一年を通して高温で、雨季と乾季があります。雨季にはメコン川や湖の水位が大きく変化します。",
+      "summaryEn": "The climate is hot year-round, with distinct wet and dry seasons that strongly affect rivers and lakes."
+    },
+    "heritage": [
+      {
+        "id": "kh-angkor-wat",
+        "title": "アンコール・ワット",
+        "titleEn": "Angkor Wat",
+        "description": "巨大な石造寺院に精密な彫刻が残り、クメール王朝の建築技術と宇宙観を伝えます。",
+        "descriptionEn": "This vast stone temple displays detailed carvings and the architectural skill of the Khmer Empire.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Angkor%20Wat%20in%20Cambodia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Angkor_Wat_in_Cambodia.jpg",
+        "imageCredit": "Martaapue",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "kh-fish-amok",
+        "title": "フィッシュ・アモック",
+        "titleEn": "Fish Amok",
+        "description": "魚をココナツミルクと香辛料で蒸す料理で、バナナの葉の器に盛ることもあります。",
+        "descriptionEn": "Fish is gently steamed with coconut milk and spices, often in a cup made from banana leaves.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Amok%20with%20fish%20%288259154034%29.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Amok_with_fish_(8259154034).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "日本の専門家がアンコール遺跡を守る",
+      "titleEn": "Japanese Experts Help Preserve Angkor",
+      "text": "日本の研究者や技術者は、アンコール遺跡の調査、修復、人材育成に長年協力しています。",
+      "textEn": "Japanese researchers and engineers have supported the study, restoration, and preservation of Angkor for many years."
+    },
+    "quiz": {
+      "question": "カンボジアの国旗の中央に描かれている建物は何でしょう？",
+      "questionEn": "Which building appears at the center of Cambodia's national flag?",
+      "options": [
+        "アンコール・ワット",
+        "王宮",
+        "国会議事堂",
+        "凱旋門"
+      ],
+      "optionsEn": [
+        "Angkor Wat",
+        "The Royal Palace",
+        "The Parliament",
+        "A triumphal arch"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はアンコール・ワットです。国旗に実在の建築物が描かれている珍しい国です。",
+      "explanationEn": "The answer is Angkor Wat. Cambodia is unusual because its flag features a real historic building."
+    }
+  },
+  "cm": {
+    "iso": "cm",
+    "nameJa": "カメルーン",
+    "nameEn": "Cameroon",
+    "capitalJa": "ヤウンデ",
+    "capitalEn": "Yaoundé",
+    "subtitle": "熱帯雨林、サバンナ、高山、海岸がそろい、「アフリカの縮図」と呼ばれる国です。",
+    "subtitleEn": "A country of rainforest, savanna, mountains, and coastlines, often called Africa in miniature.",
+    "flagUrl": "https://flagcdn.com/w320/cm.png",
+    "mapQuery": "Yaounde, Cameroon",
+    "timeZone": "Africa/Douala",
+    "currency": {
+      "nameJa": "中央アフリカCFAフラン",
+      "nameEn": "Central African CFA Franc",
+      "symbol": "FCFA"
+    },
+    "languages": [
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約750 m（ヤウンデ）",
+    "elevationEn": "Approx. 750 m (Yaoundé)",
+    "weather": {
+      "summary": "南部は高温多湿の熱帯気候で、北へ進むほど乾燥します。高地は比較的涼しくなります。",
+      "summaryEn": "The south is humid and tropical, the north is drier, and higher regions have cooler temperatures."
+    },
+    "heritage": [
+      {
+        "id": "cm-waza",
+        "title": "ワザ国立公園",
+        "titleEn": "Waza National Park",
+        "description": "サバンナと湿地が広がり、ゾウ、キリン、多彩な鳥類などが生息する自然保護区です。",
+        "descriptionEn": "Savanna and wetlands provide habitat for elephants, giraffes, antelopes, and many bird species.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Parc%20Waza.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Parc_Waza.jpg",
+        "imageCredit": "Photokadaffi",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "自然保護区",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "cm-ndole",
+        "title": "ンドレ",
+        "titleEn": "Ndolé",
+        "description": "ほろ苦い葉を落花生のペーストや肉、魚介と煮込む、カメルーンを代表する料理です。",
+        "descriptionEn": "Bitter leaves are cooked with ground peanuts, meat, or seafood to create a rich national favorite.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ndol%C3%A9%20camerounais.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ndol%C3%A9_camerounais.JPG",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "教育・保健・森林保全で協力",
+      "titleEn": "Cooperation in Education, Health, and Forest Conservation",
+      "text": "日本は学校、保健医療、農業、森林保全などの分野でカメルーンの人材育成を支援しています。",
+      "textEn": "Japan supports Cameroon through cooperation in education, health care, agriculture, and forest conservation."
+    },
+    "quiz": {
+      "question": "カメルーンが「アフリカの縮図」と呼ばれる理由は何でしょう？",
+      "questionEn": "Why is Cameroon sometimes called Africa in miniature?",
+      "options": [
+        "多様な自然と文化があるから",
+        "面積が最も小さいから",
+        "すべての国境が海だから",
+        "国全体が砂漠だから"
+      ],
+      "optionsEn": [
+        "It has diverse landscapes and cultures",
+        "It is Africa's smallest country",
+        "All its borders are coastlines",
+        "The entire country is desert"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は、多様な自然と文化があるからです。海岸から森林、山地、サバンナまで見られます。",
+      "explanationEn": "Cameroon contains coastlines, rainforest, mountains, and savanna, as well as great cultural diversity."
+    }
+  },
+  "ca": {
+    "iso": "ca",
+    "nameJa": "カナダ",
+    "nameEn": "Canada",
+    "capitalJa": "オタワ",
+    "capitalEn": "Ottawa",
+    "subtitle": "広大な森林、湖、北極圏の自然と、多文化都市を持つ北アメリカの国です。",
+    "subtitleEn": "A vast North American country of forests, lakes, Arctic landscapes, and multicultural cities.",
+    "flagUrl": "https://flagcdn.com/w320/ca.png",
+    "mapQuery": "Ottawa, Canada",
+    "timeZone": "America/Toronto",
+    "currency": {
+      "nameJa": "カナダ・ドル",
+      "nameEn": "Canadian Dollar",
+      "symbol": "C$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約70 m（オタワ）",
+    "elevationEn": "Approx. 70 m (Ottawa)",
+    "weather": {
+      "summary": "地域差が大きく、多くの地域で冬は寒く雪が降ります。太平洋沿岸は比較的温暖です。",
+      "summaryEn": "Climate varies widely; many regions have cold snowy winters, while the Pacific coast is comparatively mild."
+    },
+    "heritage": [
+      {
+        "id": "ca-lake-louise",
+        "title": "カナディアン・ロッキーとレイク・ルイーズ",
+        "titleEn": "Canadian Rockies and Lake Louise",
+        "description": "氷河がつくった青い湖と険しい山々が広がり、地球の地形形成を観察できます。",
+        "descriptionEn": "Glacial lakes and rugged peaks create a landscape that reveals the powerful forces shaping Earth.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Louise%2C%20Canada%2C%20Banff.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Louise,_Canada,_Banff.jpg",
+        "imageCredit": "Vlunyak",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界自然遺産地域",
+        "categoryEn": "World Heritage Region"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ca-poutine",
+        "title": "プーティン",
+        "titleEn": "Poutine",
+        "description": "フライドポテトにチーズカードとグレービーソースをかける、ケベック生まれの料理です。",
+        "descriptionEn": "French fries are topped with cheese curds and hot gravy in this popular dish from Quebec.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Poutine.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Poutine.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "留学・貿易・日系社会で深いつながり",
+      "titleEn": "Strong Ties Through Study, Trade, and Japanese Canadian Communities",
+      "text": "日本とカナダは留学や姉妹都市交流が盛んで、各地には長い歴史を持つ日系社会があります。",
+      "textEn": "Japan and Canada share active educational and city exchanges, supported by long-established Japanese Canadian communities."
+    },
+    "quiz": {
+      "question": "カナダの首都はどこでしょう？",
+      "questionEn": "What is the capital of Canada?",
+      "options": [
+        "オタワ",
+        "トロント",
+        "バンクーバー",
+        "モントリオール"
+      ],
+      "optionsEn": [
+        "Ottawa",
+        "Toronto",
+        "Vancouver",
+        "Montreal"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はオタワです。最大都市はトロントですが、首都はオンタリオ州のオタワです。",
+      "explanationEn": "The answer is Ottawa. Toronto is the largest city, but Ottawa is the national capital."
+    }
+  },
+  "cv": {
+    "iso": "cv",
+    "nameJa": "カーボベルデ",
+    "nameEn": "Cabo Verde",
+    "capitalJa": "プライア",
+    "capitalEn": "Praia",
+    "subtitle": "火山島、乾いた大地、音楽文化が特徴的な、大西洋上の島国です。",
+    "subtitleEn": "An Atlantic island nation shaped by volcanoes, dry landscapes, maritime history, and music.",
+    "flagUrl": "https://flagcdn.com/w320/cv.png",
+    "mapQuery": "Praia, Cabo Verde",
+    "timeZone": "Atlantic/Cape_Verde",
+    "currency": {
+      "nameJa": "カーボベルデ・エスクード",
+      "nameEn": "Cabo Verdean Escudo",
+      "symbol": "Esc"
+    },
+    "languages": [
+      {
+        "nameJa": "ポルトガル語",
+        "nameEn": "Portuguese"
+      },
+      {
+        "nameJa": "カーボベルデ・クレオール語",
+        "nameEn": "Cape Verdean Creole"
+      }
+    ],
+    "elevation": "約35 m（プライア）",
+    "elevationEn": "Approx. 35 m (Praia)",
+    "weather": {
+      "summary": "温暖で乾燥した気候が特徴です。降水量が少なく、水資源の確保が重要な課題です。",
+      "summaryEn": "The climate is warm and dry, with limited rainfall making water management especially important."
+    },
+    "heritage": [
+      {
+        "id": "cv-cidade-velha",
+        "title": "シダーデ・ヴェーリャ",
+        "titleEn": "Cidade Velha",
+        "description": "大西洋航海の拠点として栄えた旧市街で、要塞や教会跡が歴史を伝えています。",
+        "descriptionEn": "Fortifications and church ruins preserve the history of an early Atlantic port and colonial settlement.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cidade%20Velha%200082.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cidade_Velha_0082.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "cv-cachupa",
+        "title": "カシューパ",
+        "titleEn": "Cachupa",
+        "description": "トウモロコシ、豆、野菜、肉や魚をゆっくり煮込む、国を代表する家庭料理です。",
+        "descriptionEn": "Corn, beans, vegetables, meat, or fish are slowly cooked together in the country's best-known home dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cachupa%20frita.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cachupa_frita.jpg",
+        "imageCredit": "Adriao",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "漁業と水の確保を支える協力",
+      "titleEn": "Cooperation in Fisheries and Water Security",
+      "text": "日本は漁業施設、水資源、防災などの分野で、島国カーボベルデの暮らしを支援しています。",
+      "textEn": "Japan has supported Cabo Verde through cooperation in fisheries, water resources, and disaster preparedness."
+    },
+    "quiz": {
+      "question": "カーボベルデの伝統音楽として世界的に知られるものは何でしょう？",
+      "questionEn": "Which traditional music style from Cabo Verde is internationally famous?",
+      "options": [
+        "モルナ",
+        "タンゴ",
+        "レゲエ",
+        "フラメンコ"
+      ],
+      "optionsEn": [
+        "Morna",
+        "Tango",
+        "Reggae",
+        "Flamenco"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はモルナです。哀愁のある旋律で、島を離れた人々の思いなどを歌います。",
+      "explanationEn": "The answer is morna, a reflective music style often expressing longing, migration, and island life."
+    }
+  },
+  "cf": {
+    "iso": "cf",
+    "nameJa": "中央アフリカ共和国",
+    "nameEn": "Central African Republic",
+    "capitalJa": "バンギ",
+    "capitalEn": "Bangui",
+    "subtitle": "熱帯雨林とサバンナが交わり、森林ゾウやゴリラが暮らす内陸国です。",
+    "subtitleEn": "A landlocked country where rainforest and savanna meet, supporting elephants, gorillas, and rich biodiversity.",
+    "flagUrl": "https://flagcdn.com/w320/cf.png",
+    "mapQuery": "Bangui, Central African Republic",
+    "timeZone": "Africa/Bangui",
+    "currency": {
+      "nameJa": "中央アフリカCFAフラン",
+      "nameEn": "Central African CFA Franc",
+      "symbol": "FCFA"
+    },
+    "languages": [
+      {
+        "nameJa": "サンゴ語",
+        "nameEn": "Sango"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約370 m（バンギ）",
+    "elevationEn": "Approx. 370 m (Bangui)",
+    "weather": {
+      "summary": "南部は高温多湿の熱帯気候で、北部ほど乾季が長くなります。雨季と乾季が明確です。",
+      "summaryEn": "The south is humid and tropical, while the north has a longer dry season and more open savanna."
+    },
+    "heritage": [
+      {
+        "id": "cf-dzanga-sangha",
+        "title": "ザンガ・サンガ保護区",
+        "titleEn": "Dzanga-Sangha Protected Area",
+        "description": "森林の開けた湿地に多くのマルミミゾウが集まり、野生動物を観察できます。",
+        "descriptionEn": "Forest elephants gather in mineral-rich clearings, creating an exceptional place to observe rainforest wildlife.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dzanga.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dzanga.jpg",
+        "imageCredit": "Damiano Luchetti",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "自然保護区",
+        "categoryEn": "Protected Area"
+      }
+    ],
+    "culture": [
+      {
+        "id": "cf-fufu",
+        "title": "キャッサバのフフ",
+        "titleEn": "Cassava Fufu",
+        "description": "キャッサバをついて練り、野菜や肉のソースと食べる、地域の重要な主食です。",
+        "descriptionEn": "Cassava is pounded into a smooth dough and eaten with vegetable, fish, or meat sauces.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Central%20African%20woman%20pounding%20cassava%20root%20into%20fufu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Central_African_woman_pounding_cassava_root_into_fufu.jpg",
+        "imageCredit": "Danwagner01",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "食料・医療・平和構築を支援",
+      "titleEn": "Support for Food, Health, and Peacebuilding",
+      "text": "日本は国際機関と連携し、食料、医療、避難民支援、平和構築などに協力しています。",
+      "textEn": "Japan works with international organizations to support food security, health care, displaced people, and peacebuilding."
+    },
+    "quiz": {
+      "question": "中央アフリカ共和国で広く使われる共通語は何でしょう？",
+      "questionEn": "Which widely spoken national language helps connect people in the Central African Republic?",
+      "options": [
+        "サンゴ語",
+        "ポルトガル語",
+        "スワヒリ語",
+        "オランダ語"
+      ],
+      "optionsEn": [
+        "Sango",
+        "Portuguese",
+        "Swahili",
+        "Dutch"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はサンゴ語です。異なる民族や言語を持つ人々をつなぐ共通語として使われます。",
+      "explanationEn": "The answer is Sango, which serves as an important shared language among diverse communities."
+    }
+  },
+  "td": {
+    "iso": "td",
+    "nameJa": "チャド",
+    "nameEn": "Chad",
+    "capitalJa": "ンジャメナ",
+    "capitalEn": "N'Djamena",
+    "subtitle": "サハラ砂漠、サヘル、チャド湖が南北に広がる、アフリカ中央部の内陸国です。",
+    "subtitleEn": "A landlocked Central African country stretching from the Sahara through the Sahel to Lake Chad.",
+    "flagUrl": "https://flagcdn.com/w320/td.png",
+    "mapQuery": "N'Djamena, Chad",
+    "timeZone": "Africa/Ndjamena",
+    "currency": {
+      "nameJa": "中央アフリカCFAフラン",
+      "nameEn": "Central African CFA Franc",
+      "symbol": "FCFA"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約300 m（ンジャメナ）",
+    "elevationEn": "Approx. 300 m (N'Djamena)",
+    "weather": {
+      "summary": "北部は極端に乾燥した砂漠で、南部ほど雨が増えます。季節による気温差も大きいです。",
+      "summaryEn": "The north is extremely dry desert, while rainfall increases toward the south and temperatures vary by season."
+    },
+    "heritage": [
+      {
+        "id": "td-ennedi",
+        "title": "エネディ山地とゲルタ・ダルシェイ",
+        "titleEn": "Ennedi Massif and Guelta d'Archei",
+        "description": "砂岩の断崖と天然の水場がつくる景観で、砂漠の動物と人々の生活を支えています。",
+        "descriptionEn": "Sandstone cliffs and a rare desert waterhole support wildlife, livestock, and human travel across the Sahara.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Guelta%20d%27Archei%20Chad.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Guelta_d%27Archei_Chad.jpg",
+        "imageCredit": "Sahararesearch",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界複合遺産地域",
+        "categoryEn": "Mixed World Heritage Region"
+      }
+    ],
+    "culture": [
+      {
+        "id": "td-asida",
+        "title": "アシーダ",
+        "titleEn": "Asida",
+        "description": "穀物粉を練った温かな主食で、肉や野菜のソースと一緒に手で分けて食べます。",
+        "descriptionEn": "This warm grain-based dough is shared by hand and eaten with savory meat or vegetable sauces.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%B9%D8%B5%D9%8A%D8%AF%D8%A9.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:%D8%B9%D8%B5%D9%8A%D8%AF%D8%A9.jpg",
+        "imageCredit": "Amouna Abdoulaye",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "食料安全保障と避難民支援で協力",
+      "titleEn": "Cooperation in Food Security and Refugee Support",
+      "text": "日本は国際機関を通じて、食料、保健、教育、難民や避難民への支援を行っています。",
+      "textEn": "Japan supports food security, health, education, refugees, and displaced communities through international organizations."
+    },
+    "quiz": {
+      "question": "国名の由来にもなった大きな湖は何でしょう？",
+      "questionEn": "Which major lake gave the country its name?",
+      "options": [
+        "チャド湖",
+        "ビクトリア湖",
+        "タンガニーカ湖",
+        "ナセル湖"
+      ],
+      "optionsEn": [
+        "Lake Chad",
+        "Lake Victoria",
+        "Lake Tanganyika",
+        "Lake Nasser"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はチャド湖です。周辺国の人々の漁業、農業、生活用水を支える重要な湖です。",
+      "explanationEn": "The answer is Lake Chad, an important source of water, fishing, farming, and livelihoods for nearby communities."
+    }
+  },
+  "cl": {
+    "iso": "cl",
+    "nameJa": "チリ",
+    "nameEn": "Chile",
+    "capitalJa": "サンティアゴ",
+    "capitalEn": "Santiago",
+    "subtitle": "太平洋とアンデス山脈の間を細長く伸び、砂漠から氷河までを持つ国です。",
+    "subtitleEn": "A long, narrow country between the Pacific and the Andes, ranging from desert to glaciers.",
+    "flagUrl": "https://flagcdn.com/w320/cl.png",
+    "mapQuery": "Santiago, Chile",
+    "timeZone": "America/Santiago",
+    "currency": {
+      "nameJa": "チリ・ペソ",
+      "nameEn": "Chilean Peso",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約570 m（サンティアゴ）",
+    "elevationEn": "Approx. 570 m (Santiago)",
+    "weather": {
+      "summary": "北部は世界有数の乾燥地帯で、中央部は温暖、南部は冷涼で雨や氷河が多くなります。",
+      "summaryEn": "The north is extremely dry, the center is Mediterranean, and the south is cooler, wetter, and glacial."
+    },
+    "heritage": [
+      {
+        "id": "cl-rapa-nui",
+        "title": "ラパ・ヌイ国立公園のモアイ像",
+        "titleEn": "Moai of Rapa Nui National Park",
+        "description": "火山岩から彫られた巨大石像が島に並び、祖先を敬う独自の文化を伝えています。",
+        "descriptionEn": "Monumental stone figures carved from volcanic rock express Rapa Nui ideas about ancestors and community.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mo%C3%A1i%20en%20Isla%20de%20Pascua%2C%20Chile.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mo%C3%A1i_en_Isla_de_Pascua,_Chile.JPG",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mo%C3%A1i_en_Isla_de_Pascua,_Chile.JPG",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "cl-empanada",
+        "title": "チリ風エンパナーダ",
+        "titleEn": "Chilean Empanada",
+        "description": "肉、玉ねぎ、卵、オリーブなどを生地で包んで焼く、祝日にも人気の料理です。",
+        "descriptionEn": "Pastry is filled with meat, onion, egg, and olives in a favorite dish for holidays and family gatherings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Empanada%20Chilena.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Empanada_Chilena.JPG",
+        "imageCredit": "Ranstevens",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "銅・サーモン・防災で深い関係",
+      "titleEn": "Strong Links Through Copper, Salmon, and Disaster Preparedness",
+      "text": "チリは日本に銅やサーモンを届け、両国は地震や津波への防災経験も共有しています。",
+      "textEn": "Chile supplies Japan with copper and salmon, while both countries exchange knowledge about earthquakes and tsunamis."
+    },
+    "quiz": {
+      "question": "チリの国土の形として最も近いものはどれでしょう？",
+      "questionEn": "Which description best matches the shape of Chile?",
+      "options": [
+        "南北に細長い",
+        "ほぼ正方形",
+        "円形の島",
+        "東西にだけ長い"
+      ],
+      "optionsEn": [
+        "Long and narrow from north to south",
+        "Almost square",
+        "A circular island",
+        "Long only from east to west"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は南北に細長いです。そのため、国内で気候や自然環境が大きく異なります。",
+      "explanationEn": "Chile is very long from north to south, creating major differences in climate and ecosystems."
+    }
+  },
+  "cn": {
+    "iso": "cn",
+    "nameJa": "中国",
+    "nameEn": "China",
+    "capitalJa": "北京",
+    "capitalEn": "Beijing",
+    "subtitle": "長い歴史、多様な民族と地形、巨大都市を持つ、東アジアの広大な国です。",
+    "subtitleEn": "A vast East Asian country of ancient history, diverse peoples, varied landscapes, and major cities.",
+    "flagUrl": "https://flagcdn.com/w320/cn.png",
+    "mapQuery": "Beijing, China",
+    "timeZone": "Asia/Shanghai",
+    "currency": {
+      "nameJa": "人民元",
+      "nameEn": "Renminbi (Yuan)",
+      "symbol": "¥"
+    },
+    "languages": [
+      {
+        "nameJa": "中国語（普通話）",
+        "nameEn": "Standard Chinese (Mandarin)"
+      }
+    ],
+    "elevation": "約45 m（北京）",
+    "elevationEn": "Approx. 45 m (Beijing)",
+    "weather": {
+      "summary": "国土が広く、北部は寒冷で乾燥し、南部は温暖湿潤、西部には高原や砂漠があります。",
+      "summaryEn": "The north is colder and drier, the south is warmer and wetter, and the west contains plateaus and deserts."
+    },
+    "heritage": [
+      {
+        "id": "cn-great-wall",
+        "title": "万里の長城",
+        "titleEn": "Great Wall of China",
+        "description": "複数の時代に築かれた城壁や見張り台が山々を走り、国境防衛の歴史を伝えます。",
+        "descriptionEn": "Walls and watchtowers built across many dynasties follow mountain ridges and reveal a long history of defense.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Great%20Wall%20Of%20China.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Great_Wall_Of_China.JPG",
+        "imageCredit": "Johnrich121",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "cn-jiaozi",
+        "title": "餃子（ジャオズ）",
+        "titleEn": "Jiaozi",
+        "description": "小麦の皮で肉や野菜を包み、ゆでたり蒸したり焼いたりする、祝い事にも欠かせない料理です。",
+        "descriptionEn": "Dough wrappers hold meat or vegetables and may be boiled, steamed, or fried, especially during celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jiaozi.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jiaozi.jpg",
+        "imageCredit": "Gene.arboit",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "漢字・仏教・食文化が日本へ伝わった",
+      "titleEn": "Chinese Writing, Buddhism, and Food Influenced Japan",
+      "text": "日本は中国から漢字、仏教、制度、食文化など多くを学び、現代も経済や人的交流が続いています。",
+      "textEn": "Japan historically adopted writing, Buddhism, institutions, and foods from China, and modern exchanges remain extensive."
+    },
+    "quiz": {
+      "question": "中国で生まれ、日本の文字文化にも大きな影響を与えたものは何でしょう？",
+      "questionEn": "Which system developed in China and strongly influenced written Japanese?",
+      "options": [
+        "漢字",
+        "ローマ数字",
+        "点字",
+        "モールス信号"
+      ],
+      "optionsEn": [
+        "Chinese characters",
+        "Roman numerals",
+        "Braille",
+        "Morse code"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は漢字です。日本では漢字を取り入れ、ひらがなやカタカナも発達しました。",
+      "explanationEn": "The answer is Chinese characters. Japan adapted them and later developed hiragana and katakana."
+    }
+  },
+  "co": {
+    "iso": "co",
+    "nameJa": "コロンビア",
+    "nameEn": "Colombia",
+    "capitalJa": "ボゴタ",
+    "capitalEn": "Bogotá",
+    "subtitle": "アンデス山脈、カリブ海、アマゾンの自然と、多彩な音楽や食文化を持つ国です。",
+    "subtitleEn": "A country of Andes mountains, Caribbean coasts, Amazon rainforest, and vibrant music and food.",
+    "flagUrl": "https://flagcdn.com/w320/co.png",
+    "mapQuery": "Bogota, Colombia",
+    "timeZone": "America/Bogota",
+    "currency": {
+      "nameJa": "コロンビア・ペソ",
+      "nameEn": "Colombian Peso",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約2,640 m（ボゴタ）",
+    "elevationEn": "Approx. 2,640 m (Bogotá)",
+    "weather": {
+      "summary": "赤道に近いため季節変化は小さいですが、標高によって暑い低地から涼しい高地まであります。",
+      "summaryEn": "Seasonal temperature changes are small, but elevation creates climates ranging from hot lowlands to cool highlands."
+    },
+    "heritage": [
+      {
+        "id": "co-cartagena",
+        "title": "カルタヘナの港、要塞、歴史地区",
+        "titleEn": "Port, Fortresses, and Historic Centre of Cartagena",
+        "description": "色鮮やかな旧市街と巨大な要塞が、カリブ海交易と防衛の歴史を伝えています。",
+        "descriptionEn": "Colorful streets and massive fortifications preserve Cartagena's history as a major Caribbean port.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cartagena%20de%20Indias%20Colombia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cartagena_de_Indias_Colombia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "co-arepa",
+        "title": "アレパ",
+        "titleEn": "Arepa",
+        "description": "トウモロコシの生地を丸く焼く料理で、地域ごとにチーズや卵など多様な具があります。",
+        "descriptionEn": "This round corn cake may be plain or filled with cheese, egg, meat, or other regional ingredients.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arepas%201.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Arepas_1.jpg",
+        "imageCredit": "Debray05",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "コーヒーと花が日本の暮らしへ",
+      "titleEn": "Coffee and Flowers Reach Everyday Life in Japan",
+      "text": "コロンビア産コーヒーや切り花は日本でも親しまれ、両国は防災や産業分野でも交流しています。",
+      "textEn": "Colombian coffee and flowers are familiar in Japan, while the countries also cooperate in disaster and industry fields."
+    },
+    "quiz": {
+      "question": "コロンビアが高品質な産地として特に有名な宝石は何でしょう？",
+      "questionEn": "Which gemstone is Colombia especially famous for producing?",
+      "options": [
+        "エメラルド",
+        "真珠",
+        "オパール",
+        "琥珀"
+      ],
+      "optionsEn": [
+        "Emerald",
+        "Pearl",
+        "Opal",
+        "Amber"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はエメラルドです。鮮やかな緑色と透明度の高い石が世界的に評価されています。",
+      "explanationEn": "The answer is emerald. Colombian stones are valued for their vivid green color and clarity."
+    }
+  },
+  "km": {
+    "iso": "km",
+    "nameJa": "コモロ",
+    "nameEn": "Comoros",
+    "capitalJa": "モロニ",
+    "capitalEn": "Moroni",
+    "subtitle": "火山島とサンゴ礁、アフリカ・アラブ・インド洋文化が混ざり合う島国です。",
+    "subtitleEn": "A volcanic island nation where African, Arab, and Indian Ocean cultures meet.",
+    "flagUrl": "https://flagcdn.com/w320/km.png",
+    "mapQuery": "Moroni, Comoros",
+    "timeZone": "Indian/Comoro",
+    "currency": {
+      "nameJa": "コモロ・フラン",
+      "nameEn": "Comorian Franc",
+      "symbol": "CF"
+    },
+    "languages": [
+      {
+        "nameJa": "コモロ語",
+        "nameEn": "Comorian"
+      },
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約30 m（モロニ）",
+    "elevationEn": "Approx. 30 m (Moroni)",
+    "weather": {
+      "summary": "一年を通して温暖な熱帯気候です。雨季は蒸し暑く、サイクロンの影響を受けることがあります。",
+      "summaryEn": "The islands are tropical year-round, with a humid rainy season and occasional cyclone risk."
+    },
+    "heritage": [
+      {
+        "id": "km-karthala",
+        "title": "カルタラ山",
+        "titleEn": "Mount Karthala",
+        "description": "グランドコモロ島にそびえる活火山で、巨大な火口と火山性の森林が見られます。",
+        "descriptionEn": "This active volcano dominates Grande Comore, with a vast crater and distinctive volcanic forests.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Karthala%20%2811000398163%29.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mount_Karthala_(11000398163).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mount_Karthala_(11000398163).jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "km-pilao",
+        "title": "コモロ風ピラオ",
+        "titleEn": "Comorian Pilao",
+        "description": "米を肉、香辛料、野菜と炊く料理で、結婚式や家族の集まりにも登場します。",
+        "descriptionEn": "Rice is cooked with meat, vegetables, and fragrant spices for weddings and important family gatherings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pilau%20la%20nyanya.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pilau_la_nyanya.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "インド洋の食文化",
+        "categoryEn": "Indian Ocean Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "漁業・水・防災で島国を支援",
+      "titleEn": "Supporting Fisheries, Water, and Disaster Preparedness",
+      "text": "日本は漁業、水供給、保健、防災などを通じて、コモロの島々の持続可能な暮らしを支えています。",
+      "textEn": "Japan supports sustainable island life in Comoros through fisheries, water, health, and disaster cooperation."
+    },
+    "quiz": {
+      "question": "コモロが香料の産地として有名な花は何でしょう？",
+      "questionEn": "Which fragrant flower is an important product of Comoros?",
+      "options": [
+        "イランイラン",
+        "チューリップ",
+        "ラベンダー",
+        "サクラ"
+      ],
+      "optionsEn": [
+        "Ylang-ylang",
+        "Tulip",
+        "Lavender",
+        "Cherry blossom"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はイランイランです。花から採れる香油は香水づくりに利用されます。",
+      "explanationEn": "The answer is ylang-ylang. Oil from its flowers is widely used in perfume production."
+    }
+  },
+  "cg": {
+    "iso": "cg",
+    "nameJa": "コンゴ共和国",
+    "nameEn": "Republic of the Congo",
+    "capitalJa": "ブラザビル",
+    "capitalEn": "Brazzaville",
+    "subtitle": "コンゴ盆地の熱帯雨林と大河を持ち、ゴリラや森林ゾウが暮らす国です。",
+    "subtitleEn": "A Central African country of Congo Basin rainforest, great rivers, gorillas, and forest elephants.",
+    "flagUrl": "https://flagcdn.com/w320/cg.png",
+    "mapQuery": "Brazzaville, Republic of the Congo",
+    "timeZone": "Africa/Brazzaville",
+    "currency": {
+      "nameJa": "中央アフリカCFAフラン",
+      "nameEn": "Central African CFA Franc",
+      "symbol": "FCFA"
+    },
+    "languages": [
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "リンガラ語",
+        "nameEn": "Lingala"
+      },
+      {
+        "nameJa": "キトゥバ語",
+        "nameEn": "Kituba"
+      }
+    ],
+    "elevation": "約320 m（ブラザビル）",
+    "elevationEn": "Approx. 320 m (Brazzaville)",
+    "weather": {
+      "summary": "高温多湿の熱帯気候で、雨季と乾季があります。北部には広大な熱帯雨林が広がります。",
+      "summaryEn": "The climate is hot and tropical, with wet and dry seasons and extensive rainforest in the north."
+    },
+    "heritage": [
+      {
+        "id": "cg-odzala",
+        "title": "オザラ・コクア国立公園",
+        "titleEn": "Odzala-Kokoua National Park",
+        "description": "コンゴ盆地の原生林と湿地を守り、ニシローランドゴリラや森林ゾウが生息します。",
+        "descriptionEn": "Ancient rainforest and wetlands protect western lowland gorillas, forest elephants, and exceptional biodiversity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Primage2.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Primage2.jpg",
+        "imageCredit": "Pieter Henket / Leighcn",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "cg-saka-saka",
+        "title": "サカサカ",
+        "titleEn": "Saka-Saka",
+        "description": "キャッサバの葉を細かくつぶして煮込み、魚や肉、米、フフと合わせる料理です。",
+        "descriptionEn": "Cassava leaves are pounded and slowly cooked, then served with fish, meat, rice, or fufu.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Saka%20saka%20aliment%20de%20base%20congolaise.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Saka_saka_aliment_de_base_congolaise.jpg",
+        "imageCredit": "BOKOBA veroly",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "森林・保健・人材育成で協力",
+      "titleEn": "Cooperation in Forests, Health, and Training",
+      "text": "日本はコンゴ盆地の森林保全、保健医療、食料安全保障、人材育成などを支援しています。",
+      "textEn": "Japan supports forest conservation, health care, food security, and professional training in the Congo Basin."
+    },
+    "quiz": {
+      "question": "コンゴ共和国の北部に広がる世界有数の自然環境は何でしょう？",
+      "questionEn": "Which major natural environment covers much of northern Republic of the Congo?",
+      "options": [
+        "熱帯雨林",
+        "氷床",
+        "ツンドラ",
+        "地中海性草原"
+      ],
+      "optionsEn": [
+        "Tropical rainforest",
+        "Ice sheet",
+        "Tundra",
+        "Mediterranean grassland"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は熱帯雨林です。コンゴ盆地はアマゾンに次ぐ規模の熱帯林地域です。",
+      "explanationEn": "The answer is tropical rainforest. The Congo Basin contains one of the world's largest rainforest regions."
+    }
+  },
+  "cr": {
+    "iso": "cr",
+    "nameJa": "コスタリカ",
+    "nameEn": "Costa Rica",
+    "capitalJa": "サンホセ",
+    "capitalEn": "San José",
+    "subtitle": "火山、熱帯雨林、二つの海に囲まれ、生物多様性の保全で知られる国です。",
+    "subtitleEn": "A country of volcanoes, rainforest, and two coastlines, widely known for protecting biodiversity.",
+    "flagUrl": "https://flagcdn.com/w320/cr.png",
+    "mapQuery": "San Jose, Costa Rica",
+    "timeZone": "America/Costa_Rica",
+    "currency": {
+      "nameJa": "コスタリカ・コロン",
+      "nameEn": "Costa Rican Colón",
+      "symbol": "₡"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約1,170 m（サンホセ）",
+    "elevationEn": "Approx. 1,170 m (San José)",
+    "weather": {
+      "summary": "熱帯気候ですが、標高により気温が異なります。太平洋側とカリブ海側で雨季も異なります。",
+      "summaryEn": "The climate is tropical, but elevation and the two coasts create major differences in temperature and rainfall."
+    },
+    "heritage": [
+      {
+        "id": "cr-arenal",
+        "title": "アレナル火山",
+        "titleEn": "Arenal Volcano",
+        "description": "整った円すい形の火山と熱帯林が広がり、地熱や火山地形を身近に学べます。",
+        "descriptionEn": "A striking volcanic cone rises above tropical forest, offering a close view of geology and geothermal activity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arenal%20Volcano%2C%20Costa%20Rica.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Arenal_Volcano,_Costa_Rica.jpg",
+        "imageCredit": "Central Intelligence Agency",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "cr-gallo-pinto",
+        "title": "ガジョ・ピント",
+        "titleEn": "Gallo Pinto",
+        "description": "米と豆を炒め合わせる定番料理で、卵、チーズ、トルティーヤと朝食に食べます。",
+        "descriptionEn": "Rice and beans are cooked together and commonly served for breakfast with eggs, cheese, and tortillas.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Costa%20Rican%20Gallo%20Pinto.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Costa_Rican_Gallo_Pinto.jpg",
+        "imageCredit": "Legendre17",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "環境保全と平和を学び合う",
+      "titleEn": "Learning Together About Conservation and Peace",
+      "text": "日本とコスタリカは、生物多様性、地熱、防災、教育などの分野で知識や技術を共有しています。",
+      "textEn": "Japan and Costa Rica exchange knowledge in biodiversity, geothermal energy, disaster preparedness, and education."
+    },
+    "quiz": {
+      "question": "コスタリカが1948年に廃止したものは何でしょう？",
+      "questionEn": "What did Costa Rica abolish in 1948?",
+      "options": [
+        "常備軍",
+        "学校制度",
+        "国立公園",
+        "選挙"
+      ],
+      "optionsEn": [
+        "The standing army",
+        "The school system",
+        "National parks",
+        "Elections"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は常備軍です。軍事費の一部を教育や保健などに振り向けてきました。",
+      "explanationEn": "The answer is the standing army. The country has invested heavily in education, health, and public institutions."
+    }
+  },
+  "ci": {
+    "iso": "ci",
+    "nameJa": "コートジボワール",
+    "nameEn": "Côte d'Ivoire",
+    "capitalJa": "ヤムスクロ",
+    "capitalEn": "Yamoussoukro",
+    "subtitle": "西アフリカの森林と海岸、多様な民族文化を持ち、カカオ生産で知られる国です。",
+    "subtitleEn": "A West African country of forests, coastlines, diverse cultures, and globally important cocoa production.",
+    "flagUrl": "https://flagcdn.com/w320/ci.png",
+    "mapQuery": "Yamoussoukro, Cote d'Ivoire",
+    "timeZone": "Africa/Abidjan",
+    "currency": {
+      "nameJa": "西アフリカCFAフラン",
+      "nameEn": "West African CFA Franc",
+      "symbol": "CFA"
+    },
+    "languages": [
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約210 m（ヤムスクロ）",
+    "elevationEn": "Approx. 210 m (Yamoussoukro)",
+    "weather": {
+      "summary": "南部は高温多湿で雨が多く、北部ほど乾燥したサバンナ気候になります。",
+      "summaryEn": "The south is hot, humid, and rainy, while the north becomes drier and more savanna-like."
+    },
+    "heritage": [
+      {
+        "id": "ci-grand-bassam",
+        "title": "歴史都市グラン・バッサム",
+        "titleEn": "Historic Town of Grand-Bassam",
+        "description": "植民地期の建築と伝統的な地区が並び、港町の発展と地域文化の歴史を伝えます。",
+        "descriptionEn": "Colonial-era buildings and traditional neighborhoods reveal the history of a major coastal trading town.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ville%20historique%20de%20Grand-Bassam.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ville_historique_de_Grand-Bassam.jpg",
+        "imageCredit": "Jojoy99",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ville_historique_de_Grand-Bassam.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ci-attieke",
+        "title": "アチェケ",
+        "titleEn": "Attiéké",
+        "description": "発酵させたキャッサバを細かな粒状に蒸し、魚、肉、野菜と合わせる料理です。",
+        "descriptionEn": "Fermented cassava is steamed into light grains and served with fish, meat, vegetables, or spicy sauce.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Attieke.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Attieke.JPG",
+        "imageCredit": "Serein",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Attieke.JPG",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "日本のチョコレートを支えるカカオ",
+      "titleEn": "Cocoa Connects Côte d'Ivoire with Japanese Chocolate",
+      "text": "コートジボワール産カカオは日本の菓子にも使われ、農業やインフラ分野でも協力があります。",
+      "textEn": "Ivorian cocoa is used in Japanese chocolate, while the countries also cooperate in agriculture and infrastructure."
+    },
+    "quiz": {
+      "question": "コートジボワールが世界的な生産地として知られる作物は何でしょう？",
+      "questionEn": "Which crop is Côte d'Ivoire especially known for producing?",
+      "options": [
+        "カカオ",
+        "茶",
+        "オリーブ",
+        "リンゴ"
+      ],
+      "optionsEn": [
+        "Cocoa",
+        "Tea",
+        "Olives",
+        "Apples"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はカカオです。世界各地のチョコレート原料を支える重要な生産国です。",
+      "explanationEn": "The answer is cocoa. The country is a major source of the beans used to make chocolate worldwide."
+    }
+  },
+  "hr": {
+    "iso": "hr",
+    "nameJa": "クロアチア",
+    "nameEn": "Croatia",
+    "capitalJa": "ザグレブ",
+    "capitalEn": "Zagreb",
+    "subtitle": "アドリア海の島々と城壁都市、中央ヨーロッパと地中海の文化が交わる国です。",
+    "subtitleEn": "A country of Adriatic islands and walled cities where Central European and Mediterranean cultures meet.",
+    "flagUrl": "https://flagcdn.com/w320/hr.png",
+    "mapQuery": "Zagreb, Croatia",
+    "timeZone": "Europe/Zagreb",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "クロアチア語",
+        "nameEn": "Croatian"
+      }
+    ],
+    "elevation": "約120 m（ザグレブ）",
+    "elevationEn": "Approx. 120 m (Zagreb)",
+    "weather": {
+      "summary": "沿岸部は夏が暑く乾燥する地中海性気候で、内陸部は冬の寒さと降雪があります。",
+      "summaryEn": "The coast has hot, dry Mediterranean summers, while inland areas have colder and snowier winters."
+    },
+    "heritage": [
+      {
+        "id": "hr-dubrovnik",
+        "title": "ドゥブロヴニク旧市街",
+        "titleEn": "Old City of Dubrovnik",
+        "description": "海に面した城壁の内側に石造りの街並みが残り、海洋都市国家の歴史を伝えます。",
+        "descriptionEn": "Stone streets and buildings enclosed by great walls preserve the history of a powerful maritime city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik%2C%20Croatia%20%2831087351785%29.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dubrovnik,_Croatia_(31087351785).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "hr-pasticada",
+        "title": "パシュティツァーダ",
+        "titleEn": "Pašticada",
+        "description": "牛肉をワインや香味野菜と長時間煮込み、ニョッキと食べるダルマチア地方の料理です。",
+        "descriptionEn": "Beef is slowly braised with wine and aromatic ingredients, then served with gnocchi in Dalmatia.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pa%C5%A1ticada%20-%20Dalmatinska%20pa%C5%A1ticada%20-%20Dalmatian%20pot%20roast%20-%20Croatia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pa%C5%A1ticada_-_Dalmatinska_pa%C5%A1ticada_-_Dalmatian_pot_roast_-_Croatia.jpg",
+        "imageCredit": "Ponor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pa%C5%A1ticada_-_Dalmatinska_pa%C5%A1ticada_-_Dalmatian_pot_roast_-_Croatia.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "観光・音楽・スポーツで親しみが広がる",
+      "titleEn": "Tourism, Music, and Sports Bring the Countries Closer",
+      "text": "日本ではクロアチアの城壁都市や自然、音楽、サッカーが知られ、観光交流も広がっています。",
+      "textEn": "Croatian historic cities, nature, music, and football are well known in Japan, supporting growing tourism exchanges."
+    },
+    "quiz": {
+      "question": "世界で使われる「ネクタイ」の起源と関係が深い国はどこでしょう？",
+      "questionEn": "Which country is closely connected to the origin of the modern necktie?",
+      "options": [
+        "クロアチア",
+        "ノルウェー",
+        "エジプト",
+        "メキシコ"
+      ],
+      "optionsEn": [
+        "Croatia",
+        "Norway",
+        "Egypt",
+        "Mexico"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はクロアチアです。クロアチア兵の首布がフランスで注目され、クラバットへ発展しました。",
+      "explanationEn": "The answer is Croatia. Neck scarves worn by Croatian soldiers helped inspire the European cravat."
+    }
+  },
+  "cu": {
+    "iso": "cu",
+    "nameJa": "キューバ",
+    "nameEn": "Cuba",
+    "capitalJa": "ハバナ",
+    "capitalEn": "Havana",
+    "subtitle": "カリブ海最大の島に、音楽、野球、歴史的な街並みが息づく国です。",
+    "subtitleEn": "The Caribbean's largest island nation, known for music, baseball, historic cities, and tropical landscapes.",
+    "flagUrl": "https://flagcdn.com/w320/cu.png",
+    "mapQuery": "Havana, Cuba",
+    "timeZone": "America/Havana",
+    "currency": {
+      "nameJa": "キューバ・ペソ",
+      "nameEn": "Cuban Peso",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約60 m（ハバナ）",
+    "elevationEn": "Approx. 60 m (Havana)",
+    "weather": {
+      "summary": "一年を通して温暖な熱帯気候です。夏から秋には雨が増え、ハリケーンの影響もあります。",
+      "summaryEn": "The climate is tropical and warm year-round, with a wetter season and hurricane risk from summer into autumn."
+    },
+    "heritage": [
+      {
+        "id": "cu-old-havana",
+        "title": "オールド・ハバナと要塞群",
+        "titleEn": "Old Havana and Its Fortification System",
+        "description": "色鮮やかな建物、広場、要塞が残り、カリブ海交易の中心だった歴史を伝えます。",
+        "descriptionEn": "Colorful buildings, plazas, and forts preserve Havana's history as a major Caribbean trading center.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Old%20Havana%20Cuba.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Old_Havana_Cuba.jpg",
+        "imageCredit": "Jialiang Gao",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Old_Havana_Cuba.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "cu-ropa-vieja",
+        "title": "ロパ・ビエハ",
+        "titleEn": "Ropa Vieja",
+        "description": "牛肉を細くほぐし、トマト、玉ねぎ、ピーマンと煮込むキューバの代表料理です。",
+        "descriptionEn": "Shredded beef is simmered with tomato, onion, and peppers in one of Cuba's best-known dishes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ropa%20vieja%2C%20Cuba%20%289419809373%29.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ropa_vieja,_Cuba_(9419809373).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ropa_vieja,_Cuba_(9419809373).jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "野球と音楽が両国をつなぐ",
+      "titleEn": "Baseball and Music Connect Cuba and Japan",
+      "text": "両国では野球が人気で、選手交流に加え、キューバ音楽やダンスも日本で親しまれています。",
+      "textEn": "Baseball is popular in both countries, while Cuban music and dance also have enthusiastic audiences in Japan."
+    },
+    "quiz": {
+      "question": "キューバで特に人気があり、日本との交流も多いスポーツは何でしょう？",
+      "questionEn": "Which sport is especially popular in Cuba and creates strong links with Japan?",
+      "options": [
+        "野球",
+        "ラグビー",
+        "クリケット",
+        "スキー"
+      ],
+      "optionsEn": [
+        "Baseball",
+        "Rugby",
+        "Cricket",
+        "Skiing"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は野球です。国際大会やプロチームを通して、両国の選手が交流しています。",
+      "explanationEn": "The answer is baseball. Players from the two countries meet through international events and professional teams."
+    }
+  },
+  "cy": {
+    "iso": "cy",
+    "nameJa": "キプロス",
+    "nameEn": "Cyprus",
+    "capitalJa": "ニコシア",
+    "capitalEn": "Nicosia",
+    "subtitle": "地中海東部に位置し、古代遺跡、青い海、多層的な文化を持つ島国です。",
+    "subtitleEn": "An eastern Mediterranean island nation of ancient sites, clear seas, and layered cultural traditions.",
+    "flagUrl": "https://flagcdn.com/w320/cy.png",
+    "mapQuery": "Nicosia, Cyprus",
+    "timeZone": "Asia/Nicosia",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "ギリシャ語",
+        "nameEn": "Greek"
+      },
+      {
+        "nameJa": "トルコ語",
+        "nameEn": "Turkish"
+      }
+    ],
+    "elevation": "約220 m（ニコシア）",
+    "elevationEn": "Approx. 220 m (Nicosia)",
+    "weather": {
+      "summary": "夏は暑く乾燥し、冬は比較的穏やかで雨が増える地中海性気候です。",
+      "summaryEn": "Cyprus has hot, dry summers and mild, wetter winters typical of the Mediterranean climate."
+    },
+    "heritage": [
+      {
+        "id": "cy-paphos",
+        "title": "パフォスの考古遺跡",
+        "titleEn": "Archaeological Sites of Paphos",
+        "description": "古代ローマ時代のモザイクや神殿跡が残り、地中海世界の神話と暮らしを伝えます。",
+        "descriptionEn": "Roman mosaics, villas, and sacred sites preserve stories of mythology and daily life in the ancient Mediterranean.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Paphos%20Cyprus%202015.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Paphos_Cyprus_2015.jpg",
+        "imageCredit": "Liilia Moroz",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "cy-halloumi",
+        "title": "ハルーミ",
+        "titleEn": "Halloumi",
+        "description": "加熱しても形が崩れにくい塩味のチーズで、焼いたりサラダに入れたりして食べます。",
+        "descriptionEn": "This salty cheese keeps its shape when heated, making it ideal for grilling or adding to salads.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Halloumi.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Halloumi.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "海運と観光で結ばれる島国",
+      "titleEn": "Island Nations Connected Through Shipping and Tourism",
+      "text": "日本とキプロスは外交、海運、観光、文化を通じて交流し、日本製品も広く知られています。",
+      "textEn": "Japan and Cyprus maintain links through diplomacy, shipping, tourism, culture, and trade in Japanese products."
+    },
+    "quiz": {
+      "question": "キプロスを代表する、焼いても溶けにくいチーズは何でしょう？",
+      "questionEn": "Which Cypriot cheese is famous for holding its shape when grilled?",
+      "options": [
+        "ハルーミ",
+        "ゴーダ",
+        "カマンベール",
+        "マスカルポーネ"
+      ],
+      "optionsEn": [
+        "Halloumi",
+        "Gouda",
+        "Camembert",
+        "Mascarpone"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はハルーミです。表面を香ばしく焼き、温かいまま食べることもできます。",
+      "explanationEn": "The answer is halloumi. It can be browned on the outside and served warm without melting apart."
+    }
+  },
+  "cz": {
+    "iso": "cz",
+    "nameJa": "チェコ",
+    "nameEn": "Czechia",
+    "capitalJa": "プラハ",
+    "capitalEn": "Prague",
+    "subtitle": "中世の街並み、城、音楽、ガラス工芸が息づく中央ヨーロッパの国です。",
+    "subtitleEn": "A Central European country known for medieval cities, castles, music, engineering, and glassmaking.",
+    "flagUrl": "https://flagcdn.com/w320/cz.png",
+    "mapQuery": "Prague, Czechia",
+    "timeZone": "Europe/Prague",
+    "currency": {
+      "nameJa": "チェコ・コルナ",
+      "nameEn": "Czech Koruna",
+      "symbol": "Kč"
+    },
+    "languages": [
+      {
+        "nameJa": "チェコ語",
+        "nameEn": "Czech"
+      }
+    ],
+    "elevation": "約235 m（プラハ）",
+    "elevationEn": "Approx. 235 m (Prague)",
+    "weather": {
+      "summary": "温帯の大陸性気候で、夏は比較的温暖、冬は寒く雪が降ることがあります。",
+      "summaryEn": "The climate is temperate and continental, with warm summers and cold winters that may bring snow."
+    },
+    "heritage": [
+      {
+        "id": "cz-prague",
+        "title": "プラハ歴史地区とプラハ城",
+        "titleEn": "Historic Prague and Prague Castle",
+        "description": "城、教会、橋、広場が時代ごとに重なり、「建築の博物館」のような街並みです。",
+        "descriptionEn": "Castles, churches, bridges, and squares from many eras make Prague feel like an open-air museum of architecture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague-Castle-04.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Prague-Castle-04.jpg",
+        "imageCredit": "MartinThoma",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "cz-svickova",
+        "title": "スヴィーチコヴァー",
+        "titleEn": "Svíčková",
+        "description": "牛肉に野菜のクリームソースをかけ、パンのダンプリングやベリーを添える料理です。",
+        "descriptionEn": "Beef is served with a creamy root-vegetable sauce, bread dumplings, and often cranberry preserves.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sv%C3%AD%C4%8Dkov%C3%A1.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sv%C3%AD%C4%8Dkov%C3%A1.JPG",
+        "imageCredit": "Dezidor",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "音楽・ガラス・ものづくりで交流",
+      "titleEn": "Connections Through Music, Glass, and Manufacturing",
+      "text": "チェコのクラシック音楽やボヘミアンガラスは日本で人気があり、産業や研究交流も盛んです。",
+      "textEn": "Czech classical music and Bohemian glass are popular in Japan, alongside active industrial and academic exchanges."
+    },
+    "quiz": {
+      "question": "世界で使われる「ロボット」という言葉と深い関係がある国はどこでしょう？",
+      "questionEn": "Which country is closely connected to the origin of the word robot?",
+      "options": [
+        "チェコ",
+        "ブラジル",
+        "インド",
+        "カナダ"
+      ],
+      "optionsEn": [
+        "Czechia",
+        "Brazil",
+        "India",
+        "Canada"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はチェコです。作家カレル・チャペックの戯曲で、チェコ語の「労働」に由来する語が広まりました。",
+      "explanationEn": "The answer is Czechia. The word spread through a play by Karel Čapek and comes from a Czech word linked to labor."
+    }
+  }
+}

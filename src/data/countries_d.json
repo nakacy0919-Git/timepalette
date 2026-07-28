@@ -1,0 +1,744 @@
+{
+  "cd": {
+    "iso": "cd",
+    "nameJa": "コンゴ民主共和国",
+    "nameEn": "Democratic Republic of the Congo",
+    "capitalJa": "キンシャサ",
+    "capitalEn": "Kinshasa",
+    "subtitle": "コンゴ盆地の大森林、大河、火山、希少な野生動物を持つ中央アフリカの大国です。",
+    "subtitleEn": "A vast Central African country of rainforest, great rivers, volcanoes, and rare wildlife.",
+    "flagUrl": "https://flagcdn.com/w320/cd.png",
+    "mapQuery": "Kinshasa, Democratic Republic of the Congo",
+    "timeZone": "Africa/Kinshasa",
+    "currency": {
+      "nameJa": "コンゴ・フラン",
+      "nameEn": "Congolese Franc",
+      "symbol": "FC"
+    },
+    "languages": [
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "リンガラ語",
+        "nameEn": "Lingala"
+      },
+      {
+        "nameJa": "スワヒリ語",
+        "nameEn": "Swahili"
+      },
+      {
+        "nameJa": "コンゴ語",
+        "nameEn": "Kikongo ya Leta"
+      },
+      {
+        "nameJa": "チルバ語",
+        "nameEn": "Tshiluba"
+      }
+    ],
+    "elevation": "約240 m（キンシャサ）",
+    "elevationEn": "Approx. 240 m (Kinshasa)",
+    "weather": {
+      "summary": "赤道付近は高温多湿で雨が多く、南北には雨季と乾季があります。東部高地は比較的涼しいです。",
+      "summaryEn": "Equatorial areas are hot and humid, while regions farther north and south have wet and dry seasons."
+    },
+    "heritage": [
+      {
+        "id": "cd-virunga",
+        "title": "ヴィルンガ国立公園",
+        "titleEn": "Virunga National Park",
+        "description": "火山、湖、森林が連なり、絶滅危惧種のマウンテンゴリラが暮らす自然遺産です。",
+        "descriptionEn": "Volcanoes, lakes, and forests support mountain gorillas and one of Africa's richest ecosystems.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Virunga%2001.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Virunga_01.jpg",
+        "imageCredit": "Caitjeenk",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "cd-kahuzi-biega",
+        "title": "カフジ＝ビエガ国立公園",
+        "titleEn": "Kahuzi-Biega National Park",
+        "description": "低地と山地の熱帯林を守り、希少なヒガシローランドゴリラが生息しています。",
+        "descriptionEn": "Lowland and mountain forests protect the rare eastern lowland gorilla and many other species.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kahuzi-Biega%20National%20Park%20(39423247252).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kahuzi-Biega_National_Park_(39423247252).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kahuzi-Biega_National_Park_(39423247252).jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "cd-okapi-reserve",
+        "title": "オカピ野生生物保護区",
+        "titleEn": "Okapi Wildlife Reserve",
+        "description": "イトゥリの熱帯雨林に、シマウマの脚を思わせる模様を持つオカピが暮らしています。",
+        "descriptionEn": "The Ituri rainforest shelters the okapi, a forest relative of the giraffe with striped legs.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Epulu%20Okapi%20Reserve.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Epulu_Okapi_Reserve.jpg",
+        "imageCredit": "J. Doremus / USAID",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "cd-fufu",
+        "title": "フフ",
+        "titleEn": "Fufu",
+        "description": "キャッサバやトウモロコシを練った主食で、手で丸めて煮込み料理やソースと食べます。",
+        "descriptionEn": "Cassava or maize is pounded into a smooth staple eaten by hand with stews and sauces.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Making%20fufu%20Democratic%20Republic%20Congo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Making_fufu_Democratic_Republic_Congo.jpg",
+        "imageCredit": "Nick Hobgood",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Making_fufu_Democratic_Republic_Congo.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "cd-moambe",
+        "title": "鶏肉のモアンベ",
+        "titleEn": "Poulet à la Moambe",
+        "description": "鶏肉をパームナッツの濃厚なソースで煮込み、米やキャッサバの葉と味わいます。",
+        "descriptionEn": "Chicken is simmered in a rich palm-nut sauce and served with rice or cassava leaves.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Poulet%20%C3%A0%20la%20moambe.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Poulet_%C3%A0_la_moambe.JPG",
+        "imageCredit": "Brigade Piron",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "cd-kifwebe-mask",
+        "title": "キフェベの仮面",
+        "titleEn": "Kifwebe Masks",
+        "description": "縞模様と力強い造形が特徴で、ソンゲやルバの儀礼、社会秩序、物語と結びつきます。",
+        "descriptionEn": "Bold striped masks of Songye and Luba traditions are linked to ceremony, authority, and storytelling.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kifwebe%20mask%20DMA.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kifwebe_mask_DMA.jpg",
+        "imageCredit": "Dallas Museum of Art / Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kifwebe_mask_DMA.jpg",
+        "category": "伝統芸術",
+        "categoryEn": "Traditional Art"
+      }
+    ],
+    "japanConnection": {
+      "title": "日本の身近な製品を支える鉱物",
+      "titleEn": "Minerals That Support Technology in Japan",
+      "text": "コンゴ民主共和国は電池材料となるコバルトの重要な産地で、日本は保健や平和構築でも協力しています。",
+      "textEn": "The DRC is a major source of cobalt used in batteries, while Japan also supports health and peacebuilding projects."
+    },
+    "quiz": {
+      "question": "コンゴ民主共和国だけに野生で生息することで知られる動物はどれでしょう？",
+      "questionEn": "Which animal is famously native to the wild forests of the Democratic Republic of the Congo?",
+      "options": [
+        "オカピ",
+        "カンガルー",
+        "ホッキョクグマ",
+        "ジャイアントパンダ"
+      ],
+      "optionsEn": [
+        "Okapi",
+        "Kangaroo",
+        "Polar bear",
+        "Giant panda"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はオカピです。キリンの仲間ですが、脚にはシマウマのような縞模様があります。",
+      "explanationEn": "The answer is the okapi. It is related to the giraffe but has zebra-like stripes on its legs."
+    }
+  },
+  "dk": {
+    "iso": "dk",
+    "nameJa": "デンマーク",
+    "nameEn": "Denmark",
+    "capitalJa": "コペンハーゲン",
+    "capitalEn": "Copenhagen",
+    "subtitle": "島々と半島からなり、北欧デザイン、福祉、環境技術で知られる国です。",
+    "subtitleEn": "A Nordic country of islands and a peninsula, known for design, welfare, and green technology.",
+    "flagUrl": "https://flagcdn.com/w320/dk.png",
+    "mapQuery": "Copenhagen, Denmark",
+    "timeZone": "Europe/Copenhagen",
+    "currency": {
+      "nameJa": "デンマーク・クローネ",
+      "nameEn": "Danish Krone",
+      "symbol": "kr"
+    },
+    "languages": [
+      {
+        "nameJa": "デンマーク語",
+        "nameEn": "Danish"
+      }
+    ],
+    "elevation": "約14 m（コペンハーゲン）",
+    "elevationEn": "Approx. 14 m (Copenhagen)",
+    "weather": {
+      "summary": "海の影響で冬は緯度の割に穏やかですが、風が強く変わりやすい天気です。夏は涼しく日が長くなります。",
+      "summaryEn": "The sea moderates winter temperatures, while summers are cool with long daylight hours."
+    },
+    "heritage": [
+      {
+        "id": "dk-kronborg",
+        "title": "クロンボー城",
+        "titleEn": "Kronborg Castle",
+        "description": "海峡を見下ろす要塞宮殿で、シェイクスピアの『ハムレット』の舞台として有名です。",
+        "descriptionEn": "This fortress guards a narrow strait and is famous as the setting of Shakespeare's Hamlet.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kronborg%20Castle-Denmark-5.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kronborg_Castle-Denmark-5.jpg",
+        "imageCredit": "Yair Haklai",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kronborg_Castle-Denmark-5.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "dk-roskilde-cathedral",
+        "title": "ロスキレ大聖堂",
+        "titleEn": "Roskilde Cathedral",
+        "description": "北欧のれんが造り建築を代表し、何世紀ものデンマーク王や女王が眠っています。",
+        "descriptionEn": "A landmark of brick architecture, the cathedral contains the tombs of generations of Danish monarchs.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Roskilde%20Cathedral%20dk.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Roskilde_Cathedral_dk.jpg",
+        "imageCredit": "FaceMePLS",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "dk-nyhavn",
+        "title": "ニューハウン",
+        "titleEn": "Nyhavn",
+        "description": "色鮮やかな建物と木造船が並ぶ港で、コペンハーゲンを象徴する景観です。",
+        "descriptionEn": "Colorful houses and historic wooden ships line one of Copenhagen's most recognizable waterfronts.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nyhavn,%20Copenhagen,%20Denmark.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nyhavn,_Copenhagen,_Denmark.jpg",
+        "imageCredit": "Marshallhenrie",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nyhavn,_Copenhagen,_Denmark.jpg",
+        "category": "歴史地区・観光地",
+        "categoryEn": "Historic District"
+      }
+    ],
+    "culture": [
+      {
+        "id": "dk-smorrebrod",
+        "title": "スモーブロー",
+        "titleEn": "Smørrebrød",
+        "description": "ライ麦パンに魚、肉、卵、野菜などを美しく盛り付けるデンマーク式オープンサンドです。",
+        "descriptionEn": "Dark rye bread is topped with fish, meat, eggs, or vegetables in a carefully arranged open sandwich.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Smorrebrod.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Smorrebrod.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "dk-frikadeller",
+        "title": "フリカデラ",
+        "titleEn": "Frikadeller",
+        "description": "豚肉や牛肉のひき肉を平たい形にして焼く家庭料理で、ジャガイモなどと食べます。",
+        "descriptionEn": "Seasoned minced meat is shaped into flat meatballs and pan-fried for a classic Danish home meal.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Frikadeller.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Frikadeller.jpg",
+        "imageCredit": "Kenneth Jørgensen",
+        "imageLicense": "CC BY-SA 2.5",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "dk-wienerbrod",
+        "title": "ウィナーブロー",
+        "titleEn": "Danish Pastry",
+        "description": "バターを折り込んだ層状の生地に、果物やクリームを合わせる人気の菓子パンです。",
+        "descriptionEn": "Layered buttery dough is baked with fruit, custard, or icing in the pastry known abroad as a Danish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Danish%20pastry.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Danish_pastry.JPG",
+        "imageCredit": "RhinoMind",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Danish_pastry.JPG",
+        "category": "菓子文化",
+        "categoryEn": "Pastry Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "北欧デザインと風力発電が日本へ",
+      "titleEn": "Nordic Design and Wind Power Reach Japan",
+      "text": "デンマークの家具や玩具は日本でも人気があり、洋上風力や環境技術の協力も進んでいます。",
+      "textEn": "Danish furniture and toys are popular in Japan, while cooperation is growing in offshore wind and green technology."
+    },
+    "quiz": {
+      "question": "世界的に有名なブロック玩具LEGOが生まれた国はどこでしょう？",
+      "questionEn": "In which country was the LEGO building toy created?",
+      "options": [
+        "デンマーク",
+        "スイス",
+        "カナダ",
+        "イタリア"
+      ],
+      "optionsEn": [
+        "Denmark",
+        "Switzerland",
+        "Canada",
+        "Italy"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はデンマークです。LEGOという名前は、デンマーク語の「よく遊べ」に由来します。",
+      "explanationEn": "The answer is Denmark. The name LEGO comes from Danish words meaning play well."
+    }
+  },
+  "dj": {
+    "iso": "dj",
+    "nameJa": "ジブチ",
+    "nameEn": "Djibouti",
+    "capitalJa": "ジブチ市",
+    "capitalEn": "Djibouti City",
+    "subtitle": "紅海の入口に位置し、塩湖、火山地形、サンゴ礁を持つアフリカの小国です。",
+    "subtitleEn": "A small African country at the entrance to the Red Sea, with salt lakes, volcanoes, and coral reefs.",
+    "flagUrl": "https://flagcdn.com/w320/dj.png",
+    "mapQuery": "Djibouti City, Djibouti",
+    "timeZone": "Africa/Djibouti",
+    "currency": {
+      "nameJa": "ジブチ・フラン",
+      "nameEn": "Djiboutian Franc",
+      "symbol": "Fdj"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "ソマリ語",
+        "nameEn": "Somali"
+      },
+      {
+        "nameJa": "アファル語",
+        "nameEn": "Afar"
+      }
+    ],
+    "elevation": "約5 m（ジブチ市）",
+    "elevationEn": "Approx. 5 m (Djibouti City)",
+    "weather": {
+      "summary": "非常に暑く乾燥した気候で、夏は気温が大きく上がります。沿岸部は湿度も高くなります。",
+      "summaryEn": "The climate is extremely hot and dry, with high summer temperatures and humid conditions along the coast."
+    },
+    "heritage": [
+      {
+        "id": "dj-lake-assal",
+        "title": "アッサル湖",
+        "titleEn": "Lake Assal",
+        "description": "海面より約150 m低い塩湖で、白い塩の大地と青緑色の水が広がります。",
+        "descriptionEn": "This salt lake lies about 150 meters below sea level, surrounded by white salt flats and volcanic land.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Assal%201-Djibouti.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Assal_1-Djibouti.jpg",
+        "imageCredit": "Fishercd",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "dj-lake-abbe",
+        "title": "アッベ湖",
+        "titleEn": "Lake Abbé",
+        "description": "石灰岩の煙突状地形と温泉が並び、まるで別の惑星のような景観をつくります。",
+        "descriptionEn": "Limestone chimneys, hot springs, and dry lakebeds create an almost otherworldly landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lac%20Abbe.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lac_Abbe.JPG",
+        "imageCredit": "Cjulien21",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lac_Abbe.JPG",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "dj-moucha-island",
+        "title": "ムチャ島とタジュラ湾",
+        "titleEn": "Moucha Island and Gulf of Tadjoura",
+        "description": "サンゴ礁と透明な海に囲まれ、ジンベエザメが現れる季節もある海域です。",
+        "descriptionEn": "Coral reefs and clear waters surround the island, and whale sharks visit the gulf seasonally.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Moucha%20Island.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Moucha_Island.jpg",
+        "imageCredit": "Skilla1st",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Moucha_Island.jpg",
+        "category": "海洋自然",
+        "categoryEn": "Marine Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "dj-afar-issa-attire",
+        "title": "アファルとイッサの伝統衣装・舞踊",
+        "titleEn": "Afar and Issa Dress and Dance",
+        "description": "鮮やかな布や装身具をまとい、歌と手拍子に合わせて地域の歴史や誇りを表現します。",
+        "descriptionEn": "Colorful clothing, jewelry, songs, and rhythmic dance express community history and identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Djiboutian%20women%20dressed%20in%20traditional%20Afar%20and%20Issa%20tribal%20attire.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Djiboutian_women_dressed_in_traditional_Afar_and_Issa_tribal_attire.jpg",
+        "imageCredit": "U.S. Navy / Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Djiboutian_women_dressed_in_traditional_Afar_and_Issa_tribal_attire.jpg",
+        "category": "伝統文化",
+        "categoryEn": "Traditional Culture"
+      },
+      {
+        "id": "dj-lahoh",
+        "title": "ラホー",
+        "titleEn": "Lahoh",
+        "description": "発酵させた生地を薄く焼く柔らかなパンで、煮込み料理や蜂蜜と一緒に食べます。",
+        "descriptionEn": "Fermented batter is cooked into a soft, spongy flatbread eaten with stews, tea, or honey.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/LahohS.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:LahohS.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:LahohS.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "dj-camel-meat",
+        "title": "ラクダ肉料理",
+        "titleEn": "Camel Meat Dishes",
+        "description": "乾燥地域の暮らしを支えてきたラクダの肉を、香辛料と煮たり焼いたりして味わいます。",
+        "descriptionEn": "Camel meat is stewed or grilled with spices, reflecting the food traditions of an arid pastoral region.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Traditional%20Camel%20meat%20in%20Djibouti.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Traditional_Camel_meat_in_Djibouti.jpg",
+        "imageCredit": "Melting Pot Restaurant Djibouti",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Traditional_Camel_meat_in_Djibouti.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "海上交通の要衝で日本ともつながる",
+      "titleEn": "A Strategic Maritime Link with Japan",
+      "text": "ジブチは日本の船が通る重要航路に近く、日本は自衛隊の拠点運用や国際協力を行っています。",
+      "textEn": "Djibouti lies near shipping routes vital to Japan, which maintains a defense facility and supports development projects."
+    },
+    "quiz": {
+      "question": "ジブチのアッサル湖について正しいものはどれでしょう？",
+      "questionEn": "Which statement about Djibouti's Lake Assal is correct?",
+      "options": [
+        "海面より低い場所にある",
+        "淡水だけでできている",
+        "一年中凍っている",
+        "熱帯雨林の中にある"
+      ],
+      "optionsEn": [
+        "It lies below sea level",
+        "It contains only fresh water",
+        "It is frozen year-round",
+        "It lies in rainforest"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は海面より低い場所にあることです。アフリカでも特に低い地点の一つです。",
+      "explanationEn": "The answer is that it lies below sea level, making it one of the lowest points in Africa."
+    }
+  },
+  "dm": {
+    "iso": "dm",
+    "nameJa": "ドミニカ国",
+    "nameEn": "Dominica",
+    "capitalJa": "ロゾー",
+    "capitalEn": "Roseau",
+    "subtitle": "深い熱帯雨林、火山、滝、温泉が集まり、「自然の島」と呼ばれる国です。",
+    "subtitleEn": "A Caribbean island of rainforest, volcanoes, waterfalls, and hot springs, known as the Nature Island.",
+    "flagUrl": "https://flagcdn.com/w320/dm.png",
+    "mapQuery": "Roseau, Dominica",
+    "timeZone": "America/Dominica",
+    "currency": {
+      "nameJa": "東カリブ・ドル",
+      "nameEn": "East Caribbean Dollar",
+      "symbol": "EC$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "ドミニカ・クレオール語",
+        "nameEn": "Dominican Creole French"
+      }
+    ],
+    "elevation": "約40 m（ロゾー）",
+    "elevationEn": "Approx. 40 m (Roseau)",
+    "weather": {
+      "summary": "一年を通して温暖で雨が多く、山地には熱帯雨林が広がります。ハリケーンへの備えも重要です。",
+      "summaryEn": "The island is warm and rainy year-round, supporting rainforest but also facing hurricane risk."
+    },
+    "heritage": [
+      {
+        "id": "dm-boiling-lake",
+        "title": "ボイリング・レイク",
+        "titleEn": "Boiling Lake",
+        "description": "火山活動で熱せられた灰色の湖面から蒸気が立ち上る、世界最大級の熱水湖です。",
+        "descriptionEn": "Steam rises from this volcanically heated lake, one of the world's largest hot-water lakes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dominica%20boiling%20lake.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dominica_boiling_lake.jpg",
+        "imageCredit": "Pembo13",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界自然遺産地域",
+        "categoryEn": "World Heritage Region"
+      },
+      {
+        "id": "dm-trafalgar-falls",
+        "title": "トラファルガー滝",
+        "titleEn": "Trafalgar Falls",
+        "description": "熱帯林の断崖を二本の滝が流れ落ち、火山島の豊かな水と地形を感じられます。",
+        "descriptionEn": "Twin waterfalls plunge through rainforest cliffs, revealing the island's volcanic terrain and abundant water.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Trafalgar%20Falls%20at%20Morne%20Trois%20Pitons%20National%20Park.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Trafalgar_Falls_at_Morne_Trois_Pitons_National_Park.jpg",
+        "imageCredit": "Nelro",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Trafalgar_Falls_at_Morne_Trois_Pitons_National_Park.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "dm-kalinago-territory",
+        "title": "カリナゴ・テリトリー",
+        "titleEn": "Kalinago Territory",
+        "description": "先住民カリナゴの共同体が暮らし、工芸、言語、自然と共生する知恵を受け継いでいます。",
+        "descriptionEn": "Kalinago communities preserve crafts, identity, and knowledge shaped by generations of island life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carib%20Territory%20(Dominica).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Carib_Territory_(Dominica).jpg",
+        "imageCredit": "Hans Hillewaert",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Carib_Territory_(Dominica).jpg",
+        "category": "文化地域",
+        "categoryEn": "Cultural Region"
+      }
+    ],
+    "culture": [
+      {
+        "id": "dm-callaloo",
+        "title": "カラルー・スープ",
+        "titleEn": "Callaloo Soup",
+        "description": "ダシーンの葉やオクラ、ココナツミルクなどを煮込む、緑色の濃厚なスープです。",
+        "descriptionEn": "Dasheen leaves, okra, coconut milk, and seasonings create a thick green Caribbean soup.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Callaloo%20-%20made%20from%20the%20raw%20material%20(dasheen%20bush).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Callaloo_-_made_from_the_raw_material_(dasheen_bush).jpg",
+        "imageCredit": "Kalamazadkhan",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Callaloo_-_made_from_the_raw_material_(dasheen_bush).jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "dm-creole-lunch",
+        "title": "クレオール料理",
+        "titleEn": "Dominican Creole Cuisine",
+        "description": "魚、根菜、プランテン、米、香辛料を組み合わせ、島の自然と歴史を一皿に表します。",
+        "descriptionEn": "Fish, root vegetables, plantains, rice, and spices reflect the island's African, European, and Indigenous heritage.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/CreoleLunchInDominica.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:CreoleLunchInDominica.JPG",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:CreoleLunchInDominica.JPG",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "dm-cassava-bread",
+        "title": "カリナゴのキャッサバパン",
+        "titleEn": "Kalinago Cassava Bread",
+        "description": "すりおろしたキャッサバから水分を抜き、薄く焼く先住民の伝統的な保存食です。",
+        "descriptionEn": "Grated cassava is pressed and baked into a thin bread using knowledge preserved by Kalinago communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cassava%20bread.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cassava_bread.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cassava_bread.jpg",
+        "category": "先住民食文化",
+        "categoryEn": "Indigenous Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "災害に強い島づくりで協力",
+      "titleEn": "Cooperation for Disaster-Resilient Islands",
+      "text": "日本はハリケーンや豪雨に備える防災、漁業、環境分野でドミニカ国を支援しています。",
+      "textEn": "Japan supports Dominica in disaster preparedness, fisheries, and environmental projects for resilient island communities."
+    },
+    "quiz": {
+      "question": "ドミニカ国が「自然の島」と呼ばれる大きな理由は何でしょう？",
+      "questionEn": "Why is Dominica often called the Nature Island?",
+      "options": [
+        "熱帯雨林や火山、滝が豊富だから",
+        "国全体が大都市だから",
+        "砂漠が国土の大半だから",
+        "森林が全くないから"
+      ],
+      "optionsEn": [
+        "It has rainforest, volcanoes, and waterfalls",
+        "It is entirely urban",
+        "Most of it is desert",
+        "It has no forests"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は、熱帯雨林や火山、滝が豊富だからです。温泉や湖なども多く見られます。",
+      "explanationEn": "The answer is its rainforest, volcanoes, waterfalls, hot springs, and other dramatic natural features."
+    }
+  },
+  "do": {
+    "iso": "do",
+    "nameJa": "ドミニカ共和国",
+    "nameEn": "Dominican Republic",
+    "capitalJa": "サントドミンゴ",
+    "capitalEn": "Santo Domingo",
+    "subtitle": "カリブ海のビーチ、山岳地帯、植民都市、音楽と野球文化を持つ国です。",
+    "subtitleEn": "A Caribbean nation of beaches, mountains, colonial history, music, and baseball culture.",
+    "flagUrl": "https://flagcdn.com/w320/do.png",
+    "mapQuery": "Santo Domingo, Dominican Republic",
+    "timeZone": "America/Santo_Domingo",
+    "currency": {
+      "nameJa": "ドミニカ・ペソ",
+      "nameEn": "Dominican Peso",
+      "symbol": "RD$"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約14 m（サントドミンゴ）",
+    "elevationEn": "Approx. 14 m (Santo Domingo)",
+    "weather": {
+      "summary": "一年を通して温暖な熱帯気候で、山地は比較的涼しくなります。夏から秋はハリケーンに注意が必要です。",
+      "summaryEn": "The climate is tropical and warm, while highlands are cooler and hurricanes can occur from summer to autumn."
+    },
+    "heritage": [
+      {
+        "id": "do-colonial-city",
+        "title": "サントドミンゴの植民都市",
+        "titleEn": "Colonial City of Santo Domingo",
+        "description": "石造りの教会、要塞、街路が残り、ヨーロッパ到来後のアメリカ大陸の都市史を伝えます。",
+        "descriptionEn": "Churches, forts, and streets preserve the early colonial urban history of the Americas.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Convento%20de%20los%20Dominicos,%20Zona%20Colonial,%20Santo%20Domingo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Convento_de_los_Dominicos,_Zona_Colonial,_Santo_Domingo.jpg",
+        "imageCredit": "NotoriousGraffic",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Convento_de_los_Dominicos,_Zona_Colonial,_Santo_Domingo.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "do-bahia-aguilas",
+        "title": "バイア・デ・ラス・アギラス",
+        "titleEn": "Bahía de las Águilas",
+        "description": "白い砂浜と透明な海が続き、開発の少ない海岸生態系が残る自然豊かな湾です。",
+        "descriptionEn": "White sand, clear water, and an undeveloped coastline preserve an important Caribbean ecosystem.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bahia%20de%20las%20Aguilas.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bahia_de_las_Aguilas.jpg",
+        "imageCredit": "Scmjht",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "do-pico-duarte",
+        "title": "ピコ・ドゥアルテ",
+        "titleEn": "Pico Duarte",
+        "description": "カリブ海地域で最も高い山で、熱帯の島に松林と涼しい高地景観が広がります。",
+        "descriptionEn": "The Caribbean's highest peak rises through pine forests and cool highland landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pico%20Duarte.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pico_Duarte.jpg",
+        "imageCredit": "Adrian Michael",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "do-mangu",
+        "title": "マングー",
+        "titleEn": "Mangú",
+        "description": "ゆでた青いプランテンをつぶし、卵、チーズ、サラミ、玉ねぎなどと食べる朝食です。",
+        "descriptionEn": "Mashed green plantains are served with eggs, cheese, salami, and onions in a classic breakfast.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dominican%20Mangu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dominican_Mangu.jpg",
+        "imageCredit": "Ll1324",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dominican_Mangu.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "do-sancocho",
+        "title": "サンコーチョ",
+        "titleEn": "Sancocho",
+        "description": "肉、根菜、プランテンなどを煮込む料理で、家族の集まりや祝い事で囲みます。",
+        "descriptionEn": "Meat, root vegetables, and plantains are slowly stewed for celebrations and large family gatherings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20de%20la%20Rep%C3%BAblica%20Dominicana.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sancocho_de_la_Rep%C3%BAblica_Dominicana.jpg",
+        "imageCredit": "Franchesca_TS",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sancocho_de_la_Rep%C3%BAblica_Dominicana.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "do-merengue",
+        "title": "メレンゲ",
+        "titleEn": "Merengue",
+        "description": "速いリズムに合わせて踊る音楽文化で、アコーディオンや太鼓などが使われます。",
+        "descriptionEn": "This energetic music and dance uses lively rhythms, often featuring accordion and percussion.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Merengue%20Dominicano.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Merengue_Dominicano.jpg",
+        "imageCredit": "Javier10",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Merengue_Dominicano.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance"
+      }
+    ],
+    "japanConnection": {
+      "title": "野球が両国の距離を縮める",
+      "titleEn": "Baseball Brings the Two Countries Closer",
+      "text": "ドミニカ共和国出身の選手は日本のプロ野球でも活躍し、スポーツを通じた交流が続いています。",
+      "textEn": "Dominican players have made major contributions to Japanese professional baseball, strengthening sports connections."
+    },
+    "quiz": {
+      "question": "ドミニカ共和国で生まれ、国を代表する音楽と踊りは何でしょう？",
+      "questionEn": "Which music and dance style originated in the Dominican Republic?",
+      "options": [
+        "メレンゲ",
+        "フラメンコ",
+        "タンゴ",
+        "フラダンス"
+      ],
+      "optionsEn": [
+        "Merengue",
+        "Flamenco",
+        "Tango",
+        "Hula"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はメレンゲです。軽快なリズムとペアダンスで国内外に広く親しまれています。",
+      "explanationEn": "The answer is merengue, a lively rhythm and partner dance enjoyed in the Dominican Republic and abroad."
+    }
+  }
+}
