@@ -1,0 +1,104 @@
+{
+  "us": {
+    "iso": "us",
+    "nameJa": "アメリカ合衆国",
+    "nameEn": "United States of America",
+    "capitalJa": "ワシントンD.C.",
+    "capitalEn": "Washington, D.C.",
+    "region": "北アメリカ",
+    "subregion": "北アメリカ",
+    "subtitle": "広大な国土にさまざまな自然、文化、言語、産業が集まる、多様性に富んだ国です。",
+    "flagUrl": "https://flagcdn.com/w1280/us.png",
+    "mapQuery": "Washington DC, United States",
+    "timeZone": "America/New_York",
+    "currency": {
+      "code": "USD",
+      "nameJa": "アメリカドル",
+      "nameEn": "United States Dollar",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "code": "en",
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "code": "es",
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約7 m（ワシントンD.C.中心部の目安）",
+    "weather": {
+      "summary": "国土が非常に広いため、寒冷地、砂漠、温暖な海岸地域、熱帯地域など、さまざまな気候があります。",
+      "summer": "地域によって大きく異なります。南部や内陸部では非常に暑くなる場所があります。",
+      "winter": "北部では大雪になることがありますが、フロリダやハワイなど温暖な地域もあります。",
+      "bestSeason": "訪れる地域によって適した季節が異なります。"
+    },
+    "heritage": [
+      {
+        "id": "us-grand-canyon",
+        "title": "グランド・キャニオン",
+        "description": "コロラド川が長い時間をかけて大地を削ってできた巨大な渓谷です。地球の歴史を地層から読み取ることができます。",
+        "image": "https://placehold.co/1200x800/fed7aa/7c2d12?text=Grand+Canyon",
+        "location": "アリゾナ州",
+        "category": "世界自然遺産"
+      },
+      {
+        "id": "us-yellowstone",
+        "title": "イエローストーン国立公園",
+        "description": "間欠泉、温泉、湖、森林などが広がる国立公園です。バイソンやクマなどの野生動物も生息しています。",
+        "image": "https://placehold.co/1200x800/dcfce7/14532d?text=Yellowstone",
+        "location": "ワイオミング州など",
+        "category": "世界自然遺産"
+      },
+      {
+        "id": "us-statue-of-liberty",
+        "title": "自由の女神像",
+        "description": "自由と希望を象徴する像です。フランスからアメリカへ贈られ、ニューヨーク港に建てられました。",
+        "image": "https://placehold.co/1200x800/ccfbf1/134e4a?text=Statue+of+Liberty",
+        "location": "ニューヨーク",
+        "category": "世界文化遺産"
+      }
+    ],
+    "culture": [
+      {
+        "id": "us-hamburger",
+        "title": "ハンバーガー",
+        "description": "パンに肉や野菜などをはさんだ料理です。地域や店によって材料や味付けにさまざまな違いがあります。",
+        "image": "https://placehold.co/1200x800/fecaca/7f1d1d?text=American+Hamburger",
+        "category": "食文化"
+      },
+      {
+        "id": "us-baseball",
+        "title": "野球",
+        "description": "アメリカで長く親しまれてきたスポーツです。日本を含む世界各国から選手が集まり、活躍しています。",
+        "image": "https://placehold.co/1200x800/dbeafe/1e3a8a?text=Baseball",
+        "category": "スポーツ文化"
+      },
+      {
+        "id": "us-music",
+        "title": "音楽文化",
+        "description": "ジャズ、ブルース、ロック、ヒップホップなど、世界中に広がった多くの音楽がアメリカで発展しました。",
+        "image": "https://placehold.co/1200x800/fae8ff/701a75?text=American+Music",
+        "category": "音楽文化"
+      }
+    ],
+    "japanConnection": {
+      "title": "日本とアメリカをつなぐスポーツや文化！",
+      "text": "野球では、日本人選手がアメリカのプロリーグで活躍し、両国のファンをつないでいます。また、日本のアニメやゲームはアメリカでも人気があり、アメリカの映画や音楽も日本で広く親しまれています。学校同士の交流や留学も盛んです。"
+    },
+    "quiz": {
+      "question": "自由の女神像をアメリカに贈った国はどこでしょう？",
+      "options": [
+        "フランス",
+        "イギリス",
+        "カナダ",
+        "スペイン"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はフランスです。自由の女神像は、アメリカ独立100周年を記念してフランスから贈られました。"
+    }
+  }
+}

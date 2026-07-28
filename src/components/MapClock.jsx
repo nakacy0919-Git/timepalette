@@ -1,6 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { ComposableMap, Geographies, Geography, ZoomableGroup, Marker } from 'react-simple-maps';
-import { Sunrise, Sun, Sunset, Moon, MoonStar } from 'lucide-react';
+import { Home, Plus, X } from 'lucide-react';
+import AnalogClock from './AnalogClock';
+
+// ▼ 追加：作成した図鑑オーバーレイコンポーネントを読み込む
+import CountryDetailOverlay from './CountryDetailOverlay';
 
 const geoUrl = "https://unpkg.com/world-atlas@2.0.2/countries-110m.json";
 
@@ -204,208 +208,312 @@ const countryData = {
 };
 
 const multiZoneCities = {
-  // --- 北米 ---
   "United States of America": [
-    { name: "NY", fullName: "ニューヨーク", coordinates: [-74.006, 40.7128], tz: "America/New_York" }, 
-    { name: "シカゴ", fullName: "シカゴ", coordinates: [-87.6298, 41.8781], tz: "America/Chicago" }, 
-    { name: "デンバー", fullName: "デンバー", coordinates: [-104.9903, 39.7392], tz: "America/Denver" }, 
-    { name: "LA", fullName: "ロサンゼルス", coordinates: [-118.2437, 34.0522], tz: "America/Los_Angeles" }, 
-    { name: "アンカレッジ", fullName: "アンカレッジ", coordinates: [-149.9003, 61.2181], tz: "America/Anchorage" }, 
-    { name: "ホノルル", fullName: "ホノルル", coordinates: [-157.8583, 21.3069], tz: "Pacific/Honolulu" } 
+    { name: "NY", fullName: "New York", coordinates: [-74.006, 40.7128], tz: "America/New_York" }, 
+    { name: "Chicago", fullName: "Chicago", coordinates: [-87.6298, 41.8781], tz: "America/Chicago" }, 
+    { name: "Denver", fullName: "Denver", coordinates: [-104.9903, 39.7392], tz: "America/Denver" }, 
+    { name: "LA", fullName: "Los Angeles", coordinates: [-118.2437, 34.0522], tz: "America/Los_Angeles" }, 
+    { name: "Anchorage", fullName: "Anchorage", coordinates: [-149.9003, 61.2181], tz: "America/Anchorage" }, 
+    { name: "Honolulu", fullName: "Honolulu", coordinates: [-157.8583, 21.3069], tz: "Pacific/Honolulu" } 
   ],
   "Canada": [
-    { name: "セントジョンズ", fullName: "セントジョンズ", coordinates: [-52.7126, 47.5615], tz: "America/St_Johns" }, 
-    { name: "ハリファックス", fullName: "ハリファックス", coordinates: [-63.5728, 44.6476], tz: "America/Halifax" }, 
-    { name: "トロント", fullName: "トロント", coordinates: [-79.3832, 43.6532], tz: "America/Toronto" }, 
-    { name: "ウィニペグ", fullName: "ウィニペグ", coordinates: [-97.1384, 49.8951], tz: "America/Winnipeg" }, 
-    { name: "エドモントン", fullName: "エドモントン", coordinates: [-113.4909, 53.5444], tz: "America/Edmonton" }, 
-    { name: "バンクーバー", fullName: "バンクーバー", coordinates: [-123.1207, 49.2827], tz: "America/Vancouver" } 
+    { name: "St. John's", fullName: "St. John's", coordinates: [-52.7126, 47.5615], tz: "America/St_Johns" }, 
+    { name: "Halifax", fullName: "Halifax", coordinates: [-63.5728, 44.6476], tz: "America/Halifax" }, 
+    { name: "Toronto", fullName: "Toronto", coordinates: [-79.3832, 43.6532], tz: "America/Toronto" }, 
+    { name: "Winnipeg", fullName: "Winnipeg", coordinates: [-97.1384, 49.8951], tz: "America/Winnipeg" }, 
+    { name: "Edmonton", fullName: "Edmonton", coordinates: [-113.4909, 53.5444], tz: "America/Edmonton" }, 
+    { name: "Vancouver", fullName: "Vancouver", coordinates: [-123.1207, 49.2827], tz: "America/Vancouver" } 
   ],
   "Mexico": [
-    { name: "カンクン", fullName: "カンクン", coordinates: [-86.8515, 21.1619], tz: "America/Cancun" }, 
-    { name: "メキシコシティ", fullName: "メキシコシティ", coordinates: [-99.1332, 19.4326], tz: "America/Mexico_City" }, 
-    { name: "マサトラン", fullName: "マサトラン", coordinates: [-106.4246, 23.2494], tz: "America/Mazatlan" }, 
-    { name: "ティフアナ", fullName: "ティフアナ", coordinates: [-117.0382, 32.5149], tz: "America/Tijuana" } 
+    { name: "Cancun", fullName: "Cancun", coordinates: [-86.8515, 21.1619], tz: "America/Cancun" }, 
+    { name: "Mexico City", fullName: "Mexico City", coordinates: [-99.1332, 19.4326], tz: "America/Mexico_City" }, 
+    { name: "Mazatlan", fullName: "Mazatlan", coordinates: [-106.4246, 23.2494], tz: "America/Mazatlan" }, 
+    { name: "Tijuana", fullName: "Tijuana", coordinates: [-117.0382, 32.5149], tz: "America/Tijuana" } 
   ],
   "Brazil": [
-    { name: "ノローニャ", fullName: "フェルナンド・デ・ノローニャ", coordinates: [-32.4227, -3.8403], tz: "America/Noronha" },
-    { name: "サンパウロ", fullName: "サンパウロ", coordinates: [-46.6333, -23.5505], tz: "America/Sao_Paulo" }, 
-    { name: "マナウス", fullName: "マナウス", coordinates: [-60.0217, -3.1190], tz: "America/Manaus" }, 
-    { name: "リオブランコ", fullName: "リオブランコ", coordinates: [-67.8100, -9.9747], tz: "America/Rio_Branco" } 
+    { name: "Noronha", fullName: "Fernando de Noronha", coordinates: [-32.4227, -3.8403], tz: "America/Noronha" },
+    { name: "Sao Paulo", fullName: "Sao Paulo", coordinates: [-46.6333, -23.5505], tz: "America/Sao_Paulo" }, 
+    { name: "Manaus", fullName: "Manaus", coordinates: [-60.0217, -3.1190], tz: "America/Manaus" }, 
+    { name: "Rio Branco", fullName: "Rio Branco", coordinates: [-67.8100, -9.9747], tz: "America/Rio_Branco" } 
   ],
   "Chile": [
-    { name: "サンティアゴ", fullName: "サンティアゴ", coordinates: [-70.6693, -33.4489], tz: "America/Santiago" }, 
-    { name: "イースター島", fullName: "イースター島", coordinates: [-109.3496, -27.1127], tz: "Pacific/Easter" } 
+    { name: "Santiago", fullName: "Santiago", coordinates: [-70.6693, -33.4489], tz: "America/Santiago" }, 
+    { name: "Easter Island", fullName: "Easter Island", coordinates: [-109.3496, -27.1127], tz: "Pacific/Easter" } 
   ],
   "Ecuador": [
-    { name: "キト", fullName: "キト", coordinates: [-78.4678, -0.1807], tz: "America/Guayaquil" }, 
-    { name: "ガラパゴス", fullName: "ガラパゴス", coordinates: [-90.3118, -0.9538], tz: "Pacific/Galapagos" } 
+    { name: "Quito", fullName: "Quito", coordinates: [-78.4678, -0.1807], tz: "America/Guayaquil" }, 
+    { name: "Galapagos", fullName: "Galapagos", coordinates: [-90.3118, -0.9538], tz: "Pacific/Galapagos" } 
   ],
   "Russia": [
-    { name: "カリーニングラード", fullName: "カリーニングラード", coordinates: [20.4522, 54.7104], tz: "Europe/Kaliningrad" }, 
-    { name: "モスクワ", fullName: "モスクワ", coordinates: [37.6173, 55.7558], tz: "Europe/Moscow" }, 
-    { name: "サマラ", fullName: "サマラ", coordinates: [50.1018, 53.1959], tz: "Europe/Samara" }, 
-    { name: "エカテリンブルク", fullName: "エカテリンブルク", coordinates: [60.5975, 56.8389], tz: "Asia/Yekaterinburg" }, 
-    { name: "オムスク", fullName: "オムスク", coordinates: [73.3686, 54.9885], tz: "Asia/Omsk" }, 
-    { name: "ノボシビルスク", fullName: "ノボシビルスク", coordinates: [82.9204, 55.0084], tz: "Asia/Novosibirsk" }, 
-    { name: "イルクーツク", fullName: "イルクーツク", coordinates: [104.2806, 52.2870], tz: "Asia/Irkutsk" }, 
-    { name: "ヤクーツク", fullName: "ヤクーツク", coordinates: [129.7330, 62.0397], tz: "Asia/Yakutsk" }, 
-    { name: "ウラジオ", fullName: "ウラジオストク", coordinates: [131.8869, 43.1198], tz: "Asia/Vladivostok" }, 
-    { name: "マガダン", fullName: "マガダン", coordinates: [150.8011, 59.5612], tz: "Asia/Magadan" }, 
-    { name: "カムチャツカ", fullName: "カムチャツカ", coordinates: [158.6510, 53.0368], tz: "Asia/Kamchatka" } 
+    { name: "Kaliningrad", fullName: "Kaliningrad", coordinates: [20.4522, 54.7104], tz: "Europe/Kaliningrad" }, 
+    { name: "Moscow", fullName: "Moscow", coordinates: [37.6173, 55.7558], tz: "Europe/Moscow" }, 
+    { name: "Samara", fullName: "Samara", coordinates: [50.1018, 53.1959], tz: "Europe/Samara" }, 
+    { name: "Yekaterinburg", fullName: "Yekaterinburg", coordinates: [60.5975, 56.8389], tz: "Asia/Yekaterinburg" }, 
+    { name: "Omsk", fullName: "Omsk", coordinates: [73.3686, 54.9885], tz: "Asia/Omsk" }, 
+    { name: "Novosibirsk", fullName: "Novosibirsk", coordinates: [82.9204, 55.0084], tz: "Asia/Novosibirsk" }, 
+    { name: "Irkutsk", fullName: "Irkutsk", coordinates: [104.2806, 52.2870], tz: "Asia/Irkutsk" }, 
+    { name: "Yakutsk", fullName: "Yakutsk", coordinates: [129.7330, 62.0397], tz: "Asia/Yakutsk" }, 
+    { name: "Vladivostok", fullName: "Vladivostok", coordinates: [131.8869, 43.1198], tz: "Asia/Vladivostok" }, 
+    { name: "Magadan", fullName: "Magadan", coordinates: [150.8011, 59.5612], tz: "Asia/Magadan" }, 
+    { name: "Kamchatka", fullName: "Kamchatka", coordinates: [158.6510, 53.0368], tz: "Asia/Kamchatka" } 
   ],
   "Spain": [
-    { name: "マドリード", fullName: "マドリード", coordinates: [-3.7038, 40.4168], tz: "Europe/Madrid" }, 
-    { name: "カナリア諸島", fullName: "ラスパルマス", coordinates: [-15.4202, 28.1235], tz: "Atlantic/Canary" } 
+    { name: "Madrid", fullName: "Madrid", coordinates: [-3.7038, 40.4168], tz: "Europe/Madrid" }, 
+    { name: "Canary Is.", fullName: "Las Palmas", coordinates: [-15.4202, 28.1235], tz: "Atlantic/Canary" } 
   ],
   "Portugal": [
-    { name: "リスボン", fullName: "リスボン", coordinates: [-9.1393, 38.7223], tz: "Europe/Lisbon" }, 
-    { name: "アゾレス諸島", fullName: "ポンタ・デルガダ", coordinates: [-25.6687, 37.7412], tz: "Atlantic/Azores" } 
+    { name: "Lisbon", fullName: "Lisbon", coordinates: [-9.1393, 38.7223], tz: "Europe/Lisbon" }, 
+    { name: "Azores", fullName: "Ponta Delgada", coordinates: [-25.6687, 37.7412], tz: "Atlantic/Azores" } 
   ],
   "Australia": [
-    { name: "シドニー", fullName: "シドニー", coordinates: [151.2093, -33.8688], tz: "Australia/Sydney" }, 
-    { name: "アデレード", fullName: "アデレード", coordinates: [138.6007, -34.9285], tz: "Australia/Adelaide" }, 
-    { name: "パース", fullName: "パース", coordinates: [115.8605, -31.9505], tz: "Australia/Perth" }, 
-    { name: "ダーウィン", fullName: "ダーウィン", coordinates: [130.8456, -12.4634], tz: "Australia/Darwin" }, 
-    { name: "ブリスベン", fullName: "ブリスベン", coordinates: [153.0251, -27.4698], tz: "Australia/Brisbane" } 
+    { name: "Sydney", fullName: "Sydney", coordinates: [151.2093, -33.8688], tz: "Australia/Sydney" }, 
+    { name: "Adelaide", fullName: "Adelaide", coordinates: [138.6007, -34.9285], tz: "Australia/Adelaide" }, 
+    { name: "Perth", fullName: "Perth", coordinates: [115.8605, -31.9505], tz: "Australia/Perth" }, 
+    { name: "Darwin", fullName: "Darwin", coordinates: [130.8456, -12.4634], tz: "Australia/Darwin" }, 
+    { name: "Brisbane", fullName: "Brisbane", coordinates: [153.0251, -27.4698], tz: "Australia/Brisbane" } 
   ],
   "Indonesia": [
-    { name: "ジャカルタ", fullName: "ジャカルタ", coordinates: [106.8229, -6.2088], tz: "Asia/Jakarta" }, 
-    { name: "バリ", fullName: "バリ", coordinates: [115.1889, -8.4095], tz: "Asia/Makassar" }, 
-    { name: "ジャヤプラ", fullName: "ジャヤプラ", coordinates: [140.7181, -2.5337], tz: "Asia/Jayapura" } 
+    { name: "Jakarta", fullName: "Jakarta", coordinates: [106.8229, -6.2088], tz: "Asia/Jakarta" }, 
+    { name: "Bali", fullName: "Bali", coordinates: [115.1889, -8.4095], tz: "Asia/Makassar" }, 
+    { name: "Jayapura", fullName: "Jayapura", coordinates: [140.7181, -2.5337], tz: "Asia/Jayapura" } 
   ],
   "Mongolia": [
-    { name: "ホブド", fullName: "ホブド", coordinates: [91.6419, 48.0056], tz: "Asia/Hovd" }, 
-    { name: "ウランバートル", fullName: "ウランバートル", coordinates: [106.9175, 47.9152], tz: "Asia/Ulaanbaatar" } 
+    { name: "Hovd", fullName: "Hovd", coordinates: [91.6419, 48.0056], tz: "Asia/Hovd" }, 
+    { name: "Ulaanbaatar", fullName: "Ulaanbaatar", coordinates: [106.9175, 47.9152], tz: "Asia/Ulaanbaatar" } 
   ],
   "Dem. Rep. Congo": [
-    { name: "キンシャサ", fullName: "キンシャサ", coordinates: [15.2663, -4.4419], tz: "Africa/Kinshasa" }, 
-    { name: "ルブンバシ", fullName: "ルブンバシ", coordinates: [27.4794, -11.6609], tz: "Africa/Lubumbashi" } 
+    { name: "Kinshasa", fullName: "Kinshasa", coordinates: [15.2663, -4.4419], tz: "Africa/Kinshasa" }, 
+    { name: "Lubumbashi", fullName: "Lubumbashi", coordinates: [27.4794, -11.6609], tz: "Africa/Lubumbashi" } 
   ],
   "Kiribati": [
-    { name: "タラワ", fullName: "タラワ", coordinates: [173.0218, 1.4518], tz: "Pacific/Tarawa" }, 
-    { name: "カントン島", fullName: "カントン島", coordinates: [-171.6738, -2.8105], tz: "Pacific/Enderbury" }, 
-    { name: "キリスマス島", fullName: "キリスマス島", coordinates: [-157.4095, 1.8709], tz: "Pacific/Kiritimati" } 
+    { name: "Tarawa", fullName: "Tarawa", coordinates: [173.0218, 1.4518], tz: "Pacific/Tarawa" }, 
+    { name: "Kanton", fullName: "Kanton", coordinates: [-171.6738, -2.8105], tz: "Pacific/Enderbury" }, 
+    { name: "Kiritimati", fullName: "Kiritimati", coordinates: [-157.4095, 1.8709], tz: "Pacific/Kiritimati" } 
   ],
   "Micronesia": [
-    { name: "チューク", fullName: "チューク", coordinates: [151.8491, 7.4256], tz: "Pacific/Chuuk" },
-    { name: "ポンペイ", fullName: "ポンペイ", coordinates: [158.2120, 6.8594], tz: "Pacific/Pohnpei" }
+    { name: "Chuuk", fullName: "Chuuk", coordinates: [151.8491, 7.4256], tz: "Pacific/Chuuk" },
+    { name: "Pohnpei", fullName: "Pohnpei", coordinates: [158.2120, 6.8594], tz: "Pacific/Pohnpei" }
   ]
 };
 
-const getTimeIcon = (hour) => {
-  if (hour >= 5 && hour < 10) return <Sunrise className="text-orange-400" size={40} />;
-  if (hour >= 10 && hour < 16) return <Sun className="text-yellow-500" size={40} />;
-  if (hour >= 16 && hour < 19) return <Sunset className="text-orange-500" size={40} />;
-  if (hour >= 19 && hour < 24) return <Moon className="text-indigo-500" size={40} />;
-  return <MoonStar className="text-slate-700" size={40} />;
+// 大陸判定関数
+const getRegion = (tz, engName) => {
+  if (!tz) return "Worldwide";
+  if (tz.startsWith("Africa/")) return "Africa";
+  if (tz.startsWith("Asia/")) return "Asia";
+  if (tz.startsWith("Europe/")) return "Europe";
+  if (tz.startsWith("Australia/") || tz.startsWith("Pacific/")) return "Australia/Pacific";
+  if (tz.startsWith("America/")) {
+    const southAmerica = ["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Guyana", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela"];
+    if (southAmerica.includes(engName)) return "South America";
+    return "North America";
+  }
+  return "Worldwide";
 };
 
+// リスト表示用にデータを展開してA-Zソートする処理
+const generateSortedLocations = () => {
+  const list = [];
+  Object.keys(countryData).forEach(countryEng => {
+    const data = countryData[countryEng];
+    if (multiZoneCities[countryEng]) {
+      multiZoneCities[countryEng].forEach(city => {
+        list.push({ country: countryEng, city: city.fullName, tz: city.tz, iso: data.iso, region: getRegion(city.tz, countryEng) });
+      });
+    } else {
+      const cityExtracted = data.tz.split('/').pop().replace(/_/g, ' ');
+      list.push({ country: countryEng, city: cityExtracted, tz: data.tz, iso: data.iso, region: getRegion(data.tz, countryEng) });
+    }
+  });
+
+  return list.sort((a, b) => {
+    if (a.country < b.country) return -1;
+    if (a.country > b.country) return 1;
+    return a.city.localeCompare(b.city);
+  });
+};
+
+// ホーム画面のデフォルト時計
+const defaultClocks = [
+  { id: 'home', city: 'Nagoya / Tokyo', tz: 'Asia/Tokyo', iso: 'jp', isHome: true },
+  { id: 'ny', city: 'New York', tz: 'America/New_York', iso: 'us' },
+  { id: 'lon', city: 'London', tz: 'Europe/London', iso: 'gb' }
+];
+
 export default function MapClock({ isAmPm }) {
-  const [selectedLocation, setSelectedLocation] = useState({ name: "日本", tz: "Asia/Tokyo", engName: "Japan", iso: "jp" });
-  const [cityTime, setCityTime] = useState("");
-  const [cityDate, setCityDate] = useState("");
-  const [currentHour, setCurrentHour] = useState(12);
+  const [personalClocks, setPersonalClocks] = useState(() => {
+    const saved = localStorage.getItem('timepalette_clocks');
+    return saved ? JSON.parse(saved) : defaultClocks;
+  });
+  const [isAddMode, setIsAddMode] = useState(false);
+  const [activeRegion, setActiveRegion] = useState('Worldwide');
+  const regions = ['Worldwide', 'Africa', 'North America', 'South America', 'Asia', 'Australia/Pacific', 'Europe'];
+  
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  // ▼ 追加：図鑑オーバーレイを開くための状態管理
+  const [detailIso, setDetailIso] = useState(null);
+
+  const allLocationsList = useMemo(() => generateSortedLocations(), []);
+  
+  const filteredList = useMemo(() => {
+    if (activeRegion === 'Worldwide') return allLocationsList;
+    return allLocationsList.filter(loc => loc.region === activeRegion);
+  }, [activeRegion, allLocationsList]);
 
   useEffect(() => {
-    const updateTime = () => {
-      try {
-        const now = new Date();
-        const timeFormatter = new Intl.DateTimeFormat('ja-JP', {
-          timeZone: selectedLocation.tz,
-          hour: '2-digit', minute: '2-digit', second: '2-digit',
-          hour12: isAmPm
-        });
-        const dateFormatter = new Intl.DateTimeFormat('ja-JP', {
-          timeZone: selectedLocation.tz, year: 'numeric', month: 'short', day: 'numeric', weekday: 'short'
-        });
+    const timer = setInterval(() => setCurrentTime(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
 
-        setCityTime(timeFormatter.format(now));
-        setCityDate(dateFormatter.format(now));
+  useEffect(() => {
+    localStorage.setItem('timepalette_clocks', JSON.stringify(personalClocks));
+  }, [personalClocks]);
 
-        const targetTime = new Date(now.toLocaleString('en-US', { timeZone: selectedLocation.tz }));
-        setCurrentHour(targetTime.getHours());
-      } catch (e) {
-        setCityTime("--:--:--");
+  const formatTime = (tz, formatStyle) => {
+    try {
+      if (formatStyle === 'list') {
+        return new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: isAmPm }).format(currentTime).replace(',', '');
       }
-    };
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, [selectedLocation, isAmPm]);
-
-  const handleCountryClick = (geo) => {
-    const engName = geo.properties.name;
-    const data = countryData[engName];
-    if (data) {
-      setSelectedLocation({ name: data.ja, tz: data.tz, engName, iso: data.iso });
-    } else {
-      setSelectedLocation({ name: engName + " (UTC)", tz: "UTC", engName, iso: "" });
+      if (formatStyle === 'personal') {
+        return new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'short', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: isAmPm }).format(currentTime).replace(',', '');
+      }
+    } catch(e) {
+      return "--:--";
     }
   };
 
-  const handleCityClick = (city, engName, e) => {
-    e.stopPropagation();
+  const handleMapClick = (engName, cityData = null) => {
     const data = countryData[engName];
-    setSelectedLocation({ name: `${data.ja} (${city.fullName})`, tz: city.tz, engName, iso: data?.iso || "" });
+    if (!data) return;
+
+    // 通常時は図鑑オーバーレイを開く
+    if (!isAddMode) {
+      setDetailIso(data.iso);
+      return;
+    }
+
+    // 「追加する」モードでは従来どおり時計を追加する
+    const newCityName = cityData ? cityData.fullName : data.tz.split('/').pop().replace(/_/g, ' ');
+    const newTz = cityData ? cityData.tz : data.tz;
+
+    if (!personalClocks.find(c => c.tz === newTz)) {
+      const newClock = {
+        id: Date.now().toString(),
+        city: newCityName,
+        tz: newTz,
+        iso: data.iso
+      };
+      setPersonalClocks([...personalClocks, newClock]);
+    }
+    setIsAddMode(false);
   };
 
+  const removeClock = (id) => {
+    setPersonalClocks(personalClocks.filter(c => c.id !== id));
+  };
+
+  // 画面上部の時計・日付表示用の関数
+  const [headerTime, setHeaderTime] = useState("");
+  const [headerDate, setHeaderDate] = useState("");
+  // 選択中のエリア情報（デフォルトはローカルストレージの1番目か東京）
+  const selectedHeaderLocation = personalClocks[0] || defaultClocks[0];
+
+  useEffect(() => {
+    try {
+      const timeFormatter = new Intl.DateTimeFormat('ja-JP', {
+        timeZone: selectedHeaderLocation.tz,
+        hour: '2-digit', minute: '2-digit', second: '2-digit',
+        hour12: isAmPm
+      });
+      const dateFormatter = new Intl.DateTimeFormat('ja-JP', {
+        timeZone: selectedHeaderLocation.tz, year: 'numeric', month: 'long', day: 'numeric', weekday: 'short'
+      });
+      setHeaderTime(timeFormatter.format(currentTime));
+      setHeaderDate(dateFormatter.format(currentTime));
+    } catch (e) {
+      setHeaderTime("--:--:--");
+    }
+  }, [currentTime, selectedHeaderLocation, isAmPm]);
+
   return (
-    <div className="flex flex-col w-full h-full">
-      <div className="w-full bg-white border border-blue-100 rounded-2xl shadow-sm p-6 mb-4 flex items-center justify-center gap-8">
-        <div className="flex flex-col items-end">
-          
-          {/* 国名と国旗を横並びで表示（国旗サイズを w-20 に拡大） */}
-          <div className="flex items-center gap-4 mb-2">
-            {selectedLocation.iso && (
-              <img 
-                src={`https://flagcdn.com/w160/${selectedLocation.iso}.png`} 
-                alt="flag" 
-                className="w-20 h-auto rounded shadow-sm border border-gray-200" 
-              />
-            )}
-            <h2 className="text-4xl font-bold text-gray-800">{selectedLocation.name}</h2>
-          </div>
-          
-          <span className="text-gray-500 font-medium text-lg">{cityDate}</span>
-        </div>
-        
-        <div className="bg-blue-50 p-4 rounded-full shadow-inner">
-          {getTimeIcon(currentHour)}
+    <div className="flex flex-col w-full h-full gap-6 relative">
+      
+      {/* --- 上部：My Cities (Personal World Clock) --- */}
+      <div className="w-full bg-white border border-gray-200 rounded-3xl shadow-sm p-6 relative">
+        <div className="flex justify-between items-end mb-6 border-b pb-2">
+          <h2 className="text-xl font-bold text-gray-800">My Cities (Personal World Clock)</h2>
+          {isAddMode && <span className="text-sm font-bold text-blue-500 animate-pulse">地図から追加したい都市を選択してください...</span>}
         </div>
 
-        <div className="text-6xl font-black text-gray-800 tracking-wider font-mono tabular-nums">
-          {cityTime}
+        <div className="flex flex-wrap gap-8 items-start">
+          {personalClocks.map(clock => (
+            <div 
+              key={clock.id} 
+              onClick={() => clock.iso && setDetailIso(clock.iso)}
+              onKeyDown={(e) => {
+                if ((e.key === 'Enter' || e.key === ' ') && clock.iso) {
+                  e.preventDefault();
+                  setDetailIso(clock.iso);
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              className="flex flex-col items-center group relative min-w-[140px] p-2 rounded-2xl cursor-pointer hover:bg-blue-50 transition-colors focus:outline-none focus:ring-4 focus:ring-blue-100"
+            >
+              {!clock.isHome && (
+                <button onClick={(e) => { e.stopPropagation(); removeClock(clock.id); }} className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-red-600 shadow-md">
+                  <X size={14} />
+                </button>
+              )}
+              
+              <div className="w-28 h-28 mb-4">
+                <AnalogClock timeZone={clock.tz} />
+              </div>
+              
+              <div className="flex items-center gap-2 mb-1">
+                {clock.iso && <img src={`https://flagcdn.com/w20/${clock.iso}.png`} alt="flag" className="w-5 shadow-sm border border-gray-100 rounded-sm" />}
+                <span className="font-bold text-lg text-gray-800">{clock.city}</span>
+              </div>
+              
+              <div className="text-gray-500 text-sm flex items-center gap-1 font-mono">
+                {clock.isHome && <Home size={14} className="text-blue-500 mb-0.5" />}
+                {formatTime(clock.tz, 'personal')}
+              </div>
+            </div>
+          ))}
+
+          <button 
+            onClick={() => setIsAddMode(!isAddMode)} 
+            className={`w-28 h-28 rounded-full border-4 border-dashed flex flex-col items-center justify-center transition-all ${isAddMode ? 'border-blue-500 bg-blue-50 text-blue-600' : 'border-gray-200 bg-gray-50 text-gray-400 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-500'}`}
+          >
+            <Plus size={32} className="mb-1" />
+            <span className="text-xs font-bold">{isAddMode ? 'キャンセル' : '追加する'}</span>
+          </button>
         </div>
       </div>
 
-      <div className="flex-1 w-full bg-[#f0f9ff] rounded-2xl border-2 border-blue-100 overflow-hidden shadow-inner min-h-[500px]">
-        <ComposableMap 
-          projection="geoEquirectangular" 
-          projectionConfig={{ scale: 150, center: [0, 0] }} 
-          width={1000} 
-          height={500} 
-          style={{ width: "100%", height: "100%" }}
-        >
+      {/* --- 中段：世界地図 --- */}
+      <div className={`flex-1 w-full bg-[#f0f9ff] rounded-3xl border-4 overflow-hidden shadow-inner min-h-[450px] transition-colors ${isAddMode ? 'border-blue-400 cursor-crosshair ring-4 ring-blue-100' : 'border-blue-100'}`}>
+        <ComposableMap projection="geoEquirectangular" projectionConfig={{ scale: 150, center: [0, 0] }} width={1000} height={450} style={{ width: "100%", height: "100%" }}>
           <ZoomableGroup zoom={1} minZoom={1} maxZoom={8}>
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
                 geographies.map((geo) => {
                   const engName = geo.properties.name;
-                  const data = countryData[engName];
-                  const isSelected = selectedLocation.engName === engName;
+                  const hasData = !!countryData[engName];
 
                   return (
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
-                      onClick={() => handleCountryClick(geo)}
-                      fill={isSelected ? "#3b82f6" : "#cbd5e1"}
+                      onClick={() => handleMapClick(engName)}
+                      fill={hasData ? "#cbd5e1" : "#e2e8f0"}
                       stroke="#ffffff"
                       strokeWidth={0.5}
                       style={{
                         default: { outline: "none" },
-                        hover: { fill: "#60a5fa", outline: "none", cursor: "pointer" },
+                        hover: { fill: isAddMode && hasData ? "#60a5fa" : "#94a3b8", outline: "none" },
                         pressed: { outline: "none" },
                       }}
                     />
@@ -414,37 +522,90 @@ export default function MapClock({ isAmPm }) {
               }
             </Geographies>
 
-            {multiZoneCities[selectedLocation.engName] && multiZoneCities[selectedLocation.engName].map((city, idx) => {
-              const isSelectedCity = selectedLocation.name.includes(city.fullName);
-              
-              return (
-                <Marker key={idx} coordinates={city.coordinates} onClick={(e) => handleCityClick(city, selectedLocation.engName, e)}>
-                  <circle 
-                    r={isSelectedCity ? 6 : 4} 
-                    fill={isSelectedCity ? "#ef4444" : "#fca5a5"} 
-                    stroke="#fff" 
-                    strokeWidth={1.5} 
-                    className="cursor-pointer transition-all hover:scale-150 hover:fill-red-500"
-                  >
+            {Object.keys(multiZoneCities).map(engName => (
+              multiZoneCities[engName].map((city, idx) => (
+                <Marker key={`${engName}-${idx}`} coordinates={city.coordinates} onClick={(e) => { e.stopPropagation(); handleMapClick(engName, city); }}>
+                  <circle r={4} fill="#fca5a5" stroke="#fff" strokeWidth={1.5} className="transition-all hover:scale-150 hover:fill-red-500">
                     <title>{city.fullName}</title>
                   </circle>
-                  
-                  {isSelectedCity && (
-                    <text 
-                      textAnchor="middle" 
-                      y={-12} 
-                      style={{ fontFamily: "sans-serif", fontSize: "14px", fill: "#1e293b", fontWeight: "900", stroke: "#ffffff", strokeWidth: 3, paintOrder: "stroke" }}
-                    >
-                      {city.name}
-                    </text>
-                  )}
                 </Marker>
-              );
-            })}
+              ))
+            ))}
           </ZoomableGroup>
         </ComposableMap>
       </div>
-      <p className="text-gray-500 text-sm mt-3 text-center font-medium">※時差が複数ある国（アメリカ、ロシアなど）を選択すると赤いピンが表示され、都市ごとの時刻を確認できます。</p>
+
+      {/* --- 下段：大陸別フィルタ & 世界時計リスト (4カラム A-Z) --- */}
+      <div className="w-full bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm">
+        <div className="bg-[#3b82f6] text-white px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <h3 className="font-bold text-xl">Current Local Times Around the World</h3>
+          <div className="flex flex-wrap items-center gap-2 text-sm">
+            <span className="font-bold opacity-80 mr-2">Popular Lists:</span>
+            {regions.map(region => (
+              <button 
+                key={region}
+                onClick={() => setActiveRegion(region)}
+                className={`px-3 py-1 rounded-full transition-colors ${activeRegion === region ? 'bg-white text-blue-600 font-bold shadow-sm' : 'hover:bg-blue-400 hover:bg-opacity-50 text-blue-50'}`}
+              >
+                {region}
+              </button>
+            ))}
+          </div>
+        </div>
+        
+        <div className="p-6 bg-slate-50">
+          <div className="columns-1 sm:columns-2 lg:columns-4 gap-6 space-y-4">
+            {filteredList.map((loc, idx) => (
+              <div 
+                key={`${loc.iso}-${loc.city}-${idx}`} 
+                onClick={() => loc.iso && setDetailIso(loc.iso)}
+                onKeyDown={(e) => {
+                  if ((e.key === 'Enter' || e.key === ' ') && loc.iso) {
+                    e.preventDefault();
+                    setDetailIso(loc.iso);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                className="flex items-center justify-between p-3 bg-white border border-gray-100 rounded-lg shadow-sm break-inside-avoid hover:border-blue-300 hover:bg-blue-50 hover:shadow-md transition-all cursor-pointer focus:outline-none focus:ring-4 focus:ring-blue-100"
+              >
+                <div className="flex items-center gap-3 overflow-hidden">
+                  {loc.iso ? (
+                    <img 
+                      src={`https://flagcdn.com/w40/${loc.iso}.png`} 
+                      alt="flag" 
+                      className="w-8 h-auto rounded-sm shadow-sm border border-gray-200 shrink-0"
+                    />
+                  ) : (
+                    <div className="w-8 h-5 bg-gray-200 rounded-sm shrink-0"></div>
+                  )}
+                  <span className="font-bold text-blue-700 hover:underline truncate text-sm">
+                    {loc.country}, {loc.city}
+                  </span>
+                </div>
+                <div className="font-mono text-gray-700 font-bold text-sm shrink-0 ml-2">
+                  {formatTime(loc.tz, 'list')}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {filteredList.length === 0 && (
+            <div className="text-center text-gray-400 py-10 font-bold">
+              このエリアに該当する都市データがありません。
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* ▼ 追加：図鑑オーバーレイの呼び出し部分 */}
+      {detailIso && (
+        <CountryDetailOverlay 
+          iso={detailIso} 
+          onClose={() => setDetailIso(null)} 
+        />
+      )}
+
     </div>
   );
 }

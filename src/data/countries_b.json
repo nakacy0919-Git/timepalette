@@ -1,0 +1,1528 @@
+{
+  "bs": {
+    "iso": "bs",
+    "nameJa": "バハマ",
+    "nameEn": "The Bahamas",
+    "capitalJa": "ナッソー",
+    "capitalEn": "Nassau",
+    "subtitle": "透き通る海と数多くの島々が広がる、カリブ海北部の美しい島国です。",
+    "subtitleEn": "An island nation of clear turquoise seas, coral reefs, and hundreds of islands and cays.",
+    "flagUrl": "https://flagcdn.com/w320/bs.png",
+    "mapQuery": "Nassau, The Bahamas",
+    "timeZone": "America/Nassau",
+    "currency": {
+      "nameJa": "バハマ・ドル",
+      "nameEn": "Bahamian Dollar",
+      "symbol": "B$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約5 m（ナッソー）",
+    "elevationEn": "Approx. 5 m (Nassau)",
+    "weather": {
+      "summary": "一年を通して温暖な亜熱帯気候です。夏から秋は雨が増え、ハリケーンへの備えが必要です。",
+      "summaryEn": "The climate is warm and subtropical, with a wetter hurricane season from summer into autumn."
+    },
+    "heritage": [
+      {
+        "id": "bs-exuma",
+        "title": "エグズーマ諸島",
+        "titleEn": "Exuma Islands",
+        "description": "白い砂浜と浅い青色の海が広がり、サンゴ礁や海洋生物を間近に観察できます。",
+        "descriptionEn": "White beaches and shallow turquoise water make the Exumas ideal for observing reefs and marine life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spiaggia%20Exuma.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Spiaggia_Exuma.JPG",
+        "imageCredit": "Cappo80",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bs-conch-salad",
+        "title": "コンクサラダ",
+        "titleEn": "Conch Salad",
+        "description": "巻き貝の身にトマト、玉ねぎ、柑橘果汁を合わせる、爽やかな島の定番料理です。",
+        "descriptionEn": "Fresh conch is mixed with tomato, onion, and citrus juice to create a bright island favorite.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Conch%20salad%202022%201.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Conch_salad_2022_1.jpg",
+        "imageCredit": "Hannah On The Go",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "島国同士、防災と海を守る協力",
+      "titleEn": "Island Nations Cooperate on Oceans and Disaster Safety",
+      "text": "日本はカリブ地域で、防災、漁業、海洋環境保全などの分野を通じて協力しています。",
+      "textEn": "Japan supports Caribbean partners through cooperation in disaster preparedness, fisheries, and marine conservation."
+    },
+    "quiz": {
+      "question": "バハマの首都はどこでしょう？",
+      "questionEn": "What is the capital of The Bahamas?",
+      "options": [
+        "ナッソー",
+        "ハバナ",
+        "キングストン",
+        "ブリッジタウン"
+      ],
+      "optionsEn": [
+        "Nassau",
+        "Havana",
+        "Kingston",
+        "Bridgetown"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はナッソーです。ニュープロビデンス島にあり、国の政治と観光の中心です。",
+      "explanationEn": "The answer is Nassau. It is located on New Providence Island and is the country's political and tourism center."
+    }
+  },
+  "bh": {
+    "iso": "bh",
+    "nameJa": "バーレーン",
+    "nameEn": "Bahrain",
+    "capitalJa": "マナーマ",
+    "capitalEn": "Manama",
+    "subtitle": "ペルシャ湾に浮かぶ島国で、真珠交易の歴史と近代的な都市景観を持ちます。",
+    "subtitleEn": "A Gulf island nation shaped by ancient pearl trading and modern urban development.",
+    "flagUrl": "https://flagcdn.com/w320/bh.png",
+    "mapQuery": "Manama, Bahrain",
+    "timeZone": "Asia/Bahrain",
+    "currency": {
+      "nameJa": "バーレーン・ディナール",
+      "nameEn": "Bahraini Dinar",
+      "symbol": "د.ب"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約5 m（マナーマ）",
+    "elevationEn": "Approx. 5 m (Manama)",
+    "weather": {
+      "summary": "砂漠気候で、夏は非常に暑く湿度も高くなります。冬は短く比較的穏やかです。",
+      "summaryEn": "Bahrain has a desert climate with extremely hot, humid summers and short, mild winters."
+    },
+    "heritage": [
+      {
+        "id": "bh-qalat",
+        "title": "カルアト・アル＝バーレーン",
+        "titleEn": "Qal'at al-Bahrain",
+        "description": "古代ディルムン文明から続く都市遺跡で、交易の中心だった島の歴史を伝えます。",
+        "descriptionEn": "Layers of settlement reveal Bahrain's long history as a trading center from the Dilmun civilization onward.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Qal'at%20al-Bahrain%201.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Qal'at_al-Bahrain_1.jpg",
+        "imageCredit": "Beireke1",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bh-machboos",
+        "title": "マチブース",
+        "titleEn": "Machboos",
+        "description": "香辛料で炊いた米に肉や魚を合わせる料理で、湾岸地域の家庭料理として親しまれます。",
+        "descriptionEn": "Spiced rice is served with meat or fish in this popular family dish across the Gulf.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Machboos.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Machboos.JPG",
+        "imageCredit": "Miansari66",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "自動車とエネルギーがつなぐ関係",
+      "titleEn": "Cars and Energy Connect the Two Countries",
+      "text": "日本車はバーレーンで広く利用され、両国はエネルギーやビジネス分野でも交流しています。",
+      "textEn": "Japanese vehicles are widely used in Bahrain, and the two countries also cooperate in energy and business."
+    },
+    "quiz": {
+      "question": "バーレーンが古くから世界的に知られてきた産業は何でしょう？",
+      "questionEn": "Which traditional industry made Bahrain famous for centuries?",
+      "options": [
+        "真珠採取",
+        "茶栽培",
+        "絹織物",
+        "森林業"
+      ],
+      "optionsEn": [
+        "Pearl diving",
+        "Tea growing",
+        "Silk weaving",
+        "Forestry"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は真珠採取です。石油開発以前、天然真珠はバーレーン経済を支える重要な産業でした。",
+      "explanationEn": "The answer is pearl diving. Before oil development, natural pearls were central to Bahrain's economy."
+    }
+  },
+  "bd": {
+    "iso": "bd",
+    "nameJa": "バングラデシュ",
+    "nameEn": "Bangladesh",
+    "capitalJa": "ダッカ",
+    "capitalEn": "Dhaka",
+    "subtitle": "大河川がつくる肥沃なデルタと、活気ある都市文化を持つ南アジアの国です。",
+    "subtitleEn": "A South Asian nation shaped by great rivers, fertile delta lands, and energetic urban culture.",
+    "flagUrl": "https://flagcdn.com/w320/bd.png",
+    "mapQuery": "Dhaka, Bangladesh",
+    "timeZone": "Asia/Dhaka",
+    "currency": {
+      "nameJa": "タカ",
+      "nameEn": "Taka",
+      "symbol": "৳"
+    },
+    "languages": [
+      {
+        "nameJa": "ベンガル語",
+        "nameEn": "Bengali"
+      }
+    ],
+    "elevation": "約4 m（ダッカ）",
+    "elevationEn": "Approx. 4 m (Dhaka)",
+    "weather": {
+      "summary": "高温多湿の熱帯モンスーン気候です。雨季には大雨や洪水、沿岸部ではサイクロンが起こります。",
+      "summaryEn": "The tropical monsoon climate brings heavy rain, floods, and occasional coastal cyclones."
+    },
+    "heritage": [
+      {
+        "id": "bd-sundarbans",
+        "title": "シュンドルボン",
+        "titleEn": "The Sundarbans",
+        "description": "世界最大級のマングローブ林で、ベンガルトラや多様な水鳥が暮らしています。",
+        "descriptionEn": "One of the world's largest mangrove forests, the Sundarbans supports Bengal tigers and rich birdlife.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SUNDARBAN.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:SUNDARBAN.jpg",
+        "imageCredit": "Shahid BDWiki",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bd-panta-bhat",
+        "title": "パンタ・バート",
+        "titleEn": "Panta Bhat",
+        "description": "水に浸して発酵させたご飯を、魚、野菜、唐辛子などと食べる伝統料理です。",
+        "descriptionEn": "Lightly fermented rice is eaten with fish, vegetables, and chilies, especially during the Bengali New Year.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Panta%20vat%20Bangladesh.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Panta_vat_Bangladesh.jpg",
+        "imageCredit": "Md Rashidul Hasan Biplob",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "橋や鉄道を支える長い協力",
+      "titleEn": "Long Cooperation in Bridges and Railways",
+      "text": "日本は橋、都市交通、港湾、教育などの整備を通じて、バングラデシュの発展に協力しています。",
+      "textEn": "Japan has supported Bangladesh through projects in bridges, urban transit, ports, education, and skills development."
+    },
+    "quiz": {
+      "question": "シュンドルボンはどのような森林でしょう？",
+      "questionEn": "What type of forest is the Sundarbans?",
+      "options": [
+        "マングローブ林",
+        "針葉樹林",
+        "竹林",
+        "高山草原"
+      ],
+      "optionsEn": [
+        "Mangrove forest",
+        "Conifer forest",
+        "Bamboo forest",
+        "Alpine grassland"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はマングローブ林です。海水と淡水が混ざる沿岸環境に適応した樹木が生えています。",
+      "explanationEn": "The answer is mangrove forest. Its trees are adapted to coastal water where fresh and salt water mix."
+    }
+  },
+  "bb": {
+    "iso": "bb",
+    "nameJa": "バルバドス",
+    "nameEn": "Barbados",
+    "capitalJa": "ブリッジタウン",
+    "capitalEn": "Bridgetown",
+    "subtitle": "大西洋とカリブ文化が出会う島国で、歴史ある港町と美しい海岸を持ちます。",
+    "subtitleEn": "An Atlantic island nation with Caribbean culture, historic Bridgetown, and beautiful coastlines.",
+    "flagUrl": "https://flagcdn.com/w320/bb.png",
+    "mapQuery": "Bridgetown, Barbados",
+    "timeZone": "America/Barbados",
+    "currency": {
+      "nameJa": "バルバドス・ドル",
+      "nameEn": "Barbadian Dollar",
+      "symbol": "Bds$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約1 m（ブリッジタウン）",
+    "elevationEn": "Approx. 1 m (Bridgetown)",
+    "weather": {
+      "summary": "一年中温暖な熱帯気候で、乾季と雨季があります。強い熱帯低気圧への備えも重要です。",
+      "summaryEn": "Barbados is warm year-round, with distinct dry and wet seasons and a need for hurricane preparedness."
+    },
+    "heritage": [
+      {
+        "id": "bb-bridgetown",
+        "title": "歴史都市ブリッジタウンと軍事施設",
+        "titleEn": "Historic Bridgetown and its Garrison",
+        "description": "英国植民地時代の街路や港湾施設が残り、大西洋交易の歴史を伝えています。",
+        "descriptionEn": "Colonial streets, port buildings, and military sites reveal Bridgetown's role in Atlantic trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial%20view%20of%20Bridgetown%20Barbados.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Bridgetown_Barbados.jpg",
+        "imageCredit": "Barry Haynes",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bb-flying-fish",
+        "title": "トビウオ料理",
+        "titleEn": "Flying Fish Cuisine",
+        "description": "トビウオは島を象徴する食材で、蒸し料理や揚げ料理として家庭で親しまれています。",
+        "descriptionEn": "Flying fish is an island symbol and is commonly steamed, seasoned, or fried in Barbadian meals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/FlyingFish.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:FlyingFish.JPG",
+        "imageCredit": "Shoestring",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "防災と海洋分野での協力",
+      "titleEn": "Cooperation in Disaster Safety and Ocean Affairs",
+      "text": "日本はカリブ地域で、防災、漁業、気候変動対策などを通じた協力を行っています。",
+      "textEn": "Japan works with Caribbean nations in disaster preparedness, fisheries, and climate resilience."
+    },
+    "quiz": {
+      "question": "バルバドスの首都はどこでしょう？",
+      "questionEn": "What is the capital of Barbados?",
+      "options": [
+        "ブリッジタウン",
+        "ナッソー",
+        "ロゾー",
+        "セントジョンズ"
+      ],
+      "optionsEn": [
+        "Bridgetown",
+        "Nassau",
+        "Roseau",
+        "St. John's"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はブリッジタウンです。歴史地区は世界文化遺産に登録されています。",
+      "explanationEn": "The answer is Bridgetown. Its historic center and garrison are recognized as a World Heritage Site."
+    }
+  },
+  "by": {
+    "iso": "by",
+    "nameJa": "ベラルーシ",
+    "nameEn": "Belarus",
+    "capitalJa": "ミンスク",
+    "capitalEn": "Minsk",
+    "subtitle": "広い森林と湖、歴史的な城を持つ、東ヨーロッパの内陸国です。",
+    "subtitleEn": "A landlocked Eastern European country of forests, lakes, historic castles, and broad plains.",
+    "flagUrl": "https://flagcdn.com/w320/by.png",
+    "mapQuery": "Minsk, Belarus",
+    "timeZone": "Europe/Minsk",
+    "currency": {
+      "nameJa": "ベラルーシ・ルーブル",
+      "nameEn": "Belarusian Ruble",
+      "symbol": "Br"
+    },
+    "languages": [
+      {
+        "nameJa": "ベラルーシ語",
+        "nameEn": "Belarusian"
+      },
+      {
+        "nameJa": "ロシア語",
+        "nameEn": "Russian"
+      }
+    ],
+    "elevation": "約220 m（ミンスク）",
+    "elevationEn": "Approx. 220 m (Minsk)",
+    "weather": {
+      "summary": "大陸性気候で、冬は寒く雪が降り、夏は比較的穏やかです。年間を通して降水があります。",
+      "summaryEn": "Belarus has cold, snowy winters, mild summers, and precipitation throughout the year."
+    },
+    "heritage": [
+      {
+        "id": "by-mir-castle",
+        "title": "ミール城",
+        "titleEn": "Mir Castle Complex",
+        "description": "ゴシック、ルネサンス、バロックの特徴が混ざる城で、地域の複雑な歴史を映しています。",
+        "descriptionEn": "This castle blends Gothic, Renaissance, and Baroque styles, reflecting centuries of regional history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mir-Castle.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mir-Castle.jpg",
+        "imageCredit": "Torarne",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "by-draniki",
+        "title": "ドラニキ",
+        "titleEn": "Draniki",
+        "description": "すりおろしたジャガイモを焼く料理で、サワークリームや肉料理と一緒に食べます。",
+        "descriptionEn": "These crisp potato pancakes are commonly served with sour cream or meat-based sauces.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2024.12.17%20Belarusian%20Cuisine%20Draniki.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:2024.12.17_Belarusian_Cuisine_Draniki.jpg",
+        "imageCredit": "Tess Mattew",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "日本文化への関心と人的交流",
+      "titleEn": "Interest in Japanese Culture and People-to-People Exchange",
+      "text": "ベラルーシでは日本語や日本文化への関心があり、大学や文化行事を通じた交流が行われています。",
+      "textEn": "Japanese language and culture attract interest in Belarus, with exchanges through universities and cultural events."
+    },
+    "quiz": {
+      "question": "ベラルーシの森林に生息する大型動物はどれでしょう？",
+      "questionEn": "Which large animal lives in the forests of Belarus?",
+      "options": [
+        "ヨーロッパバイソン",
+        "コアラ",
+        "ジャイアントパンダ",
+        "ラマ"
+      ],
+      "optionsEn": [
+        "European bison",
+        "Koala",
+        "Giant panda",
+        "Llama"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はヨーロッパバイソンです。ベラヴェシュスカヤ・プーシャの森で保護されています。",
+      "explanationEn": "The answer is the European bison. It is protected in the ancient Białowieża Forest region."
+    }
+  },
+  "be": {
+    "iso": "be",
+    "nameJa": "ベルギー",
+    "nameEn": "Belgium",
+    "capitalJa": "ブリュッセル",
+    "capitalEn": "Brussels",
+    "subtitle": "中世の街並み、漫画、チョコレート、多言語社会で知られる西ヨーロッパの国です。",
+    "subtitleEn": "A Western European country known for medieval cities, comics, chocolate, and a multilingual society.",
+    "flagUrl": "https://flagcdn.com/w320/be.png",
+    "mapQuery": "Brussels, Belgium",
+    "timeZone": "Europe/Brussels",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "オランダ語",
+        "nameEn": "Dutch"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "ドイツ語",
+        "nameEn": "German"
+      }
+    ],
+    "elevation": "約13 m（ブリュッセル）",
+    "elevationEn": "Approx. 13 m (Brussels)",
+    "weather": {
+      "summary": "海洋性気候で、夏は比較的涼しく冬も極端には寒くありません。雨は一年を通して降ります。",
+      "summaryEn": "Belgium has a mild maritime climate with cool summers, moderate winters, and rain throughout the year."
+    },
+    "heritage": [
+      {
+        "id": "be-grand-place",
+        "title": "ブリュッセルのグラン＝プラス",
+        "titleEn": "Grand-Place of Brussels",
+        "description": "豪華なギルドハウスと市庁舎が囲む広場で、ヨーロッパ都市建築の傑作です。",
+        "descriptionEn": "Ornate guildhalls and the town hall surround one of Europe's most celebrated historic squares.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand-Place%20de%20Bruxelles,%20Brussels.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Grand-Place_de_Bruxelles,_Brussels.jpg",
+        "imageCredit": "Xinyuan Dang",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "be-waffle",
+        "title": "ベルギーワッフル",
+        "titleEn": "Belgian Waffles",
+        "description": "ブリュッセル風やリエージュ風などがあり、生地の軽さや砂糖の食感が異なります。",
+        "descriptionEn": "Brussels and Liège waffles differ in shape, texture, and sweetness, giving each style a distinct character.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Belgian%20waffle.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Belgian_waffle.jpg",
+        "imageCredit": "Anusha Shirly",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "150年以上続く交流",
+      "titleEn": "More Than 150 Years of Exchange",
+      "text": "日本とベルギーは長い外交関係を持ち、芸術、科学、ビジネス、食文化で交流しています。",
+      "textEn": "Japan and Belgium share long diplomatic ties and active exchange in art, science, business, and food culture."
+    },
+    "quiz": {
+      "question": "ベルギーの公用語はいくつあるでしょう？",
+      "questionEn": "How many official languages does Belgium have?",
+      "options": [
+        "3つ",
+        "1つ",
+        "2つ",
+        "5つ"
+      ],
+      "optionsEn": [
+        "Three",
+        "One",
+        "Two",
+        "Five"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は3つです。オランダ語、フランス語、ドイツ語が公用語です。",
+      "explanationEn": "The answer is three: Dutch, French, and German."
+    }
+  },
+  "bz": {
+    "iso": "bz",
+    "nameJa": "ベリーズ",
+    "nameEn": "Belize",
+    "capitalJa": "ベルモパン",
+    "capitalEn": "Belmopan",
+    "subtitle": "サンゴ礁、熱帯雨林、マヤ遺跡が近い距離に集まる中央アメリカの国です。",
+    "subtitleEn": "A Central American country where coral reefs, rainforests, and Maya sites are all close together.",
+    "flagUrl": "https://flagcdn.com/w320/bz.png",
+    "mapQuery": "Belmopan, Belize",
+    "timeZone": "America/Belize",
+    "currency": {
+      "nameJa": "ベリーズ・ドル",
+      "nameEn": "Belize Dollar",
+      "symbol": "BZ$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      },
+      {
+        "nameJa": "ベリーズ・クレオール語",
+        "nameEn": "Belizean Creole"
+      }
+    ],
+    "elevation": "約76 m（ベルモパン）",
+    "elevationEn": "Approx. 76 m (Belmopan)",
+    "weather": {
+      "summary": "高温多湿の熱帯気候で、雨季と乾季があります。沿岸部ではハリケーンへの備えが必要です。",
+      "summaryEn": "Belize has a hot tropical climate with wet and dry seasons and a coastal hurricane risk."
+    },
+    "heritage": [
+      {
+        "id": "bz-blue-hole",
+        "title": "グレート・ブルーホール",
+        "titleEn": "Great Blue Hole",
+        "description": "円形に近い巨大な海底陥没穴で、濃い青色とサンゴ礁の景観が宇宙からも目立ちます。",
+        "descriptionEn": "This giant marine sinkhole forms a striking dark-blue circle within Belize's reef system.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Great%20Blue%20Hole,%20Belize.png?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:The_Great_Blue_Hole,_Belize.png",
+        "imageCredit": "Sentinel Hub / Monja Šebela",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "ベリーズ・バリア・リーフ保護区",
+        "categoryEn": "Belize Barrier Reef Reserve System"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bz-rice-beans",
+        "title": "ライス・アンド・ビーンズ",
+        "titleEn": "Rice and Beans",
+        "description": "ココナツミルクで炊く米と豆に、煮込み鶏やポテトサラダを添える定番料理です。",
+        "descriptionEn": "Rice and beans cooked with coconut milk are often served with stewed chicken and potato salad.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rice%20and%20Beans,%20Stew%20Chicken%20and%20Potato%20Salad%20-%20Belize.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Rice_and_Beans,_Stew_Chicken_and_Potato_Salad_-_Belize.jpg",
+        "imageCredit": "satanoid",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "環境保全と人材育成で協力",
+      "titleEn": "Cooperation in Conservation and Skills Development",
+      "text": "日本はベリーズで、環境保全、防災、教育、人材育成などの分野を支援してきました。",
+      "textEn": "Japan has supported Belize in environmental conservation, disaster preparedness, education, and training."
+    },
+    "quiz": {
+      "question": "中央アメリカで英語を公用語とする国はどこでしょう？",
+      "questionEn": "Which Central American country has English as its official language?",
+      "options": [
+        "ベリーズ",
+        "グアテマラ",
+        "ホンジュラス",
+        "ニカラグア"
+      ],
+      "optionsEn": [
+        "Belize",
+        "Guatemala",
+        "Honduras",
+        "Nicaragua"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はベリーズです。英語が公用語ですが、スペイン語やクレオール語も広く使われます。",
+      "explanationEn": "The answer is Belize. English is official, while Spanish and Belizean Creole are also widely spoken."
+    }
+  },
+  "bj": {
+    "iso": "bj",
+    "nameJa": "ベナン",
+    "nameEn": "Benin",
+    "capitalJa": "ポルトノボ",
+    "capitalEn": "Porto-Novo",
+    "subtitle": "西アフリカの王国史、活気ある市場、ヴォドゥン文化を受け継ぐ国です。",
+    "subtitleEn": "A West African country with royal history, lively markets, and a strong Vodun cultural tradition.",
+    "flagUrl": "https://flagcdn.com/w320/bj.png",
+    "mapQuery": "Porto-Novo, Benin",
+    "timeZone": "Africa/Porto-Novo",
+    "currency": {
+      "nameJa": "西アフリカCFAフラン",
+      "nameEn": "West African CFA Franc",
+      "symbol": "CFA"
+    },
+    "languages": [
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "フォン語",
+        "nameEn": "Fon"
+      },
+      {
+        "nameJa": "ヨルバ語",
+        "nameEn": "Yoruba"
+      }
+    ],
+    "elevation": "約38 m（ポルトノボ）",
+    "elevationEn": "Approx. 38 m (Porto-Novo)",
+    "weather": {
+      "summary": "南部は高温多湿で雨季が二度あり、北部は乾季と雨季がよりはっきりしています。",
+      "summaryEn": "The humid south has two rainy periods, while northern Benin has more distinct wet and dry seasons."
+    },
+    "heritage": [
+      {
+        "id": "bj-abomey",
+        "title": "アボメイの王宮群",
+        "titleEn": "Royal Palaces of Abomey",
+        "description": "ダホメ王国の歴代王が築いた宮殿群で、壁画や建物が王国の歴史を伝えます。",
+        "descriptionEn": "Palaces built by the kings of Dahomey preserve royal history through architecture, reliefs, and symbols.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal%20Palaces%20of%20Abomey-133491.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Royal_Palaces_of_Abomey-133491.jpg",
+        "imageCredit": "Karalyn Monteil / UNESCO",
+        "imageLicense": "CC BY-SA 3.0 IGO",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bj-zangbeto",
+        "title": "ザンベトの舞",
+        "titleEn": "Zangbeto Tradition",
+        "description": "大きなわらの衣装が回転する儀礼で、共同体の守護と秩序を象徴します。",
+        "descriptionEn": "Spinning raffia costumes represent spiritual night guardians associated with community protection and order.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zangbeto%201.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Zangbeto_1.jpg",
+        "imageCredit": "Koutchika Lihouenou Gaspard",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "伝統文化",
+        "categoryEn": "Traditional Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "学校と保健を支える協力",
+      "titleEn": "Supporting Schools and Health",
+      "text": "日本はベナンで、学校建設、母子保健、水供給、人材育成などの協力を進めています。",
+      "textEn": "Japan has supported Benin through school construction, maternal health, water access, and professional training."
+    },
+    "quiz": {
+      "question": "ベナンと深い関わりを持つ伝統宗教は何でしょう？",
+      "questionEn": "Which traditional religion has deep roots in Benin?",
+      "options": [
+        "ヴォドゥン",
+        "神道",
+        "シク教",
+        "ゾロアスター教"
+      ],
+      "optionsEn": [
+        "Vodun",
+        "Shinto",
+        "Sikhism",
+        "Zoroastrianism"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はヴォドゥンです。音楽、舞踊、祭りなどにも影響を与えています。",
+      "explanationEn": "The answer is Vodun. It has influenced local music, dance, ceremonies, and festivals."
+    }
+  },
+  "bt": {
+    "iso": "bt",
+    "nameJa": "ブータン",
+    "nameEn": "Bhutan",
+    "capitalJa": "ティンプー",
+    "capitalEn": "Thimphu",
+    "subtitle": "ヒマラヤの自然と仏教文化を守り、国民総幸福を重視する山岳国家です。",
+    "subtitleEn": "A Himalayan kingdom known for Buddhist culture, protected nature, and its focus on Gross National Happiness.",
+    "flagUrl": "https://flagcdn.com/w320/bt.png",
+    "mapQuery": "Thimphu, Bhutan",
+    "timeZone": "Asia/Thimphu",
+    "currency": {
+      "nameJa": "ニュルタム",
+      "nameEn": "Ngultrum",
+      "symbol": "Nu."
+    },
+    "languages": [
+      {
+        "nameJa": "ゾンカ語",
+        "nameEn": "Dzongkha"
+      }
+    ],
+    "elevation": "約2,320 m（ティンプー）",
+    "elevationEn": "Approx. 2,320 m (Thimphu)",
+    "weather": {
+      "summary": "標高によって気候が大きく異なります。南部は温暖で多雨、山地は涼しく冬に雪が降ります。",
+      "summaryEn": "Climate changes sharply with elevation, from warm, wet southern valleys to cold and snowy high mountains."
+    },
+    "heritage": [
+      {
+        "id": "bt-taktsang",
+        "title": "タクツァン僧院",
+        "titleEn": "Paro Taktsang",
+        "description": "切り立った岩壁に建つ仏教寺院で、「虎の巣」と呼ばれるブータンを象徴する景観です。",
+        "descriptionEn": "Known as the Tiger's Nest, this monastery clings dramatically to a cliff above the Paro Valley.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Paro%20Taktsang.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Paro_Taktsang.jpg",
+        "imageCredit": "Goyaldevender",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "文化的名所",
+        "categoryEn": "Cultural Landmark"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bt-ema-datshi",
+        "title": "エマ・ダツィ",
+        "titleEn": "Ema Datshi",
+        "description": "唐辛子とチーズを煮込む代表料理で、辛さの中に濃厚な味わいがあります。",
+        "descriptionEn": "Bhutan's signature dish combines chilies and cheese in a rich, spicy stew.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ema%20datshi.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ema_datshi.jpg",
+        "imageCredit": "Rigzen Dema",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "「ブータン農業の父」は日本人",
+      "titleEn": "A Japanese Expert Became the Father of Bhutanese Agriculture",
+      "text": "西岡京治は農業技術の普及に長年尽力し、「ブータン農業の父」として今も敬意を集めています。",
+      "textEn": "Japanese agricultural expert Keiji Nishioka worked for decades in Bhutan and is remembered as the father of modern Bhutanese agriculture."
+    },
+    "quiz": {
+      "question": "ブータンが国の発展を考える際に重視する考え方は何でしょう？",
+      "questionEn": "Which idea is central to Bhutan's approach to national development?",
+      "options": [
+        "国民総幸福",
+        "金の生産量",
+        "人口の多さ",
+        "高層ビルの数"
+      ],
+      "optionsEn": [
+        "Gross National Happiness",
+        "Gold production",
+        "Population size",
+        "Number of skyscrapers"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は国民総幸福です。経済だけでなく、文化、環境、健康なども重視します。",
+      "explanationEn": "The answer is Gross National Happiness, which considers culture, environment, health, and community as well as the economy."
+    }
+  },
+  "bo": {
+    "iso": "bo",
+    "nameJa": "ボリビア",
+    "nameEn": "Bolivia",
+    "capitalJa": "スクレ（憲法上）",
+    "capitalEn": "Sucre (constitutional capital)",
+    "subtitle": "アンデス高原、塩湖、先住民文化が色濃く残る南アメリカの内陸国です。",
+    "subtitleEn": "A landlocked South American country of Andean highlands, salt flats, and strong Indigenous traditions.",
+    "flagUrl": "https://flagcdn.com/w320/bo.png",
+    "mapQuery": "Sucre, Bolivia",
+    "timeZone": "America/La_Paz",
+    "currency": {
+      "nameJa": "ボリビアーノ",
+      "nameEn": "Boliviano",
+      "symbol": "Bs."
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      },
+      {
+        "nameJa": "ケチュア語",
+        "nameEn": "Quechua"
+      },
+      {
+        "nameJa": "アイマラ語",
+        "nameEn": "Aymara"
+      }
+    ],
+    "elevation": "約2,810 m（スクレ）",
+    "elevationEn": "Approx. 2,810 m (Sucre)",
+    "weather": {
+      "summary": "高地は昼夜の寒暖差が大きく、低地は温暖です。地域と標高によって気候が大きく変わります。",
+      "summaryEn": "Climate varies greatly by altitude, from cool highlands with large day-night changes to warm tropical lowlands."
+    },
+    "heritage": [
+      {
+        "id": "bo-uyuni",
+        "title": "ウユニ塩湖",
+        "titleEn": "Salar de Uyuni",
+        "description": "世界最大の塩原で、雨季には薄い水が空を映し、巨大な鏡のように見えます。",
+        "descriptionEn": "The world's largest salt flat becomes a vast natural mirror when a thin layer of rainwater covers it.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salar%20de%20Uyuni%20Bolivia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Salar_de_Uyuni_Bolivia.jpg",
+        "imageCredit": "Entropy1963",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bo-saltena",
+        "title": "サルテーニャ",
+        "titleEn": "Salteña",
+        "description": "肉や野菜、卵などの汁気ある具を包んで焼く、ボリビア風のパン料理です。",
+        "descriptionEn": "This baked pastry holds a juicy filling of meat, vegetables, egg, and lightly sweet spices.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salte%C3%B1as%20de%20Bolivia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Salte%C3%B1as_de_Bolivia.jpg",
+        "imageCredit": "EEJCC",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "南米に生まれた日本人移住地",
+      "titleEn": "Japanese Communities Took Root in Bolivia",
+      "text": "オキナワ移住地やサンフアン移住地では、日系社会が農業と地域発展に貢献してきました。",
+      "textEn": "Japanese communities such as Colonia Okinawa and San Juan have contributed to agriculture and local development."
+    },
+    "quiz": {
+      "question": "ボリビアの憲法上の首都はどこでしょう？",
+      "questionEn": "What is Bolivia's constitutional capital?",
+      "options": [
+        "スクレ",
+        "ラパス",
+        "サンタクルス",
+        "ウユニ"
+      ],
+      "optionsEn": [
+        "Sucre",
+        "La Paz",
+        "Santa Cruz",
+        "Uyuni"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はスクレです。政府と議会の主要機関はラパスに置かれています。",
+      "explanationEn": "The answer is Sucre. The main seat of government and legislature is in La Paz."
+    }
+  },
+  "ba": {
+    "iso": "ba",
+    "nameJa": "ボスニア・ヘルツェゴビナ",
+    "nameEn": "Bosnia and Herzegovina",
+    "capitalJa": "サラエボ",
+    "capitalEn": "Sarajevo",
+    "subtitle": "山々と川に囲まれ、オスマン文化とヨーロッパ文化が交差するバルカンの国です。",
+    "subtitleEn": "A mountainous Balkan country where Ottoman, Slavic, and Central European influences meet.",
+    "flagUrl": "https://flagcdn.com/w320/ba.png",
+    "mapQuery": "Sarajevo, Bosnia and Herzegovina",
+    "timeZone": "Europe/Sarajevo",
+    "currency": {
+      "nameJa": "兌換マルク",
+      "nameEn": "Convertible Mark",
+      "symbol": "KM"
+    },
+    "languages": [
+      {
+        "nameJa": "ボスニア語",
+        "nameEn": "Bosnian"
+      },
+      {
+        "nameJa": "クロアチア語",
+        "nameEn": "Croatian"
+      },
+      {
+        "nameJa": "セルビア語",
+        "nameEn": "Serbian"
+      }
+    ],
+    "elevation": "約520 m（サラエボ）",
+    "elevationEn": "Approx. 520 m (Sarajevo)",
+    "weather": {
+      "summary": "内陸部は夏が暖かく冬は寒く雪が降ります。南部は地中海の影響で比較的温暖です。",
+      "summaryEn": "Inland areas have warm summers and cold snowy winters, while the south has a milder Mediterranean influence."
+    },
+    "heritage": [
+      {
+        "id": "ba-mostar",
+        "title": "モスタル旧市街と古橋",
+        "titleEn": "Old Bridge Area of Mostar",
+        "description": "ネレトヴァ川に架かる石橋は、異なる文化を結ぶ町の象徴として再建されました。",
+        "descriptionEn": "The reconstructed stone bridge over the Neretva River symbolizes connection across cultures and communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bridge%20of%20mostar.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bridge_of_mostar.JPG",
+        "imageCredit": "Vikiçizer",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ba-cevapi",
+        "title": "チェヴァピ",
+        "titleEn": "Ćevapi",
+        "description": "香辛料を加えたひき肉を細長く焼き、平たいパンや玉ねぎと一緒に食べます。",
+        "descriptionEn": "Small grilled meat rolls are served with flatbread, onions, and often a creamy pepper spread.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cevapi%20in%20Bosnia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cevapi_in_Bosnia.jpg",
+        "imageCredit": "Hibasi",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "復興と平和構築を支援",
+      "titleEn": "Supporting Reconstruction and Peacebuilding",
+      "text": "日本は紛争後の復興、教育、地雷対策、地域交流などを通じて協力してきました。",
+      "textEn": "Japan has supported post-conflict reconstruction, education, mine action, and community cooperation."
+    },
+    "quiz": {
+      "question": "モスタルの古橋が架かる川はどれでしょう？",
+      "questionEn": "Which river flows beneath Mostar's Old Bridge?",
+      "options": [
+        "ネレトヴァ川",
+        "ドナウ川",
+        "ライン川",
+        "テムズ川"
+      ],
+      "optionsEn": [
+        "Neretva River",
+        "Danube River",
+        "Rhine River",
+        "River Thames"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はネレトヴァ川です。鮮やかな青緑色の水と石橋の景観で知られています。",
+      "explanationEn": "The answer is the Neretva River, known for its clear blue-green water beneath the historic bridge."
+    }
+  },
+  "bw": {
+    "iso": "bw",
+    "nameJa": "ボツワナ",
+    "nameEn": "Botswana",
+    "capitalJa": "ハボローネ",
+    "capitalEn": "Gaborone",
+    "subtitle": "カラハリ砂漠と水豊かな湿地が共存し、多くの野生動物が暮らす国です。",
+    "subtitleEn": "A southern African country where the dry Kalahari and water-rich wetlands support remarkable wildlife.",
+    "flagUrl": "https://flagcdn.com/w320/bw.png",
+    "mapQuery": "Gaborone, Botswana",
+    "timeZone": "Africa/Gaborone",
+    "currency": {
+      "nameJa": "プラ",
+      "nameEn": "Pula",
+      "symbol": "P"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "ツワナ語",
+        "nameEn": "Setswana"
+      }
+    ],
+    "elevation": "約1,010 m（ハボローネ）",
+    "elevationEn": "Approx. 1,010 m (Gaborone)",
+    "weather": {
+      "summary": "半乾燥気候で、日中と夜の寒暖差があります。夏の雨がオカバンゴ湿地を潤します。",
+      "summaryEn": "Botswana is semi-arid, with large day-night temperature changes and seasonal rains that feed its wetlands."
+    },
+    "heritage": [
+      {
+        "id": "bw-okavango",
+        "title": "オカバンゴ・デルタ",
+        "titleEn": "Okavango Delta",
+        "description": "川が海へ流れず内陸で湿地をつくり、ゾウやカバ、多くの鳥を支えています。",
+        "descriptionEn": "A river spreads into an inland wetland rather than reaching the sea, supporting elephants, hippos, and birds.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Okavango%20Delta,%20Botswana.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Okavango_Delta,_Botswana.jpg",
+        "imageCredit": "Joachim Huber",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bw-seswaa",
+        "title": "セスワー",
+        "titleEn": "Seswaa",
+        "description": "牛肉やヤギ肉を柔らかく煮てほぐす料理で、祝いや家族の集まりに登場します。",
+        "descriptionEn": "Beef or goat is slowly cooked and pounded into tender strands for celebrations and family gatherings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pap%20and%20Seswaa%20Botswana.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pap_and_Seswaa_Botswana.jpg",
+        "imageCredit": "JupiterKB",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "野生動物と人材育成で交流",
+      "titleEn": "Exchange in Wildlife and Human Development",
+      "text": "日本は教育、保健、インフラ、人材育成などを通じてボツワナとの協力を進めています。",
+      "textEn": "Japan works with Botswana in education, health, infrastructure, and professional training."
+    },
+    "quiz": {
+      "question": "ボツワナの通貨名「プラ」はツワナ語で何を意味するでしょう？",
+      "questionEn": "What does the currency name pula mean in Setswana?",
+      "options": [
+        "雨",
+        "太陽",
+        "ゾウ",
+        "川"
+      ],
+      "optionsEn": [
+        "Rain",
+        "Sun",
+        "Elephant",
+        "River"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は「雨」です。乾燥した国では雨が大切な恵みであることを表しています。",
+      "explanationEn": "The answer is rain. In a dry country, rainfall is a precious blessing."
+    }
+  },
+  "br": {
+    "iso": "br",
+    "nameJa": "ブラジル",
+    "nameEn": "Brazil",
+    "capitalJa": "ブラジリア",
+    "capitalEn": "Brasília",
+    "subtitle": "アマゾンの熱帯林、広大な高原、多文化都市を持つ南米最大の国です。",
+    "subtitleEn": "South America's largest country, known for the Amazon rainforest, vast highlands, and multicultural cities.",
+    "flagUrl": "https://flagcdn.com/w320/br.png",
+    "mapQuery": "Brasilia, Brazil",
+    "timeZone": "America/Sao_Paulo",
+    "currency": {
+      "nameJa": "レアル",
+      "nameEn": "Brazilian Real",
+      "symbol": "R$"
+    },
+    "languages": [
+      {
+        "nameJa": "ポルトガル語",
+        "nameEn": "Portuguese"
+      }
+    ],
+    "elevation": "約1,170 m（ブラジリア）",
+    "elevationEn": "Approx. 1,170 m (Brasília)",
+    "weather": {
+      "summary": "アマゾン地域は高温多湿で、中央部には雨季と乾季があります。南部は比較的涼しくなります。",
+      "summaryEn": "The Amazon is hot and humid, central regions have wet and dry seasons, and the south is generally cooler."
+    },
+    "heritage": [
+      {
+        "id": "br-iguacu",
+        "title": "イグアス国立公園",
+        "titleEn": "Iguaçu National Park",
+        "description": "巨大な滝群と亜熱帯林が広がり、ジャガーなど多様な野生動物の生息地になっています。",
+        "descriptionEn": "A vast waterfall system and subtropical forest provide habitat for jaguars and many other species.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iguazu%20Falls.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Iguazu_Falls.jpg",
+        "imageCredit": "Emesbe",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "br-feijoada",
+        "title": "フェイジョアーダ",
+        "titleEn": "Feijoada",
+        "description": "黒豆と肉をじっくり煮込み、米や青菜、オレンジなどを添えて食べる代表料理です。",
+        "descriptionEn": "This rich black-bean and meat stew is commonly served with rice, greens, and orange slices.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brazilian%20food%20Feijoada.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Brazilian_food_Feijoada.jpg",
+        "imageCredit": "Wilfredor",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "世界最大の日系社会がある国",
+      "titleEn": "Home to the World's Largest Japanese Community Abroad",
+      "text": "ブラジルには海外最大規模の日系社会があり、食文化、祭り、スポーツを通じた交流が続いています。",
+      "textEn": "Brazil has the world's largest Japanese-descendant community outside Japan, sustaining close ties through food, festivals, and sports."
+    },
+    "quiz": {
+      "question": "ブラジルの公用語は何でしょう？",
+      "questionEn": "What is the official language of Brazil?",
+      "options": [
+        "ポルトガル語",
+        "スペイン語",
+        "英語",
+        "フランス語"
+      ],
+      "optionsEn": [
+        "Portuguese",
+        "Spanish",
+        "English",
+        "French"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はポルトガル語です。南米の多くの国ではスペイン語ですが、ブラジルではポルトガル語を使います。",
+      "explanationEn": "The answer is Portuguese. Most neighboring countries use Spanish, but Brazil developed under Portuguese rule."
+    }
+  },
+  "bn": {
+    "iso": "bn",
+    "nameJa": "ブルネイ",
+    "nameEn": "Brunei",
+    "capitalJa": "バンダルスリブガワン",
+    "capitalEn": "Bandar Seri Begawan",
+    "subtitle": "ボルネオ島に位置し、熱帯雨林と水上集落、豊かな石油資源を持つ小国です。",
+    "subtitleEn": "A small state on Borneo known for tropical forests, water villages, and rich oil and gas resources.",
+    "flagUrl": "https://flagcdn.com/w320/bn.png",
+    "mapQuery": "Bandar Seri Begawan, Brunei",
+    "timeZone": "Asia/Brunei",
+    "currency": {
+      "nameJa": "ブルネイ・ドル",
+      "nameEn": "Brunei Dollar",
+      "symbol": "B$"
+    },
+    "languages": [
+      {
+        "nameJa": "マレー語",
+        "nameEn": "Malay"
+      }
+    ],
+    "elevation": "約9 m（バンダルスリブガワン）",
+    "elevationEn": "Approx. 9 m (Bandar Seri Begawan)",
+    "weather": {
+      "summary": "一年を通して高温多湿の熱帯気候です。雨が多く、短時間に激しく降ることがあります。",
+      "summaryEn": "The climate is hot and humid throughout the year, with frequent rain and occasional heavy downpours."
+    },
+    "heritage": [
+      {
+        "id": "bn-kampong-ayer",
+        "title": "カンポン・アイール",
+        "titleEn": "Kampong Ayer",
+        "description": "川の上に家、学校、商店が広がる大規模な水上集落で、長い暮らしの歴史があります。",
+        "descriptionEn": "This large water village has homes, schools, and shops built above the river and centuries of living history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/KAMPONG%20AYER,%20BRUNEI.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:KAMPONG_AYER,_BRUNEI.jpg",
+        "imageCredit": "JERRYE AND ROY KLOTZ MD",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "歴史的景観",
+        "categoryEn": "Historic Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bn-ambuyat",
+        "title": "アンブヤット",
+        "titleEn": "Ambuyat",
+        "description": "サゴヤシのでんぷんを熱湯で練った粘りのある料理で、竹の道具ですくいソースにつけます。",
+        "descriptionEn": "This sticky sago-starch dish is twirled with a bamboo utensil and dipped into flavorful sauces.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ambuyat.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ambuyat.jpg",
+        "imageCredit": "Juan Pablo",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "天然ガスが日本の暮らしを支える",
+      "titleEn": "Natural Gas Connects Brunei and Japan",
+      "text": "ブルネイは長年、日本へ液化天然ガスを輸出しており、両国はエネルギーや教育で協力しています。",
+      "textEn": "Brunei has supplied liquefied natural gas to Japan for decades, while the two countries also cooperate in education."
+    },
+    "quiz": {
+      "question": "カンポン・アイールはどのような場所でしょう？",
+      "questionEn": "What kind of place is Kampong Ayer?",
+      "options": [
+        "水上集落",
+        "砂漠都市",
+        "地下都市",
+        "氷上の村"
+      ],
+      "optionsEn": [
+        "A water village",
+        "A desert city",
+        "An underground city",
+        "A village on ice"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は水上集落です。ブルネイ川の上に多くの家や公共施設が建てられています。",
+      "explanationEn": "The answer is a water village. Homes and public facilities stand above the Brunei River."
+    }
+  },
+  "bg": {
+    "iso": "bg",
+    "nameJa": "ブルガリア",
+    "nameEn": "Bulgaria",
+    "capitalJa": "ソフィア",
+    "capitalEn": "Sofia",
+    "subtitle": "バルカン山脈、黒海沿岸、古代遺跡と修道院文化を持つ東南ヨーロッパの国です。",
+    "subtitleEn": "A southeastern European country of Balkan mountains, Black Sea shores, ancient ruins, and monasteries.",
+    "flagUrl": "https://flagcdn.com/w320/bg.png",
+    "mapQuery": "Sofia, Bulgaria",
+    "timeZone": "Europe/Sofia",
+    "currency": {
+      "nameJa": "レフ",
+      "nameEn": "Bulgarian Lev",
+      "symbol": "лв"
+    },
+    "languages": [
+      {
+        "nameJa": "ブルガリア語",
+        "nameEn": "Bulgarian"
+      }
+    ],
+    "elevation": "約550 m（ソフィア）",
+    "elevationEn": "Approx. 550 m (Sofia)",
+    "weather": {
+      "summary": "内陸部は夏が暑く冬が寒い大陸性気候です。黒海沿岸は比較的穏やかです。",
+      "summaryEn": "Inland areas have hot summers and cold winters, while the Black Sea coast has a milder climate."
+    },
+    "heritage": [
+      {
+        "id": "bg-rila",
+        "title": "リラ修道院",
+        "titleEn": "Rila Monastery",
+        "description": "山中に建つブルガリア正教会の中心地で、鮮やかな壁画と石造建築が残っています。",
+        "descriptionEn": "Set in the mountains, this major Orthodox monastery is known for vivid frescoes and striking stone architecture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rila%20monastery%20-%20bulgaria.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Rila_monastery_-_bulgaria.JPG",
+        "imageCredit": "Biso",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bg-banitsa",
+        "title": "バニツァ",
+        "titleEn": "Banitsa",
+        "description": "薄い生地に白チーズや卵を重ねて焼く料理で、朝食や祝いの日に親しまれています。",
+        "descriptionEn": "Layers of thin pastry, white cheese, and eggs are baked into a popular breakfast and festive dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Banitsa%20and%20yogurt.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Banitsa_and_yogurt.jpg",
+        "imageCredit": "Biso",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "ヨーグルトが生んだ身近なつながり",
+      "titleEn": "A Familiar Connection Through Yogurt",
+      "text": "ブルガリア式ヨーグルトは日本で広く親しまれ、食文化を通じて国名を身近にしました。",
+      "textEn": "Bulgarian-style yogurt is widely enjoyed in Japan and has made the country familiar through everyday food culture."
+    },
+    "quiz": {
+      "question": "ブルガリアが世界的に知られる香料はどれでしょう？",
+      "questionEn": "Which fragrant product is Bulgaria famous for?",
+      "options": [
+        "バラ油",
+        "バニラ油",
+        "ココナツ油",
+        "ゴマ油"
+      ],
+      "optionsEn": [
+        "Rose oil",
+        "Vanilla oil",
+        "Coconut oil",
+        "Sesame oil"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はバラ油です。「バラの谷」では香水などに使うダマスクローズが栽培されています。",
+      "explanationEn": "The answer is rose oil. Damask roses grown in the Valley of Roses are used in perfumes and cosmetics."
+    }
+  },
+  "bf": {
+    "iso": "bf",
+    "nameJa": "ブルキナファソ",
+    "nameEn": "Burkina Faso",
+    "capitalJa": "ワガドゥグー",
+    "capitalEn": "Ouagadougou",
+    "subtitle": "サヘル地域に位置し、多様な民族文化、音楽、仮面芸術で知られる西アフリカの国です。",
+    "subtitleEn": "A West African Sahel country known for diverse communities, music, filmmaking, and mask traditions.",
+    "flagUrl": "https://flagcdn.com/w320/bf.png",
+    "mapQuery": "Ouagadougou, Burkina Faso",
+    "timeZone": "Africa/Ouagadougou",
+    "currency": {
+      "nameJa": "西アフリカCFAフラン",
+      "nameEn": "West African CFA Franc",
+      "symbol": "CFA"
+    },
+    "languages": [
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "モレ語",
+        "nameEn": "Mooré"
+      },
+      {
+        "nameJa": "ジュラ語",
+        "nameEn": "Dioula"
+      }
+    ],
+    "elevation": "約305 m（ワガドゥグー）",
+    "elevationEn": "Approx. 305 m (Ouagadougou)",
+    "weather": {
+      "summary": "一年を通して暑く、雨季と乾季がはっきりしています。北部ほど乾燥が強くなります。",
+      "summaryEn": "It is hot year-round with clear wet and dry seasons, and conditions become drier toward the north."
+    },
+    "heritage": [
+      {
+        "id": "bf-loropeni",
+        "title": "ロロペニの遺跡群",
+        "titleEn": "Ruins of Loropéni",
+        "description": "高い石壁に囲まれた遺跡で、金交易に関わった集落の歴史を伝えています。",
+        "descriptionEn": "These tall stone walls preserve evidence of settlements connected to the region's historic gold trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2016.05-441-134ap%20archeology,excavation%20Lorop%C3%A9ni%20Ruins%20nr.Lorop%C3%A9ni(Poni%20Prv.),BF%20sun15may2016-1119h.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:2016.05-441-134ap_archeology,excavation_Lorop%C3%A9ni_Ruins_nr.Lorop%C3%A9ni(Poni_Prv.),BF_sun15may2016-1119h.jpg",
+        "imageCredit": "Rik Schuiling / TropCrop-TCS",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bf-mossi-mask",
+        "title": "モシの仮面舞踊",
+        "titleEn": "Mossi Mask Dance",
+        "description": "動物や祖先を表す仮面を使い、祭礼や共同体の儀式で音楽とともに踊ります。",
+        "descriptionEn": "Masks representing animals or ancestors are worn during community ceremonies accompanied by music and dance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Masque%20de%20danse%20karan%20wemba%20Mossi%20(Burkina%20Faso).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Masque_de_danse_karan_wemba_Mossi_(Burkina_Faso).jpg",
+        "imageCredit": "Ji-Elle",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "伝統文化",
+        "categoryEn": "Traditional Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "水・教育・農業を通じた協力",
+      "titleEn": "Cooperation Through Water, Education, and Agriculture",
+      "text": "日本は給水、学校教育、農業、人材育成などを通じて、ブルキナファソの地域づくりを支援しています。",
+      "textEn": "Japan has supported communities in Burkina Faso through water access, education, agriculture, and professional training."
+    },
+    "quiz": {
+      "question": "国名「ブルキナファソ」に近い意味はどれでしょう？",
+      "questionEn": "What does the name Burkina Faso roughly mean?",
+      "options": [
+        "高潔な人々の国",
+        "千の湖の国",
+        "黄金の島",
+        "雪山の王国"
+      ],
+      "optionsEn": [
+        "Land of Upright People",
+        "Land of a Thousand Lakes",
+        "Golden Island",
+        "Kingdom of Snowy Mountains"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は「高潔な人々の国」です。複数の現地語を組み合わせた国名です。",
+      "explanationEn": "The answer is Land of Upright People. The name combines words from local languages."
+    }
+  },
+  "bi": {
+    "iso": "bi",
+    "nameJa": "ブルンジ",
+    "nameEn": "Burundi",
+    "capitalJa": "ギテガ",
+    "capitalEn": "Gitega",
+    "subtitle": "アフリカ大湖沼地域の高原に位置し、太鼓文化とタンガニーカ湖で知られる国です。",
+    "subtitleEn": "A highland country in Africa's Great Lakes region, known for royal drumming and Lake Tanganyika.",
+    "flagUrl": "https://flagcdn.com/w320/bi.png",
+    "mapQuery": "Gitega, Burundi",
+    "timeZone": "Africa/Bujumbura",
+    "currency": {
+      "nameJa": "ブルンジ・フラン",
+      "nameEn": "Burundian Franc",
+      "symbol": "FBu"
+    },
+    "languages": [
+      {
+        "nameJa": "ルンディ語",
+        "nameEn": "Kirundi"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約1,500 m（ギテガ）",
+    "elevationEn": "Approx. 1,500 m (Gitega)",
+    "weather": {
+      "summary": "赤道に近いものの高地のため比較的穏やかで、雨季と乾季があります。",
+      "summaryEn": "Although near the Equator, its high elevation keeps temperatures moderate, with distinct wet and dry seasons."
+    },
+    "heritage": [
+      {
+        "id": "bi-tanganyika",
+        "title": "タンガニーカ湖",
+        "titleEn": "Lake Tanganyika",
+        "description": "世界で特に深く古い湖の一つで、多数の固有魚が暮らす重要な淡水生態系です。",
+        "descriptionEn": "One of the world's deepest and oldest lakes, it supports an exceptional variety of unique freshwater fish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20tanganyika.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_tanganyika.jpg",
+        "imageCredit": "NASA",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "自然景観",
+        "categoryEn": "Natural Landmark"
+      }
+    ],
+    "culture": [
+      {
+        "id": "bi-royal-drums",
+        "title": "ブルンジの王の太鼓",
+        "titleEn": "Royal Drumming of Burundi",
+        "description": "力強い太鼓演奏と踊りを組み合わせた伝統で、国の歴史と結束を象徴します。",
+        "descriptionEn": "Powerful drumming and dance represent national history, ceremony, and community unity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Drummers%20from%20Burundi.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Drummers_from_Burundi.jpg",
+        "imageCredit": "Jean Baptiste Hatungimana",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "無形文化遺産",
+        "categoryEn": "Intangible Cultural Heritage"
+      }
+    ],
+    "japanConnection": {
+      "title": "平和と生活基盤を支える協力",
+      "titleEn": "Cooperation for Peace and Essential Services",
+      "text": "日本はブルンジで、平和構築、保健、水、インフラ、人材育成などの支援を行っています。",
+      "textEn": "Japan has supported Burundi in peacebuilding, health, water access, infrastructure, and professional training."
+    },
+    "quiz": {
+      "question": "ブルンジを象徴する伝統芸能で中心となる楽器は何でしょう？",
+      "questionEn": "Which instrument is central to one of Burundi's best-known traditions?",
+      "options": [
+        "太鼓",
+        "ハープ",
+        "フルート",
+        "バイオリン"
+      ],
+      "optionsEn": [
+        "Drum",
+        "Harp",
+        "Flute",
+        "Violin"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は太鼓です。王の太鼓の演奏は、音楽、踊り、儀礼を一体にした文化です。",
+      "explanationEn": "The answer is the drum. Royal drumming combines music, dance, and ceremony."
+    }
+  }
+}

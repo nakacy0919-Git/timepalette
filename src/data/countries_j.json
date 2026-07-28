@@ -1,0 +1,100 @@
+{
+  "jp": {
+    "iso": "jp",
+    "nameJa": "日本",
+    "nameEn": "Japan",
+    "capitalJa": "東京",
+    "capitalEn": "Tokyo",
+    "region": "アジア",
+    "subregion": "東アジア",
+    "subtitle": "古くから受け継がれてきた伝統と、世界を驚かせる新しい技術が共存する島国です。",
+    "flagUrl": "https://flagcdn.com/w1280/jp.png",
+    "mapQuery": "Tokyo, Japan",
+    "timeZone": "Asia/Tokyo",
+    "currency": {
+      "code": "JPY",
+      "nameJa": "日本円",
+      "nameEn": "Japanese Yen",
+      "symbol": "¥"
+    },
+    "languages": [
+      {
+        "code": "ja",
+        "nameJa": "日本語",
+        "nameEn": "Japanese"
+      }
+    ],
+    "elevation": "約40 m（東京都心部の目安）",
+    "timeDifferenceFromJapan": "日本国内なので時差はありません",
+    "weather": {
+      "summary": "南北に長い国なので、地域によって気候が大きく異なります。多くの地域には春・夏・秋・冬の四季があります。",
+      "summer": "多くの地域で高温多湿になります。沖縄などでは台風にも注意が必要です。",
+      "winter": "北海道や日本海側では多くの雪が降りますが、太平洋側は晴れる日が比較的多くなります。",
+      "bestSeason": "春の桜や秋の紅葉の季節が人気です。"
+    },
+    "heritage": [
+      {
+        "id": "jp-himeji-castle",
+        "title": "姫路城",
+        "description": "白い壁が羽を広げた鳥のように見えることから、「白鷺城」とも呼ばれています。日本の城の美しさと防御の工夫を学べる場所です。",
+        "image": "https://placehold.co/1200x800/e2e8f0/0f172a?text=Himeji+Castle",
+        "location": "兵庫県姫路市",
+        "category": "世界文化遺産"
+      },
+      {
+        "id": "jp-itsukushima",
+        "title": "厳島神社",
+        "description": "海の上に建っているように見える神社です。潮の満ち引きによって景色が変わり、大きな鳥居も有名です。",
+        "image": "https://placehold.co/1200x800/fecaca/7f1d1d?text=Itsukushima+Shrine",
+        "location": "広島県廿日市市",
+        "category": "世界文化遺産"
+      },
+      {
+        "id": "jp-mount-fuji",
+        "title": "富士山",
+        "description": "日本で最も高い山です。昔から絵や物語、信仰の対象となり、日本を象徴する存在として親しまれてきました。",
+        "image": "https://placehold.co/1200x800/dbeafe/1e3a8a?text=Mount+Fuji",
+        "location": "山梨県・静岡県",
+        "category": "世界文化遺産"
+      }
+    ],
+    "culture": [
+      {
+        "id": "jp-sushi",
+        "title": "すし",
+        "description": "酢を混ぜたご飯に、魚や野菜などを合わせる日本料理です。地域によって形や材料が異なります。",
+        "image": "https://placehold.co/1200x800/fef3c7/78350f?text=Japanese+Sushi",
+        "category": "食文化"
+      },
+      {
+        "id": "jp-matsuri",
+        "title": "日本の祭り",
+        "description": "地域の歴史や自然への感謝を表す行事です。みこし、山車、踊り、花火など、地域ごとにさまざまな特徴があります。",
+        "image": "https://placehold.co/1200x800/fce7f3/831843?text=Japanese+Festival",
+        "category": "伝統行事"
+      },
+      {
+        "id": "jp-tea-ceremony",
+        "title": "茶道",
+        "description": "お茶を入れて客をもてなす日本の文化です。動作や道具だけでなく、相手を大切にする心も重視します。",
+        "image": "https://placehold.co/1200x800/dcfce7/14532d?text=Japanese+Tea+Ceremony",
+        "category": "伝統文化"
+      }
+    ],
+    "japanConnection": {
+      "title": "日本の文化は世界とつながっている！",
+      "text": "アニメ、漫画、ゲーム、日本食、武道など、日本で生まれた文化は世界各地で親しまれています。一方で、日本の言葉や食べ物、科学技術にも、外国との交流から生まれたものがたくさんあります。日本の文化は、日本だけで完成したものではなく、世界との長い交流によって発展してきました。"
+    },
+    "quiz": {
+      "question": "日本で最も高い山はどれでしょう？",
+      "options": [
+        "富士山",
+        "高尾山",
+        "六甲山",
+        "阿蘇山"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は富士山です。富士山の標高は3,776 mで、日本で最も高い山です。山梨県と静岡県にまたがっています。"
+    }
+  }
+}

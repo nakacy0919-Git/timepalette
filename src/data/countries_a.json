@@ -1,0 +1,960 @@
+{
+  "af": {
+    "iso": "af",
+    "nameJa": "アフガニスタン",
+    "nameEn": "Afghanistan",
+    "capitalJa": "カブール",
+    "capitalEn": "Kabul",
+    "subtitle": "険しい山々とシルクロードの歴史が交差する、中央アジアと南アジアの要衝です。",
+    "subtitleEn": "A mountainous country shaped by Silk Road trade and the meeting of Central and South Asia.",
+    "flagUrl": "https://flagcdn.com/w320/af.png",
+    "mapQuery": "Kabul, Afghanistan",
+    "timeZone": "Asia/Kabul",
+    "currency": {
+      "nameJa": "アフガニ",
+      "nameEn": "Afghani",
+      "symbol": "؋"
+    },
+    "languages": [
+      {
+        "nameJa": "パシュトー語",
+        "nameEn": "Pashto"
+      },
+      {
+        "nameJa": "ダリー語",
+        "nameEn": "Dari"
+      }
+    ],
+    "elevation": "約1,800 m（カブール）",
+    "elevationEn": "Approx. 1,800 m (Kabul)",
+    "weather": {
+      "summary": "乾燥した大陸性気候で、夏は暑く、標高の高い地域では冬に厳しい寒さと雪があります。",
+      "summaryEn": "The climate is dry and continental, with hot summers and cold, snowy winters in highland areas."
+    },
+    "heritage": [
+      {
+        "id": "af-bamiyan",
+        "title": "バーミヤン渓谷の文化的景観",
+        "titleEn": "Cultural Landscape of the Bamiyan Valley",
+        "description": "岩壁には多くの石窟寺院が残り、仏教文化とシルクロード交流の歴史を伝えています。",
+        "descriptionEn": "Cave temples carved into the cliffs preserve the valley's Buddhist past and Silk Road connections.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monk%20Caves%20in%20Bamiyan%20Valley.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Monk_Caves_in_Bamiyan_Valley.jpg",
+        "imageCredit": "Tracy Hunter",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "af-kabuli-pulao",
+        "title": "カブリ・プラオ",
+        "titleEn": "Kabuli Pulao",
+        "description": "米に肉、ニンジン、レーズンを重ねて炊く料理で、祝い事や来客時にも振る舞われます。",
+        "descriptionEn": "This festive rice dish combines meat, carrots, and raisins and is often served to honored guests.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kabuli%20Pulao.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kabuli_Pulao.JPG",
+        "imageCredit": "Miansari66",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "日本のランドセルが学びを支える",
+      "titleEn": "Japanese School Backpacks Support Learning",
+      "text": "日本で使われたランドセルが寄贈され、アフガニスタンの子どもたちの通学や学習を支えています。",
+      "textEn": "Used Japanese randoseru backpacks have been donated to help Afghan children carry books and attend school."
+    },
+    "quiz": {
+      "question": "アフガニスタン北東部で数千年前から採掘されてきた青い宝石は何でしょう？",
+      "questionEn": "Which blue gemstone has been mined in northeastern Afghanistan for thousands of years?",
+      "options": [
+        "ラピスラズリ",
+        "エメラルド",
+        "ルビー",
+        "オパール"
+      ],
+      "optionsEn": [
+        "Lapis lazuli",
+        "Emerald",
+        "Ruby",
+        "Opal"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はラピスラズリです。古代文明にも運ばれ、装飾品や青色の顔料に使われました。",
+      "explanationEn": "The answer is lapis lazuli. It was traded to ancient civilizations and used in jewelry and blue pigments."
+    }
+  },
+  "al": {
+    "iso": "al",
+    "nameJa": "アルバニア",
+    "nameEn": "Albania",
+    "capitalJa": "ティラナ",
+    "capitalEn": "Tirana",
+    "subtitle": "アドリア海の美しい海岸と山岳地帯、古代から続く多文化の歴史を持つ国です。",
+    "subtitleEn": "A Balkan country of Adriatic beaches, rugged mountains, and layers of ancient history.",
+    "flagUrl": "https://flagcdn.com/w320/al.png",
+    "mapQuery": "Tirana, Albania",
+    "timeZone": "Europe/Tirane",
+    "currency": {
+      "nameJa": "レク",
+      "nameEn": "Lek",
+      "symbol": "L"
+    },
+    "languages": [
+      {
+        "nameJa": "アルバニア語",
+        "nameEn": "Albanian"
+      }
+    ],
+    "elevation": "約110 m（ティラナ）",
+    "elevationEn": "Approx. 110 m (Tirana)",
+    "weather": {
+      "summary": "海岸部は夏が暑く乾燥し、冬は比較的穏やかです。内陸の山地では冬に雪が降ります。",
+      "summaryEn": "Coastal areas have hot, dry summers and mild winters, while the mountains are colder and snowier."
+    },
+    "heritage": [
+      {
+        "id": "al-berat-gjirokaster",
+        "title": "ベラトとジロカストラの歴史地区",
+        "titleEn": "Historic Centres of Berat and Gjirokastra",
+        "description": "石造りの家々や城塞が残り、オスマン帝国時代の都市文化と宗教の共存を伝えています。",
+        "descriptionEn": "Stone houses and hilltop fortresses preserve Ottoman-era urban life and religious coexistence.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Berat%20Albania.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Berat_Albania.jpg",
+        "imageCredit": "godo godaj",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "al-byrek",
+        "title": "ブレク",
+        "titleEn": "Byrek",
+        "description": "薄い生地にチーズ、肉、野菜などを包んで焼く料理で、家庭やパン店で親しまれています。",
+        "descriptionEn": "This flaky pastry is filled with cheese, meat, or vegetables and is enjoyed at home and in bakeries.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Albanian%20Byrek.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Albanian_Byrek.jpg",
+        "imageCredit": "BlerimBalaj",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "100年以上続く外交のつながり",
+      "titleEn": "More Than a Century of Diplomatic Ties",
+      "text": "日本とアルバニアは1922年に外交関係を結び、文化や観光を通じた交流を広げています。",
+      "textEn": "Japan and Albania established diplomatic relations in 1922, and cultural and tourism exchanges continue to grow."
+    },
+    "quiz": {
+      "question": "アルバニアの国旗に大きく描かれている鳥は何でしょう？",
+      "questionEn": "Which bird appears prominently on Albania's national flag?",
+      "options": [
+        "双頭のワシ",
+        "白いハト",
+        "金色のタカ",
+        "青いクジャク"
+      ],
+      "optionsEn": [
+        "A double-headed eagle",
+        "A white dove",
+        "A golden hawk",
+        "A blue peacock"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は双頭のワシです。赤い背景に黒い双頭のワシが描かれています。",
+      "explanationEn": "The answer is a double-headed eagle. It appears in black against the flag's red background."
+    }
+  },
+  "dz": {
+    "iso": "dz",
+    "nameJa": "アルジェリア",
+    "nameEn": "Algeria",
+    "capitalJa": "アルジェ",
+    "capitalEn": "Algiers",
+    "subtitle": "地中海沿岸の都市と広大なサハラ砂漠を持つ、アフリカ最大面積の国です。",
+    "subtitleEn": "Africa's largest country combines Mediterranean cities with the vast landscapes of the Sahara.",
+    "flagUrl": "https://flagcdn.com/w320/dz.png",
+    "mapQuery": "Algiers, Algeria",
+    "timeZone": "Africa/Algiers",
+    "currency": {
+      "nameJa": "アルジェリア・ディナール",
+      "nameEn": "Algerian Dinar",
+      "symbol": "دج"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      },
+      {
+        "nameJa": "タマジグト語",
+        "nameEn": "Tamazight"
+      }
+    ],
+    "elevation": "約120 m（アルジェ）",
+    "elevationEn": "Approx. 120 m (Algiers)",
+    "weather": {
+      "summary": "北部は地中海性気候ですが、サハラでは極端に乾燥し、昼夜の寒暖差が大きくなります。",
+      "summaryEn": "The north has a Mediterranean climate, while the Sahara is extremely dry with large day-night temperature changes."
+    },
+    "heritage": [
+      {
+        "id": "dz-tassili",
+        "title": "タッシリ・ナジェール",
+        "titleEn": "Tassili n'Ajjer",
+        "description": "奇岩が連なる砂漠地帯に多くの岩絵が残り、古代のサハラが緑豊かだったことを示します。",
+        "descriptionEn": "Rock formations and ancient paintings show that the Sahara once supported animals and human communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20tassili%20of%20Algeria.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:The_tassili_of_Algeria.jpg",
+        "imageCredit": "raandree",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "dz-couscous",
+        "title": "クスクス",
+        "titleEn": "Couscous",
+        "description": "粒状の小麦に野菜や肉の煮込みを添える料理で、家族が集まる食卓を象徴します。",
+        "descriptionEn": "Steamed semolina grains are served with vegetables and meat as an important shared family meal.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Algerian%20couscous%20from%20Kabylia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Algerian_couscous_from_Kabylia.jpg",
+        "imageCredit": "Slothtysloth",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "エネルギーと防災で協力",
+      "titleEn": "Cooperation in Energy and Disaster Preparedness",
+      "text": "日本とアルジェリアは、エネルギー、インフラ、防災、人材育成などの分野で交流しています。",
+      "textEn": "Japan and Algeria cooperate in energy, infrastructure, disaster preparedness, and professional training."
+    },
+    "quiz": {
+      "question": "アルジェリアについて正しい説明はどれでしょう？",
+      "questionEn": "Which statement about Algeria is correct?",
+      "options": [
+        "アフリカで最も面積が大きい",
+        "国土に砂漠がない",
+        "赤道上に位置する",
+        "島だけでできている"
+      ],
+      "optionsEn": [
+        "It is Africa's largest country by area",
+        "It has no desert",
+        "It lies on the Equator",
+        "It consists only of islands"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は「アフリカで最も面積が大きい」です。国土の大部分はサハラ砂漠に含まれます。",
+      "explanationEn": "Algeria is Africa's largest country by area. Much of its territory lies within the Sahara Desert."
+    }
+  },
+  "ad": {
+    "iso": "ad",
+    "nameJa": "アンドラ",
+    "nameEn": "Andorra",
+    "capitalJa": "アンドラ・ラ・ベリャ",
+    "capitalEn": "Andorra la Vella",
+    "subtitle": "フランスとスペインの間、ピレネー山脈に位置する小さな山岳国家です。",
+    "subtitleEn": "A small mountain state located high in the Pyrenees between France and Spain.",
+    "flagUrl": "https://flagcdn.com/w320/ad.png",
+    "mapQuery": "Andorra la Vella, Andorra",
+    "timeZone": "Europe/Andorra",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "カタルーニャ語",
+        "nameEn": "Catalan"
+      }
+    ],
+    "elevation": "約1,020 m（アンドラ・ラ・ベリャ）",
+    "elevationEn": "Approx. 1,020 m (Andorra la Vella)",
+    "weather": {
+      "summary": "標高が高いため夏は比較的涼しく、冬は寒く雪が多いためスキー観光が盛んです。",
+      "summaryEn": "Its high elevation brings mild summers and cold, snowy winters that support a major ski industry."
+    },
+    "heritage": [
+      {
+        "id": "ad-madriu",
+        "title": "マドリウ＝ペラフィタ＝クラロ渓谷",
+        "titleEn": "Madriu-Perafita-Claror Valley",
+        "description": "氷河がつくった渓谷に牧草地や石造りの小屋が残り、山岳地域の伝統的な暮らしを伝えます。",
+        "descriptionEn": "Glacial valleys, pastures, and stone shelters preserve the traditional use of a high mountain landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Refuge%20perafita%20andorra.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Refuge_perafita_andorra.jpg",
+        "imageCredit": "Aliento Más Allá",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ad-escudella",
+        "title": "エスクデリャ",
+        "titleEn": "Escudella",
+        "description": "肉、豆、野菜、パスタなどを煮込む温かな料理で、寒い山の冬に親しまれています。",
+        "descriptionEn": "This hearty stew combines meat, beans, vegetables, and pasta and is popular during cold winters.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Escudella.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Escudella.jpg",
+        "imageCredit": "arquera / Emi Yañez",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "ピレネーの小国と日本の交流",
+      "titleEn": "Japan's Connection with a Pyrenean Microstate",
+      "text": "日本とアンドラは1995年に外交関係を結び、観光や文化を通じて交流を深めています。",
+      "textEn": "Japan and Andorra established diplomatic relations in 1995 and continue exchanges through tourism and culture."
+    },
+    "quiz": {
+      "question": "アンドラはどの二つの国の間に位置していますか？",
+      "questionEn": "Between which two countries is Andorra located?",
+      "options": [
+        "フランスとスペイン",
+        "ドイツとオーストリア",
+        "イタリアとスイス",
+        "ベルギーとオランダ"
+      ],
+      "optionsEn": [
+        "France and Spain",
+        "Germany and Austria",
+        "Italy and Switzerland",
+        "Belgium and the Netherlands"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はフランスとスペインです。両国の間にあるピレネー山脈の中に位置します。",
+      "explanationEn": "Andorra lies in the Pyrenees between France and Spain."
+    }
+  },
+  "ao": {
+    "iso": "ao",
+    "nameJa": "アンゴラ",
+    "nameEn": "Angola",
+    "capitalJa": "ルアンダ",
+    "capitalEn": "Luanda",
+    "subtitle": "大西洋岸の都市、広大な高原、砂漠、熱帯の自然が共存する南部アフリカの国です。",
+    "subtitleEn": "A southern African country of Atlantic cities, broad plateaus, desert landscapes, and tropical ecosystems.",
+    "flagUrl": "https://flagcdn.com/w320/ao.png",
+    "mapQuery": "Luanda, Angola",
+    "timeZone": "Africa/Luanda",
+    "currency": {
+      "nameJa": "クワンザ",
+      "nameEn": "Kwanza",
+      "symbol": "Kz"
+    },
+    "languages": [
+      {
+        "nameJa": "ポルトガル語",
+        "nameEn": "Portuguese"
+      },
+      {
+        "nameJa": "ウンブンドゥ語",
+        "nameEn": "Umbundu"
+      }
+    ],
+    "elevation": "約6 m（ルアンダ）",
+    "elevationEn": "Approx. 6 m (Luanda)",
+    "weather": {
+      "summary": "北部は高温多湿ですが、南部は乾燥しています。沿岸部は冷たい海流の影響を受けます。",
+      "summaryEn": "The north is hot and humid, while the south is drier and the coast is cooled by the Benguela Current."
+    },
+    "heritage": [
+      {
+        "id": "ao-mbanza-kongo",
+        "title": "ンバンザ・コンゴ",
+        "titleEn": "Mbanza Kongo",
+        "description": "かつてコンゴ王国の首都だった都市で、現在も王国の歴史と文化が受け継がれています。",
+        "descriptionEn": "This former capital of the Kingdom of Kongo preserves the history and living traditions of a major African state.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Desfile%20Provincial%20do%20Carnaval%20em%20Mbanza%20Kongo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Desfile_Provincial_do_Carnaval_em_Mbanza_Kongo.jpg",
+        "imageCredit": "André Semeador",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ao-muamba",
+        "title": "ムアンバ・デ・ガリーニャ",
+        "titleEn": "Muamba de Galinha",
+        "description": "鶏肉をパーム油、オクラ、野菜などで煮込み、キャッサバ料理と一緒に食べます。",
+        "descriptionEn": "Chicken is stewed with palm oil, okra, and vegetables and served with cassava-based side dishes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Moamba%20traditional%20dish%20in%20Luanda.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Moamba_traditional_dish_in_Luanda.JPG",
+        "imageCredit": "Rui Gabriel Correia",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "地雷除去と医療を支援",
+      "titleEn": "Supporting Demining and Health Care",
+      "text": "日本はアンゴラで、地雷除去、母子保健、農業、人材育成などの国際協力を行っています。",
+      "textEn": "Japan has supported Angola through projects in demining, maternal health, agriculture, and professional training."
+    },
+    "quiz": {
+      "question": "アンゴラの公用語は何でしょう？",
+      "questionEn": "What is the official language of Angola?",
+      "options": [
+        "ポルトガル語",
+        "フランス語",
+        "英語",
+        "アラビア語"
+      ],
+      "optionsEn": [
+        "Portuguese",
+        "French",
+        "English",
+        "Arabic"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はポルトガル語です。アンゴラは1975年までポルトガルの統治下にありました。",
+      "explanationEn": "The answer is Portuguese. Angola was governed by Portugal until independence in 1975."
+    }
+  },
+  "ag": {
+    "iso": "ag",
+    "nameJa": "アンティグア・バーブーダ",
+    "nameEn": "Antigua and Barbuda",
+    "capitalJa": "セントジョンズ",
+    "capitalEn": "St. John's",
+    "subtitle": "透明な海とサンゴ礁、歴史ある港を持つカリブ海の島国です。",
+    "subtitleEn": "A Caribbean island nation known for clear seas, coral reefs, and historic harbors.",
+    "flagUrl": "https://flagcdn.com/w320/ag.png",
+    "mapQuery": "St. John's, Antigua and Barbuda",
+    "timeZone": "America/Antigua",
+    "currency": {
+      "nameJa": "東カリブ・ドル",
+      "nameEn": "East Caribbean Dollar",
+      "symbol": "EC$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約15 m（セントジョンズ）",
+    "elevationEn": "Approx. 15 m (St. John's)",
+    "weather": {
+      "summary": "一年を通して温暖な熱帯気候です。雨季には強い雨が降り、ハリケーンへの備えも必要です。",
+      "summaryEn": "The climate is warm and tropical year-round, with a wetter season and a risk of hurricanes."
+    },
+    "heritage": [
+      {
+        "id": "ag-nelsons-dockyard",
+        "title": "アンティグア海軍造船所",
+        "titleEn": "Antigua Naval Dockyard",
+        "description": "英国海軍の拠点だった港湾施設が残り、帆船時代の軍事とカリブ海交易の歴史を伝えます。",
+        "descriptionEn": "Historic naval buildings preserve the story of Caribbean trade and warfare during the age of sailing ships.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nelson%27s%20Dockyard%20Antigua.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nelson%27s_Dockyard_Antigua.jpg",
+        "imageCredit": "Kognos",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ag-black-pineapple",
+        "title": "アンティグア・ブラックパイナップル",
+        "titleEn": "Antigua Black Pineapple",
+        "description": "小ぶりで甘みが強い特産品です。名前にブラックとありますが、果肉は明るい黄色です。",
+        "descriptionEn": "This small local pineapple is famous for its sweetness. Despite its name, the flesh is bright yellow.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ANTIGUA-blackpine-1.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:ANTIGUA-blackpine-1.jpg",
+        "imageCredit": "Bgabel",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "漁業と防災で島国同士が協力",
+      "titleEn": "Island Nations Cooperate in Fisheries and Disaster Preparedness",
+      "text": "日本は漁業施設の整備や防災分野の支援を通して、カリブ海の島国との協力を続けています。",
+      "textEn": "Japan has cooperated with Antigua and Barbuda through fisheries projects and disaster preparedness support."
+    },
+    "quiz": {
+      "question": "国名に含まれる主要な二つの島はどれでしょう？",
+      "questionEn": "Which two main islands appear in the country's name?",
+      "options": [
+        "アンティグア島とバーブーダ島",
+        "キューバ島とジャマイカ島",
+        "タヒチ島とモーレア島",
+        "サモア島とトンガ島"
+      ],
+      "optionsEn": [
+        "Antigua and Barbuda",
+        "Cuba and Jamaica",
+        "Tahiti and Moorea",
+        "Samoa and Tonga"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はアンティグア島とバーブーダ島です。小さなレドンダ島も国土に含まれます。",
+      "explanationEn": "The main islands are Antigua and Barbuda. The smaller island of Redonda is also part of the country."
+    }
+  },
+  "ar": {
+    "iso": "ar",
+    "nameJa": "アルゼンチン",
+    "nameEn": "Argentina",
+    "capitalJa": "ブエノスアイレス",
+    "capitalEn": "Buenos Aires",
+    "subtitle": "アンデス山脈、パンパ草原、氷河、亜熱帯の滝まで、多様な自然を持つ南米の国です。",
+    "subtitleEn": "A South American country stretching from subtropical waterfalls to grasslands, Andes peaks, and glaciers.",
+    "flagUrl": "https://flagcdn.com/w320/ar.png",
+    "mapQuery": "Buenos Aires, Argentina",
+    "timeZone": "America/Argentina/Buenos_Aires",
+    "currency": {
+      "nameJa": "アルゼンチン・ペソ",
+      "nameEn": "Argentine Peso",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約25 m（ブエノスアイレス）",
+    "elevationEn": "Approx. 25 m (Buenos Aires)",
+    "weather": {
+      "summary": "北部は亜熱帯、中央部は温帯、南部のパタゴニアは寒冷で乾燥しています。",
+      "summaryEn": "The north is subtropical, the center is temperate, and southern Patagonia is colder, windier, and drier."
+    },
+    "heritage": [
+      {
+        "id": "ar-iguazu",
+        "title": "イグアス国立公園",
+        "titleEn": "Iguazú National Park",
+        "description": "多数の滝が亜熱帯林の中に連なり、水量と広がりで世界有数の壮大な景観を生み出します。",
+        "descriptionEn": "Hundreds of waterfalls spread through subtropical forest, creating one of the world's most dramatic landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iguazu%20Falls.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Iguazu_Falls.jpg",
+        "imageCredit": "Emesbe",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ar-asado",
+        "title": "アサード",
+        "titleEn": "Asado",
+        "description": "牛肉などを炭火でじっくり焼き、家族や友人と味わう食文化です。",
+        "descriptionEn": "Meat is slowly grilled over coals and shared with family and friends as an important social tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asado%20a%20la%20estaca%20en%20Argentina.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Asado_a_la_estaca_en_Argentina.jpg",
+        "imageCredit": "Pierre Loocas",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "タンゴと日系社会が両国を結ぶ",
+      "titleEn": "Tango and the Japanese Argentine Community",
+      "text": "アルゼンチンには日系人社会があり、日本ではタンゴやサッカーを通して親しみが広がっています。",
+      "textEn": "Argentina has a Japanese descendant community, while tango and football have built strong cultural interest in Japan."
+    },
+    "quiz": {
+      "question": "ブエノスアイレス周辺で発展した踊りはどれでしょう？",
+      "questionEn": "Which dance developed in and around Buenos Aires?",
+      "options": [
+        "タンゴ",
+        "フラメンコ",
+        "サンバ",
+        "フラダンス"
+      ],
+      "optionsEn": [
+        "Tango",
+        "Flamenco",
+        "Samba",
+        "Hula"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はタンゴです。移民文化が混ざり合う港町で音楽と踊りが発展しました。",
+      "explanationEn": "The answer is tango. It developed in port neighborhoods shaped by a mixture of immigrant cultures."
+    }
+  },
+  "am": {
+    "iso": "am",
+    "nameJa": "アルメニア",
+    "nameEn": "Armenia",
+    "capitalJa": "エレバン",
+    "capitalEn": "Yerevan",
+    "subtitle": "コーカサスの山々に囲まれ、古い教会文化と独自の文字を守り続けてきた国です。",
+    "subtitleEn": "A mountainous Caucasus nation known for ancient churches, a unique alphabet, and a long cultural history.",
+    "flagUrl": "https://flagcdn.com/w320/am.png",
+    "mapQuery": "Yerevan, Armenia",
+    "timeZone": "Asia/Yerevan",
+    "currency": {
+      "nameJa": "ドラム",
+      "nameEn": "Dram",
+      "symbol": "֏"
+    },
+    "languages": [
+      {
+        "nameJa": "アルメニア語",
+        "nameEn": "Armenian"
+      }
+    ],
+    "elevation": "約990 m（エレバン）",
+    "elevationEn": "Approx. 990 m (Yerevan)",
+    "weather": {
+      "summary": "乾燥した大陸性気候で、夏は暑く晴天が多く、冬は寒く山地では雪が降ります。",
+      "summaryEn": "The climate is dry and continental, with hot sunny summers and cold, snowy winters at higher elevations."
+    },
+    "heritage": [
+      {
+        "id": "am-geghard",
+        "title": "ゲガルド修道院とアザト川上流域",
+        "titleEn": "Monastery of Geghard and the Upper Azat Valley",
+        "description": "岩山を掘って造られた礼拝空間があり、中世アルメニア建築と信仰の深さを伝えています。",
+        "descriptionEn": "Parts of the monastery were carved directly into rock, displaying the skill and faith of medieval Armenia.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Geghard%20Monastery%2C%20Gavit%2C%20Armenia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Geghard_Monastery,_Gavit,_Armenia.jpg",
+        "imageCredit": "Vyacheslav Argenberg",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "am-lavash",
+        "title": "ラヴァシュ",
+        "titleEn": "Lavash",
+        "description": "薄く大きな伝統パンで、肉、野菜、チーズなどを包んで食べます。",
+        "descriptionEn": "Lavash is a thin flatbread traditionally used to wrap meat, cheese, or vegetables.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavash.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lavash.jpg",
+        "imageCredit": "Gaeser",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "地震防災の経験を共有",
+      "titleEn": "Sharing Earthquake Preparedness Knowledge",
+      "text": "地震の多い日本とアルメニアは、防災、発電設備、人材育成などの分野で協力しています。",
+      "textEn": "Japan and Armenia share experience in earthquake preparedness and cooperate in energy and professional training."
+    },
+    "quiz": {
+      "question": "アルメニアが世界で最も早く国教として採用した宗教は何でしょう？",
+      "questionEn": "Which religion did Armenia become the first country to adopt as a state religion?",
+      "options": [
+        "キリスト教",
+        "仏教",
+        "イスラム教",
+        "ヒンドゥー教"
+      ],
+      "optionsEn": [
+        "Christianity",
+        "Buddhism",
+        "Islam",
+        "Hinduism"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はキリスト教です。アルメニアは4世紀初めに国教として採用したとされています。",
+      "explanationEn": "The answer is Christianity. Armenia adopted it as a state religion in the early fourth century."
+    }
+  },
+  "au": {
+    "iso": "au",
+    "nameJa": "オーストラリア",
+    "nameEn": "Australia",
+    "capitalJa": "キャンベラ",
+    "capitalEn": "Canberra",
+    "subtitle": "固有の動植物、多文化都市、世界最大級のサンゴ礁を持つ大陸国家です。",
+    "subtitleEn": "A continent-sized country known for unique wildlife, multicultural cities, and vast coral reef systems.",
+    "flagUrl": "https://flagcdn.com/w320/au.png",
+    "mapQuery": "Canberra, Australia",
+    "timeZone": "Australia/Sydney",
+    "currency": {
+      "nameJa": "オーストラリア・ドル",
+      "nameEn": "Australian Dollar",
+      "symbol": "A$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約580 m（キャンベラ）",
+    "elevationEn": "Approx. 580 m (Canberra)",
+    "weather": {
+      "summary": "北部は熱帯、内陸は乾燥、南東部は温帯です。季節は日本とほぼ反対になります。",
+      "summaryEn": "The north is tropical, the interior is dry, and the southeast is temperate, with seasons opposite to Japan's."
+    },
+    "heritage": [
+      {
+        "id": "au-great-barrier-reef",
+        "title": "グレート・バリア・リーフ",
+        "titleEn": "Great Barrier Reef",
+        "description": "多数のサンゴ礁と島々からなる巨大な生態系で、ウミガメや多彩な魚が暮らしています。",
+        "descriptionEn": "This enormous reef system supports coral, sea turtles, fish, and many other forms of marine life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Great%20Barrier%20Reef%20%28aerial%20view%29.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Great_Barrier_Reef_(aerial_view).JPG",
+        "imageCredit": "Nerdge",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "au-aboriginal-art",
+        "title": "オーストラリア先住民芸術",
+        "titleEn": "Indigenous Australian Art",
+        "description": "点、線、象徴的な模様を用いて、土地、祖先、知識、物語とのつながりを表現します。",
+        "descriptionEn": "Dots, lines, and symbols express deep connections to land, ancestors, knowledge, and traditional stories.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aboriginal%20art%20%2848019167157%29.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Aboriginal_art_(48019167157).jpg",
+        "imageCredit": "scott1346",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "先住民文化",
+        "categoryEn": "Indigenous Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "資源・食料・学校交流の重要な相手",
+      "titleEn": "A Major Partner in Resources, Food, and Education",
+      "text": "日本とオーストラリアは貿易関係が深く、姉妹校交流、留学、観光でも多くの人が行き来しています。",
+      "textEn": "Japan and Australia have strong trade ties and active exchanges through sister schools, study abroad, and tourism."
+    },
+    "quiz": {
+      "question": "オーストラリアの首都はどこでしょう？",
+      "questionEn": "What is the capital of Australia?",
+      "options": [
+        "キャンベラ",
+        "シドニー",
+        "メルボルン",
+        "ブリスベン"
+      ],
+      "optionsEn": [
+        "Canberra",
+        "Sydney",
+        "Melbourne",
+        "Brisbane"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はキャンベラです。シドニーとメルボルンの対立を避けるため選ばれました。",
+      "explanationEn": "The answer is Canberra. It was selected partly as a compromise between Sydney and Melbourne."
+    }
+  },
+  "at": {
+    "iso": "at",
+    "nameJa": "オーストリア",
+    "nameEn": "Austria",
+    "capitalJa": "ウィーン",
+    "capitalEn": "Vienna",
+    "subtitle": "アルプスの自然と、音楽、宮殿、カフェ文化が調和する中央ヨーロッパの国です。",
+    "subtitleEn": "A Central European country where Alpine landscapes meet classical music, palaces, and café culture.",
+    "flagUrl": "https://flagcdn.com/w320/at.png",
+    "mapQuery": "Vienna, Austria",
+    "timeZone": "Europe/Vienna",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "ドイツ語",
+        "nameEn": "German"
+      }
+    ],
+    "elevation": "約170 m（ウィーン）",
+    "elevationEn": "Approx. 170 m (Vienna)",
+    "weather": {
+      "summary": "東部は比較的乾燥し、アルプス地域は涼しく降雪が多い気候です。",
+      "summaryEn": "Eastern areas are relatively dry, while the Alps are cooler and receive heavy winter snowfall."
+    },
+    "heritage": [
+      {
+        "id": "at-schonbrunn",
+        "title": "シェーンブルン宮殿と庭園群",
+        "titleEn": "Palace and Gardens of Schönbrunn",
+        "description": "ハプスブルク家の夏の宮殿で、豪華な部屋と広大な庭園が帝国時代の文化を伝えます。",
+        "descriptionEn": "The former imperial summer residence displays grand rooms and gardens from the Habsburg era.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schonbrunn%20Palace.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Schonbrunn_Palace.jpg",
+        "imageCredit": "Truete",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "at-sachertorte",
+        "title": "ザッハトルテ",
+        "titleEn": "Sachertorte",
+        "description": "チョコレート生地にアプリコットジャムを重ねた菓子で、ウィーンのカフェ文化を代表します。",
+        "descriptionEn": "This chocolate cake layered with apricot jam is a famous symbol of Viennese café culture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sachertorte.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sachertorte.jpg",
+        "imageCredit": "Tomphotographe",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "クラシック音楽が日本とウィーンを結ぶ",
+      "titleEn": "Classical Music Connects Japan and Vienna",
+      "text": "ウィーンのオーケストラは日本でも人気が高く、音楽留学や芸術交流が長く続いています。",
+      "textEn": "Viennese orchestras are highly popular in Japan, and exchanges in music education have continued for decades."
+    },
+    "quiz": {
+      "question": "作曲家モーツァルトが生まれた都市はどこでしょう？",
+      "questionEn": "In which Austrian city was composer Wolfgang Amadeus Mozart born?",
+      "options": [
+        "ザルツブルク",
+        "ウィーン",
+        "グラーツ",
+        "インスブルック"
+      ],
+      "optionsEn": [
+        "Salzburg",
+        "Vienna",
+        "Graz",
+        "Innsbruck"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はザルツブルクです。モーツァルトはその後ウィーンでも多くの作品を生み出しました。",
+      "explanationEn": "The answer is Salzburg. Mozart later composed many important works in Vienna."
+    }
+  },
+  "az": {
+    "iso": "az",
+    "nameJa": "アゼルバイジャン",
+    "nameEn": "Azerbaijan",
+    "capitalJa": "バクー",
+    "capitalEn": "Baku",
+    "subtitle": "カスピ海沿岸に位置し、古代都市、炎の伝説、近未来的な建築が共存する国です。",
+    "subtitleEn": "A Caspian nation where ancient walled cities, natural flames, and futuristic architecture exist side by side.",
+    "flagUrl": "https://flagcdn.com/w320/az.png",
+    "mapQuery": "Baku, Azerbaijan",
+    "timeZone": "Asia/Baku",
+    "currency": {
+      "nameJa": "マナト",
+      "nameEn": "Manat",
+      "symbol": "₼"
+    },
+    "languages": [
+      {
+        "nameJa": "アゼルバイジャン語",
+        "nameEn": "Azerbaijani"
+      }
+    ],
+    "elevation": "約マイナス28 m（バクー）",
+    "elevationEn": "Approx. 28 m below sea level (Baku)",
+    "weather": {
+      "summary": "バクー周辺は乾燥して風が強く、山地では冬に気温が下がり雪が降ります。",
+      "summaryEn": "Baku is dry and windy, while mountain regions experience colder and snowier winters."
+    },
+    "heritage": [
+      {
+        "id": "az-baku",
+        "title": "城壁都市バクーと乙女の塔",
+        "titleEn": "Walled City of Baku and Maiden Tower",
+        "description": "城壁内に宮殿、塔、隊商宿が残り、ペルシャやトルコなどとの文化交流を伝えます。",
+        "descriptionEn": "Palaces, towers, and caravan buildings reflect centuries of exchange among neighboring cultures.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Old%20city%20baku%20azerbaijan6.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Old_city_baku_azerbaijan6.jpg",
+        "imageCredit": "Самый древний",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "az-plov",
+        "title": "アゼルバイジャンのプロフ",
+        "titleEn": "Azerbaijani Plov",
+        "description": "香り高い米に肉、ドライフルーツ、栗などを合わせ、祝い事や客へのもてなしに出されます。",
+        "descriptionEn": "Fragrant rice is served with meat, dried fruit, or chestnuts at celebrations and special meals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Azerbaijani%20plov.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Azerbaijani_plov.JPG",
+        "imageCredit": "Urek Meniashvili",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "お茶文化とインフラ協力",
+      "titleEn": "Tea Culture and Infrastructure Cooperation",
+      "text": "両国ではお茶が親しまれ、日本は医療、水道、教育などの分野で協力を行ってきました。",
+      "textEn": "Tea is important in both cultures, and Japan has supported projects in health care, water systems, and education."
+    },
+    "quiz": {
+      "question": "アゼルバイジャンが「火の国」と呼ばれる理由に関係するものは何でしょう？",
+      "questionEn": "What helps explain Azerbaijan's nickname, the Land of Fire?",
+      "options": [
+        "天然ガスによる炎",
+        "活火山の大噴火",
+        "一年中続く森林火災",
+        "赤い砂浜"
+      ],
+      "optionsEn": [
+        "Flames fueled by natural gas",
+        "Major active volcanoes",
+        "Year-round forest fires",
+        "Red beaches"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は天然ガスによる炎です。地中から出るガスが自然に燃え続ける場所があります。",
+      "explanationEn": "The answer is natural gas flames. Gas escaping from the ground has burned naturally at several sites."
+    }
+  }
+}
