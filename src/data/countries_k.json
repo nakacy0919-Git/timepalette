@@ -1,0 +1,728 @@
+{
+  "kz": {
+    "iso": "kz",
+    "nameJa": "カザフスタン",
+    "nameEn": "Kazakhstan",
+    "capitalJa": "アスタナ",
+    "capitalEn": "Astana",
+    "subtitle": "広大な草原、天山山脈、シルクロードの歴史、遊牧文化を持つ中央アジアの国です。",
+    "subtitleEn": "A vast Central Asian country of steppe, Tian Shan mountains, Silk Road history, and nomadic traditions.",
+    "flagUrl": "https://flagcdn.com/w320/kz.png",
+    "mapQuery": "Astana, Kazakhstan",
+    "timeZone": "Asia/Almaty",
+    "currency": {
+      "nameJa": "テンゲ",
+      "nameEn": "Tenge",
+      "symbol": "₸"
+    },
+    "languages": [
+      {
+        "nameJa": "カザフ語",
+        "nameEn": "Kazakh"
+      },
+      {
+        "nameJa": "ロシア語",
+        "nameEn": "Russian"
+      }
+    ],
+    "elevation": "約350 m（アスタナ）",
+    "elevationEn": "Approx. 350 m (Astana)",
+    "weather": {
+      "summary": "大陸性気候で、夏は暑く乾燥し、冬は非常に寒くなります。地域による寒暖差も大きいです。",
+      "summaryEn": "Kazakhstan has a continental climate with hot dry summers, very cold winters, and major regional variation."
+    },
+    "heritage": [
+      {
+        "id": "kz-yasawi",
+        "title": "ホージャ・アフマド・ヤサヴィー廟",
+        "titleEn": "Mausoleum of Khoja Ahmed Yasawi",
+        "description": "ティムール朝期に築かれた巨大な霊廟で、青いドームと精密な装飾が特徴です。",
+        "descriptionEn": "This monumental Timurid mausoleum is known for its great blue dome and refined decorative architecture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mausoleum%20of%20Khoja%20Ahmed%20Yasawi.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mausoleum_of_Khoja_Ahmed_Yasawi.jpg",
+        "imageCredit": "Adam Harangozó",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mausoleum_of_Khoja_Ahmed_Yasawi.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "kz-tamgaly",
+        "title": "タムガリの岩絵群",
+        "titleEn": "Petroglyphs of Tamgaly",
+        "description": "青銅器時代からの人物、動物、太陽神などの岩絵が谷に数多く残されています。",
+        "descriptionEn": "Thousands of rock carvings depict people, animals, rituals, and sun-headed figures from ancient periods.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Petroglyphs%20in%20Tamgaly,%20Kazakhstan%2001.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Petroglyphs_in_Tamgaly,_Kazakhstan_01.jpg",
+        "imageCredit": "Ninaras",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Petroglyphs_in_Tamgaly,_Kazakhstan_01.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "kz-charyn",
+        "title": "チャリン・キャニオン",
+        "titleEn": "Charyn Canyon",
+        "description": "風と川が赤褐色の岩を削り、城や塔を思わせる巨大な谷を作り上げました。",
+        "descriptionEn": "Wind and water carved reddish rock into a dramatic canyon filled with formations resembling castles and towers.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kazakhstan,%20Charyn%20Canyon.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kazakhstan,_Charyn_Canyon.jpg",
+        "imageCredit": "kalpaktravel",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kazakhstan,_Charyn_Canyon.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "kz-beshbarmak",
+        "title": "ベシュバルマク",
+        "titleEn": "Beshbarmak",
+        "description": "ゆでた肉と幅広い麺を盛り、玉ねぎのスープを添える祝いの食卓の代表料理です。",
+        "descriptionEn": "Boiled meat and broad noodles are served with onion broth in a dish associated with hospitality and celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kazakh%20beshbarmak.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kazakh_beshbarmak.jpg",
+        "imageCredit": "Igor22121976",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kazakh_beshbarmak.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "kz-dombra",
+        "title": "ドンブラ",
+        "titleEn": "Dombra",
+        "description": "二本の弦を持つ長い棹の楽器で、英雄物語や歴史を器楽曲として語り継ぎます。",
+        "descriptionEn": "This long-necked two-string instrument carries epic stories, history, and emotion through instrumental music.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kazakh%20Dombra.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kazakh_Dombra.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kazakh_Dombra.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      },
+      {
+        "id": "kz-yurt",
+        "title": "カザフのユルト",
+        "titleEn": "Kazakh Yurt",
+        "description": "木の骨組みをフェルトで覆う移動式住居で、草原の遊牧生活に適した構造です。",
+        "descriptionEn": "A collapsible wooden frame covered with felt creates a portable home suited to life on the steppe.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kazakhyurt.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kazakhyurt.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kazakhyurt.jpg",
+        "category": "遊牧文化",
+        "categoryEn": "Nomadic Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "資源・宇宙・人材交流でつながる",
+      "titleEn": "Connections Through Resources, Space, and Human Exchange",
+      "text": "日本とカザフスタンは資源、医療、環境、人材育成、宇宙開発などの分野で交流しています。",
+      "textEn": "Japan and Kazakhstan cooperate in natural resources, health, environment, professional training, and space-related fields."
+    },
+    "quiz": {
+      "question": "カザフスタンの国土の多くに広がる代表的な地形は何でしょう？",
+      "questionEn": "Which landscape covers a large part of Kazakhstan?",
+      "options": [
+        "草原（ステップ）",
+        "熱帯雨林",
+        "氷床",
+        "サンゴ礁"
+      ],
+      "optionsEn": [
+        "Steppe grassland",
+        "Tropical rainforest",
+        "Ice sheet",
+        "Coral reef"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は草原です。広大なステップは牧畜や遊牧文化の発展を支えてきました。",
+      "explanationEn": "The answer is steppe grassland, which supported pastoral and nomadic ways of life."
+    }
+  },
+  "ke": {
+    "iso": "ke",
+    "nameJa": "ケニア",
+    "nameEn": "Kenya",
+    "capitalJa": "ナイロビ",
+    "capitalEn": "Nairobi",
+    "subtitle": "サバンナ、高山、インド洋岸、多民族の文化を持つ東アフリカの国です。",
+    "subtitleEn": "An East African country of savanna, high mountains, Indian Ocean coasts, and diverse communities.",
+    "flagUrl": "https://flagcdn.com/w320/ke.png",
+    "mapQuery": "Nairobi, Kenya",
+    "timeZone": "Africa/Nairobi",
+    "currency": {
+      "nameJa": "ケニア・シリング",
+      "nameEn": "Kenyan Shilling",
+      "symbol": "KSh"
+    },
+    "languages": [
+      {
+        "nameJa": "スワヒリ語",
+        "nameEn": "Swahili"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約1,795 m（ナイロビ）",
+    "elevationEn": "Approx. 1,795 m (Nairobi)",
+    "weather": {
+      "summary": "赤道付近ですが高地は比較的涼しく、沿岸部は高温多湿です。多くの地域に雨季があります。",
+      "summaryEn": "Although near the Equator, highlands are mild, the coast is hot and humid, and many regions have rainy seasons."
+    },
+    "heritage": [
+      {
+        "id": "ke-mount-kenya",
+        "title": "ケニア山国立公園",
+        "titleEn": "Mount Kenya National Park",
+        "description": "アフリカ第2の高峰を中心に、氷河、高山草原、固有の植物が広がります。",
+        "descriptionEn": "Africa's second-highest mountain supports glaciers, alpine ecosystems, forests, and unusual high-altitude plants.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20kenya.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mount_kenya.JPG",
+        "imageCredit": "Ruud Zwart",
+        "imageLicense": "CC BY-SA 2.5 NL",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/nl/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ke-lamu",
+        "title": "ラム旧市街",
+        "titleEn": "Lamu Old Town",
+        "description": "サンゴ石と木材の家々、細い路地が残り、スワヒリ海洋文化の歴史を伝えます。",
+        "descriptionEn": "Coral-stone houses, carved doors, and narrow streets preserve centuries of Swahili maritime culture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lamu%20Old%20Town.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lamu_Old_Town.jpg",
+        "imageCredit": "Almaddy2022",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lamu_Old_Town.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ke-fort-jesus",
+        "title": "フォート・ジーザス",
+        "titleEn": "Fort Jesus",
+        "description": "モンバサ港を守るために築かれ、インド洋交易をめぐる争いの歴史を伝える要塞です。",
+        "descriptionEn": "Built to control Mombasa's harbor, this fortress reflects centuries of conflict and Indian Ocean trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/FORT%20JESUS.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:FORT_JESUS.jpg",
+        "imageCredit": "Joseph Muchoki",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ke-ugali",
+        "title": "ウガリとスクマ・ウィキ",
+        "titleEn": "Ugali and Sukuma Wiki",
+        "description": "トウモロコシ粉を練った主食を、葉野菜の炒め物や肉、煮込み料理と食べます。",
+        "descriptionEn": "Firm maize porridge is eaten with sautéed leafy greens, meat, beans, or stew.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ugali%20&%20Sukuma%20Wiki.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ugali_&_Sukuma_Wiki.jpg",
+        "imageCredit": "Paresh Jai",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ke-nyama-choma",
+        "title": "ニャマ・チョマ",
+        "titleEn": "Nyama Choma",
+        "description": "山羊肉や牛肉を炭火でじっくり焼き、家族や友人と分け合う人気料理です。",
+        "descriptionEn": "Goat or beef is slowly roasted over fire and shared during social gatherings and celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kenya-safaris-cuisine.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kenya-safaris-cuisine.jpg",
+        "imageCredit": "Wachira",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ke-maasai-beadwork",
+        "title": "マサイのビーズ細工",
+        "titleEn": "Maasai Beadwork",
+        "description": "色鮮やかなビーズを幾何学模様に組み、年齢、役割、祝い事などを表現します。",
+        "descriptionEn": "Bright beads form geometric designs that can communicate age, social roles, ceremony, and identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Handmade%20maasai%20beadwork.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Handmade_maasai_beadwork.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Handmade_maasai_beadwork.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "TICAD・教育・保健で深まる交流",
+      "titleEn": "Growing Links Through TICAD, Education, and Health",
+      "text": "日本はケニアと、保健、教育、農業、地熱発電、インフラ、人材育成などで協力しています。",
+      "textEn": "Japan and Kenya cooperate in health, education, agriculture, geothermal energy, infrastructure, and professional training."
+    },
+    "quiz": {
+      "question": "ケニアの首都ナイロビについて正しいものはどれでしょう？",
+      "questionEn": "Which statement about Nairobi is correct?",
+      "options": [
+        "標高の高い場所にある",
+        "北極圏にある",
+        "無人島にある",
+        "海面より低い場所にある"
+      ],
+      "optionsEn": [
+        "It lies at high elevation",
+        "It lies in the Arctic",
+        "It is on an uninhabited island",
+        "It lies below sea level"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は標高の高い場所にあることです。赤道付近でも比較的穏やかな気温になります。",
+      "explanationEn": "The answer is that Nairobi lies at high elevation, helping keep temperatures milder despite its equatorial location."
+    }
+  },
+  "ki": {
+    "iso": "ki",
+    "nameJa": "キリバス",
+    "nameEn": "Kiribati",
+    "capitalJa": "南タラワ",
+    "capitalEn": "South Tarawa",
+    "subtitle": "太平洋の広大な海域に低い環礁が点在し、海と共に暮らす文化を持つ島国です。",
+    "subtitleEn": "A Pacific island nation of low-lying atolls spread across a vast ocean area, with life closely tied to the sea.",
+    "flagUrl": "https://flagcdn.com/w320/ki.png",
+    "mapQuery": "South Tarawa, Kiribati",
+    "timeZone": "Pacific/Tarawa",
+    "currency": {
+      "nameJa": "オーストラリア・ドル",
+      "nameEn": "Australian Dollar",
+      "symbol": "A$"
+    },
+    "languages": [
+      {
+        "nameJa": "キリバス語",
+        "nameEn": "Gilbertese"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約3 m（南タラワ）",
+    "elevationEn": "Approx. 3 m (South Tarawa)",
+    "weather": {
+      "summary": "一年を通して高温で、降水量は島により異なります。海面上昇や高潮への備えが重要です。",
+      "summaryEn": "Kiribati is hot year-round, rainfall varies by island, and sea-level rise and storm surges are major concerns."
+    },
+    "heritage": [
+      {
+        "id": "ki-phoenix",
+        "title": "フェニックス諸島保護地域",
+        "titleEn": "Phoenix Islands Protected Area",
+        "description": "広大な海域にサンゴ礁、海山、無人島が広がり、海鳥や大型魚類を守っています。",
+        "descriptionEn": "Coral reefs, seamounts, remote islands, seabirds, and large marine animals are protected across a vast ocean area.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nikumaroro%20Lagoon%20Entrance%20AKK.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nikumaroro_Lagoon_Entrance_AKK.jpg",
+        "imageCredit": "Angela K. Kepler",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界自然遺産地域",
+        "categoryEn": "World Heritage Region"
+      },
+      {
+        "id": "ki-kiritimati",
+        "title": "キリスィマスィ島",
+        "titleEn": "Kiritimati Atoll",
+        "description": "世界最大級のサンゴ環礁で、巨大なラグーンと海鳥の繁殖地を持っています。",
+        "descriptionEn": "One of the world's largest coral atolls contains an immense lagoon and important seabird breeding grounds.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiritimati%20AKK%20Aerial.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kiritimati_AKK_Aerial.jpg",
+        "imageCredit": "Angela K. Kepler",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kiritimati_AKK_Aerial.jpg",
+        "category": "環礁・自然景観",
+        "categoryEn": "Atoll and Natural Landscape"
+      },
+      {
+        "id": "ki-tarawa-history",
+        "title": "タラワの戦争遺構",
+        "titleEn": "Wartime Heritage of Tarawa",
+        "description": "海岸には第二次世界大戦の砲台などが残り、太平洋戦争の記憶を伝えています。",
+        "descriptionEn": "Coastal guns and other remains preserve the memory of fierce fighting in the Pacific during World War II.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese%20shore%20battery%20from%20WW2,%20on%20Tarawa%20-%20190717-M-ZY556-064.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Japanese_shore_battery_from_WW2,_on_Tarawa_-_190717-M-ZY556-064.jpg",
+        "imageCredit": "United States Marine Corps",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "近現代歴史遺産",
+        "categoryEn": "Modern Historical Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ki-maneaba",
+        "title": "マネアバ",
+        "titleEn": "Maneaba",
+        "description": "村の人々が話し合い、祝い、学び、客を迎えるために集まる大きな共同集会所です。",
+        "descriptionEn": "This large community meeting house is used for discussion, celebration, learning, and welcoming guests.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Maneaba%20in%20Abemama,%20Kiribati.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Maneaba_in_Abemama,_Kiribati.jpg",
+        "imageCredit": "Edvac",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Maneaba_in_Abemama,_Kiribati.jpg",
+        "category": "共同体文化",
+        "categoryEn": "Community Culture"
+      },
+      {
+        "id": "ki-dance",
+        "title": "キリバスの伝統舞踊",
+        "titleEn": "Traditional Kiribati Dance",
+        "description": "鳥を思わせる腕の動きと力強い表情を使い、物語や自然との関係を表します。",
+        "descriptionEn": "Precise arm movements resembling seabirds and strong facial expression communicate stories and connections to nature.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiribati%20dancers%20(7754800384)%20(2).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kiribati_dancers_(7754800384)_(2).jpg",
+        "imageCredit": "David Kirkland",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      },
+      {
+        "id": "ki-toddy",
+        "title": "ココヤシ樹液の採取",
+        "titleEn": "Coconut Toddy Collection",
+        "description": "ココヤシの花から樹液を集め、飲料や甘味料として島の暮らしに生かします。",
+        "descriptionEn": "Sap collected from coconut flowers is used as a drink or sweetener in an environment with limited land resources.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Man%20collects%20toddy.%20Kiribati%202007.%20Photo-%20Lorrie%20Graham%20(10698208676).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Man_collects_toddy._Kiribati_2007._Photo-_Lorrie_Graham_(10698208676).jpg",
+        "imageCredit": "Lorrie Graham / DFAT",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Man_collects_toddy._Kiribati_2007._Photo-_Lorrie_Graham_(10698208676).jpg",
+        "category": "生活・食文化",
+        "categoryEn": "Living and Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "漁業・気候変動・防災で協力",
+      "titleEn": "Cooperation in Fisheries, Climate Change, and Disaster Preparedness",
+      "text": "日本は漁業、水、再生可能エネルギー、防災、気候変動への適応などでキリバスを支援しています。",
+      "textEn": "Japan supports Kiribati in fisheries, water, renewable energy, disaster preparedness, and climate adaptation."
+    },
+    "quiz": {
+      "question": "キリバスが特に直面している環境上の課題は何でしょう？",
+      "questionEn": "Which environmental challenge is especially serious for Kiribati?",
+      "options": [
+        "海面上昇",
+        "永久凍土の融解だけ",
+        "大規模な氷河雪崩",
+        "高山の酸素不足"
+      ],
+      "optionsEn": [
+        "Sea-level rise",
+        "Only permafrost thaw",
+        "Large glacial avalanches",
+        "High-altitude oxygen shortage"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は海面上昇です。多くの島が低いため、高潮、浸水、地下水の塩水化にも影響します。",
+      "explanationEn": "The answer is sea-level rise. Low elevation increases risks from flooding, storm surges, and saltwater intrusion."
+    }
+  },
+  "kw": {
+    "iso": "kw",
+    "nameJa": "クウェート",
+    "nameEn": "Kuwait",
+    "capitalJa": "クウェート市",
+    "capitalEn": "Kuwait City",
+    "subtitle": "ペルシャ湾岸の港湾史、砂漠文化、石油産業、現代都市が共存する国です。",
+    "subtitleEn": "A Gulf country where maritime heritage, desert traditions, petroleum, and modern urban life coexist.",
+    "flagUrl": "https://flagcdn.com/w320/kw.png",
+    "mapQuery": "Kuwait City, Kuwait",
+    "timeZone": "Asia/Kuwait",
+    "currency": {
+      "nameJa": "クウェート・ディナール",
+      "nameEn": "Kuwaiti Dinar",
+      "symbol": "KD"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約5 m（クウェート市）",
+    "elevationEn": "Approx. 5 m (Kuwait City)",
+    "weather": {
+      "summary": "非常に乾燥した砂漠気候で、夏は猛烈に暑くなります。冬は比較的穏やかです。",
+      "summaryEn": "Kuwait has an extremely dry desert climate with intensely hot summers and comparatively mild winters."
+    },
+    "heritage": [
+      {
+        "id": "kw-failaka-archaeology",
+        "title": "ファイラカ島の考古遺跡",
+        "titleEn": "Archaeological Sites of Failaka Island",
+        "description": "古代の集落や神殿跡が残り、メソポタミアと湾岸交易の長い歴史を伝えます。",
+        "descriptionEn": "Ancient settlements and temple remains preserve Failaka's long connections with Mesopotamia and Gulf trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Archeological%20site%20of%20Failaka,Kuwait.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Archeological_site_of_Failaka,Kuwait.jpg",
+        "imageCredit": "Kishore R. Sudarsan",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Archeological_site_of_Failaka,Kuwait.jpg",
+        "category": "考古遺産",
+        "categoryEn": "Archaeological Heritage"
+      },
+      {
+        "id": "kw-az-zaur",
+        "title": "ファイラカ島のアズ・ザウル",
+        "titleEn": "Az Zaur on Failaka Island",
+        "description": "湾岸の島で漁業や海上交通と結びついてきた伝統的な集落景観が見られます。",
+        "descriptionEn": "This island settlement reflects community life historically connected to fishing and Gulf navigation.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Az%20Zaur%20(town)%20on%20Failaka%20Island,%20Kuwait.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Az_Zaur_(town)_on_Failaka_Island,_Kuwait.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "島嶼文化景観",
+        "categoryEn": "Island Cultural Landscape"
+      },
+      {
+        "id": "kw-dhow-harbour",
+        "title": "クウェートのダウ船港",
+        "titleEn": "Kuwait Dhow Harbour",
+        "description": "木造帆船が並ぶ港は、石油以前の交易、漁業、真珠採取の歴史を伝えています。",
+        "descriptionEn": "Traditional wooden boats recall the era when trade, fishing, and pearling shaped Kuwait's economy.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait%20City%20Dhow%20Harbour%2012.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Dhow_Harbour_12.jpg",
+        "imageCredit": "Zairon",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Dhow_Harbour_12.jpg",
+        "category": "海洋文化遺産",
+        "categoryEn": "Maritime Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "kw-machboos",
+        "title": "マチュブース",
+        "titleEn": "Machboos",
+        "description": "香辛料を加えた米に鶏肉、羊肉、魚などを合わせて炊く湾岸地域の代表料理です。",
+        "descriptionEn": "Spiced rice is cooked with chicken, lamb, or fish in a celebrated Gulf family dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Machboos.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Machboos.JPG",
+        "imageCredit": "Miansari66",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Machboos.JPG",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "kw-sadu",
+        "title": "アル・サドゥ織",
+        "titleEn": "Al Sadu Weaving",
+        "description": "羊毛などを使って赤、黒、白の幾何学模様を織り、テントや敷物を作ります。",
+        "descriptionEn": "Wool is woven into red, black, and white geometric designs for tents, cushions, and floor coverings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Majlis%20in%20Sadu%20style.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Majlis_in_Sadu_style.jpg",
+        "imageCredit": "Ashley Columbus",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Majlis_in_Sadu_style.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "kw-pearl-diving",
+        "title": "真珠採りの伝統",
+        "titleEn": "Pearl Diving Tradition",
+        "description": "潜水者が海底の貝を探し、船員や歌い手と協力する仕事が湾岸社会を支えました。",
+        "descriptionEn": "Divers, sailors, and singers worked together in a maritime industry that sustained Gulf communities before oil.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Exploring%20the%20beauty%20of%20pearl%20diving.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Exploring_the_beauty_of_pearl_diving.jpg",
+        "imageCredit": "Lilybestieslay",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Exploring_the_beauty_of_pearl_diving.jpg",
+        "category": "海洋生活文化",
+        "categoryEn": "Maritime Living Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "エネルギーと復興支援で続く関係",
+      "titleEn": "Longstanding Links Through Energy and Reconstruction Support",
+      "text": "日本はクウェートから原油を輸入し、両国はエネルギー、投資、文化、防災などで交流しています。",
+      "textEn": "Japan imports crude oil from Kuwait, while the countries maintain ties in energy, investment, culture, and disaster support."
+    },
+    "quiz": {
+      "question": "石油産業が発展する前のクウェートを支えた重要な産業は何でしょう？",
+      "questionEn": "Which industry was important to Kuwait before the growth of petroleum?",
+      "options": [
+        "真珠採りと海上交易",
+        "氷河観光",
+        "森林伐採",
+        "茶の高山栽培"
+      ],
+      "optionsEn": [
+        "Pearling and maritime trade",
+        "Glacier tourism",
+        "Logging",
+        "Highland tea farming"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は真珠採りと海上交易です。ダウ船と海の知識が人々の暮らしを支えました。",
+      "explanationEn": "The answer is pearling and maritime trade. Dhows and seafaring knowledge supported livelihoods."
+    }
+  },
+  "kg": {
+    "iso": "kg",
+    "nameJa": "キルギス",
+    "nameEn": "Kyrgyzstan",
+    "capitalJa": "ビシュケク",
+    "capitalEn": "Bishkek",
+    "subtitle": "天山山脈、高山湖、遊牧文化、シルクロードの遺跡を持つ中央アジアの国です。",
+    "subtitleEn": "A Central Asian country of Tian Shan mountains, alpine lakes, nomadic culture, and Silk Road heritage.",
+    "flagUrl": "https://flagcdn.com/w320/kg.png",
+    "mapQuery": "Bishkek, Kyrgyzstan",
+    "timeZone": "Asia/Bishkek",
+    "currency": {
+      "nameJa": "ソム",
+      "nameEn": "Kyrgyzstani Som",
+      "symbol": "с"
+    },
+    "languages": [
+      {
+        "nameJa": "キルギス語",
+        "nameEn": "Kyrgyz"
+      },
+      {
+        "nameJa": "ロシア語",
+        "nameEn": "Russian"
+      }
+    ],
+    "elevation": "約800 m（ビシュケク）",
+    "elevationEn": "Approx. 800 m (Bishkek)",
+    "weather": {
+      "summary": "大陸性気候で、谷は夏に暑く、冬は寒くなります。高山部には長く雪が残ります。",
+      "summaryEn": "The climate is continental, with hot valley summers, cold winters, and long-lasting snow in high mountains."
+    },
+    "heritage": [
+      {
+        "id": "kg-sulaiman-too",
+        "title": "スライマン＝トー聖山",
+        "titleEn": "Sulaiman-Too Sacred Mountain",
+        "description": "オシュの街にそびえ、洞窟、礼拝所、古い道が信仰と巡礼の歴史を伝えます。",
+        "descriptionEn": "Caves, shrines, and ancient paths on this mountain preserve a long history of worship and pilgrimage.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Osh%20sulaiman%20Too.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Osh_sulaiman_Too.jpg",
+        "imageCredit": "Hzewo",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "kg-issyk-kul",
+        "title": "イシク・クル湖",
+        "titleEn": "Lake Issyk-Kul",
+        "description": "雪山に囲まれた巨大な高山湖で、塩分を含むため厳冬期にも全面凍結しにくい湖です。",
+        "descriptionEn": "This vast mountain lake is surrounded by snowy peaks and remains largely ice-free because of its depth and salinity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Issyk-Kul,%20Kyrgyzstan%20(42812885110).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Issyk-Kul,_Kyrgyzstan_(42812885110).jpg",
+        "imageCredit": "Ninara",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "自然・文化景観",
+        "categoryEn": "Natural and Cultural Landscape"
+      },
+      {
+        "id": "kg-burana",
+        "title": "ブラナの塔",
+        "titleEn": "Burana Tower",
+        "description": "シルクロード都市バラサグンに残る中世のミナレットで、石像や遺跡に囲まれています。",
+        "descriptionEn": "This medieval minaret survives from the Silk Road city of Balasagun among stone figures and archaeological remains.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Burana%20Tower,%20Kyrgyzstan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Burana_Tower,_Kyrgyzstan.jpg",
+        "imageCredit": "Bgag",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Burana_Tower,_Kyrgyzstan.jpg",
+        "category": "シルクロード遺産",
+        "categoryEn": "Silk Road Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "kg-yurt",
+        "title": "ボズ・ウイ（キルギスのユルト）",
+        "titleEn": "Boz Üy, the Kyrgyz Yurt",
+        "description": "木の骨組みとフェルトで作る移動式住居で、家族生活やもてなしの中心となります。",
+        "descriptionEn": "A portable wooden and felt dwelling forms an important center of family life and hospitality.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyz%20yurt%20-%20Boz%20Uy.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kyrgyz_yurt_-_Boz_Uy.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "遊牧文化",
+        "categoryEn": "Nomadic Culture"
+      },
+      {
+        "id": "kg-komuz",
+        "title": "コムズ",
+        "titleEn": "Komuz",
+        "description": "三本の弦を持つ伝統楽器で、独奏や歌の伴奏として物語や感情を表現します。",
+        "descriptionEn": "This three-string instrument is played solo or with song to express stories, history, and emotion.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyz%20students%20plays%20the%20Komuz.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kyrgyz_students_plays_the_Komuz.JPG",
+        "imageCredit": "United States Air Force / Wikimedia Commons contributor",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      },
+      {
+        "id": "kg-shyrdak",
+        "title": "シルダック",
+        "titleEn": "Shyrdak Felt Carpets",
+        "description": "色の異なるフェルトを切り合わせ、角や植物を思わせる左右対称の模様を作ります。",
+        "descriptionEn": "Contrasting felt pieces are cut and joined into symmetrical designs inspired by horns, plants, and nature.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyrgyz%20shyrdak.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kyrgyz_shyrdak.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kyrgyz_shyrdak.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "一村一品・人材育成で協力",
+      "titleEn": "Cooperation Through One Village One Product and Training",
+      "text": "日本は地域産品の開発、道路、医療、教育、行政、人材育成などでキルギスと協力しています。",
+      "textEn": "Japan supports Kyrgyzstan in local product development, roads, health, education, governance, and professional training."
+    },
+    "quiz": {
+      "question": "キルギス国旗の太陽の中心に描かれた交差模様は何を表すでしょう？",
+      "questionEn": "What does the crossed pattern at the center of Kyrgyzstan's flag represent?",
+      "options": [
+        "ユルトの天井部分",
+        "船のかじ",
+        "雪の結晶",
+        "都市の道路"
+      ],
+      "optionsEn": [
+        "The roof of a yurt",
+        "A ship's wheel",
+        "A snowflake",
+        "City roads"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はユルトの天井部分です。トゥンドゥクと呼ばれ、家と民族の一体感を象徴します。",
+      "explanationEn": "The answer is the roof crown of a yurt, called the tunduk, symbolizing home and national unity."
+    }
+  }
+}

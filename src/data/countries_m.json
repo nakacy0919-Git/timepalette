@@ -1,0 +1,2590 @@
+{
+  "mg": {
+    "iso": "mg",
+    "nameJa": "マダガスカル",
+    "nameEn": "Madagascar",
+    "capitalJa": "アンタナナリボ",
+    "capitalEn": "Antananarivo",
+    "subtitle": "独自に進化した動植物、赤い大地、バオバブ、山地文化を持つインド洋の島国です。",
+    "subtitleEn": "An Indian Ocean island nation of unique wildlife, red highlands, baobabs, and distinctive cultural traditions.",
+    "flagUrl": "https://flagcdn.com/w320/mg.png",
+    "mapQuery": "Antananarivo, Madagascar",
+    "timeZone": "Indian/Antananarivo",
+    "currency": {
+      "nameJa": "アリアリ",
+      "nameEn": "Malagasy Ariary",
+      "symbol": "Ar"
+    },
+    "languages": [
+      {
+        "nameJa": "マダガスカル語",
+        "nameEn": "Malagasy"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約1,280 m（アンタナナリボ）",
+    "elevationEn": "Approx. 1,280 m (Antananarivo)",
+    "weather": {
+      "summary": "沿岸部は高温多湿で、中央高地は比較的涼しく、南西部は乾燥しています。",
+      "summaryEn": "Coastal areas are hot and humid, the central highlands are cooler, and the southwest is much drier."
+    },
+    "heritage": [
+      {
+        "id": "mg-tsingy",
+        "title": "ツィンギ・デ・ベマラ厳正自然保護区",
+        "titleEn": "Tsingy de Bemaraha Strict Nature Reserve",
+        "description": "鋭い石灰岩の峰が森のように立ち並び、固有の動植物を守る独特の地形です。",
+        "descriptionEn": "A forest of sharp limestone pinnacles protects rare plants and animals found nowhere else.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tsingy%20de%20Bemaraha.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tsingy_de_Bemaraha.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tsingy_de_Bemaraha.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mg-baobabs",
+        "title": "バオバブ街道",
+        "titleEn": "Avenue of the Baobabs",
+        "description": "巨大なバオバブが道の両側に並び、マダガスカルを象徴する景観を作っています。",
+        "descriptionEn": "Massive baobab trees line a rural road in one of Madagascar's most iconic landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenue%20of%20the%20Baobabs,%20Madagascar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Avenue_of_the_Baobabs,_Madagascar.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Avenue_of_the_Baobabs,_Madagascar.jpg",
+        "category": "自然・文化景観",
+        "categoryEn": "Natural and Cultural Landscape"
+      },
+      {
+        "id": "mg-ambohimanga",
+        "title": "アンブヒマンガの丘の王領地",
+        "titleEn": "Royal Hill of Ambohimanga",
+        "description": "王宮、聖地、城壁が残り、マダガスカル王国と祖先信仰の歴史を伝えます。",
+        "descriptionEn": "Palaces, walls, and sacred places preserve the political and spiritual history of the Malagasy kingdom.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ambohimanga%20Madagascar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ambohimanga_Madagascar.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ambohimanga_Madagascar.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mg-romazava",
+        "title": "ロマザヴァ",
+        "titleEn": "Romazava",
+        "description": "肉と葉野菜を香草と一緒に煮込む、家庭で広く親しまれる温かな料理です。",
+        "descriptionEn": "Meat and leafy greens are simmered with herbs in a widely enjoyed Malagasy home dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Romazava.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Romazava.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Romazava.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "mg-valiha",
+        "title": "ヴァリハ",
+        "titleEn": "Valiha",
+        "description": "竹筒に弦を張った伝統楽器で、歌、祭り、物語の伴奏に用いられます。",
+        "descriptionEn": "This bamboo tube zither accompanies songs, celebrations, and storytelling.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Valiha%20player%20Madagascar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Valiha_player_Madagascar.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Valiha_player_Madagascar.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      },
+      {
+        "id": "mg-famadihana",
+        "title": "ファマディハナ",
+        "titleEn": "Famadihana",
+        "description": "祖先の遺体を新しい布で包み直し、家族の絆と記憶を確かめる儀礼です。",
+        "descriptionEn": "Families rewrap ancestral remains in new cloth during a ceremony of remembrance and kinship.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Famadihana%20Madagascar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Famadihana_Madagascar.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Famadihana_Madagascar.jpg",
+        "category": "祖先祭祀文化",
+        "categoryEn": "Ancestral Tradition"
+      }
+    ],
+    "japanConnection": {
+      "title": "生物多様性・農業・教育で協力",
+      "titleEn": "Cooperation in Biodiversity, Agriculture, and Education",
+      "text": "日本は森林保全、農業、保健、教育、インフラ、人材育成などでマダガスカルと協力しています。",
+      "textEn": "Japan supports Madagascar through biodiversity conservation, agriculture, health, education, infrastructure, and training."
+    },
+    "quiz": {
+      "question": "マダガスカルに多くの固有種がいる大きな理由は何でしょう？",
+      "questionEn": "Why does Madagascar have so many endemic species?",
+      "options": [
+        "長期間ほかの大陸から孤立したから",
+        "国土全体が都市だから",
+        "一年中雪に覆われるから",
+        "すべての動物が輸入されたから"
+      ],
+      "optionsEn": [
+        "It was isolated from other landmasses for a long time",
+        "It is entirely urban",
+        "It is covered by snow year-round",
+        "All animals were imported"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は長い地理的孤立です。その結果、キツネザルなど独自の生物が進化しました。",
+      "explanationEn": "The answer is long geographic isolation, which allowed unique animals such as lemurs to evolve."
+    }
+  },
+  "mw": {
+    "iso": "mw",
+    "nameJa": "マラウイ",
+    "nameEn": "Malawi",
+    "capitalJa": "リロングウェ",
+    "capitalEn": "Lilongwe",
+    "subtitle": "大地溝帯の湖、山地、農村文化、仮面舞踊を持つ南東アフリカの内陸国です。",
+    "subtitleEn": "A southeastern African country of Rift Valley lakes, mountains, farming communities, and masked dance traditions.",
+    "flagUrl": "https://flagcdn.com/w320/mw.png",
+    "mapQuery": "Lilongwe, Malawi",
+    "timeZone": "Africa/Blantyre",
+    "currency": {
+      "nameJa": "マラウイ・クワチャ",
+      "nameEn": "Malawian Kwacha",
+      "symbol": "MK"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "チェワ語",
+        "nameEn": "Chichewa"
+      }
+    ],
+    "elevation": "約1,050 m（リロングウェ）",
+    "elevationEn": "Approx. 1,050 m (Lilongwe)",
+    "weather": {
+      "summary": "雨季と乾季があり、高地は比較的涼しく、湖岸の低地はより暑くなります。",
+      "summaryEn": "Malawi has wet and dry seasons, with cooler highlands and warmer lowlands near the lake."
+    },
+    "heritage": [
+      {
+        "id": "mw-lake-malawi",
+        "title": "マラウイ湖国立公園",
+        "titleEn": "Lake Malawi National Park",
+        "description": "透明な湖に多様なシクリッドが暮らし、魚類の進化を学べる重要な場所です。",
+        "descriptionEn": "Clear waters contain extraordinary cichlid diversity and provide a natural laboratory for studying evolution.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Malawi%20National%20Park.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Malawi_National_Park.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lake_Malawi_National_Park.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mw-chongoni",
+        "title": "チョンゴニ岩絵地域",
+        "titleEn": "Chongoni Rock-Art Area",
+        "description": "岩陰に狩猟採集民と農耕民が描いた岩絵が残り、長い文化変化を伝えています。",
+        "descriptionEn": "Rock shelters preserve paintings by hunter-gatherers and farming communities across many centuries.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chongoni%20Rock%20Art%20Area.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Chongoni_Rock_Art_Area.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Chongoni_Rock_Art_Area.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mw-mulanje",
+        "title": "ムランジェ山",
+        "titleEn": "Mount Mulanje",
+        "description": "高原と切り立った峰がそびえ、固有植物や森林を育む巨大な山塊です。",
+        "descriptionEn": "A vast mountain massif of plateaus and steep peaks protects forests and endemic plants.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Mulanje.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mount_Mulanje.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mount_Mulanje.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mw-nsima",
+        "title": "ンシマ",
+        "titleEn": "Nsima",
+        "description": "トウモロコシ粉を固く練った主食で、野菜、豆、魚、肉の料理と食べます。",
+        "descriptionEn": "A firm maize porridge is eaten with vegetables, beans, fish, or meat.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nsima%20with%20relish.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nsima_with_relish.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nsima_with_relish.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "mw-gule-wamkulu",
+        "title": "グレ・ワムクル",
+        "titleEn": "Gule Wamkulu",
+        "description": "仮面をつけた踊り手が祖先や動物を表し、共同体の教えや儀礼を伝えます。",
+        "descriptionEn": "Masked dancers represent ancestors, animals, and social lessons during important community ceremonies.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gule%20Wamkulu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gule_Wamkulu.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gule_Wamkulu.jpg",
+        "category": "仮面舞踊文化",
+        "categoryEn": "Masked Dance Tradition"
+      },
+      {
+        "id": "mw-basketry",
+        "title": "マラウイのかご細工",
+        "titleEn": "Malawian Basketry",
+        "description": "草やヤシの葉を編み、収納、運搬、装飾に使う丈夫なかごを作ります。",
+        "descriptionEn": "Grass and palm fibers are woven into durable baskets for storage, transport, and decoration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Malawi%20basket%20weaving.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Malawi_basket_weaving.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Malawi_basket_weaving.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "農業・保健・教育で協力",
+      "titleEn": "Cooperation in Agriculture, Health, and Education",
+      "text": "日本は農業技術、学校、保健医療、水供給、道路、人材育成などでマラウイを支援しています。",
+      "textEn": "Japan supports Malawi through agricultural skills, schools, health care, water, roads, and professional training."
+    },
+    "quiz": {
+      "question": "マラウイ国土の大きな特徴となっている湖は何でしょう？",
+      "questionEn": "Which lake is a major geographic feature of Malawi?",
+      "options": [
+        "マラウイ湖",
+        "死海",
+        "バイカル湖",
+        "チチカカ湖"
+      ],
+      "optionsEn": [
+        "Lake Malawi",
+        "Dead Sea",
+        "Lake Baikal",
+        "Lake Titicaca"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はマラウイ湖です。国の東側を南北に長く伸び、多くの人の生活を支えます。",
+      "explanationEn": "The answer is Lake Malawi, which stretches along much of the country's eastern side and supports many livelihoods."
+    }
+  },
+  "my": {
+    "iso": "my",
+    "nameJa": "マレーシア",
+    "nameEn": "Malaysia",
+    "capitalJa": "クアラルンプール",
+    "capitalEn": "Kuala Lumpur",
+    "subtitle": "マレー半島とボルネオ島に、熱帯林、多民族都市、多彩な宗教と食文化が広がる国です。",
+    "subtitleEn": "A country across the Malay Peninsula and Borneo, with rainforest, multicultural cities, religions, and diverse cuisines.",
+    "flagUrl": "https://flagcdn.com/w320/my.png",
+    "mapQuery": "Kuala Lumpur, Malaysia",
+    "timeZone": "Asia/Kuala_Lumpur",
+    "currency": {
+      "nameJa": "リンギット",
+      "nameEn": "Malaysian Ringgit",
+      "symbol": "RM"
+    },
+    "languages": [
+      {
+        "nameJa": "マレー語",
+        "nameEn": "Malay"
+      }
+    ],
+    "elevation": "約66 m（クアラルンプール）",
+    "elevationEn": "Approx. 66 m (Kuala Lumpur)",
+    "weather": {
+      "summary": "一年を通して高温多湿で、地域ごとに異なるモンスーンの影響を受けます。",
+      "summaryEn": "Malaysia is hot and humid year-round, with regional rainfall patterns shaped by different monsoon seasons."
+    },
+    "heritage": [
+      {
+        "id": "my-george-town",
+        "title": "ジョージタウン歴史地区",
+        "titleEn": "George Town Historic City",
+        "description": "中国、マレー、インド、欧州の建築と宗教施設が並び、港町の多文化史を伝えます。",
+        "descriptionEn": "Chinese, Malay, Indian, and European buildings preserve the multicultural history of a major port city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/George%20Town%20Penang%20Malaysia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:George_Town_Penang_Malaysia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:George_Town_Penang_Malaysia.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "my-kinabalu",
+        "title": "キナバル公園",
+        "titleEn": "Kinabalu Park",
+        "description": "東南アジア有数の高峰を中心に、標高ごとに多様な植物と生態系が広がります。",
+        "descriptionEn": "One of Southeast Asia's highest mountains supports remarkable plant diversity across many elevation zones.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kinabalu%20Sabah%20Malaysia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mount_Kinabalu_Sabah_Malaysia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mount_Kinabalu_Sabah_Malaysia.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "my-batu-caves",
+        "title": "バトゥ洞窟",
+        "titleEn": "Batu Caves",
+        "description": "石灰岩の洞窟にヒンドゥー寺院があり、大階段と巨大な神像で知られます。",
+        "descriptionEn": "Hindu temples occupy limestone caves reached by a great staircase beside a monumental statue.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Batu%20Caves%20Kuala%20Lumpur%20Malaysia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Batu_Caves_Kuala_Lumpur_Malaysia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Batu_Caves_Kuala_Lumpur_Malaysia.jpg",
+        "category": "宗教・自然景観",
+        "categoryEn": "Religious and Natural Site"
+      }
+    ],
+    "culture": [
+      {
+        "id": "my-nasi-lemak",
+        "title": "ナシレマ",
+        "titleEn": "Nasi Lemak",
+        "description": "ココナツミルクで炊いた米に、サンバル、卵、小魚、落花生などを添えます。",
+        "descriptionEn": "Coconut rice is served with sambal, egg, anchovies, peanuts, cucumber, and many regional additions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nasi%20lemak%20Malaysia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nasi_lemak_Malaysia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nasi_lemak_Malaysia.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "my-batik",
+        "title": "マレーシア・バティック",
+        "titleEn": "Malaysian Batik",
+        "description": "ろうで防染し、花や植物を明るい色で描く布は衣服や装飾に使われます。",
+        "descriptionEn": "Wax-resist dyeing creates bright floral and plant designs used for clothing and decoration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Malaysian%20batik.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Malaysian_batik.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Malaysian_batik.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "my-wayang-kulit",
+        "title": "ワヤン・クリ",
+        "titleEn": "Wayang Kulit",
+        "description": "革人形の影と語り、音楽を組み合わせ、神話や地域の物語を上演します。",
+        "descriptionEn": "Leather puppets, shadow, narration, and music bring myths and local stories to life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wayang%20kulit%20Kelantan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Wayang_kulit_Kelantan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Wayang_kulit_Kelantan.jpg",
+        "category": "伝統芸能",
+        "categoryEn": "Performing Arts"
+      }
+    ],
+    "japanConnection": {
+      "title": "ルックイースト政策と留学交流",
+      "titleEn": "Look East Policy and Educational Exchange",
+      "text": "マレーシアは日本の産業や働き方を学ぶルックイースト政策を進め、留学、企業、観光交流が盛んです。",
+      "textEn": "Malaysia's Look East Policy encouraged learning from Japan, supporting extensive student, business, and tourism exchange."
+    },
+    "quiz": {
+      "question": "マレーシアの行政機関が多く置かれている計画都市はどこでしょう？",
+      "questionEn": "Which planned city hosts many Malaysian government offices?",
+      "options": [
+        "プトラジャヤ",
+        "ジョージタウン",
+        "コタキナバル",
+        "マラッカ"
+      ],
+      "optionsEn": [
+        "Putrajaya",
+        "George Town",
+        "Kota Kinabalu",
+        "Malacca"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はプトラジャヤです。首都はクアラルンプールですが、行政機能の多くが移されています。",
+      "explanationEn": "The answer is Putrajaya. Kuala Lumpur is the capital, while many federal administrative functions are located in Putrajaya."
+    }
+  },
+  "mv": {
+    "iso": "mv",
+    "nameJa": "モルディブ",
+    "nameEn": "Maldives",
+    "capitalJa": "マレ",
+    "capitalEn": "Malé",
+    "subtitle": "インド洋に低いサンゴ環礁が連なり、海洋文化と豊かなサンゴ礁を持つ島国です。",
+    "subtitleEn": "An Indian Ocean island nation of low coral atolls, marine traditions, and rich reef ecosystems.",
+    "flagUrl": "https://flagcdn.com/w320/mv.png",
+    "mapQuery": "Male, Maldives",
+    "timeZone": "Indian/Maldives",
+    "currency": {
+      "nameJa": "ルフィヤ",
+      "nameEn": "Maldivian Rufiyaa",
+      "symbol": "Rf"
+    },
+    "languages": [
+      {
+        "nameJa": "ディベヒ語",
+        "nameEn": "Dhivehi"
+      }
+    ],
+    "elevation": "約2 m（マレ）",
+    "elevationEn": "Approx. 2 m (Malé)",
+    "weather": {
+      "summary": "一年を通して高温で、モンスーンにより雨の多い時期と比較的乾燥した時期があります。",
+      "summaryEn": "The climate is hot year-round, with monsoon winds producing wetter and relatively drier seasons."
+    },
+    "heritage": [
+      {
+        "id": "mv-baa-atoll",
+        "title": "バア環礁生物圏保護区",
+        "titleEn": "Baa Atoll Biosphere Reserve",
+        "description": "サンゴ礁、マンタ、ジンベエザメなどが集まる、海洋生物多様性の重要地域です。",
+        "descriptionEn": "Coral reefs support manta rays, whale sharks, turtles, and exceptional marine biodiversity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Baa%20Atoll%20Maldives.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Baa_Atoll_Maldives.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Baa_Atoll_Maldives.jpg",
+        "category": "生物圏保護区",
+        "categoryEn": "Biosphere Reserve"
+      },
+      {
+        "id": "mv-friday-mosque",
+        "title": "マレ・フクル・ミスキー",
+        "titleEn": "Malé Friday Mosque",
+        "description": "サンゴ石を精密に彫って建てられた歴史的モスクで、島の建築技術を伝えます。",
+        "descriptionEn": "This historic mosque was built from finely carved coral stone and reflects distinctive island craftsmanship.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mal%C3%A9%20Friday%20Mosque.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mal%C3%A9_Friday_Mosque.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mal%C3%A9_Friday_Mosque.jpg",
+        "category": "歴史・宗教建築",
+        "categoryEn": "Historic Religious Architecture"
+      },
+      {
+        "id": "mv-hanifaru",
+        "title": "ハニファル湾",
+        "titleEn": "Hanifaru Bay",
+        "description": "季節によって大量のプランクトンが集まり、多数のマンタが採餌することで知られます。",
+        "descriptionEn": "Seasonal plankton blooms attract large groups of manta rays to feed in this small bay.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanifaru%20Bay%20Maldives.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hanifaru_Bay_Maldives.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hanifaru_Bay_Maldives.jpg",
+        "category": "海洋自然",
+        "categoryEn": "Marine Nature"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mv-mas-huni",
+        "title": "マスフニ",
+        "titleEn": "Mas Huni",
+        "description": "ツナ、ココナツ、玉ねぎ、唐辛子を混ぜ、薄いロシと食べる朝食です。",
+        "descriptionEn": "Tuna, coconut, onion, and chili are mixed and eaten with thin flatbread for breakfast.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mas%20huni%20Maldives.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mas_huni_Maldives.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mas_huni_Maldives.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "mv-bodu-beru",
+        "title": "ボドゥ・ベル",
+        "titleEn": "Bodu Beru",
+        "description": "大太鼓のリズムが徐々に速くなり、歌と踊りが一体となる伝統芸能です。",
+        "descriptionEn": "Large drums build an accelerating rhythm while singing and dance create an energetic communal performance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bodu%20beru%20Maldives.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bodu_beru_Maldives.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bodu_beru_Maldives.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      },
+      {
+        "id": "mv-dhoni",
+        "title": "ドーニ船",
+        "titleEn": "Dhoni Boats",
+        "description": "漁業や島間移動に使われてきた木造船で、海洋国家の生活を象徴します。",
+        "descriptionEn": "Traditional wooden boats used for fishing and inter-island travel symbolize life in a maritime nation.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Maldivian%20dhoni.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Maldivian_dhoni.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Maldivian_dhoni.jpg",
+        "category": "海洋生活文化",
+        "categoryEn": "Maritime Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "防災・海洋・環境で協力",
+      "titleEn": "Cooperation in Disaster Preparedness, Oceans, and Environment",
+      "text": "日本は防波堤、防災、気候変動対策、廃棄物管理、漁業、人材育成などでモルディブを支援しています。",
+      "textEn": "Japan supports the Maldives in coastal protection, disaster preparedness, climate action, waste management, fisheries, and training."
+    },
+    "quiz": {
+      "question": "モルディブが特に影響を受けやすい環境問題は何でしょう？",
+      "questionEn": "Which environmental issue poses a major risk to the Maldives?",
+      "options": [
+        "海面上昇",
+        "永久凍土の融解だけ",
+        "高山の雪崩",
+        "砂漠化だけ"
+      ],
+      "optionsEn": [
+        "Sea-level rise",
+        "Only permafrost thaw",
+        "Mountain avalanches",
+        "Only desertification"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は海面上昇です。島々の標高が低いため、浸水や海岸侵食への備えが重要です。",
+      "explanationEn": "The answer is sea-level rise. Low elevation makes flooding and coastal erosion serious concerns."
+    }
+  },
+  "ml": {
+    "iso": "ml",
+    "nameJa": "マリ",
+    "nameEn": "Mali",
+    "capitalJa": "バマコ",
+    "capitalEn": "Bamako",
+    "subtitle": "サハラ砂漠、ニジェール川、土の建築、音楽と語り部文化を持つ西アフリカの国です。",
+    "subtitleEn": "A West African country of Sahara desert, the Niger River, earthen architecture, music, and oral traditions.",
+    "flagUrl": "https://flagcdn.com/w320/ml.png",
+    "mapQuery": "Bamako, Mali",
+    "timeZone": "Africa/Bamako",
+    "currency": {
+      "nameJa": "西アフリカCFAフラン",
+      "nameEn": "West African CFA Franc",
+      "symbol": "CFA"
+    },
+    "languages": [
+      {
+        "nameJa": "バンバラ語",
+        "nameEn": "Bambara"
+      },
+      {
+        "nameJa": "その他の国民言語",
+        "nameEn": "Other national languages"
+      }
+    ],
+    "elevation": "約350 m（バマコ）",
+    "elevationEn": "Approx. 350 m (Bamako)",
+    "weather": {
+      "summary": "北部は非常に乾燥した砂漠で、南部ほど雨が増えます。気温は一年を通して高めです。",
+      "summaryEn": "The north is extremely dry desert, rainfall increases toward the south, and temperatures are generally high."
+    },
+    "heritage": [
+      {
+        "id": "ml-timbuktu",
+        "title": "トンブクトゥ",
+        "titleEn": "Timbuktu",
+        "description": "サハラ交易とイスラム学問の中心として栄え、歴史的モスクや写本文化を残します。",
+        "descriptionEn": "A center of Saharan trade and Islamic scholarship, Timbuktu preserves historic mosques and manuscript traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Timbuktu%20Mosque%20Sankore.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Timbuktu_Mosque_Sankore.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Timbuktu_Mosque_Sankore.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ml-djenne",
+        "title": "ジェンネの大モスク",
+        "titleEn": "Great Mosque of Djenné",
+        "description": "日干しれんがで築かれ、地域住民が毎年壁を塗り直して守る巨大な土の建築です。",
+        "descriptionEn": "Built of sun-dried earth, this monumental mosque is maintained through annual community replastering.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Great%20Mosque%20of%20Djenne%201.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Great_Mosque_of_Djenne_1.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Great_Mosque_of_Djenne_1.jpg",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      },
+      {
+        "id": "ml-bandiagara",
+        "title": "バンディアガラの断崖",
+        "titleEn": "Bandiagara Escarpment",
+        "description": "断崖、村、洞窟、農地が一体となり、ドゴンの人々の暮らしと信仰を伝えます。",
+        "descriptionEn": "Cliffs, villages, caves, and fields form a cultural landscape shaped by Dogon life and belief.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bandiagara%20Escarpment%20Mali.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bandiagara_Escarpment_Mali.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bandiagara_Escarpment_Mali.jpg",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ml-bogolan",
+        "title": "ボゴラン布",
+        "titleEn": "Bogolan Mud Cloth",
+        "description": "植物染料と発酵した泥を使い、布に幾何学模様や象徴的な意味を描きます。",
+        "descriptionEn": "Plant dyes and fermented mud create geometric designs carrying symbolic and social meanings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogolan%20Mali.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bogolan_Mali.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bogolan_Mali.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "ml-kora",
+        "title": "コラとグリオ",
+        "titleEn": "Kora and Griot Tradition",
+        "description": "語り部がコラを奏で、家系、歴史、教訓、英雄物語を歌い継ぎます。",
+        "descriptionEn": "Griot storytellers play the kora while preserving genealogy, history, lessons, and heroic tales.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kora%20Mali.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kora_Mali.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kora_Mali.jpg",
+        "category": "音楽・口承文化",
+        "categoryEn": "Music and Oral Tradition"
+      },
+      {
+        "id": "ml-to",
+        "title": "トー",
+        "titleEn": "Tô",
+        "description": "キビやトウモロコシの粉を練った主食で、野菜や肉のソースと一緒に食べます。",
+        "descriptionEn": "Millet or maize flour is cooked into a firm staple eaten with vegetable or meat sauces.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Malian%20t%C3%B4.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Malian_t%C3%B4.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Malian_t%C3%B4.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "食料・教育・平和構築を支援",
+      "titleEn": "Support for Food Security, Education, and Peacebuilding",
+      "text": "日本は食料、農業、教育、保健、人道支援、文化財保護などを通じてマリを支援しています。",
+      "textEn": "Japan supports Mali through food security, agriculture, education, health, humanitarian assistance, and heritage protection."
+    },
+    "quiz": {
+      "question": "マリを流れ、農業や交通を支える大河は何でしょう？",
+      "questionEn": "Which major river supports agriculture and transport in Mali?",
+      "options": [
+        "ニジェール川",
+        "テムズ川",
+        "黄河",
+        "ボルガ川"
+      ],
+      "optionsEn": [
+        "Niger River",
+        "Thames River",
+        "Yellow River",
+        "Volga River"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はニジェール川です。乾燥地域の人々に水、漁業、農地、交通を提供します。",
+      "explanationEn": "The answer is the Niger River, which provides water, fishing, farmland, and transport in a dry region."
+    }
+  },
+  "mt": {
+    "iso": "mt",
+    "nameJa": "マルタ",
+    "nameEn": "Malta",
+    "capitalJa": "バレッタ",
+    "capitalEn": "Valletta",
+    "subtitle": "地中海の要塞都市、巨石神殿、海洋文化、多言語社会を持つ島国です。",
+    "subtitleEn": "A Mediterranean island nation of fortified cities, megalithic temples, maritime traditions, and multilingual life.",
+    "flagUrl": "https://flagcdn.com/w320/mt.png",
+    "mapQuery": "Valletta, Malta",
+    "timeZone": "Europe/Malta",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "マルタ語",
+        "nameEn": "Maltese"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約56 m（バレッタ）",
+    "elevationEn": "Approx. 56 m (Valletta)",
+    "weather": {
+      "summary": "夏は暑く乾燥し、冬は比較的穏やかで雨が増える地中海性気候です。",
+      "summaryEn": "Malta has hot dry summers and mild wetter winters typical of the Mediterranean climate."
+    },
+    "heritage": [
+      {
+        "id": "mt-valletta",
+        "title": "バレッタ市街",
+        "titleEn": "City of Valletta",
+        "description": "要塞、教会、宮殿が密集し、騎士団時代の都市計画と地中海史を伝えます。",
+        "descriptionEn": "Fortifications, churches, and palaces preserve the urban vision of the Knights of St. John.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Valletta%20Malta.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Valletta_Malta.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Valletta_Malta.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mt-hypogeum",
+        "title": "ハル・サフリエニ地下墳墓",
+        "titleEn": "Ħal Saflieni Hypogeum",
+        "description": "地下の岩盤を掘って造られた先史時代の複合施設で、儀礼と埋葬の痕跡を残します。",
+        "descriptionEn": "This prehistoric underground complex was carved from rock and used for ritual and burial.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hal%20Saflieni%20Hypogeum.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hal_Saflieni_Hypogeum.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hal_Saflieni_Hypogeum.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mt-megalithic-temples",
+        "title": "マルタの巨石神殿群",
+        "titleEn": "Megalithic Temples of Malta",
+        "description": "巨大な石を組んだ神殿群で、世界最古級の独立した石造建築に数えられます。",
+        "descriptionEn": "These massive stone temples rank among the world's oldest free-standing monumental structures.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagar%20Qim%20Malta.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hagar_Qim_Malta.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hagar_Qim_Malta.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mt-pastizzi",
+        "title": "パスティッツィ",
+        "titleEn": "Pastizzi",
+        "description": "薄い層の生地にリコッタチーズや豆のペーストを包んで焼く人気の軽食です。",
+        "descriptionEn": "Flaky pastry is filled with ricotta or pea paste in a popular Maltese snack.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pastizzi%20Malta.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pastizzi_Malta.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pastizzi_Malta.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "mt-festa",
+        "title": "村のフェスタ",
+        "titleEn": "Village Festa",
+        "description": "守護聖人を祝って教会、旗、花火、音楽、行列で町全体を飾ります。",
+        "descriptionEn": "Churches, banners, fireworks, music, and processions celebrate local patron saints.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Maltese%20festa.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Maltese_festa.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Maltese_festa.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "mt-luzzu",
+        "title": "ルッツ船",
+        "titleEn": "Luzzu Boats",
+        "description": "鮮やかな色で塗られた伝統漁船で、船首の目の模様が航海の安全を願います。",
+        "descriptionEn": "These brightly painted fishing boats often carry symbolic eyes intended to protect sailors.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Luzzu%20Malta.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Luzzu_Malta.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Luzzu_Malta.jpg",
+        "category": "海洋文化",
+        "categoryEn": "Maritime Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "海運・観光・文化で交流",
+      "titleEn": "Exchange Through Shipping, Tourism, and Culture",
+      "text": "日本とマルタは海運、観光、教育、文化交流を通じて関係を深めています。",
+      "textEn": "Japan and Malta maintain growing ties through shipping, tourism, education, and cultural exchange."
+    },
+    "quiz": {
+      "question": "マルタの公用語の一つで、アラビア語系の特徴を持つ言語は何でしょう？",
+      "questionEn": "Which official language of Malta has strong Semitic roots?",
+      "options": [
+        "マルタ語",
+        "フィンランド語",
+        "日本語",
+        "アイスランド語"
+      ],
+      "optionsEn": [
+        "Maltese",
+        "Finnish",
+        "Japanese",
+        "Icelandic"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はマルタ語です。アラビア語系の語彙と文法に欧州言語の影響が重なっています。",
+      "explanationEn": "The answer is Maltese, a Semitic language with substantial European influence."
+    }
+  },
+  "mh": {
+    "iso": "mh",
+    "nameJa": "マーシャル諸島",
+    "nameEn": "Marshall Islands",
+    "capitalJa": "マジュロ",
+    "capitalEn": "Majuro",
+    "subtitle": "太平洋に低い環礁が点在し、航海術、海洋文化、核実験の歴史を持つ島国です。",
+    "subtitleEn": "A Pacific nation of low atolls, navigation traditions, marine culture, and a difficult nuclear-testing history.",
+    "flagUrl": "https://flagcdn.com/w320/mh.png",
+    "mapQuery": "Majuro, Marshall Islands",
+    "timeZone": "Pacific/Majuro",
+    "currency": {
+      "nameJa": "米ドル",
+      "nameEn": "United States Dollar",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "nameJa": "マーシャル語",
+        "nameEn": "Marshallese"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約3 m（マジュロ）",
+    "elevationEn": "Approx. 3 m (Majuro)",
+    "weather": {
+      "summary": "一年を通して高温多湿で、降水量が多く、海面上昇や高潮の影響を受けやすいです。",
+      "summaryEn": "The climate is hot and humid with high rainfall, while low elevation increases risks from sea-level rise and storm surges."
+    },
+    "heritage": [
+      {
+        "id": "mh-bikini",
+        "title": "ビキニ環礁核実験場",
+        "titleEn": "Bikini Atoll Nuclear Test Site",
+        "description": "核実験による環境と人々への影響を伝える、20世紀史上重要な場所です。",
+        "descriptionEn": "This atoll preserves the environmental and human legacy of twentieth-century nuclear testing.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bikini%20Atoll.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bikini_Atoll.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bikini_Atoll.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mh-majuro-lagoon",
+        "title": "マジュロ環礁のラグーン",
+        "titleEn": "Majuro Lagoon",
+        "description": "細長い島々に囲まれた巨大なラグーンが、交通、漁業、都市生活を支えます。",
+        "descriptionEn": "A vast lagoon enclosed by narrow islets supports transport, fishing, and urban life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Majuro%20Atoll%20lagoon.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Majuro_Atoll_lagoon.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Majuro_Atoll_lagoon.jpg",
+        "category": "環礁景観",
+        "categoryEn": "Atoll Landscape"
+      },
+      {
+        "id": "mh-likiep",
+        "title": "リキエップ環礁",
+        "titleEn": "Likiep Atoll",
+        "description": "伝統的な島の集落、ラグーン、海洋生態系が比較的良好な状態で残されています。",
+        "descriptionEn": "Traditional settlements, lagoon ecosystems, and island life remain visible across this remote atoll.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Likiep%20Atoll%20Marshall%20Islands.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Likiep_Atoll_Marshall_Islands.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Likiep_Atoll_Marshall_Islands.jpg",
+        "category": "島嶼文化景観",
+        "categoryEn": "Island Cultural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mh-stick-charts",
+        "title": "スティックチャート",
+        "titleEn": "Stick Charts",
+        "description": "ヤシの骨組みと貝で波、うねり、島の位置を表す伝統的な航海知識の道具です。",
+        "descriptionEn": "Palm sticks and shells represent ocean swells, currents, and island positions in a traditional navigation system.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Marshall%20Islands%20stick%20chart.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Marshall_Islands_stick_chart.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Marshall_Islands_stick_chart.jpg",
+        "category": "航海文化",
+        "categoryEn": "Navigation Culture"
+      },
+      {
+        "id": "mh-canoe",
+        "title": "マーシャル諸島のカヌー",
+        "titleEn": "Marshallese Canoes",
+        "description": "細長い船体とアウトリガーを持ち、環礁間の移動や漁業に適した構造です。",
+        "descriptionEn": "Slender hulls and outriggers create fast vessels suited to fishing and travel among atolls.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Marshallese%20outrigger%20canoe.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Marshallese_outrigger_canoe.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Marshallese_outrigger_canoe.jpg",
+        "category": "海洋文化",
+        "categoryEn": "Maritime Culture"
+      },
+      {
+        "id": "mh-handicrafts",
+        "title": "ヤシ葉の編み細工",
+        "titleEn": "Pandanus and Palm Weaving",
+        "description": "葉を乾燥させて細く裂き、かご、敷物、帽子、装飾品を編み上げます。",
+        "descriptionEn": "Dried pandanus and palm leaves are split and woven into baskets, mats, hats, and ornaments.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Marshall%20Islands%20handicrafts.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Marshall_Islands_handicrafts.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Marshall_Islands_handicrafts.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "歴史・漁業・気候変動で深い関係",
+      "titleEn": "Strong Links Through History, Fisheries, and Climate Change",
+      "text": "日本は戦前期の歴史的関係を持ち、現在は漁業、防災、気候変動、教育などで協力しています。",
+      "textEn": "Japan has historical ties with the Marshall Islands and now cooperates in fisheries, disaster preparedness, climate action, and education."
+    },
+    "quiz": {
+      "question": "マーシャル諸島の伝統航海で使われた地図状の道具は何でしょう？",
+      "questionEn": "Which traditional tool was used to teach navigation in the Marshall Islands?",
+      "options": [
+        "スティックチャート",
+        "羅針盤だけ",
+        "紙の世界地図",
+        "砂時計"
+      ],
+      "optionsEn": [
+        "Stick chart",
+        "Only a compass",
+        "A paper world map",
+        "Hourglass"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はスティックチャートです。波とうねりを読み取る知識を視覚化しました。",
+      "explanationEn": "The answer is the stick chart, which visualized knowledge of waves, swells, and island locations."
+    }
+  },
+  "mr": {
+    "iso": "mr",
+    "nameJa": "モーリタニア",
+    "nameEn": "Mauritania",
+    "capitalJa": "ヌアクショット",
+    "capitalEn": "Nouakchott",
+    "subtitle": "サハラ砂漠、大西洋岸、隊商都市、遊牧文化を持つ北西アフリカの国です。",
+    "subtitleEn": "A northwest African country of Sahara desert, Atlantic coast, caravan towns, and nomadic traditions.",
+    "flagUrl": "https://flagcdn.com/w320/mr.png",
+    "mapQuery": "Nouakchott, Mauritania",
+    "timeZone": "Africa/Nouakchott",
+    "currency": {
+      "nameJa": "ウギア",
+      "nameEn": "Ouguiya",
+      "symbol": "UM"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約7 m（ヌアクショット）",
+    "elevationEn": "Approx. 7 m (Nouakchott)",
+    "weather": {
+      "summary": "国土の大半は非常に乾燥した砂漠で、昼夜や季節の寒暖差が大きくなります。",
+      "summaryEn": "Most of Mauritania is extremely dry desert, with large temperature differences between day and night and across seasons."
+    },
+    "heritage": [
+      {
+        "id": "mr-chinguetti",
+        "title": "シンゲッティ",
+        "titleEn": "Chinguetti",
+        "description": "サハラ交易と巡礼の拠点だった隊商都市で、古いモスクと写本図書館が残ります。",
+        "descriptionEn": "This historic caravan town preserves a mosque, libraries, and the legacy of Saharan trade and pilgrimage.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chinguetti%20Mauritania.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Chinguetti_Mauritania.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Chinguetti_Mauritania.jpg",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      },
+      {
+        "id": "mr-banc-arguin",
+        "title": "バン・ダルガン国立公園",
+        "titleEn": "Banc d'Arguin National Park",
+        "description": "干潟、浅い海、島々が渡り鳥、魚類、イルカなどを支える海洋生態系です。",
+        "descriptionEn": "Tidal flats, shallow waters, and islands support migratory birds, fish, dolphins, and coastal communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Banc%20d'Arguin%20Mauritania.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Banc_d'Arguin_Mauritania.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Banc_d'Arguin_Mauritania.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mr-richat",
+        "title": "リシャット構造",
+        "titleEn": "Richat Structure",
+        "description": "宇宙からも見える巨大な同心円状の地形で、「サハラの目」と呼ばれます。",
+        "descriptionEn": "This enormous circular geological formation is visible from space and is known as the Eye of the Sahara.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Richat%20Structure%20Mauritania.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Richat_Structure_Mauritania.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Richat_Structure_Mauritania.jpg",
+        "category": "地質景観",
+        "categoryEn": "Geological Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mr-tea",
+        "title": "三杯のミントティー",
+        "titleEn": "Three-Cup Tea Ceremony",
+        "description": "濃さと甘さを変えながら三杯の茶を出し、会話ともてなしの時間を共有します。",
+        "descriptionEn": "Three increasingly gentle cups of tea are served slowly as part of hospitality and conversation.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mauritanian%20tea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mauritanian_tea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mauritanian_tea.jpg",
+        "category": "もてなし文化",
+        "categoryEn": "Hospitality Culture"
+      },
+      {
+        "id": "mr-thieboudienne",
+        "title": "チェブジェン",
+        "titleEn": "Thieboudienne",
+        "description": "魚、米、野菜、トマトを一つの鍋で炊く、西アフリカ沿岸の代表料理です。",
+        "descriptionEn": "Fish, rice, vegetables, and tomato are cooked together in a celebrated coastal West African dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thieboudienne%20Mauritania.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Thieboudienne_Mauritania.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Thieboudienne_Mauritania.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "mr-ardine",
+        "title": "アルディン",
+        "titleEn": "Ardin",
+        "description": "主に女性が演奏するハープ状の楽器で、詩や歌、祝い事を彩ります。",
+        "descriptionEn": "This harp-like instrument, traditionally played by women, accompanies poetry, song, and celebration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ardin%20Mauritania.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ardin_Mauritania.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ardin_Mauritania.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "漁業・食料・水分野で協力",
+      "titleEn": "Cooperation in Fisheries, Food, and Water",
+      "text": "日本は漁業施設、食料安全保障、水供給、保健、人材育成などでモーリタニアを支援しています。",
+      "textEn": "Japan supports Mauritania through fisheries, food security, water supply, health, and professional training."
+    },
+    "quiz": {
+      "question": "モーリタニアの国土の大部分を占める自然環境は何でしょう？",
+      "questionEn": "Which environment covers most of Mauritania?",
+      "options": [
+        "サハラ砂漠",
+        "熱帯雨林",
+        "氷河",
+        "ツンドラ"
+      ],
+      "optionsEn": [
+        "Sahara Desert",
+        "Tropical rainforest",
+        "Glacier",
+        "Tundra"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はサハラ砂漠です。人々はオアシス、沿岸部、都市部などに多く暮らします。",
+      "explanationEn": "The answer is the Sahara Desert. Many people live around oases, coastal areas, and cities."
+    }
+  },
+  "mu": {
+    "iso": "mu",
+    "nameJa": "モーリシャス",
+    "nameEn": "Mauritius",
+    "capitalJa": "ポートルイス",
+    "capitalEn": "Port Louis",
+    "subtitle": "火山島、サンゴ礁、多民族社会、砂糖と音楽文化を持つインド洋の島国です。",
+    "subtitleEn": "An Indian Ocean island nation of volcanic landscapes, coral reefs, multicultural society, sugar, and music.",
+    "flagUrl": "https://flagcdn.com/w320/mu.png",
+    "mapQuery": "Port Louis, Mauritius",
+    "timeZone": "Indian/Mauritius",
+    "currency": {
+      "nameJa": "モーリシャス・ルピー",
+      "nameEn": "Mauritian Rupee",
+      "symbol": "₨"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "モーリシャス・クレオール語",
+        "nameEn": "Mauritian Creole"
+      }
+    ],
+    "elevation": "約5 m（ポートルイス）",
+    "elevationEn": "Approx. 5 m (Port Louis)",
+    "weather": {
+      "summary": "一年を通して温暖な海洋性熱帯気候で、夏は高温多湿になり、サイクロンの影響もあります。",
+      "summaryEn": "Mauritius has a warm tropical maritime climate, with hot humid summers and occasional cyclone impacts."
+    },
+    "heritage": [
+      {
+        "id": "mu-le-morne",
+        "title": "ル・モーンの文化的景観",
+        "titleEn": "Le Morne Cultural Landscape",
+        "description": "逃亡奴隷の避難場所となった山で、自由への抵抗と記憶を象徴します。",
+        "descriptionEn": "This mountain sheltered escaped enslaved people and symbolizes resistance, freedom, and memory.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Morne%20Brabant%20Mauritius.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Le_Morne_Brabant_Mauritius.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Le_Morne_Brabant_Mauritius.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mu-aapravasi",
+        "title": "アープラヴァシ・ガート",
+        "titleEn": "Aapravasi Ghat",
+        "description": "契約労働者が到着した移民施設跡で、近代の移住と労働の歴史を伝えます。",
+        "descriptionEn": "This immigration depot records the arrival of indentured laborers and a major chapter in global migration history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aapravasi%20Ghat%20Mauritius.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Aapravasi_Ghat_Mauritius.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Aapravasi_Ghat_Mauritius.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mu-black-river",
+        "title": "ブラックリバー・ゴージズ国立公園",
+        "titleEn": "Black River Gorges National Park",
+        "description": "山地の森林と渓谷に、島固有の植物や鳥類が残る重要な保護区です。",
+        "descriptionEn": "Mountain forest and deep valleys protect endemic plants and birds found only in Mauritius.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Black%20River%20Gorges%20Mauritius.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Black_River_Gorges_Mauritius.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Black_River_Gorges_Mauritius.jpg",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mu-dholl-puri",
+        "title": "ドール・プリ",
+        "titleEn": "Dholl Puri",
+        "description": "豆の粉を包んだ薄いパンに、カレー、チャツネ、漬物を添える人気の軽食です。",
+        "descriptionEn": "Thin flatbread filled with ground split peas is served with curry, chutney, and pickles.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dholl%20puri%20Mauritius.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dholl_puri_Mauritius.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dholl_puri_Mauritius.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "mu-sega",
+        "title": "セガ",
+        "titleEn": "Sega",
+        "description": "太鼓や三角形の金属楽器に合わせ、腰の動きと歌で島の歴史や感情を表します。",
+        "descriptionEn": "Drums, triangle, singing, and expressive dance movements communicate island history and emotion.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sega%20dance%20Mauritius.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sega_dance_Mauritius.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sega_dance_Mauritius.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      },
+      {
+        "id": "mu-sugar",
+        "title": "砂糖文化",
+        "titleEn": "Sugar Culture",
+        "description": "サトウキビ栽培は島の景観、産業、移民史、料理に大きな影響を与えました。",
+        "descriptionEn": "Sugarcane shaped the island's landscape, economy, migration history, and food traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sugarcane%20Mauritius.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sugarcane_Mauritius.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sugarcane_Mauritius.jpg",
+        "category": "農業・産業文化",
+        "categoryEn": "Agricultural and Industrial Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "海洋・防災・観光で交流",
+      "titleEn": "Exchange Through Oceans, Disaster Preparedness, and Tourism",
+      "text": "日本は海洋環境、防災、気候変動、観光、人材育成などでモーリシャスと協力しています。",
+      "textEn": "Japan and Mauritius cooperate in marine environment, disaster preparedness, climate action, tourism, and training."
+    },
+    "quiz": {
+      "question": "かつてモーリシャスに生息し、現在は絶滅した鳥は何でしょう？",
+      "questionEn": "Which extinct bird once lived on Mauritius?",
+      "options": [
+        "ドードー",
+        "ペンギン",
+        "ワシ",
+        "フラミンゴ"
+      ],
+      "optionsEn": [
+        "Dodo",
+        "Penguin",
+        "Eagle",
+        "Flamingo"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はドードーです。飛べない鳥で、人間の到来後に絶滅しました。",
+      "explanationEn": "The answer is the dodo, a flightless bird that became extinct after human arrival."
+    }
+  },
+  "mx": {
+    "iso": "mx",
+    "nameJa": "メキシコ",
+    "nameEn": "Mexico",
+    "capitalJa": "メキシコシティ",
+    "capitalEn": "Mexico City",
+    "subtitle": "古代文明、火山、砂漠、熱帯林、色彩豊かな祭りと食文化を持つ国です。",
+    "subtitleEn": "A country of ancient civilizations, volcanoes, deserts, rainforest, colorful festivals, and celebrated cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/mx.png",
+    "mapQuery": "Mexico City, Mexico",
+    "timeZone": "America/Mexico_City",
+    "currency": {
+      "nameJa": "メキシコ・ペソ",
+      "nameEn": "Mexican Peso",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約2,240 m（メキシコシティ）",
+    "elevationEn": "Approx. 2,240 m (Mexico City)",
+    "weather": {
+      "summary": "国土が広く、北部の乾燥地、中央高原、南部の熱帯地域など多様な気候があります。",
+      "summaryEn": "Mexico has highly varied climates, including northern deserts, central highlands, and tropical southern regions."
+    },
+    "heritage": [
+      {
+        "id": "mx-chichen-itza",
+        "title": "チチェン・イッツァ",
+        "titleEn": "Chichén Itzá",
+        "description": "マヤ文明の都市遺跡で、階段ピラミッド、天文観測、球技場などが残ります。",
+        "descriptionEn": "This Maya city preserves a stepped pyramid, observatory, temples, and a great ball court.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chichen%20Itza%20Mexico.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Chichen_Itza_Mexico.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Chichen_Itza_Mexico.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mx-teotihuacan",
+        "title": "テオティワカン",
+        "titleEn": "Teotihuacan",
+        "description": "太陽と月のピラミッド、大通り、集合住宅を持つ古代の巨大都市です。",
+        "descriptionEn": "Pyramids of the Sun and Moon, a grand avenue, and apartment compounds reveal an immense ancient city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teotihuacan%20Mexico.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Teotihuacan_Mexico.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Teotihuacan_Mexico.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mx-monarch",
+        "title": "オオカバマダラ生物圏保護区",
+        "titleEn": "Monarch Butterfly Biosphere Reserve",
+        "description": "北米から渡ってきた無数の蝶が山地の森で越冬する世界的に重要な場所です。",
+        "descriptionEn": "Millions of monarch butterflies migrate from North America and overwinter in mountain forests.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monarch%20Butterfly%20Biosphere%20Reserve%20Mexico.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Monarch_Butterfly_Biosphere_Reserve_Mexico.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Monarch_Butterfly_Biosphere_Reserve_Mexico.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mx-day-dead",
+        "title": "死者の日",
+        "titleEn": "Day of the Dead",
+        "description": "花、ろうそく、写真、食べ物を供え、亡くなった家族を明るく迎える行事です。",
+        "descriptionEn": "Families build altars with flowers, candles, photographs, and food to welcome and remember the dead.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Day%20of%20the%20Dead%20Mexico.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Day_of_the_Dead_Mexico.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Day_of_the_Dead_Mexico.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "mx-tacos",
+        "title": "タコス",
+        "titleEn": "Tacos",
+        "description": "トルティーヤに肉、魚、豆、野菜、サルサなどを包む多彩な料理です。",
+        "descriptionEn": "Tortillas are filled with meat, fish, beans, vegetables, and salsa in countless regional styles.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tacos%20Mexico.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tacos_Mexico.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tacos_Mexico.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "mx-mariachi",
+        "title": "マリアッチ",
+        "titleEn": "Mariachi",
+        "description": "弦楽器とトランペット、力強い歌声で祝い、愛、地域の物語を表現します。",
+        "descriptionEn": "Strings, trumpets, and powerful singing express celebration, love, and regional stories.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mariachi%20Mexico.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mariachi_Mexico.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mariachi_Mexico.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "自動車産業と400年以上の交流",
+      "titleEn": "Automotive Links and More Than Four Centuries of Exchange",
+      "text": "日本とメキシコは長い交流史を持ち、現在は自動車、貿易、教育、文化、観光で深く結ばれています。",
+      "textEn": "Japan and Mexico share a long history and strong modern ties in automobiles, trade, education, culture, and tourism."
+    },
+    "quiz": {
+      "question": "メキシコの国旗でワシがくわえている動物は何でしょう？",
+      "questionEn": "Which animal is held by the eagle on Mexico's national flag?",
+      "options": [
+        "ヘビ",
+        "魚",
+        "ウサギ",
+        "カエル"
+      ],
+      "optionsEn": [
+        "Snake",
+        "Fish",
+        "Rabbit",
+        "Frog"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はヘビです。サボテンの上のワシとヘビはアステカの建国伝説に由来します。",
+      "explanationEn": "The answer is a snake. The eagle, snake, and cactus come from an Aztec founding legend."
+    }
+  },
+  "fm": {
+    "iso": "fm",
+    "nameJa": "ミクロネシア連邦",
+    "nameEn": "Micronesia (Federated States of)",
+    "capitalJa": "パリキール",
+    "capitalEn": "Palikir",
+    "subtitle": "西太平洋の島々に、石造遺跡、環礁、伝統航海、地域ごとの文化が広がる国です。",
+    "subtitleEn": "A western Pacific nation of islands, stone ruins, atolls, traditional navigation, and diverse regional cultures.",
+    "flagUrl": "https://flagcdn.com/w320/fm.png",
+    "mapQuery": "Palikir, Federated States of Micronesia",
+    "timeZone": "Pacific/Pohnpei",
+    "currency": {
+      "nameJa": "米ドル",
+      "nameEn": "United States Dollar",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約35 m（パリキール）",
+    "elevationEn": "Approx. 35 m (Palikir)",
+    "weather": {
+      "summary": "一年を通して高温多湿で雨が多く、島によって台風や干ばつの影響も受けます。",
+      "summaryEn": "The climate is hot, humid, and rainy year-round, while some islands face typhoons or drought."
+    },
+    "heritage": [
+      {
+        "id": "fm-nan-madol",
+        "title": "ナン・マドール",
+        "titleEn": "Nan Madol",
+        "description": "人工島と玄武岩の壁で築かれた古代都市で、ポーンペイ島の王権と宗教を伝えます。",
+        "descriptionEn": "Artificial islets and basalt walls form an ancient ceremonial city linked to Pohnpei's rulers and religion.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nan%20Madol%20Micronesia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nan_Madol_Micronesia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nan_Madol_Micronesia.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "fm-chuuk-lagoon",
+        "title": "チューク・ラグーン",
+        "titleEn": "Chuuk Lagoon",
+        "description": "巨大な環礁の海底に第二次世界大戦期の船や航空機が残る海洋歴史遺産です。",
+        "descriptionEn": "Wrecked ships and aircraft from World War II lie beneath the waters of a vast tropical lagoon.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chuuk%20Lagoon%20Micronesia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Chuuk_Lagoon_Micronesia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Chuuk_Lagoon_Micronesia.jpg",
+        "category": "海洋歴史遺産",
+        "categoryEn": "Maritime Historical Heritage"
+      },
+      {
+        "id": "fm-lelu",
+        "title": "レル遺跡",
+        "titleEn": "Lelu Ruins",
+        "description": "コスラエ島に石壁と運河が残り、かつての政治・儀礼中心地を伝えます。",
+        "descriptionEn": "Stone walls, compounds, and canals preserve the former political and ceremonial center of Kosrae.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lelu%20ruins%20Kosrae.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lelu_ruins_Kosrae.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lelu_ruins_Kosrae.jpg",
+        "category": "考古遺産",
+        "categoryEn": "Archaeological Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "fm-yap-stone-money",
+        "title": "ヤップ島の石貨",
+        "titleEn": "Yapese Stone Money",
+        "description": "巨大な円形石に社会的価値と所有の記憶が結びつく、独特の交換文化です。",
+        "descriptionEn": "Large stone disks carry social value through shared knowledge of ownership, history, and exchange.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Yap%20stone%20money.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Yap_stone_money.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Yap_stone_money.jpg",
+        "category": "伝統的交換文化",
+        "categoryEn": "Traditional Exchange Culture"
+      },
+      {
+        "id": "fm-sakau",
+        "title": "サカウの儀式",
+        "titleEn": "Sakau Ceremony",
+        "description": "植物の根から飲み物を作り、儀礼、歓迎、共同体の話し合いで分かち合います。",
+        "descriptionEn": "A drink prepared from plant roots is shared during ceremonies, hospitality, and community discussion.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sakau%20ceremony%20Pohnpei.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sakau_ceremony_Pohnpei.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sakau_ceremony_Pohnpei.jpg",
+        "category": "儀礼・生活文化",
+        "categoryEn": "Ceremonial and Living Culture"
+      },
+      {
+        "id": "fm-navigation",
+        "title": "伝統航海術",
+        "titleEn": "Traditional Navigation",
+        "description": "星、波、風、鳥、雲を読み、海図に頼らず島々の間を航海する知識です。",
+        "descriptionEn": "Navigators read stars, swells, winds, birds, and clouds to travel between islands without modern charts.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Micronesian%20traditional%20canoe%20navigation.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Micronesian_traditional_canoe_navigation.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Micronesian_traditional_canoe_navigation.jpg",
+        "category": "航海文化",
+        "categoryEn": "Navigation Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "歴史・漁業・教育で深いつながり",
+      "titleEn": "Strong Links Through History, Fisheries, and Education",
+      "text": "日本は歴史的関係を持ち、現在は漁業、防災、教育、保健、インフラなどで協力しています。",
+      "textEn": "Japan has historical ties with Micronesia and now cooperates in fisheries, disaster preparedness, education, health, and infrastructure."
+    },
+    "quiz": {
+      "question": "ナン・マドールがある島はどこでしょう？",
+      "questionEn": "On which island is Nan Madol located?",
+      "options": [
+        "ポーンペイ島",
+        "ヤップ島",
+        "グアム島",
+        "タヒチ島"
+      ],
+      "optionsEn": [
+        "Pohnpei",
+        "Yap",
+        "Guam",
+        "Tahiti"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はポーンペイ島です。海上に築かれた人工島群として知られます。",
+      "explanationEn": "The answer is Pohnpei, where Nan Madol was built across a network of artificial islets."
+    }
+  },
+  "md": {
+    "iso": "md",
+    "nameJa": "モルドバ",
+    "nameEn": "Moldova",
+    "capitalJa": "キシナウ",
+    "capitalEn": "Chișinău",
+    "subtitle": "丘陵、ブドウ畑、洞窟修道院、多言語文化を持つ東ヨーロッパの内陸国です。",
+    "subtitleEn": "A landlocked Eastern European country of rolling hills, vineyards, cave monasteries, and multilingual traditions.",
+    "flagUrl": "https://flagcdn.com/w320/md.png",
+    "mapQuery": "Chisinau, Moldova",
+    "timeZone": "Europe/Chisinau",
+    "currency": {
+      "nameJa": "モルドバ・レウ",
+      "nameEn": "Moldovan Leu",
+      "symbol": "L"
+    },
+    "languages": [
+      {
+        "nameJa": "ルーマニア語",
+        "nameEn": "Romanian"
+      }
+    ],
+    "elevation": "約85 m（キシナウ）",
+    "elevationEn": "Approx. 85 m (Chișinău)",
+    "weather": {
+      "summary": "大陸性気候で、夏は暖かく、冬は寒くなります。降水量は比較的少なめです。",
+      "summaryEn": "Moldova has a continental climate with warm summers, cold winters, and moderate rainfall."
+    },
+    "heritage": [
+      {
+        "id": "md-orheiul-vechi",
+        "title": "オルヘイ・ヴェキ",
+        "titleEn": "Orheiul Vechi",
+        "description": "川が削った谷に洞窟修道院、要塞跡、村落が集まる文化的景観です。",
+        "descriptionEn": "A river valley contains cave monasteries, fortifications, archaeological remains, and traditional villages.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Orheiul%20Vechi%20Moldova.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Orheiul_Vechi_Moldova.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Orheiul_Vechi_Moldova.jpg",
+        "category": "文化・考古景観",
+        "categoryEn": "Cultural and Archaeological Landscape"
+      },
+      {
+        "id": "md-soroca",
+        "title": "ソロカ要塞",
+        "titleEn": "Soroca Fortress",
+        "description": "ドニエストル川沿いに築かれた円形要塞で、中世の国境防衛を伝えます。",
+        "descriptionEn": "This circular fortress beside the Dniester River preserves the history of medieval border defense.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Soroca%20Fortress%20Moldova.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Soroca_Fortress_Moldova.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Soroca_Fortress_Moldova.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      },
+      {
+        "id": "md-cricova",
+        "title": "クリコバの地下ワイン都市",
+        "titleEn": "Cricova Underground Wine Cellars",
+        "description": "長大な地下トンネルにワイン庫と熟成施設が広がり、独特の産業景観を作ります。",
+        "descriptionEn": "Kilometers of underground tunnels form a wine-storage and aging complex resembling a subterranean city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cricova%20wine%20cellar%20Moldova.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cricova_wine_cellar_Moldova.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cricova_wine_cellar_Moldova.jpg",
+        "category": "産業・文化遺産",
+        "categoryEn": "Industrial and Cultural Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "md-mamaliga",
+        "title": "ママリガ",
+        "titleEn": "Mămăligă",
+        "description": "トウモロコシ粉を煮て固め、チーズ、クリーム、肉料理などと食べます。",
+        "descriptionEn": "Cornmeal is cooked into a firm staple and served with cheese, sour cream, or meat dishes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mamaliga%20Moldova.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mamaliga_Moldova.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mamaliga_Moldova.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "md-wine",
+        "title": "モルドバのワイン文化",
+        "titleEn": "Moldovan Wine Culture",
+        "description": "丘陵のブドウ畑と地下セラーを生かし、家庭から大規模生産までワイン造りが根付いています。",
+        "descriptionEn": "Vineyards and underground cellars support a winemaking tradition ranging from family production to major wineries.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Moldova%20vineyard.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Moldova_vineyard.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Moldova_vineyard.jpg",
+        "category": "農業・食文化",
+        "categoryEn": "Agricultural and Food Culture"
+      },
+      {
+        "id": "md-martisor",
+        "title": "マルツィショール",
+        "titleEn": "Mărțișor",
+        "description": "赤と白のひも飾りを贈り合い、春の訪れ、健康、幸運を願います。",
+        "descriptionEn": "Red-and-white thread ornaments are exchanged to welcome spring and wish health and good fortune.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Martisor%20Moldova.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Martisor_Moldova.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Martisor_Moldova.jpg",
+        "category": "季節文化",
+        "categoryEn": "Seasonal Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "農業・医療・地域振興で協力",
+      "titleEn": "Cooperation in Agriculture, Health, and Regional Development",
+      "text": "日本は農業機械、医療、教育、地域産業、人材育成などでモルドバと協力しています。",
+      "textEn": "Japan supports Moldova through agricultural equipment, health care, education, regional industry, and training."
+    },
+    "quiz": {
+      "question": "モルドバが特に知られる農産文化は何でしょう？",
+      "questionEn": "Which agricultural tradition is Moldova especially known for?",
+      "options": [
+        "ワイン造り",
+        "コーヒー栽培",
+        "茶畑",
+        "オリーブだけ"
+      ],
+      "optionsEn": [
+        "Winemaking",
+        "Coffee growing",
+        "Tea farming",
+        "Only olive production"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はワイン造りです。広い地下セラーと長いブドウ栽培の歴史があります。",
+      "explanationEn": "The answer is winemaking, supported by long vineyard traditions and vast underground cellars."
+    }
+  },
+  "mc": {
+    "iso": "mc",
+    "nameJa": "モナコ",
+    "nameEn": "Monaco",
+    "capitalJa": "モナコ",
+    "capitalEn": "Monaco",
+    "subtitle": "地中海沿岸の断崖に宮殿、港、海洋研究施設が集まる世界有数の小国です。",
+    "subtitleEn": "One of the world's smallest states, combining a Mediterranean harbor, palace, cliffs, and marine science.",
+    "flagUrl": "https://flagcdn.com/w320/mc.png",
+    "mapQuery": "Monaco",
+    "timeZone": "Europe/Monaco",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約55 m（モナコ）",
+    "elevationEn": "Approx. 55 m (Monaco)",
+    "weather": {
+      "summary": "夏は暑く乾燥し、冬は穏やかで雨が増える地中海性気候です。",
+      "summaryEn": "Monaco has a Mediterranean climate with hot dry summers and mild wetter winters."
+    },
+    "heritage": [
+      {
+        "id": "mc-prince-palace",
+        "title": "モナコ大公宮殿",
+        "titleEn": "Prince's Palace of Monaco",
+        "description": "港を見下ろす岩山に建ち、要塞から大公家の宮殿へ発展した歴史建築です。",
+        "descriptionEn": "This hilltop building evolved from a fortress into the residence of Monaco's princely family.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Prince's%20Palace%20of%20Monaco.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Prince's_Palace_of_Monaco.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Prince's_Palace_of_Monaco.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      },
+      {
+        "id": "mc-oceanographic",
+        "title": "海洋博物館",
+        "titleEn": "Oceanographic Museum",
+        "description": "海を見下ろす断崖に建ち、海洋生物、探査、保全を紹介する研究・教育施設です。",
+        "descriptionEn": "Built above the sea, this museum presents marine life, exploration, science, and conservation.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Oceanographic%20Museum%20Monaco.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Oceanographic_Museum_Monaco.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Oceanographic_Museum_Monaco.jpg",
+        "category": "科学・文化施設",
+        "categoryEn": "Scientific and Cultural Institution"
+      },
+      {
+        "id": "mc-larvotto",
+        "title": "ラルヴォット海洋保護区",
+        "titleEn": "Larvotto Marine Reserve",
+        "description": "都市の海岸に海草藻場と海洋生物を守る保護区域が設けられています。",
+        "descriptionEn": "A protected coastal area preserves seagrass beds and marine life beside a dense urban shoreline.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Larvotto%20Monaco.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Larvotto_Monaco.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Larvotto_Monaco.jpg",
+        "category": "海洋自然",
+        "categoryEn": "Marine Nature"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mc-barbagiuan",
+        "title": "バルバジュアン",
+        "titleEn": "Barbagiuan",
+        "description": "葉野菜、リコッタ、米などを薄い生地に包み、揚げたり焼いたりする郷土料理です。",
+        "descriptionEn": "Pastry pockets filled with greens, ricotta, and rice are fried or baked as a traditional specialty.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Barbagiuan%20Monaco.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Barbagiuan_Monaco.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Barbagiuan_Monaco.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "mc-grand-prix",
+        "title": "モナコ・グランプリ",
+        "titleEn": "Monaco Grand Prix",
+        "description": "市街地の狭い道路を使う自動車レースで、港と都市景観が舞台になります。",
+        "descriptionEn": "Race cars compete through narrow city streets in an event closely associated with Monaco's harbor and identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monaco%20Grand%20Prix.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Monaco_Grand_Prix.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Monaco_Grand_Prix.jpg",
+        "category": "スポーツ文化",
+        "categoryEn": "Sports Culture"
+      },
+      {
+        "id": "mc-national-day",
+        "title": "モナコ国民の日",
+        "titleEn": "Monaco National Day",
+        "description": "大公家と国を祝う式典、音楽、旗、宗教行事が行われます。",
+        "descriptionEn": "Ceremonies, music, flags, and religious events celebrate the principality and its ruling family.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monaco%20National%20Day.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Monaco_National_Day.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Monaco_National_Day.jpg",
+        "category": "国家祭礼文化",
+        "categoryEn": "National Festival Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "海洋保全・観光・文化で交流",
+      "titleEn": "Exchange in Marine Conservation, Tourism, and Culture",
+      "text": "日本とモナコは外交、海洋研究、環境保全、観光、芸術を通じて交流しています。",
+      "textEn": "Japan and Monaco maintain ties through diplomacy, ocean science, environmental protection, tourism, and the arts."
+    },
+    "quiz": {
+      "question": "モナコの国土について正しいものはどれでしょう？",
+      "questionEn": "Which statement about Monaco is correct?",
+      "options": [
+        "世界で最も小さい国の一つ",
+        "アジア最大の国",
+        "国土の大半が熱帯雨林",
+        "複数の大きな島からなる"
+      ],
+      "optionsEn": [
+        "It is one of the world's smallest countries",
+        "It is Asia's largest country",
+        "Most of it is tropical rainforest",
+        "It consists of several large islands"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は世界で最も小さい国の一つです。フランス南部の地中海沿岸にあります。",
+      "explanationEn": "The answer is that Monaco is one of the world's smallest states, located on the Mediterranean coast."
+    }
+  },
+  "mn": {
+    "iso": "mn",
+    "nameJa": "モンゴル",
+    "nameEn": "Mongolia",
+    "capitalJa": "ウランバートル",
+    "capitalEn": "Ulaanbaatar",
+    "subtitle": "広大な草原、ゴビ砂漠、遊牧生活、馬文化、壮大な歴史を持つ内陸国です。",
+    "subtitleEn": "A landlocked country of vast steppe, Gobi Desert, nomadic life, horse culture, and sweeping history.",
+    "flagUrl": "https://flagcdn.com/w320/mn.png",
+    "mapQuery": "Ulaanbaatar, Mongolia",
+    "timeZone": "Asia/Ulaanbaatar",
+    "currency": {
+      "nameJa": "トゥグルグ",
+      "nameEn": "Tögrög",
+      "symbol": "₮"
+    },
+    "languages": [
+      {
+        "nameJa": "モンゴル語",
+        "nameEn": "Mongolian"
+      }
+    ],
+    "elevation": "約1,350 m（ウランバートル）",
+    "elevationEn": "Approx. 1,350 m (Ulaanbaatar)",
+    "weather": {
+      "summary": "乾燥した大陸性気候で、冬は非常に寒く、夏は短く暖かくなります。",
+      "summaryEn": "Mongolia has a dry continental climate with extremely cold winters and short warm summers."
+    },
+    "heritage": [
+      {
+        "id": "mn-orkhon",
+        "title": "オルホン渓谷の文化的景観",
+        "titleEn": "Orkhon Valley Cultural Landscape",
+        "description": "遊牧帝国の都、寺院、牧草地が集まり、中央アジアの国家と遊牧生活を伝えます。",
+        "descriptionEn": "Ancient capitals, monasteries, and pastures preserve the history of steppe empires and nomadic life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Orkhon%20Valley%20Mongolia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Orkhon_Valley_Mongolia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Orkhon_Valley_Mongolia.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mn-flaming-cliffs",
+        "title": "フレイミング・クリフ",
+        "titleEn": "Flaming Cliffs",
+        "description": "赤い崖から恐竜の化石や卵が発見され、古生物学史上重要な場所となりました。",
+        "descriptionEn": "Red cliffs yielded important dinosaur fossils and eggs, making the site famous in paleontology.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flaming%20Cliffs%20Mongolia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Flaming_Cliffs_Mongolia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Flaming_Cliffs_Mongolia.jpg",
+        "category": "地質・化石景観",
+        "categoryEn": "Geological and Fossil Landscape"
+      },
+      {
+        "id": "mn-khovsgol",
+        "title": "フブスグル湖",
+        "titleEn": "Lake Khövsgöl",
+        "description": "森林と山に囲まれた透明度の高い湖で、淡水と遊牧民の暮らしを支えます。",
+        "descriptionEn": "A clear mountain lake surrounded by forest supports freshwater ecosystems and pastoral communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Khovsgol%20Mongolia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Khovsgol_Mongolia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lake_Khovsgol_Mongolia.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mn-naadam",
+        "title": "ナーダム",
+        "titleEn": "Naadam",
+        "description": "相撲、競馬、弓術の「男の三競技」を中心に、夏に各地で行われる祭典です。",
+        "descriptionEn": "Wrestling, horse racing, and archery form the core of a major summer festival celebrated nationwide.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Naadam%20Mongolia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Naadam_Mongolia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Naadam_Mongolia.jpg",
+        "category": "祭礼・スポーツ文化",
+        "categoryEn": "Festival and Sports Culture"
+      },
+      {
+        "id": "mn-ger",
+        "title": "ゲル",
+        "titleEn": "Ger",
+        "description": "木の骨組みをフェルトで覆う移動式住居で、草原の寒暖差に適応しています。",
+        "descriptionEn": "A portable wooden frame covered with felt creates a home adapted to the steppe's extreme temperatures.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mongolian%20ger.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mongolian_ger.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mongolian_ger.jpg",
+        "category": "遊牧文化",
+        "categoryEn": "Nomadic Culture"
+      },
+      {
+        "id": "mn-throat-singing",
+        "title": "ホーミー",
+        "titleEn": "Khöömii Throat Singing",
+        "description": "一人の歌い手が低い持続音と高い倍音を同時に響かせ、自然の音を表現します。",
+        "descriptionEn": "A singer produces a low drone and high overtones at the same time, often evoking sounds of nature.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mongolian%20throat%20singing.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mongolian_throat_singing.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mongolian_throat_singing.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "相撲・教育・環境で深い交流",
+      "titleEn": "Strong Links Through Sumo, Education, and Environment",
+      "text": "モンゴル出身力士は日本で活躍し、両国は教育、医療、環境、インフラ、人材育成でも協力しています。",
+      "textEn": "Mongolian sumo wrestlers are prominent in Japan, while the countries also cooperate in education, health, environment, and infrastructure."
+    },
+    "quiz": {
+      "question": "モンゴルのナーダムで行われる三つの伝統競技に含まれないものはどれでしょう？",
+      "questionEn": "Which sport is not one of Naadam's traditional three games?",
+      "options": [
+        "水泳",
+        "相撲",
+        "競馬",
+        "弓術"
+      ],
+      "optionsEn": [
+        "Swimming",
+        "Wrestling",
+        "Horse racing",
+        "Archery"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は水泳です。ナーダムの三競技は相撲、競馬、弓術です。",
+      "explanationEn": "The answer is swimming. Naadam's traditional three games are wrestling, horse racing, and archery."
+    }
+  },
+  "me": {
+    "iso": "me",
+    "nameJa": "モンテネグロ",
+    "nameEn": "Montenegro",
+    "capitalJa": "ポドゴリツァ",
+    "capitalEn": "Podgorica",
+    "subtitle": "アドリア海の湾岸都市、険しい山々、修道院、バルカンの伝統文化を持つ国です。",
+    "subtitleEn": "A Balkan country of Adriatic towns, rugged mountains, monasteries, and strong regional traditions.",
+    "flagUrl": "https://flagcdn.com/w320/me.png",
+    "mapQuery": "Podgorica, Montenegro",
+    "timeZone": "Europe/Podgorica",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "モンテネグロ語",
+        "nameEn": "Montenegrin"
+      }
+    ],
+    "elevation": "約44 m（ポドゴリツァ）",
+    "elevationEn": "Approx. 44 m (Podgorica)",
+    "weather": {
+      "summary": "沿岸部は地中海性気候で、内陸山地は冬に寒く雪が多くなります。",
+      "summaryEn": "The coast has a Mediterranean climate, while inland mountains have cold and snowy winters."
+    },
+    "heritage": [
+      {
+        "id": "me-kotor",
+        "title": "コトルの自然と文化歴史地域",
+        "titleEn": "Natural and Culturo-Historical Region of Kotor",
+        "description": "険しい山と湾に囲まれた城壁都市で、海洋交易と中世建築の歴史を伝えます。",
+        "descriptionEn": "A walled town between mountains and a deep bay preserves medieval architecture and maritime history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kotor%20Montenegro.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kotor_Montenegro.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kotor_Montenegro.jpg",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      },
+      {
+        "id": "me-durmitor",
+        "title": "ドゥルミトル国立公園",
+        "titleEn": "Durmitor National Park",
+        "description": "石灰岩の山、氷河湖、深い峡谷が広がるモンテネグロを代表する自然地域です。",
+        "descriptionEn": "Limestone peaks, glacial lakes, and deep canyons define one of Montenegro's major natural landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Durmitor%20Montenegro.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Durmitor_Montenegro.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Durmitor_Montenegro.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "me-ostrog",
+        "title": "オストログ修道院",
+        "titleEn": "Ostrog Monastery",
+        "description": "白い修道院が断崖に埋め込まれるように建ち、重要な巡礼地となっています。",
+        "descriptionEn": "A white monastery built into a sheer cliff remains an important place of pilgrimage.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ostrog%20Monastery%20Montenegro.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ostrog_Monastery_Montenegro.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ostrog_Monastery_Montenegro.jpg",
+        "category": "宗教・歴史建築",
+        "categoryEn": "Religious and Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "me-njeguski-prsut",
+        "title": "ニェグシ・プロシュート",
+        "titleEn": "Njeguški Pršut",
+        "description": "山の空気と煙で豚肉を乾燥・熟成させる、ニェグシ村の伝統的な生ハムです。",
+        "descriptionEn": "Pork is smoked and air-dried in mountain conditions to produce a celebrated cured ham.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Njeguski%20prsut%20Montenegro.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Njeguski_prsut_Montenegro.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Njeguski_prsut_Montenegro.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "me-kolo",
+        "title": "コロ",
+        "titleEn": "Kolo Dance",
+        "description": "人々が輪や列を作り、地域の音楽に合わせて足取りをそろえる共同体の舞踊です。",
+        "descriptionEn": "People form circles or lines and coordinate steps to regional music in a communal dance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Montenegrin%20kolo%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Montenegrin_kolo_dance.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Montenegrin_kolo_dance.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      },
+      {
+        "id": "me-gusle",
+        "title": "グスレ",
+        "titleEn": "Gusle",
+        "description": "一本弦の楽器を弾きながら英雄物語や歴史を歌い語る口承文化です。",
+        "descriptionEn": "Epic singers accompany historical and heroic poetry on a single-string instrument.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gusle%20Montenegro.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gusle_Montenegro.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gusle_Montenegro.jpg",
+        "category": "音楽・口承文化",
+        "categoryEn": "Music and Oral Tradition"
+      }
+    ],
+    "japanConnection": {
+      "title": "観光・文化・環境で交流",
+      "titleEn": "Exchange in Tourism, Culture, and Environment",
+      "text": "日本とモンテネグロは観光、文化、環境、人材育成などを通じて交流しています。",
+      "textEn": "Japan and Montenegro maintain ties through tourism, culture, environmental cooperation, and professional training."
+    },
+    "quiz": {
+      "question": "モンテネグロという国名の意味に最も近いものはどれでしょう？",
+      "questionEn": "Which meaning is closest to the name Montenegro?",
+      "options": [
+        "黒い山",
+        "青い海",
+        "白い城",
+        "緑の谷"
+      ],
+      "optionsEn": [
+        "Black mountain",
+        "Blue sea",
+        "White castle",
+        "Green valley"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は黒い山です。イタリア語由来の国名です。",
+      "explanationEn": "The answer is black mountain, derived from the Italian name for the region."
+    }
+  },
+  "ma": {
+    "iso": "ma",
+    "nameJa": "モロッコ",
+    "nameEn": "Morocco",
+    "capitalJa": "ラバト",
+    "capitalEn": "Rabat",
+    "subtitle": "アトラス山脈、サハラ、旧市街、イスラム建築、多彩な工芸と食文化を持つ国です。",
+    "subtitleEn": "A North African country of Atlas mountains, Sahara landscapes, medinas, Islamic architecture, crafts, and cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/ma.png",
+    "mapQuery": "Rabat, Morocco",
+    "timeZone": "Africa/Casablanca",
+    "currency": {
+      "nameJa": "モロッコ・ディルハム",
+      "nameEn": "Moroccan Dirham",
+      "symbol": "د.م."
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      },
+      {
+        "nameJa": "アマジグ語",
+        "nameEn": "Amazigh"
+      }
+    ],
+    "elevation": "約75 m（ラバト）",
+    "elevationEn": "Approx. 75 m (Rabat)",
+    "weather": {
+      "summary": "沿岸部は比較的穏やかで、内陸は寒暖差が大きく、南東部は乾燥した砂漠気候です。",
+      "summaryEn": "Coastal areas are mild, inland regions have greater temperature variation, and the southeast is desert."
+    },
+    "heritage": [
+      {
+        "id": "ma-fez",
+        "title": "フェズ旧市街",
+        "titleEn": "Medina of Fez",
+        "description": "細い路地、神学校、モスク、工房が密集し、中世イスラム都市の構造を残します。",
+        "descriptionEn": "Narrow lanes, schools, mosques, and workshops preserve the structure of a medieval Islamic city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fez%20Morocco%20medina.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fez_Morocco_medina.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Fez_Morocco_medina.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ma-ait-benhaddou",
+        "title": "アイット・ベン・ハドゥ",
+        "titleEn": "Aït Benhaddou",
+        "description": "土造りの城塞集落が山麓に重なり、サハラ交易路の暮らしを伝えます。",
+        "descriptionEn": "A fortified earthen village rises against the hills along an old trans-Saharan caravan route.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ait%20Benhaddou%20Morocco.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ait_Benhaddou_Morocco.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ait_Benhaddou_Morocco.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ma-erg-chebbi",
+        "title": "エルグ・シェビ砂丘",
+        "titleEn": "Erg Chebbi Dunes",
+        "description": "風で形を変える巨大な砂丘が連なり、サハラ北西部の景観を代表します。",
+        "descriptionEn": "Tall dunes continually reshaped by wind create one of Morocco's most famous Sahara landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Erg%20Chebbi%20Morocco.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Erg_Chebbi_Morocco.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Erg_Chebbi_Morocco.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ma-tagine",
+        "title": "タジン",
+        "titleEn": "Tagine",
+        "description": "円すい形のふたを持つ鍋で、肉、野菜、果物、香辛料を蒸し煮にします。",
+        "descriptionEn": "A conical-lidded pot slowly steams meat, vegetables, fruit, and spices into a fragrant dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Moroccan%20tagine.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Moroccan_tagine.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Moroccan_tagine.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ma-zellige",
+        "title": "ゼリージュ",
+        "titleEn": "Zellige",
+        "description": "小さな彩色タイルを切り、幾何学模様に組み合わせる精密な装飾工芸です。",
+        "descriptionEn": "Small colored tiles are cut and assembled into highly precise geometric mosaics.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zellige%20Morocco.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Zellige_Morocco.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Zellige_Morocco.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "ma-mint-tea",
+        "title": "ミントティーのもてなし",
+        "titleEn": "Mint Tea Hospitality",
+        "description": "緑茶にミントと砂糖を加え、高い位置から注いで客への歓迎を表します。",
+        "descriptionEn": "Green tea with mint and sugar is poured from a height as a sign of welcome and hospitality.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Moroccan%20mint%20tea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Moroccan_mint_tea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Moroccan_mint_tea.jpg",
+        "category": "生活・もてなし文化",
+        "categoryEn": "Living and Hospitality Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "漁業・産業・文化で交流",
+      "titleEn": "Exchange Through Fisheries, Industry, and Culture",
+      "text": "日本とモロッコは漁業、農業、製造業、教育、観光、文化などで関係を深めています。",
+      "textEn": "Japan and Morocco cooperate in fisheries, agriculture, manufacturing, education, tourism, and culture."
+    },
+    "quiz": {
+      "question": "モロッコ料理で使われる円すい形のふたを持つ鍋は何でしょう？",
+      "questionEn": "What is the Moroccan cooking pot with a conical lid called?",
+      "options": [
+        "タジン",
+        "中華鍋",
+        "土鍋",
+        "圧力鍋"
+      ],
+      "optionsEn": [
+        "Tagine",
+        "Wok",
+        "Donabe",
+        "Pressure cooker"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はタジンです。食材の水分を循環させ、少ない水で柔らかく調理できます。",
+      "explanationEn": "The answer is tagine. Its lid circulates moisture and allows slow cooking with little added water."
+    }
+  },
+  "mz": {
+    "iso": "mz",
+    "nameJa": "モザンビーク",
+    "nameEn": "Mozambique",
+    "capitalJa": "マプト",
+    "capitalEn": "Maputo",
+    "subtitle": "長いインド洋岸、島々、サバンナ、多民族の音楽と食文化を持つ南東アフリカの国です。",
+    "subtitleEn": "A southeastern African country of a long Indian Ocean coast, islands, savanna, music, and diverse cuisines.",
+    "flagUrl": "https://flagcdn.com/w320/mz.png",
+    "mapQuery": "Maputo, Mozambique",
+    "timeZone": "Africa/Maputo",
+    "currency": {
+      "nameJa": "メティカル",
+      "nameEn": "Metical",
+      "symbol": "MT"
+    },
+    "languages": [
+      {
+        "nameJa": "ポルトガル語",
+        "nameEn": "Portuguese"
+      }
+    ],
+    "elevation": "約47 m（マプト）",
+    "elevationEn": "Approx. 47 m (Maputo)",
+    "weather": {
+      "summary": "多くの地域は高温の熱帯気候で、雨季と乾季があります。沿岸部はサイクロンの影響も受けます。",
+      "summaryEn": "Much of Mozambique is tropical with wet and dry seasons, while the coast is exposed to cyclones."
+    },
+    "heritage": [
+      {
+        "id": "mz-island",
+        "title": "モザンビーク島",
+        "titleEn": "Island of Mozambique",
+        "description": "サンゴ石の建物、要塞、港が残り、アフリカ、アラブ、インド、欧州の交易史を伝えます。",
+        "descriptionEn": "Coral-stone buildings, forts, and a historic port reflect African, Arab, Indian, and European exchange.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Island%20of%20Mozambique.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Island_of_Mozambique.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Island_of_Mozambique.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mz-gorongosa",
+        "title": "ゴロンゴーザ国立公園",
+        "titleEn": "Gorongosa National Park",
+        "description": "湿地、草原、森林が多様な野生動物を支え、自然再生の取り組みでも知られます。",
+        "descriptionEn": "Wetlands, grasslands, and forests support wildlife and a major long-term ecological restoration effort.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gorongosa%20National%20Park%20Mozambique.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gorongosa_National_Park_Mozambique.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gorongosa_National_Park_Mozambique.jpg",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      },
+      {
+        "id": "mz-bazaruto",
+        "title": "バザルート諸島",
+        "titleEn": "Bazaruto Archipelago",
+        "description": "白い砂丘、サンゴ礁、透明な海が広がり、ジュゴンの重要な生息地です。",
+        "descriptionEn": "White dunes, coral reefs, and clear water form an important habitat for dugongs and marine life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bazaruto%20Archipelago%20Mozambique.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bazaruto_Archipelago_Mozambique.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bazaruto_Archipelago_Mozambique.jpg",
+        "category": "海洋自然",
+        "categoryEn": "Marine Nature"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mz-matapa",
+        "title": "マタパ",
+        "titleEn": "Matapa",
+        "description": "キャッサバの葉を落花生、ココナツミルク、魚介などと煮込む料理です。",
+        "descriptionEn": "Cassava leaves are cooked with peanuts, coconut milk, and sometimes seafood.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Matapa%20Mozambique.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Matapa_Mozambique.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Matapa_Mozambique.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "mz-marrabenta",
+        "title": "マラベンタ",
+        "titleEn": "Marrabenta",
+        "description": "ギターと力強いリズムにポルトガル語や地域言語の歌を合わせる都市音楽です。",
+        "descriptionEn": "Guitars and energetic rhythms accompany songs in Portuguese and local languages.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Marrabenta%20Mozambique.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Marrabenta_Mozambique.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Marrabenta_Mozambique.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      },
+      {
+        "id": "mz-capulana",
+        "title": "カプラナ",
+        "titleEn": "Capulana",
+        "description": "鮮やかな模様の布を衣服、抱っこ布、贈り物、室内装飾などに使います。",
+        "descriptionEn": "Bright patterned cloth is used for clothing, carrying children, gifts, and household decoration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Capulana%20Mozambique.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Capulana_Mozambique.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Capulana_Mozambique.jpg",
+        "category": "服飾・生活文化",
+        "categoryEn": "Clothing and Living Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "天然ガス・農業・教育で協力",
+      "titleEn": "Cooperation in Natural Gas, Agriculture, and Education",
+      "text": "日本はエネルギー、農業、港湾、教育、保健、防災、人材育成などでモザンビークと協力しています。",
+      "textEn": "Japan and Mozambique cooperate in energy, agriculture, ports, education, health, disaster preparedness, and training."
+    },
+    "quiz": {
+      "question": "モザンビークが面している大洋はどこでしょう？",
+      "questionEn": "Which ocean borders Mozambique?",
+      "options": [
+        "インド洋",
+        "北極海",
+        "大西洋だけ",
+        "南極海"
+      ],
+      "optionsEn": [
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Only the Atlantic Ocean",
+        "Southern Ocean"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はインド洋です。長い海岸線が漁業、港湾、海洋文化を支えています。",
+      "explanationEn": "The answer is the Indian Ocean. The long coastline supports fisheries, ports, and maritime culture."
+    }
+  },
+  "mm": {
+    "iso": "mm",
+    "nameJa": "ミャンマー",
+    "nameEn": "Myanmar",
+    "capitalJa": "ネピドー",
+    "capitalEn": "Naypyidaw",
+    "subtitle": "仏教遺跡、山地、河川、多民族の生活文化を持つ東南アジアの国です。",
+    "subtitleEn": "A Southeast Asian country of Buddhist monuments, mountains, rivers, and many ethnic cultural traditions.",
+    "flagUrl": "https://flagcdn.com/w320/mm.png",
+    "mapQuery": "Naypyidaw, Myanmar",
+    "timeZone": "Asia/Yangon",
+    "currency": {
+      "nameJa": "チャット",
+      "nameEn": "Kyat",
+      "symbol": "K"
+    },
+    "languages": [
+      {
+        "nameJa": "ミャンマー語",
+        "nameEn": "Burmese"
+      }
+    ],
+    "elevation": "約115 m（ネピドー）",
+    "elevationEn": "Approx. 115 m (Naypyidaw)",
+    "weather": {
+      "summary": "多くの地域は熱帯モンスーン気候で、雨季と乾季があります。北部山地はより涼しくなります。",
+      "summaryEn": "Much of Myanmar has a tropical monsoon climate with wet and dry seasons, while northern mountains are cooler."
+    },
+    "heritage": [
+      {
+        "id": "mm-bagan",
+        "title": "バガン",
+        "titleEn": "Bagan",
+        "description": "平原に数千の仏塔と寺院が点在し、古代王朝の宗教と都市文化を伝えます。",
+        "descriptionEn": "Thousands of Buddhist temples and stupas spread across a plain, preserving the legacy of an ancient kingdom.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bagan%20Myanmar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bagan_Myanmar.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bagan_Myanmar.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "mm-inle",
+        "title": "インレー湖",
+        "titleEn": "Inle Lake",
+        "description": "水上家屋、浮畑、片足で櫂を操る漁法が、湖と共に生きる文化を示します。",
+        "descriptionEn": "Stilt houses, floating gardens, and one-leg rowing reveal a distinctive lake-based way of life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Inle%20Lake%20Myanmar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Inle_Lake_Myanmar.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Inle_Lake_Myanmar.jpg",
+        "category": "文化・自然景観",
+        "categoryEn": "Cultural and Natural Landscape"
+      },
+      {
+        "id": "mm-shwedagon",
+        "title": "シュエダゴン・パゴダ",
+        "titleEn": "Shwedagon Pagoda",
+        "description": "黄金色の仏塔がヤンゴンを見下ろし、国内で最も重要な仏教聖地の一つです。",
+        "descriptionEn": "A golden stupa rises above Yangon as one of the country's most important Buddhist sacred places.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shwedagon%20Pagoda%20Myanmar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Shwedagon_Pagoda_Myanmar.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Shwedagon_Pagoda_Myanmar.jpg",
+        "category": "宗教・歴史建築",
+        "categoryEn": "Religious and Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mm-mohinga",
+        "title": "モヒンガー",
+        "titleEn": "Mohinga",
+        "description": "魚のだしと米麺を合わせ、香草、ゆで卵、揚げ物などを添える国民的料理です。",
+        "descriptionEn": "Rice noodles are served in a fish-based broth with herbs, egg, fritters, and regional toppings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mohinga%20Myanmar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mohinga_Myanmar.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mohinga_Myanmar.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "mm-thanaka",
+        "title": "タナカ",
+        "titleEn": "Thanaka",
+        "description": "木をすりつぶした黄色いペーストを顔に塗り、日差し対策と装飾に用います。",
+        "descriptionEn": "A pale paste ground from wood is applied to the face for sun protection, cooling, and decoration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thanaka%20Myanmar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Thanaka_Myanmar.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Thanaka_Myanmar.jpg",
+        "category": "生活・美容文化",
+        "categoryEn": "Living and Beauty Culture"
+      },
+      {
+        "id": "mm-longyi",
+        "title": "ロンジー",
+        "titleEn": "Longyi",
+        "description": "筒状の布を腰に巻く日常着で、色や模様、結び方に地域や性別の違いがあります。",
+        "descriptionEn": "A tubular cloth wrapped around the waist is everyday clothing with regional patterns and tying styles.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Longyi%20Myanmar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Longyi_Myanmar.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Longyi_Myanmar.jpg",
+        "category": "服飾文化",
+        "categoryEn": "Clothing Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "鉄道・教育・人道支援で関係",
+      "titleEn": "Connections Through Railways, Education, and Humanitarian Support",
+      "text": "日本は鉄道、都市開発、教育、保健、人道支援、人材育成などを通じてミャンマーと関わっています。",
+      "textEn": "Japan has engaged with Myanmar through railways, urban development, education, health, humanitarian assistance, and training."
+    },
+    "quiz": {
+      "question": "ミャンマーの顔に塗る伝統的な黄色いペーストは何でしょう？",
+      "questionEn": "What is the traditional pale-yellow paste applied to the face in Myanmar?",
+      "options": [
+        "タナカ",
+        "ヘナ",
+        "チョーク",
+        "サフラン水"
+      ],
+      "optionsEn": [
+        "Thanaka",
+        "Henna",
+        "Chalk",
+        "Saffron water"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はタナカです。日差しを和らげ、涼しさや装飾のためにも使われます。",
+      "explanationEn": "The answer is thanaka, used for sun protection, cooling, and decoration."
+    }
+  }
+}

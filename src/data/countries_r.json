@@ -1,0 +1,440 @@
+{
+  "ro": {
+    "iso": "ro",
+    "nameJa": "ルーマニア",
+    "nameEn": "Romania",
+    "capitalJa": "ブカレスト",
+    "capitalEn": "Bucharest",
+    "subtitle": "カルパチア山脈、ドナウ川、中世都市、農村文化、刺しゅうや食文化を持つ東ヨーロッパの国です。",
+    "subtitleEn": "An Eastern European country of the Carpathians, the Danube, medieval towns, rural traditions, embroidery, and cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/ro.png",
+    "mapQuery": "Bucharest, Romania",
+    "timeZone": "Europe/Bucharest",
+    "currency": {
+      "nameJa": "ルーマニア・レウ",
+      "nameEn": "Romanian Leu",
+      "symbol": "lei"
+    },
+    "languages": [
+      {
+        "nameJa": "ルーマニア語",
+        "nameEn": "Romanian"
+      }
+    ],
+    "elevation": "約85 m（ブカレスト）",
+    "elevationEn": "Approx. 85 m (Bucharest)",
+    "weather": {
+      "summary": "大陸性気候で、夏は暑く、冬は寒くなります。山地では降雪が多く、黒海沿岸は比較的穏やかです。",
+      "summaryEn": "Romania has a continental climate with hot summers and cold winters. Mountain areas receive more snow, while the Black Sea coast is milder."
+    },
+    "heritage": [
+      {
+        "id": "ro-sighisoara",
+        "title": "シギショアラ歴史地区",
+        "titleEn": "Historic Centre of Sighișoara",
+        "description": "城壁、塔、石畳の路地、色鮮やかな家々が残り、中世トランシルヴァニアの都市生活を伝えます。",
+        "descriptionEn": "Walls, towers, cobbled lanes, and colorful houses preserve the urban life of medieval Transylvania.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sighisoara.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sighisoara.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sighisoara.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ro-danube-delta",
+        "title": "ドナウ・デルタ",
+        "titleEn": "Danube Delta",
+        "description": "ドナウ川が黒海へ注ぐ広大な湿地で、ヨシ原、湖、水路に多数の鳥類と魚類が暮らします。",
+        "descriptionEn": "A vast wetland where the Danube meets the Black Sea, supporting reed beds, lakes, channels, birds, and fish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Danube%20Delta,%20fisherman.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Danube_Delta,_fisherman.jpg",
+        "imageCredit": "Raff",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ro-bran-castle",
+        "title": "ブラン城",
+        "titleEn": "Bran Castle",
+        "description": "カルパチア山脈の峠を見下ろす城で、中世の防衛、交易、王室の歴史と結びついています。",
+        "descriptionEn": "This castle overlooking a Carpathian pass is connected to medieval defense, trade, and Romanian royal history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bran%20Castle%20(23973322549).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bran_Castle_(23973322549).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bran_Castle_(23973322549).jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ro-sarmale",
+        "title": "サルマーレ",
+        "titleEn": "Sarmale",
+        "description": "ひき肉や米をキャベツまたはブドウの葉で包み、時間をかけて煮込む祝いの定番料理です。",
+        "descriptionEn": "Meat and rice are wrapped in cabbage or vine leaves and slowly cooked for family meals and celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarmale%20Romania.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sarmale_Romania.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sarmale_Romania.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ro-ie",
+        "title": "伝統ブラウス「イエ」",
+        "titleEn": "Traditional Ie Blouse",
+        "description": "白い布に地域ごとの幾何学模様や植物文様を刺しゅうし、女性の伝統衣装として受け継がれています。",
+        "descriptionEn": "Regional geometric and floral embroidery decorates the white blouse worn as traditional women's clothing.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20IE.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:National_IE.jpg",
+        "imageCredit": "Helenas38",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "服飾・刺しゅう文化",
+        "categoryEn": "Clothing and Embroidery Culture"
+      },
+      {
+        "id": "ro-painted-eggs",
+        "title": "彩色イースターエッグ",
+        "titleEn": "Painted Easter Eggs",
+        "description": "ろうや染料を使って卵に細かな幾何学模様や宗教的な象徴を描く春の民俗工芸です。",
+        "descriptionEn": "Wax and dyes create detailed geometric and religious patterns on eggs in a spring folk-art tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Painted%20Romanian%20Easter%20Eggs.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Painted_Romanian_Easter_Eggs.jpg",
+        "imageCredit": "Pixabay contributor",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "季節・民俗工芸",
+        "categoryEn": "Seasonal Folk Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "自動車産業・音楽・教育で交流",
+      "titleEn": "Exchange Through Automobiles, Music, and Education",
+      "text": "日本とルーマニアは自動車関連産業、IT、大学交流、クラシック音楽、文化事業などを通じて関係を深めています。",
+      "textEn": "Japan and Romania maintain ties in automotive industries, IT, universities, classical music, and cultural programs."
+    },
+    "quiz": {
+      "question": "ルーマニアを通り、黒海へ注ぐ大河は何でしょう？",
+      "questionEn": "Which major river flows through Romania and empties into the Black Sea?",
+      "options": [
+        "ドナウ川",
+        "ナイル川",
+        "アマゾン川",
+        "ガンジス川"
+      ],
+      "optionsEn": [
+        "Danube River",
+        "Nile River",
+        "Amazon River",
+        "Ganges River"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はドナウ川です。河口部には生物多様性の豊かなドナウ・デルタが形成されています。",
+      "explanationEn": "The answer is the Danube River. Its mouth forms the biodiverse Danube Delta."
+    }
+  },
+  "ru": {
+    "iso": "ru",
+    "nameJa": "ロシア",
+    "nameEn": "Russia",
+    "capitalJa": "モスクワ",
+    "capitalEn": "Moscow",
+    "subtitle": "ヨーロッパから北アジアへ広がる広大な国土に、森林、湖、歴史都市、多民族の文化が共存しています。",
+    "subtitleEn": "A vast country extending from Europe across northern Asia, with forests, lakes, historic cities, and many cultural traditions.",
+    "flagUrl": "https://flagcdn.com/w320/ru.png",
+    "mapQuery": "Moscow, Russia",
+    "timeZone": "Europe/Moscow",
+    "currency": {
+      "nameJa": "ロシア・ルーブル",
+      "nameEn": "Russian Ruble",
+      "symbol": "₽"
+    },
+    "languages": [
+      {
+        "nameJa": "ロシア語",
+        "nameEn": "Russian"
+      }
+    ],
+    "elevation": "約156 m（モスクワ）",
+    "elevationEn": "Approx. 156 m (Moscow)",
+    "weather": {
+      "summary": "国土が非常に広く気候差も大きいですが、多くの地域で冬は長く寒く、夏は比較的短くなります。",
+      "summaryEn": "Climate varies enormously across the vast territory, but many regions have long cold winters and relatively short summers."
+    },
+    "heritage": [
+      {
+        "id": "ru-kremlin-red-square",
+        "title": "モスクワのクレムリンと赤の広場",
+        "titleEn": "Kremlin and Red Square, Moscow",
+        "description": "城壁、宮殿、聖堂、広場が、ロシアの政治、宗教、都市史の中心を形作っています。",
+        "descriptionEn": "Walls, palaces, cathedrals, and the great square form a central landscape of Russian political and religious history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow%20-%20Red%20Square%20and%20Kremlin%20towers%20-%202024%201.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Moscow_-_Red_Square_and_Kremlin_towers_-_2024_1.jpg",
+        "imageCredit": "Yury D. / Wikimedia Commons",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ru-lake-baikal",
+        "title": "バイカル湖",
+        "titleEn": "Lake Baikal",
+        "description": "世界で最も深い湖として知られ、大量の淡水と多数の固有生物を有しています。",
+        "descriptionEn": "Known as the world's deepest lake, Baikal contains an immense volume of freshwater and many endemic species.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/20170306%20Lake%20Baikal%20Russia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:20170306_Lake_Baikal_Russia.jpg",
+        "imageCredit": "Екатерина Васягина",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ru-kizhi",
+        "title": "キジー・ポゴスト",
+        "titleEn": "Kizhi Pogost",
+        "description": "釘をほとんど使わずに組み上げた木造教会群で、多くの小屋根とドームが独特の景観を作ります。",
+        "descriptionEn": "A remarkable ensemble of wooden churches, built largely without nails, is distinguished by many roofs and domes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/0417Ac.%20Kizhi%20Pogost.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:0417Ac._Kizhi_Pogost.jpg",
+        "imageCredit": "Александровы АГ",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ru-blini",
+        "title": "ブリヌイ",
+        "titleEn": "Blini",
+        "description": "薄いパンケーキにサワークリーム、魚卵、果物、はちみつなどを添えて食べます。",
+        "descriptionEn": "Thin pancakes are served with sour cream, fish roe, fruit, honey, or savory fillings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Russian%20blini.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Russian_blini.jpg",
+        "imageCredit": "Ninaras",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ru-matryoshka",
+        "title": "マトリョーシカ",
+        "titleEn": "Matryoshka Dolls",
+        "description": "大きな木製人形の中から小さな人形が次々に現れる、色鮮やかな入れ子人形です。",
+        "descriptionEn": "A series of increasingly smaller painted wooden dolls fits one inside another.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Matryoshka.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Matryoshka.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "ru-rushnik",
+        "title": "ルシニク",
+        "titleEn": "Rushnik",
+        "description": "赤や黒の刺しゅうを施した儀礼用の布で、結婚式、宗教行事、家庭の装飾に使われます。",
+        "descriptionEn": "This embroidered ceremonial cloth is used in weddings, religious traditions, hospitality, and home decoration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Russian%20rushnik%20in%20Kizhi.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Russian_rushnik_in_Kizhi.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Russian_rushnik_in_Kizhi.jpg",
+        "category": "刺しゅう・儀礼文化",
+        "categoryEn": "Embroidery and Ceremonial Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "地理的に近く、文化・研究で接点",
+      "titleEn": "Geographic Proximity and Cultural and Academic Links",
+      "text": "日本とロシアは隣接する国であり、文学、音楽、研究、漁業などに交流の歴史がありますが、現在の関係には重大な課題があります。",
+      "textEn": "Japan and Russia are neighboring countries with historical ties in literature, music, research, and fisheries, although current relations face serious challenges."
+    },
+    "quiz": {
+      "question": "世界で最も深い湖として知られるロシアの湖は何でしょう？",
+      "questionEn": "Which Russian lake is known as the deepest lake in the world?",
+      "options": [
+        "バイカル湖",
+        "ビクトリア湖",
+        "チチカカ湖",
+        "バラトン湖"
+      ],
+      "optionsEn": [
+        "Lake Baikal",
+        "Lake Victoria",
+        "Lake Titicaca",
+        "Lake Balaton"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はバイカル湖です。非常に古い湖で、多数の固有種が生息しています。",
+      "explanationEn": "The answer is Lake Baikal, an ancient lake with many endemic species."
+    }
+  },
+  "rw": {
+    "iso": "rw",
+    "nameJa": "ルワンダ",
+    "nameEn": "Rwanda",
+    "capitalJa": "キガリ",
+    "capitalEn": "Kigali",
+    "subtitle": "緑の丘、熱帯山地林、湖、ゴリラ、共同体の再生と豊かな工芸文化を持つ東アフリカの国です。",
+    "subtitleEn": "An East African country of green hills, montane rainforest, lakes, gorillas, community rebuilding, and rich craft traditions.",
+    "flagUrl": "https://flagcdn.com/w320/rw.png",
+    "mapQuery": "Kigali, Rwanda",
+    "timeZone": "Africa/Kigali",
+    "currency": {
+      "nameJa": "ルワンダ・フラン",
+      "nameEn": "Rwandan Franc",
+      "symbol": "FRw"
+    },
+    "languages": [
+      {
+        "nameJa": "キニャルワンダ語",
+        "nameEn": "Kinyarwanda"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "スワヒリ語",
+        "nameEn": "Swahili"
+      }
+    ],
+    "elevation": "約1,567 m（キガリ）",
+    "elevationEn": "Approx. 1,567 m (Kigali)",
+    "weather": {
+      "summary": "赤道に近いものの標高が高いため比較的穏やかで、一年に雨の多い時期と乾燥した時期があります。",
+      "summaryEn": "Despite its equatorial location, Rwanda is relatively mild because of elevation and has wetter and drier periods."
+    },
+    "heritage": [
+      {
+        "id": "rw-nyungwe",
+        "title": "ニュングウェ国立公園",
+        "titleEn": "Nyungwe National Park",
+        "description": "古い山地熱帯林にチンパンジー、サル類、多様な鳥や植物が暮らす重要な自然地域です。",
+        "descriptionEn": "Ancient montane rainforest protects chimpanzees, other primates, birds, and remarkable plant diversity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nyungwe%20National%20Park,%20Rwanda.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nyungwe_National_Park,_Rwanda.jpg",
+        "imageCredit": "travelmag.com",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "rw-genocide-memorial",
+        "title": "ジェノサイド記憶の場所",
+        "titleEn": "Genocide Memorial Sites",
+        "description": "犠牲者を追悼し、1994年のジェノサイドの歴史を伝え、差別と暴力を繰り返さないための学びを提供します。",
+        "descriptionEn": "These sites commemorate victims, document the 1994 genocide, and support education against hatred and mass violence.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ground%20of%20Kigali%20genocide%20memorials.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ground_of_Kigali_genocide_memorials.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産・記憶遺産",
+        "categoryEn": "World Heritage and Memorial Heritage"
+      },
+      {
+        "id": "rw-volcanoes",
+        "title": "火山国立公園",
+        "titleEn": "Volcanoes National Park",
+        "description": "ヴィルンガ山地の竹林と火山斜面に、希少なマウンテンゴリラが生息しています。",
+        "descriptionEn": "Bamboo forest and volcanic slopes in the Virunga Mountains provide habitat for endangered mountain gorillas.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gorillas%20at%20Volcanoes%20National%20Park,%20Rwanda.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gorillas_at_Volcanoes_National_Park,_Rwanda.jpg",
+        "imageCredit": "Voyager",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gorillas_at_Volcanoes_National_Park,_Rwanda.jpg",
+        "category": "国立公園・自然遺産",
+        "categoryEn": "National Park and Natural Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "rw-brochettes",
+        "title": "ブロシェット",
+        "titleEn": "Brochettes",
+        "description": "肉や魚、野菜を串に刺して炭火で焼き、香辛料や付け合わせと楽しむ人気料理です。",
+        "descriptionEn": "Meat, fish, or vegetables are placed on skewers, grilled over charcoal, and served with seasonings and side dishes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rwanda%20Brochettes.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Rwanda_Brochettes.jpg",
+        "imageCredit": "Schlawgclart",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "rw-imigongo",
+        "title": "イミゴンゴ",
+        "titleEn": "Imigongo Art",
+        "description": "盛り上げた幾何学模様を黒、白、赤などで彩色する、ルワンダ南東部発祥の装飾芸術です。",
+        "descriptionEn": "Raised geometric patterns painted in black, white, red, and other colors form an art tradition originating in southeastern Rwanda.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Imigongo%20traditional%20patterns%20(1).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Imigongo_traditional_patterns_(1).jpg",
+        "imageCredit": "Ji-Elle",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Imigongo_traditional_patterns_(1).jpg",
+        "category": "伝統美術",
+        "categoryEn": "Traditional Art"
+      },
+      {
+        "id": "rw-amaraba",
+        "title": "アマラバの伝統舞踊",
+        "titleEn": "Amaraba Traditional Dance",
+        "description": "腕の動き、足取り、歌、太鼓、衣装を組み合わせ、歓迎、祝い、共同体の誇りを表します。",
+        "descriptionEn": "Arm movements, steps, song, drums, and costume express welcome, celebration, and community pride.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rwandan%20traditional%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Rwandan_traditional_dance.jpg",
+        "imageCredit": "Gilbert Sibomana",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "ICT・教育・復興で交流",
+      "titleEn": "Exchange Through ICT, Education, and Reconstruction",
+      "text": "日本とルワンダはICT、教育、農業、保健、インフラ、人材育成、平和構築などで協力しています。",
+      "textEn": "Japan and Rwanda cooperate in ICT, education, agriculture, health, infrastructure, training, and peacebuilding."
+    },
+    "quiz": {
+      "question": "ルワンダが「千の丘の国」と呼ばれる理由は何でしょう？",
+      "questionEn": "Why is Rwanda often called the Land of a Thousand Hills?",
+      "options": [
+        "丘陵地が多いから",
+        "砂丘だけでできているから",
+        "千の人工島があるから",
+        "高層ビルが千棟あるから"
+      ],
+      "optionsEn": [
+        "Because it has many hills",
+        "Because it consists only of sand dunes",
+        "Because it has one thousand artificial islands",
+        "Because it has one thousand skyscrapers"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は丘陵地が多いからです。高地と緑の斜面が国土の特徴的な景観を作っています。",
+      "explanationEn": "The answer is its many hills, whose green slopes create one of the country's most distinctive landscapes."
+    }
+  }
+}

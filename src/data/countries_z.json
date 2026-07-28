@@ -1,0 +1,310 @@
+{
+  "zm": {
+    "iso": "zm",
+    "nameJa": "ザンビア",
+    "nameEn": "Zambia",
+    "capitalJa": "ルサカ",
+    "capitalEn": "Lusaka",
+    "subtitle": "南部アフリカの内陸国で、ザンベジ川、巨大な滝、サバンナ、湿地、王国文化、多民族の音楽と食文化を持ちます。",
+    "subtitleEn": "A landlocked southern African country of the Zambezi River, great waterfalls, savanna, wetlands, royal traditions, music, and diverse food cultures.",
+    "flagUrl": "https://flagcdn.com/w320/zm.png",
+    "mapQuery": "Lusaka, Zambia",
+    "timeZone": "Africa/Lusaka",
+    "currency": {
+      "nameJa": "ザンビア・クワチャ",
+      "nameEn": "Zambian Kwacha",
+      "symbol": "K"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "ベンバ語",
+        "nameEn": "Bemba"
+      },
+      {
+        "nameJa": "ニャンジャ語",
+        "nameEn": "Nyanja"
+      },
+      {
+        "nameJa": "トンガ語",
+        "nameEn": "Tonga"
+      },
+      {
+        "nameJa": "ロジ語",
+        "nameEn": "Lozi"
+      }
+    ],
+    "elevation": "約1,280 m（ルサカ）",
+    "elevationEn": "Approx. 1,280 m (Lusaka)",
+    "weather": {
+      "summary": "標高の高い熱帯性気候で、雨季と乾季があります。低地は暑く、高原部は比較的穏やかです。",
+      "summaryEn": "Zambia has a tropical highland climate with wet and dry seasons. Lowlands are hotter, while the plateau is comparatively mild."
+    },
+    "heritage": [
+      {
+        "id": "zm-victoria-falls",
+        "title": "モシ・オ・トゥニャ／ヴィクトリアの滝",
+        "titleEn": "Mosi-oa-Tunya / Victoria Falls",
+        "description": "ザンベジ川の水が幅広い断崖から深い峡谷へ落下し、巨大な水煙と轟音を生み出すザンビアとジンバブエの世界自然遺産です。",
+        "descriptionEn": "The Zambezi River plunges over a broad cliff into deep gorges, creating immense spray and thunder at a World Heritage Site shared by Zambia and Zimbabwe.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria%20falls,%20zambia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Victoria_falls,_zambia.jpg",
+        "imageCredit": "Someone35",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "zm-lower-zambezi",
+        "title": "ローワー・ザンベジ国立公園",
+        "titleEn": "Lower Zambezi National Park",
+        "description": "ザンベジ川、氾濫原、森林、断崖が広がり、ゾウ、カバ、ワニ、鳥類などを支える自然地域です。",
+        "descriptionEn": "The Zambezi River, floodplains, woodland, and escarpment support elephants, hippos, crocodiles, and abundant birdlife.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lower%20Zambezi,%20Zambia%20(2518067857).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lower_Zambezi,_Zambia_(2518067857).jpg",
+        "imageCredit": "Joachim Huber",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "国立公園・暫定一覧",
+        "categoryEn": "National Park and Tentative List"
+      },
+      {
+        "id": "zm-kalambo-falls",
+        "title": "カランボ滝",
+        "titleEn": "Kalambo Falls",
+        "description": "ザンビアとタンザニアの国境付近で高い断崖から流れ落ちる滝で、周辺には非常に古い人類活動の痕跡も残されています。",
+        "descriptionEn": "This high waterfall near the Zambia–Tanzania border is surrounded by archaeological evidence of very early human activity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalambo%20falls.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kalambo_falls.jpg",
+        "imageCredit": "Kelvin Chidoti",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "国定記念物・暫定一覧",
+        "categoryEn": "National Monument and Tentative List"
+      }
+    ],
+    "culture": [
+      {
+        "id": "zm-nshima",
+        "title": "ンシマ",
+        "titleEn": "Nshima",
+        "description": "トウモロコシ粉を湯で練った主食で、野菜、豆、肉、魚などの副菜と一緒に食べます。",
+        "descriptionEn": "Maize meal is cooked into a firm staple and eaten with vegetables, beans, meat, or fish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lady%20of%20Zambia%20Makes%20Nshima.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lady_of_Zambia_Makes_Nshima.JPG",
+        "imageCredit": "Gerhard302",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "zm-kuomboka",
+        "title": "クオンボカ祭",
+        "titleEn": "Kuomboka Ceremony",
+        "description": "ザンベジ川の増水に合わせ、ロジ王が大きな王室船で低地から高地へ移動する伝統行事です。",
+        "descriptionEn": "As the Zambezi floods, the Lozi king travels in a great royal barge from the floodplain to higher ground.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuomboka%20ceremony%20in%20Zambia%2013.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kuomboka_ceremony_in_Zambia_13.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kuomboka_ceremony_in_Zambia_13.jpg",
+        "category": "王国・祭礼文化",
+        "categoryEn": "Royal and Festival Culture"
+      },
+      {
+        "id": "zm-traditional-dance",
+        "title": "ザンビアの伝統舞踊",
+        "titleEn": "Zambian Traditional Dance",
+        "description": "太鼓、歌、仮面、衣装、集団の動きを組み合わせ、祝い、儀礼、歴史、地域の誇りを表現します。",
+        "descriptionEn": "Drums, song, masks, costume, and group movement express celebration, ceremony, history, and regional identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zambian%20Tribal%20Dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Zambian_Tribal_Dance.jpg",
+        "imageCredit": "Tsidoti",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "鉱業・農業・保健で協力",
+      "titleEn": "Cooperation in Mining, Agriculture, and Health",
+      "text": "日本は鉱業、農業、保健医療、道路、教育、水供給、人材育成などを通じてザンビアと協力しています。",
+      "textEn": "Japan and Zambia cooperate in mining, agriculture, health care, roads, education, water supply, and professional training."
+    },
+    "quiz": {
+      "question": "ザンビアとジンバブエの国境を流れ、ヴィクトリアの滝を形成する川は何でしょう？",
+      "questionEn": "Which river forms Victoria Falls on the border of Zambia and Zimbabwe?",
+      "options": [
+        "ザンベジ川",
+        "ナイル川",
+        "コンゴ川",
+        "ニジェール川"
+      ],
+      "optionsEn": [
+        "Zambezi River",
+        "Nile River",
+        "Congo River",
+        "Niger River"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はザンベジ川です。南部アフリカを東へ流れ、最終的にインド洋へ注ぎます。",
+      "explanationEn": "The answer is the Zambezi River, which flows eastward across southern Africa to the Indian Ocean."
+    }
+  },
+  "zw": {
+    "iso": "zw",
+    "nameJa": "ジンバブエ",
+    "nameEn": "Zimbabwe",
+    "capitalJa": "ハラレ",
+    "capitalEn": "Harare",
+    "subtitle": "南部アフリカの高原国で、石造都市遺跡、ザンベジ川、花こう岩の丘、野生動物、ショナとンデベレの文化を持ちます。",
+    "subtitleEn": "A southern African plateau country of ancient stone cities, the Zambezi River, granite hills, wildlife, and Shona and Ndebele cultures.",
+    "flagUrl": "https://flagcdn.com/w320/zw.png",
+    "mapQuery": "Harare, Zimbabwe",
+    "timeZone": "Africa/Harare",
+    "currency": {
+      "nameJa": "ジンバブエ・ゴールド（ZiG、外貨も流通）",
+      "nameEn": "Zimbabwe Gold (ZiG; foreign currencies also circulate)",
+      "symbol": "ZiG"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "ショナ語",
+        "nameEn": "Shona"
+      },
+      {
+        "nameJa": "北ンデベレ語",
+        "nameEn": "Northern Ndebele"
+      }
+    ],
+    "elevation": "約1,490 m（ハラレ）",
+    "elevationEn": "Approx. 1,490 m (Harare)",
+    "weather": {
+      "summary": "高原性の亜熱帯気候で、夏は暖かく雨が多く、冬は乾燥して朝晩が冷え込みます。",
+      "summaryEn": "Zimbabwe has a subtropical highland climate, with warm wet summers and dry winters that can bring cool mornings and nights."
+    },
+    "heritage": [
+      {
+        "id": "zw-great-zimbabwe",
+        "title": "大ジンバブエ遺跡",
+        "titleEn": "Great Zimbabwe National Monument",
+        "description": "11～15世紀に繁栄したショナ系王国の石造都市で、巨大な囲壁、円すい形の塔、丘上遺構が残ります。",
+        "descriptionEn": "This stone-built city of a Shona civilization flourished between the eleventh and fifteenth centuries and contains great walls, a conical tower, and hill ruins.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Great%20Zimbabwe%208.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Great_Zimbabwe_8.jpg",
+        "imageCredit": "Mike / SqueakyMarmot",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "zw-mana-pools",
+        "title": "マナ・プールズ国立公園",
+        "titleEn": "Mana Pools National Park",
+        "description": "ザンベジ川沿いの水たまり、氾濫原、森林に、ゾウ、カバ、ワニ、ライオンなどが暮らします。",
+        "descriptionEn": "Pools, floodplains, and woodland beside the Zambezi support elephants, hippos, crocodiles, lions, and many other species.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Island%20in%20the%20Zambezi%20River%20at%20Mana%20Pools%20National%20Park.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Island_in_the_Zambezi_River_at_Mana_Pools_National_Park.jpg",
+        "imageCredit": "Babakathy",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "zw-matobo",
+        "title": "マトボの丘群",
+        "titleEn": "Matobo Hills",
+        "description": "丸みを帯びた花こう岩と巨岩が広がり、岩絵、聖地、歴史的な墓所を含む文化的景観です。",
+        "descriptionEn": "Rounded granite hills and balancing rocks form a cultural landscape containing rock art, sacred places, and historic graves.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ZW%20Matobo%20NPview.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:ZW_Matobo_NPview.JPG",
+        "imageCredit": "Digr",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "zw-sadza-kapenta",
+        "title": "サザとカペンタ",
+        "titleEn": "Sadza and Kapenta",
+        "description": "トウモロコシ粉を練ったサザを、小魚カペンタ、野菜、肉、ソースなどと組み合わせる代表的な食事です。",
+        "descriptionEn": "Firm maize-meal sadza is served with small kapenta fish, vegetables, meat, or other relishes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/An%20Example%20of%20Kapenta%20And%20Sadza(as%20it%20is%20known%20in%20Zimbabwe).JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:An_Example_of_Kapenta_And_Sadza(as_it_is_known_in_Zimbabwe).JPG",
+        "imageCredit": "Simz711",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "zw-mbira",
+        "title": "ムビラ音楽",
+        "titleEn": "Mbira Music",
+        "description": "木板に取り付けた金属鍵盤を指ではじき、歌、ホショのリズム、儀礼と組み合わせて演奏します。",
+        "descriptionEn": "Metal keys fixed to a wooden board are plucked and combined with song, hosho rattles, ceremony, and layered rhythm.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mbira%20DzeNharira.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mbira_DzeNharira.jpg",
+        "imageCredit": "Magadu Emily / Govera waMambo",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "音楽・精神文化",
+        "categoryEn": "Music and Spiritual Culture"
+      },
+      {
+        "id": "zw-shona-sculpture",
+        "title": "ショナ石彫",
+        "titleEn": "Shona Stone Sculpture",
+        "description": "蛇紋岩などの石を手作業で彫り、人物、家族、精霊、自然を流れるような形で表現します。",
+        "descriptionEn": "Artists carve serpentine and other stones into flowing forms representing people, family, spirituality, and nature.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/African%20sculpture%20garden,%20dedicated%20to%20the%20Shona%20people%20of%20Zimbabwe.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:African_sculpture_garden,_dedicated_to_the_Shona_people_of_Zimbabwe.jpg",
+        "imageCredit": "Jose Manuel",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "現代伝統美術",
+        "categoryEn": "Contemporary Traditional Art"
+      }
+    ],
+    "japanConnection": {
+      "title": "農業・保健・スポーツで交流",
+      "titleEn": "Exchange in Agriculture, Health, and Sport",
+      "text": "日本は農業、保健、水、教育、人材育成などで協力し、ラグビーや文化を通じた交流も行われています。",
+      "textEn": "Japan and Zimbabwe cooperate in agriculture, health, water, education, and training, with additional exchange through rugby and culture."
+    },
+    "quiz": {
+      "question": "国名「ジンバブエ」の由来となったと考えられる石造都市遺跡は何でしょう？",
+      "questionEn": "Which stone city is associated with the origin of the name Zimbabwe?",
+      "options": [
+        "大ジンバブエ遺跡",
+        "マチュ・ピチュ",
+        "ペトラ",
+        "アンコール・ワット"
+      ],
+      "optionsEn": [
+        "Great Zimbabwe",
+        "Machu Picchu",
+        "Petra",
+        "Angkor Wat"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は大ジンバブエ遺跡です。「石の家」を意味する表現が国名の由来とされています。",
+      "explanationEn": "The answer is Great Zimbabwe. The country's name is associated with a phrase commonly interpreted as houses of stone."
+    }
+  }
+}

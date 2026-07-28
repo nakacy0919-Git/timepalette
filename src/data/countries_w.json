@@ -1,0 +1,152 @@
+{
+  "eh": {
+    "iso": "eh",
+    "nameJa": "西サハラ",
+    "nameEn": "Western Sahara",
+    "capitalJa": "未確定（ラユーンが最大都市）",
+    "capitalEn": "Undetermined (Laayoune is the largest city)",
+    "subtitle": "北西アフリカの大西洋岸に広がる係争地域で、砂漠、ワジ、ラグーン、遊牧生活、サハラウィ文化を持ちます。国連では非自治地域として扱われています。",
+    "subtitleEn": "A disputed territory on the Atlantic coast of northwestern Africa, with desert, wadis, lagoons, pastoral life, and Sahrawi culture. The United Nations lists it as a Non-Self-Governing Territory.",
+    "flagUrl": "https://flagcdn.com/w320/eh.png",
+    "mapQuery": "Western Sahara",
+    "timeZone": "Africa/El_Aaiun",
+    "currency": {
+      "nameJa": "モロッコ・ディルハム（主に流通）",
+      "nameEn": "Moroccan Dirham (widely used)",
+      "symbol": "DH"
+    },
+    "languages": [
+      {
+        "nameJa": "ハッサニーヤ・アラビア語",
+        "nameEn": "Hassaniya Arabic"
+      },
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      },
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "海岸低地から内陸の砂漠高原まで",
+    "elevationEn": "From coastal lowlands to inland desert plateaus",
+    "weather": {
+      "summary": "非常に乾燥した砂漠気候です。大西洋岸は寒流と海霧の影響を受け、内陸部では昼夜の寒暖差が大きくなります。",
+      "summaryEn": "Western Sahara has an extremely dry desert climate. The Atlantic coast is influenced by cool ocean currents and fog, while inland areas have large day-night temperature differences."
+    },
+    "heritage": [
+      {
+        "id": "eh-dakhla-lagoon",
+        "title": "ダフラ半島とラグーン",
+        "titleEn": "Dakhla Peninsula and Lagoon",
+        "description": "細長い半島と大西洋に開かれたラグーンが、漁業、渡り鳥、海洋生物、沿岸の暮らしを支えています。",
+        "descriptionEn": "A long peninsula and Atlantic lagoon support fisheries, migratory birds, marine life, and coastal communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakhla,%20Western%20Sahara.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dakhla,_Western_Sahara.jpg",
+        "imageCredit": "YoTuT",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "海岸・海洋景観",
+        "categoryEn": "Coastal and Marine Landscape"
+      },
+      {
+        "id": "eh-smara-zawiya",
+        "title": "スマラのザーウィヤ",
+        "titleEn": "Zawiya of Smara",
+        "description": "スマラに残る宗教・学問施設で、サハラの交易路、イスラム教育、地域社会の歴史を伝えます。",
+        "descriptionEn": "This religious and scholarly complex in Smara preserves the history of Saharan trade routes, Islamic learning, and community life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Smara,Zawiya.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Smara,Zawiya.jpg",
+        "imageCredit": "Bertramz",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "宗教・歴史建築",
+        "categoryEn": "Religious and Historic Architecture"
+      },
+      {
+        "id": "eh-saguia-el-hamra",
+        "title": "サギア・エル・ハムラ",
+        "titleEn": "Saguia el-Hamra",
+        "description": "ラユーン付近を通るワジで、乾燥地の水環境、牧畜、集落形成と地域名の由来に深く関わっています。",
+        "descriptionEn": "This wadi near Laayoune is closely connected to desert water, pastoral life, settlement, and the historical name of the region.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Laayoune,Saguia-el-Hamra.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Laayoune,Saguia-el-Hamra.jpg",
+        "imageCredit": "Bertramz",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "砂漠・水環境景観",
+        "categoryEn": "Desert and Water Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "eh-tea-ceremony",
+        "title": "サハラウィの茶の儀式",
+        "titleEn": "Sahrawi Tea Ceremony",
+        "description": "ミント茶を高い位置から注ぎ、一般に三杯を時間をかけて分かち合います。会話、歓迎、家族や友人との結びつきを大切にする習慣です。",
+        "descriptionEn": "Mint tea is poured from a height and commonly shared in three rounds. The custom emphasizes conversation, welcome, family, and friendship.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/TeaSeremonyWS.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:TeaSeremonyWS.jpg",
+        "imageCredit": "Kathrine Sund-Henriksen",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "飲料・もてなし文化",
+        "categoryEn": "Beverage and Hospitality Culture"
+      },
+      {
+        "id": "eh-melhfa",
+        "title": "メルハファ",
+        "titleEn": "Melhfa",
+        "description": "女性が身体を包む大きな布で、鮮やかな色や模様を通して個性、美意識、サハラウィの文化的アイデンティティーを表します。",
+        "descriptionEn": "A large draped garment worn by women, whose colors and patterns express personal style, beauty, and Sahrawi cultural identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Des%20femmes%20sahraouies%20v%C3%AAtues%20de%20melhfa%20color%C3%A9es.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Des_femmes_sahraouies_v%C3%AAtues_de_melhfa_color%C3%A9es.jpg",
+        "imageCredit": "Camelia Khadraoui",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "服飾文化",
+        "categoryEn": "Clothing Culture"
+      },
+      {
+        "id": "eh-guedra",
+        "title": "ゲドラの歌と踊り",
+        "titleEn": "Guedra Music and Dance",
+        "description": "太鼓、手拍子、歌、手や身体の動きを組み合わせるサハラ地域の伝統芸能で、共同体の祝いで演じられます。",
+        "descriptionEn": "Drumming, clapping, song, and expressive hand and body movements combine in a Saharan performance tradition used at community celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/COLLECTIE%20TROPENMUSEUM%20Dansgroep%20uit%20de%20westelijke%20Sahara%20tijdens%20het%20Nationaal%20Folkore%20Festival%20te%20Marrakech%20TMnr%2020017655.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Dansgroep_uit_de_westelijke_Sahara_tijdens_het_Nationaal_Folkore_Festival_te_Marrakech_TMnr_20017655.jpg",
+        "imageCredit": "F. M. Cowan / Collectie Wereldmuseum",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "国連・平和・砂漠文化を通じて学ぶ地域",
+      "titleEn": "A Region Studied Through the UN, Peace, and Desert Culture",
+      "text": "日本との直接的な交流は限定的です。国連の脱植民地化と平和活動、人道問題、砂漠環境、サハラウィ文化を学ぶ際に重要な地域です。",
+      "textEn": "Direct exchange with Japan is limited. Western Sahara is important when studying United Nations decolonization and peace efforts, humanitarian issues, desert environments, and Sahrawi culture."
+    },
+    "quiz": {
+      "question": "国連は西サハラを現在どのように分類しているでしょう？",
+      "questionEn": "How does the United Nations currently classify Western Sahara?",
+      "options": [
+        "非自治地域",
+        "国連加盟国",
+        "欧州連合加盟国",
+        "独立が完全に確定した島国"
+      ],
+      "optionsEn": [
+        "Non-Self-Governing Territory",
+        "United Nations Member State",
+        "European Union Member State",
+        "A fully settled independent island state"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は非自治地域です。西サハラは1963年から国連の非自治地域一覧に掲載され、最終的な政治的地位は未解決です。",
+      "explanationEn": "The answer is Non-Self-Governing Territory. Western Sahara has been listed by the United Nations since 1963, and its final status remains unresolved."
+    }
+  }
+}

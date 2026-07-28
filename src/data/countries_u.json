@@ -1,104 +1,1020 @@
 {
+  "ug": {
+    "iso": "ug",
+    "nameJa": "ウガンダ",
+    "nameEn": "Uganda",
+    "capitalJa": "カンパラ",
+    "capitalEn": "Kampala",
+    "subtitle": "赤道付近の高原に位置し、熱帯林、湖、高山、王国文化、音楽と工芸の伝統を持つ東アフリカの国です。",
+    "subtitleEn": "An East African highland country near the equator, with rainforest, lakes, mountains, historic kingdoms, music, and craft traditions.",
+    "flagUrl": "https://flagcdn.com/w320/ug.png",
+    "mapQuery": "Kampala, Uganda",
+    "timeZone": "Africa/Kampala",
+    "currency": {
+      "nameJa": "ウガンダ・シリング",
+      "nameEn": "Ugandan Shilling",
+      "symbol": "USh"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "スワヒリ語",
+        "nameEn": "Swahili"
+      },
+      {
+        "nameJa": "ルガンダ語",
+        "nameEn": "Luganda"
+      }
+    ],
+    "elevation": "約1,190 m（カンパラ）",
+    "elevationEn": "Approx. 1,190 m (Kampala)",
+    "weather": {
+      "summary": "赤道に近いものの標高が高いため比較的穏やかで、地域によって雨季と乾季の時期が異なります。",
+      "summaryEn": "Despite its equatorial location, Uganda is relatively mild because of elevation, with wet and dry seasons varying by region."
+    },
+    "heritage": [
+      {
+        "id": "ug-bwindi",
+        "title": "ブウィンディ原生国立公園",
+        "titleEn": "Bwindi Impenetrable National Park",
+        "description": "深い山地林にマウンテンゴリラや多様な鳥類、植物が暮らす重要な自然保護地域です。",
+        "descriptionEn": "Dense montane forest protects mountain gorillas, many bird species, and remarkable plant diversity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bwindi%20Impenetrable%20National%20Park%2020190924%20080342.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bwindi_Impenetrable_National_Park_20190924_080342.jpg",
+        "imageCredit": "Josefito123",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bwindi_Impenetrable_National_Park_20190924_080342.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ug-rwenzori",
+        "title": "ルウェンゾリ山地国立公園",
+        "titleEn": "Rwenzori Mountains National Park",
+        "description": "氷河を頂く峰、高山湿地、巨大な植物が広がり、「月の山」とも呼ばれる高山地域です。",
+        "descriptionEn": "Glaciated peaks, alpine wetlands, and giant plants form the highland landscape sometimes called the Mountains of the Moon.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rwenzori%20Mountains%20National%20Park.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Rwenzori_Mountains_National_Park.jpg",
+        "imageCredit": "GarethBessant",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Rwenzori_Mountains_National_Park.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ug-kasubi",
+        "title": "カスビのブガンダ歴代国王の墓",
+        "titleEn": "Tombs of Buganda Kings at Kasubi",
+        "description": "草葺きの巨大な建物と王墓が、ブガンダ王国の政治、信仰、建築技術を伝えています。",
+        "descriptionEn": "A monumental thatched structure and royal tombs preserve the political, spiritual, and architectural heritage of Buganda.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Kasubi%20Tombs.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:The_Kasubi_Tombs.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:The_Kasubi_Tombs.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ug-rolex",
+        "title": "ウガンダ・ロレックス",
+        "titleEn": "Ugandan Rolex",
+        "description": "薄焼き卵と野菜をチャパティで巻く、手軽で人気の高い屋台料理です。",
+        "descriptionEn": "An omelet with vegetables is rolled inside chapati to make a popular and portable street food.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20bitten%20off%20Ugandan%20rolex.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:A_bitten_off_Ugandan_rolex.jpg",
+        "imageCredit": "B722N",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:A_bitten_off_Ugandan_rolex.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ug-barkcloth",
+        "title": "バーククロス作り",
+        "titleEn": "Barkcloth Making",
+        "description": "木の樹皮をたたいて柔らかな布にし、衣服、儀礼、装飾に用いるブガンダの伝統工芸です。",
+        "descriptionEn": "Tree bark is beaten into flexible cloth used for clothing, ceremony, and decoration in a Buganda tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Barkcloth.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Barkcloth.jpg",
+        "imageCredit": "Kyakwera",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Barkcloth.jpg",
+        "category": "伝統工芸・服飾文化",
+        "categoryEn": "Traditional Craft and Clothing Culture"
+      },
+      {
+        "id": "ug-larakaraka",
+        "title": "ララカラカ舞踊",
+        "titleEn": "Larakaraka Dance",
+        "description": "アチョリの人々が太鼓、歌、集団の足取りを組み合わせ、祝いと交流を表現する舞踊です。",
+        "descriptionEn": "Acholi performers combine drums, song, and coordinated group movement in a dance of celebration and social connection.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Larakaraka%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Larakaraka_dance.jpg",
+        "imageCredit": "Tabwoch",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Larakaraka_dance.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "農業・保健・教育で協力",
+      "titleEn": "Cooperation in Agriculture, Health, and Education",
+      "text": "日本は農業、保健医療、教育、道路、水供給、人材育成などを通じてウガンダと協力しています。",
+      "textEn": "Japan and Uganda cooperate in agriculture, health care, education, roads, water supply, and professional training."
+    },
+    "quiz": {
+      "question": "ウガンダ南西部の森林に生息する希少な大型類人猿は何でしょう？",
+      "questionEn": "Which endangered great ape lives in the forests of southwestern Uganda?",
+      "options": [
+        "マウンテンゴリラ",
+        "オランウータン",
+        "ホッキョクグマ",
+        "コアラ"
+      ],
+      "optionsEn": [
+        "Mountain gorilla",
+        "Orangutan",
+        "Polar bear",
+        "Koala"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はマウンテンゴリラです。ブウィンディ原生国立公園などで保護されています。",
+      "explanationEn": "The answer is the mountain gorilla, protected in areas such as Bwindi Impenetrable National Park."
+    }
+  },
+  "ua": {
+    "iso": "ua",
+    "nameJa": "ウクライナ",
+    "nameEn": "Ukraine",
+    "capitalJa": "キーウ",
+    "capitalEn": "Kyiv",
+    "subtitle": "黒海沿岸、肥沃な平原、カルパチア山地、歴史都市、刺しゅうと豊かな食文化を持つ東ヨーロッパの国です。",
+    "subtitleEn": "An Eastern European country of Black Sea coasts, fertile plains, Carpathian mountains, historic cities, embroidery, and rich cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/ua.png",
+    "mapQuery": "Kyiv, Ukraine",
+    "timeZone": "Europe/Kyiv",
+    "currency": {
+      "nameJa": "フリヴニャ",
+      "nameEn": "Hryvnia",
+      "symbol": "₴"
+    },
+    "languages": [
+      {
+        "nameJa": "ウクライナ語",
+        "nameEn": "Ukrainian"
+      }
+    ],
+    "elevation": "約179 m（キーウ）",
+    "elevationEn": "Approx. 179 m (Kyiv)",
+    "weather": {
+      "summary": "大陸性気候が中心で、夏は暖かく、冬は寒くなります。黒海沿岸は内陸部より比較的穏やかです。",
+      "summaryEn": "Ukraine has a mainly continental climate with warm summers and cold winters, while the Black Sea coast is comparatively milder."
+    },
+    "heritage": [
+      {
+        "id": "ua-sophia",
+        "title": "聖ソフィア大聖堂",
+        "titleEn": "Saint Sophia Cathedral, Kyiv",
+        "description": "モザイク、フレスコ画、黄金のドームが、中世キーウの宗教と建築文化を伝えます。",
+        "descriptionEn": "Mosaics, frescoes, and golden domes preserve the religious and architectural heritage of medieval Kyiv.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/St.Sophia%20Cathedral,%20Kyiv,%20Ukraine.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:St.Sophia_Cathedral,_Kyiv,_Ukraine.jpg",
+        "imageCredit": "Ivan Sedlovskyi",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:St.Sophia_Cathedral,_Kyiv,_Ukraine.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ua-lviv",
+        "title": "リヴィウ歴史地区",
+        "titleEn": "Lviv Historic Centre",
+        "description": "中央広場、教会、商家、石畳の街路が、東西ヨーロッパの文化交流を伝えます。",
+        "descriptionEn": "Market squares, churches, merchant houses, and cobbled streets reflect centuries of exchange between eastern and western Europe.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lviv,%20Rynok%20square.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lviv,_Rynok_square.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ua-odesa",
+        "title": "オデーサ歴史地区",
+        "titleEn": "Historic Centre of Odesa",
+        "description": "港、劇場、街路、建築群が、黒海交易都市としての多文化的な発展を伝えます。",
+        "descriptionEn": "The port, theaters, streets, and architecture preserve the multicultural development of a Black Sea trading city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centre%20historique%20du%20port%20d'Odessa,%20Ukraine.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Centre_historique_du_port_d'Odessa,_Ukraine.jpg",
+        "imageCredit": "Freddy de Hosdent",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Centre_historique_du_port_d'Odessa,_Ukraine.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ua-borshch",
+        "title": "ウクライナのボルシチ",
+        "titleEn": "Ukrainian Borshch",
+        "description": "ビーツ、キャベツ、ジャガイモ、肉などを煮込み、地域や家庭ごとに異なる味を受け継ぎます。",
+        "descriptionEn": "Beets, cabbage, potatoes, meat, and other ingredients are simmered in recipes that vary by region and family.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ukrainian%20borshch%2003.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ukrainian_borshch_03.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ua-pysanky",
+        "title": "プィーサンカ",
+        "titleEn": "Pysanky",
+        "description": "ろうで模様を描いて染め分ける卵装飾で、春、家族、生命、祈りの象徴を表します。",
+        "descriptionEn": "Wax-resist decoration creates patterned eggs symbolizing spring, family, life, and blessing.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ukrainian%20folk%20pysanky.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ukrainian_folk_pysanky.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ukrainian_folk_pysanky.jpg",
+        "category": "季節・伝統工芸",
+        "categoryEn": "Seasonal Traditional Craft"
+      },
+      {
+        "id": "ua-vyshyvanka",
+        "title": "ヴィシヴァンカ",
+        "titleEn": "Vyshyvanka",
+        "description": "シャツや衣服に地域ごとの幾何学模様や植物文様を刺しゅうし、文化的なアイデンティティーを表します。",
+        "descriptionEn": "Regional geometric and floral embroidery on shirts and clothing expresses cultural identity and continuity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vyshyvanka%201.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Vyshyvanka_1.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Vyshyvanka_1.jpg",
+        "category": "服飾・刺しゅう文化",
+        "categoryEn": "Clothing and Embroidery Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "復旧・人道・文化交流で協力",
+      "titleEn": "Cooperation in Recovery, Humanitarian Support, and Culture",
+      "text": "日本は人道支援、インフラ復旧、医療、教育、農業、地雷対策、文化交流などでウクライナを支援しています。",
+      "textEn": "Japan supports Ukraine through humanitarian assistance, infrastructure recovery, health, education, agriculture, mine action, and cultural exchange."
+    },
+    "quiz": {
+      "question": "ウクライナの伝統的な刺しゅう入りシャツは何と呼ばれるでしょう？",
+      "questionEn": "What is the traditional Ukrainian embroidered shirt called?",
+      "options": [
+        "ヴィシヴァンカ",
+        "キルト",
+        "ポンチョ",
+        "サリー"
+      ],
+      "optionsEn": [
+        "Vyshyvanka",
+        "Kilt",
+        "Poncho",
+        "Sari"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はヴィシヴァンカです。地域によって模様や色に特色があります。",
+      "explanationEn": "The answer is vyshyvanka, whose patterns and colors vary by region."
+    }
+  },
+  "ae": {
+    "iso": "ae",
+    "nameJa": "アラブ首長国連邦",
+    "nameEn": "United Arab Emirates",
+    "capitalJa": "アブダビ",
+    "capitalEn": "Abu Dhabi",
+    "subtitle": "七つの首長国からなり、砂漠、オアシス、海洋交易、伝統文化と現代都市が共存する湾岸国家です。",
+    "subtitleEn": "A Gulf federation of seven emirates where desert, oases, maritime trade, traditional culture, and modern cities coexist.",
+    "flagUrl": "https://flagcdn.com/w320/ae.png",
+    "mapQuery": "Abu Dhabi, United Arab Emirates",
+    "timeZone": "Asia/Dubai",
+    "currency": {
+      "nameJa": "UAEディルハム",
+      "nameEn": "UAE Dirham",
+      "symbol": "AED"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約27 m（アブダビ）",
+    "elevationEn": "Approx. 27 m (Abu Dhabi)",
+    "weather": {
+      "summary": "非常に暑く乾燥した砂漠気候で、夏の沿岸部は高温多湿になります。",
+      "summaryEn": "The UAE has a very hot and dry desert climate, with especially high humidity along the coast in summer."
+    },
+    "heritage": [
+      {
+        "id": "ae-al-ain",
+        "title": "アル・アインの文化的遺跡群",
+        "titleEn": "Cultural Sites of Al Ain",
+        "description": "オアシス、古墳、集落、ファラジ灌漑が、砂漠で続いてきた人々の暮らしを伝えます。",
+        "descriptionEn": "Oases, tombs, settlements, and falaj irrigation preserve a long history of human life in an arid environment.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Al%20Ain%20Oasis.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Al_Ain_Oasis.jpg",
+        "imageCredit": "Weirdweazel",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Al_Ain_Oasis.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ae-grand-mosque",
+        "title": "シェイク・ザイード・グランド・モスク",
+        "titleEn": "Sheikh Zayed Grand Mosque",
+        "description": "白大理石、ドーム、列柱、庭園が一体となった、現代イスラム建築を代表するモスクです。",
+        "descriptionEn": "White marble, domes, columns, and gardens combine in a major work of contemporary Islamic architecture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Grand%20Mosque-Abu%20Dhabi.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:The_Grand_Mosque-Abu_Dhabi.jpg",
+        "imageCredit": "Sifaat",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "宗教・現代建築",
+        "categoryEn": "Religious and Modern Architecture"
+      },
+      {
+        "id": "ae-al-fahidi",
+        "title": "アル・ファヒディ歴史地区",
+        "titleEn": "Al Fahidi Historic Neighbourhood",
+        "description": "風塔、石こう壁、細い路地が、石油開発以前のドバイの商業と住生活を伝えます。",
+        "descriptionEn": "Wind towers, plaster walls, and narrow lanes preserve Dubai's commercial and domestic life before the oil era.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Al%20Fahidi%20Historic%20Neighbourhood%20-%20Dubai.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Al_Fahidi_Historic_Neighbourhood_-_Dubai.jpg",
+        "imageCredit": "Sarkar.abhik",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "歴史地区",
+        "categoryEn": "Historic District"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ae-coffee",
+        "title": "アラビック・コーヒーのもてなし",
+        "titleEn": "Arabic Coffee Hospitality",
+        "description": "カルダモンなどで香りを付けたコーヒーを小さな杯に注ぎ、デーツとともに客へふるまいます。",
+        "descriptionEn": "Cardamom-scented coffee is poured into small cups and offered with dates as a sign of hospitality.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Serving%20Arabic%20Coffee.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Serving_Arabic_Coffee.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "飲料・もてなし文化",
+        "categoryEn": "Beverage and Hospitality Culture"
+      },
+      {
+        "id": "ae-sadu",
+        "title": "アル・サドゥ織",
+        "titleEn": "Al Sadu Weaving",
+        "description": "羊毛やラクダ毛を幾何学模様に織り、テント、敷物、座席、袋を作る遊牧民の工芸です。",
+        "descriptionEn": "Wool and camel hair are woven into geometric designs for tents, carpets, seating, and bags.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Majlis%20in%20Sadu%20style.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Majlis_in_Sadu_style.jpg",
+        "imageCredit": "Ashley Columbus",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "遊牧・伝統工芸",
+        "categoryEn": "Bedouin Traditional Craft"
+      },
+      {
+        "id": "ae-falconry",
+        "title": "鷹狩り",
+        "titleEn": "Falconry",
+        "description": "ハヤブサを訓練して狩りを行い、砂漠生活の知識、忍耐、自然との関係を受け継ぎます。",
+        "descriptionEn": "Training falcons for hunting preserves knowledge of desert life, patience, animal care, and relationships with nature.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Falcon%20uae.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Falcon_uae.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "鷹狩り・生活文化",
+        "categoryEn": "Falconry and Living Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "エネルギー・投資・宇宙で深い交流",
+      "titleEn": "Strong Exchange in Energy, Investment, and Space",
+      "text": "日本とUAEは原油・LNG、投資、航空、宇宙、再生可能エネルギー、観光、教育で深く結ばれています。",
+      "textEn": "Japan and the UAE are closely connected through oil and LNG, investment, aviation, space, renewable energy, tourism, and education."
+    },
+    "quiz": {
+      "question": "アラブ首長国連邦はいくつの首長国から構成されるでしょう？",
+      "questionEn": "How many emirates form the United Arab Emirates?",
+      "options": [
+        "7",
+        "3",
+        "10",
+        "15"
+      ],
+      "optionsEn": [
+        "Seven",
+        "Three",
+        "Ten",
+        "Fifteen"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は7です。アブダビ、ドバイ、シャルジャなどの首長国からなります。",
+      "explanationEn": "The answer is seven, including Abu Dhabi, Dubai, and Sharjah."
+    }
+  },
+  "gb": {
+    "iso": "gb",
+    "nameJa": "イギリス",
+    "nameEn": "United Kingdom",
+    "capitalJa": "ロンドン",
+    "capitalEn": "London",
+    "subtitle": "イングランド、スコットランド、ウェールズ、北アイルランドからなり、先史遺跡、歴史都市、島ごとの多様な文化を持つ国です。",
+    "subtitleEn": "A country formed by England, Scotland, Wales, and Northern Ireland, with prehistoric monuments, historic cities, and diverse regional cultures.",
+    "flagUrl": "https://flagcdn.com/w320/gb.png",
+    "mapQuery": "London, United Kingdom",
+    "timeZone": "Europe/London",
+    "currency": {
+      "nameJa": "スターリング・ポンド",
+      "nameEn": "Pound Sterling",
+      "symbol": "£"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "ウェールズ語",
+        "nameEn": "Welsh"
+      },
+      {
+        "nameJa": "スコットランド・ゲール語",
+        "nameEn": "Scottish Gaelic"
+      },
+      {
+        "nameJa": "アイルランド語",
+        "nameEn": "Irish"
+      }
+    ],
+    "elevation": "約11 m（ロンドン中心部）",
+    "elevationEn": "Approx. 11 m (central London)",
+    "weather": {
+      "summary": "温帯海洋性気候で、夏は比較的穏やか、冬も緯度の割に温暖です。一年を通して天候が変わりやすく、雨が降ります。",
+      "summaryEn": "The United Kingdom has a temperate maritime climate, with relatively mild summers and winters, changeable weather, and year-round rainfall."
+    },
+    "heritage": [
+      {
+        "id": "gb-stonehenge",
+        "title": "ストーンヘンジ",
+        "titleEn": "Stonehenge",
+        "description": "巨大な石を円形に配置した先史時代の遺跡で、儀礼、天文、共同体との関係が研究されています。",
+        "descriptionEn": "Massive stones arranged in circles form a prehistoric monument studied for its ceremonial, astronomical, and social meanings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stonehenge,%20United%20Kingdom..jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Stonehenge,_United_Kingdom..jpg",
+        "imageCredit": "Sherpalibre",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "gb-edinburgh",
+        "title": "エディンバラ旧市街",
+        "titleEn": "Edinburgh Old Town",
+        "description": "城、石造建築、急な路地が、スコットランドの政治、宗教、都市史を伝えます。",
+        "descriptionEn": "A castle, stone buildings, and steep closes preserve the political, religious, and urban history of Scotland.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Edinburgh%20Old%20Town.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Edinburgh_Old_Town.jpg",
+        "imageCredit": "Karl1587",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      },
+      {
+        "id": "gb-giants-causeway",
+        "title": "ジャイアンツ・コーズウェー",
+        "titleEn": "Giant's Causeway",
+        "description": "古代の火山活動で形成された六角形を中心とする玄武岩柱が、北アイルランドの海岸に連なります。",
+        "descriptionEn": "Interlocking basalt columns formed by ancient volcanic activity extend along the coast of Northern Ireland.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Giant's%20Causeway%202006%2008.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Giant's_Causeway_2006_08.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Giant's_Causeway_2006_08.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "gb-afternoon-tea",
+        "title": "アフタヌーンティー",
+        "titleEn": "Afternoon Tea",
+        "description": "紅茶とサンドイッチ、スコーン、菓子を段状の皿で楽しむ社交と食事の習慣です。",
+        "descriptionEn": "Tea is served with sandwiches, scones, and pastries as a social meal and hospitality tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Afternoon%20Tea%20Edinburgh.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Afternoon_Tea_Edinburgh.jpg",
+        "imageCredit": "Melissa Highton",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Afternoon_Tea_Edinburgh.jpg",
+        "category": "飲料・食文化",
+        "categoryEn": "Beverage and Food Culture"
+      },
+      {
+        "id": "gb-highland-games",
+        "title": "ハイランドゲームズ",
+        "titleEn": "Highland Games",
+        "description": "丸太投げ、重量競技、バグパイプ、舞踊を組み合わせるスコットランドの伝統行事です。",
+        "descriptionEn": "Caber tossing, strength events, bagpipes, and dance combine in a Scottish sporting and cultural tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carmunnock%20Highland%20Games,%202018,%20Glasgow,%20Scotland.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Carmunnock_Highland_Games,_2018,_Glasgow,_Scotland.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Carmunnock_Highland_Games,_2018,_Glasgow,_Scotland.jpg",
+        "category": "伝統スポーツ・祭礼文化",
+        "categoryEn": "Traditional Sport and Festival Culture"
+      },
+      {
+        "id": "gb-eisteddfod",
+        "title": "アイステズヴォッド",
+        "titleEn": "Eisteddfod",
+        "description": "詩、歌、音楽、演劇の競演を通して、ウェールズ語と文化を祝う祭典です。",
+        "descriptionEn": "Competitions in poetry, singing, music, and drama celebrate Welsh language and culture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eisteddfod%20Caerdydd%202018%2001.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Eisteddfod_Caerdydd_2018_01.jpg",
+        "imageCredit": "Llywelyn2000",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Eisteddfod_Caerdydd_2018_01.jpg",
+        "category": "言語・芸術文化",
+        "categoryEn": "Language and Arts Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "産業・科学・教育・文化で長い交流",
+      "titleEn": "Longstanding Exchange in Industry, Science, Education, and Culture",
+      "text": "日本とイギリスは外交、製造業、金融、科学、大学、音楽、文学、スポーツを通じて長く交流しています。",
+      "textEn": "Japan and the United Kingdom have longstanding ties in diplomacy, manufacturing, finance, science, universities, music, literature, and sport."
+    },
+    "quiz": {
+      "question": "イギリスを構成する地域に含まれないものはどれでしょう？",
+      "questionEn": "Which is not one of the four constituent parts of the United Kingdom?",
+      "options": [
+        "アイルランド共和国",
+        "イングランド",
+        "スコットランド",
+        "ウェールズ"
+      ],
+      "optionsEn": [
+        "Republic of Ireland",
+        "England",
+        "Scotland",
+        "Wales"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はアイルランド共和国です。イギリスには北アイルランドが含まれます。",
+      "explanationEn": "The answer is the Republic of Ireland; the United Kingdom includes Northern Ireland."
+    }
+  },
   "us": {
     "iso": "us",
     "nameJa": "アメリカ合衆国",
-    "nameEn": "United States of America",
+    "nameEn": "United States",
     "capitalJa": "ワシントンD.C.",
     "capitalEn": "Washington, D.C.",
-    "region": "北アメリカ",
-    "subregion": "北アメリカ",
-    "subtitle": "広大な国土にさまざまな自然、文化、言語、産業が集まる、多様性に富んだ国です。",
-    "flagUrl": "https://flagcdn.com/w1280/us.png",
-    "mapQuery": "Washington DC, United States",
+    "subtitle": "大西洋から太平洋、北極圏から亜熱帯まで広がり、多様な自然、先住民文化、移民社会、音楽と食文化を持つ国です。",
+    "subtitleEn": "A vast country stretching from the Atlantic to the Pacific and from Arctic to subtropical regions, with diverse nature, Indigenous heritage, migration histories, music, and cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/us.png",
+    "mapQuery": "Washington, D.C., United States",
     "timeZone": "America/New_York",
     "currency": {
-      "code": "USD",
-      "nameJa": "アメリカドル",
+      "nameJa": "米ドル",
       "nameEn": "United States Dollar",
       "symbol": "$"
     },
     "languages": [
       {
-        "code": "en",
         "nameJa": "英語",
         "nameEn": "English"
       },
       {
-        "code": "es",
         "nameJa": "スペイン語",
         "nameEn": "Spanish"
       }
     ],
-    "elevation": "約7 m（ワシントンD.C.中心部の目安）",
+    "elevation": "約7 m（ワシントンD.C.中心部）",
+    "elevationEn": "Approx. 7 m (central Washington, D.C.)",
     "weather": {
-      "summary": "国土が非常に広いため、寒冷地、砂漠、温暖な海岸地域、熱帯地域など、さまざまな気候があります。",
-      "summer": "地域によって大きく異なります。南部や内陸部では非常に暑くなる場所があります。",
-      "winter": "北部では大雪になることがありますが、フロリダやハワイなど温暖な地域もあります。",
-      "bestSeason": "訪れる地域によって適した季節が異なります。"
+      "summary": "国土が非常に広く、寒帯、温帯、乾燥帯、熱帯、高山気候など多様な気候があります。",
+      "summaryEn": "The vast territory includes Arctic, temperate, dry, tropical, and high-mountain climates."
     },
     "heritage": [
       {
         "id": "us-grand-canyon",
-        "title": "グランド・キャニオン",
-        "description": "コロラド川が長い時間をかけて大地を削ってできた巨大な渓谷です。地球の歴史を地層から読み取ることができます。",
-        "image": "https://placehold.co/1200x800/fed7aa/7c2d12?text=Grand+Canyon",
-        "location": "アリゾナ州",
-        "category": "世界自然遺産"
+        "title": "グランド・キャニオン国立公園",
+        "titleEn": "Grand Canyon National Park",
+        "description": "コロラド川が地層を深く削り、地球の長い歴史を示す巨大な峡谷を形成しました。",
+        "descriptionEn": "The Colorado River carved a vast canyon exposing rock layers that record an immense span of Earth's history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand%20Canyon%20USA.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_USA.jpg",
+        "imageCredit": "Yourusernamewillbepublic2",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
       },
       {
-        "id": "us-yellowstone",
-        "title": "イエローストーン国立公園",
-        "description": "間欠泉、温泉、湖、森林などが広がる国立公園です。バイソンやクマなどの野生動物も生息しています。",
-        "image": "https://placehold.co/1200x800/dcfce7/14532d?text=Yellowstone",
-        "location": "ワイオミング州など",
-        "category": "世界自然遺産"
-      },
-      {
-        "id": "us-statue-of-liberty",
+        "id": "us-statue-liberty",
         "title": "自由の女神像",
-        "description": "自由と希望を象徴する像です。フランスからアメリカへ贈られ、ニューヨーク港に建てられました。",
-        "image": "https://placehold.co/1200x800/ccfbf1/134e4a?text=Statue+of+Liberty",
-        "location": "ニューヨーク",
-        "category": "世界文化遺産"
+        "titleEn": "Statue of Liberty",
+        "description": "ニューヨーク港に立つ巨大な像で、自由、移住、民主主義を象徴する建造物です。",
+        "descriptionEn": "This monumental statue in New York Harbor symbolizes liberty, migration, and democratic ideals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Statue%20of%20Liberty,%20NYC,%20USA.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Statue_of_Liberty,_NYC,_USA.jpg",
+        "imageCredit": "Carptrash",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "us-mesa-verde",
+        "title": "メサ・ヴェルデ国立公園",
+        "titleEn": "Mesa Verde National Park",
+        "description": "断崖の岩陰に築かれた住居群が、プエブロの祖先の建築と共同体生活を伝えます。",
+        "descriptionEn": "Cliff dwellings preserve the architecture and community life of Ancestral Pueblo peoples.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mesa%20Verde%20National%20Park,%20Cliff%20Palace.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mesa_Verde_National_Park,_Cliff_Palace.jpg",
+        "imageCredit": "Laceelc",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mesa_Verde_National_Park,_Cliff_Palace.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
       }
     ],
     "culture": [
       {
-        "id": "us-hamburger",
-        "title": "ハンバーガー",
-        "description": "パンに肉や野菜などをはさんだ料理です。地域や店によって材料や味付けにさまざまな違いがあります。",
-        "image": "https://placehold.co/1200x800/fecaca/7f1d1d?text=American+Hamburger",
-        "category": "食文化"
+        "id": "us-jazz",
+        "title": "ジャズ",
+        "titleEn": "Jazz",
+        "description": "ニューオーリンズのアフリカ系アメリカ人文化を中心に発展し、即興演奏と独特のリズムで世界の音楽へ影響を与えました。",
+        "descriptionEn": "Developed especially through African American culture in New Orleans, jazz uses improvisation and distinctive rhythm and has influenced global music.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Louisiana%20-%20New%20Orleans%20Jazz%20National%20Historical%20Park%20-%2020181015120321.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Louisiana_-_New_Orleans_Jazz_National_Historical_Park_-_20181015120321.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Louisiana_-_New_Orleans_Jazz_National_Historical_Park_-_20181015120321.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
       },
       {
-        "id": "us-baseball",
-        "title": "野球",
-        "description": "アメリカで長く親しまれてきたスポーツです。日本を含む世界各国から選手が集まり、活躍しています。",
-        "image": "https://placehold.co/1200x800/dbeafe/1e3a8a?text=Baseball",
-        "category": "スポーツ文化"
+        "id": "us-barbecue",
+        "title": "アメリカン・バーベキュー",
+        "titleEn": "American Barbecue",
+        "description": "肉を煙と低温で長時間調理し、地域ごとに異なるソースや香辛料を用います。",
+        "descriptionEn": "Meat is cooked slowly with smoke, with regional traditions using different woods, spices, sauces, and cuts.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Barbecue%20(28304459273).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Barbecue_(28304459273).jpg",
+        "imageCredit": "LassenNPS",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
       },
       {
-        "id": "us-music",
-        "title": "音楽文化",
-        "description": "ジャズ、ブルース、ロック、ヒップホップなど、世界中に広がった多くの音楽がアメリカで発展しました。",
-        "image": "https://placehold.co/1200x800/fae8ff/701a75?text=American+Music",
-        "category": "音楽文化"
+        "id": "us-thanksgiving",
+        "title": "サンクスギビング",
+        "titleEn": "Thanksgiving",
+        "description": "家族や友人が集まり、七面鳥や季節料理を囲んで感謝を表す祝日文化です。",
+        "descriptionEn": "Families and friends gather around turkey and seasonal foods during a holiday centered on gratitude.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thanksgiving%20Dinner%20Alc2.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Thanksgiving_Dinner_Alc2.jpg",
+        "imageCredit": "Alcinoe",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Thanksgiving_Dinner_Alc2.jpg",
+        "category": "祝日・食文化",
+        "categoryEn": "Holiday and Food Culture"
       }
     ],
     "japanConnection": {
-      "title": "日本とアメリカをつなぐスポーツや文化！",
-      "text": "野球では、日本人選手がアメリカのプロリーグで活躍し、両国のファンをつないでいます。また、日本のアニメやゲームはアメリカでも人気があり、アメリカの映画や音楽も日本で広く親しまれています。学校同士の交流や留学も盛んです。"
+      "title": "安全保障・経済・文化で最も深い同盟関係",
+      "titleEn": "A Deep Alliance in Security, Economy, and Culture",
+      "text": "日本とアメリカは安全保障、貿易、科学技術、教育、観光、映画、音楽、スポーツを通じて極めて深く結ばれています。",
+      "textEn": "Japan and the United States are deeply connected through security, trade, science and technology, education, tourism, film, music, and sport."
     },
     "quiz": {
-      "question": "自由の女神像をアメリカに贈った国はどこでしょう？",
+      "question": "アメリカ合衆国の首都はどこでしょう？",
+      "questionEn": "What is the capital of the United States?",
       "options": [
-        "フランス",
-        "イギリス",
-        "カナダ",
-        "スペイン"
+        "ワシントンD.C.",
+        "ニューヨーク",
+        "ロサンゼルス",
+        "シカゴ"
+      ],
+      "optionsEn": [
+        "Washington, D.C.",
+        "New York City",
+        "Los Angeles",
+        "Chicago"
       ],
       "correctIndex": 0,
-      "explanation": "正解はフランスです。自由の女神像は、アメリカ独立100周年を記念してフランスから贈られました。"
+      "explanation": "正解はワシントンD.C.です。ニューヨークは最大級の都市ですが首都ではありません。",
+      "explanationEn": "The answer is Washington, D.C. New York is a major city but not the national capital."
+    }
+  },
+  "uy": {
+    "iso": "uy",
+    "nameJa": "ウルグアイ",
+    "nameEn": "Uruguay",
+    "capitalJa": "モンテビデオ",
+    "capitalEn": "Montevideo",
+    "subtitle": "ラプラタ川と大西洋に面し、草原、歴史都市、マテ茶、カンドンベ、牧畜と食文化を持つ南米の国です。",
+    "subtitleEn": "A South American country on the Río de la Plata and Atlantic, with grasslands, historic towns, mate, candombe, ranching, and food traditions.",
+    "flagUrl": "https://flagcdn.com/w320/uy.png",
+    "mapQuery": "Montevideo, Uruguay",
+    "timeZone": "America/Montevideo",
+    "currency": {
+      "nameJa": "ウルグアイ・ペソ",
+      "nameEn": "Uruguayan Peso",
+      "symbol": "$U"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約43 m（モンテビデオ）",
+    "elevationEn": "Approx. 43 m (Montevideo)",
+    "weather": {
+      "summary": "温帯で四季があり、夏は暖かく、冬は比較的穏やかです。一年を通して降水があります。",
+      "summaryEn": "Uruguay has a temperate four-season climate with warm summers, relatively mild winters, and rainfall throughout the year."
+    },
+    "heritage": [
+      {
+        "id": "uy-colonia",
+        "title": "コロニア・デル・サクラメント歴史地区",
+        "titleEn": "Historic Quarter of Colonia del Sacramento",
+        "description": "ポルトガルとスペインの街路や建築が混在し、ラプラタ川交易の歴史を伝えます。",
+        "descriptionEn": "Portuguese and Spanish street patterns and architecture preserve the history of Río de la Plata trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colonia%20del%20Sacramento,%20Uruguay%20(5459635915).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Colonia_del_Sacramento,_Uruguay_(5459635915).jpg",
+        "imageCredit": "Liam Quinn",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "uy-fray-bentos",
+        "title": "フライ・ベントスの産業景観",
+        "titleEn": "Fray Bentos Industrial Landscape",
+        "description": "食肉加工工場、港、倉庫が、世界的な食品産業と労働の歴史を伝えます。",
+        "descriptionEn": "A meat-processing plant, port, and warehouses preserve the history of global food production and labor.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fray%20Bentos%20industrial%20plant.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fray_Bentos_industrial_plant.jpg",
+        "imageCredit": "Mx.",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Fray_Bentos_industrial_plant.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "uy-cabo-polonio",
+        "title": "カボ・ポロニオ",
+        "titleEn": "Cabo Polonio",
+        "description": "砂丘、岩場、灯台、アシカの繁殖地が広がる大西洋岸の自然・集落景観です。",
+        "descriptionEn": "Dunes, rocky shores, a lighthouse, and sea-lion colonies form a distinctive Atlantic coastal settlement.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabo%20Polonio,%20Uruguay.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cabo_Polonio,_Uruguay.jpg",
+        "imageCredit": "Gonzalo Acuña",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cabo_Polonio,_Uruguay.jpg",
+        "category": "海岸・自然景観",
+        "categoryEn": "Coastal Natural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "uy-mate",
+        "title": "ウルグアイのマテ茶",
+        "titleEn": "Uruguayan Mate",
+        "description": "マテの葉を入れた器に湯を注ぎ、金属製のボンビージャで日常的に楽しみます。",
+        "descriptionEn": "Hot water is poured over yerba mate in a gourd and drunk through a metal bombilla as an everyday social habit.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mate%20uruguayo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mate_uruguayo.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "飲料・生活文化",
+        "categoryEn": "Beverage and Living Culture"
+      },
+      {
+        "id": "uy-candombe",
+        "title": "カンドンベ",
+        "titleEn": "Candombe",
+        "description": "アフリカ系住民の歴史を背景に、三種類の太鼓、行進、踊りで力強いリズムを生み出します。",
+        "descriptionEn": "Rooted in Afro-Uruguayan history, three drum types, procession, and dance create a powerful rhythmic tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Candombe%20Montevideo%20Uruguay.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Candombe_Montevideo_Uruguay.jpg",
+        "imageCredit": "Larrycox54",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Candombe_Montevideo_Uruguay.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      },
+      {
+        "id": "uy-asado",
+        "title": "ウルグアイのアサード",
+        "titleEn": "Uruguayan Asado",
+        "description": "牛肉やソーセージを炭火や薪火で焼き、家族や友人と長い時間をかけて楽しみます。",
+        "descriptionEn": "Beef and sausages are grilled over coals or wood fire and shared slowly with family and friends.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asado%20uruguayo.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Asado_uruguayo.JPG",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "日系社会・再生可能エネルギー・文化で交流",
+      "titleEn": "Exchange Through the Japanese Community, Renewable Energy, and Culture",
+      "text": "日本とウルグアイは日系社会、農業、再生可能エネルギー、スポーツ、文化、国際協力を通じて交流しています。",
+      "textEn": "Japan and Uruguay maintain ties through the Japanese community, agriculture, renewable energy, sport, culture, and international cooperation."
+    },
+    "quiz": {
+      "question": "ウルグアイで日常的に持ち歩いて飲まれる飲み物は何でしょう？",
+      "questionEn": "Which drink is commonly carried and consumed in daily life in Uruguay?",
+      "options": [
+        "マテ茶",
+        "抹茶ラテ",
+        "バブルティー",
+        "ホットチョコレートだけ"
+      ],
+      "optionsEn": [
+        "Mate",
+        "Matcha latte",
+        "Bubble tea",
+        "Only hot chocolate"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はマテ茶です。魔法瓶とマテの器を持ち歩く姿がよく見られます。",
+      "explanationEn": "The answer is mate, often carried together with a thermos of hot water."
+    }
+  },
+  "uz": {
+    "iso": "uz",
+    "nameJa": "ウズベキスタン",
+    "nameEn": "Uzbekistan",
+    "capitalJa": "タシケント",
+    "capitalEn": "Tashkent",
+    "subtitle": "シルクロードの青い都市、砂漠とオアシス、刺しゅう、プロフ、春祭りの文化を持つ中央アジアの国です。",
+    "subtitleEn": "A Central Asian country of blue-tiled Silk Road cities, deserts and oases, embroidery, plov, and spring festivals.",
+    "flagUrl": "https://flagcdn.com/w320/uz.png",
+    "mapQuery": "Tashkent, Uzbekistan",
+    "timeZone": "Asia/Tashkent",
+    "currency": {
+      "nameJa": "スム",
+      "nameEn": "Uzbekistani Sum",
+      "symbol": "soʻm"
+    },
+    "languages": [
+      {
+        "nameJa": "ウズベク語",
+        "nameEn": "Uzbek"
+      }
+    ],
+    "elevation": "約455 m（タシケント）",
+    "elevationEn": "Approx. 455 m (Tashkent)",
+    "weather": {
+      "summary": "乾燥した大陸性気候で、夏は非常に暑く、冬は冷え込みます。",
+      "summaryEn": "Uzbekistan has a dry continental climate with very hot summers and cold winters."
+    },
+    "heritage": [
+      {
+        "id": "uz-samarkand",
+        "title": "サマルカンド",
+        "titleEn": "Samarkand",
+        "description": "レギスタン広場の神学校や青いドームが、シルクロード交易と学問の繁栄を伝えます。",
+        "descriptionEn": "Madrasas and blue domes around Registan Square preserve the prosperity of Silk Road trade, scholarship, and architecture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Registan%20Samarkand.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Registan_Samarkand.jpg",
+        "imageCredit": "Euyasik",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Registan_Samarkand.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "uz-bukhara",
+        "title": "ブハラ歴史地区",
+        "titleEn": "Historic Centre of Bukhara",
+        "description": "ミナレット、モスク、神学校、市場が、中央アジアの宗教と商業の歴史を伝えます。",
+        "descriptionEn": "Minarets, mosques, madrasas, and markets preserve the religious and commercial history of Central Asia.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Historic%20Centre%20of%20Bukhara%202023.9.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Historic_Centre_of_Bukhara_2023.9.jpg",
+        "imageCredit": "ほっきー",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Historic_Centre_of_Bukhara_2023.9.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "uz-khiva",
+        "title": "イチャン・カラ",
+        "titleEn": "Itchan Kala",
+        "description": "城壁に囲まれたヒヴァの内城に、宮殿、モスク、ミナレット、住居が残ります。",
+        "descriptionEn": "The walled inner city of Khiva contains palaces, mosques, minarets, and traditional houses.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Itchan%20Kala%20Khiva%20World%20Heritage%20Site.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Itchan_Kala_Khiva_World_Heritage_Site.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Itchan_Kala_Khiva_World_Heritage_Site.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "uz-plov",
+        "title": "ウズベク・プロフ",
+        "titleEn": "Uzbek Plov",
+        "description": "米、肉、にんじん、玉ねぎを大鍋で炊き、結婚式や地域の集まりで分かち合います。",
+        "descriptionEn": "Rice, meat, carrots, and onions are cooked in a large cauldron and shared at weddings and community gatherings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plov%20Tashkent.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Plov_Tashkent.jpg",
+        "imageCredit": "HylgeriaK",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Plov_Tashkent.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "uz-suzani",
+        "title": "スザニ刺しゅう",
+        "titleEn": "Suzani Embroidery",
+        "description": "布に太陽、花、果実、つる草の模様を刺しゅうし、婚礼や家庭の装飾に用います。",
+        "descriptionEn": "Sun, flower, fruit, and vine motifs are embroidered on cloth for weddings and household decoration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20embroidery%20in%20Uzbekiston.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:National_embroidery_in_Uzbekiston.jpg",
+        "imageCredit": "Ro'zigul2312",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:National_embroidery_in_Uzbekiston.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "uz-navruz",
+        "title": "ナウルーズ",
+        "titleEn": "Nowruz",
+        "description": "春分の時期に新年を祝い、スマラク作り、歌、踊り、競技を楽しみます。",
+        "descriptionEn": "The spring new year is celebrated with sumalak, music, dance, games, and community gatherings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Navruz%20traditionalholidayUzbekistan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Navruz_traditionalholidayUzbekistan.jpg",
+        "imageCredit": "SarvinozGulomova",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Navruz_traditionalholidayUzbekistan.jpg",
+        "category": "季節・祭礼文化",
+        "categoryEn": "Seasonal Festival Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "人材育成・インフラ・文化で協力",
+      "titleEn": "Cooperation in Training, Infrastructure, and Culture",
+      "text": "日本は鉄道、発電、医療、教育、行政、人材育成、文化財保護などでウズベキスタンと協力しています。",
+      "textEn": "Japan and Uzbekistan cooperate in railways, energy, health, education, governance, professional training, and heritage protection."
+    },
+    "quiz": {
+      "question": "サマルカンド中心部の有名な広場は何でしょう？",
+      "questionEn": "What is the famous central square of Samarkand called?",
+      "options": [
+        "レギスタン広場",
+        "赤の広場",
+        "トラファルガー広場",
+        "天安門広場"
+      ],
+      "optionsEn": [
+        "Registan Square",
+        "Red Square",
+        "Trafalgar Square",
+        "Tiananmen Square"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はレギスタン広場です。三つの壮麗な神学校が広場を囲みます。",
+      "explanationEn": "The answer is Registan Square, surrounded by three monumental madrasas."
     }
   }
 }

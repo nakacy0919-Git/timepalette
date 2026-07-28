@@ -1,0 +1,144 @@
+{
+  "om": {
+    "iso": "om",
+    "nameJa": "オマーン",
+    "nameEn": "Oman",
+    "capitalJa": "マスカット",
+    "capitalEn": "Muscat",
+    "subtitle": "アラビア半島南東部に位置し、砂漠、山岳、海洋交易、乳香、要塞文化を持つ国です。",
+    "subtitleEn": "A southeastern Arabian country of deserts, mountains, maritime trade, frankincense, and historic forts.",
+    "flagUrl": "https://flagcdn.com/w320/om.png",
+    "mapQuery": "Muscat, Oman",
+    "timeZone": "Asia/Muscat",
+    "currency": {
+      "nameJa": "オマーン・リアル",
+      "nameEn": "Omani Rial",
+      "symbol": "ر.ع."
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約15 m（マスカット）",
+    "elevationEn": "Approx. 15 m (Muscat)",
+    "weather": {
+      "summary": "沿岸部と内陸部は非常に暑く乾燥し、山地は比較的涼しくなります。南部ドファール地方では季節風による雨と霧が見られます。",
+      "summaryEn": "Coastal and inland areas are generally hot and dry, mountains are cooler, and southern Dhofar receives seasonal mist and rain from the monsoon."
+    },
+    "heritage": [
+      {
+        "id": "om-bahla-fort",
+        "title": "バハラ城塞",
+        "titleEn": "Bahla Fort",
+        "description": "泥れんがの壁と塔を持つ巨大な要塞で、中世オマーン内陸部の政治とオアシス都市の繁栄を伝えます。",
+        "descriptionEn": "This immense mud-brick fortress preserves the political history and oasis prosperity of medieval inland Oman.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bahla%20Fort.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bahla_Fort.jpg",
+        "imageCredit": "Francisco Anzola",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "om-bat-al-ayn",
+        "title": "バット、アル＝フトゥム、アル＝アインの考古遺跡群",
+        "titleEn": "Archaeological Sites of Bat, Al-Khutm and Al-Ayn",
+        "description": "青銅器時代の円形塔、集落、蜂の巣形墳墓が残り、古代オマーンの交易と社会構造を伝えます。",
+        "descriptionEn": "Bronze Age towers, settlements, and beehive tombs reveal ancient Omani trade, burial customs, and social organization.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bat%20Al%20Ayn%20Beehive%20Tombs%20UNESCO%20Oman.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bat_Al_Ayn_Beehive_Tombs_UNESCO_Oman.jpg",
+        "imageCredit": "Esra1993",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "om-frankincense",
+        "title": "乳香の土地",
+        "titleEn": "Land of Frankincense",
+        "description": "乳香樹の生育地、隊商都市、港湾遺跡が、古代から続いた乳香交易の歴史を伝えています。",
+        "descriptionEn": "Frankincense groves, caravan settlements, and port remains preserve the history of the ancient incense trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Oman,%20Wadi%20Dawkah,%20Land%20of%20Frankincense.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Oman,_Wadi_Dawkah,_Land_of_Frankincense.jpg",
+        "imageCredit": "Dr. Thomas Liptak",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "om-shuwa",
+        "title": "シュワ",
+        "titleEn": "Shuwa",
+        "description": "香辛料で味付けした肉を葉で包み、地中の炉で長時間蒸し焼きにする祝祭料理です。",
+        "descriptionEn": "Spiced meat is wrapped in leaves and slow-cooked for many hours in an underground oven for festivals and family gatherings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D9%88%D8%AC%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B4%D9%88%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D9%86%D9%8A.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:%D9%88%D8%AC%D8%A8%D8%A9_%D8%A7%D9%84%D8%B4%D9%88%D8%A7%D8%A1_%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D9%86%D9%8A.jpg",
+        "imageCredit": "لطيفة النوفلية",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "om-khanjar",
+        "title": "ハンジャル",
+        "titleEn": "Omani Khanjar",
+        "description": "湾曲した短剣を装飾的な鞘に収め、正装や公式行事で身に着けるオマーンの象徴です。",
+        "descriptionEn": "This curved ceremonial dagger, worn in an ornate sheath, is an important symbol of Omani identity and formal dress.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Omani%20Khanjar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Omani_Khanjar.jpg",
+        "imageCredit": "A1000",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "伝統工芸・服飾文化",
+        "categoryEn": "Traditional Craft and Clothing Culture"
+      },
+      {
+        "id": "om-coffee-hospitality",
+        "title": "オマーン式コーヒーのもてなし",
+        "titleEn": "Omani Coffee Hospitality",
+        "description": "カルダモンなどで香りを付けたコーヒーをダッラで注ぎ、デーツとともに客へふるまいます。",
+        "descriptionEn": "Cardamom-scented coffee is poured from a dallah and offered with dates as an expression of welcome and generosity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Al%20Dallah,%20Bait%20al%20Zubair%20Museum,%20Oman.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Al_Dallah,_Bait_al_Zubair_Museum,_Oman.jpg",
+        "imageCredit": "Reda Kerbush",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "生活・もてなし文化",
+        "categoryEn": "Living and Hospitality Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "エネルギーと海洋交易でつながる",
+      "titleEn": "Connections Through Energy and Maritime Trade",
+      "text": "日本とオマーンは原油・LNGなどのエネルギー、海運、投資、教育、文化交流を通じて関係を築いています。",
+      "textEn": "Japan and Oman maintain ties through crude oil and LNG, shipping, investment, education, and cultural exchange."
+    },
+    "quiz": {
+      "question": "オマーンで古代から重要な交易品だった香料は何でしょう？",
+      "questionEn": "Which aromatic product was an important trade item in ancient Oman?",
+      "options": [
+        "乳香",
+        "抹茶",
+        "カカオ",
+        "メープルシロップ"
+      ],
+      "optionsEn": [
+        "Frankincense",
+        "Matcha",
+        "Cacao",
+        "Maple syrup"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は乳香です。ドファール地方で採取され、古代の隊商路と港を通じて各地へ運ばれました。",
+      "explanationEn": "The answer is frankincense. It was harvested in Dhofar and transported through ancient caravan routes and ports."
+    }
+  }
+}

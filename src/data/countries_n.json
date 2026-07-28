@@ -1,0 +1,1616 @@
+{
+  "na": {
+    "iso": "na",
+    "nameJa": "ナミビア",
+    "nameEn": "Namibia",
+    "capitalJa": "ウィントフック",
+    "capitalEn": "Windhoek",
+    "subtitle": "ナミブ砂漠、大西洋岸、サバンナ、岩絵、多民族文化を持つ南部アフリカの国です。",
+    "subtitleEn": "A southern African country of Namib Desert, Atlantic coast, savanna, rock art, and diverse cultures.",
+    "flagUrl": "https://flagcdn.com/w320/na.png",
+    "mapQuery": "Windhoek, Namibia",
+    "timeZone": "Africa/Windhoek",
+    "currency": {
+      "nameJa": "ナミビア・ドル",
+      "nameEn": "Namibian Dollar",
+      "symbol": "N$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "オシワンボ諸語",
+        "nameEn": "Oshiwambo languages"
+      },
+      {
+        "nameJa": "アフリカーンス語",
+        "nameEn": "Afrikaans"
+      }
+    ],
+    "elevation": "約1,650 m（ウィントフック）",
+    "elevationEn": "Approx. 1,650 m (Windhoek)",
+    "weather": {
+      "summary": "乾燥した気候が中心で、沿岸部は寒流の影響を受け、内陸は昼夜の寒暖差が大きくなります。",
+      "summaryEn": "Much of Namibia is dry; the coast is cooled by an ocean current, while inland temperatures vary greatly between day and night."
+    },
+    "heritage": [
+      {
+        "id": "na-sossusvlei",
+        "title": "ソススフレイ",
+        "titleEn": "Sossusvlei",
+        "description": "ナミブ砂漠に巨大な赤い砂丘と白い粘土平原が広がる、ナミビアを象徴する景観です。",
+        "descriptionEn": "Giant red dunes surround pale clay pans in one of Namibia's most iconic desert landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sossusvlei,%20Namibia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sossusvlei,_Namibia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sossusvlei,_Namibia.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "na-twyfelfontein",
+        "title": "トゥウェイフルフォンテーン",
+        "titleEn": "Twyfelfontein",
+        "description": "岩肌に動物や足跡が刻まれ、狩猟採集民の長い歴史を伝える岩刻画群です。",
+        "descriptionEn": "Thousands of engravings of animals and tracks preserve a long record of hunter-gatherer life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Twyfelfontein%20Namibia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Twyfelfontein_Namibia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Twyfelfontein_Namibia.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "na-etosha",
+        "title": "エトーシャ国立公園",
+        "titleEn": "Etosha National Park",
+        "description": "巨大な塩湖跡と水場にゾウ、ライオン、サイ、キリンなどが集まる保護区です。",
+        "descriptionEn": "A vast salt pan and scattered waterholes attract elephants, lions, rhinos, giraffes, and many birds.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Etosha%20National%20Park%20Namibia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Etosha_National_Park_Namibia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Etosha_National_Park_Namibia.jpg",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      }
+    ],
+    "culture": [
+      {
+        "id": "na-himba",
+        "title": "ヒンバの装い",
+        "titleEn": "Himba Dress and Ochre Tradition",
+        "description": "赤い顔料と油を混ぜたオチゼを肌や髪に塗り、装身具とともに共同体の美意識を表します。",
+        "descriptionEn": "Red ochre mixed with fat is applied to skin and hair, expressing beauty, identity, and community tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himba%20woman%20Namibia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Himba_woman_Namibia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Himba_woman_Namibia.jpg",
+        "category": "生活・服飾文化",
+        "categoryEn": "Living and Clothing Culture"
+      },
+      {
+        "id": "na-herero-dress",
+        "title": "ヘレロの伝統衣装",
+        "titleEn": "Herero Traditional Dress",
+        "description": "長いドレスと角のような帽子を身に着け、歴史と地域の誇りを表現します。",
+        "descriptionEn": "Long dresses and horn-shaped headdresses express history, memory, and community pride.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Herero%20women%20Namibia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Herero_women_Namibia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Herero_women_Namibia.jpg",
+        "category": "服飾文化",
+        "categoryEn": "Clothing Culture"
+      },
+      {
+        "id": "na-kapana",
+        "title": "カパナ",
+        "titleEn": "Kapana",
+        "description": "市場で牛肉を小さく切って焼き、香辛料やサルサと食べる人気の屋台料理です。",
+        "descriptionEn": "Small pieces of grilled beef are sold at markets and eaten with spices and salsa.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kapana%20Namibia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kapana_Namibia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kapana_Namibia.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "砂漠研究・鉱業・環境で交流",
+      "titleEn": "Exchange in Desert Research, Mining, and Environment",
+      "text": "日本とナミビアは鉱物資源、環境保全、保健、教育、人材育成などで協力しています。",
+      "textEn": "Japan and Namibia cooperate in mineral resources, environmental protection, health, education, and training."
+    },
+    "quiz": {
+      "question": "ナミビアの大西洋岸を冷やし、乾燥した気候に影響する海流は何でしょう？",
+      "questionEn": "Which ocean current cools Namibia's Atlantic coast and contributes to its dry climate?",
+      "options": [
+        "ベンゲラ海流",
+        "黒潮",
+        "メキシコ湾流",
+        "東オーストラリア海流"
+      ],
+      "optionsEn": [
+        "Benguela Current",
+        "Kuroshio Current",
+        "Gulf Stream",
+        "East Australian Current"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はベンゲラ海流です。冷たい海水が沿岸の気温と霧、乾燥に大きな影響を与えます。",
+      "explanationEn": "The answer is the Benguela Current, whose cold water strongly influences coastal temperatures, fog, and aridity."
+    }
+  },
+  "nr": {
+    "iso": "nr",
+    "nameJa": "ナオエロ（旧称ナウル）",
+    "nameEn": "Naoero (formerly Nauru)",
+    "capitalJa": "公式首都なし（政府機関はヤレン地区）",
+    "capitalEn": "No official capital (government offices are in Yaren District)",
+    "subtitle": "太平洋に浮かぶ小さなサンゴ島で、リン鉱石の歴史、海洋文化、環境再生の課題を持つ国です。",
+    "subtitleEn": "A small Pacific coral island shaped by phosphate mining, marine culture, and major environmental restoration challenges.",
+    "flagUrl": "https://flagcdn.com/w320/nr.png",
+    "mapQuery": "Yaren District, Naoero",
+    "timeZone": "Pacific/Nauru",
+    "currency": {
+      "nameJa": "オーストラリア・ドル",
+      "nameEn": "Australian Dollar",
+      "symbol": "A$"
+    },
+    "languages": [
+      {
+        "nameJa": "ナオエロ語（ナウル語）",
+        "nameEn": "Naoeroan / Nauruan"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約7 m（ヤレン地区）",
+    "elevationEn": "Approx. 7 m (Yaren District)",
+    "weather": {
+      "summary": "一年を通して高温多湿で、雨量の年変動が大きく、干ばつの影響を受けることがあります。",
+      "summaryEn": "The climate is hot and humid year-round, but rainfall varies greatly and drought can occur."
+    },
+    "heritage": [
+      {
+        "id": "nr-buada",
+        "title": "ブアダ・ラグーン",
+        "titleEn": "Buada Lagoon",
+        "description": "島の内陸部にある淡水に近いラグーンで、ヤシや植生に囲まれた重要な景観です。",
+        "descriptionEn": "This inland lagoon, surrounded by palms and vegetation, is one of the island's most distinctive natural features.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Buada%20Lagoon%20Nauru.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Buada_Lagoon_Nauru.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Buada_Lagoon_Nauru.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "nr-command-ridge",
+        "title": "コマンド・リッジ",
+        "titleEn": "Command Ridge",
+        "description": "島の最高地点周辺に第二次世界大戦期の施設跡が残り、近現代史を伝えています。",
+        "descriptionEn": "World War II remains around the island's highest area preserve an important part of modern history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Command%20Ridge%20Nauru.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Command_Ridge_Nauru.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Command_Ridge_Nauru.jpg",
+        "category": "近現代歴史遺産",
+        "categoryEn": "Modern Historical Heritage"
+      },
+      {
+        "id": "nr-anibare",
+        "title": "アニバレ湾",
+        "titleEn": "Anibare Bay",
+        "description": "白い砂浜とサンゴ礁が広がる島東部の湾で、漁業や海辺の暮らしと結びついています。",
+        "descriptionEn": "A broad eastern bay of pale sand and reef is closely connected to fishing and coastal life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anibare%20Bay%20Nauru.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Anibare_Bay_Nauru.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Anibare_Bay_Nauru.jpg",
+        "category": "海岸景観",
+        "categoryEn": "Coastal Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "nr-dance",
+        "title": "ナオエロの伝統舞踊",
+        "titleEn": "Traditional Naoeroan Dance",
+        "description": "歌、手拍子、集団の動きで島の歴史、海、共同体の物語を表現します。",
+        "descriptionEn": "Songs, clapping, and group movement express stories of island history, ocean life, and community.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nauruan%20traditional%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nauruan_traditional_dance.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nauruan_traditional_dance.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      },
+      {
+        "id": "nr-weaving",
+        "title": "ヤシとパンダナスの編み細工",
+        "titleEn": "Palm and Pandanus Weaving",
+        "description": "葉を乾燥させて編み、敷物、かご、帽子、生活用品を作ります。",
+        "descriptionEn": "Dried leaves are woven into mats, baskets, hats, and practical household objects.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nauru%20weaving.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nauru_weaving.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nauru_weaving.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "nr-fish-coconut",
+        "title": "魚とココナツの料理",
+        "titleEn": "Fish and Coconut Cuisine",
+        "description": "新鮮な魚を焼いたり煮たりし、ココナツや島の食材と組み合わせます。",
+        "descriptionEn": "Fresh fish is grilled or cooked and combined with coconut and other island ingredients.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nauru%20fish%20coconut%20food.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nauru_fish_coconut_food.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nauru_fish_coconut_food.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "気候変動・廃棄物・教育で協力",
+      "titleEn": "Cooperation in Climate Change, Waste, and Education",
+      "text": "日本はナオエロと、気候変動、防災、廃棄物管理、教育、保健などで協力しています。",
+      "textEn": "Japan cooperates with Naoero in climate adaptation, disaster preparedness, waste management, education, and health."
+    },
+    "quiz": {
+      "question": "ナオエロに公式の首都はあるでしょうか？",
+      "questionEn": "Does Naoero have an official capital?",
+      "options": [
+        "公式首都はない",
+        "ヤレンが憲法上の首都",
+        "アイウォが首都",
+        "ブアダが首都"
+      ],
+      "optionsEn": [
+        "It has no official capital",
+        "Yaren is the constitutional capital",
+        "Aiwo is the capital",
+        "Buada is the capital"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は公式首都がないことです。政府機関の多くはヤレン地区に置かれています。",
+      "explanationEn": "The answer is that there is no official capital; many government offices are located in Yaren District."
+    }
+  },
+  "np": {
+    "iso": "np",
+    "nameJa": "ネパール",
+    "nameEn": "Nepal",
+    "capitalJa": "カトマンズ",
+    "capitalEn": "Kathmandu",
+    "subtitle": "ヒマラヤ山脈、寺院都市、多民族社会、祭り文化を持つ南アジアの内陸国です。",
+    "subtitleEn": "A South Asian landlocked nation of Himalayan peaks, temple cities, diverse communities, and festivals.",
+    "flagUrl": "https://flagcdn.com/w320/np.png",
+    "mapQuery": "Kathmandu, Nepal",
+    "timeZone": "Asia/Kathmandu",
+    "currency": {
+      "nameJa": "ネパール・ルピー",
+      "nameEn": "Nepalese Rupee",
+      "symbol": "रु"
+    },
+    "languages": [
+      {
+        "nameJa": "ネパール語",
+        "nameEn": "Nepali"
+      }
+    ],
+    "elevation": "約1,400 m（カトマンズ）",
+    "elevationEn": "Approx. 1,400 m (Kathmandu)",
+    "weather": {
+      "summary": "標高差が非常に大きく、南部は亜熱帯、山地は温帯、高山部は極寒の気候です。",
+      "summaryEn": "Nepal's great elevation range creates subtropical lowlands, temperate hills, and extremely cold high mountains."
+    },
+    "heritage": [
+      {
+        "id": "np-kathmandu-valley",
+        "title": "カトマンズの谷",
+        "titleEn": "Kathmandu Valley",
+        "description": "王宮広場、仏塔、ヒンドゥー寺院が集まり、ネワール文化と都市史を伝えます。",
+        "descriptionEn": "Palace squares, stupas, and Hindu temples preserve Newar culture and the history of several old cities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kathmandu%20Valley%20Nepal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kathmandu_Valley_Nepal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kathmandu_Valley_Nepal.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "np-sagarmatha",
+        "title": "サガルマータ国立公園",
+        "titleEn": "Sagarmatha National Park",
+        "description": "エベレストを中心に氷河、高山谷、シェルパの村々が広がる自然地域です。",
+        "descriptionEn": "Mount Everest, glaciers, deep valleys, and Sherpa settlements form a dramatic high-mountain landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sagarmatha%20National%20Park%20Nepal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sagarmatha_National_Park_Nepal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sagarmatha_National_Park_Nepal.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "np-lumbini",
+        "title": "仏陀生誕の地ルンビニ",
+        "titleEn": "Lumbini, Birthplace of the Buddha",
+        "description": "仏陀の生誕地とされ、アショーカ王の石柱や寺院、巡礼施設が残ります。",
+        "descriptionEn": "Traditionally recognized as the Buddha's birthplace, Lumbini contains an Ashokan pillar, temples, and pilgrimage sites.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lumbini%20Nepal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lumbini_Nepal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lumbini_Nepal.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "np-momo",
+        "title": "モモ",
+        "titleEn": "Momo",
+        "description": "肉や野菜の具を皮で包んで蒸し、香辛料の効いたソースと食べる料理です。",
+        "descriptionEn": "Dumplings filled with meat or vegetables are steamed and served with a spicy dipping sauce.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nepalese%20momo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nepalese_momo.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nepalese_momo.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "np-dashain",
+        "title": "ダサイン",
+        "titleEn": "Dashain",
+        "description": "家族が集まり、祝福、供物、凧揚げなどを通して善の勝利を祝う大祭です。",
+        "descriptionEn": "Families gather for blessings, offerings, feasts, and kite flying during Nepal's major annual festival.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dashain%20festival%20Nepal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dashain_festival_Nepal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dashain_festival_Nepal.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "np-thangka",
+        "title": "タンカ絵画",
+        "titleEn": "Thangka Painting",
+        "description": "仏教の神々や宇宙観を布に精密に描き、礼拝や瞑想、教育に用います。",
+        "descriptionEn": "Detailed Buddhist images painted on cloth support worship, meditation, teaching, and ritual.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nepalese%20thangka%20painting.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nepalese_thangka_painting.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nepalese_thangka_painting.jpg",
+        "category": "宗教美術",
+        "categoryEn": "Religious Art"
+      }
+    ],
+    "japanConnection": {
+      "title": "防災・教育・農村開発で協力",
+      "titleEn": "Cooperation in Disaster Preparedness, Education, and Rural Development",
+      "text": "日本は地震防災、学校、道路、保健、農業、人材育成などを通じてネパールを支援しています。",
+      "textEn": "Japan supports Nepal through earthquake preparedness, schools, roads, health, agriculture, and professional training."
+    },
+    "quiz": {
+      "question": "世界最高峰エベレストのネパール語名は何でしょう？",
+      "questionEn": "What is the Nepali name for Mount Everest?",
+      "options": [
+        "サガルマータ",
+        "アンナプルナ",
+        "ローツェ",
+        "カンチェンジュンガ"
+      ],
+      "optionsEn": [
+        "Sagarmatha",
+        "Annapurna",
+        "Lhotse",
+        "Kangchenjunga"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はサガルマータです。「世界の頂上」などの意味で理解されています。",
+      "explanationEn": "The answer is Sagarmatha, the Nepali name used for the world's highest mountain."
+    }
+  },
+  "nl": {
+    "iso": "nl",
+    "nameJa": "オランダ",
+    "nameEn": "Netherlands",
+    "capitalJa": "アムステルダム（政府・議会はハーグ）",
+    "capitalEn": "Amsterdam (government and parliament are in The Hague)",
+    "subtitle": "運河、干拓地、風車、海との共存、芸術とデザインで知られる西ヨーロッパの国です。",
+    "subtitleEn": "A Western European country known for canals, reclaimed land, windmills, water management, art, and design.",
+    "flagUrl": "https://flagcdn.com/w320/nl.png",
+    "mapQuery": "Amsterdam, Netherlands",
+    "timeZone": "Europe/Amsterdam",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "オランダ語",
+        "nameEn": "Dutch"
+      },
+      {
+        "nameJa": "西フリジア語",
+        "nameEn": "West Frisian"
+      }
+    ],
+    "elevation": "約2 m（アムステルダム）",
+    "elevationEn": "Approx. 2 m (Amsterdam)",
+    "weather": {
+      "summary": "海洋性気候で、夏は穏やか、冬は比較的温暖です。一年を通して雨と風があります。",
+      "summaryEn": "The Netherlands has a maritime climate with mild summers, relatively gentle winters, and rain and wind throughout the year."
+    },
+    "heritage": [
+      {
+        "id": "nl-amsterdam-canals",
+        "title": "アムステルダムの運河地区",
+        "titleEn": "Amsterdam Canal Ring",
+        "description": "同心円状の運河と細長い商家が、17世紀の都市計画と交易の繁栄を伝えます。",
+        "descriptionEn": "Concentric canals and narrow merchant houses preserve seventeenth-century planning and commercial prosperity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam%20canal%20ring.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Amsterdam_canal_ring.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_canal_ring.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "nl-kinderdijk",
+        "title": "キンデルダイクの風車群",
+        "titleEn": "Mill Network at Kinderdijk-Elshout",
+        "description": "風車、水路、堤防、排水施設が、低地を洪水から守る知恵を示します。",
+        "descriptionEn": "Windmills, canals, dikes, and pumping systems demonstrate centuries of water management.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kinderdijk%20windmills%20Netherlands.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kinderdijk_windmills_Netherlands.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kinderdijk_windmills_Netherlands.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "nl-wadden",
+        "title": "ワッデン海",
+        "titleEn": "Wadden Sea",
+        "description": "潮の満ち引きで広大な干潟が現れ、渡り鳥、アザラシ、多様な海洋生物を育みます。",
+        "descriptionEn": "Vast tidal flats appear at low tide and support migratory birds, seals, and rich marine life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wadden%20Sea%20Netherlands.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Wadden_Sea_Netherlands.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Wadden_Sea_Netherlands.jpg",
+        "category": "世界自然遺産地域",
+        "categoryEn": "World Heritage Region"
+      }
+    ],
+    "culture": [
+      {
+        "id": "nl-stroopwafel",
+        "title": "ストロープワッフル",
+        "titleEn": "Stroopwafel",
+        "description": "薄いワッフル二枚の間にキャラメル状のシロップを挟む菓子です。",
+        "descriptionEn": "Two thin waffle layers hold a sweet caramel-like syrup filling.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dutch%20stroopwafel.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dutch_stroopwafel.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dutch_stroopwafel.jpg",
+        "category": "菓子文化",
+        "categoryEn": "Pastry Culture"
+      },
+      {
+        "id": "nl-delftware",
+        "title": "デルフト陶器",
+        "titleEn": "Delftware",
+        "description": "白地に青い絵付けを施す陶器で、東西交易とオランダの工芸史を映します。",
+        "descriptionEn": "Blue decoration on white pottery reflects Dutch craftsmanship and the influence of global trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Delftware%20Netherlands.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Delftware_Netherlands.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Delftware_Netherlands.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "nl-kings-day",
+        "title": "キングスデー",
+        "titleEn": "King's Day",
+        "description": "街がオレンジ色に染まり、フリーマーケット、音楽、船上の祝宴が行われます。",
+        "descriptionEn": "Cities turn orange with street markets, music, boating, and public celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/King's%20Day%20Amsterdam.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:King's_Day_Amsterdam.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:King's_Day_Amsterdam.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "水管理・農業・先端技術で協力",
+      "titleEn": "Cooperation in Water Management, Agriculture, and Advanced Technology",
+      "text": "日本とオランダは治水、農業、半導体、エネルギー、芸術、教育などで交流しています。",
+      "textEn": "Japan and the Netherlands cooperate in water management, agriculture, semiconductors, energy, art, and education."
+    },
+    "quiz": {
+      "question": "オランダの首都と政府所在地の組み合わせで正しいものはどれでしょう？",
+      "questionEn": "Which pairing correctly describes the Dutch capital and seat of government?",
+      "options": [
+        "首都アムステルダム・政府所在地ハーグ",
+        "首都ハーグ・政府所在地ロッテルダム",
+        "首都ロッテルダム・政府所在地ユトレヒト",
+        "首都ユトレヒト・政府所在地アムステルダム"
+      ],
+      "optionsEn": [
+        "Capital Amsterdam; government in The Hague",
+        "Capital The Hague; government in Rotterdam",
+        "Capital Rotterdam; government in Utrecht",
+        "Capital Utrecht; government in Amsterdam"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は首都アムステルダム、政府と議会の所在地はハーグです。",
+      "explanationEn": "The answer is Amsterdam as the capital, with the government and parliament located in The Hague."
+    }
+  },
+  "nz": {
+    "iso": "nz",
+    "nameJa": "ニュージーランド",
+    "nameEn": "New Zealand",
+    "capitalJa": "ウェリントン",
+    "capitalEn": "Wellington",
+    "subtitle": "火山、氷河、フィヨルド、マオリ文化、多文化都市を持つ南太平洋の島国です。",
+    "subtitleEn": "A South Pacific island nation of volcanoes, glaciers, fiords, Māori culture, and multicultural cities.",
+    "flagUrl": "https://flagcdn.com/w320/nz.png",
+    "mapQuery": "Wellington, New Zealand",
+    "timeZone": "Pacific/Auckland",
+    "currency": {
+      "nameJa": "ニュージーランド・ドル",
+      "nameEn": "New Zealand Dollar",
+      "symbol": "NZ$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "マオリ語",
+        "nameEn": "Māori"
+      },
+      {
+        "nameJa": "ニュージーランド手話",
+        "nameEn": "New Zealand Sign Language"
+      }
+    ],
+    "elevation": "約0～120 m（ウェリントン中心部）",
+    "elevationEn": "Approx. 0–120 m (central Wellington)",
+    "weather": {
+      "summary": "海洋性気候で天候が変わりやすく、北島は比較的温暖、南島高地は寒冷です。",
+      "summaryEn": "The maritime climate changes quickly; the North Island is generally milder, while South Island highlands are colder."
+    },
+    "heritage": [
+      {
+        "id": "nz-tongariro",
+        "title": "トンガリロ国立公園",
+        "titleEn": "Tongariro National Park",
+        "description": "火山景観とマオリの聖地が重なり、自然と文化の両方で重要な地域です。",
+        "descriptionEn": "Volcanic landscapes and sacred Māori associations make this important for both nature and culture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tongariro%20National%20Park%20New%20Zealand.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tongariro_National_Park_New_Zealand.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tongariro_National_Park_New_Zealand.jpg",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      },
+      {
+        "id": "nz-te-wahipounamu",
+        "title": "テ・ワヒポウナム",
+        "titleEn": "Te Wāhipounamu",
+        "description": "南西部のフィヨルド、氷河、原生林に固有の動植物が暮らす広大な自然地域です。",
+        "descriptionEn": "Fiords, glaciers, and ancient forests protect endemic wildlife across the southwest of the South Island.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Milford%20Sound%20New%20Zealand.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Milford_Sound_New_Zealand.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Milford_Sound_New_Zealand.jpg",
+        "category": "世界自然遺産地域",
+        "categoryEn": "World Heritage Region"
+      },
+      {
+        "id": "nz-waitangi",
+        "title": "ワイタンギ条約記念地",
+        "titleEn": "Waitangi Treaty Grounds",
+        "description": "マオリ首長とイギリス王権の間で条約が結ばれた、国の成立を考える重要な場所です。",
+        "descriptionEn": "The site where the Treaty of Waitangi was signed is central to understanding the country's founding relationship.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Waitangi%20Treaty%20Grounds%20New%20Zealand.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Waitangi_Treaty_Grounds_New_Zealand.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Waitangi_Treaty_Grounds_New_Zealand.jpg",
+        "category": "国家歴史遺産",
+        "categoryEn": "National Historic Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "nz-haka",
+        "title": "ハカ",
+        "titleEn": "Haka",
+        "description": "力強い声、表情、足踏み、身体の動きで、歓迎、挑戦、誇り、追悼などを表します。",
+        "descriptionEn": "Powerful voice, expression, stamping, and movement communicate welcome, challenge, pride, and remembrance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Maori%20haka%20New%20Zealand.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Maori_haka_New_Zealand.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Maori_haka_New_Zealand.jpg",
+        "category": "マオリ舞踊文化",
+        "categoryEn": "Māori Performance Culture"
+      },
+      {
+        "id": "nz-hangi",
+        "title": "ハンギ",
+        "titleEn": "Hāngī",
+        "description": "地面に掘った炉で熱した石を使い、肉や野菜を時間をかけて蒸し焼きにします。",
+        "descriptionEn": "Meat and vegetables are slowly steamed in an earth oven heated with hot stones.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hangi%20New%20Zealand.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hangi_New_Zealand.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hangi_New_Zealand.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "nz-whakairo",
+        "title": "ファカイロ（木彫）",
+        "titleEn": "Whakairo Carving",
+        "description": "祖先や部族の物語を木に刻み、集会所、カヌー、道具を装飾します。",
+        "descriptionEn": "Carved ancestral and tribal stories decorate meeting houses, canoes, and important objects.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Maori%20carving%20New%20Zealand.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Maori_carving_New_Zealand.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Maori_carving_New_Zealand.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "教育・スポーツ・防災で交流",
+      "titleEn": "Exchange Through Education, Sport, and Disaster Preparedness",
+      "text": "日本とニュージーランドは留学、ラグビー、農業、観光、防災、環境分野で交流しています。",
+      "textEn": "Japan and New Zealand maintain strong links in study abroad, rugby, agriculture, tourism, disaster preparedness, and environment."
+    },
+    "quiz": {
+      "question": "ニュージーランドの先住民は何と呼ばれるでしょう？",
+      "questionEn": "What are the Indigenous people of New Zealand called?",
+      "options": [
+        "マオリ",
+        "サーミ",
+        "イヌイット",
+        "バスク"
+      ],
+      "optionsEn": [
+        "Māori",
+        "Sámi",
+        "Inuit",
+        "Basque"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はマオリです。言語、芸術、土地との関係はニュージーランド文化の重要な柱です。",
+      "explanationEn": "The answer is Māori, whose language, arts, and relationship with the land are central to New Zealand culture."
+    }
+  },
+  "ni": {
+    "iso": "ni",
+    "nameJa": "ニカラグア",
+    "nameEn": "Nicaragua",
+    "capitalJa": "マナグア",
+    "capitalEn": "Managua",
+    "subtitle": "火山、湖、植民都市、カリブ海と太平洋の文化が共存する中央アメリカの国です。",
+    "subtitleEn": "A Central American country of volcanoes, lakes, colonial cities, and both Caribbean and Pacific cultural influences.",
+    "flagUrl": "https://flagcdn.com/w320/ni.png",
+    "mapQuery": "Managua, Nicaragua",
+    "timeZone": "America/Managua",
+    "currency": {
+      "nameJa": "コルドバ",
+      "nameEn": "Nicaraguan Córdoba",
+      "symbol": "C$"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約80 m（マナグア）",
+    "elevationEn": "Approx. 80 m (Managua)",
+    "weather": {
+      "summary": "太平洋側は雨季と乾季が明確で、カリブ海側は高温多湿で雨が多くなります。",
+      "summaryEn": "The Pacific side has clear wet and dry seasons, while the Caribbean side is hotter, wetter, and more humid."
+    },
+    "heritage": [
+      {
+        "id": "ni-leon-cathedral",
+        "title": "レオン大聖堂",
+        "titleEn": "León Cathedral",
+        "description": "中米最大級の大聖堂で、地下墓所、彫刻、植民都市の歴史を伝えます。",
+        "descriptionEn": "One of Central America's largest cathedrals preserves tombs, sculpture, and the history of a colonial city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Leon%20Cathedral%20Nicaragua.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Leon_Cathedral_Nicaragua.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Leon_Cathedral_Nicaragua.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ni-leon-viejo",
+        "title": "レオン・ビエホ遺跡",
+        "titleEn": "Ruins of León Viejo",
+        "description": "火山活動で放棄された初期植民都市の遺跡で、16世紀の都市構造が残ります。",
+        "descriptionEn": "The remains of an early colonial city abandoned after volcanic activity preserve its sixteenth-century layout.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Leon%20Viejo%20Nicaragua.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Leon_Viejo_Nicaragua.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Leon_Viejo_Nicaragua.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ni-masaya-volcano",
+        "title": "マサヤ火山国立公園",
+        "titleEn": "Masaya Volcano National Park",
+        "description": "活発な火口と溶岩の歴史を近距離で観察できる、国内を代表する火山地域です。",
+        "descriptionEn": "Active craters and a long volcanic history can be observed in one of Nicaragua's best-known natural areas.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaya%20Volcano%20Nicaragua.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Masaya_Volcano_Nicaragua.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Masaya_Volcano_Nicaragua.jpg",
+        "category": "火山・自然景観",
+        "categoryEn": "Volcanic Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ni-gallo-pinto",
+        "title": "ガジョ・ピント",
+        "titleEn": "Gallo Pinto",
+        "description": "米と豆を炒め合わせ、卵、チーズ、肉、プランテンなどと食べる日常料理です。",
+        "descriptionEn": "Rice and beans are fried together and served with egg, cheese, meat, or plantain.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gallo%20pinto%20Nicaragua.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gallo_pinto_Nicaragua.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gallo_pinto_Nicaragua.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ni-el-gueguense",
+        "title": "エル・グエグエンセ",
+        "titleEn": "El Güegüense",
+        "description": "仮面、舞踊、音楽、風刺的な台詞を組み合わせ、植民地支配を批判した民衆劇です。",
+        "descriptionEn": "Masks, dance, music, and satirical dialogue combine in a folk drama that mocked colonial authority.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/El%20Gueguense%20Nicaragua.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:El_Gueguense_Nicaragua.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:El_Gueguense_Nicaragua.jpg",
+        "category": "伝統演劇",
+        "categoryEn": "Traditional Theatre"
+      },
+      {
+        "id": "ni-marimba",
+        "title": "ニカラグアのマリンバ",
+        "titleEn": "Nicaraguan Marimba",
+        "description": "木の鍵盤をたたく楽器で、祭りや舞踊、地域の音楽を支えています。",
+        "descriptionEn": "This wooden-key instrument accompanies dances, festivals, and regional musical traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Marimba%20Nicaragua.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Marimba_Nicaragua.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Marimba_Nicaragua.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "防災・教育・農業で協力",
+      "titleEn": "Cooperation in Disaster Preparedness, Education, and Agriculture",
+      "text": "日本は地震・火山防災、橋梁、教育、保健、農業、人材育成などでニカラグアを支援しています。",
+      "textEn": "Japan supports Nicaragua in earthquake and volcano preparedness, bridges, education, health, agriculture, and training."
+    },
+    "quiz": {
+      "question": "ニカラグアの国土にある中米最大の湖は何でしょう？",
+      "questionEn": "Which Central American lake is located in Nicaragua?",
+      "options": [
+        "ニカラグア湖",
+        "バイカル湖",
+        "ビクトリア湖",
+        "コモ湖"
+      ],
+      "optionsEn": [
+        "Lake Nicaragua",
+        "Lake Baikal",
+        "Lake Victoria",
+        "Lake Como"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はニカラグア湖です。淡水湖ですが、オオメジロザメが確認されたことでも知られます。",
+      "explanationEn": "The answer is Lake Nicaragua, a large freshwater lake historically known for bull sharks."
+    }
+  },
+  "ne": {
+    "iso": "ne",
+    "nameJa": "ニジェール",
+    "nameEn": "Niger",
+    "capitalJa": "ニアメ",
+    "capitalEn": "Niamey",
+    "subtitle": "サハラ砂漠、サヘル、隊商都市、遊牧民と農耕民の文化を持つ西アフリカの内陸国です。",
+    "subtitleEn": "A landlocked West African country of Sahara desert, Sahel, caravan towns, pastoralists, and farming communities.",
+    "flagUrl": "https://flagcdn.com/w320/ne.png",
+    "mapQuery": "Niamey, Niger",
+    "timeZone": "Africa/Niamey",
+    "currency": {
+      "nameJa": "西アフリカCFAフラン",
+      "nameEn": "West African CFA Franc",
+      "symbol": "CFA"
+    },
+    "languages": [
+      {
+        "nameJa": "ハウサ語",
+        "nameEn": "Hausa"
+      },
+      {
+        "nameJa": "ザルマ語",
+        "nameEn": "Zarma"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約200 m（ニアメ）",
+    "elevationEn": "Approx. 200 m (Niamey)",
+    "weather": {
+      "summary": "北部は極端に乾燥した砂漠で、南部は短い雨季を持つサヘル気候です。",
+      "summaryEn": "The north is extremely dry desert, while the south has a short rainy season typical of the Sahel."
+    },
+    "heritage": [
+      {
+        "id": "ne-air-tenere",
+        "title": "アイル・テネレ自然保護区",
+        "titleEn": "Aïr and Ténéré Natural Reserves",
+        "description": "山地と砂漠が広がり、アダックス、ダマガゼルなど乾燥地の希少動物を守ります。",
+        "descriptionEn": "Mountain and desert landscapes protect rare arid-zone wildlife such as addax and dama gazelles.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Air%20and%20Tenere%20Niger.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Air_and_Tenere_Niger.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Air_and_Tenere_Niger.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ne-w-park",
+        "title": "W国立公園",
+        "titleEn": "W National Park",
+        "description": "ニジェール川の大きな曲流地域にサバンナと湿地が広がり、多様な野生動物が暮らします。",
+        "descriptionEn": "Savanna and wetlands around a great bend of the Niger River support elephants, lions, birds, and other wildlife.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/W%20National%20Park%20Niger.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:W_National_Park_Niger.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:W_National_Park_Niger.jpg",
+        "category": "世界自然遺産地域",
+        "categoryEn": "World Heritage Region"
+      },
+      {
+        "id": "ne-agadez",
+        "title": "アガデス歴史地区",
+        "titleEn": "Historic Centre of Agadez",
+        "description": "泥れんがの大モスクと迷路状の街路が、サハラ隊商交易の歴史を伝えます。",
+        "descriptionEn": "A great earthen mosque and winding streets preserve the history of trans-Saharan caravan trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Agadez%20Niger.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Agadez_Niger.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Agadez_Niger.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ne-tuareg-silver",
+        "title": "トゥアレグの銀細工",
+        "titleEn": "Tuareg Silverwork",
+        "description": "幾何学模様を刻んだ銀の首飾りや護符を作り、家族、旅、地域の意味を表します。",
+        "descriptionEn": "Silver pendants and amulets engraved with geometric forms express family, travel, and regional identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tuareg%20silver%20Niger.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tuareg_silver_Niger.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tuareg_silver_Niger.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "ne-cure-salee",
+        "title": "キュール・サレ祭",
+        "titleEn": "Cure Salée Festival",
+        "description": "雨季の終わりに遊牧民が集まり、家畜、音楽、踊り、交流を行う大規模な祭りです。",
+        "descriptionEn": "Pastoral communities gather after the rains for livestock, music, dance, courtship, and exchange.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cure%20Salee%20Niger.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cure_Salee_Niger.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cure_Salee_Niger.jpg",
+        "category": "遊牧・祭礼文化",
+        "categoryEn": "Pastoral Festival Culture"
+      },
+      {
+        "id": "ne-dambou",
+        "title": "ダンブー",
+        "titleEn": "Dambou",
+        "description": "蒸した穀物に葉野菜、落花生、油、香辛料などを混ぜる家庭料理です。",
+        "descriptionEn": "Steamed grain is mixed with leafy greens, peanuts, oil, and spices in a nourishing local dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dambou%20Niger.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dambou_Niger.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dambou_Niger.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "食料・水・保健で協力",
+      "titleEn": "Cooperation in Food, Water, and Health",
+      "text": "日本は食料安全保障、水供給、保健、教育、人道支援、人材育成などを通じてニジェールを支援しています。",
+      "textEn": "Japan supports Niger through food security, water supply, health, education, humanitarian assistance, and training."
+    },
+    "quiz": {
+      "question": "ニジェールとナイジェリアの国名の由来に関係する大河は何でしょう？",
+      "questionEn": "Which major river is connected to the names Niger and Nigeria?",
+      "options": [
+        "ニジェール川",
+        "ナイル川",
+        "コンゴ川",
+        "ザンベジ川"
+      ],
+      "optionsEn": [
+        "Niger River",
+        "Nile River",
+        "Congo River",
+        "Zambezi River"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はニジェール川です。西アフリカの広い地域で農業、漁業、交通を支えます。",
+      "explanationEn": "The answer is the Niger River, which supports farming, fishing, and transport across West Africa."
+    }
+  },
+  "ng": {
+    "iso": "ng",
+    "nameJa": "ナイジェリア",
+    "nameEn": "Nigeria",
+    "capitalJa": "アブジャ",
+    "capitalEn": "Abuja",
+    "subtitle": "西アフリカ最大級の人口を持ち、都市、サバンナ、熱帯林、映画、音楽、多民族文化が広がる国です。",
+    "subtitleEn": "A highly populous West African nation of major cities, savanna, rainforest, film, music, and extraordinary cultural diversity.",
+    "flagUrl": "https://flagcdn.com/w320/ng.png",
+    "mapQuery": "Abuja, Nigeria",
+    "timeZone": "Africa/Lagos",
+    "currency": {
+      "nameJa": "ナイラ",
+      "nameEn": "Nigerian Naira",
+      "symbol": "₦"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "ハウサ語",
+        "nameEn": "Hausa"
+      },
+      {
+        "nameJa": "ヨルバ語",
+        "nameEn": "Yoruba"
+      },
+      {
+        "nameJa": "イボ語",
+        "nameEn": "Igbo"
+      }
+    ],
+    "elevation": "約360 m（アブジャ）",
+    "elevationEn": "Approx. 360 m (Abuja)",
+    "weather": {
+      "summary": "南部は高温多湿で雨が多く、北部ほど乾燥したサバンナ気候になります。",
+      "summaryEn": "Southern Nigeria is humid and rainy, while the north becomes drier and more savanna-like."
+    },
+    "heritage": [
+      {
+        "id": "ng-sukur",
+        "title": "スクルの文化的景観",
+        "titleEn": "Sukur Cultural Landscape",
+        "description": "丘の上の宮殿、段々畑、石畳の道が、鉄生産と山岳共同体の歴史を伝えます。",
+        "descriptionEn": "A hilltop palace, terraces, and stone paths preserve the history of iron production and mountain communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sukur%20Cultural%20Landscape%20Nigeria.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sukur_Cultural_Landscape_Nigeria.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sukur_Cultural_Landscape_Nigeria.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ng-osun-osogbo",
+        "title": "オスン＝オソボ聖林",
+        "titleEn": "Osun-Osogbo Sacred Grove",
+        "description": "川沿いの森に神殿と彫刻が点在し、ヨルバの女神オスンへの信仰を伝えます。",
+        "descriptionEn": "Shrines and sculptures in a riverside forest preserve Yoruba worship associated with the goddess Osun.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Osun%20Osogbo%20Sacred%20Grove.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Osun_Osogbo_Sacred_Grove.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Osun_Osogbo_Sacred_Grove.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ng-zuma-rock",
+        "title": "ズマ・ロック",
+        "titleEn": "Zuma Rock",
+        "description": "首都圏近くにそびえる巨大な一枚岩で、自然景観と地域の物語を象徴します。",
+        "descriptionEn": "This giant monolith near the capital region is a major natural landmark surrounded by local stories.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zuma%20Rock%20Nigeria.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Zuma_Rock_Nigeria.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Zuma_Rock_Nigeria.jpg",
+        "category": "自然・文化景観",
+        "categoryEn": "Natural and Cultural Landmark"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ng-jollof",
+        "title": "ナイジェリア風ジョロフライス",
+        "titleEn": "Nigerian Jollof Rice",
+        "description": "米をトマト、唐辛子、香辛料、肉や野菜と炊き込む祝いの定番料理です。",
+        "descriptionEn": "Rice is cooked with tomato, peppers, spices, meat, or vegetables for celebrations and everyday meals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nigerian%20jollof%20rice.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nigerian_jollof_rice.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nigerian_jollof_rice.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ng-adire",
+        "title": "アディレ",
+        "titleEn": "Adire",
+        "description": "布を縛る、縫う、ろうを使うなどして防染し、藍色の多彩な模様を作ります。",
+        "descriptionEn": "Cloth is tied, stitched, or wax-resisted to create diverse indigo patterns in a Yoruba textile tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Adire%20textile%20Nigeria.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Adire_textile_Nigeria.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Adire_textile_Nigeria.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "ng-durbar",
+        "title": "ダルバール祭",
+        "titleEn": "Durbar Festival",
+        "description": "豪華に飾られた馬と騎手が行進し、北部の首長制、歴史、祝祭を表現します。",
+        "descriptionEn": "Decorated horses and riders parade in a northern tradition linked to emirates, history, and celebration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Durbar%20Festival%20Nigeria.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Durbar_Festival_Nigeria.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Durbar_Festival_Nigeria.jpg",
+        "category": "祭礼・騎馬文化",
+        "categoryEn": "Festival and Equestrian Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "ビジネス・文化・保健で交流",
+      "titleEn": "Exchange in Business, Culture, and Health",
+      "text": "日本とナイジェリアは貿易、エネルギー、保健、スタートアップ、文化、人材育成で交流しています。",
+      "textEn": "Japan and Nigeria cooperate in trade, energy, health, startups, culture, and professional training."
+    },
+    "quiz": {
+      "question": "ナイジェリアの映画産業を表す通称は何でしょう？",
+      "questionEn": "What nickname is commonly used for Nigeria's film industry?",
+      "options": [
+        "ノリウッド",
+        "ボリウッド",
+        "ハリウッド",
+        "コリウッド"
+      ],
+      "optionsEn": [
+        "Nollywood",
+        "Bollywood",
+        "Hollywood",
+        "Kollywood"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はノリウッドです。多数の作品を制作し、アフリカ内外で大きな影響力を持ちます。",
+      "explanationEn": "The answer is Nollywood, a major film industry producing large numbers of works for African and global audiences."
+    }
+  },
+  "kp": {
+    "iso": "kp",
+    "nameJa": "北朝鮮",
+    "nameEn": "North Korea",
+    "capitalJa": "平壌",
+    "capitalEn": "Pyongyang",
+    "subtitle": "朝鮮半島北部に位置し、古代王国の遺跡、山岳景観、独自の食文化と芸能を持つ国です。",
+    "subtitleEn": "A country in the northern Korean Peninsula with ancient heritage, mountain landscapes, distinctive cuisine, and performing arts.",
+    "flagUrl": "https://flagcdn.com/w320/kp.png",
+    "mapQuery": "Pyongyang, North Korea",
+    "timeZone": "Asia/Pyongyang",
+    "currency": {
+      "nameJa": "北朝鮮ウォン",
+      "nameEn": "North Korean Won",
+      "symbol": "₩"
+    },
+    "languages": [
+      {
+        "nameJa": "朝鮮語",
+        "nameEn": "Korean"
+      }
+    ],
+    "elevation": "約38 m（平壌）",
+    "elevationEn": "Approx. 38 m (Pyongyang)",
+    "weather": {
+      "summary": "冬は寒く乾燥し、夏は高温多湿になります。山地では冬の寒さがさらに厳しくなります。",
+      "summaryEn": "Winters are cold and dry, summers are hot and humid, and mountain areas experience more severe winter conditions."
+    },
+    "heritage": [
+      {
+        "id": "kp-koguryo-tombs",
+        "title": "高句麗古墳群",
+        "titleEn": "Complex of Koguryo Tombs",
+        "description": "色鮮やかな壁画を持つ古墳が、古代高句麗の服装、建築、信仰、生活を伝えます。",
+        "descriptionEn": "Painted tombs preserve scenes of clothing, architecture, belief, and everyday life in the ancient Koguryo kingdom.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Koguryo%20Tombs%20North%20Korea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Koguryo_Tombs_North_Korea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Koguryo_Tombs_North_Korea.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "kp-kaesong",
+        "title": "開城の歴史的建造物群",
+        "titleEn": "Historic Monuments and Sites in Kaesong",
+        "description": "高麗王朝の都に学校、城壁、墓、宮殿跡が残り、中世朝鮮の政治と文化を伝えます。",
+        "descriptionEn": "Schools, walls, royal tombs, and palace remains preserve the political and cultural history of the Koryo dynasty.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kaesong%20North%20Korea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kaesong_North_Korea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kaesong_North_Korea.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "kp-paektu",
+        "title": "白頭山",
+        "titleEn": "Mount Paektu",
+        "description": "火口湖を持つ火山で、朝鮮民族の神話、歴史、自然景観と深く結びついています。",
+        "descriptionEn": "This volcanic mountain and crater lake are deeply connected to Korean mythology, history, and natural identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Paektu%20North%20Korea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mount_Paektu_North_Korea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mount_Paektu_North_Korea.jpg",
+        "category": "自然・文化景観",
+        "categoryEn": "Natural and Cultural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "kp-naengmyeon",
+        "title": "平壌冷麺",
+        "titleEn": "Pyongyang Naengmyeon",
+        "description": "そば粉などの細い麺を冷たいスープに入れ、肉、野菜、卵などを添える料理です。",
+        "descriptionEn": "Thin buckwheat-based noodles are served in cold broth with meat, vegetables, and egg.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pyongyang%20naengmyeon.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pyongyang_naengmyeon.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pyongyang_naengmyeon.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "kp-kimchi",
+        "title": "キムチ作り",
+        "titleEn": "Kimchi-Making Tradition",
+        "description": "野菜を塩漬けし、唐辛子、ニンニク、発酵調味料で保存する冬支度の食文化です。",
+        "descriptionEn": "Vegetables are salted and fermented with chili, garlic, and seasonings as an important preparation for winter.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kimchi%20North%20Korea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kimchi_North_Korea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kimchi_North_Korea.jpg",
+        "category": "発酵食文化",
+        "categoryEn": "Fermented Food Culture"
+      },
+      {
+        "id": "kp-korean-dance",
+        "title": "朝鮮の民俗舞踊",
+        "titleEn": "Korean Folk Dance",
+        "description": "長い袖、扇、太鼓などを使い、滑らかな動きとリズムで季節や物語を表現します。",
+        "descriptionEn": "Long sleeves, fans, drums, and flowing movement express seasons, stories, and community celebration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean%20folk%20dance%20North%20Korea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Korean_folk_dance_North_Korea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Korean_folk_dance_North_Korea.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "文化財・人道分野で接点",
+      "titleEn": "Connections in Heritage and Humanitarian Fields",
+      "text": "日本と北朝鮮の関係には多くの課題がありますが、文化財研究や国際機関を通じた人道分野の接点があります。",
+      "textEn": "Relations between Japan and North Korea face serious challenges, while limited connections exist through heritage research and humanitarian work via international organizations."
+    },
+    "quiz": {
+      "question": "高句麗古墳群で特に価値が高いものは何でしょう？",
+      "questionEn": "What is especially valuable about the Complex of Koguryo Tombs?",
+      "options": [
+        "古代生活を描いた壁画",
+        "巨大な金属塔",
+        "近代的な鉄道",
+        "サンゴ礁"
+      ],
+      "optionsEn": [
+        "Murals showing ancient life",
+        "A giant metal tower",
+        "A modern railway",
+        "Coral reefs"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は古代生活を描いた壁画です。人物、動物、建築、信仰の様子が残されています。",
+      "explanationEn": "The answer is the murals, which preserve images of people, animals, architecture, and belief."
+    }
+  },
+  "mk": {
+    "iso": "mk",
+    "nameJa": "北マケドニア",
+    "nameEn": "North Macedonia",
+    "capitalJa": "スコピエ",
+    "capitalEn": "Skopje",
+    "subtitle": "湖、山地、古代遺跡、正教会、バルカンの食と音楽文化を持つ国です。",
+    "subtitleEn": "A Balkan country of lakes, mountains, ancient sites, Orthodox heritage, food, and music traditions.",
+    "flagUrl": "https://flagcdn.com/w320/mk.png",
+    "mapQuery": "Skopje, North Macedonia",
+    "timeZone": "Europe/Skopje",
+    "currency": {
+      "nameJa": "マケドニア・デナール",
+      "nameEn": "Macedonian Denar",
+      "symbol": "ден"
+    },
+    "languages": [
+      {
+        "nameJa": "マケドニア語",
+        "nameEn": "Macedonian"
+      },
+      {
+        "nameJa": "アルバニア語",
+        "nameEn": "Albanian"
+      }
+    ],
+    "elevation": "約245 m（スコピエ）",
+    "elevationEn": "Approx. 245 m (Skopje)",
+    "weather": {
+      "summary": "大陸性気候で、夏は暑く乾燥し、冬は寒くなります。山地は降雪が多くなります。",
+      "summaryEn": "The climate is continental, with hot dry summers, cold winters, and heavier snowfall in mountain regions."
+    },
+    "heritage": [
+      {
+        "id": "mk-ohrid",
+        "title": "オフリド地域の自然・文化遺産",
+        "titleEn": "Natural and Cultural Heritage of the Ohrid Region",
+        "description": "古い教会、湖畔都市、固有生物を持つ深い湖が一体となった複合遺産です。",
+        "descriptionEn": "Ancient churches, a historic lakeside town, and a deep lake with endemic species form a mixed heritage landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Ohrid%20North%20Macedonia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Ohrid_North_Macedonia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lake_Ohrid_North_Macedonia.jpg",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      },
+      {
+        "id": "mk-kokino",
+        "title": "コキノ巨石観測所",
+        "titleEn": "Kokino Megalithic Observatory",
+        "description": "岩の配置と地平線を利用し、太陽や月の動きを観察したと考えられる先史遺跡です。",
+        "descriptionEn": "Rock alignments and horizon markers are believed to have been used to observe movements of the sun and moon.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kokino%20North%20Macedonia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kokino_North_Macedonia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kokino_North_Macedonia.jpg",
+        "category": "考古・天文遺産",
+        "categoryEn": "Archaeological and Astronomical Heritage"
+      },
+      {
+        "id": "mk-matka",
+        "title": "マトカ渓谷",
+        "titleEn": "Matka Canyon",
+        "description": "石灰岩の峡谷に湖、洞窟、修道院が集まり、首都近郊の自然景観を形作ります。",
+        "descriptionEn": "A limestone canyon contains a lake, caves, monasteries, and rich biodiversity near the capital.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Matka%20Canyon%20North%20Macedonia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Matka_Canyon_North_Macedonia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Matka_Canyon_North_Macedonia.jpg",
+        "category": "自然・文化景観",
+        "categoryEn": "Natural and Cultural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "mk-tavce",
+        "title": "タフチェ・グラフチェ",
+        "titleEn": "Tavče Gravče",
+        "description": "白い豆を玉ねぎ、唐辛子、香辛料と土鍋で焼く、国を代表する家庭料理です。",
+        "descriptionEn": "White beans are baked with onions, peppers, and spices in a traditional earthen dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tavce%20gravce%20North%20Macedonia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tavce_gravce_North_Macedonia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tavce_gravce_North_Macedonia.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "mk-oro",
+        "title": "オロ",
+        "titleEn": "Oro Dance",
+        "description": "人々が輪や列を作り、地域の音楽に合わせて複雑な足取りをそろえる舞踊です。",
+        "descriptionEn": "Dancers form circles or lines and perform coordinated regional steps to traditional music.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Macedonian%20oro%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Macedonian_oro_dance.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Macedonian_oro_dance.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      },
+      {
+        "id": "mk-filigree",
+        "title": "銀線細工",
+        "titleEn": "Filigree Silverwork",
+        "description": "細い銀線を曲げて花や幾何学模様を作り、装身具や装飾品に仕上げます。",
+        "descriptionEn": "Fine silver wires are shaped into floral and geometric jewelry and decorative objects.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Macedonian%20filigree.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Macedonian_filigree.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Macedonian_filigree.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "文化・教育・地域協力で交流",
+      "titleEn": "Exchange Through Culture, Education, and Regional Cooperation",
+      "text": "日本と北マケドニアは文化、教育、防災、環境、人材育成などで交流しています。",
+      "textEn": "Japan and North Macedonia maintain ties in culture, education, disaster preparedness, environment, and training."
+    },
+    "quiz": {
+      "question": "北マケドニアを代表する湖で、ヨーロッパ最古級とされる湖は何でしょう？",
+      "questionEn": "Which North Macedonian lake is considered one of Europe's oldest?",
+      "options": [
+        "オフリド湖",
+        "バラトン湖",
+        "コモ湖",
+        "ネス湖"
+      ],
+      "optionsEn": [
+        "Lake Ohrid",
+        "Lake Balaton",
+        "Lake Como",
+        "Loch Ness"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はオフリド湖です。多くの固有種と長い人間の歴史を持っています。",
+      "explanationEn": "The answer is Lake Ohrid, known for endemic species and a very long human history."
+    }
+  },
+  "no": {
+    "iso": "no",
+    "nameJa": "ノルウェー",
+    "nameEn": "Norway",
+    "capitalJa": "オスロ",
+    "capitalEn": "Oslo",
+    "subtitle": "フィヨルド、北極圏、山岳、海洋文化、福祉と環境技術で知られる北欧の国です。",
+    "subtitleEn": "A Nordic country known for fiords, Arctic regions, mountains, maritime culture, welfare, and environmental technology.",
+    "flagUrl": "https://flagcdn.com/w320/no.png",
+    "mapQuery": "Oslo, Norway",
+    "timeZone": "Europe/Oslo",
+    "currency": {
+      "nameJa": "ノルウェー・クローネ",
+      "nameEn": "Norwegian Krone",
+      "symbol": "kr"
+    },
+    "languages": [
+      {
+        "nameJa": "ノルウェー語",
+        "nameEn": "Norwegian"
+      },
+      {
+        "nameJa": "サーミ諸語",
+        "nameEn": "Sámi languages"
+      }
+    ],
+    "elevation": "約23 m（オスロ）",
+    "elevationEn": "Approx. 23 m (Oslo)",
+    "weather": {
+      "summary": "沿岸部は海流の影響で緯度の割に穏やかですが、内陸と北部の冬は寒くなります。",
+      "summaryEn": "Coastal areas are mild for their latitude because of ocean currents, while inland and northern winters are colder."
+    },
+    "heritage": [
+      {
+        "id": "no-geiranger",
+        "title": "西ノルウェーのフィヨルド群",
+        "titleEn": "West Norwegian Fjords",
+        "description": "氷河が削った深い湾に切り立った山、滝、農場が連なる壮大な景観です。",
+        "descriptionEn": "Deep glacial inlets, steep mountains, waterfalls, and historic farms create a dramatic landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Geirangerfjord%20Norway.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Geirangerfjord_Norway.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Geirangerfjord_Norway.jpg",
+        "category": "世界自然遺産地域",
+        "categoryEn": "World Heritage Region"
+      },
+      {
+        "id": "no-bryggen",
+        "title": "ブリッゲン",
+        "titleEn": "Bryggen",
+        "description": "ベルゲン港に木造商館が並び、ハンザ同盟の北海交易の歴史を伝えます。",
+        "descriptionEn": "Wooden merchant buildings along Bergen's harbor preserve the history of Hanseatic North Sea trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bryggen%20Bergen%20Norway.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bryggen_Bergen_Norway.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bryggen_Bergen_Norway.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "no-urnes",
+        "title": "ウルネスの木造教会",
+        "titleEn": "Urnes Stave Church",
+        "description": "木造建築にキリスト教と北欧の動物文様が融合した、中世教会の傑作です。",
+        "descriptionEn": "This medieval wooden church combines Christian architecture with distinctive Nordic animal ornament.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Urnes%20Stave%20Church%20Norway.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Urnes_Stave_Church_Norway.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Urnes_Stave_Church_Norway.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "no-bunad",
+        "title": "ブーナッド",
+        "titleEn": "Bunad",
+        "description": "地域ごとに異なる刺しゅうや色を持つ民族衣装で、祝日や結婚式に着用します。",
+        "descriptionEn": "Regional costumes with distinctive colors and embroidery are worn for national days, weddings, and celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Norwegian%20bunad.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Norwegian_bunad.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Norwegian_bunad.jpg",
+        "category": "服飾文化",
+        "categoryEn": "Clothing Culture"
+      },
+      {
+        "id": "no-brunost",
+        "title": "ブルノスト",
+        "titleEn": "Brunost",
+        "description": "乳清を煮詰めて作る茶色いチーズで、甘みとキャラメルのような風味があります。",
+        "descriptionEn": "Whey is slowly reduced into a brown cheese with a sweet, caramel-like flavor.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Norwegian%20brunost.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Norwegian_brunost.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Norwegian_brunost.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "no-rosemaling",
+        "title": "ローズマリング",
+        "titleEn": "Rosemaling",
+        "description": "木製品に花や曲線模様を描く装飾絵画で、地域ごとに異なる様式があります。",
+        "descriptionEn": "Floral and flowing designs are painted on wooden objects in several distinctive regional styles.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Norwegian%20rosemaling.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Norwegian_rosemaling.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Norwegian_rosemaling.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "海洋・エネルギー・平和外交で交流",
+      "titleEn": "Exchange in Oceans, Energy, and Peace Diplomacy",
+      "text": "日本とノルウェーは水産、海運、再生可能エネルギー、北極研究、平和構築などで協力しています。",
+      "textEn": "Japan and Norway cooperate in fisheries, shipping, renewable energy, Arctic research, and peacebuilding."
+    },
+    "quiz": {
+      "question": "ノルウェーの海岸に多く見られる、氷河が削った細長く深い湾は何でしょう？",
+      "questionEn": "What are the long, deep inlets carved by glaciers along Norway's coast called?",
+      "options": [
+        "フィヨルド",
+        "オアシス",
+        "デルタ",
+        "環礁"
+      ],
+      "optionsEn": [
+        "Fjords",
+        "Oases",
+        "Deltas",
+        "Atolls"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はフィヨルドです。氷河が谷を深く削り、海水が入り込んで形成されました。",
+      "explanationEn": "The answer is fjords, formed when seawater flooded deep valleys carved by glaciers."
+    }
+  }
+}

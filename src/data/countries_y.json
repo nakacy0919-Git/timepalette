@@ -1,0 +1,144 @@
+{
+  "ye": {
+    "iso": "ye",
+    "nameJa": "イエメン",
+    "nameEn": "Yemen",
+    "capitalJa": "サナア（憲法上）／アデン（暫定首都）",
+    "capitalEn": "Sana'a (constitutional) / Aden (temporary capital)",
+    "subtitle": "アラビア半島南西部に位置し、山岳都市、砂漠、紅海とアラビア海、古代交易、独自の建築、料理、音楽文化を持つ国です。",
+    "subtitleEn": "A southwestern Arabian country of mountain cities, deserts, Red Sea and Arabian Sea coasts, ancient trade, distinctive architecture, cuisine, and musical traditions.",
+    "flagUrl": "https://flagcdn.com/w320/ye.png",
+    "mapQuery": "Sana'a, Yemen",
+    "timeZone": "Asia/Aden",
+    "currency": {
+      "nameJa": "イエメン・リアル",
+      "nameEn": "Yemeni Rial",
+      "symbol": "﷼"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約2,250 m（サナア）",
+    "elevationEn": "Approx. 2,250 m (Sana'a)",
+    "weather": {
+      "summary": "沿岸部は非常に暑く、内陸高地は標高のため比較的涼しくなります。東部は乾燥し、山地では季節的な雨が見られます。",
+      "summaryEn": "Coastal areas are extremely hot, while the interior highlands are cooler because of elevation. Eastern regions are arid, and mountain areas receive seasonal rainfall."
+    },
+    "heritage": [
+      {
+        "id": "ye-sanaa",
+        "title": "サナア旧市街",
+        "titleEn": "Old City of Sana'a",
+        "description": "高地に築かれた歴史都市で、幾何学模様の白い装飾を持つ多層の日干しれんが住宅、モスク、市場が密集しています。",
+        "descriptionEn": "A historic highland city of multi-storey earth-built houses decorated with white geometric patterns, mosques, and traditional markets.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Old%20City,%20Sana'a.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Old_City,_Sana'a.JPG",
+        "imageCredit": "Shoestring",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ye-shibam",
+        "title": "城壁都市シバーム",
+        "titleEn": "Old Walled City of Shibam",
+        "description": "ワジ・ハドラマウトに日干しれんがの高層住宅が密集し、「砂漠のマンハッタン」とも呼ばれる歴史都市です。",
+        "descriptionEn": "Tall mud-brick tower houses rise closely together in Wadi Hadramaut, giving the historic city its nickname, the Manhattan of the Desert.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shibam,%20Yemen%2001.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Shibam,_Yemen_01.jpg",
+        "imageCredit": "Hasso Hohmann",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ye-socotra",
+        "title": "ソコトラ諸島",
+        "titleEn": "Socotra Archipelago",
+        "description": "長い地理的孤立によって独自の生態系が形成され、竜血樹をはじめとする多くの固有植物と動物が暮らします。",
+        "descriptionEn": "Long geographic isolation created a distinctive ecosystem with many endemic plants and animals, including dragon's blood trees.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dragon%E2%80%99s%20blood%20trees,%20Diksam%20plateau,%20Socotra%20Island.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dragon%E2%80%99s_blood_trees,_Diksam_plateau,_Socotra_Island.jpg",
+        "imageCredit": "2socotra",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ye-saltah",
+        "title": "サルタ",
+        "titleEn": "Saltah",
+        "description": "肉や野菜の煮込みにフェヌグリークの泡状ソースなどを加え、熱した石鍋で提供するイエメンを代表する料理です。",
+        "descriptionEn": "A bubbling stew of meat or vegetables is topped with a whipped fenugreek sauce and commonly served in a heated stone bowl.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Saltah.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Saltah.jpg",
+        "imageCredit": "Rania al-Bahara",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ye-jambiya",
+        "title": "ジャンビーヤ",
+        "titleEn": "Jambiya",
+        "description": "湾曲した短剣を装飾的な鞘と帯に収めて身に着け、成人、家族、地域の誇りを表す伝統的な装身文化です。",
+        "descriptionEn": "A curved dagger worn in an ornate sheath and belt represents adulthood, family heritage, regional identity, and social tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jambiya.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jambiya.jpg",
+        "imageCredit": "Bernard Gagnon",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "伝統工芸・服飾文化",
+        "categoryEn": "Traditional Craft and Clothing Culture"
+      },
+      {
+        "id": "ye-song-sanaa",
+        "title": "サナアの歌",
+        "titleEn": "Song of Sana'a",
+        "description": "詩を独唱し、イエメンのリュートであるカンブースと銅製の盆の打音で伴奏する伝統音楽です。",
+        "descriptionEn": "A solo singer performs poetic songs accompanied by the qanbus, a Yemeni lute, and rhythm lightly played on a copper tray.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Yemeni%20Qanbus%20owned%20by%20Ahmad%20Al-Tashi.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Yemeni_Qanbus_owned_by_Ahmad_Al-Tashi.jpg",
+        "imageCredit": "Ahmadaltashi",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "無形文化遺産・音楽文化",
+        "categoryEn": "Intangible Heritage and Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "人道支援・保健・文化財保護で協力",
+      "titleEn": "Cooperation in Humanitarian Aid, Health, and Heritage Protection",
+      "text": "日本は食料、保健医療、水・衛生、避難民支援、地雷対策、平和への取り組み、文化財保護などを通じてイエメンを支援しています。",
+      "textEn": "Japan supports Yemen through food assistance, health care, water and sanitation, aid for displaced people, mine action, peace efforts, and cultural heritage protection."
+    },
+    "quiz": {
+      "question": "「砂漠のマンハッタン」と呼ばれるイエメンの世界遺産都市はどこでしょう？",
+      "questionEn": "Which Yemeni World Heritage city is known as the Manhattan of the Desert?",
+      "options": [
+        "シバーム",
+        "アデン",
+        "ホデイダ",
+        "タイズ"
+      ],
+      "optionsEn": [
+        "Shibam",
+        "Aden",
+        "Hodeidah",
+        "Taiz"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はシバームです。日干しれんがで造られた高層住宅が城壁内に密集していることから、この呼び名があります。",
+      "explanationEn": "The answer is Shibam. Its tightly packed multi-storey mud-brick houses inspired the nickname Manhattan of the Desert."
+    }
+  }
+}

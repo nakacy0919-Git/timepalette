@@ -1,0 +1,1454 @@
+{
+  "pk": {
+    "iso": "pk",
+    "nameJa": "パキスタン",
+    "nameEn": "Pakistan",
+    "capitalJa": "イスラマバード",
+    "capitalEn": "Islamabad",
+    "subtitle": "インダス文明の遺跡、ヒマラヤ・カラコルムの高峰、多言語社会、豊かな工芸と食文化を持つ国です。",
+    "subtitleEn": "A South Asian country of Indus civilization sites, Himalayan and Karakoram peaks, multilingual communities, crafts, and cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/pk.png",
+    "mapQuery": "Islamabad, Pakistan",
+    "timeZone": "Asia/Karachi",
+    "currency": {
+      "nameJa": "パキスタン・ルピー",
+      "nameEn": "Pakistani Rupee",
+      "symbol": "₨"
+    },
+    "languages": [
+      {
+        "nameJa": "ウルドゥー語",
+        "nameEn": "Urdu"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約540 m（イスラマバード）",
+    "elevationEn": "Approx. 540 m (Islamabad)",
+    "weather": {
+      "summary": "南部は暑く乾燥し、北部山地は寒冷です。地域によってモンスーンの影響も受けます。",
+      "summaryEn": "Southern regions are hot and dry, northern mountains are cold, and monsoon rainfall affects parts of the country."
+    },
+    "heritage": [
+      {
+        "id": "pk-mohenjo-daro",
+        "title": "モヘンジョダロ",
+        "titleEn": "Mohenjo-daro",
+        "description": "高度な排水設備と計画的な街路を持つインダス文明の都市遺跡です。",
+        "descriptionEn": "This Indus civilization city had planned streets, brick buildings, and sophisticated drainage.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mohenjodaro.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mohenjodaro.jpg",
+        "imageCredit": "Noor-ul-Huda Arif",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "pk-badshahi",
+        "title": "バードシャーヒー・モスク",
+        "titleEn": "Badshahi Mosque",
+        "description": "赤い砂岩と白大理石を使った巨大なモスクで、ムガル建築の壮大さを伝えます。",
+        "descriptionEn": "Red sandstone, white marble, and a vast courtyard display the grandeur of Mughal architecture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Badshahi%20mosque%20wide%20angle%20front%20view.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Badshahi_mosque_wide_angle_front_view.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "歴史・宗教建築",
+        "categoryEn": "Historic Religious Architecture"
+      },
+      {
+        "id": "pk-hunza",
+        "title": "フンザ渓谷",
+        "titleEn": "Hunza Valley",
+        "description": "雪山、氷河、果樹園、村々が広がるカラコルム山脈の高地景観です。",
+        "descriptionEn": "Snowy peaks, glaciers, orchards, and villages form a dramatic highland landscape in the Karakoram.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hunza%20Valley-01.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hunza_Valley-01.jpg",
+        "imageCredit": "Shakeel.amjad39",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "自然・文化景観",
+        "categoryEn": "Natural and Cultural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "pk-biryani",
+        "title": "パキスタン風ビリヤニ",
+        "titleEn": "Pakistani Biryani",
+        "description": "香り高い米、肉、ヨーグルト、香辛料を重ねて炊き上げる人気料理です。",
+        "descriptionEn": "Fragrant rice, meat, yogurt, and spices are layered and cooked into a celebrated dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pakistani%20biryani.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pakistani_biryani.jpg",
+        "imageCredit": "Netha Hussain",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pakistani_biryani.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "pk-truck-art",
+        "title": "トラックアート",
+        "titleEn": "Pakistani Truck Art",
+        "description": "車体を花、鳥、書道、鏡などで鮮やかに装飾する移動する民俗芸術です。",
+        "descriptionEn": "Trucks are covered with flowers, birds, calligraphy, mirrors, and color in a moving folk-art tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pakistani%20truck%20art.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pakistani_truck_art.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pakistani_truck_art.jpg",
+        "category": "装飾・民俗芸術",
+        "categoryEn": "Decorative Folk Art"
+      },
+      {
+        "id": "pk-shalwar-kameez",
+        "title": "シャルワール・カミーズ",
+        "titleEn": "Shalwar Kameez",
+        "description": "ゆったりしたズボンと長い上衣を組み合わせる、日常から正装まで幅広く着られる服です。",
+        "descriptionEn": "Loose trousers and a long tunic form clothing worn in everyday life and formal settings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Men%20in%20shalwar%20kameez%20on%20the%20road%20to%20Kalash,%20Pakistan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Men_in_shalwar_kameez_on_the_road_to_Kalash,_Pakistan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Men_in_shalwar_kameez_on_the_road_to_Kalash,_Pakistan.jpg",
+        "category": "服飾文化",
+        "categoryEn": "Clothing Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "防災・教育・インフラで協力",
+      "titleEn": "Cooperation in Disaster Preparedness, Education, and Infrastructure",
+      "text": "日本は道路、電力、防災、保健、教育、人材育成などを通じてパキスタンと協力しています。",
+      "textEn": "Japan and Pakistan cooperate in roads, energy, disaster preparedness, health, education, and professional training."
+    },
+    "quiz": {
+      "question": "モヘンジョダロを築いた古代文明は何でしょう？",
+      "questionEn": "Which ancient civilization built Mohenjo-daro?",
+      "options": [
+        "インダス文明",
+        "インカ文明",
+        "マヤ文明",
+        "古代ローマ文明"
+      ],
+      "optionsEn": [
+        "Indus civilization",
+        "Inca civilization",
+        "Maya civilization",
+        "Ancient Roman civilization"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はインダス文明です。都市計画と排水設備の発達で知られます。",
+      "explanationEn": "The answer is the Indus civilization, known for planned cities and advanced drainage."
+    }
+  },
+  "pw": {
+    "iso": "pw",
+    "nameJa": "パラオ",
+    "nameEn": "Palau",
+    "capitalJa": "ンゲルルムッド",
+    "capitalEn": "Ngerulmud",
+    "subtitle": "西太平洋の島々に、石灰岩の島、サンゴ礁、海洋文化、共同体の伝統が広がる国です。",
+    "subtitleEn": "A western Pacific island nation of limestone islands, coral reefs, marine life, and community traditions.",
+    "flagUrl": "https://flagcdn.com/w320/pw.png",
+    "mapQuery": "Ngerulmud, Palau",
+    "timeZone": "Pacific/Palau",
+    "currency": {
+      "nameJa": "米ドル",
+      "nameEn": "United States Dollar",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "nameJa": "パラオ語",
+        "nameEn": "Palauan"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約20 m（ンゲルルムッド周辺）",
+    "elevationEn": "Approx. 20 m (Ngerulmud area)",
+    "weather": {
+      "summary": "一年を通して高温多湿で雨が多く、海水温も比較的高い熱帯海洋性気候です。",
+      "summaryEn": "Palau has a hot, humid, and rainy tropical maritime climate with generally warm seas."
+    },
+    "heritage": [
+      {
+        "id": "pw-rock-islands",
+        "title": "ロックアイランド南ラグーン",
+        "titleEn": "Rock Islands Southern Lagoon",
+        "description": "キノコ形の石灰岩島と青いラグーン、サンゴ礁が広がる複合的な海洋景観です。",
+        "descriptionEn": "Mushroom-shaped limestone islands, blue lagoons, and coral reefs create a remarkable marine landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rock%20Islands,%20Palau.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Rock_Islands,_Palau.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Rock_Islands,_Palau.jpg",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      },
+      {
+        "id": "pw-jellyfish-lake",
+        "title": "ジェリーフィッシュ・レイク",
+        "titleEn": "Jellyfish Lake",
+        "description": "海から隔てられた湖に多数のクラゲが暮らし、独特の生態系が形成されています。",
+        "descriptionEn": "An isolated marine lake supports a remarkable population of jellyfish and a distinctive ecosystem.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jellyfish%20Lake%20Palau.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jellyfish_Lake_Palau.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Jellyfish_Lake_Palau.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "pw-ngardmau",
+        "title": "ガルドマウの滝",
+        "titleEn": "Ngardmau Waterfall",
+        "description": "熱帯林の中を水が岩壁から流れ落ちる、パラオ最大級の滝です。",
+        "descriptionEn": "Water drops through tropical forest at one of Palau's largest and best-known waterfalls.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ngardmau%20Waterfall.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ngardmau_Waterfall.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ngardmau_Waterfall.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "pw-bai",
+        "title": "バイ",
+        "titleEn": "Bai Meeting House",
+        "description": "彫刻と物語画で飾られた伝統的な集会所で、共同体の話し合いや儀礼に使われます。",
+        "descriptionEn": "A richly decorated traditional meeting house supports community discussion, ceremony, and storytelling.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20bai%20in%20Palau.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:A_bai_in_Palau.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:A_bai_in_Palau.jpg",
+        "category": "建築・共同体文化",
+        "categoryEn": "Architectural and Community Culture"
+      },
+      {
+        "id": "pw-first-bite",
+        "title": "ファースト・バイトの儀式",
+        "titleEn": "First-Bite Ceremony",
+        "description": "出産後の母親を祝福し、家族と共同体が食事、装い、贈り物を通して支えます。",
+        "descriptionEn": "Families and communities honor a mother after childbirth through food, dress, gifts, and ceremony.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Palauan%20first%20bite%20ceremony.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Palauan_first_bite_ceremony.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Palauan_first_bite_ceremony.jpg",
+        "category": "家族・儀礼文化",
+        "categoryEn": "Family and Ceremonial Culture"
+      },
+      {
+        "id": "pw-taro-fish",
+        "title": "タロイモと魚の食文化",
+        "titleEn": "Taro and Fish Cuisine",
+        "description": "タロイモ、魚、ココナツなど、島の農地と海から得られる食材を組み合わせます。",
+        "descriptionEn": "Taro, fish, coconut, and other island ingredients connect farming, reefs, and everyday food.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Palauan%20food.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Palauan_food.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Palauan_food.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "歴史・海洋・観光で深い交流",
+      "titleEn": "Strong Links Through History, Oceans, and Tourism",
+      "text": "日本とパラオは歴史的な関係を持ち、現在は漁業、観光、環境、防災、教育で協力しています。",
+      "textEn": "Japan and Palau share historical ties and now cooperate in fisheries, tourism, environment, disaster preparedness, and education."
+    },
+    "quiz": {
+      "question": "パラオのロックアイランドで多く見られる島の形は何に例えられるでしょう？",
+      "questionEn": "What shape are many of Palau's Rock Islands often compared to?",
+      "options": [
+        "キノコ",
+        "三角定規",
+        "氷山",
+        "高層ビル"
+      ],
+      "optionsEn": [
+        "Mushrooms",
+        "Triangles",
+        "Icebergs",
+        "Skyscrapers"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はキノコです。波や風化によって島の下部が細く削られています。",
+      "explanationEn": "The answer is mushrooms, because erosion has narrowed the lower parts of many limestone islands."
+    }
+  },
+  "pa": {
+    "iso": "pa",
+    "nameJa": "パナマ",
+    "nameEn": "Panama",
+    "capitalJa": "パナマシティ",
+    "capitalEn": "Panama City",
+    "subtitle": "南北アメリカを結ぶ地峡に、運河、熱帯林、植民都市、先住民文化が共存する国です。",
+    "subtitleEn": "A country on the isthmus linking the Americas, known for its canal, rainforest, historic cities, and Indigenous cultures.",
+    "flagUrl": "https://flagcdn.com/w320/pa.png",
+    "mapQuery": "Panama City, Panama",
+    "timeZone": "America/Panama",
+    "currency": {
+      "nameJa": "バルボア／米ドル",
+      "nameEn": "Balboa / United States Dollar",
+      "symbol": "B/. / $"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約2 m（パナマシティ沿岸部）",
+    "elevationEn": "Approx. 2 m (coastal Panama City)",
+    "weather": {
+      "summary": "一年を通して高温で、雨季と乾季があります。カリブ海側は特に雨が多くなります。",
+      "summaryEn": "Panama is warm year-round with wet and dry seasons, and the Caribbean side receives especially heavy rainfall."
+    },
+    "heritage": [
+      {
+        "id": "pa-canal",
+        "title": "パナマ運河",
+        "titleEn": "Panama Canal",
+        "description": "大西洋と太平洋を水門と人工湖で結び、世界の海上輸送を大きく変えました。",
+        "descriptionEn": "Locks and artificial lakes connect the Atlantic and Pacific, transforming global maritime transport.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Panama%20Canal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:The_Panama_Canal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:The_Panama_Canal.jpg",
+        "category": "産業・交通遺産",
+        "categoryEn": "Industrial and Transport Heritage"
+      },
+      {
+        "id": "pa-casco-viejo",
+        "title": "パナマ・ビエホとカスコ・アンティグオ",
+        "titleEn": "Panamá Viejo and Casco Antiguo",
+        "description": "植民都市の遺跡と再建された歴史地区が、太平洋岸交易の歴史を伝えます。",
+        "descriptionEn": "The ruined first city and later historic quarter preserve the history of Pacific trade and urban rebuilding.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Casco%20Viejo,%20Panam%C3%A1.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Casco_Viejo,_Panam%C3%A1.jpg",
+        "imageCredit": "Esteban Folch",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Casco_Viejo,_Panam%C3%A1.jpg",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      },
+      {
+        "id": "pa-coiba",
+        "title": "コイバ国立公園",
+        "titleEn": "Coiba National Park",
+        "description": "島々と周辺海域にサンゴ礁、大型魚類、固有生物が暮らす海洋保護地域です。",
+        "descriptionEn": "Islands and surrounding seas protect coral reefs, large fish, and distinctive wildlife.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coiba%20Panama%20(26822070175).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Coiba_Panama_(26822070175).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "pa-mola",
+        "title": "モラ",
+        "titleEn": "Mola Textile Art",
+        "description": "色布を重ねて切り抜き、動物や幾何学模様を作るグナの女性たちの布芸術です。",
+        "descriptionEn": "Layers of colored cloth are cut and stitched into animal and geometric designs by Guna women.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Mola%20en%20Panam%C3%A1.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:La_Mola_en_Panam%C3%A1.JPG",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:La_Mola_en_Panam%C3%A1.JPG",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "pa-pollera",
+        "title": "ポジェラ",
+        "titleEn": "Pollera",
+        "description": "刺しゅうやレースを施した華やかな女性衣装で、祭りや公式行事で着用されます。",
+        "descriptionEn": "This elaborate embroidered and lace dress is worn during festivals and formal cultural events.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/PolleraPanama.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:PolleraPanama.JPG",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:PolleraPanama.JPG",
+        "category": "服飾文化",
+        "categoryEn": "Clothing Culture"
+      },
+      {
+        "id": "pa-sancocho",
+        "title": "サンコーチョ",
+        "titleEn": "Panamanian Sancocho",
+        "description": "鶏肉、根菜、香草を煮込むスープで、家庭や祝いの場で親しまれます。",
+        "descriptionEn": "Chicken, root vegetables, and herbs are simmered into a comforting soup shared at home and celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sancocho%20paname%C3%B1o.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sancocho_paname%C3%B1o.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sancocho_paname%C3%B1o.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "運河・海運・物流で交流",
+      "titleEn": "Exchange Through the Canal, Shipping, and Logistics",
+      "text": "日本とパナマはパナマ運河、海運、船舶登録、物流、投資、文化などで深く結ばれています。",
+      "textEn": "Japan and Panama are closely connected through the canal, shipping, vessel registration, logistics, investment, and culture."
+    },
+    "quiz": {
+      "question": "パナマ運河が結ぶ二つの大洋はどれでしょう？",
+      "questionEn": "Which two oceans are connected by the Panama Canal?",
+      "options": [
+        "大西洋と太平洋",
+        "北極海と南極海",
+        "インド洋と北極海",
+        "地中海と黒海"
+      ],
+      "optionsEn": [
+        "Atlantic and Pacific",
+        "Arctic and Southern",
+        "Indian and Arctic",
+        "Mediterranean and Black Sea"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は大西洋と太平洋です。船の航行距離を大幅に短縮します。",
+      "explanationEn": "The answer is the Atlantic and Pacific, greatly shortening many shipping routes."
+    }
+  },
+  "pg": {
+    "iso": "pg",
+    "nameJa": "パプアニューギニア",
+    "nameEn": "Papua New Guinea",
+    "capitalJa": "ポートモレスビー",
+    "capitalEn": "Port Moresby",
+    "subtitle": "高山、熱帯雨林、島々、数百の言語、仮面と祭り文化を持つ太平洋の国です。",
+    "subtitleEn": "A Pacific country of high mountains, rainforest, islands, hundreds of languages, masks, and festival traditions.",
+    "flagUrl": "https://flagcdn.com/w320/pg.png",
+    "mapQuery": "Port Moresby, Papua New Guinea",
+    "timeZone": "Pacific/Port_Moresby",
+    "currency": {
+      "nameJa": "キナ",
+      "nameEn": "Kina",
+      "symbol": "K"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "トク・ピシン",
+        "nameEn": "Tok Pisin"
+      },
+      {
+        "nameJa": "ヒリ・モツ語",
+        "nameEn": "Hiri Motu"
+      }
+    ],
+    "elevation": "約35 m（ポートモレスビー）",
+    "elevationEn": "Approx. 35 m (Port Moresby)",
+    "weather": {
+      "summary": "低地は高温多湿で、山地は標高に応じて涼しくなります。地域によって降雨量が大きく異なります。",
+      "summaryEn": "Lowlands are hot and humid, mountains become cooler with elevation, and rainfall varies greatly by region."
+    },
+    "heritage": [
+      {
+        "id": "pg-kuk",
+        "title": "クックの初期農耕遺跡",
+        "titleEn": "Kuk Early Agricultural Site",
+        "description": "湿地の排水路や畑の跡から、数千年前の農耕技術の発達を読み取れます。",
+        "descriptionEn": "Ancient drainage channels and field remains reveal the development of agriculture thousands of years ago.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuk%20New%20Guinea%202002.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kuk_New_Guinea_2002.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kuk_New_Guinea_2002.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "pg-mount-wilhelm",
+        "title": "ウィルヘルム山",
+        "titleEn": "Mount Wilhelm",
+        "description": "国内最高峰で、高山草原、湖、熱帯から高山まで変化する生態系が見られます。",
+        "descriptionEn": "The country's highest mountain contains alpine grasslands, lakes, and ecosystems changing from tropical to high-altitude zones.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Wilhelm.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mount_Wilhelm.jpg",
+        "imageCredit": "Nomadtales",
+        "imageLicense": "CC BY-SA 2.1 AU",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.1/au/",
+        "category": "高山自然景観",
+        "categoryEn": "Mountain Natural Attraction"
+      },
+      {
+        "id": "pg-sepik",
+        "title": "セピック川流域",
+        "titleEn": "Sepik River Region",
+        "description": "大河沿いに村々が点在し、木彫、精霊信仰、水上交通と結びついた文化景観です。",
+        "descriptionEn": "Villages along the great river form a cultural landscape tied to carving, spiritual traditions, and water transport.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sepik%200057.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sepik_0057.jpg",
+        "imageCredit": "Top1963",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "文化・自然景観",
+        "categoryEn": "Cultural and Natural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "pg-sing-sing",
+        "title": "シンシン",
+        "titleEn": "Sing-Sing",
+        "description": "各地域の人々が羽飾り、顔料、踊り、太鼓、歌で文化を披露する大規模な集会です。",
+        "descriptionEn": "Communities present feathered dress, body paint, dance, drums, and song at large cultural gatherings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Papua%20New%20Guinea%20Sing%20Sing.%20(48986244873).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_Sing_Sing._(48986244873).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_Sing_Sing._(48986244873).jpg",
+        "category": "祭礼・舞踊文化",
+        "categoryEn": "Festival and Dance Culture"
+      },
+      {
+        "id": "pg-bilum",
+        "title": "ビルム",
+        "titleEn": "Bilum",
+        "description": "植物繊維や糸を編んで作る丈夫な袋で、運搬、装い、家族生活に広く使われます。",
+        "descriptionEn": "Strong looped bags made from fiber or yarn are used for carrying, clothing, and family life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bilum.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bilum.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "pg-mumu",
+        "title": "ムム",
+        "titleEn": "Mumu",
+        "description": "肉、サツマイモ、野菜などを葉で包み、熱した石を使う地中炉で蒸し焼きにします。",
+        "descriptionEn": "Meat, sweet potato, and vegetables are wrapped in leaves and steamed over hot stones in an earth oven.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20Mumu%20in%20Papua%20New%20Guinea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:A_Mumu_in_Papua_New_Guinea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:A_Mumu_in_Papua_New_Guinea.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "歴史・漁業・資源で交流",
+      "titleEn": "Exchange Through History, Fisheries, and Resources",
+      "text": "日本とパプアニューギニアは歴史的関係を持ち、現在はLNG、漁業、インフラ、教育、防災で協力しています。",
+      "textEn": "Japan and Papua New Guinea share historical ties and cooperate in LNG, fisheries, infrastructure, education, and disaster preparedness."
+    },
+    "quiz": {
+      "question": "パプアニューギニアの言語の多様性について正しいものはどれでしょう？",
+      "questionEn": "Which statement about Papua New Guinea's linguistic diversity is correct?",
+      "options": [
+        "世界でも特に多くの言語が使われる",
+        "一つの言語しかない",
+        "すべて日本語である",
+        "公用語が存在しない"
+      ],
+      "optionsEn": [
+        "It has one of the world's highest numbers of languages",
+        "Only one language is spoken",
+        "All languages are Japanese",
+        "It has no official languages"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は、世界でも特に多くの言語が使われることです。地域ごとに非常に多様です。",
+      "explanationEn": "The answer is that it is one of the world's most linguistically diverse countries."
+    }
+  },
+  "py": {
+    "iso": "py",
+    "nameJa": "パラグアイ",
+    "nameEn": "Paraguay",
+    "capitalJa": "アスンシオン",
+    "capitalEn": "Asunción",
+    "subtitle": "南米中央部に位置し、大河、湿地、先住民言語、レース編み、冷たい茶文化を持つ国です。",
+    "subtitleEn": "A landlocked South American country of great rivers, wetlands, Indigenous language, lacework, and cold herbal tea.",
+    "flagUrl": "https://flagcdn.com/w320/py.png",
+    "mapQuery": "Asuncion, Paraguay",
+    "timeZone": "America/Asuncion",
+    "currency": {
+      "nameJa": "グアラニー",
+      "nameEn": "Paraguayan Guaraní",
+      "symbol": "₲"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      },
+      {
+        "nameJa": "グアラニー語",
+        "nameEn": "Guaraní"
+      }
+    ],
+    "elevation": "約43 m（アスンシオン）",
+    "elevationEn": "Approx. 43 m (Asunción)",
+    "weather": {
+      "summary": "東部は湿潤な亜熱帯気候で、西部チャコ地方はより暑く乾燥しています。",
+      "summaryEn": "Eastern Paraguay is humid and subtropical, while the western Chaco is hotter and drier."
+    },
+    "heritage": [
+      {
+        "id": "py-trinidad",
+        "title": "ラ・サンティシマ・トリニダ・デ・パラナ",
+        "titleEn": "Jesuit Mission of La Santísima Trinidad de Paraná",
+        "description": "教会、広場、住居跡が、イエズス会とグアラニー共同体の歴史を伝えます。",
+        "descriptionEn": "Churches, plazas, and residential remains preserve the history of Jesuit and Guaraní communities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/PMa%20000004%20PY%20Trinidad.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:PMa_000004_PY_Trinidad.jpg",
+        "imageCredit": "PMRMaeyaert",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:PMa_000004_PY_Trinidad.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "py-monday-falls",
+        "title": "マンデー滝",
+        "titleEn": "Monday Falls",
+        "description": "森林の中を複数の大きな滝が流れ落ちる、東部パラグアイの代表的景観です。",
+        "descriptionEn": "Several powerful cascades drop through forest in one of eastern Paraguay's major natural attractions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monday%20Falls%20in%20Paraguay.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Monday_Falls_in_Paraguay.jpg",
+        "imageCredit": "FF MM",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Monday_Falls_in_Paraguay.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "py-pantanal",
+        "title": "パラグアイのパンタナール",
+        "titleEn": "Paraguayan Pantanal",
+        "description": "湿地、河川、森林が多様な鳥類、魚類、哺乳類を支える広大な生態系です。",
+        "descriptionEn": "Wetlands, rivers, and forests support exceptional birds, fish, reptiles, and mammals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantanal%20Paraguay.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pantanal_Paraguay.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pantanal_Paraguay.jpg",
+        "category": "湿地・自然景観",
+        "categoryEn": "Wetland Natural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "py-terere",
+        "title": "テレレ",
+        "titleEn": "Tereré",
+        "description": "冷水で抽出したマテ茶に薬草を加え、グアンパとボンビージャで回し飲みします。",
+        "descriptionEn": "Cold yerba mate, often mixed with medicinal herbs, is shared from a guampa through a metal straw.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Terere%20Paraguay.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Terere_Paraguay.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Terere_Paraguay.jpg",
+        "category": "飲料・共同体文化",
+        "categoryEn": "Beverage and Community Culture"
+      },
+      {
+        "id": "py-chipa",
+        "title": "チパ",
+        "titleEn": "Chipa",
+        "description": "キャッサバでんぷん、チーズ、卵などを使って焼く、輪形や小型のパンです。",
+        "descriptionEn": "Cassava starch, cheese, and eggs are baked into rings or small breads.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chipa%20Paraguay.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Chipa_Paraguay.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Chipa_Paraguay.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "py-nanduti",
+        "title": "ニャンドゥティ",
+        "titleEn": "Ñandutí Lace",
+        "description": "放射状の糸でクモの巣のような模様を作る、色鮮やかなレース編みです。",
+        "descriptionEn": "Radiating threads form bright lace designs resembling spiderwebs.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanduti%20Paraguay.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nanduti_Paraguay.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nanduti_Paraguay.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "日系社会・農業・教育で深い関係",
+      "titleEn": "Strong Ties Through the Japanese Community, Agriculture, and Education",
+      "text": "パラグアイには長い歴史を持つ日系社会があり、農業、教育、文化、地域開発で交流しています。",
+      "textEn": "Paraguay has a longstanding Japanese community, supporting close ties in agriculture, education, culture, and regional development."
+    },
+    "quiz": {
+      "question": "パラグアイでスペイン語とともに広く使われる公用語は何でしょう？",
+      "questionEn": "Which language is widely used alongside Spanish as an official language of Paraguay?",
+      "options": [
+        "グアラニー語",
+        "アイスランド語",
+        "韓国語",
+        "スワヒリ語"
+      ],
+      "optionsEn": [
+        "Guaraní",
+        "Icelandic",
+        "Korean",
+        "Swahili"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はグアラニー語です。先住民言語が国民生活の中で広く使われています。",
+      "explanationEn": "The answer is Guaraní, an Indigenous language widely used in national life."
+    }
+  },
+  "pe": {
+    "iso": "pe",
+    "nameJa": "ペルー",
+    "nameEn": "Peru",
+    "capitalJa": "リマ",
+    "capitalEn": "Lima",
+    "subtitle": "アンデス山脈、アマゾン、海岸砂漠、古代文明、多彩な食文化を持つ南米の国です。",
+    "subtitleEn": "A South American country of Andes, Amazon rainforest, coastal desert, ancient civilizations, and celebrated cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/pe.png",
+    "mapQuery": "Lima, Peru",
+    "timeZone": "America/Lima",
+    "currency": {
+      "nameJa": "ソル",
+      "nameEn": "Sol",
+      "symbol": "S/"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      },
+      {
+        "nameJa": "ケチュア語",
+        "nameEn": "Quechua"
+      },
+      {
+        "nameJa": "アイマラ語",
+        "nameEn": "Aymara"
+      }
+    ],
+    "elevation": "約154 m（リマ中心部）",
+    "elevationEn": "Approx. 154 m (central Lima)",
+    "weather": {
+      "summary": "海岸部は乾燥し、アンデスは標高差が大きく、東部は高温多湿のアマゾン気候です。",
+      "summaryEn": "The coast is dry, the Andes vary sharply with altitude, and the east has a hot humid Amazon climate."
+    },
+    "heritage": [
+      {
+        "id": "pe-machu-picchu",
+        "title": "マチュ・ピチュ",
+        "titleEn": "Machu Picchu",
+        "description": "山の尾根に石造都市が築かれ、インカの建築、農業、宗教観を伝えます。",
+        "descriptionEn": "A stone city on a mountain ridge preserves Inca architecture, agriculture, and sacred landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/00%201605%20Machu%20Picchu%20-%20Peru.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:00_1605_Machu_Picchu_-_Peru.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:00_1605_Machu_Picchu_-_Peru.jpg",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      },
+      {
+        "id": "pe-nazca",
+        "title": "ナスカとパルパの地上絵",
+        "titleEn": "Nazca and Palpa Lines and Geoglyphs",
+        "description": "乾燥した大地に動物や幾何学模様が巨大な線で描かれています。",
+        "descriptionEn": "Huge animal and geometric figures were drawn across the dry desert surface.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nazca-lineas-colibri-c01.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nazca-lineas-colibri-c01.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nazca-lineas-colibri-c01.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "pe-titicaca",
+        "title": "チチカカ湖",
+        "titleEn": "Lake Titicaca",
+        "description": "アンデス高地の巨大湖で、浮島、漁業、農耕、先住民文化を支えています。",
+        "descriptionEn": "This great high-altitude lake supports floating islands, fishing, farming, and Indigenous cultures.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Titicaca%20Peru.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Titicaca_Peru.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lake_Titicaca_Peru.jpg",
+        "category": "自然・文化景観",
+        "categoryEn": "Natural and Cultural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "pe-ceviche",
+        "title": "セビチェ",
+        "titleEn": "Peruvian Ceviche",
+        "description": "生の魚介を柑橘果汁、唐辛子、玉ねぎなどで味付けする代表料理です。",
+        "descriptionEn": "Fresh seafood is seasoned with citrus juice, chili, onions, and regional accompaniments.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ceviche%20de%20Trucha%20en%20Puno%20Peru.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ceviche_de_Trucha_en_Puno_Peru.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ceviche_de_Trucha_en_Puno_Peru.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "pe-inti-raymi",
+        "title": "インティ・ライミ",
+        "titleEn": "Inti Raymi",
+        "description": "太陽神を祝うインカ由来の祭りを、衣装、音楽、行列、劇で再現します。",
+        "descriptionEn": "An Inca festival honoring the sun is recreated through costume, music, procession, and drama.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Inti%20Raymi%20Peru.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Inti_Raymi_Peru.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Inti_Raymi_Peru.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "pe-retablo",
+        "title": "アヤクーチョのレタブロ",
+        "titleEn": "Ayacucho Retablos",
+        "description": "箱形の中に小さな人物や宗教・生活場面を配置する彩色工芸です。",
+        "descriptionEn": "Painted box scenes contain small figures depicting religion, festivals, and everyday life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Peruvian%20retablo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Peruvian_retablo.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Peruvian_retablo.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "日系社会・鉱業・文化で深い交流",
+      "titleEn": "Strong Exchange Through the Japanese Community, Mining, and Culture",
+      "text": "ペルーには歴史ある日系社会があり、鉱業、農業、防災、教育、料理、文化で交流しています。",
+      "textEn": "Peru has a historic Japanese community, supporting ties in mining, agriculture, disaster preparedness, education, food, and culture."
+    },
+    "quiz": {
+      "question": "マチュ・ピチュを築いた文明は何でしょう？",
+      "questionEn": "Which civilization built Machu Picchu?",
+      "options": [
+        "インカ文明",
+        "マヤ文明",
+        "古代エジプト文明",
+        "バイキング"
+      ],
+      "optionsEn": [
+        "Inca civilization",
+        "Maya civilization",
+        "Ancient Egyptian civilization",
+        "Vikings"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はインカ文明です。精密な石積みと山岳環境への適応で知られます。",
+      "explanationEn": "The answer is the Inca civilization, known for precise stonework and adaptation to mountain environments."
+    }
+  },
+  "ph": {
+    "iso": "ph",
+    "nameJa": "フィリピン",
+    "nameEn": "Philippines",
+    "capitalJa": "マニラ",
+    "capitalEn": "Manila",
+    "subtitle": "7,000を超える島々に、棚田、熱帯海洋、植民都市、多言語文化が広がる国です。",
+    "subtitleEn": "An archipelagic nation of more than 7,000 islands, rice terraces, tropical seas, historic towns, and multilingual cultures.",
+    "flagUrl": "https://flagcdn.com/w320/ph.png",
+    "mapQuery": "Manila, Philippines",
+    "timeZone": "Asia/Manila",
+    "currency": {
+      "nameJa": "フィリピン・ペソ",
+      "nameEn": "Philippine Peso",
+      "symbol": "₱"
+    },
+    "languages": [
+      {
+        "nameJa": "フィリピノ語",
+        "nameEn": "Filipino"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約16 m（マニラ）",
+    "elevationEn": "Approx. 16 m (Manila)",
+    "weather": {
+      "summary": "一年を通して高温多湿で、雨季と乾季があります。台風の影響を受ける地域も多いです。",
+      "summaryEn": "The climate is hot and humid with wet and dry seasons, and many regions are exposed to typhoons."
+    },
+    "heritage": [
+      {
+        "id": "ph-rice-terraces",
+        "title": "フィリピン・コルディリェーラの棚田群",
+        "titleEn": "Rice Terraces of the Philippine Cordilleras",
+        "description": "山の斜面に石と土で棚田を築き、世代を超えて水管理と稲作を続けています。",
+        "descriptionEn": "Communities built terraced fields into mountain slopes and maintain complex irrigation and rice farming traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Banaue%20Rice%20Terraces,%20Philippines.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Banaue_Rice_Terraces,_Philippines.jpg",
+        "imageCredit": "Andrewhaimerl",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Banaue_Rice_Terraces,_Philippines.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ph-underground-river",
+        "title": "プエルト・プリンセサ地下河川国立公園",
+        "titleEn": "Puerto-Princesa Subterranean River National Park",
+        "description": "石灰岩の洞窟を地下河川が流れ、海と森林の生態系につながっています。",
+        "descriptionEn": "An underground river flows through limestone caves and connects forest, karst, and coastal ecosystems.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/PUERTO%20PRINCESA%20UNDERGROUND%20RIVER.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:PUERTO_PRINCESA_UNDERGROUND_RIVER.jpg",
+        "imageCredit": "Glennjarz",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:PUERTO_PRINCESA_UNDERGROUND_RIVER.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ph-vigan",
+        "title": "ビガン歴史都市",
+        "titleEn": "Historic City of Vigan",
+        "description": "石畳の街路にアジアと欧州の建築が融合した商家や教会が並びます。",
+        "descriptionEn": "Cobbled streets and historic houses combine Asian and European architectural influences.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calle%20Crisologo,%20Vigan,%20Philippines.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Calle_Crisologo,_Vigan,_Philippines.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Calle_Crisologo,_Vigan,_Philippines.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ph-adobo",
+        "title": "アドボ",
+        "titleEn": "Filipino Adobo",
+        "description": "肉を酢、しょうゆ、ニンニク、香辛料で煮込み、保存性と深い味を生み出します。",
+        "descriptionEn": "Meat is simmered with vinegar, soy sauce, garlic, and spices for a savory and practical dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Philippine%20adobo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Philippine_adobo.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Philippine_adobo.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ph-jeepney",
+        "title": "ジープニー",
+        "titleEn": "Jeepney",
+        "description": "色鮮やかに装飾された乗合車で、都市と地域の公共交通を支えています。",
+        "descriptionEn": "Brightly decorated shared vehicles are a distinctive part of urban and regional public transport.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jeepney%20in%20Manila.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jeepney_in_Manila.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Jeepney_in_Manila.jpg",
+        "category": "交通・大衆文化",
+        "categoryEn": "Transport and Popular Culture"
+      },
+      {
+        "id": "ph-tinikling",
+        "title": "ティニクリン",
+        "titleEn": "Tinikling",
+        "description": "二本の竹を打ち合わせる間を、踊り手が素早く正確に跳び越える民俗舞踊です。",
+        "descriptionEn": "Dancers step rapidly between bamboo poles that are rhythmically clapped together.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tinikling%20Philippine%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tinikling_Philippine_dance.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tinikling_Philippine_dance.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "人材・教育・海洋で深い交流",
+      "titleEn": "Strong Links Through People, Education, and the Sea",
+      "text": "日本とフィリピンは人の往来、介護・技能人材、教育、貿易、防災、海洋協力で深く結ばれています。",
+      "textEn": "Japan and the Philippines are closely connected through migration, skilled workers, education, trade, disaster preparedness, and maritime cooperation."
+    },
+    "quiz": {
+      "question": "フィリピンの国土について正しいものはどれでしょう？",
+      "questionEn": "Which statement about the Philippines is correct?",
+      "options": [
+        "7,000を超える島々からなる",
+        "一つの巨大な島だけである",
+        "海に面していない",
+        "北極圏にある"
+      ],
+      "optionsEn": [
+        "It consists of more than 7,000 islands",
+        "It is one single large island",
+        "It is landlocked",
+        "It lies in the Arctic"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は7,000を超える島々からなることです。地域ごとに言語や文化が多様です。",
+      "explanationEn": "The answer is that it consists of more than 7,000 islands, creating great regional diversity."
+    }
+  },
+  "pl": {
+    "iso": "pl",
+    "nameJa": "ポーランド",
+    "nameEn": "Poland",
+    "capitalJa": "ワルシャワ",
+    "capitalEn": "Warsaw",
+    "subtitle": "中世都市、森林、平原、音楽、民俗工芸、歴史の記憶を持つ中央ヨーロッパの国です。",
+    "subtitleEn": "A Central European country of medieval cities, forests, plains, music, folk crafts, and powerful historical memory.",
+    "flagUrl": "https://flagcdn.com/w320/pl.png",
+    "mapQuery": "Warsaw, Poland",
+    "timeZone": "Europe/Warsaw",
+    "currency": {
+      "nameJa": "ズウォティ",
+      "nameEn": "Polish Złoty",
+      "symbol": "zł"
+    },
+    "languages": [
+      {
+        "nameJa": "ポーランド語",
+        "nameEn": "Polish"
+      }
+    ],
+    "elevation": "約100 m（ワルシャワ）",
+    "elevationEn": "Approx. 100 m (Warsaw)",
+    "weather": {
+      "summary": "温帯気候で四季があり、夏は暖かく、冬は寒く雪が降ることがあります。",
+      "summaryEn": "Poland has four seasons, with warm summers and cold winters that may bring snow."
+    },
+    "heritage": [
+      {
+        "id": "pl-krakow",
+        "title": "クラクフ歴史地区",
+        "titleEn": "Historic Centre of Kraków",
+        "description": "王城、市場広場、教会、大学が集まり、ポーランドの政治と文化の歴史を伝えます。",
+        "descriptionEn": "A royal castle, market square, churches, and university preserve centuries of Polish political and cultural history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Krakow%20Old%20Town%20Poland.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Krakow_Old_Town_Poland.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Krakow_Old_Town_Poland.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "pl-wieliczka",
+        "title": "ヴィエリチカ岩塩坑",
+        "titleEn": "Wieliczka Salt Mine",
+        "description": "地下に坑道、礼拝堂、彫刻が広がり、長い採塩と労働の歴史を伝えます。",
+        "descriptionEn": "Underground passages, chapels, and sculptures preserve centuries of salt mining and labor history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wieliczka%20salt%20mine,%20Krakow,%20Poland.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Wieliczka_salt_mine,_Krakow,_Poland.jpg",
+        "imageCredit": "juliadbau",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Wieliczka_salt_mine,_Krakow,_Poland.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "pl-bialowieza",
+        "title": "ビャウォヴィエジャの森",
+        "titleEn": "Białowieża Forest",
+        "description": "ヨーロッパに残る原生的な低地林で、ヨーロッパバイソンなどが生息します。",
+        "descriptionEn": "This primeval lowland forest protects European bison and a rich community of woodland species.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bialowieza%20Forest%20Poland.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bialowieza_Forest_Poland.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bialowieza_Forest_Poland.jpg",
+        "category": "世界自然遺産地域",
+        "categoryEn": "World Heritage Region"
+      }
+    ],
+    "culture": [
+      {
+        "id": "pl-pierogi",
+        "title": "ピエロギ",
+        "titleEn": "Pierogi",
+        "description": "小麦の皮に肉、チーズ、ジャガイモ、果物などを包み、ゆでたり焼いたりします。",
+        "descriptionEn": "Dough pockets are filled with meat, cheese, potato, fruit, or other ingredients and boiled or fried.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Polish%20pierogi.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Polish_pierogi.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Polish_pierogi.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "pl-polonaise",
+        "title": "ポロネーズ",
+        "titleEn": "Polonaise",
+        "description": "堂々とした三拍子で行列のように進む舞曲で、式典や卒業行事でも踊られます。",
+        "descriptionEn": "This stately triple-meter dance moves like a procession and appears at ceremonies and school events.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Polonaise%20dance%20Poland.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Polonaise_dance_Poland.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Polonaise_dance_Poland.jpg",
+        "category": "舞踊・音楽文化",
+        "categoryEn": "Dance and Music Culture"
+      },
+      {
+        "id": "pl-wycinanki",
+        "title": "ヴィチナンキ",
+        "titleEn": "Wycinanki Paper Cutting",
+        "description": "紙を折って切り、花、鳥、幾何学模様を左右対称に作る民俗工芸です。",
+        "descriptionEn": "Folded paper is cut into symmetrical flowers, birds, and geometric folk designs.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Polish%20wycinanki.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Polish_wycinanki.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Polish_wycinanki.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "音楽・歴史・産業で交流",
+      "titleEn": "Exchange Through Music, History, and Industry",
+      "text": "ショパンの音楽は日本で広く親しまれ、両国は製造業、研究、教育、文化でも交流しています。",
+      "textEn": "Chopin's music is widely loved in Japan, while the countries also cooperate in manufacturing, research, education, and culture."
+    },
+    "quiz": {
+      "question": "ポーランド出身の世界的な作曲家は誰でしょう？",
+      "questionEn": "Which world-famous composer was born in Poland?",
+      "options": [
+        "フレデリック・ショパン",
+        "モーツァルト",
+        "ヴィヴァルディ",
+        "ドビュッシー"
+      ],
+      "optionsEn": [
+        "Frédéric Chopin",
+        "Mozart",
+        "Vivaldi",
+        "Debussy"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はショパンです。ピアノ作品を中心に世界の音楽へ大きな影響を与えました。",
+      "explanationEn": "The answer is Frédéric Chopin, whose piano music had a major global influence."
+    }
+  },
+  "pt": {
+    "iso": "pt",
+    "nameJa": "ポルトガル",
+    "nameEn": "Portugal",
+    "capitalJa": "リスボン",
+    "capitalEn": "Lisbon",
+    "subtitle": "大西洋岸の港町、航海史、タイル装飾、ワイン、音楽文化を持つ南西ヨーロッパの国です。",
+    "subtitleEn": "A southwestern European country of Atlantic ports, maritime history, tilework, wine, and music.",
+    "flagUrl": "https://flagcdn.com/w320/pt.png",
+    "mapQuery": "Lisbon, Portugal",
+    "timeZone": "Europe/Lisbon",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "ポルトガル語",
+        "nameEn": "Portuguese"
+      }
+    ],
+    "elevation": "約2～100 m（リスボン中心部）",
+    "elevationEn": "Approx. 2–100 m (central Lisbon)",
+    "weather": {
+      "summary": "夏は乾燥して暖かく、冬は比較的穏やかで雨が増えます。北部は南部より涼しく湿潤です。",
+      "summaryEn": "Summers are warm and dry, winters are mild and wetter, and the north is generally cooler and more humid."
+    },
+    "heritage": [
+      {
+        "id": "pt-belem",
+        "title": "ベレンの塔",
+        "titleEn": "Belém Tower",
+        "description": "テージョ川河口に建つ要塞で、大航海時代のリスボンと海上防衛を象徴します。",
+        "descriptionEn": "This fortress at the mouth of the Tagus symbolizes Lisbon's maritime expansion and coastal defense.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Belem%20Tower.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Belem_Tower.jpg",
+        "imageCredit": "Legolas258",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Belem_Tower.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "pt-sintra",
+        "title": "シントラの文化的景観",
+        "titleEn": "Cultural Landscape of Sintra",
+        "description": "森と丘陵に宮殿、庭園、別荘が点在し、ロマン主義建築の景観を作ります。",
+        "descriptionEn": "Palaces, gardens, and villas scattered through wooded hills form a celebrated Romantic landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pena%20Palace%20Sintra%20Portugal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pena_Palace_Sintra_Portugal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pena_Palace_Sintra_Portugal.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "pt-douro",
+        "title": "アルト・ドウロ・ワイン生産地域",
+        "titleEn": "Alto Douro Wine Region",
+        "description": "川沿いの急斜面に段々畑のブドウ園が広がり、長いワイン生産の歴史を伝えます。",
+        "descriptionEn": "Terraced vineyards cover steep river valleys and preserve a long history of wine production.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Douro%20Valley%20Portugal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Douro_Valley_Portugal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Douro_Valley_Portugal.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "pt-pastel",
+        "title": "パステル・デ・ナタ",
+        "titleEn": "Pastel de Nata",
+        "description": "サクサクした生地に卵黄のカスタードを入れ、高温で香ばしく焼く菓子です。",
+        "descriptionEn": "Flaky pastry holds egg-yolk custard baked at high heat until caramelized.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Past%C3%A9is%20de%20Bel%C3%A9m%20-%2020140911.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Past%C3%A9is_de_Bel%C3%A9m_-_20140911.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Past%C3%A9is_de_Bel%C3%A9m_-_20140911.jpg",
+        "category": "菓子文化",
+        "categoryEn": "Pastry Culture"
+      },
+      {
+        "id": "pt-azulejo",
+        "title": "アズレージョ",
+        "titleEn": "Azulejo",
+        "description": "彩色タイルで宗教画、歴史、幾何学模様を描き、建物の内外を飾ります。",
+        "descriptionEn": "Painted ceramic tiles depict religious scenes, history, and geometric designs on buildings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Azulejo%20Pal%C3%A1cio%20Nacional%20de%20Sintra.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Azulejo_Pal%C3%A1cio_Nacional_de_Sintra.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Azulejo_Pal%C3%A1cio_Nacional_de_Sintra.jpg",
+        "category": "伝統工芸・建築装飾",
+        "categoryEn": "Traditional Craft and Architectural Decoration"
+      },
+      {
+        "id": "pt-fado",
+        "title": "ファド",
+        "titleEn": "Fado",
+        "description": "ギターの伴奏に哀愁を帯びた歌声を重ね、愛、運命、郷愁を表現します。",
+        "descriptionEn": "Voice and guitar express love, fate, longing, and saudade in an urban musical tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fado%20singer%20Portugal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fado_singer_Portugal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Fado_singer_Portugal.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "鉄砲・言語・海洋史から続く交流",
+      "titleEn": "Connections from Early Maritime Contact to Modern Exchange",
+      "text": "日本とポルトガルは16世紀から交流し、現在も文化、言語、観光、海洋、再生可能エネルギーで関係があります。",
+      "textEn": "Japan and Portugal have interacted since the sixteenth century and maintain ties in culture, language, tourism, oceans, and renewable energy."
+    },
+    "quiz": {
+      "question": "16世紀にポルトガル人を通して日本へ伝わったものの一つは何でしょう？",
+      "questionEn": "Which item was introduced to Japan through Portuguese contact in the sixteenth century?",
+      "options": [
+        "鉄砲",
+        "蒸気機関車",
+        "スマートフォン",
+        "人工衛星"
+      ],
+      "optionsEn": [
+        "Firearms",
+        "Steam locomotive",
+        "Smartphone",
+        "Artificial satellite"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は鉄砲です。食文化や外来語にもポルトガルとの交流の痕跡があります。",
+      "explanationEn": "The answer is firearms. Portuguese contact also left traces in food culture and loanwords."
+    }
+  },
+  "ps": {
+    "iso": "ps",
+    "nameJa": "パレスチナ",
+    "nameEn": "Palestine",
+    "capitalJa": "東エルサレム（主張）、行政機能はラマッラー",
+    "capitalEn": "East Jerusalem (claimed); administrative center in Ramallah",
+    "subtitle": "長い都市史、聖地、オリーブ畑、石造建築、刺しゅうと踊りの文化を持つ地域です。",
+    "subtitleEn": "A land of ancient cities, sacred places, olive groves, stone architecture, embroidery, and dance traditions.",
+    "flagUrl": "https://flagcdn.com/w320/ps.png",
+    "mapQuery": "Ramallah, Palestine",
+    "timeZone": "Asia/Hebron",
+    "currency": {
+      "nameJa": "新シェケルなどが広く流通",
+      "nameEn": "New Israeli Shekel and other currencies widely used",
+      "symbol": "₪"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約880 m（ラマッラー）",
+    "elevationEn": "Approx. 880 m (Ramallah)",
+    "weather": {
+      "summary": "地中海性気候が中心で、夏は暑く乾燥し、冬は比較的涼しく雨が増えます。",
+      "summaryEn": "The climate is mainly Mediterranean, with hot dry summers and cooler wetter winters."
+    },
+    "heritage": [
+      {
+        "id": "ps-nativity",
+        "title": "ベツレヘムの降誕教会",
+        "titleEn": "Church of the Nativity, Bethlehem",
+        "description": "イエス生誕の地と伝えられる洞窟の上に建ち、世界的な巡礼地となっています。",
+        "descriptionEn": "Built above the grotto traditionally associated with the birth of Jesus, this church is a major pilgrimage site.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Church%20of%20the%20Nativity,%20Bethlehem,%20Palestine.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Church_of_the_Nativity,_Bethlehem,_Palestine.jpg",
+        "imageCredit": "Lewis Larsson / American Colony",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ps-battir",
+        "title": "バティールの文化的景観",
+        "titleEn": "Cultural Landscape of Battir",
+        "description": "石積みの段々畑と古い水路が、オリーブや野菜を育てる共同体の知恵を伝えます。",
+        "descriptionEn": "Stone terraces and traditional irrigation channels preserve community knowledge of farming olives and vegetables.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Battir%20terraces%20Palestine.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Battir_terraces_Palestine.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Battir_terraces_Palestine.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ps-hisham",
+        "title": "ヒシャーム宮殿",
+        "titleEn": "Hisham's Palace",
+        "description": "エリコ近郊に残る初期イスラム時代の宮殿遺跡で、精密なモザイクで知られます。",
+        "descriptionEn": "This early Islamic palace near Jericho is renowned for its architecture and detailed mosaics.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hisham's%20Palace%20Jericho.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hisham's_Palace_Jericho.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hisham's_Palace_Jericho.jpg",
+        "category": "考古・歴史遺産",
+        "categoryEn": "Archaeological and Historic Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ps-maqluba",
+        "title": "マクルーバ",
+        "titleEn": "Maqluba",
+        "description": "米、肉、野菜を鍋で重ねて炊き、皿へ逆さに返して盛り付ける料理です。",
+        "descriptionEn": "Rice, meat, and vegetables are layered in a pot and turned upside down onto a serving plate.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Palestinian%20maqluba.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Palestinian_maqluba.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Palestinian_maqluba.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ps-tatreez",
+        "title": "タトリーズ",
+        "titleEn": "Palestinian Tatreez Embroidery",
+        "description": "地域ごとの色と幾何学模様を衣服へ刺しゅうし、出身地や記憶を表します。",
+        "descriptionEn": "Regional colors and geometric embroidery on clothing communicate place, identity, and memory.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Palestinian%20embroidery%20tatreez.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Palestinian_embroidery_tatreez.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Palestinian_embroidery_tatreez.jpg",
+        "category": "伝統工芸・服飾文化",
+        "categoryEn": "Traditional Craft and Clothing Culture"
+      },
+      {
+        "id": "ps-dabke",
+        "title": "ダブケ",
+        "titleEn": "Palestinian Dabke",
+        "description": "人々が手や肩をつないで列を作り、足を踏み鳴らして祝いと共同体の結束を表します。",
+        "descriptionEn": "Dancers form a connected line and stamp rhythmic steps to express celebration and community unity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Palestinian%20dabke.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Palestinian_dabke.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Palestinian_dabke.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "人道・教育・文化財保護で協力",
+      "titleEn": "Cooperation in Humanitarian Support, Education, and Heritage",
+      "text": "日本はパレスチナに対し、保健、教育、水、行政、人道支援、文化財保護などで協力しています。",
+      "textEn": "Japan supports Palestine in health, education, water, governance, humanitarian assistance, and cultural heritage protection."
+    },
+    "quiz": {
+      "question": "パレスチナの伝統的な刺しゅうは何と呼ばれるでしょう？",
+      "questionEn": "What is traditional Palestinian embroidery called?",
+      "options": [
+        "タトリーズ",
+        "ゼリージュ",
+        "バティック",
+        "ニャンドゥティ"
+      ],
+      "optionsEn": [
+        "Tatreez",
+        "Zellige",
+        "Batik",
+        "Ñandutí"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はタトリーズです。模様や色に地域、家族、記憶の意味が込められます。",
+      "explanationEn": "The answer is tatreez, whose patterns and colors can carry regional, family, and historical meanings."
+    }
+  }
+}

@@ -1,0 +1,1738 @@
+{
+  "tj": {
+    "iso": "tj",
+    "nameJa": "タジキスタン",
+    "nameEn": "Tajikistan",
+    "capitalJa": "ドゥシャンベ",
+    "capitalEn": "Dushanbe",
+    "subtitle": "パミール高原、青い高山湖、シルクロードの歴史、ペルシャ系の言語と祭礼文化を持つ中央アジアの国です。",
+    "subtitleEn": "A Central Asian country of the Pamirs, blue mountain lakes, Silk Road history, Persian-language culture, and seasonal festivals.",
+    "flagUrl": "https://flagcdn.com/w320/tj.png",
+    "mapQuery": "Dushanbe, Tajikistan",
+    "timeZone": "Asia/Dushanbe",
+    "currency": {
+      "nameJa": "ソモニ",
+      "nameEn": "Somoni",
+      "symbol": "ЅМ"
+    },
+    "languages": [
+      {
+        "nameJa": "タジク語",
+        "nameEn": "Tajik"
+      }
+    ],
+    "elevation": "約800 m（ドゥシャンベ）",
+    "elevationEn": "Approx. 800 m (Dushanbe)",
+    "weather": {
+      "summary": "大陸性気候で、谷は夏に暑く冬は寒くなります。高山部は一年を通して冷涼です。",
+      "summaryEn": "The climate is continental, with hot valley summers, cold winters, and cool to severe conditions in the high mountains."
+    },
+    "heritage": [
+      {
+        "id": "tj-iskanderkul",
+        "title": "イスカンデルクル湖",
+        "titleEn": "Iskanderkul Lake",
+        "description": "ファン山地にある青い高山湖で、雪山と岩壁に囲まれています。",
+        "descriptionEn": "A vivid blue alpine lake in the Fann Mountains, surrounded by snowy peaks and cliffs.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tajikistan.%20Iskander-Kul.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tajikistan._Iskander-Kul.jpg",
+        "imageCredit": "Dan Lundberg",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "高山自然景観",
+        "categoryEn": "Mountain Natural Attraction"
+      },
+      {
+        "id": "tj-pamir",
+        "title": "パミール高原",
+        "titleEn": "Pamir Mountains",
+        "description": "「世界の屋根」と呼ばれる高地で、氷河、峠、遊牧地が広がります。",
+        "descriptionEn": "Known as part of the Roof of the World, the region contains glaciers, high passes, and pastoral landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pamir%20Mountains%20Tajikistan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pamir_Mountains_Tajikistan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pamir_Mountains_Tajikistan.jpg",
+        "category": "高地自然・文化景観",
+        "categoryEn": "Highland Natural and Cultural Landscape"
+      },
+      {
+        "id": "tj-hissar",
+        "title": "ヒサール要塞",
+        "titleEn": "Hissar Fortress",
+        "description": "ドゥシャンベ近郊に残る城門と遺構が、交易路と地域統治の歴史を伝えます。",
+        "descriptionEn": "Gates and ruins near Dushanbe preserve the history of regional rule and trade routes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hissar%20Fortress%20Tajikistan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hissar_Fortress_Tajikistan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hissar_Fortress_Tajikistan.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "tj-plov",
+        "title": "オシ（プロフ）",
+        "titleEn": "Oshi Palav",
+        "description": "米、肉、にんじん、玉ねぎ、香辛料を大鍋で炊く祝いと共同体の料理です。",
+        "descriptionEn": "Rice, meat, carrots, onions, and spices are cooked in a large pot for celebrations and community meals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Traditional%20plov.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Traditional_plov.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Traditional_plov.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "tj-nowruz",
+        "title": "ナウルーズ",
+        "titleEn": "Nowruz",
+        "description": "春分の時期に歌、踊り、特別な料理で新年と春の訪れを祝います。",
+        "descriptionEn": "Songs, dances, games, and special foods celebrate the new year and the arrival of spring.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nowruz%20public%20celebration%20in%20Tajikistan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nowruz_public_celebration_in_Tajikistan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nowruz_public_celebration_in_Tajikistan.jpg",
+        "category": "季節・祭礼文化",
+        "categoryEn": "Seasonal Festival Culture"
+      },
+      {
+        "id": "tj-atlas",
+        "title": "アトラスとアドラス織",
+        "titleEn": "Atlas and Adras Textiles",
+        "description": "鮮やかな色の絹や綿を絣模様に織り、衣服や装飾に用います。",
+        "descriptionEn": "Bright silk and cotton are woven into ikat-patterned textiles used for clothing and decoration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tajik%20atlas%20fabric.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tajik_atlas_fabric.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tajik_atlas_fabric.jpg",
+        "category": "伝統工芸・服飾文化",
+        "categoryEn": "Traditional Craft and Clothing Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "水資源・教育・人材育成で協力",
+      "titleEn": "Cooperation in Water, Education, and Training",
+      "text": "日本は水資源、保健、教育、農業、国境管理、人材育成などで協力しています。",
+      "textEn": "Japan and Tajikistan cooperate in water, health, education, agriculture, border management, and training."
+    },
+    "quiz": {
+      "question": "タジキスタンの国土の多くを占める地形は何でしょう？",
+      "questionEn": "Which landscape covers much of Tajikistan?",
+      "options": [
+        "山地",
+        "低いサンゴ環礁",
+        "熱帯雨林だけ",
+        "広大な平坦湿地"
+      ],
+      "optionsEn": [
+        "Mountains",
+        "Low coral atolls",
+        "Only tropical rainforest",
+        "Vast flat wetlands"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は山地です。パミール高原を含む高い山々が国土の大部分を占めます。",
+      "explanationEn": "The answer is mountains, including the high Pamir region."
+    }
+  },
+  "tw": {
+    "iso": "tw",
+    "nameJa": "台湾",
+    "nameEn": "Taiwan",
+    "capitalJa": "台北",
+    "capitalEn": "Taipei",
+    "subtitle": "高山、渓谷、亜熱帯の森林、寺院都市、茶、夜市文化を持つ東アジアの島です。",
+    "subtitleEn": "An East Asian island of high mountains, gorges, subtropical forests, temple cities, tea, and night-market culture.",
+    "flagUrl": "https://flagcdn.com/w320/tw.png",
+    "mapQuery": "Taipei, Taiwan",
+    "timeZone": "Asia/Taipei",
+    "currency": {
+      "nameJa": "ニュー台湾ドル",
+      "nameEn": "New Taiwan Dollar",
+      "symbol": "NT$"
+    },
+    "languages": [
+      {
+        "nameJa": "中国語",
+        "nameEn": "Mandarin Chinese"
+      },
+      {
+        "nameJa": "台湾語",
+        "nameEn": "Taiwanese Hokkien"
+      },
+      {
+        "nameJa": "客家語",
+        "nameEn": "Hakka"
+      }
+    ],
+    "elevation": "約10 m（台北中心部）",
+    "elevationEn": "Approx. 10 m (central Taipei)",
+    "weather": {
+      "summary": "北部は亜熱帯、南部は熱帯で、夏は高温多湿です。台風の影響を受けることがあります。",
+      "summaryEn": "The north is subtropical and the south tropical, with hot humid summers and occasional typhoons."
+    },
+    "heritage": [
+      {
+        "id": "tw-taroko",
+        "title": "太魯閣峡谷",
+        "titleEn": "Taroko Gorge",
+        "description": "大理石の断崖と急流が作る深い峡谷で、台湾東部を代表する自然景観です。",
+        "descriptionEn": "Marble cliffs and a rushing river form a deep gorge in eastern Taiwan.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taroko%20Gorge%20Taiwan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Taroko_Gorge_Taiwan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Taroko_Gorge_Taiwan.jpg",
+        "category": "峡谷・自然景観",
+        "categoryEn": "Gorge and Natural Attraction"
+      },
+      {
+        "id": "tw-sun-moon",
+        "title": "日月潭",
+        "titleEn": "Sun Moon Lake",
+        "description": "山々に囲まれた湖で、先住民サオ族の文化と観光景観が結びついています。",
+        "descriptionEn": "A mountain lake where scenic tourism and the culture of the Thao people meet.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sun-Moon-Lake%20Taiwan%20Lake-seen-from-Wen-Wu-Temple-01.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sun-Moon-Lake_Taiwan_Lake-seen-from-Wen-Wu-Temple-01.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sun-Moon-Lake_Taiwan_Lake-seen-from-Wen-Wu-Temple-01.jpg",
+        "category": "自然・文化景観",
+        "categoryEn": "Natural and Cultural Landscape"
+      },
+      {
+        "id": "tw-taipei101",
+        "title": "台北101",
+        "titleEn": "Taipei 101",
+        "description": "竹の節を思わせる外観を持つ超高層建築で、都市の技術とデザインを象徴します。",
+        "descriptionEn": "A bamboo-inspired skyscraper symbolizing engineering, urban design, and modern Taipei.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei%20101.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Taipei_101.JPG",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Taipei_101.JPG",
+        "category": "現代建築",
+        "categoryEn": "Modern Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "tw-beef-noodle",
+        "title": "牛肉麺",
+        "titleEn": "Taiwanese Beef Noodle Soup",
+        "description": "牛肉を香辛料とともに煮込み、麺、青菜、漬物などと合わせます。",
+        "descriptionEn": "Beef is braised with spices and served with noodles, greens, and pickled vegetables.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taiwanese%20beef%20noodle%20soup.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Taiwanese_beef_noodle_soup.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Taiwanese_beef_noodle_soup.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "tw-lantern",
+        "title": "台湾ランタンフェスティバル",
+        "titleEn": "Taiwan Lantern Festival",
+        "description": "巨大なランタン、光の展示、伝統行事で旧暦正月の終わりを祝います。",
+        "descriptionEn": "Large lanterns, light installations, and traditional events mark the close of the Lunar New Year season.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2020%20Taiwan%20Lantern%20Festival%201.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:2020_Taiwan_Lantern_Festival_1.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:2020_Taiwan_Lantern_Festival_1.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "tw-tea",
+        "title": "台湾茶文化",
+        "titleEn": "Taiwanese Tea Culture",
+        "description": "烏龍茶などを小さな急須と杯で丁寧にいれ、香りと味の変化を楽しみます。",
+        "descriptionEn": "Oolong and other teas are carefully brewed in small pots and cups to appreciate aroma and changing flavor.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taiwan%20tea%20ceremony.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Taiwan_tea_ceremony.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Taiwan_tea_ceremony.jpg",
+        "category": "飲料・生活文化",
+        "categoryEn": "Beverage and Living Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "半導体・観光・教育で極めて深い交流",
+      "titleEn": "Very Strong Links Through Semiconductors, Tourism, and Education",
+      "text": "日本と台湾は半導体、製造業、観光、食文化、教育、防災などで非常に活発に交流しています。",
+      "textEn": "Japan and Taiwan have extensive ties in semiconductors, manufacturing, tourism, food, education, and disaster cooperation."
+    },
+    "quiz": {
+      "question": "台湾で生産される代表的な茶の種類は何でしょう？",
+      "questionEn": "Which type of tea is especially associated with Taiwan?",
+      "options": [
+        "烏龍茶",
+        "マテ茶",
+        "ルイボスティー",
+        "ミントティーだけ"
+      ],
+      "optionsEn": [
+        "Oolong tea",
+        "Yerba mate",
+        "Rooibos",
+        "Only mint tea"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は烏龍茶です。高山茶や東方美人茶など多様な種類があります。",
+      "explanationEn": "The answer is oolong tea, including high-mountain and Oriental Beauty varieties."
+    }
+  },
+  "tz": {
+    "iso": "tz",
+    "nameJa": "タンザニア",
+    "nameEn": "Tanzania",
+    "capitalJa": "ドドマ",
+    "capitalEn": "Dodoma",
+    "subtitle": "サバンナ、高峰、火山カルデラ、インド洋岸、スワヒリ文化を持つ東アフリカの国です。",
+    "subtitleEn": "An East African country of savanna, high mountains, volcanic calderas, Indian Ocean coasts, and Swahili culture.",
+    "flagUrl": "https://flagcdn.com/w320/tz.png",
+    "mapQuery": "Dodoma, Tanzania",
+    "timeZone": "Africa/Dar_es_Salaam",
+    "currency": {
+      "nameJa": "タンザニア・シリング",
+      "nameEn": "Tanzanian Shilling",
+      "symbol": "TSh"
+    },
+    "languages": [
+      {
+        "nameJa": "スワヒリ語",
+        "nameEn": "Swahili"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約1,120 m（ドドマ）",
+    "elevationEn": "Approx. 1,120 m (Dodoma)",
+    "weather": {
+      "summary": "沿岸部は高温多湿で、内陸高原は比較的乾燥し、高山部は寒冷です。",
+      "summaryEn": "The coast is hot and humid, the interior plateau is drier, and high mountains are cold."
+    },
+    "heritage": [
+      {
+        "id": "tz-serengeti",
+        "title": "セレンゲティ国立公園",
+        "titleEn": "Serengeti National Park",
+        "description": "広大なサバンナをヌーやシマウマが大移動する、世界的に有名な生態系です。",
+        "descriptionEn": "Vast savanna supports the famous migration of wildebeest, zebra, and predators.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Serengeti%20National.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Serengeti_National.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "tz-kilimanjaro",
+        "title": "キリマンジャロ国立公園",
+        "titleEn": "Kilimanjaro National Park",
+        "description": "アフリカ最高峰を中心に、熱帯林から高山砂漠まで植生が変化します。",
+        "descriptionEn": "Africa's highest mountain rises through ecological zones from rainforest to alpine desert.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kilimanjaro%20from%20Amboseli.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kilimanjaro_from_Amboseli.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kilimanjaro_from_Amboseli.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "tz-stone-town",
+        "title": "ザンジバル島のストーン・タウン",
+        "titleEn": "Stone Town of Zanzibar",
+        "description": "サンゴ石の家、細い路地、彫刻扉が、インド洋交易と多文化史を伝えます。",
+        "descriptionEn": "Coral-stone houses, narrow lanes, and carved doors preserve Indian Ocean trade and multicultural history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stone%20Town%20Zanzibar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Stone_Town_Zanzibar.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Stone_Town_Zanzibar.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "tz-ugali",
+        "title": "ウガリとムレンダ",
+        "titleEn": "Ugali and Mlenda",
+        "description": "トウモロコシ粉の主食を、葉野菜、豆、肉、魚の料理と食べます。",
+        "descriptionEn": "Firm maize porridge is served with leafy greens, beans, meat, or fish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tanzania%20Food%20Ugali%20and%20Mlenda.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tanzania_Food_Ugali_and_Mlenda.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tanzania_Food_Ugali_and_Mlenda.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "tz-maasai",
+        "title": "マサイのビーズ装身具",
+        "titleEn": "Maasai Beadwork",
+        "description": "色鮮やかなビーズを首飾りや衣装に用い、年齢、役割、祝いを表します。",
+        "descriptionEn": "Bright beadwork in jewelry and dress communicates age, role, ceremony, and identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Maasai%20Tribe.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Maasai_Tribe.jpg",
+        "imageCredit": "Steve Pastor",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "伝統工芸・服飾文化",
+        "categoryEn": "Traditional Craft and Clothing Culture"
+      },
+      {
+        "id": "tz-tingatinga",
+        "title": "ティンガティンガ絵画",
+        "titleEn": "Tingatinga Painting",
+        "description": "鮮やかな色と単純化した動物や植物で、東アフリカの生活と自然を描きます。",
+        "descriptionEn": "Bright colors and simplified animals and plants depict East African life and nature.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tingatinga%20painting%20Tanzania.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tingatinga_painting_Tanzania.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tingatinga_painting_Tanzania.jpg",
+        "category": "現代民俗美術",
+        "categoryEn": "Contemporary Folk Art"
+      }
+    ],
+    "japanConnection": {
+      "title": "TICAD・農業・保健で協力",
+      "titleEn": "Cooperation Through TICAD, Agriculture, and Health",
+      "text": "日本は農業、道路、保健、教育、水、人材育成などでタンザニアと協力しています。",
+      "textEn": "Japan and Tanzania cooperate in agriculture, roads, health, education, water, and training."
+    },
+    "quiz": {
+      "question": "タンザニアにあるアフリカ最高峰は何でしょう？",
+      "questionEn": "Which is Africa's highest mountain, located in Tanzania?",
+      "options": [
+        "キリマンジャロ",
+        "ケニア山",
+        "アトラス山",
+        "ドラケンスバーグ"
+      ],
+      "optionsEn": [
+        "Kilimanjaro",
+        "Mount Kenya",
+        "Atlas Mountains",
+        "Drakensberg"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はキリマンジャロです。標高5,895 mの独立峰です。",
+      "explanationEn": "The answer is Kilimanjaro, a free-standing mountain rising to 5,895 meters."
+    }
+  },
+  "th": {
+    "iso": "th",
+    "nameJa": "タイ",
+    "nameEn": "Thailand",
+    "capitalJa": "バンコク",
+    "capitalEn": "Bangkok",
+    "subtitle": "仏教寺院、古都、熱帯山地、王室文化、香辛料豊かな料理と祭りを持つ東南アジアの国です。",
+    "subtitleEn": "A Southeast Asian country of Buddhist temples, ancient capitals, tropical mountains, royal traditions, spicy cuisine, and festivals.",
+    "flagUrl": "https://flagcdn.com/w320/th.png",
+    "mapQuery": "Bangkok, Thailand",
+    "timeZone": "Asia/Bangkok",
+    "currency": {
+      "nameJa": "バーツ",
+      "nameEn": "Thai Baht",
+      "symbol": "฿"
+    },
+    "languages": [
+      {
+        "nameJa": "タイ語",
+        "nameEn": "Thai"
+      }
+    ],
+    "elevation": "約1.5 m（バンコク中心部）",
+    "elevationEn": "Approx. 1.5 m (central Bangkok)",
+    "weather": {
+      "summary": "高温の熱帯モンスーン気候で、暑季、雨季、比較的涼しい乾季があります。",
+      "summaryEn": "Thailand has a tropical monsoon climate with hot, rainy, and relatively cooler dry seasons."
+    },
+    "heritage": [
+      {
+        "id": "th-ayutthaya",
+        "title": "古都アユタヤ",
+        "titleEn": "Historic City of Ayutthaya",
+        "description": "寺院塔、仏像、王宮跡が、かつての国際交易都市の繁栄を伝えます。",
+        "descriptionEn": "Temple towers, Buddha images, and palace ruins preserve the prosperity of a former international capital.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ayutthaya%20Thailand%20Wat%20Chaiwatthanaram.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ayutthaya_Thailand_Wat_Chaiwatthanaram.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ayutthaya_Thailand_Wat_Chaiwatthanaram.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "th-sukhothai",
+        "title": "古代都市スコータイ",
+        "titleEn": "Historic Town of Sukhothai",
+        "description": "仏塔、寺院、貯水池が、初期タイ王国の都市計画と仏教美術を伝えます。",
+        "descriptionEn": "Stupas, temples, and reservoirs preserve the planning and Buddhist art of an early Thai kingdom.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sukhothai%20historical%20park%20Thailand.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sukhothai_historical_park_Thailand.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sukhothai_historical_park_Thailand.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "th-doi-inthanon",
+        "title": "ドイ・インタノン",
+        "titleEn": "Doi Inthanon",
+        "description": "タイ最高峰を中心に雲霧林、滝、王室の仏塔が広がります。",
+        "descriptionEn": "Thailand's highest mountain contains cloud forest, waterfalls, and royal pagodas.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Doi%20Inthanon,%20Royal%20Pagoda,%20Thailand.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Doi_Inthanon,_Royal_Pagoda,_Thailand.jpg",
+        "imageCredit": "Vyacheslav Argenberg",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Doi_Inthanon,_Royal_Pagoda,_Thailand.jpg",
+        "category": "高山・自然景観",
+        "categoryEn": "Mountain Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "th-pad-thai",
+        "title": "パッタイ",
+        "titleEn": "Pad Thai",
+        "description": "米麺を卵、豆腐、エビ、もやし、甘酸っぱいソースと炒めます。",
+        "descriptionEn": "Rice noodles are stir-fried with egg, tofu, shrimp, bean sprouts, and a sweet-sour sauce.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pad%20Thai%20in%20Thai%20Cooking%20School%20in%20Sukhothai.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pad_Thai_in_Thai_Cooking_School_in_Sukhothai.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pad_Thai_in_Thai_Cooking_School_in_Sukhothai.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "th-songkran",
+        "title": "ソンクラーン",
+        "titleEn": "Songkran",
+        "description": "新年に仏像を清め、家族を敬い、水を掛け合って暑季を祝います。",
+        "descriptionEn": "People honor elders, cleanse Buddha images, and celebrate the new year with water.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Songkran%2010%20-%20Ayutthaya.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Songkran_10_-_Ayutthaya.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Songkran_10_-_Ayutthaya.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "th-khon",
+        "title": "コーン仮面劇",
+        "titleEn": "Khon Masked Dance Drama",
+        "description": "仮面、精密な衣装、舞踊、音楽でラーマキエンの物語を演じます。",
+        "descriptionEn": "Masks, elaborate costume, dance, and music stage episodes from the Ramakien epic.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Khon%20dance%20Thailand.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Khon_dance_Thailand.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Khon_dance_Thailand.jpg",
+        "category": "伝統芸能",
+        "categoryEn": "Performing Arts"
+      }
+    ],
+    "japanConnection": {
+      "title": "観光・製造業・教育で極めて深い交流",
+      "titleEn": "Very Strong Links Through Tourism, Manufacturing, and Education",
+      "text": "日本とタイは自動車産業、貿易、観光、教育、食文化で非常に深く結ばれています。",
+      "textEn": "Japan and Thailand are closely connected through automobiles, trade, tourism, education, and food culture."
+    },
+    "quiz": {
+      "question": "タイの新年を祝う水掛け祭りは何でしょう？",
+      "questionEn": "What is Thailand's water festival celebrating the traditional new year?",
+      "options": [
+        "ソンクラーン",
+        "ホーリー",
+        "ナウルーズ",
+        "オクトーバーフェスト"
+      ],
+      "optionsEn": [
+        "Songkran",
+        "Holi",
+        "Nowruz",
+        "Oktoberfest"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はソンクラーンです。4月に行われる代表的な祭りです。",
+      "explanationEn": "The answer is Songkran, the major traditional new-year festival held in April."
+    }
+  },
+  "tl": {
+    "iso": "tl",
+    "nameJa": "東ティモール",
+    "nameEn": "Timor-Leste",
+    "capitalJa": "ディリ",
+    "capitalEn": "Dili",
+    "subtitle": "ティモール島東部に位置し、山地、サンゴ礁、抵抗の歴史、織物と共同体舞踊を持つ国です。",
+    "subtitleEn": "A Southeast Asian country of mountains, coral reefs, resistance history, woven textiles, and community dance.",
+    "flagUrl": "https://flagcdn.com/w320/tl.png",
+    "mapQuery": "Dili, Timor-Leste",
+    "timeZone": "Asia/Dili",
+    "currency": {
+      "nameJa": "米ドル",
+      "nameEn": "United States Dollar",
+      "symbol": "$"
+    },
+    "languages": [
+      {
+        "nameJa": "テトゥン語",
+        "nameEn": "Tetum"
+      },
+      {
+        "nameJa": "ポルトガル語",
+        "nameEn": "Portuguese"
+      }
+    ],
+    "elevation": "約11 m（ディリ）",
+    "elevationEn": "Approx. 11 m (Dili)",
+    "weather": {
+      "summary": "熱帯気候で雨季と乾季があります。山地は沿岸部より涼しくなります。",
+      "summaryEn": "Timor-Leste has a tropical wet-dry climate, with cooler conditions in the mountains than on the coast."
+    },
+    "heritage": [
+      {
+        "id": "tl-cristo-rei",
+        "title": "クリスト・レイ",
+        "titleEn": "Cristo Rei of Dili",
+        "description": "ディリ湾を見下ろす丘に巨大なキリスト像が立ち、都市と海の景観を象徴します。",
+        "descriptionEn": "A monumental statue of Christ overlooks Dili Bay and forms a major city and coastal landmark.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cristo%20Rei%20Dili%20Timor%20Leste.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cristo_Rei_Dili_Timor_Leste.jpg",
+        "imageCredit": "Philip Nalangan",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "宗教・都市景観",
+        "categoryEn": "Religious and Urban Landmark"
+      },
+      {
+        "id": "tl-atauro",
+        "title": "アタウロ島",
+        "titleEn": "Atauro Island",
+        "description": "サンゴ礁、透明な海、山村が広がり、海洋生物多様性と島の暮らしを支えます。",
+        "descriptionEn": "Coral reefs, clear water, and mountain villages support rich marine biodiversity and island life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Atauro%20Island%20Timor-Leste.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Atauro_Island_Timor-Leste.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Atauro_Island_Timor-Leste.jpg",
+        "category": "島嶼・海洋景観",
+        "categoryEn": "Island and Marine Landscape"
+      },
+      {
+        "id": "tl-nino-konis",
+        "title": "ニノ・コニス・サンタナ国立公園",
+        "titleEn": "Nino Konis Santana National Park",
+        "description": "熱帯林、海岸、サンゴ礁、洞窟壁画を含む国初の国立公園です。",
+        "descriptionEn": "The country's first national park protects rainforest, coast, coral reefs, and rock-art sites.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nino%20Konis%20Santana%20National%20Park.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nino_Konis_Santana_National_Park.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nino_Konis_Santana_National_Park.jpg",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      }
+    ],
+    "culture": [
+      {
+        "id": "tl-tais",
+        "title": "タイス",
+        "titleEn": "Tais",
+        "description": "地域ごとの色と模様を織り込む伝統布で、誕生、結婚、葬儀、贈答に用います。",
+        "descriptionEn": "Regional colors and patterns are woven into ceremonial cloth used for births, weddings, funerals, and gifts.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tais.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tais.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tais.jpg",
+        "category": "伝統工芸・服飾文化",
+        "categoryEn": "Traditional Craft and Clothing Culture"
+      },
+      {
+        "id": "tl-batar-daan",
+        "title": "バタール・ダーン",
+        "titleEn": "Batar Da'an",
+        "description": "トウモロコシ、豆、カボチャなどを煮込む、農村で親しまれる素朴な料理です。",
+        "descriptionEn": "Corn, beans, pumpkin, and other ingredients are simmered in a nourishing rural dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Batar%20daan%20Timor-Leste.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Batar_daan_Timor-Leste.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Batar_daan_Timor-Leste.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "tl-tebe",
+        "title": "テベ",
+        "titleEn": "Tebe Dance",
+        "description": "人々が輪を作り、歌と足踏みを合わせて祝いと共同体の結束を表します。",
+        "descriptionEn": "People form a circle and coordinate song and stamping steps to express celebration and unity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tebe%20dance%20Timor-Leste.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tebe_dance_Timor-Leste.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tebe_dance_Timor-Leste.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "平和構築・人材育成・インフラで協力",
+      "titleEn": "Cooperation in Peacebuilding, Training, and Infrastructure",
+      "text": "日本は独立後の平和構築、道路、農業、教育、保健、人材育成で協力しています。",
+      "textEn": "Japan supports Timor-Leste in post-independence peacebuilding, roads, agriculture, education, health, and training."
+    },
+    "quiz": {
+      "question": "東ティモールの伝統的な織物は何と呼ばれるでしょう？",
+      "questionEn": "What is Timor-Leste's traditional woven cloth called?",
+      "options": [
+        "タイス",
+        "キルト",
+        "サリー",
+        "ポンチョ"
+      ],
+      "optionsEn": [
+        "Tais",
+        "Kilt",
+        "Sari",
+        "Poncho"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はタイスです。地域や用途によって模様と色が異なります。",
+      "explanationEn": "The answer is tais, whose colors and patterns vary by region and purpose."
+    }
+  },
+  "tg": {
+    "iso": "tg",
+    "nameJa": "トーゴ",
+    "nameEn": "Togo",
+    "capitalJa": "ロメ",
+    "capitalEn": "Lomé",
+    "subtitle": "ギニア湾岸から北部サバンナまで細長く延び、土の建築、滝、織物、舞踊文化を持つ国です。",
+    "subtitleEn": "A narrow West African country stretching from the Gulf of Guinea to northern savanna, with earthen architecture, waterfalls, textiles, and dance.",
+    "flagUrl": "https://flagcdn.com/w320/tg.png",
+    "mapQuery": "Lome, Togo",
+    "timeZone": "Africa/Lome",
+    "currency": {
+      "nameJa": "西アフリカCFAフラン",
+      "nameEn": "West African CFA Franc",
+      "symbol": "CFA"
+    },
+    "languages": [
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "エウェ語",
+        "nameEn": "Ewe"
+      },
+      {
+        "nameJa": "カビエ語",
+        "nameEn": "Kabye"
+      }
+    ],
+    "elevation": "約10 m（ロメ）",
+    "elevationEn": "Approx. 10 m (Lomé)",
+    "weather": {
+      "summary": "南部は高温多湿で、北部ほど乾燥したサバンナ気候になります。",
+      "summaryEn": "Southern Togo is hot and humid, while the north becomes drier and more savanna-like."
+    },
+    "heritage": [
+      {
+        "id": "tg-koutammakou",
+        "title": "クタマク",
+        "titleEn": "Koutammakou",
+        "description": "バタマリバ人の塔状土造家屋が農地と一体となる文化的景観です。",
+        "descriptionEn": "Tower-like earthen houses of the Batammariba form a cultural landscape integrated with farmland.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Koutammakou,%20pays%20des%20Batammariba%20du%20Togo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Le_Koutammakou,_pays_des_Batammariba_du_Togo.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Le_Koutammakou,_pays_des_Batammariba_du_Togo.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "tg-kpalime",
+        "title": "クパリメ周辺の滝",
+        "titleEn": "Waterfalls near Kpalimé",
+        "description": "森林に覆われた山地を水が流れ落ちる、トーゴ南西部の代表的自然景観です。",
+        "descriptionEn": "Water cascades through forested highlands in one of southwestern Togo's major natural areas.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Waterfalls%20from%20Akwapim-Togo%20range.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Waterfalls_from_Akwapim-Togo_range.JPG",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Waterfalls_from_Akwapim-Togo_range.JPG",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "tg-lake",
+        "title": "トーゴ湖",
+        "titleEn": "Lake Togo",
+        "description": "海岸近くのラグーンで、漁業、村落、舟運、宗教文化と結びついています。",
+        "descriptionEn": "A coastal lagoon closely linked to fishing, villages, boat transport, and religious traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Togo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Togo.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lake_Togo.jpg",
+        "category": "湿地・文化景観",
+        "categoryEn": "Wetland and Cultural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "tg-fufu",
+        "title": "フフ",
+        "titleEn": "Fufu",
+        "description": "ヤムイモやキャッサバをついて滑らかにし、スープやソースと食べます。",
+        "descriptionEn": "Yam or cassava is pounded into a smooth staple and eaten with soup or sauce.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Preparing%20the%20fufu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Preparing_the_fufu.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Preparing_the_fufu.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "tg-kente",
+        "title": "ケンテ織",
+        "titleEn": "Kente Weaving",
+        "description": "細い帯状の布を鮮やかな色と幾何学模様で織り、つなぎ合わせます。",
+        "descriptionEn": "Narrow woven strips with bright colors and geometric patterns are joined into larger cloth.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Culture%20du%20togo,%20Kent%C3%A9.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Culture_du_togo,_Kent%C3%A9.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Culture_du_togo,_Kent%C3%A9.jpg",
+        "category": "伝統工芸・服飾文化",
+        "categoryEn": "Traditional Craft and Clothing Culture"
+      },
+      {
+        "id": "tg-fire-dance",
+        "title": "バサールの火の踊り",
+        "titleEn": "Bassar Fire Dance",
+        "description": "火、太鼓、歌、力強い動きを用いて勇気と共同体の精神を表現します。",
+        "descriptionEn": "Fire, drums, song, and vigorous movement express courage and community spirit.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Danse%20T'bol%20du%20Togo%2009.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Danse_T'bol_du_Togo_09.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Danse_T'bol_du_Togo_09.jpg",
+        "category": "舞踊・儀礼文化",
+        "categoryEn": "Dance and Ceremonial Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "農業・教育・保健で協力",
+      "titleEn": "Cooperation in Agriculture, Education, and Health",
+      "text": "日本は農業、教育、保健、水、インフラ、人材育成などでトーゴと協力しています。",
+      "textEn": "Japan and Togo cooperate in agriculture, education, health, water, infrastructure, and training."
+    },
+    "quiz": {
+      "question": "トーゴの世界文化遺産クタマクで有名な建築は何でしょう？",
+      "questionEn": "What architecture is famous in Togo's World Heritage site Koutammakou?",
+      "options": [
+        "塔状の土造家屋",
+        "氷の宮殿",
+        "木造高層ビル",
+        "水上寺院"
+      ],
+      "optionsEn": [
+        "Tower-like earthen houses",
+        "Ice palaces",
+        "Wooden skyscrapers",
+        "Floating temples"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は塔状の土造家屋です。タキエンタと呼ばれる家屋が景観を作ります。",
+      "explanationEn": "The answer is tower-like earthen houses, often called takienta."
+    }
+  },
+  "to": {
+    "iso": "to",
+    "nameJa": "トンガ",
+    "nameEn": "Tonga",
+    "capitalJa": "ヌクアロファ",
+    "capitalEn": "Nukuʻalofa",
+    "subtitle": "南太平洋の王国で、サンゴ島と火山島、巨石遺構、舞踊、タパ布文化を持ちます。",
+    "subtitleEn": "A South Pacific kingdom of coral and volcanic islands, megalithic heritage, dance, and tapa-cloth traditions.",
+    "flagUrl": "https://flagcdn.com/w320/to.png",
+    "mapQuery": "Nuku'alofa, Tonga",
+    "timeZone": "Pacific/Tongatapu",
+    "currency": {
+      "nameJa": "パアンガ",
+      "nameEn": "Paʻanga",
+      "symbol": "T$"
+    },
+    "languages": [
+      {
+        "nameJa": "トンガ語",
+        "nameEn": "Tongan"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約3 m（ヌクアロファ）",
+    "elevationEn": "Approx. 3 m (Nukuʻalofa)",
+    "weather": {
+      "summary": "一年を通して温暖な熱帯海洋性気候で、雨季にはサイクロンの影響を受けることがあります。",
+      "summaryEn": "Tonga has a warm tropical maritime climate and may be affected by cyclones during the wetter season."
+    },
+    "heritage": [
+      {
+        "id": "to-haamonga",
+        "title": "ハアモンガ・ア・マウイ",
+        "titleEn": "Haʻamonga ʻa Maui",
+        "description": "三つの巨大なサンゴ石を組んだ先史時代の巨石門です。",
+        "descriptionEn": "A prehistoric trilithon built from three massive coral-limestone blocks.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ha%CA%BBamonga.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ha%CA%BBamonga.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "考古・巨石遺産",
+        "categoryEn": "Archaeological and Megalithic Heritage"
+      },
+      {
+        "id": "to-blowholes",
+        "title": "マプア・ア・バエアの潮吹き穴",
+        "titleEn": "Mapuʻa ʻa Vaea Blowholes",
+        "description": "波が海岸の岩穴へ入り、長い海岸線に沿って水柱を噴き上げます。",
+        "descriptionEn": "Waves enter coastal rock openings and send columns of spray along a long shoreline.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Scence%20In%20And%20Around%20Nuku'alofa%20%3D%20%E3%83%8C%E3%82%AF%E3%82%A2%E3%83%AD%E3%83%95%E3%82%A1%E3%81%AE%E9%A2%A8%E6%99%AF%20(36585556941).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:The_Scence_In_And_Around_Nuku'alofa_%3D_%E3%83%8C%E3%82%AF%E3%82%A2%E3%83%AD%E3%83%95%E3%82%A1%E3%81%AE%E9%A2%A8%E6%99%AF_(36585556941).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:The_Scence_In_And_Around_Nuku'alofa_%3D_%E3%83%8C%E3%82%AF%E3%82%A2%E3%83%AD%E3%83%95%E3%82%A1%E3%81%AE%E9%A2%A8%E6%99%AF_(36585556941).jpg",
+        "category": "海岸自然景観",
+        "categoryEn": "Coastal Natural Attraction"
+      },
+      {
+        "id": "to-hunga",
+        "title": "フンガ・トンガ＝フンガ・ハアパイ",
+        "titleEn": "Hunga Tonga–Hunga Haʻapai",
+        "description": "海底火山活動によって形成・変化してきた島で、火山と海の力を示します。",
+        "descriptionEn": "An island formed and transformed by submarine volcanism, demonstrating the power of fire and sea.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hunga%20Tonga-Hunga%20Ha%CA%BBapai%20-%2016%20May%202016,%20Tonga%20(34594085466).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hunga_Tonga-Hunga_Ha%CA%BBapai_-_16_May_2016,_Tonga_(34594085466).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hunga_Tonga-Hunga_Ha%CA%BBapai_-_16_May_2016,_Tonga_(34594085466).jpg",
+        "category": "火山・地質景観",
+        "categoryEn": "Volcanic and Geological Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "to-lu-pulu",
+        "title": "ルー・プル",
+        "titleEn": "Lu Pulu",
+        "description": "肉とココナツミルクをタロイモの葉で包み、地中炉で蒸し焼きにします。",
+        "descriptionEn": "Meat and coconut milk are wrapped in taro leaves and cooked in an earth oven.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lu%20pulu%20Tonga.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lu_pulu_Tonga.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lu_pulu_Tonga.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "to-ngatu",
+        "title": "ンガトゥ（タパ布）",
+        "titleEn": "Ngatu Tapa Cloth",
+        "description": "樹皮をたたいて布状にし、幾何学模様や王室・家族の象徴を描きます。",
+        "descriptionEn": "Bark is beaten into cloth and decorated with geometric, royal, and family motifs.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tongan%20tapa%20cloth.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tongan_tapa_cloth.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tongan_tapa_cloth.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "to-lakalaka",
+        "title": "ラカラカ",
+        "titleEn": "Lakalaka",
+        "description": "大人数が列を作り、歌、手の動き、踊りで歴史と共同体を表現します。",
+        "descriptionEn": "Large groups stand in rows and use song, gesture, and dance to express history and community.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lakalaka.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lakalaka.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lakalaka.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "王室交流・防災・水産で協力",
+      "titleEn": "Cooperation Through Royal Ties, Disaster Preparedness, and Fisheries",
+      "text": "日本とトンガは王室交流、防災、水産、教育、気候変動対策で関係を深めています。",
+      "textEn": "Japan and Tonga maintain ties through royal exchange, disaster preparedness, fisheries, education, and climate action."
+    },
+    "quiz": {
+      "question": "トンガの伝統的な樹皮布は何と呼ばれるでしょう？",
+      "questionEn": "What is Tonga's traditional bark cloth called?",
+      "options": [
+        "ンガトゥ",
+        "バティック",
+        "キルト",
+        "シルダック"
+      ],
+      "optionsEn": [
+        "Ngatu",
+        "Batik",
+        "Kilt",
+        "Shyrdak"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はンガトゥです。一般にはタパ布の一種として知られます。",
+      "explanationEn": "The answer is ngatu, a Tongan form of tapa cloth."
+    }
+  },
+  "tt": {
+    "iso": "tt",
+    "nameJa": "トリニダード・トバゴ",
+    "nameEn": "Trinidad and Tobago",
+    "capitalJa": "ポートオブスペイン",
+    "capitalEn": "Port of Spain",
+    "subtitle": "二つの主要島に、熱帯林、湿地、アスファルト湖、カーニバルとスティールパン文化が広がる国です。",
+    "subtitleEn": "A two-island Caribbean nation of rainforest, wetlands, a natural asphalt lake, carnival, and steelpan culture.",
+    "flagUrl": "https://flagcdn.com/w320/tt.png",
+    "mapQuery": "Port of Spain, Trinidad and Tobago",
+    "timeZone": "America/Port_of_Spain",
+    "currency": {
+      "nameJa": "トリニダード・トバゴ・ドル",
+      "nameEn": "Trinidad and Tobago Dollar",
+      "symbol": "TT$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約3 m（ポートオブスペイン）",
+    "elevationEn": "Approx. 3 m (Port of Spain)",
+    "weather": {
+      "summary": "一年を通して温暖で、雨季と乾季があります。南部はハリケーンの直撃が比較的少ない地域です。",
+      "summaryEn": "The climate is warm year-round with wet and dry seasons, and the southern location reduces direct hurricane exposure."
+    },
+    "heritage": [
+      {
+        "id": "tt-pitch-lake",
+        "title": "ピッチ湖",
+        "titleEn": "Pitch Lake",
+        "description": "世界最大級の天然アスファルト湖で、地質と産業の両面で重要です。",
+        "descriptionEn": "One of the world's largest natural asphalt deposits, important for both geology and industry.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Trinidad,%20Pitch%20Lake.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Trinidad,_Pitch_Lake.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Trinidad,_Pitch_Lake.jpg",
+        "category": "地質・産業景観",
+        "categoryEn": "Geological and Industrial Landscape"
+      },
+      {
+        "id": "tt-pigeon-point",
+        "title": "ピジョン・ポイント",
+        "titleEn": "Pigeon Point",
+        "description": "白砂、ヤシ、サンゴ礁に囲まれたトバゴ島を代表する海岸景観です。",
+        "descriptionEn": "White sand, palms, and nearby coral reefs form one of Tobago's most iconic coastal landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pigeon%20Point,%20Tobago,%20West%20Indies.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pigeon_Point,_Tobago,_West_Indies.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pigeon_Point,_Tobago,_West_Indies.jpg",
+        "category": "海岸・海洋景観",
+        "categoryEn": "Coastal and Marine Landscape"
+      },
+      {
+        "id": "tt-caroni",
+        "title": "カロニ湿地",
+        "titleEn": "Caroni Swamp",
+        "description": "マングローブ湿地に国鳥ショウジョウトキや多様な水鳥が集まります。",
+        "descriptionEn": "Mangrove wetlands support scarlet ibises, the national bird, and many other waterbirds.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Caroni%20Swamp%20Trinidad.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Caroni_Swamp_Trinidad.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Caroni_Swamp_Trinidad.jpg",
+        "category": "湿地・自然景観",
+        "categoryEn": "Wetland Natural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "tt-doubles",
+        "title": "ダブルス",
+        "titleEn": "Doubles",
+        "description": "揚げパンにひよこ豆カレー、チャツネ、唐辛子ソースを挟む人気の屋台料理です。",
+        "descriptionEn": "Fried flatbread is filled with chickpea curry, chutney, and pepper sauce.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Debe%20doubles%20-%20Trinidad%20&%20Tobago.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Debe_doubles_-_Trinidad_&_Tobago.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Debe_doubles_-_Trinidad_&_Tobago.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "tt-carnival",
+        "title": "トリニダード・カーニバル",
+        "titleEn": "Trinidad Carnival",
+        "description": "仮装、音楽、踊り、パレードが街を満たす、世界的に有名な祭典です。",
+        "descriptionEn": "Costume, music, dance, and parades fill the streets during a world-famous carnival.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiddies%20Carnival%20-St%20James%20Trinidad%20&%20Tobago.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kiddies_Carnival_-St_James_Trinidad_&_Tobago.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kiddies_Carnival_-St_James_Trinidad_&_Tobago.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "tt-steelpan",
+        "title": "スティールパン",
+        "titleEn": "Steelpan",
+        "description": "金属ドラムを調律して旋律を奏でる、トリニダード・トバゴ発祥の楽器文化です。",
+        "descriptionEn": "Tuned metal drums produce melody in a musical tradition originating in Trinidad and Tobago.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Steelpan%20Instruments%20at%20Trinidad%20and%20Tobago%20Carnival.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Steelpan_Instruments_at_Trinidad_and_Tobago_Carnival.jpg",
+        "imageCredit": "Kip1234",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Steelpan_Instruments_at_Trinidad_and_Tobago_Carnival.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "エネルギー・文化・観光で交流",
+      "titleEn": "Exchange Through Energy, Culture, and Tourism",
+      "text": "日本とトリニダード・トバゴはLNG、貿易、音楽、観光、国際協力で交流しています。",
+      "textEn": "Japan and Trinidad and Tobago maintain ties in LNG, trade, music, tourism, and international cooperation."
+    },
+    "quiz": {
+      "question": "トリニダード・トバゴで誕生した楽器は何でしょう？",
+      "questionEn": "Which instrument originated in Trinidad and Tobago?",
+      "options": [
+        "スティールパン",
+        "三味線",
+        "バグパイプ",
+        "バラライカ"
+      ],
+      "optionsEn": [
+        "Steelpan",
+        "Shamisen",
+        "Bagpipes",
+        "Balalaika"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はスティールパンです。カーニバル音楽の重要な楽器です。",
+      "explanationEn": "The answer is the steelpan, a central instrument in carnival music."
+    }
+  },
+  "tn": {
+    "iso": "tn",
+    "nameJa": "チュニジア",
+    "nameEn": "Tunisia",
+    "capitalJa": "チュニス",
+    "capitalEn": "Tunis",
+    "subtitle": "地中海岸、古代カルタゴ、ローマ遺跡、サハラ、白と青の町、香辛料豊かな料理を持つ国です。",
+    "subtitleEn": "A North African country of Mediterranean coasts, ancient Carthage, Roman ruins, Sahara landscapes, white-and-blue towns, and spiced cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/tn.png",
+    "mapQuery": "Tunis, Tunisia",
+    "timeZone": "Africa/Tunis",
+    "currency": {
+      "nameJa": "チュニジア・ディナール",
+      "nameEn": "Tunisian Dinar",
+      "symbol": "DT"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約4 m（チュニス）",
+    "elevationEn": "Approx. 4 m (Tunis)",
+    "weather": {
+      "summary": "北部は地中海性気候、内陸と南部は乾燥し、サハラ砂漠へ続きます。",
+      "summaryEn": "Northern Tunisia has a Mediterranean climate, while the interior and south become increasingly dry toward the Sahara."
+    },
+    "heritage": [
+      {
+        "id": "tn-carthage",
+        "title": "カルタゴ遺跡",
+        "titleEn": "Archaeological Site of Carthage",
+        "description": "フェニキアとローマの都市遺跡が、地中海交易と帝国の歴史を伝えます。",
+        "descriptionEn": "Phoenician and Roman remains preserve the history of Mediterranean trade and empire.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carthage%20Tunisia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Carthage_Tunisia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Carthage_Tunisia.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "tn-el-jem",
+        "title": "エル・ジェムの円形闘技場",
+        "titleEn": "Amphitheatre of El Jem",
+        "description": "巨大な石造円形闘技場が、ローマ帝国期の都市と娯楽文化を伝えます。",
+        "descriptionEn": "A monumental stone amphitheater preserves Roman urban and entertainment history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/El%20Jem%20Amphitheatre%20Tunisia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:El_Jem_Amphitheatre_Tunisia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:El_Jem_Amphitheatre_Tunisia.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "tn-sidi-bou-said",
+        "title": "シディ・ブ・サイド",
+        "titleEn": "Sidi Bou Said",
+        "description": "白壁と青い扉の家々が丘に並び、地中海を見下ろす独特の町並みです。",
+        "descriptionEn": "White houses with blue doors line a hill overlooking the Mediterranean.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidi%20Bou%20Said%20-%20Tunisia.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sidi_Bou_Said_-_Tunisia.JPG",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sidi_Bou_Said_-_Tunisia.JPG",
+        "category": "歴史・都市景観",
+        "categoryEn": "Historic Urban Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "tn-couscous",
+        "title": "チュニジア風クスクス",
+        "titleEn": "Tunisian Couscous",
+        "description": "蒸した小麦粒に肉、魚、野菜、ひよこ豆、辛いソースを合わせます。",
+        "descriptionEn": "Steamed semolina grains are served with meat or fish, vegetables, chickpeas, and a spicy sauce.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tunisian%20couscous.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tunisian_couscous.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tunisian_couscous.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "tn-harissa",
+        "title": "ハリッサ",
+        "titleEn": "Harissa",
+        "description": "唐辛子、ニンニク、香辛料をすりつぶした辛い調味料で、さまざまな料理に使います。",
+        "descriptionEn": "Chili peppers, garlic, and spices are ground into a hot condiment used throughout Tunisian cooking.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Harissa%20Tunisia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Harissa_Tunisia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Harissa_Tunisia.jpg",
+        "category": "食文化・調味料文化",
+        "categoryEn": "Food and Condiment Culture"
+      },
+      {
+        "id": "tn-malouf",
+        "title": "マルーフ音楽",
+        "titleEn": "Malouf Music",
+        "description": "アンダルシア系の旋律とアラブ音楽を組み合わせた古典音楽です。",
+        "descriptionEn": "A classical musical tradition combining Andalusian melodies with Arab musical forms.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Malouf%20musicians%20Tunisia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Malouf_musicians_Tunisia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Malouf_musicians_Tunisia.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "観光・産業・文化で交流",
+      "titleEn": "Exchange Through Tourism, Industry, and Culture",
+      "text": "日本とチュニジアは観光、製造業、教育、文化、国際協力で交流しています。",
+      "textEn": "Japan and Tunisia maintain ties in tourism, manufacturing, education, culture, and international cooperation."
+    },
+    "quiz": {
+      "question": "古代にローマと地中海の覇権を争った都市はどこでしょう？",
+      "questionEn": "Which ancient city competed with Rome for power in the Mediterranean?",
+      "options": [
+        "カルタゴ",
+        "京都",
+        "テオティワカン",
+        "バビロン"
+      ],
+      "optionsEn": [
+        "Carthage",
+        "Kyoto",
+        "Teotihuacan",
+        "Babylon"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はカルタゴです。フェニキア人が築いた強大な海洋都市でした。",
+      "explanationEn": "The answer is Carthage, a powerful maritime city founded by Phoenicians."
+    }
+  },
+  "tr": {
+    "iso": "tr",
+    "nameJa": "トルコ（テュルキエ）",
+    "nameEn": "Türkiye",
+    "capitalJa": "アンカラ",
+    "capitalEn": "Ankara",
+    "subtitle": "ヨーロッパとアジアを結び、古代都市、火山地形、イスラム建築、織物と豊かな食文化を持つ国です。",
+    "subtitleEn": "A country linking Europe and Asia, with ancient cities, volcanic landscapes, Islamic architecture, textiles, and rich cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/tr.png",
+    "mapQuery": "Ankara, Türkiye",
+    "timeZone": "Europe/Istanbul",
+    "currency": {
+      "nameJa": "トルコ・リラ",
+      "nameEn": "Turkish Lira",
+      "symbol": "₺"
+    },
+    "languages": [
+      {
+        "nameJa": "トルコ語",
+        "nameEn": "Turkish"
+      }
+    ],
+    "elevation": "約938 m（アンカラ）",
+    "elevationEn": "Approx. 938 m (Ankara)",
+    "weather": {
+      "summary": "沿岸部は地中海性または海洋性、内陸は寒暖差の大きい大陸性気候です。",
+      "summaryEn": "Coastal regions have Mediterranean or maritime climates, while the interior has a more continental climate with large temperature differences."
+    },
+    "heritage": [
+      {
+        "id": "tr-cappadocia",
+        "title": "ギョレメ国立公園とカッパドキア",
+        "titleEn": "Göreme National Park and Cappadocia",
+        "description": "火山灰が削られた奇岩、洞窟教会、地下都市が広がる複合景観です。",
+        "descriptionEn": "Eroded volcanic formations, cave churches, and underground cities create a remarkable mixed landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappadocia%20in%20Turkey.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cappadocia_in_Turkey.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cappadocia_in_Turkey.jpg",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      },
+      {
+        "id": "tr-ephesus",
+        "title": "エフェソス",
+        "titleEn": "Ephesus",
+        "description": "劇場、図書館、街路、神殿跡が、古代地中海都市の繁栄を伝えます。",
+        "descriptionEn": "A theater, library, streets, and temple remains preserve the prosperity of an ancient Mediterranean city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ephesus%20Turkey.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ephesus_Turkey.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ephesus_Turkey.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "tr-pamukkale",
+        "title": "ヒエラポリス＝パムッカレ",
+        "titleEn": "Hierapolis-Pamukkale",
+        "description": "白い石灰棚と温泉、古代都市遺跡が一体となった景観です。",
+        "descriptionEn": "White travertine terraces, thermal springs, and ancient ruins form a combined natural and cultural site.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkey.Pamukkale025.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Turkey.Pamukkale025.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Turkey.Pamukkale025.jpg",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "tr-baklava",
+        "title": "バクラヴァ",
+        "titleEn": "Baklava",
+        "description": "薄い生地を何層にも重ね、ナッツとシロップを加える伝統菓子です。",
+        "descriptionEn": "Layers of thin pastry are filled with nuts and sweetened with syrup.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkish%20baklava.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Turkish_baklava.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Turkish_baklava.jpg",
+        "category": "菓子文化",
+        "categoryEn": "Pastry Culture"
+      },
+      {
+        "id": "tr-sema",
+        "title": "メヴレヴィーの旋回舞踊",
+        "titleEn": "Mevlevi Sema Ceremony",
+        "description": "音楽と詩に合わせて旋回し、精神的な修行と祈りを表します。",
+        "descriptionEn": "Whirling to music and poetry expresses spiritual discipline and prayer.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%C3%87anakkale%20tradional%20Sufi%20house%20-%20Sufi%20whirling.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:%C3%87anakkale_tradional_Sufi_house_-_Sufi_whirling.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "宗教・舞踊文化",
+        "categoryEn": "Religious and Dance Culture"
+      },
+      {
+        "id": "tr-kilim",
+        "title": "キリム織",
+        "titleEn": "Kilim Weaving",
+        "description": "平織りで幾何学模様を作り、敷物、袋、装飾に使います。",
+        "descriptionEn": "Flat weaving creates geometric patterns for rugs, bags, and decoration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkish%20kilim.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Turkish_kilim.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Turkish_kilim.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "貿易・観光・防災で幅広く交流",
+      "titleEn": "Broad Exchange in Trade, Tourism, and Disaster Preparedness",
+      "text": "日本とトルコは歴史的友好関係を持ち、貿易、観光、建設、防災、文化で交流しています。",
+      "textEn": "Japan and Türkiye share a historic friendship and cooperate in trade, tourism, construction, disaster preparedness, and culture."
+    },
+    "quiz": {
+      "question": "カッパドキアの奇岩は一般に何と呼ばれるでしょう？",
+      "questionEn": "What are Cappadocia's unusual rock formations commonly called?",
+      "options": [
+        "妖精の煙突",
+        "氷の塔",
+        "珊瑚の柱",
+        "砂の城"
+      ],
+      "optionsEn": [
+        "Fairy chimneys",
+        "Ice towers",
+        "Coral pillars",
+        "Sand castles"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は妖精の煙突です。火山灰の地層が風雨で削られて形成されました。",
+      "explanationEn": "The answer is fairy chimneys, formed by erosion of volcanic deposits."
+    }
+  },
+  "tm": {
+    "iso": "tm",
+    "nameJa": "トルクメニスタン",
+    "nameEn": "Turkmenistan",
+    "capitalJa": "アシガバート",
+    "capitalEn": "Ashgabat",
+    "subtitle": "カラクム砂漠、シルクロード都市、白い大理石の首都、絨毯と馬文化を持つ中央アジアの国です。",
+    "subtitleEn": "A Central Asian country of the Karakum Desert, Silk Road cities, a white-marble capital, carpets, and horse culture.",
+    "flagUrl": "https://flagcdn.com/w320/tm.png",
+    "mapQuery": "Ashgabat, Turkmenistan",
+    "timeZone": "Asia/Ashgabat",
+    "currency": {
+      "nameJa": "マナト",
+      "nameEn": "Turkmenistan Manat",
+      "symbol": "m"
+    },
+    "languages": [
+      {
+        "nameJa": "トルクメン語",
+        "nameEn": "Turkmen"
+      }
+    ],
+    "elevation": "約219 m（アシガバート）",
+    "elevationEn": "Approx. 219 m (Ashgabat)",
+    "weather": {
+      "summary": "非常に乾燥した大陸性気候で、夏は暑く、冬は冷え込みます。",
+      "summaryEn": "The climate is extremely dry and continental, with hot summers and cold winters."
+    },
+    "heritage": [
+      {
+        "id": "tm-merv",
+        "title": "古代都市メルブ",
+        "titleEn": "Ancient Merv",
+        "description": "複数時代の城壁都市と宮殿跡が、シルクロードの巨大なオアシス都市を伝えます。",
+        "descriptionEn": "Layered walled cities and palace remains preserve the history of a great Silk Road oasis.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Merv%20(3891847139).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Merv_(3891847139).jpg",
+        "imageCredit": "David Stanley",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "tm-kunya-urgench",
+        "title": "クニャ・ウルゲンチ",
+        "titleEn": "Kunya-Urgench",
+        "description": "高いミナレット、霊廟、都市遺跡が、中世ホラズムの歴史を伝えます。",
+        "descriptionEn": "A tall minaret, mausoleums, and city remains preserve medieval Khorezm history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/KonyeUrgenchMausoleum.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:KonyeUrgenchMausoleum.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "tm-darvaza",
+        "title": "ダルヴァザ・ガスクレーター",
+        "titleEn": "Darvaza Gas Crater",
+        "description": "カラクム砂漠で長期間燃え続けてきた巨大なガスクレーターです。",
+        "descriptionEn": "A large gas crater in the Karakum Desert that has burned for decades.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkmenistan%20Darvaza.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Turkmenistan_Darvaza.jpg",
+        "imageCredit": "Kalpak Travel",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "地質・産業景観",
+        "categoryEn": "Geological and Industrial Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "tm-plov",
+        "title": "トルクメン・プロフ",
+        "titleEn": "Turkmen Plov",
+        "description": "米、肉、にんじん、玉ねぎを大鍋で炊き、家族や祝いの場で分かち合います。",
+        "descriptionEn": "Rice, meat, carrots, and onions are cooked in a large pot and shared at family and ceremonial meals.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkmen%20plov.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Turkmen_plov.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Turkmen_plov.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "tm-carpet",
+        "title": "トルクメン絨毯",
+        "titleEn": "Turkmen Carpet",
+        "description": "赤を基調に部族ごとの幾何学模様を織り込み、住居と儀礼を彩ります。",
+        "descriptionEn": "Predominantly red carpets use tribal geometric motifs for homes, ceremonies, and identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkmen%20handmade%20carpet.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Turkmen_handmade_carpet.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Turkmen_handmade_carpet.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "tm-akhal-teke",
+        "title": "アハルテケ馬",
+        "titleEn": "Akhal-Teke Horse Culture",
+        "description": "金属のような光沢を持つ細身の馬が、騎馬文化と国家的誇りを象徴します。",
+        "descriptionEn": "Slender horses with a metallic sheen symbolize equestrian culture and national pride.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Akhal-Teke%20horse%20Turkmenistan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Akhal-Teke_horse_Turkmenistan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Akhal-Teke_horse_Turkmenistan.jpg",
+        "category": "騎馬・牧畜文化",
+        "categoryEn": "Equestrian and Pastoral Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "エネルギー・人材育成で交流",
+      "titleEn": "Exchange Through Energy and Training",
+      "text": "日本とトルクメニスタンは天然ガス、化学産業、インフラ、人材育成などで協力しています。",
+      "textEn": "Japan and Turkmenistan cooperate in natural gas, chemical industries, infrastructure, and professional training."
+    },
+    "quiz": {
+      "question": "トルクメニスタンの国旗にも描かれる代表的工芸は何でしょう？",
+      "questionEn": "Which traditional craft is represented on Turkmenistan's national flag?",
+      "options": [
+        "絨毯模様",
+        "陶磁器の皿",
+        "竹細工",
+        "ガラス窓"
+      ],
+      "optionsEn": [
+        "Carpet motifs",
+        "Ceramic plates",
+        "Bamboo craft",
+        "Glass windows"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は絨毯模様です。五つの伝統的な模様が国旗に描かれています。",
+      "explanationEn": "The answer is carpet motifs, with five traditional designs shown on the flag."
+    }
+  },
+  "tv": {
+    "iso": "tv",
+    "nameJa": "ツバル",
+    "nameEn": "Tuvalu",
+    "capitalJa": "フナフティ",
+    "capitalEn": "Funafuti",
+    "subtitle": "太平洋に九つの低い環礁と島が点在し、海洋文化、共同集会所、気候変動への適応を特徴とする国です。",
+    "subtitleEn": "A Pacific nation of nine low atolls and islands, shaped by marine culture, community meeting houses, and climate adaptation.",
+    "flagUrl": "https://flagcdn.com/w320/tv.png",
+    "mapQuery": "Funafuti, Tuvalu",
+    "timeZone": "Pacific/Funafuti",
+    "currency": {
+      "nameJa": "オーストラリア・ドル",
+      "nameEn": "Australian Dollar",
+      "symbol": "A$"
+    },
+    "languages": [
+      {
+        "nameJa": "ツバル語",
+        "nameEn": "Tuvaluan"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約2 m（フナフティ）",
+    "elevationEn": "Approx. 2 m (Funafuti)",
+    "weather": {
+      "summary": "一年を通して高温多湿で、高潮、干ばつ、海面上昇の影響を受けやすいです。",
+      "summaryEn": "The climate is hot and humid year-round, with vulnerability to storm surges, drought, and sea-level rise."
+    },
+    "heritage": [
+      {
+        "id": "tv-funafuti",
+        "title": "フナフティ環礁",
+        "titleEn": "Funafuti Atoll",
+        "description": "細長い島々が大きなラグーンを囲み、国の人口と行政機能の中心となっています。",
+        "descriptionEn": "Narrow islets surround a great lagoon and contain the country's main population and government center.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Funafuti%20Atoll,%20Tuvalu%20(153047%20-%20funafuti%20oli%2020230928%20lrg).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Funafuti_Atoll,_Tuvalu_(153047_-_funafuti_oli_20230928_lrg).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Funafuti_Atoll,_Tuvalu_(153047_-_funafuti_oli_20230928_lrg).jpg",
+        "category": "環礁・文化景観",
+        "categoryEn": "Atoll and Cultural Landscape"
+      },
+      {
+        "id": "tv-conservation",
+        "title": "フナフティ保全地域",
+        "titleEn": "Funafuti Conservation Area",
+        "description": "サンゴ礁、小島、海鳥、ウミガメ、魚類を守る海洋保護区域です。",
+        "descriptionEn": "A marine protected area preserving reefs, islets, seabirds, turtles, and fish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tuvalu%20Funafuti%20conservation%20area.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tuvalu_Funafuti_conservation_area.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tuvalu_Funafuti_conservation_area.jpg",
+        "category": "海洋自然保護区",
+        "categoryEn": "Marine Protected Area"
+      },
+      {
+        "id": "tv-nanumea",
+        "title": "ナヌメア環礁",
+        "titleEn": "Nanumea Atoll",
+        "description": "ツバル北部の環礁で、ラグーン、伝統的集落、第二次世界大戦の記憶が残ります。",
+        "descriptionEn": "A northern atoll with a lagoon, traditional settlement patterns, and memories of World War II.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanumea%20Tuvalu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nanumea_Tuvalu.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nanumea_Tuvalu.jpg",
+        "category": "島嶼・歴史景観",
+        "categoryEn": "Island and Historic Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "tv-maneapa",
+        "title": "マネアパ",
+        "titleEn": "Maneapa",
+        "description": "村の話し合い、宴会、踊り、客の歓迎に使う大きな共同集会所です。",
+        "descriptionEn": "A large community meeting house used for discussion, feasts, dance, and welcoming guests.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Interior%20of%20a%20maneapa%20in%20Funafuti,%20Tuvalu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Interior_of_a_maneapa_in_Funafuti,_Tuvalu.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Interior_of_a_maneapa_in_Funafuti,_Tuvalu.jpg",
+        "category": "共同体・建築文化",
+        "categoryEn": "Community and Architectural Culture"
+      },
+      {
+        "id": "tv-fatele",
+        "title": "ファテレ",
+        "titleEn": "Fatele",
+        "description": "歌と手拍子の速度が徐々に高まり、集団の踊りが力強く展開します。",
+        "descriptionEn": "Song and clapping gradually accelerate as group dance grows increasingly energetic.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fatele%20dance%20Tuvalu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fatele_dance_Tuvalu.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Fatele_dance_Tuvalu.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      },
+      {
+        "id": "tv-pulaka",
+        "title": "プラカ栽培",
+        "titleEn": "Pulaka Cultivation",
+        "description": "地下水に近い穴を掘って根菜プラカを育て、島の食料を支えます。",
+        "descriptionEn": "Giant swamp taro is cultivated in deep pits reaching moist soil and supports island food security.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pulaka%20pit%20Tuvalu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pulaka_pit_Tuvalu.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pulaka_pit_Tuvalu.jpg",
+        "category": "農業・食文化",
+        "categoryEn": "Agricultural and Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "気候変動・防災・海洋で協力",
+      "titleEn": "Cooperation in Climate Change, Disaster Preparedness, and Oceans",
+      "text": "日本は気候変動適応、防災、水、再生可能エネルギー、漁業、教育で協力しています。",
+      "textEn": "Japan and Tuvalu cooperate in climate adaptation, disaster preparedness, water, renewable energy, fisheries, and education."
+    },
+    "quiz": {
+      "question": "ツバルが特に直面している環境上の課題は何でしょう？",
+      "questionEn": "Which environmental challenge is especially serious for Tuvalu?",
+      "options": [
+        "海面上昇",
+        "高山の雪崩",
+        "永久凍土だけ",
+        "火山灰だけ"
+      ],
+      "optionsEn": [
+        "Sea-level rise",
+        "Mountain avalanches",
+        "Only permafrost",
+        "Only volcanic ash"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は海面上昇です。国土の多くが海抜数メートルしかありません。",
+      "explanationEn": "The answer is sea-level rise, because much of the land is only a few meters above the ocean."
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "qa": {
+    "iso": "qa",
+    "nameJa": "カタール",
+    "nameEn": "Qatar",
+    "capitalJa": "ドーハ",
+    "capitalEn": "Doha",
+    "subtitle": "アラビア半島東部の小さな半島国家で、砂漠、マングローブ、海洋交易、真珠採り、遊牧文化を受け継いでいます。",
+    "subtitleEn": "A small peninsula state in eastern Arabia, shaped by desert, mangroves, maritime trade, pearling, and Bedouin traditions.",
+    "flagUrl": "https://flagcdn.com/w320/qa.png",
+    "mapQuery": "Doha, Qatar",
+    "timeZone": "Asia/Qatar",
+    "currency": {
+      "nameJa": "カタール・リヤル",
+      "nameEn": "Qatari Riyal",
+      "symbol": "QR"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約10 m（ドーハ）",
+    "elevationEn": "Approx. 10 m (Doha)",
+    "weather": {
+      "summary": "非常に暑く乾燥した砂漠気候で、夏は高温多湿になります。冬は比較的穏やかで、降水量は少なめです。",
+      "summaryEn": "Qatar has a hot and dry desert climate. Summers are extremely hot and humid, while winters are comparatively mild with little rainfall."
+    },
+    "heritage": [
+      {
+        "id": "qa-al-zubarah",
+        "title": "アル・ズバラ考古遺跡",
+        "titleEn": "Al Zubarah Archaeological Site",
+        "description": "城塞、城壁、住居跡が残る歴史的な真珠交易都市で、18～19世紀の湾岸社会と海上交易を伝えています。",
+        "descriptionEn": "Fortifications, walls, and settlement remains preserve the history of an eighteenth- and nineteenth-century pearling and trading town.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Al%20Zubarah%20Fort.%20Doha-Qatar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Al_Zubarah_Fort._Doha-Qatar.jpg",
+        "imageCredit": "Oliver Romo Miranda",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "qa-khor-al-adaid",
+        "title": "ホール・アル・ウデイド",
+        "titleEn": "Khor Al Adaid",
+        "description": "巨大な砂丘が海へ直接つながる珍しい自然景観で、「インランド・シー」とも呼ばれています。",
+        "descriptionEn": "Massive desert dunes meet a tidal sea inlet in a rare landscape commonly known as the Inland Sea.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Khor%20Al%20Adaid%20Inland%20Sea%20and%20desert%20in%20Katar.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Khor_Al_Adaid_Inland_Sea_and_desert_in_Katar.jpg",
+        "imageCredit": "FLASHPACKER TRAVELGUIDE",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "砂漠・海洋景観",
+        "categoryEn": "Desert and Marine Landscape"
+      },
+      {
+        "id": "qa-al-thakhira",
+        "title": "アル・タヒラのマングローブ",
+        "titleEn": "Al Thakhira Mangroves",
+        "description": "乾燥した国土に広がる貴重なマングローブ湿地で、魚類、甲殻類、渡り鳥などを支えています。",
+        "descriptionEn": "This valuable mangrove wetland in an arid country supports fish, crustaceans, migratory birds, and coastal biodiversity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Qatar%20-%20Al%20Thakira%20Mangrove.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Qatar_-_Al_Thakira_Mangrove.jpg",
+        "imageCredit": "P. Hughes",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "湿地・自然景観",
+        "categoryEn": "Wetland and Natural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "qa-machboos",
+        "title": "マチュブース",
+        "titleEn": "Machboos",
+        "description": "香辛料を加えた米に鶏肉、羊肉、魚などを合わせて炊く、湾岸地域を代表する家庭料理です。",
+        "descriptionEn": "Spiced rice is cooked with chicken, lamb, or fish in a celebrated Gulf family dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Machboos.JPG?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Machboos.JPG",
+        "imageCredit": "Miansari66",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "qa-fijiri",
+        "title": "フィジリ音楽とダウ船文化",
+        "titleEn": "Fijiri Music and Dhow Culture",
+        "description": "真珠採りに出た船員たちが、太鼓、手拍子、歌で海の労働、祈り、仲間との結束を表現した音楽文化です。",
+        "descriptionEn": "Pearling crews used drums, clapping, and song to express maritime labor, prayer, endurance, and solidarity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fijiri%20music%20being%20performed%20on%20a%20dhow%20in%20Qatar.png?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fijiri_music_being_performed_on_a_dhow_in_Qatar.png",
+        "imageCredit": "alittleoryx",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "音楽・海洋文化",
+        "categoryEn": "Music and Maritime Culture"
+      },
+      {
+        "id": "qa-al-sadu",
+        "title": "アル・サドゥ織",
+        "titleEn": "Al Sadu Weaving",
+        "description": "羊毛やラクダ毛を使って赤、黒、白などの幾何学模様を織り、テント、敷物、袋、装飾品を作ります。",
+        "descriptionEn": "Wool and camel hair are woven into red, black, and white geometric designs for tents, carpets, bags, and decorations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Qatar,%20tessuto%20decorativo%20per%20tende,%20in%20sadu,%2001.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Qatar,_tessuto_decorativo_per_tende,_in_sadu,_01.jpg",
+        "imageCredit": "Francesco Bini",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "遊牧・伝統工芸",
+        "categoryEn": "Bedouin Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "LNGとエネルギーで強く結ばれる",
+      "titleEn": "Strong Connections Through LNG and Energy",
+      "text": "日本とカタールはLNGや原油などのエネルギー、投資、航空、スポーツ、教育、文化交流を通じて関係を築いています。",
+      "textEn": "Japan and Qatar maintain strong ties through LNG and crude oil, investment, aviation, sport, education, and cultural exchange."
+    },
+    "quiz": {
+      "question": "カタールで世界文化遺産に登録されている歴史的な真珠交易都市はどこでしょう？",
+      "questionEn": "Which historic pearling and trading town in Qatar is a World Heritage Site?",
+      "options": [
+        "アル・ズバラ",
+        "ドバイ",
+        "マスカット",
+        "マナーマ"
+      ],
+      "optionsEn": [
+        "Al Zubarah",
+        "Dubai",
+        "Muscat",
+        "Manama"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はアル・ズバラです。城塞と都市遺跡が、湾岸地域の真珠採りと交易の歴史を伝えています。",
+      "explanationEn": "The answer is Al Zubarah. Its fort and settlement remains preserve the history of pearling and Gulf trade."
+    }
+  }
+}

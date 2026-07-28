@@ -1,0 +1,1292 @@
+{
+  "la": {
+    "iso": "la",
+    "nameJa": "ラオス",
+    "nameEn": "Laos",
+    "capitalJa": "ビエンチャン",
+    "capitalEn": "Vientiane",
+    "subtitle": "メコン川、山地、仏教寺院、少数民族の工芸文化が息づく東南アジアの内陸国です。",
+    "subtitleEn": "A landlocked Southeast Asian country of the Mekong River, mountains, Buddhist temples, and diverse craft traditions.",
+    "flagUrl": "https://flagcdn.com/w320/la.png",
+    "mapQuery": "Vientiane, Laos",
+    "timeZone": "Asia/Vientiane",
+    "currency": {
+      "nameJa": "キープ",
+      "nameEn": "Lao Kip",
+      "symbol": "₭"
+    },
+    "languages": [
+      {
+        "nameJa": "ラオ語",
+        "nameEn": "Lao"
+      }
+    ],
+    "elevation": "約174 m（ビエンチャン）",
+    "elevationEn": "Approx. 174 m (Vientiane)",
+    "weather": {
+      "summary": "高温の熱帯モンスーン気候で、雨季と乾季があります。山地は低地より涼しくなります。",
+      "summaryEn": "Laos has a tropical monsoon climate with wet and dry seasons, while mountain regions are cooler than the lowlands."
+    },
+    "heritage": [
+      {
+        "id": "la-luang-prabang",
+        "title": "ルアンパバーンの町",
+        "titleEn": "Town of Luang Prabang",
+        "description": "仏教寺院と伝統家屋、植民地期の建築が共存し、メコン川沿いの歴史都市を形作っています。",
+        "descriptionEn": "Buddhist temples, traditional houses, and colonial-era buildings form a distinctive historic town beside the Mekong.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Luang%20Prabang,%20Laos.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Luang_Prabang,_Laos.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Luang_Prabang,_Laos.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "la-vat-phou",
+        "title": "ワット・プーと周辺の文化的景観",
+        "titleEn": "Vat Phou and Associated Cultural Landscape",
+        "description": "山、聖なる泉、寺院を一直線に結び、古代クメールの宇宙観を表現しています。",
+        "descriptionEn": "Mountain, sacred spring, and temples align to express the cosmology of an ancient Khmer landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2024-11-15%20Vat%20Phou%2015.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:2024-11-15_Vat_Phou_15.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:2024-11-15_Vat_Phou_15.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "la-plain-jars",
+        "title": "シエンクワーンのジャール平原",
+        "titleEn": "Plain of Jars",
+        "description": "高原に巨大な石の壺が数多く残り、先史時代の埋葬文化との関係が研究されています。",
+        "descriptionEn": "Thousands of large stone jars stand across the plateau and are linked to prehistoric funerary traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plain%20of%20Jars%20-%20Site%201%20-%20Group%201,%20Laos%20SF0007.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Plain_of_Jars_-_Site_1_-_Group_1,_Laos_SF0007.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Plain_of_Jars_-_Site_1_-_Group_1,_Laos_SF0007.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "la-miang",
+        "title": "ミアン・ルアンパバーン",
+        "titleEn": "Miang Luang Prabang",
+        "description": "もち米のペーストと野菜、香草、香辛料を葉で包んで食べる軽食です。",
+        "descriptionEn": "Sticky-rice paste, vegetables, herbs, and spices are wrapped in leaves as a popular local snack.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Miang%20Luang%20Prabang.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Miang_Luang_Prabang.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Miang_Luang_Prabang.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "la-silk-weaving",
+        "title": "ラオスの絹織物",
+        "titleEn": "Lao Silk Weaving",
+        "description": "天然染料と複雑な織り技法を用い、地域ごとに異なる模様の布やシンを作ります。",
+        "descriptionEn": "Natural dyes and complex weaving techniques create textiles and sinh skirts with distinctive regional patterns.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20basic%20loom%20for%20weaving%20Laotian%20traditional%20scarves%20and%20garments%20(14418689887).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:A_basic_loom_for_weaving_Laotian_traditional_scarves_and_garments_(14418689887).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:A_basic_loom_for_weaving_Laotian_traditional_scarves_and_garments_(14418689887).jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "la-khaen",
+        "title": "ケーン",
+        "titleEn": "Khaen",
+        "description": "竹管を束ねた口琴で、歌や踊りとともに村の祭りや祝い事で演奏されます。",
+        "descriptionEn": "This bamboo mouth organ accompanies songs, dances, festivals, and community celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Khaen.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Khaen.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Khaen.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "橋・教育・農業で長く協力",
+      "titleEn": "Longstanding Cooperation in Bridges, Education, and Agriculture",
+      "text": "日本は道路、橋、保健、教育、農業、人材育成などを通じてラオスの発展を支援しています。",
+      "textEn": "Japan supports Laos through cooperation in roads, bridges, health, education, agriculture, and professional training."
+    },
+    "quiz": {
+      "question": "ラオスを流れ、人々の生活と交通を支える大河は何でしょう？",
+      "questionEn": "Which major river supports transport and daily life in Laos?",
+      "options": [
+        "メコン川",
+        "ナイル川",
+        "ライン川",
+        "アマゾン川"
+      ],
+      "optionsEn": [
+        "Mekong River",
+        "Nile River",
+        "Rhine River",
+        "Amazon River"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はメコン川です。漁業、農業、交通、地域交流に欠かせない川です。",
+      "explanationEn": "The answer is the Mekong River, which supports fishing, farming, transport, and regional exchange."
+    }
+  },
+  "lv": {
+    "iso": "lv",
+    "nameJa": "ラトビア",
+    "nameEn": "Latvia",
+    "capitalJa": "リガ",
+    "capitalEn": "Riga",
+    "subtitle": "バルト海、森林、中世都市、合唱文化を持つ北ヨーロッパの国です。",
+    "subtitleEn": "A Northern European country of Baltic coasts, forests, medieval towns, and strong choral traditions.",
+    "flagUrl": "https://flagcdn.com/w320/lv.png",
+    "mapQuery": "Riga, Latvia",
+    "timeZone": "Europe/Riga",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "ラトビア語",
+        "nameEn": "Latvian"
+      }
+    ],
+    "elevation": "約7 m（リガ）",
+    "elevationEn": "Approx. 7 m (Riga)",
+    "weather": {
+      "summary": "冬は寒く雪が降り、夏は比較的穏やかです。バルト海の影響で天候は変わりやすくなります。",
+      "summaryEn": "Winters are cold and snowy, summers are mild, and the Baltic Sea contributes to rapidly changing weather."
+    },
+    "heritage": [
+      {
+        "id": "lv-riga",
+        "title": "リガ歴史地区",
+        "titleEn": "Historic Centre of Riga",
+        "description": "中世の旧市街とアール・ヌーヴォー建築が共存し、商業都市としての歴史を伝えます。",
+        "descriptionEn": "A medieval old town and major Art Nouveau district preserve Riga's history as an important trading city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Riga%20Old%20Town.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Riga_Old_Town.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Riga_Old_Town.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "lv-gauja",
+        "title": "ガウヤ国立公園",
+        "titleEn": "Gauja National Park",
+        "description": "森林、砂岩の崖、川、城跡が広がり、ラトビアの自然と歴史を一度に体験できます。",
+        "descriptionEn": "Forests, sandstone cliffs, rivers, and castle ruins combine nature and history in Latvia's largest national park.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gauja%20National%20Park%20Latvia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gauja_National_Park_Latvia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gauja_National_Park_Latvia.jpg",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      },
+      {
+        "id": "lv-rundale",
+        "title": "ルンダーレ宮殿",
+        "titleEn": "Rundāle Palace",
+        "description": "華やかな室内装飾とフランス式庭園を持つ、バロック・ロココ建築の代表です。",
+        "descriptionEn": "Rich interiors and a formal garden make this palace a major example of Baroque and Rococo architecture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rundale%20Palace%20Latvia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Rundale_Palace_Latvia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Rundale_Palace_Latvia.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "lv-grey-peas",
+        "title": "灰色エンドウ豆とベーコン",
+        "titleEn": "Grey Peas with Bacon",
+        "description": "灰色エンドウ豆を玉ねぎとベーコンで味付けする、冬や祝いの食卓に登場する料理です。",
+        "descriptionEn": "Grey peas are served with onions and bacon in a traditional dish associated with winter and celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Latvian%20grey%20peas%20with%20bacon.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Latvian_grey_peas_with_bacon.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Latvian_grey_peas_with_bacon.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "lv-song-festival",
+        "title": "歌と踊りの祭典",
+        "titleEn": "Latvian Song and Dance Festival",
+        "description": "大規模な合唱と民族舞踊を通して、言語、地域文化、共同体の結びつきを表します。",
+        "descriptionEn": "Mass choirs and folk dance express language, regional identity, and strong community bonds.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Latvian%20Song%20and%20Dance%20Festival.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Latvian_Song_and_Dance_Festival.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Latvian_Song_and_Dance_Festival.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      },
+      {
+        "id": "lv-folk-costume",
+        "title": "ラトビアの民族衣装",
+        "titleEn": "Latvian Folk Costumes",
+        "description": "地域ごとに異なる織物、刺しゅう、冠、ベルトで出身地や伝統を表現します。",
+        "descriptionEn": "Regional textiles, embroidery, crowns, and belts communicate local identity and inherited traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Latvian%20folk%20costumes.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Latvian_folk_costumes.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Latvian_folk_costumes.jpg",
+        "category": "服飾文化",
+        "categoryEn": "Clothing Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "音楽・IT・教育で交流",
+      "titleEn": "Exchange Through Music, Technology, and Education",
+      "text": "日本とラトビアは合唱、文化、大学交流、デジタル技術、物流などの分野で関係を深めています。",
+      "textEn": "Japan and Latvia maintain growing ties in choral music, culture, universities, digital technology, and logistics."
+    },
+    "quiz": {
+      "question": "ラトビアの首都はどこでしょう？",
+      "questionEn": "What is the capital of Latvia?",
+      "options": [
+        "リガ",
+        "タリン",
+        "ビリニュス",
+        "ヘルシンキ"
+      ],
+      "optionsEn": [
+        "Riga",
+        "Tallinn",
+        "Vilnius",
+        "Helsinki"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はリガです。バルト三国最大級の都市で、歴史地区は世界遺産です。",
+      "explanationEn": "The answer is Riga, one of the Baltic region's largest cities and home to a World Heritage historic center."
+    }
+  },
+  "lb": {
+    "iso": "lb",
+    "nameJa": "レバノン",
+    "nameEn": "Lebanon",
+    "capitalJa": "ベイルート",
+    "capitalEn": "Beirut",
+    "subtitle": "地中海岸、古代都市、山岳地帯、多宗教社会、豊かな食文化を持つ国です。",
+    "subtitleEn": "A Mediterranean country of ancient cities, mountain landscapes, religious diversity, and celebrated cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/lb.png",
+    "mapQuery": "Beirut, Lebanon",
+    "timeZone": "Asia/Beirut",
+    "currency": {
+      "nameJa": "レバノン・ポンド",
+      "nameEn": "Lebanese Pound",
+      "symbol": "ل.ل"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約20 m（ベイルート）",
+    "elevationEn": "Approx. 20 m (Beirut)",
+    "weather": {
+      "summary": "沿岸部は地中海性気候で夏は暑く乾燥し、冬は雨が増えます。山地では雪も降ります。",
+      "summaryEn": "The coast has hot dry summers and wetter winters, while Lebanon's mountains may receive heavy snow."
+    },
+    "heritage": [
+      {
+        "id": "lb-baalbek",
+        "title": "バールベック",
+        "titleEn": "Baalbek",
+        "description": "巨大な列柱と神殿跡が残り、古代ローマ帝国の建築技術と宗教都市の歴史を伝えます。",
+        "descriptionEn": "Monumental columns and temple ruins reveal the scale of Roman architecture and a long sacred history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Baalbek,%20Lebanon.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Baalbek,_Lebanon.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Baalbek,_Lebanon.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "lb-byblos",
+        "title": "ビブロス",
+        "titleEn": "Byblos",
+        "description": "新石器時代から人々が暮らした古代港町で、フェニキア交易と文字文化に深く関わります。",
+        "descriptionEn": "This ancient port was inhabited from Neolithic times and became central to Phoenician trade and writing history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Byblos%20ancient%20ruins,%20Phoenician%20city%20of%20Byblos,%20Lebanon.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Byblos_ancient_ruins,_Phoenician_city_of_Byblos,_Lebanon.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Byblos_ancient_ruins,_Phoenician_city_of_Byblos,_Lebanon.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "lb-cedars",
+        "title": "神の杉の森",
+        "titleEn": "Cedars of God",
+        "description": "長寿のレバノンスギが残る山地の森で、古代から建築材と国の象徴として大切にされてきました。",
+        "descriptionEn": "Ancient Lebanon cedars survive in a mountain grove and have long served as building material and national symbols.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cedars%20of%20God%20Lebanon.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cedars_of_God_Lebanon.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cedars_of_God_Lebanon.jpg",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      }
+    ],
+    "culture": [
+      {
+        "id": "lb-tabbouleh",
+        "title": "タッブーレ",
+        "titleEn": "Tabbouleh",
+        "description": "パセリ、トマト、ブルグル、レモンを細かく混ぜる、爽やかな香りのサラダです。",
+        "descriptionEn": "Parsley, tomato, bulgur, lemon, and olive oil combine in a fresh and aromatic salad.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tabbouleh.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tabbouleh.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tabbouleh.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "lb-dabke",
+        "title": "ダブケ",
+        "titleEn": "Dabke",
+        "description": "人々が列や輪を作り、足を力強く踏み鳴らして踊る結婚式や祭りの舞踊です。",
+        "descriptionEn": "Dancers form lines or circles and stamp rhythmic steps during weddings, festivals, and community celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lebanese%20Dabke.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lebanese_Dabke.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lebanese_Dabke.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      },
+      {
+        "id": "lb-coffee",
+        "title": "レバノン式コーヒー",
+        "titleEn": "Lebanese Coffee",
+        "description": "細かくひいた豆を小鍋で煮出し、小さな杯で客にふるまうもてなしの習慣です。",
+        "descriptionEn": "Finely ground coffee is brewed in a small pot and served in tiny cups as a gesture of hospitality.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lebanese%20coffee.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lebanese_coffee.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lebanese_coffee.jpg",
+        "category": "生活・もてなし文化",
+        "categoryEn": "Living and Hospitality Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "文化・教育・人道支援でつながる",
+      "titleEn": "Connections Through Culture, Education, and Humanitarian Support",
+      "text": "日本はレバノンと文化・教育交流を行い、難民支援、保健、復興、人材育成にも協力しています。",
+      "textEn": "Japan maintains cultural and educational ties with Lebanon and supports refugees, health, recovery, and training."
+    },
+    "quiz": {
+      "question": "レバノン国旗の中央に描かれている木は何でしょう？",
+      "questionEn": "Which tree appears at the center of Lebanon's national flag?",
+      "options": [
+        "レバノンスギ",
+        "オリーブ",
+        "ヤシ",
+        "桜"
+      ],
+      "optionsEn": [
+        "Lebanon cedar",
+        "Olive tree",
+        "Palm tree",
+        "Cherry tree"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はレバノンスギです。強さ、長寿、国の歴史を象徴しています。",
+      "explanationEn": "The answer is the Lebanon cedar, a symbol of strength, longevity, and national history."
+    }
+  },
+  "ls": {
+    "iso": "ls",
+    "nameJa": "レソト",
+    "nameEn": "Lesotho",
+    "capitalJa": "マセル",
+    "capitalEn": "Maseru",
+    "subtitle": "国土全体が高地にあり、山岳景観、馬文化、毛布と帽子の伝統を持つ王国です。",
+    "subtitleEn": "A highland kingdom known for mountain landscapes, horse culture, blankets, and distinctive traditional hats.",
+    "flagUrl": "https://flagcdn.com/w320/ls.png",
+    "mapQuery": "Maseru, Lesotho",
+    "timeZone": "Africa/Maseru",
+    "currency": {
+      "nameJa": "ロチ",
+      "nameEn": "Loti",
+      "symbol": "L"
+    },
+    "languages": [
+      {
+        "nameJa": "ソト語",
+        "nameEn": "Sesotho"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約1,550 m（マセル）",
+    "elevationEn": "Approx. 1,550 m (Maseru)",
+    "weather": {
+      "summary": "標高が高いため夏は比較的穏やかで、冬は寒く山地では雪が降ります。",
+      "summaryEn": "High elevation keeps summers relatively mild, while winters are cold and snowfall occurs in mountain regions."
+    },
+    "heritage": [
+      {
+        "id": "ls-maletsunyane",
+        "title": "マレツニャーネ滝",
+        "titleEn": "Maletsunyane Falls",
+        "description": "玄武岩の断崖から水が約190 m落下する、南部アフリカを代表する高い滝です。",
+        "descriptionEn": "Water drops roughly 190 meters from a basalt cliff in one of southern Africa's most dramatic waterfalls.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Maletsunyane%20Falls.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Maletsunyane_Falls.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Maletsunyane_Falls.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "ls-thaba-bosiu",
+        "title": "タバ・ボシウ",
+        "titleEn": "Thaba Bosiu",
+        "description": "初代国王モショエショエ1世が拠点とした台地で、レソト国家形成の中心となりました。",
+        "descriptionEn": "This plateau served as King Moshoeshoe I's stronghold and became central to the formation of the Basotho nation.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thaba%20Bosiu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Thaba_Bosiu.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Thaba_Bosiu.jpg",
+        "category": "歴史・文化景観",
+        "categoryEn": "Historic and Cultural Landscape"
+      },
+      {
+        "id": "ls-sehlabathebe",
+        "title": "セアラバセベ国立公園",
+        "titleEn": "Sehlabathebe National Park",
+        "description": "高山草原、奇岩、湿地に固有の植物や鳥が暮らす、マロティ山地の保護地域です。",
+        "descriptionEn": "Alpine grasslands, rock formations, and wetlands protect endemic plants and birds in the Maloti Mountains.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sehlabathebe%20National%20Park.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sehlabathebe_National_Park.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sehlabathebe_National_Park.jpg",
+        "category": "世界複合遺産地域",
+        "categoryEn": "Mixed World Heritage Region"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ls-mokorotlo",
+        "title": "モコロトロ",
+        "titleEn": "Mokorotlo",
+        "description": "草を編んで作る円すい形の帽子で、山の形を思わせる国の象徴です。",
+        "descriptionEn": "This conical woven hat resembles a mountain and has become a powerful national symbol.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mokorotlo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mokorotlo.jpg",
+        "imageCredit": "Vanellus Foto",
+        "imageLicense": "GFDL 1.2 or later",
+        "imageLicenseUrl": "https://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
+        "category": "伝統工芸・服飾文化",
+        "categoryEn": "Traditional Craft and Clothing"
+      },
+      {
+        "id": "ls-basotho-blanket",
+        "title": "バソト毛布",
+        "titleEn": "Basotho Blanket",
+        "description": "厚い毛布を肩に巻き、寒さを防ぐとともに、模様で身分や祝いの意味を表します。",
+        "descriptionEn": "Heavy blankets provide warmth in the mountains and use patterns to communicate identity and ceremony.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Basotho%20blanket%20lesotho.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Basotho_blanket_lesotho.jpg",
+        "imageCredit": "Martina Buchmann Schärli",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Basotho_blanket_lesotho.jpg",
+        "category": "服飾文化",
+        "categoryEn": "Clothing Culture"
+      },
+      {
+        "id": "ls-papa-moroho",
+        "title": "パパとモロホ",
+        "titleEn": "Papa and Moroho",
+        "description": "トウモロコシ粉を練った主食を、葉野菜の料理や豆、肉と一緒に食べます。",
+        "descriptionEn": "Firm maize porridge is served with cooked leafy greens, beans, or meat.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Papa%20and%20moroho%20Lesotho.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Papa_and_moroho_Lesotho.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Papa_and_moroho_Lesotho.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "教育・保健・農業で協力",
+      "titleEn": "Cooperation in Education, Health, and Agriculture",
+      "text": "日本は学校、保健医療、農業、道路、人材育成などを通じてレソトを支援しています。",
+      "textEn": "Japan supports Lesotho through cooperation in schools, health care, agriculture, roads, and professional training."
+    },
+    "quiz": {
+      "question": "レソトについて正しい説明はどれでしょう？",
+      "questionEn": "Which statement about Lesotho is correct?",
+      "options": [
+        "国土全体が標高1,000 mを超える",
+        "海岸線が非常に長い",
+        "国土の大半が熱帯雨林",
+        "北極圏にある"
+      ],
+      "optionsEn": [
+        "Its entire territory lies above 1,000 meters",
+        "It has a very long coastline",
+        "Most of it is tropical rainforest",
+        "It lies in the Arctic"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は国土全体が標高1,000 mを超えることです。この特徴から「天空の王国」と呼ばれます。",
+      "explanationEn": "The answer is that the whole country lies above 1,000 meters, earning it the nickname Kingdom in the Sky."
+    }
+  },
+  "lr": {
+    "iso": "lr",
+    "nameJa": "リベリア",
+    "nameEn": "Liberia",
+    "capitalJa": "モンロビア",
+    "capitalEn": "Monrovia",
+    "subtitle": "大西洋岸の熱帯林、多民族文化、自由を求めた人々の歴史を持つ西アフリカの国です。",
+    "subtitleEn": "A West African country of Atlantic rainforest, diverse communities, and a history shaped by ideas of freedom.",
+    "flagUrl": "https://flagcdn.com/w320/lr.png",
+    "mapQuery": "Monrovia, Liberia",
+    "timeZone": "Africa/Monrovia",
+    "currency": {
+      "nameJa": "リベリア・ドル",
+      "nameEn": "Liberian Dollar",
+      "symbol": "L$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約25 m（モンロビア）",
+    "elevationEn": "Approx. 25 m (Monrovia)",
+    "weather": {
+      "summary": "高温多湿の熱帯気候で、沿岸部は雨が非常に多く、雨季と乾季があります。",
+      "summaryEn": "Liberia has a hot humid tropical climate, with very heavy coastal rainfall and clear wet and dry seasons."
+    },
+    "heritage": [
+      {
+        "id": "lr-providence-island",
+        "title": "プロビデンス島",
+        "titleEn": "Providence Island",
+        "description": "北米から移住した解放奴隷の人々が上陸した場所で、国家成立の歴史に深く関わります。",
+        "descriptionEn": "This island is associated with the arrival of freed settlers from North America and Liberia's founding history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Providence%20Island%20Liberia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Providence_Island_Liberia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Providence_Island_Liberia.jpg",
+        "category": "歴史遺産",
+        "categoryEn": "Historic Heritage"
+      },
+      {
+        "id": "lr-sapo",
+        "title": "サポ国立公園",
+        "titleEn": "Sapo National Park",
+        "description": "西アフリカに残る重要な熱帯雨林で、チンパンジー、コビトカバ、多様な鳥類が暮らします。",
+        "descriptionEn": "This major West African rainforest protects chimpanzees, pygmy hippos, forest elephants, and diverse birdlife.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sapo%20National%20Park%20Liberia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sapo_National_Park_Liberia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sapo_National_Park_Liberia.jpg",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      },
+      {
+        "id": "lr-kpatawee",
+        "title": "クパタウィー滝",
+        "titleEn": "Kpatawee Waterfall",
+        "description": "緑豊かな森林の中を複数の滝が流れ、地域の自然観光と水環境を支えています。",
+        "descriptionEn": "Several cascades flow through lush forest, supporting local tourism and freshwater ecosystems.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kpatawee%20Waterfall%20Liberia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kpatawee_Waterfall_Liberia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kpatawee_Waterfall_Liberia.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "lr-jollof",
+        "title": "リベリア風ジョロフライス",
+        "titleEn": "Liberian Jollof Rice",
+        "description": "米をトマト、香辛料、肉や魚、野菜と炊き込む、祝いの場にも人気の料理です。",
+        "descriptionEn": "Rice is cooked with tomato, spices, meat, fish, or vegetables for daily meals and celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Liberian%20jollof%20rice.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Liberian_jollof_rice.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Liberian_jollof_rice.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "lr-cassava-leaf",
+        "title": "キャッサバの葉の煮込み",
+        "titleEn": "Cassava Leaf Stew",
+        "description": "細かくしたキャッサバの葉を肉や魚、油、香辛料と煮込み、米と食べます。",
+        "descriptionEn": "Finely ground cassava leaves are cooked with meat or fish, oil, and spices and served with rice.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cassava%20leaf%20Liberia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cassava_leaf_Liberia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cassava_leaf_Liberia.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "lr-dance",
+        "title": "リベリアの伝統舞踊",
+        "titleEn": "Liberian Traditional Dance",
+        "description": "太鼓、仮面、衣装、集団の動きを通して、地域の歴史や儀礼を表現します。",
+        "descriptionEn": "Drums, masks, costumes, and group movement express regional history, ceremony, and community identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Liberian%20traditional%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Liberian_traditional_dance.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Liberian_traditional_dance.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "保健・食料・インフラで協力",
+      "titleEn": "Cooperation in Health, Food Security, and Infrastructure",
+      "text": "日本は保健医療、食料安全保障、道路、教育、平和構築、人材育成などを支援しています。",
+      "textEn": "Japan supports Liberia in health care, food security, roads, education, peacebuilding, and professional training."
+    },
+    "quiz": {
+      "question": "リベリアの首都名モンロビアの由来となった人物は誰でしょう？",
+      "questionEn": "Who gave his name to Liberia's capital, Monrovia?",
+      "options": [
+        "ジェームズ・モンロー",
+        "エイブラハム・リンカーン",
+        "ネルソン・マンデラ",
+        "ウィンストン・チャーチル"
+      ],
+      "optionsEn": [
+        "James Monroe",
+        "Abraham Lincoln",
+        "Nelson Mandela",
+        "Winston Churchill"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はアメリカ大統領ジェームズ・モンローです。モンロビアは彼にちなんで名付けられました。",
+      "explanationEn": "The answer is U.S. President James Monroe, after whom Monrovia was named."
+    }
+  },
+  "ly": {
+    "iso": "ly",
+    "nameJa": "リビア",
+    "nameEn": "Libya",
+    "capitalJa": "トリポリ",
+    "capitalEn": "Tripoli",
+    "subtitle": "サハラ砂漠、地中海岸、古代都市、オアシス文化を持つ北アフリカの国です。",
+    "subtitleEn": "A North African country of Sahara desert, Mediterranean coast, ancient cities, and oasis traditions.",
+    "flagUrl": "https://flagcdn.com/w320/ly.png",
+    "mapQuery": "Tripoli, Libya",
+    "timeZone": "Africa/Tripoli",
+    "currency": {
+      "nameJa": "リビア・ディナール",
+      "nameEn": "Libyan Dinar",
+      "symbol": "LD"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約80 m（トリポリ）",
+    "elevationEn": "Approx. 80 m (Tripoli)",
+    "weather": {
+      "summary": "国土の大半は非常に乾燥した砂漠で、地中海沿岸は夏が暑く乾燥し冬は比較的穏やかです。",
+      "summaryEn": "Most of Libya is extremely dry desert, while the Mediterranean coast has hot summers and milder winters."
+    },
+    "heritage": [
+      {
+        "id": "ly-leptis-magna",
+        "title": "レプティス・マグナ",
+        "titleEn": "Leptis Magna",
+        "description": "地中海岸に劇場、浴場、凱旋門が残る、保存状態の良い古代ローマ都市です。",
+        "descriptionEn": "Theaters, baths, streets, and arches survive at one of the Mediterranean's best-preserved Roman cities.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Leptis%20Magna,%20Libya.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Leptis_Magna,_Libya.jpg",
+        "imageCredit": "AbdAlrhman Abdulrasol",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Leptis_Magna,_Libya.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ly-cyrene",
+        "title": "キュレネの考古遺跡",
+        "titleEn": "Archaeological Site of Cyrene",
+        "description": "古代ギリシャ人が築いた都市で、神殿、劇場、墓地が丘陵地に残っています。",
+        "descriptionEn": "Temples, theaters, and tombs remain from an important ancient Greek city built in the hills.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cyrene%20Libya.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cyrene_Libya.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cyrene_Libya.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ly-ghadames",
+        "title": "ガダーミス旧市街",
+        "titleEn": "Old Town of Ghadamès",
+        "description": "日差しと暑さを避けるため、白い家と屋根付き通路が迷路のように連なるオアシス都市です。",
+        "descriptionEn": "White houses and covered passageways form a climate-adapted oasis town designed for shade and social life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ghadames%20Libya.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ghadames_Libya.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ghadames_Libya.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ly-couscous",
+        "title": "リビア風クスクス",
+        "titleEn": "Libyan Couscous",
+        "description": "蒸した小麦粒に羊肉や野菜、豆、香辛料の煮込みをかける家庭料理です。",
+        "descriptionEn": "Steamed semolina grains are topped with lamb, vegetables, beans, and a warmly spiced stew.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Libyan%20couscous.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Libyan_couscous.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Libyan_couscous.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ly-bazin",
+        "title": "バジーン",
+        "titleEn": "Bazin",
+        "description": "大麦粉を固く練った主食を、トマト味の肉や野菜のソースと一緒に食べます。",
+        "descriptionEn": "A firm barley-flour dough is served with tomato-based meat and vegetable sauce.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bazin%20Libya.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bazin_Libya.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bazin_Libya.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ly-tea",
+        "title": "リビア式紅茶",
+        "titleEn": "Libyan Tea",
+        "description": "濃い紅茶を高い位置から注いで泡立て、砂糖や落花生とともに客へふるまいます。",
+        "descriptionEn": "Strong sweet tea is poured from a height to create foam and may be served with peanuts.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Libyan%20tea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Libyan_tea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Libyan_tea.jpg",
+        "category": "生活・もてなし文化",
+        "categoryEn": "Living and Hospitality Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "医療・復興・人材育成で関係を維持",
+      "titleEn": "Maintaining Ties Through Health, Recovery, and Training",
+      "text": "日本はリビアに対し、医療、人道支援、地雷対策、行政能力、人材育成などで協力しています。",
+      "textEn": "Japan supports Libya in health, humanitarian assistance, mine action, governance, and professional training."
+    },
+    "quiz": {
+      "question": "リビアの国土の大部分を占める自然環境は何でしょう？",
+      "questionEn": "Which natural environment covers most of Libya?",
+      "options": [
+        "サハラ砂漠",
+        "熱帯雨林",
+        "ツンドラ",
+        "氷河地帯"
+      ],
+      "optionsEn": [
+        "Sahara Desert",
+        "Tropical rainforest",
+        "Tundra",
+        "Glacial region"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はサハラ砂漠です。人口の多くは地中海沿岸部に集中しています。",
+      "explanationEn": "The answer is the Sahara Desert. Much of the population lives along the Mediterranean coast."
+    }
+  },
+  "li": {
+    "iso": "li",
+    "nameJa": "リヒテンシュタイン",
+    "nameEn": "Liechtenstein",
+    "capitalJa": "ファドゥーツ",
+    "capitalEn": "Vaduz",
+    "subtitle": "アルプス山脈とライン川の間に位置し、城、山村、金融、工芸文化を持つ小国です。",
+    "subtitleEn": "A small Alpine country between the Rhine and the mountains, known for castles, villages, finance, and crafts.",
+    "flagUrl": "https://flagcdn.com/w320/li.png",
+    "mapQuery": "Vaduz, Liechtenstein",
+    "timeZone": "Europe/Vaduz",
+    "currency": {
+      "nameJa": "スイス・フラン",
+      "nameEn": "Swiss Franc",
+      "symbol": "CHF"
+    },
+    "languages": [
+      {
+        "nameJa": "ドイツ語",
+        "nameEn": "German"
+      }
+    ],
+    "elevation": "約455 m（ファドゥーツ）",
+    "elevationEn": "Approx. 455 m (Vaduz)",
+    "weather": {
+      "summary": "温帯の山岳気候で、谷は比較的穏やかですが、冬は山地に雪が多く積もります。",
+      "summaryEn": "Liechtenstein has a temperate Alpine climate, with milder valleys and snowy mountain winters."
+    },
+    "heritage": [
+      {
+        "id": "li-vaduz-castle",
+        "title": "ファドゥーツ城",
+        "titleEn": "Vaduz Castle",
+        "description": "首都を見下ろす丘に建つ城で、現在も侯爵家の居城として使われています。",
+        "descriptionEn": "This hilltop castle overlooks the capital and remains the residence of Liechtenstein's princely family.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Liechtenstein%20Schloss%20Vaduz.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Liechtenstein_Schloss_Vaduz.jpg",
+        "imageCredit": "St9191",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      },
+      {
+        "id": "li-gutenberg",
+        "title": "グーテンベルク城",
+        "titleEn": "Gutenberg Castle",
+        "description": "バルザースの丘に建つ中世の城で、谷とアルプスを見渡す文化的な象徴です。",
+        "descriptionEn": "This medieval castle rises above Balzers and overlooks the Rhine Valley and surrounding Alps.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gutenberg%20Castle,%20Balzers,%20Liechtenstein.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gutenberg_Castle,_Balzers,_Liechtenstein.jpg",
+        "imageCredit": "Guilherme Levandoski",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gutenberg_Castle,_Balzers,_Liechtenstein.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      },
+      {
+        "id": "li-alps",
+        "title": "リヒテンシュタイン・アルプス",
+        "titleEn": "Liechtenstein Alps",
+        "description": "小さな国土に高山草原、岩峰、ハイキング道が広がり、冬はスキー地域となります。",
+        "descriptionEn": "Alpine meadows, rocky peaks, and hiking trails fill the country's eastern mountains, which become ski areas in winter.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Liechtenstein%20Alps.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Liechtenstein_Alps.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Liechtenstein_Alps.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "li-kaesknoepfle",
+        "title": "ケーゼクネプフレ",
+        "titleEn": "Käsknöpfle",
+        "description": "小さな卵麺にチーズと炒めた玉ねぎを合わせる、アルプス地域の家庭料理です。",
+        "descriptionEn": "Small egg noodles are layered with cheese and fried onions in a comforting Alpine dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/K%C3%A4skn%C3%B6pfle.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:K%C3%A4skn%C3%B6pfle.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:K%C3%A4skn%C3%B6pfle.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "li-fasnacht",
+        "title": "ファスナハト",
+        "titleEn": "Fasnacht Carnival",
+        "description": "冬の終わりに仮面、衣装、音楽、行列で街を盛り上げるカーニバル文化です。",
+        "descriptionEn": "Masks, costumes, music, and parades animate towns during the carnival season before Lent.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fasnacht%20Liechtenstein.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fasnacht_Liechtenstein.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Fasnacht_Liechtenstein.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "li-alpine-cattle",
+        "title": "アルプスの家畜移動",
+        "titleEn": "Alpine Cattle Descent",
+        "description": "夏を高地で過ごした牛を飾り付け、秋に村へ戻す山岳地域の季節行事です。",
+        "descriptionEn": "Decorated cattle return from high summer pastures to the valleys in an important seasonal Alpine tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Almabtrieb%20Liechtenstein.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Almabtrieb_Liechtenstein.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Almabtrieb_Liechtenstein.jpg",
+        "category": "農牧文化",
+        "categoryEn": "Pastoral Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "芸術・金融・精密産業で交流",
+      "titleEn": "Exchange Through Art, Finance, and Precision Industry",
+      "text": "日本とリヒテンシュタインは美術展、金融、精密機器、観光などを通じて交流しています。",
+      "textEn": "Japan and Liechtenstein maintain links through art exhibitions, finance, precision industries, and tourism."
+    },
+    "quiz": {
+      "question": "リヒテンシュタインが国境を接している二つの国はどこでしょう？",
+      "questionEn": "Which two countries border Liechtenstein?",
+      "options": [
+        "スイスとオーストリア",
+        "フランスとドイツ",
+        "イタリアとスロベニア",
+        "ベルギーとオランダ"
+      ],
+      "optionsEn": [
+        "Switzerland and Austria",
+        "France and Germany",
+        "Italy and Slovenia",
+        "Belgium and the Netherlands"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はスイスとオーストリアです。海に面していない小さなアルプスの国です。",
+      "explanationEn": "The answer is Switzerland and Austria. Liechtenstein is a small landlocked Alpine country."
+    }
+  },
+  "lt": {
+    "iso": "lt",
+    "nameJa": "リトアニア",
+    "nameEn": "Lithuania",
+    "capitalJa": "ビリニュス",
+    "capitalEn": "Vilnius",
+    "subtitle": "バルト海、森林、歴史都市、琥珀、合唱と民俗文化を持つ北東ヨーロッパの国です。",
+    "subtitleEn": "A northeastern European country of Baltic coasts, forests, historic cities, amber, and folk traditions.",
+    "flagUrl": "https://flagcdn.com/w320/lt.png",
+    "mapQuery": "Vilnius, Lithuania",
+    "timeZone": "Europe/Vilnius",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "リトアニア語",
+        "nameEn": "Lithuanian"
+      }
+    ],
+    "elevation": "約112 m（ビリニュス）",
+    "elevationEn": "Approx. 112 m (Vilnius)",
+    "weather": {
+      "summary": "冬は寒く雪が降り、夏は穏やかです。海岸部は内陸部より気温差が小さくなります。",
+      "summaryEn": "Winters are cold and snowy, summers are mild, and coastal areas have less temperature variation than inland regions."
+    },
+    "heritage": [
+      {
+        "id": "lt-vilnius",
+        "title": "ビリニュス歴史地区",
+        "titleEn": "Vilnius Historic Centre",
+        "description": "ゴシック、ルネサンス、バロックの教会や街路が重なり、多文化都市の歴史を伝えます。",
+        "descriptionEn": "Gothic, Renaissance, and Baroque buildings preserve the layered history of a multicultural European capital.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vilnius%20Old%20Town.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Vilnius_Old_Town.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Vilnius_Old_Town.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "lt-curonian-spit",
+        "title": "クルシュー砂州",
+        "titleEn": "Curonian Spit",
+        "description": "砂丘、松林、漁村が細長い砂州に並び、自然と人の長い関わりを示します。",
+        "descriptionEn": "Dunes, pine forests, and fishing villages form a narrow landscape shaped by both nature and human care.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Curonian%20spit,%20Lithuania.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:The_Curonian_spit,_Lithuania.jpg",
+        "imageCredit": "Baltictrails",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:The_Curonian_spit,_Lithuania.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "lt-trakai",
+        "title": "トラカイ島城",
+        "titleEn": "Trakai Island Castle",
+        "description": "湖の島に赤れんがの城が建ち、中世リトアニア大公国の政治と防衛を伝えます。",
+        "descriptionEn": "A red-brick castle on a lake island preserves the political and defensive history of medieval Lithuania.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Trakai%20Island%20Castle.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Trakai_Island_Castle.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Trakai_Island_Castle.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "lt-cepelinai",
+        "title": "ツェペリナイ",
+        "titleEn": "Cepelinai",
+        "description": "すりおろしたジャガイモの生地に肉などを包み、飛行船形にゆでる代表料理です。",
+        "descriptionEn": "Potato dough is filled with meat or cheese and boiled in a large dumpling shaped like an airship.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cepelinai%20Vilnius.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cepelinai_Vilnius.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cepelinai_Vilnius.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "lt-cross-crafting",
+        "title": "十字架制作の伝統",
+        "titleEn": "Cross-Crafting Tradition",
+        "description": "木や金属で十字架や小祠を作り、信仰、追悼、地域の記憶を風景に刻みます。",
+        "descriptionEn": "Wooden and metal crosses and shrines express faith, remembrance, and local identity across the landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lithuanian%20cross%20crafting.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lithuanian_cross_crafting.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lithuanian_cross_crafting.jpg",
+        "category": "伝統工芸・信仰文化",
+        "categoryEn": "Traditional Craft and Religious Culture"
+      },
+      {
+        "id": "lt-song-festival",
+        "title": "リトアニアの歌の祭典",
+        "titleEn": "Lithuanian Song Festival",
+        "description": "大人数の合唱と民俗舞踊で、言語、歴史、共同体の結びつきを祝います。",
+        "descriptionEn": "Mass choirs and folk dances celebrate language, history, and community identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lithuanian%20Song%20Festival.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lithuanian_Song_Festival.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lithuanian_Song_Festival.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "杉原千畝の人道行動が結ぶ歴史",
+      "titleEn": "A Historical Link Through Chiune Sugihara's Humanitarian Action",
+      "text": "日本の外交官杉原千畝はカウナスで多くの避難民に通過査証を発給しました。現在も文化や教育交流が続きます。",
+      "textEn": "Japanese diplomat Chiune Sugihara issued transit visas to many refugees in Kaunas, and cultural and educational exchange continues today."
+    },
+    "quiz": {
+      "question": "第二次世界大戦期、カウナスで多くの避難民に査証を発給した日本人外交官は誰でしょう？",
+      "questionEn": "Which Japanese diplomat issued visas to many refugees in Kaunas during World War II?",
+      "options": [
+        "杉原千畝",
+        "福沢諭吉",
+        "伊能忠敬",
+        "野口英世"
+      ],
+      "optionsEn": [
+        "Chiune Sugihara",
+        "Yukichi Fukuzawa",
+        "Tadataka Ino",
+        "Hideyo Noguchi"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は杉原千畝です。人道的な判断で「命のビザ」と呼ばれる通過査証を発給しました。",
+      "explanationEn": "The answer is Chiune Sugihara, whose humanitarian transit visas became known as visas for life."
+    }
+  },
+  "lu": {
+    "iso": "lu",
+    "nameJa": "ルクセンブルク",
+    "nameEn": "Luxembourg",
+    "capitalJa": "ルクセンブルク",
+    "capitalEn": "Luxembourg City",
+    "subtitle": "要塞都市、深い渓谷、城、欧州機関、多言語社会を持つ小さな大公国です。",
+    "subtitleEn": "A small grand duchy of fortified cities, deep valleys, castles, European institutions, and multilingual society.",
+    "flagUrl": "https://flagcdn.com/w320/lu.png",
+    "mapQuery": "Luxembourg City, Luxembourg",
+    "timeZone": "Europe/Luxembourg",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "ルクセンブルク語",
+        "nameEn": "Luxembourgish"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "ドイツ語",
+        "nameEn": "German"
+      }
+    ],
+    "elevation": "約300 m（ルクセンブルク市）",
+    "elevationEn": "Approx. 300 m (Luxembourg City)",
+    "weather": {
+      "summary": "温帯の海洋性気候で、夏は穏やか、冬は冷涼です。一年を通して降水があります。",
+      "summaryEn": "Luxembourg has a temperate oceanic climate with mild summers, cool winters, and rainfall throughout the year."
+    },
+    "heritage": [
+      {
+        "id": "lu-old-quarters",
+        "title": "ルクセンブルク市の旧市街と要塞",
+        "titleEn": "Old Quarters and Fortifications of Luxembourg City",
+        "description": "断崖と谷を利用した要塞、地下通路、歴史地区が「北のジブラルタル」の名残を伝えます。",
+        "descriptionEn": "Fortifications, underground passages, cliffs, and historic districts preserve the city's military past.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxembourg%20City%20old%20quarters.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_old_quarters.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_old_quarters.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "lu-vianden",
+        "title": "ヴィアンデン城",
+        "titleEn": "Vianden Castle",
+        "description": "谷を見下ろす丘に建つ中世の城で、修復された宮殿と防御施設を見学できます。",
+        "descriptionEn": "This restored medieval castle rises above a valley and combines princely halls with defensive architecture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vianden%20Castle%20in%20Luxembourg%20-%2051129171857.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Vianden_Castle_in_Luxembourg_-_51129171857.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Vianden_Castle_in_Luxembourg_-_51129171857.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      },
+      {
+        "id": "lu-mullerthal",
+        "title": "ミュラータール",
+        "titleEn": "Mullerthal",
+        "description": "森林、渓流、砂岩の奇岩が広がり、「ルクセンブルクの小スイス」と呼ばれます。",
+        "descriptionEn": "Forests, streams, and sandstone formations create a landscape nicknamed Luxembourg's Little Switzerland.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mullerthal%20Luxembourg.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mullerthal_Luxembourg.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mullerthal_Luxembourg.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "lu-judd",
+        "title": "ジュッド・マット・ガーデボウネン",
+        "titleEn": "Judd mat Gaardebounen",
+        "description": "燻製した豚肉をそら豆と煮込む、ルクセンブルクを代表する家庭料理です。",
+        "descriptionEn": "Smoked pork is cooked with broad beans in one of Luxembourg's best-known traditional dishes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Judd%20mat%20Gaardebounen.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Judd_mat_Gaardebounen.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Judd_mat_Gaardebounen.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "lu-gromperekichelcher",
+        "title": "グロンペレキッヒェルヒャー",
+        "titleEn": "Gromperekichelcher",
+        "description": "すりおろしたジャガイモを玉ねぎや香草と混ぜ、香ばしく揚げる軽食です。",
+        "descriptionEn": "Grated potatoes are mixed with onions and herbs and fried into crisp savory cakes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gromperekichelcher.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gromperekichelcher.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gromperekichelcher.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "lu-schueberfouer",
+        "title": "シューバーファウアー",
+        "titleEn": "Schueberfouer",
+        "description": "中世の市場を起源とし、現在は乗り物、屋台、食文化を楽しむ大規模な移動遊園地です。",
+        "descriptionEn": "Originating as a medieval fair, this major event now combines rides, stalls, food, and public celebration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schueberfouer%20Luxembourg.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Schueberfouer_Luxembourg.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Schueberfouer_Luxembourg.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "金融・宇宙・欧州交流の拠点",
+      "titleEn": "A Link Through Finance, Space, and European Cooperation",
+      "text": "日本とルクセンブルクは金融、宇宙産業、物流、文化、欧州機関を通じて交流しています。",
+      "textEn": "Japan and Luxembourg cooperate through finance, the space industry, logistics, culture, and European institutions."
+    },
+    "quiz": {
+      "question": "ルクセンブルクで日常的に使われる三つの主要言語はどれでしょう？",
+      "questionEn": "Which three languages are widely used in Luxembourg?",
+      "options": [
+        "ルクセンブルク語・フランス語・ドイツ語",
+        "英語・スペイン語・日本語",
+        "ポルトガル語・中国語・アラビア語",
+        "ロシア語・スウェーデン語・ギリシャ語"
+      ],
+      "optionsEn": [
+        "Luxembourgish, French, and German",
+        "English, Spanish, and Japanese",
+        "Portuguese, Chinese, and Arabic",
+        "Russian, Swedish, and Greek"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はルクセンブルク語、フランス語、ドイツ語です。場面に応じて複数言語が使われます。",
+      "explanationEn": "The answer is Luxembourgish, French, and German, which are used in different social and official settings."
+    }
+  }
+}

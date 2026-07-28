@@ -1,0 +1,3782 @@
+{
+  "kn": {
+    "iso": "kn",
+    "nameJa": "セントクリストファー・ネービス",
+    "nameEn": "Saint Kitts and Nevis",
+    "capitalJa": "バセテール",
+    "capitalEn": "Basseterre",
+    "subtitle": "カリブ海の二つの島からなり、火山、要塞、砂糖産業の歴史、音楽と祭り文化を持つ国です。",
+    "subtitleEn": "A two-island Caribbean nation of volcanoes, fortresses, sugar history, music, and festivals.",
+    "flagUrl": "https://flagcdn.com/w320/kn.png",
+    "mapQuery": "Basseterre, Saint Kitts and Nevis",
+    "timeZone": "America/St_Kitts",
+    "currency": {
+      "nameJa": "東カリブ・ドル",
+      "nameEn": "East Caribbean Dollar",
+      "symbol": "EC$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約15 m（バセテール）",
+    "elevationEn": "Approx. 15 m (Basseterre)",
+    "weather": {
+      "summary": "一年を通して温暖な熱帯海洋性気候で、雨季と乾季があります。",
+      "summaryEn": "The climate is warm and tropical throughout the year, with wetter and drier seasons."
+    },
+    "heritage": [
+      {
+        "id": "kn-brimstone",
+        "title": "ブリムストーン・ヒル要塞国立公園",
+        "titleEn": "Brimstone Hill Fortress National Park",
+        "description": "急な丘の上に築かれた巨大な要塞で、カリブ海の植民地争いと軍事建築を伝えます。",
+        "descriptionEn": "This vast hilltop fortress preserves the military and colonial history of the Caribbean.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brimstone%20Hill%20Fortress%20National%20Park.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Brimstone_Hill_Fortress_National_Park.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Brimstone_Hill_Fortress_National_Park.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "kn-nevis-peak",
+        "title": "ネービス山",
+        "titleEn": "Nevis Peak",
+        "description": "熱帯林に覆われた火山で、島の景観と水環境を支える自然の象徴です。",
+        "descriptionEn": "A forested volcano that dominates Nevis and supports the island's landscape and water systems.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nevis%20Peak.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nevis_Peak.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nevis_Peak.jpg",
+        "category": "火山・自然景観",
+        "categoryEn": "Volcanic Natural Attraction"
+      },
+      {
+        "id": "kn-wingfield",
+        "title": "ウィングフィールド・エステート",
+        "titleEn": "Wingfield Estate",
+        "description": "砂糖農園と水力施設の遺構が残り、植民地期の産業と労働の歴史を伝えます。",
+        "descriptionEn": "Ruins of a sugar estate and water-powered works preserve colonial industrial and labor history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wingfield%20Estate%20Saint%20Kitts.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Wingfield_Estate_Saint_Kitts.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Wingfield_Estate_Saint_Kitts.jpg",
+        "category": "産業・歴史遺産",
+        "categoryEn": "Industrial and Historic Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "kn-goat-water",
+        "title": "ゴート・ウォーター",
+        "titleEn": "Goat Water",
+        "description": "山羊肉を香辛料、野菜、ハーブと煮込む、ネービス島を代表する濃厚なシチューです。",
+        "descriptionEn": "Goat is slowly stewed with spices, vegetables, and herbs in a celebrated Nevisian dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Goat%20water%20stew.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Goat_water_stew.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Goat_water_stew.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "kn-masquerade",
+        "title": "マスカレード",
+        "titleEn": "Masquerade Dance",
+        "description": "色鮮やかな衣装、仮面、足取り、太鼓を組み合わせる伝統舞踊です。",
+        "descriptionEn": "Bright costume, masks, rhythmic footwork, and drums combine in a traditional performance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/St%20Kitts%20masquerade%20dancers.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:St_Kitts_masquerade_dancers.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:St_Kitts_masquerade_dancers.jpg",
+        "category": "舞踊・祭礼文化",
+        "categoryEn": "Dance and Festival Culture"
+      },
+      {
+        "id": "kn-steelpan",
+        "title": "スティールパン音楽",
+        "titleEn": "Steelpan Music",
+        "description": "金属ドラムの澄んだ音色で、カーニバルや地域の祝祭を盛り上げます。",
+        "descriptionEn": "Tuned steel drums create bright melodies for carnivals and community celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Steelpan%20Saint%20Kitts.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Steelpan_Saint_Kitts.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Steelpan_Saint_Kitts.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "観光・防災・教育で交流",
+      "titleEn": "Exchange Through Tourism, Disaster Preparedness, and Education",
+      "text": "日本は観光、防災、気候変動、漁業、教育などを通じて協力しています。",
+      "textEn": "Japan cooperates through tourism, disaster preparedness, climate action, fisheries, and education."
+    },
+    "quiz": {
+      "question": "セントクリストファー・ネービスを構成する二つの主な島はどれでしょう？",
+      "questionEn": "Which two main islands form Saint Kitts and Nevis?",
+      "options": [
+        "セントキッツ島とネービス島",
+        "キューバ島とハイチ島",
+        "タヒチ島とモーレア島",
+        "サモア島とウポル島"
+      ],
+      "optionsEn": [
+        "Saint Kitts and Nevis",
+        "Cuba and Haiti",
+        "Tahiti and Moorea",
+        "Savaiʻi and Upolu"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はセントキッツ島とネービス島です。二つの島が一つの連邦国家を構成しています。",
+      "explanationEn": "The answer is Saint Kitts and Nevis, the two islands forming the federation."
+    }
+  },
+  "lc": {
+    "iso": "lc",
+    "nameJa": "セントルシア",
+    "nameEn": "Saint Lucia",
+    "capitalJa": "カストリーズ",
+    "capitalEn": "Castries",
+    "subtitle": "双子峰ピトン、火山地形、熱帯林、クレオール文化を持つカリブ海の島国です。",
+    "subtitleEn": "A Caribbean island nation of the twin Pitons, volcanic landscapes, rainforest, and Creole culture.",
+    "flagUrl": "https://flagcdn.com/w320/lc.png",
+    "mapQuery": "Castries, Saint Lucia",
+    "timeZone": "America/St_Lucia",
+    "currency": {
+      "nameJa": "東カリブ・ドル",
+      "nameEn": "East Caribbean Dollar",
+      "symbol": "EC$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "セントルシア・クレオール語",
+        "nameEn": "Saint Lucian Creole"
+      }
+    ],
+    "elevation": "約2 m（カストリーズ）",
+    "elevationEn": "Approx. 2 m (Castries)",
+    "weather": {
+      "summary": "高温多湿の熱帯気候で、山地は雨が多く、ハリケーンの影響を受けることがあります。",
+      "summaryEn": "The tropical climate is warm and humid, with wetter mountains and occasional hurricane impacts."
+    },
+    "heritage": [
+      {
+        "id": "lc-pitons",
+        "title": "ピトン管理地域",
+        "titleEn": "Pitons Management Area",
+        "description": "海から急に立ち上がる二つの火山岩峰が、島を代表する景観を作ります。",
+        "descriptionEn": "Two steep volcanic peaks rising from the sea form Saint Lucia's best-known landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Pitons%20Saint%20Lucia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:The_Pitons_Saint_Lucia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:The_Pitons_Saint_Lucia.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "lc-sulphur-springs",
+        "title": "サルファー・スプリングス",
+        "titleEn": "Sulphur Springs",
+        "description": "地熱活動による噴気、泥湯、温泉が見られる火山地域です。",
+        "descriptionEn": "Steam vents, mud pools, and hot springs reveal the island's active volcanic geology.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sulphur%20Springs%20Saint%20Lucia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sulphur_Springs_Saint_Lucia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sulphur_Springs_Saint_Lucia.jpg",
+        "category": "地熱・火山景観",
+        "categoryEn": "Geothermal and Volcanic Site"
+      },
+      {
+        "id": "lc-pigeon-island",
+        "title": "ピジョン島国立史跡",
+        "titleEn": "Pigeon Island National Landmark",
+        "description": "要塞跡と丘陵から海峡を見渡せる、軍事史と自然が重なる場所です。",
+        "descriptionEn": "Fort ruins and hilltop views combine military history with coastal nature.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pigeon%20Island%20Saint%20Lucia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pigeon_Island_Saint_Lucia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pigeon_Island_Saint_Lucia.jpg",
+        "category": "国家歴史遺産",
+        "categoryEn": "National Historic Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "lc-green-fig",
+        "title": "グリーン・フィグ・アンド・ソルトフィッシュ",
+        "titleEn": "Green Fig and Saltfish",
+        "description": "青いバナナと塩漬け魚を野菜や香辛料と合わせる国民的料理です。",
+        "descriptionEn": "Green bananas and salted fish are combined with vegetables and seasonings in a national dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Green%20fig%20and%20saltfish.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Green_fig_and_saltfish.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Green_fig_and_saltfish.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "lc-la-rose",
+        "title": "ラ・ローズ祭",
+        "titleEn": "La Rose Festival",
+        "description": "花の結社が衣装、歌、踊り、行列で地域の結束と華やかさを表します。",
+        "descriptionEn": "Flower societies use costume, song, dance, and procession to express community identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Rose%20Festival%20Saint%20Lucia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:La_Rose_Festival_Saint_Lucia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:La_Rose_Festival_Saint_Lucia.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "lc-quadrille",
+        "title": "セントルシアのクアドリール",
+        "titleEn": "Saint Lucian Quadrille",
+        "description": "欧州由来の舞踊をクレオール音楽と地域のリズムに合わせて発展させました。",
+        "descriptionEn": "A European-derived dance evolved through Creole music and local rhythm.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quadrille%20dancers%20Saint%20Lucia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Quadrille_dancers_Saint_Lucia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Quadrille_dancers_Saint_Lucia.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "観光・防災・気候変動で協力",
+      "titleEn": "Cooperation in Tourism, Disaster Preparedness, and Climate Change",
+      "text": "日本は防災、水産、気候変動、観光、人材育成などで協力しています。",
+      "textEn": "Japan cooperates in disaster preparedness, fisheries, climate action, tourism, and training."
+    },
+    "quiz": {
+      "question": "セントルシアを象徴する二つの火山岩峰は何でしょう？",
+      "questionEn": "Which twin volcanic peaks symbolize Saint Lucia?",
+      "options": [
+        "ピトン",
+        "アルプス",
+        "ドロミーティ",
+        "ロッキー山脈"
+      ],
+      "optionsEn": [
+        "The Pitons",
+        "The Alps",
+        "The Dolomites",
+        "The Rocky Mountains"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はピトンです。グロ・ピトンとプチ・ピトンの二峰からなります。",
+      "explanationEn": "The answer is the Pitons: Gros Piton and Petit Piton."
+    }
+  },
+  "vc": {
+    "iso": "vc",
+    "nameJa": "セントビンセントおよびグレナディーン諸島",
+    "nameEn": "Saint Vincent and the Grenadines",
+    "capitalJa": "キングスタウン",
+    "capitalEn": "Kingstown",
+    "subtitle": "火山島セントビンセントと多数の小島からなり、海洋文化とカーニバルで知られます。",
+    "subtitleEn": "A Caribbean state of volcanic Saint Vincent and many smaller Grenadine islands, known for marine culture and carnival.",
+    "flagUrl": "https://flagcdn.com/w320/vc.png",
+    "mapQuery": "Kingstown, Saint Vincent and the Grenadines",
+    "timeZone": "America/St_Vincent",
+    "currency": {
+      "nameJa": "東カリブ・ドル",
+      "nameEn": "East Caribbean Dollar",
+      "symbol": "EC$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約1 m（キングスタウン）",
+    "elevationEn": "Approx. 1 m (Kingstown)",
+    "weather": {
+      "summary": "温暖な熱帯気候で、雨季と乾季があり、山地は降水量が多くなります。",
+      "summaryEn": "The climate is tropical and warm, with wet and dry seasons and heavier mountain rainfall."
+    },
+    "heritage": [
+      {
+        "id": "vc-soufriere",
+        "title": "ラ・スフリエール火山",
+        "titleEn": "La Soufrière Volcano",
+        "description": "セントビンセント島北部にそびえる活火山で、島の地形と生活に大きな影響を与えます。",
+        "descriptionEn": "An active volcano in northern Saint Vincent that strongly shapes the island's landscape and life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Soufriere%20Saint%20Vincent.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:La_Soufriere_Saint_Vincent.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:La_Soufriere_Saint_Vincent.jpg",
+        "category": "火山・自然景観",
+        "categoryEn": "Volcanic Natural Attraction"
+      },
+      {
+        "id": "vc-tobago-cays",
+        "title": "トバゴ・ケイズ海洋公園",
+        "titleEn": "Tobago Cays Marine Park",
+        "description": "小島、サンゴ礁、透明な海にウミガメや多様な魚が暮らす保護海域です。",
+        "descriptionEn": "Small islands, coral reefs, and clear water protect sea turtles and diverse marine life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tobago%20Cays.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tobago_Cays.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tobago_Cays.jpg",
+        "category": "海洋自然保護区",
+        "categoryEn": "Marine Protected Area"
+      },
+      {
+        "id": "vc-fort-charlotte",
+        "title": "フォート・シャーロット",
+        "titleEn": "Fort Charlotte",
+        "description": "キングスタウンを見下ろす丘に建つ要塞で、植民地期の軍事史を伝えます。",
+        "descriptionEn": "A hilltop fort overlooking Kingstown preserves colonial military history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort%20Charlotte%20Saint%20Vincent.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fort_Charlotte_Saint_Vincent.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Fort_Charlotte_Saint_Vincent.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "vc-breadfruit",
+        "title": "ロースト・ブレッドフルーツとジャックフィッシュ",
+        "titleEn": "Roasted Breadfruit and Jackfish",
+        "description": "焼いたパンノキの実と魚を合わせる、島の農業と海を結ぶ代表料理です。",
+        "descriptionEn": "Roasted breadfruit and fish connect island farming with the sea in a national dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Breadfruit%20and%20jackfish%20Saint%20Vincent.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Breadfruit_and_jackfish_Saint_Vincent.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Breadfruit_and_jackfish_Saint_Vincent.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "vc-vincy-mas",
+        "title": "ヴィンシー・マス",
+        "titleEn": "Vincy Mas",
+        "description": "音楽、仮装、ダンス、スティールパンで祝う大規模なカーニバルです。",
+        "descriptionEn": "Music, costume, dance, and steelpan animate the country's major carnival.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincy%20Mas%20carnival.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Vincy_Mas_carnival.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Vincy_Mas_carnival.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "vc-bequia-boats",
+        "title": "ベキアの船大工文化",
+        "titleEn": "Bequia Boatbuilding",
+        "description": "木造船を手作業で建造する技術が、漁業と島間交通の歴史を支えてきました。",
+        "descriptionEn": "Hand-built wooden boats preserve skills connected to fishing and inter-island travel.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Boatbuilding%20Bequia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Boatbuilding_Bequia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Boatbuilding_Bequia.jpg",
+        "category": "海洋伝統工芸",
+        "categoryEn": "Maritime Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "海洋・防災・観光で協力",
+      "titleEn": "Cooperation in Oceans, Disaster Preparedness, and Tourism",
+      "text": "日本は水産、防災、気候変動、観光、教育などで協力しています。",
+      "textEn": "Japan cooperates in fisheries, disaster preparedness, climate action, tourism, and education."
+    },
+    "quiz": {
+      "question": "国の北部にある活火山は何でしょう？",
+      "questionEn": "Which active volcano lies in the north of Saint Vincent?",
+      "options": [
+        "ラ・スフリエール",
+        "富士山",
+        "エトナ山",
+        "キリマンジャロ"
+      ],
+      "optionsEn": [
+        "La Soufrière",
+        "Mount Fuji",
+        "Mount Etna",
+        "Kilimanjaro"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はラ・スフリエールです。噴火は住民生活と農業に大きな影響を与えます。",
+      "explanationEn": "The answer is La Soufrière, whose eruptions strongly affect communities and agriculture."
+    }
+  },
+  "ws": {
+    "iso": "ws",
+    "nameJa": "サモア",
+    "nameEn": "Samoa",
+    "capitalJa": "アピア",
+    "capitalEn": "Apia",
+    "subtitle": "火山島、滝、海洋文化、大家族と村を重視するファア・サモアを持つ国です。",
+    "subtitleEn": "A Pacific island nation of volcanic landscapes, waterfalls, maritime life, and the community-centered fa'a Samoa.",
+    "flagUrl": "https://flagcdn.com/w320/ws.png",
+    "mapQuery": "Apia, Samoa",
+    "timeZone": "Pacific/Apia",
+    "currency": {
+      "nameJa": "タラ",
+      "nameEn": "Samoan Tālā",
+      "symbol": "WS$"
+    },
+    "languages": [
+      {
+        "nameJa": "サモア語",
+        "nameEn": "Samoan"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約2 m（アピア）",
+    "elevationEn": "Approx. 2 m (Apia)",
+    "weather": {
+      "summary": "一年を通して高温多湿で、雨季には強い雨やサイクロンの影響があります。",
+      "summaryEn": "The climate is hot and humid year-round, with heavy rain and cyclone risk in the wet season."
+    },
+    "heritage": [
+      {
+        "id": "ws-to-sua",
+        "title": "ト・スア・オーシャン・トレンチ",
+        "titleEn": "To Sua Ocean Trench",
+        "description": "熱帯植物に囲まれた深い天然の海水プールで、地下を通じて海とつながります。",
+        "descriptionEn": "A deep natural seawater pool surrounded by tropical vegetation and connected to the ocean.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/To%20Sua%20Ocean%20Trench%20Samoa.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:To_Sua_Ocean_Trench_Samoa.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:To_Sua_Ocean_Trench_Samoa.jpg",
+        "category": "自然景観",
+        "categoryEn": "Natural Attraction"
+      },
+      {
+        "id": "ws-vailima",
+        "title": "バイリマとロバート・ルイス・スティーヴンソン博物館",
+        "titleEn": "Vailima and Robert Louis Stevenson Museum",
+        "description": "作家スティーヴンソンが暮らした家と庭園が、文学と島の近代史を伝えます。",
+        "descriptionEn": "The former home and gardens of Robert Louis Stevenson connect literature with Samoa's modern history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert%20Louis%20Stevenson%20Museum%20Samoa.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Robert_Louis_Stevenson_Museum_Samoa.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Robert_Louis_Stevenson_Museum_Samoa.jpg",
+        "category": "文学・歴史遺産",
+        "categoryEn": "Literary and Historic Heritage"
+      },
+      {
+        "id": "ws-alofaaga",
+        "title": "アロファアガの潮吹き穴",
+        "titleEn": "Alofaaga Blowholes",
+        "description": "波が溶岩洞へ入り、海水を高く噴き上げるサバイイ島の海岸地形です。",
+        "descriptionEn": "Waves enter lava tubes and force seawater high into the air along the coast of Savaiʻi.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alofaaga%20Blowholes%20Samoa.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Alofaaga_Blowholes_Samoa.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Alofaaga_Blowholes_Samoa.jpg",
+        "category": "海岸・火山景観",
+        "categoryEn": "Coastal and Volcanic Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ws-fale",
+        "title": "サモアのファレ",
+        "titleEn": "Samoan Fale",
+        "description": "壁をほとんど設けない開放的な家屋で、風通しと共同体生活を重視します。",
+        "descriptionEn": "An open-sided house emphasizes ventilation, gathering, and community life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Traditional%20Samoan%20fale.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Traditional_Samoan_fale.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Traditional_Samoan_fale.jpg",
+        "category": "建築・生活文化",
+        "categoryEn": "Architectural and Living Culture"
+      },
+      {
+        "id": "ws-siva",
+        "title": "シヴァ",
+        "titleEn": "Siva Dance",
+        "description": "手や腕の優雅な動き、歌、太鼓を通して物語や感情を表現します。",
+        "descriptionEn": "Graceful hand and arm movements, song, and percussion communicate stories and emotion.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Samoan%20siva%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Samoan_siva_dance.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Samoan_siva_dance.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      },
+      {
+        "id": "ws-umu",
+        "title": "ウム料理",
+        "titleEn": "Umu Cooking",
+        "description": "熱した石の上に肉、魚、タロイモなどを置き、葉で覆って蒸し焼きにします。",
+        "descriptionEn": "Meat, fish, and taro are placed over hot stones and covered with leaves for slow earth-oven cooking.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Samoan%20umu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Samoan_umu.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Samoan_umu.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "太平洋・防災・人材交流で協力",
+      "titleEn": "Cooperation in Pacific Affairs, Disaster Preparedness, and Training",
+      "text": "日本は防災、水、漁業、教育、保健、人材育成などでサモアと協力しています。",
+      "textEn": "Japan and Samoa cooperate in disaster preparedness, water, fisheries, education, health, and training."
+    },
+    "quiz": {
+      "question": "サモアの伝統的な社会と生活様式を表す言葉は何でしょう？",
+      "questionEn": "Which term describes the traditional Samoan way of life?",
+      "options": [
+        "ファア・サモア",
+        "ブシドー",
+        "フィーカ",
+        "ハカ"
+      ],
+      "optionsEn": [
+        "Fa'a Samoa",
+        "Bushidō",
+        "Fika",
+        "Haka"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はファア・サモアです。家族、村、敬意、共同体の責任を重視します。",
+      "explanationEn": "The answer is fa'a Samoa, emphasizing family, village, respect, and communal responsibility."
+    }
+  },
+  "sm": {
+    "iso": "sm",
+    "nameJa": "サンマリノ",
+    "nameEn": "San Marino",
+    "capitalJa": "サンマリノ市",
+    "capitalEn": "City of San Marino",
+    "subtitle": "イタリア半島の山上に位置し、中世の城壁、塔、共和国の歴史を持つ小国です。",
+    "subtitleEn": "A small mountaintop state on the Italian Peninsula with medieval walls, towers, and a long republican history.",
+    "flagUrl": "https://flagcdn.com/w320/sm.png",
+    "mapQuery": "City of San Marino, San Marino",
+    "timeZone": "Europe/San_Marino",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "イタリア語",
+        "nameEn": "Italian"
+      }
+    ],
+    "elevation": "約650 m（サンマリノ市）",
+    "elevationEn": "Approx. 650 m (City of San Marino)",
+    "weather": {
+      "summary": "温帯気候で、夏は暖かく、冬は冷涼です。高地では雪が降ることもあります。",
+      "summaryEn": "The climate is temperate, with warm summers and cool winters; snowfall can occur at higher elevations."
+    },
+    "heritage": [
+      {
+        "id": "sm-historic-centre",
+        "title": "サンマリノ歴史地区とティターノ山",
+        "titleEn": "San Marino Historic Centre and Mount Titano",
+        "description": "城壁、広場、塔、行政建築が、世界最古級の共和国の歴史を伝えます。",
+        "descriptionEn": "Walls, squares, towers, and civic buildings preserve the history of one of the world's oldest republics.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Marino%20Monte%20Titano.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:San_Marino_Monte_Titano.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:San_Marino_Monte_Titano.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sm-guaita",
+        "title": "グアイタ塔",
+        "titleEn": "Guaita Tower",
+        "description": "ティターノ山の峰に建つ最古の塔で、防御と国の象徴として知られます。",
+        "descriptionEn": "The oldest tower on Mount Titano served defensive purposes and became a national symbol.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Guaita%20San%20Marino.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Guaita_San_Marino.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Guaita_San_Marino.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      },
+      {
+        "id": "sm-basilica",
+        "title": "サンマリノ大聖堂",
+        "titleEn": "Basilica of San Marino",
+        "description": "国の守護聖人を祭る新古典主義建築で、共和国の宗教的中心です。",
+        "descriptionEn": "A neoclassical basilica dedicated to the country's patron saint and central to civic religious life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica%20di%20San%20Marino.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Marino.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Marino.jpg",
+        "category": "宗教・歴史建築",
+        "categoryEn": "Religious and Historic Architecture"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sm-torta",
+        "title": "トルタ・トレ・モンティ",
+        "titleEn": "Torta Tre Monti",
+        "description": "薄いワッフルとチョコレートクリームを重ね、三つの塔を象徴する菓子です。",
+        "descriptionEn": "Layers of thin wafers and chocolate cream symbolize San Marino's three towers.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Torta%20Tre%20Monti.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Torta_Tre_Monti.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Torta_Tre_Monti.jpg",
+        "category": "菓子文化",
+        "categoryEn": "Pastry Culture"
+      },
+      {
+        "id": "sm-crossbow",
+        "title": "石弓隊の伝統",
+        "titleEn": "Crossbowmen Tradition",
+        "description": "歴史衣装を身に着け、石弓競技と行進で中世共和国の記憶を再現します。",
+        "descriptionEn": "Historical costume, crossbow contests, and parades recreate the memory of the medieval republic.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Marino%20crossbowmen.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:San_Marino_crossbowmen.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:San_Marino_crossbowmen.jpg",
+        "category": "歴史・祭礼文化",
+        "categoryEn": "Historic Festival Culture"
+      },
+      {
+        "id": "sm-stamps",
+        "title": "切手と記念貨幣文化",
+        "titleEn": "Stamps and Commemorative Coins",
+        "description": "小国ならではの美しい切手や記念貨幣が、歴史と文化を発信しています。",
+        "descriptionEn": "Distinctive stamps and commemorative coins present the country's history and culture to the world.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Marino%20stamps.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:San_Marino_stamps.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:San_Marino_stamps.jpg",
+        "category": "収集・デザイン文化",
+        "categoryEn": "Collecting and Design Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "観光・文化・外交で交流",
+      "titleEn": "Exchange Through Tourism, Culture, and Diplomacy",
+      "text": "日本とサンマリノは外交、観光、文化行事、芸術などを通じて交流しています。",
+      "textEn": "Japan and San Marino maintain ties through diplomacy, tourism, cultural events, and the arts."
+    },
+    "quiz": {
+      "question": "サンマリノの歴史地区がある山は何でしょう？",
+      "questionEn": "On which mountain is San Marino's historic center located?",
+      "options": [
+        "ティターノ山",
+        "富士山",
+        "モンブラン",
+        "エベレスト"
+      ],
+      "optionsEn": [
+        "Mount Titano",
+        "Mount Fuji",
+        "Mont Blanc",
+        "Mount Everest"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はティターノ山です。三つの塔が山の峰に建っています。",
+      "explanationEn": "The answer is Mount Titano, whose ridges carry the country's three famous towers."
+    }
+  },
+  "st": {
+    "iso": "st",
+    "nameJa": "サントメ・プリンシペ",
+    "nameEn": "São Tomé and Príncipe",
+    "capitalJa": "サントメ",
+    "capitalEn": "São Tomé",
+    "subtitle": "ギニア湾の火山島に、熱帯林、カカオ農園、植民地建築、舞踊劇の文化が残る国です。",
+    "subtitleEn": "A Gulf of Guinea island nation of volcanic rainforest, cacao plantations, colonial architecture, and dance-drama traditions.",
+    "flagUrl": "https://flagcdn.com/w320/st.png",
+    "mapQuery": "São Tomé, São Tomé and Príncipe",
+    "timeZone": "Africa/Sao_Tome",
+    "currency": {
+      "nameJa": "ドブラ",
+      "nameEn": "Dobra",
+      "symbol": "Db"
+    },
+    "languages": [
+      {
+        "nameJa": "ポルトガル語",
+        "nameEn": "Portuguese"
+      }
+    ],
+    "elevation": "約137 m（サントメ）",
+    "elevationEn": "Approx. 137 m (São Tomé)",
+    "weather": {
+      "summary": "一年を通して高温多湿で、島の斜面や南部は特に雨が多くなります。",
+      "summaryEn": "The climate is hot and humid year-round, with especially heavy rainfall on mountain slopes and in the south."
+    },
+    "heritage": [
+      {
+        "id": "st-pico-cao-grande",
+        "title": "ピコ・カン・グランデ",
+        "titleEn": "Pico Cão Grande",
+        "description": "熱帯林から鋭く突き出す火山岩塔で、島を象徴する地形です。",
+        "descriptionEn": "A dramatic volcanic plug rises sharply from rainforest and forms one of the country's iconic landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pico%20C%C3%A3o%20Grande,%20S%C3%A3o%20Tom%C3%A9.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pico_C%C3%A3o_Grande,_S%C3%A3o_Tom%C3%A9.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pico_C%C3%A3o_Grande,_S%C3%A3o_Tom%C3%A9.jpg",
+        "category": "火山・自然景観",
+        "categoryEn": "Volcanic Natural Attraction"
+      },
+      {
+        "id": "st-obo",
+        "title": "オボ国立公園",
+        "titleEn": "Obô National Park",
+        "description": "火山性の山地林に多くの固有鳥類、植物、両生類が暮らす保護地域です。",
+        "descriptionEn": "Volcanic mountain rainforest protects many endemic birds, plants, and amphibians.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Obo%20National%20Park%20Sao%20Tome.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Obo_National_Park_Sao_Tome.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Obo_National_Park_Sao_Tome.jpg",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      },
+      {
+        "id": "st-roca",
+        "title": "ロサ・アグスティーニョ・ネト",
+        "titleEn": "Roça Agostinho Neto",
+        "description": "大規模カカオ農園の建物群が、植民地期の産業と労働の歴史を伝えます。",
+        "descriptionEn": "Buildings of a large cacao plantation preserve colonial industrial and labor history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ro%C3%A7a%20Agostinho%20Neto.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ro%C3%A7a_Agostinho_Neto.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ro%C3%A7a_Agostinho_Neto.jpg",
+        "category": "産業・歴史遺産",
+        "categoryEn": "Industrial and Historic Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "st-calulu",
+        "title": "カルル",
+        "titleEn": "Calulu",
+        "description": "魚や肉、葉野菜、オクラ、パーム油などを煮込む島の代表料理です。",
+        "descriptionEn": "Fish or meat is simmered with leafy greens, okra, palm oil, and local seasonings.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calulu%20Sao%20Tome.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Calulu_Sao_Tome.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Calulu_Sao_Tome.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "st-tchiloli",
+        "title": "チロリ",
+        "titleEn": "Tchiloli",
+        "description": "欧州由来の物語を仮面、衣装、音楽、踊りで演じる独特の舞踊劇です。",
+        "descriptionEn": "Masks, costume, music, and dance transform a European-derived story into a distinctive island drama.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tchiloli%20Sao%20Tome.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tchiloli_Sao_Tome.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tchiloli_Sao_Tome.jpg",
+        "category": "伝統演劇",
+        "categoryEn": "Traditional Theatre"
+      },
+      {
+        "id": "st-cacao",
+        "title": "カカオ文化",
+        "titleEn": "Cacao Culture",
+        "description": "カカオ栽培とチョコレート作りが、島の景観、産業、食文化に深く関わります。",
+        "descriptionEn": "Cacao cultivation and chocolate production shape the islands' landscape, economy, and food culture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cacao%20Sao%20Tome.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cacao_Sao_Tome.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cacao_Sao_Tome.jpg",
+        "category": "農業・食文化",
+        "categoryEn": "Agricultural and Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "農業・保健・海洋で協力",
+      "titleEn": "Cooperation in Agriculture, Health, and Oceans",
+      "text": "日本は農業、保健、水産、防災、教育、人材育成などで協力しています。",
+      "textEn": "Japan cooperates in agriculture, health, fisheries, disaster preparedness, education, and training."
+    },
+    "quiz": {
+      "question": "サントメ・プリンシペで歴史的に重要な輸出作物は何でしょう？",
+      "questionEn": "Which crop has been historically important to São Tomé and Príncipe?",
+      "options": [
+        "カカオ",
+        "小麦",
+        "リンゴ",
+        "オリーブ"
+      ],
+      "optionsEn": [
+        "Cacao",
+        "Wheat",
+        "Apples",
+        "Olives"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はカカオです。島は高品質なカカオとチョコレートで知られています。",
+      "explanationEn": "The answer is cacao, for which the islands are well known."
+    }
+  },
+  "sa": {
+    "iso": "sa",
+    "nameJa": "サウジアラビア",
+    "nameEn": "Saudi Arabia",
+    "capitalJa": "リヤド",
+    "capitalEn": "Riyadh",
+    "subtitle": "アラビア半島の広大な砂漠に、古代交易都市、聖地、遊牧文化、急速に成長する都市を持つ国です。",
+    "subtitleEn": "A vast Arabian country of deserts, ancient trade cities, sacred places, Bedouin traditions, and rapidly growing cities.",
+    "flagUrl": "https://flagcdn.com/w320/sa.png",
+    "mapQuery": "Riyadh, Saudi Arabia",
+    "timeZone": "Asia/Riyadh",
+    "currency": {
+      "nameJa": "サウジ・リヤル",
+      "nameEn": "Saudi Riyal",
+      "symbol": "﷼"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約600 m（リヤド）",
+    "elevationEn": "Approx. 600 m (Riyadh)",
+    "weather": {
+      "summary": "大部分は非常に暑く乾燥した砂漠気候で、内陸は昼夜の寒暖差が大きくなります。",
+      "summaryEn": "Most of the country has an extremely hot and dry desert climate, with large day-night temperature differences inland."
+    },
+    "heritage": [
+      {
+        "id": "sa-hegra",
+        "title": "ヘグラの考古遺跡",
+        "titleEn": "Hegra Archaeological Site",
+        "description": "砂岩の岩壁を掘った巨大な墓が残り、ナバテア人の交易都市の歴史を伝えます。",
+        "descriptionEn": "Monumental tombs carved into sandstone preserve the history of a Nabataean trading city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Madain%20Saleh%20Saudi%20Arabia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Madain_Saleh_Saudi_Arabia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Madain_Saleh_Saudi_Arabia.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sa-diriyah",
+        "title": "ディルイーヤのトゥライフ地区",
+        "titleEn": "At-Turaif District in Diriyah",
+        "description": "泥れんがの宮殿と街路が、サウード家と初期国家の歴史を伝えます。",
+        "descriptionEn": "Mud-brick palaces and streets preserve the history of the Saudi dynasty and early state formation.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/At-Turaif%20District%20Diriyah.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:At-Turaif_District_Diriyah.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:At-Turaif_District_Diriyah.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sa-al-balad",
+        "title": "ジッダ歴史地区アル・バラド",
+        "titleEn": "Historic Jeddah, Al-Balad",
+        "description": "紅海交易で栄えた港町に、サンゴ石の高層住宅と市場が残ります。",
+        "descriptionEn": "Coral-stone tower houses and markets preserve the history of Red Sea trade and pilgrimage.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Balad%20Jeddah.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Al-Balad_Jeddah.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Al-Balad_Jeddah.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sa-kabsa",
+        "title": "カブサ",
+        "titleEn": "Kabsa",
+        "description": "香辛料を加えた米に鶏肉や羊肉を盛り、ナッツやレーズンを添える料理です。",
+        "descriptionEn": "Spiced rice is served with chicken or lamb and often topped with nuts and raisins.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Saudi%20Kabsa.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Saudi_Kabsa.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Saudi_Kabsa.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "sa-coffee",
+        "title": "サウジ・コーヒー",
+        "titleEn": "Saudi Coffee",
+        "description": "浅煎りの豆をカルダモンなどで香り付けし、デーツとともに客へふるまいます。",
+        "descriptionEn": "Lightly roasted coffee flavored with cardamom is offered with dates as a sign of hospitality.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Saudi%20coffee%20and%20dates.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Saudi_coffee_and_dates.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Saudi_coffee_and_dates.jpg",
+        "category": "もてなし文化",
+        "categoryEn": "Hospitality Culture"
+      },
+      {
+        "id": "sa-ardah",
+        "title": "アルダ",
+        "titleEn": "Al Ardah",
+        "description": "剣を持つ男性たちが太鼓と詩に合わせて列を作る伝統舞踊です。",
+        "descriptionEn": "Men carrying swords move in lines to drums and poetry in a traditional performance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Saudi%20Ardah%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Saudi_Ardah_dance.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Saudi_Ardah_dance.jpg",
+        "category": "舞踊・詩文化",
+        "categoryEn": "Dance and Poetry Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "エネルギー・投資・文化で深い関係",
+      "titleEn": "Strong Links Through Energy, Investment, and Culture",
+      "text": "日本とサウジアラビアは原油、投資、産業、教育、観光、文化で深く結ばれています。",
+      "textEn": "Japan and Saudi Arabia are closely connected through oil, investment, industry, education, tourism, and culture."
+    },
+    "quiz": {
+      "question": "サウジアラビアの西側に面する海は何でしょう？",
+      "questionEn": "Which sea lies along western Saudi Arabia?",
+      "options": [
+        "紅海",
+        "黒海",
+        "バルト海",
+        "カリブ海"
+      ],
+      "optionsEn": [
+        "Red Sea",
+        "Black Sea",
+        "Baltic Sea",
+        "Caribbean Sea"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は紅海です。歴史的な港と巡礼路が発展しました。",
+      "explanationEn": "The answer is the Red Sea, along which historic ports and pilgrimage routes developed."
+    }
+  },
+  "sn": {
+    "iso": "sn",
+    "nameJa": "セネガル",
+    "nameEn": "Senegal",
+    "capitalJa": "ダカール",
+    "capitalEn": "Dakar",
+    "subtitle": "大西洋岸、サヘル、湿地、音楽、レスリング、多民族の食文化を持つ西アフリカの国です。",
+    "subtitleEn": "A West African country of Atlantic coast, Sahel, wetlands, music, wrestling, and diverse food traditions.",
+    "flagUrl": "https://flagcdn.com/w320/sn.png",
+    "mapQuery": "Dakar, Senegal",
+    "timeZone": "Africa/Dakar",
+    "currency": {
+      "nameJa": "西アフリカCFAフラン",
+      "nameEn": "West African CFA Franc",
+      "symbol": "CFA"
+    },
+    "languages": [
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "ウォロフ語",
+        "nameEn": "Wolof"
+      }
+    ],
+    "elevation": "約22 m（ダカール）",
+    "elevationEn": "Approx. 22 m (Dakar)",
+    "weather": {
+      "summary": "北部は乾燥し、南部ほど雨が多くなります。雨季と乾季がはっきりしています。",
+      "summaryEn": "The north is drier and rainfall increases toward the south, with clear wet and dry seasons."
+    },
+    "heritage": [
+      {
+        "id": "sn-goree",
+        "title": "ゴレ島",
+        "titleEn": "Island of Gorée",
+        "description": "奴隷貿易の記憶を伝える建物と博物館が残り、人権と歴史を考える場所です。",
+        "descriptionEn": "Buildings and museums preserve the memory of the slave trade and support reflection on human rights.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Goree%20Island%20Senegal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Goree_Island_Senegal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Goree_Island_Senegal.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sn-djoudj",
+        "title": "ジュッジ国立鳥類保護区",
+        "titleEn": "Djoudj National Bird Sanctuary",
+        "description": "セネガル川デルタの湿地に、ペリカンや渡り鳥が大群で集まります。",
+        "descriptionEn": "Wetlands in the Senegal River delta attract pelicans and vast numbers of migratory birds.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Djoudj%20Senegal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Djoudj_Senegal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Djoudj_Senegal.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sn-saloum",
+        "title": "サルーム・デルタ",
+        "titleEn": "Saloum Delta",
+        "description": "マングローブ、貝塚、島々が、漁業と長い人間活動の歴史を伝えます。",
+        "descriptionEn": "Mangroves, shell mounds, and islands preserve both fisheries and a long history of human settlement.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Saloum%20Delta%20Senegal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Saloum_Delta_Senegal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Saloum_Delta_Senegal.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sn-thieboudienne",
+        "title": "チェブジェン",
+        "titleEn": "Thieboudienne",
+        "description": "魚、米、野菜、トマトを一つの鍋で炊く、セネガルを代表する料理です。",
+        "descriptionEn": "Fish, rice, vegetables, and tomato are cooked together in Senegal's celebrated national dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thieboudienne%20Senegal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Thieboudienne_Senegal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Thieboudienne_Senegal.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "sn-sabar",
+        "title": "サバール音楽と舞踊",
+        "titleEn": "Sabar Music and Dance",
+        "description": "細長い太鼓の複雑なリズムに、力強い動きと即興的な踊りを合わせます。",
+        "descriptionEn": "Complex rhythms on tall drums accompany energetic and improvisational dance.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sabar%20dance%20Senegal.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sabar_dance_Senegal.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sabar_dance_Senegal.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      },
+      {
+        "id": "sn-wrestling",
+        "title": "セネガル相撲",
+        "titleEn": "Senegalese Wrestling",
+        "description": "格闘技に音楽、踊り、儀礼、地域の誇りが結びつく人気競技です。",
+        "descriptionEn": "Wrestling combines sport with music, dance, ritual, and strong regional identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Senegalese%20wrestling.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Senegalese_wrestling.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Senegalese_wrestling.jpg",
+        "category": "伝統スポーツ",
+        "categoryEn": "Traditional Sport"
+      }
+    ],
+    "japanConnection": {
+      "title": "TICAD・漁業・教育で協力",
+      "titleEn": "Cooperation Through TICAD, Fisheries, and Education",
+      "text": "日本は漁業、農業、保健、教育、インフラ、人材育成でセネガルと協力しています。",
+      "textEn": "Japan and Senegal cooperate in fisheries, agriculture, health, education, infrastructure, and training."
+    },
+    "quiz": {
+      "question": "セネガルを代表する魚と米の料理は何でしょう？",
+      "questionEn": "Which fish-and-rice dish is strongly associated with Senegal?",
+      "options": [
+        "チェブジェン",
+        "寿司",
+        "パエリア",
+        "ガンボ"
+      ],
+      "optionsEn": [
+        "Thieboudienne",
+        "Sushi",
+        "Paella",
+        "Gumbo"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はチェブジェンです。魚、米、野菜を同じ鍋で調理します。",
+      "explanationEn": "The answer is thieboudienne, made by cooking fish, rice, and vegetables together."
+    }
+  },
+  "rs": {
+    "iso": "rs",
+    "nameJa": "セルビア",
+    "nameEn": "Serbia",
+    "capitalJa": "ベオグラード",
+    "capitalEn": "Belgrade",
+    "subtitle": "ドナウ川、正教会修道院、要塞、山岳、音楽と家庭料理を持つバルカンの国です。",
+    "subtitleEn": "A Balkan country of the Danube, Orthodox monasteries, fortresses, mountains, music, and home cooking.",
+    "flagUrl": "https://flagcdn.com/w320/rs.png",
+    "mapQuery": "Belgrade, Serbia",
+    "timeZone": "Europe/Belgrade",
+    "currency": {
+      "nameJa": "セルビア・ディナール",
+      "nameEn": "Serbian Dinar",
+      "symbol": "дин"
+    },
+    "languages": [
+      {
+        "nameJa": "セルビア語",
+        "nameEn": "Serbian"
+      }
+    ],
+    "elevation": "約117 m（ベオグラード）",
+    "elevationEn": "Approx. 117 m (Belgrade)",
+    "weather": {
+      "summary": "大陸性気候で、夏は暑く、冬は寒くなります。山地では雪が多くなります。",
+      "summaryEn": "The climate is continental, with hot summers, cold winters, and heavier mountain snowfall."
+    },
+    "heritage": [
+      {
+        "id": "rs-studenica",
+        "title": "ストゥデニツァ修道院",
+        "titleEn": "Studenica Monastery",
+        "description": "白大理石の教会と中世フレスコ画が、セルビア正教文化の発展を伝えます。",
+        "descriptionEn": "White-marble churches and medieval frescoes preserve the development of Serbian Orthodox culture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Studenica%20Monastery%20Serbia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Studenica_Monastery_Serbia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Studenica_Monastery_Serbia.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "rs-belgrade-fortress",
+        "title": "ベオグラード要塞",
+        "titleEn": "Belgrade Fortress",
+        "description": "サヴァ川とドナウ川の合流点に築かれ、都市の軍事史を伝えます。",
+        "descriptionEn": "Built above the meeting of the Sava and Danube, the fortress preserves the city's military history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Belgrade%20Fortress%20Serbia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Belgrade_Fortress_Serbia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Belgrade_Fortress_Serbia.jpg",
+        "category": "歴史建築",
+        "categoryEn": "Historic Architecture"
+      },
+      {
+        "id": "rs-djerdap",
+        "title": "ジェルダップ峡谷",
+        "titleEn": "Đerdap Gorge",
+        "description": "ドナウ川が山地を刻む大峡谷で、自然、古代遺跡、交通史が重なります。",
+        "descriptionEn": "The Danube cuts through a great gorge where nature, archaeology, and transport history meet.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Djerdap%20Gorge%20Serbia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Djerdap_Gorge_Serbia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Djerdap_Gorge_Serbia.jpg",
+        "category": "自然・文化景観",
+        "categoryEn": "Natural and Cultural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "rs-slava",
+        "title": "スラヴァ",
+        "titleEn": "Slava",
+        "description": "家族ごとに守護聖人の日を祝い、ろうそく、パン、食事を分かち合います。",
+        "descriptionEn": "Families celebrate a patron saint with candles, ritual bread, hospitality, and a shared meal.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Serbian%20Slava.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Serbian_Slava.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Serbian_Slava.jpg",
+        "category": "家族・宗教文化",
+        "categoryEn": "Family and Religious Culture"
+      },
+      {
+        "id": "rs-pljeskavica",
+        "title": "プリェスカヴィツァ",
+        "titleEn": "Pljeskavica",
+        "description": "味付けしたひき肉を平たく焼き、パンや玉ねぎ、ソースと食べます。",
+        "descriptionEn": "Seasoned ground meat is grilled into a flat patty and served with bread, onions, and sauces.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pljeskavica%20Serbia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pljeskavica_Serbia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pljeskavica_Serbia.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "rs-kolo",
+        "title": "コロ",
+        "titleEn": "Kolo",
+        "description": "人々が輪や列を作り、手をつないで複雑な足取りをそろえる民俗舞踊です。",
+        "descriptionEn": "Dancers join hands in circles or lines and perform coordinated regional steps.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Serbian%20kolo%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Serbian_kolo_dance.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Serbian_kolo_dance.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "文化・スポーツ・産業で交流",
+      "titleEn": "Exchange Through Culture, Sport, and Industry",
+      "text": "日本とセルビアはスポーツ、音楽、文化、製造業、教育などで交流しています。",
+      "textEn": "Japan and Serbia maintain ties in sport, music, culture, manufacturing, and education."
+    },
+    "quiz": {
+      "question": "ベオグラードで合流する二つの川はどれでしょう？",
+      "questionEn": "Which two rivers meet in Belgrade?",
+      "options": [
+        "ドナウ川とサヴァ川",
+        "ナイル川とコンゴ川",
+        "ライン川とテムズ川",
+        "ガンジス川とインダス川"
+      ],
+      "optionsEn": [
+        "Danube and Sava",
+        "Nile and Congo",
+        "Rhine and Thames",
+        "Ganges and Indus"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はドナウ川とサヴァ川です。要塞はその合流点を見下ろします。",
+      "explanationEn": "The answer is the Danube and Sava, overlooked by Belgrade Fortress."
+    }
+  },
+  "sc": {
+    "iso": "sc",
+    "nameJa": "セーシェル",
+    "nameEn": "Seychelles",
+    "capitalJa": "ビクトリア",
+    "capitalEn": "Victoria",
+    "subtitle": "インド洋の花崗岩島とサンゴ島に、固有生物、白砂の浜、多文化社会が広がる国です。",
+    "subtitleEn": "An Indian Ocean nation of granite and coral islands, endemic wildlife, white beaches, and multicultural society.",
+    "flagUrl": "https://flagcdn.com/w320/sc.png",
+    "mapQuery": "Victoria, Seychelles",
+    "timeZone": "Indian/Mahe",
+    "currency": {
+      "nameJa": "セーシェル・ルピー",
+      "nameEn": "Seychellois Rupee",
+      "symbol": "₨"
+    },
+    "languages": [
+      {
+        "nameJa": "セーシェル・クレオール語",
+        "nameEn": "Seychellois Creole"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約3 m（ビクトリア）",
+    "elevationEn": "Approx. 3 m (Victoria)",
+    "weather": {
+      "summary": "高温多湿の熱帯海洋性気候で、季節風により降雨と風向が変化します。",
+      "summaryEn": "The tropical maritime climate is warm and humid, with rainfall and winds shaped by monsoon seasons."
+    },
+    "heritage": [
+      {
+        "id": "sc-vallee-de-mai",
+        "title": "ヴァレ・ド・メ自然保護区",
+        "titleEn": "Vallée de Mai Nature Reserve",
+        "description": "巨大なココ・デ・メールヤシが自然に育つ原生的なヤシ林です。",
+        "descriptionEn": "A primeval palm forest where the giant coco de mer grows naturally.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vallee%20de%20Mai%20Seychelles.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Vallee_de_Mai_Seychelles.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Vallee_de_Mai_Seychelles.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sc-aldabra",
+        "title": "アルダブラ環礁",
+        "titleEn": "Aldabra Atoll",
+        "description": "巨大なサンゴ環礁に多数のアルダブラゾウガメと海鳥が暮らします。",
+        "descriptionEn": "A vast coral atoll supports a major population of giant tortoises and abundant seabirds.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aldabra%20Atoll%20Seychelles.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Aldabra_Atoll_Seychelles.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Aldabra_Atoll_Seychelles.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sc-source-argent",
+        "title": "アンス・スース・ダルジャン",
+        "titleEn": "Anse Source d'Argent",
+        "description": "巨大な花崗岩、白砂、浅い青い海が作るセーシェルを代表する海岸景観です。",
+        "descriptionEn": "Granite boulders, pale sand, and shallow turquoise water form an iconic beach landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anse%20Source%20d'Argent%20Seychelles.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Anse_Source_d'Argent_Seychelles.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Anse_Source_d'Argent_Seychelles.jpg",
+        "category": "海岸景観",
+        "categoryEn": "Coastal Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sc-octopus-curry",
+        "title": "タコのカレー",
+        "titleEn": "Octopus Curry",
+        "description": "タコをココナツミルク、香辛料、ハーブで煮込むクレオール料理です。",
+        "descriptionEn": "Octopus is simmered with coconut milk, spices, and herbs in a Creole dish.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Seychelles%20octopus%20curry.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Seychelles_octopus_curry.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Seychelles_octopus_curry.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "sc-moutya",
+        "title": "ムティヤ",
+        "titleEn": "Moutya",
+        "description": "太鼓、歌、腰の動きを組み合わせ、奴隷制の時代からの記憶と抵抗を表します。",
+        "descriptionEn": "Drumming, song, and expressive movement preserve memories of hardship, resistance, and community.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Moutya%20dance%20Seychelles.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Moutya_dance_Seychelles.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Moutya_dance_Seychelles.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      },
+      {
+        "id": "sc-coconut-craft",
+        "title": "ココナツ工芸",
+        "titleEn": "Coconut Crafts",
+        "description": "殻、葉、繊維を使ってかご、装飾品、器などを作ります。",
+        "descriptionEn": "Shells, leaves, and fibers are transformed into baskets, decorations, and household objects.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Seychelles%20coconut%20crafts.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Seychelles_coconut_crafts.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Seychelles_coconut_crafts.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "海洋保全・観光・気候変動で協力",
+      "titleEn": "Cooperation in Marine Conservation, Tourism, and Climate Change",
+      "text": "日本は海洋環境、漁業、防災、観光、人材育成などで協力しています。",
+      "textEn": "Japan cooperates in marine environment, fisheries, disaster preparedness, tourism, and training."
+    },
+    "quiz": {
+      "question": "セーシェル固有の巨大な種子をつけるヤシは何でしょう？",
+      "questionEn": "Which Seychelles palm produces the world's famous giant seed?",
+      "options": [
+        "ココ・デ・メール",
+        "ナツメヤシ",
+        "ココヤシ",
+        "アブラヤシ"
+      ],
+      "optionsEn": [
+        "Coco de mer",
+        "Date palm",
+        "Coconut palm",
+        "Oil palm"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はココ・デ・メールです。ヴァレ・ド・メなどに自然分布します。",
+      "explanationEn": "The answer is the coco de mer, naturally found in places such as Vallée de Mai."
+    }
+  },
+  "sl": {
+    "iso": "sl",
+    "nameJa": "シエラレオネ",
+    "nameEn": "Sierra Leone",
+    "capitalJa": "フリータウン",
+    "capitalEn": "Freetown",
+    "subtitle": "大西洋岸の山地と熱帯林、解放奴隷の歴史、多民族の音楽と染色文化を持つ国です。",
+    "subtitleEn": "A West African country of Atlantic mountains, rainforest, freed-settler history, music, and textile traditions.",
+    "flagUrl": "https://flagcdn.com/w320/sl.png",
+    "mapQuery": "Freetown, Sierra Leone",
+    "timeZone": "Africa/Freetown",
+    "currency": {
+      "nameJa": "レオン",
+      "nameEn": "Leone",
+      "symbol": "Le"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "クリオ語",
+        "nameEn": "Krio"
+      }
+    ],
+    "elevation": "約26 m（フリータウン）",
+    "elevationEn": "Approx. 26 m (Freetown)",
+    "weather": {
+      "summary": "高温多湿の熱帯気候で、雨季には非常に多くの雨が降ります。",
+      "summaryEn": "The climate is hot and humid, with very heavy rainfall during the wet season."
+    },
+    "heritage": [
+      {
+        "id": "sl-bunce-island",
+        "title": "バンス島",
+        "titleEn": "Bunce Island",
+        "description": "奴隷貿易に使われた要塞跡が残り、大西洋世界の悲しい歴史を伝えます。",
+        "descriptionEn": "Fort ruins used in the slave trade preserve a painful chapter of Atlantic history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bunce%20Island%20Sierra%20Leone.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bunce_Island_Sierra_Leone.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bunce_Island_Sierra_Leone.jpg",
+        "category": "歴史・記憶遺産",
+        "categoryEn": "Historic and Memorial Heritage"
+      },
+      {
+        "id": "sl-tacugama",
+        "title": "タクガマ・チンパンジー保護区",
+        "titleEn": "Tacugama Chimpanzee Sanctuary",
+        "description": "森林で保護されたチンパンジーを救護し、野生復帰と環境教育を進めています。",
+        "descriptionEn": "Rescued chimpanzees are protected while rehabilitation and environmental education are promoted.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tacugama%20Chimpanzee%20Sanctuary.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tacugama_Chimpanzee_Sanctuary.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tacugama_Chimpanzee_Sanctuary.jpg",
+        "category": "自然保護施設",
+        "categoryEn": "Wildlife Conservation Site"
+      },
+      {
+        "id": "sl-tiwai",
+        "title": "ティワイ島野生生物保護区",
+        "titleEn": "Tiwai Island Wildlife Sanctuary",
+        "description": "川に囲まれた熱帯林に多様なサル、鳥、植物が暮らします。",
+        "descriptionEn": "A river island rainforest supports diverse primates, birds, and plant life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tiwai%20Island%20Sierra%20Leone.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Tiwai_Island_Sierra_Leone.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tiwai_Island_Sierra_Leone.jpg",
+        "category": "自然保護区",
+        "categoryEn": "Nature Reserve"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sl-cassava-leaf",
+        "title": "キャッサバの葉の煮込み",
+        "titleEn": "Cassava Leaf Stew",
+        "description": "細かくしたキャッサバの葉を肉や魚、パーム油、香辛料と煮込みます。",
+        "descriptionEn": "Ground cassava leaves are cooked with meat or fish, palm oil, and spices.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cassava%20leaf%20stew%20Sierra%20Leone.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Cassava_leaf_stew_Sierra_Leone.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Cassava_leaf_stew_Sierra_Leone.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "sl-gara",
+        "title": "ガラ染め",
+        "titleEn": "Gara Tie-Dye",
+        "description": "布を縛って染め、藍や鮮やかな色で幾何学模様を作ります。",
+        "descriptionEn": "Cloth is tied and dyed to create bold geometric patterns in indigo and bright colors.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gara%20tie%20dye%20Sierra%20Leone.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gara_tie_dye_Sierra_Leone.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gara_tie_dye_Sierra_Leone.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      },
+      {
+        "id": "sl-gumbe",
+        "title": "グンベ音楽と舞踊",
+        "titleEn": "Gumbe Music and Dance",
+        "description": "太鼓、歌、踊りに西アフリカとカリブ海の歴史的交流が重なります。",
+        "descriptionEn": "Drums, song, and dance reflect historical connections between West Africa and the Caribbean.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gumbe%20dance%20Sierra%20Leone.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gumbe_dance_Sierra_Leone.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gumbe_dance_Sierra_Leone.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "保健・教育・平和構築で協力",
+      "titleEn": "Cooperation in Health, Education, and Peacebuilding",
+      "text": "日本は保健、教育、食料安全保障、インフラ、平和構築、人材育成で協力しています。",
+      "textEn": "Japan cooperates in health, education, food security, infrastructure, peacebuilding, and training."
+    },
+    "quiz": {
+      "question": "シエラレオネの首都名フリータウンが示す歴史は何でしょう？",
+      "questionEn": "What history is reflected in the name Freetown?",
+      "options": [
+        "解放奴隷の入植地として発展した",
+        "金鉱だけで生まれた",
+        "王宮の名前だった",
+        "氷河都市だった"
+      ],
+      "optionsEn": [
+        "It developed as a settlement for freed people",
+        "It grew only from gold mining",
+        "It was named after a palace",
+        "It was a glacial city"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は解放奴隷の入植地として発展したことです。",
+      "explanationEn": "The answer is that it developed as a settlement for freed people."
+    }
+  },
+  "sg": {
+    "iso": "sg",
+    "nameJa": "シンガポール",
+    "nameEn": "Singapore",
+    "capitalJa": "シンガポール",
+    "capitalEn": "Singapore",
+    "subtitle": "東南アジアの港湾都市国家で、多民族社会、熱帯緑化、食文化、先端産業を持ちます。",
+    "subtitleEn": "A Southeast Asian city-state of a global port, multicultural society, tropical greenery, food culture, and advanced industry.",
+    "flagUrl": "https://flagcdn.com/w320/sg.png",
+    "mapQuery": "Singapore",
+    "timeZone": "Asia/Singapore",
+    "currency": {
+      "nameJa": "シンガポール・ドル",
+      "nameEn": "Singapore Dollar",
+      "symbol": "S$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "マレー語",
+        "nameEn": "Malay"
+      },
+      {
+        "nameJa": "中国語",
+        "nameEn": "Chinese"
+      },
+      {
+        "nameJa": "タミル語",
+        "nameEn": "Tamil"
+      }
+    ],
+    "elevation": "約15 m（中心部）",
+    "elevationEn": "Approx. 15 m (central Singapore)",
+    "weather": {
+      "summary": "一年を通して高温多湿で雨が多く、短時間の激しい雷雨が発生します。",
+      "summaryEn": "The climate is hot, humid, and rainy year-round, with frequent intense thunderstorms."
+    },
+    "heritage": [
+      {
+        "id": "sg-botanic-gardens",
+        "title": "シンガポール植物園",
+        "titleEn": "Singapore Botanic Gardens",
+        "description": "熱帯植物研究、ラン栽培、市民の憩いの場として発展した歴史的植物園です。",
+        "descriptionEn": "A historic tropical garden combining botanical research, orchid cultivation, and public recreation.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore%20Botanic%20Gardens.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Singapore_Botanic_Gardens.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Singapore_Botanic_Gardens.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sg-gardens-bay",
+        "title": "ガーデンズ・バイ・ザ・ベイ",
+        "titleEn": "Gardens by the Bay",
+        "description": "巨大温室とスーパーツリーが都市緑化と未来的な景観を生み出します。",
+        "descriptionEn": "Great conservatories and Supertrees create a futuristic model of urban greenery.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gardens%20by%20the%20Bay%20Singapore.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gardens_by_the_Bay_Singapore.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gardens_by_the_Bay_Singapore.jpg",
+        "category": "都市・環境景観",
+        "categoryEn": "Urban and Environmental Landmark"
+      },
+      {
+        "id": "sg-kampong-glam",
+        "title": "カンポン・グラム",
+        "titleEn": "Kampong Glam",
+        "description": "モスク、商店、伝統家屋が並び、マレー・アラブ文化の歴史を伝えます。",
+        "descriptionEn": "Mosques, shops, and traditional buildings preserve Malay and Arab cultural history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kampong%20Glam%20Singapore.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kampong_Glam_Singapore.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kampong_Glam_Singapore.jpg",
+        "category": "歴史地区",
+        "categoryEn": "Historic District"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sg-hawker",
+        "title": "ホーカー文化",
+        "titleEn": "Hawker Culture",
+        "description": "屋台街で多民族の料理を手頃な価格で楽しみ、日常の交流の場となっています。",
+        "descriptionEn": "Hawker centers offer affordable multicultural food and serve as everyday social spaces.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hawker%20centre%20Singapore.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hawker_centre_Singapore.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hawker_centre_Singapore.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "sg-peranakan",
+        "title": "プラナカン文化",
+        "titleEn": "Peranakan Culture",
+        "description": "中国系移民と東南アジアの文化が融合し、料理、衣装、ビーズ細工、建築に表れます。",
+        "descriptionEn": "Chinese migrant and Southeast Asian traditions blend in food, clothing, beadwork, and architecture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Peranakan%20beadwork%20Singapore.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Peranakan_beadwork_Singapore.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Peranakan_beadwork_Singapore.jpg",
+        "category": "複合文化・伝統工芸",
+        "categoryEn": "Hybrid Culture and Traditional Craft"
+      },
+      {
+        "id": "sg-kopi",
+        "title": "コピ文化",
+        "titleEn": "Kopi Culture",
+        "description": "濃く焙煎したコーヒーを練乳などと組み合わせ、朝食店で楽しみます。",
+        "descriptionEn": "Dark-roasted coffee is prepared with condensed or evaporated milk and enjoyed in neighborhood coffee shops.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore%20kopi.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Singapore_kopi.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Singapore_kopi.jpg",
+        "category": "飲料・生活文化",
+        "categoryEn": "Beverage and Living Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "経済・教育・スマートシティで深い交流",
+      "titleEn": "Strong Exchange in Economy, Education, and Smart Cities",
+      "text": "日本とシンガポールは貿易、金融、スタートアップ、教育、観光、都市技術で深く結ばれています。",
+      "textEn": "Japan and Singapore are closely linked through trade, finance, startups, education, tourism, and urban technology."
+    },
+    "quiz": {
+      "question": "シンガポールのホーカーセンターの特徴は何でしょう？",
+      "questionEn": "What is a key feature of Singapore's hawker centers?",
+      "options": [
+        "多民族の料理を一か所で楽しめる",
+        "一種類の料理しかない",
+        "食事が禁止されている",
+        "農場だけである"
+      ],
+      "optionsEn": [
+        "They offer many cultures' foods in one place",
+        "They serve only one dish",
+        "Eating is prohibited",
+        "They are only farms"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は多民族の料理を一か所で楽しめることです。",
+      "explanationEn": "The answer is that many cultural food traditions can be enjoyed in one shared place."
+    }
+  },
+  "sk": {
+    "iso": "sk",
+    "nameJa": "スロバキア",
+    "nameEn": "Slovakia",
+    "capitalJa": "ブラチスラバ",
+    "capitalEn": "Bratislava",
+    "subtitle": "カルパチア山脈、城、鉱山都市、洞窟、民俗音楽と刺しゅう文化を持つ中欧の国です。",
+    "subtitleEn": "A Central European country of Carpathian mountains, castles, mining towns, caves, folk music, and embroidery.",
+    "flagUrl": "https://flagcdn.com/w320/sk.png",
+    "mapQuery": "Bratislava, Slovakia",
+    "timeZone": "Europe/Bratislava",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "スロバキア語",
+        "nameEn": "Slovak"
+      }
+    ],
+    "elevation": "約134 m（ブラチスラバ）",
+    "elevationEn": "Approx. 134 m (Bratislava)",
+    "weather": {
+      "summary": "温帯の大陸性気候で、夏は暖かく、冬は寒くなり、山地では雪が多くなります。",
+      "summaryEn": "The climate is temperate continental, with warm summers, cold winters, and heavier snowfall in the mountains."
+    },
+    "heritage": [
+      {
+        "id": "sk-banska",
+        "title": "バンスカー・シュチャヴニツァ",
+        "titleEn": "Banská Štiavnica",
+        "description": "鉱山、貯水池、歴史建築が残る、中世から近代の鉱業都市です。",
+        "descriptionEn": "Mines, reservoirs, and historic buildings preserve the history of a major mining town.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Banska%20Stiavnica%20Slovakia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Banska_Stiavnica_Slovakia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Banska_Stiavnica_Slovakia.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sk-spis",
+        "title": "スピシュ城",
+        "titleEn": "Spiš Castle",
+        "description": "丘の上に広がる巨大な城跡で、中世中央ヨーロッパの防御と政治を伝えます。",
+        "descriptionEn": "A vast hilltop castle complex preserves medieval defense and political history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spis%20Castle%20Slovakia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Spis_Castle_Slovakia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Spis_Castle_Slovakia.jpg",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      },
+      {
+        "id": "sk-high-tatras",
+        "title": "ハイ・タトラス",
+        "titleEn": "High Tatras",
+        "description": "鋭い岩峰、氷河湖、高山草原が広がるカルパチア山脈の代表的景観です。",
+        "descriptionEn": "Sharp peaks, glacial lakes, and alpine meadows form a major Carpathian landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/High%20Tatras%20Slovakia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:High_Tatras_Slovakia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:High_Tatras_Slovakia.jpg",
+        "category": "高山自然景観",
+        "categoryEn": "Mountain Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sk-halusky",
+        "title": "ブリンゾヴェー・ハルシュキ",
+        "titleEn": "Bryndzové Halušky",
+        "description": "ジャガイモの小さな団子に羊乳チーズとベーコンを合わせる代表料理です。",
+        "descriptionEn": "Small potato dumplings are served with sheep cheese and bacon.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bryndzove%20halusky%20Slovakia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bryndzove_halusky_Slovakia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bryndzove_halusky_Slovakia.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "sk-fujara",
+        "title": "フヤラ",
+        "titleEn": "Fujara",
+        "description": "非常に長い木製笛で、羊飼いの歌や自然を思わせる低い音を奏でます。",
+        "descriptionEn": "This very long wooden flute produces deep tones associated with shepherd music and nature.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fujara%20Slovakia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Fujara_Slovakia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Fujara_Slovakia.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      },
+      {
+        "id": "sk-embroidery",
+        "title": "スロバキア刺しゅう",
+        "titleEn": "Slovak Folk Embroidery",
+        "description": "地域ごとに異なる色と幾何学模様を衣服や布製品に施します。",
+        "descriptionEn": "Regional colors and geometric patterns decorate clothing and household textiles.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Slovak%20folk%20embroidery.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Slovak_folk_embroidery.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Slovak_folk_embroidery.jpg",
+        "category": "伝統工芸・服飾文化",
+        "categoryEn": "Traditional Craft and Clothing Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "自動車・産業・文化で交流",
+      "titleEn": "Exchange Through Automobiles, Industry, and Culture",
+      "text": "日本とスロバキアは自動車、製造業、大学、観光、文化で交流しています。",
+      "textEn": "Japan and Slovakia maintain ties in automobiles, manufacturing, universities, tourism, and culture."
+    },
+    "quiz": {
+      "question": "スロバキアを代表する山脈は何でしょう？",
+      "questionEn": "Which mountain range is strongly associated with Slovakia?",
+      "options": [
+        "カルパチア山脈",
+        "アンデス山脈",
+        "ヒマラヤ山脈",
+        "アトラス山脈"
+      ],
+      "optionsEn": [
+        "Carpathians",
+        "Andes",
+        "Himalayas",
+        "Atlas Mountains"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はカルパチア山脈です。ハイ・タトラスはその一部です。",
+      "explanationEn": "The answer is the Carpathians, which include the High Tatras."
+    }
+  },
+  "si": {
+    "iso": "si",
+    "nameJa": "スロベニア",
+    "nameEn": "Slovenia",
+    "capitalJa": "リュブリャナ",
+    "capitalEn": "Ljubljana",
+    "subtitle": "アルプス、洞窟、湖、アドリア海岸、養蜂と民俗祭りの文化を持つ中欧の国です。",
+    "subtitleEn": "A Central European country of Alps, caves, lakes, Adriatic coast, beekeeping, and folk festivals.",
+    "flagUrl": "https://flagcdn.com/w320/si.png",
+    "mapQuery": "Ljubljana, Slovenia",
+    "timeZone": "Europe/Ljubljana",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "スロベニア語",
+        "nameEn": "Slovene"
+      }
+    ],
+    "elevation": "約295 m（リュブリャナ）",
+    "elevationEn": "Approx. 295 m (Ljubljana)",
+    "weather": {
+      "summary": "アルプス、地中海、大陸性気候の影響が交わり、地域によって気候が異なります。",
+      "summaryEn": "Alpine, Mediterranean, and continental influences create varied regional climates."
+    },
+    "heritage": [
+      {
+        "id": "si-skocjan",
+        "title": "シュコツィアン洞窟群",
+        "titleEn": "Škocjan Caves",
+        "description": "巨大な地下峡谷と川が広がるカルスト地形の世界的な代表例です。",
+        "descriptionEn": "A vast underground canyon and river system form a globally important karst landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Skocjan%20Caves%20Slovenia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Skocjan_Caves_Slovenia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Skocjan_Caves_Slovenia.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "si-bled",
+        "title": "ブレッド湖",
+        "titleEn": "Lake Bled",
+        "description": "アルプスの湖に島の教会と崖上の城が浮かぶように見える景観です。",
+        "descriptionEn": "An island church and cliff-top castle rise above an Alpine lake.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Bled%20Slovenia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Bled_Slovenia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lake_Bled_Slovenia.jpg",
+        "category": "自然・文化景観",
+        "categoryEn": "Natural and Cultural Landscape"
+      },
+      {
+        "id": "si-plecnik",
+        "title": "リュブリャナのヨジェ・プレチニク作品群",
+        "titleEn": "Works of Jože Plečnik in Ljubljana",
+        "description": "橋、市場、図書館などが人間的な都市空間を作り出しています。",
+        "descriptionEn": "Bridges, markets, libraries, and public spaces form a human-centered urban design.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Triple%20Bridge%20Ljubljana%20Slovenia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Triple_Bridge_Ljubljana_Slovenia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Triple_Bridge_Ljubljana_Slovenia.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "si-potica",
+        "title": "ポティツァ",
+        "titleEn": "Potica",
+        "description": "薄く伸ばした生地にクルミなどの具を巻き込み、輪形に焼く祝いの菓子です。",
+        "descriptionEn": "Thin dough is rolled around walnut or other fillings and baked in a ring for celebrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Slovenian%20potica.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Slovenian_potica.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Slovenian_potica.jpg",
+        "category": "菓子文化",
+        "categoryEn": "Pastry Culture"
+      },
+      {
+        "id": "si-kurent",
+        "title": "クレントヴァニェ",
+        "titleEn": "Kurentovanje",
+        "description": "毛皮と大きな鈴を身に着けたクレントが冬を追い払い、春を迎えます。",
+        "descriptionEn": "Figures in sheepskin and large bells drive away winter and welcome spring.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kurentovanje%20Slovenia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kurentovanje_Slovenia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kurentovanje_Slovenia.jpg",
+        "category": "祭礼文化",
+        "categoryEn": "Festival Culture"
+      },
+      {
+        "id": "si-idrija-lace",
+        "title": "イドリヤ・レース",
+        "titleEn": "Idrija Lace",
+        "description": "糸を多数のボビンで交差させ、繊細な花や幾何学模様を編みます。",
+        "descriptionEn": "Multiple bobbins cross fine threads into delicate floral and geometric lace.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Idrija%20lace%20Slovenia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Idrija_lace_Slovenia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Idrija_lace_Slovenia.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "環境・観光・産業で交流",
+      "titleEn": "Exchange Through Environment, Tourism, and Industry",
+      "text": "日本とスロベニアは環境技術、観光、製造業、スポーツ、文化で交流しています。",
+      "textEn": "Japan and Slovenia maintain ties in environmental technology, tourism, manufacturing, sport, and culture."
+    },
+    "quiz": {
+      "question": "スロベニアで発達した地形学の用語として世界に広まった言葉は何でしょう？",
+      "questionEn": "Which geographic term associated with Slovenia became widely used worldwide?",
+      "options": [
+        "カルスト",
+        "サバンナ",
+        "ツンドラ",
+        "デルタ"
+      ],
+      "optionsEn": [
+        "Karst",
+        "Savanna",
+        "Tundra",
+        "Delta"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はカルストです。石灰岩が水に溶けて洞窟や陥没地ができます。",
+      "explanationEn": "The answer is karst, formed when water dissolves limestone and creates caves and sinkholes."
+    }
+  },
+  "sb": {
+    "iso": "sb",
+    "nameJa": "ソロモン諸島",
+    "nameEn": "Solomon Islands",
+    "capitalJa": "ホニアラ",
+    "capitalEn": "Honiara",
+    "subtitle": "西太平洋の島々に、熱帯林、サンゴ礁、伝統航海、第二次世界大戦の歴史が残る国です。",
+    "subtitleEn": "A western Pacific nation of rainforest, coral reefs, traditional navigation, and World War II history.",
+    "flagUrl": "https://flagcdn.com/w320/sb.png",
+    "mapQuery": "Honiara, Solomon Islands",
+    "timeZone": "Pacific/Guadalcanal",
+    "currency": {
+      "nameJa": "ソロモン諸島ドル",
+      "nameEn": "Solomon Islands Dollar",
+      "symbol": "SI$"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "ソロモン諸島ピジン",
+        "nameEn": "Solomon Islands Pijin"
+      }
+    ],
+    "elevation": "約29 m（ホニアラ）",
+    "elevationEn": "Approx. 29 m (Honiara)",
+    "weather": {
+      "summary": "一年を通して高温多湿で雨が多く、サイクロンや豪雨の影響を受けます。",
+      "summaryEn": "The climate is hot, humid, and rainy year-round, with cyclone and heavy-rain risks."
+    },
+    "heritage": [
+      {
+        "id": "sb-east-rennell",
+        "title": "東レンネル",
+        "titleEn": "East Rennell",
+        "description": "世界最大級の隆起サンゴ島に大きな湖と固有の生態系が広がります。",
+        "descriptionEn": "One of the world's largest raised coral islands contains a great lake and distinctive ecosystems.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Tegano%20East%20Rennell.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lake_Tegano_East_Rennell.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lake_Tegano_East_Rennell.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sb-marovo",
+        "title": "マロボ・ラグーン",
+        "titleEn": "Marovo Lagoon",
+        "description": "島、サンゴ礁、マングローブが広がる巨大なラグーンで、漁業と生活を支えます。",
+        "descriptionEn": "A vast lagoon of islands, reefs, and mangroves supports fishing and community life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Marovo%20Lagoon%20Solomon%20Islands.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Marovo_Lagoon_Solomon_Islands.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Marovo_Lagoon_Solomon_Islands.jpg",
+        "category": "海洋・文化景観",
+        "categoryEn": "Marine and Cultural Landscape"
+      },
+      {
+        "id": "sb-guadalcanal",
+        "title": "ガダルカナルの戦跡",
+        "titleEn": "Guadalcanal War Heritage",
+        "description": "第二次世界大戦の飛行場、記念碑、沈没船が太平洋戦争の歴史を伝えます。",
+        "descriptionEn": "Airfields, memorials, and shipwrecks preserve the history of major Pacific War battles.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Guadalcanal%20memorial%20Solomon%20Islands.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Guadalcanal_memorial_Solomon_Islands.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Guadalcanal_memorial_Solomon_Islands.jpg",
+        "category": "近現代歴史遺産",
+        "categoryEn": "Modern Historical Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sb-panpipes",
+        "title": "パンパイプ音楽",
+        "titleEn": "Panpipe Music",
+        "description": "長さの異なる竹管を組み合わせ、集団で複雑な旋律とリズムを奏でます。",
+        "descriptionEn": "Bamboo pipes of different lengths are played in ensembles to create complex melodies and rhythms.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Solomon%20Islands%20panpipe%20musicians.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Solomon_Islands_panpipe_musicians.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Solomon_Islands_panpipe_musicians.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      },
+      {
+        "id": "sb-shell-money",
+        "title": "貝貨",
+        "titleEn": "Shell Money",
+        "description": "小さな貝を加工して連ね、婚資、贈答、儀礼、交換に使います。",
+        "descriptionEn": "Small shells are shaped and strung for bridewealth, gifts, ceremonies, and exchange.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shell%20money%20Solomon%20Islands.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Shell_money_Solomon_Islands.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Shell_money_Solomon_Islands.jpg",
+        "category": "伝統的交換文化",
+        "categoryEn": "Traditional Exchange Culture"
+      },
+      {
+        "id": "sb-canoe-carving",
+        "title": "カヌー彫刻",
+        "titleEn": "Canoe Carving",
+        "description": "木を削って船を作り、船首に精霊や動物を表す彫刻を施します。",
+        "descriptionEn": "Wooden canoes are carved by hand and decorated with spiritual or animal figures.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Solomon%20Islands%20canoe.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Solomon_Islands_canoe.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Solomon_Islands_canoe.jpg",
+        "category": "海洋伝統工芸",
+        "categoryEn": "Maritime Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "歴史・漁業・防災で協力",
+      "titleEn": "Cooperation in History, Fisheries, and Disaster Preparedness",
+      "text": "日本は漁業、防災、水、教育、保健、戦没者慰霊などを通じて関わっています。",
+      "textEn": "Japan engages through fisheries, disaster preparedness, water, education, health, and war remembrance."
+    },
+    "quiz": {
+      "question": "東レンネルはどのような島として知られるでしょう？",
+      "questionEn": "What type of island is East Rennell known as?",
+      "options": [
+        "隆起サンゴ島",
+        "火山だけの島",
+        "人工島",
+        "氷の島"
+      ],
+      "optionsEn": [
+        "Raised coral island",
+        "Only a volcanic island",
+        "Artificial island",
+        "Ice island"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は隆起サンゴ島です。中央にテガノ湖があります。",
+      "explanationEn": "The answer is a raised coral island, with Lake Tegano at its center."
+    }
+  },
+  "so": {
+    "iso": "so",
+    "nameJa": "ソマリア",
+    "nameEn": "Somalia",
+    "capitalJa": "モガディシュ",
+    "capitalEn": "Mogadishu",
+    "subtitle": "アフリカの角に位置し、長い海岸線、古代交易、遊牧文化、詩と香辛料料理を持つ国です。",
+    "subtitleEn": "A Horn of Africa country of long coastlines, ancient trade, pastoral traditions, poetry, and spiced cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/so.png",
+    "mapQuery": "Mogadishu, Somalia",
+    "timeZone": "Africa/Mogadishu",
+    "currency": {
+      "nameJa": "ソマリア・シリング",
+      "nameEn": "Somali Shilling",
+      "symbol": "Sh"
+    },
+    "languages": [
+      {
+        "nameJa": "ソマリ語",
+        "nameEn": "Somali"
+      },
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約9 m（モガディシュ）",
+    "elevationEn": "Approx. 9 m (Mogadishu)",
+    "weather": {
+      "summary": "多くの地域は暑く乾燥し、雨季は短く不規則です。干ばつの影響を受けやすいです。",
+      "summaryEn": "Much of Somalia is hot and dry, with short irregular rainy seasons and frequent drought risk."
+    },
+    "heritage": [
+      {
+        "id": "so-laas-geel",
+        "title": "ラス・ゲール岩絵群",
+        "titleEn": "Laas Geel Rock Paintings",
+        "description": "牛、人、儀礼を描いた鮮やかな先史時代の岩絵が洞窟に残ります。",
+        "descriptionEn": "Vivid prehistoric paintings of cattle, people, and ceremony survive in rock shelters.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Laas%20Geel%20Somaliland.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Laas_Geel_Somaliland.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Laas_Geel_Somaliland.jpg",
+        "category": "先史・岩絵遺産",
+        "categoryEn": "Prehistoric Rock-Art Heritage"
+      },
+      {
+        "id": "so-mogadishu-lighthouse",
+        "title": "モガディシュ灯台と旧港",
+        "titleEn": "Mogadishu Lighthouse and Old Port",
+        "description": "インド洋交易で栄えた港町の海洋史と都市景観を伝えます。",
+        "descriptionEn": "The lighthouse and old port preserve the maritime history of an Indian Ocean trading city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mogadishu%20lighthouse.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mogadishu_lighthouse.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Mogadishu_lighthouse.jpg",
+        "category": "海洋・都市遺産",
+        "categoryEn": "Maritime and Urban Heritage"
+      },
+      {
+        "id": "so-daallo",
+        "title": "ダーロ山地",
+        "titleEn": "Daallo Mountains",
+        "description": "北部の高地に森林、断崖、固有植物が残る重要な自然地域です。",
+        "descriptionEn": "Northern highlands contain forest, cliffs, and distinctive plant life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Daallo%20Mountains%20Somalia.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Daallo_Mountains_Somalia.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Daallo_Mountains_Somalia.jpg",
+        "category": "高地自然景観",
+        "categoryEn": "Highland Natural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "so-canjeero",
+        "title": "カンジェーロ",
+        "titleEn": "Canjeero",
+        "description": "発酵した薄いパンを肉、豆、茶、バナナなどと組み合わせて食べます。",
+        "descriptionEn": "Fermented flatbread is eaten with meat, beans, tea, bananas, or sauces.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Somali%20canjeero.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Somali_canjeero.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Somali_canjeero.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "so-poetry",
+        "title": "ソマリ詩文化",
+        "titleEn": "Somali Poetry Tradition",
+        "description": "韻律と比喩を用いた詩が、歴史、政治、恋愛、遊牧生活を語ります。",
+        "descriptionEn": "Highly structured poetry communicates history, politics, love, and pastoral life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Somali%20poet.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Somali_poet.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Somali_poet.jpg",
+        "category": "口承・文学文化",
+        "categoryEn": "Oral and Literary Culture"
+      },
+      {
+        "id": "so-dhaanto",
+        "title": "ダーンショ",
+        "titleEn": "Dhaanto",
+        "description": "歌、手拍子、跳躍、集団の動きで祝いと共同体の結束を表す踊りです。",
+        "descriptionEn": "Song, clapping, jumping, and group movement express celebration and community solidarity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Somali%20dhaanto%20dance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Somali_dhaanto_dance.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Somali_dhaanto_dance.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "人道・保健・海洋で協力",
+      "titleEn": "Cooperation in Humanitarian Support, Health, and Oceans",
+      "text": "日本は人道支援、保健、食料、水、海賊対策、人材育成などで関わっています。",
+      "textEn": "Japan engages through humanitarian assistance, health, food, water, anti-piracy efforts, and training."
+    },
+    "quiz": {
+      "question": "ソマリアが位置する地域は一般に何と呼ばれるでしょう？",
+      "questionEn": "What is the region containing Somalia commonly called?",
+      "options": [
+        "アフリカの角",
+        "南極半島",
+        "バルカン半島",
+        "スカンディナビア"
+      ],
+      "optionsEn": [
+        "Horn of Africa",
+        "Antarctic Peninsula",
+        "Balkans",
+        "Scandinavia"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はアフリカの角です。大陸東端が角のように海へ突き出しています。",
+      "explanationEn": "The answer is the Horn of Africa, named for the shape of the continent's eastern projection."
+    }
+  },
+  "za": {
+    "iso": "za",
+    "nameJa": "南アフリカ",
+    "nameEn": "South Africa",
+    "capitalJa": "プレトリア（行政）・ケープタウン（立法）・ブルームフォンテーン（司法）",
+    "capitalEn": "Pretoria (executive), Cape Town (legislative), and Bloemfontein (judicial)",
+    "subtitle": "多様な民族と言語、サバンナ、海岸、山地、歴史遺産を持つアフリカ南端の国です。",
+    "subtitleEn": "A country at Africa's southern tip with diverse peoples and languages, savanna, coasts, mountains, and historic heritage.",
+    "flagUrl": "https://flagcdn.com/w320/za.png",
+    "mapQuery": "Pretoria, South Africa",
+    "timeZone": "Africa/Johannesburg",
+    "currency": {
+      "nameJa": "ランド",
+      "nameEn": "South African Rand",
+      "symbol": "R"
+    },
+    "languages": [
+      {
+        "nameJa": "ズールー語",
+        "nameEn": "Zulu"
+      },
+      {
+        "nameJa": "コサ語",
+        "nameEn": "Xhosa"
+      },
+      {
+        "nameJa": "アフリカーンス語",
+        "nameEn": "Afrikaans"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約1,339 m（プレトリア）",
+    "elevationEn": "Approx. 1,339 m (Pretoria)",
+    "weather": {
+      "summary": "国土が広く、地中海性、亜熱帯、乾燥、温帯高地など多様な気候があります。",
+      "summaryEn": "South Africa has varied climates, including Mediterranean, subtropical, dry, and temperate highland regions."
+    },
+    "heritage": [
+      {
+        "id": "za-robben",
+        "title": "ロベン島",
+        "titleEn": "Robben Island",
+        "description": "政治犯収容所の歴史を伝え、自由と人権を考える重要な記憶の場所です。",
+        "descriptionEn": "The former political prison preserves a powerful history of oppression, freedom, and human rights.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Robben%20Island%20Cape%20Town.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Robben_Island_Cape_Town.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Robben_Island_Cape_Town.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "za-isimangaliso",
+        "title": "イシマンガリソ湿地公園",
+        "titleEn": "iSimangaliso Wetland Park",
+        "description": "湖、湿地、砂丘、海岸、サンゴ礁が多様な野生生物を支えます。",
+        "descriptionEn": "Lakes, wetlands, dunes, coast, and coral reefs support extraordinary biodiversity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/iSimangaliso%20Wetland%20Park.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:iSimangaliso_Wetland_Park.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:iSimangaliso_Wetland_Park.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "za-cradle",
+        "title": "人類のゆりかご",
+        "titleEn": "Cradle of Humankind",
+        "description": "洞窟から初期人類の化石が多数発見され、人類進化の研究に重要です。",
+        "descriptionEn": "Caves containing many early human fossils are central to research on human evolution.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sterkfontein%20Caves%20South%20Africa.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sterkfontein_Caves_South_Africa.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sterkfontein_Caves_South_Africa.jpg",
+        "category": "世界文化遺産地域",
+        "categoryEn": "World Heritage Area"
+      }
+    ],
+    "culture": [
+      {
+        "id": "za-braai",
+        "title": "ブラーイ",
+        "titleEn": "Braai",
+        "description": "肉やソーセージを火で焼き、家族や友人と時間を共有する食文化です。",
+        "descriptionEn": "Meat and sausages are grilled over fire in a social tradition shared with family and friends.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/South%20African%20braai.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:South_African_braai.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:South_African_braai.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "za-ndebele",
+        "title": "ンデベレの壁画",
+        "titleEn": "Ndebele Wall Painting",
+        "description": "家屋の壁に鮮やかな幾何学模様を描き、共同体の美意識と個性を表します。",
+        "descriptionEn": "Bright geometric designs painted on homes express identity, aesthetics, and community tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ndebele%20house%20South%20Africa.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ndebele_house_South_Africa.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ndebele_house_South_Africa.jpg",
+        "category": "伝統美術",
+        "categoryEn": "Traditional Art"
+      },
+      {
+        "id": "za-gumboot",
+        "title": "ガムブーツ・ダンス",
+        "titleEn": "Gumboot Dance",
+        "description": "鉱山労働者が長靴をたたいてリズムを作った歴史から発展した舞踊です。",
+        "descriptionEn": "A dance developed from mine workers creating rhythms by striking their boots.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gumboot%20dancers%20South%20Africa.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Gumboot_dancers_South_Africa.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Gumboot_dancers_South_Africa.jpg",
+        "category": "舞踊・労働文化",
+        "categoryEn": "Dance and Labor Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "産業・教育・スポーツで幅広く交流",
+      "titleEn": "Broad Exchange in Industry, Education, and Sport",
+      "text": "日本と南アフリカは自動車、鉱業、科学、教育、ラグビー、文化で深く交流しています。",
+      "textEn": "Japan and South Africa are closely connected through automobiles, mining, science, education, rugby, and culture."
+    },
+    "quiz": {
+      "question": "南アフリカには首都機能がいくつの都市に分かれているでしょう？",
+      "questionEn": "Across how many cities are South Africa's capital functions divided?",
+      "options": [
+        "3都市",
+        "1都市",
+        "2都市",
+        "5都市"
+      ],
+      "optionsEn": [
+        "Three cities",
+        "One city",
+        "Two cities",
+        "Five cities"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は3都市です。行政、立法、司法の首都機能が分かれています。",
+      "explanationEn": "The answer is three cities, with executive, legislative, and judicial functions separated."
+    }
+  },
+  "kr": {
+    "iso": "kr",
+    "nameJa": "韓国",
+    "nameEn": "South Korea",
+    "capitalJa": "ソウル",
+    "capitalEn": "Seoul",
+    "subtitle": "山地と海岸、王宮、仏教遺産、発酵食、音楽、先端技術を持つ東アジアの国です。",
+    "subtitleEn": "An East Asian country of mountains and coasts, royal palaces, Buddhist heritage, fermented food, music, and advanced technology.",
+    "flagUrl": "https://flagcdn.com/w320/kr.png",
+    "mapQuery": "Seoul, South Korea",
+    "timeZone": "Asia/Seoul",
+    "currency": {
+      "nameJa": "ウォン",
+      "nameEn": "South Korean Won",
+      "symbol": "₩"
+    },
+    "languages": [
+      {
+        "nameJa": "韓国語",
+        "nameEn": "Korean"
+      }
+    ],
+    "elevation": "約38 m（ソウル）",
+    "elevationEn": "Approx. 38 m (Seoul)",
+    "weather": {
+      "summary": "四季があり、夏は高温多湿、冬は寒く乾燥します。",
+      "summaryEn": "South Korea has four seasons, with hot humid summers and cold dry winters."
+    },
+    "heritage": [
+      {
+        "id": "kr-changdeokgung",
+        "title": "昌徳宮",
+        "titleEn": "Changdeokgung Palace",
+        "description": "自然地形を生かした宮殿配置と庭園が、朝鮮王朝の美意識を伝えます。",
+        "descriptionEn": "Palace buildings and gardens adapted to the natural terrain express Joseon royal aesthetics.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Changdeokgung%20Palace%20Korea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Changdeokgung_Palace_Korea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Changdeokgung_Palace_Korea.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "kr-jeju",
+        "title": "済州火山島と溶岩洞窟群",
+        "titleEn": "Jeju Volcanic Island and Lava Tubes",
+        "description": "火山、溶岩洞窟、漢拏山が独特の地質景観と生態系を作ります。",
+        "descriptionEn": "Volcanoes, lava tubes, and Hallasan create distinctive geology and ecosystems.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jeju%20volcanic%20island%20Korea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jeju_volcanic_island_Korea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Jeju_volcanic_island_Korea.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "kr-bulguksa",
+        "title": "仏国寺と石窟庵",
+        "titleEn": "Bulguksa Temple and Seokguram Grotto",
+        "description": "新羅時代の仏教建築と石仏が、精密な石造技術と信仰を伝えます。",
+        "descriptionEn": "Buddhist architecture and sculpture from Silla reveal refined stonework and religious devotion.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bulguksa%20Temple%20South%20Korea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bulguksa_Temple_South_Korea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bulguksa_Temple_South_Korea.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "kr-kimchi",
+        "title": "キムジャンとキムチ",
+        "titleEn": "Kimjang and Kimchi",
+        "description": "冬に備えて大量のキムチを共同で作り、家族や地域で分け合います。",
+        "descriptionEn": "Communities prepare and share large amounts of kimchi for winter.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kimjang%20South%20Korea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kimjang_South_Korea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kimjang_South_Korea.jpg",
+        "category": "発酵食・共同体文化",
+        "categoryEn": "Fermented Food and Community Culture"
+      },
+      {
+        "id": "kr-hanbok",
+        "title": "韓服",
+        "titleEn": "Hanbok",
+        "description": "曲線的な上衣とゆったりした衣装に、色や形で季節と祝いの意味を表します。",
+        "descriptionEn": "Flowing garments use color and form to express season, status, and celebration.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanbok%20South%20Korea.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hanbok_South_Korea.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hanbok_South_Korea.jpg",
+        "category": "服飾文化",
+        "categoryEn": "Clothing Culture"
+      },
+      {
+        "id": "kr-pansori",
+        "title": "パンソリ",
+        "titleEn": "Pansori",
+        "description": "一人の歌い手と太鼓奏者が長い物語を声、身振り、リズムで演じます。",
+        "descriptionEn": "A singer and drummer perform long stories through voice, gesture, rhythm, and dramatic expression.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pansori%20performance.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pansori_performance.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pansori_performance.jpg",
+        "category": "音楽・語り文化",
+        "categoryEn": "Music and Storytelling Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "人的交流・技術・文化で非常に深い関係",
+      "titleEn": "Very Strong Links Through People, Technology, and Culture",
+      "text": "日本と韓国は地理的に近く、観光、貿易、教育、音楽、映画、食文化で非常に多く交流しています。",
+      "textEn": "Japan and South Korea are close neighbors with extensive exchange in tourism, trade, education, music, film, and food."
+    },
+    "quiz": {
+      "question": "韓国の伝統的な発酵食品は何でしょう？",
+      "questionEn": "Which fermented food is strongly associated with Korea?",
+      "options": [
+        "キムチ",
+        "バゲット",
+        "ハギス",
+        "タコス"
+      ],
+      "optionsEn": [
+        "Kimchi",
+        "Baguette",
+        "Haggis",
+        "Tacos"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はキムチです。野菜を塩漬けし、唐辛子や発酵調味料で味付けします。",
+      "explanationEn": "The answer is kimchi, made by salting vegetables and seasoning them for fermentation."
+    }
+  },
+  "ss": {
+    "iso": "ss",
+    "nameJa": "南スーダン",
+    "nameEn": "South Sudan",
+    "capitalJa": "ジュバ",
+    "capitalEn": "Juba",
+    "subtitle": "ナイル上流の湿地、サバンナ、牧畜社会、多民族の音楽と装身文化を持つ国です。",
+    "subtitleEn": "A country of Upper Nile wetlands, savanna, pastoral communities, music, and diverse adornment traditions.",
+    "flagUrl": "https://flagcdn.com/w320/ss.png",
+    "mapQuery": "Juba, South Sudan",
+    "timeZone": "Africa/Juba",
+    "currency": {
+      "nameJa": "南スーダン・ポンド",
+      "nameEn": "South Sudanese Pound",
+      "symbol": "SSP"
+    },
+    "languages": [
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "ディンカ語",
+        "nameEn": "Dinka"
+      },
+      {
+        "nameJa": "ヌエル語",
+        "nameEn": "Nuer"
+      }
+    ],
+    "elevation": "約550 m（ジュバ）",
+    "elevationEn": "Approx. 550 m (Juba)",
+    "weather": {
+      "summary": "高温の熱帯気候で、雨季と乾季があります。北部ほど乾燥します。",
+      "summaryEn": "The climate is tropical and hot, with wet and dry seasons and drier conditions toward the north."
+    },
+    "heritage": [
+      {
+        "id": "ss-sudd",
+        "title": "スッド湿地",
+        "titleEn": "Sudd Wetland",
+        "description": "白ナイルが広大な湿地を作り、魚類、鳥類、牧畜と水上生活を支えます。",
+        "descriptionEn": "The White Nile forms a vast wetland supporting fish, birds, pastoralism, and river-based life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sudd%20wetland%20South%20Sudan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sudd_wetland_South_Sudan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sudd_wetland_South_Sudan.jpg",
+        "category": "湿地・自然景観",
+        "categoryEn": "Wetland Natural Landscape"
+      },
+      {
+        "id": "ss-boma",
+        "title": "ボマ国立公園",
+        "titleEn": "Boma National Park",
+        "description": "大規模なアンテロープの移動とサバンナ生態系で知られる保護地域です。",
+        "descriptionEn": "A protected savanna landscape known for enormous antelope migrations.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Boma%20National%20Park%20South%20Sudan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Boma_National_Park_South_Sudan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Boma_National_Park_South_Sudan.jpg",
+        "category": "国立公園",
+        "categoryEn": "National Park"
+      },
+      {
+        "id": "ss-imantong",
+        "title": "イマトング山地",
+        "titleEn": "Imatong Mountains",
+        "description": "国の最高峰を含み、山地林と多様な生物を育む南東部の高地です。",
+        "descriptionEn": "These southeastern highlands contain the country's highest peak and important mountain forests.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Imatong%20Mountains%20South%20Sudan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Imatong_Mountains_South_Sudan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Imatong_Mountains_South_Sudan.jpg",
+        "category": "高地自然景観",
+        "categoryEn": "Highland Natural Landscape"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ss-cattle",
+        "title": "牛と牧畜文化",
+        "titleEn": "Cattle and Pastoral Culture",
+        "description": "牛は食料、婚資、社会的地位、歌、儀礼と深く結びついています。",
+        "descriptionEn": "Cattle are closely linked to food, bridewealth, status, song, and ceremony.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dinka%20cattle%20camp%20South%20Sudan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dinka_cattle_camp_South_Sudan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dinka_cattle_camp_South_Sudan.jpg",
+        "category": "牧畜文化",
+        "categoryEn": "Pastoral Culture"
+      },
+      {
+        "id": "ss-beadwork",
+        "title": "ビーズ装身具",
+        "titleEn": "Beadwork and Adornment",
+        "description": "色鮮やかなビーズを首飾りや衣装に用い、年齢や共同体の意味を表します。",
+        "descriptionEn": "Bright beadwork in necklaces and dress can communicate age, identity, and community.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/South%20Sudan%20beadwork.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:South_Sudan_beadwork.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:South_Sudan_beadwork.jpg",
+        "category": "伝統工芸・服飾文化",
+        "categoryEn": "Traditional Craft and Clothing Culture"
+      },
+      {
+        "id": "ss-kisra",
+        "title": "キスラ",
+        "titleEn": "Kisra",
+        "description": "発酵した穀物生地を薄く焼き、豆や肉、野菜の煮込みと食べます。",
+        "descriptionEn": "Fermented grain batter is cooked into thin flatbread and eaten with beans, meat, or vegetable stews.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kisra%20South%20Sudan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kisra_South_Sudan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kisra_South_Sudan.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "人道・保健・平和構築を支援",
+      "titleEn": "Support for Humanitarian Relief, Health, and Peacebuilding",
+      "text": "日本は人道支援、保健、水、教育、平和構築、インフラ整備などで支援しています。",
+      "textEn": "Japan supports humanitarian relief, health, water, education, peacebuilding, and infrastructure."
+    },
+    "quiz": {
+      "question": "南スーダンを流れる大河の水系は何でしょう？",
+      "questionEn": "Which major river system flows through South Sudan?",
+      "options": [
+        "ナイル川水系",
+        "アマゾン川水系",
+        "ライン川水系",
+        "黄河水系"
+      ],
+      "optionsEn": [
+        "Nile River system",
+        "Amazon River system",
+        "Rhine River system",
+        "Yellow River system"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はナイル川水系です。白ナイルがスッド湿地を形成します。",
+      "explanationEn": "The answer is the Nile River system; the White Nile forms the Sudd wetlands."
+    }
+  },
+  "es": {
+    "iso": "es",
+    "nameJa": "スペイン",
+    "nameEn": "Spain",
+    "capitalJa": "マドリード",
+    "capitalEn": "Madrid",
+    "subtitle": "地中海と大西洋に面し、イスラム・キリスト教建築、地域言語、舞踊、食文化を持つ国です。",
+    "subtitleEn": "A country on the Mediterranean and Atlantic with Islamic and Christian architecture, regional languages, dance, and cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/es.png",
+    "mapQuery": "Madrid, Spain",
+    "timeZone": "Europe/Madrid",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約667 m（マドリード）",
+    "elevationEn": "Approx. 667 m (Madrid)",
+    "weather": {
+      "summary": "内陸は夏が暑く冬が寒く、地中海沿岸は冬が穏やかで、北西部は雨が多くなります。",
+      "summaryEn": "The interior has hot summers and cold winters, Mediterranean coasts are milder, and the northwest is wetter."
+    },
+    "heritage": [
+      {
+        "id": "es-alhambra",
+        "title": "アルハンブラ宮殿",
+        "titleEn": "Alhambra",
+        "description": "宮殿、庭園、水路、精密な装飾が、イスラム王朝の芸術と建築を伝えます。",
+        "descriptionEn": "Palaces, gardens, water channels, and intricate decoration preserve the art of Islamic rule in Iberia.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra%20Granada%20Spain.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Alhambra_Granada_Spain.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Alhambra_Granada_Spain.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "es-santiago",
+        "title": "サンティアゴ・デ・コンポステーラ旧市街",
+        "titleEn": "Old Town of Santiago de Compostela",
+        "description": "巡礼路の終着地に大聖堂と歴史地区が広がる宗教・都市遺産です。",
+        "descriptionEn": "A cathedral and historic city mark the destination of a major European pilgrimage route.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Santiago%20de%20Compostela%20cathedral%20Spain.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Santiago_de_Compostela_cathedral_Spain.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Santiago_de_Compostela_cathedral_Spain.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "es-teide",
+        "title": "テイデ国立公園",
+        "titleEn": "Teide National Park",
+        "description": "カナリア諸島の巨大火山と溶岩地形が、独特の高山景観を作ります。",
+        "descriptionEn": "A great volcano and extensive lava formations create a distinctive high-altitude island landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teide%20National%20Park%20Spain.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Teide_National_Park_Spain.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Teide_National_Park_Spain.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "es-paella",
+        "title": "パエリア",
+        "titleEn": "Paella",
+        "description": "米に魚介、肉、野菜、サフランなどを加え、浅い鍋で炊き上げます。",
+        "descriptionEn": "Rice is cooked in a wide pan with seafood, meat, vegetables, and saffron.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Paella%20Valencia%20Spain.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Paella_Valencia_Spain.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Paella_Valencia_Spain.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "es-flamenco",
+        "title": "フラメンコ",
+        "titleEn": "Flamenco",
+        "description": "歌、ギター、手拍子、踊りを組み合わせ、強い感情とリズムを表現します。",
+        "descriptionEn": "Song, guitar, clapping, and dance combine to express powerful emotion and rhythm.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flamenco%20dancers%20Spain.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Flamenco_dancers_Spain.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Flamenco_dancers_Spain.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      },
+      {
+        "id": "es-castells",
+        "title": "カステイス",
+        "titleEn": "Human Towers",
+        "description": "人々が協力して高い人間の塔を組み、信頼と共同体の力を示します。",
+        "descriptionEn": "Teams build tall human towers that depend on trust, balance, and community cooperation.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Castellers%20Catalonia%20Spain.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Castellers_Catalonia_Spain.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Castellers_Catalonia_Spain.jpg",
+        "category": "共同体・祭礼文化",
+        "categoryEn": "Community and Festival Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "観光・文化・再生可能エネルギーで交流",
+      "titleEn": "Exchange Through Tourism, Culture, and Renewable Energy",
+      "text": "日本とスペインは観光、食、芸術、サッカー、鉄道、再生可能エネルギーで交流しています。",
+      "textEn": "Japan and Spain maintain strong ties in tourism, food, arts, football, railways, and renewable energy."
+    },
+    "quiz": {
+      "question": "スペイン南部で発展した歌と踊りの芸能は何でしょう？",
+      "questionEn": "Which song-and-dance tradition developed in southern Spain?",
+      "options": [
+        "フラメンコ",
+        "ハカ",
+        "タンゴ",
+        "カブキ"
+      ],
+      "optionsEn": [
+        "Flamenco",
+        "Haka",
+        "Tango",
+        "Kabuki"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はフラメンコです。アンダルシアを中心に発展しました。",
+      "explanationEn": "The answer is flamenco, which developed especially in Andalusia."
+    }
+  },
+  "lk": {
+    "iso": "lk",
+    "nameJa": "スリランカ",
+    "nameEn": "Sri Lanka",
+    "capitalJa": "スリ・ジャヤワルダナプラ・コッテ（立法）／コロンボ（行政・商業）",
+    "capitalEn": "Sri Jayawardenepura Kotte (legislative) / Colombo (executive and commercial)",
+    "subtitle": "インド洋の島に、古代都市、茶畑、熱帯林、仏教文化、多民族の食と芸能が広がる国です。",
+    "subtitleEn": "An Indian Ocean island nation of ancient cities, tea estates, rainforest, Buddhist heritage, and diverse food and performance traditions.",
+    "flagUrl": "https://flagcdn.com/w320/lk.png",
+    "mapQuery": "Sri Jayawardenepura Kotte, Sri Lanka",
+    "timeZone": "Asia/Colombo",
+    "currency": {
+      "nameJa": "スリランカ・ルピー",
+      "nameEn": "Sri Lankan Rupee",
+      "symbol": "Rs"
+    },
+    "languages": [
+      {
+        "nameJa": "シンハラ語",
+        "nameEn": "Sinhala"
+      },
+      {
+        "nameJa": "タミル語",
+        "nameEn": "Tamil"
+      }
+    ],
+    "elevation": "約20 m（スリ・ジャヤワルダナプラ・コッテ）",
+    "elevationEn": "Approx. 20 m (Sri Jayawardenepura Kotte)",
+    "weather": {
+      "summary": "高温の熱帯気候で、地域ごとに異なるモンスーンが雨季をもたらします。中央高地は涼しくなります。",
+      "summaryEn": "Sri Lanka has a tropical climate shaped by regional monsoons, while the central highlands are cooler."
+    },
+    "heritage": [
+      {
+        "id": "lk-sigiriya",
+        "title": "古代都市シギリヤ",
+        "titleEn": "Ancient City of Sigiriya",
+        "description": "巨大な岩山の頂上に宮殿跡、庭園、貯水施設が残る古代都市です。",
+        "descriptionEn": "Palace ruins, gardens, and water systems survive on and around a massive rock fortress.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sigiriya%20Sri%20Lanka.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sigiriya_Sri_Lanka.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sigiriya_Sri_Lanka.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "lk-kandy",
+        "title": "聖地キャンディ",
+        "titleEn": "Sacred City of Kandy",
+        "description": "仏歯寺を中心に、王国時代の都市、宗教、芸能の歴史を伝えます。",
+        "descriptionEn": "The Temple of the Tooth and surrounding city preserve royal, religious, and artistic history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple%20of%20the%20Tooth%20Kandy%20Sri%20Lanka.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Temple_of_the_Tooth_Kandy_Sri_Lanka.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_the_Tooth_Kandy_Sri_Lanka.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "lk-sinharaja",
+        "title": "シンハラジャ森林保護区",
+        "titleEn": "Sinharaja Forest Reserve",
+        "description": "島固有の鳥、植物、両生類が多く暮らす低地熱帯雨林です。",
+        "descriptionEn": "This lowland rainforest protects many endemic birds, plants, and amphibians.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sinharaja%20Forest%20Reserve%20Sri%20Lanka.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sinharaja_Forest_Reserve_Sri_Lanka.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sinharaja_Forest_Reserve_Sri_Lanka.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "lk-hoppers",
+        "title": "ホッパー",
+        "titleEn": "Hoppers",
+        "description": "米粉とココナツミルクの生地を椀形に焼き、卵やカレーと食べます。",
+        "descriptionEn": "Rice-flour and coconut-milk batter is cooked into bowl-shaped pancakes served with egg or curry.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri%20Lankan%20egg%20hopper.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sri_Lankan_egg_hopper.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sri_Lankan_egg_hopper.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "lk-kandyan-dance",
+        "title": "キャンディアン・ダンス",
+        "titleEn": "Kandyan Dance",
+        "description": "太鼓、跳躍、華やかな衣装で儀礼や英雄的な物語を表現します。",
+        "descriptionEn": "Drums, leaps, and elaborate costume express ritual and heroic stories.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kandyan%20dancers%20Sri%20Lanka.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kandyan_dancers_Sri_Lanka.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kandyan_dancers_Sri_Lanka.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      },
+      {
+        "id": "lk-batik",
+        "title": "スリランカ・バティック",
+        "titleEn": "Sri Lankan Batik",
+        "description": "ろうで防染し、花、動物、仏教的モチーフを鮮やかに染めます。",
+        "descriptionEn": "Wax-resist dyeing creates bright floral, animal, and Buddhist-inspired designs.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri%20Lankan%20batik.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sri_Lankan_batik.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sri_Lankan_batik.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "港湾・教育・防災で協力",
+      "titleEn": "Cooperation in Ports, Education, and Disaster Preparedness",
+      "text": "日本は港湾、交通、防災、教育、保健、農業、人材育成などで協力しています。",
+      "textEn": "Japan cooperates in ports, transport, disaster preparedness, education, health, agriculture, and training."
+    },
+    "quiz": {
+      "question": "スリランカの中央高地で広く栽培される輸出作物は何でしょう？",
+      "questionEn": "Which export crop is widely grown in Sri Lanka's central highlands?",
+      "options": [
+        "茶",
+        "カカオだけ",
+        "オリーブ",
+        "メープル"
+      ],
+      "optionsEn": [
+        "Tea",
+        "Only cacao",
+        "Olives",
+        "Maple"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解は茶です。高地の涼しい気候が茶栽培に適しています。",
+      "explanationEn": "The answer is tea, which grows well in the cooler highlands."
+    }
+  },
+  "sd": {
+    "iso": "sd",
+    "nameJa": "スーダン",
+    "nameEn": "Sudan",
+    "capitalJa": "ハルツーム",
+    "capitalEn": "Khartoum",
+    "subtitle": "ナイル川、ヌビアのピラミッド、砂漠、紅海沿岸、多民族の文化を持つ北東アフリカの国です。",
+    "subtitleEn": "A northeastern African country of the Nile, Nubian pyramids, desert, Red Sea coast, and diverse cultures.",
+    "flagUrl": "https://flagcdn.com/w320/sd.png",
+    "mapQuery": "Khartoum, Sudan",
+    "timeZone": "Africa/Khartoum",
+    "currency": {
+      "nameJa": "スーダン・ポンド",
+      "nameEn": "Sudanese Pound",
+      "symbol": "SDG"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      }
+    ],
+    "elevation": "約380 m（ハルツーム）",
+    "elevationEn": "Approx. 380 m (Khartoum)",
+    "weather": {
+      "summary": "北部は極端に乾燥し、南部ほど雨が増えます。多くの地域で高温になります。",
+      "summaryEn": "The north is extremely dry, rainfall increases toward the south, and much of the country is hot."
+    },
+    "heritage": [
+      {
+        "id": "sd-meroe",
+        "title": "メロエ島の考古遺跡群",
+        "titleEn": "Archaeological Sites of the Island of Meroe",
+        "description": "砂漠に多数の急角度のピラミッドが並び、クシュ王国の歴史を伝えます。",
+        "descriptionEn": "Dozens of steep-sided pyramids in the desert preserve the history of the Kingdom of Kush.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pyramids%20of%20Meroe%20Sudan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pyramids_of_Meroe_Sudan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pyramids_of_Meroe_Sudan.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sd-jebel-barkal",
+        "title": "ゲベル・バルカルとナパタ地域",
+        "titleEn": "Gebel Barkal and the Sites of the Napatan Region",
+        "description": "聖なる山、神殿、王墓が古代ヌビアの政治と信仰を伝えます。",
+        "descriptionEn": "A sacred mountain, temples, and royal tombs preserve ancient Nubian political and religious history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jebel%20Barkal%20Sudan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Jebel_Barkal_Sudan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Jebel_Barkal_Sudan.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sd-sanganeb",
+        "title": "サンガネブ海洋国立公園",
+        "titleEn": "Sanganeb Marine National Park",
+        "description": "紅海のサンゴ礁に多様な魚類、サメ、ウミガメが暮らす海洋保護地域です。",
+        "descriptionEn": "Red Sea coral reefs support diverse fish, sharks, turtles, and other marine life.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanganeb%20Lighthouse%20Sudan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sanganeb_Lighthouse_Sudan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sanganeb_Lighthouse_Sudan.jpg",
+        "category": "世界自然遺産地域",
+        "categoryEn": "World Heritage Region"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sd-kisra",
+        "title": "キスラ",
+        "titleEn": "Kisra",
+        "description": "発酵させたソルガムの生地を薄く焼き、肉や野菜の煮込みと食べます。",
+        "descriptionEn": "Fermented sorghum batter is cooked into thin flatbread and eaten with meat or vegetable stews.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sudanese%20kisra.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sudanese_kisra.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sudanese_kisra.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "sd-coffee",
+        "title": "ジャバナのコーヒー儀式",
+        "titleEn": "Jabana Coffee Ceremony",
+        "description": "コーヒー豆を煎り、香辛料を加えて小さな器で分かち合います。",
+        "descriptionEn": "Coffee beans are roasted, spiced, brewed in a jabana pot, and shared socially.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sudanese%20coffee%20ceremony.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sudanese_coffee_ceremony.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sudanese_coffee_ceremony.jpg",
+        "category": "飲料・もてなし文化",
+        "categoryEn": "Beverage and Hospitality Culture"
+      },
+      {
+        "id": "sd-nubian",
+        "title": "ヌビアの家屋装飾",
+        "titleEn": "Nubian House Decoration",
+        "description": "家の壁を明るい色と幾何学模様で飾り、地域の美意識と記憶を表します。",
+        "descriptionEn": "Homes are decorated with bright colors and geometric forms expressing regional identity and memory.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nubian%20house%20Sudan.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Nubian_house_Sudan.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Nubian_house_Sudan.jpg",
+        "category": "建築・装飾文化",
+        "categoryEn": "Architectural and Decorative Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "人道・保健・文化財保護を支援",
+      "titleEn": "Support for Humanitarian Relief, Health, and Heritage",
+      "text": "日本は人道支援、保健、水、食料、教育、文化財保護などで支援しています。",
+      "textEn": "Japan supports humanitarian relief, health, water, food, education, and cultural heritage protection."
+    },
+    "quiz": {
+      "question": "スーダンの古代ピラミッドを築いた王国は何でしょう？",
+      "questionEn": "Which ancient kingdom built many of Sudan's pyramids?",
+      "options": [
+        "クシュ王国",
+        "アステカ王国",
+        "ローマ帝国だけ",
+        "インカ帝国"
+      ],
+      "optionsEn": [
+        "Kingdom of Kush",
+        "Aztec Empire",
+        "Only the Roman Empire",
+        "Inca Empire"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はクシュ王国です。メロエ周辺に王墓のピラミッドが残ります。",
+      "explanationEn": "The answer is the Kingdom of Kush, whose royal pyramids remain near Meroe."
+    }
+  },
+  "sr": {
+    "iso": "sr",
+    "nameJa": "スリナム",
+    "nameEn": "Suriname",
+    "capitalJa": "パラマリボ",
+    "capitalEn": "Paramaribo",
+    "subtitle": "南米北東部の熱帯林に、多民族・多宗教社会、木造都市、音楽と融合料理が広がる国です。",
+    "subtitleEn": "A northeastern South American country of rainforest, multicultural and multireligious society, wooden urban heritage, music, and fusion cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/sr.png",
+    "mapQuery": "Paramaribo, Suriname",
+    "timeZone": "America/Paramaribo",
+    "currency": {
+      "nameJa": "スリナム・ドル",
+      "nameEn": "Surinamese Dollar",
+      "symbol": "SRD"
+    },
+    "languages": [
+      {
+        "nameJa": "オランダ語",
+        "nameEn": "Dutch"
+      },
+      {
+        "nameJa": "スラナン・トンゴ",
+        "nameEn": "Sranan Tongo"
+      }
+    ],
+    "elevation": "約3 m（パラマリボ）",
+    "elevationEn": "Approx. 3 m (Paramaribo)",
+    "weather": {
+      "summary": "一年を通して高温多湿で、雨の多い時期が年に複数回あります。",
+      "summaryEn": "The climate is hot and humid year-round, with more than one rainy period during the year."
+    },
+    "heritage": [
+      {
+        "id": "sr-paramaribo",
+        "title": "パラマリボ市街歴史地区",
+        "titleEn": "Historic Inner City of Paramaribo",
+        "description": "木造の植民地建築、宗教施設、街路が多文化都市の歴史を伝えます。",
+        "descriptionEn": "Wooden colonial buildings, religious sites, and streets preserve the history of a multicultural city.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Paramaribo%20Suriname.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Paramaribo_Suriname.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Paramaribo_Suriname.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sr-central-reserve",
+        "title": "中央スリナム自然保護区",
+        "titleEn": "Central Suriname Nature Reserve",
+        "description": "広大な熱帯雨林にジャガー、サル、鳥類、多様な植物が暮らします。",
+        "descriptionEn": "A vast rainforest protects jaguars, primates, birds, and exceptional plant diversity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Central%20Suriname%20Nature%20Reserve.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Central_Suriname_Nature_Reserve.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Central_Suriname_Nature_Reserve.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sr-brownsberg",
+        "title": "ブラウンズベルフ自然公園",
+        "titleEn": "Brownsberg Nature Park",
+        "description": "高地の森林、滝、展望地があり、熱帯の生物多様性を観察できます。",
+        "descriptionEn": "Highland forest, waterfalls, and viewpoints provide access to tropical biodiversity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brownsberg%20Nature%20Park%20Suriname.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Brownsberg_Nature_Park_Suriname.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Brownsberg_Nature_Park_Suriname.jpg",
+        "category": "自然公園",
+        "categoryEn": "Nature Park"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sr-pom",
+        "title": "ポム",
+        "titleEn": "Pom",
+        "description": "タヤーの根と鶏肉などを重ねて焼く、ユダヤ系とクレオール文化が融合した料理です。",
+        "descriptionEn": "Grated pomtajer root and chicken are baked together in a dish shaped by Jewish and Creole traditions.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pom%20Suriname.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pom_Suriname.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pom_Suriname.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "sr-kaseko",
+        "title": "カセコ",
+        "titleEn": "Kaseko",
+        "description": "管楽器、太鼓、歌、ダンスにアフリカ、欧州、カリブ海の影響が融合した音楽です。",
+        "descriptionEn": "Brass, drums, song, and dance blend African, European, and Caribbean influences.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kaseko%20Suriname.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Kaseko_Suriname.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Kaseko_Suriname.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      },
+      {
+        "id": "sr-pangi",
+        "title": "パンギ布",
+        "titleEn": "Pangi Textiles",
+        "description": "鮮やかな布を衣服や肩掛けに使い、マルーン共同体の個性を表します。",
+        "descriptionEn": "Bright textiles used as clothing and wraps express Maroon community identity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pangi%20Suriname.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Pangi_Suriname.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Pangi_Suriname.jpg",
+        "category": "服飾・共同体文化",
+        "categoryEn": "Clothing and Community Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "森林・環境・文化で交流",
+      "titleEn": "Exchange Through Forests, Environment, and Culture",
+      "text": "日本とスリナムは森林保全、環境、漁業、文化、国際協力を通じて関係を築いています。",
+      "textEn": "Japan and Suriname maintain ties through forest conservation, environment, fisheries, culture, and international cooperation."
+    },
+    "quiz": {
+      "question": "スリナムの公用語は何でしょう？",
+      "questionEn": "What is the official language of Suriname?",
+      "options": [
+        "オランダ語",
+        "スペイン語だけ",
+        "ポルトガル語だけ",
+        "フランス語だけ"
+      ],
+      "optionsEn": [
+        "Dutch",
+        "Only Spanish",
+        "Only Portuguese",
+        "Only French"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はオランダ語です。南米でオランダ語を公用語とする国です。",
+      "explanationEn": "The answer is Dutch, making Suriname distinctive in South America."
+    }
+  },
+  "se": {
+    "iso": "se",
+    "nameJa": "スウェーデン",
+    "nameEn": "Sweden",
+    "capitalJa": "ストックホルム",
+    "capitalEn": "Stockholm",
+    "subtitle": "森林、湖、群島、北極圏、デザイン、福祉、音楽文化を持つ北欧の国です。",
+    "subtitleEn": "A Nordic country of forests, lakes, archipelagos, Arctic regions, design, welfare, and music.",
+    "flagUrl": "https://flagcdn.com/w320/se.png",
+    "mapQuery": "Stockholm, Sweden",
+    "timeZone": "Europe/Stockholm",
+    "currency": {
+      "nameJa": "スウェーデン・クローナ",
+      "nameEn": "Swedish Krona",
+      "symbol": "kr"
+    },
+    "languages": [
+      {
+        "nameJa": "スウェーデン語",
+        "nameEn": "Swedish"
+      }
+    ],
+    "elevation": "約28 m（ストックホルム）",
+    "elevationEn": "Approx. 28 m (Stockholm)",
+    "weather": {
+      "summary": "南部は比較的穏やかで、北部は冬が長く寒くなります。海洋と大陸の両方の影響を受けます。",
+      "summaryEn": "Southern Sweden is relatively mild, while northern winters are long and cold, with both maritime and continental influences."
+    },
+    "heritage": [
+      {
+        "id": "se-drottningholm",
+        "title": "ドロットニングホルム王領地",
+        "titleEn": "Royal Domain of Drottningholm",
+        "description": "宮殿、庭園、劇場が残り、欧州王室文化とスウェーデン建築を伝えます。",
+        "descriptionEn": "A palace, gardens, and historic theater preserve royal culture and Swedish architecture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Drottningholm%20Palace%20Sweden.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Drottningholm_Palace_Sweden.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Drottningholm_Palace_Sweden.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "se-visby",
+        "title": "ハンザ都市ヴィスビュー",
+        "titleEn": "Hanseatic Town of Visby",
+        "description": "城壁、教会跡、石造家屋が、中世バルト海交易の繁栄を伝えます。",
+        "descriptionEn": "Walls, church ruins, and stone houses preserve the prosperity of medieval Baltic trade.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Visby%20Sweden.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Visby_Sweden.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Visby_Sweden.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "se-laponian",
+        "title": "ラポニア地域",
+        "titleEn": "Laponian Area",
+        "description": "山、森林、湿地とサーミのトナカイ牧畜が共存する広大な複合景観です。",
+        "descriptionEn": "Mountains, forests, wetlands, and Sámi reindeer herding form a vast mixed landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Laponian%20Area%20Sweden.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Laponian_Area_Sweden.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Laponian_Area_Sweden.jpg",
+        "category": "世界複合遺産",
+        "categoryEn": "Mixed World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "se-fika",
+        "title": "フィーカ",
+        "titleEn": "Fika",
+        "description": "コーヒーと菓子を囲み、仕事や日常の合間に会話と休息を大切にします。",
+        "descriptionEn": "Coffee and pastries are shared during a social break that values conversation and rest.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Swedish%20fika.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Swedish_fika.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Swedish_fika.jpg",
+        "category": "飲料・生活文化",
+        "categoryEn": "Beverage and Living Culture"
+      },
+      {
+        "id": "se-midsummer",
+        "title": "ミッドサマー",
+        "titleEn": "Midsummer",
+        "description": "花で飾った柱を立て、歌、踊り、食事で夏至の時期を祝います。",
+        "descriptionEn": "A flower-decorated pole, songs, dance, and food celebrate the summer-solstice season.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Midsummer%20Sweden.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Midsummer_Sweden.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Midsummer_Sweden.jpg",
+        "category": "季節・祭礼文化",
+        "categoryEn": "Seasonal Festival Culture"
+      },
+      {
+        "id": "se-dala-horse",
+        "title": "ダーラナホース",
+        "titleEn": "Dala Horse",
+        "description": "木彫りの馬を鮮やかに彩色する、スウェーデンを象徴する民俗工芸です。",
+        "descriptionEn": "A carved wooden horse painted in bright patterns has become a symbol of Swedish folk craft.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dala%20horse%20Sweden.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dala_horse_Sweden.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dala_horse_Sweden.jpg",
+        "category": "伝統工芸",
+        "categoryEn": "Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "環境・産業・教育で幅広く交流",
+      "titleEn": "Broad Exchange in Environment, Industry, and Education",
+      "text": "日本とスウェーデンは自動車、通信、環境、福祉、デザイン、教育で交流しています。",
+      "textEn": "Japan and Sweden maintain ties in automobiles, communications, environment, welfare, design, and education."
+    },
+    "quiz": {
+      "question": "スウェーデンでコーヒーと会話を楽しむ休憩文化は何でしょう？",
+      "questionEn": "What is the Swedish tradition of taking a social coffee break called?",
+      "options": [
+        "フィーカ",
+        "シエスタ",
+        "アフタヌーンティー",
+        "茶道"
+      ],
+      "optionsEn": [
+        "Fika",
+        "Siesta",
+        "Afternoon tea",
+        "Tea ceremony"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はフィーカです。飲み物だけでなく、人との時間を大切にします。",
+      "explanationEn": "The answer is fika, which values social time as much as the coffee itself."
+    }
+  },
+  "ch": {
+    "iso": "ch",
+    "nameJa": "スイス",
+    "nameEn": "Switzerland",
+    "capitalJa": "ベルン（連邦都市）",
+    "capitalEn": "Bern (federal city)",
+    "subtitle": "アルプス、湖、多言語社会、精密産業、チーズと時計文化を持つ中央ヨーロッパの国です。",
+    "subtitleEn": "A Central European country of Alps, lakes, multilingual society, precision industry, cheese, and watchmaking.",
+    "flagUrl": "https://flagcdn.com/w320/ch.png",
+    "mapQuery": "Bern, Switzerland",
+    "timeZone": "Europe/Zurich",
+    "currency": {
+      "nameJa": "スイス・フラン",
+      "nameEn": "Swiss Franc",
+      "symbol": "CHF"
+    },
+    "languages": [
+      {
+        "nameJa": "ドイツ語",
+        "nameEn": "German"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      },
+      {
+        "nameJa": "イタリア語",
+        "nameEn": "Italian"
+      },
+      {
+        "nameJa": "ロマンシュ語",
+        "nameEn": "Romansh"
+      }
+    ],
+    "elevation": "約540 m（ベルン）",
+    "elevationEn": "Approx. 540 m (Bern)",
+    "weather": {
+      "summary": "標高による差が大きく、低地は温帯、高山部は寒冷で雪と氷河が見られます。",
+      "summaryEn": "Climate varies greatly with elevation, from temperate lowlands to cold snowy and glaciated high mountains."
+    },
+    "heritage": [
+      {
+        "id": "ch-bern",
+        "title": "ベルン旧市街",
+        "titleEn": "Old City of Bern",
+        "description": "アーレ川に囲まれた街にアーケード、時計塔、噴水が残る中世都市です。",
+        "descriptionEn": "Arcades, clock towers, and fountains fill a medieval city enclosed by a bend of the Aare River.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bern%20old%20city%20Switzerland.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bern_old_city_Switzerland.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bern_old_city_Switzerland.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ch-jungfrau",
+        "title": "スイス・アルプス ユングフラウ＝アレッチ",
+        "titleEn": "Swiss Alps Jungfrau-Aletsch",
+        "description": "高峰とアルプス最大級の氷河が広がる壮大な高山自然地域です。",
+        "descriptionEn": "High peaks and one of the Alps' largest glaciers form a dramatic mountain landscape.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aletsch%20Glacier%20Switzerland.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Aletsch_Glacier_Switzerland.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Aletsch_Glacier_Switzerland.jpg",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ch-lavaux",
+        "title": "ラヴォーのブドウ畑",
+        "titleEn": "Lavaux Vineyard Terraces",
+        "description": "レマン湖を見下ろす斜面に石垣の段々畑が広がり、長いワイン文化を伝えます。",
+        "descriptionEn": "Stone-walled vineyard terraces overlook Lake Geneva and preserve centuries of winemaking.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavaux%20vineyards%20Switzerland.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lavaux_vineyards_Switzerland.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lavaux_vineyards_Switzerland.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ch-fondue",
+        "title": "チーズフォンデュ",
+        "titleEn": "Cheese Fondue",
+        "description": "溶かしたチーズにパンを浸し、鍋を囲んで分け合う料理です。",
+        "descriptionEn": "Bread is dipped into melted cheese and shared communally from a pot.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Swiss%20cheese%20fondue.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Swiss_cheese_fondue.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Swiss_cheese_fondue.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ch-yodel",
+        "title": "ヨーデル",
+        "titleEn": "Yodeling",
+        "description": "胸声と頭声を素早く切り替え、山地に響く独特の歌唱を生み出します。",
+        "descriptionEn": "Rapid shifts between chest and head voice create a distinctive singing style associated with the Alps.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Swiss%20yodelers.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Swiss_yodelers.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Swiss_yodelers.jpg",
+        "category": "音楽文化",
+        "categoryEn": "Music Culture"
+      },
+      {
+        "id": "ch-watchmaking",
+        "title": "時計製造",
+        "titleEn": "Watchmaking",
+        "description": "微細な部品を精密に組み、技術、デザイン、職人技能を融合します。",
+        "descriptionEn": "Tiny components are assembled with exceptional precision, combining engineering, design, and craftsmanship.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Swiss%20watchmaker.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Swiss_watchmaker.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Swiss_watchmaker.jpg",
+        "category": "精密伝統工芸",
+        "categoryEn": "Precision Traditional Craft"
+      }
+    ],
+    "japanConnection": {
+      "title": "科学・精密産業・観光で深い交流",
+      "titleEn": "Strong Exchange in Science, Precision Industry, and Tourism",
+      "text": "日本とスイスは医薬、時計、金融、研究、観光、教育で深く交流しています。",
+      "textEn": "Japan and Switzerland maintain strong ties in pharmaceuticals, watches, finance, research, tourism, and education."
+    },
+    "quiz": {
+      "question": "スイスの連邦都市はどこでしょう？",
+      "questionEn": "Which city serves as Switzerland's federal city?",
+      "options": [
+        "ベルン",
+        "チューリヒ",
+        "ジュネーブ",
+        "バーゼル"
+      ],
+      "optionsEn": [
+        "Bern",
+        "Zurich",
+        "Geneva",
+        "Basel"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はベルンです。一般に首都として扱われますが、正式には連邦都市と呼ばれます。",
+      "explanationEn": "The answer is Bern, commonly treated as the capital and officially described as the federal city."
+    }
+  },
+  "sy": {
+    "iso": "sy",
+    "nameJa": "シリア",
+    "nameEn": "Syria",
+    "capitalJa": "ダマスカス",
+    "capitalEn": "Damascus",
+    "subtitle": "古代都市、砂漠の隊商路、城塞、モザイク、料理と舞踊の文化を持つ西アジアの国です。",
+    "subtitleEn": "A West Asian country of ancient cities, desert caravan routes, castles, mosaics, cuisine, and dance.",
+    "flagUrl": "https://flagcdn.com/w320/sy.png",
+    "mapQuery": "Damascus, Syria",
+    "timeZone": "Asia/Damascus",
+    "currency": {
+      "nameJa": "シリア・ポンド",
+      "nameEn": "Syrian Pound",
+      "symbol": "£S"
+    },
+    "languages": [
+      {
+        "nameJa": "アラビア語",
+        "nameEn": "Arabic"
+      }
+    ],
+    "elevation": "約680 m（ダマスカス）",
+    "elevationEn": "Approx. 680 m (Damascus)",
+    "weather": {
+      "summary": "沿岸部は地中海性、内陸は乾燥し、山地では冬に雪が降ることがあります。",
+      "summaryEn": "The coast has a Mediterranean climate, the interior is dry, and mountain areas may receive winter snow."
+    },
+    "heritage": [
+      {
+        "id": "sy-damascus",
+        "title": "古代都市ダマスカス",
+        "titleEn": "Ancient City of Damascus",
+        "description": "モスク、市場、伝統家屋、街路が、長い都市と交易の歴史を伝えます。",
+        "descriptionEn": "Mosques, markets, traditional houses, and streets preserve an exceptionally long urban and trading history.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Umayyad%20Mosque%20Damascus%20Syria.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Umayyad_Mosque_Damascus_Syria.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Umayyad_Mosque_Damascus_Syria.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sy-palmyra",
+        "title": "古代都市パルミラ",
+        "titleEn": "Ancient City of Palmyra",
+        "description": "砂漠の交易都市に列柱道路、神殿、墓が残り、東西交流の歴史を伝えます。",
+        "descriptionEn": "Colonnaded streets, temples, and tombs preserve the history of a desert city linking East and West.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Palmyra%20Syria.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Palmyra_Syria.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Palmyra_Syria.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "sy-krak",
+        "title": "クラック・デ・シュヴァリエ",
+        "titleEn": "Krak des Chevaliers",
+        "description": "丘の上に二重の城壁を持つ巨大な中世城塞で、十字軍期の軍事建築を伝えます。",
+        "descriptionEn": "A massive hilltop castle with double walls preserves Crusader-era military architecture.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Krak%20des%20Chevaliers%20Syria.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Krak_des_Chevaliers_Syria.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Krak_des_Chevaliers_Syria.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "sy-kibbeh",
+        "title": "キッベ",
+        "titleEn": "Kibbeh",
+        "description": "ひき肉とブルグルを混ぜたり包んだりして、揚げる、焼く、煮るなど多様に調理します。",
+        "descriptionEn": "Ground meat and bulgur are mixed or filled and prepared by frying, baking, or simmering.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Syrian%20kibbeh.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Syrian_kibbeh.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Syrian_kibbeh.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "sy-dabke",
+        "title": "ダブケ",
+        "titleEn": "Syrian Dabke",
+        "description": "人々が列を作って手をつなぎ、足を踏み鳴らして祝いと結束を表します。",
+        "descriptionEn": "Dancers join in a line and stamp rhythmic steps to express celebration and solidarity.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Syrian%20dabke.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Syrian_dabke.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Syrian_dabke.jpg",
+        "category": "舞踊文化",
+        "categoryEn": "Dance Culture"
+      },
+      {
+        "id": "sy-aleppo-soap",
+        "title": "アレッポ石けん",
+        "titleEn": "Aleppo Soap",
+        "description": "オリーブ油と月桂樹油を使い、長期間乾燥・熟成させる伝統製品です。",
+        "descriptionEn": "Olive oil and laurel oil are cooked and aged into a long-established traditional soap.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo%20soap%20Syria.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Aleppo_soap_Syria.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_soap_Syria.jpg",
+        "category": "伝統工芸・生活文化",
+        "categoryEn": "Traditional Craft and Living Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "人道・文化財保護で支援",
+      "titleEn": "Support in Humanitarian Relief and Heritage Protection",
+      "text": "日本は人道支援、保健、教育、避難民支援、文化財保護などに取り組んでいます。",
+      "textEn": "Japan supports humanitarian relief, health, education, displaced people, and cultural heritage protection."
+    },
+    "quiz": {
+      "question": "世界最古級の継続居住都市として知られるシリアの首都はどこでしょう？",
+      "questionEn": "Which Syrian capital is known as one of the world's oldest continuously inhabited cities?",
+      "options": [
+        "ダマスカス",
+        "リヤド",
+        "ドーハ",
+        "アンカラ"
+      ],
+      "optionsEn": [
+        "Damascus",
+        "Riyadh",
+        "Doha",
+        "Ankara"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はダマスカスです。古代から交易と文化の中心でした。",
+      "explanationEn": "The answer is Damascus, a center of trade and culture since ancient times."
+    }
+  }
+}
