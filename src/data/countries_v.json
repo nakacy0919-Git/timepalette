@@ -1,0 +1,582 @@
+{
+  "vu": {
+    "iso": "vu",
+    "nameJa": "バヌアツ",
+    "nameEn": "Vanuatu",
+    "capitalJa": "ポートビラ",
+    "capitalEn": "Port Vila",
+    "subtitle": "南太平洋の火山島群からなり、活火山、滝、海、多数の言語、首長制、砂絵、陸上ダイビングの伝統を持つ国です。",
+    "subtitleEn": "A South Pacific island nation of volcanoes, waterfalls, ocean landscapes, many languages, chiefly traditions, sand drawings, and land diving.",
+    "flagUrl": "https://flagcdn.com/w320/vu.png",
+    "mapQuery": "Port Vila, Vanuatu",
+    "timeZone": "Pacific/Efate",
+    "currency": {
+      "nameJa": "バツ",
+      "nameEn": "Vatu",
+      "symbol": "VT"
+    },
+    "languages": [
+      {
+        "nameJa": "ビスラマ語",
+        "nameEn": "Bislama"
+      },
+      {
+        "nameJa": "英語",
+        "nameEn": "English"
+      },
+      {
+        "nameJa": "フランス語",
+        "nameEn": "French"
+      }
+    ],
+    "elevation": "約59 m（ポートビラ）",
+    "elevationEn": "Approx. 59 m (Port Vila)",
+    "weather": {
+      "summary": "一年を通して温暖な熱帯海洋性気候で、雨季には豪雨やサイクロンの影響を受けることがあります。",
+      "summaryEn": "Vanuatu has a warm tropical maritime climate year-round, with heavy rain and cyclone risk during the wetter season."
+    },
+    "heritage": [
+      {
+        "id": "vu-roi-mata",
+        "title": "ロイ・マタ首長の領地",
+        "titleEn": "Chief Roi Mata's Domain",
+        "description": "エファテ島、レレパ島、エレトカ島の三つの場所からなり、首長ロイ・マタの生涯、死、口承伝統、首長制の記憶を伝えます。",
+        "descriptionEn": "Three sites on Efate, Lelepa, and Eretoka preserve the life, death, oral traditions, and chiefly legacy associated with Roi Mata.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lelepa%20cliffs,%20Vanuatu,%202006%20-%20Flickr%20-%20PhillipC.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Lelepa_cliffs,_Vanuatu,_2006_-_Flickr_-_PhillipC.jpg",
+        "imageCredit": "Phillip Capper",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "vu-yasur",
+        "title": "ヤスール山",
+        "titleEn": "Mount Yasur",
+        "description": "タンナ島にある活火山で、火口から噴き上がる火山弾と赤い噴煙を間近に観察できることで知られます。",
+        "descriptionEn": "An active volcano on Tanna Island, known for frequent eruptions, glowing ejecta, and dramatic views into the crater.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Yasur%202013-09-09%20(9726114421).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mount_Yasur_2013-09-09_(9726114421).jpg",
+        "imageCredit": "Timo Newton-Syms",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "火山・自然景観",
+        "categoryEn": "Volcanic Natural Attraction"
+      },
+      {
+        "id": "vu-mele-cascades",
+        "title": "メレ・カスケード",
+        "titleEn": "Mele Cascades",
+        "description": "エファテ島の熱帯林を透明な水が段状に流れ落ち、自然のプールと滝を作る景勝地です。",
+        "descriptionEn": "Clear water descends through tropical forest in a series of falls and natural pools on Efate Island.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mele%20Cascades.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Mele_Cascades.jpg",
+        "imageCredit": "Viktor Pinchuk",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "滝・自然景観",
+        "categoryEn": "Waterfall and Natural Attraction"
+      }
+    ],
+    "culture": [
+      {
+        "id": "vu-land-diving",
+        "title": "ナゴール（陸上ダイビング）",
+        "titleEn": "Naghol Land Diving",
+        "description": "ペンテコスト島で男性が足首に植物のつるを結び、高い木の塔から飛び降りて豊作と勇気を表す儀礼です。",
+        "descriptionEn": "On Pentecost Island, men leap from tall wooden towers with vines attached to their ankles in a ritual linked to courage and the yam harvest.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Land%20Diving.png?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Land_Diving.png",
+        "imageCredit": "Paul Stein",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "儀礼・祭礼文化",
+        "categoryEn": "Ritual and Festival Culture"
+      },
+      {
+        "id": "vu-laplap",
+        "title": "ラップラップ",
+        "titleEn": "Laplap",
+        "description": "すりおろしたタロイモやヤムイモ、バナナなどをココナツミルクと合わせ、葉で包んで地中炉で焼く料理です。",
+        "descriptionEn": "Grated taro, yam, or banana is mixed with coconut milk, wrapped in leaves, and cooked in an earth oven.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Laplap%2002.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Laplap_02.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Laplap_02.jpg",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "vu-sand-drawing",
+        "title": "バヌアツの砂絵",
+        "titleEn": "Vanuatu Sand Drawings",
+        "description": "砂、火山灰、粘土の上に一本の連続線で幾何学模様を描き、物語、知識、歌、土地の記憶を伝えます。",
+        "descriptionEn": "A continuous line creates geometric designs in sand, ash, or clay, transmitting stories, knowledge, songs, and local memory.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sand%20drawing,%20Vanuatu.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Sand_drawing,_Vanuatu.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Sand_drawing,_Vanuatu.jpg",
+        "category": "無形文化遺産・描画文化",
+        "categoryEn": "Intangible Heritage and Graphic Tradition"
+      }
+    ],
+    "japanConnection": {
+      "title": "防災・海洋・気候変動で協力",
+      "titleEn": "Cooperation in Disaster Preparedness, Oceans, and Climate Change",
+      "text": "日本は防災、港湾、水産、気候変動対策、教育、保健、インフラ整備などを通じてバヌアツと協力しています。",
+      "textEn": "Japan and Vanuatu cooperate in disaster preparedness, ports, fisheries, climate action, education, health, and infrastructure."
+    },
+    "quiz": {
+      "question": "バヌアツのペンテコスト島で行われる伝統儀礼は何でしょう？",
+      "questionEn": "Which traditional ritual is performed on Vanuatu's Pentecost Island?",
+      "options": [
+        "ナゴール",
+        "フラメンコ",
+        "カステイス",
+        "ポロネーズ"
+      ],
+      "optionsEn": [
+        "Naghol land diving",
+        "Flamenco",
+        "Human towers",
+        "Polonaise"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はナゴールです。木の塔からつるを足首に結んで飛び降ります。",
+      "explanationEn": "The answer is Naghol land diving, performed from wooden towers with vines."
+    }
+  },
+  "va": {
+    "iso": "va",
+    "nameJa": "バチカン市国",
+    "nameEn": "Vatican City",
+    "capitalJa": "バチカン市",
+    "capitalEn": "Vatican City",
+    "subtitle": "ローマ市内にある世界最小の主権国家で、カトリック教会の中心として、ルネサンス・バロック美術、宗教建築、典礼文化を受け継いでいます。",
+    "subtitleEn": "The world's smallest sovereign state, located within Rome and serving as the center of the Catholic Church, with Renaissance and Baroque art, sacred architecture, and liturgical traditions.",
+    "flagUrl": "https://flagcdn.com/w320/va.png",
+    "mapQuery": "Vatican City",
+    "timeZone": "Europe/Vatican",
+    "currency": {
+      "nameJa": "ユーロ",
+      "nameEn": "Euro",
+      "symbol": "€"
+    },
+    "languages": [
+      {
+        "nameJa": "イタリア語",
+        "nameEn": "Italian"
+      },
+      {
+        "nameJa": "ラテン語",
+        "nameEn": "Latin"
+      }
+    ],
+    "elevation": "約75 m",
+    "elevationEn": "Approx. 75 m",
+    "weather": {
+      "summary": "ローマと同じ地中海性気候で、夏は暑く乾燥し、冬は比較的穏やかで雨が増えます。",
+      "summaryEn": "Vatican City shares Rome's Mediterranean climate, with hot dry summers and comparatively mild, wetter winters."
+    },
+    "heritage": [
+      {
+        "id": "va-st-peters",
+        "title": "サン・ピエトロ大聖堂",
+        "titleEn": "St. Peter's Basilica",
+        "description": "聖ペトロの墓所の上に建てられた大聖堂で、ミケランジェロのドームやベルニーニの内部装飾で知られます。",
+        "descriptionEn": "Built above the traditional tomb of Saint Peter, the basilica is known for Michelangelo's dome and Bernini's monumental interior design.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/St.%20Peter's%20Basilica%20in%20Vatican%20City.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:St._Peter's_Basilica_in_Vatican_City.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:St._Peter's_Basilica_in_Vatican_City.jpg",
+        "category": "世界文化遺産・宗教建築",
+        "categoryEn": "World Heritage and Sacred Architecture"
+      },
+      {
+        "id": "va-sistine",
+        "title": "システィーナ礼拝堂",
+        "titleEn": "Sistine Chapel",
+        "description": "ミケランジェロの天井画と『最後の審判』で知られ、教皇選挙のコンクラーベにも使用されます。",
+        "descriptionEn": "Famous for Michelangelo's ceiling and Last Judgment, the chapel is also used for papal conclaves.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chapelle%20Sixtine%20-%20Int%C3%A9rieur.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Chapelle_Sixtine_-_Int%C3%A9rieur.jpg",
+        "imageCredit": "Gzen92",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "category": "世界文化遺産・美術",
+        "categoryEn": "World Heritage and Art"
+      },
+      {
+        "id": "va-museums",
+        "title": "バチカン美術館",
+        "titleEn": "Vatican Museums",
+        "description": "古代彫刻、地図、タペストリー、絵画、教皇収集品を収蔵する世界有数の美術館群です。",
+        "descriptionEn": "One of the world's major museum complexes, containing ancient sculpture, maps, tapestries, paintings, and papal collections.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vatican%20Museums-6%20(29).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Vatican_Museums-6_(29).jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "美術・博物館遺産",
+        "categoryEn": "Art and Museum Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "va-swiss-guard",
+        "title": "スイス衛兵",
+        "titleEn": "Pontifical Swiss Guard",
+        "description": "色鮮やかな制服を着用し、教皇とバチカンの警護を担う歴史ある衛兵組織です。",
+        "descriptionEn": "A historic corps in distinctive ceremonial uniforms that protects the Pope and performs security duties in Vatican City.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Swiss%20Guard%20in%20Vatican.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Swiss_Guard_in_Vatican.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "category": "制服・儀礼文化",
+        "categoryEn": "Uniform and Ceremonial Culture"
+      },
+      {
+        "id": "va-papal-audience",
+        "title": "教皇一般謁見",
+        "titleEn": "Papal General Audience",
+        "description": "世界各地から巡礼者や訪問者が集まり、教皇の講話、祈り、祝福に参加する宗教的な集会です。",
+        "descriptionEn": "Pilgrims and visitors from around the world gather for papal teaching, prayer, greetings, and blessing.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Papal%20General%20Audience%2005%202018%200276.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Papal_General_Audience_05_2018_0276.jpg",
+        "imageCredit": "Mariordo",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Papal_General_Audience_05_2018_0276.jpg",
+        "category": "宗教・巡礼文化",
+        "categoryEn": "Religious and Pilgrimage Culture"
+      },
+      {
+        "id": "va-stamps",
+        "title": "バチカンの切手文化",
+        "titleEn": "Vatican Postal Stamps",
+        "description": "宗教美術、歴史的人物、行事を描く独自の切手を発行し、郵便文化と小国の象徴を世界へ発信しています。",
+        "descriptionEn": "Vatican stamps depict sacred art, historic figures, and events, presenting the identity and postal culture of the small state.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1929-Vatican%20City%20stamp.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:1929-Vatican_City_stamp.jpg",
+        "imageCredit": "Wikimedia Commons contributor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:1929-Vatican_City_stamp.jpg",
+        "category": "郵便・デザイン文化",
+        "categoryEn": "Postal and Design Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "外交・宗教・文化財で交流",
+      "titleEn": "Exchange Through Diplomacy, Religion, and Cultural Heritage",
+      "text": "日本とバチカンは外交関係を持ち、宗教間対話、平和、教育、美術、文化財、学術交流などを通じて関係を築いています。",
+      "textEn": "Japan and the Holy See maintain diplomatic relations and exchange through interreligious dialogue, peace, education, art, heritage, and scholarship."
+    },
+    "quiz": {
+      "question": "バチカン市国で教皇の警護を担う衛兵は何でしょう？",
+      "questionEn": "Which guard corps protects the Pope in Vatican City?",
+      "options": [
+        "スイス衛兵",
+        "近衛騎兵",
+        "グルカ兵",
+        "ヴァリャーグ衛兵"
+      ],
+      "optionsEn": [
+        "Swiss Guard",
+        "Household Cavalry",
+        "Gurkhas",
+        "Varangian Guard"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はスイス衛兵です。歴史的な制服と儀礼でも知られています。",
+      "explanationEn": "The answer is the Swiss Guard, also known for its historic ceremonial uniform."
+    }
+  },
+  "ve": {
+    "iso": "ve",
+    "nameJa": "ベネズエラ",
+    "nameEn": "Venezuela",
+    "capitalJa": "カラカス",
+    "capitalEn": "Caracas",
+    "subtitle": "カリブ海岸、アンデス、リャノスの草原、ギアナ高地、巨大な滝、植民都市、音楽と多彩な食文化を持つ南米の国です。",
+    "subtitleEn": "A South American country of Caribbean coast, Andes, Llanos grasslands, Guiana Highlands, great waterfalls, historic cities, music, and diverse cuisine.",
+    "flagUrl": "https://flagcdn.com/w320/ve.png",
+    "mapQuery": "Caracas, Venezuela",
+    "timeZone": "America/Caracas",
+    "currency": {
+      "nameJa": "ボリバル（デジタル・ボリバル）",
+      "nameEn": "Bolívar (digital bolívar)",
+      "symbol": "Bs."
+    },
+    "languages": [
+      {
+        "nameJa": "スペイン語",
+        "nameEn": "Spanish"
+      }
+    ],
+    "elevation": "約900 m（カラカス）",
+    "elevationEn": "Approx. 900 m (Caracas)",
+    "weather": {
+      "summary": "熱帯に位置しますが、標高差が大きく、海岸、高原、山地、草原で気候が異なります。",
+      "summaryEn": "Venezuela is tropical, but major elevation differences create distinct coastal, highland, mountain, and grassland climates."
+    },
+    "heritage": [
+      {
+        "id": "ve-canaima",
+        "title": "カナイマ国立公園とエンジェルフォール",
+        "titleEn": "Canaima National Park and Angel Falls",
+        "description": "テーブルマウンテン、滝、森林、サバンナが広がり、世界有数の落差を持つエンジェルフォールがあります。",
+        "descriptionEn": "Table-top mountains, waterfalls, forest, and savanna form a vast park containing Angel Falls, one of the world's highest waterfalls.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Angel%20Falls%20in%20Venezuela.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Angel_Falls_in_Venezuela.jpg",
+        "imageCredit": "Paulo Capiotti",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ve-coro",
+        "title": "コロとその港",
+        "titleEn": "Coro and Its Port",
+        "description": "土壁や木造要素を用いた建築が残り、スペイン、オランダ、先住民の影響が交わる歴史都市です。",
+        "descriptionEn": "Earthen and wooden architecture preserves a historic city shaped by Spanish, Dutch, Indigenous, and Caribbean influences.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calle%20colonial%20del%20Centro%20Hist%C3%B3rico%20de%20Coro.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Calle_colonial_del_Centro_Hist%C3%B3rico_de_Coro.jpg",
+        "imageCredit": "ECSantos",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Calle_colonial_del_Centro_Hist%C3%B3rico_de_Coro.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "ve-university-city",
+        "title": "カラカスの大学都市",
+        "titleEn": "University City of Caracas",
+        "description": "建築、彫刻、壁画、庭園を統合した近代都市・大学設計で、カルロス・ラウル・ビジャヌエバが中心となって整備しました。",
+        "descriptionEn": "Modern architecture, sculpture, murals, and gardens form an integrated university complex designed principally by Carlos Raúl Villanueva.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ciudad%20universitaria,%20Caracas,%20Venezuela.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ciudad_universitaria,_Caracas,_Venezuela.jpg",
+        "imageCredit": "George Miquilena",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ciudad_universitaria,_Caracas,_Venezuela.jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "ve-arepa",
+        "title": "アレパ",
+        "titleEn": "Arepa",
+        "description": "トウモロコシ粉の円形パンを焼いたり揚げたりし、チーズ、肉、豆、アボカドなどを挟んで食べます。",
+        "descriptionEn": "Round maize breads are grilled or fried and filled with cheese, meat, beans, avocado, and other ingredients.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arepa%20-%20pancakes%20from%20Venezuela.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Arepa_-_pancakes_from_Venezuela.jpg",
+        "imageCredit": "Dj MeCa Vzla",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "ve-joropo",
+        "title": "ホローポ",
+        "titleEn": "Joropo",
+        "description": "ハープ、クアトロ、マラカスの音楽に合わせて、素早い足さばきで踊るベネズエラを代表する芸能です。",
+        "descriptionEn": "Harp, cuatro, and maracas accompany energetic footwork in a major Venezuelan music-and-dance tradition.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bailando%20Joropo.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Bailando_Joropo.jpg",
+        "imageCredit": "Acvarivs",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Bailando_Joropo.jpg",
+        "category": "音楽・舞踊文化",
+        "categoryEn": "Music and Dance Culture"
+      },
+      {
+        "id": "ve-devils",
+        "title": "ヤレの踊る悪魔",
+        "titleEn": "Dancing Devils of Yare",
+        "description": "赤い衣装と精巧な悪魔の仮面を着け、聖体祭で善に対する悪の降伏を踊りで表現します。",
+        "descriptionEn": "Performers in red clothing and elaborate devil masks dance during Corpus Christi to symbolize the submission of evil to good.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dancing%20Devils%20of%20Yare%20Mask%20from%20Venezuela.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Dancing_Devils_of_Yare_Mask_from_Venezuela.jpg",
+        "imageCredit": "Wilfredor",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Dancing_Devils_of_Yare_Mask_from_Venezuela.jpg",
+        "category": "無形文化遺産・祭礼文化",
+        "categoryEn": "Intangible Heritage and Festival Culture"
+      }
+    ],
+    "japanConnection": {
+      "title": "外交・エネルギー・文化で交流",
+      "titleEn": "Exchange Through Diplomacy, Energy, and Culture",
+      "text": "日本とベネズエラは外交、エネルギー、貿易、日系社会、音楽、スポーツ、文化交流を通じた関係があります。",
+      "textEn": "Japan and Venezuela have ties through diplomacy, energy, trade, the Japanese community, music, sport, and cultural exchange."
+    },
+    "quiz": {
+      "question": "ベネズエラのカナイマ国立公園にある巨大な滝は何でしょう？",
+      "questionEn": "Which enormous waterfall is located in Venezuela's Canaima National Park?",
+      "options": [
+        "エンジェルフォール",
+        "ナイアガラの滝",
+        "イグアスの滝",
+        "華厳の滝"
+      ],
+      "optionsEn": [
+        "Angel Falls",
+        "Niagara Falls",
+        "Iguazu Falls",
+        "Kegon Falls"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はエンジェルフォールです。ギアナ高地のテーブルマウンテンから流れ落ちます。",
+      "explanationEn": "The answer is Angel Falls, descending from a tepui in the Guiana Highlands."
+    }
+  },
+  "vn": {
+    "iso": "vn",
+    "nameJa": "ベトナム",
+    "nameEn": "Vietnam",
+    "capitalJa": "ハノイ",
+    "capitalEn": "Hanoi",
+    "subtitle": "東南アジアの長い海岸線に、石灰岩の島々、古都、王宮、水田、麺料理、伝統衣装と人形劇の文化を持つ国です。",
+    "subtitleEn": "A Southeast Asian country with a long coastline, limestone islands, historic towns, imperial monuments, rice landscapes, noodle cuisine, traditional dress, and puppetry.",
+    "flagUrl": "https://flagcdn.com/w320/vn.png",
+    "mapQuery": "Hanoi, Vietnam",
+    "timeZone": "Asia/Ho_Chi_Minh",
+    "currency": {
+      "nameJa": "ベトナム・ドン",
+      "nameEn": "Vietnamese Dong",
+      "symbol": "₫"
+    },
+    "languages": [
+      {
+        "nameJa": "ベトナム語",
+        "nameEn": "Vietnamese"
+      }
+    ],
+    "elevation": "約12 m（ハノイ）",
+    "elevationEn": "Approx. 12 m (Hanoi)",
+    "weather": {
+      "summary": "熱帯モンスーン気候を中心とし、北部は冬に涼しく、中部と南部では雨季・乾季の特徴が地域ごとに異なります。",
+      "summaryEn": "Vietnam has mainly tropical monsoon climates. Northern winters are cooler, while wet and dry seasons vary across central and southern regions."
+    },
+    "heritage": [
+      {
+        "id": "vn-ha-long",
+        "title": "ハロン湾＝カットバー群島",
+        "titleEn": "Ha Long Bay–Cat Ba Archipelago",
+        "description": "海から多数の石灰岩島が立ち上がり、洞窟、海洋生態系、漁業景観が広がる世界的な景勝地です。",
+        "descriptionEn": "Thousands of limestone islands rise from the sea amid caves, marine ecosystems, and fishing landscapes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ha%20Long%20Bay%20-%20Vietnam.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ha_Long_Bay_-_Vietnam.jpg",
+        "imageCredit": "Sang-hwan Jung",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "世界自然遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "vn-hoi-an",
+        "title": "ホイアン古都",
+        "titleEn": "Hoi An Ancient Town",
+        "description": "木造商家、会館、日本橋、細い街路が、東アジアと東南アジアの国際港としての歴史を伝えます。",
+        "descriptionEn": "Wooden merchant houses, assembly halls, the Japanese Bridge, and narrow streets preserve the history of an international Asian trading port.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoi%20An%20Ancient%20town%20(98823).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Hoi_An_Ancient_town_(98823).jpg",
+        "imageCredit": "Andre Hospers",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hoi_An_Ancient_town_(98823).jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      },
+      {
+        "id": "vn-hue",
+        "title": "フエの建造物群",
+        "titleEn": "Complex of Hué Monuments",
+        "description": "城壁に囲まれた王宮、門、寺院、庭園、皇帝陵が、阮朝の政治と宮廷文化を伝えます。",
+        "descriptionEn": "A walled imperial city, gates, temples, gardens, and royal tombs preserve the political and court culture of the Nguyễn dynasty.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Imperial%20City,%20Hue,%20Vietnam%20(7073483067).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Imperial_City,_Hue,_Vietnam_(7073483067).jpg",
+        "imageCredit": "Adam Jones",
+        "imageLicense": "See source page",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Imperial_City,_Hue,_Vietnam_(7073483067).jpg",
+        "category": "世界文化遺産",
+        "categoryEn": "World Heritage"
+      }
+    ],
+    "culture": [
+      {
+        "id": "vn-pho",
+        "title": "フォー",
+        "titleEn": "Phở",
+        "description": "米麺を香り高いスープに入れ、牛肉や鶏肉、香草、ライム、唐辛子などと味わう代表的な麺料理です。",
+        "descriptionEn": "Rice noodles are served in an aromatic broth with beef or chicken, herbs, lime, chili, and regional garnishes.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vietnamese%20Ph%E1%BB%9F.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Vietnamese_Ph%E1%BB%9F.jpg",
+        "imageCredit": "Bildflut",
+        "imageLicense": "CC0 1.0",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "category": "食文化",
+        "categoryEn": "Food Culture"
+      },
+      {
+        "id": "vn-ao-dai",
+        "title": "アオザイ",
+        "titleEn": "Áo Dài",
+        "description": "長い上衣とズボンを組み合わせた衣装で、式典、学校、婚礼、文化行事などで着用されます。",
+        "descriptionEn": "A long fitted tunic worn over trousers for ceremonies, schools, weddings, and cultural events.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ao%20dai%20in%20the%20Vietnamese%20Women's%20Museum.jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Ao_dai_in_the_Vietnamese_Women's_Museum.jpg",
+        "imageCredit": "Inputpoems",
+        "imageLicense": "Public Domain",
+        "imageLicenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "category": "服飾文化",
+        "categoryEn": "Clothing Culture"
+      },
+      {
+        "id": "vn-water-puppetry",
+        "title": "水上人形劇",
+        "titleEn": "Water Puppetry",
+        "description": "水田文化から発展した芸能で、水面を舞台に人形を操り、音楽と語りで農村生活や伝説を表現します。",
+        "descriptionEn": "Developed from rice-growing communities, puppets move across water to music and storytelling about village life and legends.",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Water%20Puppets%20in%20Hanoi,%20Vietnam%20(3486645827).jpg?width=1200",
+        "imageSource": "https://commons.wikimedia.org/wiki/File:Water_Puppets_in_Hanoi,_Vietnam_(3486645827).jpg",
+        "imageCredit": "McKay Savage",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "category": "伝統芸能",
+        "categoryEn": "Performing Arts"
+      }
+    ],
+    "japanConnection": {
+      "title": "製造業・教育・人的交流で極めて深い関係",
+      "titleEn": "Very Strong Links Through Manufacturing, Education, and People",
+      "text": "日本とベトナムは製造業、貿易、インフラ、留学、技能人材、観光、文化、地方交流を通じて非常に深く結ばれています。",
+      "textEn": "Japan and Vietnam are closely connected through manufacturing, trade, infrastructure, study abroad, skilled workers, tourism, culture, and local partnerships."
+    },
+    "quiz": {
+      "question": "ベトナムの伝統的な長い上衣は何と呼ばれるでしょう？",
+      "questionEn": "What is Vietnam's traditional long tunic called?",
+      "options": [
+        "アオザイ",
+        "キモノ",
+        "ハンボク",
+        "ディアンドル"
+      ],
+      "optionsEn": [
+        "Áo dài",
+        "Kimono",
+        "Hanbok",
+        "Dirndl"
+      ],
+      "correctIndex": 0,
+      "explanation": "正解はアオザイです。長い上衣をズボンと組み合わせて着用します。",
+      "explanationEn": "The answer is áo dài, a long tunic worn over trousers."
+    }
+  }
+}
