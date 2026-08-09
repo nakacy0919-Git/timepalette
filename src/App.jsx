@@ -3,6 +3,9 @@ import Header from './components/Header';
 import Timer from './components/Timer';
 import MapClock from './components/MapClock';
 import Stopwatch from './components/Stopwatch';
+// ▼ 1. 先ほど作成したコンポーネントとJSONデータを読み込む！
+import LanguagePractice from './components/LanguagePractice';
+import langData from './data/languages_a.json';
 
 // まだ完成していないタブ用の「仮画面（プレースホルダー）」コンポーネント
 const Placeholder = ({ title }) => (
@@ -24,8 +27,9 @@ export default function App() {
         return <Timer />;
       case 'stopwatch':
         return <Stopwatch />;
-      case 'pacemark':
-        return <Placeholder title="PaceMark" />;
+      
+      // ※ PaceMarkはHeaderから別タブで飛ぶようになったので削除しました！
+
       case 'mapClock':
         // 現在、MapClockの中に「地図」「マイ時計(複数定刻)」「リスト」が全て入っています
         return <MapClock isAmPm={false} />; 
@@ -33,6 +37,18 @@ export default function App() {
         return <Placeholder title="時差比較" />;
       case 'myClock':
         return <Placeholder title="マイ時計（複数定刻）単独ページ" />;
+      
+      // ▼ 2. 新しい機能（JICAバースの言語練習）のテスト表示用タブを追加！
+      case 'language':
+        // とりあえずオーストラリア（au）の英語（english）を表示するテスト設定
+        return (
+          <LanguagePractice 
+            countryCode="au" 
+            languageKey="english" 
+            languageData={langData} 
+          />
+        );
+
       default:
         return <Timer />;
     }

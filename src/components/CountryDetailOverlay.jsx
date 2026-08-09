@@ -1,15 +1,23 @@
 import { useState, useEffect, useRef } from 'react';
-import { X, MapPin, Globe, Coins, Mountain, CloudSun, HeartHandshake, Info, Languages } from 'lucide-react';
+import { X, MapPin, Globe, Coins, Mountain, CloudSun, HeartHandshake, Info, Languages, MessageCircle } from 'lucide-react';
 import DetailedAnalogClock from './DetailedAnalogClock';
 import InteractiveQuiz from './InteractiveQuiz';
 
+// ▼ 追加：言語練習コンポーネントのインポート
+import LanguagePractice from './LanguagePractice';
+// ※ 必要に応じてパス（'./LanguagePractice'）は実際の保存場所に合わせて調整してください。
+
 export default function CountryDetailOverlay({ iso, onClose }) {
   const [countryData, setCountryData] = useState(null);
+  
+  // ▼ 追加：言語データを保持するための状態
+  const [languageData, setLanguageData] = useState(null);
+  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [lang, setLanguage] = useState('ja');
 
-  // ▼ 追加：画面の一番上に強制ジャンプさせるための「目印（Ref）」
+  // 画面の一番上に強制ジャンプさせるための「目印（Ref）」
   const topRef = useRef(null);
 
   useEffect(() => {
@@ -18,14 +26,31 @@ export default function CountryDetailOverlay({ iso, onClose }) {
         setLoading(true);
         setError(false);
         const firstLetter = iso.charAt(0).toLowerCase();
+        
+        // 1. 基本データの読み込み
         const dataModule = await import(`../data/countries_${firstLetter}.json`);
         const data = dataModule.default ? dataModule.default[iso] : dataModule[iso];
         
         if (data) {
           setCountryData(data);
         } else {
-          throw new Error("データが見つかりません");
+          throw new Error("基本データが見つかりません");
         }
+
+        // ▼ 2. 追加：言語データの読み込み（エラーが起きても画面自体は表示できるように try-catch を分ける）
+        try {
+          // ※アルファベットごとの言語ファイルが存在する前提です。
+          // もしファイル名が違う場合は調整してください（例： `../data/languages_${firstLetter}.json` ）
+          const langModule = await import(`../data/languages_a.json`);
+          // ※ 今回はテスト用として強制的に languages_a.json を読み込んでいますが、
+          // 最終的には import(`../data/languages_${firstLetter}.json`) のように動的にします。
+          
+          setLanguageData(langModule.default || langModule);
+        } catch (langErr) {
+          console.log("この国の言語データはまだありません:", langErr);
+          setLanguageData(null); // データがない場合は null のままにする
+        }
+
       } catch (err) {
         console.error("データの読み込みに失敗しました:", err);
         setError(true);
@@ -36,12 +61,12 @@ export default function CountryDetailOverlay({ iso, onClose }) {
     fetchData();
   }, [iso]);
 
-  // ▼ 追加：データ読み込み完了後、少しだけ遅らせて強制的にトップへスクロールさせる
+  // データ読み込み完了後、少しだけ遅らせて強制的にトップへスクロールさせる
   useEffect(() => {
     if (!loading && topRef.current) {
       setTimeout(() => {
         topRef.current.scrollIntoView({ behavior: 'instant', block: 'start' });
-      }, 100); // Google Map等の読み込みによる画面のズレを防ぐため0.1秒遅延
+      }, 100);
     }
   }, [loading, iso]);
 
@@ -61,11 +86,11 @@ export default function CountryDetailOverlay({ iso, onClose }) {
       className="fixed inset-0 z-[9999] bg-slate-900/80 backdrop-blur-sm overflow-y-auto p-4 md:p-8 flex justify-center items-start scroll-smooth"
       onClick={handleBackdropClick}
     >
-      {/* ▼ 追加：ジャンプ先の目印となる透明な要素 */}
       <div ref={topRef} className="absolute top-0 left-0 w-full h-1 opacity-0 pointer-events-none" />
 
       <div className="bg-[#f8fafc] w-[95vw] max-w-[1400px] rounded-3xl shadow-2xl overflow-hidden relative animate-in fade-in zoom-in duration-300 mt-2 md:mt-6 mb-10">
         
+        {/* 言語切り替え＆閉じるボタン */}
         <div className="absolute top-6 right-6 z-50 flex items-center gap-3">
           <div className="bg-white/80 backdrop-blur-md p-1 rounded-full shadow-sm flex items-center border border-white/50">
             <button 
@@ -104,6 +129,7 @@ export default function CountryDetailOverlay({ iso, onClose }) {
         ) : (
           <div className="flex flex-col">
             
+            {/* ヒーロー画像（国旗）エリア */}
             <div className="relative h-64 md:h-80 bg-slate-800 overflow-hidden flex items-end">
               <div 
                 className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay"
@@ -138,12 +164,12 @@ export default function CountryDetailOverlay({ iso, onClose }) {
                 </p>
               </div>
 
+              {/* 地図と時計エリア */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12">
                 <div className="bg-white p-4 rounded-3xl shadow-sm border border-slate-200 h-[450px] relative overflow-hidden group">
                   <h3 className="absolute top-6 left-6 bg-white/95 backdrop-blur px-5 py-2 rounded-full font-bold text-slate-800 shadow-md z-10 flex items-center gap-2">
                     <Globe size={18} className="text-blue-500"/> {lang === 'ja' ? '地図で見る' : 'Interactive Map'}
                   </h3>
-                  {/* iframeがフォーカスを奪わないように tabIndex="-1" を追加 */}
                   <iframe 
                     title="Google Map" width="100%" height="100%" className="rounded-2xl bg-slate-100" style={{ border: 0 }}
                     loading="lazy" allowFullScreen tabIndex="-1"
@@ -152,8 +178,6 @@ export default function CountryDetailOverlay({ iso, onClose }) {
                 </div>
 
                 <div className="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between h-full">
-                  
-                  {/* ▼ 修正：時計の高さ制限を無くし、縦長デザインでもスッポリ収まるように変更 */}
                   <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-8 pb-6 border-b border-slate-100 gap-6">
                     <div className="flex-1 text-center sm:text-left flex flex-col justify-center mt-4">
                       <h3 className="text-3xl font-black text-slate-800 mb-3">{lang === 'ja' ? '現在の時間' : 'Local Time'}</h3>
@@ -164,7 +188,6 @@ export default function CountryDetailOverlay({ iso, onClose }) {
                         </span>
                       </p>
                     </div>
-                    {/* 時計エリアの横幅を大きく確保し、高さは中身（ChatGPT生成コード）に合わせて自動で伸びるようにする */}
                     <div className="shrink-0 flex items-center justify-center w-full sm:w-1/2 md:w-56 overflow-visible">
                       <DetailedAnalogClock timeZone={countryData.timeZone} />
                     </div>
@@ -217,6 +240,7 @@ export default function CountryDetailOverlay({ iso, onClose }) {
                 </div>
               )}
 
+              {/* 見どころ・文化エリア */}
               <div>
                 <h3 className="text-3xl font-black text-slate-800 mb-8 px-2 flex items-center gap-3">
                   ✨ {lang === 'ja' ? '見どころ・文化' : 'Highlights & Culture'}
@@ -253,9 +277,21 @@ export default function CountryDetailOverlay({ iso, onClose }) {
                 </div>
               </div>
 
+              {/* クイズエリア */}
               {countryData.quiz && (
                 <div className="mt-16 pt-10 border-t-2 border-dashed border-slate-300">
                   <InteractiveQuiz quizData={countryData.quiz} lang={lang} />
+                </div>
+              )}
+
+              {/* ▼ 修正：言語練習（発音チャレンジ）エリア */}
+              {/* LanguagePractice コンポーネント内部で複数言語をタブ処理するため、丸ごと渡すだけになりました */}
+              {languageData && languageData[iso] && (
+                <div className="mt-16 pt-10 border-t-2 border-dashed border-slate-300">
+                  <LanguagePractice 
+                    countryCode={iso} 
+                    languageData={languageData} 
+                  />
                 </div>
               )}
 

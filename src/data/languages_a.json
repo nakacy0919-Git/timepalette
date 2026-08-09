@@ -1,0 +1,771 @@
+{
+  "af": {
+    "pashto": {
+      "languageName": "パシュトー語",
+      "challenges": [
+        {
+          "id": "af-pashto-1",
+          "category": "挨拶・時間・体調",
+          "speaker": "partner",
+          "phrase": "سلام! سهار مو پخیر! هلته هوا څنګه ده؟",
+          "meaning": "こんにちは！おはようございます！そちらの天気はどうですか？",
+          "yomi": "サラーム！ サハール モ パヘイル！ ハルタ ハワ ツァンガ ダ？",
+          "langCode": "ps-AF",
+          "culturalNote": "「سلام」は一日を通して使える挨拶です。朝なら「سهار مو پخیر」を加えます。オンラインでは笑顔とうなずきも添えましょう。"
+        },
+        {
+          "id": "af-pashto-2",
+          "category": "挨拶・時間・体調",
+          "speaker": "self",
+          "phrase": "سلام! دلته اوس ماسپښین دی او هوا ښه ده.",
+          "meaning": "こんにちは！こちらは今午後で、天気はいいです。",
+          "yomi": "サラーム！ デルタ オス マースパシーン ディ アウ ハワ シャ ダ。",
+          "langCode": "ps-AF",
+          "culturalNote": "時間帯と天気を一緒に答えると、時差や季節の話へ自然につながります。"
+        },
+        {
+          "id": "af-pashto-3",
+          "category": "挨拶・時間・体調",
+          "speaker": "partner",
+          "phrase": "تاسو څنګه یاست؟ هر څه سم دي؟",
+          "meaning": "調子はどうですか？すべて順調ですか？",
+          "yomi": "ターソ ツァンガ ヤースト？ ハル ツァ サム ディ？",
+          "langCode": "ps-AF",
+          "culturalNote": "先生や複数の生徒にも使える丁寧な尋ね方です。"
+        },
+        {
+          "id": "af-pashto-4",
+          "category": "挨拶・時間・体調",
+          "speaker": "self",
+          "phrase": "زه ډېر ښه یم، مننه! تاسو څنګه یاست؟",
+          "meaning": "とても元気です、ありがとう！あなたはどうですか？",
+          "yomi": "ザ デール シャ ヤム、マンナ！ ターソ ツァンガ ヤースト？",
+          "langCode": "ps-AF",
+          "culturalNote": "答えの後に同じ質問を返すと、会話のキャッチボールになります。"
+        },
+        {
+          "id": "af-pashto-5",
+          "category": "挨拶・時間・体調",
+          "speaker": "self",
+          "phrase": "په جاپان کې اوس د شپې اته بجې دي. هلته څو بجې دي؟",
+          "meaning": "日本は今、夜の8時です。そちらは何時ですか？",
+          "yomi": "パ ジャーパン ケ オス ダ シュペ アタ バジェ ディ。 ハルタ ツォ バジェ ディ？",
+          "langCode": "ps-AF",
+          "culturalNote": "数字は聞き取りにくいことがあるため、時刻をチャットにも書くと確実です。"
+        },
+        {
+          "id": "af-pashto-6",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "زما نوم ___ دی. له تاسو سره په لیدو خوشحاله شوم.",
+          "meaning": "私の名前は___です。皆さんに会えてうれしいです。",
+          "yomi": "ズマー ノーム ___ ディ。 ラ ターソ サラ パ リードー フシュハーラ シュワム。",
+          "langCode": "ps-AF",
+          "culturalNote": "名前はゆっくり言い、ローマ字でも画面に表示しましょう。"
+        },
+        {
+          "id": "af-pashto-7",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "partner",
+          "phrase": "له پېژندلو مو خوشحاله شوم! زما نوم ___ دی.",
+          "meaning": "はじめまして！私の名前は___です。",
+          "yomi": "ラ ペジャンダロ モ フシュハーラ シュワム！ ズマー ノーム ___ ディ。",
+          "langCode": "ps-AF",
+          "culturalNote": "聞き取れなければ、後の「もう一度ゆっくり」を使って確認できます。"
+        },
+        {
+          "id": "af-pashto-8",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "موږ به نن خپل ښوونځی او ښار در وپېژنو.",
+          "meaning": "今日は私たちの学校と街を紹介します。",
+          "yomi": "ムング バ ナン ハプル シュウォンザイ アウ シャール ダル ウペジャヌ。",
+          "langCode": "ps-AF",
+          "culturalNote": "グループ発表の導入です。地図・学校名・写真を同時に見せると伝わりやすくなります。"
+        },
+        {
+          "id": "af-pashto-9",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "موږ د جاپان د ښوونځي د ژوند په اړه څېړنه کړې ده.",
+          "meaning": "私たちは日本の学校生活について調べました。",
+          "yomi": "ムング ダ ジャーパン ダ シュウォンザイ ダ ジュワンド パ アラ ツェーラナ クレ ダ。",
+          "langCode": "ps-AF",
+          "culturalNote": "探究発表では、テーマを最初に一文で示しましょう。"
+        },
+        {
+          "id": "af-pashto-10",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "زما شوق د انیمې لیدل او د موسیقۍ اورېدل دي. ستاسو شوق څه دی؟",
+          "meaning": "私の趣味はアニメを見ることと音楽を聴くことです。あなたの趣味は何ですか？",
+          "yomi": "ズマー ショーク ダ アニメ リーダル アウ ダ ムースィキー オーレーダル ディ。 スターソ ショーク ツァ ディ？",
+          "langCode": "ps-AF",
+          "culturalNote": "自分の例を示してから質問すると、相手が答えやすくなります。"
+        },
+        {
+          "id": "af-pashto-11",
+          "category": "質問・オンライン交流",
+          "speaker": "self",
+          "phrase": "تاسو په ښوونځي کې د غرمې ډوډۍ څه خورئ؟",
+          "meaning": "皆さんは学校で昼食に何を食べますか？",
+          "yomi": "ターソ パ シュウォンザイ ケ ダ ガルメ ドダイ ツァ ホーライ？",
+          "langCode": "ps-AF",
+          "culturalNote": "食事は家庭や地域で異なります。相手の例を国全体の決まりだと考えないようにしましょう。"
+        },
+        {
+          "id": "af-pashto-12",
+          "category": "質問・オンライン交流",
+          "speaker": "partner",
+          "phrase": "موږ ډېر وخت وریجې، ډوډۍ او سبزي خورو.",
+          "meaning": "私たちはよく、ご飯、パン、野菜を食べます。",
+          "yomi": "ムング デール ワフト ウリージェ、ドダイ アウ サブズィ ホールー。",
+          "langCode": "ps-AF",
+          "culturalNote": "味や材料をさらに尋ねると、食文化の比較につながります。"
+        },
+        {
+          "id": "af-pashto-13",
+          "category": "質問・オンライン交流",
+          "speaker": "partner",
+          "phrase": "په جاپان کې اوس کوم انیمې مشهورې دي؟",
+          "meaning": "日本では今、どのアニメが人気ですか？",
+          "yomi": "パ ジャーパン ケ オス コーム アニメ マシューレ ディ？",
+          "langCode": "ps-AF",
+          "culturalNote": "作品名は英語タイトルや画像も示すと通じやすくなります。"
+        },
+        {
+          "id": "af-pashto-14",
+          "category": "質問・オンライン交流",
+          "speaker": "self",
+          "phrase": "له ښوونځي وروسته تاسو څه کوئ؟",
+          "meaning": "放課後は何をしますか？",
+          "yomi": "ラ シュウォンザイ ウルースタ ターソ ツァ カワイ？",
+          "langCode": "ps-AF",
+          "culturalNote": "家の手伝い、勉強、スポーツなど多様な答えがあります。評価せず興味を持って聞きましょう。"
+        },
+        {
+          "id": "af-pashto-15",
+          "category": "質問・オンライン交流",
+          "speaker": "partner",
+          "phrase": "زه له ملګرو سره فوټبال کوم او بیا کورنۍ دنده ترسره کوم.",
+          "meaning": "友達とサッカーをして、その後宿題をします。",
+          "yomi": "ザ ラ マルグロ サラ フットボール カワム アウ ビヤ コーラナイ ダンダ タルサラ カワム。",
+          "langCode": "ps-AF",
+          "culturalNote": "共通点があれば「私もです」と返し、ポジションなどを質問できます。"
+        },
+        {
+          "id": "af-pashto-16",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "self",
+          "phrase": "واه، دا ډېر ښه دی!",
+          "meaning": "わあ、それはすごくいいですね！",
+          "yomi": "ワー、ダー デール シャ ディ！",
+          "langCode": "ps-AF",
+          "culturalNote": "相手が話し終わってから言うと、しっかり聞いていることが伝わります。"
+        },
+        {
+          "id": "af-pashto-17",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "self",
+          "phrase": "رښتیا؟ زه په دې نه پوهېدم!",
+          "meaning": "本当ですか？それは知りませんでした！",
+          "yomi": "リシュティヤ？ ザ パ デ ナ ポヘーダム！",
+          "langCode": "ps-AF",
+          "culturalNote": "疑っているように聞こえないよう、笑顔と柔らかな声で使いましょう。"
+        },
+        {
+          "id": "af-pashto-18",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "partner",
+          "phrase": "ډېر ښه! دا خواړه خوندور ښکاري.",
+          "meaning": "いいですね！その料理はおいしそうです。",
+          "yomi": "デール シャ！ ダー フワーラ フワンドワル シカーリー。",
+          "langCode": "ps-AF",
+          "culturalNote": "料理の写真に対する自然な反応です。"
+        },
+        {
+          "id": "af-pashto-19",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "self",
+          "phrase": "بښنه غواړم، کولای شئ یو ځل بیا ورو ووایئ؟",
+          "meaning": "すみません、もう一度ゆっくり言ってもらえますか？",
+          "yomi": "バフナ グワーラム、コーライ シェ ヨー ザル ビヤ ウロ ウワーイ？",
+          "langCode": "ps-AF",
+          "culturalNote": "聞き取れないときは分かったふりをせず、丁寧に聞き返しましょう。"
+        },
+        {
+          "id": "af-pashto-20",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "partner",
+          "phrase": "ستاسو غږ لږ لرې ښکاري. زما غږ اورئ؟",
+          "meaning": "あなたの声が少し遠く聞こえます。私の声は聞こえますか？",
+          "yomi": "スターソ ガグ ラグ ラレ シカーリー。 ズマー ガグ オーライ？",
+          "langCode": "ps-AF",
+          "culturalNote": "耳やマイクを指すジェスチャーを添えると、音声トラブルだと伝わりやすくなります。"
+        },
+        {
+          "id": "af-pashto-21",
+          "category": "感謝・クロージング",
+          "speaker": "self",
+          "phrase": "نن مو موږ ته ډېر څه را زده کړل. ډېره مننه!",
+          "meaning": "今日は私たちにたくさんのことを教えてくれて、ありがとうございます！",
+          "yomi": "ナン モ ムング タ デール ツァ ラー ザダ クラル。 デーラ マンナ！",
+          "langCode": "ps-AF",
+          "culturalNote": "交流内容への感謝を具体的に伝えられる表現です。"
+        },
+        {
+          "id": "af-pashto-22",
+          "category": "感謝・クロージング",
+          "speaker": "partner",
+          "phrase": "له تاسو سره خبرې کول زموږ لپاره هم ډېر خوندور وو!",
+          "meaning": "こちらこそ、皆さんと話せてとても楽しかったです！",
+          "yomi": "ラ ターソ サラ ハバレ コル ズムング ラパーラ ハム デール フワンドワル ウォ！",
+          "langCode": "ps-AF",
+          "culturalNote": "相手からの感謝に返す、温かい表現です。"
+        },
+        {
+          "id": "af-pashto-23",
+          "category": "感謝・クロージング",
+          "speaker": "self",
+          "phrase": "هیله لرم چې بیا هم یو له بل سره اړیکه ونیسو.",
+          "meaning": "これからも、お互いに連絡を取り合えたらうれしいです。",
+          "yomi": "ヒーラ ララム チェ ビヤ ハム ヨー ラ バル サラ アリーカ ウニースー。",
+          "langCode": "ps-AF",
+          "culturalNote": "連絡先の交換は学校や先生が管理する安全な方法を使いましょう。"
+        },
+        {
+          "id": "af-pashto-24",
+          "category": "感謝・クロージング",
+          "speaker": "partner",
+          "phrase": "ښه ورځ ولرئ! بیا به سره ګورو!",
+          "meaning": "よい一日を！また会いましょう！",
+          "yomi": "シャ ウラジュ ウラライ！ ビヤ バ サラ ゴールー！",
+          "langCode": "ps-AF",
+          "culturalNote": "相手が夜なら、夜に合った別れの表現へ替えましょう。"
+        },
+        {
+          "id": "af-pashto-25",
+          "category": "感謝・クロージング",
+          "speaker": "self",
+          "phrase": "ستاسو د ښکلي پریزنټېشن لپاره مننه.",
+          "meaning": "すてきな発表をありがとうございました。",
+          "yomi": "スターソ ダ シクリ プレゼンテーション ラパーラ マンナ。",
+          "langCode": "ps-AF",
+          "culturalNote": "写真や説明など、特によかった点を一言加えるとさらに心が伝わります。"
+        }
+      ]
+    },
+    "dari": {
+      "languageName": "ダリ語",
+      "challenges": [
+        {
+          "id": "af-dari-1",
+          "category": "挨拶・時間・体調",
+          "speaker": "partner",
+          "phrase": "سلام، صبح بخیر! هوا آنجا چطور است؟",
+          "meaning": "こんにちは、おはようございます！そちらの天気はどうですか？",
+          "yomi": "サラーム、ソブ バヘイル！ ハワー アーンジャー チェトール アスト？",
+          "langCode": "prs-AF",
+          "culturalNote": "「سلام」は一日中使えます。「صبح بخیر」は朝の挨拶です。"
+        },
+        {
+          "id": "af-dari-2",
+          "category": "挨拶・時間・体調",
+          "speaker": "self",
+          "phrase": "سلام! اینجا حالا بعد از ظهر است و هوا آفتابی است.",
+          "meaning": "こんにちは！こちらは今午後で、晴れています。",
+          "yomi": "サラーム！ インジャー ハーラー バアド アズ ゾフル アスト オ ハワー アーフタービー アスト。",
+          "langCode": "prs-AF",
+          "culturalNote": "時間帯と天気を一緒に答えると、時差の話へつながります。"
+        },
+        {
+          "id": "af-dari-3",
+          "category": "挨拶・時間・体調",
+          "speaker": "partner",
+          "phrase": "حال شما چطور است؟ خوب هستید؟",
+          "meaning": "調子はどうですか？元気ですか？",
+          "yomi": "ハーレ ショマー チェトール アスト？ ホーブ ハスティード？",
+          "langCode": "prs-AF",
+          "culturalNote": "「شما」は丁寧な「あなた」または複数の「皆さん」です。"
+        },
+        {
+          "id": "af-dari-4",
+          "category": "挨拶・時間・体調",
+          "speaker": "self",
+          "phrase": "بسیار خوب هستم، تشکر! شما چطور هستید؟",
+          "meaning": "とても元気です、ありがとう！皆さんはどうですか？",
+          "yomi": "ベスヤール ホーブ ハスタム、タシャックル！ ショマー チェトール ハスティード？",
+          "langCode": "prs-AF",
+          "culturalNote": "「تشکر」はアフガニスタンでよく使われる「ありがとう」です。"
+        },
+        {
+          "id": "af-dari-5",
+          "category": "挨拶・時間・体調",
+          "speaker": "self",
+          "phrase": "در جاپان حالا ساعت هشت شب است. آنجا ساعت چند است؟",
+          "meaning": "日本は今、夜の8時です。そちらは何時ですか？",
+          "yomi": "ダル ジャーパン ハーラー サアト ハシュテ シャブ アスト。 アーンジャー サアト チャンド アスト？",
+          "langCode": "prs-AF",
+          "culturalNote": "数字は聞き取りにくいため、時刻をチャットにも書くと確実です。"
+        },
+        {
+          "id": "af-dari-6",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "نام من ___ است. از دیدن شما خوشحال شدم.",
+          "meaning": "私の名前は___です。皆さんに会えてうれしいです。",
+          "yomi": "ナーメ マン ___ アスト。 アズ ディーダネ ショマー ホシュハール ショダム。",
+          "langCode": "prs-AF",
+          "culturalNote": "名前はゆっくり言い、ローマ字でも表示しましょう。"
+        },
+        {
+          "id": "af-dari-7",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "partner",
+          "phrase": "از آشنایی با شما خوشحال شدم! نام من ___ است.",
+          "meaning": "はじめまして！私の名前は___です。",
+          "yomi": "アズ アーシュナーイー バー ショマー ホシュハール ショダム！ ナーメ マン ___ アスト。",
+          "langCode": "prs-AF",
+          "culturalNote": "相手の名前を一度繰り返すと、聞き取り確認になります。"
+        },
+        {
+          "id": "af-dari-8",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "امروز مکتب و شهر خود را به شما معرفی می‌کنیم.",
+          "meaning": "今日は私たちの学校と街を皆さんに紹介します。",
+          "yomi": "エムルーズ マクタブ オ シャフレ ホド ラー バ ショマー モアレフィー ミーコニーム。",
+          "langCode": "prs-AF",
+          "culturalNote": "アフガニスタンでは学校を「مکتب」と表すことが一般的です。"
+        },
+        {
+          "id": "af-dari-9",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "ما دربارهٔ زندگی مکتب در جاپان تحقیق کرده‌ایم.",
+          "meaning": "私たちは日本の学校生活について調べました。",
+          "yomi": "マー ダルバーラエ ゼンデギーエ マクタブ ダル ジャーパン タフキーク カルデイーム。",
+          "langCode": "prs-AF",
+          "culturalNote": "探究発表では、調査テーマを最初に明示しましょう。"
+        },
+        {
+          "id": "af-dari-10",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "سرگرمی من دیدن انیمه و گوش دادن به موسیقی است. شما چه چیزی را دوست دارید؟",
+          "meaning": "私の趣味はアニメを見ることと音楽を聴くことです。皆さんは何が好きですか？",
+          "yomi": "サルガルミーエ マン ディーダネ アニメ オ グーシュ ダーダン バ ムースィキー アスト。 ショマー チェ チーズィ ラー ドゥースト ダーリード？",
+          "langCode": "prs-AF",
+          "culturalNote": "自分の例を示してから尋ねると、相手が答えやすくなります。"
+        },
+        {
+          "id": "af-dari-11",
+          "category": "質問・オンライン交流",
+          "speaker": "self",
+          "phrase": "شما در مکتب برای نان چاشت معمولاً چه می‌خورید؟",
+          "meaning": "皆さんは学校の昼食に、普段何を食べますか？",
+          "yomi": "ショマー ダル マクタブ バラーエ ナーネ チャーシュト マアムーラン チェ ミーホリード？",
+          "langCode": "prs-AF",
+          "culturalNote": "食事は地域や家庭で異なります。国全体の習慣と決めつけないようにしましょう。"
+        },
+        {
+          "id": "af-dari-12",
+          "category": "質問・オンライン交流",
+          "speaker": "partner",
+          "phrase": "ما بیشتر برنج، نان، سبزی و لوبیا می‌خوریم.",
+          "meaning": "私たちは、ご飯、パン、野菜、豆をよく食べます。",
+          "yomi": "マー ビーシュタル ベレンジ、ナーン、サブズィー オ ルービヤー ミーホリーム。",
+          "langCode": "prs-AF",
+          "culturalNote": "味や材料をさらに尋ねると、比較学習につながります。"
+        },
+        {
+          "id": "af-dari-13",
+          "category": "質問・オンライン交流",
+          "speaker": "partner",
+          "phrase": "حالا در جاپان کدام انیمه محبوب است؟",
+          "meaning": "今、日本ではどのアニメが人気ですか？",
+          "yomi": "ハーラー ダル ジャーパン コダーム アニメ マフブーブ アスト？",
+          "langCode": "prs-AF",
+          "culturalNote": "作品名に加え、画像や簡単な説明も示しましょう。"
+        },
+        {
+          "id": "af-dari-14",
+          "category": "質問・オンライン交流",
+          "speaker": "self",
+          "phrase": "بعد از مکتب معمولاً چه کار می‌کنید؟",
+          "meaning": "放課後は普段何をしますか？",
+          "yomi": "バアド アズ マクタブ マアムーラン チェ カール ミーコニード？",
+          "langCode": "prs-AF",
+          "culturalNote": "生活環境によって答えはさまざまです。価値判断をせず聞きましょう。"
+        },
+        {
+          "id": "af-dari-15",
+          "category": "質問・オンライン交流",
+          "speaker": "partner",
+          "phrase": "با دوستانم فوتبال بازی می‌کنم و بعد تکلیفم را انجام می‌دهم.",
+          "meaning": "友達とサッカーをして、その後宿題をします。",
+          "yomi": "バー ドゥースターナム フットボール バーズィー ミーコナム オ バアド タクリーファム ラー アンジャーム ミーダハム。",
+          "langCode": "prs-AF",
+          "culturalNote": "共通点があれば「私もです」と返し、質問を続けられます。"
+        },
+        {
+          "id": "af-dari-16",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "self",
+          "phrase": "واو، بسیار عالی است!",
+          "meaning": "わあ、とてもすごいです！",
+          "yomi": "ワーウ、ベスヤール アーリー アスト！",
+          "langCode": "prs-AF",
+          "culturalNote": "発表や写真への明るい反応です。"
+        },
+        {
+          "id": "af-dari-17",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "self",
+          "phrase": "واقعاً؟ این را نمی‌دانستم!",
+          "meaning": "本当ですか？それは知りませんでした！",
+          "yomi": "ワーケアン？ イーン ラー ナミーダーニスタム！",
+          "langCode": "prs-AF",
+          "culturalNote": "疑うのではなく、驚きや関心を示す柔らかな声で使います。"
+        },
+        {
+          "id": "af-dari-18",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "partner",
+          "phrase": "خیلی خوب است! آن غذا خوشمزه به نظر می‌رسد.",
+          "meaning": "とてもいいですね！その料理はおいしそうです。",
+          "yomi": "ヘイリー ホーブ アスト！ アーン ガザー ホシュマザ バ ナザル ミーラサド。",
+          "langCode": "prs-AF",
+          "culturalNote": "料理の写真への自然な反応です。"
+        },
+        {
+          "id": "af-dari-19",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "self",
+          "phrase": "ببخشید، می‌توانید یک بار دیگر آهسته بگویید؟",
+          "meaning": "すみません、もう一度ゆっくり言ってもらえますか？",
+          "yomi": "ベバフシード、ミータワーニード ヤク バーレ ディーガル アーヒステ ベグーイード？",
+          "langCode": "prs-AF",
+          "culturalNote": "聞き取れないときは、分かったふりをせず聞き返しましょう。"
+        },
+        {
+          "id": "af-dari-20",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "partner",
+          "phrase": "صدای شما کمی دور است. صدای مرا می‌شنوید؟",
+          "meaning": "あなたの声が少し遠いです。私の声は聞こえますか？",
+          "yomi": "セダーイェ ショマー カミー ドゥール アスト。 セダーイェ マラー ミーシェナウィード？",
+          "langCode": "prs-AF",
+          "culturalNote": "マイクや音量を確認するときの表現です。"
+        },
+        {
+          "id": "af-dari-21",
+          "category": "感謝・クロージング",
+          "speaker": "self",
+          "phrase": "تشکر که امروز چیزهای زیادی به ما یاد دادید!",
+          "meaning": "今日はたくさんのことを教えてくれて、ありがとうございました！",
+          "yomi": "タシャックル ケ エムルーズ チーズハーイェ ズィヤーディー バ マー ヤード ダーディード！",
+          "langCode": "prs-AF",
+          "culturalNote": "交流内容への具体的な感謝を表します。"
+        },
+        {
+          "id": "af-dari-22",
+          "category": "感謝・クロージング",
+          "speaker": "partner",
+          "phrase": "ما هم از صحبت با شما بسیار لذت بردیم!",
+          "meaning": "こちらこそ、皆さんと話せてとても楽しかったです！",
+          "yomi": "マー ハム アズ ソフバト バー ショマー ベスヤール ラッザト ボルディーム！",
+          "langCode": "prs-AF",
+          "culturalNote": "感謝を返す温かい表現です。"
+        },
+        {
+          "id": "af-dari-23",
+          "category": "感謝・クロージング",
+          "speaker": "self",
+          "phrase": "امیدواریم در آینده هم با هم در تماس باشیم.",
+          "meaning": "これからもお互いに連絡を取り合えたらと思います。",
+          "yomi": "オミードワーリーム ダル アーヤンダ ハム バー ハム ダル タマース バーシーム。",
+          "langCode": "prs-AF",
+          "culturalNote": "個人的な連絡先ではなく、学校管理の安全な方法を使いましょう。"
+        },
+        {
+          "id": "af-dari-24",
+          "category": "感謝・クロージング",
+          "speaker": "partner",
+          "phrase": "روز خوبی داشته باشید! دوباره می‌بینمتان!",
+          "meaning": "よい一日を！また会いましょう！",
+          "yomi": "ルーズィエ ホービー ダーシュテ バーシード！ ドーバーレ ミービーナメターン！",
+          "langCode": "prs-AF",
+          "culturalNote": "相手が夜なら「شب خوش」に替えると自然です。"
+        },
+        {
+          "id": "af-dari-25",
+          "category": "感謝・クロージング",
+          "speaker": "self",
+          "phrase": "برای ارائهٔ زیبای شما بسیار تشکر.",
+          "meaning": "皆さんのすてきな発表を本当にありがとうございました。",
+          "yomi": "バラーイェ エラーエエ ゼィバーイェ ショマー ベスヤール タシャックル。",
+          "langCode": "prs-AF",
+          "culturalNote": "特によかった点を具体的に加えると、さらに心が伝わります。"
+        }
+      ]
+    }
+  },
+  "au": {
+    "english": {
+      "languageName": "英語",
+      "challenges": [
+        {
+          "id": "au-english-1",
+          "category": "挨拶・時間・体調",
+          "speaker": "partner",
+          "phrase": "Good morning! What's the weather like in Japan today?",
+          "meaning": "おはよう！今日の日本の天気はどうですか？",
+          "yomi": "グッド モーニング！ ワッツ ザ ウェザー ライク イン ジャパン トゥデイ？",
+          "langCode": "en-AU",
+          "culturalNote": "オーストラリアでは生徒同士なら明るい「Hi」や「Good morning」が自然です。"
+        },
+        {
+          "id": "au-english-2",
+          "category": "挨拶・時間・体調",
+          "speaker": "self",
+          "phrase": "Hi! It's sunny here, and it's already afternoon.",
+          "meaning": "こんにちは！こちらは晴れていて、もう午後です。",
+          "yomi": "ハイ！ イッツ サニー ヒア、アンド イッツ オールレディ アフタヌーン。",
+          "langCode": "en-AU",
+          "culturalNote": "天気と時間帯を一緒に答えると、時差の話へ自然につながります。"
+        },
+        {
+          "id": "au-english-3",
+          "category": "挨拶・時間・体調",
+          "speaker": "partner",
+          "phrase": "How are you going? Are you feeling good today?",
+          "meaning": "調子はどう？今日は元気ですか？",
+          "yomi": "ハウ アー ユー ゴーイング？ アー ユー フィーリング グッド トゥデイ？",
+          "langCode": "en-AU",
+          "culturalNote": "オーストラリア英語の「How are you going?」は「調子はどう？」という意味です。"
+        },
+        {
+          "id": "au-english-4",
+          "category": "挨拶・時間・体調",
+          "speaker": "self",
+          "phrase": "I'm feeling great, thanks! How about you?",
+          "meaning": "絶好調です、ありがとう！あなたはどうですか？",
+          "yomi": "アイム フィーリング グレイト、サンクス！ ハウ アバウト ユー？",
+          "langCode": "en-AU",
+          "culturalNote": "答えた後に質問を返すと、会話が続きます。"
+        },
+        {
+          "id": "au-english-5",
+          "category": "挨拶・時間・体調",
+          "speaker": "self",
+          "phrase": "It's eight o'clock at night in Japan. What time is it there?",
+          "meaning": "日本は夜の8時です。そちらは何時ですか？",
+          "yomi": "イッツ エイト オクロック アット ナイト イン ジャパン。 ワット タイム イズ イット ゼア？",
+          "langCode": "en-AU",
+          "culturalNote": "オーストラリア国内には複数の時間帯があるため、都市名も確認しましょう。"
+        },
+        {
+          "id": "au-english-6",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "My name is ___. It's great to meet you.",
+          "meaning": "私の名前は___です。皆さんに会えてうれしいです。",
+          "yomi": "マイ ネイム イズ ___。 イッツ グレイト トゥ ミート ユー。",
+          "langCode": "en-AU",
+          "culturalNote": "名前はゆっくり話し、ローマ字でも表示しましょう。"
+        },
+        {
+          "id": "au-english-7",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "partner",
+          "phrase": "Nice to meet you! I'm ___, and I'm in Year Eight.",
+          "meaning": "はじめまして！私は___で、8年生です。",
+          "yomi": "ナイス トゥ ミート ユー！ アイム ___、アンド アイム イン イヤー エイト。",
+          "langCode": "en-AU",
+          "culturalNote": "オーストラリアでは学年を「Year 7」「Year 8」のように表します。"
+        },
+        {
+          "id": "au-english-8",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "Today, we'd like to introduce our school and our town.",
+          "meaning": "今日は私たちの学校と街を紹介したいと思います。",
+          "yomi": "トゥデイ、ウィド ライク トゥ イントロデュース アワ スクール アンド アワ タウン。",
+          "langCode": "en-AU",
+          "culturalNote": "発表の最初に目的を一文で示すと分かりやすくなります。"
+        },
+        {
+          "id": "au-english-9",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "We researched how students in Japan spend their school day.",
+          "meaning": "私たちは日本の生徒が学校で一日をどう過ごすかについて調べました。",
+          "yomi": "ウィ リサーチト ハウ スチューデンツ イン ジャパン スペンド ゼア スクール デイ。",
+          "langCode": "en-AU",
+          "culturalNote": "「We researched...」の後に「We found that...」を続けると探究発表らしくなります。"
+        },
+        {
+          "id": "au-english-10",
+          "category": "自己紹介・相互理解・発表",
+          "speaker": "self",
+          "phrase": "I enjoy watching anime and listening to music. What are you into?",
+          "meaning": "私はアニメを見ることと音楽を聴くことが好きです。あなたは何に夢中ですか？",
+          "yomi": "アイ エンジョイ ウォッチング アニメ アンド リスニング トゥ ミュージック。 ワット アー ユー イントゥ？",
+          "langCode": "en-AU",
+          "culturalNote": "「What are you into?」は生徒同士で使える自然な「何が好き？」です。"
+        },
+        {
+          "id": "au-english-11",
+          "category": "質問・オンライン交流",
+          "speaker": "self",
+          "phrase": "What do you usually have for lunch at school?",
+          "meaning": "学校では普段、昼食に何を食べますか？",
+          "yomi": "ワット ドゥ ユー ユージュアリー ハヴ フォー ランチ アット スクール？",
+          "langCode": "en-AU",
+          "culturalNote": "弁当、売店、食堂など学校による違いも尋ねると比較学習になります。"
+        },
+        {
+          "id": "au-english-12",
+          "category": "質問・オンライン交流",
+          "speaker": "partner",
+          "phrase": "I often bring a sandwich, some fruit, and a snack from home.",
+          "meaning": "私はよく、家からサンドイッチ、果物、おやつを持ってきます。",
+          "yomi": "アイ オーフン ブリング ア サンドウィッチ、サム フルート、アンド ア スナック フロム ホーム。",
+          "langCode": "en-AU",
+          "culturalNote": "学校によってアレルギー対策の食事ルールが異なります。"
+        },
+        {
+          "id": "au-english-13",
+          "category": "質問・オンライン交流",
+          "speaker": "partner",
+          "phrase": "Which anime is popular with students in Japan right now?",
+          "meaning": "今、日本の生徒の間ではどのアニメが人気ですか？",
+          "yomi": "ウィッチ アニメ イズ ポピュラー ウィズ スチューデンツ イン ジャパン ライト ナウ？",
+          "langCode": "en-AU",
+          "culturalNote": "作品名だけでなく、物語を一文で説明できると交流が深まります。"
+        },
+        {
+          "id": "au-english-14",
+          "category": "質問・オンライン交流",
+          "speaker": "self",
+          "phrase": "What do you usually do after school?",
+          "meaning": "放課後は普段何をしますか？",
+          "yomi": "ワット ドゥ ユー ユージュアリー ドゥ アフター スクール？",
+          "langCode": "en-AU",
+          "culturalNote": "スポーツ、宿題、家族との時間など多様な答えがあります。"
+        },
+        {
+          "id": "au-english-15",
+          "category": "質問・オンライン交流",
+          "speaker": "partner",
+          "phrase": "I usually train with my soccer team, then I do my homework.",
+          "meaning": "普段はサッカーチームで練習して、その後宿題をします。",
+          "yomi": "アイ ユージュアリー トレイン ウィズ マイ サッカー チーム、ゼン アイ ドゥ マイ ホームワーク。",
+          "langCode": "en-AU",
+          "culturalNote": "「soccer」「football」「footy」は地域や競技で意味が異なるため確認するとよいでしょう。"
+        },
+        {
+          "id": "au-english-16",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "self",
+          "phrase": "That's awesome!",
+          "meaning": "それはすごいね！",
+          "yomi": "ザッツ オーサム！",
+          "langCode": "en-AU",
+          "culturalNote": "生徒同士で使いやすい明るい表現です。"
+        },
+        {
+          "id": "au-english-17",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "self",
+          "phrase": "Really? I didn't know that!",
+          "meaning": "本当？それは知らなかった！",
+          "yomi": "リアリー？ アイ ディドゥント ノウ ザット！",
+          "langCode": "en-AU",
+          "culturalNote": "疑うような強い声ではなく、明るい調子で使いましょう。"
+        },
+        {
+          "id": "au-english-18",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "partner",
+          "phrase": "That looks delicious! I'd love to try it.",
+          "meaning": "おいしそう！食べてみたいです。",
+          "yomi": "ザット ルックス デリシャス！ アイド ラヴ トゥ トライ イット。",
+          "langCode": "en-AU",
+          "culturalNote": "料理の写真への自然な反応です。"
+        },
+        {
+          "id": "au-english-19",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "self",
+          "phrase": "Sorry, could you say that again a little more slowly?",
+          "meaning": "すみません、もう一度もう少しゆっくり言ってもらえますか？",
+          "yomi": "ソーリー、クッド ユー セイ ザット アゲイン ア リトル モア スローリー？",
+          "langCode": "en-AU",
+          "culturalNote": "聞き取れないときは、分かったふりをせず丁寧に聞き返しましょう。"
+        },
+        {
+          "id": "au-english-20",
+          "category": "リアクション・会話の潤滑油",
+          "speaker": "partner",
+          "phrase": "Your voice sounds a bit far away. Can you hear me clearly?",
+          "meaning": "あなたの声が少し遠く聞こえます。私の声ははっきり聞こえますか？",
+          "yomi": "ユア ヴォイス サウンズ ア ビット ファー アウェイ。 キャン ユー ヒア ミー クリアリー？",
+          "langCode": "en-AU",
+          "culturalNote": "マイク、音量、ミュート設定を順番に確認しましょう。"
+        },
+        {
+          "id": "au-english-21",
+          "category": "感謝・クロージング",
+          "speaker": "self",
+          "phrase": "Thank you for teaching us so many things today!",
+          "meaning": "今日はたくさんのことを教えてくれて、ありがとうございました！",
+          "yomi": "サンク ユー フォー ティーチング アス ソー メニー シングズ トゥデイ！",
+          "langCode": "en-AU",
+          "culturalNote": "印象に残った内容を一つ加えると、より心のこもった感謝になります。"
+        },
+        {
+          "id": "au-english-22",
+          "category": "感謝・クロージング",
+          "speaker": "partner",
+          "phrase": "Thanks to you too. It was really fun talking with everyone!",
+          "meaning": "こちらこそありがとう。皆さんと話せて本当に楽しかったです！",
+          "yomi": "サンクス トゥ ユー トゥー。 イット ワズ リアリー ファン トーキング ウィズ エヴリワン！",
+          "langCode": "en-AU",
+          "culturalNote": "感謝を返す自然な表現です。"
+        },
+        {
+          "id": "au-english-23",
+          "category": "感謝・クロージング",
+          "speaker": "self",
+          "phrase": "Let's keep in touch through our schools.",
+          "meaning": "これからも学校を通して連絡を取り合いましょう。",
+          "yomi": "レッツ キープ イン タッチ スルー アワ スクールズ。",
+          "langCode": "en-AU",
+          "culturalNote": "個人のSNSではなく、学校や先生が管理する方法を使いましょう。"
+        },
+        {
+          "id": "au-english-24",
+          "category": "感謝・クロージング",
+          "speaker": "partner",
+          "phrase": "Have a great day! See you next time!",
+          "meaning": "よい一日を！また次回会いましょう！",
+          "yomi": "ハヴ ア グレイト デイ！ シー ユー ネクスト タイム！",
+          "langCode": "en-AU",
+          "culturalNote": "相手が夜なら「Have a good evening!」に替えられます。"
+        },
+        {
+          "id": "au-english-25",
+          "category": "感謝・クロージング",
+          "speaker": "self",
+          "phrase": "Your presentation was clear and really interesting. Thank you!",
+          "meaning": "皆さんの発表は分かりやすくて、本当に面白かったです。ありがとう！",
+          "yomi": "ユア プレゼンテイション ワズ クリア アンド リアリー インタレスティング。 サンク ユー！",
+          "langCode": "en-AU",
+          "culturalNote": "具体的に褒めると、相手の努力が伝わったことを示せます。"
+        }
+      ]
+    }
+  }
+}
