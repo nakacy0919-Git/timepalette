@@ -9,7 +9,7 @@ import CountryDetailOverlay from './CountryDetailOverlay';
 const geoUrl = "https://unpkg.com/world-atlas@2.0.2/countries-110m.json";
 
 // 全世界対応版 countryData
-const countryData = {
+export const countryData = {
   "Afghanistan": { ja: "アフガニスタン", tz: "Asia/Kabul", iso: "af" },
   "Albania": { ja: "アルバニア", tz: "Europe/Tirane", iso: "al" },
   "Algeria": { ja: "アルジェリア", tz: "Africa/Algiers", iso: "dz" },

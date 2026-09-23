@@ -1,15 +1,21 @@
 import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
-import { Mic, Volume2, Info, Languages, Play, Square, RefreshCw, Award, XCircle } from 'lucide-react';
+import { Mic, Volume2, Info, Languages, Play, Square, RefreshCw, Award, XCircle, SplitSquareHorizontal } from 'lucide-react';
 
-// --- 発音精度の計算ロジック（レーベンシュタイン距離） ---
-const calculateAccuracy = (target, transcript) => {
+// --- 発音精度の計算ロジック（ステップ練習用の甘口判定を追加） ---
+const calculateAccuracy = (target, transcript, isPartialMode) => {
   const cleanStr = (str) => str.replace(/[^\p{L}\p{N}]/gu, '').toLowerCase();
   const s1 = cleanStr(target);
   const s2 = cleanStr(transcript);
 
   if (s1.length === 0) return 100;
   if (s2.length === 0) return 0;
+
+  if (isPartialMode) {
+    if (s2.includes(s1) || s1.includes(s2)) {
+      return 100;
+    }
+  }
 
   const matrix = Array(s2.length + 1).fill(null).map(() => Array(s1.length + 1).fill(null));
   for (let i = 0; i <= s1.length; i++) matrix[0][i] = i;
@@ -25,10 +31,25 @@ const calculateAccuracy = (target, transcript) => {
       );
     }
   }
+  
   const distance = matrix[s2.length][s1.length];
   const maxLength = Math.max(s1.length, s2.length);
-  const accuracy = ((maxLength - distance) / maxLength) * 100;
-  return Math.max(0, Math.round(accuracy));
+  let accuracy = ((maxLength - distance) / maxLength) * 100;
+
+  if (isPartialMode) {
+    accuracy += 30;
+  }
+
+  return Math.min(100, Math.max(0, Math.round(accuracy)));
+};
+
+// ▼ 修正：パシュトー語はChrome標準エンジンを使用し、ダリ語のみアフガニスタン・ペルシャ語に変換
+const LANG_FALLBACK_MAP = {
+  'prs-AF': 'fa-AF', // ダリ語 -> アフガニスタン・ペルシャ語
+};
+
+const optimizeLangCodeForSpeech = (code) => {
+  return LANG_FALLBACK_MAP[code] || code;
 };
 
 export default function LanguagePractice({ countryCode = "au", languageData }) {
@@ -36,13 +57,17 @@ export default function LanguagePractice({ countryCode = "au", languageData }) {
   const [activeCategory, setActiveCategory] = useState(null);
   const [activeChallenge, setActiveChallenge] = useState(null);
   
+  const [practiceMode, setPracticeMode] = useState('full');
+  const [selectedChunkIndex, setSelectedChunkIndex] = useState(0);
+
   const [recordingState, setRecordingState] = useState('idle');
   const [transcript, setTranscript] = useState("");
   const [accuracy, setAccuracy] = useState(0);
   
   const recognitionRef = useRef(null);
+  const isRecordingRef = useRef(false);
+  const transcriptRef = useRef(""); // ▼ 修正：無限ロードを防ぐため、裏側で安全に文字を保持する箱を追加
 
-  // --- データの初期化と安全性チェック ---
   const countryLangs = languageData?.[countryCode];
   const langKeys = countryLangs ? Object.keys(countryLangs) : [];
 
@@ -63,15 +88,12 @@ export default function LanguagePractice({ countryCode = "au", languageData }) {
     }
   }, [currentLanguage, activeCategory]);
 
-  if (!countryLangs || !currentLanguage) {
-    return null; // データがない場合は何も表示しない
-  }
+  if (!countryLangs || !currentLanguage) return null; 
 
   const challenges = currentLanguage.challenges || [];
   const categories = [...new Set(challenges.map(c => c.category))];
   const activeChallenges = challenges.filter(c => c.category === activeCategory);
 
-  // --- 音声関連の処理 ---
   const playSound = (type) => {
     const audio = new Audio();
     if (type === 'start') audio.src = 'https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3';
@@ -83,25 +105,66 @@ export default function LanguagePractice({ countryCode = "au", languageData }) {
 
   const handleListen = (phrase, langCode) => {
     if (!('speechSynthesis' in window)) return;
+    
+    const voices = window.speechSynthesis.getVoices();
+    const optimalCode = optimizeLangCodeForSpeech(langCode);
+    const shortCode = optimalCode.split('-')[0]; 
+    
+    const hasVoice = voices.some(v => v.lang.startsWith(shortCode));
+    
+    if (!hasVoice && voices.length > 0) {
+      alert(`現在お使いの端末には「${currentLanguage.languageName}」の自動音声がインストールされていないため再生できません。ルビを参考に発音してみましょう！`);
+      return;
+    }
+
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(phrase);
-    utterance.lang = langCode;
+    utterance.lang = optimalCode;
     utterance.rate = 0.85; 
     window.speechSynthesis.speak(utterance);
   };
 
   const openChallenge = (challenge) => {
     setActiveChallenge(challenge);
+    setPracticeMode('full');
+    setSelectedChunkIndex(0);
     setRecordingState('idle');
     setTranscript("");
-    setAccuracy(0);
+    transcriptRef.current = "";
+    isRecordingRef.current = false;
   };
 
   const closeChallenge = () => {
-    if (recordingState === 'recording' && recognitionRef.current) {
+    if (isRecordingRef.current && recognitionRef.current) {
       recognitionRef.current.stop();
     }
     setActiveChallenge(null);
+  };
+
+  const getTargetText = () => {
+    if (!activeChallenge) return { phrase: "", yomi: "" };
+    if (practiceMode === 'full') {
+      return { phrase: activeChallenge.phrase, yomi: activeChallenge.yomi };
+    } else {
+      const chunks = activeChallenge.phrase.split(' ').filter(Boolean);
+      const yomiChunks = activeChallenge.yomi.split(/[ \u3000]+/).filter(Boolean);
+      return { 
+        phrase: chunks[selectedChunkIndex] || "", 
+        yomi: yomiChunks[selectedChunkIndex] || "" 
+      };
+    }
+  };
+
+  const processResult = (finalTranscript) => {
+    const targetText = getTargetText();
+    if (!targetText.phrase) return; // セーフティ
+    
+    const isPartial = practiceMode === 'partial';
+    const resultAccuracy = calculateAccuracy(targetText.phrase, finalTranscript, isPartial);
+    
+    setAccuracy(resultAccuracy);
+    setRecordingState('result');
+    resultAccuracy >= 80 ? playSound('success') : playSound('fail');
   };
 
   const startRecording = () => {
@@ -111,41 +174,56 @@ export default function LanguagePractice({ countryCode = "au", languageData }) {
     playSound('start');
     setRecordingState('recording');
     setTranscript("");
+    transcriptRef.current = "";
+    isRecordingRef.current = true;
     
     recognitionRef.current = new SpeechRecognition();
-    recognitionRef.current.lang = activeChallenge.langCode;
+    recognitionRef.current.lang = optimizeLangCodeForSpeech(activeChallenge.langCode);
+    recognitionRef.current.continuous = true; 
     recognitionRef.current.interimResults = true;
     
     recognitionRef.current.onresult = (event) => {
-      let currentTranscript = '';
-      for (let i = event.resultIndex; i < event.results.length; i++) {
-        currentTranscript += event.results[i][0].transcript;
-      }
+      // ▼ 修正：単語の間にスペースを入れて結合し、きれいな「文」としてまとめる
+      let currentTranscript = Array.from(event.results)
+        .map(res => res[0].transcript.trim())
+        .filter(Boolean)
+        .join(' ');
+        
       setTranscript(currentTranscript);
+      transcriptRef.current = currentTranscript; // 安全な箱にも同時保存
     };
 
     recognitionRef.current.onerror = (event) => {
       console.error("Speech error", event.error);
+      if (event.error !== 'no-speech') {
+        alert("マイクが認識できませんでした。設定を確認してください。");
+      }
       setRecordingState('idle');
-      alert("マイクが認識できませんでした。設定を確認してください。");
+      isRecordingRef.current = false;
+    };
+
+    recognitionRef.current.onend = () => {
+      // ▼ 修正：ブラウザが勝手に切断した場合のセーフティ（無限ロードの元凶を解消）
+      if (isRecordingRef.current) {
+        isRecordingRef.current = false;
+        setRecordingState('processing');
+        setTimeout(() => processResult(transcriptRef.current), 500);
+      }
     };
 
     recognitionRef.current.start();
   };
 
   const stopRecording = () => {
-    if (recognitionRef.current) recognitionRef.current.stop();
-    setRecordingState('processing');
-    
-    setTimeout(() => {
-      const resultAccuracy = calculateAccuracy(activeChallenge.phrase, transcript);
-      setAccuracy(resultAccuracy);
-      setRecordingState('result');
-      resultAccuracy >= 80 ? playSound('success') : playSound('fail');
-    }, 1000);
+    // ▼ 修正：ストップボタンを押した時の処理を独立させ、確実に結果を計算させる
+    if (recognitionRef.current && isRecordingRef.current) {
+      isRecordingRef.current = false; // 二重実行防止
+      recognitionRef.current.stop(); 
+      setRecordingState('processing');
+      setTimeout(() => processResult(transcriptRef.current), 500);
+    }
   };
 
-  // --- 円グラフコンポーネント ---
   const CircularProgress = ({ value }) => {
     const radius = 60;
     const circumference = 2 * Math.PI * radius;
@@ -173,7 +251,6 @@ export default function LanguagePractice({ countryCode = "au", languageData }) {
   return (
     <div className="w-full bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden mt-8">
       
-      {/* --- 上部：言語とカテゴリの切り替え --- */}
       <div className="bg-slate-50 p-6 border-b border-gray-200">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
           <h2 className="text-2xl font-black text-slate-800 flex items-center gap-2">
@@ -181,7 +258,6 @@ export default function LanguagePractice({ countryCode = "au", languageData }) {
             言語・音読トレーニング
           </h2>
           
-          {/* ここで公用語の数を明示し、言語タブを表示 */}
           {langKeys.length > 0 && (
             <div className="flex items-center gap-2 bg-white p-1.5 rounded-2xl shadow-sm border border-slate-200">
               <span className="text-sm font-bold text-slate-500 pl-3 pr-1">
@@ -206,7 +282,6 @@ export default function LanguagePractice({ countryCode = "au", languageData }) {
           )}
         </div>
 
-        {/* カテゴリタブ */}
         <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-200">
           {categories.map(cat => (
             <button
@@ -222,7 +297,6 @@ export default function LanguagePractice({ countryCode = "au", languageData }) {
         </div>
       </div>
 
-      {/* --- 下部：フレーズカード一覧（グリッド表示） --- */}
       <div className="p-6 bg-slate-100/50 max-h-[500px] overflow-y-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {activeChallenges.map((challenge) => {
@@ -256,7 +330,6 @@ export default function LanguagePractice({ countryCode = "au", languageData }) {
         </div>
       </div>
 
-      {/* --- 🚀 音読ミッション画面（モーダル） --- */}
       {activeChallenge && createPortal(
         <div className="fixed inset-0 z-[99999] bg-slate-900/90 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl flex flex-col animate-in zoom-in duration-200">
@@ -270,17 +343,61 @@ export default function LanguagePractice({ countryCode = "au", languageData }) {
               </button>
             </div>
 
-            <div className="p-8 text-center border-b border-gray-100">
-              <p className="text-sm font-bold text-blue-500 mb-2">TARGET PHRASE</p>
-              <h3 className="text-3xl md:text-4xl font-black text-slate-800 mb-3" dir={activeChallenge.langCode.includes('ps') || activeChallenge.langCode.includes('prs') ? 'rtl' : 'ltr'}>
-                {activeChallenge.phrase}
-              </h3>
-              <p className="text-lg font-bold text-slate-400 mb-1">{activeChallenge.yomi}</p>
-              <p className="text-base font-medium text-slate-600">{activeChallenge.meaning}</p>
+            <div className="p-6 text-center border-b border-gray-100">
+              <div className="flex justify-center mb-6">
+                <div className="bg-slate-100 p-1 rounded-xl flex gap-1">
+                  <button 
+                    onClick={() => { setPracticeMode('full'); setRecordingState('idle'); }}
+                    className={`px-4 py-2 rounded-lg text-sm font-bold transition-colors ${practiceMode === 'full' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                  >
+                    フルセンテンス
+                  </button>
+                  <button 
+                    onClick={() => { setPracticeMode('partial'); setRecordingState('idle'); }}
+                    className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-bold transition-colors ${practiceMode === 'partial' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                  >
+                    <SplitSquareHorizontal size={16} /> ステップ練習
+                  </button>
+                </div>
+              </div>
+              
+              {practiceMode === 'full' ? (
+                <>
+                  <p className="text-sm font-bold text-blue-500 mb-2">TARGET PHRASE</p>
+                  <h3 className="text-3xl md:text-4xl font-black text-slate-800 mb-3" dir={activeChallenge.langCode.includes('ps') || activeChallenge.langCode.includes('prs') ? 'rtl' : 'ltr'}>
+                    {activeChallenge.phrase}
+                  </h3>
+                  <p className="text-lg font-bold text-slate-400 mb-1">{activeChallenge.yomi}</p>
+                  <p className="text-base font-medium text-slate-600">{activeChallenge.meaning}</p>
+                </>
+              ) : (
+                <div className="flex flex-col items-center">
+                  <p className="text-sm font-bold text-blue-500 mb-2">STEP PHRASE</p>
+                  <div className="flex flex-wrap justify-center gap-2 mb-4" dir={activeChallenge.langCode.includes('ps') || activeChallenge.langCode.includes('prs') ? 'rtl' : 'ltr'}>
+                    {activeChallenge.phrase.split(' ').filter(Boolean).map((word, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => { setSelectedChunkIndex(idx); setRecordingState('idle'); }}
+                        className={`px-4 py-3 rounded-2xl text-2xl font-black transition-all ${
+                          selectedChunkIndex === idx ? 'bg-blue-100 text-blue-600 border-2 border-blue-400 shadow-inner scale-110' : 'bg-slate-50 text-slate-600 border-2 border-transparent hover:bg-slate-100'
+                        }`}
+                      >
+                        {word}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-xl font-bold text-slate-800 mb-1">
+                    {activeChallenge.yomi.split(/[ \u3000]+/).filter(Boolean)[selectedChunkIndex] || "-"}
+                  </p>
+                  <div className="bg-amber-50 border border-amber-100 px-4 py-2 rounded-lg mt-3 text-sm font-medium text-amber-700">
+                    💡 1語だけの聞き取りはAIにとっても激ムズ！点数を気にせず口を動かす練習をしよう！
+                  </div>
+                </div>
+              )}
               
               <button 
-                onClick={() => handleListen(activeChallenge.phrase, activeChallenge.langCode)}
-                className="mt-5 inline-flex items-center gap-2 px-6 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full font-bold text-sm transition-colors"
+                onClick={() => handleListen(getTargetText().phrase, activeChallenge.langCode)}
+                className="mt-6 inline-flex items-center gap-2 px-6 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full font-bold text-sm transition-colors"
               >
                 <Volume2 size={18} /> お手本を再生する
               </button>

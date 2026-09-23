@@ -5,7 +5,7 @@ import { Sunrise, Sun, Sunset, Moon, MoonStar, ArrowRightLeft } from 'lucide-rea
 const geoUrl = "https://unpkg.com/world-atlas@2.0.2/countries-110m.json";
 
 // 全世界対応版 countryData
-const countryData = {
+export const countryData = {
   "Afghanistan": { ja: "アフガニスタン", tz: "Asia/Kabul" },
   "Albania": { ja: "アルバニア", tz: "Europe/Tirane" },
   "Algeria": { ja: "アルジェリア", tz: "Africa/Algiers" },
@@ -204,7 +204,7 @@ const countryData = {
 };
 
 // 国内で時差が異なる国の全タイムゾーン網羅版データ
-const multiZoneCities = {
+export const multiZoneCities = {
   // --- 北米 ---
   "United States of America": [
     { name: "NY", fullName: "ニューヨーク", coordinates: [-74.006, 40.7128], tz: "America/New_York" }, // 東部標準時

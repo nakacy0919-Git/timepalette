@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Timer from './components/Timer';
 import MapClock from './components/MapClock';
 import Stopwatch from './components/Stopwatch';
-// ▼ 1. 先ほど作成したコンポーネントとJSONデータを読み込む！
+import MeetingPlanner from './components/MeetingPlanner';
 import LanguagePractice from './components/LanguagePractice';
 import langData from './data/languages_a.json';
 
@@ -18,7 +18,16 @@ const Placeholder = ({ title }) => (
 
 export default function App() {
   // 初期画面を「タイマー」に設定
-  const [activeTab, setActiveTab] = useState('timer');
+  const [activeTab, setActiveTab] = useState(() => {
+  if (
+    typeof window !== 'undefined' &&
+    window.location.hash.includes('meeting=')
+  ) {
+    return 'timeDiff';
+  }
+
+  return 'timer';
+});
 
   // タブの状態に応じて表示する中身を切り替える関数
   const renderContent = () => {
@@ -34,7 +43,7 @@ export default function App() {
         // 現在、MapClockの中に「地図」「マイ時計(複数定刻)」「リスト」が全て入っています
         return <MapClock isAmPm={false} />; 
       case 'timeDiff':
-        return <Placeholder title="時差比較" />;
+  return <MeetingPlanner />;
       case 'myClock':
         return <Placeholder title="マイ時計（複数定刻）単独ページ" />;
       

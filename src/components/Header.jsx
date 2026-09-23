@@ -1,4 +1,12 @@
-import { Timer, Hourglass, Map, ArrowLeftRight, Clock, MapPin, MessageCircle } from 'lucide-react';
+import {
+  Timer,
+  Hourglass,
+  Map,
+  CalendarClock,
+  Clock,
+  MapPin,
+  MessageCircle
+} from 'lucide-react';
 
 export default function Header({ activeTab, setActiveTab }) {
   // ▼ ナビゲーションの設定（一番下に「言語練習」を追加）
@@ -12,7 +20,11 @@ export default function Header({ activeTab, setActiveTab }) {
       url: 'https://pacemark.pic-speak-story.com/'
     },
     { id: 'mapClock', label: '地図時計', icon: <Map size={18} /> },
-    { id: 'timeDiff', label: '時差比較', icon: <ArrowLeftRight size={18} /> },
+    {
+  id: 'timeDiff',
+  label: 'Meeting Planner',
+  icon: <CalendarClock size={18} />
+},
     { id: 'myClock', label: 'マイ時計', icon: <Clock size={18} /> },
     // ▼ ここを追加しました！
     { id: 'language', label: '言語練習', icon: <MessageCircle size={18} /> },
