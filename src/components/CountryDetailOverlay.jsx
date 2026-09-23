@@ -7,7 +7,11 @@ import InteractiveQuiz from './InteractiveQuiz';
 import LanguagePractice from './LanguagePractice';
 // ※ 必要に応じてパス（'./LanguagePractice'）は実際の保存場所に合わせて調整してください。
 
-export default function CountryDetailOverlay({ iso, onClose }) {
+export default function CountryDetailOverlay({
+  iso,
+  fileLetter,
+  onClose,
+}) {
   const [countryData, setCountryData] = useState(null);
   
   // ▼ 追加：言語データを保持するための状態
@@ -25,10 +29,18 @@ export default function CountryDetailOverlay({ iso, onClose }) {
       try {
         setLoading(true);
         setError(false);
-        const firstLetter = iso.charAt(0).toLowerCase();
+        const dataFileLetter = fileLetter?.toLowerCase();
+
+if (!dataFileLetter) {
+  throw new Error(
+    `国データのファイル判定に失敗しました: ${iso}`
+  );
+}
         
         // 1. 基本データの読み込み
-        const dataModule = await import(`../data/countries_${firstLetter}.json`);
+        const dataModule = await import(
+  `../data/countries_${dataFileLetter}.json`
+);
         const data = dataModule.default ? dataModule.default[iso] : dataModule[iso];
         
         if (data) {
@@ -40,13 +52,13 @@ export default function CountryDetailOverlay({ iso, onClose }) {
         // 2. 国の頭文字に合わせて言語データを自動読み込み
 try {
   const langModule = await import(
-    `../data/languages_${firstLetter}.json`
-  );
+  `../data/languages_${dataFileLetter}.json`
+);
 
   setLanguageData(langModule.default || langModule);
 } catch (langErr) {
   console.log(
-    `languages_${firstLetter}.json はまだありません:`,
+    `languages_${dataFileLetter}.json はまだありません:`,
     langErr
   );
 
@@ -61,7 +73,7 @@ try {
       }
     };
     fetchData();
-  }, [iso]);
+  }, [iso, fileLetter]);
 
   // データ読み込み完了後、少しだけ遅らせて強制的にトップへスクロールさせる
   useEffect(() => {

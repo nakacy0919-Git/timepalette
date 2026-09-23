@@ -353,6 +353,30 @@ export default function MapClock({ isAmPm }) {
 
   // ▼ 追加：図鑑オーバーレイを開くための状態管理
   const [detailIso, setDetailIso] = useState(null);
+  const [detailFileLetter, setDetailFileLetter] = useState(null);
+
+  const openCountryDetail = (iso, countryName = null) => {
+  if (!iso) return;
+
+  let resolvedCountryName = countryName;
+
+  // 国名が渡されていない場合はISOから探す
+  if (!resolvedCountryName) {
+    resolvedCountryName = Object.keys(countryData).find(
+      (name) => countryData[name].iso === iso
+    );
+  }
+
+  if (!resolvedCountryName) {
+    console.warn(`Country name not found for ISO: ${iso}`);
+    return;
+  }
+
+  setDetailIso(iso);
+  setDetailFileLetter(
+    resolvedCountryName.charAt(0).toLowerCase()
+  );
+};
 
   const allLocationsList = useMemo(() => generateSortedLocations(), []);
   
@@ -389,9 +413,9 @@ export default function MapClock({ isAmPm }) {
 
     // 通常時は図鑑オーバーレイを開く
     if (!isAddMode) {
-      setDetailIso(data.iso);
-      return;
-    }
+  openCountryDetail(data.iso, engName);
+  return;
+}
 
     // 「追加する」モードでは従来どおり時計を追加する
     const newCityName = cityData ? cityData.fullName : data.tz.split('/').pop().replace(/_/g, ' ');
@@ -450,11 +474,11 @@ export default function MapClock({ isAmPm }) {
           {personalClocks.map(clock => (
             <div 
               key={clock.id} 
-              onClick={() => clock.iso && setDetailIso(clock.iso)}
+              onClick={() => clock.iso && openCountryDetail(clock.iso)}
               onKeyDown={(e) => {
                 if ((e.key === 'Enter' || e.key === ' ') && clock.iso) {
                   e.preventDefault();
-                  setDetailIso(clock.iso);
+                  openCountryDetail(clock.iso);
                 }
               }}
               role="button"
@@ -558,11 +582,13 @@ export default function MapClock({ isAmPm }) {
             {filteredList.map((loc, idx) => (
               <div 
                 key={`${loc.iso}-${loc.city}-${idx}`} 
-                onClick={() => loc.iso && setDetailIso(loc.iso)}
+                onClick={() =>
+  loc.iso && openCountryDetail(loc.iso, loc.country)
+}
                 onKeyDown={(e) => {
                   if ((e.key === 'Enter' || e.key === ' ') && loc.iso) {
                     e.preventDefault();
-                    setDetailIso(loc.iso);
+                    setDetailIso(loc.iso);openCountryDetail(loc.iso, loc.country);
                   }
                 }}
                 role="button"
@@ -599,12 +625,16 @@ export default function MapClock({ isAmPm }) {
       </div>
 
       {/* ▼ 追加：図鑑オーバーレイの呼び出し部分 */}
-      {detailIso && (
-        <CountryDetailOverlay 
-          iso={detailIso} 
-          onClose={() => setDetailIso(null)} 
-        />
-      )}
+      {detailIso && detailFileLetter && (
+  <CountryDetailOverlay
+    iso={detailIso}
+    fileLetter={detailFileLetter}
+    onClose={() => {
+      setDetailIso(null);
+      setDetailFileLetter(null);
+    }}
+  />
+)}
 
     </div>
   );
