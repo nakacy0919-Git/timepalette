@@ -2,6 +2,21 @@
   "af": {
     "pashto": {
       "languageName": "パシュトー語",
+      "languageNameEn": "Pashto",
+      "nativeName": "پښتو",
+      "langCode": "ps-AF",
+      "direction": "rtl",
+      "script": "arabic",
+      "speechRecognition": {
+        "mode": "experimental",
+        "requestLangCode": "ps-AF",
+        "expectedScript": "arabic",
+        "scoringPolicy": "script-match-only"
+      },
+      "speechSynthesis": {
+        "mode": "browser-dependent",
+        "requestLangCode": "ps-AF"
+      },
       "challenges": [
         {
           "id": "af-pashto-1",
@@ -257,6 +272,23 @@
     },
     "dari": {
       "languageName": "ダリ語",
+      "languageNameEn": "Dari",
+      "nativeName": "دری",
+      "langCode": "prs-AF",
+      "direction": "rtl",
+      "script": "arabic",
+      "speechRecognition": {
+        "mode": "experimental",
+        "requestLangCode": "fa-AF",
+        "sourceLangCode": "prs-AF",
+        "expectedScript": "arabic",
+        "scoringPolicy": "script-match-only"
+      },
+      "speechSynthesis": {
+        "mode": "browser-dependent",
+        "requestLangCode": "fa-AF",
+        "sourceLangCode": "prs-AF"
+      },
       "challenges": [
         {
           "id": "af-dari-1",
@@ -514,6 +546,21 @@
   "au": {
     "english": {
       "languageName": "英語",
+      "languageNameEn": "English",
+      "nativeName": "English",
+      "langCode": "en-AU",
+      "direction": "ltr",
+      "script": "latin",
+      "speechRecognition": {
+        "mode": "standard",
+        "requestLangCode": "en-AU",
+        "expectedScript": "latin",
+        "scoringPolicy": "normal"
+      },
+      "speechSynthesis": {
+        "mode": "standard",
+        "requestLangCode": "en-AU"
+      },
       "challenges": [
         {
           "id": "au-english-1",

@@ -1,0 +1,822 @@
+{
+  "bs": {
+    "english": {
+      "languageName": "英語",
+      "languageNameEn": "English",
+      "nativeName": "English",
+      "langCode": "en-BS",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {
+        "mode": "standard",
+        "requestLangCode": "en-US",
+        "expectedScript": "latin",
+        "scoringPolicy": "normal"
+      },
+      "speechSynthesis": {
+        "mode": "standard",
+        "requestLangCode": "en-US"
+      },
+      "challenges": [
+        {"id":"bs-english-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Good morning! How are you today?","meaning":"おはようございます！今日は元気ですか？","yomi":"グッド モーニング！ ハウ アー ユー トゥデイ？","langCode":"en-US","culturalNote":"オンライン交流の基本の挨拶です。"},
+        {"id":"bs-english-2","category":"挨拶・時間・体調","speaker":"self","phrase":"It's evening here in Japan. What time is it there?","meaning":"日本は今夕方です。そちらは何時ですか？","yomi":"イッツ イーブニング ヒア イン ジャパン。ワット タイム イズ イット ゼア？","langCode":"en-US","culturalNote":"時差の比較につなげられます。"},
+        {"id":"bs-english-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"My name is ___. It's very nice to meet you.","meaning":"私の名前は___です。お会いできてうれしいです。","yomi":"マイ ネイム イズ ___。イッツ ベリー ナイス トゥ ミート ユー。","langCode":"en-US","culturalNote":"名前は少しゆっくり言いましょう。"},
+        {"id":"bs-english-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Today, we'd like to introduce our school and our town.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"トゥデイ、ウィド ライク トゥ イントロデュース アワ スクール アンド アワ タウン。","langCode":"en-US","culturalNote":"学校紹介の導入に使えます。"},
+        {"id":"bs-english-5","category":"質問・オンライン交流","speaker":"self","phrase":"What do you usually eat for lunch at school?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ワット ドゥ ユー ユージュアリー イート フォー ランチ アット スクール？","langCode":"en-US","culturalNote":"学校生活や食文化を比較できます。"},
+        {"id":"bs-english-6","category":"質問・オンライン交流","speaker":"self","phrase":"What do you usually do after school?","meaning":"放課後は普段何をしますか？","yomi":"ワット ドゥ ユー ユージュアリー ドゥ アフター スクール？","langCode":"en-US","culturalNote":"生徒同士で話しやすいテーマです。"},
+        {"id":"bs-english-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Wow, that's really interesting!","meaning":"わあ、それは本当に面白いですね！","yomi":"ワウ、ザッツ リアリー インタレスティング！","langCode":"en-US","culturalNote":"相手の話への関心を示します。"},
+        {"id":"bs-english-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Sorry, could you say that again more slowly?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"ソーリー、クッド ユー セイ ザット アゲイン モア スローリー？","langCode":"en-US","culturalNote":"オンライン交流で重要な聞き返し表現です。"},
+        {"id":"bs-english-9","category":"感謝・クロージング","speaker":"self","phrase":"Thank you for teaching us so many things today!","meaning":"今日はたくさんのことを教えてくれて、ありがとうございました！","yomi":"サンク ユー フォー ティーチング アス ソー メニー シングズ トゥデイ！","langCode":"en-US","culturalNote":"交流の最後に使えます。"},
+        {"id":"bs-english-10","category":"感謝・クロージング","speaker":"self","phrase":"Have a great day! See you next time!","meaning":"よい一日を！また次回会いましょう！","yomi":"ハヴ ア グレイト デイ！ シー ユー ネクスト タイム！","langCode":"en-US","culturalNote":"時間帯に応じてeveningにも変えられます。"}
+      ]
+    }
+  },
+
+  "bh": {
+    "arabic": {
+      "languageName": "アラビア語",
+      "languageNameEn": "Arabic",
+      "nativeName": "العربية",
+      "langCode": "ar-BH",
+      "direction": "rtl",
+      "script": "arabic",
+      "contentStatus": "ready",
+      "speechRecognition": {
+        "mode": "standard",
+        "requestLangCode": "ar-BH",
+        "expectedScript": "arabic",
+        "scoringPolicy": "script-match-only"
+      },
+      "speechSynthesis": {
+        "mode": "browser-dependent",
+        "requestLangCode": "ar-BH"
+      },
+      "challenges": [
+        {"id":"bh-arabic-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"مرحباً! صباح الخير! كيف حالك اليوم؟","meaning":"こんにちは！おはようございます！今日は元気ですか？","yomi":"マルハバン！ サバーフ アルハイル！ カイファ ハールカ アルヤウム？","langCode":"ar-BH","culturalNote":"丁寧で幅広く使える挨拶です。"},
+        {"id":"bh-arabic-2","category":"挨拶・時間・体調","speaker":"self","phrase":"كم الساعة عندكم الآن؟","meaning":"そちらは今何時ですか？","yomi":"カム アッサーア アインダクム アルアーン？","langCode":"ar-BH","culturalNote":"時差学習につなげられます。"},
+        {"id":"bh-arabic-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"اسمي ___. سعيد بلقائكم.","meaning":"私の名前は___です。皆さんに会えてうれしいです。","yomi":"イスミー ___。サイード ビリカーイクム。","langCode":"ar-BH","culturalNote":"名前はゆっくり言いましょう。"},
+        {"id":"bh-arabic-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"اليوم نود أن نعرّفكم بمدرستنا ومدينتنا.","meaning":"今日は私たちの学校と町を紹介します。","yomi":"アルヤウム ナワッド アン ヌアッリファクム ビマドラサティナー ワマディーナティナー。","langCode":"ar-BH","culturalNote":"学校紹介の導入表現です。"},
+        {"id":"bh-arabic-5","category":"質問・オンライン交流","speaker":"self","phrase":"ماذا تأكلون عادةً في المدرسة وقت الغداء؟","meaning":"学校では普段、昼食に何を食べますか？","yomi":"マーザー タクルーナ アーダタン フィルマドラサ ワクタルガダー？","langCode":"ar-BH","culturalNote":"食文化の比較につながります。"},
+        {"id":"bh-arabic-6","category":"質問・オンライン交流","speaker":"self","phrase":"ماذا تفعلون بعد المدرسة؟","meaning":"放課後は何をしますか？","yomi":"マーザー タフアルーナ バアダルマドラサ？","langCode":"ar-BH","culturalNote":"学校生活について質問できます。"},
+        {"id":"bh-arabic-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"واو، هذا رائع!","meaning":"わあ、それはすごいですね！","yomi":"ワーウ、ハーザー ラーイウ！","langCode":"ar-BH","culturalNote":"明るいリアクションです。"},
+        {"id":"bh-arabic-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"عذراً، هل يمكنك أن تقول ذلك مرة أخرى ببطء؟","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"ウズラン、ハル ユムキヌカ アン タクーラ ザーリカ マッラ ウフラー ビブトゥ？","langCode":"ar-BH","culturalNote":"聞き取れないときの表現です。"},
+        {"id":"bh-arabic-9","category":"感謝・クロージング","speaker":"self","phrase":"شكراً لأنكم علمتمونا الكثير اليوم!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"シュクラン リアンナクム アッラムトゥムーナ アルカシール アルヤウム！","langCode":"ar-BH","culturalNote":"交流への感謝です。"},
+        {"id":"bh-arabic-10","category":"感謝・クロージング","speaker":"self","phrase":"أتمنى لكم يوماً سعيداً! إلى اللقاء!","meaning":"よい一日を！また会いましょう！","yomi":"アタマンナー ラクム ヤウマン サイーダン！ イラー アッリカー！","langCode":"ar-BH","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  },
+
+  "bd": {
+    "bengali": {
+      "languageName": "ベンガル語",
+      "languageNameEn": "Bengali",
+      "nativeName": "বাংলা",
+      "langCode": "bn-BD",
+      "direction": "ltr",
+      "script": "bengali",
+      "contentStatus": "ready",
+      "speechRecognition": {
+        "mode": "standard",
+        "requestLangCode": "bn-BD",
+        "expectedScript": "bengali",
+        "scoringPolicy": "script-match-only"
+      },
+      "speechSynthesis": {
+        "mode": "browser-dependent",
+        "requestLangCode": "bn-BD"
+      },
+      "challenges": [
+        {"id":"bd-bengali-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"নমস্কার! সুপ্রভাত! আজ আপনি কেমন আছেন?","meaning":"こんにちは！おはようございます！今日は元気ですか？","yomi":"ノモシュカル！ シュプロバート！ アージ アプニ ケモン アチェン？","langCode":"bn-BD","culturalNote":"基本の挨拶です。"},
+        {"id":"bd-bengali-2","category":"挨拶・時間・体調","speaker":"self","phrase":"সেখানে এখন কয়টা বাজে?","meaning":"そちらは今何時ですか？","yomi":"シェカネ エコン コイタ バジェ？","langCode":"bn-BD","culturalNote":"時差の話題に使えます。"},
+        {"id":"bd-bengali-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"আমার নাম ___. আপনার সঙ্গে দেখা হয়ে ভালো লাগল।","meaning":"私の名前は___です。お会いできてうれしいです。","yomi":"アマール ナーム ___。アプナール ションゲ デカ ホイェ バロ ラグロ。","langCode":"bn-BD","culturalNote":"自己紹介の基本表現です。"},
+        {"id":"bd-bengali-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"আজ আমরা আমাদের স্কুল ও শহর পরিচয় করিয়ে দিতে চাই।","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"アージ アムラ アマデル スクール オ ショホル ポリチョイ コリエ ディテ チャイ。","langCode":"bn-BD","culturalNote":"発表の導入です。"},
+        {"id":"bd-bengali-5","category":"質問・オンライン交流","speaker":"self","phrase":"স্কুলে দুপুরের খাবারে সাধারণত কী খান?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"スクーレ ドゥプレル カバレ シャダロノト キ カン？","langCode":"bn-BD","culturalNote":"食文化を比較できます。"},
+        {"id":"bd-bengali-6","category":"質問・オンライン交流","speaker":"self","phrase":"স্কুলের পরে আপনি কী করেন?","meaning":"放課後は何をしますか？","yomi":"スクーレル ポレ アプニ キ コレン？","langCode":"bn-BD","culturalNote":"学校生活の質問です。"},
+        {"id":"bd-bengali-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"বাহ, দারুণ!","meaning":"わあ、すごいですね！","yomi":"バー、ダルン！","langCode":"bn-BD","culturalNote":"明るいリアクションです。"},
+        {"id":"bd-bengali-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"দুঃখিত, আরেকবার ধীরে বলবেন?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"ドゥッキト、アレクバル ディーレ ボルベン？","langCode":"bn-BD","culturalNote":"聞き返しに使います。"},
+        {"id":"bd-bengali-9","category":"感謝・クロージング","speaker":"self","phrase":"আজ আমাদের অনেক কিছু শেখানোর জন্য ধন্যবাদ!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"アージ アマデル オネク キチュ シェカノール ジョンノ ドンノバード！","langCode":"bn-BD","culturalNote":"交流への感謝です。"},
+        {"id":"bd-bengali-10","category":"感謝・クロージング","speaker":"self","phrase":"দিনটি ভালো কাটুক! আবার দেখা হবে!","meaning":"よい一日を！また会いましょう！","yomi":"ディンティ バロ カトゥク！ アバール デカ ホベ！","langCode":"bn-BD","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  },
+
+  "bb": {
+    "english": {
+      "languageName": "英語",
+      "languageNameEn": "English",
+      "nativeName": "English",
+      "langCode": "en-BB",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {
+        "mode": "standard",
+        "requestLangCode": "en-US",
+        "expectedScript": "latin",
+        "scoringPolicy": "normal"
+      },
+      "speechSynthesis": {
+        "mode": "standard",
+        "requestLangCode": "en-US"
+      },
+      "challenges": [
+        {"id":"bb-english-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Good morning! How are you today?","meaning":"おはようございます！今日は元気ですか？","yomi":"グッド モーニング！ ハウ アー ユー トゥデイ？","langCode":"en-US","culturalNote":"基本の挨拶です。"},
+        {"id":"bb-english-2","category":"挨拶・時間・体調","speaker":"self","phrase":"What time is it there now?","meaning":"そちらは今何時ですか？","yomi":"ワット タイム イズ イット ゼア ナウ？","langCode":"en-US","culturalNote":"時差の話題です。"},
+        {"id":"bb-english-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"My name is ___. Nice to meet you.","meaning":"私の名前は___です。はじめまして。","yomi":"マイ ネイム イズ ___。ナイス トゥ ミート ユー。","langCode":"en-US","culturalNote":"自己紹介です。"},
+        {"id":"bb-english-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Today, we'd like to introduce our school and our town.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"トゥデイ、ウィド ライク トゥ イントロデュース アワ スクール アンド アワ タウン。","langCode":"en-US","culturalNote":"学校紹介の導入です。"},
+        {"id":"bb-english-5","category":"質問・オンライン交流","speaker":"self","phrase":"What do you usually eat for lunch at school?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ワット ドゥ ユー ユージュアリー イート フォー ランチ アット スクール？","langCode":"en-US","culturalNote":"食文化の比較です。"},
+        {"id":"bb-english-6","category":"質問・オンライン交流","speaker":"self","phrase":"What do you usually do after school?","meaning":"放課後は普段何をしますか？","yomi":"ワット ドゥ ユー ユージュアリー ドゥ アフター スクール？","langCode":"en-US","culturalNote":"学校生活の比較です。"},
+        {"id":"bb-english-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"That's really interesting!","meaning":"それは本当に面白いですね！","yomi":"ザッツ リアリー インタレスティング！","langCode":"en-US","culturalNote":"関心を示す表現です。"},
+        {"id":"bb-english-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Sorry, could you say that again more slowly?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"ソーリー、クッド ユー セイ ザット アゲイン モア スローリー？","langCode":"en-US","culturalNote":"聞き返し表現です。"},
+        {"id":"bb-english-9","category":"感謝・クロージング","speaker":"self","phrase":"Thank you for teaching us so many things today!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"サンク ユー フォー ティーチング アス ソー メニー シングズ トゥデイ！","langCode":"en-US","culturalNote":"交流への感謝です。"},
+        {"id":"bb-english-10","category":"感謝・クロージング","speaker":"self","phrase":"Have a great day! See you next time!","meaning":"よい一日を！また次回会いましょう！","yomi":"ハヴ ア グレイト デイ！ シー ユー ネクスト タイム！","langCode":"en-US","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  },
+
+  "by": {
+    "belarusian": {
+      "languageName": "ベラルーシ語",
+      "languageNameEn": "Belarusian",
+      "nativeName": "Беларуская",
+      "langCode": "be-BY",
+      "direction": "ltr",
+      "script": "cyrillic",
+      "contentStatus": "ready",
+      "speechRecognition": {
+        "mode": "experimental",
+        "requestLangCode": "be-BY",
+        "expectedScript": "cyrillic",
+        "scoringPolicy": "script-match-only"
+      },
+      "speechSynthesis": {
+        "mode": "browser-dependent",
+        "requestLangCode": "be-BY"
+      },
+      "challenges": [
+        {"id":"by-belarusian-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Прывітанне! Добрай раніцы! Як вы сёння?","meaning":"こんにちは！おはようございます！今日は元気ですか？","yomi":"プリヴィタンニェ！ ドーブライ ラニツィ！ ヤク ヴィ ションニャ？","langCode":"be-BY","culturalNote":"基本の挨拶です。"},
+        {"id":"by-belarusian-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Колькі цяпер у вас часу?","meaning":"そちらは今何時ですか？","yomi":"コーリキ ツィペール ウ ヴァス チャース？","langCode":"be-BY","culturalNote":"時差の質問です。"},
+        {"id":"by-belarusian-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Мяне завуць ___. Прыемна пазнаёміцца.","meaning":"私の名前は___です。はじめまして。","yomi":"ミャネ ザヴーツ ___。プルィエムナ パズナヨミッツァ。","langCode":"be-BY","culturalNote":"自己紹介です。"},
+        {"id":"by-belarusian-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Сёння мы хочам расказаць пра нашу школу і горад.","meaning":"今日は私たちの学校と町について紹介します。","yomi":"ショニャ ムィ ホチャム ラスカザツ プラ ナシュ スコール イ ホラト。","langCode":"be-BY","culturalNote":"発表の導入です。"},
+        {"id":"by-belarusian-5","category":"質問・オンライン交流","speaker":"self","phrase":"Што вы звычайна ясце на абед у школе?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"シュト ヴィ ズヴィチャイナ ヤスツェ ナ アベド ウ シュコレ？","langCode":"be-BY","culturalNote":"食文化の比較です。"},
+        {"id":"by-belarusian-6","category":"質問・オンライン交流","speaker":"self","phrase":"Што вы робіце пасля школы?","meaning":"放課後は何をしますか？","yomi":"シュト ヴィ ロビツェ パスリャ シュコルィ？","langCode":"be-BY","culturalNote":"学校生活の質問です。"},
+        {"id":"by-belarusian-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Вау, гэта цудоўна!","meaning":"わあ、それはすごいですね！","yomi":"ヴァウ、エタ ツドウナ！","langCode":"be-BY","culturalNote":"明るいリアクションです。"},
+        {"id":"by-belarusian-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Прабачце, можаце сказаць гэта яшчэ раз павольней?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"プラバチツェ、モジャツェ スカザツ エタ ヤシュチェ ラズ パヴォリネイ？","langCode":"be-BY","culturalNote":"聞き返しです。"},
+        {"id":"by-belarusian-9","category":"感謝・クロージング","speaker":"self","phrase":"Дзякуй, што сёння шмат чаму нас навучылі!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"ジャクイ、シュト ションニャ シュマト チャム ナス ナヴチリ！","langCode":"be-BY","culturalNote":"感謝の表現です。"},
+        {"id":"by-belarusian-10","category":"感謝・クロージング","speaker":"self","phrase":"Добрага дня! Да сустрэчы!","meaning":"よい一日を！また会いましょう！","yomi":"ドブラハ ドニャ！ ダ ストレーチ！","langCode":"be-BY","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "russian": {
+      "languageName": "ロシア語",
+      "languageNameEn": "Russian",
+      "nativeName": "Русский",
+      "langCode": "ru-RU",
+      "direction": "ltr",
+      "script": "cyrillic",
+      "contentStatus": "ready",
+      "speechRecognition": {
+        "mode": "standard",
+        "requestLangCode": "ru-RU",
+        "expectedScript": "cyrillic",
+        "scoringPolicy": "normal"
+      },
+      "speechSynthesis": {
+        "mode": "standard",
+        "requestLangCode": "ru-RU"
+      },
+      "challenges": [
+        {"id":"by-russian-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Здравствуйте! Доброе утро! Как вы сегодня?","meaning":"こんにちは！おはようございます！今日は元気ですか？","yomi":"ズドラーストヴィチェ！ ドーブラエ ウートラ！ カク ヴィ セヴォードニャ？","langCode":"ru-RU","culturalNote":"丁寧な挨拶です。"},
+        {"id":"by-russian-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Который сейчас час у вас?","meaning":"そちらは今何時ですか？","yomi":"カトールイ セイチャス チャス ウ ヴァス？","langCode":"ru-RU","culturalNote":"時差の質問です。"},
+        {"id":"by-russian-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Меня зовут ___. Очень приятно.","meaning":"私の名前は___です。はじめまして。","yomi":"ミニャ ザヴート ___。オーチン プリヤートナ。","langCode":"ru-RU","culturalNote":"自己紹介です。"},
+        {"id":"by-russian-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Сегодня мы хотим рассказать о нашей школе и городе.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"セヴォードニャ ムィ ハチーム ラスカザーチ ア ナーシェイ シュコーレ イ ゴーラジェ。","langCode":"ru-RU","culturalNote":"発表の導入です。"},
+        {"id":"by-russian-5","category":"質問・オンライン交流","speaker":"self","phrase":"Что вы обычно едите на обед в школе?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"シュト ヴィ アブィーチナ イェージチェ ナ アベート フ シュコーレ？","langCode":"ru-RU","culturalNote":"食文化の比較です。"},
+        {"id":"by-russian-6","category":"質問・オンライン交流","speaker":"self","phrase":"Что вы обычно делаете после школы?","meaning":"放課後は普段何をしますか？","yomi":"シュト ヴィ アブィーチナ ジェーライチェ ポースレ シュコールィ？","langCode":"ru-RU","culturalNote":"学校生活の質問です。"},
+        {"id":"by-russian-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Вау, это очень интересно!","meaning":"わあ、それはとても面白いですね！","yomi":"ヴァウ、エタ オーチン インチェレースナ！","langCode":"ru-RU","culturalNote":"関心を示します。"},
+        {"id":"by-russian-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Извините, пожалуйста, скажите это ещё раз медленнее.","meaning":"すみません、もう一度ゆっくり言ってください。","yomi":"イズヴィニーチェ、パジャールスタ、スカジーチェ エタ イショー ラス メードレンニェエ。","langCode":"ru-RU","culturalNote":"聞き返し表現です。"},
+        {"id":"by-russian-9","category":"感謝・クロージング","speaker":"self","phrase":"Спасибо, что сегодня многому нас научили!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"スパシーバ、シュト セヴォードニャ ムノーガム ナス ナウチーリ！","langCode":"ru-RU","culturalNote":"感謝の表現です。"},
+        {"id":"by-russian-10","category":"感謝・クロージング","speaker":"self","phrase":"Хорошего дня! До встречи!","meaning":"よい一日を！また会いましょう！","yomi":"ハローシェヴァ ドニャ！ ダ フストレーチ！","langCode":"ru-RU","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  },
+
+  "be": {
+    "dutch": {
+      "languageName": "オランダ語",
+      "languageNameEn": "Dutch",
+      "nativeName": "Nederlands",
+      "langCode": "nl-BE",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {
+        "mode": "standard",
+        "requestLangCode": "nl-BE",
+        "expectedScript": "latin",
+        "scoringPolicy": "normal"
+      },
+      "speechSynthesis": {
+        "mode": "standard",
+        "requestLangCode": "nl-BE"
+      },
+      "challenges": [
+        {"id":"be-dutch-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Goedemorgen! Hoe gaat het vandaag?","meaning":"おはようございます！今日は元気ですか？","yomi":"フーデモルヘン！ フー ハート ヘット ファンダーフ？","langCode":"nl-BE","culturalNote":"基本の挨拶です。"},
+        {"id":"be-dutch-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Hoe laat is het daar nu?","meaning":"そちらは今何時ですか？","yomi":"フー ラート イス ヘット ダール ニュ？","langCode":"nl-BE","culturalNote":"時差の質問です。"},
+        {"id":"be-dutch-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Mijn naam is ___. Leuk je te ontmoeten.","meaning":"私の名前は___です。はじめまして。","yomi":"マイン ナーム イス ___。ルーク イェ テ オントムーテン。","langCode":"nl-BE","culturalNote":"自己紹介です。"},
+        {"id":"be-dutch-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Vandaag willen we onze school en onze stad voorstellen.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"ファンダーフ ヴィレン ヴェ オンゼ スホール エン オンゼ スタット フォールステレン。","langCode":"nl-BE","culturalNote":"発表の導入です。"},
+        {"id":"be-dutch-5","category":"質問・オンライン交流","speaker":"self","phrase":"Wat eten jullie meestal als lunch op school?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ヴァット エーテン ユリー メースタル アルス ルンチ オプ スホール？","langCode":"nl-BE","culturalNote":"食文化の比較です。"},
+        {"id":"be-dutch-6","category":"質問・オンライン交流","speaker":"self","phrase":"Wat doen jullie meestal na school?","meaning":"放課後は普段何をしますか？","yomi":"ヴァット ドゥン ユリー メースタル ナー スホール？","langCode":"nl-BE","culturalNote":"学校生活の質問です。"},
+        {"id":"be-dutch-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Wauw, dat is echt interessant!","meaning":"わあ、それは本当に面白いですね！","yomi":"ワウ、ダット イス エフト インテレサント！","langCode":"nl-BE","culturalNote":"関心を示します。"},
+        {"id":"be-dutch-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Sorry, kun je dat nog eens wat langzamer zeggen?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"ソリー、クン イェ ダット ノフ エンス ヴァット ラングザーマー ゼッヘン？","langCode":"nl-BE","culturalNote":"聞き返し表現です。"},
+        {"id":"be-dutch-9","category":"感謝・クロージング","speaker":"self","phrase":"Bedankt dat jullie ons vandaag zoveel hebben geleerd!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"ベダンクト ダット ユリー オンス ファンダーフ ゾーフェール ヘベン ヘレールド！","langCode":"nl-BE","culturalNote":"感謝の表現です。"},
+        {"id":"be-dutch-10","category":"感謝・クロージング","speaker":"self","phrase":"Fijne dag! Tot de volgende keer!","meaning":"よい一日を！また次回会いましょう！","yomi":"ファイネ ダーフ！ トット デ フォルヘンデ ケール！","langCode":"nl-BE","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "french": {
+      "languageName": "フランス語",
+      "languageNameEn": "French",
+      "nativeName": "Français",
+      "langCode": "fr-BE",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {
+        "mode": "standard",
+        "requestLangCode": "fr-BE",
+        "expectedScript": "latin",
+        "scoringPolicy": "normal"
+      },
+      "speechSynthesis": {
+        "mode": "standard",
+        "requestLangCode": "fr-BE"
+      },
+      "challenges": [
+        {"id":"be-french-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Bonjour ! Comment allez-vous aujourd'hui ?","meaning":"こんにちは！今日は元気ですか？","yomi":"ボンジュール！ コマン タレ ヴー オジュルデュイ？","langCode":"fr-BE","culturalNote":"丁寧な挨拶です。"},
+        {"id":"be-french-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Quelle heure est-il chez vous maintenant ?","meaning":"そちらは今何時ですか？","yomi":"ケルール エティル シェ ヴー マントナン？","langCode":"fr-BE","culturalNote":"時差の質問です。"},
+        {"id":"be-french-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Je m'appelle ___. Enchanté de vous rencontrer.","meaning":"私の名前は___です。お会いできてうれしいです。","yomi":"ジュ マペル ___。アンシャンテ ドゥ ヴー ランコントレ。","langCode":"fr-BE","culturalNote":"自己紹介です。"},
+        {"id":"be-french-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Aujourd'hui, nous aimerions présenter notre école et notre ville.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"オジュルデュイ、ヌ ゼムリオン プレザンテ ノートル エコール エ ノートル ヴィル。","langCode":"fr-BE","culturalNote":"発表の導入です。"},
+        {"id":"be-french-5","category":"質問・オンライン交流","speaker":"self","phrase":"Qu'est-ce que vous mangez habituellement à midi à l'école ?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ケスク ヴー マンジェ アビチュエルマン ア ミディ ア レコール？","langCode":"fr-BE","culturalNote":"食文化の比較です。"},
+        {"id":"be-french-6","category":"質問・オンライン交流","speaker":"self","phrase":"Que faites-vous habituellement après l'école ?","meaning":"放課後は普段何をしますか？","yomi":"ク フェット ヴー アビチュエルマン アプレ レコール？","langCode":"fr-BE","culturalNote":"学校生活の質問です。"},
+        {"id":"be-french-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Waouh, c'est vraiment intéressant !","meaning":"わあ、それは本当に面白いですね！","yomi":"ワウ、セ ヴレマン アンテレサン！","langCode":"fr-BE","culturalNote":"関心を示します。"},
+        {"id":"be-french-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Pardon, pouvez-vous répéter plus lentement ?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"パルドン、プヴェ ヴー レペテ プリュ ラントマン？","langCode":"fr-BE","culturalNote":"聞き返し表現です。"},
+        {"id":"be-french-9","category":"感謝・クロージング","speaker":"self","phrase":"Merci de nous avoir appris tant de choses aujourd'hui !","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"メルシー ドゥ ヌ ザヴォワール アプリ タン ドゥ ショーズ オジュルデュイ！","langCode":"fr-BE","culturalNote":"感謝の表現です。"},
+        {"id":"be-french-10","category":"感謝・クロージング","speaker":"self","phrase":"Bonne journée ! À la prochaine !","meaning":"よい一日を！また次回！","yomi":"ボンヌ ジュルネ！ ア ラ プロシェン！","langCode":"fr-BE","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "german": {
+      "languageName": "ドイツ語",
+      "languageNameEn": "German",
+      "nativeName": "Deutsch",
+      "langCode": "de-BE",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {
+        "mode": "standard",
+        "requestLangCode": "de-DE",
+        "expectedScript": "latin",
+        "scoringPolicy": "normal"
+      },
+      "speechSynthesis": {
+        "mode": "standard",
+        "requestLangCode": "de-DE"
+      },
+      "challenges": [
+        {"id":"be-german-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Guten Morgen! Wie geht es euch heute?","meaning":"おはようございます！今日は元気ですか？","yomi":"グーテン モルゲン！ ヴィー ゲート エス オイヒ ホイテ？","langCode":"de-DE","culturalNote":"基本の挨拶です。"},
+        {"id":"be-german-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Wie spät ist es bei euch jetzt?","meaning":"そちらは今何時ですか？","yomi":"ヴィー シュペート イス ト エス バイ オイヒ イェッツト？","langCode":"de-DE","culturalNote":"時差の質問です。"},
+        {"id":"be-german-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Ich heiße ___. Schön, euch kennenzulernen.","meaning":"私の名前は___です。皆さんに会えてうれしいです。","yomi":"イヒ ハイセ ___。シェーン、オイヒ ケネンツーレルネン。","langCode":"de-DE","culturalNote":"自己紹介です。"},
+        {"id":"be-german-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Heute möchten wir unsere Schule und unsere Stadt vorstellen.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"ホイテ メヒテン ヴィア ウンゼレ シューレ ウント ウンゼレ シュタット フォアシュテレン。","langCode":"de-DE","culturalNote":"発表の導入です。"},
+        {"id":"be-german-5","category":"質問・オンライン交流","speaker":"self","phrase":"Was esst ihr normalerweise zum Mittagessen in der Schule?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ヴァス エスト イーア ノルマーラーヴァイゼ ツム ミタークエッセン イン デア シューレ？","langCode":"de-DE","culturalNote":"食文化の比較です。"},
+        {"id":"be-german-6","category":"質問・オンライン交流","speaker":"self","phrase":"Was macht ihr normalerweise nach der Schule?","meaning":"放課後は普段何をしますか？","yomi":"ヴァス マハト イーア ノルマーラーヴァイゼ ナハ デア シューレ？","langCode":"de-DE","culturalNote":"学校生活の質問です。"},
+        {"id":"be-german-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Wow, das ist wirklich interessant!","meaning":"わあ、それは本当に面白いですね！","yomi":"ワウ、ダス イス ト ヴィルクリヒ インテレサント！","langCode":"de-DE","culturalNote":"関心を示します。"},
+        {"id":"be-german-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Entschuldigung, könnt ihr das bitte noch einmal langsamer sagen?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"エントシュルディグング、ケント イーア ダス ビッテ ノホ アインマール ラングザーマー ザーゲン？","langCode":"de-DE","culturalNote":"聞き返し表現です。"},
+        {"id":"be-german-9","category":"感謝・クロージング","speaker":"self","phrase":"Vielen Dank, dass ihr uns heute so viel beigebracht habt!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"フィーレン ダンク、ダス イーア ウンス ホイテ ゾー フィール バイゲブラハト ハープト！","langCode":"de-DE","culturalNote":"感謝の表現です。"},
+        {"id":"be-german-10","category":"感謝・クロージング","speaker":"self","phrase":"Einen schönen Tag! Bis zum nächsten Mal!","meaning":"よい一日を！また次回！","yomi":"アイネン シェーネン ターク！ ビス ツム ネヒステン マール！","langCode":"de-DE","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  },
+
+  "bz": {
+    "english": {
+      "languageName": "英語",
+      "languageNameEn": "English",
+      "nativeName": "English",
+      "langCode": "en-BZ",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"en-US","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"en-US"},
+      "challenges": [
+        {"id":"bz-english-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Good morning! How are you today?","meaning":"おはようございます！今日は元気ですか？","yomi":"グッド モーニング！ ハウ アー ユー トゥデイ？","langCode":"en-US","culturalNote":"基本の挨拶です。"},
+        {"id":"bz-english-2","category":"挨拶・時間・体調","speaker":"self","phrase":"What time is it there now?","meaning":"そちらは今何時ですか？","yomi":"ワット タイム イズ イット ゼア ナウ？","langCode":"en-US","culturalNote":"時差の質問です。"},
+        {"id":"bz-english-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"My name is ___. Nice to meet you.","meaning":"私の名前は___です。はじめまして。","yomi":"マイ ネイム イズ ___。ナイス トゥ ミート ユー。","langCode":"en-US","culturalNote":"自己紹介です。"},
+        {"id":"bz-english-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Today, we'd like to introduce our school and our town.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"トゥデイ、ウィド ライク トゥ イントロデュース アワ スクール アンド アワ タウン。","langCode":"en-US","culturalNote":"学校紹介です。"},
+        {"id":"bz-english-5","category":"質問・オンライン交流","speaker":"self","phrase":"What do you usually eat for lunch at school?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ワット ドゥ ユー ユージュアリー イート フォー ランチ アット スクール？","langCode":"en-US","culturalNote":"食文化の比較です。"},
+        {"id":"bz-english-6","category":"質問・オンライン交流","speaker":"self","phrase":"What do you usually do after school?","meaning":"放課後は普段何をしますか？","yomi":"ワット ドゥ ユー ユージュアリー ドゥ アフター スクール？","langCode":"en-US","culturalNote":"学校生活の比較です。"},
+        {"id":"bz-english-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"That's really interesting!","meaning":"それは本当に面白いですね！","yomi":"ザッツ リアリー インタレスティング！","langCode":"en-US","culturalNote":"関心を示します。"},
+        {"id":"bz-english-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Sorry, could you say that again more slowly?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"ソーリー、クッド ユー セイ ザット アゲイン モア スローリー？","langCode":"en-US","culturalNote":"聞き返し表現です。"},
+        {"id":"bz-english-9","category":"感謝・クロージング","speaker":"self","phrase":"Thank you for teaching us so many things today!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"サンク ユー フォー ティーチング アス ソー メニー シングズ トゥデイ！","langCode":"en-US","culturalNote":"感謝の表現です。"},
+        {"id":"bz-english-10","category":"感謝・クロージング","speaker":"self","phrase":"Have a great day! See you next time!","meaning":"よい一日を！また次回会いましょう！","yomi":"ハヴ ア グレイト デイ！ シー ユー ネクスト タイム！","langCode":"en-US","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "spanish": {
+      "languageName": "スペイン語",
+      "languageNameEn": "Spanish",
+      "nativeName": "Español",
+      "langCode": "es-BZ",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"es-MX","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"es-MX"},
+      "challenges": [
+        {"id":"bz-spanish-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"¡Buenos días! ¿Cómo están hoy?","meaning":"おはようございます！今日は元気ですか？","yomi":"ブエノス ディアス！ コモ エスタン オイ？","langCode":"es-MX","culturalNote":"基本の挨拶です。"},
+        {"id":"bz-spanish-2","category":"挨拶・時間・体調","speaker":"self","phrase":"¿Qué hora es allí ahora?","meaning":"そちらは今何時ですか？","yomi":"ケ オラ エス アジ アオラ？","langCode":"es-MX","culturalNote":"時差の質問です。"},
+        {"id":"bz-spanish-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Me llamo ___. Mucho gusto.","meaning":"私の名前は___です。はじめまして。","yomi":"メ ジャモ ___。ムーチョ グスト。","langCode":"es-MX","culturalNote":"自己紹介です。"},
+        {"id":"bz-spanish-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Hoy queremos presentar nuestra escuela y nuestra ciudad.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"オイ ケレモス プレセンタール ヌエストラ エスクエラ イ ヌエストラ シウダッ。","langCode":"es-MX","culturalNote":"発表の導入です。"},
+        {"id":"bz-spanish-5","category":"質問・オンライン交流","speaker":"self","phrase":"¿Qué comen normalmente para el almuerzo en la escuela?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ケ コメン ノルマルメンテ パラ エル アルムエルソ エン ラ エスクエラ？","langCode":"es-MX","culturalNote":"食文化の比較です。"},
+        {"id":"bz-spanish-6","category":"質問・オンライン交流","speaker":"self","phrase":"¿Qué hacen normalmente después de la escuela?","meaning":"放課後は普段何をしますか？","yomi":"ケ アセン ノルマルメンテ デスプエス デ ラ エスクエラ？","langCode":"es-MX","culturalNote":"学校生活の質問です。"},
+        {"id":"bz-spanish-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"¡Guau, qué interesante!","meaning":"わあ、面白いですね！","yomi":"グアウ、ケ インテレサンテ！","langCode":"es-MX","culturalNote":"関心を示します。"},
+        {"id":"bz-spanish-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Perdón, ¿pueden repetirlo más despacio?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"ペルドン、プエデン レペティルロ マス デスパシオ？","langCode":"es-MX","culturalNote":"聞き返し表現です。"},
+        {"id":"bz-spanish-9","category":"感謝・クロージング","speaker":"self","phrase":"¡Gracias por enseñarnos tantas cosas hoy!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"グラシアス ポル エンセニャルノス タンタス コサス オイ！","langCode":"es-MX","culturalNote":"感謝の表現です。"},
+        {"id":"bz-spanish-10","category":"感謝・クロージング","speaker":"self","phrase":"¡Que tengan un buen día! ¡Hasta la próxima!","meaning":"よい一日を！また次回！","yomi":"ケ テンガン ウン ブエン ディア！ アスタ ラ プロクシマ！","langCode":"es-MX","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "belizeanCreole": {
+      "languageName": "ベリーズ・クレオール語",
+      "languageNameEn": "Belizean Creole",
+      "nativeName": "Kriol",
+      "langCode": "bzj-BZ",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "needs-native-review",
+      "speechRecognition": {
+        "mode": "listen-only",
+        "requestLangCode": "en-US",
+        "expectedScript": "latin",
+        "scoringPolicy": "disabled"
+      },
+      "speechSynthesis": {
+        "mode": "browser-dependent",
+        "requestLangCode": "en-US"
+      },
+      "challenges": []
+    }
+  },
+
+  "bj": {
+    "french": {
+      "languageName": "フランス語",
+      "languageNameEn": "French",
+      "nativeName": "Français",
+      "langCode": "fr-BJ",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"fr-FR","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"fr-FR"},
+      "challenges": [
+        {"id":"bj-french-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Bonjour ! Comment allez-vous aujourd'hui ?","meaning":"こんにちは！今日は元気ですか？","yomi":"ボンジュール！ コマン タレ ヴー オジュルデュイ？","langCode":"fr-FR","culturalNote":"基本の挨拶です。"},
+        {"id":"bj-french-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Quelle heure est-il chez vous maintenant ?","meaning":"そちらは今何時ですか？","yomi":"ケルール エティル シェ ヴー マントナン？","langCode":"fr-FR","culturalNote":"時差の質問です。"},
+        {"id":"bj-french-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Je m'appelle ___. Enchanté de vous rencontrer.","meaning":"私の名前は___です。はじめまして。","yomi":"ジュ マペル ___。アンシャンテ ドゥ ヴー ランコントレ。","langCode":"fr-FR","culturalNote":"自己紹介です。"},
+        {"id":"bj-french-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Aujourd'hui, nous aimerions présenter notre école et notre ville.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"オジュルデュイ、ヌ ゼムリオン プレザンテ ノートル エコール エ ノートル ヴィル。","langCode":"fr-FR","culturalNote":"発表の導入です。"},
+        {"id":"bj-french-5","category":"質問・オンライン交流","speaker":"self","phrase":"Qu'est-ce que vous mangez habituellement à midi à l'école ?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ケスク ヴー マンジェ アビチュエルマン ア ミディ ア レコール？","langCode":"fr-FR","culturalNote":"食文化の比較です。"},
+        {"id":"bj-french-6","category":"質問・オンライン交流","speaker":"self","phrase":"Que faites-vous habituellement après l'école ?","meaning":"放課後は普段何をしますか？","yomi":"ク フェット ヴー アビチュエルマン アプレ レコール？","langCode":"fr-FR","culturalNote":"学校生活の質問です。"},
+        {"id":"bj-french-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Waouh, c'est vraiment intéressant !","meaning":"わあ、それは本当に面白いですね！","yomi":"ワウ、セ ヴレマン アンテレサン！","langCode":"fr-FR","culturalNote":"関心を示します。"},
+        {"id":"bj-french-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Pardon, pouvez-vous répéter plus lentement ?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"パルドン、プヴェ ヴー レペテ プリュ ラントマン？","langCode":"fr-FR","culturalNote":"聞き返し表現です。"},
+        {"id":"bj-french-9","category":"感謝・クロージング","speaker":"self","phrase":"Merci de nous avoir appris tant de choses aujourd'hui !","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"メルシー ドゥ ヌ ザヴォワール アプリ タン ドゥ ショーズ オジュルデュイ！","langCode":"fr-FR","culturalNote":"感謝です。"},
+        {"id":"bj-french-10","category":"感謝・クロージング","speaker":"self","phrase":"Bonne journée ! À la prochaine !","meaning":"よい一日を！また次回！","yomi":"ボンヌ ジュルネ！ ア ラ プロシェン！","langCode":"fr-FR","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "fon": {
+      "languageName": "フォン語",
+      "languageNameEn": "Fon",
+      "nativeName": "Fɔngbè",
+      "langCode": "fon-BJ",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "needs-native-review",
+      "speechRecognition": {"mode":"listen-only","requestLangCode":"fon-BJ","expectedScript":"latin","scoringPolicy":"disabled"},
+      "speechSynthesis": {"mode":"browser-dependent","requestLangCode":"fon-BJ"},
+      "challenges": []
+    },
+    "yoruba": {
+      "languageName": "ヨルバ語",
+      "languageNameEn": "Yoruba",
+      "nativeName": "Yorùbá",
+      "langCode": "yo-BJ",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "experimental",
+      "speechRecognition": {"mode":"experimental","requestLangCode":"yo-NG","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"browser-dependent","requestLangCode":"yo-NG"},
+      "challenges": [
+        {"id":"bj-yoruba-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Ẹ káàárọ̀! Báwo ni ẹ ṣe wà lónìí?","meaning":"おはようございます！今日は元気ですか？","yomi":"エ カーロ！ バウォ ニ エ シェ ワ ロニー？","langCode":"yo-NG","culturalNote":"ヨルバ語では時間帯による挨拶が大切です。"},
+        {"id":"bj-yoruba-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Àkókò wo ni ó jẹ́ níbẹ̀ báyìí?","meaning":"そちらは今何時ですか？","yomi":"アココ ウォ ニ オ ジェ ニベ バイイ？","langCode":"yo-NG","culturalNote":"時差の質問です。"},
+        {"id":"bj-yoruba-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Orúkọ mi ni ___. Inú mi dùn láti pàdé yín.","meaning":"私の名前は___です。皆さんに会えてうれしいです。","yomi":"オルコ ミ ニ ___。イヌ ミ ドゥン ラティ パデ イン。","langCode":"yo-NG","culturalNote":"自己紹介です。"},
+        {"id":"bj-yoruba-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Lónìí, a fẹ́ sọ̀rọ̀ nípa ilé-ẹ̀kọ́ wa àti ìlú wa.","meaning":"今日は私たちの学校と町について紹介します。","yomi":"ロニー、ア フェ ソロ ニパ イレエコ ワ アティ イル ワ。","langCode":"yo-NG","culturalNote":"発表の導入です。"},
+        {"id":"bj-yoruba-5","category":"質問・オンライン交流","speaker":"self","phrase":"Kí ni ẹ máa ń jẹ fún oúnjẹ ọ̀sán ní ilé-ẹ̀kọ́?","meaning":"学校では昼食に何を食べますか？","yomi":"キ ニ エ マーン ジェ フン オウンジェ オサン ニ イレエコ？","langCode":"yo-NG","culturalNote":"食文化の比較です。"},
+        {"id":"bj-yoruba-6","category":"質問・オンライン交流","speaker":"self","phrase":"Kí ni ẹ máa ń ṣe lẹ́yìn ilé-ẹ̀kọ́?","meaning":"放課後は何をしますか？","yomi":"キ ニ エ マーン シェ レイン イレエコ？","langCode":"yo-NG","culturalNote":"学校生活の質問です。"},
+        {"id":"bj-yoruba-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Wáàwù, ó dára gan-an!","meaning":"わあ、それはすごいですね！","yomi":"ワーウ、オ ダラ ガンアン！","langCode":"yo-NG","culturalNote":"明るいリアクションです。"},
+        {"id":"bj-yoruba-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Ẹ jọ̀ọ́, ẹ lè tún sọ ọ́ díẹ̀díẹ̀?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"エ ジョー、エ レ トゥン ソ オ ディエディエ？","langCode":"yo-NG","culturalNote":"聞き返し表現です。"},
+        {"id":"bj-yoruba-9","category":"感謝・クロージング","speaker":"self","phrase":"Ẹ ṣé púpọ̀ fún gbogbo ohun tí ẹ kọ́ wa lónìí!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"エ シェ プポ フン ゴンゴ オフン ティ エ コ ワ ロニー！","langCode":"yo-NG","culturalNote":"感謝の表現です。"},
+        {"id":"bj-yoruba-10","category":"感謝・クロージング","speaker":"self","phrase":"Ẹ kú ọjọ́! A ó tún pàdé!","meaning":"よい一日を！また会いましょう！","yomi":"エ ク オジョ！ ア オ トゥン パデ！","langCode":"yo-NG","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  },
+
+  "bt": {
+    "dzongkha": {
+      "languageName": "ゾンカ語",
+      "languageNameEn": "Dzongkha",
+      "nativeName": "རྫོང་ཁ",
+      "langCode": "dz-BT",
+      "direction": "ltr",
+      "script": "tibetan",
+      "contentStatus": "needs-native-review",
+      "speechRecognition": {
+        "mode": "listen-only",
+        "requestLangCode": "dz-BT",
+        "expectedScript": "tibetan",
+        "scoringPolicy": "disabled"
+      },
+      "speechSynthesis": {
+        "mode": "browser-dependent",
+        "requestLangCode": "dz-BT"
+      },
+      "challenges": []
+    }
+  },
+
+  "bo": {
+    "spanish": {
+      "languageName": "スペイン語",
+      "languageNameEn": "Spanish",
+      "nativeName": "Español",
+      "langCode": "es-BO",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"es-BO","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"es-BO"},
+      "challenges": [
+        {"id":"bo-spanish-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"¡Buenos días! ¿Cómo están hoy?","meaning":"おはようございます！今日は元気ですか？","yomi":"ブエノス ディアス！ コモ エスタン オイ？","langCode":"es-BO","culturalNote":"基本の挨拶です。"},
+        {"id":"bo-spanish-2","category":"挨拶・時間・体調","speaker":"self","phrase":"¿Qué hora es allí ahora?","meaning":"そちらは今何時ですか？","yomi":"ケ オラ エス アジ アオラ？","langCode":"es-BO","culturalNote":"時差の質問です。"},
+        {"id":"bo-spanish-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Me llamo ___. Mucho gusto.","meaning":"私の名前は___です。はじめまして。","yomi":"メ ジャモ ___。ムーチョ グスト。","langCode":"es-BO","culturalNote":"自己紹介です。"},
+        {"id":"bo-spanish-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Hoy queremos presentar nuestra escuela y nuestra ciudad.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"オイ ケレモス プレセンタール ヌエストラ エスクエラ イ ヌエストラ シウダッ。","langCode":"es-BO","culturalNote":"発表の導入です。"},
+        {"id":"bo-spanish-5","category":"質問・オンライン交流","speaker":"self","phrase":"¿Qué comen normalmente para el almuerzo en la escuela?","meaning":"学校では昼食に何を食べますか？","yomi":"ケ コメン ノルマルメンテ パラ エル アルムエルソ エン ラ エスクエラ？","langCode":"es-BO","culturalNote":"食文化の比較です。"},
+        {"id":"bo-spanish-6","category":"質問・オンライン交流","speaker":"self","phrase":"¿Qué hacen después de la escuela?","meaning":"放課後は何をしますか？","yomi":"ケ アセン デスプエス デ ラ エスクエラ？","langCode":"es-BO","culturalNote":"学校生活の質問です。"},
+        {"id":"bo-spanish-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"¡Guau, qué interesante!","meaning":"わあ、面白いですね！","yomi":"グアウ、ケ インテレサンテ！","langCode":"es-BO","culturalNote":"関心を示します。"},
+        {"id":"bo-spanish-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Perdón, ¿pueden repetirlo más despacio?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"ペルドン、プエデン レペティルロ マス デスパシオ？","langCode":"es-BO","culturalNote":"聞き返しです。"},
+        {"id":"bo-spanish-9","category":"感謝・クロージング","speaker":"self","phrase":"¡Gracias por enseñarnos tantas cosas hoy!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"グラシアス ポル エンセニャルノス タンタス コサス オイ！","langCode":"es-BO","culturalNote":"感謝です。"},
+        {"id":"bo-spanish-10","category":"感謝・クロージング","speaker":"self","phrase":"¡Que tengan un buen día! ¡Hasta la próxima!","meaning":"よい一日を！また次回！","yomi":"ケ テンガン ウン ブエン ディア！ アスタ ラ プロクシマ！","langCode":"es-BO","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "quechua": {
+      "languageName": "ケチュア語",
+      "languageNameEn": "Quechua",
+      "nativeName": "Runasimi",
+      "langCode": "qu-BO",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "needs-native-review",
+      "speechRecognition": {"mode":"listen-only","requestLangCode":"qu-BO","expectedScript":"latin","scoringPolicy":"disabled"},
+      "speechSynthesis": {"mode":"browser-dependent","requestLangCode":"qu-BO"},
+      "challenges": []
+    },
+    "aymara": {
+      "languageName": "アイマラ語",
+      "languageNameEn": "Aymara",
+      "nativeName": "Aymar aru",
+      "langCode": "ay-BO",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "needs-native-review",
+      "speechRecognition": {"mode":"listen-only","requestLangCode":"ay-BO","expectedScript":"latin","scoringPolicy":"disabled"},
+      "speechSynthesis": {"mode":"browser-dependent","requestLangCode":"ay-BO"},
+      "challenges": []
+    }
+  },
+
+  "ba": {
+    "bosnian": {
+      "languageName": "ボスニア語",
+      "languageNameEn": "Bosnian",
+      "nativeName": "Bosanski",
+      "langCode": "bs-BA",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"experimental","requestLangCode":"bs-BA","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"browser-dependent","requestLangCode":"bs-BA"},
+      "challenges": [
+        {"id":"ba-bosnian-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Dobro jutro! Kako ste danas?","meaning":"おはようございます！今日は元気ですか？","yomi":"ドブロ ユトロ！ カコ ステ ダナス？","langCode":"bs-BA","culturalNote":"基本の挨拶です。"},
+        {"id":"ba-bosnian-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Koliko je sati kod vas sada?","meaning":"そちらは今何時ですか？","yomi":"コリコ イェ サティ コド ヴァス サダ？","langCode":"bs-BA","culturalNote":"時差の質問です。"},
+        {"id":"ba-bosnian-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Zovem se ___. Drago mi je.","meaning":"私の名前は___です。はじめまして。","yomi":"ゾヴェム セ ___。ドラゴ ミ イェ。","langCode":"bs-BA","culturalNote":"自己紹介です。"},
+        {"id":"ba-bosnian-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Danas želimo predstaviti našu školu i naš grad.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"ダナス ジェリモ プレドスタヴィティ ナシュ シュコル イ ナシュ グラド。","langCode":"bs-BA","culturalNote":"発表の導入です。"},
+        {"id":"ba-bosnian-5","category":"質問・オンライン交流","speaker":"self","phrase":"Šta obično jedete za ručak u školi?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"シュタ オビチノ イェデテ ザ ルチャク ウ シュコリ？","langCode":"bs-BA","culturalNote":"食文化の比較です。"},
+        {"id":"ba-bosnian-6","category":"質問・オンライン交流","speaker":"self","phrase":"Šta obično radite poslije škole?","meaning":"放課後は普段何をしますか？","yomi":"シュタ オビチノ ラディテ ポスリイェ シュコレ？","langCode":"bs-BA","culturalNote":"学校生活の質問です。"},
+        {"id":"ba-bosnian-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Vau, to je baš zanimljivo!","meaning":"わあ、それは本当に面白いですね！","yomi":"ヴァウ、ト イェ バシュ ザニムリヴォ！","langCode":"bs-BA","culturalNote":"関心を示します。"},
+        {"id":"ba-bosnian-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Izvinite, možete li to ponoviti malo sporije?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"イズヴィニテ、モジェテ リ ト ポノヴィティ マロ スポリイェ？","langCode":"bs-BA","culturalNote":"聞き返しです。"},
+        {"id":"ba-bosnian-9","category":"感謝・クロージング","speaker":"self","phrase":"Hvala vam što ste nas danas mnogo toga naučili!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"フヴァラ ヴァム シュト ステ ナス ダナス ムノゴ トガ ナウチリ！","langCode":"bs-BA","culturalNote":"感謝です。"},
+        {"id":"ba-bosnian-10","category":"感謝・クロージング","speaker":"self","phrase":"Ugodan dan! Vidimo se ponovo!","meaning":"よい一日を！また会いましょう！","yomi":"ウゴダン ダン！ ヴィディモ セ ポノヴォ！","langCode":"bs-BA","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "croatian": {
+      "languageName": "クロアチア語",
+      "languageNameEn": "Croatian",
+      "nativeName": "Hrvatski",
+      "langCode": "hr-BA",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"hr-HR","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"hr-HR"},
+      "challenges": [
+        {"id":"ba-croatian-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Dobro jutro! Kako ste danas?","meaning":"おはようございます！今日は元気ですか？","yomi":"ドブロ ユトロ！ カコ ステ ダナス？","langCode":"hr-HR","culturalNote":"基本の挨拶です。"},
+        {"id":"ba-croatian-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Koliko je sati kod vas sada?","meaning":"そちらは今何時ですか？","yomi":"コリコ イェ サティ コド ヴァス サダ？","langCode":"hr-HR","culturalNote":"時差の質問です。"},
+        {"id":"ba-croatian-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Zovem se ___. Drago mi je.","meaning":"私の名前は___です。はじめまして。","yomi":"ゾヴェム セ ___。ドラゴ ミ イェ。","langCode":"hr-HR","culturalNote":"自己紹介です。"},
+        {"id":"ba-croatian-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Danas želimo predstaviti našu školu i naš grad.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"ダナス ジェリモ プレドスタヴィティ ナシュ シュコル イ ナシュ グラド。","langCode":"hr-HR","culturalNote":"発表の導入です。"},
+        {"id":"ba-croatian-5","category":"質問・オンライン交流","speaker":"self","phrase":"Što obično jedete za ručak u školi?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"シュト オビチノ イェデテ ザ ルチャク ウ シュコリ？","langCode":"hr-HR","culturalNote":"食文化の比較です。"},
+        {"id":"ba-croatian-6","category":"質問・オンライン交流","speaker":"self","phrase":"Što obično radite nakon škole?","meaning":"放課後は普段何をしますか？","yomi":"シュト オビチノ ラディテ ナコン シュコレ？","langCode":"hr-HR","culturalNote":"学校生活の質問です。"},
+        {"id":"ba-croatian-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Vau, to je stvarno zanimljivo!","meaning":"わあ、それは本当に面白いですね！","yomi":"ヴァウ、ト イェ ストヴァルノ ザニムリヴォ！","langCode":"hr-HR","culturalNote":"関心を示します。"},
+        {"id":"ba-croatian-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Oprostite, možete li to ponoviti malo sporije?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"オプロスティテ、モジェテ リ ト ポノヴィティ マロ スポリイェ？","langCode":"hr-HR","culturalNote":"聞き返しです。"},
+        {"id":"ba-croatian-9","category":"感謝・クロージング","speaker":"self","phrase":"Hvala vam što ste nas danas toliko toga naučili!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"フヴァラ ヴァム シュト ステ ナス ダナス トリコ トガ ナウチリ！","langCode":"hr-HR","culturalNote":"感謝です。"},
+        {"id":"ba-croatian-10","category":"感謝・クロージング","speaker":"self","phrase":"Ugodan dan! Vidimo se ponovno!","meaning":"よい一日を！また会いましょう！","yomi":"ウゴダン ダン！ ヴィディモ セ ポノヴノ！","langCode":"hr-HR","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "serbian": {
+      "languageName": "セルビア語",
+      "languageNameEn": "Serbian",
+      "nativeName": "Српски",
+      "langCode": "sr-BA",
+      "direction": "ltr",
+      "script": "cyrillic",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"experimental","requestLangCode":"sr-RS","expectedScript":"cyrillic","scoringPolicy":"script-match-only"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"sr-RS"},
+      "challenges": [
+        {"id":"ba-serbian-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Добро јутро! Како сте данас?","meaning":"おはようございます！今日は元気ですか？","yomi":"ドブロ ユートロ！ カコ ステ ダナス？","langCode":"sr-RS","culturalNote":"基本の挨拶です。"},
+        {"id":"ba-serbian-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Колико је сати код вас сада?","meaning":"そちらは今何時ですか？","yomi":"コリコ イェ サティ コド ヴァス サダ？","langCode":"sr-RS","culturalNote":"時差の質問です。"},
+        {"id":"ba-serbian-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Зовем се ___. Драго ми је.","meaning":"私の名前は___です。はじめまして。","yomi":"ゾヴェム セ ___。ドラゴ ミ イェ。","langCode":"sr-RS","culturalNote":"自己紹介です。"},
+        {"id":"ba-serbian-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Данас желимо да представимо нашу школу и наш град.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"ダナス ジェリモ ダ プレドスタヴィモ ナシュ シュコル イ ナシュ グラド。","langCode":"sr-RS","culturalNote":"発表の導入です。"},
+        {"id":"ba-serbian-5","category":"質問・オンライン交流","speaker":"self","phrase":"Шта обично једете за ручак у школи?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"シュタ オビチノ イェデテ ザ ルチャク ウ シュコリ？","langCode":"sr-RS","culturalNote":"食文化の比較です。"},
+        {"id":"ba-serbian-6","category":"質問・オンライン交流","speaker":"self","phrase":"Шта обично радите после школе?","meaning":"放課後は普段何をしますか？","yomi":"シュタ オビチノ ラディテ ポスレ シュコレ？","langCode":"sr-RS","culturalNote":"学校生活の質問です。"},
+        {"id":"ba-serbian-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Вау, то је стварно занимљиво!","meaning":"わあ、それは本当に面白いですね！","yomi":"ヴァウ、ト イェ ストヴァルノ ザニムリヴォ！","langCode":"sr-RS","culturalNote":"関心を示します。"},
+        {"id":"ba-serbian-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Извините, можете ли то поновити мало спорије?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"イズヴィニテ、モジェテ リ ト ポノヴィティ マロ スポリイェ？","langCode":"sr-RS","culturalNote":"聞き返しです。"},
+        {"id":"ba-serbian-9","category":"感謝・クロージング","speaker":"self","phrase":"Хвала вам што сте нас данас много тога научили!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"フヴァラ ヴァム シュト ステ ナス ダナス ムノゴ トガ ナウチリ！","langCode":"sr-RS","culturalNote":"感謝です。"},
+        {"id":"ba-serbian-10","category":"感謝・クロージング","speaker":"self","phrase":"Пријатан дан! Видимо се поново!","meaning":"よい一日を！また会いましょう！","yomi":"プリヤタン ダン！ ヴィディモ セ ポノヴォ！","langCode":"sr-RS","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  },
+
+  "bw": {
+    "english": {
+      "languageName": "英語",
+      "languageNameEn": "English",
+      "nativeName": "English",
+      "langCode": "en-BW",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"en-GB","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"en-GB"},
+      "challenges": [
+        {"id":"bw-english-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Good morning! How are you today?","meaning":"おはようございます！今日は元気ですか？","yomi":"グッド モーニング！ ハウ アー ユー トゥデイ？","langCode":"en-GB","culturalNote":"基本の挨拶です。"},
+        {"id":"bw-english-2","category":"挨拶・時間・体調","speaker":"self","phrase":"What time is it there now?","meaning":"そちらは今何時ですか？","yomi":"ワット タイム イズ イット ゼア ナウ？","langCode":"en-GB","culturalNote":"時差の質問です。"},
+        {"id":"bw-english-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"My name is ___. Nice to meet you.","meaning":"私の名前は___です。はじめまして。","yomi":"マイ ネイム イズ ___。ナイス トゥ ミート ユー。","langCode":"en-GB","culturalNote":"自己紹介です。"},
+        {"id":"bw-english-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Today, we'd like to introduce our school and our town.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"トゥデイ、ウィド ライク トゥ イントロデュース アワ スクール アンド アワ タウン。","langCode":"en-GB","culturalNote":"発表の導入です。"},
+        {"id":"bw-english-5","category":"質問・オンライン交流","speaker":"self","phrase":"What do you usually eat for lunch at school?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ワット ドゥ ユー ユージュアリー イート フォー ランチ アット スクール？","langCode":"en-GB","culturalNote":"食文化の比較です。"},
+        {"id":"bw-english-6","category":"質問・オンライン交流","speaker":"self","phrase":"What do you usually do after school?","meaning":"放課後は普段何をしますか？","yomi":"ワット ドゥ ユー ユージュアリー ドゥ アフター スクール？","langCode":"en-GB","culturalNote":"学校生活の質問です。"},
+        {"id":"bw-english-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"That's really interesting!","meaning":"それは本当に面白いですね！","yomi":"ザッツ リアリー インタレスティング！","langCode":"en-GB","culturalNote":"関心を示します。"},
+        {"id":"bw-english-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Sorry, could you say that again more slowly?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"ソーリー、クッド ユー セイ ザット アゲイン モア スローリー？","langCode":"en-GB","culturalNote":"聞き返しです。"},
+        {"id":"bw-english-9","category":"感謝・クロージング","speaker":"self","phrase":"Thank you for teaching us so many things today!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"サンク ユー フォー ティーチング アス ソー メニー シングズ トゥデイ！","langCode":"en-GB","culturalNote":"感謝です。"},
+        {"id":"bw-english-10","category":"感謝・クロージング","speaker":"self","phrase":"Have a great day! See you next time!","meaning":"よい一日を！また次回会いましょう！","yomi":"ハヴ ア グレイト デイ！ シー ユー ネクスト タイム！","langCode":"en-GB","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "setswana": {
+      "languageName": "ツワナ語",
+      "languageNameEn": "Setswana",
+      "nativeName": "Setswana",
+      "langCode": "tn-BW",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "experimental",
+      "speechRecognition": {"mode":"experimental","requestLangCode":"tn-BW","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"browser-dependent","requestLangCode":"tn-BW"},
+      "challenges": [
+        {"id":"bw-setswana-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Dumela! O tsogile jang gompieno?","meaning":"こんにちは！今日は元気ですか？","yomi":"ドゥメラ！ オ ツォギレ ジャン ゴンピエノ？","langCode":"tn-BW","culturalNote":"Dumelaは基本的な挨拶です。"},
+        {"id":"bw-setswana-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Ke nako mang koo jaanong?","meaning":"そちらは今何時ですか？","yomi":"ケ ナコ マン コー ジャーノン？","langCode":"tn-BW","culturalNote":"時差の質問です。"},
+        {"id":"bw-setswana-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Leina la me ke ___. Ke itumelela go kopana le lona.","meaning":"私の名前は___です。皆さんに会えてうれしいです。","yomi":"レイナ ラ メ ケ ___。ケ イトゥメレラ ゴ コパナ レ ロナ。","langCode":"tn-BW","culturalNote":"自己紹介です。"},
+        {"id":"bw-setswana-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Gompieno re batla go lo itsise sekolo le toropo ya rona.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"ゴンピエノ レ バトラ ゴ ロ イツィセ セコロ レ トロポ ヤ ロナ。","langCode":"tn-BW","culturalNote":"発表の導入です。"},
+        {"id":"bw-setswana-5","category":"質問・オンライン交流","speaker":"self","phrase":"Lo ja eng gantsi ka nako ya dijo tsa motshegare kwa sekolong?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ロ ジャ エン ガンツィ カ ナコ ヤ ディジョ ツァ モツェガレ クワ セコロン？","langCode":"tn-BW","culturalNote":"食文化の比較です。"},
+        {"id":"bw-setswana-6","category":"質問・オンライン交流","speaker":"self","phrase":"Lo dira eng morago ga sekolo?","meaning":"放課後は何をしますか？","yomi":"ロ ディラ エン マロゴ ガ セコロ？","langCode":"tn-BW","culturalNote":"学校生活の質問です。"},
+        {"id":"bw-setswana-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Ao, seo se kgatlha tota!","meaning":"わあ、それは本当に面白いですね！","yomi":"アオ、セオ セ カトラ トタ！","langCode":"tn-BW","culturalNote":"関心を示します。"},
+        {"id":"bw-setswana-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Intshwarele, a o ka bua gape ka bonya?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"インチュワレレ、ア オ カ ブア ガペ カ ボニャ？","langCode":"tn-BW","culturalNote":"聞き返しです。"},
+        {"id":"bw-setswana-9","category":"感謝・クロージング","speaker":"self","phrase":"Re a leboga go bo lo re rutile dilo tse dintsi gompieno!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"レ ア レボガ ゴ ボ ロ レ ルティレ ディロ ツェ ディンツィ ゴンピエノ！","langCode":"tn-BW","culturalNote":"感謝です。"},
+        {"id":"bw-setswana-10","category":"感謝・クロージング","speaker":"self","phrase":"Nnang le letsatsi le le monate! Re tla bonana gape!","meaning":"よい一日を！また会いましょう！","yomi":"ナン レ レツァツィ レ レ モナテ！ レ トラ ボナナ ガペ！","langCode":"tn-BW","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  },
+
+  "br": {
+    "portuguese": {
+      "languageName": "ポルトガル語",
+      "languageNameEn": "Portuguese",
+      "nativeName": "Português",
+      "langCode": "pt-BR",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"pt-BR","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"pt-BR"},
+      "challenges": [
+        {"id":"br-portuguese-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Bom dia! Como vocês estão hoje?","meaning":"おはようございます！今日は元気ですか？","yomi":"ボン ジーア！ コモ ヴォセース エスタォン オージ？","langCode":"pt-BR","culturalNote":"基本の挨拶です。"},
+        {"id":"br-portuguese-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Que horas são aí agora?","meaning":"そちらは今何時ですか？","yomi":"キ オーラス サォン アイ アゴーラ？","langCode":"pt-BR","culturalNote":"時差の質問です。"},
+        {"id":"br-portuguese-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Meu nome é ___. Prazer em conhecer vocês.","meaning":"私の名前は___です。皆さんに会えてうれしいです。","yomi":"メウ ノーミ エ ___。プラゼール エン コニェセール ヴォセース。","langCode":"pt-BR","culturalNote":"自己紹介です。"},
+        {"id":"br-portuguese-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Hoje gostaríamos de apresentar nossa escola e nossa cidade.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"オージ ゴスタリアモス ジ アプレゼンタール ノッサ エスコーラ イ ノッサ シダージ。","langCode":"pt-BR","culturalNote":"発表の導入です。"},
+        {"id":"br-portuguese-5","category":"質問・オンライン交流","speaker":"self","phrase":"O que vocês costumam comer no almoço na escola?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ウ キ ヴォセース コストゥマン コメール ノ アルモッソ ナ エスコーラ？","langCode":"pt-BR","culturalNote":"食文化の比較です。"},
+        {"id":"br-portuguese-6","category":"質問・オンライン交流","speaker":"self","phrase":"O que vocês costumam fazer depois da escola?","meaning":"放課後は普段何をしますか？","yomi":"ウ キ ヴォセース コストゥマン ファゼール デポイス ダ エスコーラ？","langCode":"pt-BR","culturalNote":"学校生活の質問です。"},
+        {"id":"br-portuguese-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Uau, isso é muito interessante!","meaning":"わあ、それはとても面白いですね！","yomi":"ウアウ、イッソ エ ムイント インテレサンチ！","langCode":"pt-BR","culturalNote":"関心を示します。"},
+        {"id":"br-portuguese-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Desculpe, podem repetir mais devagar?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"デスクウピ、ポデン ヘペチール マイス ジヴァガール？","langCode":"pt-BR","culturalNote":"聞き返しです。"},
+        {"id":"br-portuguese-9","category":"感謝・クロージング","speaker":"self","phrase":"Muito obrigado por nos ensinarem tantas coisas hoje!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"ムイント オブリガード ポル ノス エンシナーレン タンタス コイザス オージ！","langCode":"pt-BR","culturalNote":"感謝です。"},
+        {"id":"br-portuguese-10","category":"感謝・クロージング","speaker":"self","phrase":"Tenham um ótimo dia! Até a próxima!","meaning":"よい一日を！また次回！","yomi":"テニャン ウン オチモ ジーア！ アテ ア プロッシマ！","langCode":"pt-BR","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  },
+
+  "bn": {
+    "malay": {
+      "languageName": "マレー語",
+      "languageNameEn": "Malay",
+      "nativeName": "Bahasa Melayu",
+      "langCode": "ms-BN",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"ms-MY","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"ms-MY"},
+      "challenges": [
+        {"id":"bn-malay-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Selamat pagi! Apa khabar hari ini?","meaning":"おはようございます！今日は元気ですか？","yomi":"スラマッ パギ！ アパ カバール ハリ イニ？","langCode":"ms-MY","culturalNote":"基本の挨拶です。"},
+        {"id":"bn-malay-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Pukul berapa di sana sekarang?","meaning":"そちらは今何時ですか？","yomi":"プクル ブラパ ディ サナ スカラン？","langCode":"ms-MY","culturalNote":"時差の質問です。"},
+        {"id":"bn-malay-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Nama saya ___. Gembira berkenalan dengan anda.","meaning":"私の名前は___です。お会いできてうれしいです。","yomi":"ナマ サヤ ___。グンビラ ブルクナラン ドゥンガン アンダ。","langCode":"ms-MY","culturalNote":"自己紹介です。"},
+        {"id":"bn-malay-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Hari ini kami ingin memperkenalkan sekolah dan bandar kami.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"ハリ イニ カミ インギン ムンプルクナルカン スコラ ダン バンダール カミ。","langCode":"ms-MY","culturalNote":"発表の導入です。"},
+        {"id":"bn-malay-5","category":"質問・オンライン交流","speaker":"self","phrase":"Apa yang biasanya anda makan untuk makan tengah hari di sekolah?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"アパ ヤン ビアサニャ アンダ マカン ウントゥッ マカン トゥンガ ハリ ディ スコラ？","langCode":"ms-MY","culturalNote":"食文化の比較です。"},
+        {"id":"bn-malay-6","category":"質問・オンライン交流","speaker":"self","phrase":"Apa yang biasanya anda lakukan selepas sekolah?","meaning":"放課後は普段何をしますか？","yomi":"アパ ヤン ビアサニャ アンダ ラクカン スレパス スコラ？","langCode":"ms-MY","culturalNote":"学校生活の質問です。"},
+        {"id":"bn-malay-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Wah, itu sangat menarik!","meaning":"わあ、それはとても面白いですね！","yomi":"ワー、イトゥ サンガッ ムナリッ！","langCode":"ms-MY","culturalNote":"関心を示します。"},
+        {"id":"bn-malay-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Maaf, boleh cakap sekali lagi dengan lebih perlahan?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"マアフ、ボレ チャカップ スカリ ラギ ドゥンガン ルビ プルラハン？","langCode":"ms-MY","culturalNote":"聞き返しです。"},
+        {"id":"bn-malay-9","category":"感謝・クロージング","speaker":"self","phrase":"Terima kasih kerana mengajar kami banyak perkara hari ini!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"トゥリマ カシ クラナ ムンガジャール カミ バニャッ プルカラ ハリ イニ！","langCode":"ms-MY","culturalNote":"感謝です。"},
+        {"id":"bn-malay-10","category":"感謝・クロージング","speaker":"self","phrase":"Semoga hari anda menyenangkan! Jumpa lagi!","meaning":"よい一日を！また会いましょう！","yomi":"スモガ ハリ アンダ ムニェナンカン！ ジュンパ ラギ！","langCode":"ms-MY","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  },
+
+  "bg": {
+    "bulgarian": {
+      "languageName": "ブルガリア語",
+      "languageNameEn": "Bulgarian",
+      "nativeName": "Български",
+      "langCode": "bg-BG",
+      "direction": "ltr",
+      "script": "cyrillic",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"bg-BG","expectedScript":"cyrillic","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"bg-BG"},
+      "challenges": [
+        {"id":"bg-bulgarian-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Добро утро! Как сте днес?","meaning":"おはようございます！今日は元気ですか？","yomi":"ドブロ ウトロ！ カク ステ ドネス？","langCode":"bg-BG","culturalNote":"基本の挨拶です。"},
+        {"id":"bg-bulgarian-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Колко е часът при вас сега?","meaning":"そちらは今何時ですか？","yomi":"コルコ エ チャサット プリ ヴァス セガ？","langCode":"bg-BG","culturalNote":"時差の質問です。"},
+        {"id":"bg-bulgarian-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Казвам се ___. Приятно ми е.","meaning":"私の名前は___です。はじめまして。","yomi":"カズヴァム セ ___。プリヤトノ ミ エ。","langCode":"bg-BG","culturalNote":"自己紹介です。"},
+        {"id":"bg-bulgarian-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Днес искаме да представим нашето училище и нашия град.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"ドネス イスカメ ダ プレドスタヴィム ナシェト ウチリシテ イ ナシヤ グラド。","langCode":"bg-BG","culturalNote":"発表の導入です。"},
+        {"id":"bg-bulgarian-5","category":"質問・オンライン交流","speaker":"self","phrase":"Какво обикновено ядете за обяд в училище?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"カクヴォ オビクノヴェノ ヤデテ ザ オビャド ヴ ウチリシテ？","langCode":"bg-BG","culturalNote":"食文化の比較です。"},
+        {"id":"bg-bulgarian-6","category":"質問・オンライン交流","speaker":"self","phrase":"Какво правите обикновено след училище?","meaning":"放課後は普段何をしますか？","yomi":"カクヴォ プラヴィテ オビクノヴェノ スレド ウチリシテ？","langCode":"bg-BG","culturalNote":"学校生活の質問です。"},
+        {"id":"bg-bulgarian-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Уау, това е много интересно!","meaning":"わあ、それはとても面白いですね！","yomi":"ワウ、トヴァ エ ムノゴ インテレスノ！","langCode":"bg-BG","culturalNote":"関心を示します。"},
+        {"id":"bg-bulgarian-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Извинете, може ли да повторите по-бавно?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"イズヴィネテ、モジェ リ ダ ポフトリテ ポ バヴノ？","langCode":"bg-BG","culturalNote":"聞き返しです。"},
+        {"id":"bg-bulgarian-9","category":"感謝・クロージング","speaker":"self","phrase":"Благодарим ви, че ни научихте на толкова много неща днес!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"ブラゴダリム ヴィ、チェ ニ ナウチフテ ナ トルコヴァ ムノゴ ネシタ ドネス！","langCode":"bg-BG","culturalNote":"感謝です。"},
+        {"id":"bg-bulgarian-10","category":"感謝・クロージング","speaker":"self","phrase":"Приятен ден! До скоро!","meaning":"よい一日を！また会いましょう！","yomi":"プリヤテン デン！ ド スコロ！","langCode":"bg-BG","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  },
+
+  "bf": {
+    "french": {
+      "languageName": "フランス語",
+      "languageNameEn": "French",
+      "nativeName": "Français",
+      "langCode": "fr-BF",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"fr-FR","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"fr-FR"},
+      "challenges": [
+        {"id":"bf-french-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Bonjour ! Comment allez-vous aujourd'hui ?","meaning":"こんにちは！今日は元気ですか？","yomi":"ボンジュール！ コマン タレ ヴー オジュルデュイ？","langCode":"fr-FR","culturalNote":"基本の挨拶です。"},
+        {"id":"bf-french-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Quelle heure est-il chez vous maintenant ?","meaning":"そちらは今何時ですか？","yomi":"ケルール エティル シェ ヴー マントナン？","langCode":"fr-FR","culturalNote":"時差の質問です。"},
+        {"id":"bf-french-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Je m'appelle ___. Enchanté de vous rencontrer.","meaning":"私の名前は___です。はじめまして。","yomi":"ジュ マペル ___。アンシャンテ ドゥ ヴー ランコントレ。","langCode":"fr-FR","culturalNote":"自己紹介です。"},
+        {"id":"bf-french-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Aujourd'hui, nous aimerions présenter notre école et notre ville.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"オジュルデュイ、ヌ ゼムリオン プレザンテ ノートル エコール エ ノートル ヴィル。","langCode":"fr-FR","culturalNote":"発表の導入です。"},
+        {"id":"bf-french-5","category":"質問・オンライン交流","speaker":"self","phrase":"Qu'est-ce que vous mangez habituellement à midi à l'école ?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ケスク ヴー マンジェ アビチュエルマン ア ミディ ア レコール？","langCode":"fr-FR","culturalNote":"食文化の比較です。"},
+        {"id":"bf-french-6","category":"質問・オンライン交流","speaker":"self","phrase":"Que faites-vous habituellement après l'école ?","meaning":"放課後は普段何をしますか？","yomi":"ク フェット ヴー アビチュエルマン アプレ レコール？","langCode":"fr-FR","culturalNote":"学校生活の質問です。"},
+        {"id":"bf-french-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Waouh, c'est vraiment intéressant !","meaning":"わあ、それは本当に面白いですね！","yomi":"ワウ、セ ヴレマン アンテレサン！","langCode":"fr-FR","culturalNote":"関心を示します。"},
+        {"id":"bf-french-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Pardon, pouvez-vous répéter plus lentement ?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"パルドン、プヴェ ヴー レペテ プリュ ラントマン？","langCode":"fr-FR","culturalNote":"聞き返しです。"},
+        {"id":"bf-french-9","category":"感謝・クロージング","speaker":"self","phrase":"Merci de nous avoir appris tant de choses aujourd'hui !","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"メルシー ドゥ ヌ ザヴォワール アプリ タン ドゥ ショーズ オジュルデュイ！","langCode":"fr-FR","culturalNote":"感謝です。"},
+        {"id":"bf-french-10","category":"感謝・クロージング","speaker":"self","phrase":"Bonne journée ! À la prochaine !","meaning":"よい一日を！また次回！","yomi":"ボンヌ ジュルネ！ ア ラ プロシェン！","langCode":"fr-FR","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "moore": {
+      "languageName": "モレ語",
+      "languageNameEn": "Mooré",
+      "nativeName": "Mooré",
+      "langCode": "mos-BF",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "needs-native-review",
+      "speechRecognition": {"mode":"listen-only","requestLangCode":"mos-BF","expectedScript":"latin","scoringPolicy":"disabled"},
+      "speechSynthesis": {"mode":"browser-dependent","requestLangCode":"mos-BF"},
+      "challenges": []
+    },
+    "dioula": {
+      "languageName": "ジュラ語",
+      "languageNameEn": "Dioula",
+      "nativeName": "Julakan",
+      "langCode": "dyu-BF",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "needs-native-review",
+      "speechRecognition": {"mode":"listen-only","requestLangCode":"dyu-BF","expectedScript":"latin","scoringPolicy":"disabled"},
+      "speechSynthesis": {"mode":"browser-dependent","requestLangCode":"dyu-BF"},
+      "challenges": []
+    }
+  },
+
+  "bi": {
+    "kirundi": {
+      "languageName": "ルンディ語",
+      "languageNameEn": "Kirundi",
+      "nativeName": "Ikirundi",
+      "langCode": "rn-BI",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "experimental",
+      "speechRecognition": {"mode":"experimental","requestLangCode":"rn-BI","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"browser-dependent","requestLangCode":"rn-BI"},
+      "challenges": [
+        {"id":"bi-kirundi-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Bwakeye! Amakuru y'uyu munsi?","meaning":"おはようございます！今日は元気ですか？","yomi":"ブワケイェ！ アマクル ユユ ムンシ？","langCode":"rn-BI","culturalNote":"基本の挨拶です。"},
+        {"id":"bi-kirundi-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Ni isaha zingahe iwanyu ubu?","meaning":"そちらは今何時ですか？","yomi":"ニ イサハ ズィンガヘ イワニュ ウブ？","langCode":"rn-BI","culturalNote":"時差の質問です。"},
+        {"id":"bi-kirundi-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Nitwa ___. Ndanezerewe kubamenya.","meaning":"私の名前は___です。皆さんに会えてうれしいです。","yomi":"ニトワ ___。ンダネゼレウェ クバメニャ。","langCode":"rn-BI","culturalNote":"自己紹介です。"},
+        {"id":"bi-kirundi-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Uyu munsi turashaka kubamenyesha ishure ryacu n'igisagara cacu.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"ウユ ムンシ トゥラシャカ クバメニェシャ イシュレ リャク ナ イギサガラ チャク。","langCode":"rn-BI","culturalNote":"発表の導入です。"},
+        {"id":"bi-kirundi-5","category":"質問・オンライン交流","speaker":"self","phrase":"Mukunze kurya iki ku mutaga kw'ishure?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ムクンゼ クリャ イキ ク ムタガ クイシュレ？","langCode":"rn-BI","culturalNote":"食文化の比較です。"},
+        {"id":"bi-kirundi-6","category":"質問・オンライン交流","speaker":"self","phrase":"Mukunze gukora iki ishure rirangiye?","meaning":"放課後は普段何をしますか？","yomi":"ムクンゼ グコラ イキ イシュレ リランギイェ？","langCode":"rn-BI","culturalNote":"学校生活の質問です。"},
+        {"id":"bi-kirundi-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Ego, birashimishije cane!","meaning":"わあ、それはとても面白いですね！","yomi":"エゴ、ビラシミシイェ チャネ！","langCode":"rn-BI","culturalNote":"関心を示します。"},
+        {"id":"bi-kirundi-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Mbabarira, mwoshobora kubisubiramwo buhoro?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"ムババリラ、ムウォショボラ クビスビラムウォ ブホロ？","langCode":"rn-BI","culturalNote":"聞き返しです。"},
+        {"id":"bi-kirundi-9","category":"感謝・クロージング","speaker":"self","phrase":"Murakoze cane kutwigisha ibintu vyinshi uyu munsi!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"ムラコゼ チャネ クトゥウィギシャ イビントゥ ヴィンシ ウユ ムンシ！","langCode":"rn-BI","culturalNote":"感謝です。"},
+        {"id":"bi-kirundi-10","category":"感謝・クロージング","speaker":"self","phrase":"Mugire umunsi mwiza! Tuzosubira kubonana!","meaning":"よい一日を！また会いましょう！","yomi":"ムギレ ウムンシ ムウィザ！ トゥゾスビラ クボナナ！","langCode":"rn-BI","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "french": {
+      "languageName": "フランス語",
+      "languageNameEn": "French",
+      "nativeName": "Français",
+      "langCode": "fr-BI",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"fr-FR","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"fr-FR"},
+      "challenges": [
+        {"id":"bi-french-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Bonjour ! Comment allez-vous aujourd'hui ?","meaning":"こんにちは！今日は元気ですか？","yomi":"ボンジュール！ コマン タレ ヴー オジュルデュイ？","langCode":"fr-FR","culturalNote":"基本の挨拶です。"},
+        {"id":"bi-french-2","category":"挨拶・時間・体調","speaker":"self","phrase":"Quelle heure est-il chez vous maintenant ?","meaning":"そちらは今何時ですか？","yomi":"ケルール エティル シェ ヴー マントナン？","langCode":"fr-FR","culturalNote":"時差の質問です。"},
+        {"id":"bi-french-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Je m'appelle ___. Enchanté de vous rencontrer.","meaning":"私の名前は___です。はじめまして。","yomi":"ジュ マペル ___。アンシャンテ ドゥ ヴー ランコントレ。","langCode":"fr-FR","culturalNote":"自己紹介です。"},
+        {"id":"bi-french-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Aujourd'hui, nous aimerions présenter notre école et notre ville.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"オジュルデュイ、ヌ ゼムリオン プレザンテ ノートル エコール エ ノートル ヴィル。","langCode":"fr-FR","culturalNote":"発表の導入です。"},
+        {"id":"bi-french-5","category":"質問・オンライン交流","speaker":"self","phrase":"Qu'est-ce que vous mangez habituellement à midi à l'école ?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ケスク ヴー マンジェ アビチュエルマン ア ミディ ア レコール？","langCode":"fr-FR","culturalNote":"食文化の比較です。"},
+        {"id":"bi-french-6","category":"質問・オンライン交流","speaker":"self","phrase":"Que faites-vous habituellement après l'école ?","meaning":"放課後は普段何をしますか？","yomi":"ク フェット ヴー アビチュエルマン アプレ レコール？","langCode":"fr-FR","culturalNote":"学校生活の質問です。"},
+        {"id":"bi-french-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Waouh, c'est vraiment intéressant !","meaning":"わあ、それは本当に面白いですね！","yomi":"ワウ、セ ヴレマン アンテレサン！","langCode":"fr-FR","culturalNote":"関心を示します。"},
+        {"id":"bi-french-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Pardon, pouvez-vous répéter plus lentement ?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"パルドン、プヴェ ヴー レペテ プリュ ラントマン？","langCode":"fr-FR","culturalNote":"聞き返しです。"},
+        {"id":"bi-french-9","category":"感謝・クロージング","speaker":"self","phrase":"Merci de nous avoir appris tant de choses aujourd'hui !","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"メルシー ドゥ ヌ ザヴォワール アプリ タン ドゥ ショーズ オジュルデュイ！","langCode":"fr-FR","culturalNote":"感謝です。"},
+        {"id":"bi-french-10","category":"感謝・クロージング","speaker":"self","phrase":"Bonne journée ! À la prochaine !","meaning":"よい一日を！また次回！","yomi":"ボンヌ ジュルネ！ ア ラ プロシェン！","langCode":"fr-FR","culturalNote":"別れの挨拶です。"}
+      ]
+    },
+    "english": {
+      "languageName": "英語",
+      "languageNameEn": "English",
+      "nativeName": "English",
+      "langCode": "en-BI",
+      "direction": "ltr",
+      "script": "latin",
+      "contentStatus": "ready",
+      "speechRecognition": {"mode":"standard","requestLangCode":"en-US","expectedScript":"latin","scoringPolicy":"normal"},
+      "speechSynthesis": {"mode":"standard","requestLangCode":"en-US"},
+      "challenges": [
+        {"id":"bi-english-1","category":"挨拶・時間・体調","speaker":"partner","phrase":"Good morning! How are you today?","meaning":"おはようございます！今日は元気ですか？","yomi":"グッド モーニング！ ハウ アー ユー トゥデイ？","langCode":"en-US","culturalNote":"基本の挨拶です。"},
+        {"id":"bi-english-2","category":"挨拶・時間・体調","speaker":"self","phrase":"What time is it there now?","meaning":"そちらは今何時ですか？","yomi":"ワット タイム イズ イット ゼア ナウ？","langCode":"en-US","culturalNote":"時差の質問です。"},
+        {"id":"bi-english-3","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"My name is ___. Nice to meet you.","meaning":"私の名前は___です。はじめまして。","yomi":"マイ ネイム イズ ___。ナイス トゥ ミート ユー。","langCode":"en-US","culturalNote":"自己紹介です。"},
+        {"id":"bi-english-4","category":"自己紹介・相互理解・発表","speaker":"self","phrase":"Today, we'd like to introduce our school and our town.","meaning":"今日は私たちの学校と町を紹介したいと思います。","yomi":"トゥデイ、ウィド ライク トゥ イントロデュース アワ スクール アンド アワ タウン。","langCode":"en-US","culturalNote":"発表の導入です。"},
+        {"id":"bi-english-5","category":"質問・オンライン交流","speaker":"self","phrase":"What do you usually eat for lunch at school?","meaning":"学校では普段、昼食に何を食べますか？","yomi":"ワット ドゥ ユー ユージュアリー イート フォー ランチ アット スクール？","langCode":"en-US","culturalNote":"食文化の比較です。"},
+        {"id":"bi-english-6","category":"質問・オンライン交流","speaker":"self","phrase":"What do you usually do after school?","meaning":"放課後は普段何をしますか？","yomi":"ワット ドゥ ユー ユージュアリー ドゥ アフター スクール？","langCode":"en-US","culturalNote":"学校生活の質問です。"},
+        {"id":"bi-english-7","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"That's really interesting!","meaning":"それは本当に面白いですね！","yomi":"ザッツ リアリー インタレスティング！","langCode":"en-US","culturalNote":"関心を示します。"},
+        {"id":"bi-english-8","category":"リアクション・会話の潤滑油","speaker":"self","phrase":"Sorry, could you say that again more slowly?","meaning":"すみません、もう一度ゆっくり言ってもらえますか？","yomi":"ソーリー、クッド ユー セイ ザット アゲイン モア スローリー？","langCode":"en-US","culturalNote":"聞き返しです。"},
+        {"id":"bi-english-9","category":"感謝・クロージング","speaker":"self","phrase":"Thank you for teaching us so many things today!","meaning":"今日はたくさん教えてくれて、ありがとうございました！","yomi":"サンク ユー フォー ティーチング アス ソー メニー シングズ トゥデイ！","langCode":"en-US","culturalNote":"感謝です。"},
+        {"id":"bi-english-10","category":"感謝・クロージング","speaker":"self","phrase":"Have a great day! See you next time!","meaning":"よい一日を！また次回会いましょう！","yomi":"ハヴ ア グレイト デイ！ シー ユー ネクスト タイム！","langCode":"en-US","culturalNote":"別れの挨拶です。"}
+      ]
+    }
+  }
+}

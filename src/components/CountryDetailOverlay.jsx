@@ -37,19 +37,21 @@ export default function CountryDetailOverlay({ iso, onClose }) {
           throw new Error("基本データが見つかりません");
         }
 
-        // ▼ 2. 追加：言語データの読み込み（エラーが起きても画面自体は表示できるように try-catch を分ける）
-        try {
-          // ※アルファベットごとの言語ファイルが存在する前提です。
-          // もしファイル名が違う場合は調整してください（例： `../data/languages_${firstLetter}.json` ）
-          const langModule = await import(`../data/languages_a.json`);
-          // ※ 今回はテスト用として強制的に languages_a.json を読み込んでいますが、
-          // 最終的には import(`../data/languages_${firstLetter}.json`) のように動的にします。
-          
-          setLanguageData(langModule.default || langModule);
-        } catch (langErr) {
-          console.log("この国の言語データはまだありません:", langErr);
-          setLanguageData(null); // データがない場合は null のままにする
-        }
+        // 2. 国の頭文字に合わせて言語データを自動読み込み
+try {
+  const langModule = await import(
+    `../data/languages_${firstLetter}.json`
+  );
+
+  setLanguageData(langModule.default || langModule);
+} catch (langErr) {
+  console.log(
+    `languages_${firstLetter}.json はまだありません:`,
+    langErr
+  );
+
+  setLanguageData(null);
+}
 
       } catch (err) {
         console.error("データの読み込みに失敗しました:", err);
