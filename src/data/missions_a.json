@@ -1,0 +1,1179 @@
+{
+  "au": {
+    "countryNameJa": "オーストラリア",
+    "countryNameEn": "Australia",
+    "version": 1,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "au-l08",
+          "au-j07",
+          "au-k04",
+          "au-k05"
+        ]
+      }
+    },
+    "sources": {
+      "ga-size-2025": {
+        "organization": "Geoscience Australia",
+        "title": "Australia's size compared",
+        "dataYear": 2025
+      },
+      "tourism-timezones": {
+        "organization": "Tourism Australia",
+        "title": "Australia time zones",
+        "dataYear": "current"
+      },
+      "bom-seasons-2026": {
+        "organization": "Australian Bureau of Meteorology",
+        "title": "Solstices, equinoxes and the seasons",
+        "dataYear": 2026
+      },
+      "abs-census-2021": {
+        "organization": "Australian Bureau of Statistics",
+        "title": "2021 Census: Cultural diversity",
+        "dataYear": 2021
+      },
+      "aiatsis-languages": {
+        "organization": "AIATSIS",
+        "title": "Indigenous Australian languages resources",
+        "dataYear": "current"
+      },
+      "dfat-japan-2025": {
+        "organization": "Australian Government Department of Foreign Affairs and Trade",
+        "title": "Japan country brief",
+        "dataYear": 2025
+      }
+    },
+    "missions": [
+      {
+        "id": "au-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "オーストラリアを探せ！",
+        "prompt": "世界地図からオーストラリアをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "au"
+        },
+        "explanation": "オーストラリアは南半球にある大きな大陸国です。",
+        "skills": [
+          "map-reading"
+        ]
+      },
+      {
+        "id": "au-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "どの地域？",
+        "prompt": "日本の学校地理で、オーストラリアを含む州として扱われるのはどれ？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "アジア州",
+            "ヨーロッパ州",
+            "オセアニア州",
+            "アフリカ州"
+          ],
+          "correctIndex": 2
+        },
+        "explanation": "日本の学校地理では、オーストラリアはオセアニア州に含めて学びます。",
+        "skills": [
+          "geography"
+        ]
+      },
+      {
+        "id": "au-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "オーストラリアの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "シドニー",
+            "キャンベラ",
+            "メルボルン",
+            "パース"
+          ],
+          "correctIndex": 1
+        },
+        "explanation": "首都はキャンベラです。シドニーやメルボルンではありません。",
+        "skills": [
+          "geography"
+        ]
+      },
+      {
+        "id": "au-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "東西南北の都市",
+        "prompt": "Sydney・Perth・Darwin・Melbourneを、地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "cities": [
+            {
+              "name": "Sydney",
+              "timeZone": "Australia/Sydney",
+              "region": "east"
+            },
+            {
+              "name": "Perth",
+              "timeZone": "Australia/Perth",
+              "region": "west"
+            },
+            {
+              "name": "Darwin",
+              "timeZone": "Australia/Darwin",
+              "region": "north"
+            },
+            {
+              "name": "Melbourne",
+              "timeZone": "Australia/Melbourne",
+              "region": "southeast"
+            }
+          ]
+        },
+        "explanation": "都市の位置を知ると、国内の時差や気候の違いも理解しやすくなります。",
+        "skills": [
+          "map-reading"
+        ]
+      },
+      {
+        "id": "au-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "東と西の海",
+        "prompt": "オーストラリアの東側と西側に広がる大洋の組み合わせとして最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "東：太平洋／西：インド洋",
+            "東：大西洋／西：太平洋",
+            "東：インド洋／西：大西洋",
+            "東：北極海／西：太平洋"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "大きく見ると東側は太平洋、西側はインド洋に面しています。",
+        "skills": [
+          "geography"
+        ]
+      },
+      {
+        "id": "au-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "なぜ気候が一つではない？",
+        "prompt": "オーストラリアで地域によって気候が大きく異なる主な理由として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "国土が広く、緯度や海からの距離が地域で異なるから",
+            "国全体が同じ緯度にあるから",
+            "全国が高い山だけでできているから",
+            "毎日同じ風向きだから"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国土が広く、緯度や内陸・沿岸などの条件が大きく異なるため、熱帯・乾燥地域・温帯など多様な気候が見られます。",
+        "sourceIds": [
+          "bom-seasons-2026"
+        ],
+        "skills": [
+          "climate",
+          "reasoning"
+        ]
+      },
+      {
+        "id": "au-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "世界の中での大きさ",
+        "prompt": "国土面積について正しい説明はどれ？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "世界で6番目に面積が大きい国",
+            "日本より小さい国",
+            "世界で最も面積が大きい国",
+            "ヨーロッパの国の一つ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "オーストラリアは世界で6番目に面積が大きい国で、世界で最も小さい大陸性陸塊でもあります。",
+        "sourceIds": [
+          "ga-size-2025"
+        ],
+        "skills": [
+          "geography",
+          "scale"
+        ]
+      },
+      {
+        "id": "au-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとSydneyの現在時刻を同時に表示し、どちらが先の時刻か答えよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Australia/Sydney"
+          ],
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "時差は季節によって変わることがあるため、固定の数字を暗記するより現在時刻を比較するのが大切です。",
+        "sourceIds": [
+          "tourism-timezones"
+        ],
+        "skills": [
+          "time-zones"
+        ]
+      },
+      {
+        "id": "au-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "Tokyo → Perth",
+        "prompt": "Tokyoの時刻を見て、同じ瞬間のPerthの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Australia/Perth",
+          "toleranceMinutes": 0
+        },
+        "explanation": "PerthはAustralian Western Standard Time（UTC+8）、日本標準時はUTC+9なので、通常Perthは日本より1時間遅いです。",
+        "sourceIds": [
+          "tourism-timezones"
+        ],
+        "skills": [
+          "time-calculation"
+        ]
+      },
+      {
+        "id": "au-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "同じ国なのに時差？",
+        "prompt": "SydneyとPerthの現在時刻を比べ、国内で時刻が違うことを確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Australia/Sydney",
+            "Australia/Perth"
+          ],
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "オーストラリアは複数の標準時を使っています。さらに一部地域ではサマータイムがあります。",
+        "sourceIds": [
+          "tourism-timezones"
+        ],
+        "skills": [
+          "time-zones"
+        ]
+      },
+      {
+        "id": "au-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜を見分ける",
+        "prompt": "日本の現在時刻を基準に、Sydney・Perth・Darwinが朝・昼・夕方・夜のどれに近いか選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Australia/Sydney",
+            "Australia/Perth",
+            "Australia/Darwin"
+          ]
+        },
+        "explanation": "都市ごとのIANAタイムゾーンを使って判定します。",
+        "skills": [
+          "time-zones",
+          "daily-life"
+        ]
+      },
+      {
+        "id": "au-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流できる時間を探せ",
+        "prompt": "日本の学校とSydneyの学校が、両方とも8:30〜16:00の時間帯に入る候補時刻を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Australia/Sydney",
+          "windowA": [
+            "08:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "16:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "国際交流では『自分の時間』だけでなく、相手の学校時間も考える必要があります。",
+        "skills": [
+          "scheduling",
+          "time-calculation"
+        ]
+      },
+      {
+        "id": "au-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "サマータイムの落とし穴",
+        "prompt": "次のうち、オーストラリアのサマータイムについて正しい説明はどれ？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "すべての州と準州で実施する",
+            "一部の州・準州だけで実施する",
+            "全国で一年中時計を1時間進める",
+            "サマータイムは存在しない"
+          ],
+          "correctIndex": 1
+        },
+        "explanation": "New South Wales、Victoria、South Australia、Tasmania、ACTでは夏季にサマータイムを実施しますが、Queensland、Northern Territory、Western Australiaでは実施しません。",
+        "sourceIds": [
+          "tourism-timezones"
+        ],
+        "skills": [
+          "time-zones",
+          "reasoning"
+        ]
+      },
+      {
+        "id": "au-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "listen-choice",
+        "title": "あいさつを聞こう",
+        "prompt": "音声を聞いて、聞こえた表現を選ぼう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "audioText": "Good morning!",
+          "langCode": "en-AU",
+          "choices": [
+            "Good morning!",
+            "Good night!",
+            "Thank you!",
+            "See you!"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "基本的な挨拶を音と意味で結びつけます。",
+        "skills": [
+          "listening"
+        ]
+      },
+      {
+        "id": "au-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "意味をつかもう",
+        "prompt": "“Nice to meet you.” に最も近い意味は？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "はじめまして。",
+            "おやすみなさい。",
+            "ごめんなさい。",
+            "いただきます。"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "初対面の相手に使う基本表現です。",
+        "skills": [
+          "vocabulary"
+        ]
+      },
+      {
+        "id": "au-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "matching",
+        "title": "場面と表現をつなぐ",
+        "prompt": "学校交流の場面と英語表現を正しく組み合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "相手の話が聞こえなかった",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "話してくれたことに感謝",
+              "phrase": "Thank you for telling me."
+            },
+            {
+              "situation": "交流の終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "挨拶は意味だけでなく、使う場面とセットで学ぶと実際の交流で使いやすくなります。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "au-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "音読チャレンジ",
+        "prompt": "“Good morning! Nice to meet you.” をお手本の後に読もう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Good morning! Nice to meet you.",
+          "meaning": "おはようございます。はじめまして。",
+          "langCode": "en-AU",
+          "minAccuracy": 70
+        },
+        "explanation": "正確さだけでなく、相手に伝わる声量と区切りも意識します。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "au-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介を伝えよう",
+        "prompt": "名前と日本から来たことを入れて、自分の自己紹介を録音しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I'm from Japan. Nice to meet you!",
+          "langCode": "en-AU",
+          "requiredSlots": [
+            "name"
+          ]
+        },
+        "explanation": "自分の情報を入れることで、暗唱ではなく実際のコミュニケーションに近づけます。",
+        "skills": [
+          "speaking",
+          "self-introduction"
+        ]
+      },
+      {
+        "id": "au-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "data-choice",
+        "title": "英語だけの国？",
+        "prompt": "2021年国勢調査の家庭で使う言語データから分かることとして最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "英語以外の言語も多くの家庭で使われている",
+            "全員が家庭で英語だけを使う",
+            "英語の使用は禁止されている",
+            "家庭では日本語が最も多い"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "英語だけを家庭で使う人は72.0%でした。一方、Mandarin、Arabic、Vietnamese、Cantonese、Punjabiなど、多様な言語も家庭で使われています。",
+        "sourceIds": [
+          "abs-census-2021"
+        ],
+        "skills": [
+          "data-literacy",
+          "multilingualism"
+        ]
+      },
+      {
+        "id": "au-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "First Languagesの多様性",
+        "prompt": "ヨーロッパ人による植民地化の時点で、Aboriginal and Torres Strait Islander languagesはどの程度あったとされていますか？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "250を超える",
+            "約10だけ",
+            "1つだけ",
+            "英語しかなかった"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "AIATSISによると、当時250を超える言語が話されていました。各言語は特定の場所や人々と結びついています。",
+        "sourceIds": [
+          "aiatsis-languages"
+        ],
+        "skills": [
+          "multilingualism",
+          "culture"
+        ]
+      },
+      {
+        "id": "au-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "本当に聞きたい質問を話す",
+        "prompt": "オーストラリアの同年代の生徒に聞いてみたい質問を英語で1つ作り、録音しよう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-AU",
+          "requiresRecording": true,
+          "requiresText": true
+        },
+        "explanation": "正解を暗唱するのではなく、自分の好奇心を英語にします。",
+        "skills": [
+          "speaking",
+          "question-creation",
+          "communication"
+        ]
+      },
+      {
+        "id": "au-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "7月はどんな季節？",
+        "prompt": "オーストラリア南部で7月は一般にどの季節？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "夏",
+            "秋",
+            "冬",
+            "春"
+          ],
+          "correctIndex": 2
+        },
+        "explanation": "オーストラリアの一般的な季節区分では、6〜8月が冬です。",
+        "sourceIds": [
+          "bom-seasons-2026"
+        ],
+        "skills": [
+          "seasons"
+        ]
+      },
+      {
+        "id": "au-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "compare-choice",
+        "title": "日本と7月を比較",
+        "prompt": "日本とオーストラリア南部の7月を比べた説明として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本は夏、オーストラリア南部は冬",
+            "両方とも冬",
+            "日本は冬、オーストラリア南部は夏",
+            "どちらにも季節がない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本は北半球、オーストラリアは南半球なので、一般的な季節の対応が逆になります。",
+        "sourceIds": [
+          "bom-seasons-2026"
+        ],
+        "skills": [
+          "comparison",
+          "seasons"
+        ]
+      },
+      {
+        "id": "au-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "学校生活を知る質問",
+        "prompt": "オンライン交流で相手の学校生活を知るための質問として最も良いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "What do you usually do during lunch break?",
+            "Is your school better than mine?",
+            "Do all Australians do the same thing?",
+            "Why is your school strange?"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "相手が自分の生活を説明できる、開かれた質問が交流を深めます。",
+        "skills": [
+          "communication",
+          "question-quality"
+        ]
+      },
+      {
+        "id": "au-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "同じ国でも気候が違う",
+        "prompt": "Darwin・Alice Springs・Melbourneを「熱帯の北部」「乾燥した内陸」「温帯の南部」に分けよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "Darwin",
+              "target": "熱帯の北部"
+            },
+            {
+              "name": "Alice Springs",
+              "target": "乾燥した内陸"
+            },
+            {
+              "name": "Melbourne",
+              "target": "温帯の南部"
+            }
+          ]
+        },
+        "explanation": "オーストラリアは広く、北部・内陸・南部で気候の特徴が異なります。",
+        "sourceIds": [
+          "bom-seasons-2026"
+        ],
+        "skills": [
+          "climate",
+          "classification"
+        ]
+      },
+      {
+        "id": "au-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "北部は四季だけ？",
+        "prompt": "オーストラリア北部の熱帯地域で、四季よりも実際の気候を表しやすい区分は？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "雨季と乾季",
+            "梅雨だけ",
+            "一年中冬",
+            "毎月別の季節"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "北部の熱帯では、降水量の違いを基にwet seasonとdry seasonで考えることがよくあります。",
+        "sourceIds": [
+          "bom-seasons-2026"
+        ],
+        "skills": [
+          "climate",
+          "reasoning"
+        ]
+      },
+      {
+        "id": "au-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "季節の見方は一つ？",
+        "prompt": "First Nationsの季節暦について最も適切な説明は？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "地域ごとに自然の変化を基にした異なる季節暦がある",
+            "全国で必ず同じ4季だけを使う",
+            "季節という考え方は存在しない",
+            "すべてヨーロッパ式の季節区分と同じ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "地域の天候、植物、動物の変化などを長年観察し、地域ごとに異なる季節の捉え方があります。",
+        "sourceIds": [
+          "bom-seasons-2026"
+        ],
+        "skills": [
+          "culture",
+          "environment"
+        ]
+      },
+      {
+        "id": "au-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "「オーストラリア人の生活」は一つ？",
+        "prompt": "国について学ぶときの考え方として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "地域や家庭によって生活は多様だと考える",
+            "一人の例を全国民に当てはめる",
+            "都市の生活だけが本当の生活だと考える",
+            "観光広告だけで生活を判断する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "大きな国には地域差、文化差、言語差、家庭ごとの違いがあります。ひとつの例を国全体の生活だと決めつけないことが大切です。",
+        "skills": [
+          "critical-thinking",
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "au-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本の食卓とのつながり",
+        "prompt": "2025年のオーストラリアから日本への主要輸出品に含まれていたものは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "牛肉",
+            "バナナだけ",
+            "雪",
+            "紙幣"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "主要輸出品には石炭、天然ガス、鉄鉱石、牛肉、銅などが含まれていました。",
+        "sourceIds": [
+          "dfat-japan-2025"
+        ],
+        "skills": [
+          "trade"
+        ]
+      },
+      {
+        "id": "au-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "日本へ届くものを分類",
+        "prompt": "次の品目を「2025年の主要な豪州→日本輸出品」と「それ以外」に分けよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "label": "石炭",
+              "target": "主要輸出品"
+            },
+            {
+              "label": "天然ガス",
+              "target": "主要輸出品"
+            },
+            {
+              "label": "鉄鉱石",
+              "target": "主要輸出品"
+            },
+            {
+              "label": "牛肉",
+              "target": "主要輸出品"
+            },
+            {
+              "label": "銅",
+              "target": "主要輸出品"
+            },
+            {
+              "label": "雪",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "2025年の主要輸出品には石炭、天然ガス、鉄鉱石、牛肉、銅が含まれます。",
+        "sourceIds": [
+          "dfat-japan-2025"
+        ],
+        "skills": [
+          "trade",
+          "classification"
+        ]
+      },
+      {
+        "id": "au-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "逆方向のつながり",
+        "prompt": "2025年に日本からオーストラリアへ向かう主要品目の一つとして挙げられているものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "乗用車",
+            "氷山",
+            "砂漠",
+            "野生のカンガルー"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "DFATは日本からオーストラリアへの主要輸入品の一つとして乗用車を挙げています。",
+        "sourceIds": [
+          "dfat-japan-2025"
+        ],
+        "skills": [
+          "trade",
+          "two-way-connection"
+        ]
+      },
+      {
+        "id": "au-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "資源→日本の生活",
+        "prompt": "天然ガスや鉄鉱石のような資源が、日本の生活や産業へどうつながるか、正しい流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "天然ガス",
+              "middle": "エネルギー供給",
+              "end": "家庭・産業"
+            },
+            {
+              "start": "鉄鉱石",
+              "middle": "鉄鋼",
+              "end": "建物・機械など"
+            }
+          ]
+        },
+        "explanation": "国どうしのつながりは『輸入品名を覚える』だけでなく、その先の電力・製造・建築・交通などとの関係まで考えると深まります。",
+        "sourceIds": [
+          "dfat-japan-2025"
+        ],
+        "skills": [
+          "systems-thinking"
+        ]
+      },
+      {
+        "id": "au-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なAustraliaを探せ",
+        "prompt": "家・給食・スーパー・街の中から、オーストラリアとのつながりがありそうな商品や原料を1つ見つけ、理由を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "原産国表示・商品名・原料名など、見つけた根拠も書こう。"
+        },
+        "explanation": "表示や原産国を確認する習慣は、世界と日常生活のつながりを実感する方法の一つです。",
+        "skills": [
+          "observation",
+          "daily-life",
+          "evidence"
+        ]
+      },
+      {
+        "id": "au-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "scenario-choice",
+        "title": "もし輸入が大きく減ったら？",
+        "prompt": "オーストラリアから日本へのエネルギー資源の輸入が大きく減った場合、まず考えるべき影響として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "代わりの供給源や価格への影響を考える",
+            "日本の時差がなくなる",
+            "日本の面積が小さくなる",
+            "英語が使えなくなる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "供給源の変化は、エネルギー調達、価格、産業活動など複数の面に影響し得ます。必ず一つの結果になるわけではないので、因果関係を考える問題です。",
+        "sourceIds": [
+          "dfat-japan-2025"
+        ],
+        "skills": [
+          "reasoning",
+          "systems-thinking"
+        ]
+      },
+      {
+        "id": "au-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズを作れ",
+        "prompt": "オーストラリアと日本のつながりについて、4択問題を1問作ろう。正解・誤答3つ・解説まで作成する。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30
+        },
+        "explanation": "問題を作るには、事実を理解し、誤答と区別し、他者に説明できる必要があります。",
+        "skills": [
+          "quiz-creation",
+          "explanation",
+          "knowledge-transfer"
+        ]
+      },
+      {
+        "id": "au-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "共通点を3つ探す",
+        "prompt": "日本とオーストラリアの共通点を3つ、カテゴリーを変えて見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "地理・学校・食・スポーツ・都市・国際交流など、同じ視点だけに偏らない比較を目指します。",
+        "skills": [
+          "comparison"
+        ]
+      },
+      {
+        "id": "au-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由",
+        "prompt": "日本とオーストラリアの違いを3つ見つけ、そのうち1つについて『なぜ違うのか』を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "違いを挙げるだけでなく、緯度、国土、歴史、人口分布、文化など背景を考えることが深い学習につながります。",
+        "skills": [
+          "comparison",
+          "reasoning"
+        ]
+      },
+      {
+        "id": "au-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "ステレオタイプを検証",
+        "prompt": "『オーストラリアは一年中どこでも暑い』という説明を、これまで学んだ証拠を使って評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+  "claim": "オーストラリアは一年中どこでも暑い",
+  "correctJudgement": "不正確",
+  "requiredEvidenceCount": 2,
+  "evidenceOptions": [
+    {
+      "id": "au-k03-e1",
+      "text": "オーストラリア南部には冬がある",
+      "valid": true
+    },
+    {
+      "id": "au-k03-e2",
+      "text": "北部には熱帯地域がある一方、内陸には乾燥地域もある",
+      "valid": true
+    },
+    {
+      "id": "au-k03-e3",
+      "text": "国内の地域によって気候の特徴が異なる",
+      "valid": true
+    },
+    {
+      "id": "au-k03-e4",
+      "text": "オーストラリアは南半球にある",
+      "valid": false
+    },
+    {
+      "id": "au-k03-e5",
+      "text": "オーストラリアの首都はキャンベラである",
+      "valid": false
+    }
+  ]
+},
+        "explanation": "オーストラリアには熱帯・乾燥地域・温帯などがあり、南部では冬もあります。国を一つのイメージだけで説明しないことが大切です。",
+        "sourceIds": [
+          "bom-seasons-2026"
+        ],
+        "skills": [
+          "media-literacy",
+          "evidence",
+          "critical-thinking"
+        ]
+      },
+      {
+        "id": "au-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ作る",
+        "prompt": "オーストラリアの同年代の生徒に本当に聞いてみたい質問を3つ作ろう。少なくとも2分野を含める。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true
+        },
+        "explanation": "相手を決めつける質問ではなく、相手自身が自分の生活や考えを説明できる質問を目指します。",
+        "skills": [
+          "question-creation",
+          "communication"
+        ]
+      },
+      {
+        "id": "au-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Australia Master Quiz",
+        "prompt": "まだオーストラリアを学んでいない友達向けに、地理・時間・言語・文化・日本とのつながりから5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true
+        },
+        "explanation": "知識を再構成し、他者が学べる形にする最終Missionです。",
+        "skills": [
+          "creation",
+          "synthesis",
+          "teaching"
+        ]
+      }
+    ]
+  }
+}

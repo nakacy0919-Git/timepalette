@@ -5,6 +5,7 @@ import InteractiveQuiz from './InteractiveQuiz';
 
 // ▼ 追加：言語練習コンポーネントのインポート
 import LanguagePractice from './LanguagePractice';
+import WorldMissionPanel from './world-learning/WorldMissionPanel';
 // ※ 必要に応じてパス（'./LanguagePractice'）は実際の保存場所に合わせて調整してください。
 
 export default function CountryDetailOverlay({
@@ -290,7 +291,11 @@ try {
                   ))}
                 </div>
               </div>
-
+{/* World Learning Mission */}
+<WorldMissionPanel
+  countryCode={iso}
+  fileLetter={fileLetter}
+/>
               {/* クイズエリア */}
               {countryData.quiz && (
                 <div className="mt-16 pt-10 border-t-2 border-dashed border-slate-300">
