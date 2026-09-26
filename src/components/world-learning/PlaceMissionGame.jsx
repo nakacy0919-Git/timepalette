@@ -3,7 +3,12 @@ import {
   MapPin,
   RotateCcw,
 } from 'lucide-react';
-import { useMemo, useState } from 'react';
+
+import {
+  useMemo,
+  useState,
+} from 'react';
+
 import {
   ComposableMap,
   Geographies,
@@ -15,28 +20,79 @@ import worldAtlas
   from 'world-atlas/countries-110m.json';
 
 
-const TARGET_COUNTRY_NAMES = {
-  au: 'Australia',
-};
+/* =========================================================
+   HELPERS
+========================================================= */
 
-const AUSTRALIA_CITIES = {
-  Sydney: {
-    coordinates: [151.2093, -33.8688],
-    labelJa: 'シドニー',
-  },
-  Perth: {
-    coordinates: [115.8605, -31.9505],
-    labelJa: 'パース',
-  },
-  Darwin: {
-    coordinates: [130.8456, -12.4634],
-    labelJa: 'ダーウィン',
-  },
-  Melbourne: {
-    coordinates: [144.9631, -37.8136],
-    labelJa: 'メルボルン',
-  },
-};
+function getTargetCountryName(
+  mission
+) {
+  return (
+    mission
+      ?.challenge
+      ?.targetAtlasName ||
+    mission
+      ?.challenge
+      ?.targetName ||
+    ''
+  );
+}
+
+
+function normalizeCities(
+  mission
+) {
+  const rawCities =
+    mission
+      ?.challenge
+      ?.cities ??
+    [];
+
+  return rawCities
+    .map(
+      (city) => ({
+        name:
+          city?.name ??
+          '',
+
+        labelJa:
+          city?.labelJa ??
+          city?.name ??
+          '',
+
+        coordinates:
+          city?.coordinates,
+
+        timeZone:
+          city?.timeZone ??
+          '',
+
+        region:
+          city?.region ??
+          '',
+      })
+    )
+    .filter(
+      (city) =>
+        city.name &&
+        Array.isArray(
+          city.coordinates
+        ) &&
+        city.coordinates.length ===
+          2 &&
+        city.coordinates.every(
+          (value) =>
+            Number.isFinite(
+              Number(value)
+            )
+        )
+    );
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
 
 function ClearResult({
   correct,
@@ -45,32 +101,44 @@ function ClearResult({
   alreadyCompleted,
   answerLabel,
 }) {
-  if (correct === null) {
+  if (
+    correct === null
+  ) {
     return null;
   }
 
   if (!correct) {
     return (
       <div className="mt-5 rounded-2xl border border-orange-200 bg-orange-50 p-4 text-orange-700">
+
         <p className="font-black">
           もう一度地図をよく見てみよう！
         </p>
+
         <p className="mt-1 text-sm font-bold opacity-80">
-          位置関係を手がかりに、別の場所を試してみましょう。
+          大陸・海・周辺国との位置関係を手がかりに考えてみましょう。
         </p>
+
       </div>
     );
   }
 
   return (
     <div className="mt-5 rounded-3xl border border-emerald-200 bg-emerald-50 p-5">
+
       <div className="mb-3 flex items-center gap-3 text-emerald-700">
-        <CheckCircle2 size={26} />
+
+        <CheckCircle2
+          size={26}
+        />
+
         <p className="text-xl font-black">
           Mission Clear!
         </p>
+
       </div>
-          {answerLabel && (
+
+      {answerLabel && (
         <div className="mb-4 border-l-4 border-emerald-500 bg-white px-4 py-3">
 
           <p className="text-[10px] font-black tracking-[0.16em] text-emerald-600">
@@ -83,6 +151,7 @@ function ClearResult({
 
         </div>
       )}
+
       <p className="font-bold leading-relaxed text-slate-700">
         {explanation}
       </p>
@@ -92,527 +161,943 @@ function ClearResult({
           ? 'REVIEW COMPLETE'
           : `+${points} WP`}
       </div>
+
     </div>
   );
 }
+
+
+/* =========================================================
+   COUNTRY MAP TAP
+========================================================= */
 
 function CountryMapTap({
   mission,
   onComplete,
   alreadyCompleted,
 }) {
-  const [result, setResult] = useState(null);
-  const [lastCountry, setLastCountry] = useState('');
+  const [
+    result,
+    setResult,
+  ] = useState(null);
+
+  const [
+    lastCountry,
+    setLastCountry,
+  ] = useState('');
 
   const targetName =
-    TARGET_COUNTRY_NAMES[
-      mission?.challenge?.targetIso
-    ] || 'Australia';
+    getTargetCountryName(
+      mission
+    );
 
-  const handleCountryClick = (geo) => {
-    if (result === true) {
-      return;
-    }
 
-    const name =
-      geo?.properties?.name || '';
+  const handleCountryClick =
+    (geo) => {
+      if (
+        result === true
+      ) {
+        return;
+      }
 
-    setLastCountry(name);
+      const name =
+        geo
+          ?.properties
+          ?.name ??
+        '';
 
-    const correct =
-      name === targetName;
+      setLastCountry(
+        name
+      );
 
-    setResult(correct);
+      const correct =
+        name === targetName;
 
-    if (correct) {
-      onComplete(mission);
-    }
-  };
+      setResult(
+        correct
+      );
+
+      if (correct) {
+        onComplete(
+          mission
+        );
+      }
+    };
+
 
   return (
     <div>
+
       <div className="overflow-hidden border border-slate-200 bg-[#dceaf0] shadow-sm md:rounded-2xl">
+
         <div className="border-b border-slate-200 bg-white px-5 py-4">
+
           <p className="text-sm font-black text-slate-500">
             🌍 世界地図をタップ
           </p>
+
           <p className="mt-1 text-xs font-bold text-slate-400">
             国名ラベルはありません。形と位置から探してみよう。
           </p>
+
         </div>
 
+
         <ComposableMap
-  projection="geoEqualEarth"
-  projectionConfig={{
-    scale: 170,
-    center: [8, 4],
-  }}
-  width={1100}
-  height={540}
-  className="h-auto w-full"
->
-  <Geographies
-    geography={worldAtlas}
-  >
-              {({ geographies }) =>
-                geographies.map((geo) => {
+          projection="geoEqualEarth"
+          projectionConfig={{
+            scale: 170,
+            center: [
+              8,
+              4,
+            ],
+          }}
+          width={1100}
+          height={540}
+          className="h-auto w-full"
+        >
+
+          <Geographies
+            geography={
+              worldAtlas
+            }
+          >
+
+            {({
+              geographies,
+            }) =>
+              geographies.map(
+                (geo) => {
                   const name =
-                    geo?.properties?.name || '';
+                    geo
+                      ?.properties
+                      ?.name ??
+                    '';
 
                   const isTarget =
                     result === true &&
-                    name === targetName;
+                    name ===
+                      targetName;
 
                   const isWrong =
                     result === false &&
-                    name === lastCountry;
+                    name ===
+                      lastCountry;
 
                   let fill =
                     '#cbd5e1';
 
-                  if (isTarget) {
-                    fill = '#10b981';
-                  } else if (isWrong) {
-                    fill = '#fb7185';
+                  if (
+                    isTarget
+                  ) {
+                    fill =
+                      '#10b981';
+                  } else if (
+                    isWrong
+                  ) {
+                    fill =
+                      '#fb7185';
                   }
 
                   return (
                     <Geography
-                      key={geo.rsmKey}
-                      geography={geo}
-                      onClick={() =>
-                        handleCountryClick(geo)
+                      key={
+                        geo.rsmKey
                       }
-                      aria-label={name}
+                      geography={
+                        geo
+                      }
+                      onClick={() =>
+                        handleCountryClick(
+                          geo
+                        )
+                      }
+                      aria-label={
+                        name
+                      }
                       tabIndex={0}
-                      onKeyDown={(event) => {
+                      onKeyDown={(
+                        event
+                      ) => {
                         if (
-                          event.key === 'Enter' ||
-                          event.key === ' '
+                          event.key ===
+                            'Enter' ||
+                          event.key ===
+                            ' '
                         ) {
                           event.preventDefault();
-                          handleCountryClick(geo);
+
+                          handleCountryClick(
+                            geo
+                          );
                         }
                       }}
                       style={{
                         default: {
                           fill,
-                          stroke: '#ffffff',
-                          strokeWidth: 0.55,
-                          outline: 'none',
-                          cursor: 'pointer',
+                          stroke:
+                            '#ffffff',
+                          strokeWidth:
+                            0.55,
+                          outline:
+                            'none',
+                          cursor:
+                            'pointer',
                         },
+
                         hover: {
-                          fill: isTarget
-                            ? '#10b981'
-                            : '#60a5fa',
-                          stroke: '#ffffff',
-                          strokeWidth: 0.8,
-                          outline: 'none',
-                          cursor: 'pointer',
+                          fill:
+                            isTarget
+                              ? '#10b981'
+                              : '#60a5fa',
+
+                          stroke:
+                            '#ffffff',
+
+                          strokeWidth:
+                            0.8,
+
+                          outline:
+                            'none',
+
+                          cursor:
+                            'pointer',
                         },
+
                         pressed: {
-                          fill: '#2563eb',
-                          stroke: '#ffffff',
-                          strokeWidth: 0.8,
-                          outline: 'none',
+                          fill:
+                            '#2563eb',
+
+                          stroke:
+                            '#ffffff',
+
+                          strokeWidth:
+                            0.8,
+
+                          outline:
+                            'none',
                         },
                       }}
                     />
                   );
-                })
-              }
-              </Geographies>
-</ComposableMap>
+                }
+              )
+            }
+
+          </Geographies>
+
+        </ComposableMap>
+
       </div>
+
 
       {result === false && (
         <div className="mt-4 flex items-start gap-3 rounded-2xl border border-orange-200 bg-orange-50 p-4 text-orange-700">
+
           <MapPin
             size={20}
             className="mt-0.5 shrink-0"
           />
+
           <div>
+
             <p className="font-black">
               そこではありません。
             </p>
+
             <p className="mt-1 text-sm font-bold opacity-80">
-              オーストラリアは南半球にあり、アジアの南東側に位置します。
+              大陸・海・周辺国との位置関係を手がかりに、もう一度探してみましょう。
             </p>
+
           </div>
+
         </div>
       )}
 
+
       <ClearResult
-  correct={result}
-  explanation={
-    mission.explanation
-  }
-  points={
-    mission.points
-  }
-  alreadyCompleted={
-    alreadyCompleted
-  }
-  answerLabel={
-    targetName
-  }
-/>
+        correct={
+          result
+        }
+        explanation={
+          mission.explanation
+        }
+        points={
+          mission.points
+        }
+        alreadyCompleted={
+          alreadyCompleted
+        }
+        answerLabel={
+          targetName
+        }
+      />
+
     </div>
   );
 }
+
+
+/* =========================================================
+   CITY MAP
+========================================================= */
 
 function CityMapGame({
   mission,
   onComplete,
   alreadyCompleted,
 }) {
-  const cityNames = useMemo(
-    () =>
-      (mission?.challenge?.cities || [])
-        .map((city) => city.name)
-        .filter(
-          (name) =>
-            AUSTRALIA_CITIES[name]
+  const cities =
+    useMemo(
+      () =>
+        normalizeCities(
+          mission
         ),
-    [mission]
+      [mission]
+    );
+
+
+  const cityNames =
+    useMemo(
+      () =>
+        cities.map(
+          (city) =>
+            city.name
+        ),
+      [cities]
+    );
+
+
+  const cityByName =
+    useMemo(
+      () =>
+        new Map(
+          cities.map(
+            (city) => [
+              city.name,
+              city,
+            ]
+          )
+        ),
+      [cities]
+    );
+
+
+  const [
+    selectedCity,
+    setSelectedCity,
+  ] = useState(
+    cityNames[0] ??
+      ''
   );
 
-  const [selectedCity, setSelectedCity] = useState(
-    cityNames[0] || ''
-  );
-  const [placedCities, setPlacedCities] = useState([]);
-  const [wrongMarker, setWrongMarker] = useState('');
-  const [complete, setComplete] = useState(false);
 
-  const placedSet = new Set(placedCities);
+  const [
+    placedCities,
+    setPlacedCities,
+  ] = useState([]);
 
-  const handleMarkerClick = (cityName) => {
-    if (
-      complete ||
-      !selectedCity ||
-      placedSet.has(cityName)
-    ) {
-      return;
-    }
 
-    if (cityName !== selectedCity) {
-      setWrongMarker(cityName);
-      return;
-    }
+  const [
+    wrongMarker,
+    setWrongMarker,
+  ] = useState('');
 
-    const nextPlaced = [
-      ...placedCities,
-      cityName,
+
+  const [
+    complete,
+    setComplete,
+  ] = useState(false);
+
+
+  const placedSet =
+    new Set(
+      placedCities
+    );
+
+
+  const targetCountryName =
+    getTargetCountryName(
+      mission
+    );
+
+
+  const mapCenter =
+    mission
+      ?.challenge
+      ?.mapConfig
+      ?.center ??
+    [
+      0,
+      20,
     ];
 
-    setPlacedCities(nextPlaced);
-    setWrongMarker('');
 
-    const nextCity =
-      cityNames.find(
-        (name) =>
-          !nextPlaced.includes(name)
-      ) || '';
-
-    setSelectedCity(nextCity);
-
-    if (
-      nextPlaced.length ===
-      cityNames.length
-    ) {
-      setComplete(true);
-      onComplete(mission);
-    }
-  };
-
-  const resetGame = () => {
-    setPlacedCities([]);
-    setWrongMarker('');
-    setComplete(false);
-    setSelectedCity(
-      cityNames[0] || ''
+  const mapScale =
+    Number(
+      mission
+        ?.challenge
+        ?.mapConfig
+        ?.scale ??
+        600
     );
-  };
+
+
+  const handleMarkerClick =
+    (
+      cityName
+    ) => {
+      if (
+        complete ||
+        !selectedCity ||
+        placedSet.has(
+          cityName
+        )
+      ) {
+        return;
+      }
+
+      if (
+        cityName !==
+        selectedCity
+      ) {
+        setWrongMarker(
+          cityName
+        );
+
+        return;
+      }
+
+
+      const nextPlaced = [
+        ...placedCities,
+        cityName,
+      ];
+
+
+      setPlacedCities(
+        nextPlaced
+      );
+
+      setWrongMarker(
+        ''
+      );
+
+
+      const nextCity =
+        cityNames.find(
+          (name) =>
+            !nextPlaced.includes(
+              name
+            )
+        ) ??
+        '';
+
+
+      setSelectedCity(
+        nextCity
+      );
+
+
+      if (
+        nextPlaced.length ===
+        cityNames.length
+      ) {
+        setComplete(
+          true
+        );
+
+        onComplete(
+          mission
+        );
+      }
+    };
+
+
+  const resetGame =
+    () => {
+      setPlacedCities(
+        []
+      );
+
+      setWrongMarker(
+        ''
+      );
+
+      setComplete(
+        false
+      );
+
+      setSelectedCity(
+        cityNames[0] ??
+          ''
+      );
+    };
+
+
+  if (
+    cities.length === 0
+  ) {
+    return (
+      <div className="rounded-3xl border border-orange-200 bg-orange-50 p-6 text-orange-700">
+
+        <p className="font-black">
+          City Mapデータがありません。
+        </p>
+
+        <p className="mt-2 text-sm font-bold">
+          mission.challenge.cities に都市座標が必要です。
+        </p>
+
+      </div>
+    );
+  }
+
 
   return (
     <div>
+
+      {/* CURRENT CITY */}
+
       <div className="mb-5 rounded-3xl border border-blue-100 bg-blue-50 p-5">
+
         <p className="text-xs font-black tracking-[0.15em] text-blue-400">
           CURRENT CITY
         </p>
 
+
         {selectedCity ? (
           <>
+
             <p className="mt-2 text-2xl font-black text-slate-800">
+
               {
-                AUSTRALIA_CITIES[
+                cityByName.get(
                   selectedCity
-                ]?.labelJa
+                )?.labelJa
               }
+
               <span className="ml-2 text-lg text-slate-400">
-                {selectedCity}
+                {
+                  selectedCity
+                }
               </span>
+
             </p>
 
             <p className="mt-2 text-sm font-bold text-slate-500">
               この都市があると思う●を地図上でタップしてください。
             </p>
+
           </>
         ) : (
+
           <p className="mt-2 text-xl font-black text-emerald-700">
-            4都市すべて配置できました！
+            すべての都市を配置できました！
           </p>
+
         )}
+
       </div>
 
+
+      {/* MAP */}
+
       <div className="overflow-hidden border border-slate-200 bg-[#dceaf0] shadow-sm md:rounded-2xl">
+
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
-            center: [134, -25],
-            scale: 720,
+            center:
+              mapCenter,
+
+            scale:
+              mapScale,
           }}
           width={1000}
-height={620}
+          height={620}
           className="h-auto w-full"
         >
+
           <Geographies
-  geography={worldAtlas}
->
-            {({ geographies }) =>
-              geographies.map((geo) => {
-                const name =
-                  geo?.properties?.name || '';
-
-                const australia =
-                  name === 'Australia';
-
-                return (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    style={{
-                      default: {
-                        fill: australia
-                          ? '#e2e8f0'
-                          : '#f8fafc',
-                        stroke: australia
-                          ? '#94a3b8'
-                          : '#e2e8f0',
-                        strokeWidth: australia
-                          ? 1
-                          : 0.25,
-                        outline: 'none',
-                      },
-                      hover: {
-                        fill: australia
-                          ? '#e2e8f0'
-                          : '#f8fafc',
-                        stroke: australia
-                          ? '#94a3b8'
-                          : '#e2e8f0',
-                        strokeWidth: australia
-                          ? 1
-                          : 0.25,
-                        outline: 'none',
-                      },
-                      pressed: {
-                        fill: australia
-                          ? '#e2e8f0'
-                          : '#f8fafc',
-                        stroke: australia
-                          ? '#94a3b8'
-                          : '#e2e8f0',
-                        strokeWidth: australia
-                          ? 1
-                          : 0.25,
-                        outline: 'none',
-                      },
-                    }}
-                  />
-                );
-              })
+            geography={
+              worldAtlas
             }
+          >
+
+            {({
+              geographies,
+            }) =>
+              geographies.map(
+                (geo) => {
+                  const name =
+                    geo
+                      ?.properties
+                      ?.name ??
+                    '';
+
+                  const isTargetCountry =
+                    name ===
+                    targetCountryName;
+
+                  return (
+                    <Geography
+                      key={
+                        geo.rsmKey
+                      }
+                      geography={
+                        geo
+                      }
+                      style={{
+                        default: {
+                          fill:
+                            isTargetCountry
+                              ? '#e2e8f0'
+                              : '#f8fafc',
+
+                          stroke:
+                            isTargetCountry
+                              ? '#64748b'
+                              : '#e2e8f0',
+
+                          strokeWidth:
+                            isTargetCountry
+                              ? 1
+                              : 0.25,
+
+                          outline:
+                            'none',
+                        },
+
+                        hover: {
+                          fill:
+                            isTargetCountry
+                              ? '#dbeafe'
+                              : '#f8fafc',
+
+                          stroke:
+                            isTargetCountry
+                              ? '#2563eb'
+                              : '#e2e8f0',
+
+                          strokeWidth:
+                            isTargetCountry
+                              ? 1.2
+                              : 0.25,
+
+                          outline:
+                            'none',
+                        },
+
+                        pressed: {
+                          fill:
+                            isTargetCountry
+                              ? '#dbeafe'
+                              : '#f8fafc',
+
+                          stroke:
+                            isTargetCountry
+                              ? '#2563eb'
+                              : '#e2e8f0',
+
+                          strokeWidth:
+                            isTargetCountry
+                              ? 1.2
+                              : 0.25,
+
+                          outline:
+                            'none',
+                        },
+                      }}
+                    />
+                  );
+                }
+              )
+            }
+
           </Geographies>
 
-          {cityNames.map((cityName) => {
-            const city =
-              AUSTRALIA_CITIES[
-                cityName
-              ];
 
-            const placed =
-              placedSet.has(
-                cityName
-              );
+          {cityNames.map(
+            (
+              cityName
+            ) => {
+              const city =
+                cityByName.get(
+                  cityName
+                );
 
-            const wrong =
-              wrongMarker ===
-              cityName;
+              if (!city) {
+                return null;
+              }
 
-            return (
-              <Marker
-                key={cityName}
-                coordinates={
-                  city.coordinates
-                }
-              >
-                <g
-                  onClick={() =>
-                    handleMarkerClick(
-                      cityName
-                    )
+              const placed =
+                placedSet.has(
+                  cityName
+                );
+
+              const wrong =
+                wrongMarker ===
+                cityName;
+
+
+              return (
+                <Marker
+                  key={
+                    cityName
                   }
-                  onKeyDown={(event) => {
-                    if (
-                      event.key === 'Enter' ||
-                      event.key === ' '
-                    ) {
-                      event.preventDefault();
+                  coordinates={
+                    city.coordinates
+                  }
+                >
+
+                  <g
+                    onClick={() =>
                       handleMarkerClick(
                         cityName
-                      );
+                      )
                     }
-                  }}
-                  role="button"
-                  tabIndex={0}
-                  aria-label={
-                    placed
-                      ? `${cityName} placed`
-                      : 'city marker'
-                  }
-                  style={{
-                    cursor: placed
-                      ? 'default'
-                      : 'pointer',
-                    outline: 'none',
-                  }}
-                >
-                  <circle
-                    r={placed ? 11 : 10}
-                    fill={
-                      placed
-                        ? '#10b981'
-                        : wrong
-                          ? '#fb7185'
-                          : '#2563eb'
-                    }
-                    stroke="#ffffff"
-                    strokeWidth={3}
-                  />
+                    onKeyDown={(
+                      event
+                    ) => {
+                      if (
+                        event.key ===
+                          'Enter' ||
+                        event.key ===
+                          ' '
+                      ) {
+                        event.preventDefault();
 
-                  {placed && (
-                    <text
-                      textAnchor="middle"
-                      y={-18}
-                      style={{
-                        fontFamily:
-                          'system-ui, sans-serif',
-                        fontSize: 14,
-                        fontWeight: 900,
-                        fill: '#0f172a',
-                        paintOrder: 'stroke',
-                        stroke: '#ffffff',
-                        strokeWidth: 4,
-                      }}
-                    >
-                      {cityName}
-                    </text>
-                  )}
-                </g>
-              </Marker>
-            );
-          })}
+                        handleMarkerClick(
+                          cityName
+                        );
+                      }
+                    }}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={
+                      placed
+                        ? `${cityName} placed`
+                        : `${cityName} marker`
+                    }
+                    style={{
+                      cursor:
+                        placed
+                          ? 'default'
+                          : 'pointer',
+
+                      outline:
+                        'none',
+                    }}
+                  >
+
+                    <circle
+                      r={
+                        placed
+                          ? 11
+                          : 10
+                      }
+                      fill={
+                        placed
+                          ? '#10b981'
+                          : wrong
+                            ? '#fb7185'
+                            : '#2563eb'
+                      }
+                      stroke="#ffffff"
+                      strokeWidth={3}
+                    />
+
+
+                    {placed && (
+                      <text
+                        textAnchor="middle"
+                        y={-18}
+                        style={{
+                          fontFamily:
+                            'system-ui, sans-serif',
+
+                          fontSize:
+                            14,
+
+                          fontWeight:
+                            900,
+
+                          fill:
+                            '#0f172a',
+
+                          paintOrder:
+                            'stroke',
+
+                          stroke:
+                            '#ffffff',
+
+                          strokeWidth:
+                            4,
+                        }}
+                      >
+                        {
+                          cityName
+                        }
+                      </text>
+                    )}
+
+                  </g>
+
+                </Marker>
+              );
+            }
+          )}
+
         </ComposableMap>
+
       </div>
 
-      <div className="mt-4 grid grid-cols-2 gap-2 md:grid-cols-4">
+
+      {/* CITY STATUS */}
+
+      <div
+        className="
+          mt-4
+          grid
+          grid-cols-2
+          gap-2
+          md:grid-cols-4
+        "
+      >
+
         {cityNames.map(
-          (cityName) => {
+          (
+            cityName
+          ) => {
+            const city =
+              cityByName.get(
+                cityName
+              );
+
             const placed =
               placedSet.has(
                 cityName
               );
+
 
             return (
               <div
-                key={cityName}
-                className={`rounded-2xl border p-3 text-center ${
-                  placed
-                    ? 'border-emerald-200 bg-emerald-50'
-                    : selectedCity ===
-                        cityName
-                      ? 'border-blue-300 bg-blue-50'
-                      : 'border-slate-200 bg-white'
-                }`}
+                key={
+                  cityName
+                }
+                className={`
+                  rounded-2xl
+                  border
+                  p-3
+                  text-center
+                  ${
+                    placed
+                      ? 'border-emerald-200 bg-emerald-50'
+                      : selectedCity ===
+                          cityName
+                        ? 'border-blue-300 bg-blue-50'
+                        : 'border-slate-200 bg-white'
+                  }
+                `}
               >
+
                 <p className="font-black text-slate-700">
                   {
-                    AUSTRALIA_CITIES[
-                      cityName
-                    ]?.labelJa
+                    city
+                      ?.labelJa
                   }
                 </p>
+
                 <p className="text-xs font-bold text-slate-400">
-                  {cityName}
+                  {
+                    cityName
+                  }
                 </p>
+
                 <p className="mt-1 text-xs font-black">
+
                   {placed
                     ? '✓ PLACED'
                     : selectedCity ===
                         cityName
                       ? 'NOW'
                       : 'NEXT'}
+
                 </p>
+
               </div>
             );
           }
         )}
+
       </div>
 
-      {wrongMarker && !complete && (
-        <div className="mt-4 rounded-2xl border border-orange-200 bg-orange-50 p-4 text-orange-700">
-          <p className="font-black">
-            その場所ではありません。
-          </p>
-          <p className="mt-1 text-sm font-bold opacity-80">
-            オーストラリアの東・西・北・南東という位置関係を考えてみましょう。
-          </p>
-        </div>
-      )}
+
+      {wrongMarker &&
+        !complete && (
+          <div className="mt-4 rounded-2xl border border-orange-200 bg-orange-50 p-4 text-orange-700">
+
+            <p className="font-black">
+              その場所ではありません。
+            </p>
+
+            <p className="mt-1 text-sm font-bold opacity-80">
+              都市どうしの東西南北の位置関係を考えてみましょう。
+            </p>
+
+          </div>
+        )}
+
 
       {!complete &&
-        placedCities.length > 0 && (
+        placedCities.length >
+          0 && (
           <button
-            onClick={resetGame}
+            type="button"
+            onClick={
+              resetGame
+            }
             className="mt-4 inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-black text-slate-600 transition-colors hover:bg-slate-200"
           >
-            <RotateCcw size={17} />
+            <RotateCcw
+              size={17}
+            />
             最初からやり直す
           </button>
         )}
 
+
       <ClearResult
-  correct={
-    complete ? true : null
-  }
-  explanation={
-    mission.explanation
-  }
-  points={
-    mission.points
-  }
-  alreadyCompleted={
-    alreadyCompleted
-  }
-  answerLabel={
-    cityNames.join(' / ')
-  }
-/>
+        correct={
+          complete
+            ? true
+            : null
+        }
+        explanation={
+          mission.explanation
+        }
+        points={
+          mission.points
+        }
+        alreadyCompleted={
+          alreadyCompleted
+        }
+        answerLabel={
+          cityNames.join(
+            ' / '
+          )
+        }
+      />
+
     </div>
   );
 }
+
+
+/* =========================================================
+   ROUTER
+========================================================= */
 
 export default function PlaceMissionGame({
   mission,
@@ -620,12 +1105,17 @@ export default function PlaceMissionGame({
   alreadyCompleted,
 }) {
   if (
-    mission.type === 'map-tap'
+    mission.type ===
+    'map-tap'
   ) {
     return (
       <CountryMapTap
-        mission={mission}
-        onComplete={onComplete}
+        mission={
+          mission
+        }
+        onComplete={
+          onComplete
+        }
         alreadyCompleted={
           alreadyCompleted
         }
@@ -633,19 +1123,26 @@ export default function PlaceMissionGame({
     );
   }
 
+
   if (
-    mission.type === 'city-map'
+    mission.type ===
+    'city-map'
   ) {
     return (
       <CityMapGame
-        mission={mission}
-        onComplete={onComplete}
+        mission={
+          mission
+        }
+        onComplete={
+          onComplete
+        }
         alreadyCompleted={
           alreadyCompleted
         }
       />
     );
   }
+
 
   return null;
 }

@@ -54,7 +54,7 @@ const calculateAccuracy = (target, transcript) => {
   return Math.max(0, Math.round((1 - distance / denominator) * 100));
 };
 
-const speakText = (text, langCode = 'en-AU') => {
+const speakText = (text, langCode = 'en-US') => {
   if (!text || typeof window === 'undefined' || !('speechSynthesis' in window)) return;
 
   window.speechSynthesis.cancel();
@@ -64,7 +64,7 @@ const speakText = (text, langCode = 'en-AU') => {
   window.speechSynthesis.speak(utterance);
 };
 
-function useSpeechRecognition(langCode = 'en-AU') {
+function useSpeechRecognition(langCode = 'en-US') {
   const recognitionRef = useRef(null);
   const mountedRef = useRef(true);
   const [transcript, setTranscript] = useState('');
@@ -340,7 +340,7 @@ function SpeakingMission({ mission, onClear, alreadyCompleted }) {
     : mission.challenge.phrase || '';
 
   const minAccuracy = mission.challenge.minAccuracy ?? 70;
-  const speech = useSpeechRecognition(mission.challenge.langCode || 'en-AU');
+  const speech = useSpeechRecognition(mission.challenge.langCode || 'en-US');
   const canStart = !isTemplate || name.trim().length > 0;
 
   const check = () => {
@@ -386,7 +386,7 @@ function SpeakingMission({ mission, onClear, alreadyCompleted }) {
         )}
         <button
           disabled={!canStart}
-          onClick={() => speakText(targetPhrase, mission.challenge.langCode || 'en-AU')}
+          onClick={() => speakText(targetPhrase, mission.challenge.langCode || 'en-US')}
           className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 font-black text-blue-600 shadow-sm transition hover:bg-blue-50 disabled:opacity-40"
         >
           <Volume2 size={18} />
@@ -485,7 +485,7 @@ function SpeakingCreatorMission({ mission, onClear, alreadyCompleted }) {
   const [questionText, setQuestionText] = useState('');
   const [status, setStatus] = useState(null);
   const [accuracy, setAccuracy] = useState(null);
-  const speech = useSpeechRecognition(mission.challenge.langCode || 'en-AU');
+  const speech = useSpeechRecognition(mission.challenge.langCode || 'en-US');
 
   const wordCount = countWords(questionText);
   const textReady = wordCount >= minWords;
@@ -510,7 +510,7 @@ function SpeakingCreatorMission({ mission, onClear, alreadyCompleted }) {
       <div className="rounded-3xl border border-violet-200 bg-violet-50 p-5 md:p-6">
         <p className="text-xs font-black tracking-[0.12em] text-violet-500">CREATE YOUR QUESTION</p>
         <p className="mt-2 font-bold leading-relaxed text-slate-700">
-          オーストラリアの同年代の生徒に、本当に聞いてみたいことを英語で書いてください。
+          この国の同年代の生徒に、本当に聞いてみたいことを英語で書いてください。
         </p>
         <textarea
           value={questionText}
@@ -529,7 +529,7 @@ function SpeakingCreatorMission({ mission, onClear, alreadyCompleted }) {
           </span>
           {questionText.trim() && (
             <button
-              onClick={() => speakText(questionText, mission.challenge.langCode || 'en-AU')}
+              onClick={() => speakText(questionText, mission.challenge.langCode || 'en-US')}
               className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-violet-600 shadow-sm hover:bg-violet-100"
             >
               <Volume2 size={16} />

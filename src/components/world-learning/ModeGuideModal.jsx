@@ -254,7 +254,7 @@ export default function ModeGuideModal({
                 hover:bg-blue-700
               "
             >
-              Australiaで体験する
+              世界で体験する
 
               <ArrowRight
                 size={18}

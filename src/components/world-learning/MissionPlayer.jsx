@@ -241,9 +241,9 @@ const completedThisSessionRef =
       );
 
     utterance.lang =
-      mission?.challenge
-        ?.langCode ||
-      'en-AU';
+  mission?.challenge
+    ?.langCode ||
+  'en-US';
 
     utterance.rate =
       0.85;
