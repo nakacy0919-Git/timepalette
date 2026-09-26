@@ -144,47 +144,264 @@ const FIND_MODES = [
 const CONTINENTS = [
   {
     id: 'asia',
-    emoji: '🌏',
+    code: 'AS',
     label: 'アジア',
     labelEn: 'ASIA',
+
+    theme: {
+      from: '#38bdf8',
+      via: '#2563eb',
+      to: '#4f46e5',
+      land: '#bbf7d0',
+      landDark: '#22c55e',
+      glow: '#67e8f9',
+    },
   },
 
   {
     id: 'europe',
-    emoji: '🌍',
+    code: 'EU',
     label: 'ヨーロッパ',
     labelEn: 'EUROPE',
+
+    theme: {
+      from: '#818cf8',
+      via: '#6366f1',
+      to: '#7c3aed',
+      land: '#ddd6fe',
+      landDark: '#8b5cf6',
+      glow: '#c4b5fd',
+    },
   },
 
   {
     id: 'africa',
-    emoji: '🌍',
+    code: 'AF',
     label: 'アフリカ',
     labelEn: 'AFRICA',
+
+    theme: {
+      from: '#fbbf24',
+      via: '#f97316',
+      to: '#dc2626',
+      land: '#fde68a',
+      landDark: '#ca8a04',
+      glow: '#fdba74',
+    },
   },
 
   {
     id: 'americas',
-    emoji: '🌎',
+    code: 'AM',
     label: '南北アメリカ',
     labelEn: 'AMERICAS',
+
+    theme: {
+      from: '#34d399',
+      via: '#06b6d4',
+      to: '#2563eb',
+      land: '#bbf7d0',
+      landDark: '#059669',
+      glow: '#5eead4',
+    },
   },
 
   {
     id: 'oceania',
-    emoji: '🌏',
+    code: 'OC',
     label: 'オセアニア',
     labelEn: 'OCEANIA',
+
+    theme: {
+      from: '#22d3ee',
+      via: '#0ea5e9',
+      to: '#0284c7',
+      land: '#d9f99d',
+      landDark: '#65a30d',
+      glow: '#a5f3fc',
+    },
   },
 ];
 
 
 const OTHER_CONTINENT = {
   id: 'other',
-  emoji: '🌐',
+  code: 'OT',
   label: 'その他',
   labelEn: 'OTHER',
+
+  theme: {
+    from: '#94a3b8',
+    via: '#64748b',
+    to: '#334155',
+    land: '#e2e8f0',
+    landDark: '#64748b',
+    glow: '#cbd5e1',
+  },
 };
+
+function ContinentVisual({
+  continent,
+}) {
+  const theme =
+    continent.theme;
+
+  return (
+    <div
+      className="
+        relative
+        flex
+        h-[92px]
+        w-[92px]
+        shrink-0
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-[28px]
+        border
+        border-white/70
+        shadow-[0_16px_30px_rgba(15,23,42,0.18)]
+        transition-all
+        duration-500
+        group-hover:scale-[1.08]
+        group-hover:rotate-[-2deg]
+      "
+      style={{
+        background: `
+          linear-gradient(
+            145deg,
+            ${theme.from},
+            ${theme.via} 52%,
+            ${theme.to}
+          )
+        `,
+      }}
+    >
+
+      {/* LIGHT */}
+
+      <div
+        className="
+          absolute
+          -left-5
+          -top-5
+          h-16
+          w-16
+          rounded-full
+          blur-xl
+        "
+        style={{
+          backgroundColor:
+            theme.glow,
+
+          opacity:
+            0.7,
+        }}
+      />
+
+
+      {/* SUN */}
+
+      <div
+        className="
+          absolute
+          right-3
+          top-3
+          h-4
+          w-4
+          rounded-full
+          bg-white/80
+          shadow-[0_0_18px_rgba(255,255,255,0.9)]
+        "
+      />
+
+
+      {/* LAND MASS 1 */}
+
+      <div
+        className="
+          absolute
+          bottom-[24px]
+          left-[13px]
+          h-[30px]
+          w-[54px]
+          rotate-[-8deg]
+          rounded-[55%_45%_60%_40%]
+          shadow-md
+          transition-transform
+          duration-500
+          group-hover:translate-x-1
+          group-hover:-translate-y-1
+        "
+        style={{
+          background: `
+            linear-gradient(
+              145deg,
+              ${theme.land},
+              ${theme.landDark}
+            )
+          `,
+        }}
+      />
+
+
+      {/* LAND MASS 2 */}
+
+      <div
+        className="
+          absolute
+          bottom-[17px]
+          right-[12px]
+          h-[21px]
+          w-[32px]
+          rotate-[13deg]
+          rounded-[65%_35%_50%_50%]
+          opacity-95
+        "
+        style={{
+          backgroundColor:
+            theme.landDark,
+        }}
+      />
+
+
+      {/* WATER SHINE */}
+
+      <div
+        className="
+          absolute
+          bottom-[10px]
+          left-[18px]
+          h-[2px]
+          w-[55px]
+          rounded-full
+          bg-white/45
+        "
+      />
+
+
+      {/* CONTINENT CODE */}
+
+      <div
+        className="
+          relative
+          z-10
+          mt-1
+          text-[19px]
+          font-black
+          tracking-[0.08em]
+          text-white
+          drop-shadow-[0_3px_8px_rgba(0,0,0,0.45)]
+        "
+      >
+        {
+          continent.code
+        }
+      </div>
+
+    </div>
+  );
+}
 
 
 /* =========================================================
@@ -2463,129 +2680,198 @@ lg:px-6
                       >
 
                         {availableContinents.map(
-                          (
-                            continent
-                          ) => (
+  (
+    continent
+  ) => (
 
-                            <button
-                              key={
-                                continent.id
-                              }
-                              type="button"
-                              onClick={() => {
-                                playUiSound(
-                                  'tap'
-                                );
+    <button
+      key={
+        continent.id
+      }
+      type="button"
+      onClick={() => {
+        playUiSound(
+          'tap'
+        );
 
+        setSelectedContinent(
+          continent.id
+        );
+      }}
+      className="
+        group
+        relative
+        flex
+        min-h-[168px]
+        items-center
+        gap-5
+        overflow-hidden
+        rounded-[28px]
+        border
+        border-white/75
+        bg-white/55
+        p-5
+        text-left
+        shadow-[0_16px_45px_rgba(14,165,233,0.11)]
+        backdrop-blur-xl
+        transition-all
+        duration-500
+        hover:-translate-y-2
+        hover:border-cyan-300/80
+        hover:bg-white/80
+        hover:shadow-[0_26px_65px_rgba(14,165,233,0.22)]
+      "
+    >
 
-                                setSelectedContinent(
-                                  continent.id
-                                );
-                              }}
-                              className="
-  group
-  flex
-  min-h-[160px]
-  items-center
-  gap-5
-  rounded-[26px]
-  border
-  border-white/80
-  bg-white/68
-  p-6
-  text-left
-  shadow-[0_14px_40px_rgba(14,165,233,0.10)]
-  backdrop-blur-xl
-  transition-all
-  duration-300
-  hover:-translate-y-1
-  hover:border-cyan-300
-  hover:bg-white/85
-  hover:shadow-[0_22px_55px_rgba(14,165,233,0.20)]
-"
-                            >
+      {/* SOFT BACKGROUND GLOW */}
 
-                              <span
-                                className="
-                                  text-5xl
-                                "
-                              >
-                                {
-                                  continent.emoji
-                                }
-                              </span>
-
-
-                              <div
-                                className="
-                                  min-w-0
-                                  flex-1
-                                "
-                              >
-
-                                <p
-                                  className="
-                                    text-[9px]
-                                    font-black
-                                    tracking-[0.15em]
-                                    text-blue-500
-                                  "
-                                >
-                                  {
-                                    continent.labelEn
-                                  }
-                                </p>
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -left-10
+          top-1/2
+          h-32
+          w-32
+          -translate-y-1/2
+          rounded-full
+          opacity-0
+          blur-3xl
+          transition-all
+          duration-500
+          group-hover:opacity-40
+        "
+        style={{
+          backgroundColor:
+            continent.theme.glow,
+        }}
+      />
 
 
-                                <p
-                                  className="
-                                    mt-1
-                                    text-xl
-                                    font-black
-                                    text-slate-900
-                                  "
-                                >
-                                  {
-                                    continent.label
-                                  }
-                                </p>
+      {/* CSS CONTINENT VISUAL */}
+
+      <ContinentVisual
+        continent={
+          continent
+        }
+      />
 
 
-                                <p
-                                  className="
-                                    mt-2
-                                    text-xs
-                                    font-black
-                                    text-slate-400
-                                  "
-                                >
-                                  {
-                                    continentCounts[
-                                      continent.id
-                                    ] ??
-                                    0
-                                  }
-                                  {' '}
-                                  COUNTRIES
-                                </p>
+      {/* TEXT */}
 
-                              </div>
+      <div
+        className="
+          relative
+          z-10
+          min-w-0
+          flex-1
+        "
+      >
+
+        <p
+          className="
+            text-[10px]
+            font-black
+            tracking-[0.20em]
+            text-blue-500
+          "
+        >
+          {
+            continent.labelEn
+          }
+        </p>
 
 
-                              <ArrowRight
-                                size={19}
-                                className="
-                                  text-slate-300
-                                  transition
-                                  group-hover:translate-x-1
-                                  group-hover:text-blue-500
-                                "
-                              />
+        <p
+          className="
+            mt-1
+            text-[22px]
+            font-black
+            tracking-[-0.03em]
+            text-slate-900
+          "
+        >
+          {
+            continent.label
+          }
+        </p>
 
-                            </button>
 
-                          )
-                        )}
+        <div
+          className="
+            mt-3
+            flex
+            items-center
+            gap-2
+          "
+        >
+
+          <span
+            className="
+              rounded-full
+              border
+              border-white/80
+              bg-white/65
+              px-3
+              py-1
+              text-[10px]
+              font-black
+              tracking-[0.06em]
+              text-slate-500
+              backdrop-blur-md
+            "
+          >
+            {
+              continentCounts[
+                continent.id
+              ] ?? 0
+            }
+            {' '}
+            COUNTRIES
+          </span>
+
+        </div>
+
+      </div>
+
+
+      {/* ARROW */}
+
+      <div
+        className="
+          relative
+          z-10
+          flex
+          h-10
+          w-10
+          shrink-0
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-white/80
+          bg-white/65
+          text-blue-500
+          shadow-sm
+          backdrop-blur-lg
+          transition-all
+          duration-300
+          group-hover:translate-x-1
+          group-hover:bg-blue-600
+          group-hover:text-white
+        "
+      >
+
+        <ArrowRight
+          size={18}
+        />
+
+      </div>
+
+    </button>
+
+  )
+)}
 
                       </div>
 
