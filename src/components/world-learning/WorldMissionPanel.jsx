@@ -32,6 +32,7 @@ const INTERACTIVE_MISSION_TYPES = new Set([
   'time-dial',
   'daypart-match',
   'schedule-builder',
+  'global-challenge',
 
   'map-tap',
   'city-map',

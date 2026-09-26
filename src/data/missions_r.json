@@ -1,0 +1,1787 @@
+{
+  "rw": {
+    "countryNameJa": "ルワンダ",
+    "countryNameEn": "Rwanda",
+    "version": 3,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09-26",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "story": [
+        "WHERE IS RWANDA?",
+        "WHO LIVES THERE?",
+        "HOW DO PEOPLE LIVE?",
+        "WHAT CHALLENGES EXIST?",
+        "HOW ARE PEOPLE SOLVING THEM?",
+        "WHAT DOES JAPAN / JICA DO WITH RWANDA?",
+        "WHAT DOES THIS HAVE TO DO WITH ME?",
+        "LET'S CONNECT WITH RWANDA"
+      ],
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 4,
+          "time": 3,
+          "language": 4,
+          "lifeCulture": 7,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "rw-m14",
+          "rw-m32",
+          "rw-m39",
+          "rw-m40"
+        ]
+      }
+    },
+    "sources": {
+      "rw-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Rwanda profile based on countries_r.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09-26"
+      },
+      "rw-time-zone": {
+        "organization": "IANA Time Zone Database / browser Intl",
+        "title": "Rwanda and Japan time-zone identifiers used in TimePalette",
+        "dataYear": "current",
+        "verifiedAt": "2026-09-26"
+      },
+      "rw-language-basics": {
+        "organization": "Peace Corps",
+        "title": "Kinyarwanda Language Lessons / Trainee Kinyarwanda Book",
+        "url": "https://files.peacecorps.gov/multimedia/audio/languagelessons/rwanda/RW_Kinyarwanda_Language_Lessons.pdf",
+        "dataYear": "reference",
+        "verifiedAt": "2026-09-26"
+      }
+    },
+    "missions": [
+      {
+        "id": "rw-m01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "learningStage": "EXPLORE",
+        "title": "Where Is Rwanda?",
+        "prompt": "世界地図からルワンダを見つけよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "rw",
+          "targetAtlasName": "Rwanda",
+          "targetName": "Rwanda"
+        },
+        "explanation": "ルワンダは東アフリカの内陸国です。位置を知ることが、周辺国・物流・気候・生活を考える出発点になります。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "map-reading"
+        ]
+      },
+      {
+        "id": "rw-m02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "learningStage": "EXPLORE",
+        "title": "Meet Rwanda's Neighbors",
+        "prompt": "ルワンダと国境を接する国の組み合わせとして正しいものを選ぼう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ウガンダ・タンザニア・ブルンジ・コンゴ民主共和国",
+            "ケニア・エチオピア・ブルンジ・ザンビア",
+            "タンザニア・マラウイ・ケニア・コンゴ共和国",
+            "ウガンダ・南スーダン・ブルンジ・アンゴラ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ルワンダはウガンダ、タンザニア、ブルンジ、コンゴ民主共和国と国境を接しています。海に面していないため、周辺国との道路や国境のつながりが重要です。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "geography",
+          "regional-awareness"
+        ]
+      },
+      {
+        "id": "rw-m03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "learningStage": "EXPLORE",
+        "title": "Land of a Thousand Hills",
+        "prompt": "ルワンダが「千の丘の国」と呼ばれる理由として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "丘陵地が多いから",
+            "国土に人工島が千個あるから",
+            "砂丘だけでできているから",
+            "高層ビルが千棟あるから"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ルワンダは起伏のある丘陵景観で知られます。地形は農業、道路、水、都市と農村のつながりにも影響します。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "geography",
+          "landscape"
+        ]
+      },
+      {
+        "id": "rw-m04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "learningStage": "EXPLORE",
+        "title": "Kigali and Major Cities",
+        "prompt": "ルワンダの主要都市を地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "rw",
+          "targetAtlasName": "Rwanda",
+          "mapConfig": {
+            "center": [
+              29.9,
+              -1.95
+            ],
+            "scale": 3900
+          },
+          "cities": [
+            {
+              "name": "Kigali",
+              "labelJa": "キガリ",
+              "coordinates": [
+                30.0619,
+                -1.9441
+              ],
+              "timeZone": "Africa/Kigali",
+              "region": "中央部"
+            },
+            {
+              "name": "Huye",
+              "labelJa": "フイエ",
+              "coordinates": [
+                29.7394,
+                -2.5967
+              ],
+              "timeZone": "Africa/Kigali",
+              "region": "南部"
+            },
+            {
+              "name": "Musanze",
+              "labelJa": "ムサンゼ",
+              "coordinates": [
+                29.634,
+                -1.4998
+              ],
+              "timeZone": "Africa/Kigali",
+              "region": "北部"
+            },
+            {
+              "name": "Rubavu",
+              "labelJa": "ルバブ",
+              "coordinates": [
+                29.2566,
+                -1.7028
+              ],
+              "timeZone": "Africa/Kigali",
+              "region": "西部"
+            }
+          ]
+        },
+        "explanation": "首都キガリだけでなく、北・南・西にも都市があります。国内の地域差を一つのイメージにまとめすぎないことが大切です。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "map-reading",
+          "regional-awareness"
+        ]
+      },
+      {
+        "id": "rw-m05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "learningStage": "EXPLORE",
+        "title": "Landlocked Rwanda",
+        "prompt": "ルワンダが内陸国であることから、物流で特に重要になるものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "周辺国へつながる道路・国境・地域回廊",
+            "大型の海港だけ",
+            "国内の地下鉄だけ",
+            "航空輸送だけですべてを運ぶこと"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "海港を持たないルワンダでは、周辺国を通る道路、国境手続き、Northern CorridorやCentral Corridorなどの地域物流が重要です。",
+        "sourceIds": [
+          "jica_rw_infrastructure_page_001"
+        ],
+        "skills": [
+          "systems-thinking",
+          "geography"
+        ]
+      },
+      {
+        "id": "rw-m06",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "learningStage": "EXPLORE",
+        "title": "Japan and Rwanda – Time Difference",
+        "prompt": "東京とキガリの「今」を比べて、時差をつかもう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Africa/Kigali"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Kigali": "Kigali"
+          },
+          "questionMode": "difference"
+        },
+        "explanation": "日本標準時はUTC+9、ルワンダはCentral Africa Time（UTC+2）で、通常7時間の時差があります。",
+        "sourceIds": [
+          "rw-time-zone"
+        ],
+        "skills": [
+          "time-zone",
+          "global-time"
+        ]
+      },
+      {
+        "id": "rw-m07",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "learningStage": "LEARN",
+        "title": "What Time Is It in Kigali?",
+        "prompt": "東京と同じ瞬間のキガリ時刻に時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Africa/Kigali",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Kigali": "Kigali"
+          }
+        },
+        "explanation": "時差を計算だけでなく、実際の時計として扱うとオンライン交流の時間を考えやすくなります。",
+        "sourceIds": [
+          "rw-time-zone"
+        ],
+        "skills": [
+          "time-zone",
+          "calculation"
+        ]
+      },
+      {
+        "id": "rw-m08",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "learningStage": "LEARN",
+        "title": "Day or Night in Kigali?",
+        "prompt": "東京の現在時刻を基準に、キガリが朝・昼・夕方・夜のどれか考えよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Africa/Kigali"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Kigali": "Kigali"
+          }
+        },
+        "explanation": "同じ瞬間でも、東京とキガリでは一日の時間帯が異なります。相手の生活時間を尊重して交流時間を考えます。",
+        "sourceIds": [
+          "rw-time-zone"
+        ],
+        "skills": [
+          "time-zone",
+          "perspective-taking"
+        ]
+      },
+      {
+        "id": "rw-m09",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "learningStage": "CONNECT",
+        "title": "Plan an Online Exchange",
+        "prompt": "日本とルワンダの学校が30分交流できる開始時刻を探そう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Africa/Kigali",
+          "windowA": [
+            "08:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:00",
+            "16:00"
+          ],
+          "minOverlapMinutes": 30,
+          "zoneLabels": {
+            "Asia/Tokyo": "Japan",
+            "Africa/Kigali": "Rwanda"
+          }
+        },
+        "explanation": "時差を理解する目的は計算そのものではなく、相手の学校生活を尊重しながら実際に会える時間を設計することです。",
+        "sourceIds": [
+          "rw-time-zone"
+        ],
+        "skills": [
+          "scheduling",
+          "global-communication"
+        ]
+      },
+      {
+        "id": "rw-m10",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "Muraho!",
+        "prompt": "Kinyarwandaの「Muraho」はどんな意味？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "こんにちは",
+            "ありがとう",
+            "さようなら",
+            "私の名前は〜です"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "Muraho はKinyarwandaの基本的なあいさつの一つです。短い一言でも相手の言語に関心を示せます。",
+        "sourceIds": [
+          "rw-language-basics"
+        ],
+        "skills": [
+          "language-awareness"
+        ]
+      },
+      {
+        "id": "rw-m11",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "Languages of Rwanda",
+        "prompt": "ルワンダで使われる公用語の組み合わせとして適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "Kinyarwanda・English・French・Swahili",
+            "Kinyarwanda・Japanese・German・Arabic",
+            "English・Spanish・Portuguese・Hindi",
+            "French・Italian・Dutch・Greek"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ルワンダではKinyarwanda、English、French、Swahiliが公用語として使われています。多言語社会を一つの言語だけで説明しないことが大切です。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "multilingual-awareness"
+        ]
+      },
+      {
+        "id": "rw-m12",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "Murakoze",
+        "prompt": "Kinyarwandaの「Murakoze」に最も近い意味は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ありがとう",
+            "おはよう",
+            "何時ですか",
+            "水をください"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "Murakoze は「ありがとう」にあたる表現です。国際交流では、相手の言語を少しでも使う姿勢が関係づくりにつながります。",
+        "sourceIds": [
+          "rw-language-basics"
+        ],
+        "skills": [
+          "language-awareness"
+        ]
+      },
+      {
+        "id": "rw-m13",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "learningStage": "CONNECT",
+        "title": "Introduce Yourself",
+        "prompt": "オンライン交流で使える短い自己紹介を英語で話そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "template": "Hello, my name is {name}. I am from Japan. Nice to meet you.",
+          "meaning": "こんにちは。私は{name}です。日本から来ました。よろしくお願いします。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "英語を「テストの答え」ではなく、実際に人とつながるための道具として使います。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "speaking",
+          "self-introduction"
+        ]
+      },
+      {
+        "id": "rw-m14",
+        "domain": "language",
+        "level": 3,
+        "type": "speaking-creator",
+        "learningStage": "CONNECT",
+        "title": "Create a Real Question",
+        "prompt": "ルワンダの同年代の生徒に本当に聞きたい質問を英語で作り、声に出そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 6,
+          "langCode": "en-US"
+        },
+        "explanation": "自分で作った質問を実際に話せるようにしておくと、後のオンライン交流でそのまま使えます。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "speaking",
+          "question-making"
+        ]
+      },
+      {
+        "id": "rw-m15",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "A Day in Rwanda",
+        "prompt": "ルワンダの暮らしを学ぶとき、最も大切な姿勢は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "地域・家庭・個人による違いを見る",
+            "全員が同じ生活をしていると考える",
+            "首都の暮らしだけで国全体を説明する",
+            "農村の暮らしだけで国全体を説明する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "同じ国の中でも都市・農村、地域、家庭、世代によって生活は異なります。TimePaletteでは一つのイメージで国全体を決めつけません。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "perspective-taking",
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "rw-m16",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "School Life",
+        "prompt": "ルワンダの学校生活を日本と比べる前に、まず確認したいことは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "学校や地域によって違いがあること",
+            "すべての学校が同じ時間割だと仮定すること",
+            "日本の学校の方が必ず優れていると決めること",
+            "動画を見ずにイメージだけで判断すること"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "比較は優劣を決めるためではなく、違いの背景を理解するために行います。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "comparison",
+          "media-literacy"
+        ]
+      },
+      {
+        "id": "rw-m17",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "Food and Daily Life",
+        "prompt": "現在のRwanda country profileに登場する食文化の例は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "Brochettes",
+            "Sushi",
+            "Paella",
+            "Pierogi"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "Brochettesは肉・魚・野菜などを串に刺して焼く料理です。ただし一つの料理だけでルワンダの食文化全体を表すわけではありません。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "culture",
+          "food"
+        ]
+      },
+      {
+        "id": "rw-m18",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "Coffee and People",
+        "prompt": "JICAのルワンダ・コーヒー分野の協力で重視されてきたこととして適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "品質向上・加工・研修・市場とのつながり",
+            "コーヒー栽培を全面的にやめること",
+            "日本だけでコーヒーを生産すること",
+            "農家を市場から切り離すこと"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "JICAはルワンダのコーヒー農家・協同組合などと、品質、加工、研修、国際市場とのつながりを強める取り組みを行ってきました。",
+        "sourceIds": [
+          "jica_rw_coffee_page_001"
+        ],
+        "skills": [
+          "value-chain",
+          "agriculture"
+        ]
+      },
+      {
+        "id": "rw-m19",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "City and Village",
+        "prompt": "「ルワンダの生活」を一言で説明しにくい理由は？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "都市・農村・地域・家庭によって状況が異なるから",
+            "国土が小さいので違いが一切ないから",
+            "全員が同じ仕事をしているから",
+            "首都以外に人が住んでいないから"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キガリの都市生活も、農業地域の生活も、山地や湖周辺の生活もルワンダの一部です。複数の視点を持つことが国理解につながります。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "anti-stereotype",
+          "regional-awareness"
+        ]
+      },
+      {
+        "id": "rw-m20",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "evidence-check",
+        "learningStage": "LEARN",
+        "title": "Check a Stereotype",
+        "prompt": "「ルワンダの人はみんな同じような生活をしている」という説明を、根拠を使って評価しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "claim": "ルワンダの人はみんな同じような生活をしている",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "rw-m20-e1",
+              "text": "首都キガリには都市生活があり、国内には農業地域や山地・湖周辺の地域もある",
+              "valid": true
+            },
+            {
+              "id": "rw-m20-e2",
+              "text": "地域・家庭・職業・学校などによって生活条件は異なる",
+              "valid": true
+            },
+            {
+              "id": "rw-m20-e3",
+              "text": "ルワンダの首都はキガリである",
+              "valid": false
+            },
+            {
+              "id": "rw-m20-e4",
+              "text": "ルワンダはアフリカにある",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "国について学ぶときは、一つの映像や一人の経験を国全体へ広げないことが重要です。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "evidence-reading",
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "rw-m21",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "global-challenge",
+        "learningStage": "EXPLORE",
+        "title": "Where Does Water Come From?",
+        "prompt": "JICAの公式動画を見て、安全な水が人々の暮らしとどうつながるか考えよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_water_video_001"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "Safe water",
+              "Health",
+              "Community",
+              "Infrastructure",
+              "Maintenance",
+              "Daily life"
+            ]
+          },
+          "quiz": {
+            "question": "安全な水へのアクセスを考えるとき、最も適切な見方はどれ？",
+            "choices": [
+              "水源・設備・管理・利用する人々をつながった仕組みとして見る",
+              "蛇口の数だけを数えれば十分",
+              "施設を建てたら管理は不要",
+              "水は生活の他の分野と関係しない"
+            ],
+            "correctIndex": 0,
+            "explanation": "安全な水を届け続けるには、水源、施設、運営・維持管理、地域の関係者など複数の要素が関わります。"
+          },
+          "connect": {
+            "prompt": "あなたの家の水は、どこから来て、どんな設備や人によって使える状態が保たれていると思いますか？",
+            "minChars": 30
+          }
+        },
+        "explanation": "安全な水を届け続けるには、水源、施設、運営・維持管理、地域の関係者など複数の要素が関わります。",
+        "sourceIds": [
+          "jica_rw_water_video_001",
+          "jica_rw_rwasom2_pdf_001"
+        ],
+        "skills": [
+          "media-literacy",
+          "systems-thinking"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "waterSanitation",
+          "badge": "WATER",
+          "sdgs": [
+            6
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "Water and Sanitation",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m22",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "global-challenge",
+        "learningStage": "LEARN",
+        "title": "Water in Daily Life",
+        "prompt": "JICAの水・衛生動画を見て、水が生活のどんな場面に関わっているか考えよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_water_video_001"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "Drinking",
+              "Cooking",
+              "Washing",
+              "Sanitation",
+              "School",
+              "Health"
+            ]
+          },
+          "quiz": {
+            "question": "水・衛生を学ぶとき、最も適切な考え方は？",
+            "choices": [
+              "水は健康や衛生など複数の生活課題とつながっている",
+              "飲料水だけ考えればよい",
+              "水は農業とは無関係である",
+              "設備があれば水質は考えなくてよい"
+            ],
+            "correctIndex": 0,
+            "explanation": "JICAの水・衛生協力では、水供給だけでなく管理、水質、衛生、地域の能力なども重要な要素です。"
+          },
+          "connect": {
+            "prompt": "学校で一日水が使えなくなったら、授業・昼食・トイレ・掃除など何が変わるか考えて書こう。",
+            "minChars": 30
+          }
+        },
+        "explanation": "JICAの水・衛生協力では、水供給だけでなく管理、水質、衛生、地域の能力なども重要な要素です。",
+        "sourceIds": [
+          "jica_rw_water_video_001",
+          "jica_rw_health_page_001"
+        ],
+        "skills": [
+          "daily-life-connection",
+          "systems-thinking"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "waterSanitation",
+          "badge": "WATER",
+          "sdgs": [
+            6
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "Water and Sanitation",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m23",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "global-challenge",
+        "learningStage": "LEARN",
+        "title": "The Water Access Challenge",
+        "prompt": "JICAの動画とRWASOM2資料を見て、安全な水を「届け続ける」ために必要なことを考えよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_water_video_001",
+            "jica_rw_rwasom2_pdf_001"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "Maintenance",
+              "People",
+              "Water quality",
+              "Planning",
+              "Infrastructure",
+              "Training"
+            ]
+          },
+          "quiz": {
+            "question": "RWASOM2が重視している考え方として最も適切なのは？",
+            "choices": [
+              "給水施設だけでなく、運営・維持管理や関係者の能力も強くする",
+              "すべての水を外国から運ぶ",
+              "施設完成後は地域の管理を不要にする",
+              "水の利用者を計画から外す"
+            ],
+            "correctIndex": 0,
+            "explanation": "RWASOM2は地方給水施設の運営・維持管理の枠組みを強化し、WASAC、地方行政、事業者、利用者委員会など関係者の能力向上も扱います。"
+          },
+          "connect": {
+            "prompt": "あなたの地域で水道が壊れたとき、誰が見つけ、連絡し、修理し、費用を支えると思いますか？仕組みとして考えよう。",
+            "minChars": 30
+          }
+        },
+        "explanation": "RWASOM2は地方給水施設の運営・維持管理の枠組みを強化し、WASAC、地方行政、事業者、利用者委員会など関係者の能力向上も扱います。",
+        "sourceIds": [
+          "jica_rw_rwasom2_pdf_001"
+        ],
+        "skills": [
+          "source-reading",
+          "systems-thinking",
+          "media-literacy"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "waterSanitation",
+          "badge": "WATER",
+          "sdgs": [
+            6
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "RWASOM2",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m24",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "global-challenge",
+        "learningStage": "CONNECT",
+        "title": "One Hour for Water",
+        "prompt": "水へのアクセスを自分の時間の使い方と比べて考えよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_water_video_001"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "School",
+              "Work",
+              "Rest",
+              "Health",
+              "Family time",
+              "Travel"
+            ]
+          },
+          "quiz": {
+            "question": "水へのアクセスを考えるとき、距離や時間を見る理由として最も適切なのは？",
+            "choices": [
+              "水を得るための負担が生活の他の活動にも影響するから",
+              "距離だけで水質が決まるから",
+              "時間が長いほど必ず水質が良いから",
+              "水を得る時間は生活と無関係だから"
+            ],
+            "correctIndex": 0,
+            "explanation": "アクセスは『水が存在するか』だけでなく、どれだけ安全に、安定して、負担なく利用できるかという視点でも考える必要があります。"
+          },
+          "connect": {
+            "prompt": "もし毎日1時間を水の確保に使う必要があったら、あなたの一日の何を変える必要がありますか？具体的に書こう。",
+            "minChars": 30
+          }
+        },
+        "explanation": "アクセスは『水が存在するか』だけでなく、どれだけ安全に、安定して、負担なく利用できるかという視点でも考える必要があります。",
+        "sourceIds": [
+          "jica_rw_water_video_001"
+        ],
+        "skills": [
+          "perspective-taking",
+          "reflection"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "waterSanitation",
+          "badge": "WATER",
+          "sdgs": [
+            6
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "Water and Sanitation",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m25",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "global-challenge",
+        "learningStage": "EXPLORE",
+        "title": "Water for Farming",
+        "prompt": "JICAのWAMCAB2資料を見て、農業で水を管理する意味を考えよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_wamcab2_pdf_001"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "Irrigation",
+              "Water users",
+              "Maintenance",
+              "Farmers",
+              "Distribution",
+              "Market"
+            ]
+          },
+          "quiz": {
+            "question": "WAMCAB2の方向性として最も適切なのは？",
+            "choices": [
+              "灌漑施設を使い続けるための水管理と関係者の能力を高める",
+              "農家を灌漑管理から完全に外す",
+              "雨だけに頼る農業へ戻す",
+              "農産物をすべて輸入に切り替える"
+            ],
+            "correctIndex": 0,
+            "explanation": "JICAは灌漑インフラだけでなく、水利組織や関係者の能力、適切な水配分、維持管理を含む持続的な水管理を支援しています。"
+          },
+          "connect": {
+            "prompt": "学校の花壇や家庭菜園で限られた水を公平に使うなら、どんなルールが必要だと思いますか？",
+            "minChars": 30
+          }
+        },
+        "explanation": "JICAは灌漑インフラだけでなく、水利組織や関係者の能力、適切な水配分、維持管理を含む持続的な水管理を支援しています。",
+        "sourceIds": [
+          "jica_rw_wamcab2_pdf_001",
+          "jica_rw_agriculture_page_001"
+        ],
+        "skills": [
+          "agriculture",
+          "water-management"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "agriculture",
+          "badge": "AGRICULTURE",
+          "sdgs": [
+            2
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "Agriculture and Irrigation",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m26",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "global-challenge",
+        "learningStage": "LEARN",
+        "title": "Growing Food in Rwanda",
+        "prompt": "JICAの農業資料から、ルワンダ農業の変化と課題を考えよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_wamcab2_pdf_001",
+            "jica_rw_brochure_2025"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "Productivity",
+              "Water",
+              "Skills",
+              "Market",
+              "Climate",
+              "Organizations"
+            ]
+          },
+          "quiz": {
+            "question": "JICAのルワンダ農業協力の説明として適切なのは？",
+            "choices": [
+              "生産性、水管理、市場志向、関係者の能力など複数の面を扱う",
+              "収穫量だけを増やせば他は考えない",
+              "農業と市場は切り離す",
+              "農家の知識や組織は重視しない"
+            ],
+            "correctIndex": 0,
+            "explanation": "JICAの農業協力は灌漑、水管理、農家・組織の能力、市場志向型農業、コーヒーなどのバリューチェーンを含みます。"
+          },
+          "connect": {
+            "prompt": "日本の農業でも『水』『人』『市場』『技術』のどれが重要だと思いますか？理由と一緒に書こう。",
+            "minChars": 30
+          }
+        },
+        "explanation": "JICAの農業協力は灌漑、水管理、農家・組織の能力、市場志向型農業、コーヒーなどのバリューチェーンを含みます。",
+        "sourceIds": [
+          "jica_rw_agriculture_page_001",
+          "jica_rw_brochure_2025"
+        ],
+        "skills": [
+          "agriculture",
+          "systems-thinking"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "agriculture",
+          "badge": "AGRICULTURE",
+          "sdgs": [
+            2
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "Agriculture",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m27",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "global-challenge",
+        "learningStage": "LEARN",
+        "title": "From Farm to Market",
+        "prompt": "生産した農産物が市場へ届き、収入につながるまでの流れを考えよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_brochure_2025"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "Production",
+              "Quality",
+              "Processing",
+              "Transport",
+              "Market",
+              "Income"
+            ]
+          },
+          "quiz": {
+            "question": "農業を『Farm to Market』で考える利点は？",
+            "choices": [
+              "生産から加工・流通・販売・収入までのつながりを見られる",
+              "農場だけ見れば市場は考えなくてよい",
+              "品質は販売と無関係だと分かる",
+              "輸送は農業の外なので無視できる"
+            ],
+            "correctIndex": 0,
+            "explanation": "バリューチェーンで考えると、生産量だけでなく品質、加工、輸送、市場、収入などの関係が見えます。"
+          },
+          "connect": {
+            "prompt": "日本で売られている食品を一つ選び、『生産→加工→輸送→店→消費者』の流れを想像して書こう。",
+            "minChars": 30
+          }
+        },
+        "explanation": "バリューチェーンで考えると、生産量だけでなく品質、加工、輸送、市場、収入などの関係が見えます。",
+        "sourceIds": [
+          "jica_rw_agriculture_page_001",
+          "jica_rw_brochure_2025"
+        ],
+        "skills": [
+          "value-chain",
+          "consumer-awareness"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "agriculture",
+          "badge": "AGRICULTURE",
+          "sdgs": [
+            2
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "Market-Oriented Agriculture",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m28",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "global-challenge",
+        "learningStage": "CONNECT",
+        "title": "Rwanda Coffee × Japan",
+        "prompt": "ルワンダのコーヒーが農家から市場、そして消費者へ届くまでを考えよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_brochure_2025"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "Quality",
+              "Processing",
+              "Training",
+              "Cooperatives",
+              "Buyers",
+              "Consumers"
+            ]
+          },
+          "quiz": {
+            "question": "JICAのルワンダ・コーヒー分野の協力について適切なのは？",
+            "choices": [
+              "品質・加工・研修・市場とのつながりを強める取り組みがある",
+              "コーヒー生産を廃止することが目的",
+              "農家と買い手が出会わないようにする",
+              "品質は市場価値と関係しない"
+            ],
+            "correctIndex": 0,
+            "explanation": "JICAは農家や協同組合などと、良い農業・加工技術、品質向上、研修、国際市場との接点づくりを支援してきました。"
+          },
+          "connect": {
+            "prompt": "日本でコーヒーを飲むとき、生産者・加工・輸送・販売までの誰とつながっていると思いますか？",
+            "minChars": 30
+          }
+        },
+        "explanation": "JICAは農家や協同組合などと、良い農業・加工技術、品質向上、研修、国際市場との接点づくりを支援してきました。",
+        "sourceIds": [
+          "jica_rw_coffee_page_001",
+          "jica_rw_brochure_2025"
+        ],
+        "skills": [
+          "value-chain",
+          "japan-connection"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "agriculture",
+          "badge": "AGRICULTURE",
+          "sdgs": [
+            2
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "Coffee Value Chain",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m29",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "global-challenge",
+        "learningStage": "EXPLORE",
+        "title": "Learning with Technology",
+        "prompt": "JICA公式PRISM動画を見て、ICTが学びをどう支えるか考えよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_prism_video_001"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "Teacher training",
+              "Math",
+              "Science",
+              "ICT",
+              "Learning materials",
+              "Student teachers"
+            ]
+          },
+          "quiz": {
+            "question": "PRISMの目的に最も近いものは？",
+            "choices": [
+              "ICTも活用しながら将来の初等教員の理数科指導力を高める",
+              "学校から数学と理科をなくす",
+              "教師の研修を減らす",
+              "ICTだけを学び教科内容は扱わない"
+            ],
+            "correctIndex": 0,
+            "explanation": "PRISMはTeacher Training Collegesで数学・理科と教授法を強化し、ICTを効果的に活用して将来の初等教員の質向上を目指します。"
+          },
+          "connect": {
+            "prompt": "あなたの学校で、ICTが『便利』なだけでなく学びの質を高めている例を一つ書こう。",
+            "minChars": 30
+          }
+        },
+        "explanation": "PRISMはTeacher Training Collegesで数学・理科と教授法を強化し、ICTを効果的に活用して将来の初等教員の質向上を目指します。",
+        "sourceIds": [
+          "jica_rw_prism_video_001",
+          "jica_rw_education_page_001"
+        ],
+        "skills": [
+          "education",
+          "digital-literacy"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "education",
+          "badge": "EDUCATION",
+          "sdgs": [
+            4
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "PRISM",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m30",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "global-challenge",
+        "learningStage": "LEARN",
+        "title": "JICA × Education in Rwanda",
+        "prompt": "PRISMの動画を見比べ、教員養成とICTの関係を考えよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_prism_video_001",
+            "jica_rw_prism_selfstudy_video_001"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "Future teachers",
+              "Tutors",
+              "Teaching methods",
+              "Self-study",
+              "ICT skills",
+              "Math and science"
+            ]
+          },
+          "quiz": {
+            "question": "PRISMでICTを使う目的として最も適切なのは？",
+            "choices": [
+              "教員養成や理数科教育の質を高める手段として活用する",
+              "紙の教材を禁止することだけが目的",
+              "教師をすべて機械に置き換える",
+              "ICT利用時間を増やすこと自体が最終目標"
+            ],
+            "correctIndex": 0,
+            "explanation": "PRISMではICTは目的そのものではなく、教員養成、理数科授業、教授法、学習機会を改善するための手段として位置づけられています。"
+          },
+          "connect": {
+            "prompt": "あなたが先生なら、ICTを『使うこと』ではなく『学びを良くすること』につなげるために何を工夫しますか？",
+            "minChars": 30
+          }
+        },
+        "explanation": "PRISMではICTは目的そのものではなく、教員養成、理数科授業、教授法、学習機会を改善するための手段として位置づけられています。",
+        "sourceIds": [
+          "jica_rw_prism_video_001",
+          "jica_rw_prism_selfstudy_video_001",
+          "jica_rw_education_page_001"
+        ],
+        "skills": [
+          "teacher-education",
+          "digital-literacy",
+          "japan-connection"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "education",
+          "badge": "EDUCATION",
+          "sdgs": [
+            4
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "PRISM",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m31",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "global-challenge",
+        "learningStage": "LEARN",
+        "title": "Rwanda's Digital Future",
+        "prompt": "JICAのDigital & Innovation資料を見て、ルワンダのICT・起業・公共サービスの未来を考えよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_digital_summary_pdf_001"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "Startups",
+              "Innovation hubs",
+              "Public services",
+              "Entrepreneurship",
+              "Markets",
+              "Government"
+            ]
+          },
+          "quiz": {
+            "question": "JICAのDigital & Innovation Promotion Projectの方向性として適切なのは？",
+            "choices": [
+              "起業支援や市場づくり、行政サービスのデジタル化を通してイノベーションの仕組みを強める",
+              "海外企業だけが参加できる仕組みにする",
+              "政府サービスのデジタル化を止める",
+              "起業家支援拠点をなくす"
+            ],
+            "correctIndex": 0,
+            "explanation": "同プロジェクトはICT起業家の支援環境、イノベーションの市場づくり、行政サービスのデジタル化、政府の調整能力などを扱っています。"
+          },
+          "connect": {
+            "prompt": "あなたの学校や地域にある課題のうち、デジタル技術で改善できそうなものを一つ挙げ、誰のための解決かも書こう。",
+            "minChars": 30
+          }
+        },
+        "explanation": "同プロジェクトはICT起業家の支援環境、イノベーションの市場づくり、行政サービスのデジタル化、政府の調整能力などを扱っています。",
+        "sourceIds": [
+          "jica_rw_digital_summary_pdf_001",
+          "jica_rw_ict_page_001"
+        ],
+        "skills": [
+          "innovation",
+          "anti-stereotype",
+          "systems-thinking"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "digital",
+          "badge": "DIGITAL",
+          "sdgs": [
+            9
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "Digital and Innovation Promotion Project",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m32",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "global-challenge",
+        "learningStage": "CONNECT",
+        "title": "Design a Solution",
+        "prompt": "ルワンダの事例をヒントに、自分の学校や地域の課題に対する小さな解決案を考えよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_digital_summary_pdf_001",
+            "jica_rw_brochure_2025"
+          ],
+          "notice": {
+            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
+            "options": [
+              "Problem",
+              "People",
+              "Evidence",
+              "Technology",
+              "Feasibility",
+              "Collaboration"
+            ]
+          },
+          "quiz": {
+            "question": "課題解決の提案として最も良いスタートは？",
+            "choices": [
+              "誰がどんな問題で困っているかを具体的に理解する",
+              "最初に高価な技術を買う",
+              "他国の解決策をそのままコピーする",
+              "利用する人の意見を聞かない"
+            ],
+            "correctIndex": 0,
+            "explanation": "技術や資金から始めるのではなく、問題、利用する人、背景、既存の工夫を理解してから解決策を考えることが重要です。"
+          },
+          "connect": {
+            "prompt": "あなたの学校または地域の課題を一つ選び、『誰の課題か／原因は何か／小さく試せる解決策は何か』を書こう。",
+            "minChars": 45
+          }
+        },
+        "explanation": "技術や資金から始めるのではなく、問題、利用する人、背景、既存の工夫を理解してから解決策を考えることが重要です。",
+        "sourceIds": [
+          "jica_rw_digital_summary_pdf_001",
+          "jica_rw_brochure_2025"
+        ],
+        "skills": [
+          "problem-solving",
+          "design-thinking",
+          "reflection"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "digital",
+          "badge": "DIGITAL",
+          "sdgs": [
+            9
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "Development Learning",
+          "projectBased": true
+        }
+      },
+      {
+        "id": "rw-m33",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "Rwanda × Japan",
+        "prompt": "日本とルワンダのつながりについて、最も適切な説明は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ICT、教育、農業、水、インフラ、人材育成など複数分野で協力がある",
+            "交流は観光だけに限られる",
+            "日本とルワンダの間に協力はない",
+            "一つの分野だけで関係が成り立っている"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とルワンダの関係は一つの事業だけではなく、複数分野の人・組織・学びのつながりでできています。",
+        "sourceIds": [
+          "jica_rw_brochure_2025"
+        ],
+        "skills": [
+          "japan-connection",
+          "global-awareness"
+        ]
+      },
+      {
+        "id": "rw-m34",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "Japan in Rwanda",
+        "prompt": "JICA Rwandaの重点分野としてパンフレットに示されているものの組み合わせは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "経済インフラ・農業・水と衛生・教育・ICT・保健栄養など",
+            "宇宙開発だけ",
+            "観光広告だけ",
+            "プロスポーツだけ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "JICA Rwandaは経済インフラ、農業、水と衛生、教育、ICT、保健・栄養など複数の分野を扱っています。",
+        "sourceIds": [
+          "jica_rw_brochure_2025"
+        ],
+        "skills": [
+          "source-reading",
+          "japan-connection"
+        ]
+      },
+      {
+        "id": "rw-m35",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "What Is JICA?",
+        "prompt": "このWorld AdventureでJICAをどう捉えるのが最も適切？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "異なる国や組織の人々が課題解決のために協働する一つの仕組み",
+            "日本が一方的に正解を教える機関",
+            "ルワンダの人々の代わりにすべてを決める機関",
+            "課題だけを紹介するための機関"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "TimePaletteではJICAを主役にせず、Rwandaの人々、行政、学校、農家、技術者、地域組織などが協働する中の一つのパートナーとして扱います。",
+        "sourceIds": [
+          "jica_rw_brochure_2025"
+        ],
+        "skills": [
+          "development-literacy",
+          "perspective-taking"
+        ]
+      },
+      {
+        "id": "rw-m36",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "learningStage": "LEARN",
+        "title": "Meet the People Behind a Project",
+        "prompt": "JICAのプロジェクトを『人』の視点で見るとき最も大切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "現地の住民・先生・農家・技術者・行政・専門家など複数の役割を見る",
+            "日本人だけを見る",
+            "組織名だけ暗記する",
+            "現地の人の工夫を見ない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "プロジェクトは組織名ではなく、多様な立場の人が役割を持って動かしています。JICAの研修事業でも、学んだ人が自国で経験を生かすことが重視されています。",
+        "sourceIds": [
+          "jica_rw_training_page_001",
+          "jica_rw_brochure_2025"
+        ],
+        "skills": [
+          "people-centered-learning",
+          "development-literacy"
+        ]
+      },
+      {
+        "id": "rw-m37",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "daily-life-hunt",
+        "learningStage": "CONNECT",
+        "title": "Choose a Global Challenge",
+        "prompt": "水・農業・教育・ICTから、自分がもっと調べたい課題を一つ選び、自分の生活との接点を見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minChars": 20,
+          "evidencePrompt": "その課題を選んだ理由と、Rwanda Missionで見つけた根拠を書いてください。"
+        },
+        "explanation": "興味を持った課題を選び、自分の生活や地域と結びつけることで、学びが『知識』から『自分の問い』へ変わります。",
+        "sourceIds": [
+          "jica_rw_brochure_2025"
+        ],
+        "skills": [
+          "inquiry",
+          "reflection"
+        ]
+      },
+      {
+        "id": "rw-m38",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "compare-builder",
+        "learningStage": "CONNECT",
+        "title": "Compare Rwanda and Japan",
+        "prompt": "ルワンダと日本の違いを3つ選び、その背景を一つ説明しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "requireDifferentCategories": false
+        },
+        "explanation": "違いは優劣ではありません。地理、学校、生活、歴史、社会の仕組みなど、背景を考えることが比較学習の目的です。",
+        "sourceIds": [
+          "rw-country-profile",
+          "jica_rw_brochure_2025"
+        ],
+        "skills": [
+          "comparison",
+          "perspective-taking"
+        ]
+      },
+      {
+        "id": "rw-m39",
+        "domain": "language",
+        "level": 4,
+        "type": "question-creator",
+        "learningStage": "CONNECT",
+        "title": "Ask Rwanda",
+        "prompt": "実際のオンライン交流でルワンダの生徒に聞きたい質問を3つ作ろう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 3
+        },
+        "explanation": "調べれば分かる質問だけでなく、相手の経験や考えを聞ける質問を作ると、本当の交流につながります。",
+        "sourceIds": [
+          "rw-country-profile"
+        ],
+        "skills": [
+          "international-exchange",
+          "question-making"
+        ]
+      },
+      {
+        "id": "rw-m40",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "global-challenge",
+        "learningStage": "CONNECT",
+        "title": "Connect & Take Action",
+        "prompt": "Rwanda Journeyを振り返り、自分の生活・次の問い・実際の交流へつなげよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "sourceIds": [
+            "jica_rw_brochure_2025"
+          ],
+          "notice": {
+            "prompt": "40 Missionを通して、自分の学びに近いキーワードを選ぼう。",
+            "options": [
+              "People",
+              "Water",
+              "Education",
+              "Agriculture",
+              "Innovation",
+              "Connection"
+            ]
+          },
+          "quiz": {
+            "question": "このRwanda World Adventureの最終ゴールとして最も適切なのは？",
+            "choices": [
+              "国を覚えるだけでなく、人・課題・解決・自分とのつながりを理解し、対話につなげる",
+              "JICAのプロジェクト名だけ暗記する",
+              "RwandaとJapanのどちらが良い国か決める",
+              "一つのイメージでRwanda全体を説明する"
+            ],
+            "correctIndex": 0,
+            "explanation": "TimePaletteのゴールはEXPLORE → LEARN → CONNECT。国の情報を覚えて終わらず、人や課題、解決への取り組み、自分の生活との関係を考え、実際の対話へつなげます。"
+          },
+          "connect": {
+            "prompt": "①Rwandaから自分の生活について気づいたこと ②Rwandaの生徒に聞きたいこと ③次に自分が調べたい・試したいこと――この3点を書いてJourneyを完成しよう。",
+            "minChars": 60
+          }
+        },
+        "explanation": "Rwandaを『覚える国』ではなく、人と出会い、世界と自分の生活を考える入口としてJourneyを終えます。",
+        "sourceIds": [
+          "jica_rw_brochure_2025"
+        ],
+        "skills": [
+          "reflection",
+          "action",
+          "international-exchange"
+        ],
+        "globalChallenge": {
+          "enabled": true,
+          "theme": "globalCitizenship",
+          "badge": "GLOBAL",
+          "sdgs": [
+            4,
+            6,
+            9
+          ]
+        },
+        "developmentLearning": {
+          "enabled": true,
+          "organization": "JICA",
+          "country": "Rwanda",
+          "topic": "Global Learning",
+          "projectBased": true
+        }
+      }
+    ]
+  }
+}

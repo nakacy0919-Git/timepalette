@@ -23,6 +23,7 @@ import LifeCultureMissionGame from './LifeCultureMissionGame';
 import JapanConnectionMissionGame from './JapanConnectionMissionGame';
 import ThinkConnectMissionGame from './ThinkConnectMissionGame';
 import MissionSuccessCelebration from './MissionSuccessCelebration';
+import GlobalChallengeMissionGame from './GlobalChallengeMissionGame';
 
 const TIME_MISSION_TYPES =
   new Set([
@@ -119,6 +120,12 @@ const isThinkConnectMission = (
     mission?.type
   );
 
+const isGlobalChallengeMission = (
+  mission
+) =>
+  mission?.type ===
+  'global-challenge';
+
 export default function MissionPlayer({
   mission,
   domain,
@@ -186,6 +193,11 @@ const completedThisSessionRef =
     mission
   );
 
+const globalChallengePlayable =
+  isGlobalChallengeMission(
+    mission
+  );
+
   useEffect(() => {
     const container =
       scrollContainerRef.current;
@@ -210,9 +222,10 @@ const completedThisSessionRef =
   }, [mission.id]);
 
   const modalWidthClass =
-    placePlayable
-      ? 'max-w-5xl'
-      : 'max-w-2xl';
+  placePlayable ||
+  globalChallengePlayable
+    ? 'max-w-5xl'
+    : 'max-w-2xl';
 
   const isListening =
     mission.type ===
@@ -443,7 +456,15 @@ const handleMissionComplete =
 
           </div>
 
-          {timePlayable ? (
+          {globalChallengePlayable ? (
+
+  <GlobalChallengeMissionGame
+    mission={mission}
+    onComplete={handleMissionComplete}
+    alreadyCompleted={alreadyCompleted}
+  />
+
+) : timePlayable ? (
 
   <TimeMissionGame
     mission={mission}
