@@ -1,323 +1,1450 @@
-import { useState, useEffect, useRef } from 'react';
-import { X, MapPin, Globe, Coins, Mountain, CloudSun, HeartHandshake, Info, Languages, MessageCircle } from 'lucide-react';
-import DetailedAnalogClock from './DetailedAnalogClock';
-import InteractiveQuiz from './InteractiveQuiz';
+import {
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
-// ▼ 追加：言語練習コンポーネントのインポート
-import LanguagePractice from './LanguagePractice';
-import WorldMissionPanel from './world-learning/WorldMissionPanel';
-// ※ 必要に応じてパス（'./LanguagePractice'）は実際の保存場所に合わせて調整してください。
+import {
+  BookOpen,
+  ChevronDown,
+  Clock3,
+  CloudSun,
+  Coins,
+  Compass,
+  Globe2,
+  HeartHandshake,
+  Languages,
+  MapPin,
+  Mountain,
+  Sparkles,
+  X,
+} from 'lucide-react';
+
+import DetailedAnalogClock
+  from './DetailedAnalogClock';
+
+import InteractiveQuiz
+  from './InteractiveQuiz';
+
+import LanguagePractice
+  from './LanguagePractice';
+
+import WorldMissionPanel
+  from './world-learning/WorldMissionPanel';
+
+import openingBackground
+  from '../assets/opening/timepalette_opening_background.png';
+
+const ADVENTURE_THEMES = [
+  {
+    primary: '#2563eb',
+    secondary: '#7c3aed',
+    soft: '#eff6ff',
+  },
+  {
+    primary: '#059669',
+    secondary: '#0891b2',
+    soft: '#ecfdf5',
+  },
+  {
+    primary: '#ea580c',
+    secondary: '#db2777',
+    soft: '#fff7ed',
+  },
+  {
+    primary: '#7c3aed',
+    secondary: '#2563eb',
+    soft: '#f5f3ff',
+  },
+  {
+    primary: '#dc2626',
+    secondary: '#d97706',
+    soft: '#fef2f2',
+  },
+];
+
+function getAdventureTheme(
+  iso
+) {
+  const value =
+    String(iso || '')
+      .split('')
+      .reduce(
+        (
+          total,
+          character
+        ) =>
+          total +
+          character.charCodeAt(
+            0
+          ),
+        0
+      );
+
+  return ADVENTURE_THEMES[
+    value %
+      ADVENTURE_THEMES.length
+  ];
+}
+
+function makeFlagEmoji(
+  iso
+) {
+  const upper =
+    String(
+      iso || ''
+    ).toUpperCase();
+
+  if (
+    !/^[A-Z]{2}$/.test(
+      upper
+    )
+  ) {
+    return '🌍';
+  }
+
+  return upper
+    .split('')
+    .map(
+      (letter) =>
+        String.fromCodePoint(
+          127397 +
+            letter.charCodeAt(
+              0
+            )
+        )
+    )
+    .join('');
+}
 
 export default function CountryDetailOverlay({
   iso,
   fileLetter,
   onClose,
 }) {
-  const [countryData, setCountryData] = useState(null);
-  
-  // ▼ 追加：言語データを保持するための状態
-  const [languageData, setLanguageData] = useState(null);
-  
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-  const [lang, setLanguage] = useState('ja');
+  const [
+    countryData,
+    setCountryData,
+  ] = useState(null);
 
-  // 画面の一番上に強制ジャンプさせるための「目印（Ref）」
-  const topRef = useRef(null);
+  const [
+    languageData,
+    setLanguageData,
+  ] = useState(null);
+
+  const [
+    loading,
+    setLoading,
+  ] = useState(true);
+
+  const [
+    error,
+    setError,
+  ] = useState(false);
+
+  const [
+    lang,
+    setLanguage,
+  ] = useState('ja');
+
+  const topRef =
+    useRef(null);
+
+  const adventureRef =
+    useRef(null);
+
+  const discoveryRef =
+    useRef(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        setError(false);
-        const dataFileLetter = fileLetter?.toLowerCase();
+    const fetchData =
+      async () => {
+        try {
+          setLoading(true);
+          setError(false);
 
-if (!dataFileLetter) {
-  throw new Error(
-    `国データのファイル判定に失敗しました: ${iso}`
-  );
-}
-        
-        // 1. 基本データの読み込み
-        const dataModule = await import(
-  `../data/countries_${dataFileLetter}.json`
-);
-        const data = dataModule.default ? dataModule.default[iso] : dataModule[iso];
-        
-        if (data) {
-          setCountryData(data);
-        } else {
-          throw new Error("基本データが見つかりません");
+          const dataFileLetter =
+            fileLetter
+              ?.toLowerCase();
+
+          if (
+            !dataFileLetter
+          ) {
+            throw new Error(
+              `国データのファイル判定に失敗しました: ${iso}`
+            );
+          }
+
+          const dataModule =
+            await import(
+              `../data/countries_${dataFileLetter}.json`
+            );
+
+          const data =
+            dataModule.default
+              ? dataModule
+                  .default[
+                  iso
+                ]
+              : dataModule[
+                  iso
+                ];
+
+          if (!data) {
+            throw new Error(
+              '基本データが見つかりません'
+            );
+          }
+
+          setCountryData(
+            data
+          );
+
+          try {
+            const langModule =
+              await import(
+                `../data/languages_${dataFileLetter}.json`
+              );
+
+            setLanguageData(
+              langModule.default ||
+                langModule
+            );
+          } catch (
+            langError
+          ) {
+            console.log(
+              `languages_${dataFileLetter}.json はまだありません:`,
+              langError
+            );
+
+            setLanguageData(
+              null
+            );
+          }
+        } catch (loadError) {
+          console.error(
+            'データの読み込みに失敗しました:',
+            loadError
+          );
+
+          setError(true);
+        } finally {
+          setLoading(false);
         }
+      };
 
-        // 2. 国の頭文字に合わせて言語データを自動読み込み
-try {
-  const langModule = await import(
-  `../data/languages_${dataFileLetter}.json`
-);
+    fetchData();
+  }, [
+    iso,
+    fileLetter,
+  ]);
 
-  setLanguageData(langModule.default || langModule);
-} catch (langErr) {
-  console.log(
-    `languages_${dataFileLetter}.json はまだありません:`,
-    langErr
-  );
+  useEffect(() => {
+    if (
+      loading ||
+      !topRef.current
+    ) {
+      return undefined;
+    }
 
-  setLanguageData(null);
-}
+    const timer =
+      window.setTimeout(
+        () => {
+          topRef.current
+            ?.scrollIntoView({
+              behavior:
+                'auto',
+              block:
+                'start',
+            });
+        },
+        80
+      );
 
-      } catch (err) {
-        console.error("データの読み込みに失敗しました:", err);
-        setError(true);
-      } finally {
-        setLoading(false);
+    return () =>
+      window.clearTimeout(
+        timer
+      );
+  }, [
+    loading,
+    iso,
+  ]);
+
+  const handleBackdropClick =
+    (event) => {
+      if (
+        event.target ===
+        event.currentTarget
+      ) {
+        onClose();
       }
     };
-    fetchData();
-  }, [iso, fileLetter]);
 
-  // データ読み込み完了後、少しだけ遅らせて強制的にトップへスクロールさせる
-  useEffect(() => {
-    if (!loading && topRef.current) {
-      setTimeout(() => {
-        topRef.current.scrollIntoView({ behavior: 'instant', block: 'start' });
-      }, 100);
-    }
-  }, [loading, iso]);
+  const t =
+    (
+      jaText,
+      enText
+    ) => {
+      if (
+        lang === 'en' &&
+        enText
+      ) {
+        return enText;
+      }
 
-  const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
+      return (
+        jaText ||
+        enText ||
+        ''
+      );
+    };
 
-  const t = (jaText, enText) => {
-    if (lang === 'en' && enText) return enText;
-    return jaText;
-  };
+  const scrollToAdventure =
+    () => {
+      adventureRef.current
+        ?.scrollIntoView({
+          behavior:
+            'smooth',
+          block:
+            'start',
+        });
+    };
+
+  const scrollToDiscovery =
+    () => {
+      discoveryRef.current
+        ?.scrollIntoView({
+          behavior:
+            'smooth',
+          block:
+            'start',
+        });
+    };
+
+  const theme =
+    getAdventureTheme(
+      iso
+    );
+
+  const flagEmoji =
+    makeFlagEmoji(
+      iso
+    );
+
+  const languages =
+    countryData
+      ?.languages ?? [];
+
+  const languageLabel =
+    languages
+      .map(
+        (language) =>
+          t(
+            language
+              ?.nameJa,
+            language
+              ?.nameEn
+          )
+      )
+      .filter(Boolean)
+      .slice(
+        0,
+        3
+      )
+      .join(' / ');
 
   return (
-    <div 
-      className="fixed inset-0 z-[9999] bg-slate-900/80 backdrop-blur-sm overflow-y-auto p-4 md:p-8 flex justify-center items-start scroll-smooth"
-      onClick={handleBackdropClick}
+    <div
+      className="
+        fixed
+        inset-0
+        z-[9999]
+        overflow-y-auto
+        bg-slate-950/85
+        p-2
+        backdrop-blur-md
+        md:p-6
+      "
+      onClick={
+        handleBackdropClick
+      }
     >
-      <div ref={topRef} className="absolute top-0 left-0 w-full h-1 opacity-0 pointer-events-none" />
 
-      <div className="bg-[#f8fafc] w-[95vw] max-w-[1400px] rounded-3xl shadow-2xl overflow-hidden relative animate-in fade-in zoom-in duration-300 mt-2 md:mt-6 mb-10">
-        
-        {/* 言語切り替え＆閉じるボタン */}
-        <div className="absolute top-6 right-6 z-50 flex items-center gap-3">
-          <div className="bg-white/80 backdrop-blur-md p-1 rounded-full shadow-sm flex items-center border border-white/50">
-            <button 
-              onClick={() => setLanguage('ja')}
-              className={`px-3 py-1.5 rounded-full text-sm font-bold transition-all ${lang === 'ja' ? 'bg-blue-500 text-white shadow-md' : 'text-slate-600 hover:bg-white'}`}
+      {/* GLOBAL BACKGROUND */}
+      <div
+        className="
+          pointer-events-none
+          fixed
+          inset-0
+          bg-cover
+          bg-center
+          opacity-[0.16]
+        "
+        style={{
+          backgroundImage:
+            `url(${openingBackground})`,
+        }}
+      />
+
+      <div className="pointer-events-none fixed inset-0 bg-gradient-to-b from-slate-950/45 via-slate-950/65 to-slate-950/90" />
+
+      <div
+        ref={topRef}
+        className="
+          pointer-events-none
+          absolute
+          left-0
+          top-0
+          h-1
+          w-full
+          opacity-0
+        "
+      />
+
+      {/* MAIN SHELL */}
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          mb-12
+          mt-1
+          w-full
+          max-w-[1500px]
+          overflow-hidden
+          rounded-[32px]
+          bg-[#f7f6f2]/95
+          shadow-[0_35px_120px_rgba(0,0,0,0.45)]
+          backdrop-blur-xl
+          md:mt-4
+        "
+      >
+
+        {/* TOP CONTROLS */}
+        <div className="absolute right-4 top-4 z-[80] flex items-center gap-2 md:right-7 md:top-7">
+
+          <div className="flex rounded-full border border-white/40 bg-white/85 p-1 shadow-lg backdrop-blur-xl">
+
+            <button
+              type="button"
+              onClick={() =>
+                setLanguage(
+                  'ja'
+                )
+              }
+              className={`
+                rounded-full
+                px-3
+                py-1.5
+                text-xs
+                font-bold
+                transition
+                ${
+                  lang ===
+                  'ja'
+                    ? 'bg-slate-950 text-white'
+                    : 'text-slate-500 hover:bg-white'
+                }
+              `}
             >
               日本語
             </button>
-            <button 
-              onClick={() => setLanguage('en')}
-              className={`px-3 py-1.5 rounded-full text-sm font-bold transition-all ${lang === 'en' ? 'bg-blue-500 text-white shadow-md' : 'text-slate-600 hover:bg-white'}`}
+
+            <button
+              type="button"
+              onClick={() =>
+                setLanguage(
+                  'en'
+                )
+              }
+              className={`
+                rounded-full
+                px-3
+                py-1.5
+                text-xs
+                font-bold
+                transition
+                ${
+                  lang ===
+                  'en'
+                    ? 'bg-slate-950 text-white'
+                    : 'text-slate-500 hover:bg-white'
+                }
+              `}
             >
               English
             </button>
+
           </div>
-          
-          <button 
-            onClick={onClose}
-            className="bg-white/80 hover:bg-white p-2.5 rounded-full backdrop-blur-md shadow-sm transition-all border border-white/50"
+
+          <button
+            type="button"
+            onClick={
+              onClose
+            }
+            className="
+              flex
+              h-11
+              w-11
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-white/40
+              bg-white/90
+              text-slate-800
+              shadow-lg
+              backdrop-blur-xl
+              transition
+              hover:scale-105
+              hover:bg-white
+            "
+            aria-label="Close"
           >
-            <X size={24} className="text-gray-800" />
+            <X
+              size={21}
+            />
           </button>
+
         </div>
 
         {loading ? (
-          <div className="min-h-[60vh] flex flex-col items-center justify-center">
-            <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4"></div>
-            <p className="text-blue-600 font-bold text-lg animate-pulse">Loading Explorer...</p>
+
+          <div className="flex min-h-[70vh] flex-col items-center justify-center">
+
+            <div
+              className="
+                h-16
+                w-16
+                animate-spin
+                rounded-full
+                border-4
+                border-blue-100
+                border-t-blue-600
+              "
+            />
+
+            <p className="mt-5 text-sm font-black tracking-[0.15em] text-blue-600">
+              OPENING WORLD...
+            </p>
+
           </div>
+
         ) : error ? (
-          <div className="min-h-[50vh] flex flex-col items-center justify-center p-8 text-center">
-            <div className="text-6xl mb-4">🌍💦</div>
-            <h2 className="text-2xl font-bold text-red-500 mb-2">Data not found</h2>
-            <button onClick={onClose} className="px-6 py-2 bg-blue-500 text-white rounded-full font-bold hover:bg-blue-600">Close</button>
+
+          <div className="flex min-h-[60vh] flex-col items-center justify-center p-8 text-center">
+
+            <div className="text-7xl">
+              🌍
+            </div>
+
+            <h2 className="mt-5 text-2xl font-black text-slate-800">
+              Data not found
+            </h2>
+
+            <button
+              type="button"
+              onClick={
+                onClose
+              }
+              className="mt-6 bg-slate-950 px-6 py-3 font-bold text-white"
+            >
+              Close
+            </button>
+
           </div>
+
         ) : (
-          <div className="flex flex-col">
-            
-            {/* ヒーロー画像（国旗）エリア */}
-            <div className="relative h-64 md:h-80 bg-slate-800 overflow-hidden flex items-end">
-              <div 
-                className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay"
-                style={{ backgroundImage: `url(${countryData.flagUrl})` }}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
-              
-              <div className="relative z-10 w-full p-8 md:p-12 flex items-end gap-6">
-                <img 
-                  src={countryData.flagUrl} 
-                  alt="Flag" 
-                  className="w-32 md:w-48 h-auto rounded-lg shadow-xl border-2 border-white/20 object-cover"
+
+          <div>
+
+            {/* =====================================================
+                COUNTRY ADVENTURE HERO
+            ====================================================== */}
+            <section
+              className="
+                relative
+                min-h-[520px]
+                overflow-hidden
+                text-white
+              "
+              style={{
+                backgroundImage:
+                  `
+                  linear-gradient(
+                    115deg,
+                    ${theme.primary}ee 0%,
+                    ${theme.secondary}dd 48%,
+                    #0f172acc 100%
+                  ),
+                  url(${openingBackground})
+                  `,
+
+                backgroundSize:
+                  'cover',
+
+                backgroundPosition:
+                  'center',
+              }}
+            >
+
+              {/* FLAG WATERMARK */}
+              {countryData.flagUrl && (
+                <img
+                  src={
+                    countryData.flagUrl
+                  }
+                  alt=""
+                  aria-hidden="true"
+                  className="
+                    absolute
+                    -bottom-10
+                    right-[-5%]
+                    h-[85%]
+                    w-auto
+                    rotate-[-6deg]
+                    object-cover
+                    opacity-[0.09]
+                    blur-[1px]
+                  "
                 />
-                <div className="text-white pb-2">
-                  <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-2 drop-shadow-md">
-                    {t(countryData.nameJa, countryData.nameEn)} 
-                    {lang === 'ja' && <span className="text-2xl md:text-3xl font-medium text-slate-300 ml-3">{countryData.nameEn}</span>}
-                  </h1>
-                  <p className="text-lg md:text-xl text-blue-200 font-bold flex items-center gap-2">
-                    <MapPin size={20} /> 
-                    {lang === 'ja' ? '首都' : 'Capital'}: {t(countryData.capitalJa, countryData.capitalEn)}
-                  </p>
-                </div>
-              </div>
-            </div>
+              )}
 
-            <div className="p-6 md:p-10 xl:p-12 space-y-10">
-              
-              <div className="bg-white border-l-4 border-blue-500 p-5 md:p-6 rounded-r-2xl shadow-sm">
-                <p className="text-xl md:text-2xl font-bold text-slate-700 leading-relaxed">
-                  「{t(countryData.subtitle, countryData.subtitleEn || countryData.subtitle)}」
-                </p>
-              </div>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(255,255,255,0.22),transparent_30%)]" />
 
-              {/* 地図と時計エリア */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12">
-                <div className="bg-white p-4 rounded-3xl shadow-sm border border-slate-200 h-[450px] relative overflow-hidden group">
-                  <h3 className="absolute top-6 left-6 bg-white/95 backdrop-blur px-5 py-2 rounded-full font-bold text-slate-800 shadow-md z-10 flex items-center gap-2">
-                    <Globe size={18} className="text-blue-500"/> {lang === 'ja' ? '地図で見る' : 'Interactive Map'}
-                  </h3>
-                  <iframe 
-                    title="Google Map" width="100%" height="100%" className="rounded-2xl bg-slate-100" style={{ border: 0 }}
-                    loading="lazy" allowFullScreen tabIndex="-1"
-                    src={`https://maps.google.com/maps?q=${encodeURIComponent(countryData.mapQuery)}&t=m&z=5&output=embed&hl=${lang}`}
-                  ></iframe>
-                </div>
+              <div
+                className="
+                  relative
+                  z-10
+                  flex
+                  min-h-[520px]
+                  flex-col
+                  justify-end
+                  px-6
+                  pb-9
+                  pt-28
+                  md:px-10
+                  md:pb-12
+                  lg:px-14
+                "
+              >
 
-                <div className="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between h-full">
-                  <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-8 pb-6 border-b border-slate-100 gap-6">
-                    <div className="flex-1 text-center sm:text-left flex flex-col justify-center mt-4">
-                      <h3 className="text-3xl font-black text-slate-800 mb-3">{lang === 'ja' ? '現在の時間' : 'Local Time'}</h3>
-                      <p className="text-slate-500 font-medium text-lg flex flex-col gap-2">
-                        <span>Time Zone:</span>
-                        <span className="font-mono text-blue-600 bg-blue-50 px-3 py-1 rounded-lg inline-block w-fit mx-auto sm:mx-0">
-                          {countryData.timeZone}
-                        </span>
-                      </p>
-                    </div>
-                    <div className="shrink-0 flex items-center justify-center w-full sm:w-1/2 md:w-56 overflow-visible">
-                      <DetailedAnalogClock timeZone={countryData.timeZone} />
-                    </div>
-                  </div>
+                <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_360px] lg:items-end">
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div className="bg-slate-50 p-5 rounded-2xl flex items-start gap-4 hover:bg-blue-50 transition-colors">
-                      <Coins className="text-yellow-500 mt-1 shrink-0 w-6 h-6" />
-                      <div>
-                        <p className="text-sm font-bold text-slate-400 mb-1">{lang === 'ja' ? '通貨' : 'Currency'}</p>
-                        <p className="font-bold text-slate-700 text-lg">{t(countryData.currency.nameJa, countryData.currency.nameEn)} ({countryData.currency.symbol})</p>
-                      </div>
+                  {/* COUNTRY */}
+                  <div>
+
+                    <div className="mb-7 flex flex-wrap items-center gap-3">
+
+                      <span className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[10px] font-black tracking-[0.2em] backdrop-blur">
+                        COUNTRY ADVENTURE
+                      </span>
+
+                      <span className="rounded-full border border-white/20 bg-slate-950/20 px-4 py-2 text-[10px] font-black tracking-[0.18em] backdrop-blur">
+                        {iso.toUpperCase()}
+                      </span>
+
                     </div>
-                    <div className="bg-slate-50 p-5 rounded-2xl flex items-start gap-4 hover:bg-blue-50 transition-colors">
-                      <Languages className="text-green-500 mt-1 shrink-0 w-6 h-6" />
+
+                    <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
+
+                      {countryData.flagUrl ? (
+                        <img
+                          src={
+                            countryData.flagUrl
+                          }
+                          alt={`${countryData.nameEn} flag`}
+                          className="
+                            h-auto
+                            w-32
+                            rounded-xl
+                            object-cover
+                            shadow-[0_18px_50px_rgba(0,0,0,0.35)]
+                            ring-2
+                            ring-white/30
+                            md:w-40
+                          "
+                        />
+                      ) : (
+                        <div className="text-7xl">
+                          {
+                            flagEmoji
+                          }
+                        </div>
+                      )}
+
                       <div>
-                        <p className="text-sm font-bold text-slate-400 mb-1">{lang === 'ja' ? '主な言語' : 'Languages'}</p>
-                        <p className="font-bold text-slate-700 text-lg">{countryData.languages.map(l => t(l.nameJa, l.nameEn)).join(', ')}</p>
-                      </div>
-                    </div>
-                    <div className="bg-slate-50 p-5 rounded-2xl flex items-start gap-4 hover:bg-blue-50 transition-colors">
-                      <Mountain className="text-stone-500 mt-1 shrink-0 w-6 h-6" />
-                      <div>
-                        <p className="text-sm font-bold text-slate-400 mb-1">{lang === 'ja' ? '標高の目安' : 'Elevation'}</p>
-                        <p className="font-bold text-slate-700 text-lg">{t(countryData.elevation, countryData.elevationEn || countryData.elevation)}</p>
-                      </div>
-                    </div>
-                    <div className="bg-slate-50 p-5 rounded-2xl flex items-start gap-4 hover:bg-blue-50 transition-colors">
-                      <CloudSun className="text-blue-500 mt-1 shrink-0 w-6 h-6" />
-                      <div>
-                        <p className="text-sm font-bold text-slate-400 mb-1">{lang === 'ja' ? '気候の特徴' : 'Weather'}</p>
-                        <p className="font-bold text-slate-700 text-sm line-clamp-2" title={t(countryData.weather.summary, countryData.weather.summaryEn || countryData.weather.summary)}>
-                          {t(countryData.weather.summary, countryData.weather.summaryEn || countryData.weather.summary)}
+
+                        <h1 className="text-4xl font-black tracking-[-0.04em] drop-shadow-xl md:text-6xl lg:text-7xl">
+                          {
+                            countryData.nameEn
+                          }
+                        </h1>
+
+                        <p className="mt-2 text-xl font-bold text-white/70 md:text-2xl">
+                          {
+                            countryData.nameJa
+                          }
                         </p>
+
                       </div>
+
                     </div>
+
+                    <p className="mt-7 max-w-3xl text-lg font-semibold leading-8 text-white/85 md:text-xl">
+                      「
+                      {t(
+                        countryData.subtitle,
+                        countryData.subtitleEn ||
+                          countryData.subtitle
+                      )}
+                      」
+                    </p>
+
+                    {/* QUICK INFO */}
+                    <div className="mt-8 flex flex-wrap gap-3">
+
+                      <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 backdrop-blur">
+
+                        <MapPin
+                          size={16}
+                        />
+
+                        <span className="text-xs font-bold text-white/65">
+                          CAPITAL
+                        </span>
+
+                        <span className="text-sm font-black">
+                          {t(
+                            countryData.capitalJa,
+                            countryData.capitalEn
+                          )}
+                        </span>
+
+                      </div>
+
+                      <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 backdrop-blur">
+
+                        <Clock3
+                          size={16}
+                        />
+
+                        <span className="text-xs font-bold text-white/65">
+                          TIME
+                        </span>
+
+                        <span className="text-sm font-black">
+                          {
+                            countryData.timeZone
+                          }
+                        </span>
+
+                      </div>
+
+                      {languageLabel && (
+                        <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 backdrop-blur">
+
+                          <Languages
+                            size={16}
+                          />
+
+                          <span className="text-xs font-bold text-white/65">
+                            LANGUAGE
+                          </span>
+
+                          <span className="text-sm font-black">
+                            {
+                              languageLabel
+                            }
+                          </span>
+
+                        </div>
+                      )}
+
+                    </div>
+
                   </div>
+
+                  {/* START PANEL */}
+                  <div className="rounded-[28px] border border-white/20 bg-slate-950/35 p-6 shadow-2xl backdrop-blur-xl">
+
+                    <div className="flex items-center gap-2 text-blue-100">
+
+                      <Sparkles
+                        size={17}
+                      />
+
+                      <span className="text-[10px] font-black tracking-[0.2em]">
+                        YOUR ADVENTURE
+                      </span>
+
+                    </div>
+
+                    <div className="mt-6 grid grid-cols-2 gap-3">
+
+                      <div className="rounded-2xl bg-white/10 p-4">
+
+                        <div className="text-3xl font-black">
+                          40
+                        </div>
+
+                        <div className="mt-1 text-[9px] font-black tracking-[0.15em] text-white/45">
+                          MISSIONS
+                        </div>
+
+                      </div>
+
+                      <div className="rounded-2xl bg-white/10 p-4">
+
+                        <div className="text-3xl font-black text-amber-300">
+                          480
+                        </div>
+
+                        <div className="mt-1 text-[9px] font-black tracking-[0.15em] text-white/45">
+                          MAX WP
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={
+                        scrollToAdventure
+                      }
+                      className="
+                        group
+                        mt-5
+                        flex
+                        w-full
+                        items-center
+                        justify-between
+                        rounded-2xl
+                        bg-white
+                        px-5
+                        py-4
+                        font-black
+                        text-slate-950
+                        shadow-xl
+                        transition
+                        hover:-translate-y-0.5
+                      "
+                    >
+
+                      <span>
+                        START ADVENTURE
+                      </span>
+
+                      <span
+                        className="
+                          flex
+                          h-8
+                          w-8
+                          items-center
+                          justify-center
+                          rounded-full
+                          bg-slate-950
+                          text-white
+                          transition
+                          group-hover:translate-y-1
+                        "
+                      >
+                        <ChevronDown
+                          size={17}
+                        />
+                      </span>
+
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={
+                        scrollToDiscovery
+                      }
+                      className="mt-3 w-full py-2 text-xs font-bold text-white/55 transition hover:text-white"
+                    >
+                      Country Discoveryも見る
+                    </button>
+
+                  </div>
+
                 </div>
+
               </div>
 
-              {countryData.japanConnection && (
-                <div className="bg-gradient-to-br from-rose-50 to-orange-50 p-8 md:p-10 rounded-3xl border border-rose-100 shadow-sm relative overflow-hidden">
-                  <HeartHandshake className="absolute -right-10 -bottom-10 text-rose-200/50 w-64 h-64" />
-                  <h3 className="text-3xl font-black text-rose-600 mb-6 flex items-center gap-3 relative z-10">
-                    🇯🇵 {t(countryData.japanConnection.title, countryData.japanConnection.titleEn || countryData.japanConnection.title)}
-                  </h3>
-                  <p className="text-xl text-slate-700 leading-loose font-medium relative z-10 max-w-4xl">
-                    {t(countryData.japanConnection.text, countryData.japanConnection.textEn || countryData.japanConnection.text)}
+            </section>
+
+            {/* =====================================================
+                WORLD ADVENTURE — MAIN CONTENT
+            ====================================================== */}
+            <section
+              ref={
+                adventureRef
+              }
+              className="
+                scroll-mt-4
+                px-5
+                py-10
+                md:px-9
+                md:py-12
+                lg:px-12
+              "
+            >
+
+              <div className="mb-2 flex items-center gap-3">
+
+                <div
+                  className="h-1 w-12 rounded-full"
+                  style={{
+                    backgroundColor:
+                      theme.primary,
+                  }}
+                />
+
+                <p
+                  className="text-[10px] font-black tracking-[0.2em]"
+                  style={{
+                    color:
+                      theme.primary,
+                  }}
+                >
+                  EXPLORE · LEARN · CONNECT
+                </p>
+
+              </div>
+
+              <WorldMissionPanel
+                countryCode={
+                  iso
+                }
+                fileLetter={
+                  fileLetter
+                }
+              />
+
+            </section>
+
+            {/* =====================================================
+                COUNTRY DISCOVERY
+            ====================================================== */}
+            <section
+              ref={
+                discoveryRef
+              }
+              className="
+                scroll-mt-4
+                border-t
+                border-slate-200
+                bg-white/75
+                px-5
+                py-12
+                md:px-9
+                lg:px-12
+              "
+            >
+
+              <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+
+                <div>
+
+                  <div className="flex items-center gap-2">
+
+                    <Compass
+                      size={18}
+                      style={{
+                        color:
+                          theme.primary,
+                      }}
+                    />
+
+                    <p
+                      className="text-[10px] font-black tracking-[0.2em]"
+                      style={{
+                        color:
+                          theme.primary,
+                      }}
+                    >
+                      COUNTRY DISCOVERY
+                    </p>
+
+                  </div>
+
+                  <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 md:text-4xl">
+                    もっと、この国を知ろう。
+                  </h2>
+
+                  <p className="mt-3 max-w-2xl text-sm font-medium leading-7 text-slate-500">
+                    Missionで気になったことを、
+                    地図・時間・ことば・気候からさらに確かめられます。
+                  </p>
+
+                </div>
+
+                <div className="text-5xl">
+                  {
+                    flagEmoji
+                  }
+                </div>
+
+              </div>
+
+              {/* INFO CARDS */}
+              <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
+
+                <div
+                  className="rounded-2xl p-4"
+                  style={{
+                    backgroundColor:
+                      theme.soft,
+                  }}
+                >
+                  <Coins className="text-amber-500" />
+
+                  <p className="mt-4 text-[9px] font-black tracking-[0.15em] text-slate-400">
+                    CURRENCY
+                  </p>
+
+                  <p className="mt-1 font-black text-slate-800">
+                    {countryData.currency
+                      ? `${t(
+                          countryData.currency.nameJa,
+                          countryData.currency.nameEn
+                        )} ${countryData.currency.symbol || ''}`
+                      : '—'}
                   </p>
                 </div>
-              )}
 
-              {/* 見どころ・文化エリア */}
-              <div>
-                <h3 className="text-3xl font-black text-slate-800 mb-8 px-2 flex items-center gap-3">
-                  ✨ {lang === 'ja' ? '見どころ・文化' : 'Highlights & Culture'}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {countryData.heritage?.map((item) => (
-                    <div key={item.id} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group hover:shadow-xl transition-all">
-                      <div className="h-56 overflow-hidden relative">
-                        <span className="absolute top-4 left-4 z-10 text-xs font-black bg-blue-500 text-white px-3 py-1.5 rounded-full shadow-md">
-                          {t(item.category, item.categoryEn || item.category)}
-                        </span>
-                        <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                      </div>
-                      <div className="p-6">
-                        <h4 className="text-xl font-black text-slate-800 mb-3">{t(item.title, item.titleEn || item.title)}</h4>
-                        <p className="text-slate-600 font-medium leading-relaxed">{t(item.description, item.descriptionEn || item.description)}</p>
-                      </div>
-                    </div>
-                  ))}
-                  {countryData.culture?.map((item) => (
-                    <div key={item.id} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group hover:shadow-xl transition-all">
-                      <div className="h-56 overflow-hidden relative">
-                        <span className="absolute top-4 left-4 z-10 text-xs font-black bg-orange-500 text-white px-3 py-1.5 rounded-full shadow-md">
-                          {t(item.category, item.categoryEn || item.category)}
-                        </span>
-                        <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                      </div>
-                      <div className="p-6">
-                        <h4 className="text-xl font-black text-slate-800 mb-3">{t(item.title, item.titleEn || item.title)}</h4>
-                        <p className="text-slate-600 font-medium leading-relaxed">{t(item.description, item.descriptionEn || item.description)}</p>
-                      </div>
-                    </div>
-                  ))}
+                <div
+                  className="rounded-2xl p-4"
+                  style={{
+                    backgroundColor:
+                      theme.soft,
+                  }}
+                >
+                  <Languages className="text-emerald-600" />
+
+                  <p className="mt-4 text-[9px] font-black tracking-[0.15em] text-slate-400">
+                    LANGUAGE
+                  </p>
+
+                  <p className="mt-1 line-clamp-2 font-black text-slate-800">
+                    {
+                      languageLabel ||
+                      '—'
+                    }
+                  </p>
                 </div>
+
+                <div
+                  className="rounded-2xl p-4"
+                  style={{
+                    backgroundColor:
+                      theme.soft,
+                  }}
+                >
+                  <Mountain className="text-stone-600" />
+
+                  <p className="mt-4 text-[9px] font-black tracking-[0.15em] text-slate-400">
+                    ELEVATION
+                  </p>
+
+                  <p className="mt-1 line-clamp-2 font-black text-slate-800">
+                    {t(
+                      countryData.elevation,
+                      countryData.elevationEn ||
+                        countryData.elevation
+                    ) || '—'}
+                  </p>
+                </div>
+
+                <div
+                  className="rounded-2xl p-4"
+                  style={{
+                    backgroundColor:
+                      theme.soft,
+                  }}
+                >
+                  <CloudSun className="text-sky-600" />
+
+                  <p className="mt-4 text-[9px] font-black tracking-[0.15em] text-slate-400">
+                    CLIMATE
+                  </p>
+
+                  <p className="mt-1 line-clamp-2 font-black text-slate-800">
+                    {t(
+                      countryData.weather
+                        ?.summary,
+                      countryData.weather
+                        ?.summaryEn ||
+                        countryData.weather
+                          ?.summary
+                    ) || '—'}
+                  </p>
+                </div>
+
               </div>
-{/* World Learning Mission */}
-<WorldMissionPanel
-  countryCode={iso}
-  fileLetter={fileLetter}
-/>
-              {/* クイズエリア */}
-              {countryData.quiz && (
-                <div className="mt-16 pt-10 border-t-2 border-dashed border-slate-300">
-                  <InteractiveQuiz quizData={countryData.quiz} lang={lang} />
-                </div>
-              )}
 
-              {/* ▼ 修正：言語練習（発音チャレンジ）エリア */}
-              {/* LanguagePractice コンポーネント内部で複数言語をタブ処理するため、丸ごと渡すだけになりました */}
-              {languageData && languageData[iso] && (
-                <div className="mt-16 pt-10 border-t-2 border-dashed border-slate-300">
-                  <LanguagePractice 
-                    countryCode={iso} 
-                    languageData={languageData} 
+              {/* MAP + TIME */}
+              <div className="mt-7 grid grid-cols-1 gap-6 lg:grid-cols-2">
+
+                <div className="relative h-[420px] overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100 shadow-sm">
+
+                  <div className="absolute left-5 top-5 z-10 flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-black text-slate-800 shadow-lg backdrop-blur">
+
+                    <Globe2
+                      size={17}
+                      style={{
+                        color:
+                          theme.primary,
+                      }}
+                    />
+
+                    MAP
+                  </div>
+
+                  <iframe
+                    title={`${countryData.nameEn} map`}
+                    width="100%"
+                    height="100%"
+                    className="bg-slate-100"
+                    style={{
+                      border: 0,
+                    }}
+                    loading="lazy"
+                    allowFullScreen
+                    tabIndex="-1"
+                    src={`https://maps.google.com/maps?q=${encodeURIComponent(
+                      countryData.mapQuery
+                    )}&t=m&z=5&output=embed&hl=${lang}`}
                   />
-                </div>
-              )}
 
-            </div>
+                </div>
+
+                <div className="flex min-h-[420px] flex-col justify-between rounded-[28px] border border-slate-200 bg-slate-950 p-6 text-white shadow-sm md:p-8">
+
+                  <div>
+
+                    <div className="flex items-center gap-2 text-blue-300">
+
+                      <Clock3
+                        size={18}
+                      />
+
+                      <p className="text-[10px] font-black tracking-[0.2em]">
+                        LOCAL TIME
+                      </p>
+
+                    </div>
+
+                    <h3 className="mt-3 text-3xl font-black">
+                      {t(
+                        countryData.capitalJa,
+                        countryData.capitalEn
+                      )}
+                    </h3>
+
+                    <p className="mt-2 font-mono text-sm text-white/45">
+                      {
+                        countryData.timeZone
+                      }
+                    </p>
+
+                  </div>
+
+                  <div className="flex flex-1 items-center justify-center py-6">
+
+                    <DetailedAnalogClock
+                      timeZone={
+                        countryData.timeZone
+                      }
+                    />
+
+                  </div>
+
+                  <p className="text-center text-xs font-bold leading-6 text-white/45">
+                    日本との時差を考えながら、
+                    TIME Missionにも挑戦してみよう。
+                  </p>
+
+                </div>
+
+              </div>
+
+            </section>
+
+            {/* =====================================================
+                CULTURE & HERITAGE
+            ====================================================== */}
+            {(
+              countryData
+                .heritage
+                ?.length >
+                0 ||
+              countryData
+                .culture
+                ?.length >
+                0
+            ) && (
+              <section className="border-t border-slate-200 px-5 py-12 md:px-9 lg:px-12">
+
+                <div className="flex items-center gap-2">
+
+                  <BookOpen
+                    size={18}
+                    className="text-orange-500"
+                  />
+
+                  <p className="text-[10px] font-black tracking-[0.2em] text-orange-500">
+                    CULTURE & HERITAGE
+                  </p>
+
+                </div>
+
+                <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950">
+                  見どころ・文化
+                </h2>
+
+                <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+                  {countryData
+                    .heritage
+                    ?.map(
+                      (item) => (
+                        <div
+                          key={
+                            item.id
+                          }
+                          className="group overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                        >
+
+                          <div className="relative h-52 overflow-hidden">
+
+                            <img
+                              src={
+                                item.image
+                              }
+                              alt={
+                                item.title
+                              }
+                              className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                            />
+
+                            <span className="absolute left-4 top-4 rounded-full bg-blue-600 px-3 py-1.5 text-[9px] font-black tracking-wide text-white shadow">
+                              {t(
+                                item.category,
+                                item.categoryEn ||
+                                  item.category
+                              )}
+                            </span>
+
+                          </div>
+
+                          <div className="p-5">
+
+                            <h3 className="text-lg font-black text-slate-900">
+                              {t(
+                                item.title,
+                                item.titleEn ||
+                                  item.title
+                              )}
+                            </h3>
+
+                            <p className="mt-3 text-sm font-medium leading-6 text-slate-500">
+                              {t(
+                                item.description,
+                                item.descriptionEn ||
+                                  item.description
+                              )}
+                            </p>
+
+                          </div>
+
+                        </div>
+                      )
+                    )}
+
+                  {countryData
+                    .culture
+                    ?.map(
+                      (item) => (
+                        <div
+                          key={
+                            item.id
+                          }
+                          className="group overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                        >
+
+                          <div className="relative h-52 overflow-hidden">
+
+                            <img
+                              src={
+                                item.image
+                              }
+                              alt={
+                                item.title
+                              }
+                              className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                            />
+
+                            <span className="absolute left-4 top-4 rounded-full bg-orange-500 px-3 py-1.5 text-[9px] font-black tracking-wide text-white shadow">
+                              {t(
+                                item.category,
+                                item.categoryEn ||
+                                  item.category
+                              )}
+                            </span>
+
+                          </div>
+
+                          <div className="p-5">
+
+                            <h3 className="text-lg font-black text-slate-900">
+                              {t(
+                                item.title,
+                                item.titleEn ||
+                                  item.title
+                              )}
+                            </h3>
+
+                            <p className="mt-3 text-sm font-medium leading-6 text-slate-500">
+                              {t(
+                                item.description,
+                                item.descriptionEn ||
+                                  item.description
+                              )}
+                            </p>
+
+                          </div>
+
+                        </div>
+                      )
+                    )}
+
+                </div>
+
+              </section>
+            )}
+
+            {/* =====================================================
+                JAPAN CONNECTION
+            ====================================================== */}
+            {countryData
+              .japanConnection && (
+              <section className="border-t border-slate-200 px-5 py-12 md:px-9 lg:px-12">
+
+                <div className="relative overflow-hidden rounded-[30px] border border-rose-100 bg-gradient-to-br from-rose-50 via-white to-orange-50 p-7 shadow-sm md:p-10">
+
+                  <HeartHandshake className="absolute -bottom-10 -right-8 h-56 w-56 text-rose-100" />
+
+                  <div className="relative z-10">
+
+                    <p className="text-[10px] font-black tracking-[0.2em] text-rose-500">
+                      JAPAN CONNECTION
+                    </p>
+
+                    <h2 className="mt-3 flex items-center gap-3 text-3xl font-black text-slate-950">
+                      🇯🇵
+                      {t(
+                        countryData
+                          .japanConnection
+                          .title,
+                        countryData
+                          .japanConnection
+                          .titleEn ||
+                          countryData
+                            .japanConnection
+                            .title
+                      )}
+                    </h2>
+
+                    <p className="mt-6 max-w-4xl text-base font-medium leading-8 text-slate-600 md:text-lg">
+                      {t(
+                        countryData
+                          .japanConnection
+                          .text,
+                        countryData
+                          .japanConnection
+                          .textEn ||
+                          countryData
+                            .japanConnection
+                            .text
+                      )}
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </section>
+            )}
+
+            {/* =====================================================
+                EXTRA PRACTICE
+            ====================================================== */}
+            {(
+              countryData.quiz ||
+              (
+                languageData &&
+                languageData[
+                  iso
+                ]
+              )
+            ) && (
+              <section className="border-t border-slate-200 bg-slate-50/80 px-5 py-12 md:px-9 lg:px-12">
+
+                <div className="mb-8">
+
+                  <p className="text-[10px] font-black tracking-[0.2em] text-slate-400">
+                    EXTRA PRACTICE
+                  </p>
+
+                  <h2 className="mt-3 text-3xl font-black text-slate-950">
+                    もっと練習する
+                  </h2>
+
+                </div>
+
+                {countryData.quiz && (
+                  <div className="rounded-[28px] bg-white p-5 shadow-sm md:p-8">
+                    <InteractiveQuiz
+                      quizData={
+                        countryData.quiz
+                      }
+                      lang={
+                        lang
+                      }
+                    />
+                  </div>
+                )}
+
+                {languageData &&
+                  languageData[
+                    iso
+                  ] && (
+                  <div className="mt-8 rounded-[28px] bg-white p-5 shadow-sm md:p-8">
+
+                    <LanguagePractice
+                      countryCode={
+                        iso
+                      }
+                      languageData={
+                        languageData
+                      }
+                    />
+
+                  </div>
+                )}
+
+              </section>
+            )}
+
           </div>
         )}
+
       </div>
+
     </div>
   );
 }

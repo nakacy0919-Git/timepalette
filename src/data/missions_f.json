@@ -1,0 +1,3263 @@
+{
+  "fj": {
+    "countryNameJa": "フィジー",
+    "countryNameEn": "Fiji",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "fj-l08",
+          "fj-j07",
+          "fj-k04",
+          "fj-k05"
+        ]
+      }
+    },
+    "sources": {
+      "fj-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Fiji profile based on countries_f.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_f.json"
+      },
+      "fj-time-zone": {
+        "organization": "IANA Time Zone Database",
+        "title": "IANA Time Zone Database / 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "fj-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Fiji relations",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/asia-paci/fiji/index.html"
+      }
+    },
+    "missions": [
+      {
+        "id": "fj-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "フィジーを探せ！",
+        "prompt": "世界地図からフィジーをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "fj",
+          "targetAtlasName": "Fiji",
+          "targetName": "Fiji"
+        },
+        "explanation": "南太平洋に広がる300以上の島々からなる島国で、主要島はビティレブ島とバヌアレブ島です。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "フィジーの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "南太平洋・メラネシア",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "南太平洋・メラネシア",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "フィジーの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "スバ",
+            "ナンディ",
+            "ラウトカ",
+            "ランバサ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はスバです。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "フィジーの主要都市を地図上に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "fj",
+          "targetAtlasName": "Fiji",
+          "mapConfig": {
+            "center": [
+              178.2,
+              -17.8
+            ],
+            "scale": 2200
+          },
+          "cities": [
+            {
+              "name": "Suva",
+              "labelJa": "スバ",
+              "coordinates": [
+                178.4501,
+                -18.1248
+              ],
+              "timeZone": "Pacific/Fiji",
+              "region": "ビティレブ島・南東部"
+            },
+            {
+              "name": "Nadi",
+              "labelJa": "ナンディ",
+              "coordinates": [
+                177.4434,
+                -17.7765
+              ],
+              "timeZone": "Pacific/Fiji",
+              "region": "ビティレブ島・西部"
+            },
+            {
+              "name": "Lautoka",
+              "labelJa": "ラウトカ",
+              "coordinates": [
+                177.4516,
+                -17.6169
+              ],
+              "timeZone": "Pacific/Fiji",
+              "region": "ビティレブ島・西部"
+            },
+            {
+              "name": "Labasa",
+              "labelJa": "ランバサ",
+              "coordinates": [
+                179.3833,
+                -16.4333
+              ],
+              "timeZone": "Pacific/Fiji",
+              "region": "バヌアレブ島"
+            }
+          ]
+        },
+        "explanation": "都市配置から地域差を学びます。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "フィジーと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "海とサンゴ礁が交通、漁業、観光、食文化、気候変動対策に深く関わります。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島",
+            "地理では水域を考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "海とサンゴ礁が交通、漁業、観光、食文化、気候変動対策に深く関わります。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候",
+        "prompt": "フィジーの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "一年を通して温暖な熱帯気候で雨季と乾季があり、サイクロンへの備えが重要です。",
+            "全国どこでも一年中同じ気候",
+            "首都だけで全国を説明できる",
+            "地形は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "一年を通して温暖な熱帯気候で雨季と乾季があり、サイクロンへの備えが重要です。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を読む",
+        "prompt": "フィジーを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "首都スバのあるビティレブ島、バヌアレブ島、タベウニ島、離島群では人口・交通・産業・生活環境が異なります。",
+            "首都だけ見る",
+            "観光地だけで判断する",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都スバのあるビティレブ島、バヌアレブ島、タベウニ島、離島群では人口・交通・産業・生活環境が異なります。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとSuvaの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Pacific/Fiji"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Pacific/Fiji": "Suva"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "リアルタイム比較です。",
+        "sourceIds": [
+          "fj-time-zone"
+        ]
+      },
+      {
+        "id": "fj-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "Tokyoの時刻からSuvaの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Pacific/Fiji",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Pacific/Fiji": "Suva"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別の時計で表します。",
+        "sourceIds": [
+          "fj-time-zone"
+        ]
+      },
+      {
+        "id": "fj-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差を読む",
+        "prompt": "TokyoとSuvaの今の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Pacific/Fiji"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Pacific/Fiji": "Suva"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "実際の時差を確認します。",
+        "sourceIds": [
+          "fj-time-zone"
+        ]
+      },
+      {
+        "id": "fj-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜",
+        "prompt": "TokyoとSuvaの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Pacific/Fiji"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Pacific/Fiji": "Suva"
+          }
+        },
+        "explanation": "生活時間帯を比べます。",
+        "sourceIds": [
+          "fj-time-zone"
+        ]
+      },
+      {
+        "id": "fj-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流時間を探す",
+        "prompt": "両校の8:30〜16:00に入る交流時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Pacific/Fiji",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Pacific/Fiji": "Suva"
+          },
+          "windowA": [
+            "08:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "16:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "学校時間を尊重します。",
+        "sourceIds": [
+          "fj-time-zone"
+        ]
+      },
+      {
+        "id": "fj-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DSTを確認",
+        "prompt": "フィジーの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フィジーは2026年、Pacific/Fiji（UTC+12）を通年使用し、DSTは実施していません。",
+            "Tokyoとの時差は常に同じ",
+            "DSTは世界共通",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フィジーは2026年、Pacific/Fiji（UTC+12）を通年使用し、DSTは実施していません。",
+        "sourceIds": [
+          "fj-time-zone"
+        ]
+      },
+      {
+        "id": "fj-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語",
+        "prompt": "フィジーの生徒との交流場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き返す",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "交流表現を学びます。"
+      },
+      {
+        "id": "fj-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "言語事情",
+        "prompt": "フィジーの言語事情として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "英語、フィジー語、フィジー・ヒンディー語が広く使われ、多民族・多言語社会を形成しています。",
+            "全員一言語のみ",
+            "地域差はない",
+            "日本語だけが公用語"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "英語、フィジー語、フィジー・ヒンディー語が広く使われ、多民族・多言語社会を形成しています。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字",
+        "prompt": "フィジーの文字について正しいのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "英語、フィジー語、フィジー・ヒンディー語は主にラテン文字で表記されます。",
+            "世界中で同じ文字",
+            "文字はない",
+            "ひらがなのみ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "英語、フィジー語、フィジー・ヒンディー語は主にラテン文字で表記されます。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で紹介",
+        "prompt": "“Hello! I am learning about Fiji.” を読もう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Fiji.",
+          "meaning": "私はフィジーについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "音読します。"
+      },
+      {
+        "id": "fj-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介",
+        "prompt": "名前を入れて自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Fiji. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流を想定します。"
+      },
+      {
+        "id": "fj-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語ではない",
+        "prompt": "フィジーの言語を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "英語、フィジー語、フィジー・ヒンディー語が広く使われ、多民族・多言語社会を形成しています。",
+            "全員同じ言葉と決めつける",
+            "首都の言葉だけが本物",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "英語、フィジー語、フィジー・ヒンディー語が広く使われ、多民族・多言語社会を形成しています。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化",
+        "prompt": "言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "地域・歴史・文化を理解する入り口になる",
+            "全員同じ考えと分かる",
+            "他言語を否定できる",
+            "発音だけ競う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は文化理解の入り口です。"
+      },
+      {
+        "id": "fj-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "質問を話す",
+        "prompt": "フィジーの同年代に英語で質問を作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "フィジー",
+          "audienceCountryNameEn": "Fiji"
+        },
+        "explanation": "自分の好奇心を英語にします。"
+      },
+      {
+        "id": "fj-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "フィジーの気候として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "一年を通して温暖な熱帯気候で雨季と乾季があり、サイクロンへの備えが重要です。",
+            "全国同じ気候",
+            "気候は地形と無関係",
+            "毎日世界中と同じ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "一年を通して温暖な熱帯気候で雨季と乾季があり、サイクロンへの備えが重要です。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化",
+        "prompt": "フィジーの食文化と関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ロボ",
+            "寿司だけ",
+            "世界共通の一皿",
+            "歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ロボは重要な手がかりです。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "遺産",
+        "prompt": "フィジーを学ぶ題材として関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "レブカ歴史的港町",
+            "東京タワー",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "レブカ歴史的港町",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "地域差",
+        "prompt": "フィジーの都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "スバ",
+              "target": "ビティレブ島・南東部"
+            },
+            {
+              "name": "ナンディ",
+              "target": "ビティレブ島・西部"
+            },
+            {
+              "name": "ラウトカ",
+              "target": "ビティレブ島・西部"
+            }
+          ]
+        },
+        "explanation": "地域差を学びます。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を考える",
+        "prompt": "フィジーの地域差を理解するうえで大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "首都スバのあるビティレブ島、バヌアレブ島、タベウニ島、離島群では人口・交通・産業・生活環境が異なります。",
+            "首都だけ見る",
+            "一年中同じ気候と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都スバのあるビティレブ島、バヌアレブ島、タベウニ島、離島群では人口・交通・産業・生活環境が異なります。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "フィジーの文化を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "先住系フィジー人、インド系フィジー人など多様な文化的背景があり、島や都市・農村によって生活も異なります。",
+            "観光広告で全国民を説明",
+            "都市だけが本物",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "先住系フィジー人、インド系フィジー人など多様な文化的背景があり、島や都市・農村によって生活も異なります。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "その国らしさを疑う",
+        "prompt": "『フィジーの人はみんな同じ生活』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけで全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。"
+      },
+      {
+        "id": "fj-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながり",
+        "prompt": "日本とフィジーの関係として正しいのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本とフィジーは防災、気候変動、漁業、教育、人材育成、安全保障協力など幅広い分野で関係を深めています。",
+            "交流はない",
+            "同じ国土を共有",
+            "時差だけが関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とフィジーは防災、気候変動、漁業、教育、人材育成、安全保障協力など幅広い分野で関係を深めています。",
+        "sourceIds": [
+          "fj-japan-connection"
+        ]
+      },
+      {
+        "id": "fj-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とフィジーのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Fiji → JAPAN / JAPAN → Fiji",
+          "items": [
+            {
+              "label": "防災・気候変動",
+              "target": "つながりがある"
+            },
+            {
+              "label": "漁業・教育",
+              "target": "つながりがある"
+            },
+            {
+              "label": "人的交流・安全保障協力",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本とフィジーは防災、気候変動、漁業、教育、人材育成、安全保障協力など幅広い分野で関係を深めています。",
+        "sourceIds": [
+          "fj-japan-connection"
+        ]
+      },
+      {
+        "id": "fj-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "関係を多面的に見る",
+        "prompt": "両国関係を理解する最も良い見方は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "外交・経済・文化・教育・人の移動など複数を見る",
+            "輸出品1つだけ",
+            "国旗だけ",
+            "距離だけ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "複数の層から考えます。",
+        "sourceIds": [
+          "fj-japan-connection"
+        ]
+      },
+      {
+        "id": "fj-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "交流の流れ",
+        "prompt": "交流が学びにつながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "学校交流",
+              "middle": "相手の生活を直接聞く",
+              "end": "ステレオタイプを修正する"
+            },
+            {
+              "start": "文化・技術交流",
+              "middle": "背景を知る",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "交流を相互理解につなげます。"
+      },
+      {
+        "id": "fj-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながり",
+        "prompt": "身近な日本とフィジーのつながりを探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品・学校交流・ニュース・文化イベントなどの根拠も書こう。"
+        },
+        "explanation": "証拠からつながりを探します。"
+      },
+      {
+        "id": "fj-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "交流の意味",
+        "prompt": "学校交流が増えたとき期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員同じ考えと確認できる",
+            "地理を学ばなくてよい",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で理解を深めます。"
+      },
+      {
+        "id": "fj-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズ",
+        "prompt": "日本とフィジーのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "フィジー"
+        },
+        "explanation": "学びを問題に再構成します。"
+      },
+      {
+        "id": "fj-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点",
+        "prompt": "日本とフィジーの共通点を3つ探そう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "共通点を探します。"
+      },
+      {
+        "id": "fj-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由",
+        "prompt": "違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えます。"
+      },
+      {
+        "id": "fj-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "証拠で検証",
+        "prompt": "『フィジーは観光リゾートだけの国で、島や民族による暮らしの違いはない』を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "フィジーは観光リゾートだけの国で、島や民族による暮らしの違いはない",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "fj-k03-e1",
+              "text": "首都スバには行政・教育・商業機能が集中する",
+              "valid": true
+            },
+            {
+              "id": "fj-k03-e2",
+              "text": "バヌアレブ島など主要島ごとに産業や交通条件が異なる",
+              "valid": true
+            },
+            {
+              "id": "fj-k03-e3",
+              "text": "複数の言語と文化的背景を持つ人々が暮らしている",
+              "valid": true
+            },
+            {
+              "id": "fj-k03-e4",
+              "text": "フィジーの首都はスバである",
+              "valid": false
+            },
+            {
+              "id": "fj-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "証拠を複数選びます。",
+        "sourceIds": [
+          "fj-country-profile"
+        ]
+      },
+      {
+        "id": "fj-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ",
+        "prompt": "フィジーの同年代に質問を3つ作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "フィジー"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。"
+      },
+      {
+        "id": "fj-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Fiji Master Quiz",
+        "prompt": "5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "フィジー"
+        },
+        "explanation": "40 Missionの最終統合です。"
+      }
+    ]
+  },
+  "fi": {
+    "countryNameJa": "フィンランド",
+    "countryNameEn": "Finland",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "fi-l08",
+          "fi-j07",
+          "fi-k04",
+          "fi-k05"
+        ]
+      }
+    },
+    "sources": {
+      "fi-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Finland profile based on countries_f.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_f.json"
+      },
+      "fi-time-zone": {
+        "organization": "IANA Time Zone Database",
+        "title": "IANA Time Zone Database / 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "fi-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Finland relations",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/europe/finland/"
+      }
+    },
+    "missions": [
+      {
+        "id": "fi-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "フィンランドを探せ！",
+        "prompt": "世界地図からフィンランドをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "fi",
+          "targetAtlasName": "Finland",
+          "targetName": "Finland"
+        },
+        "explanation": "北欧に位置し、広大な森林、数多くの湖、北極圏のラップランド、バルト海沿岸を持つ国です。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "フィンランドの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "北ヨーロッパ・北欧",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "北ヨーロッパ・北欧",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "フィンランドの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ヘルシンキ",
+            "タンペレ",
+            "オウル",
+            "ロヴァニエミ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はヘルシンキです。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "フィンランドの主要都市を地図上に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "fi",
+          "targetAtlasName": "Finland",
+          "mapConfig": {
+            "center": [
+              26,
+              64
+            ],
+            "scale": 1000
+          },
+          "cities": [
+            {
+              "name": "Helsinki",
+              "labelJa": "ヘルシンキ",
+              "coordinates": [
+                24.9384,
+                60.1699
+              ],
+              "timeZone": "Europe/Helsinki",
+              "region": "南岸"
+            },
+            {
+              "name": "Tampere",
+              "labelJa": "タンペレ",
+              "coordinates": [
+                23.761,
+                61.4978
+              ],
+              "timeZone": "Europe/Helsinki",
+              "region": "内陸南部"
+            },
+            {
+              "name": "Oulu",
+              "labelJa": "オウル",
+              "coordinates": [
+                25.4651,
+                65.0121
+              ],
+              "timeZone": "Europe/Helsinki",
+              "region": "北部"
+            },
+            {
+              "name": "Rovaniemi",
+              "labelJa": "ロヴァニエミ",
+              "coordinates": [
+                25.7294,
+                66.5039
+              ],
+              "timeZone": "Europe/Helsinki",
+              "region": "ラップランド"
+            }
+          ]
+        },
+        "explanation": "都市配置から地域差を学びます。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "フィンランドと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "多数の湖とバルト海沿岸が交通、漁業、観光、森林産業、生活文化に関わります。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島",
+            "地理では水域を考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "多数の湖とバルト海沿岸が交通、漁業、観光、森林産業、生活文化に関わります。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候",
+        "prompt": "フィンランドの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "冬は寒く雪が多く、北部では極夜があり、夏は涼しく非常に日が長くなります。",
+            "全国どこでも一年中同じ気候",
+            "首都だけで全国を説明できる",
+            "地形は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "冬は寒く雪が多く、北部では極夜があり、夏は涼しく非常に日が長くなります。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を読む",
+        "prompt": "フィンランドを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "南部の都市圏、中部の湖水地方、北部ラップランドでは気候、人口密度、産業、昼夜の長さが大きく異なります。",
+            "首都だけ見る",
+            "観光地だけで判断する",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "南部の都市圏、中部の湖水地方、北部ラップランドでは気候、人口密度、産業、昼夜の長さが大きく異なります。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとHelsinkiの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Europe/Helsinki"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Helsinki": "Helsinki"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "リアルタイム比較です。",
+        "sourceIds": [
+          "fi-time-zone"
+        ]
+      },
+      {
+        "id": "fi-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "Tokyoの時刻からHelsinkiの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Europe/Helsinki",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Helsinki": "Helsinki"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別の時計で表します。",
+        "sourceIds": [
+          "fi-time-zone"
+        ]
+      },
+      {
+        "id": "fi-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差を読む",
+        "prompt": "TokyoとHelsinkiの今の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Europe/Helsinki"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Helsinki": "Helsinki"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "実際の時差を確認します。",
+        "sourceIds": [
+          "fi-time-zone"
+        ]
+      },
+      {
+        "id": "fi-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜",
+        "prompt": "TokyoとHelsinkiの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Europe/Helsinki"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Helsinki": "Helsinki"
+          }
+        },
+        "explanation": "生活時間帯を比べます。",
+        "sourceIds": [
+          "fi-time-zone"
+        ]
+      },
+      {
+        "id": "fi-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流時間を探す",
+        "prompt": "両校の8:30〜16:00に入る交流時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Europe/Helsinki",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Helsinki": "Helsinki"
+          },
+          "windowA": [
+            "08:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "16:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "学校時間を尊重します。",
+        "sourceIds": [
+          "fi-time-zone"
+        ]
+      },
+      {
+        "id": "fi-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DSTを確認",
+        "prompt": "フィンランドの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フィンランドは2026年3月29日にDSTを開始し、10月25日に標準時へ戻ります。",
+            "Tokyoとの時差は常に同じ",
+            "DSTは世界共通",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フィンランドは2026年3月29日にDSTを開始し、10月25日に標準時へ戻ります。",
+        "sourceIds": [
+          "fi-time-zone"
+        ]
+      },
+      {
+        "id": "fi-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語",
+        "prompt": "フィンランドの生徒との交流場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き返す",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "交流表現を学びます。"
+      },
+      {
+        "id": "fi-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "言語事情",
+        "prompt": "フィンランドの言語事情として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フィンランド語とスウェーデン語が国の公用語で、北部ではサーミ諸語も使われます。",
+            "全員一言語のみ",
+            "地域差はない",
+            "日本語だけが公用語"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フィンランド語とスウェーデン語が国の公用語で、北部ではサーミ諸語も使われます。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字",
+        "prompt": "フィンランドの文字について正しいのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フィンランド語とスウェーデン語はラテン文字を使い、ä・ö・åなどの文字も使われます。",
+            "世界中で同じ文字",
+            "文字はない",
+            "ひらがなのみ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フィンランド語とスウェーデン語はラテン文字を使い、ä・ö・åなどの文字も使われます。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で紹介",
+        "prompt": "“Hello! I am learning about Finland.” を読もう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Finland.",
+          "meaning": "私はフィンランドについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "音読します。"
+      },
+      {
+        "id": "fi-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介",
+        "prompt": "名前を入れて自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Finland. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流を想定します。"
+      },
+      {
+        "id": "fi-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語ではない",
+        "prompt": "フィンランドの言語を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フィンランド語とスウェーデン語が国の公用語で、北部ではサーミ諸語も使われます。",
+            "全員同じ言葉と決めつける",
+            "首都の言葉だけが本物",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フィンランド語とスウェーデン語が国の公用語で、北部ではサーミ諸語も使われます。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化",
+        "prompt": "言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "地域・歴史・文化を理解する入り口になる",
+            "全員同じ考えと分かる",
+            "他言語を否定できる",
+            "発音だけ競う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は文化理解の入り口です。"
+      },
+      {
+        "id": "fi-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "質問を話す",
+        "prompt": "フィンランドの同年代に英語で質問を作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "フィンランド",
+          "audienceCountryNameEn": "Finland"
+        },
+        "explanation": "自分の好奇心を英語にします。"
+      },
+      {
+        "id": "fi-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "フィンランドの気候として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "冬は寒く雪が多く、北部では極夜があり、夏は涼しく非常に日が長くなります。",
+            "全国同じ気候",
+            "気候は地形と無関係",
+            "毎日世界中と同じ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "冬は寒く雪が多く、北部では極夜があり、夏は涼しく非常に日が長くなります。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化",
+        "prompt": "フィンランドの食文化と関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カレリア・パイ",
+            "寿司だけ",
+            "世界共通の一皿",
+            "歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カレリア・パイは重要な手がかりです。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "遺産",
+        "prompt": "フィンランドを学ぶ題材として関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "スオメンリンナの要塞",
+            "東京タワー",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "スオメンリンナの要塞",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "地域差",
+        "prompt": "フィンランドの都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "ヘルシンキ",
+              "target": "南岸"
+            },
+            {
+              "name": "タンペレ",
+              "target": "内陸南部"
+            },
+            {
+              "name": "オウル",
+              "target": "北部"
+            }
+          ]
+        },
+        "explanation": "地域差を学びます。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を考える",
+        "prompt": "フィンランドの地域差を理解するうえで大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "南部の都市圏、中部の湖水地方、北部ラップランドでは気候、人口密度、産業、昼夜の長さが大きく異なります。",
+            "首都だけ見る",
+            "一年中同じ気候と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "南部の都市圏、中部の湖水地方、北部ラップランドでは気候、人口密度、産業、昼夜の長さが大きく異なります。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "フィンランドの文化を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "南部都市圏、湖水地方、ラップランド、スウェーデン語話者の多い沿岸部、サーミ地域など多様な地域があります。",
+            "観光広告で全国民を説明",
+            "都市だけが本物",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "南部都市圏、湖水地方、ラップランド、スウェーデン語話者の多い沿岸部、サーミ地域など多様な地域があります。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "その国らしさを疑う",
+        "prompt": "『フィンランドの人はみんな同じ生活』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけで全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。"
+      },
+      {
+        "id": "fi-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながり",
+        "prompt": "日本とフィンランドの関係として正しいのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本とフィンランドは戦略的パートナーシップの下、デジタル、教育、科学技術、環境、文化など幅広い分野で交流しています。",
+            "交流はない",
+            "同じ国土を共有",
+            "時差だけが関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とフィンランドは戦略的パートナーシップの下、デジタル、教育、科学技術、環境、文化など幅広い分野で交流しています。",
+        "sourceIds": [
+          "fi-japan-connection"
+        ]
+      },
+      {
+        "id": "fi-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とフィンランドのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Finland → JAPAN / JAPAN → Finland",
+          "items": [
+            {
+              "label": "教育・デジタル",
+              "target": "つながりがある"
+            },
+            {
+              "label": "科学技術・環境",
+              "target": "つながりがある"
+            },
+            {
+              "label": "文化・デザイン・人的交流",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本とフィンランドは戦略的パートナーシップの下、デジタル、教育、科学技術、環境、文化など幅広い分野で交流しています。",
+        "sourceIds": [
+          "fi-japan-connection"
+        ]
+      },
+      {
+        "id": "fi-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "関係を多面的に見る",
+        "prompt": "両国関係を理解する最も良い見方は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "外交・経済・文化・教育・人の移動など複数を見る",
+            "輸出品1つだけ",
+            "国旗だけ",
+            "距離だけ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "複数の層から考えます。",
+        "sourceIds": [
+          "fi-japan-connection"
+        ]
+      },
+      {
+        "id": "fi-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "交流の流れ",
+        "prompt": "交流が学びにつながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "学校交流",
+              "middle": "相手の生活を直接聞く",
+              "end": "ステレオタイプを修正する"
+            },
+            {
+              "start": "文化・技術交流",
+              "middle": "背景を知る",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "交流を相互理解につなげます。"
+      },
+      {
+        "id": "fi-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながり",
+        "prompt": "身近な日本とフィンランドのつながりを探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品・学校交流・ニュース・文化イベントなどの根拠も書こう。"
+        },
+        "explanation": "証拠からつながりを探します。"
+      },
+      {
+        "id": "fi-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "交流の意味",
+        "prompt": "学校交流が増えたとき期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員同じ考えと確認できる",
+            "地理を学ばなくてよい",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で理解を深めます。"
+      },
+      {
+        "id": "fi-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズ",
+        "prompt": "日本とフィンランドのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "フィンランド"
+        },
+        "explanation": "学びを問題に再構成します。"
+      },
+      {
+        "id": "fi-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点",
+        "prompt": "日本とフィンランドの共通点を3つ探そう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "共通点を探します。"
+      },
+      {
+        "id": "fi-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由",
+        "prompt": "違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えます。"
+      },
+      {
+        "id": "fi-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "証拠で検証",
+        "prompt": "『フィンランドは全国どこでも同じ言語・同じ昼の長さ・同じ都市生活である』を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "フィンランドは全国どこでも同じ言語・同じ昼の長さ・同じ都市生活である",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "fi-k03-e1",
+              "text": "フィンランド語とスウェーデン語の2公用語がある",
+              "valid": true
+            },
+            {
+              "id": "fi-k03-e2",
+              "text": "北部ラップランドでは極夜や白夜が見られる",
+              "valid": true
+            },
+            {
+              "id": "fi-k03-e3",
+              "text": "サーミ諸語や地域文化が存在する",
+              "valid": true
+            },
+            {
+              "id": "fi-k03-e4",
+              "text": "フィンランドの首都はヘルシンキである",
+              "valid": false
+            },
+            {
+              "id": "fi-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "証拠を複数選びます。",
+        "sourceIds": [
+          "fi-country-profile"
+        ]
+      },
+      {
+        "id": "fi-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ",
+        "prompt": "フィンランドの同年代に質問を3つ作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "フィンランド"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。"
+      },
+      {
+        "id": "fi-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Finland Master Quiz",
+        "prompt": "5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "フィンランド"
+        },
+        "explanation": "40 Missionの最終統合です。"
+      }
+    ]
+  },
+  "fr": {
+    "countryNameJa": "フランス",
+    "countryNameEn": "France",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "fr-l08",
+          "fr-j07",
+          "fr-k04",
+          "fr-k05"
+        ]
+      }
+    },
+    "sources": {
+      "fr-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "France profile based on countries_f.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_f.json"
+      },
+      "fr-time-zone": {
+        "organization": "IANA Time Zone Database",
+        "title": "IANA Time Zone Database / 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "fr-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–France relations",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/europe/france/"
+      }
+    },
+    "missions": [
+      {
+        "id": "fr-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "フランスを探せ！",
+        "prompt": "世界地図からフランスをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "fr",
+          "targetAtlasName": "France",
+          "targetName": "France"
+        },
+        "explanation": "西ヨーロッパに位置し、大西洋・地中海に面し、平野、アルプス、ピレネーなど多様な地形を持ちます。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "フランスの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "西ヨーロッパ",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "西ヨーロッパ",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "フランスの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "パリ",
+            "リヨン",
+            "マルセイユ",
+            "ボルドー"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はパリです。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "フランスの主要都市を地図上に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "fr",
+          "targetAtlasName": "France",
+          "mapConfig": {
+            "center": [
+              2.2,
+              46.5
+            ],
+            "scale": 1600
+          },
+          "cities": [
+            {
+              "name": "Paris",
+              "labelJa": "パリ",
+              "coordinates": [
+                2.3522,
+                48.8566
+              ],
+              "timeZone": "Europe/Paris",
+              "region": "北中部"
+            },
+            {
+              "name": "Lyon",
+              "labelJa": "リヨン",
+              "coordinates": [
+                4.8357,
+                45.764
+              ],
+              "timeZone": "Europe/Paris",
+              "region": "南東内陸"
+            },
+            {
+              "name": "Marseille",
+              "labelJa": "マルセイユ",
+              "coordinates": [
+                5.3698,
+                43.2965
+              ],
+              "timeZone": "Europe/Paris",
+              "region": "地中海沿岸"
+            },
+            {
+              "name": "Bordeaux",
+              "labelJa": "ボルドー",
+              "coordinates": [
+                -0.5792,
+                44.8378
+              ],
+              "timeZone": "Europe/Paris",
+              "region": "南西部"
+            }
+          ]
+        },
+        "explanation": "都市配置から地域差を学びます。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "フランスと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "大西洋、地中海、英仏海峡に面し、セーヌ川、ロワール川、ローヌ川などが都市・農業・交通に重要です。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島",
+            "地理では水域を考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "大西洋、地中海、英仏海峡に面し、セーヌ川、ロワール川、ローヌ川などが都市・農業・交通に重要です。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候",
+        "prompt": "フランスの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "西部は海洋性、南部は地中海性、山地は寒冷で、地域ごとに気温や降水量が大きく異なります。",
+            "全国どこでも一年中同じ気候",
+            "首都だけで全国を説明できる",
+            "地形は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "西部は海洋性、南部は地中海性、山地は寒冷で、地域ごとに気温や降水量が大きく異なります。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を読む",
+        "prompt": "フランスを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "フランス本土だけでも地域差が大きく、さらに海外県・海外領土まで含めると世界各地に異なる気候とタイムゾーンがあります。",
+            "首都だけ見る",
+            "観光地だけで判断する",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フランス本土だけでも地域差が大きく、さらに海外県・海外領土まで含めると世界各地に異なる気候とタイムゾーンがあります。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとParisの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Europe/Paris"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Paris": "Paris"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "リアルタイム比較です。",
+        "sourceIds": [
+          "fr-time-zone"
+        ]
+      },
+      {
+        "id": "fr-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "Tokyoの時刻からParisの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Europe/Paris",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Paris": "Paris"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別の時計で表します。",
+        "sourceIds": [
+          "fr-time-zone"
+        ]
+      },
+      {
+        "id": "fr-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差を読む",
+        "prompt": "TokyoとParisの今の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Europe/Paris"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Paris": "Paris"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "実際の時差を確認します。",
+        "sourceIds": [
+          "fr-time-zone"
+        ]
+      },
+      {
+        "id": "fr-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜",
+        "prompt": "TokyoとParisの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Europe/Paris"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Paris": "Paris"
+          }
+        },
+        "explanation": "生活時間帯を比べます。",
+        "sourceIds": [
+          "fr-time-zone"
+        ]
+      },
+      {
+        "id": "fr-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流時間を探す",
+        "prompt": "両校の8:30〜16:00に入る交流時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Europe/Paris",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Paris": "Paris"
+          },
+          "windowA": [
+            "08:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "16:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "学校時間を尊重します。",
+        "sourceIds": [
+          "fr-time-zone"
+        ]
+      },
+      {
+        "id": "fr-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DSTを確認",
+        "prompt": "フランスの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フランス本土は2026年3月29日にDSTを開始し、10月25日に標準時へ戻ります。海外地域では異なる時刻制度があります。",
+            "Tokyoとの時差は常に同じ",
+            "DSTは世界共通",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フランス本土は2026年3月29日にDSTを開始し、10月25日に標準時へ戻ります。海外地域では異なる時刻制度があります。",
+        "sourceIds": [
+          "fr-time-zone"
+        ]
+      },
+      {
+        "id": "fr-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語",
+        "prompt": "フランスの生徒との交流場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き返す",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "交流表現を学びます。"
+      },
+      {
+        "id": "fr-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "言語事情",
+        "prompt": "フランスの言語事情として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フランス語が共和国の言語です。ブルトン語、コルシカ語、オック語など地域言語や移民コミュニティの言語も使われます。",
+            "全員一言語のみ",
+            "地域差はない",
+            "日本語だけが公用語"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フランス語が共和国の言語です。ブルトン語、コルシカ語、オック語など地域言語や移民コミュニティの言語も使われます。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字",
+        "prompt": "フランスの文字について正しいのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フランス語はラテン文字を使い、é・è・çなどの記号付き文字があります。",
+            "世界中で同じ文字",
+            "文字はない",
+            "ひらがなのみ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フランス語はラテン文字を使い、é・è・çなどの記号付き文字があります。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で紹介",
+        "prompt": "“Hello! I am learning about France.” を読もう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about France.",
+          "meaning": "私はフランスについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "音読します。"
+      },
+      {
+        "id": "fr-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介",
+        "prompt": "名前を入れて自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about France. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流を想定します。"
+      },
+      {
+        "id": "fr-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語ではない",
+        "prompt": "フランスの言語を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フランス語が共和国の言語です。ブルトン語、コルシカ語、オック語など地域言語や移民コミュニティの言語も使われます。",
+            "全員同じ言葉と決めつける",
+            "首都の言葉だけが本物",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フランス語が共和国の言語です。ブルトン語、コルシカ語、オック語など地域言語や移民コミュニティの言語も使われます。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化",
+        "prompt": "言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "地域・歴史・文化を理解する入り口になる",
+            "全員同じ考えと分かる",
+            "他言語を否定できる",
+            "発音だけ競う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は文化理解の入り口です。"
+      },
+      {
+        "id": "fr-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "質問を話す",
+        "prompt": "フランスの同年代に英語で質問を作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "フランス",
+          "audienceCountryNameEn": "France"
+        },
+        "explanation": "自分の好奇心を英語にします。"
+      },
+      {
+        "id": "fr-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "フランスの気候として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "西部は海洋性、南部は地中海性、山地は寒冷で、地域ごとに気温や降水量が大きく異なります。",
+            "全国同じ気候",
+            "気候は地形と無関係",
+            "毎日世界中と同じ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "西部は海洋性、南部は地中海性、山地は寒冷で、地域ごとに気温や降水量が大きく異なります。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化",
+        "prompt": "フランスの食文化と関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "バゲット",
+            "寿司だけ",
+            "世界共通の一皿",
+            "歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "バゲットは重要な手がかりです。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "遺産",
+        "prompt": "フランスを学ぶ題材として関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "モン・サン＝ミシェル",
+            "東京タワー",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "モン・サン＝ミシェル",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "地域差",
+        "prompt": "フランスの都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "パリ",
+              "target": "北中部"
+            },
+            {
+              "name": "リヨン",
+              "target": "南東内陸"
+            },
+            {
+              "name": "マルセイユ",
+              "target": "地中海沿岸"
+            }
+          ]
+        },
+        "explanation": "地域差を学びます。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を考える",
+        "prompt": "フランスの地域差を理解するうえで大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フランス本土だけでも地域差が大きく、さらに海外県・海外領土まで含めると世界各地に異なる気候とタイムゾーンがあります。",
+            "首都だけ見る",
+            "一年中同じ気候と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フランス本土だけでも地域差が大きく、さらに海外県・海外領土まで含めると世界各地に異なる気候とタイムゾーンがあります。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "フランスの文化を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "パリ、地中海沿岸、アルプス、ブルターニュ、海外地域などで食文化、気候、言語、生活環境が異なります。",
+            "観光広告で全国民を説明",
+            "都市だけが本物",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "パリ、地中海沿岸、アルプス、ブルターニュ、海外地域などで食文化、気候、言語、生活環境が異なります。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "その国らしさを疑う",
+        "prompt": "『フランスの人はみんな同じ生活』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけで全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。"
+      },
+      {
+        "id": "fr-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながり",
+        "prompt": "日本とフランスの関係として正しいのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本とフランスは『特別なパートナーシップ』の下、安全保障、科学技術、文化、産業、観光、教育など幅広い協力を続けています。",
+            "交流はない",
+            "同じ国土を共有",
+            "時差だけが関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とフランスは『特別なパートナーシップ』の下、安全保障、科学技術、文化、産業、観光、教育など幅広い協力を続けています。",
+        "sourceIds": [
+          "fr-japan-connection"
+        ]
+      },
+      {
+        "id": "fr-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とフランスのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "France → JAPAN / JAPAN → France",
+          "items": [
+            {
+              "label": "芸術・文化交流",
+              "target": "つながりがある"
+            },
+            {
+              "label": "科学技術・産業",
+              "target": "つながりがある"
+            },
+            {
+              "label": "教育・観光・人的交流",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本とフランスは『特別なパートナーシップ』の下、安全保障、科学技術、文化、産業、観光、教育など幅広い協力を続けています。",
+        "sourceIds": [
+          "fr-japan-connection"
+        ]
+      },
+      {
+        "id": "fr-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "関係を多面的に見る",
+        "prompt": "両国関係を理解する最も良い見方は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "外交・経済・文化・教育・人の移動など複数を見る",
+            "輸出品1つだけ",
+            "国旗だけ",
+            "距離だけ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "複数の層から考えます。",
+        "sourceIds": [
+          "fr-japan-connection"
+        ]
+      },
+      {
+        "id": "fr-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "交流の流れ",
+        "prompt": "交流が学びにつながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "学校交流",
+              "middle": "相手の生活を直接聞く",
+              "end": "ステレオタイプを修正する"
+            },
+            {
+              "start": "文化・技術交流",
+              "middle": "背景を知る",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "交流を相互理解につなげます。"
+      },
+      {
+        "id": "fr-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながり",
+        "prompt": "身近な日本とフランスのつながりを探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品・学校交流・ニュース・文化イベントなどの根拠も書こう。"
+        },
+        "explanation": "証拠からつながりを探します。"
+      },
+      {
+        "id": "fr-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "交流の意味",
+        "prompt": "学校交流が増えたとき期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員同じ考えと確認できる",
+            "地理を学ばなくてよい",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で理解を深めます。"
+      },
+      {
+        "id": "fr-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズ",
+        "prompt": "日本とフランスのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "フランス"
+        },
+        "explanation": "学びを問題に再構成します。"
+      },
+      {
+        "id": "fr-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点",
+        "prompt": "日本とフランスの共通点を3つ探そう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "共通点を探します。"
+      },
+      {
+        "id": "fr-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由",
+        "prompt": "違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えます。"
+      },
+      {
+        "id": "fr-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "証拠で検証",
+        "prompt": "『フランスはパリとフランス料理だけで説明でき、地方差や海外地域は考えなくてよい』を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "フランスはパリとフランス料理だけで説明でき、地方差や海外地域は考えなくてよい",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "fr-k03-e1",
+              "text": "地中海沿岸と大西洋岸では気候が異なる",
+              "valid": true
+            },
+            {
+              "id": "fr-k03-e2",
+              "text": "地方ごとに食文化や地域言語がある",
+              "valid": true
+            },
+            {
+              "id": "fr-k03-e3",
+              "text": "海外地域を含めると世界各地に異なる生活圏がある",
+              "valid": true
+            },
+            {
+              "id": "fr-k03-e4",
+              "text": "フランスの首都はパリである",
+              "valid": false
+            },
+            {
+              "id": "fr-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "証拠を複数選びます。",
+        "sourceIds": [
+          "fr-country-profile"
+        ]
+      },
+      {
+        "id": "fr-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ",
+        "prompt": "フランスの同年代に質問を3つ作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "フランス"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。"
+      },
+      {
+        "id": "fr-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "France Master Quiz",
+        "prompt": "5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "フランス"
+        },
+        "explanation": "40 Missionの最終統合です。"
+      }
+    ]
+  }
+}

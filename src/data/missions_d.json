@@ -1,0 +1,2424 @@
+{
+  "cd": {
+    "countryNameJa": "コンゴ民主共和国",
+    "countryNameEn": "Democratic Republic of the Congo",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "cd-l08",
+          "cd-j07",
+          "cd-k04",
+          "cd-k05"
+        ]
+      }
+    },
+    "sources": {
+      "cd-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Democratic Republic of the Congo profile based on countries_d.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_d.json"
+      },
+      "cd-time-zone": {
+        "organization": "IANA Time Zone Database",
+        "title": "IANA Time Zone Database",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "cd-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Democratic Republic of the Congo relations / regional information",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/mofaj/area/congomin/"
+      }
+    },
+    "missions": [
+      {
+        "id": "cd-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "コンゴ民主共和国を探せ！",
+        "prompt": "世界地図からコンゴ民主共和国をタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "cd",
+          "targetAtlasName": "Democratic Republic of the Congo",
+          "targetName": "Democratic Republic of the Congo"
+        },
+        "explanation": "中央アフリカに広がる大国で、コンゴ盆地の熱帯雨林、東部の高地・火山、大河川など非常に多様な地形を持ちます。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "map-reading"
+        ]
+      },
+      {
+        "id": "cd-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "コンゴ民主共和国の位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "中央アフリカ",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "コンゴ民主共和国は中央アフリカに位置します。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "geography"
+        ]
+      },
+      {
+        "id": "cd-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "コンゴ民主共和国の首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "キンシャサ",
+            "ルブンバシ",
+            "キサンガニ",
+            "ゴマ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "コンゴ民主共和国の首都はキンシャサ（Kinshasa）です。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "geography"
+        ]
+      },
+      {
+        "id": "cd-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "コンゴ民主共和国の主要都市を地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "cd",
+          "targetAtlasName": "Democratic Republic of the Congo",
+          "mapConfig": {
+            "center": [
+              23,
+              -3
+            ],
+            "scale": 850
+          },
+          "cities": [
+            {
+              "name": "Kinshasa",
+              "labelJa": "キンシャサ",
+              "coordinates": [
+                15.2663,
+                -4.4419
+              ],
+              "timeZone": "Africa/Kinshasa",
+              "region": "西部・首都"
+            },
+            {
+              "name": "Lubumbashi",
+              "labelJa": "ルブンバシ",
+              "coordinates": [
+                27.4794,
+                -11.6876
+              ],
+              "timeZone": "Africa/Lubumbashi",
+              "region": "南東部"
+            },
+            {
+              "name": "Kisangani",
+              "labelJa": "キサンガニ",
+              "coordinates": [
+                25.2008,
+                0.5153
+              ],
+              "timeZone": "Africa/Lubumbashi",
+              "region": "北東部・コンゴ川流域"
+            },
+            {
+              "name": "Goma",
+              "labelJa": "ゴマ",
+              "coordinates": [
+                29.2228,
+                -1.6792
+              ],
+              "timeZone": "Africa/Lubumbashi",
+              "region": "東部・キブ湖畔"
+            }
+          ]
+        },
+        "explanation": "主要都市の配置から地域差を読み取ります。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "map-reading"
+        ]
+      },
+      {
+        "id": "cd-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "コンゴ民主共和国と水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "コンゴ川とその支流は交通、漁業、農業、水力発電、都市の暮らしに重要です。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島である",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "コンゴ川とその支流は交通、漁業、農業、水力発電、都市の暮らしに重要です。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "geography"
+        ]
+      },
+      {
+        "id": "cd-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候を結びつける",
+        "prompt": "コンゴ民主共和国の地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "赤道付近は高温多湿で、南北に進むと雨季と乾季が明瞭になります。東部高地は比較的涼しい地域があります。",
+            "国内はどこでも一年中同じ気候",
+            "首都の天気だけで全国を説明できる",
+            "地形や標高は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "赤道付近は高温多湿で、南北に進むと雨季と乾季が明瞭になります。東部高地は比較的涼しい地域があります。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "cd-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "スケールと地域差",
+        "prompt": "コンゴ民主共和国を一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "国土が非常に広く、西部キンシャサと東部ルブンバシではタイムゾーンも異なります。地域ごとに自然、言語、産業、暮らしが大きく違います。",
+            "首都の写真1枚だけで全国を判断する",
+            "観光地だけを国全体と考える",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国土が非常に広く、西部キンシャサと東部ルブンバシではタイムゾーンも異なります。地域ごとに自然、言語、産業、暮らしが大きく違います。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "scale",
+          "critical-thinking"
+        ]
+      },
+      {
+        "id": "cd-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとKinshasaの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Africa/Kinshasa"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Kinshasa": "Kinshasa"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "IANAタイムゾーンでリアルタイム比較します。",
+        "sourceIds": [
+          "cd-time-zone"
+        ],
+        "skills": [
+          "time-zones"
+        ]
+      },
+      {
+        "id": "cd-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "Tokyo → Kinshasa",
+        "prompt": "Tokyoの時刻を見て、同じ瞬間のKinshasaの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Africa/Kinshasa",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Kinshasa": "Kinshasa"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別都市の時計で表します。",
+        "sourceIds": [
+          "cd-time-zone"
+        ],
+        "skills": [
+          "time-calculation"
+        ]
+      },
+      {
+        "id": "cd-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差をリアルタイムで読む",
+        "prompt": "TokyoとKinshasaの現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Africa/Kinshasa"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Kinshasa": "Kinshasa"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "固定暗記ではなく実際の時差を確認します。",
+        "sourceIds": [
+          "cd-time-zone"
+        ],
+        "skills": [
+          "time-zones"
+        ]
+      },
+      {
+        "id": "cd-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜を比べる",
+        "prompt": "TokyoとKinshasaの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Africa/Kinshasa"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Kinshasa": "Kinshasa"
+          }
+        },
+        "explanation": "時刻を生活時間帯につなげます。",
+        "sourceIds": [
+          "cd-time-zone"
+        ],
+        "skills": [
+          "daily-life"
+        ]
+      },
+      {
+        "id": "cd-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流できる時間を探せ",
+        "prompt": "日本とKinshasaの学校が両方8:30〜16:00に入る交流時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Africa/Kinshasa",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Kinshasa": "Kinshasa"
+          },
+          "windowA": [
+            "08:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "16:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "相手の学校時間を尊重して計画します。",
+        "sourceIds": [
+          "cd-time-zone"
+        ],
+        "skills": [
+          "scheduling"
+        ]
+      },
+      {
+        "id": "cd-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DST・国内時差を確認",
+        "prompt": "コンゴ民主共和国の時刻制度について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "コンゴ民主共和国では西部のAfrica/Kinshasaと東部のAfrica/Lubumbashiという2つのIANAタイムゾーンが使われ、現在DSTは実施していません。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "国が広くても時刻制度は考えなくてよい",
+            "相手の現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "コンゴ民主共和国では西部のAfrica/Kinshasaと東部のAfrica/Lubumbashiという2つのIANAタイムゾーンが使われ、現在DSTは実施していません。",
+        "sourceIds": [
+          "cd-time-zone"
+        ],
+        "skills": [
+          "time-zones"
+        ]
+      },
+      {
+        "id": "cd-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語を場面で選ぶ",
+        "prompt": "コンゴ民主共和国の生徒との交流を想定し、場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き取れなかった",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活を知りたい",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "交流の終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "国際交流の基本表現を場面で使い分けます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "cd-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "どんな言語が使われる？",
+        "prompt": "コンゴ民主共和国の言語事情について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フランス語が公用語です。リンガラ語、スワヒリ語、キコンゴ・ヤ・レタ、チルバ語が国民語として広く使われ、さらに多くの地域言語があります。",
+            "全員が必ず一言語だけを使う",
+            "家庭や地域の言語差はない",
+            "日本語だけが公用語である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フランス語が公用語です。リンガラ語、スワヒリ語、キコンゴ・ヤ・レタ、チルバ語が国民語として広く使われ、さらに多くの地域言語があります。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "multilingualism"
+        ]
+      },
+      {
+        "id": "cd-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字にも注目",
+        "prompt": "コンゴ民主共和国の文字について正しい説明は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フランス語や主要な国民語は主にラテン文字で表記されます。",
+            "世界中で同じ文字体系だけを使う",
+            "文字は一切使われない",
+            "必ずひらがなだけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フランス語や主要な国民語は主にラテン文字で表記されます。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "writing-systems"
+        ]
+      },
+      {
+        "id": "cd-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で国を紹介する",
+        "prompt": "“Hello! I am learning about Democratic Republic of the Congo.” を声に出そう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Democratic Republic of the Congo.",
+          "meaning": "こんにちは。私はコンゴ民主共和国について学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して伝わるように発音します。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "cd-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介＋学んでいる国",
+        "prompt": "名前を入れて英語で自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Democratic Republic of the Congo. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流に近い自己紹介です。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "cd-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語と決めつけない",
+        "prompt": "コンゴ民主共和国の言語を学ぶ姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フランス語が公用語です。リンガラ語、スワヒリ語、キコンゴ・ヤ・レタ、チルバ語が国民語として広く使われ、さらに多くの地域言語があります。",
+            "全員が同じ言葉だけを使うと決めつける",
+            "首都の言葉だけが本物と考える",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フランス語が公用語です。リンガラ語、スワヒリ語、キコンゴ・ヤ・レタ、チルバ語が国民語として広く使われ、さらに多くの地域言語があります。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "critical-thinking"
+        ]
+      },
+      {
+        "id": "cd-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化をつなぐ",
+        "prompt": "コンゴ民主共和国の言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の地域・歴史・文化を理解する入り口になる",
+            "一つの言語を知れば全員の考えが同じと分かる",
+            "他の言語を否定するため",
+            "発音だけを競うため"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は人・地域・歴史を理解する入り口です。",
+        "skills": [
+          "culture"
+        ]
+      },
+      {
+        "id": "cd-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "本当に聞きたい質問を話す",
+        "prompt": "コンゴ民主共和国の同年代の生徒に質問を英語で1つ作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "コンゴ民主共和国",
+          "audienceCountryNameEn": "Democratic Republic of the Congo"
+        },
+        "explanation": "自分の好奇心を英語にします。",
+        "skills": [
+          "speaking",
+          "question-creation"
+        ]
+      },
+      {
+        "id": "cd-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "コンゴ民主共和国の気候について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "赤道付近は高温多湿で、南北に進むと雨季と乾季が明瞭になります。東部高地は比較的涼しい地域があります。",
+            "国内は一年中どこでも同じ気候",
+            "気候は地形と無関係",
+            "世界中の国と毎日同じ気温"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "赤道付近は高温多湿で、南北に進むと雨季と乾季が明瞭になります。東部高地は比較的涼しい地域があります。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "climate"
+        ]
+      },
+      {
+        "id": "cd-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化を知る",
+        "prompt": "コンゴ民主共和国の食文化と関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フフ、鶏肉のモアンベ",
+            "必ず寿司だけ",
+            "世界中で同じ一皿だけ",
+            "食文化は歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フフ、鶏肉のモアンベは食文化を知る手がかりの一つです。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "food-culture"
+        ]
+      },
+      {
+        "id": "cd-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文化・自然遺産から学ぶ",
+        "prompt": "コンゴ民主共和国について学ぶ題材として関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ヴィルンガ国立公園",
+            "東京タワーだけ",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ヴィルンガ国立公園は地域性を考える題材です。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "heritage"
+        ]
+      },
+      {
+        "id": "cd-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "同じ国の中の地域差",
+        "prompt": "コンゴ民主共和国の3都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "キンシャサ",
+              "target": "西部・首都"
+            },
+            {
+              "name": "ルブンバシ",
+              "target": "南東部"
+            },
+            {
+              "name": "キサンガニ",
+              "target": "北東部・コンゴ川流域"
+            }
+          ]
+        },
+        "explanation": "都市配置から生活条件の違いを考えます。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "classification"
+        ]
+      },
+      {
+        "id": "cd-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "季節と地域差",
+        "prompt": "コンゴ民主共和国の季節や地域差を考えるとき最も大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "国土が非常に広く、西部キンシャサと東部ルブンバシではタイムゾーンも異なります。地域ごとに自然、言語、産業、暮らしが大きく違います。",
+            "首都の天気を全国に当てはめる",
+            "一年中同じ気温と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国土が非常に広く、西部キンシャサと東部ルブンバシではタイムゾーンも異なります。地域ごとに自然、言語、産業、暮らしが大きく違います。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "cd-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "コンゴ民主共和国の文化を学ぶときの姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "西部の大都市、コンゴ盆地の森林地域、東部高地、鉱業地域などで言語・産業・生活環境が大きく異なります。",
+            "観光広告一つで全国民を説明する",
+            "都市だけを本物と考える",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "西部の大都市、コンゴ盆地の森林地域、東部高地、鉱業地域などで言語・産業・生活環境が大きく異なります。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "cd-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "「その国らしさ」を疑う",
+        "prompt": "『コンゴ民主共和国の人はみんな同じ生活をしている』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけ見れば全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。",
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "cd-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながりを発見",
+        "prompt": "日本とコンゴ民主共和国の関係について正しい説明は？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本はコンゴ民主共和国と、鉱物資源を含む経済関係に加え、保健、人道支援、食料安全保障、平和構築など幅広い協力を行っています。",
+            "一切の交流関係がない",
+            "同じ国土を共有する",
+            "時差だけが関係である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本はコンゴ民主共和国と、鉱物資源を含む経済関係に加え、保健、人道支援、食料安全保障、平和構築など幅広い協力を行っています。",
+        "sourceIds": [
+          "cd-japan-connection"
+        ],
+        "skills": [
+          "international-relations"
+        ]
+      },
+      {
+        "id": "cd-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とコンゴ民主共和国のつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Democratic Republic of the Congo → JAPAN / JAPAN → Democratic Republic of the Congo",
+          "items": [
+            {
+              "label": "コバルトなど鉱物資源との経済的つながり",
+              "target": "つながりがある"
+            },
+            {
+              "label": "保健・エボラ対策支援",
+              "target": "つながりがある"
+            },
+            {
+              "label": "食料・人道・平和構築支援",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本はコンゴ民主共和国と、鉱物資源を含む経済関係に加え、保健、人道支援、食料安全保障、平和構築など幅広い協力を行っています。",
+        "sourceIds": [
+          "cd-japan-connection"
+        ],
+        "skills": [
+          "classification"
+        ]
+      },
+      {
+        "id": "cd-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "関係を多面的に見る",
+        "prompt": "日本とコンゴ民主共和国の関係を理解する最も良い見方は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "外交・経済・文化・教育・人の移動など複数を見る",
+            "一つの輸出品だけ暗記する",
+            "国旗だけ覚える",
+            "距離だけで決める"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国どうしの関係は複数の層から考えます。",
+        "sourceIds": [
+          "cd-japan-connection"
+        ],
+        "skills": [
+          "systems-thinking"
+        ]
+      },
+      {
+        "id": "cd-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "つながりの流れを考える",
+        "prompt": "日本とコンゴ民主共和国の交流が学びにつながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "学校交流",
+              "middle": "相手の生活を直接聞く",
+              "end": "ステレオタイプを修正する"
+            },
+            {
+              "start": "文化・技術交流",
+              "middle": "背景を知る",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "交流を相互理解につなげます。",
+        "skills": [
+          "systems-thinking"
+        ]
+      },
+      {
+        "id": "cd-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながりを探せ",
+        "prompt": "身近な日本とコンゴ民主共和国のつながりを1つ探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品表示・学校交流・ニュース・文化イベントなどの根拠も書こう。"
+        },
+        "explanation": "日常の国際的つながりを証拠から探します。",
+        "skills": [
+          "evidence"
+        ]
+      },
+      {
+        "id": "cd-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "もし交流が増えたら？",
+        "prompt": "日本とコンゴ民主共和国の学校交流が増えたとき最も期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員が同じ考えだと確認できる",
+            "地理を学ばなくてよくなる",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で知識と人の経験を結びつけます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "cd-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズを作れ",
+        "prompt": "日本とコンゴ民主共和国のつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "コンゴ民主共和国"
+        },
+        "explanation": "他者に説明できる形へ再構成します。",
+        "skills": [
+          "quiz-creation"
+        ]
+      },
+      {
+        "id": "cd-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点を3つ探す",
+        "prompt": "日本とコンゴ民主共和国の共通点を3つ、異なるカテゴリーから見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "遠い国＝全く違う、という見方を越えます。",
+        "skills": [
+          "comparison"
+        ]
+      },
+      {
+        "id": "cd-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由を考える",
+        "prompt": "日本とコンゴ民主共和国の違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えて違いを理解します。",
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "cd-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "ステレオタイプを証拠で検証",
+        "prompt": "『コンゴ民主共和国は全国どこでも同じ時刻で、熱帯雨林と鉱山だけの国である』という説明を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "コンゴ民主共和国は全国どこでも同じ時刻で、熱帯雨林と鉱山だけの国である",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "cd-k03-e1",
+              "text": "西部と東部で2つのIANAタイムゾーンが使われる",
+              "valid": true
+            },
+            {
+              "id": "cd-k03-e2",
+              "text": "東部には高地・火山・湖がある",
+              "valid": true
+            },
+            {
+              "id": "cd-k03-e3",
+              "text": "大都市、森林地域、農業地域、鉱業地域など多様な生活圏がある",
+              "valid": true
+            },
+            {
+              "id": "cd-k03-e4",
+              "text": "コンゴ民主共和国の首都はキンシャサである",
+              "valid": false
+            },
+            {
+              "id": "cd-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "直接関係する証拠を複数選んで判断します。",
+        "sourceIds": [
+          "cd-country-profile"
+        ],
+        "skills": [
+          "evidence",
+          "critical-thinking"
+        ]
+      },
+      {
+        "id": "cd-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ作る",
+        "prompt": "コンゴ民主共和国の同年代の生徒に質問を3つ作ろう。少なくとも2分野を含める。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "コンゴ民主共和国"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。",
+        "skills": [
+          "question-creation"
+        ]
+      },
+      {
+        "id": "cd-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Democratic Republic of the Congo Master Quiz",
+        "prompt": "まだコンゴ民主共和国を学んでいない友達向けに5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "コンゴ民主共和国"
+        },
+        "explanation": "40 Missionの学びを再構成する最終Missionです。",
+        "skills": [
+          "synthesis",
+          "teaching"
+        ]
+      }
+    ]
+  },
+  "dk": {
+    "countryNameJa": "デンマーク",
+    "countryNameEn": "Denmark",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "dk-l08",
+          "dk-j07",
+          "dk-k04",
+          "dk-k05"
+        ]
+      }
+    },
+    "sources": {
+      "dk-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Denmark profile based on countries_d.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_d.json"
+      },
+      "dk-time-zone": {
+        "organization": "IANA Time Zone Database",
+        "title": "IANA Time Zone Database",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "dk-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Denmark relations / regional information",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/mofaj/area/denmark/"
+      }
+    },
+    "missions": [
+      {
+        "id": "dk-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "デンマークを探せ！",
+        "prompt": "世界地図からデンマークをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "dk",
+          "targetAtlasName": "Denmark",
+          "targetName": "Denmark"
+        },
+        "explanation": "ユトランド半島と多数の島からなる北欧の国で、平坦な地形と長い海岸線が特徴です。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "map-reading"
+        ]
+      },
+      {
+        "id": "dk-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "デンマークの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "北ヨーロッパ・北欧",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "デンマークは北ヨーロッパ・北欧に位置します。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "geography"
+        ]
+      },
+      {
+        "id": "dk-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "デンマークの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "コペンハーゲン",
+            "オーフス",
+            "オーデンセ",
+            "オールボー"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "デンマークの首都はコペンハーゲン（Copenhagen）です。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "geography"
+        ]
+      },
+      {
+        "id": "dk-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "デンマークの主要都市を地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "dk",
+          "targetAtlasName": "Denmark",
+          "mapConfig": {
+            "center": [
+              10.2,
+              56.1
+            ],
+            "scale": 3200
+          },
+          "cities": [
+            {
+              "name": "Copenhagen",
+              "labelJa": "コペンハーゲン",
+              "coordinates": [
+                12.5683,
+                55.6761
+              ],
+              "timeZone": "Europe/Copenhagen",
+              "region": "シェラン島・首都"
+            },
+            {
+              "name": "Aarhus",
+              "labelJa": "オーフス",
+              "coordinates": [
+                10.2039,
+                56.1629
+              ],
+              "timeZone": "Europe/Copenhagen",
+              "region": "ユトランド半島東部"
+            },
+            {
+              "name": "Odense",
+              "labelJa": "オーデンセ",
+              "coordinates": [
+                10.3883,
+                55.4038
+              ],
+              "timeZone": "Europe/Copenhagen",
+              "region": "フュン島"
+            },
+            {
+              "name": "Aalborg",
+              "labelJa": "オールボー",
+              "coordinates": [
+                9.9217,
+                57.0488
+              ],
+              "timeZone": "Europe/Copenhagen",
+              "region": "ユトランド半島北部"
+            }
+          ]
+        },
+        "explanation": "主要都市の配置から地域差を読み取ります。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "map-reading"
+        ]
+      },
+      {
+        "id": "dk-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "デンマークと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "北海とバルト海を結ぶ海域に位置し、海運、漁業、洋上風力、港湾都市の発展と深く関係します。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島である",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "北海とバルト海を結ぶ海域に位置し、海運、漁業、洋上風力、港湾都市の発展と深く関係します。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "geography"
+        ]
+      },
+      {
+        "id": "dk-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候を結びつける",
+        "prompt": "デンマークの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "海の影響で冬は緯度の割に比較的穏やかで、夏は涼しく日が長くなります。風が強く天気が変わりやすいことも特徴です。",
+            "国内はどこでも一年中同じ気候",
+            "首都の天気だけで全国を説明できる",
+            "地形や標高は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "海の影響で冬は緯度の割に比較的穏やかで、夏は涼しく日が長くなります。風が強く天気が変わりやすいことも特徴です。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "dk-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "スケールと地域差",
+        "prompt": "デンマークを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "デンマーク本土は一つの標準タイムゾーンですが、デンマーク王国にはフェロー諸島とグリーンランドも含まれ、王国全体では複数のタイムゾーンがあります。",
+            "首都の写真1枚だけで全国を判断する",
+            "観光地だけを国全体と考える",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "デンマーク本土は一つの標準タイムゾーンですが、デンマーク王国にはフェロー諸島とグリーンランドも含まれ、王国全体では複数のタイムゾーンがあります。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "scale",
+          "critical-thinking"
+        ]
+      },
+      {
+        "id": "dk-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとCopenhagenの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Europe/Copenhagen"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Copenhagen": "Copenhagen"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "IANAタイムゾーンでリアルタイム比較します。",
+        "sourceIds": [
+          "dk-time-zone"
+        ],
+        "skills": [
+          "time-zones"
+        ]
+      },
+      {
+        "id": "dk-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "Tokyo → Copenhagen",
+        "prompt": "Tokyoの時刻を見て、同じ瞬間のCopenhagenの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Europe/Copenhagen",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Copenhagen": "Copenhagen"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別都市の時計で表します。",
+        "sourceIds": [
+          "dk-time-zone"
+        ],
+        "skills": [
+          "time-calculation"
+        ]
+      },
+      {
+        "id": "dk-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差をリアルタイムで読む",
+        "prompt": "TokyoとCopenhagenの現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Europe/Copenhagen"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Copenhagen": "Copenhagen"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "固定暗記ではなく実際の時差を確認します。",
+        "sourceIds": [
+          "dk-time-zone"
+        ],
+        "skills": [
+          "time-zones"
+        ]
+      },
+      {
+        "id": "dk-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜を比べる",
+        "prompt": "TokyoとCopenhagenの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Europe/Copenhagen"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Copenhagen": "Copenhagen"
+          }
+        },
+        "explanation": "時刻を生活時間帯につなげます。",
+        "sourceIds": [
+          "dk-time-zone"
+        ],
+        "skills": [
+          "daily-life"
+        ]
+      },
+      {
+        "id": "dk-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流できる時間を探せ",
+        "prompt": "日本とCopenhagenの学校が両方8:30〜16:00に入る交流時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Europe/Copenhagen",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Copenhagen": "Copenhagen"
+          },
+          "windowA": [
+            "08:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "16:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "相手の学校時間を尊重して計画します。",
+        "sourceIds": [
+          "dk-time-zone"
+        ],
+        "skills": [
+          "scheduling"
+        ]
+      },
+      {
+        "id": "dk-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DST・国内時差を確認",
+        "prompt": "デンマークの時刻制度について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "デンマーク本土のEurope/Copenhagenでは2026年もCET/CESTのDST切替があります。デンマーク王国全体にはフェロー諸島やグリーンランドの別タイムゾーンもあります。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "国が広くても時刻制度は考えなくてよい",
+            "相手の現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "デンマーク本土のEurope/Copenhagenでは2026年もCET/CESTのDST切替があります。デンマーク王国全体にはフェロー諸島やグリーンランドの別タイムゾーンもあります。",
+        "sourceIds": [
+          "dk-time-zone"
+        ],
+        "skills": [
+          "time-zones"
+        ]
+      },
+      {
+        "id": "dk-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語を場面で選ぶ",
+        "prompt": "デンマークの生徒との交流を想定し、場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き取れなかった",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活を知りたい",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "交流の終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "国際交流の基本表現を場面で使い分けます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "dk-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "どんな言語が使われる？",
+        "prompt": "デンマークの言語事情について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "デンマーク語が主要言語です。フェロー語、グリーンランド語、ドイツ語なども王国内や地域社会で使われます。",
+            "全員が必ず一言語だけを使う",
+            "家庭や地域の言語差はない",
+            "日本語だけが公用語である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "デンマーク語が主要言語です。フェロー語、グリーンランド語、ドイツ語なども王国内や地域社会で使われます。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "multilingualism"
+        ]
+      },
+      {
+        "id": "dk-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字にも注目",
+        "prompt": "デンマークの文字について正しい説明は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "デンマーク語はラテン文字を使い、æ・ø・åなどの文字があります。",
+            "世界中で同じ文字体系だけを使う",
+            "文字は一切使われない",
+            "必ずひらがなだけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "デンマーク語はラテン文字を使い、æ・ø・åなどの文字があります。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "writing-systems"
+        ]
+      },
+      {
+        "id": "dk-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で国を紹介する",
+        "prompt": "“Hello! I am learning about Denmark.” を声に出そう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Denmark.",
+          "meaning": "こんにちは。私はデンマークについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して伝わるように発音します。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "dk-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介＋学んでいる国",
+        "prompt": "名前を入れて英語で自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Denmark. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流に近い自己紹介です。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "dk-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語と決めつけない",
+        "prompt": "デンマークの言語を学ぶ姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "デンマーク語が主要言語です。フェロー語、グリーンランド語、ドイツ語なども王国内や地域社会で使われます。",
+            "全員が同じ言葉だけを使うと決めつける",
+            "首都の言葉だけが本物と考える",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "デンマーク語が主要言語です。フェロー語、グリーンランド語、ドイツ語なども王国内や地域社会で使われます。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "critical-thinking"
+        ]
+      },
+      {
+        "id": "dk-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化をつなぐ",
+        "prompt": "デンマークの言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の地域・歴史・文化を理解する入り口になる",
+            "一つの言語を知れば全員の考えが同じと分かる",
+            "他の言語を否定するため",
+            "発音だけを競うため"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は人・地域・歴史を理解する入り口です。",
+        "skills": [
+          "culture"
+        ]
+      },
+      {
+        "id": "dk-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "本当に聞きたい質問を話す",
+        "prompt": "デンマークの同年代の生徒に質問を英語で1つ作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "デンマーク",
+          "audienceCountryNameEn": "Denmark"
+        },
+        "explanation": "自分の好奇心を英語にします。",
+        "skills": [
+          "speaking",
+          "question-creation"
+        ]
+      },
+      {
+        "id": "dk-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "デンマークの気候について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "海の影響で冬は緯度の割に比較的穏やかで、夏は涼しく日が長くなります。風が強く天気が変わりやすいことも特徴です。",
+            "国内は一年中どこでも同じ気候",
+            "気候は地形と無関係",
+            "世界中の国と毎日同じ気温"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "海の影響で冬は緯度の割に比較的穏やかで、夏は涼しく日が長くなります。風が強く天気が変わりやすいことも特徴です。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "climate"
+        ]
+      },
+      {
+        "id": "dk-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化を知る",
+        "prompt": "デンマークの食文化と関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "スモーブロー",
+            "必ず寿司だけ",
+            "世界中で同じ一皿だけ",
+            "食文化は歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "スモーブローは食文化を知る手がかりの一つです。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "food-culture"
+        ]
+      },
+      {
+        "id": "dk-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文化・自然遺産から学ぶ",
+        "prompt": "デンマークについて学ぶ題材として関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "クロンボー城",
+            "東京タワーだけ",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "クロンボー城は地域性を考える題材です。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "heritage"
+        ]
+      },
+      {
+        "id": "dk-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "同じ国の中の地域差",
+        "prompt": "デンマークの3都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "コペンハーゲン",
+              "target": "シェラン島・首都"
+            },
+            {
+              "name": "オーフス",
+              "target": "ユトランド半島東部"
+            },
+            {
+              "name": "オーデンセ",
+              "target": "フュン島"
+            }
+          ]
+        },
+        "explanation": "都市配置から生活条件の違いを考えます。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "classification"
+        ]
+      },
+      {
+        "id": "dk-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "季節と地域差",
+        "prompt": "デンマークの季節や地域差を考えるとき最も大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "デンマーク本土は一つの標準タイムゾーンですが、デンマーク王国にはフェロー諸島とグリーンランドも含まれ、王国全体では複数のタイムゾーンがあります。",
+            "首都の天気を全国に当てはめる",
+            "一年中同じ気温と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "デンマーク本土は一つの標準タイムゾーンですが、デンマーク王国にはフェロー諸島とグリーンランドも含まれ、王国全体では複数のタイムゾーンがあります。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "dk-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "デンマークの文化を学ぶときの姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "コペンハーゲンの都市生活、ユトランド半島の農業地域、島々、さらに王国内のフェロー諸島・グリーンランドでは暮らしや言語環境が異なります。",
+            "観光広告一つで全国民を説明する",
+            "都市だけを本物と考える",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "コペンハーゲンの都市生活、ユトランド半島の農業地域、島々、さらに王国内のフェロー諸島・グリーンランドでは暮らしや言語環境が異なります。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "dk-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "「その国らしさ」を疑う",
+        "prompt": "『デンマークの人はみんな同じ生活をしている』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけ見れば全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。",
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "dk-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながりを発見",
+        "prompt": "日本とデンマークの関係について正しい説明は？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本とデンマークは外交、再生可能エネルギー、海運、デザイン、文化、科学技術など幅広い分野で交流しています。",
+            "一切の交流関係がない",
+            "同じ国土を共有する",
+            "時差だけが関係である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とデンマークは外交、再生可能エネルギー、海運、デザイン、文化、科学技術など幅広い分野で交流しています。",
+        "sourceIds": [
+          "dk-japan-connection"
+        ],
+        "skills": [
+          "international-relations"
+        ]
+      },
+      {
+        "id": "dk-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とデンマークのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Denmark → JAPAN / JAPAN → Denmark",
+          "items": [
+            {
+              "label": "洋上風力・再生可能エネルギー",
+              "target": "つながりがある"
+            },
+            {
+              "label": "海運・経済",
+              "target": "つながりがある"
+            },
+            {
+              "label": "デザイン・文化・科学技術",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本とデンマークは外交、再生可能エネルギー、海運、デザイン、文化、科学技術など幅広い分野で交流しています。",
+        "sourceIds": [
+          "dk-japan-connection"
+        ],
+        "skills": [
+          "classification"
+        ]
+      },
+      {
+        "id": "dk-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "関係を多面的に見る",
+        "prompt": "日本とデンマークの関係を理解する最も良い見方は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "外交・経済・文化・教育・人の移動など複数を見る",
+            "一つの輸出品だけ暗記する",
+            "国旗だけ覚える",
+            "距離だけで決める"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国どうしの関係は複数の層から考えます。",
+        "sourceIds": [
+          "dk-japan-connection"
+        ],
+        "skills": [
+          "systems-thinking"
+        ]
+      },
+      {
+        "id": "dk-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "つながりの流れを考える",
+        "prompt": "日本とデンマークの交流が学びにつながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "学校交流",
+              "middle": "相手の生活を直接聞く",
+              "end": "ステレオタイプを修正する"
+            },
+            {
+              "start": "文化・技術交流",
+              "middle": "背景を知る",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "交流を相互理解につなげます。",
+        "skills": [
+          "systems-thinking"
+        ]
+      },
+      {
+        "id": "dk-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながりを探せ",
+        "prompt": "身近な日本とデンマークのつながりを1つ探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品表示・学校交流・ニュース・文化イベントなどの根拠も書こう。"
+        },
+        "explanation": "日常の国際的つながりを証拠から探します。",
+        "skills": [
+          "evidence"
+        ]
+      },
+      {
+        "id": "dk-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "もし交流が増えたら？",
+        "prompt": "日本とデンマークの学校交流が増えたとき最も期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員が同じ考えだと確認できる",
+            "地理を学ばなくてよくなる",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で知識と人の経験を結びつけます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "dk-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズを作れ",
+        "prompt": "日本とデンマークのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "デンマーク"
+        },
+        "explanation": "他者に説明できる形へ再構成します。",
+        "skills": [
+          "quiz-creation"
+        ]
+      },
+      {
+        "id": "dk-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点を3つ探す",
+        "prompt": "日本とデンマークの共通点を3つ、異なるカテゴリーから見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "遠い国＝全く違う、という見方を越えます。",
+        "skills": [
+          "comparison"
+        ]
+      },
+      {
+        "id": "dk-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由を考える",
+        "prompt": "日本とデンマークの違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えて違いを理解します。",
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "dk-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "ステレオタイプを証拠で検証",
+        "prompt": "『デンマークは小さな国なので、王国全体でも時刻・言語・暮らしはすべて同じである』という説明を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "デンマークは小さな国なので、王国全体でも時刻・言語・暮らしはすべて同じである",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "dk-k03-e1",
+              "text": "デンマーク本土とフェロー諸島・グリーンランドではタイムゾーンが異なる",
+              "valid": true
+            },
+            {
+              "id": "dk-k03-e2",
+              "text": "デンマーク語以外にフェロー語やグリーンランド語が使われる",
+              "valid": true
+            },
+            {
+              "id": "dk-k03-e3",
+              "text": "本土の都市・農村・島々でも生活環境が異なる",
+              "valid": true
+            },
+            {
+              "id": "dk-k03-e4",
+              "text": "デンマークの首都はコペンハーゲンである",
+              "valid": false
+            },
+            {
+              "id": "dk-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "直接関係する証拠を複数選んで判断します。",
+        "sourceIds": [
+          "dk-country-profile"
+        ],
+        "skills": [
+          "evidence",
+          "critical-thinking"
+        ]
+      },
+      {
+        "id": "dk-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ作る",
+        "prompt": "デンマークの同年代の生徒に質問を3つ作ろう。少なくとも2分野を含める。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "デンマーク"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。",
+        "skills": [
+          "question-creation"
+        ]
+      },
+      {
+        "id": "dk-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Denmark Master Quiz",
+        "prompt": "まだデンマークを学んでいない友達向けに5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "デンマーク"
+        },
+        "explanation": "40 Missionの学びを再構成する最終Missionです。",
+        "skills": [
+          "synthesis",
+          "teaching"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,3263 @@
+{
+  "ht": {
+    "countryNameJa": "ハイチ",
+    "countryNameEn": "Haiti",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "ht-l08",
+          "ht-j07",
+          "ht-k04",
+          "ht-k05"
+        ]
+      }
+    },
+    "sources": {
+      "ht-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Haiti profile based on countries_h.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_h.json"
+      },
+      "ht-time-zone": {
+        "organization": "IANA Time Zone Database",
+        "title": "IANA Time Zone Database / 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "ht-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Haiti relations",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/latin/haiti/"
+      }
+    },
+    "missions": [
+      {
+        "id": "ht-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "ハイチを探せ！",
+        "prompt": "世界地図からハイチをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "ht",
+          "targetAtlasName": "Haiti",
+          "targetName": "Haiti"
+        },
+        "explanation": "カリブ海のイスパニョーラ島西部を占め、山地が多く、短い平野や海岸地域が点在します。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "ハイチの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カリブ海・イスパニョーラ島西部",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カリブ海・イスパニョーラ島西部",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "ハイチの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ポルトープランス",
+            "カパイシャン",
+            "レカイ",
+            "ジャクメル"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はポルトープランスです。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "ハイチの主要都市を地図上に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "ht",
+          "targetAtlasName": "Haiti",
+          "mapConfig": {
+            "center": [
+              -72.7,
+              19.0
+            ],
+            "scale": 3500
+          },
+          "cities": [
+            {
+              "name": "Port-au-Prince",
+              "labelJa": "ポルトープランス",
+              "coordinates": [
+                -72.3074,
+                18.5944
+              ],
+              "timeZone": "America/Port-au-Prince",
+              "region": "西部・首都"
+            },
+            {
+              "name": "Cap-Haïtien",
+              "labelJa": "カパイシャン",
+              "coordinates": [
+                -72.1981,
+                19.7594
+              ],
+              "timeZone": "America/Port-au-Prince",
+              "region": "北部"
+            },
+            {
+              "name": "Les Cayes",
+              "labelJa": "レカイ",
+              "coordinates": [
+                -73.75,
+                18.2
+              ],
+              "timeZone": "America/Port-au-Prince",
+              "region": "南部"
+            },
+            {
+              "name": "Jacmel",
+              "labelJa": "ジャクメル",
+              "coordinates": [
+                -72.535,
+                18.2343
+              ],
+              "timeZone": "America/Port-au-Prince",
+              "region": "南東部"
+            }
+          ]
+        },
+        "explanation": "都市配置から地域差を読み取ります。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸",
+        "prompt": "ハイチと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カリブ海に面し、沿岸漁業や港湾が重要です。山地から流れる河川は農業や生活用水にも関わります。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カリブ海に面し、沿岸漁業や港湾が重要です。山地から流れる河川は農業や生活用水にも関わります。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候",
+        "prompt": "ハイチの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "一年を通して温暖な熱帯気候で、雨季と乾季があります。ハリケーンや豪雨への備えも重要です。",
+            "全国どこでも同じ気候",
+            "首都だけで全国を説明できる",
+            "地形は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "一年を通して温暖な熱帯気候で、雨季と乾季があります。ハリケーンや豪雨への備えも重要です。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を読む",
+        "prompt": "ハイチを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "首都圏、北部、南部半島、山岳農村、沿岸部では交通・産業・生活条件が大きく異なります。",
+            "首都だけを見る",
+            "観光地だけで判断する",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都圏、北部、南部半島、山岳農村、沿岸部では交通・産業・生活条件が大きく異なります。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとPort-au-Princeの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "America/Port-au-Prince"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Port-au-Prince": "Port-au-Prince"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "リアルタイムで比較します。",
+        "sourceIds": [
+          "ht-time-zone"
+        ]
+      },
+      {
+        "id": "ht-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "Tokyoの時刻からPort-au-Princeの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "America/Port-au-Prince",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Port-au-Prince": "Port-au-Prince"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別の時計で表します。",
+        "sourceIds": [
+          "ht-time-zone"
+        ]
+      },
+      {
+        "id": "ht-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差を読む",
+        "prompt": "TokyoとPort-au-Princeの現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "America/Port-au-Prince"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Port-au-Prince": "Port-au-Prince"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "現在の時差を確認します。",
+        "sourceIds": [
+          "ht-time-zone"
+        ]
+      },
+      {
+        "id": "ht-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜",
+        "prompt": "TokyoとPort-au-Princeの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "America/Port-au-Prince"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Port-au-Prince": "Port-au-Prince"
+          }
+        },
+        "explanation": "生活時間帯を比較します。",
+        "sourceIds": [
+          "ht-time-zone"
+        ]
+      },
+      {
+        "id": "ht-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流時間を探す",
+        "prompt": "両校の8:30〜16:00に入る交流時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "America/Port-au-Prince",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Port-au-Prince": "Port-au-Prince"
+          },
+          "windowA": [
+            "08:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "16:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "学校時間を尊重して計画します。",
+        "sourceIds": [
+          "ht-time-zone"
+        ]
+      },
+      {
+        "id": "ht-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DSTを確認",
+        "prompt": "ハイチの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ハイチは2026年3月8日にDSTを開始し、11月1日に標準時へ戻ります。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "DSTは世界共通",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ハイチは2026年3月8日にDSTを開始し、11月1日に標準時へ戻ります。",
+        "sourceIds": [
+          "ht-time-zone"
+        ]
+      },
+      {
+        "id": "ht-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語",
+        "prompt": "ハイチの生徒との交流場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き返す",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "交流表現を学びます。"
+      },
+      {
+        "id": "ht-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "言語事情",
+        "prompt": "ハイチの言語事情として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ハイチ・クレオール語とフランス語が公用語です。日常生活ではハイチ・クレオール語が広く使われます。",
+            "全員一言語のみ",
+            "地域差はない",
+            "日本語だけが公用語"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ハイチ・クレオール語とフランス語が公用語です。日常生活ではハイチ・クレオール語が広く使われます。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字",
+        "prompt": "ハイチの文字について正しいのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ハイチ・クレオール語とフランス語は主にラテン文字で書かれます。",
+            "世界中で同じ文字",
+            "文字はない",
+            "ひらがなのみ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ハイチ・クレオール語とフランス語は主にラテン文字で書かれます。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で紹介",
+        "prompt": "“Hello! I am learning about Haiti.” を読もう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Haiti.",
+          "meaning": "私はハイチについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して音読します。"
+      },
+      {
+        "id": "ht-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介",
+        "prompt": "名前を入れて自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Haiti. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "交流を想定します。"
+      },
+      {
+        "id": "ht-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語ではない",
+        "prompt": "ハイチの言語を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ハイチ・クレオール語とフランス語が公用語です。日常生活ではハイチ・クレオール語が広く使われます。",
+            "全員同じ言葉と決めつける",
+            "首都の言葉だけが本物",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ハイチ・クレオール語とフランス語が公用語です。日常生活ではハイチ・クレオール語が広く使われます。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化",
+        "prompt": "言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "地域・歴史・文化を理解する入り口になる",
+            "全員同じ考えと分かる",
+            "他言語を否定できる",
+            "発音だけ競う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は文化理解の入り口です。"
+      },
+      {
+        "id": "ht-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "質問を話す",
+        "prompt": "ハイチの同年代に英語で質問を作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "ハイチ",
+          "audienceCountryNameEn": "Haiti"
+        },
+        "explanation": "自分の好奇心を英語にします。"
+      },
+      {
+        "id": "ht-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "ハイチの気候として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "一年を通して温暖な熱帯気候で、雨季と乾季があります。ハリケーンや豪雨への備えも重要です。",
+            "全国同じ気候",
+            "気候は地形と無関係",
+            "毎日世界中と同じ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "一年を通して温暖な熱帯気候で、雨季と乾季があります。ハリケーンや豪雨への備えも重要です。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化",
+        "prompt": "ハイチの食文化と関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "スープ・ジュム",
+            "寿司だけ",
+            "世界共通の一皿",
+            "歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "スープ・ジュムは重要な手がかりです。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "遺産",
+        "prompt": "ハイチを学ぶ題材として関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "シタデル・ラフェリエール",
+            "東京タワー",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "シタデル・ラフェリエール",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "地域差",
+        "prompt": "ハイチの都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "ポルトープランス",
+              "target": "西部・首都"
+            },
+            {
+              "name": "カパイシャン",
+              "target": "北部"
+            },
+            {
+              "name": "レカイ",
+              "target": "南部"
+            }
+          ]
+        },
+        "explanation": "地域差を学びます。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を考える",
+        "prompt": "ハイチの地域差を理解するうえで大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "首都圏、北部、南部半島、山岳農村、沿岸部では交通・産業・生活条件が大きく異なります。",
+            "首都だけ見る",
+            "一年中同じ気候と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都圏、北部、南部半島、山岳農村、沿岸部では交通・産業・生活条件が大きく異なります。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "ハイチの文化を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "都市と農村、山地と沿岸、地域ごとの歴史や文化によって生活は一様ではありません。",
+            "観光広告で全国民を説明",
+            "都市だけが本物",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "都市と農村、山地と沿岸、地域ごとの歴史や文化によって生活は一様ではありません。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "その国らしさを疑う",
+        "prompt": "『ハイチの人はみんな同じ生活』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけで全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。"
+      },
+      {
+        "id": "ht-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながり",
+        "prompt": "日本とハイチの関係として正しいのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本はハイチで震災復興、保健医療、食料支援、教育、人材育成などの協力を行っています。",
+            "交流はない",
+            "同じ国土を共有",
+            "時差だけが関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本はハイチで震災復興、保健医療、食料支援、教育、人材育成などの協力を行っています。",
+        "sourceIds": [
+          "ht-japan-connection"
+        ]
+      },
+      {
+        "id": "ht-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とハイチのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Haiti → JAPAN / JAPAN → Haiti",
+          "items": [
+            {
+              "label": "震災復興",
+              "target": "つながりがある"
+            },
+            {
+              "label": "保健・医療",
+              "target": "つながりがある"
+            },
+            {
+              "label": "食料・教育・人材育成",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本はハイチで震災復興、保健医療、食料支援、教育、人材育成などの協力を行っています。",
+        "sourceIds": [
+          "ht-japan-connection"
+        ]
+      },
+      {
+        "id": "ht-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "関係を多面的に見る",
+        "prompt": "両国関係を理解する最も良い見方は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "外交・経済・文化・教育・人の移動など複数を見る",
+            "輸出品1つだけ",
+            "国旗だけ",
+            "距離だけ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "複数の層から考えます。",
+        "sourceIds": [
+          "ht-japan-connection"
+        ]
+      },
+      {
+        "id": "ht-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "交流の流れ",
+        "prompt": "交流が学びにつながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "学校交流",
+              "middle": "相手の生活を直接聞く",
+              "end": "ステレオタイプを修正する"
+            },
+            {
+              "start": "文化・技術交流",
+              "middle": "背景を知る",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "交流を相互理解につなげます。"
+      },
+      {
+        "id": "ht-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながり",
+        "prompt": "身近な日本とハイチのつながりを探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品・学校交流・ニュース・文化イベントなどの根拠も書こう。"
+        },
+        "explanation": "証拠からつながりを探します。"
+      },
+      {
+        "id": "ht-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "交流の意味",
+        "prompt": "学校交流が増えたとき期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員同じ考えと確認できる",
+            "地理を学ばなくてよい",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で理解を深めます。"
+      },
+      {
+        "id": "ht-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズ",
+        "prompt": "日本とハイチのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "ハイチ"
+        },
+        "explanation": "学びを問題に再構成します。"
+      },
+      {
+        "id": "ht-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点",
+        "prompt": "日本とハイチの共通点を3つ探そう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "共通点を探します。"
+      },
+      {
+        "id": "ht-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由",
+        "prompt": "違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えます。"
+      },
+      {
+        "id": "ht-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "証拠で検証",
+        "prompt": "『ハイチは首都だけ見れば国全体が分かり、国内の地域差はほとんどない』を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "ハイチは首都だけ見れば国全体が分かり、国内の地域差はほとんどない",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "ht-k03-e1",
+              "text": "北部と南部では歴史的中心地や産業が異なる",
+              "valid": true
+            },
+            {
+              "id": "ht-k03-e2",
+              "text": "山地が多く地域ごとに交通条件が異なる",
+              "valid": true
+            },
+            {
+              "id": "ht-k03-e3",
+              "text": "沿岸部と内陸農村では生活条件が異なる",
+              "valid": true
+            },
+            {
+              "id": "ht-k03-e4",
+              "text": "ハイチの首都はポルトープランスである",
+              "valid": false
+            },
+            {
+              "id": "ht-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "証拠を複数選びます。",
+        "sourceIds": [
+          "ht-country-profile"
+        ]
+      },
+      {
+        "id": "ht-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ",
+        "prompt": "ハイチの同年代に質問を3つ作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "ハイチ"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。"
+      },
+      {
+        "id": "ht-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Haiti Master Quiz",
+        "prompt": "5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "ハイチ"
+        },
+        "explanation": "40 Missionの最終統合です。"
+      }
+    ]
+  },
+  "hn": {
+    "countryNameJa": "ホンジュラス",
+    "countryNameEn": "Honduras",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "hn-l08",
+          "hn-j07",
+          "hn-k04",
+          "hn-k05"
+        ]
+      }
+    },
+    "sources": {
+      "hn-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Honduras profile based on countries_h.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_h.json"
+      },
+      "hn-time-zone": {
+        "organization": "IANA Time Zone Database",
+        "title": "IANA Time Zone Database / 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "hn-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Honduras relations",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/latin/honduras/"
+      }
+    },
+    "missions": [
+      {
+        "id": "hn-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "ホンジュラスを探せ！",
+        "prompt": "世界地図からホンジュラスをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "hn",
+          "targetAtlasName": "Honduras",
+          "targetName": "Honduras"
+        },
+        "explanation": "中央アメリカに位置し、国土の多くが山地で、北はカリブ海、南は太平洋側のフォンセカ湾に面します。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "ホンジュラスの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "中央アメリカ",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "中央アメリカ",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "ホンジュラスの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "テグシガルパ",
+            "サンペドロスラ",
+            "ラセイバ",
+            "コパン・ルイナス"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はテグシガルパです。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "ホンジュラスの主要都市を地図上に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "hn",
+          "targetAtlasName": "Honduras",
+          "mapConfig": {
+            "center": [
+              -86.7,
+              14.8
+            ],
+            "scale": 1800
+          },
+          "cities": [
+            {
+              "name": "Tegucigalpa",
+              "labelJa": "テグシガルパ",
+              "coordinates": [
+                -87.2068,
+                14.0723
+              ],
+              "timeZone": "America/Tegucigalpa",
+              "region": "中央南部・首都"
+            },
+            {
+              "name": "San Pedro Sula",
+              "labelJa": "サンペドロスラ",
+              "coordinates": [
+                -88.025,
+                15.5
+              ],
+              "timeZone": "America/Tegucigalpa",
+              "region": "北西部"
+            },
+            {
+              "name": "La Ceiba",
+              "labelJa": "ラセイバ",
+              "coordinates": [
+                -86.7919,
+                15.7597
+              ],
+              "timeZone": "America/Tegucigalpa",
+              "region": "カリブ海岸"
+            },
+            {
+              "name": "Copán Ruinas",
+              "labelJa": "コパン・ルイナス",
+              "coordinates": [
+                -89.15,
+                14.84
+              ],
+              "timeZone": "America/Tegucigalpa",
+              "region": "西部"
+            }
+          ]
+        },
+        "explanation": "都市配置から地域差を読み取ります。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸",
+        "prompt": "ホンジュラスと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カリブ海、フォンセカ湾、ヨホア湖、多数の河川が漁業、観光、農業、交通に関わります。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カリブ海、フォンセカ湾、ヨホア湖、多数の河川が漁業、観光、農業、交通に関わります。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候",
+        "prompt": "ホンジュラスの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "低地は高温の熱帯気候ですが、山地の首都は比較的涼しく、雨季と乾季があります。",
+            "全国どこでも同じ気候",
+            "首都だけで全国を説明できる",
+            "地形は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "低地は高温の熱帯気候ですが、山地の首都は比較的涼しく、雨季と乾季があります。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を読む",
+        "prompt": "ホンジュラスを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "カリブ海岸、山岳内陸部、太平洋側、バイア諸島などで気候・文化・産業・交通条件が異なります。",
+            "首都だけを見る",
+            "観光地だけで判断する",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カリブ海岸、山岳内陸部、太平洋側、バイア諸島などで気候・文化・産業・交通条件が異なります。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとTegucigalpaの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "America/Tegucigalpa"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Tegucigalpa": "Tegucigalpa"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "リアルタイムで比較します。",
+        "sourceIds": [
+          "hn-time-zone"
+        ]
+      },
+      {
+        "id": "hn-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "Tokyoの時刻からTegucigalpaの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "America/Tegucigalpa",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Tegucigalpa": "Tegucigalpa"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別の時計で表します。",
+        "sourceIds": [
+          "hn-time-zone"
+        ]
+      },
+      {
+        "id": "hn-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差を読む",
+        "prompt": "TokyoとTegucigalpaの現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "America/Tegucigalpa"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Tegucigalpa": "Tegucigalpa"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "現在の時差を確認します。",
+        "sourceIds": [
+          "hn-time-zone"
+        ]
+      },
+      {
+        "id": "hn-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜",
+        "prompt": "TokyoとTegucigalpaの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "America/Tegucigalpa"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Tegucigalpa": "Tegucigalpa"
+          }
+        },
+        "explanation": "生活時間帯を比較します。",
+        "sourceIds": [
+          "hn-time-zone"
+        ]
+      },
+      {
+        "id": "hn-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流時間を探す",
+        "prompt": "両校の8:30〜16:00に入る交流時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "America/Tegucigalpa",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Tegucigalpa": "Tegucigalpa"
+          },
+          "windowA": [
+            "08:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "16:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "学校時間を尊重して計画します。",
+        "sourceIds": [
+          "hn-time-zone"
+        ]
+      },
+      {
+        "id": "hn-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DSTを確認",
+        "prompt": "ホンジュラスの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ホンジュラスは2026年にDSTを実施せず、CST（UTC-6）を通年使用します。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "DSTは世界共通",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ホンジュラスは2026年にDSTを実施せず、CST（UTC-6）を通年使用します。",
+        "sourceIds": [
+          "hn-time-zone"
+        ]
+      },
+      {
+        "id": "hn-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語",
+        "prompt": "ホンジュラスの生徒との交流場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き返す",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "交流表現を学びます。"
+      },
+      {
+        "id": "hn-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "言語事情",
+        "prompt": "ホンジュラスの言語事情として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "スペイン語が主要言語で、ガリフナ語やミスキート語など地域・先住民言語も使われます。",
+            "全員一言語のみ",
+            "地域差はない",
+            "日本語だけが公用語"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "スペイン語が主要言語で、ガリフナ語やミスキート語など地域・先住民言語も使われます。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字",
+        "prompt": "ホンジュラスの文字について正しいのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "スペイン語はラテン文字で、地域言語も主にラテン文字で表記されます。",
+            "世界中で同じ文字",
+            "文字はない",
+            "ひらがなのみ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "スペイン語はラテン文字で、地域言語も主にラテン文字で表記されます。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で紹介",
+        "prompt": "“Hello! I am learning about Honduras.” を読もう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Honduras.",
+          "meaning": "私はホンジュラスについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して音読します。"
+      },
+      {
+        "id": "hn-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介",
+        "prompt": "名前を入れて自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Honduras. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "交流を想定します。"
+      },
+      {
+        "id": "hn-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語ではない",
+        "prompt": "ホンジュラスの言語を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "スペイン語が主要言語で、ガリフナ語やミスキート語など地域・先住民言語も使われます。",
+            "全員同じ言葉と決めつける",
+            "首都の言葉だけが本物",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "スペイン語が主要言語で、ガリフナ語やミスキート語など地域・先住民言語も使われます。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化",
+        "prompt": "言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "地域・歴史・文化を理解する入り口になる",
+            "全員同じ考えと分かる",
+            "他言語を否定できる",
+            "発音だけ競う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は文化理解の入り口です。"
+      },
+      {
+        "id": "hn-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "質問を話す",
+        "prompt": "ホンジュラスの同年代に英語で質問を作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "ホンジュラス",
+          "audienceCountryNameEn": "Honduras"
+        },
+        "explanation": "自分の好奇心を英語にします。"
+      },
+      {
+        "id": "hn-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "ホンジュラスの気候として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "低地は高温の熱帯気候ですが、山地の首都は比較的涼しく、雨季と乾季があります。",
+            "全国同じ気候",
+            "気候は地形と無関係",
+            "毎日世界中と同じ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "低地は高温の熱帯気候ですが、山地の首都は比較的涼しく、雨季と乾季があります。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化",
+        "prompt": "ホンジュラスの食文化と関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "バレアダ",
+            "寿司だけ",
+            "世界共通の一皿",
+            "歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "バレアダは重要な手がかりです。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "遺産",
+        "prompt": "ホンジュラスを学ぶ題材として関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "コパンのマヤ遺跡",
+            "東京タワー",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "コパンのマヤ遺跡",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "地域差",
+        "prompt": "ホンジュラスの都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "テグシガルパ",
+              "target": "中央南部・首都"
+            },
+            {
+              "name": "サンペドロスラ",
+              "target": "北西部"
+            },
+            {
+              "name": "ラセイバ",
+              "target": "カリブ海岸"
+            }
+          ]
+        },
+        "explanation": "地域差を学びます。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を考える",
+        "prompt": "ホンジュラスの地域差を理解するうえで大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カリブ海岸、山岳内陸部、太平洋側、バイア諸島などで気候・文化・産業・交通条件が異なります。",
+            "首都だけ見る",
+            "一年中同じ気候と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カリブ海岸、山岳内陸部、太平洋側、バイア諸島などで気候・文化・産業・交通条件が異なります。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "ホンジュラスの文化を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "都市、山地農村、カリブ海沿岸、先住民・ガリフナ共同体など多様な暮らしがあります。",
+            "観光広告で全国民を説明",
+            "都市だけが本物",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "都市、山地農村、カリブ海沿岸、先住民・ガリフナ共同体など多様な暮らしがあります。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "その国らしさを疑う",
+        "prompt": "『ホンジュラスの人はみんな同じ生活』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけで全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。"
+      },
+      {
+        "id": "hn-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながり",
+        "prompt": "日本とホンジュラスの関係として正しいのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本はホンジュラスで防災、教育、保健、農業、インフラ、人材育成などの協力を行っています。",
+            "交流はない",
+            "同じ国土を共有",
+            "時差だけが関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本はホンジュラスで防災、教育、保健、農業、インフラ、人材育成などの協力を行っています。",
+        "sourceIds": [
+          "hn-japan-connection"
+        ]
+      },
+      {
+        "id": "hn-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とホンジュラスのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Honduras → JAPAN / JAPAN → Honduras",
+          "items": [
+            {
+              "label": "防災",
+              "target": "つながりがある"
+            },
+            {
+              "label": "教育・保健",
+              "target": "つながりがある"
+            },
+            {
+              "label": "農業・インフラ・人材育成",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本はホンジュラスで防災、教育、保健、農業、インフラ、人材育成などの協力を行っています。",
+        "sourceIds": [
+          "hn-japan-connection"
+        ]
+      },
+      {
+        "id": "hn-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "関係を多面的に見る",
+        "prompt": "両国関係を理解する最も良い見方は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "外交・経済・文化・教育・人の移動など複数を見る",
+            "輸出品1つだけ",
+            "国旗だけ",
+            "距離だけ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "複数の層から考えます。",
+        "sourceIds": [
+          "hn-japan-connection"
+        ]
+      },
+      {
+        "id": "hn-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "交流の流れ",
+        "prompt": "交流が学びにつながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "学校交流",
+              "middle": "相手の生活を直接聞く",
+              "end": "ステレオタイプを修正する"
+            },
+            {
+              "start": "文化・技術交流",
+              "middle": "背景を知る",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "交流を相互理解につなげます。"
+      },
+      {
+        "id": "hn-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながり",
+        "prompt": "身近な日本とホンジュラスのつながりを探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品・学校交流・ニュース・文化イベントなどの根拠も書こう。"
+        },
+        "explanation": "証拠からつながりを探します。"
+      },
+      {
+        "id": "hn-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "交流の意味",
+        "prompt": "学校交流が増えたとき期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員同じ考えと確認できる",
+            "地理を学ばなくてよい",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で理解を深めます。"
+      },
+      {
+        "id": "hn-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズ",
+        "prompt": "日本とホンジュラスのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "ホンジュラス"
+        },
+        "explanation": "学びを問題に再構成します。"
+      },
+      {
+        "id": "hn-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点",
+        "prompt": "日本とホンジュラスの共通点を3つ探そう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "共通点を探します。"
+      },
+      {
+        "id": "hn-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由",
+        "prompt": "違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えます。"
+      },
+      {
+        "id": "hn-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "証拠で検証",
+        "prompt": "『ホンジュラスは熱帯低地だけの国で、全国どこでも同じ気候と文化である』を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "ホンジュラスは熱帯低地だけの国で、全国どこでも同じ気候と文化である",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "hn-k03-e1",
+              "text": "首都テグシガルパは標高が高く比較的涼しい",
+              "valid": true
+            },
+            {
+              "id": "hn-k03-e2",
+              "text": "カリブ海沿岸と内陸山地で環境が異なる",
+              "valid": true
+            },
+            {
+              "id": "hn-k03-e3",
+              "text": "ガリフナ語やミスキート語など地域言語も使われる",
+              "valid": true
+            },
+            {
+              "id": "hn-k03-e4",
+              "text": "ホンジュラスの首都はテグシガルパである",
+              "valid": false
+            },
+            {
+              "id": "hn-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "証拠を複数選びます。",
+        "sourceIds": [
+          "hn-country-profile"
+        ]
+      },
+      {
+        "id": "hn-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ",
+        "prompt": "ホンジュラスの同年代に質問を3つ作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "ホンジュラス"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。"
+      },
+      {
+        "id": "hn-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Honduras Master Quiz",
+        "prompt": "5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "ホンジュラス"
+        },
+        "explanation": "40 Missionの最終統合です。"
+      }
+    ]
+  },
+  "hu": {
+    "countryNameJa": "ハンガリー",
+    "countryNameEn": "Hungary",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "hu-l08",
+          "hu-j07",
+          "hu-k04",
+          "hu-k05"
+        ]
+      }
+    },
+    "sources": {
+      "hu-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Hungary profile based on countries_h.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_h.json"
+      },
+      "hu-time-zone": {
+        "organization": "IANA Time Zone Database",
+        "title": "IANA Time Zone Database / 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "hu-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Hungary relations",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/europe/hungary/"
+      }
+    },
+    "missions": [
+      {
+        "id": "hu-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "ハンガリーを探せ！",
+        "prompt": "世界地図からハンガリーをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "hu",
+          "targetAtlasName": "Hungary",
+          "targetName": "Hungary"
+        },
+        "explanation": "中央ヨーロッパの内陸国で、ドナウ川とティサ川が流れ、大平原と丘陵、湖沼を持ちます。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "ハンガリーの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "中央ヨーロッパ",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "中央ヨーロッパ",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "ハンガリーの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ブダペスト",
+            "デブレツェン",
+            "セゲド",
+            "ペーチ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はブダペストです。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "ハンガリーの主要都市を地図上に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "hu",
+          "targetAtlasName": "Hungary",
+          "mapConfig": {
+            "center": [
+              19.5,
+              47.1
+            ],
+            "scale": 2200
+          },
+          "cities": [
+            {
+              "name": "Budapest",
+              "labelJa": "ブダペスト",
+              "coordinates": [
+                19.0402,
+                47.4979
+              ],
+              "timeZone": "Europe/Budapest",
+              "region": "中央北部・首都"
+            },
+            {
+              "name": "Debrecen",
+              "labelJa": "デブレツェン",
+              "coordinates": [
+                21.6273,
+                47.5316
+              ],
+              "timeZone": "Europe/Budapest",
+              "region": "東部"
+            },
+            {
+              "name": "Szeged",
+              "labelJa": "セゲド",
+              "coordinates": [
+                20.1482,
+                46.253
+              ],
+              "timeZone": "Europe/Budapest",
+              "region": "南部"
+            },
+            {
+              "name": "Pécs",
+              "labelJa": "ペーチ",
+              "coordinates": [
+                18.2323,
+                46.0727
+              ],
+              "timeZone": "Europe/Budapest",
+              "region": "南西部"
+            }
+          ]
+        },
+        "explanation": "都市配置から地域差を読み取ります。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸",
+        "prompt": "ハンガリーと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ドナウ川、ティサ川、バラトン湖が交通、観光、農業、都市形成に大きく関わります。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ドナウ川、ティサ川、バラトン湖が交通、観光、農業、都市形成に大きく関わります。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候",
+        "prompt": "ハンガリーの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "大陸性の温帯気候で、夏は暑く、冬は寒く、春と秋は比較的穏やかです。",
+            "全国どこでも同じ気候",
+            "首都だけで全国を説明できる",
+            "地形は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "大陸性の温帯気候で、夏は暑く、冬は寒く、春と秋は比較的穏やかです。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を読む",
+        "prompt": "ハンガリーを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "首都ブダペスト、西部バラトン湖周辺、東部大平原、地方都市で産業・文化・景観が異なります。",
+            "首都だけを見る",
+            "観光地だけで判断する",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都ブダペスト、西部バラトン湖周辺、東部大平原、地方都市で産業・文化・景観が異なります。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとBudapestの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Europe/Budapest"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Budapest": "Budapest"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "リアルタイムで比較します。",
+        "sourceIds": [
+          "hu-time-zone"
+        ]
+      },
+      {
+        "id": "hu-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "Tokyoの時刻からBudapestの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Europe/Budapest",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Budapest": "Budapest"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別の時計で表します。",
+        "sourceIds": [
+          "hu-time-zone"
+        ]
+      },
+      {
+        "id": "hu-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差を読む",
+        "prompt": "TokyoとBudapestの現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Europe/Budapest"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Budapest": "Budapest"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "現在の時差を確認します。",
+        "sourceIds": [
+          "hu-time-zone"
+        ]
+      },
+      {
+        "id": "hu-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜",
+        "prompt": "TokyoとBudapestの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Europe/Budapest"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Budapest": "Budapest"
+          }
+        },
+        "explanation": "生活時間帯を比較します。",
+        "sourceIds": [
+          "hu-time-zone"
+        ]
+      },
+      {
+        "id": "hu-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流時間を探す",
+        "prompt": "両校の8:30〜16:00に入る交流時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Europe/Budapest",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Europe/Budapest": "Budapest"
+          },
+          "windowA": [
+            "08:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "16:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "学校時間を尊重して計画します。",
+        "sourceIds": [
+          "hu-time-zone"
+        ]
+      },
+      {
+        "id": "hu-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DSTを確認",
+        "prompt": "ハンガリーの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ハンガリーは2026年3月29日にDSTを開始し、10月25日に標準時へ戻ります。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "DSTは世界共通",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ハンガリーは2026年3月29日にDSTを開始し、10月25日に標準時へ戻ります。",
+        "sourceIds": [
+          "hu-time-zone"
+        ]
+      },
+      {
+        "id": "hu-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語",
+        "prompt": "ハンガリーの生徒との交流場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き返す",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "交流表現を学びます。"
+      },
+      {
+        "id": "hu-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "言語事情",
+        "prompt": "ハンガリーの言語事情として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ハンガリー語が公用語で、周辺言語とは系統が異なるウラル語族の言語です。少数言語も使われます。",
+            "全員一言語のみ",
+            "地域差はない",
+            "日本語だけが公用語"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ハンガリー語が公用語で、周辺言語とは系統が異なるウラル語族の言語です。少数言語も使われます。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字",
+        "prompt": "ハンガリーの文字について正しいのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ハンガリー語はラテン文字を使い、á・é・ő・űなどの文字があります。",
+            "世界中で同じ文字",
+            "文字はない",
+            "ひらがなのみ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ハンガリー語はラテン文字を使い、á・é・ő・űなどの文字があります。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で紹介",
+        "prompt": "“Hello! I am learning about Hungary.” を読もう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Hungary.",
+          "meaning": "私はハンガリーについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して音読します。"
+      },
+      {
+        "id": "hu-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介",
+        "prompt": "名前を入れて自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Hungary. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "交流を想定します。"
+      },
+      {
+        "id": "hu-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語ではない",
+        "prompt": "ハンガリーの言語を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ハンガリー語が公用語で、周辺言語とは系統が異なるウラル語族の言語です。少数言語も使われます。",
+            "全員同じ言葉と決めつける",
+            "首都の言葉だけが本物",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ハンガリー語が公用語で、周辺言語とは系統が異なるウラル語族の言語です。少数言語も使われます。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化",
+        "prompt": "言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "地域・歴史・文化を理解する入り口になる",
+            "全員同じ考えと分かる",
+            "他言語を否定できる",
+            "発音だけ競う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は文化理解の入り口です。"
+      },
+      {
+        "id": "hu-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "質問を話す",
+        "prompt": "ハンガリーの同年代に英語で質問を作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "ハンガリー",
+          "audienceCountryNameEn": "Hungary"
+        },
+        "explanation": "自分の好奇心を英語にします。"
+      },
+      {
+        "id": "hu-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "ハンガリーの気候として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "大陸性の温帯気候で、夏は暑く、冬は寒く、春と秋は比較的穏やかです。",
+            "全国同じ気候",
+            "気候は地形と無関係",
+            "毎日世界中と同じ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "大陸性の温帯気候で、夏は暑く、冬は寒く、春と秋は比較的穏やかです。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化",
+        "prompt": "ハンガリーの食文化と関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "グヤーシュ",
+            "寿司だけ",
+            "世界共通の一皿",
+            "歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "グヤーシュは重要な手がかりです。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "遺産",
+        "prompt": "ハンガリーを学ぶ題材として関係が深いのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ブダ城地区",
+            "東京タワー",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ブダ城地区",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "地域差",
+        "prompt": "ハンガリーの都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "ブダペスト",
+              "target": "中央北部・首都"
+            },
+            {
+              "name": "デブレツェン",
+              "target": "東部"
+            },
+            {
+              "name": "セゲド",
+              "target": "南部"
+            }
+          ]
+        },
+        "explanation": "地域差を学びます。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地域差を考える",
+        "prompt": "ハンガリーの地域差を理解するうえで大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "首都ブダペスト、西部バラトン湖周辺、東部大平原、地方都市で産業・文化・景観が異なります。",
+            "首都だけ見る",
+            "一年中同じ気候と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都ブダペスト、西部バラトン湖周辺、東部大平原、地方都市で産業・文化・景観が異なります。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "ハンガリーの文化を学ぶ姿勢として適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "首都、農業地域、湖畔、地方都市で生活文化・産業・景観が異なります。",
+            "観光広告で全国民を説明",
+            "都市だけが本物",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都、農業地域、湖畔、地方都市で生活文化・産業・景観が異なります。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "その国らしさを疑う",
+        "prompt": "『ハンガリーの人はみんな同じ生活』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけで全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。"
+      },
+      {
+        "id": "hu-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながり",
+        "prompt": "日本とハンガリーの関係として正しいのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本とハンガリーは長年の友好関係を基盤に、経済、科学技術、教育、文化、人的交流を進めています。",
+            "交流はない",
+            "同じ国土を共有",
+            "時差だけが関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とハンガリーは長年の友好関係を基盤に、経済、科学技術、教育、文化、人的交流を進めています。",
+        "sourceIds": [
+          "hu-japan-connection"
+        ]
+      },
+      {
+        "id": "hu-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とハンガリーのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Hungary → JAPAN / JAPAN → Hungary",
+          "items": [
+            {
+              "label": "科学技術",
+              "target": "つながりがある"
+            },
+            {
+              "label": "経済・投資",
+              "target": "つながりがある"
+            },
+            {
+              "label": "教育・文化・人的交流",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本とハンガリーは長年の友好関係を基盤に、経済、科学技術、教育、文化、人的交流を進めています。",
+        "sourceIds": [
+          "hu-japan-connection"
+        ]
+      },
+      {
+        "id": "hu-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "関係を多面的に見る",
+        "prompt": "両国関係を理解する最も良い見方は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "外交・経済・文化・教育・人の移動など複数を見る",
+            "輸出品1つだけ",
+            "国旗だけ",
+            "距離だけ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "複数の層から考えます。",
+        "sourceIds": [
+          "hu-japan-connection"
+        ]
+      },
+      {
+        "id": "hu-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "交流の流れ",
+        "prompt": "交流が学びにつながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "学校交流",
+              "middle": "相手の生活を直接聞く",
+              "end": "ステレオタイプを修正する"
+            },
+            {
+              "start": "文化・技術交流",
+              "middle": "背景を知る",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "交流を相互理解につなげます。"
+      },
+      {
+        "id": "hu-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながり",
+        "prompt": "身近な日本とハンガリーのつながりを探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品・学校交流・ニュース・文化イベントなどの根拠も書こう。"
+        },
+        "explanation": "証拠からつながりを探します。"
+      },
+      {
+        "id": "hu-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "交流の意味",
+        "prompt": "学校交流が増えたとき期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員同じ考えと確認できる",
+            "地理を学ばなくてよい",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で理解を深めます。"
+      },
+      {
+        "id": "hu-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズ",
+        "prompt": "日本とハンガリーのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "ハンガリー"
+        },
+        "explanation": "学びを問題に再構成します。"
+      },
+      {
+        "id": "hu-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点",
+        "prompt": "日本とハンガリーの共通点を3つ探そう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "共通点を探します。"
+      },
+      {
+        "id": "hu-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由",
+        "prompt": "違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えます。"
+      },
+      {
+        "id": "hu-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "証拠で検証",
+        "prompt": "『ハンガリーはブダペストだけの国で、地方ごとの差はほとんどない』を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "ハンガリーはブダペストだけの国で、地方ごとの差はほとんどない",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "hu-k03-e1",
+              "text": "東部には広大な大平原がある",
+              "valid": true
+            },
+            {
+              "id": "hu-k03-e2",
+              "text": "バラトン湖周辺は観光とワイン文化で知られる",
+              "valid": true
+            },
+            {
+              "id": "hu-k03-e3",
+              "text": "地方都市ごとに歴史・産業・食文化が異なる",
+              "valid": true
+            },
+            {
+              "id": "hu-k03-e4",
+              "text": "ハンガリーの首都はブダペストである",
+              "valid": false
+            },
+            {
+              "id": "hu-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "証拠を複数選びます。",
+        "sourceIds": [
+          "hu-country-profile"
+        ]
+      },
+      {
+        "id": "hu-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ",
+        "prompt": "ハンガリーの同年代に質問を3つ作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "ハンガリー"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。"
+      },
+      {
+        "id": "hu-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Hungary Master Quiz",
+        "prompt": "5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "ハンガリー"
+        },
+        "explanation": "40 Missionの最終統合です。"
+      }
+    ]
+  }
+}

@@ -25,12 +25,6 @@ const REQUIRED_DOMAINS = [
   'thinkConnect',
 ];
 
-/*
- * world-atlas と countries_*.json で
- * 英語名が異なる国だけここで吸収します。
- *
- * 必要になった国だけ追加できます。
- */
 const ATLAS_NAME_OVERRIDES = {
   bs: 'Bahamas',
   bo: 'Bolivia',
@@ -58,9 +52,7 @@ const ATLAS_NAME_OVERRIDES = {
   vn: 'Vietnam',
 };
 
-function unwrapModule(
-  module
-) {
+function unwrapModule(module) {
   return (
     module?.default ??
     module ??
@@ -82,9 +74,7 @@ function getFileLetterFromPath(
   );
 }
 
-function makeFlagEmoji(
-  iso
-) {
+function makeFlagEmoji(iso) {
   const upper =
     String(iso)
       .toUpperCase();
@@ -108,6 +98,45 @@ function makeFlagEmoji(
     .join('');
 }
 
+function inferRegion(
+  timeZone
+) {
+  const prefix =
+    String(
+      timeZone || ''
+    ).split('/')[0];
+
+  const labels = {
+    Asia: 'Asia',
+    Europe: 'Europe',
+    Africa: 'Africa',
+    America: 'Americas',
+    Australia: 'Oceania',
+    Pacific: 'Oceania',
+    Atlantic: 'Atlantic',
+    Indian: 'Indian Ocean',
+  };
+
+  return (
+    labels[prefix] ??
+    'World'
+  );
+}
+
+function getLanguages(
+  country
+) {
+  if (
+    !Array.isArray(
+      country?.languages
+    )
+  ) {
+    return [];
+  }
+
+  return country.languages;
+}
+
 function hasRequiredDomains(
   missionData
 ) {
@@ -117,9 +146,7 @@ function hasRequiredDomains(
       ?.domains;
 
   if (
-    !Array.isArray(
-      domains
-    )
+    !Array.isArray(domains)
   ) {
     return false;
   }
@@ -158,9 +185,7 @@ export function isCompleteMissionPackage(
     !Array.isArray(
       missionData.missions
     ) ||
-    missionData
-      .missions
-      .length !==
+    missionData.missions.length !==
       REQUIRED_MISSION_COUNT
   ) {
     return false;
@@ -181,9 +206,7 @@ export function isCompleteMissionPackage(
     );
 
   if (
-    new Set(
-      missionIds
-    ).size !==
+    new Set(missionIds).size !==
     missionIds.length
   ) {
     return false;
@@ -218,16 +241,14 @@ export function isCompleteMissionPackage(
       ) =>
         total +
         Number(
-          mission.points ||
-            0
+          mission.points || 0
         ),
       0
     );
 
   if (
     Number(
-      missionData
-        .maxWorldPoints
+      missionData.maxWorldPoints
     ) !== totalPoints
   ) {
     return false;
@@ -256,9 +277,7 @@ export function getWorldLearningCountries() {
       }
 
       const countryData =
-        unwrapModule(
-          module
-        );
+        unwrapModule(module);
 
       const missionPath =
         `../data/missions_${fileLetter}.json`;
@@ -290,6 +309,9 @@ export function getWorldLearningCountries() {
               missionData
             );
 
+          const languages =
+            getLanguages(country);
+
           countries.push({
             iso:
               normalizedIso,
@@ -297,40 +319,41 @@ export function getWorldLearningCountries() {
             fileLetter,
 
             nameJa:
-              country
-                ?.nameJa ??
-              normalizedIso
-                .toUpperCase(),
+              country?.nameJa ??
+              normalizedIso.toUpperCase(),
 
             nameEn:
-              country
-                ?.nameEn ??
-              normalizedIso
-                .toUpperCase(),
+              country?.nameEn ??
+              normalizedIso.toUpperCase(),
 
             capitalJa:
-              country
-                ?.capitalJa ??
+              country?.capitalJa ??
               '',
 
             capitalEn:
-              country
-                ?.capitalEn ??
+              country?.capitalEn ??
+              '',
+
+            subtitleJa:
+              country?.subtitle ??
+              '',
+
+            subtitleEn:
+              country?.subtitleEn ??
               '',
 
             region:
-              country
-                ?.region ??
-              '',
+              country?.region ??
+              inferRegion(
+                country?.timeZone
+              ),
 
             timeZone:
-              country
-                ?.timeZone ??
+              country?.timeZone ??
               '',
 
             flagUrl:
-              country
-                ?.flagUrl ??
+              country?.flagUrl ??
               '',
 
             flagEmoji:
@@ -338,12 +361,40 @@ export function getWorldLearningCountries() {
                 normalizedIso
               ),
 
+            languages,
+
+            mainLanguagesJa:
+              languages
+                .map(
+                  (language) =>
+                    language?.nameJa
+                )
+                .filter(Boolean),
+
+            mainLanguagesEn:
+              languages
+                .map(
+                  (language) =>
+                    language?.nameEn
+                )
+                .filter(Boolean),
+
+            weatherSummaryJa:
+              country
+                ?.weather
+                ?.summary ??
+              '',
+
+            japanConnection:
+              country
+                ?.japanConnection ??
+              null,
+
             atlasName:
               ATLAS_NAME_OVERRIDES[
                 normalizedIso
               ] ??
-              country
-                ?.nameEn ??
+              country?.nameEn ??
               '',
 
             missionData,

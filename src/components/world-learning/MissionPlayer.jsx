@@ -7,6 +7,10 @@ import {
 } from 'lucide-react';
 
 import {
+  createPortal,
+} from 'react-dom';
+
+import {
   useEffect,
   useRef,
   useState,
@@ -18,6 +22,7 @@ import LanguageMissionGame from './LanguageMissionGame';
 import LifeCultureMissionGame from './LifeCultureMissionGame';
 import JapanConnectionMissionGame from './JapanConnectionMissionGame';
 import ThinkConnectMissionGame from './ThinkConnectMissionGame';
+import MissionSuccessCelebration from './MissionSuccessCelebration';
 
 const TIME_MISSION_TYPES =
   new Set([
@@ -135,6 +140,17 @@ export default function MissionPlayer({
     setResult,
   ] = useState(null);
 
+  const [
+  celebration,
+  setCelebration,
+] = useState(null);
+
+
+const completedThisSessionRef =
+  useRef(
+    alreadyCompleted
+  );
+
   const choicePlayable =
     hasChoiceChallenge(
       mission
@@ -237,6 +253,41 @@ export default function MissionPlayer({
     );
   };
 
+const handleMissionComplete =
+  (
+    completedMission
+  ) => {
+    const firstClear =
+      !completedThisSessionRef
+        .current;
+
+    completedThisSessionRef
+      .current = true;
+
+
+    setCelebration({
+      firstClear,
+
+      points:
+        Number(
+          completedMission
+            ?.points ??
+            mission.points ??
+            0
+        ),
+
+      title:
+        completedMission
+          ?.title ??
+        mission.title,
+    });
+
+
+    onComplete(
+      completedMission
+    );
+  };
+
   const checkAnswer = () => {
     if (
       selectedIndex === null
@@ -250,16 +301,16 @@ export default function MissionPlayer({
         .correctIndex;
 
     if (correct) {
-      setResult(
-        'correct'
-      );
+  setResult(
+    'correct'
+  );
 
-      onComplete(
-        mission
-      );
+  handleMissionComplete(
+    mission
+  );
 
-      return;
-    }
+  return;
+}
 
     setResult(
       'wrong'
@@ -285,8 +336,20 @@ export default function MissionPlayer({
           ? 'DISCOVERY'
           : 'EXPLORER';
 
-  return (
+  return createPortal(
+  (
     <div className="fixed inset-0 z-[100000] flex items-start justify-center overflow-hidden bg-slate-950/85 p-2 backdrop-blur-sm md:items-center md:p-4">
+
+  <MissionSuccessCelebration
+    celebration={
+      celebration
+    }
+    onDismiss={() =>
+      setCelebration(
+        null
+      )
+    }
+  />
 
   <div
     ref={scrollContainerRef}
@@ -381,59 +444,53 @@ export default function MissionPlayer({
           </div>
 
           {timePlayable ? (
-            <TimeMissionGame
-              mission={
-                mission
-              }
-              onComplete={
-                onComplete
-              }
-              alreadyCompleted={
-                alreadyCompleted
-              }
-            />
-          ) : placePlayable ? (
-            <PlaceMissionGame
-              mission={
-                mission
-              }
-              onComplete={
-                onComplete
-              }
-              alreadyCompleted={
-                alreadyCompleted
-              }
-            />
-          ) : languagePlayable ? (
-            <LanguageMissionGame
-              mission={
-                mission
-              }
-              onComplete={
-                onComplete
-              }
-              alreadyCompleted={
-                alreadyCompleted
-              }
-            />
-          ) : lifeCulturePlayable ? (
+
+  <TimeMissionGame
+    mission={mission}
+    onComplete={handleMissionComplete}
+    alreadyCompleted={alreadyCompleted}
+  />
+
+) : placePlayable ? (
+
+  <PlaceMissionGame
+    mission={mission}
+    onComplete={handleMissionComplete}
+    alreadyCompleted={alreadyCompleted}
+  />
+
+) : languagePlayable ? (
+
+  <LanguageMissionGame
+    mission={mission}
+    onComplete={handleMissionComplete}
+    alreadyCompleted={alreadyCompleted}
+  />
+
+) : lifeCulturePlayable ? (
+
   <LifeCultureMissionGame
     mission={mission}
-    onComplete={onComplete}
+    onComplete={handleMissionComplete}
     alreadyCompleted={alreadyCompleted}
   />
+
 ) : japanConnectionPlayable ? (
+
   <JapanConnectionMissionGame
     mission={mission}
-    onComplete={onComplete}
+    onComplete={handleMissionComplete}
     alreadyCompleted={alreadyCompleted}
   />
+
 ) : thinkConnectPlayable ? (
+
   <ThinkConnectMissionGame
     mission={mission}
-    onComplete={onComplete}
+    onComplete={handleMissionComplete}
     alreadyCompleted={alreadyCompleted}
   />
+
 ) : !choicePlayable ? (
             <div className="rounded-3xl border-2 border-dashed border-slate-300 bg-slate-50 p-8 text-center">
 
@@ -726,5 +783,7 @@ export default function MissionPlayer({
         </div>
       </div>
     </div>
-  );
+    ),
+  document.body
+);
 }

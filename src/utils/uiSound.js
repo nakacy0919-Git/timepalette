@@ -3,8 +3,12 @@ const SOUND_STORAGE_KEY =
 
 let audioContext = null;
 
+
 function getAudioContext() {
-  if (typeof window === 'undefined') {
+  if (
+    typeof window ===
+    'undefined'
+  ) {
     return null;
   }
 
@@ -12,11 +16,15 @@ function getAudioContext() {
     window.AudioContext ||
     window.webkitAudioContext;
 
-  if (!AudioContextClass) {
+  if (
+    !AudioContextClass
+  ) {
     return null;
   }
 
-  if (!audioContext) {
+  if (
+    !audioContext
+  ) {
     audioContext =
       new AudioContextClass();
   }
@@ -24,8 +32,12 @@ function getAudioContext() {
   return audioContext;
 }
 
+
 export function getUiSoundEnabled() {
-  if (typeof window === 'undefined') {
+  if (
+    typeof window ===
+    'undefined'
+  ) {
     return true;
   }
 
@@ -40,32 +52,41 @@ export function getUiSoundEnabled() {
   }
 }
 
+
 export function setUiSoundEnabled(
   enabled
 ) {
-  if (typeof window === 'undefined') {
+  if (
+    typeof window ===
+    'undefined'
+  ) {
     return;
   }
 
   try {
     window.localStorage.setItem(
       SOUND_STORAGE_KEY,
-      enabled ? 'on' : 'off'
+      enabled
+        ? 'on'
+        : 'off'
     );
   } catch {
-    // Ignore storage errors.
+    // Storageが使えない場合は無視
   }
 }
+
 
 function createTone(
   context,
   {
     start = 0,
-    frequency = 520,
-    endFrequency = frequency,
-    duration = 0.05,
-    gain = 0.02,
+    frequency = 440,
+    endFrequency =
+      frequency,
+    duration = 0.12,
+    gain = 0.012,
     type = 'sine',
+    attack = 0.02,
   }
 ) {
   const now =
@@ -78,145 +99,271 @@ function createTone(
   const gainNode =
     context.createGain();
 
-  oscillator.type = type;
 
-  oscillator.frequency.setValueAtTime(
-    frequency,
-    now
-  );
+  oscillator.type =
+    type;
 
-  oscillator.frequency.exponentialRampToValueAtTime(
-    Math.max(
-      endFrequency,
-      1
-    ),
-    now + duration
-  );
 
-  gainNode.gain.setValueAtTime(
-    0.0001,
-    now
-  );
+  oscillator.frequency
+    .setValueAtTime(
+      frequency,
+      now
+    );
 
-  gainNode.gain.exponentialRampToValueAtTime(
-    gain,
-    now + 0.008
-  );
 
-  gainNode.gain.exponentialRampToValueAtTime(
-    0.0001,
-    now + duration
-  );
+  oscillator.frequency
+    .exponentialRampToValueAtTime(
+      Math.max(
+        endFrequency,
+        1
+      ),
+      now +
+        duration
+    );
+
+
+  gainNode.gain
+    .setValueAtTime(
+      0.0001,
+      now
+    );
+
+
+  gainNode.gain
+    .exponentialRampToValueAtTime(
+      gain,
+      now +
+        attack
+    );
+
+
+  gainNode.gain
+    .exponentialRampToValueAtTime(
+      0.0001,
+      now +
+        duration
+    );
+
 
   oscillator.connect(
     gainNode
   );
 
+
   gainNode.connect(
     context.destination
   );
 
-  oscillator.start(now);
+
+  oscillator.start(
+    now
+  );
+
 
   oscillator.stop(
     now +
       duration +
-      0.02
+      0.03
   );
 }
+
 
 function scheduleSound(
   context,
   sound
 ) {
   switch (sound) {
+
     case 'open':
-      createTone(
-        context,
-        {
-          frequency: 420,
-          endFrequency: 620,
-          duration: 0.07,
-          gain: 0.022,
-          type: 'sine',
-        }
-      );
 
       createTone(
         context,
         {
-          start: 0.045,
-          frequency: 620,
-          endFrequency: 820,
-          duration: 0.08,
-          gain: 0.015,
-          type: 'triangle',
+          frequency:
+            390,
+
+          endFrequency:
+            520,
+
+          duration:
+            0.08,
+
+          gain:
+            0.016,
+
+          type:
+            'sine',
         }
       );
+
+
+      createTone(
+        context,
+        {
+          start:
+            0.045,
+
+          frequency:
+            520,
+
+          endFrequency:
+            620,
+
+          duration:
+            0.1,
+
+          gain:
+            0.011,
+
+          type:
+            'triangle',
+        }
+      );
+
       break;
+
 
     case 'back':
+
       createTone(
         context,
         {
-          frequency: 560,
-          endFrequency: 410,
-          duration: 0.075,
-          gain: 0.016,
-          type: 'sine',
+          frequency:
+            480,
+
+          endFrequency:
+            370,
+
+          duration:
+            0.09,
+
+          gain:
+            0.012,
+
+          type:
+            'sine',
         }
       );
+
       break;
+
 
     case 'success':
-      createTone(
-        context,
-        {
-          frequency: 523,
-          endFrequency: 523,
-          duration: 0.08,
-          gain: 0.018,
-        }
-      );
+
+      /*
+       * D major系の柔らかいチャイム。
+       * 高音を抑えて、
+       * 「ゲームの正解音」より
+       * 心地よい通知音に寄せる。
+       */
 
       createTone(
         context,
         {
-          start: 0.06,
-          frequency: 659,
-          endFrequency: 659,
-          duration: 0.09,
-          gain: 0.018,
+          frequency:
+            293.66,
+
+          endFrequency:
+            293.66,
+
+          duration:
+            0.22,
+
+          gain:
+            0.012,
+
+          type:
+            'sine',
+
+          attack:
+            0.028,
         }
       );
+
 
       createTone(
         context,
         {
-          start: 0.12,
-          frequency: 784,
-          endFrequency: 784,
-          duration: 0.11,
-          gain: 0.02,
+          start:
+            0.075,
+
+          frequency:
+            369.99,
+
+          endFrequency:
+            369.99,
+
+          duration:
+            0.24,
+
+          gain:
+            0.011,
+
+          type:
+            'sine',
+
+          attack:
+            0.03,
         }
       );
+
+
+      createTone(
+        context,
+        {
+          start:
+            0.15,
+
+          frequency:
+            440,
+
+          endFrequency:
+            440,
+
+          duration:
+            0.3,
+
+          gain:
+            0.011,
+
+          type:
+            'triangle',
+
+          attack:
+            0.035,
+        }
+      );
+
       break;
+
 
     case 'tap':
     default:
+
       createTone(
         context,
         {
-          frequency: 520,
-          endFrequency: 610,
-          duration: 0.045,
-          gain: 0.012,
-          type: 'sine',
+          frequency:
+            470,
+
+          endFrequency:
+            530,
+
+          duration:
+            0.05,
+
+          gain:
+            0.008,
+
+          type:
+            'sine',
         }
       );
+
       break;
   }
 }
+
 
 export function playUiSound(
   sound = 'tap'
@@ -227,12 +374,15 @@ export function playUiSound(
     return;
   }
 
+
   const context =
     getAudioContext();
+
 
   if (!context) {
     return;
   }
+
 
   if (
     context.state ===
@@ -247,10 +397,13 @@ export function playUiSound(
         );
       })
       .catch(() => {});
-  } else {
-    scheduleSound(
-      context,
-      sound
-    );
+
+    return;
   }
+
+
+  scheduleSound(
+    context,
+    sound
+  );
 }

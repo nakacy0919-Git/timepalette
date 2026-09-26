@@ -1,11 +1,12 @@
 import {
   ArrowRight,
   Globe2,
-  X,
+  Languages,
+  MapPin,
+  Sparkles,
 } from 'lucide-react';
 
 import {
-  useMemo,
   useState,
 } from 'react';
 
@@ -36,6 +37,13 @@ import {
 const worldCountries =
   getWorldLearningCountries();
 
+const liveCountries =
+  worldCountries.filter(
+    (country) =>
+      country.status ===
+      'live'
+  );
+
 const countryByAtlasName =
   new Map(
     worldCountries.map(
@@ -45,6 +53,73 @@ const countryByAtlasName =
       ]
     )
   );
+
+const COUNTRY_COLORS = [
+  {
+    primary: '#2563eb',
+    dark: '#1e3a8a',
+    soft: '#eff6ff',
+    map: '#3b82f6',
+  },
+  {
+    primary: '#059669',
+    dark: '#065f46',
+    soft: '#ecfdf5',
+    map: '#10b981',
+  },
+  {
+    primary: '#d97706',
+    dark: '#92400e',
+    soft: '#fffbeb',
+    map: '#f59e0b',
+  },
+  {
+    primary: '#7c3aed',
+    dark: '#5b21b6',
+    soft: '#f5f3ff',
+    map: '#8b5cf6',
+  },
+  {
+    primary: '#dc2626',
+    dark: '#991b1b',
+    soft: '#fef2f2',
+    map: '#ef4444',
+  },
+  {
+    primary: '#0891b2',
+    dark: '#155e75',
+    soft: '#ecfeff',
+    map: '#06b6d4',
+  },
+  {
+    primary: '#db2777',
+    dark: '#9d174d',
+    soft: '#fdf2f8',
+    map: '#ec4899',
+  },
+];
+
+function getCountryVisual(
+  iso
+) {
+  const value =
+    String(iso || '')
+      .split('')
+      .reduce(
+        (
+          total,
+          char
+        ) =>
+          total +
+          char.charCodeAt(0),
+        0
+      );
+
+  return COUNTRY_COLORS[
+    value %
+      COUNTRY_COLORS.length
+  ];
+}
 
 function getAtlasCountryName(
   geo
@@ -93,8 +168,7 @@ function calculateCountryStats(
           return (
             total +
             Number(
-              mission.points ||
-                0
+              mission.points || 0
             )
           );
         }
@@ -136,23 +210,12 @@ export default function ExploreWorld() {
     setActiveCountry,
   ] = useState(null);
 
-    const [
+  const [
     ,
     setProgressRevision,
   ] = useState(0);
 
-  const liveCountries =
-    useMemo(
-      () =>
-        worldCountries.filter(
-          (country) =>
-            country.status ===
-            'live'
-        ),
-      []
-    );
-
-    const totalCompleted =
+  const totalCompleted =
     liveCountries.reduce(
       (
         total,
@@ -165,7 +228,7 @@ export default function ExploreWorld() {
       0
     );
 
-    const totalWp =
+  const totalWp =
     liveCountries.reduce(
       (
         total,
@@ -213,76 +276,82 @@ export default function ExploreWorld() {
     };
 
   return (
-    <div className="min-h-[calc(100vh-68px)] bg-[#f4f2ed]">
+    <div className="min-h-[calc(100vh-68px)] bg-[#f5f3ee]">
 
-      {/* HEADER */}
-      <section className="border-b border-slate-200 bg-white">
+      {/* HERO */}
+      <section className="overflow-hidden border-b border-slate-200 bg-white">
 
-        <div className="mx-auto w-full max-w-[1500px] px-6 py-12 md:px-10 md:py-16">
+        <div className="mx-auto grid w-full max-w-[1500px] grid-cols-1 gap-10 px-6 py-12 md:px-10 md:py-16 lg:grid-cols-[1fr_auto] lg:items-end">
 
-          <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+          <div className="max-w-3xl">
 
-            <div className="max-w-3xl">
+            <div className="flex items-center gap-2 text-blue-600">
 
-              <p className="text-[11px] font-bold tracking-[0.24em] text-slate-400">
-                EXPLORE THE WORLD
-              </p>
+              <Sparkles
+                size={17}
+              />
 
-              <h1 className="mt-4 text-4xl font-semibold tracking-[-0.035em] text-slate-950 md:text-5xl">
-                次は、どこを探検する？
-              </h1>
-
-              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600">
-                40のMissionが完成した国から、
-                World Adventureに追加されていきます。
-                地図から国を選び、
-                世界を多面的に探検しましょう。
+              <p className="text-[11px] font-bold tracking-[0.24em]">
+                WORLD ADVENTURE
               </p>
 
             </div>
 
-            <div className="flex flex-wrap items-center gap-7 border-l border-slate-200 pl-7">
+            <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-slate-950 md:text-6xl">
+              世界を選んで、
+              <br />
+              冒険を始めよう。
+            </h1>
 
-              <div>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
+              国旗、ことば、時間、文化。
+              40のMissionを通して、
+              世界を「知る」から
+              「つながる」へ進めます。
+            </p>
 
-                <div className="text-2xl font-semibold text-slate-950">
-                  {
-                    liveCountries.length
-                  }
-                </div>
+          </div>
 
-                <div className="mt-1 text-[10px] font-bold tracking-[0.15em] text-slate-400">
-                  COUNTRIES
-                </div>
+          <div className="grid grid-cols-3 overflow-hidden border border-slate-200 bg-white shadow-sm">
 
+            <div className="min-w-[105px] border-r border-slate-200 p-5 text-center">
+
+              <div className="text-3xl font-semibold text-slate-950">
+                {
+                  liveCountries.length
+                }
               </div>
 
-              <div>
-
-                <div className="text-2xl font-semibold text-slate-950">
-                  {
-                    totalCompleted
-                  }
-                </div>
-
-                <div className="mt-1 text-[10px] font-bold tracking-[0.15em] text-slate-400">
-                  MISSIONS
-                </div>
-
+              <div className="mt-1 text-[9px] font-bold tracking-[0.16em] text-slate-400">
+                COUNTRIES
               </div>
 
-              <div>
+            </div>
 
-                <div className="text-2xl font-semibold text-slate-950">
-                  {
-                    totalWp
-                  }
-                </div>
+            <div className="min-w-[105px] border-r border-slate-200 p-5 text-center">
 
-                <div className="mt-1 text-[10px] font-bold tracking-[0.15em] text-slate-400">
-                  WORLD POINTS
-                </div>
+              <div className="text-3xl font-semibold text-slate-950">
+                {
+                  totalCompleted
+                }
+              </div>
 
+              <div className="mt-1 text-[9px] font-bold tracking-[0.16em] text-slate-400">
+                CLEARED
+              </div>
+
+            </div>
+
+            <div className="min-w-[105px] p-5 text-center">
+
+              <div className="text-3xl font-semibold text-slate-950">
+                {
+                  totalWp
+                }
+              </div>
+
+              <div className="mt-1 text-[9px] font-bold tracking-[0.16em] text-slate-400">
+                WP
               </div>
 
             </div>
@@ -293,60 +362,42 @@ export default function ExploreWorld() {
 
       </section>
 
-      {/* WORLD MAP */}
+      {/* MAP */}
       <section className="mx-auto w-full max-w-[1500px] px-4 py-8 md:px-8">
 
-        <div className="overflow-hidden border border-slate-200 bg-[#dceaf0] shadow-[0_12px_40px_rgba(15,23,42,0.06)]">
+        <div className="overflow-hidden border border-slate-200 bg-[#dceaf0] shadow-[0_14px_45px_rgba(15,23,42,0.07)]">
 
           <div className="flex flex-col justify-between gap-4 border-b border-slate-200 bg-white px-5 py-4 md:flex-row md:items-center">
 
             <div className="flex items-center gap-3">
 
               <Globe2
-                size={19}
-                strokeWidth={
-                  1.7
-                }
-                className="text-slate-600"
+                size={20}
+                strokeWidth={1.7}
+                className="text-blue-600"
               />
 
               <div>
 
                 <div className="text-sm font-semibold text-slate-900">
-                  World Map
+                  Explore the World
                 </div>
 
                 <div className="text-xs text-slate-500">
-                  青い国は40 Missions完成済み
+                  色のついた国をクリックして冒険を始めよう
                 </div>
 
               </div>
 
             </div>
 
-            <div className="flex items-center gap-5 text-[10px] font-bold tracking-[0.08em] text-slate-500">
-
-              <div className="flex items-center gap-2">
-
-                <span className="h-2.5 w-2.5 bg-blue-600" />
-
-                WORLD ADVENTURE
-
-              </div>
-
-              <div className="flex items-center gap-2">
-
-                <span className="h-2.5 w-2.5 bg-slate-300" />
-
-                COMING SOON
-
-              </div>
-
+            <div className="text-[10px] font-bold tracking-[0.14em] text-slate-400">
+              EXPLORE · LEARN · CONNECT
             </div>
 
           </div>
 
-          <div className="w-full bg-[#dbe9ee]">
+          <div className="w-full bg-[#dceaf0]">
 
             <ComposableMap
               projection="geoEqualEarth"
@@ -388,6 +439,13 @@ export default function ExploreWorld() {
                           ?.status ===
                         'live';
 
+                      const visual =
+                        live
+                          ? getCountryVisual(
+                              country.iso
+                            )
+                          : null;
+
                       return (
                         <Geography
                           key={
@@ -423,9 +481,7 @@ export default function ExploreWorld() {
                           onKeyDown={(
                             event
                           ) => {
-                            if (
-                              !live
-                            ) {
+                            if (!live) {
                               return;
                             }
 
@@ -446,7 +502,7 @@ export default function ExploreWorld() {
                             default: {
                               fill:
                                 live
-                                  ? '#2563eb'
+                                  ? visual.map
                                   : '#cbd5e1',
 
                               stroke:
@@ -462,7 +518,7 @@ export default function ExploreWorld() {
                             hover: {
                               fill:
                                 live
-                                  ? '#1d4ed8'
+                                  ? visual.dark
                                   : '#cbd5e1',
 
                               stroke:
@@ -470,7 +526,7 @@ export default function ExploreWorld() {
 
                               strokeWidth:
                                 live
-                                  ? 1.1
+                                  ? 1.2
                                   : 0.65,
 
                               outline:
@@ -485,7 +541,7 @@ export default function ExploreWorld() {
                             pressed: {
                               fill:
                                 live
-                                  ? '#1e40af'
+                                  ? visual.dark
                                   : '#cbd5e1',
 
                               stroke:
@@ -514,224 +570,345 @@ export default function ExploreWorld() {
 
       </section>
 
-      {/* LIVE COUNTRIES */}
+      {/* COUNTRIES */}
       <section className="mx-auto w-full max-w-[1500px] px-6 pb-20 md:px-10">
 
-        <div>
+        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
 
-          <p className="text-[10px] font-bold tracking-[0.2em] text-slate-400">
-            WORLD ADVENTURES
-          </p>
+          <div>
 
-          <h2 className="mt-3 text-2xl font-semibold text-slate-950">
-            探検できる国
-          </h2>
-
-        </div>
-
-        {liveCountries.length ===
-        0 ? (
-
-          <div className="mt-8 border border-slate-200 bg-white p-10 text-center">
-
-            <p className="font-semibold text-slate-700">
-              Missionデータを準備しています。
+            <p className="text-[10px] font-bold tracking-[0.2em] text-slate-400">
+              DESTINATIONS
             </p>
+
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
+              探検できる国
+            </h2>
 
           </div>
 
-        ) : (
+          <p className="max-w-lg text-sm leading-6 text-slate-500">
+            国旗や基本情報から気になる国を選んでください。
+            すべて40 Missionの正式版です。
+          </p>
 
-          <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        </div>
 
-            {liveCountries.map(
-              (country) => {
-                const stats =
-                  calculateCountryStats(
-                    country
-                  );
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
 
-                return (
-                  <button
-                    key={
-                      country.iso
-                    }
-                    type="button"
-                    onClick={() =>
-                      openCountry(
-                        country
-                      )
-                    }
-                    className="
-                      group
-                      min-h-[285px]
-                      border
-                      border-slate-900
-                      bg-slate-950
-                      p-7
-                      text-left
-                      text-white
-                      shadow-[0_16px_45px_rgba(15,23,42,0.14)]
-                      transition
-                      hover:-translate-y-1
-                      hover:bg-slate-900
-                    "
+          {liveCountries.map(
+            (country) => {
+              const stats =
+                calculateCountryStats(
+                  country
+                );
+
+              const visual =
+                getCountryVisual(
+                  country.iso
+                );
+
+              const languageLabel =
+                country
+                  .mainLanguagesJa
+                  ?.slice(0, 2)
+                  .join(' / ') ||
+                '—';
+
+              return (
+                <button
+                  key={
+                    country.iso
+                  }
+                  type="button"
+                  onClick={() =>
+                    openCountry(
+                      country
+                    )
+                  }
+                  className="
+                    group
+                    overflow-hidden
+                    border
+                    border-slate-200
+                    bg-white
+                    text-left
+                    shadow-[0_10px_30px_rgba(15,23,42,0.05)]
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1.5
+                    hover:shadow-[0_18px_50px_rgba(15,23,42,0.12)]
+                  "
+                  style={{
+                    borderTopColor:
+                      visual.primary,
+                    borderTopWidth:
+                      '4px',
+                  }}
+                >
+
+                  {/* FLAG HERO */}
+                  <div
+                    className="relative h-32 overflow-hidden"
+                    style={{
+                      background:
+                        `linear-gradient(135deg, ${visual.dark}, ${visual.primary})`,
+                    }}
                   >
 
-                    <div className="flex items-start justify-between">
-
-                      <div className="text-5xl">
-                        {
-                          country.flagEmoji
+                    {country.flagUrl && (
+                      <img
+                        src={
+                          country.flagUrl
                         }
+                        alt=""
+                        aria-hidden="true"
+                        className="absolute inset-0 h-full w-full scale-110 object-cover opacity-[0.14] blur-[1px]"
+                      />
+                    )}
+
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 to-transparent" />
+
+                    <div className="relative flex h-full items-center justify-between px-6">
+
+                      <div className="flex items-center gap-4">
+
+                        {country.flagUrl ? (
+                          <img
+                            src={
+                              country.flagUrl
+                            }
+                            alt={`${country.nameEn} flag`}
+                            className="h-[62px] w-[94px] object-cover shadow-xl ring-1 ring-white/40"
+                          />
+                        ) : (
+                          <div className="text-5xl">
+                            {
+                              country.flagEmoji
+                            }
+                          </div>
+                        )}
+
+                        <div className="text-white">
+
+                          <div className="text-[10px] font-bold tracking-[0.18em] text-white/60">
+                            {
+                              country.iso.toUpperCase()
+                            }
+                          </div>
+
+                          <div className="mt-1 text-lg font-semibold">
+                            {
+                              country.region
+                            }
+                          </div>
+
+                        </div>
+
                       </div>
 
-                      <span className="text-[9px] font-bold tracking-[0.16em] text-blue-300">
-                        LIVE
-                      </span>
+                      <div className="bg-white/15 px-3 py-1.5 text-[9px] font-bold tracking-[0.15em] text-white backdrop-blur">
+                        40 MISSIONS
+                      </div>
 
                     </div>
 
-                    <h3 className="mt-7 text-2xl font-semibold">
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="p-6">
+
+                    <h3 className="text-2xl font-semibold tracking-tight text-slate-950">
                       {
                         country.nameEn
                       }
                     </h3>
 
-                    <p className="mt-1 text-sm text-white/45">
+                    <p className="mt-1 text-sm font-medium text-slate-400">
                       {
                         country.nameJa
                       }
                     </p>
 
-                    <div className="mt-8 grid grid-cols-3 gap-4 border-t border-white/15 pt-6">
+                    <p className="mt-4 line-clamp-2 min-h-[48px] text-sm leading-6 text-slate-600">
+                      {
+                        country.subtitleJa ||
+                        `${country.nameJa}を40のMissionで多面的に探検します。`
+                      }
+                    </p>
 
-                      <div>
+                    <div className="mt-5 grid grid-cols-2 gap-3">
 
-                        <div className="font-semibold">
-                          {
-                            stats.completedCount
-                          }
-                          <span className="text-white/35">
-                            {' '}
-                            /{' '}
-                            {
-                              stats.totalMissions
-                            }
+                      <div
+                        className="p-3"
+                        style={{
+                          backgroundColor:
+                            visual.soft,
+                        }}
+                      >
+
+                        <div className="flex items-center gap-2 text-slate-400">
+
+                          <MapPin
+                            size={14}
+                          />
+
+                          <span className="text-[9px] font-bold tracking-[0.1em]">
+                            CAPITAL
                           </span>
+
                         </div>
 
-                        <div className="mt-1 text-[9px] font-bold tracking-wide text-white/35">
-                          MISSIONS
-                        </div>
-
-                      </div>
-
-                      <div>
-
-                        <div className="font-semibold">
+                        <p className="mt-1 truncate text-sm font-semibold text-slate-800">
                           {
-                            stats.worldPoints
+                            country.capitalJa
                           }
-                        </div>
-
-                        <div className="mt-1 text-[9px] font-bold tracking-wide text-white/35">
-                          WP
-                        </div>
+                        </p>
 
                       </div>
 
-                      <div>
+                      <div
+                        className="p-3"
+                        style={{
+                          backgroundColor:
+                            visual.soft,
+                        }}
+                      >
 
-                        <div className="font-semibold">
+                        <div className="flex items-center gap-2 text-slate-400">
+
+                          <Languages
+                            size={14}
+                          />
+
+                          <span className="text-[9px] font-bold tracking-[0.1em]">
+                            LANGUAGE
+                          </span>
+
+                        </div>
+
+                        <p className="mt-1 truncate text-sm font-semibold text-slate-800">
+                          {
+                            languageLabel
+                          }
+                        </p>
+
+                      </div>
+
+                    </div>
+
+                    {/* PROGRESS */}
+                    <div className="mt-6">
+
+                      <div className="flex items-end justify-between">
+
+                        <div>
+
+                          <p className="text-[9px] font-bold tracking-[0.13em] text-slate-400">
+                            YOUR JOURNEY
+                          </p>
+
+                          <p className="mt-1 font-semibold text-slate-800">
+                            {
+                              stats.completedCount
+                            }
+                            <span className="text-slate-300">
+                              {' '}
+                              /{' '}
+                              {
+                                stats.totalMissions
+                              }
+                            </span>
+                            {' '}
+                            Missions
+                          </p>
+
+                        </div>
+
+                        <div
+                          className="text-2xl font-semibold"
+                          style={{
+                            color:
+                              visual.primary,
+                          }}
+                        >
                           {
                             stats.completionRate
                           }%
                         </div>
 
-                        <div className="mt-1 text-[9px] font-bold tracking-wide text-white/35">
-                          COMPLETE
-                        </div>
+                      </div>
+
+                      <div className="mt-3 h-1.5 overflow-hidden bg-slate-100">
+
+                        <div
+                          className="h-full transition-all duration-500"
+                          style={{
+                            width:
+                              `${stats.completionRate}%`,
+
+                            backgroundColor:
+                              visual.primary,
+                          }}
+                        />
 
                       </div>
 
                     </div>
 
-                    <div className="mt-7 flex items-center justify-between">
+                    <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-5">
 
-                      <span className="text-xs font-semibold text-white/55">
-                        START ADVENTURE
+                      <div>
+
+                        <span className="text-xs font-semibold text-slate-900">
+                          Start Adventure
+                        </span>
+
+                        <span className="ml-2 text-[10px] font-bold text-slate-400">
+                          {
+                            stats.worldPoints
+                          } WP
+                        </span>
+
+                      </div>
+
+                      <span
+                        className="flex h-9 w-9 items-center justify-center text-white transition-transform group-hover:translate-x-1"
+                        style={{
+                          backgroundColor:
+                            visual.primary,
+                        }}
+                      >
+                        <ArrowRight
+                          size={17}
+                        />
                       </span>
-
-                      <ArrowRight
-                        size={18}
-                        className="transition-transform group-hover:translate-x-1"
-                      />
 
                     </div>
 
-                  </button>
-                );
-              }
-            )}
+                  </div>
 
-          </div>
-
-        )}
-
-      </section>
-
-      {/* COUNTRY DETAIL */}
-      {activeCountry && (
-
-        <div className="fixed inset-0 z-[2000] bg-black/30 backdrop-blur-sm">
-
-          <div className="absolute inset-0 overflow-y-auto">
-
-            <button
-              type="button"
-              onClick={
-                closeCountry
-              }
-              className="
-                fixed
-                right-5
-                top-5
-                z-[2100]
-                flex
-                h-11
-                w-11
-                items-center
-                justify-center
-                bg-slate-950
-                text-white
-                shadow-xl
-                transition
-                hover:bg-blue-600
-              "
-              aria-label="閉じる"
-            >
-              <X
-                size={20}
-              />
-            </button>
-
-            <CountryDetailOverlay
-              iso={
-                activeCountry.iso
-              }
-              fileLetter={
-                activeCountry.fileLetter
-              }
-              onClose={
-                closeCountry
-              }
-            />
-
-          </div>
+                </button>
+              );
+            }
+          )}
 
         </div>
 
+      </section>
+
+      {activeCountry && (
+        <CountryDetailOverlay
+          iso={
+            activeCountry.iso
+          }
+          fileLetter={
+            activeCountry.fileLetter
+          }
+          onClose={
+            closeCountry
+          }
+        />
       )}
 
     </div>
