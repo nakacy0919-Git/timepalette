@@ -145,14 +145,16 @@ export default function WorldAdventureHome({
       className="
         relative
         h-[calc(100dvh-68px)]
-        min-h-[620px]
+        min-h-[650px]
         overflow-hidden
         bg-slate-950
         text-white
       "
     >
 
-      {/* BACKGROUND */}
+      {/* =====================================================
+          BACKGROUND
+      ====================================================== */}
 
       <img
         src={
@@ -165,67 +167,95 @@ export default function WorldAdventureHome({
           inset-0
           h-full
           w-full
+          scale-[1.02]
           object-cover
           object-center
         "
       />
 
 
+      {/* DARK LEFT GRADIENT */}
+
       <div
         className="
           absolute
           inset-0
           bg-gradient-to-r
-          from-slate-950/95
-          via-slate-950/72
-          to-slate-950/35
+          from-[#020817]/95
+          via-[#071426]/72
+          to-[#071426]/20
         "
       />
 
+
+      {/* BOTTOM GRADIENT */}
 
       <div
         className="
           absolute
           inset-0
           bg-gradient-to-t
-          from-slate-950/95
+          from-[#020817]/95
           via-transparent
-          to-slate-950/30
+          to-[#020817]/30
         "
       />
 
+
+      {/* BLUE LIGHT */}
 
       <div
         className="
           pointer-events-none
           absolute
-          -left-32
-          top-[25%]
-          h-[420px]
-          w-[420px]
+          -left-40
+          top-[32%]
+          h-[560px]
+          w-[560px]
           rounded-full
-          bg-blue-500/15
-          blur-[110px]
+          bg-blue-500/18
+          blur-[140px]
         "
       />
 
+
+      {/* CYAN LIGHT */}
 
       <div
         className="
           pointer-events-none
           absolute
-          right-[4%]
-          top-[18%]
-          h-[420px]
-          w-[420px]
+          left-[28%]
+          top-[45%]
+          h-[380px]
+          w-[380px]
+          rounded-full
+          bg-cyan-400/10
+          blur-[130px]
+        "
+      />
+
+
+      {/* VIOLET LIGHT */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          right-[5%]
+          top-[20%]
+          h-[500px]
+          w-[500px]
           rounded-full
           bg-violet-500/10
-          blur-[120px]
+          blur-[150px]
         "
       />
 
 
-      {/* CONTENT */}
+      {/* =====================================================
+          CONTENT
+      ====================================================== */}
 
       <div
         className="
@@ -235,41 +265,51 @@ export default function WorldAdventureHome({
           flex
           h-full
           w-full
-          max-w-[1500px]
+          max-w-[1600px]
           flex-col
           px-5
-          pb-6
-          pt-5
-          md:px-8
-          lg:px-10
+          pb-7
+          pt-4
+          sm:px-7
+          md:px-10
+          lg:px-14
+          xl:px-16
         "
       >
 
-        {/* TOP */}
+        {/* ===================================================
+            TOP
+        ==================================================== */}
 
         <div
           className="
             flex
             shrink-0
-            items-center
+            items-start
             justify-between
           "
         >
 
-          <img
-  src={
-    timePaletteLogo
-  }
-  alt="TimePalette"
-  className="
-    w-[260px]
-    drop-shadow-[0_14px_32px_rgba(0,0,0,0.45)]
-    sm:w-[310px]
-    md:w-[360px]
-    lg:w-[420px]
-  "
-/>
+          {/* BIG LOGO */}
 
+          <img
+            src={
+              timePaletteLogo
+            }
+            alt="TimePalette World Adventure"
+            className="
+              w-[280px]
+              select-none
+              drop-shadow-[0_18px_38px_rgba(0,0,0,0.50)]
+              sm:w-[340px]
+              md:w-[400px]
+              lg:w-[455px]
+              xl:w-[500px]
+            "
+          />
+
+
+          {/* SOUND */}
 
           <button
             type="button"
@@ -277,19 +317,24 @@ export default function WorldAdventureHome({
               toggleSound
             }
             className="
+              mt-2
               flex
               h-11
               w-11
+              shrink-0
               items-center
               justify-center
               rounded-full
               border
-              border-white/15
+              border-white/20
               bg-black/25
-              text-white/75
+              text-white/80
+              shadow-lg
               backdrop-blur-xl
-              transition
-              hover:bg-white/10
+              transition-all
+              duration-300
+              hover:scale-105
+              hover:bg-white/15
               hover:text-white
             "
             aria-label={
@@ -314,7 +359,9 @@ export default function WorldAdventureHome({
         </div>
 
 
-        {/* MAIN */}
+        {/* ===================================================
+            MAIN
+        ==================================================== */}
 
         <div
           className="
@@ -323,46 +370,61 @@ export default function WorldAdventureHome({
             flex-1
             grid-cols-1
             items-center
-            gap-10
-            lg:grid-cols-[1.12fr_0.88fr]
-            lg:gap-16
+            gap-8
+            lg:grid-cols-[1.15fr_0.85fr]
+            lg:gap-12
+            xl:gap-20
           "
         >
 
-          {/* LEFT */}
+          {/* =================================================
+              LEFT
+          ================================================== */}
 
           <div
             className="
-              max-w-3xl
+              flex
+              h-full
+              max-w-[820px]
+              flex-col
+              justify-center
+              pb-4
+              lg:pb-8
             "
           >
+
+            {/* SMALL LABEL */}
 
             <div
               className="
                 inline-flex
+                w-fit
                 items-center
-                gap-2
+                gap-2.5
                 rounded-full
                 border
-                border-sky-300/20
-                bg-sky-300/10
+                border-cyan-300/25
+                bg-cyan-300/10
                 px-4
                 py-2
+                shadow-[0_8px_30px_rgba(34,211,238,0.10)]
                 backdrop-blur-xl
               "
             >
 
               <Globe2
                 size={15}
-                className="text-sky-300"
+                className="
+                  text-cyan-300
+                "
               />
 
               <span
                 className="
                   text-[10px]
                   font-black
-                  tracking-[0.20em]
-                  text-sky-200
+                  tracking-[0.22em]
+                  text-cyan-100
                 "
               >
                 EXPLORE · LEARN · CONNECT
@@ -371,19 +433,22 @@ export default function WorldAdventureHome({
             </div>
 
 
+            {/* HERO TITLE */}
+
             <h1
               className="
-                mt-6
-                max-w-3xl
-                text-[38px]
+                mt-5
+                max-w-[760px]
+                text-[40px]
                 font-black
-                leading-[1.08]
-                tracking-[-0.045em]
+                leading-[1.04]
+                tracking-[-0.05em]
                 text-white
-                sm:text-[46px]
-                md:text-[56px]
-                lg:text-[64px]
-                xl:text-[70px]
+                drop-shadow-[0_8px_28px_rgba(0,0,0,0.45)]
+                sm:text-[48px]
+                md:text-[58px]
+                lg:text-[66px]
+                xl:text-[76px]
               "
             >
               世界を、
@@ -401,18 +466,21 @@ export default function WorldAdventureHome({
               >
                 冒険しながら学ぶ。
               </span>
+
             </h1>
 
+
+            {/* DESCRIPTION */}
 
             <p
               className="
                 mt-5
-                max-w-2xl
+                max-w-[620px]
                 text-sm
                 font-semibold
                 leading-7
-                text-white/62
-                md:text-base
+                text-white/68
+                sm:text-base
                 md:leading-8
               "
             >
@@ -422,26 +490,46 @@ export default function WorldAdventureHome({
             </p>
 
 
-            {/* MAIN CTA */}
+            {/* =================================================
+                BLUE MAIN CTA
+            ================================================== */}
 
             <div
               className="
                 relative
-                mt-9
-                inline-block
+                mt-8
+                w-fit
+                sm:mt-9
               "
             >
+
+              {/* OUTER GLOW */}
 
               <div
                 className="
                   pointer-events-none
                   absolute
-                  -inset-2
-                  rounded-[26px]
+                  -inset-3
+                  rounded-[30px]
                   bg-gradient-to-r
-                  from-blue-500/35
-                  via-cyan-400/35
-                  to-violet-500/30
+                  from-blue-600/60
+                  via-cyan-400/45
+                  to-blue-500/45
+                  opacity-80
+                  blur-2xl
+                "
+              />
+
+
+              {/* SECOND GLOW */}
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-2
+                  rounded-[24px]
+                  bg-cyan-300/25
                   blur-xl
                 "
               />
@@ -455,80 +543,167 @@ export default function WorldAdventureHome({
                 className="
                   group
                   relative
-                  inline-flex
+                  flex
+                  min-w-[310px]
                   items-center
-                  gap-5
                   overflow-hidden
-                  rounded-[22px]
-                  bg-white
-                  px-7
-                  py-5
-                  text-slate-950
-                  shadow-[0_20px_60px_rgba(14,165,233,0.28)]
+                  rounded-[24px]
+                  border
+                  border-cyan-200/55
+                  bg-gradient-to-r
+                  from-[#0759d9]
+                  via-[#0878ec]
+                  to-[#19b8f0]
+                  px-4
+                  py-4
+                  text-left
+                  shadow-[0_20px_55px_rgba(0,122,255,0.42),inset_0_1px_0_rgba(255,255,255,0.30)]
                   transition-all
                   duration-300
-                  hover:-translate-y-1
-                  hover:scale-[1.015]
-                  hover:shadow-[0_28px_75px_rgba(14,165,233,0.42)]
+                  hover:-translate-y-1.5
+                  hover:scale-[1.025]
+                  hover:border-white/75
+                  hover:shadow-[0_28px_75px_rgba(0,153,255,0.55),inset_0_1px_0_rgba(255,255,255,0.40)]
+                  sm:min-w-[370px]
+                  sm:px-5
+                  sm:py-5
+                  md:min-w-[410px]
                 "
               >
 
+                {/* SHINE */}
+
                 <div
                   className="
+                    pointer-events-none
+                    absolute
+                    -left-[30%]
+                    -top-[130%]
+                    h-[320%]
+                    w-[35%]
+                    rotate-[22deg]
+                    bg-gradient-to-r
+                    from-transparent
+                    via-white/20
+                    to-transparent
+                    transition-all
+                    duration-700
+                    group-hover:left-[115%]
+                  "
+                />
+
+
+                {/* ICON */}
+
+                <div
+                  className="
+                    relative
+                    z-10
                     flex
-                    h-12
-                    w-12
+                    h-14
+                    w-14
+                    shrink-0
                     items-center
                     justify-center
-                    rounded-2xl
-                    bg-slate-950
+                    rounded-[18px]
+                    border
+                    border-white/35
+                    bg-white/16
                     text-white
-                    transition
+                    shadow-[inset_0_1px_0_rgba(255,255,255,0.24)]
+                    backdrop-blur
+                    transition-all
                     duration-300
-                    group-hover:bg-blue-600
+                    group-hover:scale-110
+                    group-hover:bg-white/24
+                    sm:h-16
+                    sm:w-16
                   "
                 >
 
                   <Compass
-                    size={23}
+                    size={28}
+                    strokeWidth={2}
                   />
 
                 </div>
 
 
-                <span
-                  className="
-                    text-xl
-                    font-black
-                    tracking-tight
-                    sm:text-2xl
-                  "
-                >
-                  冒険を始める
-                </span>
-
+                {/* TEXT */}
 
                 <div
                   className="
-                    ml-1
+                    relative
+                    z-10
+                    ml-4
+                    min-w-0
+                    flex-1
+                  "
+                >
+
+                  <p
+                    className="
+                      text-[9px]
+                      font-black
+                      tracking-[0.25em]
+                      text-cyan-100/85
+                      sm:text-[10px]
+                    "
+                  >
+                    START YOUR JOURNEY
+                  </p>
+
+
+                  <p
+                    className="
+                      mt-0.5
+                      whitespace-nowrap
+                      text-xl
+                      font-black
+                      tracking-[-0.03em]
+                      text-white
+                      drop-shadow-sm
+                      sm:text-2xl
+                      md:text-[27px]
+                    "
+                  >
+                    冒険を始める
+                  </p>
+
+                </div>
+
+
+                {/* ARROW */}
+
+                <div
+                  className="
+                    relative
+                    z-10
+                    ml-4
                     flex
-                    h-10
-                    w-10
+                    h-11
+                    w-11
+                    shrink-0
                     items-center
                     justify-center
                     rounded-full
-                    bg-blue-50
+                    border
+                    border-white/45
+                    bg-white
                     text-blue-600
-                    transition
+                    shadow-[0_8px_22px_rgba(0,70,180,0.25)]
+                    transition-all
                     duration-300
-                    group-hover:translate-x-1
-                    group-hover:bg-blue-600
-                    group-hover:text-white
+                    group-hover:translate-x-1.5
+                    group-hover:scale-110
+                    sm:h-12
+                    sm:w-12
                   "
                 >
 
                   <ArrowRight
-                    size={20}
+                    size={21}
+                    strokeWidth={2.5}
                   />
 
                 </div>
@@ -540,7 +715,9 @@ export default function WorldAdventureHome({
           </div>
 
 
-          {/* RIGHT / JOURNEY */}
+          {/* =================================================
+              RIGHT / JOURNEY
+          ================================================== */}
 
           <div
             id="journey"
@@ -554,15 +731,18 @@ export default function WorldAdventureHome({
             <div
               className="
                 w-[350px]
-                rounded-[28px]
+                rounded-[30px]
                 border
                 border-white/15
-                bg-slate-950/50
+                bg-[#06101f]/52
                 p-6
-                shadow-[0_30px_80px_rgba(0,0,0,0.28)]
+                shadow-[0_30px_85px_rgba(0,0,0,0.34)]
                 backdrop-blur-2xl
+                xl:w-[380px]
               "
             >
+
+              {/* HEADER */}
 
               <div
                 className="
@@ -578,8 +758,8 @@ export default function WorldAdventureHome({
                     className="
                       text-[9px]
                       font-black
-                      tracking-[0.18em]
-                      text-sky-300
+                      tracking-[0.20em]
+                      text-cyan-300
                     "
                   >
                     YOUR JOURNEY
@@ -591,6 +771,8 @@ export default function WorldAdventureHome({
                       mt-2
                       text-xl
                       font-black
+                      tracking-tight
+                      text-white
                     "
                   >
                     World Explorer
@@ -607,8 +789,11 @@ export default function WorldAdventureHome({
                     items-center
                     justify-center
                     rounded-2xl
+                    border
+                    border-white/10
                     bg-white/10
                     text-3xl
+                    shadow-inner
                   "
                 >
                   🌍
@@ -616,6 +801,8 @@ export default function WorldAdventureHome({
 
               </div>
 
+
+              {/* STATS */}
 
               <div
                 className="
@@ -631,7 +818,7 @@ export default function WorldAdventureHome({
                     rounded-2xl
                     border
                     border-white/10
-                    bg-white/5
+                    bg-white/[0.06]
                     p-4
                   "
                 >
@@ -640,6 +827,7 @@ export default function WorldAdventureHome({
                     className="
                       text-2xl
                       font-black
+                      text-white
                     "
                   >
                     {
@@ -653,8 +841,8 @@ export default function WorldAdventureHome({
                       mt-1
                       text-[9px]
                       font-black
-                      tracking-[0.12em]
-                      text-white/35
+                      tracking-[0.14em]
+                      text-white/40
                     "
                   >
                     COUNTRIES
@@ -667,8 +855,8 @@ export default function WorldAdventureHome({
                   className="
                     rounded-2xl
                     border
-                    border-white/10
-                    bg-white/5
+                    border-cyan-300/15
+                    bg-cyan-300/[0.07]
                     p-4
                   "
                 >
@@ -691,8 +879,8 @@ export default function WorldAdventureHome({
                       mt-1
                       text-[9px]
                       font-black
-                      tracking-[0.12em]
-                      text-white/35
+                      tracking-[0.14em]
+                      text-white/40
                     "
                   >
                     MISSIONS
@@ -702,6 +890,8 @@ export default function WorldAdventureHome({
 
               </div>
 
+
+              {/* PROGRESS */}
 
               <div
                 className="
@@ -738,6 +928,7 @@ export default function WorldAdventureHome({
                     className="
                       text-xl
                       font-black
+                      text-white
                     "
                   >
                     {
@@ -763,9 +954,10 @@ export default function WorldAdventureHome({
                       h-full
                       rounded-full
                       bg-gradient-to-r
-                      from-blue-400
+                      from-blue-500
                       via-cyan-300
                       to-emerald-300
+                      shadow-[0_0_18px_rgba(34,211,238,0.65)]
                       transition-all
                       duration-700
                     "

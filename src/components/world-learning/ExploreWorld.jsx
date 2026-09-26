@@ -5,6 +5,9 @@ import {
   Globe2,
   ListOrdered,
   Map as MapIcon,
+  Minus,
+  Plus,
+  RotateCcw,
   Search,
 } from 'lucide-react';
 
@@ -14,6 +17,18 @@ import exploreWorldBackground
 import timePaletteLogo
   from '../../assets/branding/timepalette_global_adventure_logo.png';
 
+import buttonMap
+  from '../../assets/world-adventure/buttons/button1.png';
+
+import buttonContinent
+  from '../../assets/world-adventure/buttons/button2.png';
+
+import buttonAlphabet
+  from '../../assets/world-adventure/buttons/button3.png';
+
+import buttonSearch
+  from '../../assets/world-adventure/buttons/button4.png';
+
 import {
   useState,
 } from 'react';
@@ -22,6 +37,7 @@ import {
   ComposableMap,
   Geographies,
   Geography,
+  ZoomableGroup,
 } from 'react-simple-maps';
 
 import worldAtlas
@@ -69,6 +85,18 @@ const countryByAtlasName =
     )
   );
 
+const DEFAULT_MAP_CENTER = [
+  5,
+  6,
+];
+
+const DEFAULT_MAP_ZOOM = 1.18;
+
+const MAP_MIN_ZOOM = 1;
+
+const MAP_MAX_ZOOM = 4;
+
+const MAP_ZOOM_STEP = 0.45;
 
 /* =========================================================
    FIND MODES
@@ -78,6 +106,7 @@ const FIND_MODES = [
   {
     id: 'map',
     icon: MapIcon,
+    image: buttonMap,
     label: '地図から',
     labelEn: 'MAP',
   },
@@ -85,6 +114,7 @@ const FIND_MODES = [
   {
     id: 'continent',
     icon: Compass,
+    image: buttonContinent,
     label: '大陸から',
     labelEn: 'CONTINENT',
   },
@@ -92,6 +122,7 @@ const FIND_MODES = [
   {
     id: 'alphabet',
     icon: ListOrdered,
+    image: buttonAlphabet,
     label: 'A-Zから',
     labelEn: 'A–Z',
   },
@@ -99,6 +130,7 @@ const FIND_MODES = [
   {
     id: 'search',
     icon: Search,
+    image: buttonSearch,
     label: '検索から',
     labelEn: 'SEARCH',
   },
@@ -534,26 +566,29 @@ function CountryCard({
         )
       }
       className="
-        group
-        relative
-        flex
-        min-h-[108px]
-        w-full
-        items-center
-        gap-4
-        overflow-hidden
-        rounded-[22px]
-        border
-        border-slate-200
-        bg-white
-        p-4
-        text-left
-        shadow-sm
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-      "
+  group
+  relative
+  flex
+  min-h-[108px]
+  w-full
+  items-center
+  gap-4
+  overflow-hidden
+  rounded-[22px]
+  border
+  border-white/80
+  bg-white/[0.72]
+  p-4
+  text-left
+  shadow-[0_12px_35px_rgba(14,165,233,0.10)]
+  backdrop-blur-xl
+  transition-all
+  duration-300
+  hover:-translate-y-1
+  hover:border-cyan-300/80
+  hover:bg-white/90
+  hover:shadow-[0_20px_50px_rgba(14,165,233,0.20)]
+"
     >
 
       <div
@@ -932,12 +967,14 @@ function CountrySelectionLanding({
           flex
           h-full
           w-full
-          max-w-[1500px]
-          flex-col
-          px-5
-          py-5
-          md:px-8
-          lg:px-10
+          max-w-none
+           flex-col
+px-2
+py-4
+sm:px-3
+md:px-5
+md:py-5
+lg:px-6
         "
       >
 
@@ -1059,224 +1096,113 @@ function CountrySelectionLanding({
     flex-1
     items-center
     justify-center
-    px-1
-    pt-2
-    md:-translate-y-2
+    px-2
+    pb-2
+    pt-1
+    md:-translate-y-1
   "
 >
 
   <div
-    className="
-      grid
-      w-full
-      max-w-[1140px]
-      grid-cols-2
-      gap-4
-      md:gap-5
-      lg:grid-cols-4
-    "
-  >
+  className="
+    grid
+    w-full
+    max-w-[1280px]
+    grid-cols-2
+    items-center
+    justify-items-center
+    gap-x-3
+    gap-y-2
+
+    sm:gap-x-5
+
+    lg:grid-cols-4
+    lg:gap-x-2
+  "
+>
 
             {FIND_MODES.map(
-              (
-                mode,
-                index
-              ) => {
-                const Icon =
-                  mode.icon;
+  (mode) => (
+    <button
+      key={mode.id}
+      type="button"
+      onClick={() =>
+        onChooseMode(
+          mode.id
+        )
+      }
+      aria-label={mode.label}
+      className="
+        group
+        relative
+        flex
+        items-center
+        justify-center
+        bg-transparent
+        p-0
+        outline-none
+        transition-all
+        duration-300
+
+        hover:-translate-y-2
+        hover:scale-[1.045]
+
+        focus-visible:scale-[1.04]
+      "
+    >
+
+      {/* HOVER GLOW */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-1/2
+          top-1/2
+          h-[78%]
+          w-[82%]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-[35%]
+          bg-cyan-400/0
+          blur-[32px]
+          transition-all
+          duration-300
+
+          group-hover:bg-cyan-400/30
+        "
+      />
 
 
-                return (
-                  <button
-                    key={
-                      mode.id
-                    }
-                    type="button"
-                    onClick={() =>
-                      onChooseMode(
-                        mode.id
-                      )
-                    }
-                    className="
-                      group
-                      relative
-                      min-h-[170px]
-                      overflow-hidden
-                      rounded-[26px]
-                      border
-                      border-white/25
-                      bg-slate-950/38
-                      px-5
-                      py-5
-                      text-left
-                      shadow-[0_20px_55px_rgba(0,0,0,0.28)]
-                      backdrop-blur-xl
-                      transition-all
-                      duration-300
-                      hover:-translate-y-2
-                      hover:border-cyan-300/60
-                      hover:bg-slate-900/55
-                      hover:shadow-[0_24px_65px_rgba(14,165,233,0.28)]
-                      md:min-h-[195px]
-                      md:px-6
-                      md:py-6
-                    "
-                  >
+      {/* PNG BUTTON */}
 
-                    {/* CARD GLOW */}
+      <img
+        src={mode.image}
+        alt=""
+        aria-hidden="true"
+        draggable="false"
+        className="
+          relative
+          z-10
+          h-auto
+          w-full
+          max-w-[300px]
+          select-none
+          object-contain
 
-                    <div
-                      className="
-                        pointer-events-none
-                        absolute
-                        -right-14
-                        -top-14
-                        h-40
-                        w-40
-                        rounded-full
-                        bg-blue-400/15
-                        blur-2xl
-                        transition
-                        duration-500
-                        group-hover:bg-cyan-300/30
-                      "
-                    />
+          drop-shadow-[0_18px_28px_rgba(0,0,0,0.35)]
 
+          transition-all
+          duration-300
 
-                    {/* NUMBER */}
+          group-hover:
+          drop-shadow-[0_24px_35px_rgba(56,189,248,0.45)]
+        "
+      />
 
-                    <span
-                      className="
-                        absolute
-                        right-5
-                        top-4
-                        text-[10px]
-                        font-black
-                        tracking-[0.15em]
-                        text-white/30
-                      "
-                    >
-                      0{
-                        index + 1
-                      }
-                    </span>
-
-
-                    {/* ICON */}
-
-                    <div
-                      className="
-                        relative
-                        flex
-                        h-12
-                        w-12
-                        items-center
-                        justify-center
-                        rounded-2xl
-                        border
-                        border-white/20
-                        bg-white/10
-                        text-cyan-200
-                        shadow-[inset_0_1px_0_rgba(255,255,255,0.20)]
-                        transition-all
-                        duration-300
-                        group-hover:scale-110
-                        group-hover:border-cyan-300/50
-                        group-hover:bg-cyan-300/15
-                        group-hover:text-white
-                      "
-                    >
-
-                      <Icon
-                        size={23}
-                        strokeWidth={1.8}
-                      />
-
-                    </div>
-
-
-                    {/* LABEL */}
-
-                    <div
-                      className="
-                        relative
-                        mt-5
-                        flex
-                        items-end
-                        justify-between
-                        gap-4
-                      "
-                    >
-
-                      <div>
-
-                        <p
-                          className="
-                            text-[9px]
-                            font-black
-                            tracking-[0.22em]
-                            text-cyan-300/75
-                          "
-                        >
-                          {
-                            mode.labelEn
-                          }
-                        </p>
-
-
-                        <p
-                          className="
-                            mt-1
-                            text-lg
-                            font-black
-                            tracking-tight
-                            text-white
-                            md:text-xl
-                          "
-                        >
-                          {
-                            mode.label
-                          }
-                        </p>
-
-                      </div>
-
-
-                      <div
-                        className="
-                          flex
-                          h-9
-                          w-9
-                          shrink-0
-                          items-center
-                          justify-center
-                          rounded-full
-                          border
-                          border-white/20
-                          bg-white/10
-                          text-white
-                          transition
-                          duration-300
-                          group-hover:translate-x-1
-                          group-hover:border-cyan-300
-                          group-hover:bg-cyan-300
-                          group-hover:text-slate-950
-                        "
-                      >
-
-                        <ArrowRight
-                          size={17}
-                        />
-
-                      </div>
-
-                    </div>
-
-                  </button>
-                );
-              }
-            )}
-
+    </button>
+  )
+)}
           </div>
 
         </div>
@@ -1380,6 +1306,77 @@ export default function ExploreWorld() {
     0
   );
 
+  const [
+  mapPosition,
+  setMapPosition,
+] = useState({
+  coordinates:
+    DEFAULT_MAP_CENTER,
+
+  zoom:
+    DEFAULT_MAP_ZOOM,
+});
+
+const zoomMapIn =
+  () => {
+    playUiSound(
+      'tap'
+    );
+
+    setMapPosition(
+      (
+        current
+      ) => ({
+        ...current,
+
+        zoom:
+          Math.min(
+            MAP_MAX_ZOOM,
+            current.zoom +
+              MAP_ZOOM_STEP
+          ),
+      })
+    );
+  };
+
+
+const zoomMapOut =
+  () => {
+    playUiSound(
+      'tap'
+    );
+
+    setMapPosition(
+      (
+        current
+      ) => ({
+        ...current,
+
+        zoom:
+          Math.max(
+            MAP_MIN_ZOOM,
+            current.zoom -
+              MAP_ZOOM_STEP
+          ),
+      })
+    );
+  };
+
+
+const resetMapView =
+  () => {
+    playUiSound(
+      'tap'
+    );
+
+    setMapPosition({
+      coordinates:
+        DEFAULT_MAP_CENTER,
+
+      zoom:
+        DEFAULT_MAP_ZOOM,
+    });
+  };
 
   /* =======================================================
      COUNTRY ACTIONS
@@ -1627,16 +1624,14 @@ if (
       h-[calc(100dvh-68px)]
       min-h-[620px]
       overflow-hidden
-      bg-[#eef3f8]
+      bg-[#dff4ff]
     "
   >
 
     {/* WORLD BACKGROUND */}
 
     <img
-      src={
-        exploreWorldBackground
-      }
+      src={exploreWorldBackground}
       alt=""
       aria-hidden="true"
       className="
@@ -1645,57 +1640,70 @@ if (
         inset-0
         h-full
         w-full
-        scale-[1.04]
+        scale-[1.05]
         object-cover
         object-center
-        opacity-[0.18]
+        opacity-[0.20]
       "
     />
 
 
-    {/* LIGHT VEIL */}
+    {/* BLUE / CYAN VEIL */}
 
     <div
       className="
         pointer-events-none
         absolute
         inset-0
-        bg-gradient-to-b
-        from-white/75
-        via-white/70
-        to-white/88
+        bg-gradient-to-br
+        from-cyan-50/80
+        via-sky-100/72
+        to-blue-100/82
       "
     />
 
 
-    {/* BLUE ATMOSPHERE */}
+    {/* LIGHT GLOWS */}
 
     <div
       className="
         pointer-events-none
         absolute
         -left-40
-        top-[18%]
-        h-[480px]
-        w-[480px]
+        top-[5%]
+        h-[560px]
+        w-[560px]
         rounded-full
-        bg-blue-400/10
-        blur-[120px]
+        bg-cyan-300/30
+        blur-[130px]
       "
     />
 
+    <div
+      className="
+        pointer-events-none
+        absolute
+        left-[38%]
+        top-[20%]
+        h-[480px]
+        w-[480px]
+        rounded-full
+        bg-sky-300/22
+        blur-[150px]
+      "
+    />
 
     <div
       className="
         pointer-events-none
         absolute
         -right-40
-        bottom-[5%]
-        h-[480px]
-        w-[480px]
+        bottom-[-10%]
+        h-[620px]
+        w-[620px]
         rounded-full
-        bg-violet-400/10
-        blur-[130px]
+        bg-blue-300/28
+        blur-[150px]
       "
     />
 
@@ -1710,13 +1718,14 @@ if (
         flex
         h-full
         w-full
-        max-w-[1500px]
-        flex-col
-        px-5
-        py-5
-        md:px-8
-        md:py-6
-        lg:px-10
+        max-w-none
+         flex-col
+px-2
+py-4
+sm:px-3
+md:px-5
+md:py-5
+lg:px-6
       "
     >
 
@@ -1798,292 +1807,140 @@ if (
         </div>
 
 
-        {/* =================================================
-            MODE SELECTION
-        ================================================== */}
-
-        {!activeMode ? (
-
-          <div
-            className="
-              flex
-              min-h-0
-              flex-1
-              items-center
-              justify-center
-            "
-          >
-
-            <div
-              className="
-                grid
-                w-full
-                max-w-[1050px]
-                grid-cols-2
-                gap-4
-                lg:grid-cols-4
-              "
-            >
-
-              {FIND_MODES.map(
-                (
-                  mode
-                ) => {
-                  const Icon =
-                    mode.icon;
-
-
-                  return (
-                    <button
-                      key={
-                        mode.id
-                      }
-                      type="button"
-                      onClick={() =>
-                        chooseMode(
-                          mode.id
-                        )
-                      }
-                      className="
-                        group
-                        relative
-                        min-h-[220px]
-                        overflow-hidden
-                        rounded-[28px]
-                        border
-                        border-slate-200
-                        bg-white
-                        p-6
-                        text-left
-                        shadow-[0_10px_35px_rgba(15,23,42,0.06)]
-                        transition-all
-                        duration-300
-                        hover:-translate-y-2
-                        hover:border-blue-200
-                        hover:shadow-[0_22px_55px_rgba(37,99,235,0.14)]
-                      "
-                    >
-
-                      <div
-                        className="
-                          pointer-events-none
-                          absolute
-                          -right-8
-                          -top-8
-                          h-32
-                          w-32
-                          rounded-full
-                          bg-blue-50
-                          transition
-                          duration-300
-                          group-hover:scale-125
-                          group-hover:bg-blue-100
-                        "
-                      />
-
-
-                      <div
-                        className="
-                          relative
-                          flex
-                          h-14
-                          w-14
-                          items-center
-                          justify-center
-                          rounded-2xl
-                          bg-slate-950
-                          text-white
-                          shadow-lg
-                          transition
-                          duration-300
-                          group-hover:bg-blue-600
-                        "
-                      >
-
-                        <Icon
-                          size={25}
-                        />
-
-                      </div>
-
-
-                      <p
-                        className="
-                          relative
-                          mt-8
-                          text-[10px]
-                          font-black
-                          tracking-[0.16em]
-                          text-blue-500
-                        "
-                      >
-                        {
-                          mode.labelEn
-                        }
-                      </p>
-
-
-                      <h2
-                        className="
-                          relative
-                          mt-1
-                          text-xl
-                          font-black
-                          text-slate-900
-                          md:text-2xl
-                        "
-                      >
-                        {
-                          mode.label
-                        }
-                      </h2>
-
-
-                      <div
-                        className="
-                          absolute
-                          bottom-5
-                          right-5
-                          flex
-                          h-10
-                          w-10
-                          items-center
-                          justify-center
-                          rounded-full
-                          bg-slate-100
-                          text-slate-500
-                          transition
-                          duration-300
-                          group-hover:translate-x-1
-                          group-hover:bg-blue-600
-                          group-hover:text-white
-                        "
-                      >
-
-                        <ArrowRight
-                          size={18}
-                        />
-
-                      </div>
-
-                    </button>
-                  );
-                }
-              )}
-
-            </div>
-
-          </div>
-
-        ) : (
-
-          <>
+        
             {/* ===============================================
                 MODE BAR
             ================================================ */}
 
             <div
-              className="
-                mt-4
-                flex
-                shrink-0
-                items-center
-                gap-2
-                overflow-x-auto
-                pb-1
-              "
-            >
+  className="
+    mt-4
+    flex
+    shrink-0
+    items-center
+    gap-2
+    overflow-x-auto
+    pb-1
+  "
+>
 
-              <button
-                type="button"
-                onClick={
-                  backToModeSelection
-                }
-                className="
-                  flex
-                  h-11
-                  w-11
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-xl
-                  border
-                  border-slate-200
-                  bg-white
-                  text-slate-500
-                  transition
-                  hover:bg-slate-950
-                  hover:text-white
-                "
-                aria-label="選び方に戻る"
-              >
+  {/* BACK TO MODE SELECTION */}
 
-                <ArrowLeft
-                  size={18}
-                />
+  <button
+    type="button"
+    onClick={
+      backToModeSelection
+    }
+    className="
+      flex
+      h-11
+      w-11
+      shrink-0
+      items-center
+      justify-center
+      rounded-xl
+      border
+      border-white/80
+      bg-white/70
+      text-slate-500
+      shadow-[0_8px_24px_rgba(14,165,233,0.10)]
+      backdrop-blur-xl
+      transition-all
+      duration-300
+      hover:-translate-y-0.5
+      hover:border-cyan-300
+      hover:bg-blue-600
+      hover:text-white
+      hover:shadow-[0_10px_28px_rgba(14,165,233,0.22)]
+    "
+    aria-label="選び方に戻る"
+  >
 
-              </button>
+    <ArrowLeft
+      size={18}
+    />
 
-
-              {FIND_MODES.map(
-                (
-                  mode
-                ) => {
-                  const Icon =
-                    mode.icon;
-
-
-                  const active =
-                    activeMode ===
-                    mode.id;
+  </button>
 
 
-                  return (
-                    <button
-                      key={
-                        mode.id
-                      }
-                      type="button"
-                      onClick={() =>
-                        chooseMode(
-                          mode.id
-                        )
-                      }
-                      className={`
-                        flex
-                        shrink-0
-                        items-center
-                        gap-2
-                        rounded-xl
-                        px-4
-                        py-3
-                        text-xs
-                        font-black
-                        transition
+  {/* MODE BUTTONS */}
 
-                        ${
-                          active
-                            ? 'bg-slate-950 text-white shadow-lg'
-                            : 'border border-slate-200 bg-white text-slate-500 hover:bg-slate-50'
-                        }
-                      `}
-                    >
+  {FIND_MODES.map(
+    (
+      mode
+    ) => {
+      const Icon =
+        mode.icon;
 
-                      <Icon
-                        size={15}
-                      />
+      const active =
+        activeMode ===
+        mode.id;
 
-                      {
-                        mode.label
-                      }
+      return (
+        <button
+          key={
+            mode.id
+          }
+          type="button"
+          onClick={() =>
+            chooseMode(
+              mode.id
+            )
+          }
+          className={`
+            flex
+            shrink-0
+            items-center
+            gap-2
+            rounded-xl
+            border
+            px-4
+            py-3
+            text-xs
+            font-black
+            backdrop-blur-xl
+            transition-all
+            duration-300
 
-                    </button>
-                  );
-                }
-              )}
+            ${
+              active
+                ? `
+                  border-cyan-300/70
+                  bg-gradient-to-r
+                  from-blue-600
+                  to-cyan-500
+                  text-white
+                  shadow-[0_8px_24px_rgba(14,165,233,0.30)]
+                `
+                : `
+                  border-white/80
+                  bg-white/65
+                  text-slate-600
+                  shadow-[0_6px_18px_rgba(14,165,233,0.08)]
+                  hover:-translate-y-0.5
+                  hover:border-cyan-300
+                  hover:bg-white/90
+                  hover:text-blue-600
+                  hover:shadow-[0_10px_26px_rgba(14,165,233,0.16)]
+                `
+            }
+          `}
+        >
 
-            </div>
+          <Icon
+            size={15}
+          />
 
+          {
+            mode.label
+          }
+
+        </button>
+      );
+    }
+  )}
+
+</div>
 
             {/* ===============================================
                 CONTENT
@@ -2103,21 +1960,25 @@ if (
               ============================================== */}
 
               {activeMode ===
-                'map' && (
+  'map' && (
 
-                <div
-                  className="
-                    relative
-                    h-full
-                    overflow-hidden
-                    rounded-[28px]
-                    border
-                    border-slate-200
-                    bg-[#dceaf0]/85
-                    backdrop-blur-sm
-                    shadow-sm
-                  "
-                >
+  <div
+    className="
+      relative
+      h-full
+      w-full
+      overflow-hidden
+      rounded-[28px]
+      border
+      border-white/80
+      bg-gradient-to-br
+      from-cyan-50/85
+      via-sky-100/80
+      to-blue-100/85
+      shadow-[0_24px_70px_rgba(14,165,233,0.16)]
+      backdrop-blur-xl
+    "
+  >
 
                   {/* HOVERED COUNTRY */}
 
@@ -2190,210 +2051,373 @@ if (
 
 
                   <ComposableMap
-                    projection="geoEqualEarth"
-                    projectionConfig={{
-                      scale: 147,
-                      center: [
-                        5,
-                        6,
-                      ],
-                    }}
-                    width={1000}
-                    height={480}
-                    className="
-                      h-full
-                      w-full
-                    "
-                  >
+  projection="geoEqualEarth"
+  projectionConfig={{
+    scale: 170,
 
-                    <Geographies
-                      geography={
-                        worldAtlas
-                      }
-                    >
+    center: [
+      0,
+      5,
+    ],
+  }}
+  width={1200}
+  height={590}
+  className="
+    h-full
+    w-full
+  "
+>
 
-                      {({
-                        geographies,
-                      }) =>
-                        geographies.map(
-                          (
-                            geo
-                          ) => {
-                            const atlasName =
-                              getAtlasCountryName(
-                                geo
-                              );
+  <ZoomableGroup
+    center={
+      mapPosition.coordinates
+    }
+    zoom={
+      mapPosition.zoom
+    }
+    minZoom={
+      MAP_MIN_ZOOM
+    }
+    maxZoom={
+      MAP_MAX_ZOOM
+    }
+    onMoveEnd={(
+      position
+    ) => {
+      setMapPosition({
+        coordinates:
+          position.coordinates,
 
+        zoom:
+          position.zoom,
+      });
+    }}
+  >
 
-                            const country =
-                              countryByAtlasName.get(
-                                atlasName
-                              );
+    <Geographies
+      geography={
+        worldAtlas
+      }
+    >
 
-
-                            const live =
-                              country
-                                ?.status ===
-                              'live';
-
-
-                            const visual =
-                              live
-                                ? getCountryVisual(
-                                    country.iso
-                                  )
-                                : null;
-
-
-                            return (
-                              <Geography
-                                key={
-                                  geo.rsmKey
-                                }
-                                geography={
-                                  geo
-                                }
-                                tabIndex={
-                                  live
-                                    ? 0
-                                    : -1
-                                }
-                                role={
-                                  live
-                                    ? 'button'
-                                    : undefined
-                                }
-                                aria-label={
-                                  live
-                                    ? `${country.nameJa}を探検する`
-                                    : undefined
-                                }
-                                onMouseEnter={() => {
-                                  if (
-                                    live
-                                  ) {
-                                    setHoveredCountry(
-                                      country
-                                    );
-                                  }
-                                }}
-                                onMouseLeave={() =>
-                                  setHoveredCountry(
-                                    null
-                                  )
-                                }
-                                onFocus={() => {
-                                  if (
-                                    live
-                                  ) {
-                                    setHoveredCountry(
-                                      country
-                                    );
-                                  }
-                                }}
-                                onBlur={() =>
-                                  setHoveredCountry(
-                                    null
-                                  )
-                                }
-                                onClick={() => {
-                                  if (
-                                    live
-                                  ) {
-                                    openCountry(
-                                      country
-                                    );
-                                  }
-                                }}
-                                onKeyDown={(
-                                  event
-                                ) => {
-                                  if (
-                                    !live
-                                  ) {
-                                    return;
-                                  }
+      {({
+        geographies,
+      }) =>
+        geographies.map(
+          (
+            geo
+          ) => {
+            const atlasName =
+              getAtlasCountryName(
+                geo
+              );
 
 
-                                  if (
-                                    event.key ===
-                                      'Enter' ||
-                                    event.key ===
-                                      ' '
-                                  ) {
-                                    event.preventDefault();
+            const country =
+              countryByAtlasName.get(
+                atlasName
+              );
 
 
-                                    openCountry(
-                                      country
-                                    );
-                                  }
-                                }}
-                                style={{
-                                  default: {
-                                    fill:
-                                      live
-                                        ? visual.map
-                                        : '#cbd5e1',
+            const live =
+              country
+                ?.status ===
+              'live';
 
-                                    stroke:
-                                      '#f8fafc',
 
-                                    strokeWidth:
-                                      0.65,
+            const visual =
+              live
+                ? getCountryVisual(
+                    country.iso
+                  )
+                : null;
 
-                                    outline:
-                                      'none',
-                                  },
 
-                                  hover: {
-                                    fill:
-                                      live
-                                        ? visual.dark
-                                        : '#cbd5e1',
+            return (
+              <Geography
+                key={
+                  geo.rsmKey
+                }
+                geography={
+                  geo
+                }
+                tabIndex={
+                  live
+                    ? 0
+                    : -1
+                }
+                role={
+                  live
+                    ? 'button'
+                    : undefined
+                }
+                aria-label={
+                  live
+                    ? `${country.nameJa}を探検する`
+                    : undefined
+                }
+                onMouseEnter={() => {
+                  if (
+                    live
+                  ) {
+                    setHoveredCountry(
+                      country
+                    );
+                  }
+                }}
+                onMouseLeave={() =>
+                  setHoveredCountry(
+                    null
+                  )
+                }
+                onFocus={() => {
+                  if (
+                    live
+                  ) {
+                    setHoveredCountry(
+                      country
+                    );
+                  }
+                }}
+                onBlur={() =>
+                  setHoveredCountry(
+                    null
+                  )
+                }
+                onClick={() => {
+                  if (
+                    live
+                  ) {
+                    openCountry(
+                      country
+                    );
+                  }
+                }}
+                onKeyDown={(
+                  event
+                ) => {
+                  if (
+                    !live
+                  ) {
+                    return;
+                  }
 
-                                    stroke:
-                                      '#ffffff',
+                  if (
+                    event.key ===
+                      'Enter' ||
+                    event.key ===
+                      ' '
+                  ) {
+                    event.preventDefault();
 
-                                    strokeWidth:
-                                      live
-                                        ? 1.25
-                                        : 0.65,
+                    openCountry(
+                      country
+                    );
+                  }
+                }}
+                style={{
+                  default: {
+                    fill:
+                      live
+                        ? visual.map
+                        : '#cbd5e1',
 
-                                    outline:
-                                      'none',
+                    stroke:
+                      '#f8fafc',
 
-                                    cursor:
-                                      live
-                                        ? 'pointer'
-                                        : 'default',
-                                  },
+                    strokeWidth:
+                      0.6,
 
-                                  pressed: {
-                                    fill:
-                                      live
-                                        ? visual.dark
-                                        : '#cbd5e1',
+                    outline:
+                      'none',
+                  },
 
-                                    stroke:
-                                      '#ffffff',
+                  hover: {
+                    fill:
+                      live
+                        ? visual.dark
+                        : '#cbd5e1',
 
-                                    strokeWidth:
-                                      1,
+                    stroke:
+                      '#ffffff',
 
-                                    outline:
-                                      'none',
-                                  },
-                                }}
-                              />
-                            );
-                          }
-                        )
-                      }
+                    strokeWidth:
+                      live
+                        ? 1.1
+                        : 0.6,
 
-                    </Geographies>
+                    outline:
+                      'none',
 
-                  </ComposableMap>
+                    cursor:
+                      live
+                        ? 'pointer'
+                        : 'default',
+                  },
+
+                  pressed: {
+                    fill:
+                      live
+                        ? visual.dark
+                        : '#cbd5e1',
+
+                    stroke:
+                      '#ffffff',
+
+                    strokeWidth:
+                      1,
+
+                    outline:
+                      'none',
+                  },
+                }}
+              />
+            );
+          }
+        )
+      }
+
+    </Geographies>
+
+  </ZoomableGroup>
+
+</ComposableMap>
+
+{/* MAP CONTROLS */}
+
+<div
+  className="
+    absolute
+    bottom-4
+    right-4
+    z-30
+    flex
+    flex-col
+    gap-2
+    md:bottom-5
+    md:right-5
+  "
+>
+
+  {/* PLUS */}
+
+  <button
+    type="button"
+    onClick={
+      zoomMapIn
+    }
+    disabled={
+      mapPosition.zoom >=
+      MAP_MAX_ZOOM
+    }
+    aria-label="地図を拡大"
+    className="
+      flex
+      h-12
+      w-12
+      items-center
+      justify-center
+      rounded-2xl
+      border
+      border-white/80
+      bg-white/90
+      text-blue-600
+      shadow-[0_10px_30px_rgba(15,23,42,0.18)]
+      backdrop-blur-xl
+      transition-all
+      duration-200
+      hover:-translate-y-0.5
+      hover:bg-blue-600
+      hover:text-white
+      disabled:opacity-35
+      md:h-14
+      md:w-14
+    "
+  >
+    <Plus
+      size={24}
+      strokeWidth={2.5}
+    />
+  </button>
+
+
+  {/* MINUS */}
+
+  <button
+    type="button"
+    onClick={
+      zoomMapOut
+    }
+    disabled={
+      mapPosition.zoom <=
+      MAP_MIN_ZOOM
+    }
+    aria-label="地図を縮小"
+    className="
+      flex
+      h-12
+      w-12
+      items-center
+      justify-center
+      rounded-2xl
+      border
+      border-white/80
+      bg-white/90
+      text-blue-600
+      shadow-[0_10px_30px_rgba(15,23,42,0.18)]
+      backdrop-blur-xl
+      transition-all
+      duration-200
+      hover:-translate-y-0.5
+      hover:bg-blue-600
+      hover:text-white
+      disabled:opacity-35
+      md:h-14
+      md:w-14
+    "
+  >
+    <Minus
+      size={24}
+      strokeWidth={2.5}
+    />
+  </button>
+
+
+  {/* RESET */}
+
+  <button
+    type="button"
+    onClick={
+      resetMapView
+    }
+    aria-label="地図を元の大きさに戻す"
+    className="
+      flex
+      h-10
+      w-12
+      items-center
+      justify-center
+      rounded-xl
+      border
+      border-white/70
+      bg-white/80
+      text-slate-500
+      shadow-lg
+      backdrop-blur-xl
+      transition-all
+      duration-200
+      hover:bg-slate-900
+      hover:text-white
+      md:h-11
+      md:w-14
+    "
+  >
+    <RotateCcw
+      size={18}
+    />
+  </button>
+
+</div>
 
                 </div>
 
@@ -2459,24 +2483,26 @@ if (
                                 );
                               }}
                               className="
-                                group
-                                flex
-                                min-h-[160px]
-                                items-center
-                                gap-5
-                                rounded-[26px]
-                                border
-                                border-slate-200
-                                bg-white
-                                p-6
-                                text-left
-                                shadow-sm
-                                transition-all
-                                duration-300
-                                hover:-translate-y-1
-                                hover:border-blue-200
-                                hover:shadow-xl
-                              "
+  group
+  flex
+  min-h-[160px]
+  items-center
+  gap-5
+  rounded-[26px]
+  border
+  border-white/80
+  bg-white/68
+  p-6
+  text-left
+  shadow-[0_14px_40px_rgba(14,165,233,0.10)]
+  backdrop-blur-xl
+  transition-all
+  duration-300
+  hover:-translate-y-1
+  hover:border-cyan-300
+  hover:bg-white/85
+  hover:shadow-[0_22px_55px_rgba(14,165,233,0.20)]
+"
                             >
 
                               <span
@@ -2741,11 +2767,11 @@ if (
                         transition
 
                         ${
-                          selectedLetter ===
-                            'ALL'
-                            ? 'bg-slate-950 text-white'
-                            : 'border border-slate-200 bg-white text-slate-500'
-                        }
+  selectedLetter ===
+    'ALL'
+    ? 'bg-gradient-to-br from-blue-500 to-cyan-400 text-white shadow-[0_8px_22px_rgba(14,165,233,0.32)]'
+    : 'border border-white/80 bg-white/[0.65] text-slate-600 backdrop-blur-lg hover:bg-white/90 hover:text-blue-600'
+}
                       `}
                     >
                       ALL
@@ -2798,12 +2824,12 @@ if (
                               transition
 
                               ${
-                                selected
-                                  ? 'bg-blue-600 text-white shadow-md'
-                                  : enabled
-                                    ? 'border border-slate-200 bg-white text-slate-600 hover:border-blue-300 hover:text-blue-600'
-                                    : 'border border-slate-100 bg-slate-100 text-slate-300'
-                              }
+  selected
+    ? 'bg-gradient-to-br from-blue-500 to-cyan-400 text-white shadow-[0_8px_22px_rgba(14,165,233,0.32)]'
+    : enabled
+      ? 'border border-white/80 bg-white/[0.65] text-slate-600 backdrop-blur-lg hover:bg-white/90 hover:border-cyan-300 hover:text-blue-600'
+      : 'border border-white/40 bg-white/30 text-slate-300'
+}
                             `}
                           >
                             {
@@ -2904,43 +2930,45 @@ if (
 
 
                     <input
-                      autoFocus
-                      type="search"
-                      value={
-                        searchQuery
-                      }
-                      onChange={(
-                        event
-                      ) =>
-                        setSearchQuery(
-                          event
-                            .target
-                            .value
-                        )
-                      }
-                      placeholder="国名を日本語・英語で検索"
-                      className="
-                        h-16
-                        w-full
-                        rounded-[20px]
-                        border
-                        border-slate-200
-                        bg-white
-                        pl-14
-                        pr-5
-                        text-base
-                        font-bold
-                        text-slate-900
-                        shadow-sm
-                        outline-none
-                        transition
-                        placeholder:text-slate-300
-                        focus:border-blue-400
-                        focus:ring-4
-                        focus:ring-blue-100
-                      "
-                    />
-
+  autoFocus
+  type="search"
+  value={
+    searchQuery
+  }
+  onChange={(
+    event
+  ) =>
+    setSearchQuery(
+      event
+        .target
+        .value
+    )
+  }
+  placeholder="国名を日本語・英語で検索"
+  className="
+    h-16
+    w-full
+    rounded-[20px]
+    border
+    border-white/85
+    bg-white/70
+    pl-14
+    pr-5
+    text-base
+    font-bold
+    text-slate-900
+    shadow-[0_14px_45px_rgba(14,165,233,0.12)]
+    backdrop-blur-xl
+    outline-none
+    transition-all
+    duration-300
+    placeholder:text-slate-400
+    focus:border-cyan-400
+    focus:bg-white/90
+    focus:ring-4
+    focus:ring-cyan-200/50
+  "
+/>
                   </div>
 
 
@@ -3039,10 +3067,6 @@ if (
               )}
 
             </div>
-
-          </>
-
-        )}
 
       </div>
 
