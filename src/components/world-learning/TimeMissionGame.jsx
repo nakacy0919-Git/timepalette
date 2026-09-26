@@ -1,12 +1,36 @@
 import { CheckCircle2, Clock3, Lightbulb, RotateCcw } from 'lucide-react';
 import { useState } from 'react';
 
-const CITY_LABELS = {
-  'Asia/Tokyo': 'Tokyo',
-  'Australia/Sydney': 'Sydney',
-  'Australia/Perth': 'Perth',
-  'Australia/Darwin': 'Darwin',
+const getFallbackZoneLabel = (
+  timeZone
+) => {
+  if (!timeZone) {
+    return '';
+  }
+
+  const parts =
+    timeZone.split('/');
+
+  return (
+    parts[
+      parts.length - 1
+    ] || timeZone
+  ).replaceAll(
+    '_',
+    ' '
+  );
 };
+
+const getZoneLabel = (
+  challenge,
+  timeZone
+) =>
+  challenge
+    ?.zoneLabels
+    ?.[timeZone] ||
+  getFallbackZoneLabel(
+    timeZone
+  );
 
 const DAYPARTS = [
   { id: 'morning', label: '朝', range: '05:00–11:59' },
@@ -168,8 +192,17 @@ function LiveTimeCompare({ mission, onClear, alreadyCompleted }) {
   const zones = mission.challenge.zones;
   const mode = mission.challenge.questionMode;
 
-  const cityA = CITY_LABELS[zones[0]] || zones[0];
-  const cityB = CITY_LABELS[zones[1]] || zones[1];
+  const cityA =
+  getZoneLabel(
+    mission.challenge,
+    zones[0]
+  );
+
+const cityB =
+  getZoneLabel(
+    mission.challenge,
+    zones[1]
+  );
   const offsetA = getOffsetMinutes(zones[0], reference);
   const offsetB = getOffsetMinutes(zones[1], reference);
   const difference = Math.abs(offsetA - offsetB);
@@ -204,7 +237,10 @@ function LiveTimeCompare({ mission, onClear, alreadyCompleted }) {
       <div className="grid grid-cols-2 gap-3">
         {zones.map((zone) => (
           <div key={zone} className="rounded-3xl border border-slate-200 bg-slate-50 p-5 text-center">
-            <p className="text-sm font-black text-slate-500">{CITY_LABELS[zone] || zone}</p>
+            <p className="text-sm font-black text-slate-500">{getZoneLabel(
+  mission.challenge,
+  zone
+)}</p>
             <p className="mt-2 text-3xl font-black text-slate-900">{formatTime(reference, zone)}</p>
             <p className="mt-1 text-xs font-bold text-slate-400">{formatDate(reference, zone)}</p>
           </div>
@@ -233,7 +269,10 @@ function LiveTimeCompare({ mission, onClear, alreadyCompleted }) {
                     : 'border-slate-200 bg-white text-slate-700 hover:border-blue-300'
                 }`}
               >
-                {CITY_LABELS[zone] || zone}
+                {getZoneLabel(
+  mission.challenge,
+  zone
+)}
               </button>
             ))
           : differenceChoices.map((minutes) => (
@@ -293,11 +332,21 @@ function TimeDial({ mission, onClear, alreadyCompleted }) {
   return (
     <div>
       <div className="rounded-3xl border border-blue-200 bg-blue-50 p-6 text-center">
-        <p className="text-sm font-black text-blue-500">{CITY_LABELS[fromZone] || fromZone}</p>
+        <p className="text-sm font-black text-blue-500">
+  {getZoneLabel(
+    mission.challenge,
+    fromZone
+  )}
+</p>
         <p className="mt-2 text-5xl font-black tracking-tight text-slate-900">
           {pad2(sourceParts.hour)}:{pad2(sourceParts.minute)}
         </p>
-        <p className="mt-2 text-sm font-bold text-slate-500">同じ瞬間の {CITY_LABELS[toZone] || toZone} は？</p>
+        <p className="mt-2 text-sm font-bold text-slate-500">同じ瞬間の{' '}
+{getZoneLabel(
+  mission.challenge,
+  toZone
+)}
+は？</p>
       </div>
 
       <div className="mt-6 flex items-center justify-center gap-3">
@@ -373,7 +422,13 @@ function DaypartMatch({ mission, onClear, alreadyCompleted }) {
   return (
     <div>
       <div className="rounded-3xl border border-slate-200 bg-slate-50 p-5 text-center">
-        <p className="text-sm font-black text-slate-500">基準：{CITY_LABELS[baseZone] || baseZone}</p>
+        <p className="text-sm font-black text-slate-500">
+  基準：
+  {getZoneLabel(
+    mission.challenge,
+    baseZone
+  )}
+</p>
         <p className="mt-1 text-4xl font-black text-slate-900">{formatTime(reference, baseZone)}</p>
       </div>
 
@@ -381,7 +436,10 @@ function DaypartMatch({ mission, onClear, alreadyCompleted }) {
         {targetZones.map((zone) => (
           <div key={zone} className="rounded-3xl border border-slate-200 bg-white p-5">
             <div className="flex items-center justify-between gap-3">
-              <p className="text-lg font-black text-slate-800">{CITY_LABELS[zone] || zone}</p>
+              <p className="text-lg font-black text-slate-800">{getZoneLabel(
+  mission.challenge,
+  zone
+)}</p>
               {result === true && (
                 <span className="text-sm font-black text-emerald-600">{formatTime(reference, zone)}</span>
               )}
@@ -441,7 +499,25 @@ function ScheduleBuilder({ mission, onClear, alreadyCompleted }) {
   const [result, setResult] = useState(null);
   const [showHint, setShowHint] = useState(false);
 
-  const { zoneA, zoneB, windowA, windowB, minOverlapMinutes } = mission.challenge;
+  const {
+  zoneA,
+  zoneB,
+  windowA,
+  windowB,
+  minOverlapMinutes,
+} = mission.challenge;
+
+const zoneALabel =
+  getZoneLabel(
+    mission.challenge,
+    zoneA
+  );
+
+const zoneBLabel =
+  getZoneLabel(
+    mission.challenge,
+    zoneB
+  );
   const baseDate = getZonedParts(reference, zoneA);
   const startA = parseClock(windowA[0]);
   const endA = parseClock(windowA[1]);
@@ -490,17 +566,24 @@ function ScheduleBuilder({ mission, onClear, alreadyCompleted }) {
     <div>
       <div className="grid grid-cols-2 gap-3">
         <div className="rounded-3xl border border-slate-200 bg-slate-50 p-5 text-center">
-          <p className="text-sm font-black text-slate-500">Tokyo school</p>
+          <p className="text-sm font-black text-slate-500">
+  {zoneALabel} school
+</p>
           <p className="mt-1 text-xl font-black text-slate-900">{windowA[0]}–{windowA[1]}</p>
         </div>
         <div className="rounded-3xl border border-slate-200 bg-slate-50 p-5 text-center">
-          <p className="text-sm font-black text-slate-500">Sydney school</p>
+          <p className="text-sm font-black text-slate-500">
+  {zoneBLabel} school
+</p>
           <p className="mt-1 text-xl font-black text-slate-900">{windowB[0]}–{windowB[1]}</p>
         </div>
       </div>
 
       <p className="mt-5 text-center text-sm font-bold text-slate-500">
-        {minOverlapMinutes}分間のオンライン交流を始められるTokyo時刻を1つ選ぼう。
+        {minOverlapMinutes}
+分間のオンライン交流を始められる
+{zoneALabel}
+時刻を1つ選ぼう。
       </p>
 
       <div className="mt-5 grid grid-cols-3 gap-2 sm:grid-cols-4">
@@ -527,7 +610,9 @@ function ScheduleBuilder({ mission, onClear, alreadyCompleted }) {
         className="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-amber-50 py-3 text-sm font-black text-amber-700 hover:bg-amber-100"
       >
         <Lightbulb size={18} />
-        {showHint ? 'Sydney時刻を隠す' : 'ヒント：Sydney時刻を見る'}
+        {showHint
+  ? `${zoneBLabel}時刻を隠す`
+  : `ヒント：${zoneBLabel}時刻を見る`}
       </button>
 
       {showHint && (

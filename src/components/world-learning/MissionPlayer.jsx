@@ -6,7 +6,11 @@ import {
   X,
 } from 'lucide-react';
 
-import { useState } from 'react';
+import {
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import TimeMissionGame from './TimeMissionGame';
 import PlaceMissionGame from './PlaceMissionGame';
@@ -117,6 +121,10 @@ export default function MissionPlayer({
   onClose,
   onComplete,
 }) {
+
+  const scrollContainerRef =
+    useRef(null);
+
   const [
     selectedIndex,
     setSelectedIndex,
@@ -161,6 +169,34 @@ export default function MissionPlayer({
   isThinkConnectMission(
     mission
   );
+
+  useEffect(() => {
+    const container =
+      scrollContainerRef.current;
+
+    if (container) {
+      container.scrollTo({
+        top: 0,
+        behavior: 'auto',
+      });
+    }
+
+    const previousOverflow =
+      document.body.style.overflow;
+
+    document.body.style.overflow =
+      'hidden';
+
+    return () => {
+      document.body.style.overflow =
+        previousOverflow;
+    };
+  }, [mission.id]);
+
+  const modalWidthClass =
+    placePlayable
+      ? 'max-w-5xl'
+      : 'max-w-2xl';
 
   const isListening =
     mission.type ===
@@ -250,8 +286,12 @@ export default function MissionPlayer({
           : 'EXPLORER';
 
   return (
-    <div className="fixed inset-0 z-[100000] flex items-center justify-center bg-slate-950/85 p-4 backdrop-blur-sm">
-      <div className="max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-[32px] bg-white shadow-2xl">
+    <div className="fixed inset-0 z-[100000] flex items-start justify-center overflow-hidden bg-slate-950/85 p-2 backdrop-blur-sm md:items-center md:p-4">
+
+  <div
+    ref={scrollContainerRef}
+    className={`max-h-[96dvh] w-full ${modalWidthClass} overflow-y-auto bg-white shadow-2xl md:max-h-[92vh] md:rounded-[28px]`}
+  >
 
         <div className="relative bg-slate-900 px-6 py-6 text-white md:px-8">
           <button
@@ -581,7 +621,23 @@ export default function MissionPlayer({
                     </p>
 
                   </div>
+                                  <div className="mb-4 border-l-4 border-emerald-500 bg-white px-4 py-3">
 
+                    <p className="text-[10px] font-black tracking-[0.16em] text-emerald-600">
+                      CORRECT ANSWER
+                    </p>
+
+                    <p className="mt-1 text-lg font-black text-slate-900">
+                      {
+                        mission.challenge
+                          .choices[
+                          mission.challenge
+                            .correctIndex
+                        ]
+                      }
+                    </p>
+
+                  </div>
                   <p className="font-bold leading-relaxed text-slate-700">
                     {
                       mission.explanation
@@ -629,7 +685,25 @@ export default function MissionPlayer({
               )}
             </>
           )}
+                  {alreadyCompleted && (
+            <div className="mt-7 border-t border-slate-200 pt-6">
 
+              <p className="text-[10px] font-black tracking-[0.18em] text-slate-400">
+                REMEMBER THIS
+              </p>
+
+              <div className="mt-3 border-l-4 border-blue-500 bg-blue-50 px-5 py-4">
+
+                <p className="font-bold leading-7 text-slate-700">
+                  {
+                    mission.explanation
+                  }
+                </p>
+
+              </div>
+
+            </div>
+          )}
           <div className="mt-8 flex items-center justify-between border-t border-slate-200 pt-5">
 
             <span className="text-xs font-bold text-slate-400">

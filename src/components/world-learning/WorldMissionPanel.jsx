@@ -15,6 +15,10 @@ import {
   getCountryProgress,
 } from '../../utils/worldProgressStorage';
 
+import {
+  playUiSound,
+} from '../../utils/uiSound';
+
 import MissionPlayer from './MissionPlayer';
 
 const INTERACTIVE_MISSION_TYPES = new Set([
@@ -428,6 +432,18 @@ const progress =
             selectedDomain
         );
 
+   const openMission = (
+    mission
+  ) => {
+    playUiSound(
+      'open'
+    );
+
+    setActiveMission(
+      mission
+    );
+  };
+
   const handleComplete = (
     mission
   ) => {
@@ -436,6 +452,10 @@ const progress =
         countryCode,
         mission.id
       );
+
+        playUiSound(
+      'success'
+    );
 
     if (
       result.isNewCompletion
@@ -591,11 +611,15 @@ const progress =
                 key={
                   domain.id
                 }
-                onClick={() =>
-                  setSelectedDomain(
-                    domain.id
-                  )
-                }
+                onClick={() => {
+  playUiSound(
+    'tap'
+  );
+
+  setSelectedDomain(
+    domain.id
+  );
+}}
                 className={`rounded-3xl border p-4 text-left transition-all ${
                   selected
                     ? 'border-blue-500 bg-blue-50 shadow-md -translate-y-1'
@@ -627,11 +651,15 @@ const progress =
 
       <div className="mt-4">
         <button
-          onClick={() =>
-            setSelectedDomain(
-              'all'
-            )
-          }
+          onClick={() => {
+  playUiSound(
+    'tap'
+  );
+
+  setSelectedDomain(
+    'all'
+  );
+}}
           className={`px-5 py-2.5 rounded-full font-black text-sm transition-colors ${
             selectedDomain ===
             'all'
@@ -669,10 +697,10 @@ const progress =
                   mission.id
                 }
                 onClick={() =>
-                  setActiveMission(
-                    mission
-                  )
-                }
+  openMission(
+    mission
+  )
+}
                 className={`group relative text-left rounded-3xl border p-5 transition-all ${
                   completed
                     ? 'border-emerald-200 bg-emerald-50/50 hover:shadow-md'
@@ -850,11 +878,15 @@ const progress =
           onComplete={
             handleComplete
           }
-          onClose={() =>
-            setActiveMission(
-              null
-            )
-          }
+          onClose={() => {
+  playUiSound(
+    'back'
+  );
+
+  setActiveMission(
+    null
+  );
+}}
         />
       )}
     </section>

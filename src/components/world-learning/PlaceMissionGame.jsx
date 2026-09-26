@@ -9,11 +9,11 @@ import {
   Geographies,
   Geography,
   Marker,
-  ZoomableGroup,
 } from 'react-simple-maps';
 
-const GEO_URL =
-  'https://unpkg.com/world-atlas@2.0.2/countries-110m.json';
+import worldAtlas
+  from 'world-atlas/countries-110m.json';
+
 
 const TARGET_COUNTRY_NAMES = {
   au: 'Australia',
@@ -43,6 +43,7 @@ function ClearResult({
   explanation,
   points,
   alreadyCompleted,
+  answerLabel,
 }) {
   if (correct === null) {
     return null;
@@ -69,7 +70,19 @@ function ClearResult({
           Mission Clear!
         </p>
       </div>
+          {answerLabel && (
+        <div className="mb-4 border-l-4 border-emerald-500 bg-white px-4 py-3">
 
+          <p className="text-[10px] font-black tracking-[0.16em] text-emerald-600">
+            CORRECT
+          </p>
+
+          <p className="mt-1 text-lg font-black text-slate-900">
+            {answerLabel}
+          </p>
+
+        </div>
+      )}
       <p className="font-bold leading-relaxed text-slate-700">
         {explanation}
       </p>
@@ -118,7 +131,7 @@ function CountryMapTap({
 
   return (
     <div>
-      <div className="overflow-hidden rounded-3xl border border-slate-200 bg-sky-50">
+      <div className="overflow-hidden border border-slate-200 bg-[#dceaf0] shadow-sm md:rounded-2xl">
         <div className="border-b border-slate-200 bg-white px-5 py-4">
           <p className="text-sm font-black text-slate-500">
             🌍 世界地図をタップ
@@ -129,20 +142,18 @@ function CountryMapTap({
         </div>
 
         <ComposableMap
-          projectionConfig={{
-            scale: 145,
-          }}
-          width={800}
-          height={400}
-          className="h-auto w-full"
-        >
-          <ZoomableGroup
-            center={[10, 0]}
-            zoom={1}
-            minZoom={1}
-            maxZoom={4}
-          >
-            <Geographies geography={GEO_URL}>
+  projection="geoEqualEarth"
+  projectionConfig={{
+    scale: 170,
+    center: [8, 4],
+  }}
+  width={1100}
+  height={540}
+  className="h-auto w-full"
+>
+  <Geographies
+    geography={worldAtlas}
+  >
               {({ geographies }) =>
                 geographies.map((geo) => {
                   const name =
@@ -211,9 +222,8 @@ function CountryMapTap({
                   );
                 })
               }
-            </Geographies>
-          </ZoomableGroup>
-        </ComposableMap>
+              </Geographies>
+</ComposableMap>
       </div>
 
       {result === false && (
@@ -234,11 +244,20 @@ function CountryMapTap({
       )}
 
       <ClearResult
-        correct={result}
-        explanation={mission.explanation}
-        points={mission.points}
-        alreadyCompleted={alreadyCompleted}
-      />
+  correct={result}
+  explanation={
+    mission.explanation
+  }
+  points={
+    mission.points
+  }
+  alreadyCompleted={
+    alreadyCompleted
+  }
+  answerLabel={
+    targetName
+  }
+/>
     </div>
   );
 }
@@ -347,18 +366,20 @@ function CityMapGame({
         )}
       </div>
 
-      <div className="overflow-hidden rounded-3xl border border-slate-200 bg-sky-50">
+      <div className="overflow-hidden border border-slate-200 bg-[#dceaf0] shadow-sm md:rounded-2xl">
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
             center: [134, -25],
             scale: 720,
           }}
-          width={700}
-          height={500}
+          width={1000}
+height={620}
           className="h-auto w-full"
         >
-          <Geographies geography={GEO_URL}>
+          <Geographies
+  geography={worldAtlas}
+>
             {({ geographies }) =>
               geographies.map((geo) => {
                 const name =
@@ -573,13 +594,22 @@ function CityMapGame({
         )}
 
       <ClearResult
-        correct={
-          complete ? true : null
-        }
-        explanation={mission.explanation}
-        points={mission.points}
-        alreadyCompleted={alreadyCompleted}
-      />
+  correct={
+    complete ? true : null
+  }
+  explanation={
+    mission.explanation
+  }
+  points={
+    mission.points
+  }
+  alreadyCompleted={
+    alreadyCompleted
+  }
+  answerLabel={
+    cityNames.join(' / ')
+  }
+/>
     </div>
   );
 }
