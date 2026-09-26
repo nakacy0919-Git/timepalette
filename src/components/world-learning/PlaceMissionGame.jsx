@@ -228,7 +228,7 @@ function CountryMapTap({
   return (
     <div>
 
-      <div className="overflow-hidden border border-slate-200 bg-[#dceaf0] shadow-sm md:rounded-2xl">
+      <div className="overflow-hidden rounded-2xl border border-slate-200 bg-[#cfe8f3] shadow-sm">
 
         <div className="border-b border-slate-200 bg-white px-5 py-4">
 
@@ -244,149 +244,74 @@ function CountryMapTap({
 
 
         <ComposableMap
-          projection="geoEqualEarth"
-          projectionConfig={{
-            scale: 170,
-            center: [
-              8,
-              4,
-            ],
-          }}
-          width={1100}
-          height={540}
-          className="h-auto w-full"
-        >
+  projection="geoEquirectangular"
+  projectionConfig={{
+    scale: 190,
+    center: [
+      0,
+      0,
+    ],
+  }}
+  width={1200}
+  height={600}
+  className="block h-auto w-full bg-[#cfe8f3]"
+>
+  <Geographies geography={worldAtlas}>
+    {({ geographies }) =>
+      geographies.map((geo) => {
+        const name = geo?.properties?.name ?? '';
+        const isTarget = result === true && name === targetName;
+        const isWrong = result === false && name === lastCountry;
 
-          <Geographies
-            geography={
-              worldAtlas
-            }
-          >
+        let fill = '#d6dee8';
 
-            {({
-              geographies,
-            }) =>
-              geographies.map(
-                (geo) => {
-                  const name =
-                    geo
-                      ?.properties
-                      ?.name ??
-                    '';
+        if (isTarget) {
+          fill = '#10b981';
+        } else if (isWrong) {
+          fill = '#fb7185';
+        }
 
-                  const isTarget =
-                    result === true &&
-                    name ===
-                      targetName;
-
-                  const isWrong =
-                    result === false &&
-                    name ===
-                      lastCountry;
-
-                  let fill =
-                    '#cbd5e1';
-
-                  if (
-                    isTarget
-                  ) {
-                    fill =
-                      '#10b981';
-                  } else if (
-                    isWrong
-                  ) {
-                    fill =
-                      '#fb7185';
-                  }
-
-                  return (
-                    <Geography
-                      key={
-                        geo.rsmKey
-                      }
-                      geography={
-                        geo
-                      }
-                      onClick={() =>
-                        handleCountryClick(
-                          geo
-                        )
-                      }
-                      aria-label={
-                        name
-                      }
-                      tabIndex={0}
-                      onKeyDown={(
-                        event
-                      ) => {
-                        if (
-                          event.key ===
-                            'Enter' ||
-                          event.key ===
-                            ' '
-                        ) {
-                          event.preventDefault();
-
-                          handleCountryClick(
-                            geo
-                          );
-                        }
-                      }}
-                      style={{
-                        default: {
-                          fill,
-                          stroke:
-                            '#ffffff',
-                          strokeWidth:
-                            0.55,
-                          outline:
-                            'none',
-                          cursor:
-                            'pointer',
-                        },
-
-                        hover: {
-                          fill:
-                            isTarget
-                              ? '#10b981'
-                              : '#60a5fa',
-
-                          stroke:
-                            '#ffffff',
-
-                          strokeWidth:
-                            0.8,
-
-                          outline:
-                            'none',
-
-                          cursor:
-                            'pointer',
-                        },
-
-                        pressed: {
-                          fill:
-                            '#2563eb',
-
-                          stroke:
-                            '#ffffff',
-
-                          strokeWidth:
-                            0.8,
-
-                          outline:
-                            'none',
-                        },
-                      }}
-                    />
-                  );
-                }
-              )
-            }
-
-          </Geographies>
-
-        </ComposableMap>
+        return (
+          <Geography
+            key={geo.rsmKey}
+            geography={geo}
+            onClick={() => handleCountryClick(geo)}
+            aria-label={name}
+            tabIndex={0}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                handleCountryClick(geo);
+              }
+            }}
+            style={{
+              default: {
+                fill,
+                stroke: '#ffffff',
+                strokeWidth: 0.8,
+                outline: 'none',
+                cursor: 'pointer',
+              },
+              hover: {
+                fill: isTarget ? '#10b981' : '#60a5fa',
+                stroke: '#ffffff',
+                strokeWidth: 1.2,
+                outline: 'none',
+                cursor: 'pointer',
+              },
+              pressed: {
+                fill: '#2563eb',
+                stroke: '#ffffff',
+                strokeWidth: 1.2,
+                outline: 'none',
+              },
+            }}
+          />
+        );
+      })
+    }
+  </Geographies>
+</ComposableMap>
 
       </div>
 
@@ -703,7 +628,7 @@ function CityMapGame({
 
       {/* MAP */}
 
-      <div className="overflow-hidden border border-slate-200 bg-[#dceaf0] shadow-sm md:rounded-2xl">
+      <div className="overflow-hidden rounded-2xl border border-slate-200 bg-[#cfeeff] shadow-sm">
 
         <ComposableMap
           projection="geoMercator"
