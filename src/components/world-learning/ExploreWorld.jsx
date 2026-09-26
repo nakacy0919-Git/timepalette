@@ -1052,30 +1052,30 @@ function CountrySelectionLanding({
 
         {/* MODE BUTTONS */}
 
-        <div
-          className="
-            flex
-            min-h-0
-            flex-1
-            items-end
-            justify-center
-            pb-8
-            pt-5
-            md:pb-10
-          "
-        >
+<div
+  className="
+    flex
+    min-h-0
+    flex-1
+    items-center
+    justify-center
+    px-1
+    pt-2
+    md:-translate-y-2
+  "
+>
 
-          <div
-            className="
-              grid
-              w-full
-              max-w-[1180px]
-              grid-cols-2
-              gap-3
-              md:gap-5
-              lg:grid-cols-4
-            "
-          >
+  <div
+    className="
+      grid
+      w-full
+      max-w-[1140px]
+      grid-cols-2
+      gap-4
+      md:gap-5
+      lg:grid-cols-4
+    "
+  >
 
             {FIND_MODES.map(
               (
@@ -1100,7 +1100,7 @@ function CountrySelectionLanding({
                     className="
                       group
                       relative
-                      min-h-[150px]
+                      min-h-[170px]
                       overflow-hidden
                       rounded-[26px]
                       border
@@ -1117,7 +1117,7 @@ function CountrySelectionLanding({
                       hover:border-cyan-300/60
                       hover:bg-slate-900/55
                       hover:shadow-[0_24px_65px_rgba(14,165,233,0.28)]
-                      md:min-h-[175px]
+                      md:min-h-[195px]
                       md:px-6
                       md:py-6
                     "
@@ -1621,30 +1621,104 @@ if (
   ======================================================= */
 
   return (
+  <div
+    className="
+      relative
+      h-[calc(100dvh-68px)]
+      min-h-[620px]
+      overflow-hidden
+      bg-[#eef3f8]
+    "
+  >
+
+    {/* WORLD BACKGROUND */}
+
+    <img
+      src={
+        exploreWorldBackground
+      }
+      alt=""
+      aria-hidden="true"
+      className="
+        pointer-events-none
+        absolute
+        inset-0
+        h-full
+        w-full
+        scale-[1.04]
+        object-cover
+        object-center
+        opacity-[0.18]
+      "
+    />
+
+
+    {/* LIGHT VEIL */}
+
     <div
       className="
-        h-[calc(100dvh-68px)]
-        min-h-[620px]
-        overflow-hidden
-        bg-[#f5f3ee]
+        pointer-events-none
+        absolute
+        inset-0
+        bg-gradient-to-b
+        from-white/75
+        via-white/70
+        to-white/88
+      "
+    />
+
+
+    {/* BLUE ATMOSPHERE */}
+
+    <div
+      className="
+        pointer-events-none
+        absolute
+        -left-40
+        top-[18%]
+        h-[480px]
+        w-[480px]
+        rounded-full
+        bg-blue-400/10
+        blur-[120px]
+      "
+    />
+
+
+    <div
+      className="
+        pointer-events-none
+        absolute
+        -right-40
+        bottom-[5%]
+        h-[480px]
+        w-[480px]
+        rounded-full
+        bg-violet-400/10
+        blur-[130px]
+      "
+    />
+
+
+    {/* CONTENT */}
+
+    <div
+      className="
+        relative
+        z-10
+        mx-auto
+        flex
+        h-full
+        w-full
+        max-w-[1500px]
+        flex-col
+        px-5
+        py-5
+        md:px-8
+        md:py-6
+        lg:px-10
       "
     >
-
-      <div
-        className="
-          mx-auto
-          flex
-          h-full
-          w-full
-          max-w-[1500px]
-          flex-col
-          px-5
-          py-5
-          md:px-8
-          md:py-6
-          lg:px-10
-        "
-      >
 
         {/* =================================================
             HEADER
@@ -2039,7 +2113,8 @@ if (
                     rounded-[28px]
                     border
                     border-slate-200
-                    bg-[#dceaf0]
+                    bg-[#dceaf0]/85
+                    backdrop-blur-sm
                     shadow-sm
                   "
                 >

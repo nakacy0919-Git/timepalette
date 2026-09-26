@@ -257,17 +257,18 @@ export default function WorldAdventureHome({
         >
 
           <img
-            src={
-              timePaletteLogo
-            }
-            alt="TimePalette"
-            className="
-              w-[180px]
-              drop-shadow-xl
-              sm:w-[220px]
-              md:w-[250px]
-            "
-          />
+  src={
+    timePaletteLogo
+  }
+  alt="TimePalette"
+  className="
+    w-[260px]
+    drop-shadow-[0_14px_32px_rgba(0,0,0,0.45)]
+    sm:w-[310px]
+    md:w-[360px]
+    lg:w-[420px]
+  "
+/>
 
 
           <button
