@@ -24,6 +24,7 @@ import JapanConnectionMissionGame from './JapanConnectionMissionGame';
 import ThinkConnectMissionGame from './ThinkConnectMissionGame';
 import MissionSuccessCelebration from './MissionSuccessCelebration';
 import GlobalChallengeMissionGame from './GlobalChallengeMissionGame';
+import SourceQuestMissionGame from './SourceQuestMissionGame';
 
 const TIME_MISSION_TYPES =
   new Set([
@@ -126,6 +127,12 @@ const isGlobalChallengeMission = (
   mission?.type ===
   'global-challenge';
 
+const isSourceQuestMission = (
+  mission
+) =>
+  mission?.type ===
+  'source-quest';
+
 export default function MissionPlayer({
   mission,
   domain,
@@ -198,6 +205,11 @@ const globalChallengePlayable =
     mission
   );
 
+const sourceQuestPlayable =
+  isSourceQuestMission(
+    mission
+  );
+
   useEffect(() => {
     const container =
       scrollContainerRef.current;
@@ -221,9 +233,10 @@ const globalChallengePlayable =
     };
   }, [mission.id]);
 
-  const modalWidthClass =
+const modalWidthClass =
   placePlayable ||
-  globalChallengePlayable
+  globalChallengePlayable ||
+  sourceQuestPlayable
     ? 'max-w-5xl'
     : 'max-w-2xl';
 
@@ -456,7 +469,15 @@ const handleMissionComplete =
 
           </div>
 
-          {globalChallengePlayable ? (
+          {sourceQuestPlayable ? (
+
+  <SourceQuestMissionGame
+    mission={mission}
+    onComplete={handleMissionComplete}
+    alreadyCompleted={alreadyCompleted}
+  />
+
+) : globalChallengePlayable ? (
 
   <GlobalChallengeMissionGame
     mission={mission}
