@@ -1,0 +1,6072 @@
+{
+  "kz": {
+    "countryNameJa": "カザフスタン",
+    "countryNameEn": "Kazakhstan",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "kz-l08",
+          "kz-j07",
+          "kz-k04",
+          "kz-k05"
+        ]
+      }
+    },
+    "sources": {
+      "kz-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Kazakhstan profile based on countries_k.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_k.json"
+      },
+      "kz-time-zone": {
+        "organization": "IANA Time Zone Database / 2026 clock-change verification",
+        "title": "IANA Time Zone Database and 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "kz-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Kazakhstan relations / regional information",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/europe/kazakhstan/"
+      }
+    },
+    "missions": [
+      {
+        "id": "kz-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "カザフスタンを探せ！",
+        "prompt": "世界地図からカザフスタンをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "kz",
+          "targetAtlasName": "Kazakhstan",
+          "targetName": "Kazakhstan"
+        },
+        "explanation": "中央アジアに広がる世界最大の内陸国で、広大なステップ、砂漠、カスピ海沿岸、天山山脈など多様な地形を持ちます。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "カザフスタンの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "中央アジア",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カザフスタンは中央アジアに位置します。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "カザフスタンの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "アスタナ",
+            "アルマトイ",
+            "シムケント",
+            "アクタウ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はアスタナです。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "カザフスタンの主要都市を地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "kz",
+          "targetAtlasName": "Kazakhstan",
+          "mapConfig": {
+            "center": [
+              67.5,
+              48.0
+            ],
+            "scale": 650
+          },
+          "cities": [
+            {
+              "name": "Astana",
+              "labelJa": "アスタナ",
+              "coordinates": [
+                71.4304,
+                51.1694
+              ],
+              "timeZone": "Asia/Almaty",
+              "region": "北中部・首都"
+            },
+            {
+              "name": "Almaty",
+              "labelJa": "アルマトイ",
+              "coordinates": [
+                76.8512,
+                43.222
+              ],
+              "timeZone": "Asia/Almaty",
+              "region": "南東部"
+            },
+            {
+              "name": "Shymkent",
+              "labelJa": "シムケント",
+              "coordinates": [
+                69.5901,
+                42.3417
+              ],
+              "timeZone": "Asia/Almaty",
+              "region": "南部"
+            },
+            {
+              "name": "Aktau",
+              "labelJa": "アクタウ",
+              "coordinates": [
+                51.1605,
+                43.6411
+              ],
+              "timeZone": "Asia/Almaty",
+              "region": "西部・カスピ海沿岸"
+            }
+          ]
+        },
+        "explanation": "主要都市の配置から地域差を読み取ります。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "カザフスタンと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カスピ海、アラル海の一部、バルハシ湖、イルティシ川などが漁業、農業、水資源、地域経済に関わります。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島である",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カスピ海、アラル海の一部、バルハシ湖、イルティシ川などが漁業、農業、水資源、地域経済に関わります。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候を結びつける",
+        "prompt": "カザフスタンの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "大陸性気候で、夏は暑く乾燥し、冬は非常に寒くなります。南北・標高による気候差も大きいです。",
+            "全国どこでも一年中同じ気候",
+            "首都の天気だけで全国を説明できる",
+            "地形や標高は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "大陸性気候で、夏は暑く乾燥し、冬は非常に寒くなります。南北・標高による気候差も大きいです。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "スケールと地域差",
+        "prompt": "カザフスタンを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "北部ステップ、南部都市・農業地域、西部カスピ海沿岸、東南部山岳地域で自然、産業、人口分布が大きく異なります。",
+            "首都の写真1枚だけで全国を判断する",
+            "観光地だけを国全体と考える",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "北部ステップ、南部都市・農業地域、西部カスピ海沿岸、東南部山岳地域で自然、産業、人口分布が大きく異なります。",
+        "skills": [
+          "scale",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとAstana / Almatyの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Asia/Almaty"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Almaty": "Astana / Almaty"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "IANAタイムゾーンでリアルタイム比較します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "kz-time-zone"
+        ]
+      },
+      {
+        "id": "kz-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "Tokyoの時刻を見て、同じ瞬間のAstana / Almatyの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Asia/Almaty",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Almaty": "Astana / Almaty"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別都市の時計で表します。",
+        "skills": [
+          "time-calculation"
+        ],
+        "sourceIds": [
+          "kz-time-zone"
+        ]
+      },
+      {
+        "id": "kz-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差をリアルタイムで読む",
+        "prompt": "TokyoとAstana / Almatyの現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Asia/Almaty"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Almaty": "Astana / Almaty"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "固定暗記ではなく実際の時差を確認します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "kz-time-zone"
+        ]
+      },
+      {
+        "id": "kz-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜を比べる",
+        "prompt": "TokyoとAstana / Almatyの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Asia/Almaty"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Almaty": "Astana / Almaty"
+          }
+        },
+        "explanation": "時刻を生活時間帯につなげます。",
+        "skills": [
+          "daily-life"
+        ],
+        "sourceIds": [
+          "kz-time-zone"
+        ]
+      },
+      {
+        "id": "kz-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流できる時間を探せ",
+        "prompt": "日本側12:30〜16:00、カザフスタン側8:30〜12:00の範囲で学校交流できる時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Asia/Almaty",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Almaty": "Astana / Almaty"
+          },
+          "windowA": [
+            "12:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "12:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "実際に重なる時間帯から、相手にも無理の少ない交流時間を考えます。",
+        "skills": [
+          "scheduling"
+        ],
+        "sourceIds": [
+          "kz-time-zone"
+        ]
+      },
+      {
+        "id": "kz-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DST・国内時差を確認",
+        "prompt": "カザフスタンの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カザフスタンは2026年、国内でUTC+5の標準時を通年使用し、DSTは実施していません。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "DSTは世界共通で必ず実施される",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カザフスタンは2026年、国内でUTC+5の標準時を通年使用し、DSTは実施していません。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "kz-time-zone"
+        ]
+      },
+      {
+        "id": "kz-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語を場面で選ぶ",
+        "prompt": "カザフスタンの生徒との交流を想定し、場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き取れなかった",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活を知りたい",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "交流の終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "国際交流の基本表現を場面で使い分けます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "kz-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "どんな言語が使われる？",
+        "prompt": "カザフスタンの言語事情について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カザフ語が国家語で、ロシア語も社会・行政・都市生活などで広く使われています。ほかにも多様な民族言語があります。",
+            "全員が必ず一言語だけを使う",
+            "家庭や地域の言語差はない",
+            "日本語だけが公用語である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カザフ語が国家語で、ロシア語も社会・行政・都市生活などで広く使われています。ほかにも多様な民族言語があります。",
+        "skills": [
+          "multilingualism"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字にも注目",
+        "prompt": "カザフスタンの文字について正しい説明は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カザフ語は現在キリル文字が広く使われ、ロシア語もキリル文字を使います。",
+            "世界中で同じ文字体系だけを使う",
+            "文字は一切使われない",
+            "必ずひらがなだけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カザフ語は現在キリル文字が広く使われ、ロシア語もキリル文字を使います。",
+        "skills": [
+          "writing-systems"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で国を紹介する",
+        "prompt": "“Hello! I am learning about Kazakhstan.” を声に出そう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Kazakhstan.",
+          "meaning": "こんにちは。私はカザフスタンについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して伝わるように発音します。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "kz-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介＋学んでいる国",
+        "prompt": "名前を入れて英語で自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Kazakhstan. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流に近い自己紹介です。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "kz-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語と決めつけない",
+        "prompt": "カザフスタンの言語を学ぶ姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カザフ語が国家語で、ロシア語も社会・行政・都市生活などで広く使われています。ほかにも多様な民族言語があります。",
+            "全員が同じ言葉だけを使うと決めつける",
+            "首都の言葉だけが本物と考える",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カザフ語が国家語で、ロシア語も社会・行政・都市生活などで広く使われています。ほかにも多様な民族言語があります。",
+        "skills": [
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化をつなぐ",
+        "prompt": "カザフスタンの言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の地域・歴史・文化を理解する入り口になる",
+            "一つの言語を知れば全員の考えが同じと分かる",
+            "他の言語を否定するため",
+            "発音だけを競うため"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は人・地域・歴史を理解する入り口です。",
+        "skills": [
+          "culture"
+        ]
+      },
+      {
+        "id": "kz-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "本当に聞きたい質問を話す",
+        "prompt": "カザフスタンの同年代の生徒に質問を英語で1つ作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "カザフスタン",
+          "audienceCountryNameEn": "Kazakhstan"
+        },
+        "explanation": "自分の好奇心を英語にします。",
+        "skills": [
+          "speaking",
+          "question-creation"
+        ]
+      },
+      {
+        "id": "kz-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "カザフスタンの気候について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "大陸性気候で、夏は暑く乾燥し、冬は非常に寒くなります。南北・標高による気候差も大きいです。",
+            "国内は一年中どこでも同じ気候",
+            "気候は地形と無関係",
+            "世界中の国と毎日同じ気温"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "大陸性気候で、夏は暑く乾燥し、冬は非常に寒くなります。南北・標高による気候差も大きいです。",
+        "skills": [
+          "climate"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化を知る",
+        "prompt": "カザフスタンの食文化と関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ベシュバルマク",
+            "必ず寿司だけ",
+            "世界中で同じ一皿だけ",
+            "食文化は歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ベシュバルマクは食文化を知る手がかりの一つです。",
+        "skills": [
+          "food-culture"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文化・自然遺産から学ぶ",
+        "prompt": "カザフスタンについて学ぶ題材として関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ホージャ・アフマド・ヤサヴィー廟",
+            "東京タワーだけ",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ホージャ・アフマド・ヤサヴィー廟は地域性を考える題材です。",
+        "skills": [
+          "heritage"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "同じ国の中の地域差",
+        "prompt": "カザフスタンの3都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "アスタナ",
+              "target": "北中部・首都"
+            },
+            {
+              "name": "アルマトイ",
+              "target": "南東部"
+            },
+            {
+              "name": "シムケント",
+              "target": "南部"
+            }
+          ]
+        },
+        "explanation": "都市配置から生活条件の違いを考えます。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "季節と地域差",
+        "prompt": "カザフスタンの季節や地域差を考えるとき最も大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "北部ステップ、南部都市・農業地域、西部カスピ海沿岸、東南部山岳地域で自然、産業、人口分布が大きく異なります。",
+            "首都の天気を全国に当てはめる",
+            "一年中同じ気温と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "北部ステップ、南部都市・農業地域、西部カスピ海沿岸、東南部山岳地域で自然、産業、人口分布が大きく異なります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "カザフスタンの文化を学ぶときの姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "大都市、草原の牧畜地域、工業・資源地域、山岳地域などで暮らしや産業は一様ではありません。",
+            "観光広告一つで全国民を説明する",
+            "都市だけを本物と考える",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "大都市、草原の牧畜地域、工業・資源地域、山岳地域などで暮らしや産業は一様ではありません。",
+        "skills": [
+          "anti-stereotype"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "「その国らしさ」を疑う",
+        "prompt": "『カザフスタンの人はみんな同じ生活をしている』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけ見れば全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。",
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "kz-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながりを発見",
+        "prompt": "日本とカザフスタンの関係について正しい説明は？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本とカザフスタンは天然資源、医療、環境、人材育成、科学技術・宇宙などの分野で交流しています。",
+            "一切の交流関係がない",
+            "同じ国土を共有する",
+            "時差だけが関係である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とカザフスタンは天然資源、医療、環境、人材育成、科学技術・宇宙などの分野で交流しています。",
+        "skills": [
+          "international-relations"
+        ],
+        "sourceIds": [
+          "kz-japan-connection"
+        ]
+      },
+      {
+        "id": "kz-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とカザフスタンのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Kazakhstan → JAPAN / JAPAN → Kazakhstan",
+          "items": [
+            {
+              "label": "天然資源・エネルギー",
+              "target": "つながりがある"
+            },
+            {
+              "label": "医療・環境協力",
+              "target": "つながりがある"
+            },
+            {
+              "label": "人材育成・科学技術",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本とカザフスタンは天然資源、医療、環境、人材育成、科学技術・宇宙などの分野で交流しています。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "kz-japan-connection"
+        ]
+      },
+      {
+        "id": "kz-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "国別の協力を読む",
+        "prompt": "日本とカザフスタンの具体的なつながりとして最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "天然資源・エネルギー / 医療・環境協力 / 人材育成・科学技術",
+            "両国間に人や物の移動はない",
+            "国際協力は時差だけで決まる",
+            "文化交流は国際関係に含まれない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とカザフスタンは天然資源、医療、環境、人材育成、科学技術・宇宙などの分野で交流しています。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "kz-japan-connection"
+        ]
+      },
+      {
+        "id": "kz-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "つながりの流れを考える",
+        "prompt": "日本とカザフスタンの協力が社会につながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "資源・エネルギー協力",
+              "middle": "安定した供給と技術交流",
+              "end": "産業と経済のつながり"
+            },
+            {
+              "start": "医療・人材育成",
+              "middle": "専門家・研修の交流",
+              "end": "社会課題への協力"
+            }
+          ]
+        },
+        "explanation": "協力の『分野→活動→社会への意味』をつなげます。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "kz-japan-connection"
+        ]
+      },
+      {
+        "id": "kz-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながりを探せ",
+        "prompt": "身近な日本とカザフスタンのつながりを1つ探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品表示・学校交流・ニュース・文化イベント・技術協力などの根拠も書こう。"
+        },
+        "explanation": "日常の国際的つながりを証拠から探します。",
+        "skills": [
+          "evidence"
+        ]
+      },
+      {
+        "id": "kz-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "もし交流が増えたら？",
+        "prompt": "日本とカザフスタンの学校交流が増えたとき最も期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員が同じ考えだと確認できる",
+            "地理を学ばなくてよくなる",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で知識と人の経験を結びつけます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "kz-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズを作れ",
+        "prompt": "日本とカザフスタンのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "カザフスタン"
+        },
+        "explanation": "他者に説明できる形へ再構成します。",
+        "skills": [
+          "quiz-creation"
+        ]
+      },
+      {
+        "id": "kz-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点を3つ探す",
+        "prompt": "日本とカザフスタンの共通点を3つ、異なるカテゴリーから見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "遠い国＝全く違う、という見方を越えます。",
+        "skills": [
+          "comparison"
+        ]
+      },
+      {
+        "id": "kz-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由を考える",
+        "prompt": "日本とカザフスタンの違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えて違いを理解します。",
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "kz-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "ステレオタイプを証拠で検証",
+        "prompt": "『カザフスタンは草原だけの国で、全国どこでも同じ自然環境と生活である』という説明を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "カザフスタンは草原だけの国で、全国どこでも同じ自然環境と生活である",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "kz-k03-e1",
+              "text": "南東部には天山山脈があり高山環境がある",
+              "valid": true
+            },
+            {
+              "id": "kz-k03-e2",
+              "text": "西部はカスピ海に面し、石油・港湾産業が重要である",
+              "valid": true
+            },
+            {
+              "id": "kz-k03-e3",
+              "text": "北部ステップ、南部農業地域、大都市では暮らしや産業が異なる",
+              "valid": true
+            },
+            {
+              "id": "kz-k03-e4",
+              "text": "カザフスタンの首都はアスタナである",
+              "valid": false
+            },
+            {
+              "id": "kz-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "主張に直接関係する証拠を複数選んで判断します。",
+        "skills": [
+          "evidence",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "kz-country-profile"
+        ]
+      },
+      {
+        "id": "kz-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ作る",
+        "prompt": "カザフスタンの同年代の生徒に質問を3つ作ろう。少なくとも2分野を含める。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "カザフスタン"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。",
+        "skills": [
+          "question-creation"
+        ]
+      },
+      {
+        "id": "kz-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Kazakhstan Master Quiz",
+        "prompt": "まだカザフスタンをよく知らない友達向けに5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "カザフスタン"
+        },
+        "explanation": "40 Missionの学びを再構成する最終Missionです。",
+        "skills": [
+          "synthesis",
+          "teaching"
+        ]
+      }
+    ]
+  },
+  "ke": {
+    "countryNameJa": "ケニア",
+    "countryNameEn": "Kenya",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "ke-l08",
+          "ke-j07",
+          "ke-k04",
+          "ke-k05"
+        ]
+      }
+    },
+    "sources": {
+      "ke-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Kenya profile based on countries_k.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_k.json"
+      },
+      "ke-time-zone": {
+        "organization": "IANA Time Zone Database / 2026 clock-change verification",
+        "title": "IANA Time Zone Database and 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "ke-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Kenya relations / regional information",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/africa/kenya/"
+      }
+    },
+    "missions": [
+      {
+        "id": "ke-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "ケニアを探せ！",
+        "prompt": "世界地図からケニアをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "ke",
+          "targetAtlasName": "Kenya",
+          "targetName": "Kenya"
+        },
+        "explanation": "赤道をまたぐ東アフリカの国で、グレート・リフト・バレー、高地、サバンナ、ケニア山、インド洋岸を持ちます。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "ケニアの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "東アフリカ",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ケニアは東アフリカに位置します。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "ケニアの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ナイロビ",
+            "モンバサ",
+            "キスム",
+            "エルドレット"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はナイロビです。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "ケニアの主要都市を地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "ke",
+          "targetAtlasName": "Kenya",
+          "mapConfig": {
+            "center": [
+              37.8,
+              0.4
+            ],
+            "scale": 1050
+          },
+          "cities": [
+            {
+              "name": "Nairobi",
+              "labelJa": "ナイロビ",
+              "coordinates": [
+                36.8219,
+                -1.2921
+              ],
+              "timeZone": "Africa/Nairobi",
+              "region": "中央高地・首都"
+            },
+            {
+              "name": "Mombasa",
+              "labelJa": "モンバサ",
+              "coordinates": [
+                39.6682,
+                -4.0435
+              ],
+              "timeZone": "Africa/Nairobi",
+              "region": "インド洋岸"
+            },
+            {
+              "name": "Kisumu",
+              "labelJa": "キスム",
+              "coordinates": [
+                34.7617,
+                -0.0917
+              ],
+              "timeZone": "Africa/Nairobi",
+              "region": "西部・ビクトリア湖岸"
+            },
+            {
+              "name": "Eldoret",
+              "labelJa": "エルドレット",
+              "coordinates": [
+                35.2698,
+                0.5143
+              ],
+              "timeZone": "Africa/Nairobi",
+              "region": "西部高地"
+            }
+          ]
+        },
+        "explanation": "主要都市の配置から地域差を読み取ります。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "ケニアと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "インド洋、ビクトリア湖の一部、トゥルカナ湖、多数の河川が漁業、港湾、農業、水資源に重要です。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島である",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "インド洋、ビクトリア湖の一部、トゥルカナ湖、多数の河川が漁業、港湾、農業、水資源に重要です。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候を結びつける",
+        "prompt": "ケニアの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "赤道付近ですが高地は比較的涼しく、沿岸は高温多湿、北部は乾燥地域が多く、地域差が大きいです。",
+            "全国どこでも一年中同じ気候",
+            "首都の天気だけで全国を説明できる",
+            "地形や標高は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "赤道付近ですが高地は比較的涼しく、沿岸は高温多湿、北部は乾燥地域が多く、地域差が大きいです。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "スケールと地域差",
+        "prompt": "ケニアを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "ナイロビ高地、中央高地、リフトバレー、乾燥した北部、スワヒリ文化の沿岸で産業・言語・生活が異なります。",
+            "首都の写真1枚だけで全国を判断する",
+            "観光地だけを国全体と考える",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ナイロビ高地、中央高地、リフトバレー、乾燥した北部、スワヒリ文化の沿岸で産業・言語・生活が異なります。",
+        "skills": [
+          "scale",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとNairobiの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Africa/Nairobi"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Nairobi": "Nairobi"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "IANAタイムゾーンでリアルタイム比較します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "ke-time-zone"
+        ]
+      },
+      {
+        "id": "ke-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "Tokyoの時刻を見て、同じ瞬間のNairobiの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Africa/Nairobi",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Nairobi": "Nairobi"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別都市の時計で表します。",
+        "skills": [
+          "time-calculation"
+        ],
+        "sourceIds": [
+          "ke-time-zone"
+        ]
+      },
+      {
+        "id": "ke-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差をリアルタイムで読む",
+        "prompt": "TokyoとNairobiの現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Africa/Nairobi"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Nairobi": "Nairobi"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "固定暗記ではなく実際の時差を確認します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "ke-time-zone"
+        ]
+      },
+      {
+        "id": "ke-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜を比べる",
+        "prompt": "TokyoとNairobiの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Africa/Nairobi"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Nairobi": "Nairobi"
+          }
+        },
+        "explanation": "時刻を生活時間帯につなげます。",
+        "skills": [
+          "daily-life"
+        ],
+        "sourceIds": [
+          "ke-time-zone"
+        ]
+      },
+      {
+        "id": "ke-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流できる時間を探せ",
+        "prompt": "日本側14:30〜16:00、ケニア側8:30〜10:00の範囲で学校交流できる時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Africa/Nairobi",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Africa/Nairobi": "Nairobi"
+          },
+          "windowA": [
+            "14:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "10:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "実際に重なる時間帯から、相手にも無理の少ない交流時間を考えます。",
+        "skills": [
+          "scheduling"
+        ],
+        "sourceIds": [
+          "ke-time-zone"
+        ]
+      },
+      {
+        "id": "ke-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DST・国内時差を確認",
+        "prompt": "ケニアの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ケニアは2026年も東アフリカ時間（EAT、UTC+3）を通年使用し、DSTは実施していません。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "DSTは世界共通で必ず実施される",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ケニアは2026年も東アフリカ時間（EAT、UTC+3）を通年使用し、DSTは実施していません。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "ke-time-zone"
+        ]
+      },
+      {
+        "id": "ke-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語を場面で選ぶ",
+        "prompt": "ケニアの生徒との交流を想定し、場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き取れなかった",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活を知りたい",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "交流の終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "国際交流の基本表現を場面で使い分けます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "ke-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "どんな言語が使われる？",
+        "prompt": "ケニアの言語事情について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "スワヒリ語と英語が公用語で、キクユ語、ルオ語、ルヒヤ語、カレンジン諸語など多くの地域言語も使われています。",
+            "全員が必ず一言語だけを使う",
+            "家庭や地域の言語差はない",
+            "日本語だけが公用語である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "スワヒリ語と英語が公用語で、キクユ語、ルオ語、ルヒヤ語、カレンジン諸語など多くの地域言語も使われています。",
+        "skills": [
+          "multilingualism"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字にも注目",
+        "prompt": "ケニアの文字について正しい説明は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "スワヒリ語と英語は主にラテン文字で表記されます。地域言語にもラテン文字表記が広く使われます。",
+            "世界中で同じ文字体系だけを使う",
+            "文字は一切使われない",
+            "必ずひらがなだけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "スワヒリ語と英語は主にラテン文字で表記されます。地域言語にもラテン文字表記が広く使われます。",
+        "skills": [
+          "writing-systems"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で国を紹介する",
+        "prompt": "“Hello! I am learning about Kenya.” を声に出そう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Kenya.",
+          "meaning": "こんにちは。私はケニアについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して伝わるように発音します。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "ke-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介＋学んでいる国",
+        "prompt": "名前を入れて英語で自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Kenya. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流に近い自己紹介です。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "ke-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語と決めつけない",
+        "prompt": "ケニアの言語を学ぶ姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "スワヒリ語と英語が公用語で、キクユ語、ルオ語、ルヒヤ語、カレンジン諸語など多くの地域言語も使われています。",
+            "全員が同じ言葉だけを使うと決めつける",
+            "首都の言葉だけが本物と考える",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "スワヒリ語と英語が公用語で、キクユ語、ルオ語、ルヒヤ語、カレンジン諸語など多くの地域言語も使われています。",
+        "skills": [
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化をつなぐ",
+        "prompt": "ケニアの言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の地域・歴史・文化を理解する入り口になる",
+            "一つの言語を知れば全員の考えが同じと分かる",
+            "他の言語を否定するため",
+            "発音だけを競うため"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は人・地域・歴史を理解する入り口です。",
+        "skills": [
+          "culture"
+        ]
+      },
+      {
+        "id": "ke-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "本当に聞きたい質問を話す",
+        "prompt": "ケニアの同年代の生徒に質問を英語で1つ作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "ケニア",
+          "audienceCountryNameEn": "Kenya"
+        },
+        "explanation": "自分の好奇心を英語にします。",
+        "skills": [
+          "speaking",
+          "question-creation"
+        ]
+      },
+      {
+        "id": "ke-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "ケニアの気候について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "赤道付近ですが高地は比較的涼しく、沿岸は高温多湿、北部は乾燥地域が多く、地域差が大きいです。",
+            "国内は一年中どこでも同じ気候",
+            "気候は地形と無関係",
+            "世界中の国と毎日同じ気温"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "赤道付近ですが高地は比較的涼しく、沿岸は高温多湿、北部は乾燥地域が多く、地域差が大きいです。",
+        "skills": [
+          "climate"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化を知る",
+        "prompt": "ケニアの食文化と関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ウガリ、スクマ・ウィキ、ニャマ・チョマ",
+            "必ず寿司だけ",
+            "世界中で同じ一皿だけ",
+            "食文化は歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ウガリ、スクマ・ウィキ、ニャマ・チョマは食文化を知る手がかりの一つです。",
+        "skills": [
+          "food-culture"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文化・自然遺産から学ぶ",
+        "prompt": "ケニアについて学ぶ題材として関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ケニア山国立公園",
+            "東京タワーだけ",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ケニア山国立公園は地域性を考える題材です。",
+        "skills": [
+          "heritage"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "同じ国の中の地域差",
+        "prompt": "ケニアの3都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "ナイロビ",
+              "target": "中央高地・首都"
+            },
+            {
+              "name": "モンバサ",
+              "target": "インド洋岸"
+            },
+            {
+              "name": "キスム",
+              "target": "西部・ビクトリア湖岸"
+            }
+          ]
+        },
+        "explanation": "都市配置から生活条件の違いを考えます。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "季節と地域差",
+        "prompt": "ケニアの季節や地域差を考えるとき最も大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ナイロビ高地、中央高地、リフトバレー、乾燥した北部、スワヒリ文化の沿岸で産業・言語・生活が異なります。",
+            "首都の天気を全国に当てはめる",
+            "一年中同じ気温と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ナイロビ高地、中央高地、リフトバレー、乾燥した北部、スワヒリ文化の沿岸で産業・言語・生活が異なります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "ケニアの文化を学ぶときの姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "多数の民族・言語共同体があり、大都市、高地農業地域、牧畜地域、沿岸都市などで生活文化が大きく異なります。",
+            "観光広告一つで全国民を説明する",
+            "都市だけを本物と考える",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "多数の民族・言語共同体があり、大都市、高地農業地域、牧畜地域、沿岸都市などで生活文化が大きく異なります。",
+        "skills": [
+          "anti-stereotype"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "「その国らしさ」を疑う",
+        "prompt": "『ケニアの人はみんな同じ生活をしている』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけ見れば全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。",
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "ke-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながりを発見",
+        "prompt": "日本とケニアの関係について正しい説明は？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本とケニアは地熱発電、インフラ、保健、農業、人材育成など幅広い分野で協力しています。",
+            "一切の交流関係がない",
+            "同じ国土を共有する",
+            "時差だけが関係である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とケニアは地熱発電、インフラ、保健、農業、人材育成など幅広い分野で協力しています。",
+        "skills": [
+          "international-relations"
+        ],
+        "sourceIds": [
+          "ke-japan-connection"
+        ]
+      },
+      {
+        "id": "ke-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とケニアのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Kenya → JAPAN / JAPAN → Kenya",
+          "items": [
+            {
+              "label": "地熱発電・エネルギー",
+              "target": "つながりがある"
+            },
+            {
+              "label": "港湾・インフラ",
+              "target": "つながりがある"
+            },
+            {
+              "label": "保健・農業・人材育成",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本とケニアは地熱発電、インフラ、保健、農業、人材育成など幅広い分野で協力しています。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "ke-japan-connection"
+        ]
+      },
+      {
+        "id": "ke-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "国別の協力を読む",
+        "prompt": "日本とケニアの具体的なつながりとして最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "地熱発電・エネルギー / 港湾・インフラ / 保健・農業・人材育成",
+            "両国間に人や物の移動はない",
+            "国際協力は時差だけで決まる",
+            "文化交流は国際関係に含まれない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とケニアは地熱発電、インフラ、保健、農業、人材育成など幅広い分野で協力しています。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "ke-japan-connection"
+        ]
+      },
+      {
+        "id": "ke-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "つながりの流れを考える",
+        "prompt": "日本とケニアの協力が社会につながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "地熱発電協力",
+              "middle": "地熱資源を電力に活用",
+              "end": "安定した低炭素電力へ"
+            },
+            {
+              "start": "保健・農業協力",
+              "middle": "技術・人材育成",
+              "end": "地域の生活改善へ"
+            }
+          ]
+        },
+        "explanation": "協力の『分野→活動→社会への意味』をつなげます。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "ke-japan-connection"
+        ]
+      },
+      {
+        "id": "ke-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながりを探せ",
+        "prompt": "身近な日本とケニアのつながりを1つ探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品表示・学校交流・ニュース・文化イベント・技術協力などの根拠も書こう。"
+        },
+        "explanation": "日常の国際的つながりを証拠から探します。",
+        "skills": [
+          "evidence"
+        ]
+      },
+      {
+        "id": "ke-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "もし交流が増えたら？",
+        "prompt": "日本とケニアの学校交流が増えたとき最も期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員が同じ考えだと確認できる",
+            "地理を学ばなくてよくなる",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で知識と人の経験を結びつけます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "ke-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズを作れ",
+        "prompt": "日本とケニアのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "ケニア"
+        },
+        "explanation": "他者に説明できる形へ再構成します。",
+        "skills": [
+          "quiz-creation"
+        ]
+      },
+      {
+        "id": "ke-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点を3つ探す",
+        "prompt": "日本とケニアの共通点を3つ、異なるカテゴリーから見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "遠い国＝全く違う、という見方を越えます。",
+        "skills": [
+          "comparison"
+        ]
+      },
+      {
+        "id": "ke-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由を考える",
+        "prompt": "日本とケニアの違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えて違いを理解します。",
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "ke-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "ステレオタイプを証拠で検証",
+        "prompt": "『ケニアはサバンナと野生動物だけの国で、都市・高地・沿岸の生活は重要ではない』という説明を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "ケニアはサバンナと野生動物だけの国で、都市・高地・沿岸の生活は重要ではない",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "ke-k03-e1",
+              "text": "ナイロビは東アフリカ有数の大都市・国際都市である",
+              "valid": true
+            },
+            {
+              "id": "ke-k03-e2",
+              "text": "高地は比較的涼しく農業が盛んである",
+              "valid": true
+            },
+            {
+              "id": "ke-k03-e3",
+              "text": "モンバサなど沿岸部にはスワヒリ海洋文化と港湾産業がある",
+              "valid": true
+            },
+            {
+              "id": "ke-k03-e4",
+              "text": "ケニアの首都はナイロビである",
+              "valid": false
+            },
+            {
+              "id": "ke-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "主張に直接関係する証拠を複数選んで判断します。",
+        "skills": [
+          "evidence",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "ke-country-profile"
+        ]
+      },
+      {
+        "id": "ke-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ作る",
+        "prompt": "ケニアの同年代の生徒に質問を3つ作ろう。少なくとも2分野を含める。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "ケニア"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。",
+        "skills": [
+          "question-creation"
+        ]
+      },
+      {
+        "id": "ke-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Kenya Master Quiz",
+        "prompt": "まだケニアをよく知らない友達向けに5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "ケニア"
+        },
+        "explanation": "40 Missionの学びを再構成する最終Missionです。",
+        "skills": [
+          "synthesis",
+          "teaching"
+        ]
+      }
+    ]
+  },
+  "ki": {
+    "countryNameJa": "キリバス",
+    "countryNameEn": "Kiribati",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "ki-l08",
+          "ki-j07",
+          "ki-k04",
+          "ki-k05"
+        ]
+      }
+    },
+    "sources": {
+      "ki-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Kiribati profile based on countries_k.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_k.json"
+      },
+      "ki-time-zone": {
+        "organization": "IANA Time Zone Database / 2026 clock-change verification",
+        "title": "IANA Time Zone Database and 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "ki-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Kiribati relations / regional information",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/asia-paci/kiribati/"
+      }
+    },
+    "missions": [
+      {
+        "id": "ki-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "キリバスを探せ！",
+        "prompt": "世界地図からキリバスをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "ki",
+          "targetAtlasName": "Kiribati",
+          "targetName": "Kiribati"
+        },
+        "explanation": "太平洋の非常に広い海域に33の島・環礁が点在する島国で、国土の多くは海面に近い低い環礁です。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "キリバスの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "中部太平洋・ミクロネシア",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キリバスは中部太平洋・ミクロネシアに位置します。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "キリバスの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "南タラワ",
+            "ベティオ",
+            "キリスィマスィ島",
+            "タビテウエア"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都は南タラワです。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "キリバスの主要都市を地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "ki",
+          "targetAtlasName": "Kiribati",
+          "mapConfig": {
+            "center": [
+              173.0,
+              1.0
+            ],
+            "scale": 4200
+          },
+          "cities": [
+            {
+              "name": "South Tarawa",
+              "labelJa": "南タラワ",
+              "coordinates": [
+                172.9791,
+                1.4518
+              ],
+              "timeZone": "Pacific/Tarawa",
+              "region": "ギルバート諸島・首都圏"
+            },
+            {
+              "name": "Betio",
+              "labelJa": "ベティオ",
+              "coordinates": [
+                172.9211,
+                1.3579
+              ],
+              "timeZone": "Pacific/Tarawa",
+              "region": "南タラワ西端"
+            },
+            {
+              "name": "Kiritimati",
+              "labelJa": "キリスィマスィ島",
+              "coordinates": [
+                -157.3333,
+                1.8721
+              ],
+              "timeZone": "Pacific/Tarawa",
+              "region": "ライン諸島"
+            },
+            {
+              "name": "Tabiteuea",
+              "labelJa": "タビテウエア",
+              "coordinates": [
+                174.8,
+                -1.35
+              ],
+              "timeZone": "Pacific/Tarawa",
+              "region": "ギルバート諸島南部"
+            }
+          ]
+        },
+        "explanation": "主要都市の配置から地域差を読み取ります。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "キリバスと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "生活圏のほとんどが海と直結し、漁業、航海、地下水、ラグーン、生態系、食料安全保障に海が大きく関わります。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島である",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "生活圏のほとんどが海と直結し、漁業、航海、地下水、ラグーン、生態系、食料安全保障に海が大きく関わります。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候を結びつける",
+        "prompt": "キリバスの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "一年を通して高温で、降水量は島によって異なります。海面上昇、高潮、塩水侵入への適応が重要です。",
+            "全国どこでも一年中同じ気候",
+            "首都の天気だけで全国を説明できる",
+            "地形や標高は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "一年を通して高温で、降水量は島によって異なります。海面上昇、高潮、塩水侵入への適応が重要です。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "スケールと地域差",
+        "prompt": "キリバスを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "ギルバート諸島、フェニックス諸島、ライン諸島は広大な海に離れており、距離、交通、時刻、人口密度が大きく異なります。",
+            "首都の写真1枚だけで全国を判断する",
+            "観光地だけを国全体と考える",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ギルバート諸島、フェニックス諸島、ライン諸島は広大な海に離れており、距離、交通、時刻、人口密度が大きく異なります。",
+        "skills": [
+          "scale",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとSouth Tarawaの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Pacific/Tarawa"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Pacific/Tarawa": "South Tarawa"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "IANAタイムゾーンでリアルタイム比較します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "ki-time-zone"
+        ]
+      },
+      {
+        "id": "ki-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "Tokyoの時刻を見て、同じ瞬間のSouth Tarawaの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Pacific/Tarawa",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Pacific/Tarawa": "South Tarawa"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別都市の時計で表します。",
+        "skills": [
+          "time-calculation"
+        ],
+        "sourceIds": [
+          "ki-time-zone"
+        ]
+      },
+      {
+        "id": "ki-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差をリアルタイムで読む",
+        "prompt": "TokyoとSouth Tarawaの現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Pacific/Tarawa"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Pacific/Tarawa": "South Tarawa"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "固定暗記ではなく実際の時差を確認します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "ki-time-zone"
+        ]
+      },
+      {
+        "id": "ki-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜を比べる",
+        "prompt": "TokyoとSouth Tarawaの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Pacific/Tarawa"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Pacific/Tarawa": "South Tarawa"
+          }
+        },
+        "explanation": "時刻を生活時間帯につなげます。",
+        "skills": [
+          "daily-life"
+        ],
+        "sourceIds": [
+          "ki-time-zone"
+        ]
+      },
+      {
+        "id": "ki-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流できる時間を探せ",
+        "prompt": "日本側8:30〜13:00、南タラワ側11:30〜16:00の範囲で学校交流できる時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Pacific/Tarawa",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Pacific/Tarawa": "South Tarawa"
+          },
+          "windowA": [
+            "08:30",
+            "13:00"
+          ],
+          "windowB": [
+            "11:30",
+            "16:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "実際に重なる時間帯から、相手にも無理の少ない交流時間を考えます。",
+        "skills": [
+          "scheduling"
+        ],
+        "sourceIds": [
+          "ki-time-zone"
+        ]
+      },
+      {
+        "id": "ki-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DST・国内時差を確認",
+        "prompt": "キリバスの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "キリバスは2026年、UTC+12・UTC+13・UTC+14の3タイムゾーンを通年使用し、DSTは実施していません。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "DSTは世界共通で必ず実施される",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キリバスは2026年、UTC+12・UTC+13・UTC+14の3タイムゾーンを通年使用し、DSTは実施していません。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "ki-time-zone"
+        ]
+      },
+      {
+        "id": "ki-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語を場面で選ぶ",
+        "prompt": "キリバスの生徒との交流を想定し、場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き取れなかった",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活を知りたい",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "交流の終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "国際交流の基本表現を場面で使い分けます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "ki-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "どんな言語が使われる？",
+        "prompt": "キリバスの言語事情について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "キリバス語（Gilbertese / I-Kiribati）と英語が使われます。地域社会ではキリバス語が重要です。",
+            "全員が必ず一言語だけを使う",
+            "家庭や地域の言語差はない",
+            "日本語だけが公用語である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キリバス語（Gilbertese / I-Kiribati）と英語が使われます。地域社会ではキリバス語が重要です。",
+        "skills": [
+          "multilingualism"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字にも注目",
+        "prompt": "キリバスの文字について正しい説明は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "キリバス語と英語は主にラテン文字で表記されます。",
+            "世界中で同じ文字体系だけを使う",
+            "文字は一切使われない",
+            "必ずひらがなだけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キリバス語と英語は主にラテン文字で表記されます。",
+        "skills": [
+          "writing-systems"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で国を紹介する",
+        "prompt": "“Hello! I am learning about Kiribati.” を声に出そう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Kiribati.",
+          "meaning": "こんにちは。私はキリバスについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して伝わるように発音します。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "ki-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介＋学んでいる国",
+        "prompt": "名前を入れて英語で自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Kiribati. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流に近い自己紹介です。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "ki-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語と決めつけない",
+        "prompt": "キリバスの言語を学ぶ姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "キリバス語（Gilbertese / I-Kiribati）と英語が使われます。地域社会ではキリバス語が重要です。",
+            "全員が同じ言葉だけを使うと決めつける",
+            "首都の言葉だけが本物と考える",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キリバス語（Gilbertese / I-Kiribati）と英語が使われます。地域社会ではキリバス語が重要です。",
+        "skills": [
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化をつなぐ",
+        "prompt": "キリバスの言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の地域・歴史・文化を理解する入り口になる",
+            "一つの言語を知れば全員の考えが同じと分かる",
+            "他の言語を否定するため",
+            "発音だけを競うため"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は人・地域・歴史を理解する入り口です。",
+        "skills": [
+          "culture"
+        ]
+      },
+      {
+        "id": "ki-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "本当に聞きたい質問を話す",
+        "prompt": "キリバスの同年代の生徒に質問を英語で1つ作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "キリバス",
+          "audienceCountryNameEn": "Kiribati"
+        },
+        "explanation": "自分の好奇心を英語にします。",
+        "skills": [
+          "speaking",
+          "question-creation"
+        ]
+      },
+      {
+        "id": "ki-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "キリバスの気候について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "一年を通して高温で、降水量は島によって異なります。海面上昇、高潮、塩水侵入への適応が重要です。",
+            "国内は一年中どこでも同じ気候",
+            "気候は地形と無関係",
+            "世界中の国と毎日同じ気温"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "一年を通して高温で、降水量は島によって異なります。海面上昇、高潮、塩水侵入への適応が重要です。",
+        "skills": [
+          "climate"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化を知る",
+        "prompt": "キリバスの食文化と関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "魚、ココナツ、タロイモ類、ココヤシ樹液を使う料理",
+            "必ず寿司だけ",
+            "世界中で同じ一皿だけ",
+            "食文化は歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "魚、ココナツ、タロイモ類、ココヤシ樹液を使う料理は食文化を知る手がかりの一つです。",
+        "skills": [
+          "food-culture"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文化・自然遺産から学ぶ",
+        "prompt": "キリバスについて学ぶ題材として関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "フェニックス諸島保護地域",
+            "東京タワーだけ",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "フェニックス諸島保護地域は地域性を考える題材です。",
+        "skills": [
+          "heritage"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "同じ国の中の地域差",
+        "prompt": "キリバスの3都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "南タラワ",
+              "target": "ギルバート諸島・首都圏"
+            },
+            {
+              "name": "ベティオ",
+              "target": "南タラワ西端"
+            },
+            {
+              "name": "キリスィマスィ島",
+              "target": "ライン諸島"
+            }
+          ]
+        },
+        "explanation": "都市配置から生活条件の違いを考えます。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "季節と地域差",
+        "prompt": "キリバスの季節や地域差を考えるとき最も大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ギルバート諸島、フェニックス諸島、ライン諸島は広大な海に離れており、距離、交通、時刻、人口密度が大きく異なります。",
+            "首都の天気を全国に当てはめる",
+            "一年中同じ気温と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ギルバート諸島、フェニックス諸島、ライン諸島は広大な海に離れており、距離、交通、時刻、人口密度が大きく異なります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "キリバスの文化を学ぶときの姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "首都南タラワの高人口密度地域と、離島の小さな共同体では交通、教育、仕事、資源条件が大きく異なります。",
+            "観光広告一つで全国民を説明する",
+            "都市だけを本物と考える",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都南タラワの高人口密度地域と、離島の小さな共同体では交通、教育、仕事、資源条件が大きく異なります。",
+        "skills": [
+          "anti-stereotype"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "「その国らしさ」を疑う",
+        "prompt": "『キリバスの人はみんな同じ生活をしている』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけ見れば全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。",
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "ki-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながりを発見",
+        "prompt": "日本とキリバスの関係について正しい説明は？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本はキリバスで漁業、水資源、再生可能エネルギー、防災、気候変動への適応などを支援しています。",
+            "一切の交流関係がない",
+            "同じ国土を共有する",
+            "時差だけが関係である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本はキリバスで漁業、水資源、再生可能エネルギー、防災、気候変動への適応などを支援しています。",
+        "skills": [
+          "international-relations"
+        ],
+        "sourceIds": [
+          "ki-japan-connection"
+        ]
+      },
+      {
+        "id": "ki-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とキリバスのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Kiribati → JAPAN / JAPAN → Kiribati",
+          "items": [
+            {
+              "label": "漁業",
+              "target": "つながりがある"
+            },
+            {
+              "label": "水・再生可能エネルギー",
+              "target": "つながりがある"
+            },
+            {
+              "label": "防災・気候変動適応",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本はキリバスで漁業、水資源、再生可能エネルギー、防災、気候変動への適応などを支援しています。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "ki-japan-connection"
+        ]
+      },
+      {
+        "id": "ki-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "国別の協力を読む",
+        "prompt": "日本とキリバスの具体的なつながりとして最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "漁業 / 水・再生可能エネルギー / 防災・気候変動適応",
+            "両国間に人や物の移動はない",
+            "国際協力は時差だけで決まる",
+            "文化交流は国際関係に含まれない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本はキリバスで漁業、水資源、再生可能エネルギー、防災、気候変動への適応などを支援しています。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "ki-japan-connection"
+        ]
+      },
+      {
+        "id": "ki-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "つながりの流れを考える",
+        "prompt": "日本とキリバスの協力が社会につながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "漁業協力",
+              "middle": "海洋資源を持続可能に利用",
+              "end": "島の食料・経済を支える"
+            },
+            {
+              "start": "気候変動・防災協力",
+              "middle": "水・インフラの強靭化",
+              "end": "島の暮らしを守る"
+            }
+          ]
+        },
+        "explanation": "協力の『分野→活動→社会への意味』をつなげます。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "ki-japan-connection"
+        ]
+      },
+      {
+        "id": "ki-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながりを探せ",
+        "prompt": "身近な日本とキリバスのつながりを1つ探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品表示・学校交流・ニュース・文化イベント・技術協力などの根拠も書こう。"
+        },
+        "explanation": "日常の国際的つながりを証拠から探します。",
+        "skills": [
+          "evidence"
+        ]
+      },
+      {
+        "id": "ki-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "もし交流が増えたら？",
+        "prompt": "日本とキリバスの学校交流が増えたとき最も期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員が同じ考えだと確認できる",
+            "地理を学ばなくてよくなる",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で知識と人の経験を結びつけます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "ki-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズを作れ",
+        "prompt": "日本とキリバスのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "キリバス"
+        },
+        "explanation": "他者に説明できる形へ再構成します。",
+        "skills": [
+          "quiz-creation"
+        ]
+      },
+      {
+        "id": "ki-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点を3つ探す",
+        "prompt": "日本とキリバスの共通点を3つ、異なるカテゴリーから見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "遠い国＝全く違う、という見方を越えます。",
+        "skills": [
+          "comparison"
+        ]
+      },
+      {
+        "id": "ki-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由を考える",
+        "prompt": "日本とキリバスの違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えて違いを理解します。",
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "ki-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "ステレオタイプを証拠で検証",
+        "prompt": "『キリバスは小さな一つの島だけからなる国で、全国どこでも同じ時刻である』という説明を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "キリバスは小さな一つの島だけからなる国で、全国どこでも同じ時刻である",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "ki-k03-e1",
+              "text": "キリバスは33の島・環礁が広大な太平洋に分散している",
+              "valid": true
+            },
+            {
+              "id": "ki-k03-e2",
+              "text": "国内にはUTC+12、UTC+13、UTC+14の3タイムゾーンがある",
+              "valid": true
+            },
+            {
+              "id": "ki-k03-e3",
+              "text": "南タラワと遠隔離島では人口密度や交通条件が大きく異なる",
+              "valid": true
+            },
+            {
+              "id": "ki-k03-e4",
+              "text": "キリバスの首都は南タラワである",
+              "valid": false
+            },
+            {
+              "id": "ki-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "主張に直接関係する証拠を複数選んで判断します。",
+        "skills": [
+          "evidence",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "ki-country-profile"
+        ]
+      },
+      {
+        "id": "ki-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ作る",
+        "prompt": "キリバスの同年代の生徒に質問を3つ作ろう。少なくとも2分野を含める。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "キリバス"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。",
+        "skills": [
+          "question-creation"
+        ]
+      },
+      {
+        "id": "ki-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Kiribati Master Quiz",
+        "prompt": "まだキリバスをよく知らない友達向けに5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "キリバス"
+        },
+        "explanation": "40 Missionの学びを再構成する最終Missionです。",
+        "skills": [
+          "synthesis",
+          "teaching"
+        ]
+      }
+    ]
+  },
+  "kw": {
+    "countryNameJa": "クウェート",
+    "countryNameEn": "Kuwait",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "kw-l08",
+          "kw-j07",
+          "kw-k04",
+          "kw-k05"
+        ]
+      }
+    },
+    "sources": {
+      "kw-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Kuwait profile based on countries_k.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_k.json"
+      },
+      "kw-time-zone": {
+        "organization": "IANA Time Zone Database / 2026 clock-change verification",
+        "title": "IANA Time Zone Database and 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "kw-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Kuwait relations / regional information",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/middle_e/kuwait/"
+      }
+    },
+    "missions": [
+      {
+        "id": "kw-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "クウェートを探せ！",
+        "prompt": "世界地図からクウェートをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "kw",
+          "targetAtlasName": "Kuwait",
+          "targetName": "Kuwait"
+        },
+        "explanation": "ペルシャ湾北西部に位置する小国で、平坦な砂漠地形、湾岸、島々、都市化した沿岸部が特徴です。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "クウェートの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "西アジア・ペルシャ湾岸",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "クウェートは西アジア・ペルシャ湾岸に位置します。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "クウェートの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "クウェート市",
+            "アル・アハマディ",
+            "アル・ジャハラ",
+            "サルミヤ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はクウェート市です。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "クウェートの主要都市を地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "kw",
+          "targetAtlasName": "Kuwait",
+          "mapConfig": {
+            "center": [
+              47.6,
+              29.3
+            ],
+            "scale": 4200
+          },
+          "cities": [
+            {
+              "name": "Kuwait City",
+              "labelJa": "クウェート市",
+              "coordinates": [
+                47.9774,
+                29.3759
+              ],
+              "timeZone": "Asia/Kuwait",
+              "region": "首都圏"
+            },
+            {
+              "name": "Al Ahmadi",
+              "labelJa": "アル・アハマディ",
+              "coordinates": [
+                48.0839,
+                29.0769
+              ],
+              "timeZone": "Asia/Kuwait",
+              "region": "南部・石油産業地域"
+            },
+            {
+              "name": "Al Jahra",
+              "labelJa": "アル・ジャハラ",
+              "coordinates": [
+                47.6581,
+                29.3375
+              ],
+              "timeZone": "Asia/Kuwait",
+              "region": "西部"
+            },
+            {
+              "name": "Salmiya",
+              "labelJa": "サルミヤ",
+              "coordinates": [
+                48.0761,
+                29.3339
+              ],
+              "timeZone": "Asia/Kuwait",
+              "region": "東部沿岸"
+            }
+          ]
+        },
+        "explanation": "主要都市の配置から地域差を読み取ります。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "クウェートと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ペルシャ湾は港湾、海運、漁業、真珠採りの歴史、海水淡水化など、生活と経済に深く関わります。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島である",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ペルシャ湾は港湾、海運、漁業、真珠採りの歴史、海水淡水化など、生活と経済に深く関わります。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候を結びつける",
+        "prompt": "クウェートの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "非常に乾燥した砂漠気候で、夏は猛烈に暑く、冬は比較的穏やかです。降水量は少ないです。",
+            "全国どこでも一年中同じ気候",
+            "首都の天気だけで全国を説明できる",
+            "地形や標高は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "非常に乾燥した砂漠気候で、夏は猛烈に暑く、冬は比較的穏やかです。降水量は少ないです。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "スケールと地域差",
+        "prompt": "クウェートを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "クウェート市都市圏、工業・港湾地域、郊外、砂漠地域、ファイラカ島などで土地利用と生活が異なります。",
+            "首都の写真1枚だけで全国を判断する",
+            "観光地だけを国全体と考える",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "クウェート市都市圏、工業・港湾地域、郊外、砂漠地域、ファイラカ島などで土地利用と生活が異なります。",
+        "skills": [
+          "scale",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとKuwait Cityの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Asia/Kuwait"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Kuwait": "Kuwait City"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "IANAタイムゾーンでリアルタイム比較します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "kw-time-zone"
+        ]
+      },
+      {
+        "id": "kw-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "Tokyoの時刻を見て、同じ瞬間のKuwait Cityの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Asia/Kuwait",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Kuwait": "Kuwait City"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別都市の時計で表します。",
+        "skills": [
+          "time-calculation"
+        ],
+        "sourceIds": [
+          "kw-time-zone"
+        ]
+      },
+      {
+        "id": "kw-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差をリアルタイムで読む",
+        "prompt": "TokyoとKuwait Cityの現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Asia/Kuwait"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Kuwait": "Kuwait City"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "固定暗記ではなく実際の時差を確認します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "kw-time-zone"
+        ]
+      },
+      {
+        "id": "kw-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜を比べる",
+        "prompt": "TokyoとKuwait Cityの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Asia/Kuwait"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Kuwait": "Kuwait City"
+          }
+        },
+        "explanation": "時刻を生活時間帯につなげます。",
+        "skills": [
+          "daily-life"
+        ],
+        "sourceIds": [
+          "kw-time-zone"
+        ]
+      },
+      {
+        "id": "kw-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流できる時間を探せ",
+        "prompt": "日本側14:30〜16:00、クウェート側8:30〜10:00の範囲で学校交流できる時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Asia/Kuwait",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Kuwait": "Kuwait City"
+          },
+          "windowA": [
+            "14:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "10:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "実際に重なる時間帯から、相手にも無理の少ない交流時間を考えます。",
+        "skills": [
+          "scheduling"
+        ],
+        "sourceIds": [
+          "kw-time-zone"
+        ]
+      },
+      {
+        "id": "kw-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DST・国内時差を確認",
+        "prompt": "クウェートの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "クウェートは2026年もアラビア標準時（AST、UTC+3）を通年使用し、DSTは実施していません。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "DSTは世界共通で必ず実施される",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "クウェートは2026年もアラビア標準時（AST、UTC+3）を通年使用し、DSTは実施していません。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "kw-time-zone"
+        ]
+      },
+      {
+        "id": "kw-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語を場面で選ぶ",
+        "prompt": "クウェートの生徒との交流を想定し、場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き取れなかった",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活を知りたい",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "交流の終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "国際交流の基本表現を場面で使い分けます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "kw-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "どんな言語が使われる？",
+        "prompt": "クウェートの言語事情について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "アラビア語が公用語で、英語もビジネスや教育などで広く使われます。外国人住民による多様な言語も聞かれます。",
+            "全員が必ず一言語だけを使う",
+            "家庭や地域の言語差はない",
+            "日本語だけが公用語である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "アラビア語が公用語で、英語もビジネスや教育などで広く使われます。外国人住民による多様な言語も聞かれます。",
+        "skills": [
+          "multilingualism"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字にも注目",
+        "prompt": "クウェートの文字について正しい説明は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "アラビア語はアラビア文字で右から左へ書き、英語などではラテン文字を使います。",
+            "世界中で同じ文字体系だけを使う",
+            "文字は一切使われない",
+            "必ずひらがなだけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "アラビア語はアラビア文字で右から左へ書き、英語などではラテン文字を使います。",
+        "skills": [
+          "writing-systems"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で国を紹介する",
+        "prompt": "“Hello! I am learning about Kuwait.” を声に出そう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Kuwait.",
+          "meaning": "こんにちは。私はクウェートについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して伝わるように発音します。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "kw-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介＋学んでいる国",
+        "prompt": "名前を入れて英語で自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Kuwait. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流に近い自己紹介です。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "kw-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語と決めつけない",
+        "prompt": "クウェートの言語を学ぶ姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "アラビア語が公用語で、英語もビジネスや教育などで広く使われます。外国人住民による多様な言語も聞かれます。",
+            "全員が同じ言葉だけを使うと決めつける",
+            "首都の言葉だけが本物と考える",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "アラビア語が公用語で、英語もビジネスや教育などで広く使われます。外国人住民による多様な言語も聞かれます。",
+        "skills": [
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化をつなぐ",
+        "prompt": "クウェートの言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の地域・歴史・文化を理解する入り口になる",
+            "一つの言語を知れば全員の考えが同じと分かる",
+            "他の言語を否定するため",
+            "発音だけを競うため"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は人・地域・歴史を理解する入り口です。",
+        "skills": [
+          "culture"
+        ]
+      },
+      {
+        "id": "kw-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "本当に聞きたい質問を話す",
+        "prompt": "クウェートの同年代の生徒に質問を英語で1つ作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "クウェート",
+          "audienceCountryNameEn": "Kuwait"
+        },
+        "explanation": "自分の好奇心を英語にします。",
+        "skills": [
+          "speaking",
+          "question-creation"
+        ]
+      },
+      {
+        "id": "kw-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "クウェートの気候について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "非常に乾燥した砂漠気候で、夏は猛烈に暑く、冬は比較的穏やかです。降水量は少ないです。",
+            "国内は一年中どこでも同じ気候",
+            "気候は地形と無関係",
+            "世界中の国と毎日同じ気温"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "非常に乾燥した砂漠気候で、夏は猛烈に暑く、冬は比較的穏やかです。降水量は少ないです。",
+        "skills": [
+          "climate"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化を知る",
+        "prompt": "クウェートの食文化と関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "マチブースなど米・肉・香辛料を使う湾岸料理",
+            "必ず寿司だけ",
+            "世界中で同じ一皿だけ",
+            "食文化は歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "マチブースなど米・肉・香辛料を使う湾岸料理は食文化を知る手がかりの一つです。",
+        "skills": [
+          "food-culture"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文化・自然遺産から学ぶ",
+        "prompt": "クウェートについて学ぶ題材として関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ファイラカ島の考古遺跡",
+            "東京タワーだけ",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ファイラカ島の考古遺跡は地域性を考える題材です。",
+        "skills": [
+          "heritage"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "同じ国の中の地域差",
+        "prompt": "クウェートの3都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "クウェート市",
+              "target": "首都圏"
+            },
+            {
+              "name": "アル・アハマディ",
+              "target": "南部・石油産業地域"
+            },
+            {
+              "name": "アル・ジャハラ",
+              "target": "西部"
+            }
+          ]
+        },
+        "explanation": "都市配置から生活条件の違いを考えます。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "季節と地域差",
+        "prompt": "クウェートの季節や地域差を考えるとき最も大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "クウェート市都市圏、工業・港湾地域、郊外、砂漠地域、ファイラカ島などで土地利用と生活が異なります。",
+            "首都の天気を全国に当てはめる",
+            "一年中同じ気温と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "クウェート市都市圏、工業・港湾地域、郊外、砂漠地域、ファイラカ島などで土地利用と生活が異なります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "クウェートの文化を学ぶときの姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "国民と多くの外国人住民が暮らし、都市・港湾・工業地域・砂漠地域などで生活環境や言語環境が異なります。",
+            "観光広告一つで全国民を説明する",
+            "都市だけを本物と考える",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国民と多くの外国人住民が暮らし、都市・港湾・工業地域・砂漠地域などで生活環境や言語環境が異なります。",
+        "skills": [
+          "anti-stereotype"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "「その国らしさ」を疑う",
+        "prompt": "『クウェートの人はみんな同じ生活をしている』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけ見れば全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。",
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "kw-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながりを発見",
+        "prompt": "日本とクウェートの関係について正しい説明は？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本とクウェートは原油を中心とするエネルギー関係に加え、投資、文化、防災、人的交流などでつながっています。",
+            "一切の交流関係がない",
+            "同じ国土を共有する",
+            "時差だけが関係である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とクウェートは原油を中心とするエネルギー関係に加え、投資、文化、防災、人的交流などでつながっています。",
+        "skills": [
+          "international-relations"
+        ],
+        "sourceIds": [
+          "kw-japan-connection"
+        ]
+      },
+      {
+        "id": "kw-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とクウェートのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Kuwait → JAPAN / JAPAN → Kuwait",
+          "items": [
+            {
+              "label": "原油・エネルギー",
+              "target": "つながりがある"
+            },
+            {
+              "label": "投資・経済交流",
+              "target": "つながりがある"
+            },
+            {
+              "label": "防災・文化・人的交流",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本とクウェートは原油を中心とするエネルギー関係に加え、投資、文化、防災、人的交流などでつながっています。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "kw-japan-connection"
+        ]
+      },
+      {
+        "id": "kw-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "国別の協力を読む",
+        "prompt": "日本とクウェートの具体的なつながりとして最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "原油・エネルギー / 投資・経済交流 / 防災・文化・人的交流",
+            "両国間に人や物の移動はない",
+            "国際協力は時差だけで決まる",
+            "文化交流は国際関係に含まれない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とクウェートは原油を中心とするエネルギー関係に加え、投資、文化、防災、人的交流などでつながっています。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "kw-japan-connection"
+        ]
+      },
+      {
+        "id": "kw-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "つながりの流れを考える",
+        "prompt": "日本とクウェートの協力が社会につながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "クウェートのエネルギー資源",
+              "middle": "日本への原油供給",
+              "end": "日本の産業・生活を支える"
+            },
+            {
+              "start": "防災・文化交流",
+              "middle": "経験と人の交流",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "協力の『分野→活動→社会への意味』をつなげます。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "kw-japan-connection"
+        ]
+      },
+      {
+        "id": "kw-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながりを探せ",
+        "prompt": "身近な日本とクウェートのつながりを1つ探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品表示・学校交流・ニュース・文化イベント・技術協力などの根拠も書こう。"
+        },
+        "explanation": "日常の国際的つながりを証拠から探します。",
+        "skills": [
+          "evidence"
+        ]
+      },
+      {
+        "id": "kw-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "もし交流が増えたら？",
+        "prompt": "日本とクウェートの学校交流が増えたとき最も期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員が同じ考えだと確認できる",
+            "地理を学ばなくてよくなる",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で知識と人の経験を結びつけます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "kw-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズを作れ",
+        "prompt": "日本とクウェートのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "クウェート"
+        },
+        "explanation": "他者に説明できる形へ再構成します。",
+        "skills": [
+          "quiz-creation"
+        ]
+      },
+      {
+        "id": "kw-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点を3つ探す",
+        "prompt": "日本とクウェートの共通点を3つ、異なるカテゴリーから見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "遠い国＝全く違う、という見方を越えます。",
+        "skills": [
+          "comparison"
+        ]
+      },
+      {
+        "id": "kw-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由を考える",
+        "prompt": "日本とクウェートの違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えて違いを理解します。",
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "kw-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "ステレオタイプを証拠で検証",
+        "prompt": "『クウェートは石油だけの国で、海洋史や多文化的な都市生活は重要ではない』という説明を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "クウェートは石油だけの国で、海洋史や多文化的な都市生活は重要ではない",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "kw-k03-e1",
+              "text": "石油以前から真珠採り・漁業・海上交易が重要だった",
+              "valid": true
+            },
+            {
+              "id": "kw-k03-e2",
+              "text": "ペルシャ湾と港湾は現在も物流や都市形成に重要である",
+              "valid": true
+            },
+            {
+              "id": "kw-k03-e3",
+              "text": "多数の外国人住民が暮らし、都市では多様な言語が使われる",
+              "valid": true
+            },
+            {
+              "id": "kw-k03-e4",
+              "text": "クウェートの首都はクウェート市である",
+              "valid": false
+            },
+            {
+              "id": "kw-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "主張に直接関係する証拠を複数選んで判断します。",
+        "skills": [
+          "evidence",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "kw-country-profile"
+        ]
+      },
+      {
+        "id": "kw-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ作る",
+        "prompt": "クウェートの同年代の生徒に質問を3つ作ろう。少なくとも2分野を含める。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "クウェート"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。",
+        "skills": [
+          "question-creation"
+        ]
+      },
+      {
+        "id": "kw-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Kuwait Master Quiz",
+        "prompt": "まだクウェートをよく知らない友達向けに5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "クウェート"
+        },
+        "explanation": "40 Missionの学びを再構成する最終Missionです。",
+        "skills": [
+          "synthesis",
+          "teaching"
+        ]
+      }
+    ]
+  },
+  "kg": {
+    "countryNameJa": "キルギス",
+    "countryNameEn": "Kyrgyzstan",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "kg-l08",
+          "kg-j07",
+          "kg-k04",
+          "kg-k05"
+        ]
+      }
+    },
+    "sources": {
+      "kg-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Kyrgyzstan profile based on countries_k.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_k.json"
+      },
+      "kg-time-zone": {
+        "organization": "IANA Time Zone Database / 2026 clock-change verification",
+        "title": "IANA Time Zone Database and 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "kg-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "Japan–Kyrgyzstan relations / regional information",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/europe/kyrgyz/"
+      }
+    },
+    "missions": [
+      {
+        "id": "kg-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "キルギスを探せ！",
+        "prompt": "世界地図からキルギスをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "kg",
+          "targetAtlasName": "Kyrgyzstan",
+          "targetName": "Kyrgyzstan"
+        },
+        "explanation": "国土の大部分を天山山脈が占める山岳国で、高山湖、谷、牧草地、シルクロードの歴史を持ちます。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "キルギスの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "中央アジア",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キルギスは中央アジアに位置します。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "キルギスの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ビシュケク",
+            "オシュ",
+            "カラコル",
+            "ナルイン"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はビシュケクです。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "キルギスの主要都市を地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "kg",
+          "targetAtlasName": "Kyrgyzstan",
+          "mapConfig": {
+            "center": [
+              74.7,
+              41.5
+            ],
+            "scale": 1250
+          },
+          "cities": [
+            {
+              "name": "Bishkek",
+              "labelJa": "ビシュケク",
+              "coordinates": [
+                74.5698,
+                42.8746
+              ],
+              "timeZone": "Asia/Bishkek",
+              "region": "北部・首都"
+            },
+            {
+              "name": "Osh",
+              "labelJa": "オシュ",
+              "coordinates": [
+                72.7985,
+                40.5139
+              ],
+              "timeZone": "Asia/Bishkek",
+              "region": "南部"
+            },
+            {
+              "name": "Karakol",
+              "labelJa": "カラコル",
+              "coordinates": [
+                78.3936,
+                42.4907
+              ],
+              "timeZone": "Asia/Bishkek",
+              "region": "東部・イシククル湖岸"
+            },
+            {
+              "name": "Naryn",
+              "labelJa": "ナルイン",
+              "coordinates": [
+                75.9911,
+                41.4287
+              ],
+              "timeZone": "Asia/Bishkek",
+              "region": "中央山岳部"
+            }
+          ]
+        },
+        "explanation": "主要都市の配置から地域差を読み取ります。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "キルギスと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "イシク・クル湖、ナルイン川などが観光、農業、水力発電、地域の暮らしに重要です。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島である",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "イシク・クル湖、ナルイン川などが観光、農業、水力発電、地域の暮らしに重要です。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候を結びつける",
+        "prompt": "キルギスの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "大陸性で標高差が大きく、谷では夏が暑く、高山部では寒冷です。地域による降水量の差もあります。",
+            "全国どこでも一年中同じ気候",
+            "首都の天気だけで全国を説明できる",
+            "地形や標高は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "大陸性で標高差が大きく、谷では夏が暑く、高山部では寒冷です。地域による降水量の差もあります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "スケールと地域差",
+        "prompt": "キルギスを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "ビシュケク周辺のチュイ盆地、イシク・クル湖周辺、南部オシュ、天山高地で産業・交通・生活が異なります。",
+            "首都の写真1枚だけで全国を判断する",
+            "観光地だけを国全体と考える",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ビシュケク周辺のチュイ盆地、イシク・クル湖周辺、南部オシュ、天山高地で産業・交通・生活が異なります。",
+        "skills": [
+          "scale",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとBishkekの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Asia/Bishkek"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Bishkek": "Bishkek"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "IANAタイムゾーンでリアルタイム比較します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "kg-time-zone"
+        ]
+      },
+      {
+        "id": "kg-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "Tokyoの時刻を見て、同じ瞬間のBishkekの時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Asia/Bishkek",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Bishkek": "Bishkek"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別都市の時計で表します。",
+        "skills": [
+          "time-calculation"
+        ],
+        "sourceIds": [
+          "kg-time-zone"
+        ]
+      },
+      {
+        "id": "kg-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差をリアルタイムで読む",
+        "prompt": "TokyoとBishkekの現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Asia/Bishkek"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Bishkek": "Bishkek"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "固定暗記ではなく実際の時差を確認します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "kg-time-zone"
+        ]
+      },
+      {
+        "id": "kg-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜を比べる",
+        "prompt": "TokyoとBishkekの生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Asia/Bishkek"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Bishkek": "Bishkek"
+          }
+        },
+        "explanation": "時刻を生活時間帯につなげます。",
+        "skills": [
+          "daily-life"
+        ],
+        "sourceIds": [
+          "kg-time-zone"
+        ]
+      },
+      {
+        "id": "kg-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流できる時間を探せ",
+        "prompt": "日本側11:30〜16:00、キルギス側8:30〜13:00の範囲で学校交流できる時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Asia/Bishkek",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Bishkek": "Bishkek"
+          },
+          "windowA": [
+            "11:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "13:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "実際に重なる時間帯から、相手にも無理の少ない交流時間を考えます。",
+        "skills": [
+          "scheduling"
+        ],
+        "sourceIds": [
+          "kg-time-zone"
+        ]
+      },
+      {
+        "id": "kg-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DST・国内時差を確認",
+        "prompt": "キルギスの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "キルギスは2026年もキルギス時間（KGT、UTC+6）を通年使用し、DSTは実施していません。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "DSTは世界共通で必ず実施される",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キルギスは2026年もキルギス時間（KGT、UTC+6）を通年使用し、DSTは実施していません。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "kg-time-zone"
+        ]
+      },
+      {
+        "id": "kg-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語を場面で選ぶ",
+        "prompt": "キルギスの生徒との交流を想定し、場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き取れなかった",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活を知りたい",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "交流の終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "国際交流の基本表現を場面で使い分けます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "kg-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "どんな言語が使われる？",
+        "prompt": "キルギスの言語事情について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "キルギス語が国家語で、ロシア語も公的・都市的な場面で広く使われます。ウズベク語など地域言語もあります。",
+            "全員が必ず一言語だけを使う",
+            "家庭や地域の言語差はない",
+            "日本語だけが公用語である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キルギス語が国家語で、ロシア語も公的・都市的な場面で広く使われます。ウズベク語など地域言語もあります。",
+        "skills": [
+          "multilingualism"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字にも注目",
+        "prompt": "キルギスの文字について正しい説明は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "キルギス語とロシア語は現在主にキリル文字で表記されます。",
+            "世界中で同じ文字体系だけを使う",
+            "文字は一切使われない",
+            "必ずひらがなだけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キルギス語とロシア語は現在主にキリル文字で表記されます。",
+        "skills": [
+          "writing-systems"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で国を紹介する",
+        "prompt": "“Hello! I am learning about Kyrgyzstan.” を声に出そう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Kyrgyzstan.",
+          "meaning": "こんにちは。私はキルギスについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して伝わるように発音します。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "kg-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介＋学んでいる国",
+        "prompt": "名前を入れて英語で自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Kyrgyzstan. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流に近い自己紹介です。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "kg-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語と決めつけない",
+        "prompt": "キルギスの言語を学ぶ姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "キルギス語が国家語で、ロシア語も公的・都市的な場面で広く使われます。ウズベク語など地域言語もあります。",
+            "全員が同じ言葉だけを使うと決めつける",
+            "首都の言葉だけが本物と考える",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キルギス語が国家語で、ロシア語も公的・都市的な場面で広く使われます。ウズベク語など地域言語もあります。",
+        "skills": [
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化をつなぐ",
+        "prompt": "キルギスの言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の地域・歴史・文化を理解する入り口になる",
+            "一つの言語を知れば全員の考えが同じと分かる",
+            "他の言語を否定するため",
+            "発音だけを競うため"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は人・地域・歴史を理解する入り口です。",
+        "skills": [
+          "culture"
+        ]
+      },
+      {
+        "id": "kg-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "本当に聞きたい質問を話す",
+        "prompt": "キルギスの同年代の生徒に質問を英語で1つ作り、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "キルギス",
+          "audienceCountryNameEn": "Kyrgyzstan"
+        },
+        "explanation": "自分の好奇心を英語にします。",
+        "skills": [
+          "speaking",
+          "question-creation"
+        ]
+      },
+      {
+        "id": "kg-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "キルギスの気候について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "大陸性で標高差が大きく、谷では夏が暑く、高山部では寒冷です。地域による降水量の差もあります。",
+            "国内は一年中どこでも同じ気候",
+            "気候は地形と無関係",
+            "世界中の国と毎日同じ気温"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "大陸性で標高差が大きく、谷では夏が暑く、高山部では寒冷です。地域による降水量の差もあります。",
+        "skills": [
+          "climate"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化を知る",
+        "prompt": "キルギスの食文化と関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ベシュバルマク、ラグマン",
+            "必ず寿司だけ",
+            "世界中で同じ一皿だけ",
+            "食文化は歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ベシュバルマク、ラグマンは食文化を知る手がかりの一つです。",
+        "skills": [
+          "food-culture"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文化・自然遺産から学ぶ",
+        "prompt": "キルギスについて学ぶ題材として関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "イシク・クル湖とシルクロード遺産",
+            "東京タワーだけ",
+            "南極点",
+            "ナイアガラの滝"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "イシク・クル湖とシルクロード遺産は地域性を考える題材です。",
+        "skills": [
+          "heritage"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "同じ国の中の地域差",
+        "prompt": "キルギスの3都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "ビシュケク",
+              "target": "北部・首都"
+            },
+            {
+              "name": "オシュ",
+              "target": "南部"
+            },
+            {
+              "name": "カラコル",
+              "target": "東部・イシククル湖岸"
+            }
+          ]
+        },
+        "explanation": "都市配置から生活条件の違いを考えます。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "季節と地域差",
+        "prompt": "キルギスの季節や地域差を考えるとき最も大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ビシュケク周辺のチュイ盆地、イシク・クル湖周辺、南部オシュ、天山高地で産業・交通・生活が異なります。",
+            "首都の天気を全国に当てはめる",
+            "一年中同じ気温と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ビシュケク周辺のチュイ盆地、イシク・クル湖周辺、南部オシュ、天山高地で産業・交通・生活が異なります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "キルギスの文化を学ぶときの姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "首都・地方都市、農村、山岳牧畜地域、南北の地域差により、言語・産業・生活環境は一様ではありません。",
+            "観光広告一つで全国民を説明する",
+            "都市だけを本物と考える",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都・地方都市、農村、山岳牧畜地域、南北の地域差により、言語・産業・生活環境は一様ではありません。",
+        "skills": [
+          "anti-stereotype"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "「その国らしさ」を疑う",
+        "prompt": "『キルギスの人はみんな同じ生活をしている』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけ見れば全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。",
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "kg-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とのつながりを発見",
+        "prompt": "日本とキルギスの関係について正しい説明は？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本はキルギスで一村一品運動、道路、保健、教育、行政、人材育成などの協力を行っています。",
+            "一切の交流関係がない",
+            "同じ国土を共有する",
+            "時差だけが関係である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本はキルギスで一村一品運動、道路、保健、教育、行政、人材育成などの協力を行っています。",
+        "skills": [
+          "international-relations"
+        ],
+        "sourceIds": [
+          "kg-japan-connection"
+        ]
+      },
+      {
+        "id": "kg-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とキルギスのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Kyrgyzstan → JAPAN / JAPAN → Kyrgyzstan",
+          "items": [
+            {
+              "label": "一村一品・地域産業",
+              "target": "つながりがある"
+            },
+            {
+              "label": "道路・インフラ",
+              "target": "つながりがある"
+            },
+            {
+              "label": "保健・教育・人材育成",
+              "target": "つながりがある"
+            },
+            {
+              "label": "両国は同じ国土を共有する",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本はキルギスで一村一品運動、道路、保健、教育、行政、人材育成などの協力を行っています。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "kg-japan-connection"
+        ]
+      },
+      {
+        "id": "kg-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "国別の協力を読む",
+        "prompt": "日本とキルギスの具体的なつながりとして最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "一村一品・地域産業 / 道路・インフラ / 保健・教育・人材育成",
+            "両国間に人や物の移動はない",
+            "国際協力は時差だけで決まる",
+            "文化交流は国際関係に含まれない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本はキルギスで一村一品運動、道路、保健、教育、行政、人材育成などの協力を行っています。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "kg-japan-connection"
+        ]
+      },
+      {
+        "id": "kg-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "つながりの流れを考える",
+        "prompt": "日本とキルギスの協力が社会につながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "一村一品協力",
+              "middle": "地域の特色を商品化",
+              "end": "地域の所得と雇用につなげる"
+            },
+            {
+              "start": "人材育成",
+              "middle": "研修・教育の交流",
+              "end": "行政・社会サービスの改善へ"
+            }
+          ]
+        },
+        "explanation": "協力の『分野→活動→社会への意味』をつなげます。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "kg-japan-connection"
+        ]
+      },
+      {
+        "id": "kg-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながりを探せ",
+        "prompt": "身近な日本とキルギスのつながりを1つ探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品表示・学校交流・ニュース・文化イベント・技術協力などの根拠も書こう。"
+        },
+        "explanation": "日常の国際的つながりを証拠から探します。",
+        "skills": [
+          "evidence"
+        ]
+      },
+      {
+        "id": "kg-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "もし交流が増えたら？",
+        "prompt": "日本とキルギスの学校交流が増えたとき最も期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員が同じ考えだと確認できる",
+            "地理を学ばなくてよくなる",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で知識と人の経験を結びつけます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "kg-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズを作れ",
+        "prompt": "日本とキルギスのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "キルギス"
+        },
+        "explanation": "他者に説明できる形へ再構成します。",
+        "skills": [
+          "quiz-creation"
+        ]
+      },
+      {
+        "id": "kg-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "日本との共通点を3つ探す",
+        "prompt": "日本とキルギスの共通点を3つ、異なるカテゴリーから見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "遠い国＝全く違う、という見方を越えます。",
+        "skills": [
+          "comparison"
+        ]
+      },
+      {
+        "id": "kg-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由を考える",
+        "prompt": "日本とキルギスの違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えて違いを理解します。",
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "kg-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "ステレオタイプを証拠で検証",
+        "prompt": "『キルギスは遊牧民だけが暮らす山国で、都市生活や地域差はほとんどない』という説明を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "キルギスは遊牧民だけが暮らす山国で、都市生活や地域差はほとんどない",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "kg-k03-e1",
+              "text": "ビシュケクやオシュには大規模な都市生活がある",
+              "valid": true
+            },
+            {
+              "id": "kg-k03-e2",
+              "text": "高山牧畜地域と盆地農業地域では仕事や移動が異なる",
+              "valid": true
+            },
+            {
+              "id": "kg-k03-e3",
+              "text": "北部と南部で人口構成・言語環境・経済活動に違いがある",
+              "valid": true
+            },
+            {
+              "id": "kg-k03-e4",
+              "text": "キルギスの首都はビシュケクである",
+              "valid": false
+            },
+            {
+              "id": "kg-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "主張に直接関係する証拠を複数選んで判断します。",
+        "skills": [
+          "evidence",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "kg-country-profile"
+        ]
+      },
+      {
+        "id": "kg-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ作る",
+        "prompt": "キルギスの同年代の生徒に質問を3つ作ろう。少なくとも2分野を含める。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "キルギス"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。",
+        "skills": [
+          "question-creation"
+        ]
+      },
+      {
+        "id": "kg-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Kyrgyzstan Master Quiz",
+        "prompt": "まだキルギスをよく知らない友達向けに5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "キルギス"
+        },
+        "explanation": "40 Missionの学びを再構成する最終Missionです。",
+        "skills": [
+          "synthesis",
+          "teaching"
+        ]
+      }
+    ]
+  }
+}

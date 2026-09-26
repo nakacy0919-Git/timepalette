@@ -1,0 +1,3635 @@
+{
+  "jm": {
+    "countryNameJa": "ジャマイカ",
+    "countryNameEn": "Jamaica",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "jm-l08",
+          "jm-j07",
+          "jm-k04",
+          "jm-k05"
+        ]
+      }
+    },
+    "sources": {
+      "jm-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Jamaica profile based on countries_j.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_j.json"
+      },
+      "jm-time-zone": {
+        "organization": "IANA Time Zone Database / 2026 clock-change verification",
+        "title": "IANA Time Zone Database and 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "jm-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "日本とジャマイカのつながり",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/latin/jamaica/index.html"
+      }
+    },
+    "missions": [
+      {
+        "id": "jm-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "ジャマイカを探せ！",
+        "prompt": "世界地図からジャマイカをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "jm",
+          "targetAtlasName": "Jamaica",
+          "targetName": "Jamaica"
+        },
+        "explanation": "カリブ海に浮かぶ山地の多い島国で、中央部の山地、海岸平野、入り組んだ湾や滝があります。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "ジャマイカの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カリブ海・大アンティル諸島",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ジャマイカはカリブ海・大アンティル諸島に位置します。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "ジャマイカの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "キングストン",
+            "モンテゴ・ベイ",
+            "スパニッシュ・タウン",
+            "ポート・アントニオ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はキングストンです。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "ジャマイカの主要都市を地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "jm",
+          "targetAtlasName": "Jamaica",
+          "mapConfig": {
+            "center": [
+              -77.3,
+              18.15
+            ],
+            "scale": 3400
+          },
+          "cities": [
+            {
+              "name": "Kingston",
+              "labelJa": "キングストン",
+              "coordinates": [
+                -76.792,
+                17.9712
+              ],
+              "timeZone": "America/Jamaica",
+              "region": "南東部・首都"
+            },
+            {
+              "name": "Montego Bay",
+              "labelJa": "モンテゴ・ベイ",
+              "coordinates": [
+                -77.8939,
+                18.4762
+              ],
+              "timeZone": "America/Jamaica",
+              "region": "北西海岸"
+            },
+            {
+              "name": "Spanish Town",
+              "labelJa": "スパニッシュ・タウン",
+              "coordinates": [
+                -76.9574,
+                17.9911
+              ],
+              "timeZone": "America/Jamaica",
+              "region": "南東部内陸"
+            },
+            {
+              "name": "Port Antonio",
+              "labelJa": "ポート・アントニオ",
+              "coordinates": [
+                -76.4509,
+                18.1762
+              ],
+              "timeZone": "America/Jamaica",
+              "region": "北東海岸"
+            }
+          ]
+        },
+        "explanation": "主要都市の配置から地域差を読み取ります。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "ジャマイカと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "カリブ海に囲まれ、港湾、漁業、観光、サンゴ礁、沿岸コミュニティの生活に海が深く関わります。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島である",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "カリブ海に囲まれ、港湾、漁業、観光、サンゴ礁、沿岸コミュニティの生活に海が深く関わります。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候を結びつける",
+        "prompt": "ジャマイカの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "一年を通して温暖な熱帯気候ですが、山地は比較的涼しく、雨季やハリケーンの影響もあります。",
+            "全国どこでも一年中同じ気候",
+            "首都の天気だけで全国を説明できる",
+            "地形や標高は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "一年を通して温暖な熱帯気候ですが、山地は比較的涼しく、雨季やハリケーンの影響もあります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "スケールと地域差",
+        "prompt": "ジャマイカを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "キングストン都市圏、北海岸の観光地域、ブルーマウンテン、農村部では産業・気候・生活環境が異なります。",
+            "首都の写真1枚だけで全国を判断する",
+            "観光地だけを国全体と考える",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キングストン都市圏、北海岸の観光地域、ブルーマウンテン、農村部では産業・気候・生活環境が異なります。",
+        "skills": [
+          "scale",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとKingstonの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "America/Jamaica"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Jamaica": "Kingston"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "IANAタイムゾーンでリアルタイム比較します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "jm-time-zone"
+        ]
+      },
+      {
+        "id": "jm-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "同じ瞬間の2都市の時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "America/Jamaica",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Jamaica": "Kingston"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別都市の時計で表します。",
+        "skills": [
+          "time-calculation"
+        ],
+        "sourceIds": [
+          "jm-time-zone"
+        ]
+      },
+      {
+        "id": "jm-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差をリアルタイムで読む",
+        "prompt": "2都市の現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "America/Jamaica"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Jamaica": "Kingston"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "固定暗記ではなく実際の時差を確認します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "jm-time-zone"
+        ]
+      },
+      {
+        "id": "jm-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜を比べる",
+        "prompt": "2都市の生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "America/Jamaica"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Jamaica": "Kingston"
+          }
+        },
+        "explanation": "時刻を生活時間帯につなげます。",
+        "skills": [
+          "daily-life"
+        ],
+        "sourceIds": [
+          "jm-time-zone"
+        ]
+      },
+      {
+        "id": "jm-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流できる時間を探せ",
+        "prompt": "日本側20:00〜22:00、ジャマイカ側06:00〜08:00の範囲で、オンライン交流できる時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "America/Jamaica",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "America/Jamaica": "Kingston"
+          },
+          "windowA": [
+            "20:00",
+            "22:00"
+          ],
+          "windowB": [
+            "06:00",
+            "08:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "実際に重なる時間帯を使って、相手にも無理の少ない交流計画を立てます。",
+        "skills": [
+          "scheduling"
+        ],
+        "sourceIds": [
+          "jm-time-zone"
+        ]
+      },
+      {
+        "id": "jm-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DST・時刻制度を確認",
+        "prompt": "ジャマイカの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ジャマイカは2026年もEST（UTC-5）を通年使用し、DSTは実施していません。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "DSTは世界共通で必ず実施される",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ジャマイカは2026年もEST（UTC-5）を通年使用し、DSTは実施していません。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "jm-time-zone"
+        ]
+      },
+      {
+        "id": "jm-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語を場面で選ぶ",
+        "prompt": "ジャマイカについて交流する場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き返す",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活を知る",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "交流の終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "国際交流の基本表現を場面で使い分けます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "jm-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "どんな言語が使われる？",
+        "prompt": "ジャマイカの言語事情について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "英語が公用語で、ジャマイカ・パトワ（Jamaican Patois / Creole）も日常生活や文化表現で広く使われます。",
+            "全員が必ず一言語だけを使う",
+            "家庭や地域の言語差はない",
+            "世界中の人が日本語だけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "英語が公用語で、ジャマイカ・パトワ（Jamaican Patois / Creole）も日常生活や文化表現で広く使われます。",
+        "skills": [
+          "multilingualism"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字にも注目",
+        "prompt": "ジャマイカの文字について正しい説明は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "英語とジャマイカ・パトワは主にラテン文字で表記されます。",
+            "世界中で同じ文字体系だけを使う",
+            "文字は一切使われない",
+            "必ずラテン文字だけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "英語とジャマイカ・パトワは主にラテン文字で表記されます。",
+        "skills": [
+          "writing-systems"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で国を紹介する",
+        "prompt": "“Hello! I am learning about Jamaica.” を声に出そう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Jamaica.",
+          "meaning": "こんにちは。私はジャマイカについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して伝わるように発音します。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "jm-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介＋学んでいる国",
+        "prompt": "名前を入れて英語で自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Jamaica. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流に近い自己紹介です。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "jm-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語と決めつけない",
+        "prompt": "ジャマイカの言語を学ぶ姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "英語が公用語で、ジャマイカ・パトワ（Jamaican Patois / Creole）も日常生活や文化表現で広く使われます。",
+            "全員が同じ言葉だけを使うと決めつける",
+            "首都の言葉だけが本物と考える",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "英語が公用語で、ジャマイカ・パトワ（Jamaican Patois / Creole）も日常生活や文化表現で広く使われます。",
+        "skills": [
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化をつなぐ",
+        "prompt": "ジャマイカの言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の地域・歴史・文化を理解する入り口になる",
+            "一つの言語を知れば全員の考えが同じと分かる",
+            "他の言語を否定するため",
+            "発音だけを競うため"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は人・地域・歴史を理解する入り口です。",
+        "skills": [
+          "culture"
+        ]
+      },
+      {
+        "id": "jm-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "本当に聞きたい質問を話す",
+        "prompt": "ジャマイカの同年代について知りたいことを英語で1つ質問し、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "ジャマイカ",
+          "audienceCountryNameEn": "Jamaica"
+        },
+        "explanation": "自分の好奇心を英語にします。",
+        "skills": [
+          "speaking",
+          "question-creation"
+        ]
+      },
+      {
+        "id": "jm-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "ジャマイカの気候について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "一年を通して温暖な熱帯気候ですが、山地は比較的涼しく、雨季やハリケーンの影響もあります。",
+            "国内は一年中どこでも同じ気候",
+            "気候は地形と無関係",
+            "世界中の国と毎日同じ気温"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "一年を通して温暖な熱帯気候ですが、山地は比較的涼しく、雨季やハリケーンの影響もあります。",
+        "skills": [
+          "climate"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化を知る",
+        "prompt": "ジャマイカの食文化と関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ジャークチキン、アキー・アンド・ソルトフィッシュ",
+            "必ず世界中同じ一皿だけ",
+            "食文化は地域差がない",
+            "食文化は歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ジャークチキン、アキー・アンド・ソルトフィッシュは食文化を知る手がかりです。",
+        "skills": [
+          "food-culture"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文化・自然遺産から学ぶ",
+        "prompt": "ジャマイカについて学ぶ題材として関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ブルー・アンド・ジョン・クロウ・マウンテンズ",
+            "南極点",
+            "ナイアガラの滝",
+            "サハラ砂漠だけ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ブルー・アンド・ジョン・クロウ・マウンテンズは地域性を考える題材です。",
+        "skills": [
+          "heritage"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "同じ国の中の地域差",
+        "prompt": "ジャマイカの3都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "キングストン",
+              "target": "南東部・首都"
+            },
+            {
+              "name": "モンテゴ・ベイ",
+              "target": "北西海岸"
+            },
+            {
+              "name": "スパニッシュ・タウン",
+              "target": "南東部内陸"
+            }
+          ]
+        },
+        "explanation": "都市配置から生活条件の違いを考えます。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "季節と地域差",
+        "prompt": "ジャマイカの季節や地域差を考えるとき最も大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "キングストン都市圏、北海岸の観光地域、ブルーマウンテン、農村部では産業・気候・生活環境が異なります。",
+            "首都の天気を全国に当てはめる",
+            "一年中同じ気温と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "キングストン都市圏、北海岸の観光地域、ブルーマウンテン、農村部では産業・気候・生活環境が異なります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "ジャマイカの文化を学ぶときの姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "都市・農村・山地・沿岸、社会階層や世代によって言葉や生活、音楽文化、仕事は一様ではありません。",
+            "観光広告一つで全国民を説明する",
+            "都市だけを本物と考える",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "都市・農村・山地・沿岸、社会階層や世代によって言葉や生活、音楽文化、仕事は一様ではありません。",
+        "skills": [
+          "anti-stereotype"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "「その国らしさ」を疑う",
+        "prompt": "『ジャマイカの人はみんな同じ生活をしている』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけ見れば全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。",
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "jm-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とジャマイカのつながり",
+        "prompt": "日本とジャマイカの関係について正しい説明は？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本とジャマイカは外交関係に加え、海洋・水産、文化、スポーツ、観光、人的交流などでつながっています。",
+            "国際的なつながりは存在しない",
+            "同じ国土を世界中で共有する",
+            "時差だけが国際関係である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とジャマイカは外交関係に加え、海洋・水産、文化、スポーツ、観光、人的交流などでつながっています。",
+        "skills": [
+          "international-relations"
+        ],
+        "sourceIds": [
+          "jm-japan-connection"
+        ]
+      },
+      {
+        "id": "jm-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とジャマイカのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Jamaica → JAPAN / JAPAN → Jamaica",
+          "items": [
+            {
+              "label": "海洋・水産協力",
+              "target": "つながりがある"
+            },
+            {
+              "label": "音楽・スポーツ・文化交流",
+              "target": "つながりがある"
+            },
+            {
+              "label": "観光・人的交流",
+              "target": "つながりがある"
+            },
+            {
+              "label": "国際交流では相手を一つのイメージで決めつける",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本とジャマイカは外交関係に加え、海洋・水産、文化、スポーツ、観光、人的交流などでつながっています。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "jm-japan-connection"
+        ]
+      },
+      {
+        "id": "jm-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "関係を多面的に見る",
+        "prompt": "日本とジャマイカの関係を理解する最も良い見方は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "外交・経済・文化・教育・人の移動など複数を見る",
+            "一つの商品だけ暗記する",
+            "国旗だけ覚える",
+            "距離だけで決める"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国どうし・地域どうしの関係は複数の層から考えます。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "jm-japan-connection"
+        ]
+      },
+      {
+        "id": "jm-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "つながりの流れを考える",
+        "prompt": "交流が学びにつながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "学校交流",
+              "middle": "相手の生活を直接聞く",
+              "end": "ステレオタイプを修正する"
+            },
+            {
+              "start": "文化・技術交流",
+              "middle": "背景を知る",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "交流を相互理解につなげます。",
+        "skills": [
+          "systems-thinking"
+        ]
+      },
+      {
+        "id": "jm-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながりを探せ",
+        "prompt": "身近な日本とジャマイカのつながりを1つ探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品表示・学校交流・ニュース・文化イベント・地域の外国人住民など、具体的な根拠も書こう。"
+        },
+        "explanation": "日常の国際的つながりを証拠から探します。",
+        "skills": [
+          "evidence"
+        ]
+      },
+      {
+        "id": "jm-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "もし交流が増えたら？",
+        "prompt": "日本とジャマイカの学校交流が増えたとき最も期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員が同じ考えだと確認できる",
+            "地理を学ばなくてよくなる",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で知識と人の経験を結びつけます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "jm-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズを作れ",
+        "prompt": "日本とジャマイカのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "ジャマイカ"
+        },
+        "explanation": "他者に説明できる形へ再構成します。",
+        "skills": [
+          "quiz-creation"
+        ]
+      },
+      {
+        "id": "jm-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "共通点を3つ探す",
+        "prompt": "日本とジャマイカの共通点を3つ、異なるカテゴリーから見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "単純な『同じ／違う』を越えて比較します。",
+        "skills": [
+          "comparison"
+        ]
+      },
+      {
+        "id": "jm-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由を考える",
+        "prompt": "日本とジャマイカの違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えて違いを理解します。",
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "jm-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "ステレオタイプを証拠で検証",
+        "prompt": "『ジャマイカはビーチとレゲエだけの国で、山地・都市・農村の違いは重要ではない』という説明を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "ジャマイカはビーチとレゲエだけの国で、山地・都市・農村の違いは重要ではない",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "jm-k03-e1",
+              "text": "ブルーマウンテンなど高い山地があり、沿岸とは気候や土地利用が異なる",
+              "valid": true
+            },
+            {
+              "id": "jm-k03-e2",
+              "text": "キングストンは政治・経済・文化の大都市圏である",
+              "valid": true
+            },
+            {
+              "id": "jm-k03-e3",
+              "text": "観光地域、農業地域、都市部では仕事や生活環境が異なる",
+              "valid": true
+            },
+            {
+              "id": "jm-k03-e4",
+              "text": "ジャマイカの首都はキングストンである",
+              "valid": false
+            },
+            {
+              "id": "jm-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "直接関係する証拠を複数選んで判断します。",
+        "skills": [
+          "evidence",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "jm-country-profile"
+        ]
+      },
+      {
+        "id": "jm-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ作る",
+        "prompt": "ジャマイカの同年代の生徒に質問を3つ作ろう。少なくとも2分野を含める。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "ジャマイカ"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。",
+        "skills": [
+          "question-creation"
+        ]
+      },
+      {
+        "id": "jm-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Jamaica Master Quiz",
+        "prompt": "まだジャマイカをよく知らない友達向けに5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "ジャマイカ"
+        },
+        "explanation": "40 Missionの学びを再構成する最終Missionです。",
+        "skills": [
+          "synthesis",
+          "teaching"
+        ]
+      }
+    ]
+  },
+  "jp": {
+    "countryNameJa": "日本",
+    "countryNameEn": "Japan",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "jp-l08",
+          "jp-j07",
+          "jp-k04",
+          "jp-k05"
+        ]
+      }
+    },
+    "sources": {
+      "jp-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Japan profile based on countries_j.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_j.json"
+      },
+      "jp-time-zone": {
+        "organization": "IANA Time Zone Database / 2026 clock-change verification",
+        "title": "IANA Time Zone Database and 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "jp-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "日本と世界のつながり",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/policy/culture/people/student/"
+      }
+    },
+    "missions": [
+      {
+        "id": "jp-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "日本を探せ！",
+        "prompt": "世界地図から日本をタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "jp",
+          "targetAtlasName": "Japan",
+          "targetName": "Japan"
+        },
+        "explanation": "北海道から沖縄まで南北に長い島国で、山地が多く、火山、平野、長い海岸線、多数の離島があります。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "日本の位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "東アジア・北西太平洋",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本は東アジア・北西太平洋に位置します。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "日本の首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "東京",
+            "大阪",
+            "札幌",
+            "那覇"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都は東京です。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "日本の主要都市を地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "jp",
+          "targetAtlasName": "Japan",
+          "mapConfig": {
+            "center": [
+              137.5,
+              37.0
+            ],
+            "scale": 850
+          },
+          "cities": [
+            {
+              "name": "Tokyo",
+              "labelJa": "東京",
+              "coordinates": [
+                139.6917,
+                35.6895
+              ],
+              "timeZone": "Asia/Tokyo",
+              "region": "関東・首都"
+            },
+            {
+              "name": "Osaka",
+              "labelJa": "大阪",
+              "coordinates": [
+                135.5023,
+                34.6937
+              ],
+              "timeZone": "Asia/Tokyo",
+              "region": "近畿"
+            },
+            {
+              "name": "Sapporo",
+              "labelJa": "札幌",
+              "coordinates": [
+                141.3545,
+                43.0618
+              ],
+              "timeZone": "Asia/Tokyo",
+              "region": "北海道"
+            },
+            {
+              "name": "Naha",
+              "labelJa": "那覇",
+              "coordinates": [
+                127.6809,
+                26.2124
+              ],
+              "timeZone": "Asia/Tokyo",
+              "region": "沖縄"
+            }
+          ]
+        },
+        "explanation": "主要都市の配置から地域差を読み取ります。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "日本と水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "太平洋、日本海、東シナ海、オホーツク海、瀬戸内海などに囲まれ、漁業、海運、気候、地域文化に海が大きく影響します。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島である",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "太平洋、日本海、東シナ海、オホーツク海、瀬戸内海などに囲まれ、漁業、海運、気候、地域文化に海が大きく影響します。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候を結びつける",
+        "prompt": "日本の地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "南北に長く標高差も大きいため、北海道の寒冷地域から沖縄の亜熱帯まで多様な気候があります。",
+            "全国どこでも一年中同じ気候",
+            "首都の天気だけで全国を説明できる",
+            "地形や標高は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "南北に長く標高差も大きいため、北海道の寒冷地域から沖縄の亜熱帯まで多様な気候があります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "スケールと地域差",
+        "prompt": "日本を一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "北海道、東北、関東、中部、近畿、中国・四国、九州・沖縄などで気候、方言、食文化、産業、都市構造が異なります。",
+            "首都の写真1枚だけで全国を判断する",
+            "観光地だけを国全体と考える",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "北海道、東北、関東、中部、近畿、中国・四国、九州・沖縄などで気候、方言、食文化、産業、都市構造が異なります。",
+        "skills": [
+          "scale",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとSingaporeの現在時刻を比べ、日本が世界の時間の中でどこにあるか考えよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Asia/Singapore"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Singapore": "Singapore"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "IANAタイムゾーンでリアルタイム比較します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "jp-time-zone"
+        ]
+      },
+      {
+        "id": "jp-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "同じ瞬間の2都市の時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Asia/Singapore",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Singapore": "Singapore"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別都市の時計で表します。",
+        "skills": [
+          "time-calculation"
+        ],
+        "sourceIds": [
+          "jp-time-zone"
+        ]
+      },
+      {
+        "id": "jp-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差をリアルタイムで読む",
+        "prompt": "2都市の現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Asia/Singapore"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Singapore": "Singapore"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "固定暗記ではなく実際の時差を確認します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "jp-time-zone"
+        ]
+      },
+      {
+        "id": "jp-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜を比べる",
+        "prompt": "2都市の生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Asia/Singapore"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Singapore": "Singapore"
+          }
+        },
+        "explanation": "時刻を生活時間帯につなげます。",
+        "skills": [
+          "daily-life"
+        ],
+        "sourceIds": [
+          "jp-time-zone"
+        ]
+      },
+      {
+        "id": "jp-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流できる時間を探せ",
+        "prompt": "日本の学校9:00〜16:00、シンガポールの学校8:00〜15:00の範囲で交流時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Asia/Singapore",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Singapore": "Singapore"
+          },
+          "windowA": [
+            "09:00",
+            "16:00"
+          ],
+          "windowB": [
+            "08:00",
+            "15:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "実際に重なる時間帯を使って、相手にも無理の少ない交流計画を立てます。",
+        "skills": [
+          "scheduling"
+        ],
+        "sourceIds": [
+          "jp-time-zone"
+        ]
+      },
+      {
+        "id": "jp-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DST・時刻制度を確認",
+        "prompt": "日本の時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本は2026年もJST（UTC+9）を通年使用し、DSTは実施していません。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "DSTは世界共通で必ず実施される",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本は2026年もJST（UTC+9）を通年使用し、DSTは実施していません。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "jp-time-zone"
+        ]
+      },
+      {
+        "id": "jp-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語を場面で選ぶ",
+        "prompt": "日本について交流する場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き返す",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活を知る",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "交流の終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "国際交流の基本表現を場面で使い分けます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "jp-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "どんな言語が使われる？",
+        "prompt": "日本の言語事情について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本語が社会で最も広く使われますが、アイヌ語、琉球諸語、日本手話、在日コミュニティの多様な言語も存在します。",
+            "全員が必ず一言語だけを使う",
+            "家庭や地域の言語差はない",
+            "世界中の人が日本語だけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本語が社会で最も広く使われますが、アイヌ語、琉球諸語、日本手話、在日コミュニティの多様な言語も存在します。",
+        "skills": [
+          "multilingualism"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字にも注目",
+        "prompt": "日本の文字について正しい説明は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本語では漢字・ひらがな・カタカナを組み合わせ、ローマ字も用途に応じて使います。",
+            "世界中で同じ文字体系だけを使う",
+            "文字は一切使われない",
+            "必ずラテン文字だけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本語では漢字・ひらがな・カタカナを組み合わせ、ローマ字も用途に応じて使います。",
+        "skills": [
+          "writing-systems"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で国を紹介する",
+        "prompt": "“Hello! I am learning about Japan.” を声に出そう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Japan.",
+          "meaning": "こんにちは。私は日本について学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して伝わるように発音します。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "jp-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介＋学んでいる国",
+        "prompt": "名前を入れて英語で自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Japan. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流に近い自己紹介です。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "jp-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語と決めつけない",
+        "prompt": "日本の言語を学ぶ姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本語が社会で最も広く使われますが、アイヌ語、琉球諸語、日本手話、在日コミュニティの多様な言語も存在します。",
+            "全員が同じ言葉だけを使うと決めつける",
+            "首都の言葉だけが本物と考える",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本語が社会で最も広く使われますが、アイヌ語、琉球諸語、日本手話、在日コミュニティの多様な言語も存在します。",
+        "skills": [
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化をつなぐ",
+        "prompt": "日本の言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の地域・歴史・文化を理解する入り口になる",
+            "一つの言語を知れば全員の考えが同じと分かる",
+            "他の言語を否定するため",
+            "発音だけを競うため"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は人・地域・歴史を理解する入り口です。",
+        "skills": [
+          "culture"
+        ]
+      },
+      {
+        "id": "jp-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "本当に聞きたい質問を話す",
+        "prompt": "日本の同年代について知りたいことを英語で1つ質問し、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "日本",
+          "audienceCountryNameEn": "Japan"
+        },
+        "explanation": "自分の好奇心を英語にします。",
+        "skills": [
+          "speaking",
+          "question-creation"
+        ]
+      },
+      {
+        "id": "jp-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "日本の気候について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "南北に長く標高差も大きいため、北海道の寒冷地域から沖縄の亜熱帯まで多様な気候があります。",
+            "国内は一年中どこでも同じ気候",
+            "気候は地形と無関係",
+            "世界中の国と毎日同じ気温"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "南北に長く標高差も大きいため、北海道の寒冷地域から沖縄の亜熱帯まで多様な気候があります。",
+        "skills": [
+          "climate"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化を知る",
+        "prompt": "日本の食文化と関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "寿司、和食、地域ごとの郷土料理",
+            "必ず世界中同じ一皿だけ",
+            "食文化は地域差がない",
+            "食文化は歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "寿司、和食、地域ごとの郷土料理は食文化を知る手がかりです。",
+        "skills": [
+          "food-culture"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文化・自然遺産から学ぶ",
+        "prompt": "日本について学ぶ題材として関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "姫路城",
+            "南極点",
+            "ナイアガラの滝",
+            "サハラ砂漠だけ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "姫路城は地域性を考える題材です。",
+        "skills": [
+          "heritage"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "同じ国の中の地域差",
+        "prompt": "日本の3都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "東京",
+              "target": "関東・首都"
+            },
+            {
+              "name": "大阪",
+              "target": "近畿"
+            },
+            {
+              "name": "札幌",
+              "target": "北海道"
+            }
+          ]
+        },
+        "explanation": "都市配置から生活条件の違いを考えます。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "季節と地域差",
+        "prompt": "日本の季節や地域差を考えるとき最も大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "北海道、東北、関東、中部、近畿、中国・四国、九州・沖縄などで気候、方言、食文化、産業、都市構造が異なります。",
+            "首都の天気を全国に当てはめる",
+            "一年中同じ気温と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "北海道、東北、関東、中部、近畿、中国・四国、九州・沖縄などで気候、方言、食文化、産業、都市構造が異なります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "日本の文化を学ぶときの姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "大都市、農山漁村、豪雪地域、亜熱帯の島々などで生活は大きく異なり、世代・家庭・地域による多様性もあります。",
+            "観光広告一つで全国民を説明する",
+            "都市だけを本物と考える",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "大都市、農山漁村、豪雪地域、亜熱帯の島々などで生活は大きく異なり、世代・家庭・地域による多様性もあります。",
+        "skills": [
+          "anti-stereotype"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "「その国らしさ」を疑う",
+        "prompt": "『日本の人はみんな同じ生活をしている』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけ見れば全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。",
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "jp-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本と世界のつながり",
+        "prompt": "日本が世界とつながっている例として正しいのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本は貿易、観光、留学、科学技術、文化、国際協力などを通じて世界各地とつながっています。",
+            "国際的なつながりは存在しない",
+            "同じ国土を世界中で共有する",
+            "時差だけが国際関係である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本は貿易、観光、留学、科学技術、文化、国際協力などを通じて世界各地とつながっています。",
+        "skills": [
+          "international-relations"
+        ],
+        "sourceIds": [
+          "jp-japan-connection"
+        ]
+      },
+      {
+        "id": "jp-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本と世界のつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Japan ↔ WORLD",
+          "items": [
+            {
+              "label": "留学・学校交流",
+              "target": "つながりがある"
+            },
+            {
+              "label": "貿易・観光・人の移動",
+              "target": "つながりがある"
+            },
+            {
+              "label": "科学技術・文化・国際協力",
+              "target": "つながりがある"
+            },
+            {
+              "label": "国際交流では相手を一つのイメージで決めつける",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本は貿易、観光、留学、科学技術、文化、国際協力などを通じて世界各地とつながっています。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "jp-japan-connection"
+        ]
+      },
+      {
+        "id": "jp-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "関係を多面的に見る",
+        "prompt": "日本と世界の関係を理解する最も良い見方は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "外交・経済・文化・教育・人の移動など複数を見る",
+            "一つの商品だけ暗記する",
+            "国旗だけ覚える",
+            "距離だけで決める"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国どうし・地域どうしの関係は複数の層から考えます。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "jp-japan-connection"
+        ]
+      },
+      {
+        "id": "jp-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "つながりの流れを考える",
+        "prompt": "交流が学びにつながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "学校交流",
+              "middle": "相手の生活を直接聞く",
+              "end": "ステレオタイプを修正する"
+            },
+            {
+              "start": "文化・技術交流",
+              "middle": "背景を知る",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "交流を相互理解につなげます。",
+        "skills": [
+          "systems-thinking"
+        ]
+      },
+      {
+        "id": "jp-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながりを探せ",
+        "prompt": "自分の身近な場所にある『日本と世界のつながり』を1つ探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品表示・学校交流・ニュース・文化イベント・地域の外国人住民など、具体的な根拠も書こう。"
+        },
+        "explanation": "日常の国際的つながりを証拠から探します。",
+        "skills": [
+          "evidence"
+        ]
+      },
+      {
+        "id": "jp-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "もし交流が増えたら？",
+        "prompt": "海外との学校交流が増えたとき最も期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員が同じ考えだと確認できる",
+            "地理を学ばなくてよくなる",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で知識と人の経験を結びつけます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "jp-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズを作れ",
+        "prompt": "日本と世界のつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "日本"
+        },
+        "explanation": "他者に説明できる形へ再構成します。",
+        "skills": [
+          "quiz-creation"
+        ]
+      },
+      {
+        "id": "jp-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "共通点を3つ探す",
+        "prompt": "日本国内の異なる地域に共通する点を3つ、異なるカテゴリーから見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "単純な『同じ／違う』を越えて比較します。",
+        "skills": [
+          "comparison"
+        ]
+      },
+      {
+        "id": "jp-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由を考える",
+        "prompt": "日本国内の地域差を3つ挙げ、その背景を1つ説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えて違いを理解します。",
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "jp-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "ステレオタイプを証拠で検証",
+        "prompt": "『日本は東京だけ見れば分かり、全国どこでも同じ気候・方言・暮らしである』という説明を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "日本は東京だけ見れば分かり、全国どこでも同じ気候・方言・暮らしである",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "jp-k03-e1",
+              "text": "北海道と沖縄では気候が大きく異なる",
+              "valid": true
+            },
+            {
+              "id": "jp-k03-e2",
+              "text": "各地域に方言や郷土料理、祭りなどの違いがある",
+              "valid": true
+            },
+            {
+              "id": "jp-k03-e3",
+              "text": "大都市、農山漁村、離島では交通や仕事、生活条件が異なる",
+              "valid": true
+            },
+            {
+              "id": "jp-k03-e4",
+              "text": "日本の首都は東京である",
+              "valid": false
+            },
+            {
+              "id": "jp-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "直接関係する証拠を複数選んで判断します。",
+        "skills": [
+          "evidence",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "jp-country-profile"
+        ]
+      },
+      {
+        "id": "jp-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ作る",
+        "prompt": "海外の同年代に、日本について知ってほしいこと・聞いてみたいことを3つ作ろう。少なくとも2分野を含める。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "日本"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。",
+        "skills": [
+          "question-creation"
+        ]
+      },
+      {
+        "id": "jp-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Japan Master Quiz",
+        "prompt": "まだ日本をよく知らない友達向けに5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "日本"
+        },
+        "explanation": "40 Missionの学びを再構成する最終Missionです。",
+        "skills": [
+          "synthesis",
+          "teaching"
+        ]
+      }
+    ]
+  },
+  "jo": {
+    "countryNameJa": "ヨルダン",
+    "countryNameEn": "Jordan",
+    "version": 2,
+    "totalMissions": 40,
+    "maxWorldPoints": 480,
+    "verifiedAt": "2026-09",
+    "design": {
+      "concept": "EXPLORE → LEARN → CONNECT",
+      "domains": [
+        {
+          "id": "place",
+          "labelJa": "場所・地理",
+          "labelEn": "Place & Geography",
+          "icon": "🌍"
+        },
+        {
+          "id": "time",
+          "labelJa": "時間・時差",
+          "labelEn": "Time & Time Zones",
+          "icon": "⏰"
+        },
+        {
+          "id": "language",
+          "labelJa": "ことば・音読",
+          "labelEn": "Language & Speaking",
+          "icon": "🗣️"
+        },
+        {
+          "id": "lifeCulture",
+          "labelJa": "生活・文化",
+          "labelEn": "Life & Culture",
+          "icon": "🏠"
+        },
+        {
+          "id": "japanConnection",
+          "labelJa": "日本とのつながり",
+          "labelEn": "Japan Connection",
+          "icon": "🇯🇵"
+        },
+        {
+          "id": "thinkConnect",
+          "labelJa": "比較・思考・交流",
+          "labelEn": "Think & Connect",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "badgeRules": {
+      "stamp": {
+        "minMissions": 1
+      },
+      "bronze": {
+        "minMissions": 15,
+        "minWorldPoints": 120,
+        "minDomains": 4
+      },
+      "silver": {
+        "minMissions": 25,
+        "minWorldPoints": 260,
+        "minDomains": 6
+      },
+      "gold": {
+        "minMissions": 34,
+        "minWorldPoints": 400,
+        "domainMinimums": {
+          "place": 5,
+          "time": 4,
+          "language": 6,
+          "lifeCulture": 5,
+          "japanConnection": 5,
+          "thinkConnect": 4
+        }
+      },
+      "diamond": {
+        "minMissions": 38,
+        "minWorldPoints": 450,
+        "requiredMissionIds": [
+          "jo-l08",
+          "jo-j07",
+          "jo-k04",
+          "jo-k05"
+        ]
+      }
+    },
+    "sources": {
+      "jo-country-profile": {
+        "organization": "TimePalette Country Data",
+        "title": "Jordan profile based on countries_j.json",
+        "dataYear": "current",
+        "verifiedAt": "2026-09",
+        "url": "https://github.com/nakacy0919-Git/timepalette/blob/main/src/data/countries_j.json"
+      },
+      "jo-time-zone": {
+        "organization": "IANA Time Zone Database / 2026 clock-change verification",
+        "title": "IANA Time Zone Database and 2026 DST verification",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://data.iana.org/time-zones/tzdb/"
+      },
+      "jo-japan-connection": {
+        "organization": "Ministry of Foreign Affairs of Japan",
+        "title": "日本とヨルダンのつながり",
+        "dataYear": "2026",
+        "verifiedAt": "2026-09",
+        "url": "https://www.mofa.go.jp/region/middle_e/jordan/data.html"
+      }
+    },
+    "missions": [
+      {
+        "id": "jo-p01",
+        "domain": "place",
+        "level": 1,
+        "type": "map-tap",
+        "title": "ヨルダンを探せ！",
+        "prompt": "世界地図からヨルダンをタップしよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "jo",
+          "targetAtlasName": "Jordan",
+          "targetName": "Jordan"
+        },
+        "explanation": "西アジアの内陸部に位置し、ヨルダン渓谷、高原、乾燥した東部砂漠、紅海沿岸のアカバを持ちます。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-p02",
+        "domain": "place",
+        "level": 1,
+        "type": "single-choice",
+        "title": "世界のどの地域？",
+        "prompt": "ヨルダンの位置として最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "西アジア・中東",
+            "南極大陸",
+            "北極点だけ",
+            "太平洋上の無人海域"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ヨルダンは西アジア・中東に位置します。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-p03",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "首都はどこ？",
+        "prompt": "ヨルダンの首都を選ぼう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "アンマン",
+            "アカバ",
+            "イルビド",
+            "ワディ・ムーサ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都はアンマンです。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-p04",
+        "domain": "place",
+        "level": 2,
+        "type": "city-map",
+        "title": "都市を地図に置こう",
+        "prompt": "ヨルダンの主要都市を地図上のおおよその位置に置こう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "targetIso": "jo",
+          "targetAtlasName": "Jordan",
+          "mapConfig": {
+            "center": [
+              36.3,
+              31.2
+            ],
+            "scale": 1800
+          },
+          "cities": [
+            {
+              "name": "Amman",
+              "labelJa": "アンマン",
+              "coordinates": [
+                35.9106,
+                31.9539
+              ],
+              "timeZone": "Asia/Amman",
+              "region": "北西部高地・首都"
+            },
+            {
+              "name": "Aqaba",
+              "labelJa": "アカバ",
+              "coordinates": [
+                35.0078,
+                29.5321
+              ],
+              "timeZone": "Asia/Amman",
+              "region": "南部・紅海沿岸"
+            },
+            {
+              "name": "Irbid",
+              "labelJa": "イルビド",
+              "coordinates": [
+                35.8497,
+                32.5556
+              ],
+              "timeZone": "Asia/Amman",
+              "region": "北部"
+            },
+            {
+              "name": "Wadi Musa",
+              "labelJa": "ワディ・ムーサ",
+              "coordinates": [
+                35.4801,
+                30.3216
+              ],
+              "timeZone": "Asia/Amman",
+              "region": "南部・ペトラ周辺"
+            }
+          ]
+        },
+        "explanation": "主要都市の配置から地域差を読み取ります。",
+        "skills": [
+          "map-reading"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-p05",
+        "domain": "place",
+        "level": 2,
+        "type": "single-choice",
+        "title": "海・川・内陸を読む",
+        "prompt": "ヨルダンと水域の関係として最も適切なのは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ヨルダン川、死海、アカバ湾などが水資源、観光、環境、都市生活に重要です。",
+            "水域は生活と関係しない",
+            "国土はすべて人工島である",
+            "河川や海岸は地理では考えない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ヨルダン川、死海、アカバ湾などが水資源、観光、環境、都市生活に重要です。",
+        "skills": [
+          "geography"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-p06",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "地形と気候を結びつける",
+        "prompt": "ヨルダンの地形・気候について最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "国土の多くは乾燥していますが、西部高地は冬に冷え込み、降水量も東部砂漠より多くなります。",
+            "全国どこでも一年中同じ気候",
+            "首都の天気だけで全国を説明できる",
+            "地形や標高は気候に影響しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国土の多くは乾燥していますが、西部高地は冬に冷え込み、降水量も東部砂漠より多くなります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-p07",
+        "domain": "place",
+        "level": 3,
+        "type": "single-choice",
+        "title": "スケールと地域差",
+        "prompt": "ヨルダンを一つのイメージだけで理解しないために重要なのは？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "アンマン高地、ヨルダン渓谷、北部農業地域、東部砂漠、南部アカバ・ワディラムで自然と暮らしが異なります。",
+            "首都の写真1枚だけで全国を判断する",
+            "観光地だけを国全体と考える",
+            "地域差を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "アンマン高地、ヨルダン渓谷、北部農業地域、東部砂漠、南部アカバ・ワディラムで自然と暮らしが異なります。",
+        "skills": [
+          "scale",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-t01",
+        "domain": "time",
+        "level": 1,
+        "type": "live-time-compare",
+        "title": "今、何時？",
+        "prompt": "TokyoとAmmanの現在時刻を比べよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Asia/Amman"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Amman": "Amman"
+          },
+          "questionMode": "which-is-ahead"
+        },
+        "explanation": "IANAタイムゾーンでリアルタイム比較します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "jo-time-zone"
+        ]
+      },
+      {
+        "id": "jo-t02",
+        "domain": "time",
+        "level": 2,
+        "type": "time-dial",
+        "title": "時計を合わせる",
+        "prompt": "同じ瞬間の2都市の時計を合わせよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "fromZone": "Asia/Tokyo",
+          "toZone": "Asia/Amman",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Amman": "Amman"
+          },
+          "toleranceMinutes": 0
+        },
+        "explanation": "同じ瞬間を別都市の時計で表します。",
+        "skills": [
+          "time-calculation"
+        ],
+        "sourceIds": [
+          "jo-time-zone"
+        ]
+      },
+      {
+        "id": "jo-t03",
+        "domain": "time",
+        "level": 2,
+        "type": "live-time-compare",
+        "title": "時差をリアルタイムで読む",
+        "prompt": "2都市の現在の時差を確認しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "zones": [
+            "Asia/Tokyo",
+            "Asia/Amman"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Amman": "Amman"
+          },
+          "questionMode": "difference-hours-live"
+        },
+        "explanation": "固定暗記ではなく実際の時差を確認します。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "jo-time-zone"
+        ]
+      },
+      {
+        "id": "jo-t04",
+        "domain": "time",
+        "level": 2,
+        "type": "daypart-match",
+        "title": "朝・昼・夜を比べる",
+        "prompt": "2都市の生活時間帯を比べよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "baseZone": "Asia/Tokyo",
+          "targetZones": [
+            "Asia/Amman"
+          ],
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Amman": "Amman"
+          }
+        },
+        "explanation": "時刻を生活時間帯につなげます。",
+        "skills": [
+          "daily-life"
+        ],
+        "sourceIds": [
+          "jo-time-zone"
+        ]
+      },
+      {
+        "id": "jo-t05",
+        "domain": "time",
+        "level": 3,
+        "type": "schedule-builder",
+        "title": "交流できる時間を探せ",
+        "prompt": "日本側14:30〜16:00、ヨルダン側08:30〜10:00の範囲で学校交流できる時間を探そう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "zoneA": "Asia/Tokyo",
+          "zoneB": "Asia/Amman",
+          "zoneLabels": {
+            "Asia/Tokyo": "Tokyo",
+            "Asia/Amman": "Amman"
+          },
+          "windowA": [
+            "14:30",
+            "16:00"
+          ],
+          "windowB": [
+            "08:30",
+            "10:00"
+          ],
+          "minOverlapMinutes": 30
+        },
+        "explanation": "実際に重なる時間帯を使って、相手にも無理の少ない交流計画を立てます。",
+        "skills": [
+          "scheduling"
+        ],
+        "sourceIds": [
+          "jo-time-zone"
+        ]
+      },
+      {
+        "id": "jo-t06",
+        "domain": "time",
+        "level": 3,
+        "type": "single-choice",
+        "title": "DST・時刻制度を確認",
+        "prompt": "ヨルダンの時刻制度として正しいのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ヨルダンは2026年もUTC+3を通年使用し、DSTによる時計変更はありません。",
+            "Tokyoとの時差は世界中で常に同じ",
+            "DSTは世界共通で必ず実施される",
+            "現地時刻は交流に関係しない"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ヨルダンは2026年もUTC+3を通年使用し、DSTによる時計変更はありません。",
+        "skills": [
+          "time-zones"
+        ],
+        "sourceIds": [
+          "jo-time-zone"
+        ]
+      },
+      {
+        "id": "jo-l01",
+        "domain": "language",
+        "level": 1,
+        "type": "matching",
+        "title": "交流英語を場面で選ぶ",
+        "prompt": "ヨルダンについて交流する場面と英語表現を組み合わせよう。",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "pairs": [
+            {
+              "situation": "初対面",
+              "phrase": "Nice to meet you."
+            },
+            {
+              "situation": "聞き返す",
+              "phrase": "Could you say that again?"
+            },
+            {
+              "situation": "学校生活を知る",
+              "phrase": "What is school life like for you?"
+            },
+            {
+              "situation": "交流の終わり",
+              "phrase": "It was nice talking with you."
+            }
+          ]
+        },
+        "explanation": "国際交流の基本表現を場面で使い分けます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "jo-l02",
+        "domain": "language",
+        "level": 1,
+        "type": "single-choice",
+        "title": "どんな言語が使われる？",
+        "prompt": "ヨルダンの言語事情について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "アラビア語が公用語で、英語も教育・ビジネス・観光などで広く使われます。ほかにも共同体ごとの言語があります。",
+            "全員が必ず一言語だけを使う",
+            "家庭や地域の言語差はない",
+            "世界中の人が日本語だけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "アラビア語が公用語で、英語も教育・ビジネス・観光などで広く使われます。ほかにも共同体ごとの言語があります。",
+        "skills": [
+          "multilingualism"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-l03",
+        "domain": "language",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文字にも注目",
+        "prompt": "ヨルダンの文字について正しい説明は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "アラビア語はアラビア文字で右から左へ書き、英語はラテン文字を使います。",
+            "世界中で同じ文字体系だけを使う",
+            "文字は一切使われない",
+            "必ずラテン文字だけを使う"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "アラビア語はアラビア文字で右から左へ書き、英語はラテン文字を使います。",
+        "skills": [
+          "writing-systems"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-l04",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking",
+        "title": "英語で国を紹介する",
+        "prompt": "“Hello! I am learning about Jordan.” を声に出そう。",
+        "points": 10,
+        "requiredForMastery": true,
+        "challenge": {
+          "phrase": "Hello! I am learning about Jordan.",
+          "meaning": "こんにちは。私はヨルダンについて学んでいます。",
+          "langCode": "en-US",
+          "minAccuracy": 70
+        },
+        "explanation": "意味を理解して伝わるように発音します。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "jo-l05",
+        "domain": "language",
+        "level": 2,
+        "type": "speaking-template",
+        "title": "自己紹介＋学んでいる国",
+        "prompt": "名前を入れて英語で自己紹介しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "template": "Hi! My name is {name}. I am learning about Jordan. Nice to meet you!",
+          "langCode": "en-US",
+          "requiredSlots": [
+            "name"
+          ],
+          "minAccuracy": 70
+        },
+        "explanation": "実際の交流に近い自己紹介です。",
+        "skills": [
+          "speaking"
+        ]
+      },
+      {
+        "id": "jo-l06",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "一国一言語と決めつけない",
+        "prompt": "ヨルダンの言語を学ぶ姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "アラビア語が公用語で、英語も教育・ビジネス・観光などで広く使われます。ほかにも共同体ごとの言語があります。",
+            "全員が同じ言葉だけを使うと決めつける",
+            "首都の言葉だけが本物と考える",
+            "少数言語を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "アラビア語が公用語で、英語も教育・ビジネス・観光などで広く使われます。ほかにも共同体ごとの言語があります。",
+        "skills": [
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-l07",
+        "domain": "language",
+        "level": 3,
+        "type": "single-choice",
+        "title": "言語と文化をつなぐ",
+        "prompt": "ヨルダンの言語を学ぶ理由として最も良いものは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の地域・歴史・文化を理解する入り口になる",
+            "一つの言語を知れば全員の考えが同じと分かる",
+            "他の言語を否定するため",
+            "発音だけを競うため"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "言語は人・地域・歴史を理解する入り口です。",
+        "skills": [
+          "culture"
+        ]
+      },
+      {
+        "id": "jo-l08",
+        "domain": "language",
+        "level": 4,
+        "type": "speaking-creator",
+        "title": "本当に聞きたい質問を話す",
+        "prompt": "ヨルダンの同年代について知りたいことを英語で1つ質問し、声に出そう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minWords": 5,
+          "langCode": "en-US",
+          "requiresRecording": true,
+          "requiresText": true,
+          "audienceCountryNameJa": "ヨルダン",
+          "audienceCountryNameEn": "Jordan"
+        },
+        "explanation": "自分の好奇心を英語にします。",
+        "skills": [
+          "speaking",
+          "question-creation"
+        ]
+      },
+      {
+        "id": "jo-c01",
+        "domain": "lifeCulture",
+        "level": 1,
+        "type": "single-choice",
+        "title": "気候と暮らし",
+        "prompt": "ヨルダンの気候について最も適切なのは？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "国土の多くは乾燥していますが、西部高地は冬に冷え込み、降水量も東部砂漠より多くなります。",
+            "国内は一年中どこでも同じ気候",
+            "気候は地形と無関係",
+            "世界中の国と毎日同じ気温"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国土の多くは乾燥していますが、西部高地は冬に冷え込み、降水量も東部砂漠より多くなります。",
+        "skills": [
+          "climate"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-c02",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "食文化を知る",
+        "prompt": "ヨルダンの食文化と関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "マンサフ",
+            "必ず世界中同じ一皿だけ",
+            "食文化は地域差がない",
+            "食文化は歴史と無関係"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "マンサフは食文化を知る手がかりです。",
+        "skills": [
+          "food-culture"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-c03",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "single-choice",
+        "title": "文化・自然遺産から学ぶ",
+        "prompt": "ヨルダンについて学ぶ題材として関係が深いものは？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "ペトラ",
+            "南極点",
+            "ナイアガラの滝",
+            "サハラ砂漠だけ"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "ペトラは地域性を考える題材です。",
+        "skills": [
+          "heritage"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-c04",
+        "domain": "lifeCulture",
+        "level": 2,
+        "type": "region-sort",
+        "title": "同じ国の中の地域差",
+        "prompt": "ヨルダンの3都市を地域に分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "items": [
+            {
+              "name": "アンマン",
+              "target": "北西部高地・首都"
+            },
+            {
+              "name": "アカバ",
+              "target": "南部・紅海沿岸"
+            },
+            {
+              "name": "イルビド",
+              "target": "北部"
+            }
+          ]
+        },
+        "explanation": "都市配置から生活条件の違いを考えます。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-c05",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "季節と地域差",
+        "prompt": "ヨルダンの季節や地域差を考えるとき最も大切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "アンマン高地、ヨルダン渓谷、北部農業地域、東部砂漠、南部アカバ・ワディラムで自然と暮らしが異なります。",
+            "首都の天気を全国に当てはめる",
+            "一年中同じ気温と考える",
+            "地形を無視する"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "アンマン高地、ヨルダン渓谷、北部農業地域、東部砂漠、南部アカバ・ワディラムで自然と暮らしが異なります。",
+        "skills": [
+          "reasoning"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-c06",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "文化は一つではない",
+        "prompt": "ヨルダンの文化を学ぶときの姿勢として最も適切なのは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "首都、高地農業地域、砂漠、南部観光地域、ベドウィン共同体、難民を含む多様な人々の生活があります。",
+            "観光広告一つで全国民を説明する",
+            "都市だけを本物と考える",
+            "一人の例を全員に当てはめる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "首都、高地農業地域、砂漠、南部観光地域、ベドウィン共同体、難民を含む多様な人々の生活があります。",
+        "skills": [
+          "anti-stereotype"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-c07",
+        "domain": "lifeCulture",
+        "level": 3,
+        "type": "single-choice",
+        "title": "「その国らしさ」を疑う",
+        "prompt": "『ヨルダンの人はみんな同じ生活をしている』をどう考える？",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "choices": [
+            "不正確。地域・家庭・世代・言語・仕事などで生活は多様",
+            "完全に正しい",
+            "首都だけ見れば全国が分かる",
+            "観光客の印象だけで判断できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国を一つのイメージに固定しないことが重要です。",
+        "skills": [
+          "anti-stereotype"
+        ]
+      },
+      {
+        "id": "jo-j01",
+        "domain": "japanConnection",
+        "level": 1,
+        "type": "single-choice",
+        "title": "日本とヨルダンのつながり",
+        "prompt": "日本とヨルダンの関係について正しい説明は？",
+        "points": 5,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "日本とヨルダンは戦略的パートナーシップの下、水資源、教育、保健、インフラ、難民支援、安全保障対話などで協力しています。",
+            "国際的なつながりは存在しない",
+            "同じ国土を世界中で共有する",
+            "時差だけが国際関係である"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "日本とヨルダンは戦略的パートナーシップの下、水資源、教育、保健、インフラ、難民支援、安全保障対話などで協力しています。",
+        "skills": [
+          "international-relations"
+        ],
+        "sourceIds": [
+          "jo-japan-connection"
+        ]
+      },
+      {
+        "id": "jo-j02",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "sorting",
+        "title": "つながりを分類",
+        "prompt": "日本とヨルダンのつながりを分類しよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "uiLead": "Jordan → JAPAN / JAPAN → Jordan",
+          "items": [
+            {
+              "label": "水資源・インフラ",
+              "target": "つながりがある"
+            },
+            {
+              "label": "教育・保健・難民支援",
+              "target": "つながりがある"
+            },
+            {
+              "label": "外交・安全保障対話",
+              "target": "つながりがある"
+            },
+            {
+              "label": "国際交流では相手を一つのイメージで決めつける",
+              "target": "それ以外"
+            }
+          ]
+        },
+        "explanation": "日本とヨルダンは戦略的パートナーシップの下、水資源、教育、保健、インフラ、難民支援、安全保障対話などで協力しています。",
+        "skills": [
+          "classification"
+        ],
+        "sourceIds": [
+          "jo-japan-connection"
+        ]
+      },
+      {
+        "id": "jo-j03",
+        "domain": "japanConnection",
+        "level": 2,
+        "type": "single-choice",
+        "title": "関係を多面的に見る",
+        "prompt": "日本とヨルダンの関係を理解する最も良い見方は？",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "外交・経済・文化・教育・人の移動など複数を見る",
+            "一つの商品だけ暗記する",
+            "国旗だけ覚える",
+            "距離だけで決める"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "国どうし・地域どうしの関係は複数の層から考えます。",
+        "skills": [
+          "systems-thinking"
+        ],
+        "sourceIds": [
+          "jo-japan-connection"
+        ]
+      },
+      {
+        "id": "jo-j04",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "connection-chain",
+        "title": "つながりの流れを考える",
+        "prompt": "交流が学びにつながる流れを完成させよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "chains": [
+            {
+              "start": "学校交流",
+              "middle": "相手の生活を直接聞く",
+              "end": "ステレオタイプを修正する"
+            },
+            {
+              "start": "文化・技術交流",
+              "middle": "背景を知る",
+              "end": "相互理解を深める"
+            }
+          ]
+        },
+        "explanation": "交流を相互理解につなげます。",
+        "skills": [
+          "systems-thinking"
+        ]
+      },
+      {
+        "id": "jo-j05",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "daily-life-hunt",
+        "title": "身近なつながりを探せ",
+        "prompt": "身近な日本とヨルダンのつながりを1つ探し、根拠を書こう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "requiresText": true,
+          "minChars": 20,
+          "evidencePrompt": "商品表示・学校交流・ニュース・文化イベント・地域の外国人住民など、具体的な根拠も書こう。"
+        },
+        "explanation": "日常の国際的つながりを証拠から探します。",
+        "skills": [
+          "evidence"
+        ]
+      },
+      {
+        "id": "jo-j06",
+        "domain": "japanConnection",
+        "level": 3,
+        "type": "single-choice",
+        "title": "もし交流が増えたら？",
+        "prompt": "日本とヨルダンの学校交流が増えたとき最も期待できることは？",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "choices": [
+            "相手の実際の生活や考えを聞き、ステレオタイプを修正できる",
+            "全員が同じ考えだと確認できる",
+            "地理を学ばなくてよくなる",
+            "時差を無視できる"
+          ],
+          "correctIndex": 0
+        },
+        "explanation": "直接交流で知識と人の経験を結びつけます。",
+        "skills": [
+          "communication"
+        ]
+      },
+      {
+        "id": "jo-j07",
+        "domain": "japanConnection",
+        "level": 4,
+        "type": "quiz-creator",
+        "title": "Japan Connectionクイズを作れ",
+        "prompt": "日本とヨルダンのつながりについて4択問題を作ろう。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "requiredFields": [
+            "question",
+            "correctAnswer",
+            "wrongAnswer1",
+            "wrongAnswer2",
+            "wrongAnswer3",
+            "explanation"
+          ],
+          "minExplanationChars": 30,
+          "countryNameJa": "ヨルダン"
+        },
+        "explanation": "他者に説明できる形へ再構成します。",
+        "skills": [
+          "quiz-creation"
+        ]
+      },
+      {
+        "id": "jo-k01",
+        "domain": "thinkConnect",
+        "level": 2,
+        "type": "compare-builder",
+        "title": "共通点を3つ探す",
+        "prompt": "日本とヨルダンの共通点を3つ、異なるカテゴリーから見つけよう。",
+        "points": 10,
+        "requiredForMastery": false,
+        "challenge": {
+          "minItems": 3,
+          "requireDifferentCategories": true,
+          "requiresText": true
+        },
+        "explanation": "単純な『同じ／違う』を越えて比較します。",
+        "skills": [
+          "comparison"
+        ]
+      },
+      {
+        "id": "jo-k02",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "compare-builder",
+        "title": "違い＋理由を考える",
+        "prompt": "日本とヨルダンの違いを3つ挙げ、1つの背景を説明しよう。",
+        "points": 15,
+        "requiredForMastery": false,
+        "challenge": {
+          "minDifferences": 3,
+          "minReasons": 1,
+          "requiresText": true
+        },
+        "explanation": "背景まで考えて違いを理解します。",
+        "skills": [
+          "reasoning"
+        ]
+      },
+      {
+        "id": "jo-k03",
+        "domain": "thinkConnect",
+        "level": 3,
+        "type": "evidence-check",
+        "title": "ステレオタイプを証拠で検証",
+        "prompt": "『ヨルダンは砂漠だけの国で、全国どこでも同じ自然環境と暮らしである』という説明を証拠で評価しよう。",
+        "points": 15,
+        "requiredForMastery": true,
+        "challenge": {
+          "claim": "ヨルダンは砂漠だけの国で、全国どこでも同じ自然環境と暮らしである",
+          "correctJudgement": "不正確",
+          "requiredEvidenceCount": 2,
+          "evidenceOptions": [
+            {
+              "id": "jo-k03-e1",
+              "text": "西部高地は東部砂漠より降水量が多く農業地域もある",
+              "valid": true
+            },
+            {
+              "id": "jo-k03-e2",
+              "text": "死海、ヨルダン渓谷、紅海沿岸アカバなど異なる水環境がある",
+              "valid": true
+            },
+            {
+              "id": "jo-k03-e3",
+              "text": "首都アンマン、ベドウィン地域、観光都市など生活環境が異なる",
+              "valid": true
+            },
+            {
+              "id": "jo-k03-e4",
+              "text": "ヨルダンの首都はアンマンである",
+              "valid": false
+            },
+            {
+              "id": "jo-k03-e5",
+              "text": "日本の首都は東京である",
+              "valid": false
+            }
+          ]
+        },
+        "explanation": "直接関係する証拠を複数選んで判断します。",
+        "skills": [
+          "evidence",
+          "critical-thinking"
+        ],
+        "sourceIds": [
+          "jo-country-profile"
+        ]
+      },
+      {
+        "id": "jo-k04",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "question-creator",
+        "title": "交流質問を3つ作る",
+        "prompt": "ヨルダンの同年代の生徒に質問を3つ作ろう。少なくとも2分野を含める。",
+        "points": 20,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 3,
+          "minDomains": 2,
+          "requiresText": true,
+          "countryNameJa": "ヨルダン"
+        },
+        "explanation": "相手自身が説明できる問いを作ります。",
+        "skills": [
+          "question-creation"
+        ]
+      },
+      {
+        "id": "jo-k05",
+        "domain": "thinkConnect",
+        "level": 4,
+        "type": "creator-capstone",
+        "title": "Jordan Master Quiz",
+        "prompt": "まだヨルダンをよく知らない友達向けに5分野から5問のミニクイズを作ろう。",
+        "points": 25,
+        "requiredForMastery": true,
+        "challenge": {
+          "minQuestions": 5,
+          "requiredDomains": [
+            "place",
+            "time",
+            "language",
+            "lifeCulture",
+            "japanConnection"
+          ],
+          "requiresAnswerKey": true,
+          "requiresExplanations": true,
+          "countryNameJa": "ヨルダン"
+        },
+        "explanation": "40 Missionの学びを再構成する最終Missionです。",
+        "skills": [
+          "synthesis",
+          "teaching"
+        ]
+      }
+    ]
+  }
+}
