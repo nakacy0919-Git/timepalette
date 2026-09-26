@@ -8,6 +8,12 @@ import {
   Search,
 } from 'lucide-react';
 
+import exploreWorldBackground
+  from '../../assets/world-adventure/explore_world_background.png';
+
+import timePaletteLogo
+  from '../../assets/branding/timepalette_global_adventure_logo.png';
+
 import {
   useState,
 } from 'react';
@@ -728,6 +734,592 @@ function CountryCard({
 }
 
 
+function CountrySelectionLanding({
+  onChooseMode,
+}) {
+  return (
+    <div
+      className="
+        relative
+        h-[calc(100dvh-68px)]
+        min-h-[650px]
+        overflow-hidden
+        bg-[#07111f]
+        text-white
+      "
+    >
+
+      <style>
+        {`
+          @keyframes tp-world-drift {
+            0% {
+              transform:
+                scale(1.04)
+                translate3d(0, 0, 0);
+            }
+
+            50% {
+              transform:
+                scale(1.09)
+                translate3d(-1.2%, -0.6%, 0);
+            }
+
+            100% {
+              transform:
+                scale(1.06)
+                translate3d(1%, 0.4%, 0);
+            }
+          }
+
+          @keyframes tp-glow-float {
+            0% {
+              transform:
+                translate3d(0, 0, 0)
+                scale(1);
+            }
+
+            50% {
+              transform:
+                translate3d(30px, -18px, 0)
+                scale(1.08);
+            }
+
+            100% {
+              transform:
+                translate3d(-15px, 12px, 0)
+                scale(0.96);
+            }
+          }
+
+          .tp-world-background {
+            animation:
+              tp-world-drift
+              24s
+              ease-in-out
+              infinite
+              alternate;
+            transform-origin:
+              center center;
+          }
+
+          .tp-world-glow {
+            animation:
+              tp-glow-float
+              12s
+              ease-in-out
+              infinite
+              alternate;
+          }
+
+          @media (
+            prefers-reduced-motion:
+            reduce
+          ) {
+            .tp-world-background,
+            .tp-world-glow {
+              animation: none;
+            }
+          }
+        `}
+      </style>
+
+
+      {/* BACKGROUND */}
+
+      <img
+        src={
+          exploreWorldBackground
+        }
+        alt=""
+        aria-hidden="true"
+        className="
+          tp-world-background
+          absolute
+          inset-0
+          h-full
+          w-full
+          object-cover
+          object-center
+        "
+      />
+
+
+      {/* CINEMATIC OVERLAYS */}
+
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-b
+          from-slate-950/42
+          via-slate-950/18
+          to-slate-950/72
+        "
+      />
+
+
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-r
+          from-slate-950/46
+          via-transparent
+          to-slate-950/35
+        "
+      />
+
+
+      <div
+        className="
+          absolute
+          inset-x-0
+          bottom-0
+          h-[45%]
+          bg-gradient-to-t
+          from-[#07111f]/90
+          via-[#07111f]/35
+          to-transparent
+        "
+      />
+
+
+      {/* MOVING LIGHT */}
+
+      <div
+        className="
+          tp-world-glow
+          pointer-events-none
+          absolute
+          -left-24
+          top-[18%]
+          h-[430px]
+          w-[430px]
+          rounded-full
+          bg-blue-500/20
+          blur-[120px]
+        "
+      />
+
+
+      <div
+        className="
+          tp-world-glow
+          pointer-events-none
+          absolute
+          right-[-120px]
+          top-[28%]
+          h-[450px]
+          w-[450px]
+          rounded-full
+          bg-violet-500/15
+          blur-[130px]
+        "
+        style={{
+          animationDelay:
+            '-5s',
+        }}
+      />
+
+
+      {/* CONTENT */}
+
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          flex
+          h-full
+          w-full
+          max-w-[1500px]
+          flex-col
+          px-5
+          py-5
+          md:px-8
+          lg:px-10
+        "
+      >
+
+        {/* TOP */}
+
+        <div
+          className="
+            flex
+            shrink-0
+            items-start
+            justify-between
+          "
+        >
+
+          <img
+            src={
+              timePaletteLogo
+            }
+            alt="TimePalette World Adventure"
+            className="
+              w-[190px]
+              drop-shadow-[0_10px_25px_rgba(0,0,0,0.45)]
+              sm:w-[220px]
+              lg:w-[255px]
+            "
+          />
+
+
+          <div
+            className="
+              flex
+              items-center
+              gap-3
+              rounded-full
+              border
+              border-white/20
+              bg-slate-950/30
+              px-4
+              py-2.5
+              shadow-lg
+              backdrop-blur-xl
+            "
+          >
+
+            <Globe2
+              size={16}
+              className="
+                text-cyan-300
+              "
+            />
+
+
+            <span
+              className="
+                text-xs
+                font-black
+                tracking-[0.10em]
+                text-white/85
+              "
+            >
+              {
+                liveCountries.length
+              } COUNTRIES
+            </span>
+
+          </div>
+
+        </div>
+
+
+        {/* TITLE */}
+
+        <div
+          className="
+            mt-2
+            shrink-0
+            text-center
+            md:mt-0
+          "
+        >
+
+          <p
+            className="
+              text-[10px]
+              font-black
+              tracking-[0.32em]
+              text-cyan-200
+              md:text-xs
+            "
+          >
+            WORLD ADVENTURE
+          </p>
+
+
+          <h1
+            className="
+              mt-2
+              text-4xl
+              font-black
+              tracking-[-0.045em]
+              text-white
+              drop-shadow-[0_5px_20px_rgba(0,0,0,0.55)]
+              md:text-5xl
+              lg:text-[58px]
+            "
+          >
+            国を選ぼう
+          </h1>
+
+        </div>
+
+
+        {/* MODE BUTTONS */}
+
+        <div
+          className="
+            flex
+            min-h-0
+            flex-1
+            items-end
+            justify-center
+            pb-8
+            pt-5
+            md:pb-10
+          "
+        >
+
+          <div
+            className="
+              grid
+              w-full
+              max-w-[1180px]
+              grid-cols-2
+              gap-3
+              md:gap-5
+              lg:grid-cols-4
+            "
+          >
+
+            {FIND_MODES.map(
+              (
+                mode,
+                index
+              ) => {
+                const Icon =
+                  mode.icon;
+
+
+                return (
+                  <button
+                    key={
+                      mode.id
+                    }
+                    type="button"
+                    onClick={() =>
+                      onChooseMode(
+                        mode.id
+                      )
+                    }
+                    className="
+                      group
+                      relative
+                      min-h-[150px]
+                      overflow-hidden
+                      rounded-[26px]
+                      border
+                      border-white/25
+                      bg-slate-950/38
+                      px-5
+                      py-5
+                      text-left
+                      shadow-[0_20px_55px_rgba(0,0,0,0.28)]
+                      backdrop-blur-xl
+                      transition-all
+                      duration-300
+                      hover:-translate-y-2
+                      hover:border-cyan-300/60
+                      hover:bg-slate-900/55
+                      hover:shadow-[0_24px_65px_rgba(14,165,233,0.28)]
+                      md:min-h-[175px]
+                      md:px-6
+                      md:py-6
+                    "
+                  >
+
+                    {/* CARD GLOW */}
+
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute
+                        -right-14
+                        -top-14
+                        h-40
+                        w-40
+                        rounded-full
+                        bg-blue-400/15
+                        blur-2xl
+                        transition
+                        duration-500
+                        group-hover:bg-cyan-300/30
+                      "
+                    />
+
+
+                    {/* NUMBER */}
+
+                    <span
+                      className="
+                        absolute
+                        right-5
+                        top-4
+                        text-[10px]
+                        font-black
+                        tracking-[0.15em]
+                        text-white/30
+                      "
+                    >
+                      0{
+                        index + 1
+                      }
+                    </span>
+
+
+                    {/* ICON */}
+
+                    <div
+                      className="
+                        relative
+                        flex
+                        h-12
+                        w-12
+                        items-center
+                        justify-center
+                        rounded-2xl
+                        border
+                        border-white/20
+                        bg-white/10
+                        text-cyan-200
+                        shadow-[inset_0_1px_0_rgba(255,255,255,0.20)]
+                        transition-all
+                        duration-300
+                        group-hover:scale-110
+                        group-hover:border-cyan-300/50
+                        group-hover:bg-cyan-300/15
+                        group-hover:text-white
+                      "
+                    >
+
+                      <Icon
+                        size={23}
+                        strokeWidth={1.8}
+                      />
+
+                    </div>
+
+
+                    {/* LABEL */}
+
+                    <div
+                      className="
+                        relative
+                        mt-5
+                        flex
+                        items-end
+                        justify-between
+                        gap-4
+                      "
+                    >
+
+                      <div>
+
+                        <p
+                          className="
+                            text-[9px]
+                            font-black
+                            tracking-[0.22em]
+                            text-cyan-300/75
+                          "
+                        >
+                          {
+                            mode.labelEn
+                          }
+                        </p>
+
+
+                        <p
+                          className="
+                            mt-1
+                            text-lg
+                            font-black
+                            tracking-tight
+                            text-white
+                            md:text-xl
+                          "
+                        >
+                          {
+                            mode.label
+                          }
+                        </p>
+
+                      </div>
+
+
+                      <div
+                        className="
+                          flex
+                          h-9
+                          w-9
+                          shrink-0
+                          items-center
+                          justify-center
+                          rounded-full
+                          border
+                          border-white/20
+                          bg-white/10
+                          text-white
+                          transition
+                          duration-300
+                          group-hover:translate-x-1
+                          group-hover:border-cyan-300
+                          group-hover:bg-cyan-300
+                          group-hover:text-slate-950
+                        "
+                      >
+
+                        <ArrowRight
+                          size={17}
+                        />
+
+                      </div>
+
+                    </div>
+
+                  </button>
+                );
+              }
+            )}
+
+          </div>
+
+        </div>
+
+
+        {/* BOTTOM */}
+
+        <div
+          className="
+            hidden
+            shrink-0
+            justify-center
+            pb-1
+            md:flex
+          "
+        >
+
+          <div
+            className="
+              rounded-full
+              border
+              border-white/10
+              bg-black/20
+              px-5
+              py-2
+              text-[9px]
+              font-black
+              tracking-[0.25em]
+              text-white/45
+              backdrop-blur-md
+            "
+          >
+            EXPLORE · LEARN · CONNECT
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  );
+}
+
 /* =========================================================
    EXPLORE WORLD
 ========================================================= */
@@ -1013,7 +1605,17 @@ export default function ExploreWorld() {
         )
     );
 
-
+if (
+  !activeMode
+) {
+  return (
+    <CountrySelectionLanding
+      onChooseMode={
+        chooseMode
+      }
+    />
+  );
+}
   /* =======================================================
      RENDER
   ======================================================= */
