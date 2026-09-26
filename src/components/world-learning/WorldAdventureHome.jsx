@@ -27,6 +27,10 @@ import {
   getCountryProgress,
 } from '../../utils/worldProgressStorage';
 
+import {
+  getLiveWorldLearningCountries,
+} from '../../utils/worldLearningRegistry';
+
 import ModeGuideModal
   from './ModeGuideModal';
 
@@ -194,17 +198,62 @@ export default function WorldAdventureHome({
       getUiSoundEnabled()
   );
 
-  const progress =
-    getCountryProgress(
-      'au'
-    );
+const liveCountries =
+  getLiveWorldLearningCountries();
 
-  const completedCount =
-    progress
-      ?.completedMissionIds
-      ?.length ?? 0;
+const journeyTotals =
+  liveCountries.reduce(
+    (
+      totals,
+      country
+    ) => {
+      const countryProgress =
+        getCountryProgress(
+          country.iso
+        );
 
-  const toggleSound =
+      const completed =
+        countryProgress
+          ?.completedMissionIds
+          ?.length ?? 0;
+
+      return {
+        completed:
+          totals.completed +
+          completed,
+
+        total:
+          totals.total +
+          Number(
+            country.totalMissions ??
+              0
+          ),
+      };
+    },
+    {
+      completed: 0,
+      total: 0,
+    }
+  );
+
+const completedCount =
+  journeyTotals.completed;
+
+const totalMissionCount =
+  journeyTotals.total;
+
+const journeyPercent =
+  totalMissionCount > 0
+    ? Math.round(
+        (
+          completedCount /
+          totalMissionCount
+        ) *
+          100
+      )
+    : 0;
+
+    const toggleSound =
     () => {
       const next =
         !soundEnabled;
@@ -362,8 +411,7 @@ export default function WorldAdventureHome({
                 }
                 className="inline-flex items-center gap-3 border border-white/25 bg-black/20 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/10"
               >
-                Australia
-                を続ける
+                探検を続ける
               </button>
 
             </div>
@@ -386,16 +434,16 @@ export default function WorldAdventureHome({
 
                 <div>
                   <div className="text-4xl">
-                    🇦🇺
-                  </div>
+  🌍
+</div>
 
-                  <h2 className="mt-4 text-2xl font-semibold">
-                    Australia
-                  </h2>
+<h2 className="mt-4 text-2xl font-semibold">
+  World Explorer
+</h2>
 
-                  <p className="mt-1 text-sm text-white/55">
-                    World Learning
-                  </p>
+<p className="mt-1 text-sm text-white/55">
+  {liveCountries.length} Countries Available
+</p>
                 </div>
 
                 <div className="text-right">
@@ -406,7 +454,7 @@ export default function WorldAdventureHome({
                   </div>
 
                   <div className="mt-1 text-xs tracking-wide text-white/50">
-                    / 40 MISSIONS
+                    / {totalMissionCount} MISSIONS
                   </div>
                 </div>
 

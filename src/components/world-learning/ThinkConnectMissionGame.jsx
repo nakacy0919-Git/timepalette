@@ -986,8 +986,8 @@ function QuestionCreatorMission({
           />
 
           <span className="text-sm font-bold leading-relaxed text-slate-600">
-            「Australiaの人はみんな○○だ」
-            と決めつける質問になっていないことを確認しました。
+            「この国の人はみんな○○だ」
+と決めつける質問になっていないことを確認しました。
           </span>
         </label>
       </div>
@@ -1124,8 +1124,8 @@ function CreatorCapstoneMission({
     <div>
       <div className="rounded-3xl border border-violet-200 bg-gradient-to-br from-violet-50 to-blue-50 p-5 md:p-6">
         <p className="text-xs font-black tracking-[0.12em] text-violet-600">
-          AUSTRALIA MASTER
-          CAPSTONE
+          COUNTRY MASTER
+CAPSTONE
         </p>
 
         <h3 className="mt-2 text-2xl font-black text-slate-900">
@@ -1297,8 +1297,8 @@ function CreatorCapstoneMission({
           />
 
           <span className="text-sm font-bold leading-relaxed text-slate-600">
-            まだAustraliaを学んでいない友達でも、
-            解説を読めば学べる内容になっていることを確認しました。
+            まだこの国を学んでいない友達でも、
+解説を読めば学べる内容になっていることを確認しました。
           </span>
         </label>
       </div>
@@ -1310,7 +1310,7 @@ function CreatorCapstoneMission({
           onClick={submit}
           className="mt-6 w-full rounded-2xl bg-slate-900 py-4 text-lg font-black text-white transition hover:bg-violet-700 disabled:bg-slate-200 disabled:text-slate-400"
         >
-          Australia Master Quizを完成
+          Country Master Quizを完成
         </button>
       )}
 
