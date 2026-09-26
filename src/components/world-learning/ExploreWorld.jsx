@@ -1,9 +1,11 @@
 import {
+  ArrowLeft,
   ArrowRight,
+  Compass,
   Globe2,
-  Languages,
-  MapPin,
-  Sparkles,
+  ListOrdered,
+  Map as MapIcon,
+  Search,
 } from 'lucide-react';
 
 import {
@@ -34,8 +36,14 @@ import {
   playUiSound,
 } from '../../utils/uiSound';
 
+
+/* =========================================================
+   COUNTRY DATA
+========================================================= */
+
 const worldCountries =
   getWorldLearningCountries();
+
 
 const liveCountries =
   worldCountries.filter(
@@ -43,6 +51,7 @@ const liveCountries =
       country.status ===
       'live'
   );
+
 
 const countryByAtlasName =
   new Map(
@@ -54,6 +63,96 @@ const countryByAtlasName =
     )
   );
 
+
+/* =========================================================
+   FIND MODES
+========================================================= */
+
+const FIND_MODES = [
+  {
+    id: 'map',
+    icon: MapIcon,
+    label: '地図から',
+    labelEn: 'MAP',
+  },
+
+  {
+    id: 'continent',
+    icon: Compass,
+    label: '大陸から',
+    labelEn: 'CONTINENT',
+  },
+
+  {
+    id: 'alphabet',
+    icon: ListOrdered,
+    label: 'A-Zから',
+    labelEn: 'A–Z',
+  },
+
+  {
+    id: 'search',
+    icon: Search,
+    label: '検索から',
+    labelEn: 'SEARCH',
+  },
+];
+
+
+/* =========================================================
+   CONTINENTS
+========================================================= */
+
+const CONTINENTS = [
+  {
+    id: 'asia',
+    emoji: '🌏',
+    label: 'アジア',
+    labelEn: 'ASIA',
+  },
+
+  {
+    id: 'europe',
+    emoji: '🌍',
+    label: 'ヨーロッパ',
+    labelEn: 'EUROPE',
+  },
+
+  {
+    id: 'africa',
+    emoji: '🌍',
+    label: 'アフリカ',
+    labelEn: 'AFRICA',
+  },
+
+  {
+    id: 'americas',
+    emoji: '🌎',
+    label: '南北アメリカ',
+    labelEn: 'AMERICAS',
+  },
+
+  {
+    id: 'oceania',
+    emoji: '🌏',
+    label: 'オセアニア',
+    labelEn: 'OCEANIA',
+  },
+];
+
+
+const OTHER_CONTINENT = {
+  id: 'other',
+  emoji: '🌐',
+  label: 'その他',
+  labelEn: 'OTHER',
+};
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
 const COUNTRY_COLORS = [
   {
     primary: '#2563eb',
@@ -61,36 +160,42 @@ const COUNTRY_COLORS = [
     soft: '#eff6ff',
     map: '#3b82f6',
   },
+
   {
     primary: '#059669',
     dark: '#065f46',
     soft: '#ecfdf5',
     map: '#10b981',
   },
+
   {
     primary: '#d97706',
     dark: '#92400e',
     soft: '#fffbeb',
     map: '#f59e0b',
   },
+
   {
     primary: '#7c3aed',
     dark: '#5b21b6',
     soft: '#f5f3ff',
     map: '#8b5cf6',
   },
+
   {
     primary: '#dc2626',
     dark: '#991b1b',
     soft: '#fef2f2',
     map: '#ef4444',
   },
+
   {
     primary: '#0891b2',
     dark: '#155e75',
     soft: '#ecfeff',
     map: '#06b6d4',
   },
+
   {
     primary: '#db2777',
     dark: '#9d174d',
@@ -99,11 +204,14 @@ const COUNTRY_COLORS = [
   },
 ];
 
+
 function getCountryVisual(
   iso
 ) {
   const value =
-    String(iso || '')
+    String(
+      iso || ''
+    )
       .split('')
       .reduce(
         (
@@ -111,7 +219,9 @@ function getCountryVisual(
           char
         ) =>
           total +
-          char.charCodeAt(0),
+          char.charCodeAt(
+            0
+          ),
         0
       );
 
@@ -120,6 +230,11 @@ function getCountryVisual(
       COUNTRY_COLORS.length
   ];
 }
+
+
+/* =========================================================
+   HELPERS
+========================================================= */
 
 function getAtlasCountryName(
   geo
@@ -130,6 +245,177 @@ function getAtlasCountryName(
   );
 }
 
+
+function getContinentId(
+  country
+) {
+  const region =
+    String(
+      country?.region ??
+      ''
+    ).toLowerCase();
+
+
+  if (
+    region.includes(
+      'asia'
+    )
+  ) {
+    return 'asia';
+  }
+
+
+  if (
+    region.includes(
+      'europe'
+    )
+  ) {
+    return 'europe';
+  }
+
+
+  if (
+    region.includes(
+      'africa'
+    )
+  ) {
+    return 'africa';
+  }
+
+
+  if (
+    region.includes(
+      'america'
+    )
+  ) {
+    return 'americas';
+  }
+
+
+  if (
+    region.includes(
+      'oceania'
+    ) ||
+    region.includes(
+      'australia'
+    ) ||
+    region.includes(
+      'pacific'
+    )
+  ) {
+    return 'oceania';
+  }
+
+
+  return 'other';
+}
+
+
+function hiraganaToKatakana(
+  value
+) {
+  return String(
+    value ?? ''
+  ).replace(
+    /[\u3041-\u3096]/g,
+    (character) =>
+      String.fromCharCode(
+        character.charCodeAt(
+          0
+        ) + 0x60
+      )
+  );
+}
+
+
+function normalizeSearchText(
+  value
+) {
+  return hiraganaToKatakana(
+    String(
+      value ?? ''
+    )
+      .normalize(
+        'NFKC'
+      )
+      .toLowerCase()
+      .trim()
+  );
+}
+
+
+function countryMatchesSearch(
+  country,
+  query
+) {
+  const normalizedQuery =
+    normalizeSearchText(
+      query
+    );
+
+
+  if (
+    !normalizedQuery
+  ) {
+    return true;
+  }
+
+
+  const searchValues = [
+    country.nameJa,
+    country.nameEn,
+    country.capitalJa,
+    country.capitalEn,
+    country.iso,
+    country.region,
+
+    ...(
+      country
+        .mainLanguagesJa ??
+      []
+    ),
+
+    ...(
+      country
+        .mainLanguagesEn ??
+      []
+    ),
+  ];
+
+
+  return searchValues.some(
+    (value) =>
+      normalizeSearchText(
+        value
+      ).includes(
+        normalizedQuery
+      )
+  );
+}
+
+
+function getCountryInitial(
+  country
+) {
+  const first =
+    String(
+      country?.nameEn ??
+      ''
+    )
+      .charAt(
+        0
+      )
+      .toUpperCase();
+
+
+  return /^[A-Z]$/.test(
+    first
+  )
+    ? first
+    : '#';
+}
+
+
 function calculateCountryStats(
   country
 ) {
@@ -138,21 +424,25 @@ function calculateCountryStats(
       country.iso
     );
 
+
   const completedIds =
     progress
       ?.completedMissionIds ??
     [];
+
 
   const completedSet =
     new Set(
       completedIds
     );
 
+
   const missions =
     country
       ?.missionData
       ?.missions ??
     [];
+
 
   const worldPoints =
     missions.reduce(
@@ -168,7 +458,8 @@ function calculateCountryStats(
           return (
             total +
             Number(
-              mission.points || 0
+              mission.points ??
+              0
             )
           );
         }
@@ -178,8 +469,10 @@ function calculateCountryStats(
       0
     );
 
+
   const totalMissions =
     missions.length;
+
 
   const completionRate =
     totalMissions > 0
@@ -191,6 +484,7 @@ function calculateCountryStats(
             100
         )
       : 0;
+
 
   return {
     completedCount:
@@ -204,45 +498,305 @@ function calculateCountryStats(
   };
 }
 
+
+/* =========================================================
+   COUNTRY CARD
+========================================================= */
+
+function CountryCard({
+  country,
+  onOpen,
+}) {
+  const visual =
+    getCountryVisual(
+      country.iso
+    );
+
+
+  const stats =
+    calculateCountryStats(
+      country
+    );
+
+
+  return (
+    <button
+      type="button"
+      onClick={() =>
+        onOpen(
+          country
+        )
+      }
+      className="
+        group
+        relative
+        flex
+        min-h-[108px]
+        w-full
+        items-center
+        gap-4
+        overflow-hidden
+        rounded-[22px]
+        border
+        border-slate-200
+        bg-white
+        p-4
+        text-left
+        shadow-sm
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-xl
+      "
+    >
+
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          top-0
+          w-1.5
+        "
+        style={{
+          backgroundColor:
+            visual.primary,
+        }}
+      />
+
+
+      {/* FLAG */}
+
+      <div
+        className="
+          flex
+          h-[58px]
+          w-[84px]
+          shrink-0
+          items-center
+          justify-center
+          overflow-hidden
+          rounded-xl
+          bg-slate-100
+          shadow-sm
+        "
+      >
+
+        {country.flagUrl ? (
+
+          <img
+            src={
+              country.flagUrl
+            }
+            alt={`${country.nameEn} flag`}
+            className="
+              h-full
+              w-full
+              object-cover
+            "
+          />
+
+        ) : (
+
+          <span
+            className="
+              text-4xl
+            "
+          >
+            {
+              country.flagEmoji
+            }
+          </span>
+
+        )}
+
+      </div>
+
+
+      {/* NAME */}
+
+      <div
+        className="
+          min-w-0
+          flex-1
+        "
+      >
+
+        <p
+          className="
+            truncate
+            text-lg
+            font-black
+            text-slate-900
+          "
+        >
+          {
+            country.nameEn
+          }
+        </p>
+
+
+        <p
+          className="
+            mt-0.5
+            truncate
+            text-sm
+            font-bold
+            text-slate-400
+          "
+        >
+          {
+            country.nameJa
+          }
+        </p>
+
+
+        <div
+          className="
+            mt-2
+            flex
+            items-center
+            gap-3
+          "
+        >
+
+          <span
+            className="
+              text-[9px]
+              font-black
+              tracking-[0.10em]
+              text-slate-400
+            "
+          >
+            {
+              country.region
+            }
+          </span>
+
+
+          {stats.completedCount > 0 && (
+
+            <span
+              className="
+                text-[9px]
+                font-black
+                text-blue-500
+              "
+            >
+              {
+                stats.completionRate
+              }%
+            </span>
+
+          )}
+
+        </div>
+
+      </div>
+
+
+      {/* ARROW */}
+
+      <div
+        className="
+          flex
+          h-9
+          w-9
+          shrink-0
+          items-center
+          justify-center
+          rounded-full
+          text-white
+          transition
+          duration-300
+          group-hover:translate-x-1
+        "
+        style={{
+          backgroundColor:
+            visual.primary,
+        }}
+      >
+
+        <ArrowRight
+          size={17}
+        />
+
+      </div>
+
+    </button>
+  );
+}
+
+
+/* =========================================================
+   EXPLORE WORLD
+========================================================= */
+
 export default function ExploreWorld() {
   const [
     activeCountry,
     setActiveCountry,
-  ] = useState(null);
+  ] = useState(
+    null
+  );
+
+
+  const [
+    activeMode,
+    setActiveMode,
+  ] = useState(
+    null
+  );
+
+
+  const [
+    selectedContinent,
+    setSelectedContinent,
+  ] = useState(
+    null
+  );
+
+
+  const [
+    selectedLetter,
+    setSelectedLetter,
+  ] = useState(
+    'ALL'
+  );
+
+
+  const [
+    searchQuery,
+    setSearchQuery,
+  ] = useState(
+    ''
+  );
+
+
+  const [
+    hoveredCountry,
+    setHoveredCountry,
+  ] = useState(
+    null
+  );
+
 
   const [
     ,
     setProgressRevision,
-  ] = useState(0);
+  ] = useState(
+    0
+  );
 
-  const totalCompleted =
-    liveCountries.reduce(
-      (
-        total,
-        country
-      ) =>
-        total +
-        calculateCountryStats(
-          country
-        ).completedCount,
-      0
-    );
 
-  const totalWp =
-    liveCountries.reduce(
-      (
-        total,
-        country
-      ) =>
-        total +
-        calculateCountryStats(
-          country
-        ).worldPoints,
-      0
-    );
+  /* =======================================================
+     COUNTRY ACTIONS
+  ======================================================= */
 
   const openCountry =
-    (country) => {
+    (
+      country
+    ) => {
       if (
         country.status !==
         'live'
@@ -250,14 +804,17 @@ export default function ExploreWorld() {
         return;
       }
 
+
       playUiSound(
         'open'
       );
+
 
       setActiveCountry(
         country
       );
     };
+
 
   const closeCountry =
     () => {
@@ -265,9 +822,11 @@ export default function ExploreWorld() {
         'back'
       );
 
+
       setActiveCountry(
         null
       );
+
 
       setProgressRevision(
         (value) =>
@@ -275,629 +834,1548 @@ export default function ExploreWorld() {
       );
     };
 
+
+  /* =======================================================
+     MODE
+  ======================================================= */
+
+  const chooseMode =
+    (
+      modeId
+    ) => {
+      playUiSound(
+        'tap'
+      );
+
+
+      setActiveMode(
+        modeId
+      );
+
+
+      setHoveredCountry(
+        null
+      );
+    };
+
+
+  const backToModeSelection =
+    () => {
+      playUiSound(
+        'back'
+      );
+
+
+      setActiveMode(
+        null
+      );
+
+
+      setSelectedContinent(
+        null
+      );
+
+
+      setSelectedLetter(
+        'ALL'
+      );
+
+
+      setSearchQuery(
+        ''
+      );
+
+
+      setHoveredCountry(
+        null
+      );
+    };
+
+
+  /* =======================================================
+     CONTINENTS
+  ======================================================= */
+
+  const continentCounts =
+    liveCountries.reduce(
+      (
+        result,
+        country
+      ) => {
+        const continentId =
+          getContinentId(
+            country
+          );
+
+
+        result[
+          continentId
+        ] =
+          (
+            result[
+              continentId
+            ] ??
+            0
+          ) + 1;
+
+
+        return result;
+      },
+      {}
+    );
+
+
+  const availableContinents = [
+    ...CONTINENTS.filter(
+      (continent) =>
+        (
+          continentCounts[
+            continent.id
+          ] ??
+          0
+        ) > 0
+    ),
+
+    ...(
+      (
+        continentCounts.other ??
+        0
+      ) > 0
+        ? [
+            OTHER_CONTINENT,
+          ]
+        : []
+    ),
+  ];
+
+
+  const continentCountries =
+    selectedContinent
+      ? liveCountries.filter(
+          (country) =>
+            getContinentId(
+              country
+            ) ===
+            selectedContinent
+        )
+      : [];
+
+
+  /* =======================================================
+     ALPHABET
+  ======================================================= */
+
+  const alphabet =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+      .split(
+        ''
+      );
+
+
+  const availableLetters =
+    new Set(
+      liveCountries.map(
+        (
+          country
+        ) =>
+          getCountryInitial(
+            country
+          )
+      )
+    );
+
+
+  const alphabetCountries =
+    selectedLetter ===
+    'ALL'
+      ? liveCountries
+      : liveCountries.filter(
+          (country) =>
+            getCountryInitial(
+              country
+            ) ===
+            selectedLetter
+        );
+
+
+  /* =======================================================
+     SEARCH
+  ======================================================= */
+
+  const searchResults =
+    liveCountries.filter(
+      (
+        country
+      ) =>
+        countryMatchesSearch(
+          country,
+          searchQuery
+        )
+    );
+
+
+  /* =======================================================
+     RENDER
+  ======================================================= */
+
   return (
-    <div className="min-h-[calc(100vh-68px)] bg-[#f5f3ee]">
-
-      {/* HERO */}
-      <section className="overflow-hidden border-b border-slate-200 bg-white">
-
-        <div className="mx-auto grid w-full max-w-[1500px] grid-cols-1 gap-10 px-6 py-12 md:px-10 md:py-16 lg:grid-cols-[1fr_auto] lg:items-end">
-
-          <div className="max-w-3xl">
-
-            <div className="flex items-center gap-2 text-blue-600">
-
-              <Sparkles
-                size={17}
-              />
-
-              <p className="text-[11px] font-bold tracking-[0.24em]">
-                WORLD ADVENTURE
-              </p>
-
-            </div>
-
-            <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-slate-950 md:text-6xl">
-              世界を選んで、
-              <br />
-              冒険を始めよう。
-            </h1>
-
-            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
-              国旗、ことば、時間、文化。
-              40のMissionを通して、
-              世界を「知る」から
-              「つながる」へ進めます。
-            </p>
-
-          </div>
-
-          <div className="grid grid-cols-3 overflow-hidden border border-slate-200 bg-white shadow-sm">
-
-            <div className="min-w-[105px] border-r border-slate-200 p-5 text-center">
-
-              <div className="text-3xl font-semibold text-slate-950">
-                {
-                  liveCountries.length
-                }
-              </div>
-
-              <div className="mt-1 text-[9px] font-bold tracking-[0.16em] text-slate-400">
-                COUNTRIES
-              </div>
-
-            </div>
-
-            <div className="min-w-[105px] border-r border-slate-200 p-5 text-center">
-
-              <div className="text-3xl font-semibold text-slate-950">
-                {
-                  totalCompleted
-                }
-              </div>
-
-              <div className="mt-1 text-[9px] font-bold tracking-[0.16em] text-slate-400">
-                CLEARED
-              </div>
-
-            </div>
-
-            <div className="min-w-[105px] p-5 text-center">
-
-              <div className="text-3xl font-semibold text-slate-950">
-                {
-                  totalWp
-                }
-              </div>
-
-              <div className="mt-1 text-[9px] font-bold tracking-[0.16em] text-slate-400">
-                WP
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* MAP */}
-      <section className="mx-auto w-full max-w-[1500px] px-4 py-8 md:px-8">
-
-        <div className="overflow-hidden border border-slate-200 bg-[#dceaf0] shadow-[0_14px_45px_rgba(15,23,42,0.07)]">
-
-          <div className="flex flex-col justify-between gap-4 border-b border-slate-200 bg-white px-5 py-4 md:flex-row md:items-center">
-
-            <div className="flex items-center gap-3">
-
-              <Globe2
-                size={20}
-                strokeWidth={1.7}
-                className="text-blue-600"
-              />
-
-              <div>
-
-                <div className="text-sm font-semibold text-slate-900">
-                  Explore the World
-                </div>
-
-                <div className="text-xs text-slate-500">
-                  色のついた国をクリックして冒険を始めよう
-                </div>
-
-              </div>
-
-            </div>
-
-            <div className="text-[10px] font-bold tracking-[0.14em] text-slate-400">
-              EXPLORE · LEARN · CONNECT
-            </div>
-
-          </div>
-
-          <div className="w-full bg-[#dceaf0]">
-
-            <ComposableMap
-              projection="geoEqualEarth"
-              projectionConfig={{
-                scale: 147,
-                center: [
-                  5,
-                  6,
-                ],
-              }}
-              width={1000}
-              height={480}
-              className="h-auto w-full"
-            >
-
-              <Geographies
-                geography={
-                  worldAtlas
-                }
-              >
-
-                {({
-                  geographies,
-                }) =>
-                  geographies.map(
-                    (geo) => {
-                      const atlasName =
-                        getAtlasCountryName(
-                          geo
-                        );
-
-                      const country =
-                        countryByAtlasName.get(
-                          atlasName
-                        );
-
-                      const live =
-                        country
-                          ?.status ===
-                        'live';
-
-                      const visual =
-                        live
-                          ? getCountryVisual(
-                              country.iso
-                            )
-                          : null;
-
-                      return (
-                        <Geography
-                          key={
-                            geo.rsmKey
-                          }
-                          geography={
-                            geo
-                          }
-                          tabIndex={
-                            live
-                              ? 0
-                              : -1
-                          }
-                          role={
-                            live
-                              ? 'button'
-                              : undefined
-                          }
-                          aria-label={
-                            live
-                              ? `${country.nameEn}を探検する`
-                              : undefined
-                          }
-                          onClick={() => {
-                            if (
-                              live
-                            ) {
-                              openCountry(
-                                country
-                              );
-                            }
-                          }}
-                          onKeyDown={(
-                            event
-                          ) => {
-                            if (!live) {
-                              return;
-                            }
-
-                            if (
-                              event.key ===
-                                'Enter' ||
-                              event.key ===
-                                ' '
-                            ) {
-                              event.preventDefault();
-
-                              openCountry(
-                                country
-                              );
-                            }
-                          }}
-                          style={{
-                            default: {
-                              fill:
-                                live
-                                  ? visual.map
-                                  : '#cbd5e1',
-
-                              stroke:
-                                '#f8fafc',
-
-                              strokeWidth:
-                                0.65,
-
-                              outline:
-                                'none',
-                            },
-
-                            hover: {
-                              fill:
-                                live
-                                  ? visual.dark
-                                  : '#cbd5e1',
-
-                              stroke:
-                                '#ffffff',
-
-                              strokeWidth:
-                                live
-                                  ? 1.2
-                                  : 0.65,
-
-                              outline:
-                                'none',
-
-                              cursor:
-                                live
-                                  ? 'pointer'
-                                  : 'default',
-                            },
-
-                            pressed: {
-                              fill:
-                                live
-                                  ? visual.dark
-                                  : '#cbd5e1',
-
-                              stroke:
-                                '#ffffff',
-
-                              strokeWidth:
-                                1,
-
-                              outline:
-                                'none',
-                            },
-                          }}
-                        />
-                      );
-                    }
-                  )
-                }
-
-              </Geographies>
-
-            </ComposableMap>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* COUNTRIES */}
-      <section className="mx-auto w-full max-w-[1500px] px-6 pb-20 md:px-10">
-
-        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+    <div
+      className="
+        h-[calc(100dvh-68px)]
+        min-h-[620px]
+        overflow-hidden
+        bg-[#f5f3ee]
+      "
+    >
+
+      <div
+        className="
+          mx-auto
+          flex
+          h-full
+          w-full
+          max-w-[1500px]
+          flex-col
+          px-5
+          py-5
+          md:px-8
+          md:py-6
+          lg:px-10
+        "
+      >
+
+        {/* =================================================
+            HEADER
+        ================================================== */}
+
+        <div
+          className="
+            flex
+            shrink-0
+            items-end
+            justify-between
+            gap-4
+            border-b
+            border-slate-200
+            pb-5
+          "
+        >
 
           <div>
 
-            <p className="text-[10px] font-bold tracking-[0.2em] text-slate-400">
-              DESTINATIONS
+            <p
+              className="
+                text-[10px]
+                font-black
+                tracking-[0.20em]
+                text-blue-500
+              "
+            >
+              WORLD ADVENTURE
             </p>
 
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
-              探検できる国
-            </h2>
+
+            <h1
+              className="
+                mt-1
+                text-3xl
+                font-black
+                tracking-[-0.04em]
+                text-slate-950
+                md:text-4xl
+              "
+            >
+              国を選ぼう
+            </h1>
 
           </div>
 
-          <p className="max-w-lg text-sm leading-6 text-slate-500">
-            国旗や基本情報から気になる国を選んでください。
-            すべて40 Missionの正式版です。
-          </p>
+
+          <div
+            className="
+              hidden
+              items-center
+              gap-2
+              rounded-full
+              bg-white
+              px-4
+              py-2
+              text-xs
+              font-black
+              text-slate-500
+              shadow-sm
+              md:flex
+            "
+          >
+
+            <Globe2
+              size={15}
+              className="text-blue-500"
+            />
+
+            {
+              liveCountries.length
+            } COUNTRIES
+
+          </div>
 
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
 
-          {liveCountries.map(
-            (country) => {
-              const stats =
-                calculateCountryStats(
-                  country
-                );
+        {/* =================================================
+            MODE SELECTION
+        ================================================== */}
 
-              const visual =
-                getCountryVisual(
-                  country.iso
-                );
+        {!activeMode ? (
 
-              const languageLabel =
-                country
-                  .mainLanguagesJa
-                  ?.slice(0, 2)
-                  .join(' / ') ||
-                '—';
+          <div
+            className="
+              flex
+              min-h-0
+              flex-1
+              items-center
+              justify-center
+            "
+          >
 
-              return (
-                <button
-                  key={
-                    country.iso
-                  }
-                  type="button"
-                  onClick={() =>
-                    openCountry(
-                      country
-                    )
-                  }
-                  className="
-                    group
-                    overflow-hidden
-                    border
-                    border-slate-200
-                    bg-white
-                    text-left
-                    shadow-[0_10px_30px_rgba(15,23,42,0.05)]
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1.5
-                    hover:shadow-[0_18px_50px_rgba(15,23,42,0.12)]
-                  "
-                  style={{
-                    borderTopColor:
-                      visual.primary,
-                    borderTopWidth:
-                      '4px',
-                  }}
-                >
+            <div
+              className="
+                grid
+                w-full
+                max-w-[1050px]
+                grid-cols-2
+                gap-4
+                lg:grid-cols-4
+              "
+            >
 
-                  {/* FLAG HERO */}
-                  <div
-                    className="relative h-32 overflow-hidden"
-                    style={{
-                      background:
-                        `linear-gradient(135deg, ${visual.dark}, ${visual.primary})`,
-                    }}
-                  >
+              {FIND_MODES.map(
+                (
+                  mode
+                ) => {
+                  const Icon =
+                    mode.icon;
 
-                    {country.flagUrl && (
-                      <img
-                        src={
-                          country.flagUrl
-                        }
-                        alt=""
-                        aria-hidden="true"
-                        className="absolute inset-0 h-full w-full scale-110 object-cover opacity-[0.14] blur-[1px]"
+
+                  return (
+                    <button
+                      key={
+                        mode.id
+                      }
+                      type="button"
+                      onClick={() =>
+                        chooseMode(
+                          mode.id
+                        )
+                      }
+                      className="
+                        group
+                        relative
+                        min-h-[220px]
+                        overflow-hidden
+                        rounded-[28px]
+                        border
+                        border-slate-200
+                        bg-white
+                        p-6
+                        text-left
+                        shadow-[0_10px_35px_rgba(15,23,42,0.06)]
+                        transition-all
+                        duration-300
+                        hover:-translate-y-2
+                        hover:border-blue-200
+                        hover:shadow-[0_22px_55px_rgba(37,99,235,0.14)]
+                      "
+                    >
+
+                      <div
+                        className="
+                          pointer-events-none
+                          absolute
+                          -right-8
+                          -top-8
+                          h-32
+                          w-32
+                          rounded-full
+                          bg-blue-50
+                          transition
+                          duration-300
+                          group-hover:scale-125
+                          group-hover:bg-blue-100
+                        "
                       />
-                    )}
 
-                    <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 to-transparent" />
-
-                    <div className="relative flex h-full items-center justify-between px-6">
-
-                      <div className="flex items-center gap-4">
-
-                        {country.flagUrl ? (
-                          <img
-                            src={
-                              country.flagUrl
-                            }
-                            alt={`${country.nameEn} flag`}
-                            className="h-[62px] w-[94px] object-cover shadow-xl ring-1 ring-white/40"
-                          />
-                        ) : (
-                          <div className="text-5xl">
-                            {
-                              country.flagEmoji
-                            }
-                          </div>
-                        )}
-
-                        <div className="text-white">
-
-                          <div className="text-[10px] font-bold tracking-[0.18em] text-white/60">
-                            {
-                              country.iso.toUpperCase()
-                            }
-                          </div>
-
-                          <div className="mt-1 text-lg font-semibold">
-                            {
-                              country.region
-                            }
-                          </div>
-
-                        </div>
-
-                      </div>
-
-                      <div className="bg-white/15 px-3 py-1.5 text-[9px] font-bold tracking-[0.15em] text-white backdrop-blur">
-                        40 MISSIONS
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                  {/* CONTENT */}
-                  <div className="p-6">
-
-                    <h3 className="text-2xl font-semibold tracking-tight text-slate-950">
-                      {
-                        country.nameEn
-                      }
-                    </h3>
-
-                    <p className="mt-1 text-sm font-medium text-slate-400">
-                      {
-                        country.nameJa
-                      }
-                    </p>
-
-                    <p className="mt-4 line-clamp-2 min-h-[48px] text-sm leading-6 text-slate-600">
-                      {
-                        country.subtitleJa ||
-                        `${country.nameJa}を40のMissionで多面的に探検します。`
-                      }
-                    </p>
-
-                    <div className="mt-5 grid grid-cols-2 gap-3">
 
                       <div
-                        className="p-3"
-                        style={{
-                          backgroundColor:
-                            visual.soft,
-                        }}
+                        className="
+                          relative
+                          flex
+                          h-14
+                          w-14
+                          items-center
+                          justify-center
+                          rounded-2xl
+                          bg-slate-950
+                          text-white
+                          shadow-lg
+                          transition
+                          duration-300
+                          group-hover:bg-blue-600
+                        "
                       >
 
-                        <div className="flex items-center gap-2 text-slate-400">
-
-                          <MapPin
-                            size={14}
-                          />
-
-                          <span className="text-[9px] font-bold tracking-[0.1em]">
-                            CAPITAL
-                          </span>
-
-                        </div>
-
-                        <p className="mt-1 truncate text-sm font-semibold text-slate-800">
-                          {
-                            country.capitalJa
-                          }
-                        </p>
-
-                      </div>
-
-                      <div
-                        className="p-3"
-                        style={{
-                          backgroundColor:
-                            visual.soft,
-                        }}
-                      >
-
-                        <div className="flex items-center gap-2 text-slate-400">
-
-                          <Languages
-                            size={14}
-                          />
-
-                          <span className="text-[9px] font-bold tracking-[0.1em]">
-                            LANGUAGE
-                          </span>
-
-                        </div>
-
-                        <p className="mt-1 truncate text-sm font-semibold text-slate-800">
-                          {
-                            languageLabel
-                          }
-                        </p>
-
-                      </div>
-
-                    </div>
-
-                    {/* PROGRESS */}
-                    <div className="mt-6">
-
-                      <div className="flex items-end justify-between">
-
-                        <div>
-
-                          <p className="text-[9px] font-bold tracking-[0.13em] text-slate-400">
-                            YOUR JOURNEY
-                          </p>
-
-                          <p className="mt-1 font-semibold text-slate-800">
-                            {
-                              stats.completedCount
-                            }
-                            <span className="text-slate-300">
-                              {' '}
-                              /{' '}
-                              {
-                                stats.totalMissions
-                              }
-                            </span>
-                            {' '}
-                            Missions
-                          </p>
-
-                        </div>
-
-                        <div
-                          className="text-2xl font-semibold"
-                          style={{
-                            color:
-                              visual.primary,
-                          }}
-                        >
-                          {
-                            stats.completionRate
-                          }%
-                        </div>
-
-                      </div>
-
-                      <div className="mt-3 h-1.5 overflow-hidden bg-slate-100">
-
-                        <div
-                          className="h-full transition-all duration-500"
-                          style={{
-                            width:
-                              `${stats.completionRate}%`,
-
-                            backgroundColor:
-                              visual.primary,
-                          }}
+                        <Icon
+                          size={25}
                         />
 
                       </div>
 
-                    </div>
 
-                    <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-5">
+                      <p
+                        className="
+                          relative
+                          mt-8
+                          text-[10px]
+                          font-black
+                          tracking-[0.16em]
+                          text-blue-500
+                        "
+                      >
+                        {
+                          mode.labelEn
+                        }
+                      </p>
+
+
+                      <h2
+                        className="
+                          relative
+                          mt-1
+                          text-xl
+                          font-black
+                          text-slate-900
+                          md:text-2xl
+                        "
+                      >
+                        {
+                          mode.label
+                        }
+                      </h2>
+
+
+                      <div
+                        className="
+                          absolute
+                          bottom-5
+                          right-5
+                          flex
+                          h-10
+                          w-10
+                          items-center
+                          justify-center
+                          rounded-full
+                          bg-slate-100
+                          text-slate-500
+                          transition
+                          duration-300
+                          group-hover:translate-x-1
+                          group-hover:bg-blue-600
+                          group-hover:text-white
+                        "
+                      >
+
+                        <ArrowRight
+                          size={18}
+                        />
+
+                      </div>
+
+                    </button>
+                  );
+                }
+              )}
+
+            </div>
+
+          </div>
+
+        ) : (
+
+          <>
+            {/* ===============================================
+                MODE BAR
+            ================================================ */}
+
+            <div
+              className="
+                mt-4
+                flex
+                shrink-0
+                items-center
+                gap-2
+                overflow-x-auto
+                pb-1
+              "
+            >
+
+              <button
+                type="button"
+                onClick={
+                  backToModeSelection
+                }
+                className="
+                  flex
+                  h-11
+                  w-11
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-xl
+                  border
+                  border-slate-200
+                  bg-white
+                  text-slate-500
+                  transition
+                  hover:bg-slate-950
+                  hover:text-white
+                "
+                aria-label="選び方に戻る"
+              >
+
+                <ArrowLeft
+                  size={18}
+                />
+
+              </button>
+
+
+              {FIND_MODES.map(
+                (
+                  mode
+                ) => {
+                  const Icon =
+                    mode.icon;
+
+
+                  const active =
+                    activeMode ===
+                    mode.id;
+
+
+                  return (
+                    <button
+                      key={
+                        mode.id
+                      }
+                      type="button"
+                      onClick={() =>
+                        chooseMode(
+                          mode.id
+                        )
+                      }
+                      className={`
+                        flex
+                        shrink-0
+                        items-center
+                        gap-2
+                        rounded-xl
+                        px-4
+                        py-3
+                        text-xs
+                        font-black
+                        transition
+
+                        ${
+                          active
+                            ? 'bg-slate-950 text-white shadow-lg'
+                            : 'border border-slate-200 bg-white text-slate-500 hover:bg-slate-50'
+                        }
+                      `}
+                    >
+
+                      <Icon
+                        size={15}
+                      />
+
+                      {
+                        mode.label
+                      }
+
+                    </button>
+                  );
+                }
+              )}
+
+            </div>
+
+
+            {/* ===============================================
+                CONTENT
+            ================================================ */}
+
+            <div
+              className="
+                mt-4
+                min-h-0
+                flex-1
+                overflow-hidden
+              "
+            >
+
+              {/* =============================================
+                  MAP
+              ============================================== */}
+
+              {activeMode ===
+                'map' && (
+
+                <div
+                  className="
+                    relative
+                    h-full
+                    overflow-hidden
+                    rounded-[28px]
+                    border
+                    border-slate-200
+                    bg-[#dceaf0]
+                    shadow-sm
+                  "
+                >
+
+                  {/* HOVERED COUNTRY */}
+
+                  {hoveredCountry && (
+
+                    <div
+                      className="
+                        absolute
+                        left-5
+                        top-5
+                        z-20
+                        flex
+                        items-center
+                        gap-3
+                        rounded-2xl
+                        border
+                        border-white/70
+                        bg-white/95
+                        px-4
+                        py-3
+                        shadow-xl
+                        backdrop-blur
+                      "
+                    >
+
+                      <span
+                        className="
+                          text-2xl
+                        "
+                      >
+                        {
+                          hoveredCountry
+                            .flagEmoji
+                        }
+                      </span>
+
 
                       <div>
 
-                        <span className="text-xs font-semibold text-slate-900">
-                          Start Adventure
-                        </span>
-
-                        <span className="ml-2 text-[10px] font-bold text-slate-400">
+                        <p
+                          className="
+                            font-black
+                            text-slate-900
+                          "
+                        >
                           {
-                            stats.worldPoints
-                          } WP
-                        </span>
+                            hoveredCountry
+                              .nameEn
+                          }
+                        </p>
+
+                        <p
+                          className="
+                            text-xs
+                            font-bold
+                            text-slate-400
+                          "
+                        >
+                          {
+                            hoveredCountry
+                              .nameJa
+                          }
+                        </p>
 
                       </div>
 
-                      <span
-                        className="flex h-9 w-9 items-center justify-center text-white transition-transform group-hover:translate-x-1"
-                        style={{
-                          backgroundColor:
-                            visual.primary,
-                        }}
+                    </div>
+
+                  )}
+
+
+                  <ComposableMap
+                    projection="geoEqualEarth"
+                    projectionConfig={{
+                      scale: 147,
+                      center: [
+                        5,
+                        6,
+                      ],
+                    }}
+                    width={1000}
+                    height={480}
+                    className="
+                      h-full
+                      w-full
+                    "
+                  >
+
+                    <Geographies
+                      geography={
+                        worldAtlas
+                      }
+                    >
+
+                      {({
+                        geographies,
+                      }) =>
+                        geographies.map(
+                          (
+                            geo
+                          ) => {
+                            const atlasName =
+                              getAtlasCountryName(
+                                geo
+                              );
+
+
+                            const country =
+                              countryByAtlasName.get(
+                                atlasName
+                              );
+
+
+                            const live =
+                              country
+                                ?.status ===
+                              'live';
+
+
+                            const visual =
+                              live
+                                ? getCountryVisual(
+                                    country.iso
+                                  )
+                                : null;
+
+
+                            return (
+                              <Geography
+                                key={
+                                  geo.rsmKey
+                                }
+                                geography={
+                                  geo
+                                }
+                                tabIndex={
+                                  live
+                                    ? 0
+                                    : -1
+                                }
+                                role={
+                                  live
+                                    ? 'button'
+                                    : undefined
+                                }
+                                aria-label={
+                                  live
+                                    ? `${country.nameJa}を探検する`
+                                    : undefined
+                                }
+                                onMouseEnter={() => {
+                                  if (
+                                    live
+                                  ) {
+                                    setHoveredCountry(
+                                      country
+                                    );
+                                  }
+                                }}
+                                onMouseLeave={() =>
+                                  setHoveredCountry(
+                                    null
+                                  )
+                                }
+                                onFocus={() => {
+                                  if (
+                                    live
+                                  ) {
+                                    setHoveredCountry(
+                                      country
+                                    );
+                                  }
+                                }}
+                                onBlur={() =>
+                                  setHoveredCountry(
+                                    null
+                                  )
+                                }
+                                onClick={() => {
+                                  if (
+                                    live
+                                  ) {
+                                    openCountry(
+                                      country
+                                    );
+                                  }
+                                }}
+                                onKeyDown={(
+                                  event
+                                ) => {
+                                  if (
+                                    !live
+                                  ) {
+                                    return;
+                                  }
+
+
+                                  if (
+                                    event.key ===
+                                      'Enter' ||
+                                    event.key ===
+                                      ' '
+                                  ) {
+                                    event.preventDefault();
+
+
+                                    openCountry(
+                                      country
+                                    );
+                                  }
+                                }}
+                                style={{
+                                  default: {
+                                    fill:
+                                      live
+                                        ? visual.map
+                                        : '#cbd5e1',
+
+                                    stroke:
+                                      '#f8fafc',
+
+                                    strokeWidth:
+                                      0.65,
+
+                                    outline:
+                                      'none',
+                                  },
+
+                                  hover: {
+                                    fill:
+                                      live
+                                        ? visual.dark
+                                        : '#cbd5e1',
+
+                                    stroke:
+                                      '#ffffff',
+
+                                    strokeWidth:
+                                      live
+                                        ? 1.25
+                                        : 0.65,
+
+                                    outline:
+                                      'none',
+
+                                    cursor:
+                                      live
+                                        ? 'pointer'
+                                        : 'default',
+                                  },
+
+                                  pressed: {
+                                    fill:
+                                      live
+                                        ? visual.dark
+                                        : '#cbd5e1',
+
+                                    stroke:
+                                      '#ffffff',
+
+                                    strokeWidth:
+                                      1,
+
+                                    outline:
+                                      'none',
+                                  },
+                                }}
+                              />
+                            );
+                          }
+                        )
+                      }
+
+                    </Geographies>
+
+                  </ComposableMap>
+
+                </div>
+
+              )}
+
+
+              {/* =============================================
+                  CONTINENT
+              ============================================== */}
+
+              {activeMode ===
+                'continent' && (
+
+                <div
+                  className="
+                    flex
+                    h-full
+                    flex-col
+                    overflow-hidden
+                  "
+                >
+
+                  {!selectedContinent ? (
+
+                    <div
+                      className="
+                        flex
+                        flex-1
+                        items-center
+                        justify-center
+                      "
+                    >
+
+                      <div
+                        className="
+                          grid
+                          w-full
+                          max-w-[1050px]
+                          grid-cols-2
+                          gap-4
+                          lg:grid-cols-3
+                        "
                       >
-                        <ArrowRight
-                          size={17}
-                        />
-                      </span>
+
+                        {availableContinents.map(
+                          (
+                            continent
+                          ) => (
+
+                            <button
+                              key={
+                                continent.id
+                              }
+                              type="button"
+                              onClick={() => {
+                                playUiSound(
+                                  'tap'
+                                );
+
+
+                                setSelectedContinent(
+                                  continent.id
+                                );
+                              }}
+                              className="
+                                group
+                                flex
+                                min-h-[160px]
+                                items-center
+                                gap-5
+                                rounded-[26px]
+                                border
+                                border-slate-200
+                                bg-white
+                                p-6
+                                text-left
+                                shadow-sm
+                                transition-all
+                                duration-300
+                                hover:-translate-y-1
+                                hover:border-blue-200
+                                hover:shadow-xl
+                              "
+                            >
+
+                              <span
+                                className="
+                                  text-5xl
+                                "
+                              >
+                                {
+                                  continent.emoji
+                                }
+                              </span>
+
+
+                              <div
+                                className="
+                                  min-w-0
+                                  flex-1
+                                "
+                              >
+
+                                <p
+                                  className="
+                                    text-[9px]
+                                    font-black
+                                    tracking-[0.15em]
+                                    text-blue-500
+                                  "
+                                >
+                                  {
+                                    continent.labelEn
+                                  }
+                                </p>
+
+
+                                <p
+                                  className="
+                                    mt-1
+                                    text-xl
+                                    font-black
+                                    text-slate-900
+                                  "
+                                >
+                                  {
+                                    continent.label
+                                  }
+                                </p>
+
+
+                                <p
+                                  className="
+                                    mt-2
+                                    text-xs
+                                    font-black
+                                    text-slate-400
+                                  "
+                                >
+                                  {
+                                    continentCounts[
+                                      continent.id
+                                    ] ??
+                                    0
+                                  }
+                                  {' '}
+                                  COUNTRIES
+                                </p>
+
+                              </div>
+
+
+                              <ArrowRight
+                                size={19}
+                                className="
+                                  text-slate-300
+                                  transition
+                                  group-hover:translate-x-1
+                                  group-hover:text-blue-500
+                                "
+                              />
+
+                            </button>
+
+                          )
+                        )}
+
+                      </div>
+
+                    </div>
+
+                  ) : (
+
+                    <div
+                      className="
+                        flex
+                        h-full
+                        flex-col
+                      "
+                    >
+
+                      <div
+                        className="
+                          flex
+                          shrink-0
+                          items-center
+                          gap-3
+                          pb-4
+                        "
+                      >
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            playUiSound(
+                              'back'
+                            );
+
+
+                            setSelectedContinent(
+                              null
+                            );
+                          }}
+                          className="
+                            flex
+                            h-9
+                            w-9
+                            items-center
+                            justify-center
+                            rounded-full
+                            bg-white
+                            text-slate-500
+                            shadow-sm
+                            transition
+                            hover:bg-slate-950
+                            hover:text-white
+                          "
+                        >
+
+                          <ArrowLeft
+                            size={16}
+                          />
+
+                        </button>
+
+
+                        <p
+                          className="
+                            text-lg
+                            font-black
+                            text-slate-900
+                          "
+                        >
+                          {
+                            availableContinents.find(
+                              (
+                                continent
+                              ) =>
+                                continent.id ===
+                                selectedContinent
+                            )?.label
+                          }
+                        </p>
+
+                      </div>
+
+
+                      <div
+                        className="
+                          min-h-0
+                          flex-1
+                          overflow-y-auto
+                          pr-1
+                        "
+                      >
+
+                        <div
+                          className="
+                            grid
+                            grid-cols-1
+                            gap-3
+                            md:grid-cols-2
+                            xl:grid-cols-3
+                          "
+                        >
+
+                          {continentCountries.map(
+                            (
+                              country
+                            ) => (
+
+                              <CountryCard
+                                key={
+                                  country.iso
+                                }
+                                country={
+                                  country
+                                }
+                                onOpen={
+                                  openCountry
+                                }
+                              />
+
+                            )
+                          )}
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  )}
+
+                </div>
+
+              )}
+
+
+              {/* =============================================
+                  ALPHABET
+              ============================================== */}
+
+              {activeMode ===
+                'alphabet' && (
+
+                <div
+                  className="
+                    flex
+                    h-full
+                    flex-col
+                  "
+                >
+
+                  {/* LETTERS */}
+
+                  <div
+                    className="
+                      flex
+                      shrink-0
+                      flex-wrap
+                      gap-2
+                      pb-4
+                    "
+                  >
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        playUiSound(
+                          'tap'
+                        );
+
+
+                        setSelectedLetter(
+                          'ALL'
+                        );
+                      }}
+                      className={`
+                        h-10
+                        rounded-xl
+                        px-4
+                        text-xs
+                        font-black
+                        transition
+
+                        ${
+                          selectedLetter ===
+                            'ALL'
+                            ? 'bg-slate-950 text-white'
+                            : 'border border-slate-200 bg-white text-slate-500'
+                        }
+                      `}
+                    >
+                      ALL
+                    </button>
+
+
+                    {alphabet.map(
+                      (
+                        letter
+                      ) => {
+                        const enabled =
+                          availableLetters.has(
+                            letter
+                          );
+
+
+                        const selected =
+                          selectedLetter ===
+                          letter;
+
+
+                        return (
+                          <button
+                            key={
+                              letter
+                            }
+                            type="button"
+                            disabled={
+                              !enabled
+                            }
+                            onClick={() => {
+                              playUiSound(
+                                'tap'
+                              );
+
+
+                              setSelectedLetter(
+                                letter
+                              );
+                            }}
+                            className={`
+                              flex
+                              h-10
+                              w-10
+                              items-center
+                              justify-center
+                              rounded-xl
+                              text-xs
+                              font-black
+                              transition
+
+                              ${
+                                selected
+                                  ? 'bg-blue-600 text-white shadow-md'
+                                  : enabled
+                                    ? 'border border-slate-200 bg-white text-slate-600 hover:border-blue-300 hover:text-blue-600'
+                                    : 'border border-slate-100 bg-slate-100 text-slate-300'
+                              }
+                            `}
+                          >
+                            {
+                              letter
+                            }
+                          </button>
+                        );
+                      }
+                    )}
+
+                  </div>
+
+
+                  {/* COUNTRY LIST */}
+
+                  <div
+                    className="
+                      min-h-0
+                      flex-1
+                      overflow-y-auto
+                      pr-1
+                    "
+                  >
+
+                    <div
+                      className="
+                        grid
+                        grid-cols-1
+                        gap-3
+                        md:grid-cols-2
+                        xl:grid-cols-3
+                      "
+                    >
+
+                      {alphabetCountries.map(
+                        (
+                          country
+                        ) => (
+
+                          <CountryCard
+                            key={
+                              country.iso
+                            }
+                            country={
+                              country
+                            }
+                            onOpen={
+                              openCountry
+                            }
+                          />
+
+                        )
+                      )}
 
                     </div>
 
                   </div>
 
-                </button>
-              );
-            }
-          )}
+                </div>
 
-        </div>
+              )}
 
-      </section>
+
+              {/* =============================================
+                  SEARCH
+              ============================================== */}
+
+              {activeMode ===
+                'search' && (
+
+                <div
+                  className="
+                    flex
+                    h-full
+                    flex-col
+                  "
+                >
+
+                  {/* SEARCH BAR */}
+
+                  <div
+                    className="
+                      relative
+                      shrink-0
+                    "
+                  >
+
+                    <Search
+                      size={21}
+                      className="
+                        absolute
+                        left-5
+                        top-1/2
+                        -translate-y-1/2
+                        text-slate-400
+                      "
+                    />
+
+
+                    <input
+                      autoFocus
+                      type="search"
+                      value={
+                        searchQuery
+                      }
+                      onChange={(
+                        event
+                      ) =>
+                        setSearchQuery(
+                          event
+                            .target
+                            .value
+                        )
+                      }
+                      placeholder="国名を日本語・英語で検索"
+                      className="
+                        h-16
+                        w-full
+                        rounded-[20px]
+                        border
+                        border-slate-200
+                        bg-white
+                        pl-14
+                        pr-5
+                        text-base
+                        font-bold
+                        text-slate-900
+                        shadow-sm
+                        outline-none
+                        transition
+                        placeholder:text-slate-300
+                        focus:border-blue-400
+                        focus:ring-4
+                        focus:ring-blue-100
+                      "
+                    />
+
+                  </div>
+
+
+                  {/* RESULTS */}
+
+                  <div
+                    className="
+                      mt-4
+                      min-h-0
+                      flex-1
+                      overflow-y-auto
+                      pr-1
+                    "
+                  >
+
+                    {searchResults.length >
+                    0 ? (
+
+                      <div
+                        className="
+                          grid
+                          grid-cols-1
+                          gap-3
+                          md:grid-cols-2
+                          xl:grid-cols-3
+                        "
+                      >
+
+                        {searchResults.map(
+                          (
+                            country
+                          ) => (
+
+                            <CountryCard
+                              key={
+                                country.iso
+                              }
+                              country={
+                                country
+                              }
+                              onOpen={
+                                openCountry
+                              }
+                            />
+
+                          )
+                        )}
+
+                      </div>
+
+                    ) : (
+
+                      <div
+                        className="
+                          flex
+                          h-full
+                          items-center
+                          justify-center
+                        "
+                      >
+
+                        <div
+                          className="
+                            text-center
+                          "
+                        >
+
+                          <div
+                            className="
+                              text-4xl
+                            "
+                          >
+                            🔎
+                          </div>
+
+                          <p
+                            className="
+                              mt-3
+                              font-black
+                              text-slate-500
+                            "
+                          >
+                            見つかりませんでした
+                          </p>
+
+                        </div>
+
+                      </div>
+
+                    )}
+
+                  </div>
+
+                </div>
+
+              )}
+
+            </div>
+
+          </>
+
+        )}
+
+      </div>
+
+
+      {/* ===================================================
+          COUNTRY DETAIL
+      ==================================================== */}
 
       {activeCountry && (
+
         <CountryDetailOverlay
           iso={
             activeCountry.iso
@@ -909,6 +2387,7 @@ export default function ExploreWorld() {
             closeCountry
           }
         />
+
       )}
 
     </div>

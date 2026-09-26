@@ -1,14 +1,7 @@
 import {
   ArrowRight,
-  BrainCircuit,
-  Clock3,
   Compass,
   Globe2,
-  Languages,
-  Map,
-  Network,
-  Play,
-  TimerReset,
   Volume2,
   VolumeX,
 } from 'lucide-react';
@@ -31,165 +24,16 @@ import {
   getLiveWorldLearningCountries,
 } from '../../utils/worldLearningRegistry';
 
-import ModeGuideModal
-  from './ModeGuideModal';
-
-import placeGuide
-  from '../../assets/mode-guides/mode_place_treasure_map.png';
-
-import timeGuide
-  from '../../assets/mode-guides/mode_time_global_clock.png';
-
-import languageGuide
-  from '../../assets/mode-guides/mode_language_carnival.png';
-
-import cultureGuide
-  from '../../assets/mode-guides/mode_life_culture_world_stories.png';
-
-import japanGuide
-  from '../../assets/mode-guides/mode_japan_connection_global_ties.png';
-
-import thinkGuide
-  from '../../assets/mode-guides/mode_think_connect_world_learning.png';
-
 import {
   getUiSoundEnabled,
   playUiSound,
   setUiSoundEnabled,
 } from '../../utils/uiSound';
 
-const learningModes = [
-  {
-    id: 'place',
-    number: '01',
-    title: 'PLACE',
-    subtitle:
-      '地図から世界を発見する',
-    description:
-      '国や都市の位置、地域の特徴を地図から読み取ります。',
-    icon: Map,
-    accent:
-      'border-emerald-500',
-    guideImage:
-      placeGuide,
-  },
-  {
-    id: 'time',
-    number: '02',
-    title: 'TIME',
-    subtitle:
-      '世界の時間を体験する',
-    description:
-      '時差や時間帯を使って、世界との距離を実感します。',
-    icon: Clock3,
-    accent:
-      'border-blue-500',
-    guideImage:
-      timeGuide,
-  },
-  {
-    id: 'language',
-    number: '03',
-    title: 'LANGUAGE',
-    subtitle:
-      'ことばでつながる',
-    description:
-      '聞く・話す・質問する活動から交流の表現を学びます。',
-    icon: Languages,
-    accent:
-      'border-violet-500',
-    guideImage:
-      languageGuide,
-  },
-  {
-    id: 'culture',
-    number: '04',
-    title:
-      'LIFE & CULTURE',
-    subtitle:
-      'くらしと文化を知る',
-    description:
-      '気候、学校生活、食文化など、多様なくらしを比べます。',
-    icon: Globe2,
-    accent:
-      'border-amber-500',
-    guideImage:
-      cultureGuide,
-  },
-  {
-    id: 'japan',
-    number: '05',
-    title:
-      'JAPAN CONNECTION',
-    subtitle:
-      '日本とのつながりを探す',
-    description:
-      '世界の国々と日本の生活・産業との関係を考えます。',
-    icon: Network,
-    accent:
-      'border-rose-500',
-    guideImage:
-      japanGuide,
-  },
-  {
-    id: 'think',
-    number: '06',
-    title:
-      'THINK & CONNECT',
-    subtitle:
-      '比べて、考えて、伝える',
-    description:
-      '根拠を使って考え、自分の問いや意見へつなげます。',
-    icon: BrainCircuit,
-    accent:
-      'border-slate-700',
-    guideImage:
-      thinkGuide,
-  },
-];
-
-const tools = [
-  {
-    id: 'timer',
-    title: 'Timer',
-    description:
-      '授業や活動時間を管理',
-    icon: TimerReset,
-  },
-  {
-    id: 'stopwatch',
-    title: 'Stopwatch',
-    description:
-      'スピーチや活動時間を計測',
-    icon: Play,
-  },
-  {
-    id: 'mapClock',
-    title: 'World Clock',
-    description:
-      '世界の都市と時刻を見る',
-    icon: Globe2,
-  },
-  {
-    id: 'timeDiff',
-    title:
-      'Meeting Planner',
-    description:
-      '国際交流の時間を調整',
-    icon: Clock3,
-  },
-];
 
 export default function WorldAdventureHome({
   onExploreWorld,
-  onOpenTool,
 }) {
-
-  const [
-    selectedMode,
-    setSelectedMode,
-  ] = useState(null);
-
   const [
     soundEnabled,
     setSoundEnabledState,
@@ -198,62 +42,69 @@ export default function WorldAdventureHome({
       getUiSoundEnabled()
   );
 
-const liveCountries =
-  getLiveWorldLearningCountries();
 
-const journeyTotals =
-  liveCountries.reduce(
-    (
-      totals,
-      country
-    ) => {
-      const countryProgress =
-        getCountryProgress(
-          country.iso
-        );
+  const liveCountries =
+    getLiveWorldLearningCountries();
 
-      const completed =
-        countryProgress
-          ?.completedMissionIds
-          ?.length ?? 0;
 
-      return {
-        completed:
-          totals.completed +
-          completed,
+  const journeyTotals =
+    liveCountries.reduce(
+      (
+        totals,
+        country
+      ) => {
+        const countryProgress =
+          getCountryProgress(
+            country.iso
+          );
 
-        total:
-          totals.total +
-          Number(
-            country.totalMissions ??
-              0
-          ),
-      };
-    },
-    {
-      completed: 0,
-      total: 0,
-    }
-  );
+        const completed =
+          countryProgress
+            ?.completedMissionIds
+            ?.length ??
+          0;
 
-const completedCount =
-  journeyTotals.completed;
+        return {
+          completed:
+            totals.completed +
+            completed,
 
-const totalMissionCount =
-  journeyTotals.total;
+          total:
+            totals.total +
+            Number(
+              country.totalMissions ??
+                0
+            ),
+        };
+      },
+      {
+        completed: 0,
+        total: 0,
+      }
+    );
 
-const journeyPercent =
-  totalMissionCount > 0
-    ? Math.round(
-        (
-          completedCount /
-          totalMissionCount
-        ) *
-          100
-      )
-    : 0;
 
-    const toggleSound =
+  const completedCount =
+    journeyTotals.completed;
+
+
+  const totalMissionCount =
+    journeyTotals.total;
+
+
+  const journeyPercent =
+    totalMissionCount > 0
+      ? Math.round(
+          (
+            completedCount /
+            totalMissionCount
+          ) *
+            100
+        )
+      : 0;
+
+
+  const toggleSound =
     () => {
       const next =
         !soundEnabled;
@@ -278,6 +129,7 @@ const journeyPercent =
       }
     };
 
+
   const startAdventure =
     () => {
       playUiSound(
@@ -287,57 +139,165 @@ const journeyPercent =
       onExploreWorld?.();
     };
 
-  const openTool =
-    (toolId) => {
-      playUiSound(
-        'tap'
-      );
-
-      onOpenTool?.(
-        toolId
-      );
-    };
 
   return (
-    <div className="min-h-screen bg-[#f4f2ed] text-slate-900">
+    <div
+      className="
+        relative
+        h-[calc(100dvh-68px)]
+        min-h-[620px]
+        overflow-hidden
+        bg-slate-950
+        text-white
+      "
+    >
 
-      {/* HERO */}
-      <section className="relative min-h-[720px] overflow-hidden bg-slate-950">
+      {/* BACKGROUND */}
 
-        <img
-          src={
-            openingBackground
-          }
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+      <img
+        src={
+          openingBackground
+        }
+        alt=""
+        aria-hidden="true"
+        className="
+          absolute
+          inset-0
+          h-full
+          w-full
+          object-cover
+          object-center
+        "
+      />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/66 to-slate-950/30" />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/20" />
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-r
+          from-slate-950/95
+          via-slate-950/72
+          to-slate-950/35
+        "
+      />
 
-        {/* Top */}
-        <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
 
-          <div className="text-xs font-semibold tracking-[0.22em] text-white/70">
-            TIMEPALETTE
-            <span className="ml-3 text-white/40">
-              WORLD LEARNING
-            </span>
-          </div>
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-t
+          from-slate-950/95
+          via-transparent
+          to-slate-950/30
+        "
+      />
+
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -left-32
+          top-[25%]
+          h-[420px]
+          w-[420px]
+          rounded-full
+          bg-blue-500/15
+          blur-[110px]
+        "
+      />
+
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          right-[4%]
+          top-[18%]
+          h-[420px]
+          w-[420px]
+          rounded-full
+          bg-violet-500/10
+          blur-[120px]
+        "
+      />
+
+
+      {/* CONTENT */}
+
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          flex
+          h-full
+          w-full
+          max-w-[1500px]
+          flex-col
+          px-5
+          pb-6
+          pt-5
+          md:px-8
+          lg:px-10
+        "
+      >
+
+        {/* TOP */}
+
+        <div
+          className="
+            flex
+            shrink-0
+            items-center
+            justify-between
+          "
+        >
+
+          <img
+            src={
+              timePaletteLogo
+            }
+            alt="TimePalette"
+            className="
+              w-[180px]
+              drop-shadow-xl
+              sm:w-[220px]
+              md:w-[250px]
+            "
+          />
+
 
           <button
             type="button"
             onClick={
               toggleSound
             }
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/20 text-white/80 backdrop-blur-md transition hover:bg-white/10 hover:text-white"
+            className="
+              flex
+              h-11
+              w-11
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-white/15
+              bg-black/25
+              text-white/75
+              backdrop-blur-xl
+              transition
+              hover:bg-white/10
+              hover:text-white
+            "
             aria-label={
               soundEnabled
                 ? 'ボタン音をオフ'
                 : 'ボタン音をオン'
             }
           >
+
             {soundEnabled ? (
               <Volume2
                 size={18}
@@ -347,367 +307,485 @@ const journeyPercent =
                 size={18}
               />
             )}
+
           </button>
 
         </div>
 
-        {/* Main hero */}
-        <div className="relative z-10 mx-auto grid min-h-[610px] w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 pb-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-10">
 
-          <div className="max-w-3xl">
+        {/* MAIN */}
 
-            <img
-              src={
-                timePaletteLogo
-              }
-              alt="TimePalette"
-              className="mb-8 w-full max-w-xl drop-shadow-2xl"
-            />
+        <div
+          className="
+            grid
+            min-h-0
+            flex-1
+            grid-cols-1
+            items-center
+            gap-10
+            lg:grid-cols-[1.12fr_0.88fr]
+            lg:gap-16
+          "
+        >
 
-            <p className="mb-4 text-xs font-bold tracking-[0.28em] text-sky-300">
-              EXPLORE · LEARN · CONNECT
-            </p>
+          {/* LEFT */}
 
-            <h1 className="max-w-2xl text-4xl font-semibold leading-[1.15] tracking-tight text-white md:text-5xl lg:text-6xl">
+          <div
+            className="
+              max-w-3xl
+            "
+          >
+
+            <div
+              className="
+                inline-flex
+                items-center
+                gap-2
+                rounded-full
+                border
+                border-sky-300/20
+                bg-sky-300/10
+                px-4
+                py-2
+                backdrop-blur-xl
+              "
+            >
+
+              <Globe2
+                size={15}
+                className="text-sky-300"
+              />
+
+              <span
+                className="
+                  text-[10px]
+                  font-black
+                  tracking-[0.20em]
+                  text-sky-200
+                "
+              >
+                EXPLORE · LEARN · CONNECT
+              </span>
+
+            </div>
+
+
+            <h1
+              className="
+                mt-6
+                max-w-3xl
+                text-[38px]
+                font-black
+                leading-[1.08]
+                tracking-[-0.045em]
+                text-white
+                sm:text-[46px]
+                md:text-[56px]
+                lg:text-[64px]
+                xl:text-[70px]
+              "
+            >
               世界を、
               <br />
-              地図・時間・ことば・文化から学ぶ。
+
+              <span
+                className="
+                  bg-gradient-to-r
+                  from-white
+                  via-sky-100
+                  to-cyan-300
+                  bg-clip-text
+                  text-transparent
+                "
+              >
+                冒険しながら学ぶ。
+              </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-8 text-white/72 md:text-lg">
+
+            <p
+              className="
+                mt-5
+                max-w-2xl
+                text-sm
+                font-semibold
+                leading-7
+                text-white/62
+                md:text-base
+                md:leading-8
+              "
+            >
               世界の国を訪れ、
-              観察し、比べ、問いをつくる。
-              TimePaletteは、
-              世界を知ることから
-              人とつながるところまでを
-              一つの学びにします。
+              地図・時間・ことば・文化から
+              新しい発見をしよう。
             </p>
 
-            <div className="mt-9 flex flex-wrap items-center gap-3">
+
+            {/* MAIN CTA */}
+
+            <div
+              className="
+                relative
+                mt-9
+                inline-block
+              "
+            >
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -inset-2
+                  rounded-[26px]
+                  bg-gradient-to-r
+                  from-blue-500/35
+                  via-cyan-400/35
+                  to-violet-500/30
+                  blur-xl
+                "
+              />
+
 
               <button
                 type="button"
                 onClick={
                   startAdventure
                 }
-                className="group inline-flex items-center gap-3 bg-white px-6 py-3.5 text-sm font-bold text-slate-950 shadow-xl transition hover:-translate-y-0.5 hover:bg-sky-50"
+                className="
+                  group
+                  relative
+                  inline-flex
+                  items-center
+                  gap-5
+                  overflow-hidden
+                  rounded-[22px]
+                  bg-white
+                  px-7
+                  py-5
+                  text-slate-950
+                  shadow-[0_20px_60px_rgba(14,165,233,0.28)]
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:scale-[1.015]
+                  hover:shadow-[0_28px_75px_rgba(14,165,233,0.42)]
+                "
               >
-                <Compass
-                  size={19}
-                />
 
-                世界を探検する
+                <div
+                  className="
+                    flex
+                    h-12
+                    w-12
+                    items-center
+                    justify-center
+                    rounded-2xl
+                    bg-slate-950
+                    text-white
+                    transition
+                    duration-300
+                    group-hover:bg-blue-600
+                  "
+                >
 
-                <ArrowRight
-                  size={18}
-                  className="transition-transform group-hover:translate-x-1"
-                />
-              </button>
+                  <Compass
+                    size={23}
+                  />
 
-              <button
-                type="button"
-                onClick={
-                  startAdventure
-                }
-                className="inline-flex items-center gap-3 border border-white/25 bg-black/20 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/10"
-              >
-                探検を続ける
+                </div>
+
+
+                <span
+                  className="
+                    text-xl
+                    font-black
+                    tracking-tight
+                    sm:text-2xl
+                  "
+                >
+                  冒険を始める
+                </span>
+
+
+                <div
+                  className="
+                    ml-1
+                    flex
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    rounded-full
+                    bg-blue-50
+                    text-blue-600
+                    transition
+                    duration-300
+                    group-hover:translate-x-1
+                    group-hover:bg-blue-600
+                    group-hover:text-white
+                  "
+                >
+
+                  <ArrowRight
+                    size={20}
+                  />
+
+                </div>
+
               </button>
 
             </div>
 
           </div>
 
-          {/* Progress */}
+
+          {/* RIGHT / JOURNEY */}
+
           <div
-  id="journey"
-  className="lg:justify-self-end scroll-mt-28"
->
+            id="journey"
+            className="
+              hidden
+              lg:block
+              lg:justify-self-end
+            "
+          >
 
-            <div className="w-full max-w-sm border border-white/15 bg-slate-950/55 p-6 text-white shadow-2xl backdrop-blur-xl">
+            <div
+              className="
+                w-[350px]
+                rounded-[28px]
+                border
+                border-white/15
+                bg-slate-950/50
+                p-6
+                shadow-[0_30px_80px_rgba(0,0,0,0.28)]
+                backdrop-blur-2xl
+              "
+            >
 
-              <p className="text-[11px] font-bold tracking-[0.24em] text-white/50">
-                CURRENT JOURNEY
-              </p>
-
-              <div className="mt-6 flex items-start justify-between">
+              <div
+                className="
+                  flex
+                  items-start
+                  justify-between
+                "
+              >
 
                 <div>
-                  <div className="text-4xl">
-  🌍
-</div>
 
-<h2 className="mt-4 text-2xl font-semibold">
-  World Explorer
-</h2>
+                  <p
+                    className="
+                      text-[9px]
+                      font-black
+                      tracking-[0.18em]
+                      text-sky-300
+                    "
+                  >
+                    YOUR JOURNEY
+                  </p>
 
-<p className="mt-1 text-sm text-white/55">
-  {liveCountries.length} Countries Available
-</p>
+
+                  <h2
+                    className="
+                      mt-2
+                      text-xl
+                      font-black
+                    "
+                  >
+                    World Explorer
+                  </h2>
+
                 </div>
 
-                <div className="text-right">
-                  <div className="text-3xl font-light">
+
+                <div
+                  className="
+                    flex
+                    h-14
+                    w-14
+                    items-center
+                    justify-center
+                    rounded-2xl
+                    bg-white/10
+                    text-3xl
+                  "
+                >
+                  🌍
+                </div>
+
+              </div>
+
+
+              <div
+                className="
+                  mt-6
+                  grid
+                  grid-cols-2
+                  gap-3
+                "
+              >
+
+                <div
+                  className="
+                    rounded-2xl
+                    border
+                    border-white/10
+                    bg-white/5
+                    p-4
+                  "
+                >
+
+                  <p
+                    className="
+                      text-2xl
+                      font-black
+                    "
+                  >
+                    {
+                      liveCountries.length
+                    }
+                  </p>
+
+
+                  <p
+                    className="
+                      mt-1
+                      text-[9px]
+                      font-black
+                      tracking-[0.12em]
+                      text-white/35
+                    "
+                  >
+                    COUNTRIES
+                  </p>
+
+                </div>
+
+
+                <div
+                  className="
+                    rounded-2xl
+                    border
+                    border-white/10
+                    bg-white/5
+                    p-4
+                  "
+                >
+
+                  <p
+                    className="
+                      text-2xl
+                      font-black
+                      text-cyan-300
+                    "
+                  >
                     {
                       completedCount
                     }
-                  </div>
+                  </p>
 
-                  <div className="mt-1 text-xs tracking-wide text-white/50">
-                    / {totalMissionCount} MISSIONS
-                  </div>
+
+                  <p
+                    className="
+                      mt-1
+                      text-[9px]
+                      font-black
+                      tracking-[0.12em]
+                      text-white/35
+                    "
+                  >
+                    MISSIONS
+                  </p>
+
                 </div>
 
               </div>
 
-              <div className="mt-7 h-1 overflow-hidden bg-white/15">
+
+              <div
+                className="
+                  mt-6
+                "
+              >
 
                 <div
-                  className="h-full bg-sky-400 transition-all"
-                  style={{
-                    width:
-                      `${Math.min(
-                        100,
-                        (completedCount /
-                          40) *
-                          100
-                      )}%`,
-                  }}
-                />
+                  className="
+                    flex
+                    items-end
+                    justify-between
+                  "
+                >
+
+                  <p
+                    className="
+                      text-xs
+                      font-black
+                      text-white/50
+                    "
+                  >
+                    {
+                      completedCount
+                    }
+                    {' / '}
+                    {
+                      totalMissionCount
+                    }
+                  </p>
+
+
+                  <p
+                    className="
+                      text-xl
+                      font-black
+                    "
+                  >
+                    {
+                      journeyPercent
+                    }%
+                  </p>
+
+                </div>
+
+
+                <div
+                  className="
+                    mt-3
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-white/10
+                  "
+                >
+
+                  <div
+                    className="
+                      h-full
+                      rounded-full
+                      bg-gradient-to-r
+                      from-blue-400
+                      via-cyan-300
+                      to-emerald-300
+                      transition-all
+                      duration-700
+                    "
+                    style={{
+                      width:
+                        `${journeyPercent}%`,
+                    }}
+                  />
+
+                </div>
 
               </div>
 
-              <p className="mt-5 text-sm leading-6 text-white/60">
-                次のミッションから
-                そのまま学習を続けられます。
-              </p>
-
             </div>
 
           </div>
 
         </div>
 
-      </section>
+      </div>
 
-      {/* LEARNING MODES */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-10">
-
-        <div className="max-w-2xl">
-
-          <p className="text-xs font-bold tracking-[0.24em] text-slate-400">
-            SIX WAYS TO DISCOVER
-          </p>
-
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-            世界を見る6つの視点
-          </h2>
-
-          <p className="mt-4 leading-7 text-slate-600">
-            正解を覚えるだけではなく、
-            場所・時間・ことば・文化・日本との関係・問いの6つから
-            一つの国を立体的に学びます。
-          </p>
-
-        </div>
-
-                <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-
-          {learningModes.map(
-            (mode) => {
-              const Icon =
-                mode.icon;
-
-              return (
-                <button
-                  key={
-                    mode.id
-                  }
-                  type="button"
-                  onClick={() => {
-                    playUiSound(
-                      'open'
-                    );
-
-                    setSelectedMode(
-                      mode
-                    );
-                  }}
-                  className={`
-                    group
-                    border-t-4
-                    ${mode.accent}
-                    bg-white
-                    p-7
-                    text-left
-                    shadow-[0_8px_30px_rgba(15,23,42,0.05)]
-                    transition
-                    hover:-translate-y-1
-                    hover:shadow-[0_14px_35px_rgba(15,23,42,0.09)]
-                  `}
-                >
-
-                  <div className="flex items-center justify-between">
-
-                    <Icon
-                      size={26}
-                      strokeWidth={
-                        1.7
-                      }
-                      className="text-slate-700"
-                    />
-
-                    <span className="text-xs font-semibold tracking-[0.18em] text-slate-300">
-                      {
-                        mode.number
-                      }
-                    </span>
-
-                  </div>
-
-                  <h3 className="mt-8 text-lg font-bold tracking-wide">
-                    {
-                      mode.title
-                    }
-                  </h3>
-
-                  <p className="mt-2 text-lg font-medium text-slate-800">
-                    {
-                      mode.subtitle
-                    }
-                  </p>
-
-                  <p className="mt-4 text-sm leading-7 text-slate-500">
-                    {
-                      mode.description
-                    }
-                  </p>
-
-                  <div className="mt-7 flex items-center gap-2 text-[10px] font-bold tracking-[0.16em] text-slate-400 transition group-hover:text-slate-700">
-
-                    VIEW GUIDE
-
-                    <ArrowRight
-                      size={13}
-                    />
-
-                  </div>
-
-                </button>
-              );
-            }
-          )}
-
-        </div>
-
-      </section>
-
-      {/* TOOLS */}
-      <section
-        id="tools"
-        className="border-t border-slate-200 bg-white"
-      >
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-10">
-
-          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-
-            <div>
-              <p className="text-xs font-bold tracking-[0.24em] text-slate-400">
-                TOOLS
-              </p>
-
-              <h2 className="mt-3 text-2xl font-semibold tracking-tight">
-                学びと交流を支える道具
-              </h2>
-            </div>
-
-            <p className="max-w-md text-sm leading-6 text-slate-500">
-              タイマーや世界時計は、
-              TimePaletteの学習や国際交流を支えるツールとして利用できます。
-            </p>
-
-          </div>
-
-          <div className="mt-9 grid grid-cols-1 border-y border-slate-200 sm:grid-cols-2 lg:grid-cols-4">
-
-            {tools.map(
-              (tool) => {
-                const Icon =
-                  tool.icon;
-
-                return (
-                  <button
-                    key={
-                      tool.id
-                    }
-                    type="button"
-                    onClick={() =>
-                      openTool(
-                        tool.id
-                      )
-                    }
-                    className="group flex min-h-36 items-start gap-4 border-b border-slate-200 p-6 text-left transition hover:bg-slate-50 sm:border-r lg:border-b-0"
-                  >
-
-                    <Icon
-                      size={22}
-                      strokeWidth={
-                        1.7
-                      }
-                      className="mt-1 shrink-0 text-slate-500"
-                    />
-
-                    <div>
-                      <div className="font-semibold text-slate-900">
-                        {
-                          tool.title
-                        }
-                      </div>
-
-                      <div className="mt-2 text-sm leading-6 text-slate-500">
-                        {
-                          tool.description
-                        }
-                      </div>
-
-                      <div className="mt-5 flex items-center gap-1 text-xs font-bold text-slate-400 transition group-hover:text-slate-700">
-                        OPEN
-                        <ArrowRight
-                          size={
-                            14
-                          }
-                        />
-                      </div>
-                    </div>
-
-                  </button>
-                );
-              }
-            )}
-
-          </div>
-
-        </div>
-      </section>
-
-      <footer className="border-t border-slate-200 bg-[#f4f2ed] px-6 py-8 text-center text-xs tracking-wide text-slate-400">
-        TIMEPALETTE ·
-        EXPLORE · LEARN ·
-        CONNECT
-      </footer>
-      <ModeGuideModal
-        mode={
-          selectedMode
-        }
-        onClose={() =>
-          setSelectedMode(
-            null
-          )
-        }
-        onExplore={
-          onExploreWorld
-        }
-      />
     </div>
   );
 }
