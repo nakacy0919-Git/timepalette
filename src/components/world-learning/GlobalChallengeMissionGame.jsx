@@ -77,11 +77,10 @@ function SourceViewer({
             title={
               source.title
             }
-            src={`https://www.youtube-nocookie.com/embed/${source.youtubeId}?rel=0`}
+            src={`https://www.youtube.com/embed/${source.youtubeId}?rel=0&playsinline=1`}
             className="h-full w-full"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            sandbox="allow-scripts allow-same-origin allow-presentation"
             referrerPolicy="strict-origin-when-cross-origin"
           />
 

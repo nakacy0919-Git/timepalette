@@ -1,21 +1,17 @@
 {
-  "jica_rw_wash_video_001": {
-    "id": "jica_rw_wash_video_001",
+  "jica_rw_water_video_001": {
+    "id": "jica_rw_water_video_001",
     "organization": "JICA",
     "country": "Rwanda",
     "theme": "waterSanitation",
-    "title": "JICA Rwanda Office's Interventions in Water and Sanitation Sector",
-    "titleJa": "JICAルワンダ事務所 水・衛生分野の取り組み",
+    "title": "JICA Rwanda Office - Water and Sanitation",
     "sourceType": "official",
     "assetType": "youtube",
     "youtubeId": "ZBPgwpWY-TQ",
     "url": "https://www.youtube.com/watch?v=ZBPgwpWY-TQ",
-    "sourcePage": "https://www.jica.go.jp/english/overseas/rwanda/office/video.html",
-    "language": [
-      "en"
-    ],
+    "language": ["en"],
     "usageMode": "embedded",
-    "verifiedAt": "2026-09"
+    "verifiedAt": "2026-09-26"
   },
 
   "jica_rw_rwasom2_pdf_001": {
@@ -23,15 +19,182 @@
     "organization": "JICA",
     "country": "Rwanda",
     "theme": "waterSanitation",
-    "title": "The Project for Rural Water Supply Services and Infrastructure Management Development in Rwanda",
-    "titleJa": "ルワンダ地方給水サービス・インフラ管理開発プロジェクト",
+    "title": "RWASOM2 Project Brief Note",
     "sourceType": "official",
     "assetType": "pdf",
     "url": "https://www.jica.go.jp/activities/issues/water/case/__icsFiles/afieldfile/2025/11/25/EN_RWASOM2_Phase2_1.pdf",
-    "language": [
-      "en"
-    ],
+    "language": ["en"],
     "usageMode": "embedded",
-    "verifiedAt": "2026-09"
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_brochure_2025": {
+    "id": "jica_rw_brochure_2025",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "countryOverview",
+    "title": "JICA Rwanda Brochure",
+    "sourceType": "official",
+    "assetType": "pdf",
+    "url": "https://www.jica.go.jp/english/overseas/rwanda/others/__icsFiles/afieldfile/2026/03/19/JICARwanda_brochure2025.pdf",
+    "language": ["en"],
+    "usageMode": "embedded",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_wamcab2_pdf_001": {
+    "id": "jica_rw_wamcab2_pdf_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "agriculture",
+    "title": "Project for Water Management and Capacity Building Phase 2",
+    "sourceType": "official",
+    "assetType": "pdf",
+    "url": "https://openjicareport.jica.go.jp/pdf/1000053585.pdf",
+    "language": ["en"],
+    "usageMode": "embedded",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_prism_video_001": {
+    "id": "jica_rw_prism_video_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "education",
+    "title": "Rwanda PRISM - Mathematics, Science and ICT",
+    "sourceType": "official",
+    "assetType": "youtube",
+    "youtubeId": "HeY3-uq3bs4",
+    "url": "https://www.youtube.com/watch?v=HeY3-uq3bs4",
+    "language": ["en"],
+    "usageMode": "embedded",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_prism_selfstudy_video_001": {
+    "id": "jica_rw_prism_selfstudy_video_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "education",
+    "title": "Rwanda PRISM - Self Studies in TTC Zaza",
+    "sourceType": "official",
+    "assetType": "youtube",
+    "youtubeId": "HdnRgJOidTE",
+    "url": "https://www.youtube.com/watch?v=HdnRgJOidTE",
+    "language": ["en"],
+    "usageMode": "embedded",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_digital_summary_pdf_001": {
+    "id": "jica_rw_digital_summary_pdf_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "digital",
+    "title": "Rwanda Digital and Innovation Promotion Project",
+    "sourceType": "official",
+    "assetType": "pdf",
+    "url": "https://openjicareport.jica.go.jp/pdf/1000056872.pdf",
+    "language": ["en"],
+    "usageMode": "embedded",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_agriculture_page_001": {
+    "id": "jica_rw_agriculture_page_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "agriculture",
+    "title": "JICA Intervention in Agriculture Sector in Rwanda",
+    "sourceType": "official",
+    "assetType": "web",
+    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_01.html",
+    "language": ["en"],
+    "usageMode": "reference",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_coffee_page_001": {
+    "id": "jica_rw_coffee_page_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "agriculture",
+    "title": "Rwanda Coffee Sector with JICA",
+    "sourceType": "official",
+    "assetType": "web",
+    "url": "https://www.jica.go.jp/english/overseas/rwanda/information/press/2025/1581380_59675.html",
+    "language": ["en"],
+    "usageMode": "reference",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_education_page_001": {
+    "id": "jica_rw_education_page_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "education",
+    "title": "JICA Intervention in Education Sector in Rwanda",
+    "sourceType": "official",
+    "assetType": "web",
+    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_03.html",
+    "language": ["en"],
+    "usageMode": "reference",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_ict_page_001": {
+    "id": "jica_rw_ict_page_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "digital",
+    "title": "JICA Intervention in ICT Sector in Rwanda",
+    "sourceType": "official",
+    "assetType": "web",
+    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_05.html",
+    "language": ["en"],
+    "usageMode": "reference",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_infrastructure_page_001": {
+    "id": "jica_rw_infrastructure_page_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "infrastructure",
+    "title": "JICA Intervention in Economic Infrastructure Sector of Rwanda",
+    "sourceType": "official",
+    "assetType": "web",
+    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_02.html",
+    "language": ["en"],
+    "usageMode": "reference",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_health_page_001": {
+    "id": "jica_rw_health_page_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "health",
+    "title": "JICA Intervention in Health and Nutrition Sector in Rwanda",
+    "sourceType": "official",
+    "assetType": "web",
+    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_04.html",
+    "language": ["en"],
+    "usageMode": "reference",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_training_page_001": {
+    "id": "jica_rw_training_page_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "people",
+    "title": "Training Program in Japan and Other Countries",
+    "sourceType": "official",
+    "assetType": "web",
+    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/1563949_16102.html",
+    "language": ["en"],
+    "usageMode": "reference",
+    "verifiedAt": "2026-09-26"
   }
 }
