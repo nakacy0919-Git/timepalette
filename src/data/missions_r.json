@@ -865,72 +865,290 @@
         }
       },
       {
-        "id": "rw-m23",
-        "domain": "thinkConnect",
-        "level": 3,
-        "type": "global-challenge",
-        "learningStage": "LEARN",
-        "title": "The Water Access Challenge",
-        "prompt": "JICAの動画とRWASOM2資料を見て、安全な水を「届け続ける」ために必要なことを考えよう。",
-        "points": 15,
-        "requiredForMastery": true,
-        "challenge": {
+  "id": "rw-m23",
+  "domain": "thinkConnect",
+  "level": 3,
+  "type": "source-quest",
+  "learningStage": "LEARN",
+  "title": "Water for Life",
+  "prompt": "ルワンダの水と暮らしについて、JICAの映像や資料から学び、自分の生活とつなげて考えよう。",
+  "points": 15,
+  "requiredForMastery": true,
+  "defaultDifficulty": "globalBridge",
+
+  "sourceIds": [
+    "jica_rw_rural_child_ja_video_001",
+    "jica_rw_without_water_ja_video_001",
+    "jica_rw_water_video_001",
+    "jica_rw_rwasom2_pdf_001"
+  ],
+
+  "difficultyProfiles": {
+
+    "explorer": {
+      "steps": [
+        {
+          "type": "watch",
+          "title": "ルワンダの子どもの一日を見よう",
+          "prompt": "動画を見ながら、日本の自分の生活と違うところを探してみよう。",
           "sourceIds": [
-            "jica_rw_water_video_001",
-            "jica_rw_rwasom2_pdf_001"
+            "jica_rw_rural_child_ja_video_001"
           ],
-          "notice": {
-            "prompt": "資料を見て、重要だと思ったポイントを選ぼう。",
-            "options": [
-              "Maintenance",
-              "People",
-              "Water quality",
-              "Planning",
-              "Infrastructure",
-              "Training"
-            ]
-          },
-          "quiz": {
-            "question": "RWASOM2が重視している考え方として最も適切なのは？",
-            "choices": [
-              "給水施設だけでなく、運営・維持管理や関係者の能力も強くする",
-              "すべての水を外国から運ぶ",
-              "施設完成後は地域の管理を不要にする",
-              "水の利用者を計画から外す"
-            ],
-            "correctIndex": 0,
-            "explanation": "RWASOM2は地方給水施設の運営・維持管理の枠組みを強化し、WASAC、地方行政、事業者、利用者委員会など関係者の能力向上も扱います。"
-          },
-          "connect": {
-            "prompt": "あなたの地域で水道が壊れたとき、誰が見つけ、連絡し、修理し、費用を支えると思いますか？仕組みとして考えよう。",
-            "minChars": 30
-          }
+          "completeLabel": "動画を見た！"
         },
-        "explanation": "RWASOM2は地方給水施設の運営・維持管理の枠組みを強化し、WASAC、地方行政、事業者、利用者委員会など関係者の能力向上も扱います。",
-        "sourceIds": [
-          "jica_rw_rwasom2_pdf_001"
-        ],
-        "skills": [
-          "source-reading",
-          "systems-thinking",
-          "media-literacy"
-        ],
-        "globalChallenge": {
-          "enabled": true,
-          "theme": "waterSanitation",
-          "badge": "WATER",
-          "sdgs": [
-            6
+
+        {
+          "type": "single-choice",
+          "title": "水はどうしている？",
+          "prompt": "動画に出てくる村落部の子どもの生活について、正しいものを選ぼう。",
+          "choices": [
+            "家の近くまで水をくみに行くことがある",
+            "毎日海から水を運んでいる",
+            "水はすべて飛行機で運ばれてくる",
+            "水は生活ではほとんど使わない"
+          ],
+          "correctIndex": 0
+        },
+
+        {
+          "type": "keyword-writing",
+          "title": "気づいたことを書こう",
+          "prompt": "動画を見て気づいたことや、日本との違いを書いてみよう。",
+          "minChars": 30,
+          "requiredKeywords": [
+            "水",
+            "生活"
+          ],
+          "requiredKeywordCount": 1,
+          "placeholder": "例：ルワンダでは水を手に入れるために..."
+        }
+      ]
+    },
+
+
+    "challenger": {
+      "steps": [
+        {
+          "type": "watch",
+          "title": "水と暮らしを観察しよう",
+          "prompt": "ルワンダの村落部の子どもの生活を見て、水が一日の生活とどう関係しているか考えよう。",
+          "sourceIds": [
+            "jica_rw_rural_child_ja_video_001"
+          ],
+          "completeLabel": "動画を見た！"
+        },
+
+        {
+          "type": "watch",
+          "title": "もし水がなかったら？",
+          "prompt": "安全な水を近くで使えることが、生活のどんな部分につながるのか考えながら見よう。",
+          "sourceIds": [
+            "jica_rw_without_water_ja_video_001"
+          ],
+          "completeLabel": "動画を見た！"
+        },
+
+        {
+          "type": "multi-select",
+          "title": "水とつながっているもの",
+          "prompt": "安全な水を近くで使えることと関係するものを、すべて選ぼう。",
+          "choices": [
+            "健康",
+            "勉強や仕事に使える時間",
+            "暮らしや社会の発展",
+            "好きなテレビ番組の数"
+          ],
+          "correctIndices": [
+            0,
+            1,
+            2
           ]
         },
-        "developmentLearning": {
-          "enabled": true,
-          "organization": "JICA",
-          "country": "Rwanda",
-          "topic": "RWASOM2",
-          "projectBased": true
+
+        {
+          "type": "keyword-writing",
+          "title": "日本の生活と比べよう",
+          "prompt": "ルワンダの映像を見て、日本の自分の生活と比べて考えたことを書こう。",
+          "minChars": 60,
+          "requiredKeywords": [
+            "水",
+            "時間",
+            "生活"
+          ],
+          "requiredKeywordCount": 2,
+          "placeholder": "水を手に入れるまでの時間や、自分の生活との違いを考えてみよう。"
         }
-      },
+      ]
+    },
+
+
+    "globalBridge": {
+      "steps": [
+        {
+          "type": "watch",
+          "title": "暮らしから水の課題を考える",
+          "prompt": "まず、ルワンダの村落部で暮らす子どもの一日を見よう。『大変そう』だけで終わらず、家族の工夫や生活にも注目しよう。",
+          "sourceIds": [
+            "jica_rw_rural_child_ja_video_001"
+          ],
+          "completeLabel": "動画を見終わった"
+        },
+
+        {
+          "type": "watch",
+          "title": "安全な水と社会",
+          "prompt": "次に、安全な水へのアクセスが健康・教育・仕事などとどうつながっているか考えながら見よう。",
+          "sourceIds": [
+            "jica_rw_without_water_ja_video_001"
+          ],
+          "completeLabel": "社会とのつながりを確認した"
+        },
+
+        {
+          "type": "multi-select",
+          "title": "水の問題を広く考える",
+          "prompt": "安全な水へのアクセスが改善すると影響を受けると考えられるものを、すべて選ぼう。",
+          "choices": [
+            "健康",
+            "勉強に使える時間",
+            "仕事に使える時間",
+            "月の満ち欠け"
+          ],
+          "correctIndices": [
+            0,
+            1,
+            2
+          ]
+        },
+
+        {
+          "type": "single-choice",
+          "title": "課題をどう考える？",
+          "prompt": "水へのアクセスを社会課題として考えるとき、最も適切な考え方はどれだろう。",
+          "choices": [
+            "水道設備だけでなく、人々の生活や地域の仕組みも一緒に考える",
+            "設備を一度作れば、その後について考える必要はない",
+            "水の問題は健康だけに関係する",
+            "水を使う地域の人々の考えは必要ない"
+          ],
+          "correctIndex": 0
+        },
+
+        {
+          "type": "opinion-writing",
+          "title": "あなたならどう考える？",
+          "prompt": "安全な水を使い続けられる社会にするために、何が重要だと思いますか。ルワンダの映像と日本の生活を比べながら書こう。",
+          "minChars": 100,
+          "requiredKeywords": [
+            "安全な水",
+            "時間",
+            "地域",
+            "生活"
+          ],
+          "requiredKeywordCount": 2,
+          "placeholder": "私は、安全な水を使い続けるためには..."
+        }
+      ]
+    },
+
+
+    "globalExplorer": {
+      "steps": [
+        {
+          "type": "watch",
+          "title": "Water and Sanitation in Rwanda",
+          "prompt": "Watch the JICA Rwanda video. Focus on the challenges and the people working to improve water and sanitation services.",
+          "sourceIds": [
+            "jica_rw_water_video_001"
+          ],
+          "completeLabel": "I watched the video"
+        },
+
+        {
+          "type": "read",
+          "title": "Read the RWASOM2 Project Brief",
+          "prompt": "Look for information about operation, maintenance, local organizations, and sustainable water services.",
+          "sourceIds": [
+            "jica_rw_rwasom2_pdf_001"
+          ],
+          "completeLabel": "I checked the project brief"
+        },
+
+        {
+          "type": "multi-select",
+          "title": "What makes water services sustainable?",
+          "prompt": "Select all the elements that are important for sustainable rural water services.",
+          "choices": [
+            "Maintenance",
+            "People and organizations",
+            "Planning and management",
+            "Ignoring users after construction"
+          ],
+          "correctIndices": [
+            0,
+            1,
+            2
+          ]
+        },
+
+        {
+          "type": "single-choice",
+          "title": "Think beyond infrastructure",
+          "prompt": "Which statement best explains the idea behind sustainable water services?",
+          "choices": [
+            "Infrastructure, maintenance, people, and management need to work together",
+            "Building facilities is the only thing that matters",
+            "Local people should not be involved in water management",
+            "Water systems do not need maintenance after construction"
+          ],
+          "correctIndex": 0
+        },
+
+        {
+          "type": "opinion-writing",
+          "title": "Your Global Opinion",
+          "prompt": "What is necessary to provide sustainable water services to communities? Use ideas from the video and project brief.",
+          "minWords": 80,
+          "maxWords": 120,
+          "requiredKeywords": [
+            "water",
+            "community",
+            "maintenance"
+          ],
+          "requiredKeywordCount": 2,
+          "placeholder": "I think sustainable water services require..."
+        }
+      ]
+    }
+  },
+
+  "explanation": "安全な水へのアクセスは、水そのものだけではなく、健康、時間、教育、仕事、地域の仕組みなど多くの要素とつながっています。",
+
+  "skills": [
+    "source-reading",
+    "systems-thinking",
+    "media-literacy",
+    "reflection",
+    "writing"
+  ],
+
+  "globalChallenge": {
+    "enabled": true,
+    "theme": "waterSanitation",
+    "badge": "WATER",
+    "sdgs": [
+      6
+    ]
+  },
+
+  "developmentLearning": {
+    "enabled": true,
+    "organization": "JICA",
+    "country": "Rwanda",
+    "topic": "Water Access and Sustainable Water Services",
+    "projectBased": true
+  }
+},
       {
         "id": "rw-m24",
         "domain": "thinkConnect",

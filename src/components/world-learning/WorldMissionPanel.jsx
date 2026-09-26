@@ -32,7 +32,9 @@ const INTERACTIVE_MISSION_TYPES = new Set([
   'time-dial',
   'daypart-match',
   'schedule-builder',
+
   'global-challenge',
+  'source-quest',
 
   'map-tap',
   'city-map',
@@ -76,6 +78,210 @@ const isMissionPlayable = (
       mission?.type
     )
   );
+};
+
+
+/* =========================================================
+   LEARNING LEVELS
+========================================================= */
+
+const LEARNING_LEVELS = [
+  {
+    id: 'elementary',
+    profileKey: 'explorer',
+    icon: '🧒',
+    label: '小学生',
+    labelEn: 'Elementary',
+    description:
+      '見る・選ぶ・発見する',
+  },
+
+  {
+    id: 'juniorHigh',
+    profileKey: 'challenger',
+    icon: '🧑',
+    label: '中学生',
+    labelEn: 'Junior High',
+    description:
+      '比べる・理由を考える',
+  },
+
+  {
+    id: 'highSchoolStandard',
+    profileKey: 'globalBridge',
+    icon: '🎓',
+    label: '高校生',
+    labelEn: 'High School',
+    description:
+      '日本語で世界の課題を深く考える',
+  },
+
+  {
+    id: 'highSchoolAdvanced',
+    profileKey: 'globalExplorer',
+    icon: '🚀',
+    label: '高校生 Challenge',
+    labelEn: 'High School Challenge',
+    description:
+      '英語を使って世界を探究する',
+  },
+];
+
+
+const getLearningLevelMeta = (
+  learningLevelId
+) =>
+  LEARNING_LEVELS.find(
+    (level) =>
+      level.id ===
+      learningLevelId
+  ) ??
+  LEARNING_LEVELS[2];
+
+
+/* =========================================================
+   APPLY LEARNING LEVEL TO MISSION
+========================================================= */
+
+const applyLearningLevelToMission = (
+  mission,
+  learningLevelId
+) => {
+  const level =
+    getLearningLevelMeta(
+      learningLevelId
+    );
+
+  /*
+   * Mission Standard v2
+   *
+   * 将来的には各Missionに
+   *
+   * variants: {
+   *   elementary: {},
+   *   juniorHigh: {},
+   *   highSchoolStandard: {},
+   *   highSchoolAdvanced: {}
+   * }
+   *
+   * を持たせる。
+   */
+  const variant =
+    mission?.variants?.[
+      learningLevelId
+    ];
+
+  if (variant) {
+    return {
+      ...mission,
+      ...variant,
+
+      /*
+       * Mission ID / Domain / WP は
+       * 学習レベルが変わっても共通。
+       */
+      id:
+        mission.id,
+
+      domain:
+        mission.domain,
+
+      points:
+        mission.points,
+
+      requiredForMastery:
+        mission.requiredForMastery,
+
+      learningLevelId,
+
+      learningLevelLabel:
+        level.label,
+    };
+  }
+
+
+  /*
+   * 現在のSource Quest用。
+   *
+   * M23では
+   *
+   * explorer
+   * challenger
+   * globalBridge
+   * globalExplorer
+   *
+   * を使用しているため、
+   * 学校段階に対応するprofileだけを渡す。
+   */
+  const profile =
+    mission
+      ?.difficultyProfiles
+      ?.[level.profileKey];
+
+
+  if (!profile) {
+    return {
+      ...mission,
+
+      learningLevelId,
+
+      learningLevelLabel:
+        level.label,
+    };
+  }
+
+
+  return {
+    ...mission,
+
+    title:
+      profile.title ??
+      mission.title,
+
+    prompt:
+      profile.prompt ??
+      mission.prompt,
+
+    defaultDifficulty:
+      level.profileKey,
+
+    difficultyProfiles: {
+      [level.profileKey]:
+        profile,
+    },
+
+    learningLevelId,
+
+    learningLevelLabel:
+      level.label,
+  };
+};
+
+
+/* =========================================================
+   MISSION NUMBER
+========================================================= */
+
+const getMissionNumber = (
+  missionId
+) => {
+  const match =
+    String(
+      missionId ?? ''
+    ).match(
+      /-m(\d+)$/i
+    );
+
+  if (!match) {
+    return 'MISSION';
+  }
+
+  return `M${String(
+    match[1]
+  ).padStart(
+    2,
+    '0'
+  )}`;
 };
 
 
@@ -168,50 +374,38 @@ const makeFlagEmoji = (
 const BADGE_META = {
   none: {
     icon: '🌍',
-    label:
-      'Start Exploring',
-    labelJa:
-      '冒険を始めよう',
+    label: 'Start Exploring',
+    labelJa: '冒険を始めよう',
   },
 
   stamp: {
     icon: '🌏',
-    label:
-      'Explorer Stamp',
-    labelJa:
-      '探索スタンプ',
+    label: 'Explorer Stamp',
+    labelJa: '探索スタンプ',
   },
 
   bronze: {
     icon: '🥉',
-    label:
-      'Explorer Badge',
-    labelJa:
-      'エクスプローラー',
+    label: 'Explorer Badge',
+    labelJa: 'エクスプローラー',
   },
 
   silver: {
     icon: '🥈',
-    label:
-      'Discovery Badge',
-    labelJa:
-      'ディスカバリー',
+    label: 'Discovery Badge',
+    labelJa: 'ディスカバリー',
   },
 
   gold: {
     icon: '🥇',
-    label:
-      'Country Master',
-    labelJa:
-      'カントリーマスター',
+    label: 'Country Master',
+    labelJa: 'カントリーマスター',
   },
 
   diamond: {
     icon: '💎',
-    label:
-      'Connector Badge',
-    labelJa:
-      'コネクター',
+    label: 'Connector Badge',
+    labelJa: 'コネクター',
   },
 };
 
@@ -222,124 +416,61 @@ const BADGE_META = {
 
 const DOMAIN_THEME = {
   place: {
-    accent:
-      '#10b981',
-
-    dark:
-      '#047857',
-
-    soft:
-      '#ecfdf5',
-
-    border:
-      '#a7f3d0',
-
-    label:
-      'EXPLORE THE MAP',
+    accent: '#10b981',
+    dark: '#047857',
+    soft: '#ecfdf5',
+    border: '#a7f3d0',
+    label: 'EXPLORE THE MAP',
   },
 
   time: {
-    accent:
-      '#f59e0b',
-
-    dark:
-      '#b45309',
-
-    soft:
-      '#fffbeb',
-
-    border:
-      '#fde68a',
-
-    label:
-      'TRAVEL THROUGH TIME',
+    accent: '#f59e0b',
+    dark: '#b45309',
+    soft: '#fffbeb',
+    border: '#fde68a',
+    label: 'TRAVEL THROUGH TIME',
   },
 
   language: {
-    accent:
-      '#8b5cf6',
-
-    dark:
-      '#6d28d9',
-
-    soft:
-      '#f5f3ff',
-
-    border:
-      '#ddd6fe',
-
-    label:
-      'USE YOUR VOICE',
+    accent: '#8b5cf6',
+    dark: '#6d28d9',
+    soft: '#f5f3ff',
+    border: '#ddd6fe',
+    label: 'USE YOUR VOICE',
   },
 
   lifeCulture: {
-    accent:
-      '#f97316',
-
-    dark:
-      '#c2410c',
-
-    soft:
-      '#fff7ed',
-
-    border:
-      '#fed7aa',
-
-    label:
-      'DISCOVER DAILY LIFE',
+    accent: '#f97316',
+    dark: '#c2410c',
+    soft: '#fff7ed',
+    border: '#fed7aa',
+    label: 'DISCOVER DAILY LIFE',
   },
 
   japanConnection: {
-    accent:
-      '#3b82f6',
-
-    dark:
-      '#1d4ed8',
-
-    soft:
-      '#eff6ff',
-
-    border:
-      '#bfdbfe',
-
-    label:
-      'CONNECT WITH JAPAN',
+    accent: '#3b82f6',
+    dark: '#1d4ed8',
+    soft: '#eff6ff',
+    border: '#bfdbfe',
+    label: 'CONNECT WITH JAPAN',
   },
 
   thinkConnect: {
-    accent:
-      '#ec4899',
-
-    dark:
-      '#be185d',
-
-    soft:
-      '#fdf2f8',
-
-    border:
-      '#fbcfe8',
-
-    label:
-      'THINK & CONNECT',
+    accent: '#ec4899',
+    dark: '#be185d',
+    soft: '#fdf2f8',
+    border: '#fbcfe8',
+    label: 'THINK & CONNECT',
   },
 };
 
 
 const DEFAULT_DOMAIN_THEME = {
-  accent:
-    '#64748b',
-
-  dark:
-    '#334155',
-
-  soft:
-    '#f8fafc',
-
-  border:
-    '#e2e8f0',
-
-  label:
-    'WORLD ADVENTURE',
+  accent: '#64748b',
+  dark: '#334155',
+  soft: '#f8fafc',
+  border: '#e2e8f0',
+  label: 'WORLD ADVENTURE',
 };
 
 
@@ -367,7 +498,11 @@ const getDomainCounts = (
     }
   );
 
-  missionData.missions.forEach(
+  (
+    missionData
+      ?.missions ??
+    []
+  ).forEach(
     (mission) => {
       if (
         completedIds.has(
@@ -406,6 +541,7 @@ const qualifiesForRule = ({
     return false;
   }
 
+
   if (
     rule.minMissions &&
     completedCount <
@@ -414,6 +550,7 @@ const qualifiesForRule = ({
     return false;
   }
 
+
   if (
     rule.minWorldPoints &&
     totalPoints <
@@ -421,6 +558,7 @@ const qualifiesForRule = ({
   ) {
     return false;
   }
+
 
   if (
     rule.minDomains
@@ -441,6 +579,7 @@ const qualifiesForRule = ({
     }
   }
 
+
   if (
     rule.domainMinimums
   ) {
@@ -457,7 +596,8 @@ const qualifiesForRule = ({
               domainId
             ] ??
             0
-          ) >= minimum
+          ) >=
+          minimum
       );
 
     if (
@@ -466,6 +606,7 @@ const qualifiesForRule = ({
       return false;
     }
   }
+
 
   if (
     rule.requiredMissionIds
@@ -486,6 +627,7 @@ const qualifiesForRule = ({
       return false;
     }
   }
+
 
   return true;
 };
@@ -512,6 +654,7 @@ const calculateBadge = (
     completedIds,
   };
 
+
   if (
     qualifiesForRule({
       rule:
@@ -521,6 +664,7 @@ const calculateBadge = (
   ) {
     return 'diamond';
   }
+
 
   if (
     qualifiesForRule({
@@ -532,6 +676,7 @@ const calculateBadge = (
     return 'gold';
   }
 
+
   if (
     qualifiesForRule({
       rule:
@@ -541,6 +686,7 @@ const calculateBadge = (
   ) {
     return 'silver';
   }
+
 
   if (
     qualifiesForRule({
@@ -552,6 +698,7 @@ const calculateBadge = (
     return 'bronze';
   }
 
+
   if (
     qualifiesForRule({
       rule:
@@ -561,6 +708,7 @@ const calculateBadge = (
   ) {
     return 'stamp';
   }
+
 
   return 'none';
 };
@@ -577,20 +725,37 @@ export default function WorldMissionPanel({
   const missionListRef =
     useRef(null);
 
+
   const [
     selectedDomain,
     setSelectedDomain,
-  ] = useState('all');
+  ] = useState(
+    'all'
+  );
+
+
+  const [
+    selectedLearningLevel,
+    setSelectedLearningLevel,
+  ] = useState(
+    'highSchoolStandard'
+  );
+
 
   const [
     activeMission,
     setActiveMission,
-  ] = useState(null);
+  ] = useState(
+    null
+  );
+
 
   const [
     ,
     setProgressRevision,
-  ] = useState(0);
+  ] = useState(
+    0
+  );
 
 
   const missionData =
@@ -606,14 +771,31 @@ export default function WorldMissionPanel({
     );
 
 
-  if (!missionData) {
+  if (
+    !missionData
+  ) {
     return null;
   }
 
 
-  const missions =
-    missionData.missions ??
+  const rawMissions =
+    missionData
+      .missions ??
     [];
+
+
+  /*
+   * 40 Missionすべてに
+   * 選択中の学習レベルを適用。
+   */
+  const missions =
+    rawMissions.map(
+      (mission) =>
+        applyLearningLevelToMission(
+          mission,
+          selectedLearningLevel
+        )
+    );
 
 
   const domains =
@@ -621,6 +803,12 @@ export default function WorldMissionPanel({
       ?.design
       ?.domains ??
     [];
+
+
+  const selectedLevelMeta =
+    getLearningLevelMeta(
+      selectedLearningLevel
+    );
 
 
   const completedIds =
@@ -670,7 +858,8 @@ export default function WorldMissionPanel({
 
   const totalMissions =
     Number(
-      missionData.totalMissions ??
+      missionData
+        .totalMissions ??
         missions.length
     );
 
@@ -731,11 +920,11 @@ export default function WorldMissionPanel({
     () => {
       window.setTimeout(
         () => {
-          missionListRef.current
+          missionListRef
+            .current
             ?.scrollIntoView({
               behavior:
                 'smooth',
-
               block:
                 'start',
             });
@@ -758,6 +947,28 @@ export default function WorldMissionPanel({
       );
 
       moveToMissionList();
+    };
+
+
+  const selectLearningLevel =
+    (
+      learningLevelId
+    ) => {
+      playUiSound(
+        'tap'
+      );
+
+      setSelectedLearningLevel(
+        learningLevelId
+      );
+
+      /*
+       * 以前のレベルで開いていたMissionを
+       * 残さないため閉じる。
+       */
+      setActiveMission(
+        null
+      );
     };
 
 
@@ -790,7 +1001,8 @@ export default function WorldMissionPanel({
       );
 
       if (
-        result.isNewCompletion
+        result
+          .isNewCompletion
       ) {
         setProgressRevision(
           (value) =>
@@ -826,6 +1038,7 @@ export default function WorldMissionPanel({
         <div className="pointer-events-none absolute -bottom-32 right-[-5%] h-96 w-96 rounded-full bg-violet-500/20 blur-3xl" />
 
         <div className="pointer-events-none absolute left-[45%] top-[10%] h-48 w-48 rounded-full bg-cyan-400/10 blur-3xl" />
+
 
         <div className="relative p-6 md:p-9 lg:p-10">
 
@@ -864,6 +1077,7 @@ export default function WorldMissionPanel({
 
                 </span>
 
+
                 <span
                   className="
                     rounded-full
@@ -884,7 +1098,36 @@ export default function WorldMissionPanel({
                   )}{' '}
 
                   {
-                    missionData.countryNameEn
+                    missionData
+                      .countryNameEn
+                  }
+
+                </span>
+
+
+                <span
+                  className="
+                    rounded-full
+                    border
+                    border-cyan-300/20
+                    bg-cyan-300/10
+                    px-4
+                    py-2
+                    text-[10px]
+                    font-black
+                    tracking-[0.12em]
+                    text-cyan-200
+                  "
+                >
+
+                  {
+                    selectedLevelMeta
+                      .icon
+                  }{' '}
+
+                  {
+                    selectedLevelMeta
+                      .label
                   }
 
                 </span>
@@ -973,7 +1216,8 @@ export default function WorldMissionPanel({
                     <span className="text-sm text-white/30">
                       {' / '}
                       {
-                        missionData.maxWorldPoints
+                        missionData
+                          .maxWorldPoints
                       }
                     </span>
 
@@ -1058,21 +1302,25 @@ export default function WorldMissionPanel({
 
                   <p className="mt-2 text-lg font-black">
                     {
-                      badgeMeta.label
+                      badgeMeta
+                        .label
                     }
                   </p>
 
                   <p className="mt-1 text-xs font-bold text-white/40">
                     {
-                      badgeMeta.labelJa
+                      badgeMeta
+                        .labelJa
                     }
                   </p>
 
                 </div>
 
+
                 <div className="text-5xl">
                   {
-                    badgeMeta.icon
+                    badgeMeta
+                      .icon
                   }
                 </div>
 
@@ -1085,39 +1333,59 @@ export default function WorldMissionPanel({
               {nextMission ? (
                 <>
 
-                  <p className="text-[9px] font-black tracking-[0.17em] text-white/40">
-                    NEXT ADVENTURE
-                  </p>
+                  <div className="flex items-center justify-between gap-3">
+
+                    <p className="text-[9px] font-black tracking-[0.17em] text-white/40">
+                      NEXT ADVENTURE
+                    </p>
+
+                    <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] font-black text-white/55">
+                      {
+                        getMissionNumber(
+                          nextMission.id
+                        )
+                      }
+                    </span>
+
+                  </div>
+
 
                   <p className="mt-2 text-lg font-black leading-snug">
                     {
-                      nextMission.title
+                      nextMission
+                        .title
                     }
                   </p>
 
+
                   <p className="mt-2 line-clamp-2 text-xs font-semibold leading-6 text-white/50">
                     {
-                      nextMission.prompt
+                      nextMission
+                        .prompt
                     }
                   </p>
+
 
                   <div className="mt-4 flex items-center justify-between">
 
                     <span className="text-xs font-black text-amber-300">
                       +
                       {
-                        nextMission.points
+                        nextMission
+                          .points
                       } WP
                     </span>
 
                     <span className="text-[10px] font-black tracking-[0.1em] text-white/35">
                       LV.
                       {
-                        nextMission.level
+                        nextMission
+                          .level
                       }
                     </span>
 
                   </div>
+
 
                   <button
                     type="button"
@@ -1203,6 +1471,189 @@ export default function WorldMissionPanel({
 
 
       {/* =====================================================
+          LEARNING LEVEL SELECTOR
+      ====================================================== */}
+
+      <div
+        className="
+          mt-8
+          rounded-[30px]
+          border
+          border-slate-200
+          bg-gradient-to-br
+          from-white
+          to-slate-50
+          p-5
+          shadow-sm
+          md:p-7
+        "
+      >
+
+        <div className="mb-5">
+
+          <p className="text-[10px] font-black tracking-[0.18em] text-blue-500">
+            YOUR LEARNING LEVEL
+          </p>
+
+
+          <div className="mt-2 flex flex-col justify-between gap-2 md:flex-row md:items-end">
+
+            <div>
+
+              <h3 className="text-2xl font-black text-slate-900 md:text-3xl">
+                学習レベルを選ぼう
+              </h3>
+
+              <p className="mt-2 text-sm font-semibold text-slate-500">
+                レベルを変えると、
+                Missionの内容や教材も変わります。
+              </p>
+
+            </div>
+
+
+            <div className="rounded-full bg-slate-900 px-4 py-2 text-xs font-black text-white">
+
+              {
+                selectedLevelMeta
+                  .icon
+              }{' '}
+
+              {
+                selectedLevelMeta
+                  .label
+              }
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+
+          {LEARNING_LEVELS.map(
+            (
+              level
+            ) => {
+              const selected =
+                selectedLearningLevel ===
+                level.id;
+
+              return (
+                <button
+                  key={
+                    level.id
+                  }
+                  type="button"
+                  onClick={() =>
+                    selectLearningLevel(
+                      level.id
+                    )
+                  }
+                  className={`
+                    relative
+                    overflow-hidden
+                    rounded-[24px]
+                    border
+                    p-4
+                    text-left
+                    transition-all
+                    duration-300
+                    md:p-5
+
+                    ${
+                      selected
+                        ? `
+                          -translate-y-1
+                          border-slate-900
+                          bg-slate-950
+                          text-white
+                          shadow-xl
+                        `
+                        : `
+                          border-slate-200
+                          bg-white
+                          text-slate-900
+                          hover:-translate-y-1
+                          hover:shadow-lg
+                        `
+                    }
+                  `}
+                >
+
+                  {selected && (
+                    <div className="absolute right-3 top-3 rounded-full bg-emerald-400 px-2.5 py-1 text-[8px] font-black tracking-[0.08em] text-emerald-950">
+                      SELECTED
+                    </div>
+                  )}
+
+
+                  <div className="text-3xl">
+                    {
+                      level.icon
+                    }
+                  </div>
+
+
+                  <p className="mt-4 text-base font-black md:text-lg">
+                    {
+                      level.label
+                    }
+                  </p>
+
+
+                  <p
+                    className={`
+                      mt-1
+                      text-[9px]
+                      font-black
+                      tracking-[0.1em]
+
+                      ${
+                        selected
+                          ? 'text-white/40'
+                          : 'text-slate-400'
+                      }
+                    `}
+                  >
+                    {
+                      level.labelEn
+                    }
+                  </p>
+
+
+                  <p
+                    className={`
+                      mt-3
+                      text-xs
+                      font-semibold
+                      leading-5
+
+                      ${
+                        selected
+                          ? 'text-white/65'
+                          : 'text-slate-500'
+                      }
+                    `}
+                  >
+                    {
+                      level.description
+                    }
+                  </p>
+
+                </button>
+              );
+            }
+          )}
+
+        </div>
+
+      </div>
+
+
+      {/* =====================================================
           ADVENTURE MAP
       ====================================================== */}
 
@@ -1226,6 +1677,7 @@ export default function WorldMissionPanel({
 
           </div>
 
+
           <button
             type="button"
             onClick={() =>
@@ -1242,6 +1694,7 @@ export default function WorldMissionPanel({
               font-black
               transition
               md:block
+
               ${
                 selectedDomain ===
                 'all'
@@ -1300,6 +1753,7 @@ export default function WorldMissionPanel({
                 ] ??
                 DEFAULT_DOMAIN_THEME;
 
+
               return (
                 <button
                   key={
@@ -1323,6 +1777,7 @@ export default function WorldMissionPanel({
                     duration-300
                     hover:-translate-y-1
                     hover:shadow-xl
+
                     ${
                       selected
                         ? 'shadow-lg ring-2 ring-slate-900/5'
@@ -1339,8 +1794,6 @@ export default function WorldMissionPanel({
                         : theme.border,
                   }}
                 >
-
-                  {/* LARGE NUMBER */}
 
                   <div
                     className="
@@ -1505,8 +1958,6 @@ export default function WorldMissionPanel({
         </div>
 
 
-        {/* MOBILE ALL */}
-
         <div className="mt-4 md:hidden">
 
           <button
@@ -1524,6 +1975,7 @@ export default function WorldMissionPanel({
               text-sm
               font-black
               transition
+
               ${
                 selectedDomain ===
                 'all'
@@ -1562,7 +2014,9 @@ export default function WorldMissionPanel({
               MISSIONS
             </p>
 
+
             <h3 className="mt-2 text-2xl font-black text-slate-900">
+
               {selectedDomain ===
               'all'
                 ? '全40 Mission'
@@ -1573,9 +2027,33 @@ export default function WorldMissionPanel({
                   )
                     ?.labelJa ??
                   'Mission'}
+
             </h3>
 
+
+            <p className="mt-2 text-xs font-black text-blue-500">
+
+              {
+                selectedLevelMeta
+                  .icon
+              }{' '}
+
+              {
+                selectedLevelMeta
+                  .label
+              }
+
+              {' · '}
+
+              {
+                selectedLevelMeta
+                  .description
+              }
+
+            </p>
+
           </div>
+
 
           <div className="text-xs font-black text-slate-400">
             {
@@ -1615,6 +2093,16 @@ export default function WorldMissionPanel({
                 ] ??
                 DEFAULT_DOMAIN_THEME;
 
+              const missionNumber =
+                getMissionNumber(
+                  mission.id
+                );
+
+              const isSourceQuest =
+                mission.type ===
+                'source-quest';
+
+
               return (
                 <button
                   key={
@@ -1639,6 +2127,7 @@ export default function WorldMissionPanel({
                     duration-300
                     hover:-translate-y-1
                     hover:shadow-xl
+
                     ${
                       completed
                         ? 'border-emerald-200'
@@ -1648,8 +2137,6 @@ export default function WorldMissionPanel({
                     }
                   `}
                 >
-
-                  {/* DOMAIN STRIPE */}
 
                   <div
                     className="absolute left-0 top-0 h-full w-1.5"
@@ -1686,10 +2173,45 @@ export default function WorldMissionPanel({
                         }
                       </span>
 
+
                       <div>
 
+                        <div className="flex flex-wrap items-center gap-2">
+
+                          <span
+                            className="
+                              rounded-full
+                              px-2.5
+                              py-1
+                              text-[10px]
+                              font-black
+                              tracking-[0.08em]
+                            "
+                            style={{
+                              backgroundColor:
+                                `${theme.accent}14`,
+
+                              color:
+                                theme.dark,
+                            }}
+                          >
+                            {
+                              missionNumber
+                            }
+                          </span>
+
+
+                          {isSourceQuest && (
+                            <span className="rounded-full bg-violet-50 px-2.5 py-1 text-[9px] font-black tracking-[0.08em] text-violet-600">
+                              SOURCE QUEST
+                            </span>
+                          )}
+
+                        </div>
+
+
                         <p
-                          className="text-[9px] font-black tracking-[0.12em]"
+                          className="mt-2 text-[9px] font-black tracking-[0.12em]"
                           style={{
                             color:
                               theme.accent,
@@ -1699,13 +2221,6 @@ export default function WorldMissionPanel({
                             domain?.labelEn
                           }
                         </p>
-
-                        <span className="mt-1 inline-block rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-black text-slate-500">
-                          LV.
-                          {
-                            mission.level
-                          }
-                        </span>
 
                       </div>
 
@@ -1778,6 +2293,33 @@ export default function WorldMissionPanel({
                       mission.prompt
                     }
                   </p>
+
+
+                  <div className="mt-4 flex flex-wrap items-center gap-2">
+
+                    <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[9px] font-black text-slate-500">
+                      LV.
+                      {
+                        mission.level
+                      }
+                    </span>
+
+
+                    <span className="rounded-full bg-blue-50 px-2.5 py-1 text-[9px] font-black text-blue-600">
+
+                      {
+                        selectedLevelMeta
+                          .icon
+                      }{' '}
+
+                      {
+                        selectedLevelMeta
+                          .label
+                      }
+
+                    </span>
+
+                  </div>
 
 
                   <div className="mt-5 flex items-end justify-between border-t border-slate-100 pt-4">
@@ -1856,6 +2398,7 @@ export default function WorldMissionPanel({
 
             </div>
 
+
             <div>
 
               <p className="text-[9px] font-black tracking-[0.15em] text-amber-500">
@@ -1878,6 +2421,7 @@ export default function WorldMissionPanel({
                 badgeMeta.icon
               }
             </span>
+
 
             <div>
 
@@ -1943,6 +2487,7 @@ export default function WorldMissionPanel({
                   badgeKey
                 );
 
+
               return (
                 <div
                   key={
@@ -1955,6 +2500,7 @@ export default function WorldMissionPanel({
                     border
                     p-4
                     transition
+
                     ${
                       achieved
                         ? 'border-amber-200 bg-gradient-to-br from-amber-50 to-white'
@@ -1970,9 +2516,11 @@ export default function WorldMissionPanel({
                     />
                   )}
 
+
                   <div
                     className={`
                       text-3xl
+
                       ${
                         achieved
                           ? ''
@@ -1985,11 +2533,13 @@ export default function WorldMissionPanel({
                     }
                   </div>
 
+
                   <p
                     className={`
                       mt-3
                       text-sm
                       font-black
+
                       ${
                         achieved
                           ? 'text-slate-800'
@@ -2004,12 +2554,14 @@ export default function WorldMissionPanel({
                     }
                   </p>
 
+
                   <p
                     className={`
                       mt-2
                       text-[9px]
                       font-black
                       tracking-[0.12em]
+
                       ${
                         achieved
                           ? 'text-amber-600'
@@ -2040,7 +2592,7 @@ export default function WorldMissionPanel({
 
         <MissionPlayer
           key={
-            activeMission.id
+            `${activeMission.id}-${selectedLearningLevel}`
           }
           mission={
             activeMission

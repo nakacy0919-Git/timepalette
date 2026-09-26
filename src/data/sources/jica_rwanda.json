@@ -196,5 +196,47 @@
     "language": ["en"],
     "usageMode": "reference",
     "verifiedAt": "2026-09-26"
+  },
+  "jica_rw_rural_child_ja_video_001": {
+    "id": "jica_rw_rural_child_ja_video_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "waterSanitation",
+    "title": "A Day in the Life of a Child in Rural Rwanda",
+    "titleJa": "ルワンダ村落部の子どもの一日",
+    "sourceType": "official",
+    "assetType": "youtube",
+    "youtubeId": "7QsFBAEMD4Y",
+    "url": "https://www.youtube.com/watch?v=7QsFBAEMD4Y",
+    "sourcePage": "https://www.jica.go.jp/cooperation/learn/material/active/index.html",
+    "language": ["ja"],
+    "recommendedStages": [
+      "explorer",
+      "challenger",
+      "globalBridge"
+    ],
+    "usageMode": "embedded",
+    "verifiedAt": "2026-09-26"
+  },
+
+  "jica_rw_without_water_ja_video_001": {
+    "id": "jica_rw_without_water_ja_video_001",
+    "organization": "JICA",
+    "country": "Rwanda",
+    "theme": "waterSanitation",
+    "title": "What If There Were No Water?",
+    "titleJa": "もし水がなかったら…",
+    "sourceType": "official",
+    "assetType": "youtube",
+    "youtubeId": "j_Xqnz1KdDw",
+    "url": "https://www.youtube.com/watch?v=j_Xqnz1KdDw",
+    "sourcePage": "https://www.jica.go.jp/cooperation/learn/material/active/index.html",
+    "language": ["ja"],
+    "recommendedStages": [
+      "challenger",
+      "globalBridge"
+    ],
+    "usageMode": "embedded",
+    "verifiedAt": "2026-09-26"
   }
 }
