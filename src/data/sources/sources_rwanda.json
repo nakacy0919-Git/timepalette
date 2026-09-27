@@ -1,1101 +1,856 @@
 {
-  "jica_rw_water_video_001": {
-    "id": "jica_rw_water_video_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "waterSanitation",
-    "title": "JICA Rwanda Office - Water and Sanitation",
-    "titleJa": "JICAルワンダ事務所：水と衛生",
-    "sourceType": "official",
-    "assetType": "youtube",
-    "youtubeId": "ZBPgwpWY-TQ",
-    "url": "https://www.youtube.com/watch?v=ZBPgwpWY-TQ",
-    "language": [
-      "en"
-    ],
-    "usageMode": "embedded",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
+  "rw": {
+    "countryNameJa": "ルワンダ",
+    "countryNameEn": "Rwanda",
+    "version": 1,
+    "sourceStandard": "TimePalette Source Catalog v1",
+    "missionFile": "missions_r.json",
+    "verifiedAt": "2026-09-27",
+    "sourceCount": 16,
+    "policy": {
+      "priority": [
+        "official-primary",
+        "authoritative-reference",
+        "reputable-secondary"
+      ],
+      "rule": "Prefer official government, JICA, statistical, or institutional sources. Use secondary sources only when a mission-specific cultural example is not directly supported by a stable official page.",
+      "studentSafety": "Do not generalize one source, image, person, city, or project to all people in Rwanda.",
+      "copyright": "Link to or embed official media only where technically permitted. Do not copy entire external texts into TimePalette.",
+      "freshness": "Project status, statistics and live web resources should be rechecked periodically."
     },
-    "accessNoteJa": "英語動画。高校標準まではTimePalette側の日本語設問・要約を付けて利用。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_rwasom2_pdf_001": {
-    "id": "jica_rw_rwasom2_pdf_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "waterSanitation",
-    "title": "RWASOM2 Project Brief Note",
-    "titleJa": "RWASOM2 プロジェクト概要",
-    "sourceType": "official",
-    "assetType": "pdf",
-    "url": "https://www.jica.go.jp/activities/issues/water/case/__icsFiles/afieldfile/2025/11/25/EN_RWASOM2_Phase2_1.pdf",
-    "language": [
-      "en"
-    ],
-    "usageMode": "embedded",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "teacher-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "英語PDF。小中学生には原文読解を求めず、教師・TimePaletteによる日本語化が必要。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_brochure_2025": {
-    "id": "jica_rw_brochure_2025",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "countryOverview",
-    "title": "JICA Rwanda Brochure 2025",
-    "titleJa": "JICAルワンダ事務所パンフレット 2025",
-    "sourceType": "official",
-    "assetType": "pdf",
-    "url": "https://www.jica.go.jp/english/overseas/rwanda/others/__icsFiles/afieldfile/2026/03/19/JICARwanda_brochure2025.pdf",
-    "language": [
-      "en"
-    ],
-    "usageMode": "embedded",
-    "contentRole": "country-overview",
-    "recommendedLevels": [
-      "juniorHigh",
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "英語資料だが、分野別の図や見出しを日本語支援付きで利用可能。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_wamcab2_pdf_001": {
-    "id": "jica_rw_wamcab2_pdf_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "agriculture",
-    "title": "Project for Water Management and Capacity Building Phase 2",
-    "titleJa": "灌漑水管理能力向上プロジェクト フェーズ2",
-    "sourceType": "official",
-    "assetType": "pdf",
-    "url": "https://openjicareport.jica.go.jp/pdf/1000053585.pdf",
-    "language": [
-      "en"
-    ],
-    "usageMode": "embedded",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "teacher-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "専門性の高い英語PDF。高校標準は日本語要約、高校発展は原文の一部を利用。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_prism_video_001": {
-    "id": "jica_rw_prism_video_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "education",
-    "title": "Rwanda PRISM - Mathematics, Science and ICT",
-    "titleJa": "PRISM：算数・理科・ICTと教員養成",
-    "sourceType": "official",
-    "assetType": "youtube",
-    "youtubeId": "HeY3-uq3bs4",
-    "url": "https://www.youtube.com/watch?v=HeY3-uq3bs4",
-    "language": [
-      "en"
-    ],
-    "usageMode": "embedded",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "juniorHigh",
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "映像中心で中学生にも利用可能。日本語ガイドを併用。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_prism_selfstudy_video_001": {
-    "id": "jica_rw_prism_selfstudy_video_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "education",
-    "title": "Rwanda PRISM - Self Studies in TTC Zaza",
-    "titleJa": "PRISM：TTC Zazaでの自主学習",
-    "sourceType": "official",
-    "assetType": "youtube",
-    "youtubeId": "HdnRgJOidTE",
-    "url": "https://www.youtube.com/watch?v=HdnRgJOidTE",
-    "language": [
-      "en"
-    ],
-    "usageMode": "embedded",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "英語動画。教員養成・ICT活用を考える資料。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_digital_summary_pdf_001": {
-    "id": "jica_rw_digital_summary_pdf_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "digital",
-    "title": "Rwanda Digital and Innovation Promotion Project",
-    "titleJa": "デジタル・イノベーション促進プロジェクト",
-    "sourceType": "official",
-    "assetType": "pdf",
-    "url": "https://openjicareport.jica.go.jp/pdf/1000056872.pdf",
-    "language": [
-      "en"
-    ],
-    "usageMode": "embedded",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "teacher-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "高校標準は図・要約中心、高校発展は英語原文を利用。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_agriculture_page_001": {
-    "id": "jica_rw_agriculture_page_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "agriculture",
-    "title": "JICA Intervention in Agriculture Sector in Rwanda",
-    "titleJa": "JICAのルワンダ農業分野協力",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_01.html",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "英語公式ページ。高校標準までは日本語支援を付ける。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_coffee_page_001": {
-    "id": "jica_rw_coffee_page_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "agriculture",
-    "title": "Rwanda Coffee Sector with JICA",
-    "titleJa": "JICAとルワンダのコーヒー分野",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.jica.go.jp/english/overseas/rwanda/information/press/2025/1581380_59675.html",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "英語公式ページ。高校標準までは日本語支援を付ける。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_education_page_001": {
-    "id": "jica_rw_education_page_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "education",
-    "title": "JICA Intervention in Education Sector in Rwanda",
-    "titleJa": "JICAのルワンダ教育分野協力",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_03.html",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "英語公式ページ。高校標準までは日本語支援を付ける。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_ict_page_001": {
-    "id": "jica_rw_ict_page_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "digital",
-    "title": "JICA Intervention in ICT Sector in Rwanda",
-    "titleJa": "JICAのルワンダICT分野協力",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_05.html",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "英語公式ページ。高校標準までは日本語支援を付ける。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_infrastructure_page_001": {
-    "id": "jica_rw_infrastructure_page_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "infrastructure",
-    "title": "JICA Intervention in Economic Infrastructure Sector of Rwanda",
-    "titleJa": "JICAのルワンダ経済インフラ分野協力",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_02.html",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "英語公式ページ。高校標準までは日本語支援を付ける。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_health_page_001": {
-    "id": "jica_rw_health_page_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "health",
-    "title": "JICA Intervention in Health and Nutrition Sector in Rwanda",
-    "titleJa": "JICAのルワンダ保健・栄養分野協力",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_04.html",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "英語公式ページ。高校標準までは日本語支援を付ける。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_training_page_001": {
-    "id": "jica_rw_training_page_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "people",
-    "title": "Training Program in Japan and Other Countries",
-    "titleJa": "日本・第三国での研修プログラム",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/1563949_16102.html",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "英語公式ページ。高校標準までは日本語支援を付ける。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_rural_child_ja_video_001": {
-    "id": "jica_rw_rural_child_ja_video_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "waterSanitation",
-    "title": "A Day in the Life of a Child in Rural Rwanda",
-    "titleJa": "ルワンダ村落部の子どもの一日",
-    "sourceType": "official",
-    "assetType": "youtube",
-    "youtubeId": "7QsFBAEMD4Y",
-    "url": "https://www.youtube.com/watch?v=7QsFBAEMD4Y",
-    "sourcePage": "https://www.jica.go.jp/cooperation/learn/material/active/index.html",
-    "language": [
-      "ja"
-    ],
-    "usageMode": "embedded",
-    "contentRole": "student-facing",
-    "recommendedLevels": [
-      "elementary",
-      "juniorHigh",
-      "highSchoolStandard"
-    ],
-    "studentAccess": {
-      "elementary": "direct-ja",
-      "juniorHigh": "direct-ja",
-      "highSchoolStandard": "direct-ja",
-      "highSchoolAdvanced": "supplementary-ja"
-    },
-    "accessNoteJa": "日本語で直接アクセス可能。小中学生の中心教材に適する。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_without_water_ja_video_001": {
-    "id": "jica_rw_without_water_ja_video_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "waterSanitation",
-    "title": "What If There Were No Water?",
-    "titleJa": "もし水がなかったら…",
-    "sourceType": "official",
-    "assetType": "youtube",
-    "youtubeId": "j_Xqnz1KdDw",
-    "url": "https://www.youtube.com/watch?v=j_Xqnz1KdDw",
-    "sourcePage": "https://www.jica.go.jp/cooperation/learn/material/active/index.html",
-    "language": [
-      "ja"
-    ],
-    "usageMode": "embedded",
-    "contentRole": "student-facing",
-    "recommendedLevels": [
-      "elementary",
-      "juniorHigh",
-      "highSchoolStandard"
-    ],
-    "studentAccess": {
-      "elementary": "direct-ja",
-      "juniorHigh": "direct-ja",
-      "highSchoolStandard": "direct-ja",
-      "highSchoolAdvanced": "supplementary-ja"
-    },
-    "accessNoteJa": "日本語で直接アクセス可能。水と生活を考える導入教材。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_urban_child_ja_video_001": {
-    "id": "jica_rw_urban_child_ja_video_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "dailyLife",
-    "title": "A Day in the Life of a Child in Urban Rwanda",
-    "titleJa": "ルワンダ都心部の子どもの一日",
-    "sourceType": "official",
-    "assetType": "youtube",
-    "youtubeId": "8lEFXQfZs4M",
-    "url": "https://youtu.be/8lEFXQfZs4M",
-    "sourcePage": "https://www.jica.go.jp/cooperation/learn/material/active/index.html",
-    "language": [
-      "ja"
-    ],
-    "usageMode": "embedded",
-    "contentRole": "student-facing",
-    "recommendedLevels": [
-      "elementary",
-      "juniorHigh",
-      "highSchoolStandard"
-    ],
-    "studentAccess": {
-      "elementary": "direct-ja",
-      "juniorHigh": "direct-ja",
-      "highSchoolStandard": "direct-ja",
-      "highSchoolAdvanced": "supplementary-ja"
-    },
-    "accessNoteJa": "村落部動画と比較すると、国内の多様性を視覚的に学べる。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jica_rw_active_learning_page_001": {
-    "id": "jica_rw_active_learning_page_001",
-    "country": "Rwanda",
-    "organization": "JICA",
-    "theme": "educationMaterials",
-    "title": "Short Video Collection for Active Learning",
-    "titleJa": "授業で使えるショート映像集：水と世界・ルワンダ・国際協力",
-    "sourceType": "official-education",
-    "assetType": "web",
-    "url": "https://www.jica.go.jp/cooperation/learn/material/active/index.html",
-    "language": [
-      "ja"
-    ],
-    "usageMode": "reference",
-    "contentRole": "teacher-resource",
-    "recommendedLevels": [
-      "elementary",
-      "juniorHigh",
-      "highSchoolStandard"
-    ],
-    "studentAccess": {
-      "elementary": "direct-ja",
-      "juniorHigh": "direct-ja",
-      "highSchoolStandard": "direct-ja",
-      "highSchoolAdvanced": "supplementary-ja"
-    },
-    "accessNoteJa": "JICAが授業利用を想定して整理した日本語教材ハブ。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jocv_rw_diary_index_001": {
-    "id": "jocv_rw_diary_index_001",
-    "country": "Rwanda",
-    "organization": "JICA Overseas Cooperation Volunteers",
-    "theme": "dailyLife",
-    "title": "JICA Volunteer's World Diary - Rwanda",
-    "titleJa": "JICA海外協力隊の世界日記：ルワンダ便り",
-    "sourceType": "official-diary",
-    "assetType": "web",
-    "url": "https://world-diary.jica.go.jp/JICA_Rwanda/",
-    "language": [
-      "ja"
-    ],
-    "usageMode": "reference",
-    "contentRole": "people-and-daily-life",
-    "recommendedLevels": [
-      "elementary",
-      "juniorHigh",
-      "highSchoolStandard"
-    ],
-    "studentAccess": {
-      "elementary": "direct-ja",
-      "juniorHigh": "direct-ja",
-      "highSchoolStandard": "direct-ja",
-      "highSchoolAdvanced": "supplementary-ja"
-    },
-    "accessNoteJa": "現地で活動する隊員の視点。『一人の経験＝国全体』と一般化しないようMission側で注意を入れる。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jocv_rw_coffee_school_diary_001": {
-    "id": "jocv_rw_coffee_school_diary_001",
-    "country": "Rwanda",
-    "organization": "JICA Overseas Cooperation Volunteers",
-    "theme": "coffeeEducation",
-    "title": "Coffee Lessons at a School in Rwanda",
-    "titleJa": "ルワンダの学校でコーヒーの授業",
-    "sourceType": "official-diary",
-    "assetType": "article",
-    "url": "https://world-diary.jica.go.jp/JICA_Rwanda/cat2354/post_3.php",
-    "language": [
-      "ja"
-    ],
-    "usageMode": "reference",
-    "contentRole": "people-and-daily-life",
-    "recommendedLevels": [
-      "juniorHigh",
-      "highSchoolStandard"
-    ],
-    "studentAccess": {
-      "elementary": "teacher-mediated",
-      "juniorHigh": "direct-ja",
-      "highSchoolStandard": "direct-ja",
-      "highSchoolAdvanced": "supplementary-ja"
-    },
-    "accessNoteJa": "職業教育・コーヒー・日本人隊員の活動をつなぐ日本語記事。",
-    "verifiedAt": "2026-09-27"
-  },
-  "jocv_rw_tea_deafblind_diary_001": {
-    "id": "jocv_rw_tea_deafblind_diary_001",
-    "country": "Rwanda",
-    "organization": "JICA Overseas Cooperation Volunteers",
-    "theme": "inclusionCulture",
-    "title": "Tea Ceremony Experience at a Special Needs School in Rwanda",
-    "titleJa": "ルワンダの特別支援学校で茶道体験",
-    "sourceType": "official-diary",
-    "assetType": "article",
-    "url": "https://world-diary.jica.go.jp/JICA_Rwanda/cat2589/post_2.php",
-    "language": [
-      "ja"
-    ],
-    "usageMode": "reference",
-    "contentRole": "people-and-daily-life",
-    "recommendedLevels": [
-      "elementary",
-      "juniorHigh",
-      "highSchoolStandard"
-    ],
-    "studentAccess": {
-      "elementary": "direct-ja",
-      "juniorHigh": "direct-ja",
-      "highSchoolStandard": "direct-ja",
-      "highSchoolAdvanced": "supplementary-ja"
-    },
-    "accessNoteJa": "文化交流・障害のある生徒への配慮・翻訳や手話を考える教材に向く。",
-    "verifiedAt": "2026-09-27"
-  },
-  "unicef_rw_children_overview_001": {
-    "id": "unicef_rw_children_overview_001",
-    "country": "Rwanda",
-    "organization": "UNICEF Rwanda",
-    "theme": "children",
-    "title": "Situation of Children in Rwanda",
-    "titleJa": "ルワンダの子どもたちの状況",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.unicef.org/rwanda/situation-children-rwanda",
-    "language": [
-      "en",
-      "rw"
-    ],
-    "usageMode": "reference",
-    "contentRole": "country-evidence",
-    "recommendedLevels": [
-      "juniorHigh",
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "teacher-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "英語／キニヤルワンダ語。中学生以下は日本語要約や図表の再構成を介して使う。",
-    "verifiedAt": "2026-09-27"
-  },
-  "unicef_rw_education_page_001": {
-    "id": "unicef_rw_education_page_001",
-    "country": "Rwanda",
-    "organization": "UNICEF Rwanda",
-    "theme": "education",
-    "title": "Education in Rwanda",
-    "titleJa": "ルワンダの教育",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.unicef.org/rwanda/education",
-    "language": [
-      "en",
-      "rw"
-    ],
-    "usageMode": "reference",
-    "contentRole": "country-evidence",
-    "recommendedLevels": [
-      "juniorHigh",
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "teacher-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "写真と統計があり、教育Missionの比較資料に向く。",
-    "verifiedAt": "2026-09-27"
-  },
-  "unicef_rw_education_report_2024_001": {
-    "id": "unicef_rw_education_report_2024_001",
-    "country": "Rwanda",
-    "organization": "UNICEF Rwanda",
-    "theme": "education",
-    "title": "Education in Rwanda: A Situation Analysis",
-    "titleJa": "ルワンダ教育：状況分析",
-    "sourceType": "official-report",
-    "assetType": "pdf",
-    "url": "https://www.unicef.org/rwanda/reports/education-rwanda",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-report",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "not-recommended",
-      "juniorHigh": "teacher-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "高校標準は日本語要約、高校発展は英語レポートのグラフ・本文を利用。",
-    "verifiedAt": "2026-09-27"
-  },
-  "unicef_rw_ecd_001": {
-    "id": "unicef_rw_ecd_001",
-    "country": "Rwanda",
-    "organization": "UNICEF Rwanda",
-    "theme": "earlyChildhood",
-    "title": "Early Childhood Development in Rwanda",
-    "titleJa": "ルワンダの乳幼児期の発達",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.unicef.org/rwanda/early-childhood-development",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "country-evidence",
-    "recommendedLevels": [
-      "juniorHigh",
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "teacher-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "子どもの生活・栄養・教育を関連づける資料。",
-    "verifiedAt": "2026-09-27"
-  },
-  "unicef_rw_wash_budget_001": {
-    "id": "unicef_rw_wash_budget_001",
-    "country": "Rwanda",
-    "organization": "UNICEF Rwanda",
-    "theme": "waterSanitation",
-    "title": "WASH Budget Briefs",
-    "titleJa": "水・衛生（WASH）予算ブリーフ",
-    "sourceType": "official-report",
-    "assetType": "web",
-    "url": "https://www.unicef.org/rwanda/reports/wash-budget-briefs",
-    "language": [
-      "en",
-      "rw"
-    ],
-    "usageMode": "reference",
-    "contentRole": "data-and-policy",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "not-recommended",
-      "juniorHigh": "teacher-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "予算・政策を扱う発展資料。高校生の資料読解向き。",
-    "verifiedAt": "2026-09-27"
-  },
-  "unicef_rw_remedial_learning_2026_001": {
-    "id": "unicef_rw_remedial_learning_2026_001",
-    "country": "Rwanda",
-    "organization": "UNICEF Rwanda",
-    "theme": "education",
-    "title": "Unlocking Every Student's Potential",
-    "titleJa": "学習の遅れを支える全国的な補習学習",
-    "sourceType": "official-story",
-    "assetType": "article",
-    "url": "https://www.unicef.org/rwanda/stories/unlocking-every-students-potential",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "human-story",
-    "recommendedLevels": [
-      "juniorHigh",
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "teacher-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "学校現場の具体例。中学生は写真＋日本語要約、高校発展は原文読解に利用。",
-    "verifiedAt": "2026-09-27"
-  },
-  "nisr_rw_census2022_001": {
-    "id": "nisr_rw_census2022_001",
-    "country": "Rwanda",
-    "organization": "National Institute of Statistics of Rwanda (NISR)",
-    "theme": "population",
-    "title": "Fifth Population and Housing Census - 2022",
-    "titleJa": "第5回ルワンダ人口・住宅センサス 2022",
-    "sourceType": "official-data",
-    "assetType": "web",
-    "url": "https://statistics.gov.rw/data-sources/censuses/Population-and-Housing-Census/fifth-population-and-housing-census-2022",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-data",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "not-recommended",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "公式人口統計。中学生はTimePaletteで日本語グラフ化、高校生は一次データ読解。",
-    "verifiedAt": "2026-09-27"
-  },
-  "nisr_rw_census2022_main_001": {
-    "id": "nisr_rw_census2022_main_001",
-    "country": "Rwanda",
-    "organization": "National Institute of Statistics of Rwanda (NISR)",
-    "theme": "population",
-    "title": "Main Indicators: 5th Rwanda Population and Housing Census",
-    "titleJa": "2022人口・住宅センサス主要指標",
-    "sourceType": "official-data",
-    "assetType": "web",
-    "url": "https://www.statistics.gov.rw/data-sources/censuses/Population-and-Housing-Census/fifth-population-and-housing-census-2022/main-indicators-5th-rwanda-population-and-housing-census-phc",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-data",
-    "recommendedLevels": [
-      "juniorHigh",
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "not-recommended",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "主要指標はグラフ・地図Missionへ加工しやすい。",
-    "verifiedAt": "2026-09-27"
-  },
-  "nisr_rw_dhs2025_001": {
-    "id": "nisr_rw_dhs2025_001",
-    "country": "Rwanda",
-    "organization": "National Institute of Statistics of Rwanda (NISR)",
-    "theme": "healthPopulation",
-    "title": "Rwanda Demographic and Health Survey 2025",
-    "titleJa": "ルワンダ人口保健調査 2025",
-    "sourceType": "official-data",
-    "assetType": "web",
-    "url": "https://www.statistics.gov.rw/data-sources/surveys/Demographic-and-Health-Survey/demographic-and-health-survey-2025",
-    "language": [
-      "en",
-      "rw"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-data",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "not-recommended",
-      "juniorHigh": "teacher-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "保健・栄養・家庭・人口の公式調査。高校生向け。",
-    "verifiedAt": "2026-09-27"
-  },
-  "nisr_rw_dhs2025_booklet_001": {
-    "id": "nisr_rw_dhs2025_booklet_001",
-    "country": "Rwanda",
-    "organization": "National Institute of Statistics of Rwanda (NISR)",
-    "theme": "healthPopulation",
-    "title": "Rwanda DHS 2025 Key Indicators / Booklet",
-    "titleJa": "ルワンダ人口保健調査2025 主要指標ブックレット",
-    "sourceType": "official-data",
-    "assetType": "web",
-    "url": "https://www.statistics.gov.rw/data-sources/surveys/Demographic-and-Health-Survey/demographic-and-health-survey-2025/demographic-and-health-survey-2025-key-indicators",
-    "language": [
-      "en",
-      "rw"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-data",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "not-recommended",
-      "juniorHigh": "teacher-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "キニヤルワンダ語版PDFも公開。高校標準は日本語支援で主要指標を扱う。",
-    "verifiedAt": "2026-09-27"
-  },
-  "worldbank_rw_data_001": {
-    "id": "worldbank_rw_data_001",
-    "country": "Rwanda",
-    "organization": "World Bank",
-    "theme": "developmentData",
-    "title": "Rwanda - World Development Indicators",
-    "titleJa": "世界銀行：ルワンダ国別データ",
-    "sourceType": "official-data",
-    "assetType": "data",
-    "url": "https://data.worldbank.org/country/rwanda",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "primary-data",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "not-recommended",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "人口・経済・環境・制度の時系列データ。TimePalette側で日本語グラフ化すると使いやすい。",
-    "verifiedAt": "2026-09-27"
-  },
-  "who_rw_country_001": {
-    "id": "who_rw_country_001",
-    "country": "Rwanda",
-    "organization": "World Health Organization (WHO)",
-    "theme": "health",
-    "title": "Rwanda - WHO Country Profile",
-    "titleJa": "WHO ルワンダ国別ページ",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.who.int/countries/rwa",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "health-evidence",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "not-recommended",
-      "juniorHigh": "teacher-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "保健分野の国別統計・報告書への入口。",
-    "verifiedAt": "2026-09-27"
-  },
-  "fao_rw_country_profile_001": {
-    "id": "fao_rw_country_profile_001",
-    "country": "Rwanda",
-    "organization": "Food and Agriculture Organization of the United Nations (FAO)",
-    "theme": "agriculturePolicy",
-    "title": "Rwanda Country Profile - FAOLEX",
-    "titleJa": "FAO：ルワンダ国別政策・法制度プロフィール",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://www.fao.org/faolex/country-profiles/general-profile/en/?iso3=RWA",
-    "language": [
-      "en"
-    ],
-    "usageMode": "reference",
-    "contentRole": "policy-evidence",
-    "recommendedLevels": [
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "not-recommended",
-      "juniorHigh": "not-recommended",
-      "highSchoolStandard": "teacher-mediated",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "農業・環境政策の発展資料。主に高校発展向け。",
-    "verifiedAt": "2026-09-27"
-  },
-  "unesco_rw_world_heritage_001": {
-    "id": "unesco_rw_world_heritage_001",
-    "country": "Rwanda",
-    "organization": "UNESCO World Heritage Centre",
-    "theme": "heritage",
-    "title": "Rwanda - UNESCO World Heritage Convention",
-    "titleJa": "UNESCO世界遺産：ルワンダ",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://whc.unesco.org/en/statesparties/rw",
-    "language": [
-      "en",
-      "fr"
-    ],
-    "usageMode": "reference",
-    "contentRole": "heritage-overview",
-    "recommendedLevels": [
-      "juniorHigh",
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "teacher-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "世界遺産2件の公式入口。中学生までは日本語解説を付けて利用。",
-    "verifiedAt": "2026-09-27"
-  },
-  "unesco_rw_nyungwe_001": {
-    "id": "unesco_rw_nyungwe_001",
-    "country": "Rwanda",
-    "organization": "UNESCO World Heritage Centre",
-    "theme": "natureBiodiversity",
-    "title": "Nyungwe National Park",
-    "titleJa": "ニョンウェ国立公園",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://whc.unesco.org/en/list/1697",
-    "language": [
-      "en",
-      "fr"
-    ],
-    "usageMode": "reference",
-    "contentRole": "heritage-primary-source",
-    "recommendedLevels": [
-      "elementary",
-      "juniorHigh",
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "ja-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "小中学生は写真・地図・生物多様性を日本語で扱い、高校発展は英語説明を読む。",
-    "verifiedAt": "2026-09-27"
-  },
-  "unesco_rw_genocide_memorials_001": {
-    "id": "unesco_rw_genocide_memorials_001",
-    "country": "Rwanda",
-    "organization": "UNESCO World Heritage Centre",
-    "theme": "peaceMemory",
-    "title": "Memorial sites of the Genocide: Nyamata, Murambi, Gisozi and Bisesero",
-    "titleJa": "ジェノサイド記憶遺産：ニャマタ、ムランビ、ギソジ、ビセセロ",
-    "sourceType": "official",
-    "assetType": "web",
-    "url": "https://whc.unesco.org/en/list/1586",
-    "language": [
-      "en",
-      "fr"
-    ],
-    "usageMode": "reference",
-    "contentRole": "sensitive-history-primary-source",
-    "recommendedLevels": [
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "not-recommended",
-      "juniorHigh": "teacher-mediated-only",
-      "highSchoolStandard": "ja-supported-sensitive",
-      "highSchoolAdvanced": "original-sensitive"
-    },
-    "sensitiveContent": true,
-    "accessNoteJa": "虐殺・死に関する重い内容を含む。小学生には使用せず、中学生も教師判断。高校では平和・記憶・対話の文脈で慎重に扱う。",
-    "verifiedAt": "2026-09-27"
-  },
-  "peacecorps_rw_kinyarwanda_001": {
-    "id": "peacecorps_rw_kinyarwanda_001",
-    "country": "Rwanda",
-    "organization": "Peace Corps",
-    "theme": "language",
-    "title": "Kinyarwanda Language Lessons",
-    "titleJa": "キニヤルワンダ語レッスン",
-    "sourceType": "official-education",
-    "assetType": "pdf",
-    "url": "https://files.peacecorps.gov/multimedia/audio/languagelessons/rwanda/RW_Kinyarwanda_Language_Lessons.pdf",
-    "language": [
-      "en",
-      "rw"
-    ],
-    "usageMode": "reference",
-    "contentRole": "language-reference",
-    "recommendedLevels": [
-      "juniorHigh",
-      "highSchoolStandard",
-      "highSchoolAdvanced"
-    ],
-    "studentAccess": {
-      "elementary": "teacher-mediated",
-      "juniorHigh": "ja-mediated",
-      "highSchoolStandard": "ja-supported",
-      "highSchoolAdvanced": "original"
-    },
-    "accessNoteJa": "現地語の挨拶・基本表現の確認用。小学生はTimePalette側で短い表現だけ提示。",
-    "verifiedAt": "2026-09-27"
+    "sources": {
+      "rw-map-geography": {
+        "organization": "Government of Rwanda / Embassy of Rwanda in Japan",
+        "title": "Practical Info – Rwanda: Geography, Borders and General Information",
+        "type": "webpage",
+        "url": "https://www.rwandainjapan.gov.rw/info/practical-info",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "current",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "geography",
+          "landlocked",
+          "neighbors",
+          "land-of-a-thousand-hills",
+          "regional-awareness"
+        ],
+        "supports": [
+          "Rwanda is landlocked",
+          "Rwanda borders Uganda, Tanzania, Burundi and the Democratic Republic of the Congo",
+          "Rwanda is known as the Land of a Thousand Hills"
+        ],
+        "usedByMissions": [
+          "rw-m01",
+          "rw-m02",
+          "rw-m03",
+          "rw-m04",
+          "rw-m05",
+          "rw-m15",
+          "rw-m16",
+          "rw-m19",
+          "rw-m37",
+          "rw-m38",
+          "rw-m40"
+        ],
+        "resources": [
+          {
+            "title": "City of Kigali – Overview",
+            "organization": "City of Kigali",
+            "type": "webpage",
+            "url": "https://www.kigalicity.gov.rw/about/overview",
+            "language": [
+              "en"
+            ],
+            "use": "Kigali location and city context"
+          },
+          {
+            "title": "About Rwanda",
+            "organization": "Government of Rwanda – Directorate General of Immigration and Emigration",
+            "type": "webpage",
+            "url": "https://www.migration.gov.rw/about-rwanda",
+            "language": [
+              "en"
+            ],
+            "use": "Borders, terrain and Land of a Thousand Hills"
+          }
+        ],
+        "studentAccess": {
+          "elementary": "direct-with-map",
+          "juniorHigh": "direct",
+          "highSchoolStandard": "direct",
+          "highSchoolAdvanced": "direct"
+        },
+        "note": "Exact interactive map geometry and city plotting coordinates are app data; these official pages support the geographic narrative."
+      },
+      "rw-government-profile": {
+        "organization": "Government of Rwanda",
+        "title": "About the Government of Rwanda – People, Culture and National Profile",
+        "type": "webpage",
+        "url": "https://www.gov.rw/about",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "current",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "country-profile",
+          "official-languages",
+          "people",
+          "culture"
+        ],
+        "supports": [
+          "Kinyarwanda is spoken throughout Rwanda",
+          "English, French and Kiswahili are also official languages",
+          "Government profile and cultural context"
+        ],
+        "usedByMissions": [
+          "rw-m03",
+          "rw-m11",
+          "rw-m16",
+          "rw-m19",
+          "rw-m38",
+          "rw-m39",
+          "rw-m40"
+        ],
+        "resources": [
+          {
+            "title": "Fifth Rwanda Population and Housing Census – Education",
+            "organization": "National Institute of Statistics of Rwanda",
+            "type": "pdf",
+            "url": "https://www.statistics.gov.rw/sites/default/files/documents/2025-02/Education.pdf",
+            "language": [
+              "en"
+            ],
+            "use": "Official-language and literacy context"
+          }
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "teacher-mediated",
+          "highSchoolStandard": "direct-with-Japanese-support",
+          "highSchoolAdvanced": "direct"
+        }
+      },
+      "rw-time-zone": {
+        "organization": "Government of Rwanda / Timeanddate.com",
+        "title": "Rwanda and Japan Time Zones",
+        "type": "reference",
+        "url": "https://www.timeanddate.com/time/zone/rwanda/kigali",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "authoritative-reference",
+        "dataYear": "current",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "time-zone",
+          "UTC",
+          "Kigali",
+          "Tokyo",
+          "daylight-saving-time"
+        ],
+        "supports": [
+          "Kigali uses UTC+2",
+          "Tokyo uses UTC+9",
+          "Rwanda and Japan do not currently use daylight saving time",
+          "Tokyo is normally seven hours ahead of Kigali"
+        ],
+        "usedByMissions": [
+          "rw-m06",
+          "rw-m07",
+          "rw-m08",
+          "rw-m09",
+          "rw-m40"
+        ],
+        "machineData": {
+          "kigali": {
+            "iana": "Africa/Kigali",
+            "utcOffset": "+02:00",
+            "dst": false
+          },
+          "tokyo": {
+            "iana": "Asia/Tokyo",
+            "utcOffset": "+09:00",
+            "dst": false
+          },
+          "differenceHours": 7
+        },
+        "resources": [
+          {
+            "title": "Practical Info – Embassy of Rwanda in Japan",
+            "organization": "Embassy of Rwanda in Japan",
+            "type": "webpage",
+            "url": "https://www.rwandainjapan.gov.rw/info/practical-info",
+            "language": [
+              "en"
+            ],
+            "use": "Official Rwanda UTC+2 reference"
+          },
+          {
+            "title": "Time Zone & Clock Changes in Tokyo",
+            "organization": "Timeanddate.com",
+            "type": "webpage",
+            "url": "https://www.timeanddate.com/time/zone/japan/tokyo",
+            "language": [
+              "en"
+            ],
+            "use": "Tokyo UTC+9 and no DST"
+          }
+        ],
+        "studentAccess": {
+          "elementary": "app-generated",
+          "juniorHigh": "app-generated",
+          "highSchoolStandard": "app-generated",
+          "highSchoolAdvanced": "direct"
+        }
+      },
+      "rw-language-basics": {
+        "organization": "Peace Corps",
+        "title": "Trainee Kinyarwanda Book – Rwanda",
+        "type": "pdf",
+        "url": "https://files.peacecorps.gov/multimedia/audio/languagelessons/rwanda/RW_Kinyarwanda_Language_Lessons.pdf",
+        "language": [
+          "rw",
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "reference",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "Kinyarwanda",
+          "greetings",
+          "Muraho",
+          "Murakoze",
+          "communication"
+        ],
+        "supports": [
+          "Muraho is used as a greeting",
+          "Murakoze is used for thanks",
+          "Basic Kinyarwanda communication examples"
+        ],
+        "usedByMissions": [
+          "rw-m10",
+          "rw-m12",
+          "rw-m13",
+          "rw-m14",
+          "rw-m39",
+          "rw-m40"
+        ],
+        "studentAccess": {
+          "elementary": "audio-or-teacher-mediated",
+          "juniorHigh": "selected-extract",
+          "highSchoolStandard": "selected-extract",
+          "highSchoolAdvanced": "direct"
+        }
+      },
+      "rw-food-culture": {
+        "organization": "Lonely Planet",
+        "title": "Rwanda's food scene: The taste of a nation",
+        "type": "webpage",
+        "url": "https://www.lonelyplanet.com/articles/gateway-to-rwanda-food",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "reputable-secondary",
+        "dataYear": "2023",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "food",
+          "brochettes",
+          "daily-life",
+          "culture"
+        ],
+        "supports": [
+          "Brochettes are part of Rwandan cuisine",
+          "Food culture is diverse and should not be reduced to one dish"
+        ],
+        "usedByMissions": [
+          "rw-m17"
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "teacher-mediated",
+          "highSchoolStandard": "direct-with-support",
+          "highSchoolAdvanced": "direct"
+        },
+        "note": "Secondary source. Included because a stable Rwanda-government page directly supporting the Brochettes example was not confirmed during verification."
+      },
+      "rw-government-culture": {
+        "organization": "Government of Rwanda",
+        "title": "About the Government of Rwanda – Home-Grown Solutions and Culture",
+        "type": "webpage",
+        "url": "https://www.gov.rw/about",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "current",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "Umuganda",
+          "community-work",
+          "culture",
+          "civic-participation"
+        ],
+        "supports": [
+          "Umuganda is a Rwandan community-work practice"
+        ],
+        "usedByMissions": [
+          "rw-m20"
+        ],
+        "resources": [
+          {
+            "title": "Rwandan Culture and Traditions – Umuganda",
+            "organization": "Visit Rwanda",
+            "type": "webpage",
+            "url": "https://visitrwanda.com/interests/rwandan-culture-and-traditions/",
+            "language": [
+              "en"
+            ],
+            "use": "Student-friendly explanation of Umuganda"
+          },
+          {
+            "title": "Umuganda being Transformed by Initiatives from Citizens",
+            "organization": "Ministry of Local Government, Rwanda",
+            "type": "webpage",
+            "url": "https://www.minaloc.gov.rw/news-detail/umuganda-being-transformed-by-initiatives-from-citizens",
+            "language": [
+              "en"
+            ],
+            "use": "Government example of citizen-led community work"
+          }
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "direct-with-support",
+          "highSchoolStandard": "direct",
+          "highSchoolAdvanced": "direct"
+        }
+      },
+      "jica-rw-cooperation-overview": {
+        "organization": "JICA Rwanda Office",
+        "title": "JICA Rwanda Brochure 2025 – Sector Goals",
+        "type": "pdf",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/others/__icsFiles/afieldfile/2026/03/19/JICARwanda_brochure2025.pdf",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "2025",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "Japan-Rwanda cooperation",
+          "infrastructure",
+          "agriculture",
+          "water-sanitation",
+          "education",
+          "ICT",
+          "health-nutrition"
+        ],
+        "supports": [
+          "JICA Rwanda works across multiple sectors",
+          "Cooperation includes infrastructure, agriculture, water and sanitation, education and ICT",
+          "JICA frames activities around partnership and capacity development"
+        ],
+        "usedByMissions": [
+          "rw-m05",
+          "rw-m32",
+          "rw-m33",
+          "rw-m34",
+          "rw-m35",
+          "rw-m36",
+          "rw-m37",
+          "rw-m38",
+          "rw-m40"
+        ],
+        "resources": [
+          {
+            "title": "Rwanda – Where We Work",
+            "organization": "JICA",
+            "type": "webpage",
+            "url": "https://www.jica.go.jp/english/overseas/rwanda/index.html",
+            "language": [
+              "en"
+            ],
+            "use": "Current Rwanda office overview and latest news"
+          }
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "teacher-mediated",
+          "highSchoolStandard": "direct-with-support",
+          "highSchoolAdvanced": "direct"
+        }
+      },
+      "jica-rw-water-rwasom2": {
+        "organization": "JICA Rwanda Office",
+        "title": "Water and Sanitation Sector – Rural Water Supply Services and Infrastructure Management Development (RWASOM 2)",
+        "type": "webpage",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_08.html",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "2021-2027",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "water",
+          "sanitation",
+          "rural-water-supply",
+          "maintenance",
+          "management",
+          "community",
+          "RWASOM2"
+        ],
+        "supports": [
+          "RWASOM2 runs from October 2021 to October 2027",
+          "The project strengthens operation and maintenance of rural water supply",
+          "Local districts, operators, engineers, water users committees and other stakeholders are involved"
+        ],
+        "usedByMissions": [
+          "rw-m21",
+          "rw-m23"
+        ],
+        "resources": [
+          {
+            "title": "Signing of Record of Discussions – Rural Water Supply Services and Infrastructure Management Development",
+            "organization": "JICA",
+            "type": "webpage",
+            "url": "https://www.jica.go.jp/english/information/press/2021/20210610_30.html",
+            "language": [
+              "en"
+            ],
+            "use": "Project purpose and management details"
+          },
+          {
+            "title": "Clean Water for People’s Lives: A 20-Year Journey of Rwanda–Japan Cooperation Transforming Communities",
+            "organization": "JICA Rwanda Office",
+            "type": "webpage",
+            "url": "https://www.jica.go.jp/english/overseas/rwanda/information/press/2026/1581585_71005.html",
+            "language": [
+              "en"
+            ],
+            "use": "2026 human-centered example of rural water services and community maintenance"
+          }
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "selected-extract",
+          "highSchoolStandard": "direct-with-support",
+          "highSchoolAdvanced": "direct"
+        }
+      },
+      "jica-rw-water-media": {
+        "organization": "JICA",
+        "title": "Teaching Materials about Water, Rwanda and International Cooperation",
+        "type": "media-collection",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/office/video.html",
+        "language": [
+          "ja",
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "2020-2026",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "water",
+          "Rwanda",
+          "daily-life",
+          "international-cooperation",
+          "video",
+          "development-education"
+        ],
+        "supports": [
+          "Visual learning about Rwanda and water",
+          "Urban and rural daily-life comparison",
+          "Water-access reflection",
+          "JICA Rwanda water-sector overview"
+        ],
+        "usedByMissions": [
+          "rw-m21",
+          "rw-m22",
+          "rw-m23",
+          "rw-m24"
+        ],
+        "defaultResourceId": "water-rwanda-overview",
+        "resources": [
+          {
+            "id": "water-rwanda-overview",
+            "title": "JICA Rwanda Office's Interventions in Water and Sanitation Sector",
+            "organization": "JICA",
+            "type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ZBPgwpWY-TQ",
+            "language": [
+              "en"
+            ],
+            "year": 2024,
+            "recommendedFor": [
+              "highSchoolStandard",
+              "highSchoolAdvanced"
+            ]
+          },
+          {
+            "id": "rwanda-country-intro-ja",
+            "title": "世界につながる教室 2．ルワンダってどんな国？",
+            "organization": "JICA",
+            "type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9LyfKTWGf0s",
+            "language": [
+              "ja"
+            ],
+            "year": 2020,
+            "recommendedFor": [
+              "elementary",
+              "juniorHigh",
+              "highSchoolStandard"
+            ]
+          },
+          {
+            "id": "rwanda-urban-child-ja",
+            "title": "世界につながる教室 3．ルワンダ都心部の子どもの一日",
+            "organization": "JICA",
+            "type": "youtube",
+            "url": "https://www.youtube.com/watch?v=8lEFXQfZs4M",
+            "language": [
+              "ja"
+            ],
+            "year": 2020,
+            "recommendedFor": [
+              "elementary",
+              "juniorHigh",
+              "highSchoolStandard"
+            ]
+          },
+          {
+            "id": "rwanda-rural-child-ja",
+            "title": "世界につながる教室 4．ルワンダ村落部の子どもの一日",
+            "organization": "JICA",
+            "type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7QsFBAEMD4Y",
+            "language": [
+              "ja"
+            ],
+            "year": 2020,
+            "recommendedFor": [
+              "elementary",
+              "juniorHigh",
+              "highSchoolStandard"
+            ]
+          },
+          {
+            "id": "without-water-ja",
+            "title": "世界につながる教室 6．もし水がなかったら…",
+            "organization": "JICA",
+            "type": "youtube",
+            "url": "https://www.youtube.com/watch?v=j_Xqnz1KdDw",
+            "language": [
+              "ja"
+            ],
+            "year": 2020,
+            "recommendedFor": [
+              "elementary",
+              "juniorHigh",
+              "highSchoolStandard"
+            ]
+          },
+          {
+            "id": "cooperation-interview-jica-expert-ja",
+            "title": "世界につながる教室 7．国際協力活動に取り組む人々のインタビュー",
+            "organization": "JICA",
+            "type": "youtube",
+            "url": "https://www.youtube.com/watch?v=CW5OFnzDG0I",
+            "language": [
+              "ja"
+            ],
+            "year": 2020,
+            "recommendedFor": [
+              "juniorHigh",
+              "highSchoolStandard"
+            ]
+          }
+        ],
+        "catalogProof": {
+          "title": "JICA-Net Multimedia-Based Learning Materials – Media List",
+          "url": "https://www.jica.go.jp/english/our_work/types_of_assistance/tech/projects/activities/231128/jicanet_medialist_all_231128.pdf"
+        },
+        "studentAccess": {
+          "elementary": "direct-Japanese-video",
+          "juniorHigh": "direct-Japanese-video",
+          "highSchoolStandard": "Japanese-video-plus-official-English-source",
+          "highSchoolAdvanced": "official-English-video-and-project-source"
+        }
+      },
+      "jica-rw-wamcab2": {
+        "organization": "JICA",
+        "title": "Project for Water Management and Capacity Building Phase 2 (WAMCAB2)",
+        "type": "webpage",
+        "url": "https://www.jica.go.jp/oda/project/202311738/",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "2025-2029",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "agriculture",
+          "irrigation",
+          "water-management",
+          "IWUO",
+          "maintenance",
+          "market-oriented-agriculture"
+        ],
+        "supports": [
+          "WAMCAB2 is a technical cooperation project from May 2025 to May 2029",
+          "It expands capacity for irrigation management",
+          "Water-user organizations and equitable water distribution are important"
+        ],
+        "usedByMissions": [
+          "rw-m25"
+        ],
+        "resources": [
+          {
+            "title": "Agriculture Sector – WAMCAB2",
+            "organization": "JICA Rwanda Office",
+            "type": "webpage",
+            "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_01.html",
+            "language": [
+              "en"
+            ],
+            "use": "English project explanation"
+          }
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "teacher-mediated",
+          "highSchoolStandard": "direct-Japanese",
+          "highSchoolAdvanced": "English-sector-page"
+        }
+      },
+      "jica-rw-agriculture": {
+        "organization": "JICA Rwanda Office",
+        "title": "Agriculture Sector – JICA Intervention in Rwanda",
+        "type": "webpage",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_01.html",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "current",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "agriculture",
+          "irrigation",
+          "productivity",
+          "market",
+          "coffee",
+          "value-chain"
+        ],
+        "supports": [
+          "JICA agriculture cooperation includes irrigation management and coffee value-chain development",
+          "Agriculture links production, water management, capacity and markets"
+        ],
+        "usedByMissions": [
+          "rw-m25",
+          "rw-m26",
+          "rw-m27"
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "teacher-mediated",
+          "highSchoolStandard": "direct-with-support",
+          "highSchoolAdvanced": "direct"
+        }
+      },
+      "jica-rw-coffee-cup2": {
+        "organization": "JICA Rwanda Office",
+        "title": "Project for Strengthening and Promoting Coffee Value Chain (CUP2)",
+        "type": "webpage",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_01.html",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "2021-2025",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "coffee",
+          "value-chain",
+          "quality",
+          "processing",
+          "cooperatives",
+          "market"
+        ],
+        "supports": [
+          "CUP2 worked across the coffee value chain",
+          "The project supported cooperatives, quality improvement and international market positioning"
+        ],
+        "usedByMissions": [
+          "rw-m18",
+          "rw-m27",
+          "rw-m28"
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "selected-extract",
+          "highSchoolStandard": "direct-with-support",
+          "highSchoolAdvanced": "direct"
+        }
+      },
+      "jica-rw-coffee-2026": {
+        "organization": "JICA Rwanda Office",
+        "title": "A 12-Year Journey in Coffee Sector With JICA: Rwandan Farmers Share Experience",
+        "type": "webpage",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/information/press/2025/1581380_59675.html",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "2026",
+        "publishedAt": "2026-03-31",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "coffee",
+          "Best of Rwanda",
+          "Japan",
+          "buyers",
+          "quality",
+          "processing",
+          "international-market"
+        ],
+        "supports": [
+          "JICA supported quality, processing, training and buyer connections",
+          "Best of Rwanda links producers with international buyers",
+          "Cupping roadshows were held in Japan and China",
+          "Japan and China purchased a substantial share of winning lots in 2024 and 2025"
+        ],
+        "usedByMissions": [
+          "rw-m28"
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "teacher-mediated",
+          "highSchoolStandard": "selected-extract",
+          "highSchoolAdvanced": "direct"
+        }
+      },
+      "jica-rw-prism": {
+        "organization": "JICA Rwanda Office",
+        "title": "Education Sector – Project to Strengthen Primary School Mathematics and Science with the Use of ICT (PRISM)",
+        "type": "webpage",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_03.html",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "2021-2026",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "education",
+          "teacher-training",
+          "mathematics",
+          "science",
+          "ICT",
+          "PRISM"
+        ],
+        "supports": [
+          "PRISM ran from September 2021 to August 2026",
+          "The project aimed to improve mathematics and science lessons through stronger teacher education",
+          "ICT is used as a means to strengthen project outputs"
+        ],
+        "usedByMissions": [
+          "rw-m29",
+          "rw-m30"
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "teacher-mediated",
+          "highSchoolStandard": "direct-with-support",
+          "highSchoolAdvanced": "direct"
+        }
+      },
+      "jica-rw-digital-project": {
+        "organization": "JICA",
+        "title": "Digital & Innovation Promotion Project",
+        "type": "webpage",
+        "url": "https://www.jica.go.jp/oda/project/202005081/",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "2022-2026",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "ICT",
+          "innovation",
+          "entrepreneurship",
+          "public-services",
+          "market-creation",
+          "government-capacity"
+        ],
+        "supports": [
+          "The project strengthened ICT entrepreneur support",
+          "It promoted innovation through public-private collaboration and digital public services",
+          "It strengthened government capacity to coordinate ICT initiatives"
+        ],
+        "usedByMissions": [
+          "rw-m31",
+          "rw-m32"
+        ],
+        "resources": [
+          {
+            "title": "ICT Sector – The Digital and Innovation Promotion Project",
+            "organization": "JICA Rwanda Office",
+            "type": "webpage",
+            "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_05.html",
+            "language": [
+              "en"
+            ],
+            "use": "English sector overview"
+          }
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "teacher-mediated",
+          "highSchoolStandard": "direct-Japanese",
+          "highSchoolAdvanced": "English-sector-page"
+        }
+      },
+      "jica-rw-ict-sector": {
+        "organization": "JICA Rwanda Office",
+        "title": "ICT Sector – JICA Intervention in Rwanda",
+        "type": "webpage",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_05.html",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "dataYear": "current",
+        "verifiedAt": "2026-09-27",
+        "topics": [
+          "ICT",
+          "innovation-ecosystem",
+          "entrepreneurs",
+          "digital-public-services",
+          "human-capacity"
+        ],
+        "supports": [
+          "Rwanda treats ICT as a tool for transformation and knowledge-based economic development",
+          "JICA has worked with Rwanda on the innovation ecosystem and entrepreneur support"
+        ],
+        "usedByMissions": [
+          "rw-m31"
+        ],
+        "studentAccess": {
+          "elementary": "teacher-mediated",
+          "juniorHigh": "teacher-mediated",
+          "highSchoolStandard": "direct-with-support",
+          "highSchoolAdvanced": "direct"
+        }
+      }
+    }
   }
 }

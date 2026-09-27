@@ -1,9 +1,9 @@
 import {
+  ArrowLeft,
   CheckCircle2,
   LockKeyhole,
   Play,
   Sparkles,
-  Trophy,
 } from 'lucide-react';
 
 import {
@@ -32,25 +32,19 @@ const INTERACTIVE_MISSION_TYPES = new Set([
   'time-dial',
   'daypart-match',
   'schedule-builder',
-
   'global-challenge',
   'source-quest',
-
   'map-tap',
   'city-map',
-
   'matching',
   'speaking',
   'speaking-template',
   'speaking-creator',
-
   'region-sort',
-
   'sorting',
   'connection-chain',
   'daily-life-hunt',
   'quiz-creator',
-
   'compare-builder',
   'evidence-check',
   'question-creator',
@@ -63,13 +57,9 @@ const isMissionPlayable = (
 ) => {
   const hasChoiceChallenge =
     Array.isArray(
-      mission
-        ?.challenge
-        ?.choices
+      mission?.challenge?.choices
     ) &&
-    typeof mission
-      ?.challenge
-      ?.correctIndex ===
+    typeof mission?.challenge?.correctIndex ===
       'number';
 
   return (
@@ -92,38 +82,31 @@ const LEARNING_LEVELS = [
     icon: '🧒',
     label: '小学生',
     labelEn: 'Elementary',
-    description:
-      '見る・選ぶ・発見する',
+    description: '見る・選ぶ・発見する',
   },
-
   {
     id: 'juniorHigh',
     profileKey: 'challenger',
     icon: '🧑',
     label: '中学生',
     labelEn: 'Junior High',
-    description:
-      '比べる・理由を考える',
+    description: '比べる・理由を考える',
   },
-
   {
     id: 'highSchoolStandard',
     profileKey: 'globalBridge',
     icon: '🎓',
     label: '高校生',
     labelEn: 'High School',
-    description:
-      '日本語で世界の課題を深く考える',
+    description: '日本語で世界の課題を深く考える',
   },
-
   {
     id: 'highSchoolAdvanced',
     profileKey: 'globalExplorer',
     icon: '🚀',
     label: '高校生 Challenge',
     labelEn: 'High School Challenge',
-    description:
-      '英語を使って世界を探究する',
+    description: '英語を使って世界を探究する',
   },
 ];
 
@@ -139,33 +122,19 @@ const getLearningLevelMeta = (
   LEARNING_LEVELS[2];
 
 
-/* =========================================================
-   APPLY LEARNING LEVEL TO MISSION
-========================================================= */
-
 const applyLearningLevelToMission = (
   mission,
   learningLevelId
 ) => {
+  if (!learningLevelId) {
+    return mission;
+  }
+
   const level =
     getLearningLevelMeta(
       learningLevelId
     );
 
-  /*
-   * Mission Standard v2
-   *
-   * 将来的には各Missionに
-   *
-   * variants: {
-   *   elementary: {},
-   *   juniorHigh: {},
-   *   highSchoolStandard: {},
-   *   highSchoolAdvanced: {}
-   * }
-   *
-   * を持たせる。
-   */
   const variant =
     mission?.variants?.[
       learningLevelId
@@ -175,83 +144,46 @@ const applyLearningLevelToMission = (
     return {
       ...mission,
       ...variant,
-
-      /*
-       * Mission ID / Domain / WP は
-       * 学習レベルが変わっても共通。
-       */
-      id:
-        mission.id,
-
-      domain:
-        mission.domain,
-
-      points:
-        mission.points,
-
+      id: mission.id,
+      domain: mission.domain,
+      points: mission.points,
       requiredForMastery:
         mission.requiredForMastery,
-
       learningLevelId,
-
       learningLevelLabel:
         level.label,
     };
   }
 
-
-  /*
-   * 現在のSource Quest用。
-   *
-   * M23では
-   *
-   * explorer
-   * challenger
-   * globalBridge
-   * globalExplorer
-   *
-   * を使用しているため、
-   * 学校段階に対応するprofileだけを渡す。
-   */
   const profile =
-    mission
-      ?.difficultyProfiles
-      ?.[level.profileKey];
-
+    mission?.difficultyProfiles?.[
+      level.profileKey
+    ];
 
   if (!profile) {
     return {
       ...mission,
-
       learningLevelId,
-
       learningLevelLabel:
         level.label,
     };
   }
 
-
   return {
     ...mission,
-
     title:
       profile.title ??
       mission.title,
-
     prompt:
       profile.prompt ??
       mission.prompt,
-
     defaultDifficulty:
       level.profileKey,
-
     difficultyProfiles: {
       [level.profileKey]:
         profile,
     },
-
     learningLevelId,
-
     learningLevelLabel:
       level.label,
   };
@@ -259,7 +191,7 @@ const applyLearningLevelToMission = (
 
 
 /* =========================================================
-   MISSION NUMBER
+   HELPERS
 ========================================================= */
 
 const getMissionNumber = (
@@ -284,10 +216,6 @@ const getMissionNumber = (
   )}`;
 };
 
-
-/* =========================================================
-   MISSION JSON LOADER
-========================================================= */
 
 const missionModules =
   import.meta.glob(
@@ -332,10 +260,6 @@ const getMissionCountryData = (
 };
 
 
-/* =========================================================
-   FLAG
-========================================================= */
-
 const makeFlagEmoji = (
   countryCode
 ) => {
@@ -367,41 +291,32 @@ const makeFlagEmoji = (
 };
 
 
-/* =========================================================
-   BADGES
-========================================================= */
-
 const BADGE_META = {
   none: {
     icon: '🌍',
     label: 'Start Exploring',
     labelJa: '冒険を始めよう',
   },
-
   stamp: {
     icon: '🌏',
     label: 'Explorer Stamp',
     labelJa: '探索スタンプ',
   },
-
   bronze: {
     icon: '🥉',
     label: 'Explorer Badge',
     labelJa: 'エクスプローラー',
   },
-
   silver: {
     icon: '🥈',
     label: 'Discovery Badge',
     labelJa: 'ディスカバリー',
   },
-
   gold: {
     icon: '🥇',
     label: 'Country Master',
     labelJa: 'カントリーマスター',
   },
-
   diamond: {
     icon: '💎',
     label: 'Connector Badge',
@@ -409,10 +324,6 @@ const BADGE_META = {
   },
 };
 
-
-/* =========================================================
-   DOMAIN COLORS
-========================================================= */
 
 const DOMAIN_THEME = {
   place: {
@@ -422,7 +333,6 @@ const DOMAIN_THEME = {
     border: '#a7f3d0',
     label: 'EXPLORE THE MAP',
   },
-
   time: {
     accent: '#f59e0b',
     dark: '#b45309',
@@ -430,7 +340,6 @@ const DOMAIN_THEME = {
     border: '#fde68a',
     label: 'TRAVEL THROUGH TIME',
   },
-
   language: {
     accent: '#8b5cf6',
     dark: '#6d28d9',
@@ -438,7 +347,6 @@ const DOMAIN_THEME = {
     border: '#ddd6fe',
     label: 'USE YOUR VOICE',
   },
-
   lifeCulture: {
     accent: '#f97316',
     dark: '#c2410c',
@@ -446,7 +354,6 @@ const DOMAIN_THEME = {
     border: '#fed7aa',
     label: 'DISCOVER DAILY LIFE',
   },
-
   japanConnection: {
     accent: '#3b82f6',
     dark: '#1d4ed8',
@@ -454,7 +361,6 @@ const DOMAIN_THEME = {
     border: '#bfdbfe',
     label: 'CONNECT WITH JAPAN',
   },
-
   thinkConnect: {
     accent: '#ec4899',
     dark: '#be185d',
@@ -474,10 +380,6 @@ const DEFAULT_DOMAIN_THEME = {
 };
 
 
-/* =========================================================
-   DOMAIN PROGRESS
-========================================================= */
-
 const getDomainCounts = (
   missionData,
   completedIds
@@ -485,9 +387,7 @@ const getDomainCounts = (
   const counts = {};
 
   const domains =
-    missionData
-      ?.design
-      ?.domains ??
+    missionData?.design?.domains ??
     [];
 
   domains.forEach(
@@ -499,8 +399,7 @@ const getDomainCounts = (
   );
 
   (
-    missionData
-      ?.missions ??
+    missionData?.missions ??
     []
   ).forEach(
     (mission) => {
@@ -526,10 +425,6 @@ const getDomainCounts = (
 };
 
 
-/* =========================================================
-   BADGE CALCULATION
-========================================================= */
-
 const qualifiesForRule = ({
   rule,
   completedCount,
@@ -541,7 +436,6 @@ const qualifiesForRule = ({
     return false;
   }
 
-
   if (
     rule.minMissions &&
     completedCount <
@@ -550,7 +444,6 @@ const qualifiesForRule = ({
     return false;
   }
 
-
   if (
     rule.minWorldPoints &&
     totalPoints <
@@ -558,7 +451,6 @@ const qualifiesForRule = ({
   ) {
     return false;
   }
-
 
   if (
     rule.minDomains
@@ -578,7 +470,6 @@ const qualifiesForRule = ({
       return false;
     }
   }
-
 
   if (
     rule.domainMinimums
@@ -600,34 +491,26 @@ const qualifiesForRule = ({
           minimum
       );
 
-    if (
-      !allDomainsClear
-    ) {
+    if (!allDomainsClear) {
       return false;
     }
   }
-
 
   if (
     rule.requiredMissionIds
   ) {
     const allRequiredClear =
-      rule
-        .requiredMissionIds
-        .every(
-          (missionId) =>
-            completedIds.has(
-              missionId
-            )
-        );
+      rule.requiredMissionIds.every(
+        (missionId) =>
+          completedIds.has(
+            missionId
+          )
+      );
 
-    if (
-      !allRequiredClear
-    ) {
+    if (!allRequiredClear) {
       return false;
     }
   }
-
 
   return true;
 };
@@ -643,8 +526,7 @@ const calculateBadge = (
     completedIds.size;
 
   const rules =
-    missionData
-      ?.badgeRules ??
+    missionData?.badgeRules ??
     {};
 
   const shared = {
@@ -654,64 +536,190 @@ const calculateBadge = (
     completedIds,
   };
 
-
   if (
     qualifiesForRule({
-      rule:
-        rules.diamond,
+      rule: rules.diamond,
       ...shared,
     })
   ) {
     return 'diamond';
   }
 
-
   if (
     qualifiesForRule({
-      rule:
-        rules.gold,
+      rule: rules.gold,
       ...shared,
     })
   ) {
     return 'gold';
   }
 
-
   if (
     qualifiesForRule({
-      rule:
-        rules.silver,
+      rule: rules.silver,
       ...shared,
     })
   ) {
     return 'silver';
   }
 
-
   if (
     qualifiesForRule({
-      rule:
-        rules.bronze,
+      rule: rules.bronze,
       ...shared,
     })
   ) {
     return 'bronze';
   }
 
-
   if (
     qualifiesForRule({
-      rule:
-        rules.stamp,
+      rule: rules.stamp,
       ...shared,
     })
   ) {
     return 'stamp';
   }
 
-
   return 'none';
 };
+
+
+/* =========================================================
+   STEP INDICATOR
+========================================================= */
+
+function StepIndicator({
+  currentStep,
+  selectedLearningLevel,
+  selectedDomain,
+  onGoLevel,
+  onGoZone,
+}) {
+  const steps = [
+    {
+      number: 1,
+      label: 'LEVEL',
+      labelJa: '学習レベル',
+      enabled: true,
+      onClick: onGoLevel,
+    },
+    {
+      number: 2,
+      label: 'ZONE',
+      labelJa: '冒険ゾーン',
+      enabled:
+        Boolean(
+          selectedLearningLevel
+        ),
+      onClick: onGoZone,
+    },
+    {
+      number: 3,
+      label: 'MISSION',
+      labelJa: 'ミッション',
+      enabled:
+        Boolean(
+          selectedLearningLevel &&
+          selectedDomain
+        ),
+      onClick: null,
+    },
+  ];
+
+  return (
+    <div className="grid grid-cols-3 gap-2 rounded-[22px] border border-slate-200 bg-white p-2 shadow-sm">
+      {steps.map(
+        (step) => {
+          const active =
+            currentStep ===
+            step.number;
+
+          const complete =
+            currentStep >
+            step.number;
+
+          return (
+            <button
+              key={
+                step.number
+              }
+              type="button"
+              disabled={
+                !step.enabled ||
+                !step.onClick
+              }
+              onClick={
+                step.onClick ??
+                undefined
+              }
+              className={`
+                flex
+                min-w-0
+                items-center
+                gap-3
+                rounded-2xl
+                px-3
+                py-3
+                text-left
+                transition
+                md:px-4
+
+                ${
+                  active
+                    ? 'bg-slate-950 text-white shadow-lg'
+                    : complete
+                      ? 'bg-blue-50 text-blue-700 hover:bg-blue-100'
+                      : 'bg-slate-50 text-slate-400'
+                }
+
+                ${
+                  step.enabled &&
+                  step.onClick
+                    ? 'cursor-pointer'
+                    : 'cursor-default'
+                }
+              `}
+            >
+              <span
+                className={`
+                  flex
+                  h-8
+                  w-8
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-full
+                  text-xs
+                  font-black
+
+                  ${
+                    active
+                      ? 'bg-white text-slate-950'
+                      : complete
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-white text-slate-400'
+                  }
+                `}
+              >
+                {complete ? '✓' : step.number}
+              </span>
+
+              <span className="min-w-0">
+                <span className="block text-[9px] font-black tracking-[0.14em] opacity-70">
+                  {step.label}
+                </span>
+                <span className="mt-0.5 block truncate text-xs font-black md:text-sm">
+                  {step.labelJa}
+                </span>
+              </span>
+            </button>
+          );
+        }
+      )}
+    </div>
+  );
+}
 
 
 /* =========================================================
@@ -722,41 +730,28 @@ export default function WorldMissionPanel({
   countryCode,
   fileLetter,
 }) {
-  const missionListRef =
+  const launcherRef =
     useRef(null);
-
-
-  const [
-    selectedDomain,
-    setSelectedDomain,
-  ] = useState(
-    'all'
-  );
-
 
   const [
     selectedLearningLevel,
     setSelectedLearningLevel,
-  ] = useState(
-    'highSchoolStandard'
-  );
+  ] = useState(null);
 
+  const [
+    selectedDomain,
+    setSelectedDomain,
+  ] = useState(null);
 
   const [
     activeMission,
     setActiveMission,
-  ] = useState(
-    null
-  );
-
+  ] = useState(null);
 
   const [
     ,
     setProgressRevision,
-  ] = useState(
-    0
-  );
-
+  ] = useState(0);
 
   const missionData =
     getMissionCountryData(
@@ -764,30 +759,19 @@ export default function WorldMissionPanel({
       countryCode
     );
 
-
   const progress =
     getCountryProgress(
       countryCode
     );
 
-
-  if (
-    !missionData
-  ) {
+  if (!missionData) {
     return null;
   }
 
-
   const rawMissions =
-    missionData
-      .missions ??
+    missionData.missions ??
     [];
 
-
-  /*
-   * 40 Missionすべてに
-   * 選択中の学習レベルを適用。
-   */
   const missions =
     rawMissions.map(
       (mission) =>
@@ -797,27 +781,22 @@ export default function WorldMissionPanel({
         )
     );
 
-
   const domains =
-    missionData
-      ?.design
-      ?.domains ??
+    missionData?.design?.domains ??
     [];
 
-
   const selectedLevelMeta =
-    getLearningLevelMeta(
-      selectedLearningLevel
-    );
-
+    selectedLearningLevel
+      ? getLearningLevelMeta(
+          selectedLearningLevel
+        )
+      : null;
 
   const completedIds =
     new Set(
-      progress
-        ?.completedMissionIds ??
+      progress?.completedMissionIds ??
         []
     );
-
 
   const totalPoints =
     missions.reduce(
@@ -844,25 +823,20 @@ export default function WorldMissionPanel({
       0
     );
 
-
   const domainCounts =
     getDomainCounts(
       missionData,
       completedIds
     );
 
-
   const completedCount =
     completedIds.size;
 
-
   const totalMissions =
     Number(
-      missionData
-        .totalMissions ??
+      missionData.totalMissions ??
         missions.length
     );
-
 
   const missionPercent =
     totalMissions > 0
@@ -875,7 +849,6 @@ export default function WorldMissionPanel({
         )
       : 0;
 
-
   const badge =
     calculateBadge(
       missionData,
@@ -884,27 +857,39 @@ export default function WorldMissionPanel({
       domainCounts
     );
 
-
   const badgeMeta =
     BADGE_META[
       badge
     ] ??
     BADGE_META.none;
 
+  const selectedDomainMeta =
+    domains.find(
+      (domain) =>
+        domain.id ===
+        selectedDomain
+    ) ??
+    null;
+
+  const selectedDomainTheme =
+    selectedDomainMeta
+      ? DOMAIN_THEME[
+          selectedDomainMeta.id
+        ] ??
+        DEFAULT_DOMAIN_THEME
+      : DEFAULT_DOMAIN_THEME;
 
   const visibleMissions =
-    selectedDomain ===
-    'all'
-      ? missions
-      : missions.filter(
+    selectedDomain
+      ? missions.filter(
           (mission) =>
             mission.domain ===
             selectedDomain
-        );
+        )
+      : [];
 
-
-  const nextMission =
-    missions.find(
+  const recommendedMission =
+    visibleMissions.find(
       (mission) =>
         !completedIds.has(
           mission.id
@@ -913,57 +898,122 @@ export default function WorldMissionPanel({
           mission
         )
     ) ??
+    visibleMissions.find(
+      (mission) =>
+        isMissionPlayable(
+          mission
+        )
+    ) ??
     null;
 
-
-  const moveToMissionList =
-    () => {
-      window.setTimeout(
-        () => {
-          missionListRef
-            .current
-            ?.scrollIntoView({
-              behavior:
-                'smooth',
-              block:
-                'start',
-            });
-        },
-        80
-      );
-    };
-
-      /* =========================================================
-     ACTIVE MISSION NAVIGATION
-  ========================================================= */
+  const currentStep =
+    !selectedLearningLevel
+      ? 1
+      : !selectedDomain
+        ? 2
+        : 3;
 
   const activeMissionIndex =
     activeMission
-      ? missions.findIndex(
+      ? visibleMissions.findIndex(
           (mission) =>
             mission.id ===
             activeMission.id
         )
       : -1;
 
-
   const previousActiveMission =
     activeMissionIndex > 0
-      ? missions[
+      ? visibleMissions[
           activeMissionIndex - 1
         ]
       : null;
 
-
   const nextActiveMission =
     activeMissionIndex >= 0 &&
     activeMissionIndex <
-      missions.length - 1
-      ? missions[
+      visibleMissions.length - 1
+      ? visibleMissions[
           activeMissionIndex + 1
         ]
       : null;
 
+  const moveToLauncher =
+    () => {
+      window.setTimeout(
+        () => {
+          launcherRef.current?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        },
+        40
+      );
+    };
+
+  const selectLearningLevel =
+    (
+      learningLevelId
+    ) => {
+      playUiSound('tap');
+      setSelectedLearningLevel(
+        learningLevelId
+      );
+      setSelectedDomain(null);
+      setActiveMission(null);
+      moveToLauncher();
+    };
+
+  const selectDomain =
+    (
+      domainId
+    ) => {
+      playUiSound('tap');
+      setSelectedDomain(
+        domainId
+      );
+      setActiveMission(null);
+      moveToLauncher();
+    };
+
+  const goToLevel =
+    () => {
+      playUiSound('back');
+      setSelectedLearningLevel(null);
+      setSelectedDomain(null);
+      setActiveMission(null);
+      moveToLauncher();
+    };
+
+  const goToZone =
+    () => {
+      if (!selectedLearningLevel) {
+        return;
+      }
+
+      playUiSound('back');
+      setSelectedDomain(null);
+      setActiveMission(null);
+      moveToLauncher();
+    };
+
+  const openMission =
+    (
+      mission
+    ) => {
+      if (
+        !isMissionPlayable(
+          mission
+        )
+      ) {
+        return;
+      }
+
+      playUiSound('open');
+      setActiveMission(
+        mission
+      );
+    };
 
   const moveToAdjacentMission =
     (
@@ -973,80 +1023,18 @@ export default function WorldMissionPanel({
         return;
       }
 
-      playUiSound(
-        'open'
-      );
-
+      playUiSound('open');
       setActiveMission(
         mission
       );
     };
-
 
   const closeMissionToList =
     () => {
-      playUiSound(
-        'back'
-      );
-
-      setActiveMission(
-        null
-      );
-
-      moveToMissionList();
+      playUiSound('back');
+      setActiveMission(null);
+      moveToLauncher();
     };
-
-  const selectDomain =
-    (
-      domainId
-    ) => {
-      playUiSound(
-        'tap'
-      );
-
-      setSelectedDomain(
-        domainId
-      );
-
-      moveToMissionList();
-    };
-
-
-  const selectLearningLevel =
-    (
-      learningLevelId
-    ) => {
-      playUiSound(
-        'tap'
-      );
-
-      setSelectedLearningLevel(
-        learningLevelId
-      );
-
-      /*
-       * 以前のレベルで開いていたMissionを
-       * 残さないため閉じる。
-       */
-      setActiveMission(
-        null
-      );
-    };
-
-
-  const openMission =
-    (
-      mission
-    ) => {
-      playUiSound(
-        'open'
-      );
-
-      setActiveMission(
-        mission
-      );
-    };
-
 
   const handleComplete =
     (
@@ -1058,13 +1046,10 @@ export default function WorldMissionPanel({
           mission.id
         );
 
-      playUiSound(
-        'success'
-      );
+      playUiSound('success');
 
       if (
-        result
-          .isNewCompletion
+        result.isNewCompletion
       ) {
         setProgressRevision(
           (value) =>
@@ -1073,1576 +1058,745 @@ export default function WorldMissionPanel({
       }
     };
 
-
   return (
     <section className="relative">
 
       {/* =====================================================
-          ADVENTURE DASHBOARD
+          COMPACT DASHBOARD
       ====================================================== */}
 
       <div
         className="
           relative
           overflow-hidden
-          rounded-[34px]
+          rounded-[32px]
           bg-gradient-to-br
           from-slate-950
           via-blue-950
           to-violet-950
           text-white
-          shadow-[0_25px_70px_rgba(15,23,42,0.20)]
+          shadow-[0_24px_70px_rgba(15,23,42,0.20)]
         "
       >
-
         <div className="pointer-events-none absolute -left-28 -top-28 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-28 right-[-5%] h-80 w-80 rounded-full bg-violet-500/20 blur-3xl" />
 
-        <div className="pointer-events-none absolute -bottom-32 right-[-5%] h-96 w-96 rounded-full bg-violet-500/20 blur-3xl" />
-
-        <div className="pointer-events-none absolute left-[45%] top-[10%] h-48 w-48 rounded-full bg-cyan-400/10 blur-3xl" />
-
-
-        <div className="relative p-6 md:p-9 lg:p-10">
-
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_370px] lg:items-center">
-
-            {/* LEFT */}
-
-            <div>
-
-              <div className="flex flex-wrap items-center gap-3">
-
-                <span
-                  className="
-                    flex
-                    items-center
-                    gap-2
-                    rounded-full
-                    border
-                    border-white/15
-                    bg-white/10
-                    px-4
-                    py-2
-                    text-[10px]
-                    font-black
-                    tracking-[0.18em]
-                    text-blue-200
-                    backdrop-blur
-                  "
-                >
-
-                  <Sparkles
-                    size={15}
-                  />
-
-                  WORLD ADVENTURE
-
-                </span>
-
-
-                <span
-                  className="
-                    rounded-full
-                    border
-                    border-white/15
-                    bg-white/5
-                    px-4
-                    py-2
-                    text-[10px]
-                    font-black
-                    tracking-[0.15em]
-                    text-white/55
-                  "
-                >
-
-                  {makeFlagEmoji(
-                    countryCode
-                  )}{' '}
-
-                  {
-                    missionData
-                      .countryNameEn
-                  }
-
-                </span>
-
-
-                <span
-                  className="
-                    rounded-full
-                    border
-                    border-cyan-300/20
-                    bg-cyan-300/10
-                    px-4
-                    py-2
-                    text-[10px]
-                    font-black
-                    tracking-[0.12em]
-                    text-cyan-200
-                  "
-                >
-
-                  {
-                    selectedLevelMeta
-                      .icon
-                  }{' '}
-
-                  {
-                    selectedLevelMeta
-                      .label
-                  }
-
-                </span>
-
-              </div>
-
-
-              <h2
-                className="
-                  mt-6
-                  text-3xl
-                  font-black
-                  tracking-[-0.04em]
-                  md:text-5xl
-                "
-              >
-                どの冒険から
-                <br />
-                始める？
-              </h2>
-
-
-              <p
-                className="
-                  mt-4
-                  max-w-2xl
-                  text-sm
-                  font-semibold
-                  leading-7
-                  text-white/60
-                  md:text-base
-                "
-              >
-                地図、時間、ことば、文化、
-                日本とのつながり、
-                そして自分で考えるMission。
-                6つのAdventure Zoneから
-                世界を探検しよう。
-              </p>
-
-
-              {/* MAIN STATS */}
-
-              <div
-                className="
-                  mt-8
-                  grid
-                  max-w-2xl
-                  grid-cols-3
-                  gap-3
-                "
-              >
-
-                <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
-
-                  <p className="text-2xl font-black md:text-3xl">
-
-                    {
-                      completedCount
-                    }
-
-                    <span className="text-sm text-white/30">
-                      {' / '}
-                      {
-                        totalMissions
-                      }
-                    </span>
-
-                  </p>
-
-                  <p className="mt-1 text-[9px] font-black tracking-[0.14em] text-white/40">
-                    MISSIONS
-                  </p>
-
-                </div>
-
-
-                <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
-
-                  <p className="text-2xl font-black text-amber-300 md:text-3xl">
-
-                    {
-                      totalPoints
-                    }
-
-                    <span className="text-sm text-white/30">
-                      {' / '}
-                      {
-                        missionData
-                          .maxWorldPoints
-                      }
-                    </span>
-
-                  </p>
-
-                  <p className="mt-1 text-[9px] font-black tracking-[0.14em] text-white/40">
-                    WORLD POINTS
-                  </p>
-
-                </div>
-
-
-                <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
-
-                  <p className="text-2xl font-black text-cyan-300 md:text-3xl">
-                    {
-                      missionPercent
-                    }%
-                  </p>
-
-                  <p className="mt-1 text-[9px] font-black tracking-[0.14em] text-white/40">
-                    COMPLETE
-                  </p>
-
-                </div>
-
-              </div>
-
-
-              {/* TOTAL PROGRESS */}
-
-              <div className="mt-5 max-w-2xl">
-
-                <div className="h-2 overflow-hidden rounded-full bg-white/10">
-
-                  <div
-                    className="
-                      h-full
-                      rounded-full
-                      bg-gradient-to-r
-                      from-blue-400
-                      via-cyan-300
-                      to-emerald-300
-                      transition-all
-                      duration-700
-                    "
-                    style={{
-                      width:
-                        `${missionPercent}%`,
-                    }}
-                  />
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            {/* NEXT MISSION */}
-
-            <div
-              className="
-                rounded-[28px]
-                border
-                border-white/15
-                bg-white/10
-                p-5
-                shadow-xl
-                backdrop-blur-xl
-                md:p-6
-              "
-            >
-
-              <div className="flex items-center justify-between gap-4">
-
-                <div>
-
-                  <p className="text-[9px] font-black tracking-[0.17em] text-blue-200">
-                    CURRENT BADGE
-                  </p>
-
-                  <p className="mt-2 text-lg font-black">
-                    {
-                      badgeMeta
-                        .label
-                    }
-                  </p>
-
-                  <p className="mt-1 text-xs font-bold text-white/40">
-                    {
-                      badgeMeta
-                        .labelJa
-                    }
-                  </p>
-
-                </div>
-
-
-                <div className="text-5xl">
-                  {
-                    badgeMeta
-                      .icon
-                  }
-                </div>
-
-              </div>
-
-
-              <div className="my-5 h-px bg-white/10" />
-
-
-              {nextMission ? (
-                <>
-
-                  <div className="flex items-center justify-between gap-3">
-
-                    <p className="text-[9px] font-black tracking-[0.17em] text-white/40">
-                      NEXT ADVENTURE
-                    </p>
-
-                    <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] font-black text-white/55">
-                      {
-                        getMissionNumber(
-                          nextMission.id
-                        )
-                      }
-                    </span>
-
-                  </div>
-
-
-                  <p className="mt-2 text-lg font-black leading-snug">
-                    {
-                      nextMission
-                        .title
-                    }
-                  </p>
-
-
-                  <p className="mt-2 line-clamp-2 text-xs font-semibold leading-6 text-white/50">
-                    {
-                      nextMission
-                        .prompt
-                    }
-                  </p>
-
-
-                  <div className="mt-4 flex items-center justify-between">
-
-                    <span className="text-xs font-black text-amber-300">
-                      +
-                      {
-                        nextMission
-                          .points
-                      } WP
-                    </span>
-
-                    <span className="text-[10px] font-black tracking-[0.1em] text-white/35">
-                      LV.
-                      {
-                        nextMission
-                          .level
-                      }
-                    </span>
-
-                  </div>
-
-
-                  <button
-                    type="button"
-                    onClick={() =>
-                      openMission(
-                        nextMission
-                      )
-                    }
-                    className="
-                      group
-                      mt-5
-                      flex
-                      w-full
-                      items-center
-                      justify-between
-                      rounded-2xl
-                      bg-white
-                      px-5
-                      py-4
-                      text-sm
-                      font-black
-                      text-slate-950
-                      shadow-lg
-                      transition
-                      hover:-translate-y-0.5
-                    "
-                  >
-
-                    <span>
-                      PLAY NEXT MISSION
-                    </span>
-
-                    <span
-                      className="
-                        flex
-                        h-8
-                        w-8
-                        items-center
-                        justify-center
-                        rounded-full
-                        bg-slate-950
-                        text-white
-                        transition
-                        group-hover:scale-105
-                      "
-                    >
-                      <Play
-                        size={15}
-                        fill="currentColor"
-                      />
-                    </span>
-
-                  </button>
-
-                </>
-              ) : (
-
-                <div className="py-7 text-center">
-
-                  <div className="text-6xl">
-                    🏆
-                  </div>
-
-                  <p className="mt-4 text-lg font-black">
-                    ALL MISSIONS CLEAR!
-                  </p>
-
-                  <p className="mt-2 text-xs font-bold text-white/45">
-                    40 Mission 完全クリア
-                  </p>
-
-                </div>
-
-              )}
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      {/* =====================================================
-          LEARNING LEVEL SELECTOR
-      ====================================================== */}
-
-      <div
-        className="
-          mt-8
-          rounded-[30px]
-          border
-          border-slate-200
-          bg-gradient-to-br
-          from-white
-          to-slate-50
-          p-5
-          shadow-sm
-          md:p-7
-        "
-      >
-
-        <div className="mb-5">
-
-          <p className="text-[10px] font-black tracking-[0.18em] text-blue-500">
-            YOUR LEARNING LEVEL
-          </p>
-
-
-          <div className="mt-2 flex flex-col justify-between gap-2 md:flex-row md:items-end">
-
-            <div>
-
-              <h3 className="text-2xl font-black text-slate-900 md:text-3xl">
-                学習レベルを選ぼう
-              </h3>
-
-              <p className="mt-2 text-sm font-semibold text-slate-500">
-                レベルを変えると、
-                Missionの内容や教材も変わります。
-              </p>
-
-            </div>
-
-
-            <div className="rounded-full bg-slate-900 px-4 py-2 text-xs font-black text-white">
-
-              {
-                selectedLevelMeta
-                  .icon
-              }{' '}
-
-              {
-                selectedLevelMeta
-                  .label
-              }
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-
-          {LEARNING_LEVELS.map(
-            (
-              level
-            ) => {
-              const selected =
-                selectedLearningLevel ===
-                level.id;
-
-              return (
-                <button
-                  key={
-                    level.id
-                  }
-                  type="button"
-                  onClick={() =>
-                    selectLearningLevel(
-                      level.id
-                    )
-                  }
-                  className={`
-                    relative
-                    overflow-hidden
-                    rounded-[24px]
-                    border
-                    p-4
-                    text-left
-                    transition-all
-                    duration-300
-                    md:p-5
-
-                    ${
-                      selected
-                        ? `
-                          -translate-y-1
-                          border-slate-900
-                          bg-slate-950
-                          text-white
-                          shadow-xl
-                        `
-                        : `
-                          border-slate-200
-                          bg-white
-                          text-slate-900
-                          hover:-translate-y-1
-                          hover:shadow-lg
-                        `
-                    }
-                  `}
-                >
-
-                  {selected && (
-                    <div className="absolute right-3 top-3 rounded-full bg-emerald-400 px-2.5 py-1 text-[8px] font-black tracking-[0.08em] text-emerald-950">
-                      SELECTED
-                    </div>
-                  )}
-
-
-                  <div className="text-3xl">
-                    {
-                      level.icon
-                    }
-                  </div>
-
-
-                  <p className="mt-4 text-base font-black md:text-lg">
-                    {
-                      level.label
-                    }
-                  </p>
-
-
-                  <p
-                    className={`
-                      mt-1
-                      text-[9px]
-                      font-black
-                      tracking-[0.1em]
-
-                      ${
-                        selected
-                          ? 'text-white/40'
-                          : 'text-slate-400'
-                      }
-                    `}
-                  >
-                    {
-                      level.labelEn
-                    }
-                  </p>
-
-
-                  <p
-                    className={`
-                      mt-3
-                      text-xs
-                      font-semibold
-                      leading-5
-
-                      ${
-                        selected
-                          ? 'text-white/65'
-                          : 'text-slate-500'
-                      }
-                    `}
-                  >
-                    {
-                      level.description
-                    }
-                  </p>
-
-                </button>
-              );
-            }
-          )}
-
-        </div>
-
-      </div>
-
-
-      {/* =====================================================
-          ADVENTURE MAP
-      ====================================================== */}
-
-      <div className="mt-9">
-
-        <div className="mb-5 flex items-end justify-between gap-4">
-
+        <div className="relative grid gap-6 p-6 md:p-8 lg:grid-cols-[1fr_auto] lg:items-center lg:p-9">
           <div>
+            <div className="flex flex-wrap items-center gap-2.5">
+              <span className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-2 text-[9px] font-black tracking-[0.16em] text-blue-200 backdrop-blur">
+                <Sparkles size={14} />
+                WORLD ADVENTURE
+              </span>
 
-            <p className="text-[10px] font-black tracking-[0.18em] text-slate-400">
-              ADVENTURE MAP
+              <span className="rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-[9px] font-black tracking-[0.12em] text-white/60">
+                {makeFlagEmoji(
+                  countryCode
+                )}{' '}
+                {missionData.countryNameEn}
+              </span>
+            </div>
+
+            <h2 className="mt-5 text-3xl font-black tracking-[-0.04em] md:text-4xl">
+              3ステップで冒険を始めよう
+            </h2>
+
+            <p className="mt-3 max-w-2xl text-sm font-semibold leading-7 text-white/60">
+              学習レベルを選ぶ → Adventure Zoneを選ぶ → Missionを始める。
+              今やることだけを順番に表示します。
             </p>
 
-            <h3 className="mt-2 text-2xl font-black tracking-tight text-slate-900 md:text-3xl">
-              6つのAdventure Zone
-            </h3>
+            <div className="mt-6 flex flex-wrap gap-2.5">
+              <span className="rounded-xl border border-white/10 bg-white/10 px-3.5 py-2 text-xs font-black">
+                {completedCount} / {totalMissions} Missions
+              </span>
+              <span className="rounded-xl border border-white/10 bg-white/10 px-3.5 py-2 text-xs font-black text-amber-300">
+                {totalPoints} / {missionData.maxWorldPoints} WP
+              </span>
+              <span className="rounded-xl border border-white/10 bg-white/10 px-3.5 py-2 text-xs font-black text-cyan-300">
+                {missionPercent}% Complete
+              </span>
+            </div>
 
-            <p className="mt-2 text-sm font-semibold text-slate-500">
-              気になる分野から自由に探検できます。
-            </p>
-
+            <div className="mt-4 max-w-2xl">
+              <div className="h-2 overflow-hidden rounded-full bg-white/10">
+                <div
+                  className="h-full rounded-full bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-300 transition-all duration-700"
+                  style={{
+                    width:
+                      `${missionPercent}%`,
+                  }}
+                />
+              </div>
+            </div>
           </div>
 
+          <div className="flex min-w-[210px] items-center justify-between gap-4 rounded-[24px] border border-white/15 bg-white/10 p-4 backdrop-blur-xl lg:block lg:text-center">
+            <div>
+              <p className="text-[9px] font-black tracking-[0.15em] text-blue-200">
+                CURRENT BADGE
+              </p>
+              <p className="mt-2 text-base font-black">
+                {badgeMeta.label}
+              </p>
+              <p className="mt-1 text-[11px] font-bold text-white/45">
+                {badgeMeta.labelJa}
+              </p>
+            </div>
 
-          <button
-            type="button"
-            onClick={() =>
-              selectDomain(
-                'all'
-              )
-            }
-            className={`
-              hidden
-              rounded-full
-              px-5
-              py-2.5
-              text-xs
-              font-black
-              transition
-              md:block
-
-              ${
-                selectedDomain ===
-                'all'
-                  ? 'bg-slate-950 text-white'
-                  : 'border border-slate-200 bg-white text-slate-500 hover:bg-slate-50'
-              }
-            `}
-          >
-            ALL 40
-          </button>
-
+            <div className="text-4xl lg:mt-4 lg:text-5xl">
+              {badgeMeta.icon}
+            </div>
+          </div>
         </div>
-
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-
-          {domains.map(
-            (
-              domain,
-              domainIndex
-            ) => {
-              const domainMissions =
-                missions.filter(
-                  (mission) =>
-                    mission.domain ===
-                    domain.id
-                );
-
-              const domainTotal =
-                domainMissions.length;
-
-              const domainComplete =
-                domainCounts[
-                  domain.id
-                ] ??
-                0;
-
-              const selected =
-                selectedDomain ===
-                domain.id;
-
-              const domainPercent =
-                domainTotal > 0
-                  ? Math.round(
-                      (
-                        domainComplete /
-                        domainTotal
-                      ) *
-                        100
-                    )
-                  : 0;
-
-              const theme =
-                DOMAIN_THEME[
-                  domain.id
-                ] ??
-                DEFAULT_DOMAIN_THEME;
-
-
-              return (
-                <button
-                  key={
-                    domain.id
-                  }
-                  type="button"
-                  onClick={() =>
-                    selectDomain(
-                      domain.id
-                    )
-                  }
-                  className={`
-                    group
-                    relative
-                    overflow-hidden
-                    rounded-[26px]
-                    border
-                    p-5
-                    text-left
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1
-                    hover:shadow-xl
-
-                    ${
-                      selected
-                        ? 'shadow-lg ring-2 ring-slate-900/5'
-                        : 'shadow-sm'
-                    }
-                  `}
-                  style={{
-                    backgroundColor:
-                      theme.soft,
-
-                    borderColor:
-                      selected
-                        ? theme.accent
-                        : theme.border,
-                  }}
-                >
-
-                  <div
-                    className="
-                      pointer-events-none
-                      absolute
-                      -right-2
-                      -top-5
-                      text-[88px]
-                      font-black
-                      leading-none
-                      opacity-[0.07]
-                    "
-                    style={{
-                      color:
-                        theme.accent,
-                    }}
-                  >
-                    {
-                      String(
-                        domainIndex +
-                          1
-                      ).padStart(
-                        2,
-                        '0'
-                      )
-                    }
-                  </div>
-
-
-                  <div className="relative">
-
-                    <div className="flex items-start justify-between gap-3">
-
-                      <div
-                        className="
-                          flex
-                          h-12
-                          w-12
-                          items-center
-                          justify-center
-                          rounded-2xl
-                          text-2xl
-                          text-white
-                          shadow-sm
-                        "
-                        style={{
-                          backgroundColor:
-                            theme.accent,
-                        }}
-                      >
-                        {
-                          domain.icon
-                        }
-                      </div>
-
-
-                      <span
-                        className="
-                          rounded-full
-                          px-3
-                          py-1
-                          text-[9px]
-                          font-black
-                          tracking-[0.1em]
-                        "
-                        style={{
-                          backgroundColor:
-                            `${theme.accent}18`,
-
-                          color:
-                            theme.dark,
-                        }}
-                      >
-                        {
-                          domainComplete
-                        }
-                        {' / '}
-                        {
-                          domainTotal
-                        }
-                      </span>
-
-                    </div>
-
-
-                    <p
-                      className="mt-5 text-[9px] font-black tracking-[0.15em]"
-                      style={{
-                        color:
-                          theme.accent,
-                      }}
-                    >
-                      {
-                        theme.label
-                      }
-                    </p>
-
-
-                    <h4 className="mt-1 text-lg font-black text-slate-900">
-                      {
-                        domain.labelJa
-                      }
-                    </h4>
-
-
-                    <p className="mt-1 text-xs font-bold text-slate-400">
-                      {
-                        domain.labelEn
-                      }
-                    </p>
-
-
-                    <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-white/80">
-
-                      <div
-                        className="h-full rounded-full transition-all duration-500"
-                        style={{
-                          width:
-                            `${domainPercent}%`,
-
-                          backgroundColor:
-                            theme.accent,
-                        }}
-                      />
-
-                    </div>
-
-
-                    <div className="mt-4 flex items-center justify-between">
-
-                      <span className="text-xs font-black text-slate-500">
-                        {
-                          domainPercent
-                        }%
-                      </span>
-
-                      <span
-                        className="
-                          text-[10px]
-                          font-black
-                          tracking-[0.1em]
-                          transition-transform
-                          group-hover:translate-x-1
-                        "
-                        style={{
-                          color:
-                            theme.dark,
-                        }}
-                      >
-                        EXPLORE →
-                      </span>
-
-                    </div>
-
-                  </div>
-
-                </button>
-              );
-            }
-          )}
-
-        </div>
-
-
-        <div className="mt-4 md:hidden">
-
-          <button
-            type="button"
-            onClick={() =>
-              selectDomain(
-                'all'
-              )
-            }
-            className={`
-              w-full
-              rounded-2xl
-              px-5
-              py-3
-              text-sm
-              font-black
-              transition
-
-              ${
-                selectedDomain ===
-                'all'
-                  ? 'bg-slate-950 text-white'
-                  : 'border border-slate-200 bg-white text-slate-600'
-              }
-            `}
-          >
-            ALL 40 MISSIONS
-          </button>
-
-        </div>
-
       </div>
 
 
       {/* =====================================================
-          MISSION LIST
+          3-STEP LAUNCHER
       ====================================================== */}
 
       <div
         ref={
-          missionListRef
+          launcherRef
         }
-        className="
-          mt-10
-          scroll-mt-6
-        "
+        className="mt-7 scroll-mt-5"
       >
+        <StepIndicator
+          currentStep={
+            currentStep
+          }
+          selectedLearningLevel={
+            selectedLearningLevel
+          }
+          selectedDomain={
+            selectedDomain
+          }
+          onGoLevel={
+            currentStep > 1
+              ? goToLevel
+              : null
+          }
+          onGoZone={
+            currentStep > 2
+              ? goToZone
+              : null
+          }
+        />
 
-        <div className="mb-5 flex flex-col justify-between gap-3 md:flex-row md:items-end">
+        <div
+          className="
+            mt-4
+            overflow-hidden
+            rounded-[30px]
+            border
+            border-slate-200
+            bg-gradient-to-br
+            from-white
+            to-slate-50
+            shadow-sm
+          "
+        >
 
-          <div>
+          {/* =================================================
+              STEP 1 / LEVEL
+          ================================================== */}
 
-            <p className="text-[10px] font-black tracking-[0.18em] text-slate-400">
-              MISSIONS
-            </p>
+          {currentStep === 1 && (
+            <div className="p-5 md:p-7">
+              <div className="mb-6">
+                <p className="text-[10px] font-black tracking-[0.18em] text-blue-500">
+                  STEP 1 · YOUR LEARNING LEVEL
+                </p>
+                <h3 className="mt-2 text-2xl font-black text-slate-900 md:text-3xl">
+                  まず、学習レベルを選ぼう
+                </h3>
+                <p className="mt-2 text-sm font-semibold text-slate-500">
+                  選んだレベルに合わせてMissionの内容・問い・教材が変わります。
+                </p>
+              </div>
 
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                {LEARNING_LEVELS.map(
+                  (level) => (
+                    <button
+                      key={
+                        level.id
+                      }
+                      type="button"
+                      onClick={() =>
+                        selectLearningLevel(
+                          level.id
+                        )
+                      }
+                      className="group relative overflow-hidden rounded-[24px] border border-slate-200 bg-white p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
+                    >
+                      <div className="text-3xl">
+                        {level.icon}
+                      </div>
 
-            <h3 className="mt-2 text-2xl font-black text-slate-900">
+                      <p className="mt-4 text-lg font-black text-slate-900">
+                        {level.label}
+                      </p>
 
-              {selectedDomain ===
-              'all'
-                ? '全40 Mission'
-                : domains.find(
-                    (domain) =>
-                      domain.id ===
-                      selectedDomain
+                      <p className="mt-1 text-[9px] font-black tracking-[0.1em] text-slate-400">
+                        {level.labelEn}
+                      </p>
+
+                      <p className="mt-3 text-xs font-semibold leading-5 text-slate-500">
+                        {level.description}
+                      </p>
+
+                      <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                        <span className="text-[10px] font-black tracking-[0.1em] text-blue-600">
+                          SELECT LEVEL
+                        </span>
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white transition-transform group-hover:translate-x-1">
+                          →
+                        </span>
+                      </div>
+                    </button>
                   )
-                    ?.labelJa ??
-                  'Mission'}
-
-            </h3>
-
-
-            <p className="mt-2 text-xs font-black text-blue-500">
-
-              {
-                selectedLevelMeta
-                  .icon
-              }{' '}
-
-              {
-                selectedLevelMeta
-                  .label
-              }
-
-              {' · '}
-
-              {
-                selectedLevelMeta
-                  .description
-              }
-
-            </p>
-
-          </div>
+                )}
+              </div>
+            </div>
+          )}
 
 
-          <div className="text-xs font-black text-slate-400">
-            {
-              visibleMissions.length
-            } MISSIONS
-          </div>
+          {/* =================================================
+              STEP 2 / ZONE
+          ================================================== */}
 
-        </div>
+          {currentStep === 2 && (
+            <div className="p-5 md:p-7">
+              <div className="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+                <div>
+                  <p className="text-[10px] font-black tracking-[0.18em] text-blue-500">
+                    STEP 2 · ADVENTURE ZONE
+                  </p>
+                  <h3 className="mt-2 text-2xl font-black text-slate-900 md:text-3xl">
+                    次に、冒険する分野を選ぼう
+                  </h3>
+                  <p className="mt-2 text-sm font-semibold text-slate-500">
+                    6つのZoneから1つ選ぶと、そのZoneのMissionだけが表示されます。
+                  </p>
+                </div>
 
-
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-
-          {visibleMissions.map(
-            (
-              mission
-            ) => {
-              const completed =
-                completedIds.has(
-                  mission.id
-                );
-
-              const playable =
-                isMissionPlayable(
-                  mission
-                );
-
-              const domain =
-                domains.find(
-                  (item) =>
-                    item.id ===
-                    mission.domain
-                );
-
-              const theme =
-                DOMAIN_THEME[
-                  mission.domain
-                ] ??
-                DEFAULT_DOMAIN_THEME;
-
-              const missionNumber =
-                getMissionNumber(
-                  mission.id
-                );
-
-              const isSourceQuest =
-                mission.type ===
-                'source-quest';
-
-
-              return (
-                <button
-                  key={
-                    mission.id
-                  }
-                  type="button"
-                  onClick={() =>
-                    openMission(
-                      mission
-                    )
-                  }
-                  className={`
-                    group
-                    relative
-                    overflow-hidden
-                    rounded-[24px]
-                    border
-                    bg-white
-                    p-5
-                    text-left
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1
-                    hover:shadow-xl
-
-                    ${
-                      completed
-                        ? 'border-emerald-200'
-                        : playable
-                          ? 'border-slate-200'
-                          : 'border-slate-200 opacity-75'
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={
+                      goToLevel
                     }
-                  `}
-                >
+                    className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-600 hover:bg-slate-50"
+                  >
+                    <ArrowLeft size={14} />
+                    レベルを変更
+                  </button>
 
-                  <div
-                    className="absolute left-0 top-0 h-full w-1.5"
-                    style={{
-                      backgroundColor:
-                        completed
-                          ? '#10b981'
-                          : theme.accent,
-                    }}
-                  />
+                  <span className="rounded-full bg-slate-950 px-4 py-2 text-xs font-black text-white">
+                    {selectedLevelMeta?.icon}{' '}
+                    {selectedLevelMeta?.label}
+                  </span>
+                </div>
+              </div>
 
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                {domains.map(
+                  (
+                    domain,
+                    domainIndex
+                  ) => {
+                    const domainMissions =
+                      missions.filter(
+                        (mission) =>
+                          mission.domain ===
+                          domain.id
+                      );
 
-                  <div className="flex items-start justify-between gap-3">
+                    const domainTotal =
+                      domainMissions.length;
 
-                    <div className="flex items-center gap-2">
+                    const domainComplete =
+                      domainCounts[
+                        domain.id
+                      ] ??
+                      0;
 
-                      <span
-                        className="
-                          flex
-                          h-10
-                          w-10
-                          items-center
-                          justify-center
-                          rounded-xl
-                          text-xl
-                        "
+                    const domainPercent =
+                      domainTotal > 0
+                        ? Math.round(
+                            (
+                              domainComplete /
+                              domainTotal
+                            ) *
+                              100
+                          )
+                        : 0;
+
+                    const theme =
+                      DOMAIN_THEME[
+                        domain.id
+                      ] ??
+                      DEFAULT_DOMAIN_THEME;
+
+                    return (
+                      <button
+                        key={
+                          domain.id
+                        }
+                        type="button"
+                        onClick={() =>
+                          selectDomain(
+                            domain.id
+                          )
+                        }
+                        className="group relative overflow-hidden rounded-[26px] border p-5 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                         style={{
                           backgroundColor:
                             theme.soft,
+                          borderColor:
+                            theme.border,
                         }}
                       >
-                        {
-                          domain?.icon
-                        }
-                      </span>
-
-
-                      <div>
-
-                        <div className="flex flex-wrap items-center gap-2">
-
-                          <span
-                            className="
-                              rounded-full
-                              px-2.5
-                              py-1
-                              text-[10px]
-                              font-black
-                              tracking-[0.08em]
-                            "
-                            style={{
-                              backgroundColor:
-                                `${theme.accent}14`,
-
-                              color:
-                                theme.dark,
-                            }}
-                          >
-                            {
-                              missionNumber
-                            }
-                          </span>
-
-
-                          {isSourceQuest && (
-                            <span className="rounded-full bg-violet-50 px-2.5 py-1 text-[9px] font-black tracking-[0.08em] text-violet-600">
-                              SOURCE QUEST
-                            </span>
-                          )}
-
-                        </div>
-
-
-                        <p
-                          className="mt-2 text-[9px] font-black tracking-[0.12em]"
+                        <div
+                          className="pointer-events-none absolute -right-2 -top-5 text-[88px] font-black leading-none opacity-[0.07]"
                           style={{
                             color:
                               theme.accent,
                           }}
                         >
-                          {
-                            domain?.labelEn
-                          }
-                        </p>
+                          {String(
+                            domainIndex + 1
+                          ).padStart(
+                            2,
+                            '0'
+                          )}
+                        </div>
 
-                      </div>
+                        <div className="relative">
+                          <div className="flex items-start justify-between gap-3">
+                            <div
+                              className="flex h-12 w-12 items-center justify-center rounded-2xl text-2xl text-white shadow-sm"
+                              style={{
+                                backgroundColor:
+                                  theme.accent,
+                              }}
+                            >
+                              {domain.icon}
+                            </div>
 
-                    </div>
+                            <span
+                              className="rounded-full px-3 py-1 text-[9px] font-black tracking-[0.1em]"
+                              style={{
+                                backgroundColor:
+                                  `${theme.accent}18`,
+                                color:
+                                  theme.dark,
+                              }}
+                            >
+                              {domainComplete} / {domainTotal}
+                            </span>
+                          </div>
+
+                          <p
+                            className="mt-5 text-[9px] font-black tracking-[0.15em]"
+                            style={{
+                              color:
+                                theme.accent,
+                            }}
+                          >
+                            {theme.label}
+                          </p>
+
+                          <h4 className="mt-1 text-lg font-black text-slate-900">
+                            {domain.labelJa}
+                          </h4>
+
+                          <p className="mt-1 text-xs font-bold text-slate-400">
+                            {domain.labelEn}
+                          </p>
+
+                          <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-white/80">
+                            <div
+                              className="h-full rounded-full transition-all duration-500"
+                              style={{
+                                width:
+                                  `${domainPercent}%`,
+                                backgroundColor:
+                                  theme.accent,
+                              }}
+                            />
+                          </div>
+
+                          <div className="mt-4 flex items-center justify-between">
+                            <span className="text-xs font-black text-slate-500">
+                              {domainPercent}%
+                            </span>
+                            <span
+                              className="text-[10px] font-black tracking-[0.1em] transition-transform group-hover:translate-x-1"
+                              style={{
+                                color:
+                                  theme.dark,
+                              }}
+                            >
+                              SELECT →
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    );
+                  }
+                )}
+              </div>
+            </div>
+          )}
 
 
-                    {completed ? (
+          {/* =================================================
+              STEP 3 / MISSIONS
+          ================================================== */}
 
-                      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50">
+          {currentStep === 3 && (
+            <div className="p-5 md:p-7">
+              <div className="mb-5 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+                <div>
+                  <p className="text-[10px] font-black tracking-[0.18em] text-blue-500">
+                    STEP 3 · CHOOSE A MISSION
+                  </p>
+                  <h3 className="mt-2 text-2xl font-black text-slate-900 md:text-3xl">
+                    {selectedDomainMeta?.labelJa}
+                  </h3>
+                  <p className="mt-2 text-sm font-semibold text-slate-500">
+                    このZoneのMissionから1つ選んで始めよう。
+                  </p>
+                </div>
 
-                        <CheckCircle2
-                          size={21}
-                          className="text-emerald-500"
-                        />
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    onClick={
+                      goToZone
+                    }
+                    className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-600 hover:bg-slate-50"
+                  >
+                    <ArrowLeft size={14} />
+                    Zoneを変更
+                  </button>
 
-                      </div>
+                  <button
+                    type="button"
+                    onClick={
+                      goToLevel
+                    }
+                    className="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-500 hover:bg-slate-50"
+                  >
+                    {selectedLevelMeta?.icon}{' '}
+                    {selectedLevelMeta?.label}
+                  </button>
+                </div>
+              </div>
 
-                    ) : playable ? (
-
-                      <div
-                        className="
-                          flex
-                          h-9
-                          w-9
-                          items-center
-                          justify-center
-                          rounded-full
-                          text-white
-                          transition
-                          group-hover:scale-110
-                        "
+              {recommendedMission && (
+                <div
+                  className="relative mb-6 overflow-hidden rounded-[26px] border p-5 md:p-6"
+                  style={{
+                    backgroundColor:
+                      selectedDomainTheme.soft,
+                    borderColor:
+                      selectedDomainTheme.border,
+                  }}
+                >
+                  <div className="grid gap-5 md:grid-cols-[1fr_auto] md:items-center">
+                    <div>
+                      <p
+                        className="text-[10px] font-black tracking-[0.15em]"
                         style={{
-                          backgroundColor:
-                            theme.accent,
+                          color:
+                            selectedDomainTheme.dark,
                         }}
                       >
-
-                        <Play
-                          size={14}
-                          fill="currentColor"
-                        />
-
-                      </div>
-
-                    ) : (
-
-                      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100">
-
-                        <LockKeyhole
-                          size={17}
-                          className="text-slate-400"
-                        />
-
-                      </div>
-
-                    )}
-
-                  </div>
-
-
-                  <h4 className="mt-5 text-lg font-black leading-snug text-slate-900">
-                    {
-                      mission.title
-                    }
-                  </h4>
-
-
-                  <p className="mt-2 line-clamp-2 min-h-[48px] text-sm font-medium leading-6 text-slate-500">
-                    {
-                      mission.prompt
-                    }
-                  </p>
-
-
-                  <div className="mt-4 flex flex-wrap items-center gap-2">
-
-                    <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[9px] font-black text-slate-500">
-                      LV.
-                      {
-                        mission.level
-                      }
-                    </span>
-
-
-                    <span className="rounded-full bg-blue-50 px-2.5 py-1 text-[9px] font-black text-blue-600">
-
-                      {
-                        selectedLevelMeta
-                          .icon
-                      }{' '}
-
-                      {
-                        selectedLevelMeta
-                          .label
-                      }
-
-                    </span>
-
-                  </div>
-
-
-                  <div className="mt-5 flex items-end justify-between border-t border-slate-100 pt-4">
-
-                    <div>
-
-                      <p className="text-[9px] font-black tracking-[0.12em] text-slate-300">
-                        REWARD
+                        NEXT RECOMMENDED MISSION
                       </p>
 
-                      <p className="mt-1 font-black text-amber-500">
-                        +
-                        {
-                          mission.points
-                        } WP
-                      </p>
+                      <div className="mt-2 flex flex-wrap items-center gap-2">
+                        <span
+                          className="rounded-full px-2.5 py-1 text-[10px] font-black"
+                          style={{
+                            backgroundColor:
+                              `${selectedDomainTheme.accent}18`,
+                            color:
+                              selectedDomainTheme.dark,
+                          }}
+                        >
+                          {getMissionNumber(
+                            recommendedMission.id
+                          )}
+                        </span>
+                        <span className="rounded-full bg-white px-2.5 py-1 text-[10px] font-black text-amber-600 shadow-sm">
+                          +{recommendedMission.points} WP
+                        </span>
+                      </div>
 
+                      <h4 className="mt-3 text-xl font-black text-slate-900 md:text-2xl">
+                        {recommendedMission.title}
+                      </h4>
+
+                      <p className="mt-2 max-w-3xl text-sm font-semibold leading-6 text-slate-600">
+                        {recommendedMission.prompt}
+                      </p>
                     </div>
 
-
-                    <span
-                      className="text-[10px] font-black tracking-[0.11em]"
-                      style={{
-                        color:
-                          completed
-                            ? '#059669'
-                            : playable
-                              ? theme.dark
-                              : '#94a3b8',
-                      }}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        openMission(
+                          recommendedMission
+                        )
+                      }
+                      className="group flex min-w-[210px] items-center justify-between gap-5 rounded-2xl bg-slate-950 px-5 py-4 text-left text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-blue-700"
                     >
-                      {completed
-                        ? 'CLEARED ✓'
-                        : playable
-                          ? 'PLAY →'
-                          : 'COMING NEXT'}
-                    </span>
+                      <span>
+                        <span className="block text-[9px] font-black tracking-[0.13em] text-white/50">
+                          START NOW
+                        </span>
+                        <span className="mt-1 block text-sm font-black">
+                          このMissionを始める
+                        </span>
+                      </span>
 
+                      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-950 transition-transform group-hover:scale-105">
+                        <Play
+                          size={15}
+                          fill="currentColor"
+                        />
+                      </span>
+                    </button>
                   </div>
-
-                </button>
-              );
-            }
-          )}
-
-        </div>
-
-      </div>
-
-
-      {/* =====================================================
-          BADGE JOURNEY
-      ====================================================== */}
-
-      <div
-        className="
-          mt-12
-          overflow-hidden
-          rounded-[30px]
-          border
-          border-slate-200
-          bg-white
-          shadow-sm
-        "
-      >
-
-        <div className="flex flex-col justify-between gap-4 border-b border-slate-100 p-6 md:flex-row md:items-center md:p-8">
-
-          <div className="flex items-center gap-4">
-
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50">
-
-              <Trophy
-                className="text-amber-500"
-              />
-
-            </div>
-
-
-            <div>
-
-              <p className="text-[9px] font-black tracking-[0.15em] text-amber-500">
-                BADGE JOURNEY
-              </p>
-
-              <h3 className="mt-1 text-2xl font-black text-slate-900">
-                冒険の記録
-              </h3>
-
-            </div>
-
-          </div>
-
-
-          <div className="flex items-center gap-3">
-
-            <span className="text-3xl">
-              {
-                badgeMeta.icon
-              }
-            </span>
-
-
-            <div>
-
-              <p className="text-[9px] font-black text-slate-400">
-                CURRENT
-              </p>
-
-              <p className="font-black text-slate-800">
-                {
-                  badgeMeta.label
-                }
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div className="grid grid-cols-1 gap-3 p-5 sm:grid-cols-2 md:grid-cols-5 md:p-7">
-
-          {[
-            [
-              'stamp',
-              '🌏',
-            ],
-            [
-              'bronze',
-              '🥉',
-            ],
-            [
-              'silver',
-              '🥈',
-            ],
-            [
-              'gold',
-              '🥇',
-            ],
-            [
-              'diamond',
-              '💎',
-            ],
-          ].map(
-            ([
-              badgeKey,
-              icon,
-            ]) => {
-              const order = [
-                'none',
-                'stamp',
-                'bronze',
-                'silver',
-                'gold',
-                'diamond',
-              ];
-
-              const achieved =
-                order.indexOf(
-                  badge
-                ) >=
-                order.indexOf(
-                  badgeKey
-                );
-
-
-              return (
-                <div
-                  key={
-                    badgeKey
-                  }
-                  className={`
-                    relative
-                    overflow-hidden
-                    rounded-2xl
-                    border
-                    p-4
-                    transition
-
-                    ${
-                      achieved
-                        ? 'border-amber-200 bg-gradient-to-br from-amber-50 to-white'
-                        : 'border-slate-200 bg-slate-50'
-                    }
-                  `}
-                >
-
-                  {!achieved && (
-                    <LockKeyhole
-                      size={14}
-                      className="absolute right-3 top-3 text-slate-300"
-                    />
-                  )}
-
-
-                  <div
-                    className={`
-                      text-3xl
-
-                      ${
-                        achieved
-                          ? ''
-                          : 'grayscale opacity-40'
-                      }
-                    `}
-                  >
-                    {
-                      icon
-                    }
-                  </div>
-
-
-                  <p
-                    className={`
-                      mt-3
-                      text-sm
-                      font-black
-
-                      ${
-                        achieved
-                          ? 'text-slate-800'
-                          : 'text-slate-400'
-                      }
-                    `}
-                  >
-                    {
-                      BADGE_META[
-                        badgeKey
-                      ].label
-                    }
-                  </p>
-
-
-                  <p
-                    className={`
-                      mt-2
-                      text-[9px]
-                      font-black
-                      tracking-[0.12em]
-
-                      ${
-                        achieved
-                          ? 'text-amber-600'
-                          : 'text-slate-300'
-                      }
-                    `}
-                  >
-                    {achieved
-                      ? 'UNLOCKED'
-                      : 'LOCKED'}
-                  </p>
-
                 </div>
-              );
-            }
+              )}
+
+              <div className="mb-4 flex items-center justify-between">
+                <p className="text-xs font-black text-slate-400">
+                  {visibleMissions.length} MISSIONS IN THIS ZONE
+                </p>
+
+                <span
+                  className="rounded-full px-3 py-1.5 text-[10px] font-black"
+                  style={{
+                    backgroundColor:
+                      `${selectedDomainTheme.accent}14`,
+                    color:
+                      selectedDomainTheme.dark,
+                  }}
+                >
+                  {selectedDomainMeta?.labelEn}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+                {visibleMissions.map(
+                  (mission) => {
+                    const completed =
+                      completedIds.has(
+                        mission.id
+                      );
+
+                    const playable =
+                      isMissionPlayable(
+                        mission
+                      );
+
+                    const domain =
+                      domains.find(
+                        (item) =>
+                          item.id ===
+                          mission.domain
+                      );
+
+                    const theme =
+                      DOMAIN_THEME[
+                        mission.domain
+                      ] ??
+                      DEFAULT_DOMAIN_THEME;
+
+                    const isRecommended =
+                      recommendedMission?.id ===
+                      mission.id;
+
+                    return (
+                      <button
+                        key={
+                          mission.id
+                        }
+                        type="button"
+                        disabled={
+                          !playable
+                        }
+                        onClick={() =>
+                          openMission(
+                            mission
+                          )
+                        }
+                        className={`
+                          group
+                          relative
+                          overflow-hidden
+                          rounded-[24px]
+                          border
+                          bg-white
+                          p-5
+                          text-left
+                          transition-all
+                          duration-300
+
+                          ${
+                            playable
+                              ? 'hover:-translate-y-1 hover:shadow-xl'
+                              : 'cursor-not-allowed opacity-65'
+                          }
+
+                          ${
+                            completed
+                              ? 'border-emerald-200'
+                              : isRecommended
+                                ? 'border-blue-300 shadow-md ring-2 ring-blue-100'
+                                : 'border-slate-200'
+                          }
+                        `}
+                      >
+                        <div
+                          className="absolute left-0 top-0 h-full w-1.5"
+                          style={{
+                            backgroundColor:
+                              completed
+                                ? '#10b981'
+                                : theme.accent,
+                          }}
+                        />
+
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="flex items-center gap-2">
+                            <span
+                              className="flex h-10 w-10 items-center justify-center rounded-xl text-xl"
+                              style={{
+                                backgroundColor:
+                                  theme.soft,
+                              }}
+                            >
+                              {domain?.icon}
+                            </span>
+
+                            <div>
+                              <div className="flex flex-wrap items-center gap-2">
+                                <span
+                                  className="rounded-full px-2.5 py-1 text-[10px] font-black tracking-[0.08em]"
+                                  style={{
+                                    backgroundColor:
+                                      `${theme.accent}14`,
+                                    color:
+                                      theme.dark,
+                                  }}
+                                >
+                                  {getMissionNumber(
+                                    mission.id
+                                  )}
+                                </span>
+
+                                {isRecommended &&
+                                  !completed && (
+                                    <span className="rounded-full bg-blue-50 px-2.5 py-1 text-[9px] font-black text-blue-600">
+                                      NEXT
+                                    </span>
+                                  )}
+                              </div>
+
+                              <p
+                                className="mt-2 text-[9px] font-black tracking-[0.12em]"
+                                style={{
+                                  color:
+                                    theme.accent,
+                                }}
+                              >
+                                {domain?.labelEn}
+                              </p>
+                            </div>
+                          </div>
+
+                          {completed ? (
+                            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50">
+                              <CheckCircle2
+                                size={21}
+                                className="text-emerald-500"
+                              />
+                            </div>
+                          ) : playable ? (
+                            <div
+                              className="flex h-9 w-9 items-center justify-center rounded-full text-white transition group-hover:scale-110"
+                              style={{
+                                backgroundColor:
+                                  theme.accent,
+                              }}
+                            >
+                              <Play
+                                size={14}
+                                fill="currentColor"
+                              />
+                            </div>
+                          ) : (
+                            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100">
+                              <LockKeyhole
+                                size={17}
+                                className="text-slate-400"
+                              />
+                            </div>
+                          )}
+                        </div>
+
+                        <h4 className="mt-5 text-lg font-black leading-snug text-slate-900">
+                          {mission.title}
+                        </h4>
+
+                        <p className="mt-2 line-clamp-2 min-h-[48px] text-sm font-medium leading-6 text-slate-500">
+                          {mission.prompt}
+                        </p>
+
+                        <div className="mt-5 flex items-end justify-between border-t border-slate-100 pt-4">
+                          <div>
+                            <p className="text-[9px] font-black tracking-[0.12em] text-slate-300">
+                              REWARD
+                            </p>
+                            <p className="mt-1 font-black text-amber-500">
+                              +{mission.points} WP
+                            </p>
+                          </div>
+
+                          <span
+                            className="text-[10px] font-black tracking-[0.11em]"
+                            style={{
+                              color:
+                                completed
+                                  ? '#059669'
+                                  : playable
+                                    ? theme.dark
+                                    : '#94a3b8',
+                            }}
+                          >
+                            {completed
+                              ? 'REVIEW →'
+                              : playable
+                                ? 'PLAY →'
+                                : 'COMING NEXT'}
+                          </span>
+                        </div>
+                      </button>
+                    );
+                  }
+                )}
+              </div>
+            </div>
           )}
-
         </div>
-
       </div>
 
 
@@ -2651,16 +1805,13 @@ export default function WorldMissionPanel({
       ====================================================== */}
 
       {activeMission && (
-
-                <MissionPlayer
+        <MissionPlayer
           key={
             `${activeMission.id}-${selectedLearningLevel}`
           }
-
           mission={
             activeMission
           }
-
           domain={
             domains.find(
               (domain) =>
@@ -2668,54 +1819,42 @@ export default function WorldMissionPanel({
                 activeMission.domain
             )
           }
-
           alreadyCompleted={
             completedIds.has(
               activeMission.id
             )
           }
-
           onComplete={
             handleComplete
           }
-
           previousMission={
             previousActiveMission
           }
-
           nextMission={
             nextActiveMission
           }
-
           missionPosition={
             activeMissionIndex >= 0
               ? activeMissionIndex + 1
               : null
           }
-
           totalMissions={
-            missions.length
+            visibleMissions.length
           }
-
           onPreviousMission={
             moveToAdjacentMission
           }
-
           onNextMission={
             moveToAdjacentMission
           }
-
           onBackToList={
             closeMissionToList
           }
-
           onClose={
             closeMissionToList
           }
         />
-
       )}
-
     </section>
   );
 }

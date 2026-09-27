@@ -6,7 +6,6 @@ import {
 
 import {
   BookOpen,
-  ChevronDown,
   Clock3,
   CloudSun,
   Coins,
@@ -16,7 +15,6 @@ import {
   Languages,
   MapPin,
   Mountain,
-  Sparkles,
   X,
 } from 'lucide-react';
 
@@ -34,6 +32,7 @@ import WorldMissionPanel
 
 import openingBackground
   from '../assets/opening/timepalette_opening_background.png';
+
 
 const ADVENTURE_THEMES = [
   {
@@ -63,6 +62,7 @@ const ADVENTURE_THEMES = [
   },
 ];
 
+
 function getAdventureTheme(
   iso
 ) {
@@ -75,9 +75,7 @@ function getAdventureTheme(
           character
         ) =>
           total +
-          character.charCodeAt(
-            0
-          ),
+          character.charCodeAt(0),
         0
       );
 
@@ -86,6 +84,7 @@ function getAdventureTheme(
       ADVENTURE_THEMES.length
   ];
 }
+
 
 function makeFlagEmoji(
   iso
@@ -109,13 +108,12 @@ function makeFlagEmoji(
       (letter) =>
         String.fromCodePoint(
           127397 +
-            letter.charCodeAt(
-              0
-            )
+            letter.charCodeAt(0)
         )
     )
     .join('');
 }
+
 
 export default function CountryDetailOverlay({
   iso,
@@ -150,11 +148,6 @@ export default function CountryDetailOverlay({
   const topRef =
     useRef(null);
 
-  const adventureRef =
-    useRef(null);
-
-  const discoveryRef =
-    useRef(null);
 
   useEffect(() => {
     const fetchData =
@@ -167,9 +160,7 @@ export default function CountryDetailOverlay({
             fileLetter
               ?.toLowerCase();
 
-          if (
-            !dataFileLetter
-          ) {
+          if (!dataFileLetter) {
             throw new Error(
               `国データのファイル判定に失敗しました: ${iso}`
             );
@@ -182,8 +173,7 @@ export default function CountryDetailOverlay({
 
           const data =
             dataModule.default
-              ? dataModule
-                  .default[
+              ? dataModule.default[
                   iso
                 ]
               : dataModule[
@@ -240,6 +230,7 @@ export default function CountryDetailOverlay({
     fileLetter,
   ]);
 
+
   useEffect(() => {
     if (
       loading ||
@@ -253,10 +244,8 @@ export default function CountryDetailOverlay({
         () => {
           topRef.current
             ?.scrollIntoView({
-              behavior:
-                'auto',
-              block:
-                'start',
+              behavior: 'auto',
+              block: 'start',
             });
         },
         80
@@ -271,6 +260,7 @@ export default function CountryDetailOverlay({
     iso,
   ]);
 
+
   const handleBackdropClick =
     (event) => {
       if (
@@ -280,6 +270,7 @@ export default function CountryDetailOverlay({
         onClose();
       }
     };
+
 
   const t =
     (
@@ -300,27 +291,6 @@ export default function CountryDetailOverlay({
       );
     };
 
-  const scrollToAdventure =
-    () => {
-      adventureRef.current
-        ?.scrollIntoView({
-          behavior:
-            'smooth',
-          block:
-            'start',
-        });
-    };
-
-  const scrollToDiscovery =
-    () => {
-      discoveryRef.current
-        ?.scrollIntoView({
-          behavior:
-            'smooth',
-          block:
-            'start',
-        });
-    };
 
   const theme =
     getAdventureTheme(
@@ -348,11 +318,9 @@ export default function CountryDetailOverlay({
           )
       )
       .filter(Boolean)
-      .slice(
-        0,
-        3
-      )
+      .slice(0, 3)
       .join(' / ');
+
 
   return (
     <div
@@ -390,7 +358,9 @@ export default function CountryDetailOverlay({
       <div className="pointer-events-none fixed inset-0 bg-gradient-to-b from-slate-950/45 via-slate-950/65 to-slate-950/90" />
 
       <div
-        ref={topRef}
+        ref={
+          topRef
+        }
         className="
           pointer-events-none
           absolute
@@ -401,6 +371,7 @@ export default function CountryDetailOverlay({
           opacity-0
         "
       />
+
 
       {/* MAIN SHELL */}
       <div
@@ -441,8 +412,7 @@ export default function CountryDetailOverlay({
                 font-bold
                 transition
                 ${
-                  lang ===
-                  'ja'
+                  lang === 'ja'
                     ? 'bg-slate-950 text-white'
                     : 'text-slate-500 hover:bg-white'
                 }
@@ -466,8 +436,7 @@ export default function CountryDetailOverlay({
                 font-bold
                 transition
                 ${
-                  lang ===
-                  'en'
+                  lang === 'en'
                     ? 'bg-slate-950 text-white'
                     : 'text-slate-500 hover:bg-white'
                 }
@@ -509,6 +478,7 @@ export default function CountryDetailOverlay({
 
         </div>
 
+
         {loading ? (
 
           <div className="flex min-h-[70vh] flex-col items-center justify-center">
@@ -548,7 +518,7 @@ export default function CountryDetailOverlay({
               onClick={
                 onClose
               }
-              className="mt-6 bg-slate-950 px-6 py-3 font-bold text-white"
+              className="mt-6 rounded-2xl bg-slate-950 px-6 py-3 font-bold text-white"
             >
               Close
             </button>
@@ -560,12 +530,13 @@ export default function CountryDetailOverlay({
           <div>
 
             {/* =====================================================
-                COUNTRY ADVENTURE HERO
+                COUNTRY HERO
+                V2: 情報だけ。ここにはCTAを置かない。
             ====================================================== */}
             <section
               className="
                 relative
-                min-h-[520px]
+                min-h-[360px]
                 overflow-hidden
                 text-white
               "
@@ -580,16 +551,13 @@ export default function CountryDetailOverlay({
                   ),
                   url(${openingBackground})
                   `,
-
                 backgroundSize:
                   'cover',
-
                 backgroundPosition:
                   'center',
               }}
             >
 
-              {/* FLAG WATERMARK */}
               {countryData.flagUrl && (
                 <img
                   src={
@@ -601,11 +569,11 @@ export default function CountryDetailOverlay({
                     absolute
                     -bottom-10
                     right-[-5%]
-                    h-[85%]
+                    h-[90%]
                     w-auto
                     rotate-[-6deg]
                     object-cover
-                    opacity-[0.09]
+                    opacity-[0.08]
                     blur-[1px]
                   "
                 />
@@ -618,255 +586,133 @@ export default function CountryDetailOverlay({
                   relative
                   z-10
                   flex
-                  min-h-[520px]
+                  min-h-[360px]
                   flex-col
                   justify-end
                   px-6
-                  pb-9
-                  pt-28
+                  pb-16
+                  pt-24
                   md:px-10
-                  md:pb-12
+                  md:pb-20
                   lg:px-14
                 "
               >
 
-                <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_360px] lg:items-end">
+                <div className="max-w-5xl">
 
-                  {/* COUNTRY */}
-                  <div>
+                  <div className="mb-5 flex flex-wrap items-center gap-3">
 
-                    <div className="mb-7 flex flex-wrap items-center gap-3">
+                    <span className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[10px] font-black tracking-[0.2em] backdrop-blur">
+                      COUNTRY ADVENTURE
+                    </span>
 
-                      <span className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[10px] font-black tracking-[0.2em] backdrop-blur">
-                        COUNTRY ADVENTURE
-                      </span>
+                    <span className="rounded-full border border-white/20 bg-slate-950/20 px-4 py-2 text-[10px] font-black tracking-[0.18em] backdrop-blur">
+                      {iso.toUpperCase()}
+                    </span>
 
-                      <span className="rounded-full border border-white/20 bg-slate-950/20 px-4 py-2 text-[10px] font-black tracking-[0.18em] backdrop-blur">
-                        {iso.toUpperCase()}
-                      </span>
+                  </div>
 
-                    </div>
+                  <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
 
-                    <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
-
-                      {countryData.flagUrl ? (
-                        <img
-                          src={
-                            countryData.flagUrl
-                          }
-                          alt={`${countryData.nameEn} flag`}
-                          className="
-                            h-auto
-                            w-32
-                            rounded-xl
-                            object-cover
-                            shadow-[0_18px_50px_rgba(0,0,0,0.35)]
-                            ring-2
-                            ring-white/30
-                            md:w-40
-                          "
-                        />
-                      ) : (
-                        <div className="text-7xl">
-                          {
-                            flagEmoji
-                          }
-                        </div>
-                      )}
-
-                      <div>
-
-                        <h1 className="text-4xl font-black tracking-[-0.04em] drop-shadow-xl md:text-6xl lg:text-7xl">
-                          {
-                            countryData.nameEn
-                          }
-                        </h1>
-
-                        <p className="mt-2 text-xl font-bold text-white/70 md:text-2xl">
-                          {
-                            countryData.nameJa
-                          }
-                        </p>
-
+                    {countryData.flagUrl ? (
+                      <img
+                        src={
+                          countryData.flagUrl
+                        }
+                        alt={`${countryData.nameEn} flag`}
+                        className="
+                          h-auto
+                          w-28
+                          rounded-xl
+                          object-cover
+                          shadow-[0_18px_50px_rgba(0,0,0,0.35)]
+                          ring-2
+                          ring-white/30
+                          md:w-36
+                        "
+                      />
+                    ) : (
+                      <div className="text-7xl">
+                        {
+                          flagEmoji
+                        }
                       </div>
+                    )}
 
-                    </div>
+                    <div>
 
-                    <p className="mt-7 max-w-3xl text-lg font-semibold leading-8 text-white/85 md:text-xl">
-                      「
-                      {t(
-                        countryData.subtitle,
-                        countryData.subtitleEn ||
-                          countryData.subtitle
-                      )}
-                      」
-                    </p>
+                      <h1 className="text-4xl font-black tracking-[-0.04em] drop-shadow-xl md:text-6xl lg:text-7xl">
+                        {
+                          countryData.nameEn
+                        }
+                      </h1>
 
-                    {/* QUICK INFO */}
-                    <div className="mt-8 flex flex-wrap gap-3">
-
-                      <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 backdrop-blur">
-
-                        <MapPin
-                          size={16}
-                        />
-
-                        <span className="text-xs font-bold text-white/65">
-                          CAPITAL
-                        </span>
-
-                        <span className="text-sm font-black">
-                          {t(
-                            countryData.capitalJa,
-                            countryData.capitalEn
-                          )}
-                        </span>
-
-                      </div>
-
-                      <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 backdrop-blur">
-
-                        <Clock3
-                          size={16}
-                        />
-
-                        <span className="text-xs font-bold text-white/65">
-                          TIME
-                        </span>
-
-                        <span className="text-sm font-black">
-                          {
-                            countryData.timeZone
-                          }
-                        </span>
-
-                      </div>
-
-                      {languageLabel && (
-                        <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 backdrop-blur">
-
-                          <Languages
-                            size={16}
-                          />
-
-                          <span className="text-xs font-bold text-white/65">
-                            LANGUAGE
-                          </span>
-
-                          <span className="text-sm font-black">
-                            {
-                              languageLabel
-                            }
-                          </span>
-
-                        </div>
-                      )}
+                      <p className="mt-1 text-xl font-bold text-white/70 md:text-2xl">
+                        {
+                          countryData.nameJa
+                        }
+                      </p>
 
                     </div>
 
                   </div>
 
-                  {/* START PANEL */}
-                  <div className="rounded-[28px] border border-white/20 bg-slate-950/35 p-6 shadow-2xl backdrop-blur-xl">
+                  <p className="mt-5 max-w-3xl text-base font-semibold leading-7 text-white/85 md:text-lg">
+                    「
+                    {t(
+                      countryData.subtitle,
+                      countryData.subtitleEn ||
+                        countryData.subtitle
+                    )}
+                    」
+                  </p>
 
-                    <div className="flex items-center gap-2 text-blue-100">
+                  <div className="mt-6 flex flex-wrap gap-2.5">
 
-                      <Sparkles
-                        size={17}
+                    <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur">
+                      <MapPin
+                        size={15}
                       />
-
-                      <span className="text-[10px] font-black tracking-[0.2em]">
-                        YOUR ADVENTURE
+                      <span className="text-[10px] font-bold text-white/60">
+                        CAPITAL
                       </span>
-
+                      <span className="text-xs font-black sm:text-sm">
+                        {t(
+                          countryData.capitalJa,
+                          countryData.capitalEn
+                        )}
+                      </span>
                     </div>
 
-                    <div className="mt-6 grid grid-cols-2 gap-3">
-
-                      <div className="rounded-2xl bg-white/10 p-4">
-
-                        <div className="text-3xl font-black">
-                          40
-                        </div>
-
-                        <div className="mt-1 text-[9px] font-black tracking-[0.15em] text-white/45">
-                          MISSIONS
-                        </div>
-
-                      </div>
-
-                      <div className="rounded-2xl bg-white/10 p-4">
-
-                        <div className="text-3xl font-black text-amber-300">
-                          480
-                        </div>
-
-                        <div className="mt-1 text-[9px] font-black tracking-[0.15em] text-white/45">
-                          MAX WP
-                        </div>
-
-                      </div>
-
+                    <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur">
+                      <Clock3
+                        size={15}
+                      />
+                      <span className="text-[10px] font-bold text-white/60">
+                        TIME
+                      </span>
+                      <span className="text-xs font-black sm:text-sm">
+                        {
+                          countryData.timeZone
+                        }
+                      </span>
                     </div>
 
-                    <button
-                      type="button"
-                      onClick={
-                        scrollToAdventure
-                      }
-                      className="
-                        group
-                        mt-5
-                        flex
-                        w-full
-                        items-center
-                        justify-between
-                        rounded-2xl
-                        bg-white
-                        px-5
-                        py-4
-                        font-black
-                        text-slate-950
-                        shadow-xl
-                        transition
-                        hover:-translate-y-0.5
-                      "
-                    >
-
-                      <span>
-                        START ADVENTURE
-                      </span>
-
-                      <span
-                        className="
-                          flex
-                          h-8
-                          w-8
-                          items-center
-                          justify-center
-                          rounded-full
-                          bg-slate-950
-                          text-white
-                          transition
-                          group-hover:translate-y-1
-                        "
-                      >
-                        <ChevronDown
-                          size={17}
+                    {languageLabel && (
+                      <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur">
+                        <Languages
+                          size={15}
                         />
-                      </span>
-
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={
-                        scrollToDiscovery
-                      }
-                      className="mt-3 w-full py-2 text-xs font-bold text-white/55 transition hover:text-white"
-                    >
-                      Country Discoveryも見る
-                    </button>
+                        <span className="text-[10px] font-bold text-white/60">
+                          LANGUAGE
+                        </span>
+                        <span className="text-xs font-black sm:text-sm">
+                          {
+                            languageLabel
+                          }
+                        </span>
+                      </div>
+                    )}
 
                   </div>
 
@@ -876,44 +722,24 @@ export default function CountryDetailOverlay({
 
             </section>
 
+
             {/* =====================================================
-                WORLD ADVENTURE — MAIN CONTENT
+                WORLD ADVENTURE V2
+                Heroに重ね、最初の選択をすぐ見せる。
             ====================================================== */}
             <section
-              ref={
-                adventureRef
-              }
               className="
+                relative
+                z-20
+                -mt-12
                 scroll-mt-4
-                px-5
-                py-10
-                md:px-9
-                md:py-12
-                lg:px-12
+                px-4
+                pb-10
+                md:-mt-14
+                md:px-7
+                lg:px-10
               "
             >
-
-              <div className="mb-2 flex items-center gap-3">
-
-                <div
-                  className="h-1 w-12 rounded-full"
-                  style={{
-                    backgroundColor:
-                      theme.primary,
-                  }}
-                />
-
-                <p
-                  className="text-[10px] font-black tracking-[0.2em]"
-                  style={{
-                    color:
-                      theme.primary,
-                  }}
-                >
-                  EXPLORE · LEARN · CONNECT
-                </p>
-
-              </div>
 
               <WorldMissionPanel
                 countryCode={
@@ -922,19 +748,25 @@ export default function CountryDetailOverlay({
                 fileLetter={
                   fileLetter
                 }
+                countryNameEn={
+                  countryData.nameEn
+                }
+                countryNameJa={
+                  countryData.nameJa
+                }
+                flagUrl={
+                  countryData.flagUrl
+                }
               />
 
             </section>
+
 
             {/* =====================================================
                 COUNTRY DISCOVERY
             ====================================================== */}
             <section
-              ref={
-                discoveryRef
-              }
               className="
-                scroll-mt-4
                 border-t
                 border-slate-200
                 bg-white/75
@@ -950,7 +782,6 @@ export default function CountryDetailOverlay({
                 <div>
 
                   <div className="flex items-center gap-2">
-
                     <Compass
                       size={18}
                       style={{
@@ -958,7 +789,6 @@ export default function CountryDetailOverlay({
                           theme.primary,
                       }}
                     />
-
                     <p
                       className="text-[10px] font-black tracking-[0.2em]"
                       style={{
@@ -968,7 +798,6 @@ export default function CountryDetailOverlay({
                     >
                       COUNTRY DISCOVERY
                     </p>
-
                   </div>
 
                   <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 md:text-4xl">
@@ -990,6 +819,7 @@ export default function CountryDetailOverlay({
 
               </div>
 
+
               {/* INFO CARDS */}
               <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
 
@@ -1001,11 +831,9 @@ export default function CountryDetailOverlay({
                   }}
                 >
                   <Coins className="text-amber-500" />
-
                   <p className="mt-4 text-[9px] font-black tracking-[0.15em] text-slate-400">
                     CURRENCY
                   </p>
-
                   <p className="mt-1 font-black text-slate-800">
                     {countryData.currency
                       ? `${t(
@@ -1024,11 +852,9 @@ export default function CountryDetailOverlay({
                   }}
                 >
                   <Languages className="text-emerald-600" />
-
                   <p className="mt-4 text-[9px] font-black tracking-[0.15em] text-slate-400">
                     LANGUAGE
                   </p>
-
                   <p className="mt-1 line-clamp-2 font-black text-slate-800">
                     {
                       languageLabel ||
@@ -1045,11 +871,9 @@ export default function CountryDetailOverlay({
                   }}
                 >
                   <Mountain className="text-stone-600" />
-
                   <p className="mt-4 text-[9px] font-black tracking-[0.15em] text-slate-400">
                     ELEVATION
                   </p>
-
                   <p className="mt-1 line-clamp-2 font-black text-slate-800">
                     {t(
                       countryData.elevation,
@@ -1067,11 +891,9 @@ export default function CountryDetailOverlay({
                   }}
                 >
                   <CloudSun className="text-sky-600" />
-
                   <p className="mt-4 text-[9px] font-black tracking-[0.15em] text-slate-400">
                     CLIMATE
                   </p>
-
                   <p className="mt-1 line-clamp-2 font-black text-slate-800">
                     {t(
                       countryData.weather
@@ -1086,13 +908,13 @@ export default function CountryDetailOverlay({
 
               </div>
 
+
               {/* MAP + TIME */}
               <div className="mt-7 grid grid-cols-1 gap-6 lg:grid-cols-2">
 
                 <div className="relative h-[420px] overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100 shadow-sm">
 
                   <div className="absolute left-5 top-5 z-10 flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-black text-slate-800 shadow-lg backdrop-blur">
-
                     <Globe2
                       size={17}
                       style={{
@@ -1100,7 +922,6 @@ export default function CountryDetailOverlay({
                           theme.primary,
                       }}
                     />
-
                     MAP
                   </div>
 
@@ -1125,17 +946,13 @@ export default function CountryDetailOverlay({
                 <div className="flex min-h-[420px] flex-col justify-between rounded-[28px] border border-slate-200 bg-slate-950 p-6 text-white shadow-sm md:p-8">
 
                   <div>
-
                     <div className="flex items-center gap-2 text-blue-300">
-
                       <Clock3
                         size={18}
                       />
-
                       <p className="text-[10px] font-black tracking-[0.2em]">
                         LOCAL TIME
                       </p>
-
                     </div>
 
                     <h3 className="mt-3 text-3xl font-black">
@@ -1150,17 +967,14 @@ export default function CountryDetailOverlay({
                         countryData.timeZone
                       }
                     </p>
-
                   </div>
 
                   <div className="flex flex-1 items-center justify-center py-6">
-
                     <DetailedAnalogClock
                       timeZone={
                         countryData.timeZone
                       }
                     />
-
                   </div>
 
                   <p className="text-center text-xs font-bold leading-6 text-white/45">
@@ -1174,32 +988,28 @@ export default function CountryDetailOverlay({
 
             </section>
 
+
             {/* =====================================================
                 CULTURE & HERITAGE
             ====================================================== */}
             {(
               countryData
                 .heritage
-                ?.length >
-                0 ||
+                ?.length > 0 ||
               countryData
                 .culture
-                ?.length >
-                0
+                ?.length > 0
             ) && (
               <section className="border-t border-slate-200 px-5 py-12 md:px-9 lg:px-12">
 
                 <div className="flex items-center gap-2">
-
                   <BookOpen
                     size={18}
                     className="text-orange-500"
                   />
-
                   <p className="text-[10px] font-black tracking-[0.2em] text-orange-500">
                     CULTURE & HERITAGE
                   </p>
-
                 </div>
 
                 <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950">
@@ -1218,9 +1028,7 @@ export default function CountryDetailOverlay({
                           }
                           className="group overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                         >
-
                           <div className="relative h-52 overflow-hidden">
-
                             <img
                               src={
                                 item.image
@@ -1230,7 +1038,6 @@ export default function CountryDetailOverlay({
                               }
                               className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                             />
-
                             <span className="absolute left-4 top-4 rounded-full bg-blue-600 px-3 py-1.5 text-[9px] font-black tracking-wide text-white shadow">
                               {t(
                                 item.category,
@@ -1238,11 +1045,9 @@ export default function CountryDetailOverlay({
                                   item.category
                               )}
                             </span>
-
                           </div>
 
                           <div className="p-5">
-
                             <h3 className="text-lg font-black text-slate-900">
                               {t(
                                 item.title,
@@ -1250,7 +1055,6 @@ export default function CountryDetailOverlay({
                                   item.title
                               )}
                             </h3>
-
                             <p className="mt-3 text-sm font-medium leading-6 text-slate-500">
                               {t(
                                 item.description,
@@ -1258,9 +1062,7 @@ export default function CountryDetailOverlay({
                                   item.description
                               )}
                             </p>
-
                           </div>
-
                         </div>
                       )
                     )}
@@ -1275,9 +1077,7 @@ export default function CountryDetailOverlay({
                           }
                           className="group overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                         >
-
                           <div className="relative h-52 overflow-hidden">
-
                             <img
                               src={
                                 item.image
@@ -1287,7 +1087,6 @@ export default function CountryDetailOverlay({
                               }
                               className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                             />
-
                             <span className="absolute left-4 top-4 rounded-full bg-orange-500 px-3 py-1.5 text-[9px] font-black tracking-wide text-white shadow">
                               {t(
                                 item.category,
@@ -1295,11 +1094,9 @@ export default function CountryDetailOverlay({
                                   item.category
                               )}
                             </span>
-
                           </div>
 
                           <div className="p-5">
-
                             <h3 className="text-lg font-black text-slate-900">
                               {t(
                                 item.title,
@@ -1307,7 +1104,6 @@ export default function CountryDetailOverlay({
                                   item.title
                               )}
                             </h3>
-
                             <p className="mt-3 text-sm font-medium leading-6 text-slate-500">
                               {t(
                                 item.description,
@@ -1315,9 +1111,7 @@ export default function CountryDetailOverlay({
                                   item.description
                               )}
                             </p>
-
                           </div>
-
                         </div>
                       )
                     )}
@@ -1326,6 +1120,7 @@ export default function CountryDetailOverlay({
 
               </section>
             )}
+
 
             {/* =====================================================
                 JAPAN CONNECTION
@@ -1339,7 +1134,6 @@ export default function CountryDetailOverlay({
                   <HeartHandshake className="absolute -bottom-10 -right-8 h-56 w-56 text-rose-100" />
 
                   <div className="relative z-10">
-
                     <p className="text-[10px] font-black tracking-[0.2em] text-rose-500">
                       JAPAN CONNECTION
                     </p>
@@ -1372,13 +1166,13 @@ export default function CountryDetailOverlay({
                             .text
                       )}
                     </p>
-
                   </div>
 
                 </div>
 
               </section>
             )}
+
 
             {/* =====================================================
                 EXTRA PRACTICE
@@ -1395,15 +1189,12 @@ export default function CountryDetailOverlay({
               <section className="border-t border-slate-200 bg-slate-50/80 px-5 py-12 md:px-9 lg:px-12">
 
                 <div className="mb-8">
-
                   <p className="text-[10px] font-black tracking-[0.2em] text-slate-400">
                     EXTRA PRACTICE
                   </p>
-
                   <h2 className="mt-3 text-3xl font-black text-slate-950">
                     もっと練習する
                   </h2>
-
                 </div>
 
                 {countryData.quiz && (
@@ -1424,7 +1215,6 @@ export default function CountryDetailOverlay({
                     iso
                   ] && (
                   <div className="mt-8 rounded-[28px] bg-white p-5 shadow-sm md:p-8">
-
                     <LanguagePractice
                       countryCode={
                         iso
@@ -1433,7 +1223,6 @@ export default function CountryDetailOverlay({
                         languageData
                       }
                     />
-
                   </div>
                 )}
 
