@@ -1,15 +1,23 @@
 import {
   ArrowLeft,
+  Check,
   CheckCircle2,
+  ChevronRight,
   LockKeyhole,
   Play,
   Sparkles,
+  Trophy,
+  X,
 } from 'lucide-react';
 
 import {
   useRef,
   useState,
 } from 'react';
+
+import {
+  createPortal,
+} from 'react-dom';
 
 import {
   completeWorldMission,
@@ -24,7 +32,7 @@ import MissionPlayer from './MissionPlayer';
 
 
 /* =========================================================
-   SUPPORTED MISSION TYPES
+   PLAYABLE MISSION TYPES
 ========================================================= */
 
 const INTERACTIVE_MISSION_TYPES = new Set([
@@ -50,7 +58,6 @@ const INTERACTIVE_MISSION_TYPES = new Set([
   'question-creator',
   'creator-capstone',
 ]);
-
 
 const isMissionPlayable = (
   mission
@@ -83,6 +90,9 @@ const LEARNING_LEVELS = [
     label: '小学生',
     labelEn: 'Elementary',
     description: '見る・選ぶ・発見する',
+    accent: '#10b981',
+    tint: '#ecfdf5',
+    glow: 'rgba(16,185,129,0.18)',
   },
   {
     id: 'juniorHigh',
@@ -91,6 +101,9 @@ const LEARNING_LEVELS = [
     label: '中学生',
     labelEn: 'Junior High',
     description: '比べる・理由を考える',
+    accent: '#2563eb',
+    tint: '#eff6ff',
+    glow: 'rgba(37,99,235,0.18)',
   },
   {
     id: 'highSchoolStandard',
@@ -99,6 +112,9 @@ const LEARNING_LEVELS = [
     label: '高校生',
     labelEn: 'High School',
     description: '日本語で世界の課題を深く考える',
+    accent: '#7c3aed',
+    tint: '#f5f3ff',
+    glow: 'rgba(124,58,237,0.18)',
   },
   {
     id: 'highSchoolAdvanced',
@@ -107,9 +123,11 @@ const LEARNING_LEVELS = [
     label: '高校生 Challenge',
     labelEn: 'High School Challenge',
     description: '英語を使って世界を探究する',
+    accent: '#ec4899',
+    tint: '#fdf2f8',
+    glow: 'rgba(236,72,153,0.18)',
   },
 ];
-
 
 const getLearningLevelMeta = (
   learningLevelId
@@ -191,31 +209,8 @@ const applyLearningLevelToMission = (
 
 
 /* =========================================================
-   HELPERS
+   DATA / THEMES
 ========================================================= */
-
-const getMissionNumber = (
-  missionId
-) => {
-  const match =
-    String(
-      missionId ?? ''
-    ).match(
-      /-m(\d+)$/i
-    );
-
-  if (!match) {
-    return 'MISSION';
-  }
-
-  return `M${String(
-    match[1]
-  ).padStart(
-    2,
-    '0'
-  )}`;
-};
-
 
 const missionModules =
   import.meta.glob(
@@ -224,7 +219,6 @@ const missionModules =
       eager: true,
     }
   );
-
 
 const getMissionCountryData = (
   fileLetter,
@@ -259,7 +253,6 @@ const getMissionCountryData = (
   );
 };
 
-
 const makeFlagEmoji = (
   countryCode
 ) => {
@@ -282,48 +275,33 @@ const makeFlagEmoji = (
       (letter) =>
         String.fromCodePoint(
           127397 +
-            letter.charCodeAt(
-              0
-            )
+            letter.charCodeAt(0)
         )
     )
     .join('');
 };
 
+const getMissionNumber = (
+  missionId
+) => {
+  const match =
+    String(
+      missionId ?? ''
+    ).match(
+      /-m(\d+)$/i
+    );
 
-const BADGE_META = {
-  none: {
-    icon: '🌍',
-    label: 'Start Exploring',
-    labelJa: '冒険を始めよう',
-  },
-  stamp: {
-    icon: '🌏',
-    label: 'Explorer Stamp',
-    labelJa: '探索スタンプ',
-  },
-  bronze: {
-    icon: '🥉',
-    label: 'Explorer Badge',
-    labelJa: 'エクスプローラー',
-  },
-  silver: {
-    icon: '🥈',
-    label: 'Discovery Badge',
-    labelJa: 'ディスカバリー',
-  },
-  gold: {
-    icon: '🥇',
-    label: 'Country Master',
-    labelJa: 'カントリーマスター',
-  },
-  diamond: {
-    icon: '💎',
-    label: 'Connector Badge',
-    labelJa: 'コネクター',
-  },
+  if (!match) {
+    return 'MISSION';
+  }
+
+  return `M${String(
+    match[1]
+  ).padStart(
+    2,
+    '0'
+  )}`;
 };
-
 
 const DOMAIN_THEME = {
   place: {
@@ -331,6 +309,8 @@ const DOMAIN_THEME = {
     dark: '#047857',
     soft: '#ecfdf5',
     border: '#a7f3d0',
+    gradient:
+      'linear-gradient(135deg,#059669 0%,#10b981 56%,#6ee7b7 100%)',
     label: 'EXPLORE THE MAP',
   },
   time: {
@@ -338,6 +318,8 @@ const DOMAIN_THEME = {
     dark: '#b45309',
     soft: '#fffbeb',
     border: '#fde68a',
+    gradient:
+      'linear-gradient(135deg,#d97706 0%,#f59e0b 58%,#fde68a 100%)',
     label: 'TRAVEL THROUGH TIME',
   },
   language: {
@@ -345,6 +327,8 @@ const DOMAIN_THEME = {
     dark: '#6d28d9',
     soft: '#f5f3ff',
     border: '#ddd6fe',
+    gradient:
+      'linear-gradient(135deg,#6d28d9 0%,#8b5cf6 58%,#c4b5fd 100%)',
     label: 'USE YOUR VOICE',
   },
   lifeCulture: {
@@ -352,6 +336,8 @@ const DOMAIN_THEME = {
     dark: '#c2410c',
     soft: '#fff7ed',
     border: '#fed7aa',
+    gradient:
+      'linear-gradient(135deg,#ea580c 0%,#f97316 58%,#fdba74 100%)',
     label: 'DISCOVER DAILY LIFE',
   },
   japanConnection: {
@@ -359,6 +345,8 @@ const DOMAIN_THEME = {
     dark: '#1d4ed8',
     soft: '#eff6ff',
     border: '#bfdbfe',
+    gradient:
+      'linear-gradient(135deg,#1d4ed8 0%,#3b82f6 58%,#93c5fd 100%)',
     label: 'CONNECT WITH JAPAN',
   },
   thinkConnect: {
@@ -366,358 +354,735 @@ const DOMAIN_THEME = {
     dark: '#be185d',
     soft: '#fdf2f8',
     border: '#fbcfe8',
+    gradient:
+      'linear-gradient(135deg,#be185d 0%,#ec4899 58%,#f9a8d4 100%)',
     label: 'THINK & CONNECT',
   },
 };
-
 
 const DEFAULT_DOMAIN_THEME = {
   accent: '#64748b',
   dark: '#334155',
   soft: '#f8fafc',
   border: '#e2e8f0',
+  gradient:
+    'linear-gradient(135deg,#334155 0%,#64748b 58%,#cbd5e1 100%)',
   label: 'WORLD ADVENTURE',
 };
 
 
-const getDomainCounts = (
-  missionData,
-  completedIds
-) => {
-  const counts = {};
-
-  const domains =
-    missionData?.design?.domains ??
-    [];
-
-  domains.forEach(
-    (domain) => {
-      counts[
-        domain.id
-      ] = 0;
-    }
-  );
-
-  (
-    missionData?.missions ??
-    []
-  ).forEach(
-    (mission) => {
-      if (
-        completedIds.has(
-          mission.id
-        )
-      ) {
-        counts[
-          mission.domain
-        ] =
-          (
-            counts[
-              mission.domain
-            ] ??
-            0
-          ) + 1;
-      }
-    }
-  );
-
-  return counts;
-};
-
-
-const qualifiesForRule = ({
-  rule,
-  completedCount,
-  totalPoints,
-  domainCounts,
-  completedIds,
-}) => {
-  if (!rule) {
-    return false;
-  }
-
-  if (
-    rule.minMissions &&
-    completedCount <
-      rule.minMissions
-  ) {
-    return false;
-  }
-
-  if (
-    rule.minWorldPoints &&
-    totalPoints <
-      rule.minWorldPoints
-  ) {
-    return false;
-  }
-
-  if (
-    rule.minDomains
-  ) {
-    const activeDomains =
-      Object.values(
-        domainCounts
-      ).filter(
-        (count) =>
-          count > 0
-      ).length;
-
-    if (
-      activeDomains <
-      rule.minDomains
-    ) {
-      return false;
-    }
-  }
-
-  if (
-    rule.domainMinimums
-  ) {
-    const allDomainsClear =
-      Object.entries(
-        rule.domainMinimums
-      ).every(
-        ([
-          domainId,
-          minimum,
-        ]) =>
-          (
-            domainCounts[
-              domainId
-            ] ??
-            0
-          ) >=
-          minimum
-      );
-
-    if (!allDomainsClear) {
-      return false;
-    }
-  }
-
-  if (
-    rule.requiredMissionIds
-  ) {
-    const allRequiredClear =
-      rule.requiredMissionIds.every(
-        (missionId) =>
-          completedIds.has(
-            missionId
-          )
-      );
-
-    if (!allRequiredClear) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-
-const calculateBadge = (
-  missionData,
-  completedIds,
-  totalPoints,
-  domainCounts
-) => {
-  const completedCount =
-    completedIds.size;
-
-  const rules =
-    missionData?.badgeRules ??
-    {};
-
-  const shared = {
-    completedCount,
-    totalPoints,
-    domainCounts,
-    completedIds,
-  };
-
-  if (
-    qualifiesForRule({
-      rule: rules.diamond,
-      ...shared,
-    })
-  ) {
-    return 'diamond';
-  }
-
-  if (
-    qualifiesForRule({
-      rule: rules.gold,
-      ...shared,
-    })
-  ) {
-    return 'gold';
-  }
-
-  if (
-    qualifiesForRule({
-      rule: rules.silver,
-      ...shared,
-    })
-  ) {
-    return 'silver';
-  }
-
-  if (
-    qualifiesForRule({
-      rule: rules.bronze,
-      ...shared,
-    })
-  ) {
-    return 'bronze';
-  }
-
-  if (
-    qualifiesForRule({
-      rule: rules.stamp,
-      ...shared,
-    })
-  ) {
-    return 'stamp';
-  }
-
-  return 'none';
-};
-
-
 /* =========================================================
-   STEP INDICATOR
+   STEP HEADER
 ========================================================= */
 
-function StepIndicator({
+function StepHeader({
   currentStep,
-  selectedLearningLevel,
-  selectedDomain,
-  onGoLevel,
-  onGoZone,
 }) {
-  const steps = [
+  const items = [
     {
-      number: 1,
-      label: 'LEVEL',
-      labelJa: '学習レベル',
-      enabled: true,
-      onClick: onGoLevel,
+      id: 1,
+      label: 'レベル',
     },
     {
-      number: 2,
-      label: 'ZONE',
-      labelJa: '冒険ゾーン',
-      enabled:
-        Boolean(
-          selectedLearningLevel
-        ),
-      onClick: onGoZone,
+      id: 2,
+      label: 'ゾーン',
     },
     {
-      number: 3,
-      label: 'MISSION',
-      labelJa: 'ミッション',
-      enabled:
-        Boolean(
-          selectedLearningLevel &&
-          selectedDomain
-        ),
-      onClick: null,
+      id: 3,
+      label: 'ミッション',
     },
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-2 rounded-[22px] border border-slate-200 bg-white p-2 shadow-sm">
-      {steps.map(
-        (step) => {
-          const active =
-            currentStep ===
-            step.number;
+    <div className="flex items-center justify-between gap-3 border-b border-slate-100 bg-white/95 px-4 py-3 md:px-6">
+      <div className="flex items-center gap-3">
+        <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-violet-600 text-lg font-black text-white shadow-lg shadow-blue-200/70">
+          {currentStep}
+        </div>
 
-          const complete =
-            currentStep >
-            step.number;
+        <div>
+          <p className="text-[9px] font-black tracking-[0.18em] text-blue-500">
+            STEP {currentStep}
+          </p>
+          <p className="text-sm font-black text-slate-900 md:text-base">
+            {currentStep === 1 && '学習レベルを選ぶ'}
+            {currentStep === 2 && '冒険ゾーンを選ぶ'}
+            {currentStep === 3 && 'ミッションを選ぶ'}
+          </p>
+        </div>
+      </div>
 
-          return (
-            <button
-              key={
-                step.number
-              }
-              type="button"
-              disabled={
-                !step.enabled ||
-                !step.onClick
-              }
-              onClick={
-                step.onClick ??
-                undefined
-              }
-              className={`
-                flex
-                min-w-0
-                items-center
-                gap-3
-                rounded-2xl
-                px-3
-                py-3
-                text-left
-                transition
-                md:px-4
+      <div className="flex items-center gap-1.5 sm:gap-2">
+        {items.map(
+          (item) => {
+            const complete =
+              item.id <
+              currentStep;
 
-                ${
-                  active
-                    ? 'bg-slate-950 text-white shadow-lg'
-                    : complete
-                      ? 'bg-blue-50 text-blue-700 hover:bg-blue-100'
-                      : 'bg-slate-50 text-slate-400'
-                }
+            const active =
+              item.id ===
+              currentStep;
 
-                ${
-                  step.enabled &&
-                  step.onClick
-                    ? 'cursor-pointer'
-                    : 'cursor-default'
-                }
-              `}
-            >
-              <span
+            return (
+              <div
+                key={item.id}
                 className={`
                   flex
-                  h-8
-                  w-8
-                  shrink-0
                   items-center
-                  justify-center
+                  gap-1.5
                   rounded-full
-                  text-xs
+                  px-2.5
+                  py-1.5
+                  text-[10px]
                   font-black
+                  transition
+                  md:px-3
 
                   ${
                     active
-                      ? 'bg-white text-slate-950'
+                      ? 'bg-blue-50 text-blue-700 ring-1 ring-blue-200'
                       : complete
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-white text-slate-400'
+                        ? 'text-emerald-600'
+                        : 'text-slate-300'
                   }
                 `}
               >
-                {complete ? '✓' : step.number}
-              </span>
+                <span
+                  className={`
+                    flex
+                    h-5
+                    w-5
+                    items-center
+                    justify-center
+                    rounded-full
+                    text-[9px]
 
-              <span className="min-w-0">
-                <span className="block text-[9px] font-black tracking-[0.14em] opacity-70">
-                  {step.label}
+                    ${
+                      active
+                        ? 'bg-blue-600 text-white'
+                        : complete
+                          ? 'bg-emerald-500 text-white'
+                          : 'bg-slate-100 text-slate-400'
+                    }
+                  `}
+                >
+                  {complete ? (
+                    <Check
+                      size={12}
+                      strokeWidth={3}
+                    />
+                  ) : (
+                    item.id
+                  )}
                 </span>
-                <span className="mt-0.5 block truncate text-xs font-black md:text-sm">
-                  {step.labelJa}
+
+                <span className="hidden sm:inline">
+                  {item.label}
                 </span>
-              </span>
-            </button>
-          );
-        }
+              </div>
+            );
+          }
+        )}
+      </div>
+    </div>
+  );
+}
+
+
+/* =========================================================
+   COUNTRY SUMMARY BAR
+========================================================= */
+
+function CountryBar({
+  countryCode,
+  countryNameEn,
+  countryNameJa,
+  flagUrl,
+  selectedLevelMeta,
+  selectedDomainMeta,
+  selectedDomainTheme,
+  onBack,
+  backLabel,
+}) {
+  return (
+    <div className="flex flex-col gap-3 border-b border-slate-100 bg-gradient-to-r from-white via-white to-blue-50/60 px-5 py-4 md:flex-row md:items-center md:justify-between md:px-7">
+      <div className="flex flex-wrap items-center gap-2.5">
+        {flagUrl ? (
+          <img
+            src={flagUrl}
+            alt={`${countryNameEn} flag`}
+            className="h-8 w-12 rounded-md object-cover shadow-sm ring-1 ring-slate-200"
+          />
+        ) : (
+          <span className="text-2xl">
+            {makeFlagEmoji(
+              countryCode
+            )}
+          </span>
+        )}
+
+        <div className="mr-2">
+          <span className="font-black text-slate-900">
+            {countryNameEn}
+          </span>
+          {countryNameJa && (
+            <span className="ml-1.5 text-xs font-bold text-slate-400">
+              {countryNameJa}
+            </span>
+          )}
+        </div>
+
+        {selectedLevelMeta && (
+          <span
+            className="rounded-full px-3 py-1.5 text-[10px] font-black"
+            style={{
+              backgroundColor:
+                selectedLevelMeta.tint,
+              color:
+                selectedLevelMeta.accent,
+            }}
+          >
+            {selectedLevelMeta.icon}{' '}
+            {selectedLevelMeta.label}
+          </span>
+        )}
+
+        {selectedDomainMeta && (
+          <span
+            className="rounded-full px-3 py-1.5 text-[10px] font-black"
+            style={{
+              backgroundColor:
+                selectedDomainTheme.soft,
+              color:
+                selectedDomainTheme.dark,
+            }}
+          >
+            {selectedDomainMeta.icon}{' '}
+            {selectedDomainMeta.labelJa}
+          </span>
+        )}
+      </div>
+
+      {onBack && (
+        <button
+          type="button"
+          onClick={onBack}
+          className="inline-flex w-fit items-center gap-1.5 rounded-full px-3 py-2 text-xs font-black text-blue-600 transition hover:bg-blue-50"
+        >
+          <ArrowLeft
+            size={14}
+          />
+          {backLabel}
+        </button>
       )}
     </div>
+  );
+}
+
+
+/* =========================================================
+   MISSION CLEAR — GLOBAL GAME FEEDBACK
+========================================================= */
+
+const CLEAR_CONFETTI = Array.from(
+  { length: 76 },
+  (_, index) => ({
+    id: index,
+    left: `${(index * 43) % 100}%`,
+    delay: `${(index % 12) * 0.035}s`,
+    duration: `${1.45 + (index % 7) * 0.14}s`,
+    drift: `${((index * 31) % 220) - 110}px`,
+    spin: `${360 + (index % 6) * 150}deg`,
+    size: `${6 + (index % 4) * 2}px`,
+    color: [
+      '#38bdf8',
+      '#a78bfa',
+      '#f472b6',
+      '#fbbf24',
+      '#34d399',
+      '#fb7185',
+      '#ffffff',
+    ][index % 7],
+  })
+);
+
+let missionClearAudioContext = null;
+
+function playMissionClearSound(
+  firstClear = true
+) {
+  if (
+    typeof window === 'undefined'
+  ) {
+    return;
+  }
+
+  const AudioContextClass =
+    window.AudioContext ||
+    window.webkitAudioContext;
+
+  if (!AudioContextClass) {
+    return;
+  }
+
+  if (!missionClearAudioContext) {
+    missionClearAudioContext =
+      new AudioContextClass();
+  }
+
+  const context =
+    missionClearAudioContext;
+
+  const run = () => {
+    const now =
+      context.currentTime + 0.015;
+
+    const master =
+      context.createGain();
+
+    master.gain.setValueAtTime(
+      0.0001,
+      now
+    );
+
+    master.gain.exponentialRampToValueAtTime(
+      firstClear ? 0.095 : 0.065,
+      now + 0.025
+    );
+
+    master.gain.exponentialRampToValueAtTime(
+      0.0001,
+      now + (firstClear ? 1.25 : 0.75)
+    );
+
+    master.connect(
+      context.destination
+    );
+
+    const notes = firstClear
+      ? [
+          [523.25, 0.00, 0.20, 'sine'],
+          [659.25, 0.10, 0.24, 'triangle'],
+          [783.99, 0.21, 0.28, 'sine'],
+          [1046.50, 0.36, 0.46, 'triangle'],
+        ]
+      : [
+          [523.25, 0.00, 0.18, 'sine'],
+          [659.25, 0.11, 0.24, 'triangle'],
+        ];
+
+    notes.forEach(
+      ([frequency, offset, duration, type]) => {
+        const oscillator =
+          context.createOscillator();
+
+        const gain =
+          context.createGain();
+
+        const start =
+          now + offset;
+
+        oscillator.type = type;
+        oscillator.frequency.setValueAtTime(
+          frequency,
+          start
+        );
+
+        gain.gain.setValueAtTime(
+          0.0001,
+          start
+        );
+
+        gain.gain.exponentialRampToValueAtTime(
+          0.72,
+          start + 0.025
+        );
+
+        gain.gain.exponentialRampToValueAtTime(
+          0.0001,
+          start + duration
+        );
+
+        oscillator.connect(gain);
+        gain.connect(master);
+
+        oscillator.start(start);
+        oscillator.stop(
+          start + duration + 0.03
+        );
+      }
+    );
+  };
+
+  if (
+    context.state === 'suspended'
+  ) {
+    context.resume()
+      .then(run)
+      .catch(() => {});
+  } else {
+    run();
+  }
+
+  try {
+    if (
+      'vibrate' in navigator
+    ) {
+      navigator.vibrate(
+        firstClear
+          ? [35, 30, 80]
+          : [30]
+      );
+    }
+  } catch {
+    // Vibration is optional.
+  }
+}
+
+function MissionClearFX({
+  data,
+  hasNextMission,
+  onNext,
+  onBackToList,
+  onDismiss,
+}) {
+  if (
+    !data ||
+    typeof document === 'undefined'
+  ) {
+    return null;
+  }
+
+  const firstClear =
+    data.firstClear;
+
+  return createPortal(
+    <div
+      className="fixed inset-0 z-[100300] flex items-center justify-center overflow-hidden bg-slate-950/72 p-4 backdrop-blur-md"
+      role="dialog"
+      aria-modal="true"
+      aria-label={
+        firstClear
+          ? 'Mission clear'
+          : 'Review complete'
+      }
+    >
+      <style>{`
+        @keyframes tp-clear-flash {
+          0% { opacity: 0; }
+          18% { opacity: .92; }
+          100% { opacity: 0; }
+        }
+
+        @keyframes tp-clear-card {
+          0% {
+            opacity: 0;
+            transform: translateY(34px) scale(.68) rotate(-1deg);
+          }
+          58% {
+            opacity: 1;
+            transform: translateY(-8px) scale(1.045) rotate(.4deg);
+          }
+          78% {
+            transform: translateY(2px) scale(.985);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        @keyframes tp-clear-badge {
+          0% { transform: scale(.2) rotate(-24deg); opacity: 0; }
+          62% { transform: scale(1.16) rotate(5deg); opacity: 1; }
+          82% { transform: scale(.94) rotate(-2deg); }
+          100% { transform: scale(1) rotate(0); opacity: 1; }
+        }
+
+        @keyframes tp-clear-ring {
+          0% { transform: scale(.45); opacity: .85; }
+          100% { transform: scale(2.2); opacity: 0; }
+        }
+
+        @keyframes tp-clear-rays {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+
+        @keyframes tp-clear-wp {
+          0% { opacity: 0; transform: translateY(30px) scale(.7); }
+          65% { opacity: 1; transform: translateY(-6px) scale(1.12); }
+          100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes tp-clear-confetti {
+          0% {
+            opacity: 0;
+            transform: translate3d(0,-12vh,0) rotate(0deg);
+          }
+          8% { opacity: 1; }
+          100% {
+            opacity: 0;
+            transform:
+              translate3d(var(--tp-drift),112vh,0)
+              rotate(var(--tp-spin));
+          }
+        }
+
+        @keyframes tp-clear-star {
+          0%,100% { opacity: .25; transform: scale(.7) rotate(0); }
+          50% { opacity: 1; transform: scale(1.2) rotate(12deg); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .tp-clear-animated,
+          .tp-clear-confetti {
+            animation: none !important;
+          }
+          .tp-clear-confetti,
+          .tp-clear-flash-layer,
+          .tp-clear-rays-layer {
+            display: none !important;
+          }
+        }
+      `}</style>
+
+      <div
+        className="tp-clear-flash-layer pointer-events-none absolute inset-0 bg-white"
+        style={{
+          animation:
+            'tp-clear-flash 520ms ease-out both',
+        }}
+      />
+
+      {firstClear && (
+        <div
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+          aria-hidden="true"
+        >
+          {CLEAR_CONFETTI.map(
+            (piece) => (
+              <span
+                key={piece.id}
+                className="tp-clear-confetti absolute top-[-12vh] rounded-[2px]"
+                style={{
+                  left: piece.left,
+                  width: piece.size,
+                  height:
+                    `${Number.parseInt(piece.size, 10) + 7}px`,
+                  backgroundColor:
+                    piece.color,
+                  '--tp-drift':
+                    piece.drift,
+                  '--tp-spin':
+                    piece.spin,
+                  animation:
+                    `tp-clear-confetti ${piece.duration} cubic-bezier(.2,.7,.3,1) ${piece.delay} both`,
+                }}
+              />
+            )
+          )}
+        </div>
+      )}
+
+      <div
+        className="tp-clear-animated relative w-full max-w-[590px] overflow-hidden rounded-[38px] border border-white/65 bg-white px-5 pb-6 pt-7 text-center shadow-[0_45px_130px_rgba(0,0,0,.48)] md:px-9 md:pb-8 md:pt-9"
+        style={{
+          animation:
+            'tp-clear-card 720ms cubic-bezier(.16,1,.3,1) both',
+        }}
+      >
+        <button
+          type="button"
+          onClick={onDismiss}
+          className="absolute right-4 top-4 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-400 transition hover:bg-slate-200 hover:text-slate-700"
+          aria-label="Clear画面を閉じる"
+        >
+          <X size={17} />
+        </button>
+
+        <div
+          className={`absolute inset-x-0 top-0 h-48 ${
+            firstClear
+              ? 'bg-gradient-to-b from-emerald-100 via-cyan-50 to-transparent'
+              : 'bg-gradient-to-b from-blue-100 via-violet-50 to-transparent'
+          }`}
+        />
+
+        {firstClear && (
+          <div
+            className="tp-clear-rays-layer pointer-events-none absolute left-1/2 top-[-125px] h-[390px] w-[390px] -translate-x-1/2 rounded-full opacity-25"
+            style={{
+              background:
+                'repeating-conic-gradient(from 0deg, #fbbf24 0deg 7deg, transparent 7deg 18deg)',
+              animation:
+                'tp-clear-rays 10s linear infinite',
+            }}
+          />
+        )}
+
+        <div className="relative z-10">
+          <div className="relative mx-auto flex h-28 w-28 items-center justify-center">
+            <span
+              className={`tp-clear-animated absolute h-24 w-24 rounded-full ${
+                firstClear
+                  ? 'bg-emerald-300'
+                  : 'bg-blue-300'
+              }`}
+              style={{
+                animation:
+                  'tp-clear-ring 1000ms 120ms ease-out both',
+              }}
+            />
+
+            <div
+              className={`tp-clear-animated relative z-10 flex h-24 w-24 items-center justify-center rounded-[30px] text-white shadow-2xl ${
+                firstClear
+                  ? 'bg-gradient-to-br from-emerald-400 via-emerald-500 to-cyan-600 shadow-emerald-300/50'
+                  : 'bg-gradient-to-br from-blue-500 via-indigo-500 to-violet-600 shadow-blue-300/50'
+              }`}
+              style={{
+                animation:
+                  'tp-clear-badge 760ms 80ms cubic-bezier(.16,1,.3,1) both',
+              }}
+            >
+              {firstClear ? (
+                <Trophy
+                  size={51}
+                  strokeWidth={2.2}
+                />
+              ) : (
+                <CheckCircle2
+                  size={51}
+                  strokeWidth={2.4}
+                />
+              )}
+            </div>
+
+            <Sparkles
+              size={22}
+              className="tp-clear-animated absolute -left-1 top-2 text-amber-400"
+              style={{
+                animation:
+                  'tp-clear-star 900ms .22s ease-in-out 2',
+              }}
+            />
+            <Sparkles
+              size={18}
+              className="tp-clear-animated absolute -right-1 bottom-6 text-fuchsia-400"
+              style={{
+                animation:
+                  'tp-clear-star 820ms .38s ease-in-out 2',
+              }}
+            />
+          </div>
+
+          <p
+            className={`mt-3 text-[11px] font-black tracking-[0.28em] ${
+              firstClear
+                ? 'text-emerald-600'
+                : 'text-blue-600'
+            }`}
+          >
+            {firstClear
+              ? 'MISSION CLEAR!'
+              : 'REVIEW COMPLETE!'}
+          </p>
+
+          <h2 className="mt-2 text-4xl font-black tracking-[-0.045em] text-slate-950 md:text-5xl">
+            {firstClear
+              ? 'Great Job!'
+              : 'Nice Review!'}
+          </h2>
+
+          <p className="mx-auto mt-2 max-w-[430px] text-sm font-bold leading-6 text-slate-500 md:text-base">
+            {data.title}
+          </p>
+
+          {firstClear ? (
+            <div
+              className="tp-clear-animated mt-5"
+              style={{
+                animation:
+                  'tp-clear-wp 700ms 300ms cubic-bezier(.16,1,.3,1) both',
+              }}
+            >
+              <p className="text-[10px] font-black tracking-[0.22em] text-amber-500">
+                WORLD POINTS GET!
+              </p>
+
+              <div className="mt-[-2px] flex items-end justify-center gap-2">
+                <span className="bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 bg-clip-text text-7xl font-black tracking-[-0.06em] text-transparent md:text-8xl">
+                  +{data.points}
+                </span>
+                <span className="mb-2 text-xl font-black text-slate-400">
+                  WP
+                </span>
+              </div>
+            </div>
+          ) : (
+            <div className="mx-auto mt-5 max-w-[420px] rounded-2xl border border-blue-100 bg-blue-50 px-5 py-4">
+              <p className="text-xs font-black tracking-[0.16em] text-blue-500">
+                REVIEW MODE
+              </p>
+              <p className="mt-1 text-sm font-bold text-slate-600">
+                復習クリア！ WPは初回クリア時のみ加算されます。
+              </p>
+            </div>
+          )}
+
+          {data.position &&
+            data.total && (
+              <div className="mx-auto mt-5 max-w-[360px]">
+                <div className="flex items-center justify-between text-[10px] font-black text-slate-400">
+                  <span>ADVENTURE PROGRESS</span>
+                  <span>
+                    {data.position} / {data.total}
+                  </span>
+                </div>
+                <div className="mt-2 h-2 overflow-hidden rounded-full bg-slate-100">
+                  <div
+                    className="h-full rounded-full bg-gradient-to-r from-blue-500 via-violet-500 to-fuchsia-500 transition-all duration-700"
+                    style={{
+                      width:
+                        `${Math.min(100, (data.position / data.total) * 100)}%`,
+                    }}
+                  />
+                </div>
+              </div>
+            )}
+
+          <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-[.8fr_1.35fr]">
+            <button
+              type="button"
+              onClick={onBackToList}
+              className="rounded-2xl border border-slate-200 bg-white px-5 py-4 text-sm font-black text-slate-600 transition hover:-translate-y-0.5 hover:bg-slate-50"
+            >
+              Mission一覧
+            </button>
+
+            <button
+              type="button"
+              onClick={
+                hasNextMission
+                  ? onNext
+                  : onBackToList
+              }
+              className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 via-violet-600 to-fuchsia-600 px-5 py-4 text-base font-black text-white shadow-[0_16px_38px_rgba(79,70,229,.32)] transition hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(79,70,229,.42)]"
+            >
+              {hasNextMission
+                ? '次のMissionへ'
+                : 'Adventureへ戻る'}
+              <ChevronRight
+                size={21}
+                className="transition group-hover:translate-x-1"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>,
+    document.body
   );
 }
 
@@ -729,6 +1094,9 @@ function StepIndicator({
 export default function WorldMissionPanel({
   countryCode,
   fileLetter,
+  countryNameEn: countryNameEnProp,
+  countryNameJa = '',
+  flagUrl = '',
 }) {
   const launcherRef =
     useRef(null);
@@ -746,6 +1114,11 @@ export default function WorldMissionPanel({
   const [
     activeMission,
     setActiveMission,
+  ] = useState(null);
+
+  const [
+    missionClear,
+    setMissionClear,
   ] = useState(null);
 
   const [
@@ -767,6 +1140,12 @@ export default function WorldMissionPanel({
   if (!missionData) {
     return null;
   }
+
+  const countryNameEn =
+    countryNameEnProp ||
+    missionData.countryNameEn ||
+    String(countryCode || '')
+      .toUpperCase();
 
   const rawMissions =
     missionData.missions ??
@@ -792,77 +1171,6 @@ export default function WorldMissionPanel({
         )
       : null;
 
-  const completedIds =
-    new Set(
-      progress?.completedMissionIds ??
-        []
-    );
-
-  const totalPoints =
-    missions.reduce(
-      (
-        total,
-        mission
-      ) => {
-        if (
-          completedIds.has(
-            mission.id
-          )
-        ) {
-          return (
-            total +
-            Number(
-              mission.points ??
-                0
-            )
-          );
-        }
-
-        return total;
-      },
-      0
-    );
-
-  const domainCounts =
-    getDomainCounts(
-      missionData,
-      completedIds
-    );
-
-  const completedCount =
-    completedIds.size;
-
-  const totalMissions =
-    Number(
-      missionData.totalMissions ??
-        missions.length
-    );
-
-  const missionPercent =
-    totalMissions > 0
-      ? Math.round(
-          (
-            completedCount /
-            totalMissions
-          ) *
-            100
-        )
-      : 0;
-
-  const badge =
-    calculateBadge(
-      missionData,
-      completedIds,
-      totalPoints,
-      domainCounts
-    );
-
-  const badgeMeta =
-    BADGE_META[
-      badge
-    ] ??
-    BADGE_META.none;
-
   const selectedDomainMeta =
     domains.find(
       (domain) =>
@@ -878,6 +1186,12 @@ export default function WorldMissionPanel({
         ] ??
         DEFAULT_DOMAIN_THEME
       : DEFAULT_DOMAIN_THEME;
+
+  const completedIds =
+    new Set(
+      progress?.completedMissionIds ??
+        []
+    );
 
   const visibleMissions =
     selectedDomain
@@ -947,7 +1261,7 @@ export default function WorldMissionPanel({
             block: 'start',
           });
         },
-        40
+        50
       );
     };
 
@@ -956,6 +1270,7 @@ export default function WorldMissionPanel({
       learningLevelId
     ) => {
       playUiSound('tap');
+      setMissionClear(null);
       setSelectedLearningLevel(
         learningLevelId
       );
@@ -969,6 +1284,7 @@ export default function WorldMissionPanel({
       domainId
     ) => {
       playUiSound('tap');
+      setMissionClear(null);
       setSelectedDomain(
         domainId
       );
@@ -979,6 +1295,7 @@ export default function WorldMissionPanel({
   const goToLevel =
     () => {
       playUiSound('back');
+      setMissionClear(null);
       setSelectedLearningLevel(null);
       setSelectedDomain(null);
       setActiveMission(null);
@@ -992,6 +1309,7 @@ export default function WorldMissionPanel({
       }
 
       playUiSound('back');
+      setMissionClear(null);
       setSelectedDomain(null);
       setActiveMission(null);
       moveToLauncher();
@@ -1010,6 +1328,7 @@ export default function WorldMissionPanel({
       }
 
       playUiSound('open');
+      setMissionClear(null);
       setActiveMission(
         mission
       );
@@ -1024,6 +1343,7 @@ export default function WorldMissionPanel({
       }
 
       playUiSound('open');
+      setMissionClear(null);
       setActiveMission(
         mission
       );
@@ -1032,6 +1352,7 @@ export default function WorldMissionPanel({
   const closeMissionToList =
     () => {
       playUiSound('back');
+      setMissionClear(null);
       setActiveMission(null);
       moveToLauncher();
     };
@@ -1046,11 +1367,34 @@ export default function WorldMissionPanel({
           mission.id
         );
 
-      playUiSound('success');
+      const firstClear =
+        Boolean(
+          result.isNewCompletion
+        );
 
-      if (
-        result.isNewCompletion
-      ) {
+      playMissionClearSound(
+        firstClear
+      );
+
+      setMissionClear({
+        firstClear,
+        points:
+          Number(
+            mission?.points ?? 0
+          ),
+        title:
+          mission?.title ??
+          'Mission Clear',
+        position:
+          activeMissionIndex >= 0
+            ? activeMissionIndex + 1
+            : null,
+        total:
+          visibleMissions.length ||
+          null,
+      });
+
+      if (firstClear) {
         setProgressRevision(
           (value) =>
             value + 1
@@ -1058,255 +1402,188 @@ export default function WorldMissionPanel({
       }
     };
 
+  const goNextFromClear =
+    () => {
+      setMissionClear(null);
+
+      if (nextActiveMission) {
+        moveToAdjacentMission(
+          nextActiveMission
+        );
+        return;
+      }
+
+      closeMissionToList();
+    };
+
+  const goBackFromClear =
+    () => {
+      setMissionClear(null);
+      closeMissionToList();
+    };
+
   return (
-    <section className="relative">
-
-      {/* =====================================================
-          COMPACT DASHBOARD
-      ====================================================== */}
-
-      <div
-        className="
-          relative
-          overflow-hidden
-          rounded-[32px]
-          bg-gradient-to-br
-          from-slate-950
-          via-blue-950
-          to-violet-950
-          text-white
-          shadow-[0_24px_70px_rgba(15,23,42,0.20)]
-        "
-      >
-        <div className="pointer-events-none absolute -left-28 -top-28 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-28 right-[-5%] h-80 w-80 rounded-full bg-violet-500/20 blur-3xl" />
-
-        <div className="relative grid gap-6 p-6 md:p-8 lg:grid-cols-[1fr_auto] lg:items-center lg:p-9">
-          <div>
-            <div className="flex flex-wrap items-center gap-2.5">
-              <span className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-2 text-[9px] font-black tracking-[0.16em] text-blue-200 backdrop-blur">
-                <Sparkles size={14} />
-                WORLD ADVENTURE
-              </span>
-
-              <span className="rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-[9px] font-black tracking-[0.12em] text-white/60">
-                {makeFlagEmoji(
-                  countryCode
-                )}{' '}
-                {missionData.countryNameEn}
-              </span>
-            </div>
-
-            <h2 className="mt-5 text-3xl font-black tracking-[-0.04em] md:text-4xl">
-              3ステップで冒険を始めよう
-            </h2>
-
-            <p className="mt-3 max-w-2xl text-sm font-semibold leading-7 text-white/60">
-              学習レベルを選ぶ → Adventure Zoneを選ぶ → Missionを始める。
-              今やることだけを順番に表示します。
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-2.5">
-              <span className="rounded-xl border border-white/10 bg-white/10 px-3.5 py-2 text-xs font-black">
-                {completedCount} / {totalMissions} Missions
-              </span>
-              <span className="rounded-xl border border-white/10 bg-white/10 px-3.5 py-2 text-xs font-black text-amber-300">
-                {totalPoints} / {missionData.maxWorldPoints} WP
-              </span>
-              <span className="rounded-xl border border-white/10 bg-white/10 px-3.5 py-2 text-xs font-black text-cyan-300">
-                {missionPercent}% Complete
-              </span>
-            </div>
-
-            <div className="mt-4 max-w-2xl">
-              <div className="h-2 overflow-hidden rounded-full bg-white/10">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-300 transition-all duration-700"
-                  style={{
-                    width:
-                      `${missionPercent}%`,
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="flex min-w-[210px] items-center justify-between gap-4 rounded-[24px] border border-white/15 bg-white/10 p-4 backdrop-blur-xl lg:block lg:text-center">
-            <div>
-              <p className="text-[9px] font-black tracking-[0.15em] text-blue-200">
-                CURRENT BADGE
-              </p>
-              <p className="mt-2 text-base font-black">
-                {badgeMeta.label}
-              </p>
-              <p className="mt-1 text-[11px] font-bold text-white/45">
-                {badgeMeta.labelJa}
-              </p>
-            </div>
-
-            <div className="text-4xl lg:mt-4 lg:text-5xl">
-              {badgeMeta.icon}
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      {/* =====================================================
-          3-STEP LAUNCHER
-      ====================================================== */}
-
-      <div
-        ref={
-          launcherRef
-        }
-        className="mt-7 scroll-mt-5"
-      >
-        <StepIndicator
+    <section
+      ref={launcherRef}
+      className="relative z-20 scroll-mt-5"
+    >
+      <div className="overflow-hidden rounded-[30px] border border-white/80 bg-white/95 shadow-[0_24px_70px_rgba(15,23,42,0.16)] ring-1 ring-slate-200/70 backdrop-blur-xl">
+        <StepHeader
           currentStep={
             currentStep
           }
-          selectedLearningLevel={
-            selectedLearningLevel
-          }
-          selectedDomain={
-            selectedDomain
-          }
-          onGoLevel={
-            currentStep > 1
-              ? goToLevel
-              : null
-          }
-          onGoZone={
-            currentStep > 2
-              ? goToZone
-              : null
-          }
         />
 
-        <div
-          className="
-            mt-4
-            overflow-hidden
-            rounded-[30px]
-            border
-            border-slate-200
-            bg-gradient-to-br
-            from-white
-            to-slate-50
-            shadow-sm
-          "
-        >
+        {/* =====================================================
+            STEP 1 — LEVEL ONLY
+        ====================================================== */}
+        {currentStep === 1 && (
+          <div className="p-5 md:p-7 lg:p-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-[10px] font-black tracking-[0.2em] text-blue-500">
+                FIRST CHOICE
+              </p>
 
-          {/* =================================================
-              STEP 1 / LEVEL
-          ================================================== */}
+              <h2 className="mt-2 text-2xl font-black tracking-[-0.035em] text-slate-950 md:text-4xl">
+                まず、学習レベルを選ぼう
+              </h2>
 
-          {currentStep === 1 && (
-            <div className="p-5 md:p-7">
-              <div className="mb-6">
-                <p className="text-[10px] font-black tracking-[0.18em] text-blue-500">
-                  STEP 1 · YOUR LEARNING LEVEL
-                </p>
-                <h3 className="mt-2 text-2xl font-black text-slate-900 md:text-3xl">
-                  まず、学習レベルを選ぼう
-                </h3>
-                <p className="mt-2 text-sm font-semibold text-slate-500">
-                  選んだレベルに合わせてMissionの内容・問い・教材が変わります。
-                </p>
-              </div>
+              <p className="mt-3 text-sm font-semibold leading-6 text-slate-500 md:text-base">
+                ここでは1つ選ぶだけ。選んだレベルに合わせてMissionの問い方・教材・難しさが変わります。
+              </p>
+            </div>
 
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
-                {LEARNING_LEVELS.map(
-                  (level) => (
-                    <button
-                      key={
+            <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              {LEARNING_LEVELS.map(
+                (level) => (
+                  <button
+                    key={level.id}
+                    type="button"
+                    onClick={() =>
+                      selectLearningLevel(
                         level.id
-                      }
-                      type="button"
-                      onClick={() =>
-                        selectLearningLevel(
-                          level.id
-                        )
-                      }
-                      className="group relative overflow-hidden rounded-[24px] border border-slate-200 bg-white p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
-                    >
-                      <div className="text-3xl">
+                      )
+                    }
+                    className="group relative min-h-[220px] overflow-hidden rounded-[26px] border p-5 text-left transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] hover:shadow-2xl focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200"
+                    style={{
+                      background:
+                        `linear-gradient(180deg, #ffffff 0%, ${level.tint} 100%)`,
+                      borderColor:
+                        `${level.accent}33`,
+                      boxShadow:
+                        `0 18px 44px ${level.glow}`,
+                    }}
+                  >
+                    <div
+                      className="pointer-events-none absolute -right-10 -top-10 h-36 w-36 rounded-full blur-2xl"
+                      style={{
+                        backgroundColor:
+                          `${level.accent}18`,
+                      }}
+                    />
+
+                    <div className="relative flex h-full flex-col">
+                      <div
+                        className="flex h-14 w-14 items-center justify-center rounded-2xl text-3xl shadow-sm"
+                        style={{
+                          backgroundColor:
+                            `${level.accent}16`,
+                        }}
+                      >
                         {level.icon}
                       </div>
 
-                      <p className="mt-4 text-lg font-black text-slate-900">
-                        {level.label}
-                      </p>
+                      <div className="mt-5">
+                        <p className="text-xl font-black text-slate-950">
+                          {level.label}
+                        </p>
+                        <p className="mt-1 text-[10px] font-black tracking-[0.1em] text-slate-400">
+                          {level.labelEn}
+                        </p>
+                        <p className="mt-3 text-sm font-bold leading-6 text-slate-500">
+                          {level.description}
+                        </p>
+                      </div>
 
-                      <p className="mt-1 text-[9px] font-black tracking-[0.1em] text-slate-400">
-                        {level.labelEn}
-                      </p>
-
-                      <p className="mt-3 text-xs font-semibold leading-5 text-slate-500">
-                        {level.description}
-                      </p>
-
-                      <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-                        <span className="text-[10px] font-black tracking-[0.1em] text-blue-600">
-                          SELECT LEVEL
-                        </span>
-                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white transition-transform group-hover:translate-x-1">
-                          →
+                      <div className="mt-auto flex items-center justify-end pt-5">
+                        <span
+                          className="flex h-11 w-11 items-center justify-center rounded-full text-white shadow-lg transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110"
+                          style={{
+                            backgroundColor:
+                              level.accent,
+                          }}
+                        >
+                          <ChevronRight
+                            size={21}
+                            strokeWidth={2.6}
+                          />
                         </span>
                       </div>
-                    </button>
-                  )
-                )}
-              </div>
-            </div>
-          )}
-
-
-          {/* =================================================
-              STEP 2 / ZONE
-          ================================================== */}
-
-          {currentStep === 2 && (
-            <div className="p-5 md:p-7">
-              <div className="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-                <div>
-                  <p className="text-[10px] font-black tracking-[0.18em] text-blue-500">
-                    STEP 2 · ADVENTURE ZONE
-                  </p>
-                  <h3 className="mt-2 text-2xl font-black text-slate-900 md:text-3xl">
-                    次に、冒険する分野を選ぼう
-                  </h3>
-                  <p className="mt-2 text-sm font-semibold text-slate-500">
-                    6つのZoneから1つ選ぶと、そのZoneのMissionだけが表示されます。
-                  </p>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={
-                      goToLevel
-                    }
-                    className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-600 hover:bg-slate-50"
-                  >
-                    <ArrowLeft size={14} />
-                    レベルを変更
+                    </div>
                   </button>
+                )
+              )}
+            </div>
+          </div>
+        )}
 
-                  <span className="rounded-full bg-slate-950 px-4 py-2 text-xs font-black text-white">
-                    {selectedLevelMeta?.icon}{' '}
-                    {selectedLevelMeta?.label}
-                  </span>
-                </div>
+        {/* =====================================================
+            STEP 2 — ZONES ONLY
+        ====================================================== */}
+        {currentStep === 2 && (
+          <div>
+            <CountryBar
+              countryCode={
+                countryCode
+              }
+              countryNameEn={
+                countryNameEn
+              }
+              countryNameJa={
+                countryNameJa
+              }
+              flagUrl={
+                flagUrl
+              }
+              selectedLevelMeta={
+                selectedLevelMeta
+              }
+              selectedDomainMeta={
+                null
+              }
+              selectedDomainTheme={
+                DEFAULT_DOMAIN_THEME
+              }
+              onBack={
+                goToLevel
+              }
+              backLabel="レベルを変更する"
+            />
+
+            <div className="p-5 md:p-7 lg:p-8">
+              <div className="mb-6">
+                <p className="text-[10px] font-black tracking-[0.2em] text-violet-500">
+                  CHOOSE YOUR ADVENTURE
+                </p>
+                <h2 className="mt-2 text-2xl font-black tracking-[-0.035em] text-slate-950 md:text-4xl">
+                  どのゾーンから始める？
+                </h2>
+                <p className="mt-2 text-sm font-semibold text-slate-500">
+                  気になるテーマを1つ選んで、{countryNameEn}について深く学ぼう。
+                </p>
               </div>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {domains.map(
                   (
-                    domain,
-                    domainIndex
+                    domain
                   ) => {
+                    const theme =
+                      DOMAIN_THEME[
+                        domain.id
+                      ] ??
+                      DEFAULT_DOMAIN_THEME;
+
                     const domainMissions =
                       missions.filter(
                         (mission) =>
@@ -1314,135 +1591,62 @@ export default function WorldMissionPanel({
                           domain.id
                       );
 
-                    const domainTotal =
-                      domainMissions.length;
-
-                    const domainComplete =
-                      domainCounts[
-                        domain.id
-                      ] ??
-                      0;
-
-                    const domainPercent =
-                      domainTotal > 0
-                        ? Math.round(
-                            (
-                              domainComplete /
-                              domainTotal
-                            ) *
-                              100
+                    const completeCount =
+                      domainMissions.filter(
+                        (mission) =>
+                          completedIds.has(
+                            mission.id
                           )
-                        : 0;
-
-                    const theme =
-                      DOMAIN_THEME[
-                        domain.id
-                      ] ??
-                      DEFAULT_DOMAIN_THEME;
+                      ).length;
 
                     return (
                       <button
-                        key={
-                          domain.id
-                        }
+                        key={domain.id}
                         type="button"
                         onClick={() =>
                           selectDomain(
                             domain.id
                           )
                         }
-                        className="group relative overflow-hidden rounded-[26px] border p-5 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                        className="group relative min-h-[190px] overflow-hidden rounded-[28px] p-6 text-left text-white shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200"
                         style={{
-                          backgroundColor:
-                            theme.soft,
-                          borderColor:
-                            theme.border,
+                          background:
+                            theme.gradient,
                         }}
                       >
-                        <div
-                          className="pointer-events-none absolute -right-2 -top-5 text-[88px] font-black leading-none opacity-[0.07]"
-                          style={{
-                            color:
-                              theme.accent,
-                          }}
-                        >
-                          {String(
-                            domainIndex + 1
-                          ).padStart(
-                            2,
-                            '0'
-                          )}
+                        <div className="pointer-events-none absolute -right-7 -top-8 text-[118px] font-black leading-none text-white/10">
+                          {domain.icon}
                         </div>
 
-                        <div className="relative">
+                        <div className="relative flex h-full flex-col">
                           <div className="flex items-start justify-between gap-3">
-                            <div
-                              className="flex h-12 w-12 items-center justify-center rounded-2xl text-2xl text-white shadow-sm"
-                              style={{
-                                backgroundColor:
-                                  theme.accent,
-                              }}
-                            >
+                            <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/30 bg-white/20 text-2xl shadow-inner backdrop-blur">
                               {domain.icon}
                             </div>
 
-                            <span
-                              className="rounded-full px-3 py-1 text-[9px] font-black tracking-[0.1em]"
-                              style={{
-                                backgroundColor:
-                                  `${theme.accent}18`,
-                                color:
-                                  theme.dark,
-                              }}
-                            >
-                              {domainComplete} / {domainTotal}
+                            <span className="rounded-full border border-white/20 bg-white/15 px-3 py-1.5 text-[9px] font-black backdrop-blur">
+                              {completeCount} / {domainMissions.length}
                             </span>
                           </div>
 
-                          <p
-                            className="mt-5 text-[9px] font-black tracking-[0.15em]"
-                            style={{
-                              color:
-                                theme.accent,
-                            }}
-                          >
-                            {theme.label}
-                          </p>
+                          <div className="mt-auto pt-6">
+                            <p className="text-[9px] font-black tracking-[0.15em] text-white/70">
+                              {theme.label}
+                            </p>
+                            <p className="mt-1 text-2xl font-black tracking-[-0.03em]">
+                              {domain.labelJa}
+                            </p>
+                            <p className="mt-1 text-xs font-bold text-white/75">
+                              {domain.labelEn}
+                            </p>
+                          </div>
 
-                          <h4 className="mt-1 text-lg font-black text-slate-900">
-                            {domain.labelJa}
-                          </h4>
-
-                          <p className="mt-1 text-xs font-bold text-slate-400">
-                            {domain.labelEn}
-                          </p>
-
-                          <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-white/80">
-                            <div
-                              className="h-full rounded-full transition-all duration-500"
-                              style={{
-                                width:
-                                  `${domainPercent}%`,
-                                backgroundColor:
-                                  theme.accent,
-                              }}
+                          <span className="absolute bottom-0 right-0 flex h-11 w-11 items-center justify-center rounded-full bg-white text-slate-900 shadow-lg transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
+                            <ChevronRight
+                              size={21}
+                              strokeWidth={2.6}
                             />
-                          </div>
-
-                          <div className="mt-4 flex items-center justify-between">
-                            <span className="text-xs font-black text-slate-500">
-                              {domainPercent}%
-                            </span>
-                            <span
-                              className="text-[10px] font-black tracking-[0.1em] transition-transform group-hover:translate-x-1"
-                              style={{
-                                color:
-                                  theme.dark,
-                              }}
-                            >
-                              SELECT →
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </button>
                     );
@@ -1450,153 +1654,72 @@ export default function WorldMissionPanel({
                 )}
               </div>
             </div>
-          )}
+          </div>
+        )}
 
+        {/* =====================================================
+            STEP 3 — MISSIONS ONLY
+        ====================================================== */}
+        {currentStep === 3 && (
+          <div>
+            <CountryBar
+              countryCode={
+                countryCode
+              }
+              countryNameEn={
+                countryNameEn
+              }
+              countryNameJa={
+                countryNameJa
+              }
+              flagUrl={
+                flagUrl
+              }
+              selectedLevelMeta={
+                selectedLevelMeta
+              }
+              selectedDomainMeta={
+                selectedDomainMeta
+              }
+              selectedDomainTheme={
+                selectedDomainTheme
+              }
+              onBack={
+                goToZone
+              }
+              backLabel="ゾーンを変更する"
+            />
 
-          {/* =================================================
-              STEP 3 / MISSIONS
-          ================================================== */}
-
-          {currentStep === 3 && (
-            <div className="p-5 md:p-7">
-              <div className="mb-5 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div className="p-5 md:p-7 lg:p-8">
+              <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
                 <div>
-                  <p className="text-[10px] font-black tracking-[0.18em] text-blue-500">
-                    STEP 3 · CHOOSE A MISSION
+                  <p
+                    className="text-[10px] font-black tracking-[0.2em]"
+                    style={{
+                      color:
+                        selectedDomainTheme.accent,
+                    }}
+                  >
+                    CHOOSE A MISSION
                   </p>
-                  <h3 className="mt-2 text-2xl font-black text-slate-900 md:text-3xl">
-                    {selectedDomainMeta?.labelJa}
-                  </h3>
+                  <h2 className="mt-2 text-2xl font-black tracking-[-0.035em] text-slate-950 md:text-4xl">
+                    Missionを選ぼう
+                  </h2>
                   <p className="mt-2 text-sm font-semibold text-slate-500">
-                    このZoneのMissionから1つ選んで始めよう。
+                    「{selectedDomainMeta?.labelJa}」について、{visibleMissions.length}個のMissionがあります。
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-2">
-                  <button
-                    type="button"
-                    onClick={
-                      goToZone
-                    }
-                    className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-600 hover:bg-slate-50"
-                  >
-                    <ArrowLeft size={14} />
-                    Zoneを変更
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={
-                      goToLevel
-                    }
-                    className="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black text-slate-500 hover:bg-slate-50"
-                  >
-                    {selectedLevelMeta?.icon}{' '}
-                    {selectedLevelMeta?.label}
-                  </button>
+                <div className="text-xs font-black text-slate-400">
+                  {visibleMissions.length} MISSIONS
                 </div>
               </div>
 
-              {recommendedMission && (
-                <div
-                  className="relative mb-6 overflow-hidden rounded-[26px] border p-5 md:p-6"
-                  style={{
-                    backgroundColor:
-                      selectedDomainTheme.soft,
-                    borderColor:
-                      selectedDomainTheme.border,
-                  }}
-                >
-                  <div className="grid gap-5 md:grid-cols-[1fr_auto] md:items-center">
-                    <div>
-                      <p
-                        className="text-[10px] font-black tracking-[0.15em]"
-                        style={{
-                          color:
-                            selectedDomainTheme.dark,
-                        }}
-                      >
-                        NEXT RECOMMENDED MISSION
-                      </p>
-
-                      <div className="mt-2 flex flex-wrap items-center gap-2">
-                        <span
-                          className="rounded-full px-2.5 py-1 text-[10px] font-black"
-                          style={{
-                            backgroundColor:
-                              `${selectedDomainTheme.accent}18`,
-                            color:
-                              selectedDomainTheme.dark,
-                          }}
-                        >
-                          {getMissionNumber(
-                            recommendedMission.id
-                          )}
-                        </span>
-                        <span className="rounded-full bg-white px-2.5 py-1 text-[10px] font-black text-amber-600 shadow-sm">
-                          +{recommendedMission.points} WP
-                        </span>
-                      </div>
-
-                      <h4 className="mt-3 text-xl font-black text-slate-900 md:text-2xl">
-                        {recommendedMission.title}
-                      </h4>
-
-                      <p className="mt-2 max-w-3xl text-sm font-semibold leading-6 text-slate-600">
-                        {recommendedMission.prompt}
-                      </p>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={() =>
-                        openMission(
-                          recommendedMission
-                        )
-                      }
-                      className="group flex min-w-[210px] items-center justify-between gap-5 rounded-2xl bg-slate-950 px-5 py-4 text-left text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-blue-700"
-                    >
-                      <span>
-                        <span className="block text-[9px] font-black tracking-[0.13em] text-white/50">
-                          START NOW
-                        </span>
-                        <span className="mt-1 block text-sm font-black">
-                          このMissionを始める
-                        </span>
-                      </span>
-
-                      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-950 transition-transform group-hover:scale-105">
-                        <Play
-                          size={15}
-                          fill="currentColor"
-                        />
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              <div className="mb-4 flex items-center justify-between">
-                <p className="text-xs font-black text-slate-400">
-                  {visibleMissions.length} MISSIONS IN THIS ZONE
-                </p>
-
-                <span
-                  className="rounded-full px-3 py-1.5 text-[10px] font-black"
-                  style={{
-                    backgroundColor:
-                      `${selectedDomainTheme.accent}14`,
-                    color:
-                      selectedDomainTheme.dark,
-                  }}
-                >
-                  {selectedDomainMeta?.labelEn}
-                </span>
-              </div>
-
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {visibleMissions.map(
-                  (mission) => {
+                  (
+                    mission
+                  ) => {
                     const completed =
                       completedIds.has(
                         mission.id
@@ -1607,32 +1730,15 @@ export default function WorldMissionPanel({
                         mission
                       );
 
-                    const domain =
-                      domains.find(
-                        (item) =>
-                          item.id ===
-                          mission.domain
-                      );
-
-                    const theme =
-                      DOMAIN_THEME[
-                        mission.domain
-                      ] ??
-                      DEFAULT_DOMAIN_THEME;
-
-                    const isRecommended =
+                    const recommended =
                       recommendedMission?.id ===
                       mission.id;
 
                     return (
                       <button
-                        key={
-                          mission.id
-                        }
+                        key={mission.id}
                         type="button"
-                        disabled={
-                          !playable
-                        }
+                        disabled={!playable}
                         onClick={() =>
                           openMission(
                             mission
@@ -1641,26 +1747,30 @@ export default function WorldMissionPanel({
                         className={`
                           group
                           relative
+                          min-h-[230px]
                           overflow-hidden
-                          rounded-[24px]
+                          rounded-[26px]
                           border
                           bg-white
                           p-5
                           text-left
                           transition-all
                           duration-300
+                          focus:outline-none
+                          focus-visible:ring-4
+                          focus-visible:ring-blue-200
 
                           ${
                             playable
-                              ? 'hover:-translate-y-1 hover:shadow-xl'
-                              : 'cursor-not-allowed opacity-65'
+                              ? 'hover:-translate-y-1.5 hover:shadow-2xl'
+                              : 'cursor-not-allowed opacity-55'
                           }
 
                           ${
                             completed
                               ? 'border-emerald-200'
-                              : isRecommended
-                                ? 'border-blue-300 shadow-md ring-2 ring-blue-100'
+                              : recommended
+                                ? 'border-blue-400 shadow-lg ring-2 ring-blue-100'
                                 : 'border-slate-200'
                           }
                         `}
@@ -1671,123 +1781,82 @@ export default function WorldMissionPanel({
                             backgroundColor:
                               completed
                                 ? '#10b981'
-                                : theme.accent,
+                                : selectedDomainTheme.accent,
                           }}
                         />
 
-                        <div className="flex items-start justify-between gap-3">
-                          <div className="flex items-center gap-2">
-                            <span
-                              className="flex h-10 w-10 items-center justify-center rounded-xl text-xl"
-                              style={{
-                                backgroundColor:
-                                  theme.soft,
-                              }}
-                            >
-                              {domain?.icon}
-                            </span>
-
-                            <div>
-                              <div className="flex flex-wrap items-center gap-2">
-                                <span
-                                  className="rounded-full px-2.5 py-1 text-[10px] font-black tracking-[0.08em]"
-                                  style={{
-                                    backgroundColor:
-                                      `${theme.accent}14`,
-                                    color:
-                                      theme.dark,
-                                  }}
-                                >
-                                  {getMissionNumber(
-                                    mission.id
-                                  )}
-                                </span>
-
-                                {isRecommended &&
-                                  !completed && (
-                                    <span className="rounded-full bg-blue-50 px-2.5 py-1 text-[9px] font-black text-blue-600">
-                                      NEXT
-                                    </span>
-                                  )}
-                              </div>
-
-                              <p
-                                className="mt-2 text-[9px] font-black tracking-[0.12em]"
-                                style={{
-                                  color:
-                                    theme.accent,
-                                }}
-                              >
-                                {domain?.labelEn}
-                              </p>
+                        {recommended &&
+                          !completed && (
+                            <div className="absolute right-4 top-4 rounded-full bg-blue-600 px-3 py-1.5 text-[9px] font-black tracking-[0.08em] text-white shadow-md">
+                              NEXT
                             </div>
+                          )}
+
+                        <div className="flex items-start justify-between gap-3">
+                          <div
+                            className="flex h-12 w-12 items-center justify-center rounded-2xl text-2xl"
+                            style={{
+                              backgroundColor:
+                                selectedDomainTheme.soft,
+                            }}
+                          >
+                            {selectedDomainMeta?.icon}
                           </div>
 
                           {completed ? (
-                            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50">
-                              <CheckCircle2
-                                size={21}
-                                className="text-emerald-500"
-                              />
-                            </div>
-                          ) : playable ? (
-                            <div
-                              className="flex h-9 w-9 items-center justify-center rounded-full text-white transition group-hover:scale-110"
-                              style={{
-                                backgroundColor:
-                                  theme.accent,
-                              }}
-                            >
-                              <Play
-                                size={14}
-                                fill="currentColor"
-                              />
-                            </div>
-                          ) : (
-                            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100">
-                              <LockKeyhole
-                                size={17}
-                                className="text-slate-400"
-                              />
-                            </div>
-                          )}
+                            <CheckCircle2
+                              size={25}
+                              className="text-emerald-500"
+                            />
+                          ) : !playable ? (
+                            <LockKeyhole
+                              size={21}
+                              className="text-slate-300"
+                            />
+                          ) : null}
                         </div>
 
-                        <h4 className="mt-5 text-lg font-black leading-snug text-slate-900">
-                          {mission.title}
-                        </h4>
+                        <p
+                          className="mt-5 text-[10px] font-black tracking-[0.12em]"
+                          style={{
+                            color:
+                              selectedDomainTheme.accent,
+                          }}
+                        >
+                          {getMissionNumber(
+                            mission.id
+                          )}
+                        </p>
 
-                        <p className="mt-2 line-clamp-2 min-h-[48px] text-sm font-medium leading-6 text-slate-500">
+                        <h3 className="mt-2 text-xl font-black leading-snug text-slate-950">
+                          {mission.title}
+                        </h3>
+
+                        <p className="mt-2 line-clamp-2 text-sm font-semibold leading-6 text-slate-500">
                           {mission.prompt}
                         </p>
 
-                        <div className="mt-5 flex items-end justify-between border-t border-slate-100 pt-4">
-                          <div>
-                            <p className="text-[9px] font-black tracking-[0.12em] text-slate-300">
-                              REWARD
-                            </p>
-                            <p className="mt-1 font-black text-amber-500">
-                              +{mission.points} WP
-                            </p>
-                          </div>
-
-                          <span
-                            className="text-[10px] font-black tracking-[0.11em]"
-                            style={{
-                              color:
-                                completed
-                                  ? '#059669'
-                                  : playable
-                                    ? theme.dark
-                                    : '#94a3b8',
-                            }}
-                          >
-                            {completed
-                              ? 'REVIEW →'
-                              : playable
-                                ? 'PLAY →'
-                                : 'COMING NEXT'}
+                        <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                          <span className="rounded-full bg-amber-50 px-3 py-1.5 text-[10px] font-black text-amber-600">
+                            +{mission.points} WP
                           </span>
+
+                          {playable && (
+                            <span
+                              className="flex h-10 w-10 items-center justify-center rounded-full text-white shadow-md transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110"
+                              style={{
+                                backgroundColor:
+                                  completed
+                                    ? '#10b981'
+                                    : selectedDomainTheme.accent,
+                              }}
+                            >
+                              <Play
+                                size={15}
+                                fill="currentColor"
+                              />
+                            </span>
+                          )}
                         </div>
                       </button>
                     );
@@ -1795,23 +1864,34 @@ export default function WorldMissionPanel({
                 )}
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
 
-
-      {/* =====================================================
-          ACTIVE MISSION
-      ====================================================== */}
+      <MissionClearFX
+        data={missionClear}
+        hasNextMission={
+          Boolean(
+            nextActiveMission
+          )
+        }
+        onNext={
+          goNextFromClear
+        }
+        onBackToList={
+          goBackFromClear
+        }
+        onDismiss={() =>
+          setMissionClear(
+            null
+          )
+        }
+      />
 
       {activeMission && (
         <MissionPlayer
-          key={
-            `${activeMission.id}-${selectedLearningLevel}`
-          }
-          mission={
-            activeMission
-          }
+          key={`${activeMission.id}-${selectedLearningLevel}`}
+          mission={activeMission}
           domain={
             domains.find(
               (domain) =>
