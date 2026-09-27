@@ -4,7 +4,6 @@ import {
   ArrowRight,
   CheckCircle2,
   List,
-  RotateCcw,
   Volume2,
   X,
 } from 'lucide-react';
@@ -18,6 +17,10 @@ import {
   useRef,
   useState,
 } from 'react';
+
+import {
+  playUiSound,
+} from '../../utils/uiSound';
 
 import TimeMissionGame from './TimeMissionGame';
 import PlaceMissionGame from './PlaceMissionGame';
@@ -225,6 +228,16 @@ export default function MissionPlayer({
       alreadyCompleted
     );
 
+const activeMissionIdRef =
+  useRef(
+    null
+  );
+
+
+const answerLockedRef =
+  useRef(
+    false
+  );
 
   const [
     selectedIndex,
@@ -322,51 +335,80 @@ export default function MissionPlayer({
 
 
   useEffect(
-    () => {
-      setSelectedIndex(
-        null
-      );
-
-      setResult(
-        null
-      );
-
-      setCelebration(
-        null
-      );
-
-      setClearedThisRun(
-        false
-      );
-
-
-      completedThisSessionRef
-        .current =
-        alreadyCompleted;
+  () => {
+    /*
+     * alreadyCompleted が更新された
+     * だけではMission画面を初期化しない。
+     *
+     * Missionそのものが変わった時だけ
+     * リセットする。
+     */
+    if (
+      activeMissionIdRef
+        .current ===
+      mission.id
+    ) {
+      return;
+    }
 
 
-      const container =
-        scrollContainerRef
-          .current;
+    activeMissionIdRef
+      .current =
+      mission.id;
 
 
-      if (
-        container
-      ) {
-        container.scrollTo({
-          top:
-            0,
+    answerLockedRef
+      .current =
+      false;
 
-          behavior:
-            'auto',
-        });
-      }
-    },
-    [
-      mission.id,
-      alreadyCompleted,
-    ]
-  );
+
+    setSelectedIndex(
+      null
+    );
+
+
+    setResult(
+      null
+    );
+
+
+    setCelebration(
+      null
+    );
+
+
+    setClearedThisRun(
+      false
+    );
+
+
+    completedThisSessionRef
+      .current =
+      alreadyCompleted;
+
+
+    const container =
+      scrollContainerRef
+        .current;
+
+
+    if (
+      container
+    ) {
+      container.scrollTo({
+        top:
+          0,
+
+        behavior:
+          'auto',
+      });
+    }
+  },
+  [
+    mission.id,
+    alreadyCompleted,
+  ]
+);
 
 
   useEffect(
@@ -491,57 +533,100 @@ export default function MissionPlayer({
     };
 
 
-  const checkAnswer =
-    () => {
+  const handleChoiceClick =
+  (
+    index
+  ) => {
+    /*
+     * すでに正解済みなら
+     * 追加操作を受け付けない。
+     */
+    if (
+      answerLockedRef
+        .current
+    ) {
+      return;
+    }
+
+
+    setSelectedIndex(
+      index
+    );
+
+
+    const correct =
+      index ===
+      mission
+        .challenge
+        .correctIndex;
+
+
+    if (
+      correct
+    ) {
+      /*
+       * 二重タップによる
+       * 二重クリアを防止。
+       */
+      answerLockedRef
+        .current =
+        true;
+
+
+      setResult(
+        'correct'
+      );
+
+
+      /*
+       * Mission共通の
+       * 正解音。
+       */
+      playUiSound(
+        'success'
+      );
+
+
+      /*
+       * 対応端末のみ軽い振動。
+       * 非対応端末では何もしない。
+       */
       if (
-        selectedIndex ===
-        null
+        typeof navigator !==
+          'undefined' &&
+        'vibrate' in
+          navigator
       ) {
-        return;
+        navigator.vibrate(
+          [
+            45,
+            35,
+            90,
+          ]
+        );
       }
 
 
-      const correct =
-        selectedIndex ===
+      handleMissionComplete(
         mission
-          .challenge
-          .correctIndex;
-
-
-      if (
-        correct
-      ) {
-        setResult(
-          'correct'
-        );
-
-
-        handleMissionComplete(
-          mission
-        );
-
-
-        return;
-      }
-
-
-      setResult(
-        'wrong'
-      );
-    };
-
-
-  const retry =
-    () => {
-      setSelectedIndex(
-        null
       );
 
 
-      setResult(
-        null
-      );
-    };
+      return;
+    }
+
+
+    /*
+     * 不正解の場合は
+     * ロックしない。
+     *
+     * そのまま別の選択肢を
+     * タップできる。
+     */
+    setResult(
+      'wrong'
+    );
+  };
 
 
   const goBackToList =
@@ -1047,22 +1132,11 @@ export default function MissionPlayer({
                     }
 
                     onClick={
-                      () => {
-                        setSelectedIndex(
-                          index
-                        );
-
-
-                        if (
-                          result ===
-                          'wrong'
-                        ) {
-                          setResult(
-                            null
-                          );
-                        }
-                      }
-                    }
+  () =>
+    handleChoiceClick(
+      index
+    )
+}
 
                     className={`
                       group
@@ -2070,96 +2144,38 @@ export default function MissionPlayer({
                   </button>
 
                 ) : choicePlayable &&
-                  !specializedPlayable ? (
+  !specializedPlayable ? (
 
-                  result ===
-                    'wrong' ? (
+  <div
+    className={`
+      rounded-full
+      px-5
+      py-3
+      text-sm
+      font-black
+      ${
+        result ===
+        'wrong'
+          ? `
+            bg-orange-50
+            text-orange-600
+          `
+          : `
+            bg-blue-50
+            text-blue-500
+          `
+      }
+    `}
+  >
+    {
+      result ===
+      'wrong'
+        ? '別の答えを選んでみよう'
+        : '選択肢をタップ'
+    }
+  </div>
 
-                    <button
-                      type="button"
-
-                      onClick={
-                        retry
-                      }
-
-                      className="
-                        inline-flex
-                        min-w-[165px]
-                        items-center
-                        justify-center
-                        gap-2
-                        rounded-xl
-                        bg-orange-500
-                        px-5
-                        py-3.5
-                        text-sm
-                        font-black
-                        text-white
-                        shadow-lg
-                        transition
-                        hover:bg-orange-600
-                        md:text-base
-                      "
-                    >
-                      <RotateCcw
-                        size={
-                          18
-                        }
-                      />
-
-                      もう一度
-                    </button>
-
-                  ) : (
-
-                    <button
-                      type="button"
-
-                      disabled={
-                        selectedIndex ===
-                        null
-                      }
-
-                      onClick={
-                        checkAnswer
-                      }
-
-                      className="
-                        inline-flex
-                        min-w-[180px]
-                        items-center
-                        justify-center
-                        gap-2
-                        rounded-xl
-                        bg-blue-600
-                        px-5
-                        py-3.5
-                        text-sm
-                        font-black
-                        text-white
-                        shadow-lg
-                        transition
-                        hover:bg-blue-700
-                        disabled:cursor-not-allowed
-                        disabled:bg-slate-200
-                        disabled:text-slate-400
-                        disabled:shadow-none
-                        md:min-w-[200px]
-                        md:text-base
-                      "
-                    >
-                      答えを確認
-
-                      <ArrowRight
-                        size={
-                          19
-                        }
-                      />
-                    </button>
-
-                  )
-
-                ) : (
+) : (
 
                   <button
                     type="button"
