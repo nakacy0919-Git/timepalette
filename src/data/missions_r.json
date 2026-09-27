@@ -2,13 +2,13 @@
   "rw": {
     "countryNameJa": "ルワンダ",
     "countryNameEn": "Rwanda",
-    "version": 5,
-    "schemaVersion": "TimePalette Mission Standard v5",
-    "missionStandard": "TimePalette Mission Standard v5",
+    "version": 6,
+    "schemaVersion": "TimePalette Mission Standard v6",
+    "missionStandard": "TimePalette Mission Standard v6",
     "totalMissions": 40,
     "maxWorldPoints": 480,
-    "sourceCatalog": "sources_r.json",
-    "verifiedAt": "2026-09-27",
+    "sourceCatalog": "sources_rwanda.json",
+    "verifiedAt": "2026-09-28",
     "design": {
       "concept": "EXPLORE → LEARN → CONNECT",
       "story": [
@@ -114,7 +114,66 @@
         "Use evidence before judgment.",
         "Move from factual discovery to systems thinking and finally to real communication.",
         "Vary interaction types so students cannot progress by answer-position guessing."
-      ]
+      ],
+      "materialStandard": {
+        "enabled": true,
+        "renderer": "MissionMaterialRenderer",
+        "supportedTypes": [
+          "image",
+          "video",
+          "map",
+          "pdf",
+          "webpage",
+          "document",
+          "audio",
+          "chart",
+          "gallery",
+          "text",
+          "interactive"
+        ],
+        "supportedRoles": [
+          "primary",
+          "support",
+          "comparison",
+          "evidence",
+          "reference",
+          "extension"
+        ],
+        "supportedPlacements": [
+          "beforePrompt",
+          "afterPrompt",
+          "beforeChallenge",
+          "insideChallenge",
+          "afterChallenge"
+        ],
+        "levelOverride": true,
+        "levelResolutionRule": "Use materialsByLevel[currentLevel] when present; otherwise use materials.",
+        "requirePromptMaterialConsistency": true,
+        "requireMaterialForEveryMission": true,
+        "urlPolicy": "External URLs belong in sources_rwanda.json. Mission JSON references them by sourceId."
+      },
+      "materialLanguagePolicy": {
+        "elementary": {
+          "instructionLanguage": "ja",
+          "materialLanguage": "ja",
+          "rule": "Japanese materials first. Prefer visual, map, short video and simple Japanese explanations."
+        },
+        "juniorHigh": {
+          "instructionLanguage": "ja",
+          "materialLanguage": "ja",
+          "rule": "Japanese materials first. Use comparison, classification and short evidence reading."
+        },
+        "highSchoolStandard": {
+          "instructionLanguage": "ja",
+          "materialLanguage": "ja",
+          "rule": "Use Japanese official/educational materials and Japanese support for evidence-based learning."
+        },
+        "highSchoolAdvanced": {
+          "instructionLanguage": "en",
+          "materialLanguage": "en",
+          "rule": "English primary or official sources may be used. Require evidence reading, synthesis and expression."
+        }
+      }
     },
     "badgeRules": {
       "stamp": {
@@ -173,7 +232,8 @@
         },
         "explanation": "ルワンダはアフリカ東部の内陸国です。まず位置をつかむことで、周辺国・物流・気候・文化のつながりを考えやすくなります。",
         "sourceIds": [
-          "rw-map-geography"
+          "mofa-jp-rw-basic-data",
+          "rw-gov-en-practical-info"
         ],
         "skills": [
           "map-reading",
@@ -196,6 +256,77 @@
             "title": "Locate Rwanda",
             "prompt": "Locate Rwanda in East Africa and note the countries and major lake systems around it."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m01-map",
+            "type": "map",
+            "role": "primary",
+            "required": true,
+            "instruction": "日本語表示の世界地図から、アフリカ東部にあるルワンダを探そう。",
+            "generator": "country-map",
+            "config": {
+              "countryIso": "rw",
+              "mode": "country-location",
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge",
+              "aspectRatio": "16:9"
+            }
+          },
+          {
+            "id": "rw-m01-guide",
+            "type": "webpage",
+            "role": "support",
+            "required": false,
+            "instruction": "位置を確認した後、日本語の国別基礎データで首都や周辺地域を確かめよう。",
+            "sourceId": "mofa-jp-rw-basic-data",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m01-map-adv",
+              "type": "map",
+              "role": "primary",
+              "required": true,
+              "instruction": "Locate Rwanda in East Africa.",
+              "generator": "country-map",
+              "config": {
+                "countryIso": "rw",
+                "mode": "country-location",
+                "uiLanguage": "en"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge",
+                "aspectRatio": "16:9"
+              }
+            },
+            {
+              "id": "rw-m01-source-adv",
+              "type": "webpage",
+              "role": "evidence",
+              "required": false,
+              "instruction": "Check the official English geography profile.",
+              "sourceId": "rw-gov-en-practical-info",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -219,7 +350,8 @@
         },
         "explanation": "ルワンダはウガンダ、タンザニア、ブルンジ、コンゴ民主共和国と国境を接しています。",
         "sourceIds": [
-          "rw-map-geography"
+          "mofa-jp-rw-basic-data",
+          "rw-gov-en-practical-info"
         ],
         "skills": [
           "geography",
@@ -251,6 +383,77 @@
               "correctIndex": 2
             }
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m02-map",
+            "type": "map",
+            "role": "primary",
+            "required": true,
+            "instruction": "国境線が見える地図を見て、ルワンダと接する国を確認しよう。",
+            "generator": "country-map",
+            "config": {
+              "countryIso": "rw",
+              "mode": "neighbors",
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge",
+              "aspectRatio": "16:9"
+            }
+          },
+          {
+            "id": "rw-m02-basic",
+            "type": "webpage",
+            "role": "support",
+            "required": false,
+            "instruction": "外務省の日本語基礎データも確認できる。",
+            "sourceId": "mofa-jp-rw-basic-data",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m02-map-adv",
+              "type": "map",
+              "role": "primary",
+              "required": true,
+              "instruction": "Use the map to identify Rwanda's four neighbors.",
+              "generator": "country-map",
+              "config": {
+                "countryIso": "rw",
+                "mode": "neighbors",
+                "uiLanguage": "en"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge",
+                "aspectRatio": "16:9"
+              }
+            },
+            {
+              "id": "rw-m02-en",
+              "type": "webpage",
+              "role": "evidence",
+              "required": false,
+              "instruction": "Verify the borders in an official English source.",
+              "sourceId": "rw-gov-en-practical-info",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -274,8 +477,8 @@
         },
         "explanation": "ルワンダは起伏のある丘陵景観で知られます。地形は農業、道路、水利用、集落の位置などにも関係します。",
         "sourceIds": [
-          "rw-map-geography",
-          "rw-government-profile"
+          "jica-jp-rw-hills-story",
+          "rw-gov-en-practical-info"
         ],
         "skills": [
           "geography",
@@ -308,6 +511,75 @@
               "correctIndex": 1
             }
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m03-photo",
+            "type": "image",
+            "role": "primary",
+            "required": true,
+            "instruction": "ルワンダの丘陵景観の写真を見て、地形の特徴を観察しよう。",
+            "sourceId": "jica-jp-rw-hills-story",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge",
+              "aspectRatio": "16:9",
+              "fit": "cover"
+            }
+          },
+          {
+            "id": "rw-m03-map",
+            "type": "map",
+            "role": "support",
+            "required": false,
+            "instruction": "地形の位置関係も地図で確認しよう。",
+            "generator": "country-map",
+            "config": {
+              "countryIso": "rw",
+              "mode": "physical",
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge",
+              "aspectRatio": "16:9"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m03-photo-adv",
+              "type": "image",
+              "role": "primary",
+              "required": true,
+              "instruction": "Observe Rwanda's hilly landscape and connect terrain with human activity.",
+              "sourceId": "rw-gov-en-practical-info",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge",
+                "aspectRatio": "16:9",
+                "fit": "cover"
+              }
+            },
+            {
+              "id": "rw-m03-source-adv",
+              "type": "webpage",
+              "role": "evidence",
+              "required": true,
+              "instruction": "Read the official English geography description.",
+              "sourceId": "rw-gov-en-practical-info",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -371,7 +643,8 @@
         },
         "explanation": "首都キガリだけでなく、北・南・西にも主要都市があります。国を一つの都市だけで説明しないことが大切です。",
         "sourceIds": [
-          "rw-map-geography"
+          "mofa-jp-rw-basic-data",
+          "rw-gov-en-profile"
         ],
         "skills": [
           "map-reading",
@@ -394,6 +667,89 @@
             "title": "Map Rwanda’s Major Cities",
             "prompt": "Place Kigali, Huye, Musanze, and Rubavu and use their locations to discuss regional diversity."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m04-city-map",
+            "type": "map",
+            "role": "primary",
+            "required": true,
+            "instruction": "キガリ、フイエ、ムサンゼ、ルバブの位置を地図上で確かめよう。",
+            "generator": "country-map",
+            "config": {
+              "countryIso": "rw",
+              "mode": "cities",
+              "uiLanguage": "ja",
+              "cities": [
+                "Kigali",
+                "Huye",
+                "Musanze",
+                "Rubavu"
+              ]
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge",
+              "aspectRatio": "16:9"
+            }
+          },
+          {
+            "id": "rw-m04-basic",
+            "type": "webpage",
+            "role": "support",
+            "required": false,
+            "instruction": "国の基本情報も日本語で確認しよう。",
+            "sourceId": "mofa-jp-rw-basic-data",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m04-city-map-adv",
+              "type": "map",
+              "role": "primary",
+              "required": true,
+              "instruction": "Map Kigali, Huye, Musanze and Rubavu and consider regional diversity.",
+              "generator": "country-map",
+              "config": {
+                "countryIso": "rw",
+                "mode": "cities",
+                "uiLanguage": "en",
+                "cities": [
+                  "Kigali",
+                  "Huye",
+                  "Musanze",
+                  "Rubavu"
+                ]
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge",
+                "aspectRatio": "16:9"
+              }
+            },
+            {
+              "id": "rw-m04-en",
+              "type": "webpage",
+              "role": "reference",
+              "required": false,
+              "instruction": "Use the official English country profile as a reference.",
+              "sourceId": "rw-gov-en-profile",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -417,8 +773,8 @@
         },
         "explanation": "海に面していないルワンダでは、周辺国を通る道路、国境手続き、地域交通回廊が国際物流に重要です。",
         "sourceIds": [
-          "rw-map-geography",
-          "jica-rw-cooperation-overview"
+          "jica-jp-rw-country-business-overview",
+          "jica-en-rw-cooperation-brochure-2025"
         ],
         "skills": [
           "systems-thinking",
@@ -451,6 +807,77 @@
               "correctIndex": 3
             }
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m05-map",
+            "type": "map",
+            "role": "primary",
+            "required": true,
+            "instruction": "ルワンダが海に面していないことと、周辺国へのルートを地図で確認しよう。",
+            "generator": "country-map",
+            "config": {
+              "countryIso": "rw",
+              "mode": "regional-route",
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge",
+              "aspectRatio": "16:9"
+            }
+          },
+          {
+            "id": "rw-m05-jica",
+            "type": "webpage",
+            "role": "evidence",
+            "required": true,
+            "instruction": "JICAの日本語資料から、内陸国としての物流・インフラの重要性を確認しよう。",
+            "sourceId": "jica-jp-rw-country-business-overview",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m05-map-adv",
+              "type": "map",
+              "role": "primary",
+              "required": true,
+              "instruction": "Trace Rwanda's regional transport connections as a landlocked country.",
+              "generator": "country-map",
+              "config": {
+                "countryIso": "rw",
+                "mode": "regional-route",
+                "uiLanguage": "en"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge",
+                "aspectRatio": "16:9"
+              }
+            },
+            {
+              "id": "rw-m05-en",
+              "type": "pdf",
+              "role": "evidence",
+              "required": true,
+              "instruction": "Use JICA's English Rwanda cooperation material to connect geography and infrastructure.",
+              "sourceId": "jica-en-rw-cooperation-brochure-2025",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -500,6 +927,55 @@
             "title": "Tokyo–Kigali Live Time",
             "prompt": "Compare live times and explain why time-zone awareness matters for communication."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m06-clock",
+            "type": "interactive",
+            "role": "primary",
+            "required": true,
+            "instruction": "日本語表示の東京とキガリの現在時刻を見比べよう。",
+            "generator": "live-time-compare",
+            "config": {
+              "zones": [
+                "Asia/Tokyo",
+                "Africa/Kigali"
+              ],
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m06-clock-adv",
+              "type": "interactive",
+              "role": "primary",
+              "required": true,
+              "instruction": "Compare the current local times in Tokyo and Kigali.",
+              "generator": "live-time-compare",
+              "config": {
+                "zones": [
+                  "Asia/Tokyo",
+                  "Africa/Kigali"
+                ],
+                "uiLanguage": "en"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -547,6 +1023,51 @@
             "title": "Set the Kigali Clock",
             "prompt": "Convert Tokyo time to Kigali time accurately, including cases that cross midnight."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m07-clock",
+            "type": "interactive",
+            "role": "primary",
+            "required": true,
+            "instruction": "東京の時刻を見て、同じ瞬間のキガリの時刻に時計を合わせよう。",
+            "generator": "time-dial",
+            "config": {
+              "fromZone": "Asia/Tokyo",
+              "toZone": "Africa/Kigali",
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m07-clock-adv",
+              "type": "interactive",
+              "role": "primary",
+              "required": true,
+              "instruction": "Convert Tokyo time to Kigali time accurately.",
+              "generator": "time-dial",
+              "config": {
+                "fromZone": "Asia/Tokyo",
+                "toZone": "Africa/Kigali",
+                "uiLanguage": "en"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -612,6 +1133,51 @@
             "title": "Day or Night in Kigali?",
             "prompt": "Infer daily routines from time zones and discuss respectful scheduling."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m08-daypart",
+            "type": "interactive",
+            "role": "primary",
+            "required": true,
+            "instruction": "東京とキガリの現在時刻を見て、キガリが朝・昼・夕方・夜のどれか考えよう。",
+            "generator": "daypart-compare",
+            "config": {
+              "baseZone": "Asia/Tokyo",
+              "targetZone": "Africa/Kigali",
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m08-daypart-adv",
+              "type": "interactive",
+              "role": "primary",
+              "required": true,
+              "instruction": "Infer Kigali's part of day from the live time-zone comparison.",
+              "generator": "daypart-compare",
+              "config": {
+                "baseZone": "Asia/Tokyo",
+                "targetZone": "Africa/Kigali",
+                "uiLanguage": "en"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -668,6 +1234,51 @@
             "title": "Plan an Online Exchange",
             "prompt": "Find a workable 30-minute exchange window while respecting school hours in both countries."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m09-schedule",
+            "type": "interactive",
+            "role": "primary",
+            "required": true,
+            "instruction": "日本とルワンダの学校時間を日本語のタイムラインで重ね、30分交流できる時間を探そう。",
+            "generator": "schedule-overlap",
+            "config": {
+              "zoneA": "Asia/Tokyo",
+              "zoneB": "Africa/Kigali",
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m09-schedule-adv",
+              "type": "interactive",
+              "role": "primary",
+              "required": true,
+              "instruction": "Find a respectful 30-minute exchange window using both school schedules.",
+              "generator": "schedule-overlap",
+              "config": {
+                "zoneA": "Asia/Tokyo",
+                "zoneB": "Africa/Kigali",
+                "uiLanguage": "en"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -702,7 +1313,8 @@
         },
         "explanation": "短いあいさつでも相手の言語に関心を示すことが、交流の第一歩になります。",
         "sourceIds": [
-          "rw-language-basics"
+          "jica-jp-rw-language-greetings",
+          "peacecorps-en-rw-kinyarwanda"
         ],
         "skills": [
           "language-awareness",
@@ -726,6 +1338,71 @@
             "title": "Match the Communication Context",
             "prompt": "Match Kinyarwanda and English expressions to real exchange situations."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m10-language",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語記事で、キニアルワンダ語のあいさつと意味を確認しよう。",
+            "sourceId": "jica-jp-rw-language-greetings",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m10-cards",
+            "type": "interactive",
+            "role": "support",
+            "required": true,
+            "instruction": "場面カードと表現カードを組み合わせよう。",
+            "generator": "phrase-cards",
+            "config": {
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m10-en",
+              "type": "pdf",
+              "role": "primary",
+              "required": true,
+              "instruction": "Check basic Kinyarwanda greetings in the English language lesson.",
+              "sourceId": "peacecorps-en-rw-kinyarwanda",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m10-cards-adv",
+              "type": "interactive",
+              "role": "support",
+              "required": true,
+              "instruction": "Match greetings to authentic communication contexts.",
+              "generator": "phrase-cards",
+              "config": {
+                "uiLanguage": "en"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -749,7 +1426,8 @@
         },
         "explanation": "ルワンダではKinyarwandaが全国で広く話され、English、French、Kiswahiliも公用語です。",
         "sourceIds": [
-          "rw-government-profile"
+          "mofa-jp-rw-basic-data",
+          "rw-gov-en-profile"
         ],
         "skills": [
           "multilingual-awareness",
@@ -781,6 +1459,41 @@
               "correctIndex": 0
             }
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m11-basic",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "外務省の日本語基礎データで、ルワンダで使われる言語を確認しよう。",
+            "sourceId": "mofa-jp-rw-basic-data",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m11-en",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Read the official English country profile and identify Rwanda's official languages.",
+              "sourceId": "rw-gov-en-profile",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -799,13 +1512,12 @@
           "language": "Kinyarwanda",
           "recognitionMode": "practice",
           "minAttempts": 1,
-          "scoring": "participation-first",
-          "langCode": "rw-RW",
-          "minAccuracy": 55
+          "scoring": "participation-first"
         },
         "explanation": "Murakozeは「ありがとう」にあたる表現です。未知の言語では、完璧さよりもまず聞いて試すことを大切にします。",
         "sourceIds": [
-          "rw-language-basics"
+          "jica-jp-rw-language-greetings",
+          "peacecorps-en-rw-kinyarwanda"
         ],
         "skills": [
           "speaking",
@@ -829,6 +1541,75 @@
             "title": "Say Murakoze",
             "prompt": "Practice a Kinyarwanda expression and reflect on language choice as a form of respect."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m12-language",
+            "type": "webpage",
+            "role": "support",
+            "required": true,
+            "instruction": "JICAの日本語記事で「Murakoze＝ありがとう」を確認しよう。",
+            "sourceId": "jica-jp-rw-language-greetings",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m12-audio",
+            "type": "audio",
+            "role": "primary",
+            "required": true,
+            "instruction": "お手本を聞いてから「Murakoze」と声に出してみよう。",
+            "generator": "speech-synthesis",
+            "config": {
+              "text": "Murakoze",
+              "langCode": "rw-RW",
+              "rate": 0.8
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m12-en",
+              "type": "pdf",
+              "role": "reference",
+              "required": true,
+              "instruction": "Check the phrase in the English Kinyarwanda lesson.",
+              "sourceId": "peacecorps-en-rw-kinyarwanda",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m12-audio-adv",
+              "type": "audio",
+              "role": "primary",
+              "required": true,
+              "instruction": "Listen and pronounce Murakoze.",
+              "generator": "speech-synthesis",
+              "config": {
+                "text": "Murakoze",
+                "langCode": "rw-RW",
+                "rate": 0.8
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -842,19 +1623,17 @@
         "points": 10,
         "requiredForMastery": true,
         "challenge": {
-          "template": "Hello, my name is {name}. I am from Japan. Nice to meet you.",
+          "template": "Hello, my name is {name}. I am from Japan. I like {interest}. Nice to meet you.",
           "requiredSlots": [
-            "name"
+            "name",
+            "interest"
           ],
           "language": "en",
-          "meaning": "こんにちは。私は{name}です。日本から来ました。よろしくお願いします。",
-          "langCode": "en-US",
-          "minAccuracy": 70
+          "minWords": 10,
+          "maxWords": 35
         },
         "explanation": "英語をテストの答えではなく、人とつながるための道具として使います。",
-        "sourceIds": [
-          "rw-language-basics"
-        ],
+        "sourceIds": [],
         "skills": [
           "speaking",
           "self-introduction",
@@ -877,6 +1656,50 @@
             "title": "Introduce Yourself Naturally",
             "prompt": "Deliver a clear self-introduction that could lead naturally into a real conversation."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m13-guide",
+            "type": "text",
+            "role": "primary",
+            "required": true,
+            "instruction": "日本語のガイドを見ながら、交流で使える短い英語自己紹介を組み立てよう。",
+            "generator": "self-introduction-guide",
+            "config": {
+              "uiLanguage": "ja",
+              "targetLanguage": "en"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m13-guide-adv",
+              "type": "text",
+              "role": "primary",
+              "required": true,
+              "instruction": "Prepare a natural self-introduction for a real exchange.",
+              "generator": "self-introduction-guide",
+              "config": {
+                "uiLanguage": "en",
+                "targetLanguage": "en",
+                "extension": true
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -896,13 +1719,10 @@
           "questionCount": 1,
           "requireQuestionMark": true,
           "preferOpenEnded": true,
-          "avoidSearchableFactOnly": true,
-          "langCode": "en-US"
+          "avoidSearchableFactOnly": true
         },
         "explanation": "検索すれば分かる情報だけでなく、相手の経験や考えを聞く質問が対話につながります。",
-        "sourceIds": [
-          "rw-language-basics"
-        ],
+        "sourceIds": [],
         "skills": [
           "speaking",
           "question-making",
@@ -925,6 +1745,50 @@
             "title": "Create a Meaningful Question",
             "prompt": "Create and say an open-ended question that invites a Rwandan student to share an experience or opinion."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m14-guide",
+            "type": "text",
+            "role": "primary",
+            "required": true,
+            "instruction": "「検索すれば分かる質問」ではなく「相手の経験を聞く質問」の例を日本語で確認しよう。",
+            "generator": "question-quality-guide",
+            "config": {
+              "uiLanguage": "ja",
+              "targetLanguage": "en"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m14-guide-adv",
+              "type": "text",
+              "role": "primary",
+              "required": true,
+              "instruction": "Review examples of open-ended questions that invite experience and opinion.",
+              "generator": "question-quality-guide",
+              "config": {
+                "uiLanguage": "en",
+                "targetLanguage": "en",
+                "extension": true
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -941,7 +1805,8 @@
           "categories": [
             "都市・中央部",
             "高地・北部",
-            "湖岸・西部"
+            "湖岸・西部",
+            "南部の都市・学術地域"
           ],
           "items": [
             {
@@ -955,12 +1820,19 @@
             {
               "name": "Rubavu",
               "target": "湖岸・西部"
+            },
+            {
+              "name": "Huye",
+              "target": "南部の都市・学術地域"
             }
           ]
         },
         "explanation": "国土が比較的小さくても、地形・都市・湖・高地など地域条件は異なります。",
         "sourceIds": [
-          "rw-map-geography"
+          "jica-jp-rw-urban-photo-gallery",
+          "jica-jp-rw-rural-photo-gallery",
+          "rw-gov-en-profile",
+          "rw-gov-en-practical-info"
         ],
         "skills": [
           "regional-awareness",
@@ -984,6 +1856,49 @@
             "title": "Rwanda Is Not One Place",
             "prompt": "Classify locations by regional characteristics and connect place with environmental and social conditions."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m15-gallery",
+            "type": "gallery",
+            "role": "comparison",
+            "required": true,
+            "instruction": "JICAの日本語写真教材で、都市部と村落部の生活の様子を複数見比べよう。",
+            "sourceIds": [
+              "jica-jp-rw-urban-photo-gallery",
+              "jica-jp-rw-rural-photo-gallery"
+            ],
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge",
+              "aspectRatio": "16:9"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m15-gallery-adv",
+              "type": "gallery",
+              "role": "comparison",
+              "required": true,
+              "instruction": "Compare multiple examples of urban and rural life. Do not treat one image as representative of the whole country.",
+              "sourceIds": [
+                "rw-gov-en-profile",
+                "rw-gov-en-practical-info"
+              ],
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge",
+                "aspectRatio": "16:9"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1025,8 +1940,8 @@
         },
         "explanation": "写真は貴重な資料ですが、一枚の写真を国全体へ一般化しないことがメディアリテラシーでは重要です。",
         "sourceIds": [
-          "rw-map-geography",
-          "rw-government-profile"
+          "jica-jp-rw-rural-photo-gallery",
+          "rw-gov-en-profile"
         ],
         "skills": [
           "evidence-reading",
@@ -1050,6 +1965,45 @@
             "title": "What Can One Photo Tell Us?",
             "prompt": "Evaluate the value and limits of a single image as evidence about everyday life."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m16-photo",
+            "type": "image",
+            "role": "primary",
+            "required": true,
+            "instruction": "まず1枚の写真だけを見て、その写真から分かること・分からないことを分けよう。",
+            "sourceId": "jica-jp-rw-rural-photo-gallery",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge",
+              "aspectRatio": "16:9",
+              "fit": "cover"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m16-photo-adv",
+              "type": "image",
+              "role": "primary",
+              "required": true,
+              "instruction": "Use one image as evidence, then identify what it cannot prove about Rwanda as a whole.",
+              "sourceId": "rw-gov-en-profile",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge",
+                "aspectRatio": "16:9",
+                "fit": "cover"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1059,21 +2013,22 @@
         "type": "single-choice",
         "learningStage": "LEARN",
         "title": "Food as a Window into Daily Life",
-        "prompt": "ルワンダで見られる料理の例として適切なものを選ぼう。",
+        "prompt": "日本語の料理教材を見て、ルワンダの家庭料理の一例を見つけよう。",
         "points": 10,
         "requiredForMastery": false,
         "challenge": {
           "choices": [
+            "Sushi",
             "Paella",
-            "Pierogi",
-            "Brochettes",
-            "Sushi"
+            "Ibijumba（イビジュンバ）",
+            "Pierogi"
           ],
           "correctIndex": 2
         },
-        "explanation": "Brochettesは肉などを串に刺して焼く料理の例です。ただし、一つの料理で国全体の食文化を代表させないことも大切です。",
+        "explanation": "イビジュンバは、JICA海外協力隊の日本語教材で紹介されているルワンダの家庭料理の一例です。サツマイモやピーナッツなど身近な食材から、食文化と日常生活を考えます。一つの料理だけで国全体の食文化を代表させないことも大切です。",
         "sourceIds": [
-          "rw-food-culture"
+          "jica-jp-rw-food-ibijumba",
+          "visit-rwanda-en-food-culture"
         ],
         "skills": [
           "culture",
@@ -1083,29 +2038,64 @@
         "variants": {
           "elementary": {
             "title": "ルワンダの食べ物を発見！",
-            "prompt": "4つの料理から、ルワンダで見られる料理の例を選ぼう。"
+            "prompt": "日本語の料理ページと写真を見て、ルワンダの家庭料理の一例を選ぼう。"
           },
           "juniorHigh": {
             "title": "食文化から暮らしを見る",
-            "prompt": "料理を一つ覚えるだけでなく、食材や家庭による違いも考えよう。"
+            "prompt": "料理写真と日本語の説明から、食材と暮らしのつながりを考えよう。"
           },
           "highSchoolStandard": {
             "title": "食文化を一つで代表させない",
-            "prompt": "一つの料理を入口に、食文化の多様性を考えよう。"
+            "prompt": "一つの家庭料理を入口に、食文化の多様性と日常生活を考えよう。"
           },
           "highSchoolAdvanced": {
             "title": "Food as a Window into Daily Life",
             "prompt": "Use one food example as a starting point without treating it as all of Rwandan food culture.",
             "challenge": {
               "choices": [
+                "Sushi",
                 "Paella",
-                "Pierogi",
-                "Brochettes",
-                "Sushi"
+                "Ibijumba",
+                "Pierogi"
               ],
               "correctIndex": 2
             }
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m17-food",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICA海外協力隊の日本語料理教材「イビジュンバ」を写真と説明で見よう。",
+            "sourceId": "jica-jp-rw-food-ibijumba",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m17-food-adv",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Use an English Rwanda food/culture source and treat one dish as an example, not the whole cuisine.",
+              "sourceId": "visit-rwanda-en-food-culture",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1139,7 +2129,8 @@
         },
         "explanation": "コーヒーは農園だけで完結せず、生産・加工・品質管理・輸送・焙煎・販売・消費まで続くバリューチェーンで考えられます。",
         "sourceIds": [
-          "jica-rw-coffee-cup2"
+          "jica-jp-rw-coffee-project",
+          "jica-en-rw-coffee-sector"
         ],
         "skills": [
           "value-chain",
@@ -1163,6 +2154,73 @@
             "title": "From Coffee Cherry to Cup",
             "prompt": "Trace the coffee value chain and identify where quality and value can be created."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m18-coffee",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語プロジェクトページの写真と説明から、コーヒーが農園から市場へ届く流れを確認しよう。",
+            "sourceId": "jica-jp-rw-coffee-project",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m18-chain",
+            "type": "interactive",
+            "role": "support",
+            "required": true,
+            "instruction": "生産・加工・品質・市場をカードでつなごう。",
+            "generator": "value-chain",
+            "config": {
+              "uiLanguage": "ja",
+              "theme": "coffee"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m18-coffee-adv",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Read JICA's English coffee-sector material and trace the coffee value chain.",
+              "sourceId": "jica-en-rw-coffee-sector",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m18-chain-adv",
+              "type": "interactive",
+              "role": "support",
+              "required": true,
+              "instruction": "Build the value chain from producer to market.",
+              "generator": "value-chain",
+              "config": {
+                "uiLanguage": "en",
+                "theme": "coffee"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1204,8 +2262,10 @@
         },
         "explanation": "都市／農村という二分だけでも不十分です。同じ国の中に多様な地域・家庭・仕事・世代があります。",
         "sourceIds": [
-          "rw-map-geography",
-          "rw-government-profile"
+          "jica-jp-rw-urban-photo-gallery",
+          "jica-jp-rw-rural-photo-gallery",
+          "rw-gov-en-profile",
+          "rw-gov-en-practical-info"
         ],
         "skills": [
           "evidence-reading",
@@ -1229,6 +2289,49 @@
             "title": "Challenge a Generalization",
             "prompt": "Use multiple pieces of evidence to challenge an overgeneralized claim about daily life."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m19-gallery",
+            "type": "gallery",
+            "role": "evidence",
+            "required": true,
+            "instruction": "JICAの日本語写真教材から、都市部と村落部の複数の場面を比べよう。",
+            "sourceIds": [
+              "jica-jp-rw-urban-photo-gallery",
+              "jica-jp-rw-rural-photo-gallery"
+            ],
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge",
+              "aspectRatio": "16:9"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m19-gallery-adv",
+              "type": "gallery",
+              "role": "evidence",
+              "required": true,
+              "instruction": "Compare multiple sources before evaluating a claim about daily life in Rwanda.",
+              "sourceIds": [
+                "rw-gov-en-profile",
+                "rw-gov-en-practical-info"
+              ],
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge",
+                "aspectRatio": "16:9"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1252,7 +2355,9 @@
         },
         "explanation": "Umugandaはルワンダで行われるコミュニティ活動として知られています。文化を「伝統」だけでなく、地域社会を動かす実践として見る入口になります。",
         "sourceIds": [
-          "rw-government-culture"
+          "jica-jp-rw-umuganda-workbook",
+          "rwanda-embassy-jp-umuganda-2026",
+          "rwanda-gov-en-culture-umuganda"
         ],
         "skills": [
           "culture",
@@ -1285,6 +2390,53 @@
               "correctIndex": 1
             }
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m20-umuganda",
+            "type": "document",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語教材で「ウムガンダ」の説明を読み、地域活動の写真・図を確認しよう。",
+            "sourceId": "jica-jp-rw-umuganda-workbook",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m20-japan",
+            "type": "webpage",
+            "role": "extension",
+            "required": false,
+            "instruction": "2026年に日本で行われたウムガンダの日本語記事も見て、文化交流とのつながりを考えよう。",
+            "sourceId": "rwanda-embassy-jp-umuganda-2026",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m20-umuganda-adv",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Read an official English source about Umuganda and analyze community participation.",
+              "sourceId": "rwanda-gov-en-culture-umuganda",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1299,8 +2451,8 @@
         "requiredForMastery": true,
         "challenge": {
           "sourceIds": [
-            "water-rwanda-overview",
-            "jica-rw-water-rwasom2"
+            "jica-rw-water-rwasom2",
+            "jica-rw-water-media"
           ],
           "activityType": "system-map",
           "notice": {
@@ -1332,8 +2484,10 @@
         },
         "explanation": "安全な水を届け続けるには、設備だけでなく維持管理、運営、地域の組織、利用者など複数の要素が関わります。",
         "sourceIds": [
-          "water-rwanda-overview",
-          "jica-rw-water-rwasom2"
+          "jica-jp-rw-water-short-video",
+          "jica-jp-rw-water-supply-project",
+          "jica-en-rw-water-video",
+          "jica-en-rw-water-rwasom2"
         ],
         "skills": [
           "media-literacy",
@@ -1372,6 +2526,65 @@
           "country": "Rwanda",
           "topic": "Water and Sanitation",
           "projectBased": true
+        },
+        "materials": [
+          {
+            "id": "rw-m21-video",
+            "type": "video",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語「水と世界」教材を見て、安全な水が届くまでに何が必要か探そう。",
+            "sourceId": "jica-jp-rw-water-short-video",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m21-project",
+            "type": "webpage",
+            "role": "evidence",
+            "required": false,
+            "instruction": "JICAの日本語給水プロジェクト資料で、施設や給水の仕組みを確認しよう。",
+            "sourceId": "jica-jp-rw-water-supply-project",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m21-video-adv",
+              "type": "video",
+              "role": "primary",
+              "required": true,
+              "instruction": "Watch JICA's English water and sanitation material.",
+              "sourceId": "jica-en-rw-water-video",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m21-project-adv",
+              "type": "webpage",
+              "role": "evidence",
+              "required": true,
+              "instruction": "Read the English RWASOM2 project source for operation, maintenance and stakeholders.",
+              "sourceId": "jica-en-rw-water-rwasom2",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1386,7 +2599,7 @@
         "requiredForMastery": false,
         "challenge": {
           "sourceIds": [
-            "without-water-ja"
+            "jica-rw-water-media"
           ],
           "activityType": "life-link",
           "notice": {
@@ -1418,7 +2631,8 @@
         },
         "explanation": "水へのアクセスは飲み水だけでなく、衛生、健康、学校生活、時間の使い方などにも関係します。",
         "sourceIds": [
-          "without-water-ja"
+          "jica-jp-rw-without-water-video",
+          "jica-en-rw-water-video"
         ],
         "skills": [
           "water-sanitation",
@@ -1450,6 +2664,41 @@
           "sdgs": [
             6
           ]
+        },
+        "materials": [
+          {
+            "id": "rw-m22-video",
+            "type": "video",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語動画「もし水がなかったら…」を見て、水と生活のつながりを探そう。",
+            "sourceId": "jica-jp-rw-without-water-video",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m22-en",
+              "type": "video",
+              "role": "primary",
+              "required": true,
+              "instruction": "Use the English water-sector source to analyze links among water, sanitation, health and daily life.",
+              "sourceId": "jica-en-rw-water-video",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1473,9 +2722,11 @@
         },
         "explanation": "一つの資料だけで結論を出さず、複数資料をつないで水へのアクセスと生活・維持管理・地域の仕組みを考えます。",
         "sourceIds": [
-          "rwanda-rural-child-ja",
-          "water-rwanda-overview",
-          "jica-rw-water-rwasom2"
+          "jica-jp-rw-rural-child-video",
+          "jica-jp-rw-without-water-video",
+          "jica-en-rw-water-video",
+          "jica-en-rw-water-rwasom2",
+          "jica-jp-rw-water-supply-project"
         ],
         "skills": [
           "source-reading",
@@ -1513,7 +2764,7 @@
                 "title": "水と暮らしを見つけよう",
                 "prompt": "日本語で支援された動画を見て、水を使う場面を探そう。",
                 "sourceIds": [
-                  "rwanda-rural-child-ja"
+                  "jica-jp-rw-rural-child-video"
                 ],
                 "completeLabel": "見つけた！"
               },
@@ -1549,7 +2800,7 @@
                 "title": "水と一日の生活",
                 "prompt": "水が生活のどこで必要か考えながら見よう。",
                 "sourceIds": [
-                  "rwanda-rural-child-ja"
+                  "jica-jp-rw-rural-child-video"
                 ],
                 "completeLabel": "動画を見た"
               },
@@ -1570,7 +2821,7 @@
                 ]
               },
               {
-                "type": "opinion-writing",
+                "type": "evidence-writing",
                 "title": "根拠を使って説明",
                 "prompt": "資料から分かったことを一つ根拠にして、日本との違いや共通点を書こう。",
                 "minChars": 60
@@ -1584,7 +2835,7 @@
                 "title": "暮らしから水の課題を考える",
                 "prompt": "水へのアクセスが一日の生活にどう影響するか、具体的な場面を探そう。",
                 "sourceIds": [
-                  "without-water-ja"
+                  "jica-jp-rw-rural-child-video"
                 ],
                 "completeLabel": "生活とのつながりを確認した"
               },
@@ -1593,7 +2844,7 @@
                 "title": "持続する給水を考える",
                 "prompt": "施設だけでなく、維持管理・組織・利用者に注目して資料を読もう。",
                 "sourceIds": [
-                  "jica-rw-water-rwasom2"
+                  "jica-jp-rw-water-supply-project"
                 ],
                 "completeLabel": "仕組みを確認した"
               },
@@ -1634,7 +2885,7 @@
                 "title": "Water and Daily Life",
                 "prompt": "Identify how water access affects everyday activities and opportunities.",
                 "sourceIds": [
-                  "water-rwanda-overview"
+                  "jica-en-rw-water-video"
                 ],
                 "completeLabel": "I identified key impacts"
               },
@@ -1643,7 +2894,7 @@
                 "title": "Sustainable Water Services",
                 "prompt": "Look for operation, maintenance, local organizations, users, and sustainability.",
                 "sourceIds": [
-                  "jica-rw-water-rwasom2"
+                  "jica-en-rw-water-rwasom2"
                 ],
                 "completeLabel": "I checked the project evidence"
               },
@@ -1698,6 +2949,65 @@
           "sdgs": [
             6
           ]
+        },
+        "materials": [
+          {
+            "id": "rw-m23-rural",
+            "type": "video",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語「ルワンダ村落部の子どもの一日」を見て、水と一日の生活を観察しよう。",
+            "sourceId": "jica-jp-rw-rural-child-video",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m23-without",
+            "type": "video",
+            "role": "evidence",
+            "required": true,
+            "instruction": "日本語動画「もし水がなかったら…」も使って、影響を広げて考えよう。",
+            "sourceId": "jica-jp-rw-without-water-video",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m23-en-video",
+              "type": "video",
+              "role": "primary",
+              "required": true,
+              "instruction": "Watch JICA's English water and sanitation material.",
+              "sourceId": "jica-en-rw-water-video",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m23-en-project",
+              "type": "webpage",
+              "role": "evidence",
+              "required": true,
+              "instruction": "Read the English RWASOM2 source and identify operation, maintenance, local organizations and sustainability.",
+              "sourceId": "jica-en-rw-water-rwasom2",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1712,7 +3022,7 @@
         "requiredForMastery": false,
         "challenge": {
           "sourceIds": [
-            "rwanda-rural-child-ja"
+            "jica-rw-water-media"
           ],
           "activityType": "time-budget",
           "notice": {
@@ -1744,7 +3054,8 @@
         },
         "explanation": "アクセスは「ある／ない」だけでなく、距離・所要時間・安定性など負担の大きさでも考える必要があります。",
         "sourceIds": [
-          "rwanda-rural-child-ja"
+          "jica-jp-rw-rural-child-video",
+          "jica-en-rw-water-video"
         ],
         "skills": [
           "perspective-taking",
@@ -1776,6 +3087,71 @@
           "sdgs": [
             6
           ]
+        },
+        "materials": [
+          {
+            "id": "rw-m24-video",
+            "type": "video",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語「ルワンダ村落部の子どもの一日」で、水を得るために使う時間に注目しよう。",
+            "sourceId": "jica-jp-rw-rural-child-video",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m24-timeline",
+            "type": "interactive",
+            "role": "support",
+            "required": true,
+            "instruction": "自分の一日と比べるタイムラインを作ろう。",
+            "generator": "daily-time-comparison",
+            "config": {
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m24-en",
+              "type": "video",
+              "role": "primary",
+              "required": true,
+              "instruction": "Use the English source to analyze time burden and opportunity costs.",
+              "sourceId": "jica-en-rw-water-video",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m24-timeline-adv",
+              "type": "interactive",
+              "role": "support",
+              "required": true,
+              "instruction": "Compare time use and opportunity costs.",
+              "generator": "daily-time-comparison",
+              "config": {
+                "uiLanguage": "en"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1823,8 +3199,8 @@
         },
         "explanation": "農業用水は設備だけでなく、利用者組織、配分ルール、維持管理、能力づくりまで含めて考えます。",
         "sourceIds": [
-          "jica-rw-wamcab2",
-          "jica-rw-agriculture"
+          "jica-jp-rw-wamcab2",
+          "jica-en-rw-agriculture-sector"
         ],
         "skills": [
           "agriculture",
@@ -1857,6 +3233,73 @@
             2,
             6
           ]
+        },
+        "materials": [
+          {
+            "id": "rw-m25-wamcab",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語WAMCAB2ページの写真・説明から、灌漑施設、水利組合、維持管理を確認しよう。",
+            "sourceId": "jica-jp-rw-wamcab2",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m25-system",
+            "type": "interactive",
+            "role": "support",
+            "required": true,
+            "instruction": "水・施設・利用者・ルールを一つの仕組みとして並べよう。",
+            "generator": "system-map",
+            "config": {
+              "uiLanguage": "ja",
+              "theme": "irrigation"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m25-en",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Read JICA's English agriculture-sector material and identify irrigation management actors.",
+              "sourceId": "jica-en-rw-agriculture-sector",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m25-system-adv",
+              "type": "interactive",
+              "role": "support",
+              "required": true,
+              "instruction": "Map institutions, users, infrastructure and maintenance.",
+              "generator": "system-map",
+              "config": {
+                "uiLanguage": "en",
+                "theme": "irrigation"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1903,7 +3346,8 @@
         },
         "explanation": "農業を生産量だけでなく、水、人、技術、市場、組織、自然条件のつながりで考えることが重要です。",
         "sourceIds": [
-          "jica-rw-agriculture"
+          "jica-jp-rw-wamcab2",
+          "jica-en-rw-agriculture-sector"
         ],
         "skills": [
           "agriculture",
@@ -1935,6 +3379,57 @@
           "sdgs": [
             2
           ]
+        },
+        "materials": [
+          {
+            "id": "rw-m26-wamcab",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語資料の農家・灌漑・市場の写真と説明から、農業を複数要素の仕組みとして見よう。",
+            "sourceId": "jica-jp-rw-wamcab2",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m26-map",
+            "type": "interactive",
+            "role": "support",
+            "required": true,
+            "instruction": "水・技術・人・市場・組織のつながりを図にしよう。",
+            "generator": "system-map",
+            "config": {
+              "uiLanguage": "ja",
+              "theme": "agriculture"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m26-en",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Use JICA's English agriculture-sector source to analyze agriculture as a system.",
+              "sourceId": "jica-en-rw-agriculture-sector",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -1982,8 +3477,8 @@
         },
         "explanation": "農業は農場だけで完結せず、加工・輸送・市場・消費者までつながっています。",
         "sourceIds": [
-          "jica-rw-agriculture",
-          "jica-rw-coffee-cup2"
+          "jica-jp-rw-coffee-project",
+          "jica-en-rw-coffee-sector"
         ],
         "skills": [
           "value-chain",
@@ -2017,6 +3512,73 @@
             8,
             12
           ]
+        },
+        "materials": [
+          {
+            "id": "rw-m27-coffee",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語コーヒープロジェクトページで、生産者・加工・品質・買い手・市場のつながりを見よう。",
+            "sourceId": "jica-jp-rw-coffee-project",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m27-chain",
+            "type": "interactive",
+            "role": "support",
+            "required": true,
+            "instruction": "Farm to Marketの流れを組み立てよう。",
+            "generator": "value-chain",
+            "config": {
+              "uiLanguage": "ja",
+              "theme": "farm-to-market"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m27-en",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Trace a value chain using JICA's English agriculture and coffee-sector materials.",
+              "sourceId": "jica-en-rw-coffee-sector",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m27-chain-adv",
+              "type": "interactive",
+              "role": "support",
+              "required": true,
+              "instruction": "Map where value is added from farm to market.",
+              "generator": "value-chain",
+              "config": {
+                "uiLanguage": "en",
+                "theme": "farm-to-market"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2064,8 +3626,8 @@
         },
         "explanation": "ルワンダのコーヒーは、生産者・協同組合・加工・品質評価・輸出・買い手・消費者をつなぐ国際的なバリューチェーンの中にあります。",
         "sourceIds": [
-          "jica-rw-coffee-cup2",
-          "jica-rw-coffee-2026"
+          "jica-jp-rw-coffee-project",
+          "jica-en-rw-coffee-2026"
         ],
         "skills": [
           "value-chain",
@@ -2099,6 +3661,41 @@
             8,
             12
           ]
+        },
+        "materials": [
+          {
+            "id": "rw-m28-coffee",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語コーヒープロジェクトの写真と説明から、日本市場とのつながりを探そう。",
+            "sourceId": "jica-jp-rw-coffee-project",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m28-en",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Read JICA's English 2026 article on Rwanda coffee, buyers and the Japan cupping roadshow.",
+              "sourceId": "jica-en-rw-coffee-2026",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2145,7 +3742,9 @@
         },
         "explanation": "教育で重要なのはICTを使うこと自体ではなく、教員の学びや授業方法、学習機会をどう改善するかです。",
         "sourceIds": [
-          "jica-rw-prism"
+          "jica-jp-rw-prism",
+          "jica-jp-rw-prism-newsletter",
+          "jica-en-rw-education-sector"
         ],
         "skills": [
           "education",
@@ -2177,6 +3776,53 @@
           "sdgs": [
             4
           ]
+        },
+        "materials": [
+          {
+            "id": "rw-m29-prism",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語PRISMページで、ICTを活用した理数科の学びの改善を確認しよう。",
+            "sourceId": "jica-jp-rw-prism",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m29-news",
+            "type": "pdf",
+            "role": "support",
+            "required": false,
+            "instruction": "JICA教育だよりの日本語記事も見て、デジタル問題集の使い方を確認しよう。",
+            "sourceId": "jica-jp-rw-prism-newsletter",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m29-en",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Read JICA's English PRISM source and identify how ICT supports learning rather than replacing teaching.",
+              "sourceId": "jica-en-rw-education-sector",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2223,7 +3869,9 @@
         },
         "explanation": "教員養成への協力は、技術を導入するだけでなく、将来の教員と教員養成者の学びを支える取り組みです。",
         "sourceIds": [
-          "jica-rw-prism"
+          "jica-jp-rw-prism",
+          "jica-jp-rw-prism-newsletter",
+          "jica-en-rw-education-sector"
         ],
         "skills": [
           "teacher-education",
@@ -2255,6 +3903,53 @@
           "sdgs": [
             4
           ]
+        },
+        "materials": [
+          {
+            "id": "rw-m30-prism",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語PRISM資料から、教員養成校・指導員・デジタル教材の役割を整理しよう。",
+            "sourceId": "jica-jp-rw-prism",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m30-news",
+            "type": "pdf",
+            "role": "evidence",
+            "required": true,
+            "instruction": "日本語の教育だよりから、学習改善の具体例を探そう。",
+            "sourceId": "jica-jp-rw-prism-newsletter",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m30-en",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Use the English PRISM source to analyze teacher education, pedagogy and ICT.",
+              "sourceId": "jica-en-rw-education-sector",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2302,8 +3997,8 @@
         },
         "explanation": "ルワンダのデジタル政策・協力を、スタートアップ、行政サービス、市場、制度、人材を含むエコシステムとして考えます。",
         "sourceIds": [
-          "jica-rw-digital-project",
-          "jica-rw-ict-sector"
+          "jica-jp-rw-digital-project",
+          "jica-en-rw-ict-sector"
         ],
         "skills": [
           "innovation",
@@ -2336,6 +4031,41 @@
           "sdgs": [
             9
           ]
+        },
+        "materials": [
+          {
+            "id": "rw-m31-digital",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語「デジタルイノベーション促進プロジェクト」を読み、起業・行政・市場・ICTのつながりを探そう。",
+            "sourceId": "jica-jp-rw-digital-project",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m31-en",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Read JICA's English ICT-sector source and analyze Rwanda's innovation ecosystem.",
+              "sourceId": "jica-en-rw-ict-sector",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2383,8 +4113,8 @@
         },
         "explanation": "課題解決では、技術そのものより先に「誰の、どんな問題か」を理解し、小さく試せる解決策へつなげることが重要です。",
         "sourceIds": [
-          "jica-rw-digital-project",
-          "jica-rw-cooperation-overview"
+          "jica-jp-rw-digital-project",
+          "jica-en-rw-ict-sector"
         ],
         "skills": [
           "problem-solving",
@@ -2416,6 +4146,71 @@
           "sdgs": [
             9
           ]
+        },
+        "materials": [
+          {
+            "id": "rw-m32-digital",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語デジタルプロジェクトを読み、「技術より先に課題と利用者を見る」視点を確認しよう。",
+            "sourceId": "jica-jp-rw-digital-project",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m32-canvas",
+            "type": "interactive",
+            "role": "support",
+            "required": true,
+            "instruction": "問題・困っている人・原因・小さく試す解決策をキャンバスに整理しよう。",
+            "generator": "solution-canvas",
+            "config": {
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m32-en",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Use the English ICT-sector source, then design an evidence-based solution.",
+              "sourceId": "jica-en-rw-ict-sector",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m32-canvas-adv",
+              "type": "interactive",
+              "role": "support",
+              "required": true,
+              "instruction": "Define user, problem, evidence, constraints and a testable solution.",
+              "generator": "solution-canvas",
+              "config": {
+                "uiLanguage": "en"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2456,7 +4251,14 @@
         },
         "explanation": "日本とルワンダの協力は一つの分野だけではなく、水、農業、教育、ICTなど複数分野に広がっています。",
         "sourceIds": [
-          "jica-rw-cooperation-overview"
+          "jica-jp-rw-water-supply-project",
+          "jica-jp-rw-wamcab2",
+          "jica-jp-rw-prism",
+          "jica-jp-rw-digital-project",
+          "jica-en-rw-water-rwasom2",
+          "jica-en-rw-agriculture-sector",
+          "jica-en-rw-education-sector",
+          "jica-en-rw-ict-sector"
         ],
         "skills": [
           "japan-connection",
@@ -2480,6 +4282,51 @@
             "title": "Map Japan–Rwanda Cooperation",
             "prompt": "Classify cooperation projects by sector and consider how sectors overlap in real development challenges."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m33-projects",
+            "type": "gallery",
+            "role": "comparison",
+            "required": true,
+            "instruction": "JICAの日本語ページから、水・農業・教育・デジタルの4分野のプロジェクト資料を見比べよう。",
+            "sourceIds": [
+              "jica-jp-rw-water-supply-project",
+              "jica-jp-rw-wamcab2",
+              "jica-jp-rw-prism",
+              "jica-jp-rw-digital-project"
+            ],
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m33-projects-adv",
+              "type": "gallery",
+              "role": "comparison",
+              "required": true,
+              "instruction": "Compare JICA's English Rwanda sector sources across water, agriculture, education and ICT.",
+              "sourceIds": [
+                "jica-en-rw-water-rwasom2",
+                "jica-en-rw-agriculture-sector",
+                "jica-en-rw-education-sector",
+                "jica-en-rw-ict-sector"
+              ],
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2503,7 +4350,12 @@
         },
         "explanation": "社会課題は一つの分野だけで完結しません。水、農業、教育、ICT、インフラなどは互いにつながっています。",
         "sourceIds": [
-          "jica-rw-cooperation-overview"
+          "jica-jp-rw-country-business-overview",
+          "jica-jp-rw-water-supply-project",
+          "jica-jp-rw-wamcab2",
+          "jica-jp-rw-prism",
+          "jica-jp-rw-digital-project",
+          "jica-en-rw-cooperation-brochure-2025"
         ],
         "skills": [
           "source-reading",
@@ -2536,6 +4388,58 @@
               "correctIndex": 1
             }
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m34-overview",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語ルワンダ概要を見て、協力が一つの分野だけではないことを確認しよう。",
+            "sourceId": "jica-jp-rw-country-business-overview",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m34-projects",
+            "type": "gallery",
+            "role": "evidence",
+            "required": false,
+            "instruction": "水・農業・教育・デジタルの具体例も見比べよう。",
+            "sourceIds": [
+              "jica-jp-rw-water-supply-project",
+              "jica-jp-rw-wamcab2",
+              "jica-jp-rw-prism",
+              "jica-jp-rw-digital-project"
+            ],
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m34-en",
+              "type": "pdf",
+              "role": "primary",
+              "required": true,
+              "instruction": "Read JICA's English Rwanda brochure and identify multiple cooperation sectors.",
+              "sourceId": "jica-en-rw-cooperation-brochure-2025",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2559,7 +4463,9 @@
         },
         "explanation": "TimePaletteでは、ルワンダの人々や組織を主体として捉え、JICAなどを協働するパートナーの一つとして扱います。",
         "sourceIds": [
-          "jica-rw-cooperation-overview"
+          "jica-jp-development-cooperation-basics",
+          "jica-jp-rw-country-business-overview",
+          "jica-en-rw-cooperation-brochure-2025"
         ],
         "skills": [
           "development-literacy",
@@ -2592,6 +4498,53 @@
               "correctIndex": 3
             }
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m35-dev",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語教材で「国際協力」を、現地の人々や組織との協働という視点で確認しよう。",
+            "sourceId": "jica-jp-development-cooperation-basics",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m35-rwanda",
+            "type": "webpage",
+            "role": "support",
+            "required": false,
+            "instruction": "ルワンダでの具体的な協力例も見よう。",
+            "sourceId": "jica-jp-rw-country-business-overview",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m35-en",
+              "type": "pdf",
+              "role": "primary",
+              "required": true,
+              "instruction": "Use JICA's English Rwanda cooperation material to evaluate development cooperation as partnership.",
+              "sourceId": "jica-en-rw-cooperation-brochure-2025",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2615,7 +4568,12 @@
         },
         "explanation": "プロジェクトは組織名だけで動くのではなく、多様な立場の人がそれぞれ役割を持って動かしています。",
         "sourceIds": [
-          "jica-rw-cooperation-overview"
+          "jica-jp-rw-wamcab2",
+          "jica-jp-rw-coffee-project",
+          "jica-jp-rw-prism",
+          "jica-en-rw-agriculture-sector",
+          "jica-en-rw-coffee-sector",
+          "jica-en-rw-education-sector"
         ],
         "skills": [
           "people-centered-learning",
@@ -2648,6 +4606,49 @@
               "correctIndex": 0
             }
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m36-gallery",
+            "type": "gallery",
+            "role": "evidence",
+            "required": true,
+            "instruction": "JICAの日本語プロジェクト写真から、住民・農家・先生・技術者・行政など、関わる人を探そう。",
+            "sourceIds": [
+              "jica-jp-rw-wamcab2",
+              "jica-jp-rw-coffee-project",
+              "jica-jp-rw-prism"
+            ],
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m36-gallery-adv",
+              "type": "gallery",
+              "role": "evidence",
+              "required": true,
+              "instruction": "Identify stakeholder roles across JICA's English project sources.",
+              "sourceIds": [
+                "jica-en-rw-agriculture-sector",
+                "jica-en-rw-coffee-sector",
+                "jica-en-rw-education-sector"
+              ],
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2674,8 +4675,16 @@
         },
         "explanation": "自分の関心を問いに変えると、学びが知識の受け取りから探究へ変わります。",
         "sourceIds": [
-          "rw-map-geography",
-          "jica-rw-cooperation-overview"
+          "jica-jp-rw-rural-child-video",
+          "jica-jp-rw-wamcab2",
+          "jica-jp-rw-prism",
+          "jica-jp-rw-digital-project",
+          "jica-jp-rw-umuganda-workbook",
+          "jica-en-rw-water-rwasom2",
+          "jica-en-rw-agriculture-sector",
+          "jica-en-rw-education-sector",
+          "jica-en-rw-ict-sector",
+          "rw-gov-en-profile"
         ],
         "skills": [
           "inquiry",
@@ -2699,6 +4708,53 @@
             "title": "Choose Your Inquiry",
             "prompt": "Formulate three focused, open-ended inquiry questions across different domains."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m37-source-board",
+            "type": "gallery",
+            "role": "reference",
+            "required": true,
+            "instruction": "これまで使った日本語資料から、水・農業・教育・デジタル・文化の資料を振り返り、自分がもっと調べたい分野を選ぼう。",
+            "sourceIds": [
+              "jica-jp-rw-rural-child-video",
+              "jica-jp-rw-wamcab2",
+              "jica-jp-rw-prism",
+              "jica-jp-rw-digital-project",
+              "jica-jp-rw-umuganda-workbook"
+            ],
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m37-source-board-adv",
+              "type": "gallery",
+              "role": "reference",
+              "required": true,
+              "instruction": "Review English primary sources across several domains and formulate focused inquiry questions.",
+              "sourceIds": [
+                "jica-en-rw-water-rwasom2",
+                "jica-en-rw-agriculture-sector",
+                "jica-en-rw-education-sector",
+                "jica-en-rw-ict-sector",
+                "rw-gov-en-profile"
+              ],
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2727,14 +4783,18 @@
           "requireSimilarityAtLeast": 1,
           "requireDifferenceAtLeast": 1,
           "requireBackgroundExplanation": true,
-          "avoidBetterWorseRanking": true,
-          "minDifferences": 3
+          "avoidBetterWorseRanking": true
         },
         "explanation": "比較の目的は優劣をつけることではなく、地理・歴史・制度・生活条件など背景を考えることです。",
         "sourceIds": [
-          "rw-map-geography",
-          "rw-government-profile",
-          "jica-rw-cooperation-overview"
+          "mofa-jp-rw-basic-data",
+          "jica-jp-rw-urban-photo-gallery",
+          "jica-jp-rw-rural-photo-gallery",
+          "jica-jp-rw-prism",
+          "rw-gov-en-practical-info",
+          "rw-gov-en-profile",
+          "jica-en-rw-education-sector",
+          "jica-en-rw-cooperation-brochure-2025"
         ],
         "skills": [
           "comparison",
@@ -2758,6 +4818,85 @@
             "title": "Compare Without Ranking",
             "prompt": "Compare multiple dimensions and explain similarities and differences without turning them into a better/worse ranking."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m38-compare",
+            "type": "interactive",
+            "role": "primary",
+            "required": true,
+            "instruction": "日本語の比較ボードで、地理・学校・食・文化・都市生活など複数の視点からルワンダと日本を比べよう。",
+            "generator": "country-compare-board",
+            "config": {
+              "countryA": "rw",
+              "countryB": "jp",
+              "uiLanguage": "ja"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m38-evidence",
+            "type": "gallery",
+            "role": "evidence",
+            "required": true,
+            "instruction": "比較の根拠として、ルワンダの日本語資料を最低2種類確認しよう。",
+            "sourceIds": [
+              "mofa-jp-rw-basic-data",
+              "jica-jp-rw-urban-photo-gallery",
+              "jica-jp-rw-rural-photo-gallery",
+              "jica-jp-rw-prism"
+            ],
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m38-compare-adv",
+              "type": "interactive",
+              "role": "primary",
+              "required": true,
+              "instruction": "Compare Rwanda and Japan across multiple dimensions without ranking them.",
+              "generator": "country-compare-board",
+              "config": {
+                "countryA": "rw",
+                "countryB": "jp",
+                "uiLanguage": "en"
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m38-evidence-adv",
+              "type": "gallery",
+              "role": "evidence",
+              "required": true,
+              "instruction": "Support the comparison with multiple English sources.",
+              "sourceIds": [
+                "rw-gov-en-practical-info",
+                "rw-gov-en-profile",
+                "jica-en-rw-education-sector",
+                "jica-en-rw-cooperation-brochure-2025"
+              ],
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2782,8 +4921,8 @@
         },
         "explanation": "相手の経験や考えを聞けるオープンな質問が、本当の交流につながります。",
         "sourceIds": [
-          "rw-language-basics",
-          "rw-government-profile"
+          "jica-jp-rw-exchange-2026",
+          "rw-gov-en-profile"
         ],
         "skills": [
           "international-exchange",
@@ -2807,6 +4946,74 @@
             "title": "Ask Better Questions",
             "prompt": "Create three open-ended, culturally respectful questions that invite personal experience and multiple perspectives."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m39-exchange",
+            "type": "webpage",
+            "role": "primary",
+            "required": true,
+            "instruction": "JICAの日本語「世界とつながる交流～ルワンダ編～」を読み、実際の交流ではどんな質問が役立つか考えよう。",
+            "sourceId": "jica-jp-rw-exchange-2026",
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m39-guide",
+            "type": "text",
+            "role": "support",
+            "required": true,
+            "instruction": "経験や考えを聞くオープンな英語質問の作り方を日本語で確認しよう。",
+            "generator": "question-quality-guide",
+            "config": {
+              "uiLanguage": "ja",
+              "targetLanguage": "en"
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m39-en",
+              "type": "webpage",
+              "role": "primary",
+              "required": true,
+              "instruction": "Use English country sources to prepare culturally respectful, open-ended questions.",
+              "sourceId": "rw-gov-en-profile",
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m39-guide-adv",
+              "type": "text",
+              "role": "support",
+              "required": true,
+              "instruction": "Create questions that invite personal experience and multiple perspectives.",
+              "generator": "question-quality-guide",
+              "config": {
+                "uiLanguage": "en",
+                "targetLanguage": "en",
+                "extension": true
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       },
       {
@@ -2836,11 +5043,17 @@
         },
         "explanation": "学んだことを自分で問い・答え・解説に再構成し、根拠まで確認できれば、知識を「使える形」に変えられています。",
         "sourceIds": [
-          "rw-map-geography",
-          "rw-time-zone",
-          "rw-language-basics",
-          "rw-government-profile",
-          "jica-rw-cooperation-overview"
+          "mofa-jp-rw-basic-data",
+          "jica-jp-rw-language-greetings",
+          "jica-jp-rw-rural-photo-gallery",
+          "jica-jp-rw-coffee-project",
+          "jica-jp-rw-prism",
+          "jica-jp-rw-digital-project",
+          "rw-gov-en-practical-info",
+          "peacecorps-en-rw-kinyarwanda",
+          "rw-gov-en-profile",
+          "jica-en-rw-coffee-2026",
+          "jica-en-rw-cooperation-brochure-2025"
         ],
         "skills": [
           "reflection",
@@ -2865,8 +5078,125 @@
             "title": "Rwanda Country Master",
             "prompt": "Create an evidence-based mini-quiz across five domains with accurate answers, explanations, and source references."
           }
+        },
+        "materials": [
+          {
+            "id": "rw-m40-review",
+            "type": "gallery",
+            "role": "reference",
+            "required": true,
+            "instruction": "Rwanda Adventureで使った日本語教材を分野別に振り返り、5分野のクイズ作成に使う根拠を選ぼう。",
+            "sourceIds": [
+              "mofa-jp-rw-basic-data",
+              "jica-jp-rw-language-greetings",
+              "jica-jp-rw-rural-photo-gallery",
+              "jica-jp-rw-coffee-project",
+              "jica-jp-rw-prism",
+              "jica-jp-rw-digital-project"
+            ],
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          },
+          {
+            "id": "rw-m40-builder",
+            "type": "interactive",
+            "role": "support",
+            "required": true,
+            "instruction": "PLACE・TIME・LANGUAGE・LIFE & CULTURE・JAPAN CONNECTIONから1問ずつ作ろう。",
+            "generator": "country-master-builder",
+            "config": {
+              "uiLanguage": "ja",
+              "requiredDomains": [
+                "place",
+                "time",
+                "language",
+                "lifeCulture",
+                "japanConnection"
+              ]
+            },
+            "language": "ja",
+            "display": {
+              "placement": "beforeChallenge"
+            }
+          }
+        ],
+        "materialsByLevel": {
+          "highSchoolAdvanced": [
+            {
+              "id": "rw-m40-review-adv",
+              "type": "gallery",
+              "role": "reference",
+              "required": true,
+              "instruction": "Review English primary sources and build an evidence-based five-domain mini-quiz.",
+              "sourceIds": [
+                "rw-gov-en-practical-info",
+                "peacecorps-en-rw-kinyarwanda",
+                "rw-gov-en-profile",
+                "jica-en-rw-coffee-2026",
+                "jica-en-rw-cooperation-brochure-2025"
+              ],
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            },
+            {
+              "id": "rw-m40-builder-adv",
+              "type": "interactive",
+              "role": "support",
+              "required": true,
+              "instruction": "Create one accurate item per domain with answer and explanation.",
+              "generator": "country-master-builder",
+              "config": {
+                "uiLanguage": "en",
+                "requiredDomains": [
+                  "place",
+                  "time",
+                  "language",
+                  "lifeCulture",
+                  "japanConnection"
+                ]
+              },
+              "language": "en",
+              "display": {
+                "placement": "beforeChallenge"
+              }
+            }
+          ]
+        },
+        "materialAudit": {
+          "hasDefaultMaterial": true,
+          "advancedOverride": true,
+          "promptMaterialConsistencyRequired": true
         }
       }
-    ]
+    ],
+    "validation": {
+      "missionCount": 40,
+      "maxWorldPoints": 480,
+      "expectedMissionIds": {
+        "from": "rw-m01",
+        "to": "rw-m40"
+      },
+      "correctAnswerDistribution": {
+        "A": 5,
+        "B": 5,
+        "C": 5,
+        "D": 5
+      },
+      "requiredChecks": [
+        "missionCount=40",
+        "worldPoints=480",
+        "missionIdsSequential=true",
+        "materialsPresentForAllMissions=true",
+        "advancedMaterialOverridePresentForAllMissions=true",
+        "defaultMaterialLanguage=ja",
+        "highSchoolAdvancedMaterialLanguage=en",
+        "promptMaterialConsistency=true",
+        "sourceIdsResolveInSourceCatalog=true"
+      ]
+    }
   }
 }
