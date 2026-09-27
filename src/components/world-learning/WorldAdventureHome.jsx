@@ -34,15 +34,7 @@ import {
 export default function WorldAdventureHome({
   onExploreWorld,
 }) {
-  const [
-    soundEnabled,
-    setSoundEnabledState,
-  ] = useState(
-    () =>
-      getUiSoundEnabled()
-  );
-
-
+  
   const liveCountries =
     getLiveWorldLearningCountries();
 
@@ -104,33 +96,7 @@ export default function WorldAdventureHome({
       : 0;
 
 
-  const toggleSound =
-    () => {
-      const next =
-        !soundEnabled;
-
-      setUiSoundEnabled(
-        next
-      );
-
-      setSoundEnabledState(
-        next
-      );
-
-      if (next) {
-        window.setTimeout(
-          () => {
-            playUiSound(
-              'tap'
-            );
-          },
-          20
-        );
-      }
-    };
-
-
-  const startAdventure =
+   const startAdventure =
     () => {
       playUiSound(
         'open'
@@ -309,54 +275,7 @@ export default function WorldAdventureHome({
           />
 
 
-          {/* SOUND */}
-
-          <button
-            type="button"
-            onClick={
-              toggleSound
-            }
-            className="
-              mt-2
-              flex
-              h-11
-              w-11
-              shrink-0
-              items-center
-              justify-center
-              rounded-full
-              border
-              border-white/20
-              bg-black/25
-              text-white/80
-              shadow-lg
-              backdrop-blur-xl
-              transition-all
-              duration-300
-              hover:scale-105
-              hover:bg-white/15
-              hover:text-white
-            "
-            aria-label={
-              soundEnabled
-                ? 'ボタン音をオフ'
-                : 'ボタン音をオン'
-            }
-          >
-
-            {soundEnabled ? (
-              <Volume2
-                size={18}
-              />
-            ) : (
-              <VolumeX
-                size={18}
-              />
-            )}
-
-          </button>
-
-        </div>
+          </div>
 
 
         {/* ===================================================
