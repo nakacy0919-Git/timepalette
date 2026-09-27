@@ -1,11 +1,9 @@
 import {
+  ArrowRight,
   CheckCircle2,
+  List,
   Sparkles,
 } from 'lucide-react';
-
-import {
-  useEffect,
-} from 'react';
 
 
 const CONFETTI_COLORS = [
@@ -28,49 +26,40 @@ const CONFETTI_PIECES =
       _,
       index
     ) => ({
-      id:
-        index,
-
+      id: index,
       left:
         `${(index * 37) % 100}%`,
-
       delay:
         `${(index % 9) * 0.045}s`,
-
       duration:
         `${
           1.7 +
           (index % 6) *
             0.16
         }s`,
-
       width:
         `${
           6 +
-          (index % 4) *
-            2
+          (index % 4) * 2
         }px`,
-
       height:
         `${
           10 +
-          (index % 3) *
-            4
+          (index % 3) * 4
         }px`,
-
       color:
         CONFETTI_COLORS[
           index %
-            CONFETTI_COLORS.length
+          CONFETTI_COLORS.length
         ],
-
       drift:
         `${
-          ((index * 29) %
-            180) -
+          (
+            (index * 29) %
+            180
+          ) -
           90
         }px`,
-
       spin:
         `${
           360 +
@@ -83,35 +72,14 @@ const CONFETTI_PIECES =
 
 export default function MissionSuccessCelebration({
   celebration,
+  nextMission = null,
+  onNext,
+  onBackToList,
   onDismiss,
 }) {
-  useEffect(() => {
-    if (!celebration) {
-      return undefined;
-    }
-
-    const timer =
-      window.setTimeout(
-        () => {
-          onDismiss?.();
-        },
-        2600
-      );
-
-    return () =>
-      window.clearTimeout(
-        timer
-      );
-  }, [
-    celebration,
-    onDismiss,
-  ]);
-
-
   if (!celebration) {
     return null;
   }
-
 
   const {
     firstClear,
@@ -130,17 +98,14 @@ export default function MissionSuccessCelebration({
         items-center
         justify-center
         overflow-hidden
-        bg-slate-950/25
+        bg-slate-950/45
         p-4
-        backdrop-blur-[2px]
+        backdrop-blur-sm
       "
-      role="status"
-      aria-live="assertive"
-      onClick={
-        onDismiss
-      }
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mission clear"
     >
-
       <style>
         {`
           @keyframes tp-confetti-fall {
@@ -239,7 +204,8 @@ export default function MissionSuccessCelebration({
             .tp-success-points,
             .tp-success-ring,
             .tp-confetti {
-              animation: none !important;
+              animation:
+                none !important;
             }
 
             .tp-confetti {
@@ -250,8 +216,6 @@ export default function MissionSuccessCelebration({
       </style>
 
 
-      {/* CONFETTI */}
-
       <div
         className="
           pointer-events-none
@@ -261,15 +225,10 @@ export default function MissionSuccessCelebration({
         "
         aria-hidden="true"
       >
-
         {CONFETTI_PIECES.map(
-          (
-            piece
-          ) => (
+          (piece) => (
             <span
-              key={
-                piece.id
-              }
+              key={piece.id}
               className="
                 tp-confetti
                 absolute
@@ -279,70 +238,69 @@ export default function MissionSuccessCelebration({
               style={{
                 left:
                   piece.left,
-
                 width:
                   piece.width,
-
                 height:
                   piece.height,
-
                 backgroundColor:
                   piece.color,
-
                 '--tp-drift':
                   piece.drift,
-
                 '--tp-spin':
                   piece.spin,
-
                 animation:
                   `tp-confetti-fall ${piece.duration} ease-in ${piece.delay} forwards`,
               }}
             />
           )
         )}
-
       </div>
 
-
-      {/* SUCCESS CARD */}
 
       <div
         className="
           tp-success-card
           relative
           w-full
-          max-w-[430px]
+          max-w-[520px]
           overflow-hidden
           rounded-[34px]
           border
           border-white/60
           bg-white
           px-6
-          py-8
+          py-7
           text-center
-          shadow-[0_35px_100px_rgba(15,23,42,0.35)]
-          md:px-9
-          md:py-10
+          shadow-[0_35px_100px_rgba(15,23,42,0.38)]
+          md:px-10
+          md:py-9
         "
         style={{
           animation:
             'tp-success-pop 620ms cubic-bezier(0.22, 1.2, 0.32, 1) both',
         }}
-        onClick={(
-          event
-        ) =>
-          event.stopPropagation()
-        }
       >
+        <div className="
+          pointer-events-none
+          absolute
+          inset-x-0
+          top-0
+          h-32
+          bg-gradient-to-b
+          from-emerald-50
+          to-transparent
+        " />
 
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-emerald-50 to-transparent" />
 
-
-        {/* ICON */}
-
-        <div className="relative mx-auto flex h-24 w-24 items-center justify-center">
-
+        <div className="
+          relative
+          mx-auto
+          flex
+          h-24
+          w-24
+          items-center
+          justify-center
+        ">
           <div
             className="
               tp-success-ring
@@ -358,148 +316,276 @@ export default function MissionSuccessCelebration({
             }}
           />
 
-          <div
-            className="
-              relative
-              z-10
-              flex
-              h-20
-              w-20
-              items-center
-              justify-center
-              rounded-full
-              bg-gradient-to-br
-              from-emerald-400
-              to-emerald-600
-              text-white
-              shadow-[0_12px_30px_rgba(16,185,129,0.35)]
-            "
-          >
+          <div className="
+            relative
+            z-10
+            flex
+            h-20
+            w-20
+            items-center
+            justify-center
+            rounded-full
+            bg-gradient-to-br
+            from-emerald-400
+            to-emerald-600
+            text-white
+            shadow-[0_12px_30px_rgba(16,185,129,0.35)]
+          ">
             <CheckCircle2
               size={43}
               strokeWidth={2.6}
             />
           </div>
-
         </div>
 
 
-        <div className="mt-4 flex items-center justify-center gap-2 text-emerald-600">
+        <div className="
+          mt-4
+          flex
+          items-center
+          justify-center
+          gap-2
+          text-emerald-600
+        ">
+          <Sparkles size={16} />
 
-          <Sparkles
-            size={16}
-          />
-
-          <p className="text-[10px] font-black tracking-[0.22em]">
+          <p className="
+            text-[10px]
+            font-black
+            tracking-[0.22em]
+          ">
             MISSION CLEAR
           </p>
 
-          <Sparkles
-            size={16}
-          />
-
+          <Sparkles size={16} />
         </div>
 
 
-        <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-slate-950">
+        <h2 className="
+          mt-3
+          text-3xl
+          font-black
+          tracking-[-0.04em]
+          text-slate-950
+          md:text-4xl
+        ">
           Great Job!
         </h2>
 
-
-        <p className="mx-auto mt-2 max-w-[320px] text-sm font-bold leading-6 text-slate-500">
+        <p className="
+          mx-auto
+          mt-2
+          max-w-[380px]
+          text-sm
+          font-bold
+          leading-6
+          text-slate-500
+        ">
           {title}
         </p>
 
 
         {firstClear ? (
-
           <div
             className="
               tp-success-points
-              mt-6
+              mt-5
             "
             style={{
               animation:
                 'tp-points-rise 720ms 180ms cubic-bezier(0.22, 1.2, 0.32, 1) both',
             }}
           >
-
-            <p className="text-[10px] font-black tracking-[0.18em] text-amber-500">
+            <p className="
+              text-[10px]
+              font-black
+              tracking-[0.18em]
+              text-amber-500
+            ">
               WORLD POINTS GET!
             </p>
 
-            <div
-              className="
-                mt-1
-                bg-gradient-to-r
-                from-amber-400
-                via-orange-500
-                to-rose-500
-                bg-clip-text
-                text-6xl
-                font-black
-                tracking-[-0.05em]
-                text-transparent
-              "
-            >
-              +
-              {
-                points
-              }
+            <div className="
+              mt-1
+              bg-gradient-to-r
+              from-amber-400
+              via-orange-500
+              to-rose-500
+              bg-clip-text
+              text-6xl
+              font-black
+              tracking-[-0.05em]
+              text-transparent
+            ">
+              +{points}
             </div>
 
-            <p className="mt-[-4px] text-lg font-black text-slate-400">
+            <p className="
+              mt-[-4px]
+              text-lg
+              font-black
+              text-slate-400
+            ">
               WP
             </p>
-
           </div>
-
         ) : (
-
-          <div className="mt-6 rounded-2xl bg-blue-50 px-5 py-4">
-
-            <p className="text-xs font-black tracking-[0.12em] text-blue-500">
+          <div className="
+            mt-5
+            rounded-2xl
+            bg-blue-50
+            px-5
+            py-4
+          ">
+            <p className="
+              text-xs
+              font-black
+              tracking-[0.12em]
+              text-blue-500
+            ">
               REVIEW COMPLETE
             </p>
 
-            <p className="mt-1 text-sm font-bold text-slate-600">
-              復習完了！WPは初回クリア時のみ加算されます。
+            <p className="
+              mt-1
+              text-sm
+              font-bold
+              text-slate-600
+            ">
+              復習完了！
+              WPは初回クリア時のみ
+              加算されます。
+            </p>
+          </div>
+        )}
+
+
+        {nextMission && (
+          <div className="
+            mt-5
+            rounded-2xl
+            border
+            border-slate-200
+            bg-slate-50
+            px-4
+            py-3
+            text-left
+          ">
+            <p className="
+              text-[9px]
+              font-black
+              tracking-[0.15em]
+              text-slate-400
+            ">
+              NEXT MISSION
             </p>
 
+            <p className="
+              mt-1
+              truncate
+              text-sm
+              font-black
+              text-slate-800
+            ">
+              {nextMission.title}
+            </p>
           </div>
-
         )}
+
+
+        <div className="
+          mt-6
+          grid
+          grid-cols-1
+          gap-3
+          sm:grid-cols-[1fr_1.45fr]
+        ">
+          <button
+            type="button"
+            onClick={
+              onBackToList ??
+              onDismiss
+            }
+            className="
+              inline-flex
+              items-center
+              justify-center
+              gap-2
+              rounded-2xl
+              border
+              border-slate-200
+              bg-white
+              px-5
+              py-4
+              text-sm
+              font-black
+              text-slate-600
+              transition
+              hover:bg-slate-50
+            "
+          >
+            <List size={19} />
+            Mission一覧
+          </button>
+
+          <button
+            type="button"
+            onClick={
+              nextMission
+                ? onNext
+                : (
+                  onBackToList ??
+                  onDismiss
+                )
+            }
+            className="
+              inline-flex
+              items-center
+              justify-center
+              gap-2
+              rounded-2xl
+              bg-gradient-to-r
+              from-blue-600
+              to-violet-600
+              px-5
+              py-4
+              text-base
+              font-black
+              text-white
+              shadow-[0_14px_30px_rgba(37,99,235,0.30)]
+              transition
+              hover:-translate-y-0.5
+              hover:shadow-[0_18px_36px_rgba(37,99,235,0.36)]
+            "
+          >
+            {nextMission
+              ? '次のMissionへ'
+              : 'Adventureへ戻る'}
+
+            <ArrowRight
+              size={21}
+            />
+          </button>
+        </div>
 
 
         <button
           type="button"
-          onClick={
-            onDismiss
-          }
+          onClick={onDismiss}
           className="
-            mt-7
-            w-full
-            rounded-2xl
-            bg-slate-950
-            px-5
-            py-3.5
-            text-sm
-            font-black
-            text-white
+            mt-4
+            text-xs
+            font-bold
+            text-slate-300
+            underline-offset-4
             transition
-            hover:bg-slate-800
+            hover:text-slate-500
+            hover:underline
           "
         >
-          CONTINUE
+          この画面を閉じる
         </button>
-
-
-        <p className="mt-3 text-[10px] font-bold text-slate-300">
-          自動的にMission画面へ戻ります
-        </p>
-
       </div>
-
     </div>
   );
 }

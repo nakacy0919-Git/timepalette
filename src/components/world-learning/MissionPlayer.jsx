@@ -1,6 +1,9 @@
 import {
   AlertCircle,
+  ArrowLeft,
+  ArrowRight,
   CheckCircle2,
+  List,
   RotateCcw,
   Volume2,
   X,
@@ -26,112 +29,118 @@ import MissionSuccessCelebration from './MissionSuccessCelebration';
 import GlobalChallengeMissionGame from './GlobalChallengeMissionGame';
 import SourceQuestMissionGame from './SourceQuestMissionGame';
 
-const TIME_MISSION_TYPES =
-  new Set([
-    'live-time-compare',
-    'time-dial',
-    'daypart-match',
-    'schedule-builder',
-  ]);
 
-const PLACE_MISSION_TYPES =
-  new Set([
-    'map-tap',
-    'city-map',
-  ]);
+const TIME_MISSION_TYPES = new Set([
+  'live-time-compare',
+  'time-dial',
+  'daypart-match',
+  'schedule-builder',
+]);
 
-const LANGUAGE_MISSION_TYPES =
-  new Set([
-    'matching',
-    'speaking',
-    'speaking-template',
-    'speaking-creator',
-  ]);
+const PLACE_MISSION_TYPES = new Set([
+  'map-tap',
+  'city-map',
+]);
 
-const LIFE_CULTURE_MISSION_TYPES =
-  new Set([
-    'region-sort',
-  ]);
+const LANGUAGE_MISSION_TYPES = new Set([
+  'matching',
+  'speaking',
+  'speaking-template',
+  'speaking-creator',
+]);
 
-const JAPAN_CONNECTION_MISSION_TYPES =
-  new Set([
-    'sorting',
-    'connection-chain',
-    'daily-life-hunt',
-    'quiz-creator',
-  ]);
+const LIFE_CULTURE_MISSION_TYPES = new Set([
+  'region-sort',
+]);
 
-const THINK_CONNECT_MISSION_TYPES =
-  new Set([
-    'compare-builder',
-    'evidence-check',
-    'question-creator',
-    'creator-capstone',
-  ]);
+const JAPAN_CONNECTION_MISSION_TYPES = new Set([
+  'sorting',
+  'connection-chain',
+  'daily-life-hunt',
+  'quiz-creator',
+]);
 
-const hasChoiceChallenge = (
-  mission
-) =>
+const THINK_CONNECT_MISSION_TYPES = new Set([
+  'compare-builder',
+  'evidence-check',
+  'question-creator',
+  'creator-capstone',
+]);
+
+
+const hasChoiceChallenge = (mission) =>
   Array.isArray(
     mission?.challenge?.choices
   ) &&
-  typeof mission?.challenge
-    ?.correctIndex ===
+  typeof mission?.challenge?.correctIndex ===
     'number';
 
-const isTimeMission = (
-  mission
-) =>
-  TIME_MISSION_TYPES.has(
-    mission?.type
-  );
 
-const isPlaceMission = (
-  mission
-) =>
-  PLACE_MISSION_TYPES.has(
-    mission?.type
-  );
+const getMissionNumber = (missionId) => {
+  const match = String(
+    missionId ?? ''
+  ).match(/-m(\d+)$/i);
 
-const isLanguageMission = (
-  mission
-) =>
-  LANGUAGE_MISSION_TYPES.has(
-    mission?.type
-  );
+  if (!match) {
+    return 'MISSION';
+  }
 
-const isLifeCultureMission = (
-  mission
-) =>
-  LIFE_CULTURE_MISSION_TYPES.has(
-    mission?.type
-  );
+  return `M${String(
+    match[1]
+  ).padStart(2, '0')}`;
+};
 
-const isJapanConnectionMission = (
-  mission
-) =>
-  JAPAN_CONNECTION_MISSION_TYPES.has(
-    mission?.type
-  );
 
-const isThinkConnectMission = (
-  mission
-) =>
-  THINK_CONNECT_MISSION_TYPES.has(
-    mission?.type
-  );
+const normalizeChoice = (
+  choice,
+  index
+) => {
+  if (
+    choice &&
+    typeof choice === 'object' &&
+    !Array.isArray(choice)
+  ) {
+    return {
+      id:
+        choice.id ??
+        `choice-${index}`,
+      label:
+        choice.label ??
+        choice.text ??
+        choice.caption ??
+        '',
+      caption:
+        choice.caption ??
+        '',
+      image:
+        choice.image ??
+        choice.imageUrl ??
+        null,
+      emoji:
+        choice.emoji ??
+        null,
+      alt:
+        choice.alt ??
+        choice.label ??
+        choice.text ??
+        `Choice ${index + 1}`,
+    };
+  }
 
-const isGlobalChallengeMission = (
-  mission
-) =>
-  mission?.type ===
-  'global-challenge';
+  return {
+    id: `choice-${index}`,
+    label: String(
+      choice ?? ''
+    ),
+    caption: '',
+    image: null,
+    emoji: null,
+    alt: String(
+      choice ?? `Choice ${index + 1}`
+    ),
+  };
+};
 
-const isSourceQuestMission = (
-  mission
-) =>
-  mission?.type ===
-  'source-quest';
 
 export default function MissionPlayer({
   mission,
@@ -139,8 +148,17 @@ export default function MissionPlayer({
   alreadyCompleted,
   onClose,
   onComplete,
-}) {
 
+  // UI v2: optional navigation props.
+  // Existing callers continue to work even if these are omitted.
+  nextMission = null,
+  previousMission = null,
+  missionPosition = null,
+  totalMissions = null,
+  onNextMission = null,
+  onPreviousMission = null,
+  onBackToList = null,
+}) {
   const scrollContainerRef =
     useRef(null);
 
@@ -155,62 +173,74 @@ export default function MissionPlayer({
   ] = useState(null);
 
   const [
-  celebration,
-  setCelebration,
-] = useState(null);
+    celebration,
+    setCelebration,
+  ] = useState(null);
 
+  const completedThisSessionRef =
+    useRef(alreadyCompleted);
 
-const completedThisSessionRef =
-  useRef(
-    alreadyCompleted
-  );
 
   const choicePlayable =
-    hasChoiceChallenge(
-      mission
-    );
+    hasChoiceChallenge(mission);
 
   const timePlayable =
-    isTimeMission(
-      mission
+    TIME_MISSION_TYPES.has(
+      mission?.type
     );
 
   const placePlayable =
-    isPlaceMission(
-      mission
+    PLACE_MISSION_TYPES.has(
+      mission?.type
     );
 
   const languagePlayable =
-    isLanguageMission(
-      mission
+    LANGUAGE_MISSION_TYPES.has(
+      mission?.type
     );
 
   const lifeCulturePlayable =
-    isLifeCultureMission(
-      mission
+    LIFE_CULTURE_MISSION_TYPES.has(
+      mission?.type
     );
 
   const japanConnectionPlayable =
-  isJapanConnectionMission(
-    mission
-  );
+    JAPAN_CONNECTION_MISSION_TYPES.has(
+      mission?.type
+    );
 
   const thinkConnectPlayable =
-  isThinkConnectMission(
-    mission
-  );
+    THINK_CONNECT_MISSION_TYPES.has(
+      mission?.type
+    );
 
-const globalChallengePlayable =
-  isGlobalChallengeMission(
-    mission
-  );
+  const globalChallengePlayable =
+    mission?.type ===
+    'global-challenge';
 
-const sourceQuestPlayable =
-  isSourceQuestMission(
-    mission
-  );
+  const sourceQuestPlayable =
+    mission?.type ===
+    'source-quest';
+
+  const specializedPlayable =
+    sourceQuestPlayable ||
+    globalChallengePlayable ||
+    timePlayable ||
+    placePlayable ||
+    languagePlayable ||
+    lifeCulturePlayable ||
+    japanConnectionPlayable ||
+    thinkConnectPlayable;
+
 
   useEffect(() => {
+    setSelectedIndex(null);
+    setResult(null);
+    setCelebration(null);
+
+    completedThisSessionRef.current =
+      alreadyCompleted;
+
     const container =
       scrollContainerRef.current;
 
@@ -220,7 +250,13 @@ const sourceQuestPlayable =
         behavior: 'auto',
       });
     }
+  }, [
+    mission.id,
+    alreadyCompleted,
+  ]);
 
+
+  useEffect(() => {
     const previousOverflow =
       document.body.style.overflow;
 
@@ -231,18 +267,13 @@ const sourceQuestPlayable =
       document.body.style.overflow =
         previousOverflow;
     };
-  }, [mission.id]);
+  }, []);
 
-const modalWidthClass =
-  placePlayable ||
-  globalChallengePlayable ||
-  sourceQuestPlayable
-    ? 'max-w-5xl'
-    : 'max-w-2xl';
 
   const isListening =
     mission.type ===
     'listen-choice';
+
 
   const playAudio = () => {
     const text =
@@ -267,9 +298,9 @@ const modalWidthClass =
       );
 
     utterance.lang =
-  mission?.challenge
-    ?.langCode ||
-  'en-US';
+      mission?.challenge
+        ?.langCode ||
+      'en-US';
 
     utterance.rate =
       0.85;
@@ -279,8 +310,8 @@ const modalWidthClass =
     );
   };
 
-const handleMissionComplete =
-  (
+
+  const handleMissionComplete = (
     completedMission
   ) => {
     const firstClear =
@@ -290,7 +321,6 @@ const handleMissionComplete =
     completedThisSessionRef
       .current = true;
 
-
     setCelebration({
       firstClear,
 
@@ -298,8 +328,8 @@ const handleMissionComplete =
         Number(
           completedMission
             ?.points ??
-            mission.points ??
-            0
+          mission.points ??
+          0
         ),
 
       title:
@@ -308,11 +338,11 @@ const handleMissionComplete =
         mission.title,
     });
 
-
     onComplete(
       completedMission
     );
   };
+
 
   const checkAnswer = () => {
     if (
@@ -327,21 +357,22 @@ const handleMissionComplete =
         .correctIndex;
 
     if (correct) {
-  setResult(
-    'correct'
-  );
+      setResult(
+        'correct'
+      );
 
-  handleMissionComplete(
-    mission
-  );
+      handleMissionComplete(
+        mission
+      );
 
-  return;
-}
+      return;
+    }
 
     setResult(
       'wrong'
     );
   };
+
 
   const retry = () => {
     setSelectedIndex(
@@ -353,479 +384,1099 @@ const handleMissionComplete =
     );
   };
 
+
+  const goBackToList = () => {
+    setCelebration(
+      null
+    );
+
+    if (onBackToList) {
+      onBackToList();
+      return;
+    }
+
+    onClose();
+  };
+
+
+  const goNext = () => {
+    setCelebration(
+      null
+    );
+
+    if (
+      nextMission &&
+      onNextMission
+    ) {
+      onNextMission(
+        nextMission
+      );
+      return;
+    }
+
+    goBackToList();
+  };
+
+
+  const goPrevious = () => {
+    if (
+      previousMission &&
+      onPreviousMission
+    ) {
+      onPreviousMission(
+        previousMission
+      );
+    }
+  };
+
+
   const levelLabel =
-    mission.level >= 4
-      ? 'WORLD MASTER'
-      : mission.level === 3
-        ? 'CHALLENGER'
-        : mission.level === 2
-          ? 'DISCOVERY'
-          : 'EXPLORER';
+    mission.learningLevelLabel ??
+    (
+      mission.level >= 4
+        ? 'WORLD MASTER'
+        : mission.level === 3
+          ? 'CHALLENGER'
+          : mission.level === 2
+            ? 'DISCOVERY'
+            : 'EXPLORER'
+    );
 
-  return createPortal(
-  (
-    <div className="fixed inset-0 z-[100000] flex items-start justify-center overflow-hidden bg-slate-950/85 p-2 backdrop-blur-sm md:items-center md:p-4">
 
-  <MissionSuccessCelebration
-    celebration={
-      celebration
+  const progressLabel =
+    missionPosition &&
+    totalMissions
+      ? `${missionPosition} / ${totalMissions}`
+      : getMissionNumber(
+          mission.id
+        );
+
+
+  const renderGame = () => {
+    if (
+      sourceQuestPlayable
+    ) {
+      return (
+        <SourceQuestMissionGame
+          mission={mission}
+          onComplete={
+            handleMissionComplete
+          }
+          alreadyCompleted={
+            alreadyCompleted
+          }
+        />
+      );
     }
-    onDismiss={() =>
-      setCelebration(
-        null
-      )
+
+    if (
+      globalChallengePlayable
+    ) {
+      return (
+        <GlobalChallengeMissionGame
+          mission={mission}
+          onComplete={
+            handleMissionComplete
+          }
+          alreadyCompleted={
+            alreadyCompleted
+          }
+        />
+      );
     }
-  />
 
-  <div
-    ref={scrollContainerRef}
-    className={`max-h-[96dvh] w-full ${modalWidthClass} overflow-y-auto bg-white shadow-2xl md:max-h-[92vh] md:rounded-[28px]`}
-  >
+    if (timePlayable) {
+      return (
+        <TimeMissionGame
+          mission={mission}
+          onComplete={
+            handleMissionComplete
+          }
+          alreadyCompleted={
+            alreadyCompleted
+          }
+        />
+      );
+    }
 
-        <div className="relative bg-slate-900 px-6 py-6 text-white md:px-8">
-          <button
-            onClick={
-              onClose
-            }
-            className="absolute right-5 top-5 rounded-full bg-white/10 p-2 transition-colors hover:bg-white/20"
-            aria-label="Close mission"
-          >
-            <X size={22} />
-          </button>
+    if (placePlayable) {
+      return (
+        <PlaceMissionGame
+          mission={mission}
+          onComplete={
+            handleMissionComplete
+          }
+          alreadyCompleted={
+            alreadyCompleted
+          }
+        />
+      );
+    }
 
-          <div className="pr-12">
-            <div className="mb-3 flex flex-wrap items-center gap-2">
+    if (
+      languagePlayable
+    ) {
+      return (
+        <LanguageMissionGame
+          mission={mission}
+          onComplete={
+            handleMissionComplete
+          }
+          alreadyCompleted={
+            alreadyCompleted
+          }
+        />
+      );
+    }
 
-              <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-black">
-                {domain?.icon}{' '}
-                {
-                  domain?.labelJa
-                }
-              </span>
+    if (
+      lifeCulturePlayable
+    ) {
+      return (
+        <LifeCultureMissionGame
+          mission={mission}
+          onComplete={
+            handleMissionComplete
+          }
+          alreadyCompleted={
+            alreadyCompleted
+          }
+        />
+      );
+    }
 
-              <span className="rounded-full bg-blue-500/20 px-3 py-1 text-xs font-black text-blue-200">
-                LEVEL{' '}
-                {
-                  mission.level
-                }
-              </span>
+    if (
+      japanConnectionPlayable
+    ) {
+      return (
+        <JapanConnectionMissionGame
+          mission={mission}
+          onComplete={
+            handleMissionComplete
+          }
+          alreadyCompleted={
+            alreadyCompleted
+          }
+        />
+      );
+    }
 
-              <span className="rounded-full bg-amber-400/20 px-3 py-1 text-xs font-black text-amber-200">
-                {
-                  mission.points
-                }{' '}
-                WP
-              </span>
+    if (
+      thinkConnectPlayable
+    ) {
+      return (
+        <ThinkConnectMissionGame
+          mission={mission}
+          onComplete={
+            handleMissionComplete
+          }
+          alreadyCompleted={
+            alreadyCompleted
+          }
+        />
+      );
+    }
 
+    if (!choicePlayable) {
+      return (
+        <div className="
+          flex
+          min-h-[340px]
+          items-center
+          justify-center
+          rounded-[28px]
+          border-2
+          border-dashed
+          border-slate-300
+          bg-slate-50
+          p-8
+          text-center
+        ">
+          <div>
+            <div className="text-6xl">
+              🚧
             </div>
 
-            <p className="mb-2 text-xs font-black tracking-[0.18em] text-blue-300">
-              {
-                levelLabel
-              }
-            </p>
+            <h3 className="
+              mt-5
+              text-xl
+              font-black
+              text-slate-800
+            ">
+              Interactive Mission
+            </h3>
 
-            <h2 className="text-2xl font-black leading-tight md:text-3xl">
-              {
-                mission.title
-              }
-            </h2>
+            <p className="
+              mx-auto
+              mt-2
+              max-w-lg
+              font-bold
+              leading-7
+              text-slate-500
+            ">
+              「{mission.type}」
+              専用の操作画面を使うMissionです。
+            </p>
           </div>
         </div>
-
-        <div className="p-6 md:p-8">
-
-          {alreadyCompleted && (
-            <div className="mb-6 flex items-center gap-3 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-700">
-
-              <CheckCircle2
-                size={22}
-                className="shrink-0"
-              />
-
-              <div>
-                <p className="font-black">
-                  Mission Clear!
-                </p>
-
-                <p className="text-sm font-bold opacity-80">
-                  復習は何度でもできます。WPは初回クリア時だけ加算されます。
-                </p>
-              </div>
-            </div>
-          )}
-
-          <div className="mb-6 rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-
-            <p className="mb-2 text-xs font-black tracking-[0.15em] text-slate-400">
-              MISSION
-            </p>
-
-            <p className="text-lg font-black leading-relaxed text-slate-800 md:text-xl">
-              {
-                mission.prompt
-              }
-            </p>
-
-          </div>
-
-          {sourceQuestPlayable ? (
-
-  <SourceQuestMissionGame
-    mission={mission}
-    onComplete={handleMissionComplete}
-    alreadyCompleted={alreadyCompleted}
-  />
-
-) : globalChallengePlayable ? (
-
-  <GlobalChallengeMissionGame
-    mission={mission}
-    onComplete={handleMissionComplete}
-    alreadyCompleted={alreadyCompleted}
-  />
-
-) : timePlayable ? (
-
-  <TimeMissionGame
-    mission={mission}
-    onComplete={handleMissionComplete}
-    alreadyCompleted={alreadyCompleted}
-  />
-
-) : placePlayable ? (
-
-  <PlaceMissionGame
-    mission={mission}
-    onComplete={handleMissionComplete}
-    alreadyCompleted={alreadyCompleted}
-  />
-
-) : languagePlayable ? (
-
-  <LanguageMissionGame
-    mission={mission}
-    onComplete={handleMissionComplete}
-    alreadyCompleted={alreadyCompleted}
-  />
-
-) : lifeCulturePlayable ? (
-
-  <LifeCultureMissionGame
-    mission={mission}
-    onComplete={handleMissionComplete}
-    alreadyCompleted={alreadyCompleted}
-  />
-
-) : japanConnectionPlayable ? (
-
-  <JapanConnectionMissionGame
-    mission={mission}
-    onComplete={handleMissionComplete}
-    alreadyCompleted={alreadyCompleted}
-  />
-
-) : thinkConnectPlayable ? (
-
-  <ThinkConnectMissionGame
-    mission={mission}
-    onComplete={handleMissionComplete}
-    alreadyCompleted={alreadyCompleted}
-  />
-
-) : !choicePlayable ? (
-            <div className="rounded-3xl border-2 border-dashed border-slate-300 bg-slate-50 p-8 text-center">
-
-              <div className="mb-4 text-5xl">
-                🚧
-              </div>
-
-              <h3 className="mb-2 text-xl font-black text-slate-700">
-                Interactive Mission
-              </h3>
-
-              <p className="font-bold leading-relaxed text-slate-500">
-                このMissionは
-                「
-                {
-                  mission.type
-                }
-                」
-                専用の操作画面を使います。
-              </p>
-
-              <p className="mt-3 text-sm text-slate-400">
-                ボタンを押しただけではクリアにはしません。
-                実際に課題を達成できる画面を順番に実装します。
-              </p>
-
-              <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-slate-200 px-4 py-2 text-sm font-black text-slate-600">
-                COMING NEXT
-              </div>
-            </div>
-          ) : (
-            <>
-              {isListening && (
-                <div className="mb-6 flex justify-center">
-
-                  <button
-                    onClick={
-                      playAudio
-                    }
-                    className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-black text-white shadow-md transition-all hover:scale-105 hover:bg-blue-700"
-                  >
-                    <Volume2
-                      size={20}
-                    />
-                    音声を聞く
-                  </button>
-
-                </div>
-              )}
-
-              <div className="space-y-3">
-
-                {mission.challenge.choices.map(
-                  (
-                    choice,
-                    index
-                  ) => {
-                    const selected =
-                      selectedIndex ===
-                      index;
-
-                    const isCorrectChoice =
-                      result ===
-                        'correct' &&
-                      index ===
-                        mission.challenge
-                          .correctIndex;
-
-                    const isWrongChoice =
-                      result ===
-                        'wrong' &&
-                      selected;
-
-                    let choiceClass =
-                      'border-slate-200 bg-white hover:border-blue-400 hover:bg-blue-50';
-
-                    if (
-                      selected
-                    ) {
-                      choiceClass =
-                        'border-blue-500 bg-blue-50';
-                    }
-
-                    if (
-                      isCorrectChoice
-                    ) {
-                      choiceClass =
-                        'border-emerald-500 bg-emerald-50';
-                    }
-
-                    if (
-                      isWrongChoice
-                    ) {
-                      choiceClass =
-                        'border-red-400 bg-red-50';
-                    }
-
-                    return (
-                      <button
-                        key={`${mission.id}-${index}`}
-                        disabled={
-                          result ===
-                          'correct'
-                        }
-                        onClick={() => {
-                          setSelectedIndex(
-                            index
-                          );
-
-                          if (
-                            result ===
-                            'wrong'
-                          ) {
-                            setResult(
-                              null
-                            );
-                          }
-                        }}
-                        className={`w-full rounded-2xl border-2 p-4 text-left transition-all md:p-5 ${choiceClass}`}
-                      >
-                        <div className="flex items-center gap-4">
-
-                          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-100 font-black text-slate-500">
-                            {[
-                              'A',
-                              'B',
-                              'C',
-                              'D',
-                            ][
-                              index
-                            ] ||
-                              index +
-                                1}
-                          </span>
-
-                          <span className="font-black text-slate-700">
-                            {
-                              choice
-                            }
-                          </span>
-
-                        </div>
-                      </button>
-                    );
-                  }
-                )}
-
-              </div>
-
-              {result ===
-                'wrong' && (
-                <div className="mt-5 flex items-start gap-3 rounded-2xl border border-orange-200 bg-orange-50 p-4 text-orange-700">
-
-                  <AlertCircle
-                    size={22}
-                    className="mt-0.5 shrink-0"
-                  />
-
-                  <div>
-                    <p className="font-black">
-                      もう一度考えてみよう！
-                    </p>
-
-                    <p className="mt-1 text-sm font-bold opacity-80">
-                      答えはまだ表示しません。
-                      別の選択肢を試してみましょう。
-                    </p>
-                  </div>
-
-                </div>
-              )}
-
-              {result ===
-                'correct' && (
-                <div className="mt-5 rounded-3xl border border-emerald-200 bg-emerald-50 p-5">
-
-                  <div className="mb-3 flex items-center gap-3 text-emerald-700">
-
-                    <CheckCircle2
-                      size={26}
-                    />
-
-                    <p className="text-xl font-black">
-                      Mission Clear!
-                    </p>
-
-                  </div>
-                                  <div className="mb-4 border-l-4 border-emerald-500 bg-white px-4 py-3">
-
-                    <p className="text-[10px] font-black tracking-[0.16em] text-emerald-600">
-                      CORRECT ANSWER
-                    </p>
-
-                    <p className="mt-1 text-lg font-black text-slate-900">
-                      {
-                        mission.challenge
-                          .choices[
-                          mission.challenge
-                            .correctIndex
-                        ]
-                      }
-                    </p>
-
-                  </div>
-                  <p className="font-bold leading-relaxed text-slate-700">
-                    {
-                      mission.explanation
-                    }
-                  </p>
-
-                  <div className="mt-4 inline-flex rounded-full bg-emerald-600 px-4 py-2 font-black text-white">
-                    {alreadyCompleted
-                      ? 'REVIEW COMPLETE'
-                      : `+${mission.points} WP`}
-                  </div>
-
-                </div>
-              )}
-
-              {result !==
-                'correct' && (
-                <button
-                  disabled={
-                    selectedIndex ===
-                    null
-                  }
-                  onClick={
-                    checkAnswer
-                  }
-                  className="mt-7 w-full rounded-2xl bg-slate-900 py-4 text-lg font-black text-white transition-colors hover:bg-blue-700 disabled:bg-slate-200 disabled:text-slate-400"
-                >
-                  答えをチェック
-                </button>
-              )}
-
-              {result ===
-                'wrong' && (
-                <button
-                  onClick={
-                    retry
-                  }
-                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl py-3 font-black text-slate-500 hover:bg-slate-100"
-                >
-                  <RotateCcw
-                    size={18}
-                  />
-                  最初からやり直す
-                </button>
-              )}
-            </>
-          )}
-                  {alreadyCompleted && (
-            <div className="mt-7 border-t border-slate-200 pt-6">
-
-              <p className="text-[10px] font-black tracking-[0.18em] text-slate-400">
-                REMEMBER THIS
-              </p>
-
-              <div className="mt-3 border-l-4 border-blue-500 bg-blue-50 px-5 py-4">
-
-                <p className="font-bold leading-7 text-slate-700">
-                  {
-                    mission.explanation
-                  }
-                </p>
-
-              </div>
-
-            </div>
-          )}
-          <div className="mt-8 flex items-center justify-between border-t border-slate-200 pt-5">
-
-            <span className="text-xs font-bold text-slate-400">
-              Mission ID:{' '}
-              {
-                mission.id
-              }
-            </span>
-
+      );
+    }
+
+
+    const choices =
+      mission.challenge
+        .choices
+        .map(
+          normalizeChoice
+        );
+
+    const hasVisualChoice =
+      choices.some(
+        (choice) =>
+          choice.image ||
+          choice.emoji
+      );
+
+    return (
+      <div>
+        {isListening && (
+          <div className="
+            mb-5
+            flex
+            justify-center
+          ">
             <button
-              onClick={
-                onClose
-              }
-              className="rounded-full bg-slate-100 px-5 py-2.5 text-sm font-black text-slate-700 hover:bg-slate-200"
+              type="button"
+              onClick={playAudio}
+              className="
+                inline-flex
+                items-center
+                gap-2
+                rounded-full
+                bg-blue-600
+                px-6
+                py-3
+                font-black
+                text-white
+                shadow-md
+                transition
+                hover:-translate-y-0.5
+                hover:bg-blue-700
+              "
             >
-              Mission一覧へ
+              <Volume2
+                size={20}
+              />
+              音声を聞く
+            </button>
+          </div>
+        )}
+
+
+        <div
+          className={
+            hasVisualChoice
+              ? 'grid grid-cols-2 gap-3 md:gap-4'
+              : 'grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4'
+          }
+        >
+          {choices.map(
+            (
+              choice,
+              index
+            ) => {
+              const selected =
+                selectedIndex ===
+                index;
+
+              const correct =
+                result ===
+                  'correct' &&
+                index ===
+                  mission.challenge
+                    .correctIndex;
+
+              const wrong =
+                result ===
+                  'wrong' &&
+                selected;
+
+              let choiceClass =
+                'border-slate-200 bg-white hover:-translate-y-1 hover:border-blue-400 hover:shadow-lg';
+
+              if (selected) {
+                choiceClass =
+                  'border-blue-500 bg-blue-50 shadow-md ring-4 ring-blue-100';
+              }
+
+              if (correct) {
+                choiceClass =
+                  'border-emerald-500 bg-emerald-50 shadow-md ring-4 ring-emerald-100';
+              }
+
+              if (wrong) {
+                choiceClass =
+                  'border-red-400 bg-red-50 ring-4 ring-red-100';
+              }
+
+              return (
+                <button
+                  key={
+                    choice.id
+                  }
+                  type="button"
+                  disabled={
+                    result ===
+                    'correct'
+                  }
+                  onClick={() => {
+                    setSelectedIndex(
+                      index
+                    );
+
+                    if (
+                      result ===
+                      'wrong'
+                    ) {
+                      setResult(
+                        null
+                      );
+                    }
+                  }}
+                  className={`
+                    group
+                    relative
+                    min-h-[112px]
+                    overflow-hidden
+                    rounded-[24px]
+                    border-2
+                    p-4
+                    text-left
+                    transition-all
+                    duration-200
+                    md:min-h-[138px]
+                    md:p-5
+                    ${choiceClass}
+                  `}
+                >
+                  <div className="
+                    flex
+                    h-full
+                    gap-4
+                  ">
+                    <span className="
+                      flex
+                      h-9
+                      w-9
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-full
+                      bg-slate-100
+                      text-sm
+                      font-black
+                      text-slate-500
+                    ">
+                      {[
+                        'A',
+                        'B',
+                        'C',
+                        'D',
+                      ][index] ??
+                        index + 1}
+                    </span>
+
+                    <div className="
+                      flex
+                      min-w-0
+                      flex-1
+                      flex-col
+                    ">
+                      {choice.image && (
+                        <div className="
+                          mb-3
+                          aspect-[16/9]
+                          w-full
+                          overflow-hidden
+                          rounded-2xl
+                          bg-slate-100
+                        ">
+                          <img
+                            src={
+                              choice.image
+                            }
+                            alt={
+                              choice.alt
+                            }
+                            className="
+                              h-full
+                              w-full
+                              object-cover
+                            "
+                          />
+                        </div>
+                      )}
+
+                      {choice.emoji && (
+                        <div
+                          className="
+                            mb-2
+                            text-center
+                            text-5xl
+                            leading-none
+                            md:text-6xl
+                          "
+                          aria-hidden="true"
+                        >
+                          {
+                            choice.emoji
+                          }
+                        </div>
+                      )}
+
+                      <span className="
+                        text-sm
+                        font-black
+                        leading-6
+                        text-slate-800
+                        md:text-base
+                      ">
+                        {
+                          choice.label
+                        }
+                      </span>
+
+                      {choice.caption && (
+                        <span className="
+                          mt-1
+                          text-xs
+                          font-bold
+                          leading-5
+                          text-slate-400
+                        ">
+                          {
+                            choice.caption
+                          }
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {correct && (
+                    <CheckCircle2
+                      size={25}
+                      className="
+                        absolute
+                        right-4
+                        top-4
+                        text-emerald-500
+                      "
+                    />
+                  )}
+                </button>
+              );
+            }
+          )}
+        </div>
+
+
+        {result ===
+          'wrong' && (
+          <div className="
+            mt-5
+            flex
+            items-start
+            gap-3
+            rounded-2xl
+            border
+            border-orange-200
+            bg-orange-50
+            p-4
+            text-orange-700
+          ">
+            <AlertCircle
+              size={22}
+              className="shrink-0"
+            />
+
+            <div>
+              <p className="font-black">
+                もう一度考えてみよう
+              </p>
+
+              <p className="
+                mt-1
+                text-sm
+                font-bold
+                leading-6
+                opacity-80
+              ">
+                ヒントや選択肢を見直して、
+                別の答えを選んでみよう。
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  };
+
+
+  return createPortal(
+    (
+      <div className="
+        fixed
+        inset-0
+        z-[100000]
+        flex
+        items-center
+        justify-center
+        overflow-hidden
+        bg-slate-950/85
+        p-0
+        backdrop-blur-sm
+        md:p-4
+      ">
+        <MissionSuccessCelebration
+          celebration={
+            celebration
+          }
+          nextMission={
+            nextMission
+          }
+          onNext={
+            goNext
+          }
+          onBackToList={
+            goBackToList
+          }
+          onDismiss={() =>
+            setCelebration(
+              null
+            )
+          }
+        />
+
+
+        <div
+          className="
+            flex
+            h-[100dvh]
+            w-full
+            max-w-[1480px]
+            flex-col
+            overflow-hidden
+            bg-white
+            shadow-2xl
+            md:h-[94vh]
+            md:rounded-[30px]
+          "
+        >
+          {/* HEADER */}
+          <div className="
+            relative
+            shrink-0
+            bg-gradient-to-r
+            from-slate-950
+            via-slate-900
+            to-blue-950
+            px-4
+            py-4
+            text-white
+            md:px-7
+            md:py-5
+          ">
+            <button
+              type="button"
+              onClick={onClose}
+              className="
+                absolute
+                right-4
+                top-4
+                rounded-full
+                bg-white/10
+                p-2.5
+                transition
+                hover:bg-white/20
+              "
+              aria-label="Close mission"
+            >
+              <X size={22} />
             </button>
 
+            <div className="
+              flex
+              items-center
+              gap-3
+              pr-14
+            ">
+              <div className="
+                hidden
+                h-12
+                w-12
+                shrink-0
+                items-center
+                justify-center
+                rounded-2xl
+                bg-white/10
+                text-2xl
+                md:flex
+              ">
+                {domain?.icon ??
+                  '🌍'}
+              </div>
+
+              <div className="min-w-0">
+                <div className="
+                  flex
+                  flex-wrap
+                  items-center
+                  gap-2
+                ">
+                  <span className="
+                    rounded-full
+                    bg-white/10
+                    px-3
+                    py-1
+                    text-[10px]
+                    font-black
+                    tracking-[0.12em]
+                  ">
+                    {
+                      getMissionNumber(
+                        mission.id
+                      )
+                    }
+                  </span>
+
+                  <span className="
+                    rounded-full
+                    bg-cyan-400/15
+                    px-3
+                    py-1
+                    text-[10px]
+                    font-black
+                    text-cyan-200
+                  ">
+                    {levelLabel}
+                  </span>
+
+                  <span className="
+                    rounded-full
+                    bg-amber-400/15
+                    px-3
+                    py-1
+                    text-[10px]
+                    font-black
+                    text-amber-200
+                  ">
+                    {mission.points} WP
+                  </span>
+                </div>
+
+                <h2 className="
+                  mt-2
+                  truncate
+                  text-xl
+                  font-black
+                  tracking-tight
+                  md:text-2xl
+                ">
+                  {mission.title}
+                </h2>
+              </div>
+            </div>
+          </div>
+
+
+          {/* MAIN */}
+          <div
+            ref={
+              scrollContainerRef
+            }
+            className="
+              min-h-0
+              flex-1
+              overflow-y-auto
+              bg-slate-50
+            "
+          >
+            <div className="
+              mx-auto
+              grid
+              w-full
+              max-w-[1380px]
+              gap-5
+              p-4
+              md:p-6
+              lg:grid-cols-[330px_minmax(0,1fr)]
+              xl:grid-cols-[370px_minmax(0,1fr)]
+            ">
+              {/* LEFT: mission brief */}
+              <aside className="
+                self-start
+                lg:sticky
+                lg:top-0
+              ">
+                <div className="
+                  rounded-[26px]
+                  border
+                  border-slate-200
+                  bg-white
+                  p-5
+                  shadow-sm
+                  md:p-6
+                ">
+                  <p className="
+                    text-[10px]
+                    font-black
+                    tracking-[0.18em]
+                    text-blue-500
+                  ">
+                    YOUR MISSION
+                  </p>
+
+                  <p className="
+                    mt-3
+                    text-lg
+                    font-black
+                    leading-8
+                    text-slate-900
+                    md:text-xl
+                  ">
+                    {mission.prompt}
+                  </p>
+
+                  {mission.explanation && (
+                    <div className="
+                      mt-5
+                      rounded-2xl
+                      bg-blue-50
+                      p-4
+                    ">
+                      <p className="
+                        text-[10px]
+                        font-black
+                        tracking-[0.14em]
+                        text-blue-500
+                      ">
+                        DISCOVERY NOTE
+                      </p>
+
+                      <p className="
+                        mt-2
+                        text-sm
+                        font-bold
+                        leading-6
+                        text-slate-600
+                      ">
+                        {
+                          mission.explanation
+                        }
+                      </p>
+                    </div>
+                  )}
+
+                  {alreadyCompleted && (
+                    <div className="
+                      mt-5
+                      flex
+                      items-start
+                      gap-3
+                      rounded-2xl
+                      bg-emerald-50
+                      p-4
+                      text-emerald-700
+                    ">
+                      <CheckCircle2
+                        size={20}
+                        className="mt-0.5 shrink-0"
+                      />
+                      <div>
+                        <p className="font-black">
+                          Mission Clear!
+                        </p>
+                        <p className="
+                          mt-1
+                          text-xs
+                          font-bold
+                          leading-5
+                          opacity-80
+                        ">
+                          復習は何度でもできます。
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </aside>
+
+
+              {/* RIGHT: interactive area */}
+              <main className="
+                min-w-0
+                rounded-[28px]
+                border
+                border-slate-200
+                bg-white
+                p-4
+                shadow-sm
+                md:p-6
+                xl:p-7
+              ">
+                {renderGame()}
+              </main>
+            </div>
+          </div>
+
+
+          {/* STICKY ACTION BAR */}
+          <div className="
+            shrink-0
+            border-t
+            border-slate-200
+            bg-white/95
+            px-3
+            py-3
+            backdrop-blur
+            md:px-6
+          ">
+            <div className="
+              mx-auto
+              flex
+              max-w-[1380px]
+              items-center
+              justify-between
+              gap-3
+            ">
+              <div className="
+                flex
+                items-center
+                gap-2
+              ">
+                <button
+                  type="button"
+                  onClick={
+                    goBackToList
+                  }
+                  className="
+                    inline-flex
+                    items-center
+                    gap-2
+                    rounded-xl
+                    border
+                    border-slate-200
+                    bg-white
+                    px-3
+                    py-3
+                    text-xs
+                    font-black
+                    text-slate-600
+                    transition
+                    hover:bg-slate-50
+                    md:px-4
+                  "
+                >
+                  <List size={18} />
+                  <span className="
+                    hidden
+                    sm:inline
+                  ">
+                    Mission一覧
+                  </span>
+                </button>
+
+                {previousMission &&
+                  onPreviousMission && (
+                  <button
+                    type="button"
+                    onClick={
+                      goPrevious
+                    }
+                    className="
+                      hidden
+                      items-center
+                      gap-1
+                      rounded-xl
+                      px-3
+                      py-3
+                      text-xs
+                      font-black
+                      text-slate-500
+                      transition
+                      hover:bg-slate-100
+                      md:inline-flex
+                    "
+                  >
+                    <ArrowLeft
+                      size={17}
+                    />
+                    前へ
+                  </button>
+                )}
+              </div>
+
+
+              <div className="
+                hidden
+                text-center
+                sm:block
+              ">
+                <p className="
+                  text-xs
+                  font-black
+                  text-slate-800
+                ">
+                  {progressLabel}
+                </p>
+
+                <p className="
+                  text-[9px]
+                  font-black
+                  tracking-[0.12em]
+                  text-slate-300
+                ">
+                  WORLD ADVENTURE
+                </p>
+              </div>
+
+
+              <div>
+                {choicePlayable &&
+                !specializedPlayable ? (
+                  result ===
+                  'wrong' ? (
+                    <button
+                      type="button"
+                      onClick={retry}
+                      className="
+                        inline-flex
+                        min-w-[150px]
+                        items-center
+                        justify-center
+                        gap-2
+                        rounded-xl
+                        bg-orange-500
+                        px-5
+                        py-3
+                        text-sm
+                        font-black
+                        text-white
+                        shadow-lg
+                        transition
+                        hover:bg-orange-600
+                      "
+                    >
+                      <RotateCcw
+                        size={18}
+                      />
+                      もう一度
+                    </button>
+                  ) : result ===
+                    'correct' ? (
+                    <button
+                      type="button"
+                      onClick={
+                        goNext
+                      }
+                      className="
+                        inline-flex
+                        min-w-[170px]
+                        items-center
+                        justify-center
+                        gap-2
+                        rounded-xl
+                        bg-emerald-500
+                        px-5
+                        py-3
+                        text-sm
+                        font-black
+                        text-white
+                        shadow-lg
+                        transition
+                        hover:bg-emerald-600
+                      "
+                    >
+                      {nextMission
+                        ? '次のMissionへ'
+                        : 'Mission一覧へ'}
+                      <ArrowRight
+                        size={19}
+                      />
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      disabled={
+                        selectedIndex ===
+                        null
+                      }
+                      onClick={
+                        checkAnswer
+                      }
+                      className="
+                        inline-flex
+                        min-w-[170px]
+                        items-center
+                        justify-center
+                        gap-2
+                        rounded-xl
+                        bg-blue-600
+                        px-5
+                        py-3
+                        text-sm
+                        font-black
+                        text-white
+                        shadow-lg
+                        transition
+                        hover:bg-blue-700
+                        disabled:cursor-not-allowed
+                        disabled:bg-slate-200
+                        disabled:text-slate-400
+                        disabled:shadow-none
+                      "
+                    >
+                      答えを確認
+                      <ArrowRight
+                        size={19}
+                      />
+                    </button>
+                  )
+                ) : (
+                  <button
+                    type="button"
+                    onClick={
+                      goBackToList
+                    }
+                    className="
+                      inline-flex
+                      min-w-[150px]
+                      items-center
+                      justify-center
+                      gap-2
+                      rounded-xl
+                      bg-slate-950
+                      px-5
+                      py-3
+                      text-sm
+                      font-black
+                      text-white
+                      transition
+                      hover:bg-slate-800
+                    "
+                  >
+                    Mission一覧
+                    <ArrowRight
+                      size={18}
+                    />
+                  </button>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     ),
-  document.body
-);
+    document.body
+  );
 }

@@ -933,6 +933,68 @@ export default function WorldMissionPanel({
       );
     };
 
+      /* =========================================================
+     ACTIVE MISSION NAVIGATION
+  ========================================================= */
+
+  const activeMissionIndex =
+    activeMission
+      ? missions.findIndex(
+          (mission) =>
+            mission.id ===
+            activeMission.id
+        )
+      : -1;
+
+
+  const previousActiveMission =
+    activeMissionIndex > 0
+      ? missions[
+          activeMissionIndex - 1
+        ]
+      : null;
+
+
+  const nextActiveMission =
+    activeMissionIndex >= 0 &&
+    activeMissionIndex <
+      missions.length - 1
+      ? missions[
+          activeMissionIndex + 1
+        ]
+      : null;
+
+
+  const moveToAdjacentMission =
+    (
+      mission
+    ) => {
+      if (!mission) {
+        return;
+      }
+
+      playUiSound(
+        'open'
+      );
+
+      setActiveMission(
+        mission
+      );
+    };
+
+
+  const closeMissionToList =
+    () => {
+      playUiSound(
+        'back'
+      );
+
+      setActiveMission(
+        null
+      );
+
+      moveToMissionList();
+    };
 
   const selectDomain =
     (
@@ -2590,13 +2652,15 @@ export default function WorldMissionPanel({
 
       {activeMission && (
 
-        <MissionPlayer
+                <MissionPlayer
           key={
             `${activeMission.id}-${selectedLearningLevel}`
           }
+
           mission={
             activeMission
           }
+
           domain={
             domains.find(
               (domain) =>
@@ -2604,23 +2668,50 @@ export default function WorldMissionPanel({
                 activeMission.domain
             )
           }
+
           alreadyCompleted={
             completedIds.has(
               activeMission.id
             )
           }
+
           onComplete={
             handleComplete
           }
-          onClose={() => {
-            playUiSound(
-              'back'
-            );
 
-            setActiveMission(
-              null
-            );
-          }}
+          previousMission={
+            previousActiveMission
+          }
+
+          nextMission={
+            nextActiveMission
+          }
+
+          missionPosition={
+            activeMissionIndex >= 0
+              ? activeMissionIndex + 1
+              : null
+          }
+
+          totalMissions={
+            missions.length
+          }
+
+          onPreviousMission={
+            moveToAdjacentMission
+          }
+
+          onNextMission={
+            moveToAdjacentMission
+          }
+
+          onBackToList={
+            closeMissionToList
+          }
+
+          onClose={
+            closeMissionToList
+          }
         />
 
       )}
