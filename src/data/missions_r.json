@@ -799,7 +799,9 @@
           "language": "Kinyarwanda",
           "recognitionMode": "practice",
           "minAttempts": 1,
-          "scoring": "participation-first"
+          "scoring": "participation-first",
+          "langCode": "rw-RW",
+          "minAccuracy": 55
         },
         "explanation": "Murakozeは「ありがとう」にあたる表現です。未知の言語では、完璧さよりもまず聞いて試すことを大切にします。",
         "sourceIds": [
@@ -840,14 +842,14 @@
         "points": 10,
         "requiredForMastery": true,
         "challenge": {
-          "template": "Hello, my name is {name}. I am from Japan. I like {interest}. Nice to meet you.",
+          "template": "Hello, my name is {name}. I am from Japan. Nice to meet you.",
           "requiredSlots": [
-            "name",
-            "interest"
+            "name"
           ],
           "language": "en",
-          "minWords": 10,
-          "maxWords": 35
+          "meaning": "こんにちは。私は{name}です。日本から来ました。よろしくお願いします。",
+          "langCode": "en-US",
+          "minAccuracy": 70
         },
         "explanation": "英語をテストの答えではなく、人とつながるための道具として使います。",
         "sourceIds": [
@@ -894,7 +896,8 @@
           "questionCount": 1,
           "requireQuestionMark": true,
           "preferOpenEnded": true,
-          "avoidSearchableFactOnly": true
+          "avoidSearchableFactOnly": true,
+          "langCode": "en-US"
         },
         "explanation": "検索すれば分かる情報だけでなく、相手の経験や考えを聞く質問が対話につながります。",
         "sourceIds": [
@@ -938,8 +941,7 @@
           "categories": [
             "都市・中央部",
             "高地・北部",
-            "湖岸・西部",
-            "南部の都市・学術地域"
+            "湖岸・西部"
           ],
           "items": [
             {
@@ -953,10 +955,6 @@
             {
               "name": "Rubavu",
               "target": "湖岸・西部"
-            },
-            {
-              "name": "Huye",
-              "target": "南部の都市・学術地域"
             }
           ]
         },
@@ -1301,8 +1299,8 @@
         "requiredForMastery": true,
         "challenge": {
           "sourceIds": [
-            "jica-rw-water-rwasom2",
-            "jica-rw-water-media"
+            "water-rwanda-overview",
+            "jica-rw-water-rwasom2"
           ],
           "activityType": "system-map",
           "notice": {
@@ -1334,8 +1332,8 @@
         },
         "explanation": "安全な水を届け続けるには、設備だけでなく維持管理、運営、地域の組織、利用者など複数の要素が関わります。",
         "sourceIds": [
-          "jica-rw-water-rwasom2",
-          "jica-rw-water-media"
+          "water-rwanda-overview",
+          "jica-rw-water-rwasom2"
         ],
         "skills": [
           "media-literacy",
@@ -1388,7 +1386,7 @@
         "requiredForMastery": false,
         "challenge": {
           "sourceIds": [
-            "jica-rw-water-media"
+            "without-water-ja"
           ],
           "activityType": "life-link",
           "notice": {
@@ -1420,7 +1418,7 @@
         },
         "explanation": "水へのアクセスは飲み水だけでなく、衛生、健康、学校生活、時間の使い方などにも関係します。",
         "sourceIds": [
-          "jica-rw-water-media"
+          "without-water-ja"
         ],
         "skills": [
           "water-sanitation",
@@ -1475,7 +1473,8 @@
         },
         "explanation": "一つの資料だけで結論を出さず、複数資料をつないで水へのアクセスと生活・維持管理・地域の仕組みを考えます。",
         "sourceIds": [
-          "jica-rw-water-media",
+          "rwanda-rural-child-ja",
+          "water-rwanda-overview",
           "jica-rw-water-rwasom2"
         ],
         "skills": [
@@ -1514,7 +1513,7 @@
                 "title": "水と暮らしを見つけよう",
                 "prompt": "日本語で支援された動画を見て、水を使う場面を探そう。",
                 "sourceIds": [
-                  "jica-rw-water-media"
+                  "rwanda-rural-child-ja"
                 ],
                 "completeLabel": "見つけた！"
               },
@@ -1550,7 +1549,7 @@
                 "title": "水と一日の生活",
                 "prompt": "水が生活のどこで必要か考えながら見よう。",
                 "sourceIds": [
-                  "jica-rw-water-media"
+                  "rwanda-rural-child-ja"
                 ],
                 "completeLabel": "動画を見た"
               },
@@ -1571,7 +1570,7 @@
                 ]
               },
               {
-                "type": "evidence-writing",
+                "type": "opinion-writing",
                 "title": "根拠を使って説明",
                 "prompt": "資料から分かったことを一つ根拠にして、日本との違いや共通点を書こう。",
                 "minChars": 60
@@ -1585,7 +1584,7 @@
                 "title": "暮らしから水の課題を考える",
                 "prompt": "水へのアクセスが一日の生活にどう影響するか、具体的な場面を探そう。",
                 "sourceIds": [
-                  "jica-rw-water-media"
+                  "without-water-ja"
                 ],
                 "completeLabel": "生活とのつながりを確認した"
               },
@@ -1635,7 +1634,7 @@
                 "title": "Water and Daily Life",
                 "prompt": "Identify how water access affects everyday activities and opportunities.",
                 "sourceIds": [
-                  "jica-rw-water-media"
+                  "water-rwanda-overview"
                 ],
                 "completeLabel": "I identified key impacts"
               },
@@ -1713,7 +1712,7 @@
         "requiredForMastery": false,
         "challenge": {
           "sourceIds": [
-            "jica-rw-water-media"
+            "rwanda-rural-child-ja"
           ],
           "activityType": "time-budget",
           "notice": {
@@ -1745,7 +1744,7 @@
         },
         "explanation": "アクセスは「ある／ない」だけでなく、距離・所要時間・安定性など負担の大きさでも考える必要があります。",
         "sourceIds": [
-          "jica-rw-water-media"
+          "rwanda-rural-child-ja"
         ],
         "skills": [
           "perspective-taking",
@@ -2728,7 +2727,8 @@
           "requireSimilarityAtLeast": 1,
           "requireDifferenceAtLeast": 1,
           "requireBackgroundExplanation": true,
-          "avoidBetterWorseRanking": true
+          "avoidBetterWorseRanking": true,
+          "minDifferences": 3
         },
         "explanation": "比較の目的は優劣をつけることではなく、地理・歴史・制度・生活条件など背景を考えることです。",
         "sourceIds": [
