@@ -170,14 +170,18 @@ function ResultBox({ correct, explanation, points, alreadyCompleted }) {
     );
   }
 
-  return (
-    <div className="mt-5 rounded-3xl border border-emerald-200 bg-emerald-50 p-5">
+    return (
+    <div className="mt-6 rounded-[28px] border border-emerald-200 bg-emerald-50 p-6 md:p-7">
       <div className="mb-3 flex items-center gap-3 text-emerald-700">
-        <CheckCircle2 size={26} />
-        <p className="text-xl font-black">Mission Clear!</p>
+        <CheckCircle2 size={28} />
+        <p className="text-2xl font-black">Mission Clear!</p>
       </div>
-      <p className="font-bold leading-relaxed text-slate-700">{explanation}</p>
-      <div className="mt-4 inline-flex rounded-full bg-emerald-600 px-4 py-2 font-black text-white">
+
+      <p className="text-base font-bold leading-8 text-slate-700 md:text-lg">
+        {explanation}
+      </p>
+
+      <div className="mt-5 inline-flex rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-black text-white md:text-base">
         {alreadyCompleted ? 'REVIEW COMPLETE' : `+${points} WP`}
       </div>
     </div>
@@ -234,20 +238,22 @@ const cityB =
 
   return (
     <div>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {zones.map((zone) => (
-          <div key={zone} className="rounded-3xl border border-slate-200 bg-slate-50 p-5 text-center">
+          <div key={zone} className="rounded-[28px] border border-slate-200 bg-slate-50 p-6 text-center md:p-7">
             <p className="text-sm font-black text-slate-500">{getZoneLabel(
   mission.challenge,
   zone
 )}</p>
-            <p className="mt-2 text-3xl font-black text-slate-900">{formatTime(reference, zone)}</p>
+            <p className="mt-2 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">
+  {formatTime(reference, zone)}
+</p>
             <p className="mt-1 text-xs font-bold text-slate-400">{formatDate(reference, zone)}</p>
           </div>
         ))}
       </div>
 
-      <div className="mt-6 rounded-2xl bg-blue-50 p-4 text-sm font-bold text-blue-800">
+      <div className="mt-6 rounded-[24px] border border-blue-100 bg-gradient-to-r from-blue-50 to-indigo-50 p-5 text-base font-bold text-blue-800 md:text-lg">
         <Clock3 className="mr-2 inline" size={18} />
         {mode === 'which-is-ahead'
           ? 'どちらの都市の時計が、同じ瞬間により先の時刻を示していますか？'
@@ -263,7 +269,7 @@ const cityB =
                   setSelected(zone);
                   setResult(null);
                 }}
-                className={`rounded-2xl border-2 p-4 font-black transition-all ${
+                className={`min-h-[88px] rounded-[22px] border-2 px-5 py-5 text-lg font-black transition-all md:text-xl ${
                   selected === zone
                     ? 'border-blue-500 bg-blue-50 text-blue-700'
                     : 'border-slate-200 bg-white text-slate-700 hover:border-blue-300'
@@ -297,7 +303,7 @@ const cityB =
         <button
           disabled={selected === null}
           onClick={check}
-          className="mt-6 w-full rounded-2xl bg-slate-900 py-4 text-lg font-black text-white transition-colors hover:bg-blue-700 disabled:bg-slate-200 disabled:text-slate-400"
+          className="mt-6 w-full rounded-[24px] bg-slate-900 py-5 text-xl font-black text-white shadow-lg transition-colors hover:bg-blue-700 disabled:bg-slate-200 disabled:text-slate-400"
         >
           答えをチェック
         </button>
