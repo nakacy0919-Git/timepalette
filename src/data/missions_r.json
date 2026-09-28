@@ -515,16 +515,16 @@
         "materials": [
           {
             "id": "rw-m03-photo",
-            "type": "image",
+            "type": "pdf",
             "role": "primary",
             "required": true,
-            "instruction": "ルワンダの丘陵景観の写真を見て、地形の特徴を観察しよう。",
+            "instruction": "JICAの日本語冊子にある写真や図を見て、ルワンダの丘陵地形の特徴を観察しよう。",
             "sourceId": "jica-jp-rw-hills-story",
             "language": "ja",
             "display": {
               "placement": "beforeChallenge",
-              "aspectRatio": "16:9",
-              "fit": "cover"
+              "mode": "visualDocument",
+              "pageHint": 2
             }
           },
           {
@@ -549,17 +549,21 @@
         "materialsByLevel": {
           "highSchoolAdvanced": [
             {
-              "id": "rw-m03-photo-adv",
-              "type": "image",
+              "id": "rw-m03-map-adv",
+              "type": "map",
               "role": "primary",
               "required": true,
-              "instruction": "Observe Rwanda's hilly landscape and connect terrain with human activity.",
-              "sourceId": "rw-gov-en-practical-info",
+              "instruction": "Observe Rwanda's physical geography on the map and connect terrain with human activity.",
+              "generator": "country-map",
+              "config": {
+                "countryIso": "rw",
+                "mode": "physical",
+                "uiLanguage": "en"
+              },
               "language": "en",
               "display": {
                 "placement": "beforeChallenge",
-                "aspectRatio": "16:9",
-                "fit": "cover"
+                "aspectRatio": "16:9"
               }
             },
             {
@@ -1969,16 +1973,16 @@
         "materials": [
           {
             "id": "rw-m16-photo",
-            "type": "image",
+            "type": "gallery",
             "role": "primary",
             "required": true,
-            "instruction": "まず1枚の写真だけを見て、その写真から分かること・分からないことを分けよう。",
+            "instruction": "JICAの村落部写真教材から1枚を選び、その写真から分かること・分からないことを分けよう。",
             "sourceId": "jica-jp-rw-rural-photo-gallery",
             "language": "ja",
             "display": {
               "placement": "beforeChallenge",
-              "aspectRatio": "16:9",
-              "fit": "cover"
+              "mode": "singleFromGallery",
+              "aspectRatio": "16:9"
             }
           }
         ],
@@ -1986,16 +1990,15 @@
           "highSchoolAdvanced": [
             {
               "id": "rw-m16-photo-adv",
-              "type": "image",
+              "type": "pdf",
               "role": "primary",
               "required": true,
-              "instruction": "Use one image as evidence, then identify what it cannot prove about Rwanda as a whole.",
-              "sourceId": "rw-gov-en-profile",
+              "instruction": "Choose one photograph from the JICA Rwanda brochure. Identify what the image shows and what it cannot prove about Rwanda as a whole.",
+              "sourceId": "jica-en-rw-cooperation-brochure-2025",
               "language": "en",
               "display": {
                 "placement": "beforeChallenge",
-                "aspectRatio": "16:9",
-                "fit": "cover"
+                "mode": "visualDocument"
               }
             }
           ]

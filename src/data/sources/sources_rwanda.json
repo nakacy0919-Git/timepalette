@@ -2,854 +2,1099 @@
   "rw": {
     "countryNameJa": "ルワンダ",
     "countryNameEn": "Rwanda",
-    "version": 1,
-    "sourceStandard": "TimePalette Source Catalog v1",
+    "version": 6,
+    "schemaVersion": "TimePalette Source Catalog v6",
+    "sourceStandard": "TimePalette Source Catalog v6",
+    "missionStandard": "TimePalette Mission Standard v6",
     "missionFile": "missions_r.json",
-    "verifiedAt": "2026-09-27",
-    "sourceCount": 16,
+    "verifiedAt": "2026-09-28",
+    "sourceCount": 44,
+    "languagePolicy": {
+      "elementary": "Japanese-first materials",
+      "juniorHigh": "Japanese-first materials",
+      "highSchoolStandard": "Japanese-first materials",
+      "highSchoolAdvanced": "English primary / official sources"
+    },
     "policy": {
       "priority": [
         "official-primary",
         "authoritative-reference",
         "reputable-secondary"
       ],
-      "rule": "Prefer official government, JICA, statistical, or institutional sources. Use secondary sources only when a mission-specific cultural example is not directly supported by a stable official page.",
-      "studentSafety": "Do not generalize one source, image, person, city, or project to all people in Rwanda.",
-      "copyright": "Link to or embed official media only where technically permitted. Do not copy entire external texts into TimePalette.",
-      "freshness": "Project status, statistics and live web resources should be rechecked periodically."
+      "copyright": "Link to or embed official materials only where technically permitted. Do not reproduce full external texts.",
+      "visualRule": "A prompt that tells learners to view, watch, read, compare, or listen must resolve to a compatible material source.",
+      "antiStereotype": "Do not present one person, photo, city, village, or project as representing all people in Rwanda.",
+      "aliasRule": "Legacy source IDs may remain as aliases, but every alias must resolve to a verified canonical source."
+    },
+    "rendererNotes": {
+      "gallery": "JICA photo-gallery pages are catalogued as gallery sources. MissionMaterialRenderer should render a preview/card or child assets rather than treating the page URL as a raw image.",
+      "visualDocument": "Some Japanese JICA PDFs include photos, maps and diagrams. Renderer may show PDF pages as visual material.",
+      "externalWebpage": "If iframe embedding is blocked, show Source Preview + Open Official Source."
     },
     "sources": {
-      "rw-map-geography": {
-        "organization": "Government of Rwanda / Embassy of Rwanda in Japan",
-        "title": "Practical Info – Rwanda: Geography, Borders and General Information",
-        "type": "webpage",
+      "mofa-jp-rw-basic-data": {
+        "organization": "外務省",
+        "title": "ルワンダ基礎データ",
+        "assetType": "webpage",
+        "url": "https://www.mofa.go.jp/mofaj/area/rwanda/data.html",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "country-profile",
+          "geography",
+          "capital",
+          "languages",
+          "economy",
+          "japan-rwanda-relations"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m01",
+          "rw-m02",
+          "rw-m04",
+          "rw-m11",
+          "rw-m38",
+          "rw-m40"
+        ]
+      },
+      "rw-gov-en-practical-info": {
+        "organization": "Embassy of the Republic of Rwanda in Japan",
+        "title": "Practical Info",
+        "assetType": "webpage",
         "url": "https://www.rwandainjapan.gov.rw/info/practical-info",
         "language": [
           "en"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "current",
-        "verifiedAt": "2026-09-27",
         "topics": [
           "geography",
-          "landlocked",
-          "neighbors",
-          "land-of-a-thousand-hills",
-          "regional-awareness"
+          "borders",
+          "time",
+          "language",
+          "country-profile"
         ],
-        "supports": [
-          "Rwanda is landlocked",
-          "Rwanda borders Uganda, Tanzania, Burundi and the Democratic Republic of the Congo",
-          "Rwanda is known as the Land of a Thousand Hills"
-        ],
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
           "rw-m01",
           "rw-m02",
           "rw-m03",
+          "rw-m15",
+          "rw-m19",
+          "rw-m38",
+          "rw-m40"
+        ]
+      },
+      "jica-jp-rw-hills-story": {
+        "organization": "JICA",
+        "title": "生徒向け冊子「みんなが知らないルワンダのこと」",
+        "assetType": "pdf",
+        "url": "https://www.jica.go.jp/africahiroba/ticad/ku57pq000021x7b8-att/about_africa_rwanda_student.pdf",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "geography",
+          "landlocked",
+          "cities",
+          "ICT",
+          "water",
+          "japan-rwanda"
+        ],
+        "renderHint": "visual-document",
+        "note": "M03では写真・図を含む日本語教材として使用。Material RendererではPDFページをvisualとして表示可能にする。",
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m03"
+        ]
+      },
+      "rw-gov-en-profile": {
+        "organization": "Government of Rwanda",
+        "title": "About the Government of Rwanda",
+        "assetType": "webpage",
+        "url": "https://www.gov.rw/about",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "country-profile",
+          "people-culture",
+          "languages",
+          "umuganda"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
           "rw-m04",
-          "rw-m05",
+          "rw-m11",
           "rw-m15",
           "rw-m16",
           "rw-m19",
           "rw-m37",
           "rw-m38",
+          "rw-m39",
           "rw-m40"
-        ],
-        "resources": [
-          {
-            "title": "City of Kigali – Overview",
-            "organization": "City of Kigali",
-            "type": "webpage",
-            "url": "https://www.kigalicity.gov.rw/about/overview",
-            "language": [
-              "en"
-            ],
-            "use": "Kigali location and city context"
-          },
-          {
-            "title": "About Rwanda",
-            "organization": "Government of Rwanda – Directorate General of Immigration and Emigration",
-            "type": "webpage",
-            "url": "https://www.migration.gov.rw/about-rwanda",
-            "language": [
-              "en"
-            ],
-            "use": "Borders, terrain and Land of a Thousand Hills"
-          }
-        ],
-        "studentAccess": {
-          "elementary": "direct-with-map",
-          "juniorHigh": "direct",
-          "highSchoolStandard": "direct",
-          "highSchoolAdvanced": "direct"
-        },
-        "note": "Exact interactive map geometry and city plotting coordinates are app data; these official pages support the geographic narrative."
+        ]
       },
-      "rw-government-profile": {
-        "organization": "Government of Rwanda",
-        "title": "About the Government of Rwanda – People, Culture and National Profile",
-        "type": "webpage",
-        "url": "https://www.gov.rw/about",
+      "jica-jp-rw-country-business-overview": {
+        "organization": "JICA",
+        "title": "ルワンダ ｜ 海外での取り組み",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/overseas/rwanda/index.html",
         "language": [
-          "en"
+          "ja"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "current",
-        "verifiedAt": "2026-09-27",
         "topics": [
           "country-profile",
-          "official-languages",
-          "people",
-          "culture"
+          "cooperation",
+          "projects",
+          "water",
+          "agriculture",
+          "education",
+          "ICT"
         ],
-        "supports": [
-          "Kinyarwanda is spoken throughout Rwanda",
-          "English, French and Kiswahili are also official languages",
-          "Government profile and cultural context"
-        ],
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
-          "rw-m03",
-          "rw-m11",
-          "rw-m16",
-          "rw-m19",
-          "rw-m38",
-          "rw-m39",
-          "rw-m40"
-        ],
-        "resources": [
-          {
-            "title": "Fifth Rwanda Population and Housing Census – Education",
-            "organization": "National Institute of Statistics of Rwanda",
-            "type": "pdf",
-            "url": "https://www.statistics.gov.rw/sites/default/files/documents/2025-02/Education.pdf",
-            "language": [
-              "en"
-            ],
-            "use": "Official-language and literacy context"
-          }
-        ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "teacher-mediated",
-          "highSchoolStandard": "direct-with-Japanese-support",
-          "highSchoolAdvanced": "direct"
-        }
+          "rw-m05",
+          "rw-m34",
+          "rw-m35"
+        ]
       },
-      "rw-time-zone": {
-        "organization": "Government of Rwanda / Timeanddate.com",
-        "title": "Rwanda and Japan Time Zones",
-        "type": "reference",
-        "url": "https://www.timeanddate.com/time/zone/rwanda/kigali",
-        "language": [
-          "en"
-        ],
-        "sourceTier": "authoritative-reference",
-        "dataYear": "current",
-        "verifiedAt": "2026-09-27",
-        "topics": [
-          "time-zone",
-          "UTC",
-          "Kigali",
-          "Tokyo",
-          "daylight-saving-time"
-        ],
-        "supports": [
-          "Kigali uses UTC+2",
-          "Tokyo uses UTC+9",
-          "Rwanda and Japan do not currently use daylight saving time",
-          "Tokyo is normally seven hours ahead of Kigali"
-        ],
-        "usedByMissions": [
-          "rw-m06",
-          "rw-m07",
-          "rw-m08",
-          "rw-m09",
-          "rw-m40"
-        ],
-        "machineData": {
-          "kigali": {
-            "iana": "Africa/Kigali",
-            "utcOffset": "+02:00",
-            "dst": false
-          },
-          "tokyo": {
-            "iana": "Asia/Tokyo",
-            "utcOffset": "+09:00",
-            "dst": false
-          },
-          "differenceHours": 7
-        },
-        "resources": [
-          {
-            "title": "Practical Info – Embassy of Rwanda in Japan",
-            "organization": "Embassy of Rwanda in Japan",
-            "type": "webpage",
-            "url": "https://www.rwandainjapan.gov.rw/info/practical-info",
-            "language": [
-              "en"
-            ],
-            "use": "Official Rwanda UTC+2 reference"
-          },
-          {
-            "title": "Time Zone & Clock Changes in Tokyo",
-            "organization": "Timeanddate.com",
-            "type": "webpage",
-            "url": "https://www.timeanddate.com/time/zone/japan/tokyo",
-            "language": [
-              "en"
-            ],
-            "use": "Tokyo UTC+9 and no DST"
-          }
-        ],
-        "studentAccess": {
-          "elementary": "app-generated",
-          "juniorHigh": "app-generated",
-          "highSchoolStandard": "app-generated",
-          "highSchoolAdvanced": "direct"
-        }
-      },
-      "rw-language-basics": {
-        "organization": "Peace Corps",
-        "title": "Trainee Kinyarwanda Book – Rwanda",
-        "type": "pdf",
-        "url": "https://files.peacecorps.gov/multimedia/audio/languagelessons/rwanda/RW_Kinyarwanda_Language_Lessons.pdf",
-        "language": [
-          "rw",
-          "en"
-        ],
-        "sourceTier": "official-primary",
-        "dataYear": "reference",
-        "verifiedAt": "2026-09-27",
-        "topics": [
-          "Kinyarwanda",
-          "greetings",
-          "Muraho",
-          "Murakoze",
-          "communication"
-        ],
-        "supports": [
-          "Muraho is used as a greeting",
-          "Murakoze is used for thanks",
-          "Basic Kinyarwanda communication examples"
-        ],
-        "usedByMissions": [
-          "rw-m10",
-          "rw-m12",
-          "rw-m13",
-          "rw-m14",
-          "rw-m39",
-          "rw-m40"
-        ],
-        "studentAccess": {
-          "elementary": "audio-or-teacher-mediated",
-          "juniorHigh": "selected-extract",
-          "highSchoolStandard": "selected-extract",
-          "highSchoolAdvanced": "direct"
-        }
-      },
-      "rw-food-culture": {
-        "organization": "Lonely Planet",
-        "title": "Rwanda's food scene: The taste of a nation",
-        "type": "webpage",
-        "url": "https://www.lonelyplanet.com/articles/gateway-to-rwanda-food",
-        "language": [
-          "en"
-        ],
-        "sourceTier": "reputable-secondary",
-        "dataYear": "2023",
-        "verifiedAt": "2026-09-27",
-        "topics": [
-          "food",
-          "brochettes",
-          "daily-life",
-          "culture"
-        ],
-        "supports": [
-          "Brochettes are part of Rwandan cuisine",
-          "Food culture is diverse and should not be reduced to one dish"
-        ],
-        "usedByMissions": [
-          "rw-m17"
-        ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "teacher-mediated",
-          "highSchoolStandard": "direct-with-support",
-          "highSchoolAdvanced": "direct"
-        },
-        "note": "Secondary source. Included because a stable Rwanda-government page directly supporting the Brochettes example was not confirmed during verification."
-      },
-      "rw-government-culture": {
-        "organization": "Government of Rwanda",
-        "title": "About the Government of Rwanda – Home-Grown Solutions and Culture",
-        "type": "webpage",
-        "url": "https://www.gov.rw/about",
-        "language": [
-          "en"
-        ],
-        "sourceTier": "official-primary",
-        "dataYear": "current",
-        "verifiedAt": "2026-09-27",
-        "topics": [
-          "Umuganda",
-          "community-work",
-          "culture",
-          "civic-participation"
-        ],
-        "supports": [
-          "Umuganda is a Rwandan community-work practice"
-        ],
-        "usedByMissions": [
-          "rw-m20"
-        ],
-        "resources": [
-          {
-            "title": "Rwandan Culture and Traditions – Umuganda",
-            "organization": "Visit Rwanda",
-            "type": "webpage",
-            "url": "https://visitrwanda.com/interests/rwandan-culture-and-traditions/",
-            "language": [
-              "en"
-            ],
-            "use": "Student-friendly explanation of Umuganda"
-          },
-          {
-            "title": "Umuganda being Transformed by Initiatives from Citizens",
-            "organization": "Ministry of Local Government, Rwanda",
-            "type": "webpage",
-            "url": "https://www.minaloc.gov.rw/news-detail/umuganda-being-transformed-by-initiatives-from-citizens",
-            "language": [
-              "en"
-            ],
-            "use": "Government example of citizen-led community work"
-          }
-        ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "direct-with-support",
-          "highSchoolStandard": "direct",
-          "highSchoolAdvanced": "direct"
-        }
-      },
-      "jica-rw-cooperation-overview": {
+      "jica-en-rw-cooperation-brochure-2025": {
         "organization": "JICA Rwanda Office",
-        "title": "JICA Rwanda Brochure 2025 – Sector Goals",
-        "type": "pdf",
+        "title": "JICA Rwanda 20 Year Anniversary Brochure",
+        "assetType": "pdf",
         "url": "https://www.jica.go.jp/english/overseas/rwanda/others/__icsFiles/afieldfile/2026/03/19/JICARwanda_brochure2025.pdf",
         "language": [
           "en"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "2025",
-        "verifiedAt": "2026-09-27",
         "topics": [
-          "Japan-Rwanda cooperation",
+          "cooperation",
           "infrastructure",
           "agriculture",
-          "water-sanitation",
+          "water",
           "education",
           "ICT",
-          "health-nutrition"
+          "health"
         ],
-        "supports": [
-          "JICA Rwanda works across multiple sectors",
-          "Cooperation includes infrastructure, agriculture, water and sanitation, education and ICT",
-          "JICA frames activities around partnership and capacity development"
-        ],
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
           "rw-m05",
-          "rw-m32",
-          "rw-m33",
+          "rw-m16",
           "rw-m34",
           "rw-m35",
-          "rw-m36",
-          "rw-m37",
           "rw-m38",
           "rw-m40"
+        ]
+      },
+      "rw-time-zone": {
+        "organization": "Timeanddate.com",
+        "title": "Time Zone & Clock Changes in Kigali, Rwanda",
+        "assetType": "webpage",
+        "url": "https://www.timeanddate.com/time/zone/rwanda/kigali",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "authoritative-reference",
+        "topics": [
+          "time-zone",
+          "UTC+2",
+          "Kigali"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m06",
+          "rw-m07",
+          "rw-m08",
+          "rw-m09"
+        ]
+      },
+      "jica-jp-rw-language-greetings": {
+        "organization": "JICA海外協力隊 世界日記",
+        "title": "初めのご挨拶 / Arigatou運動実施中！",
+        "assetType": "webpage",
+        "url": "https://world-diary.jica.go.jp/ogotomoko/activity/post.php",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "kinyarwanda",
+          "muraho",
+          "murakoze",
+          "greetings"
         ],
         "resources": [
           {
-            "title": "Rwanda – Where We Work",
-            "organization": "JICA",
-            "type": "webpage",
-            "url": "https://www.jica.go.jp/english/overseas/rwanda/index.html",
+            "title": "Arigatou運動実施中！",
+            "url": "https://world-diary.jica.go.jp/ogotomoko/person/arigatou.php",
+            "assetType": "webpage",
             "language": [
-              "en"
-            ],
-            "use": "Current Rwanda office overview and latest news"
+              "ja"
+            ]
           }
         ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "teacher-mediated",
-          "highSchoolStandard": "direct-with-support",
-          "highSchoolAdvanced": "direct"
-        }
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m10",
+          "rw-m12",
+          "rw-m40"
+        ]
+      },
+      "peacecorps-en-rw-kinyarwanda": {
+        "organization": "Peace Corps",
+        "title": "Kinyarwanda Language Lessons",
+        "assetType": "pdf",
+        "url": "https://files.peacecorps.gov/multimedia/audio/languagelessons/rwanda/RW_Kinyarwanda_Language_Lessons.pdf",
+        "language": [
+          "en",
+          "rw"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "kinyarwanda",
+          "greetings",
+          "language-learning"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m10",
+          "rw-m12",
+          "rw-m40"
+        ]
+      },
+      "jica-jp-rw-urban-photo-gallery": {
+        "organization": "JICA",
+        "title": "ルワンダ都心部の少年の一日",
+        "assetType": "gallery",
+        "url": "https://www.jica.go.jp/hiroba/teacher/material/active/photo_02.html",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "daily-life",
+          "urban",
+          "school",
+          "family"
+        ],
+        "renderHint": "gallery-page",
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m15",
+          "rw-m19",
+          "rw-m38"
+        ]
+      },
+      "jica-jp-rw-rural-photo-gallery": {
+        "organization": "JICA",
+        "title": "ルワンダ村落部の少年の一日",
+        "assetType": "gallery",
+        "url": "https://www.jica.go.jp/hiroba/teacher/material/active/photo_01.html",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "daily-life",
+          "rural",
+          "school",
+          "water",
+          "family"
+        ],
+        "renderHint": "gallery-page",
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m15",
+          "rw-m16",
+          "rw-m19",
+          "rw-m38",
+          "rw-m40"
+        ]
+      },
+      "jica-jp-rw-food-ibijumba": {
+        "organization": "JICA海外協力隊",
+        "title": "今月の料理・ルワンダ：イビジュンバ",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/volunteer/outline/publication/pamphlet/crossroad/202503/pickup_03_23/",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "food",
+          "daily-life",
+          "ibijumba"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m17"
+        ]
+      },
+      "visit-rwanda-en-food-culture": {
+        "organization": "Visit Rwanda",
+        "title": "Culture & Heritage",
+        "assetType": "webpage",
+        "url": "https://visitrwanda.com/tourism/interests/culture-heritage/",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "culture",
+          "food-vendors",
+          "heritage",
+          "crafts"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m17"
+        ]
+      },
+      "jica-jp-rw-coffee-project": {
+        "organization": "JICA",
+        "title": "ルワンダ国コーヒーバリューチェーン強化振興プロジェクト",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/oda/project/201941436/",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "coffee",
+          "value-chain",
+          "quality",
+          "markets",
+          "farmers"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m18",
+          "rw-m27",
+          "rw-m28",
+          "rw-m36",
+          "rw-m40"
+        ]
+      },
+      "jica-en-rw-coffee-sector": {
+        "organization": "JICA Rwanda Office",
+        "title": "Agriculture Sector",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_01.html",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "coffee",
+          "agriculture",
+          "value-chain",
+          "markets"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m18",
+          "rw-m27",
+          "rw-m36"
+        ]
+      },
+      "jica-jp-rw-umuganda-workbook": {
+        "organization": "JICA",
+        "title": "生徒向け冊子「みんなが知らないルワンダのこと」",
+        "assetType": "pdf",
+        "url": "https://www.jica.go.jp/africahiroba/ticad/ku57pq000021x7b8-att/about_africa_rwanda_student.pdf",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "umuganda",
+          "community",
+          "culture",
+          "development"
+        ],
+        "note": "日本語の国理解教材としてUmuganda・地域社会の学習に利用。",
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m20",
+          "rw-m37"
+        ]
+      },
+      "rwanda-embassy-jp-umuganda-2026": {
+        "organization": "Embassy of the Republic of Rwanda in Japan",
+        "title": "Embassy of Rwanda and Setagaya City hosts the First-Umuganda in Japan",
+        "assetType": "webpage",
+        "url": "https://www.rwandainjapan.gov.rw/info/info-details/embassy-of-rwanda-and-setagaya-city-hosts-the-first-umuganda-in-japan",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "publishedAt": "2026-07-25",
+        "topics": [
+          "umuganda",
+          "japan-rwanda",
+          "community-service"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m20"
+        ]
+      },
+      "rwanda-gov-en-culture-umuganda": {
+        "organization": "Government of Rwanda",
+        "title": "About the Government of Rwanda",
+        "assetType": "webpage",
+        "url": "https://www.gov.rw/about",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "umuganda",
+          "people-culture",
+          "home-grown-solutions"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m20"
+        ]
       },
       "jica-rw-water-rwasom2": {
+        "canonicalSourceId": "jica-en-rw-water-rwasom2",
         "organization": "JICA Rwanda Office",
-        "title": "Water and Sanitation Sector – Rural Water Supply Services and Infrastructure Management Development (RWASOM 2)",
-        "type": "webpage",
+        "title": "Water and Sanitation Sector",
+        "assetType": "webpage",
         "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_08.html",
         "language": [
           "en"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "2021-2027",
-        "verifiedAt": "2026-09-27",
         "topics": [
           "water",
           "sanitation",
-          "rural-water-supply",
-          "maintenance",
-          "management",
-          "community",
-          "RWASOM2"
+          "RWASOM2",
+          "operation-maintenance"
         ],
-        "supports": [
-          "RWASOM2 runs from October 2021 to October 2027",
-          "The project strengthens operation and maintenance of rural water supply",
-          "Local districts, operators, engineers, water users committees and other stakeholders are involved"
-        ],
+        "alias": true,
+        "note": "Compatibility alias retained so existing Mission IDs continue to resolve.",
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
-          "rw-m21",
-          "rw-m23"
-        ],
-        "resources": [
-          {
-            "title": "Signing of Record of Discussions – Rural Water Supply Services and Infrastructure Management Development",
-            "organization": "JICA",
-            "type": "webpage",
-            "url": "https://www.jica.go.jp/english/information/press/2021/20210610_30.html",
-            "language": [
-              "en"
-            ],
-            "use": "Project purpose and management details"
-          },
-          {
-            "title": "Clean Water for People’s Lives: A 20-Year Journey of Rwanda–Japan Cooperation Transforming Communities",
-            "organization": "JICA Rwanda Office",
-            "type": "webpage",
-            "url": "https://www.jica.go.jp/english/overseas/rwanda/information/press/2026/1581585_71005.html",
-            "language": [
-              "en"
-            ],
-            "use": "2026 human-centered example of rural water services and community maintenance"
-          }
-        ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "selected-extract",
-          "highSchoolStandard": "direct-with-support",
-          "highSchoolAdvanced": "direct"
-        }
+          "rw-m21"
+        ]
       },
       "jica-rw-water-media": {
-        "organization": "JICA",
-        "title": "Teaching Materials about Water, Rwanda and International Cooperation",
-        "type": "media-collection",
-        "url": "https://www.jica.go.jp/english/overseas/rwanda/office/video.html",
+        "canonicalSourceId": "jica-en-rw-water-video",
+        "organization": "JICA Rwanda Office",
+        "title": "JICA Rwanda Office's Interventions in Water and Sanitation Sector",
+        "assetType": "youtube",
+        "url": "https://www.youtube.com/watch?v=ZBPgwpWY-TQ",
         "language": [
-          "ja",
           "en"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "2020-2026",
-        "verifiedAt": "2026-09-27",
         "topics": [
           "water",
-          "Rwanda",
-          "daily-life",
-          "international-cooperation",
-          "video",
-          "development-education"
+          "sanitation",
+          "JICA",
+          "Rwanda"
         ],
-        "supports": [
-          "Visual learning about Rwanda and water",
-          "Urban and rural daily-life comparison",
-          "Water-access reflection",
-          "JICA Rwanda water-sector overview"
+        "alias": true,
+        "note": "Compatibility alias retained so existing Mission IDs continue to resolve.",
+        "youtubeId": "ZBPgwpWY-TQ",
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m21",
+          "rw-m22",
+          "rw-m24"
+        ]
+      },
+      "jica-jp-rw-water-short-video": {
+        "organization": "JICA",
+        "title": "ルワンダってどんな国？",
+        "assetType": "youtube",
+        "youtubeId": "9LyFKTWgF0s",
+        "url": "https://www.youtube.com/watch?v=9LyFKTWgF0s",
+        "language": [
+          "ja"
         ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "rwanda-introduction",
+          "water",
+          "daily-life"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m21"
+        ]
+      },
+      "jica-jp-rw-water-supply-project": {
+        "organization": "JICA",
+        "title": "地方給水施設運営維持管理強化プロジェクト",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/oda/project/1103745/",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "rural-water",
+          "operation-maintenance",
+          "water-supply",
+          "capacity-building"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m21",
+          "rw-m23",
+          "rw-m33",
+          "rw-m34"
+        ]
+      },
+      "jica-en-rw-water-video": {
+        "organization": "JICA Rwanda Office",
+        "title": "JICA Rwanda Office's Interventions in Water and Sanitation Sector",
+        "assetType": "youtube",
+        "youtubeId": "ZBPgwpWY-TQ",
+        "url": "https://www.youtube.com/watch?v=ZBPgwpWY-TQ",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "water",
+          "sanitation",
+          "JICA",
+          "Rwanda"
+        ],
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
           "rw-m21",
           "rw-m22",
           "rw-m23",
           "rw-m24"
+        ]
+      },
+      "jica-en-rw-water-rwasom2": {
+        "organization": "JICA Rwanda Office",
+        "title": "Water and Sanitation Sector",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_08.html",
+        "language": [
+          "en"
         ],
-        "defaultResourceId": "water-rwanda-overview",
-        "resources": [
-          {
-            "id": "water-rwanda-overview",
-            "title": "JICA Rwanda Office's Interventions in Water and Sanitation Sector",
-            "organization": "JICA",
-            "type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ZBPgwpWY-TQ",
-            "language": [
-              "en"
-            ],
-            "year": 2024,
-            "recommendedFor": [
-              "highSchoolStandard",
-              "highSchoolAdvanced"
-            ]
-          },
-          {
-            "id": "rwanda-country-intro-ja",
-            "title": "世界につながる教室 2．ルワンダってどんな国？",
-            "organization": "JICA",
-            "type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9LyfKTWGf0s",
-            "language": [
-              "ja"
-            ],
-            "year": 2020,
-            "recommendedFor": [
-              "elementary",
-              "juniorHigh",
-              "highSchoolStandard"
-            ]
-          },
-          {
-            "id": "rwanda-urban-child-ja",
-            "title": "世界につながる教室 3．ルワンダ都心部の子どもの一日",
-            "organization": "JICA",
-            "type": "youtube",
-            "url": "https://www.youtube.com/watch?v=8lEFXQfZs4M",
-            "language": [
-              "ja"
-            ],
-            "year": 2020,
-            "recommendedFor": [
-              "elementary",
-              "juniorHigh",
-              "highSchoolStandard"
-            ]
-          },
-          {
-            "id": "rwanda-rural-child-ja",
-            "title": "世界につながる教室 4．ルワンダ村落部の子どもの一日",
-            "organization": "JICA",
-            "type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7QsFBAEMD4Y",
-            "language": [
-              "ja"
-            ],
-            "year": 2020,
-            "recommendedFor": [
-              "elementary",
-              "juniorHigh",
-              "highSchoolStandard"
-            ]
-          },
-          {
-            "id": "without-water-ja",
-            "title": "世界につながる教室 6．もし水がなかったら…",
-            "organization": "JICA",
-            "type": "youtube",
-            "url": "https://www.youtube.com/watch?v=j_Xqnz1KdDw",
-            "language": [
-              "ja"
-            ],
-            "year": 2020,
-            "recommendedFor": [
-              "elementary",
-              "juniorHigh",
-              "highSchoolStandard"
-            ]
-          },
-          {
-            "id": "cooperation-interview-jica-expert-ja",
-            "title": "世界につながる教室 7．国際協力活動に取り組む人々のインタビュー",
-            "organization": "JICA",
-            "type": "youtube",
-            "url": "https://www.youtube.com/watch?v=CW5OFnzDG0I",
-            "language": [
-              "ja"
-            ],
-            "year": 2020,
-            "recommendedFor": [
-              "juniorHigh",
-              "highSchoolStandard"
-            ]
-          }
+        "sourceTier": "official-primary",
+        "topics": [
+          "water",
+          "sanitation",
+          "RWASOM2",
+          "operation-maintenance"
         ],
-        "catalogProof": {
-          "title": "JICA-Net Multimedia-Based Learning Materials – Media List",
-          "url": "https://www.jica.go.jp/english/our_work/types_of_assistance/tech/projects/activities/231128/jicanet_medialist_all_231128.pdf"
-        },
-        "studentAccess": {
-          "elementary": "direct-Japanese-video",
-          "juniorHigh": "direct-Japanese-video",
-          "highSchoolStandard": "Japanese-video-plus-official-English-source",
-          "highSchoolAdvanced": "official-English-video-and-project-source"
-        }
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m21",
+          "rw-m23",
+          "rw-m33",
+          "rw-m37"
+        ]
+      },
+      "jica-jp-rw-without-water-video": {
+        "organization": "JICA",
+        "title": "もし水がなかったら…",
+        "assetType": "youtube",
+        "youtubeId": "j_Xqnz1KdDw",
+        "url": "https://www.youtube.com/watch?v=j_Xqnz1KdDw",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "water",
+          "daily-life",
+          "sanitation",
+          "international-cooperation"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m22",
+          "rw-m23"
+        ]
+      },
+      "jica-jp-rw-rural-child-video": {
+        "organization": "JICA",
+        "title": "ルワンダ村落部の子どもの一日",
+        "assetType": "youtube",
+        "youtubeId": "7QsFBAEMD4Y",
+        "url": "https://www.youtube.com/watch?v=7QsFBAEMD4Y",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "rural-life",
+          "water",
+          "school",
+          "family"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m23",
+          "rw-m24",
+          "rw-m37"
+        ]
       },
       "jica-rw-wamcab2": {
+        "canonicalSourceId": "jica-jp-rw-wamcab2",
         "organization": "JICA",
-        "title": "Project for Water Management and Capacity Building Phase 2 (WAMCAB2)",
-        "type": "webpage",
+        "title": "灌漑水管理能力向上プロジェクトフェーズ2",
+        "assetType": "webpage",
         "url": "https://www.jica.go.jp/oda/project/202311738/",
         "language": [
           "ja"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "2025-2029",
-        "verifiedAt": "2026-09-27",
         "topics": [
-          "agriculture",
           "irrigation",
+          "agriculture",
           "water-management",
-          "IWUO",
-          "maintenance",
+          "farmers",
           "market-oriented-agriculture"
         ],
-        "supports": [
-          "WAMCAB2 is a technical cooperation project from May 2025 to May 2029",
-          "It expands capacity for irrigation management",
-          "Water-user organizations and equitable water distribution are important"
-        ],
+        "alias": true,
+        "note": "Compatibility alias retained so existing Mission IDs continue to resolve.",
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
           "rw-m25"
-        ],
-        "resources": [
-          {
-            "title": "Agriculture Sector – WAMCAB2",
-            "organization": "JICA Rwanda Office",
-            "type": "webpage",
-            "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_01.html",
-            "language": [
-              "en"
-            ],
-            "use": "English project explanation"
-          }
-        ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "teacher-mediated",
-          "highSchoolStandard": "direct-Japanese",
-          "highSchoolAdvanced": "English-sector-page"
-        }
+        ]
       },
       "jica-rw-agriculture": {
+        "canonicalSourceId": "jica-en-rw-agriculture-sector",
         "organization": "JICA Rwanda Office",
-        "title": "Agriculture Sector – JICA Intervention in Rwanda",
-        "type": "webpage",
+        "title": "Agriculture Sector",
+        "assetType": "webpage",
         "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_01.html",
         "language": [
           "en"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "current",
-        "verifiedAt": "2026-09-27",
         "topics": [
           "agriculture",
+          "WAMCAB2",
           "irrigation",
-          "productivity",
-          "market",
-          "coffee",
-          "value-chain"
+          "markets"
         ],
-        "supports": [
-          "JICA agriculture cooperation includes irrigation management and coffee value-chain development",
-          "Agriculture links production, water management, capacity and markets"
-        ],
+        "alias": true,
+        "note": "Compatibility alias retained so existing Mission IDs continue to resolve.",
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
           "rw-m25",
           "rw-m26",
           "rw-m27"
-        ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "teacher-mediated",
-          "highSchoolStandard": "direct-with-support",
-          "highSchoolAdvanced": "direct"
-        }
+        ]
       },
-      "jica-rw-coffee-cup2": {
+      "jica-jp-rw-wamcab2": {
+        "organization": "JICA",
+        "title": "灌漑水管理能力向上プロジェクトフェーズ2",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/oda/project/202311738/",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "irrigation",
+          "agriculture",
+          "water-management",
+          "farmers",
+          "market-oriented-agriculture"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m25",
+          "rw-m26",
+          "rw-m33",
+          "rw-m34",
+          "rw-m36",
+          "rw-m37"
+        ]
+      },
+      "jica-en-rw-agriculture-sector": {
         "organization": "JICA Rwanda Office",
-        "title": "Project for Strengthening and Promoting Coffee Value Chain (CUP2)",
-        "type": "webpage",
+        "title": "Agriculture Sector",
+        "assetType": "webpage",
         "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_01.html",
         "language": [
           "en"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "2021-2025",
-        "verifiedAt": "2026-09-27",
+        "topics": [
+          "agriculture",
+          "WAMCAB2",
+          "irrigation",
+          "markets"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m25",
+          "rw-m26",
+          "rw-m33",
+          "rw-m36",
+          "rw-m37"
+        ]
+      },
+      "jica-rw-coffee-cup2": {
+        "canonicalSourceId": "jica-jp-rw-coffee-project",
+        "organization": "JICA",
+        "title": "ルワンダ国コーヒーバリューチェーン強化振興プロジェクト",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/oda/project/201941436/",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
         "topics": [
           "coffee",
           "value-chain",
           "quality",
-          "processing",
-          "cooperatives",
-          "market"
+          "markets",
+          "farmers"
         ],
-        "supports": [
-          "CUP2 worked across the coffee value chain",
-          "The project supported cooperatives, quality improvement and international market positioning"
-        ],
+        "alias": true,
+        "note": "Compatibility alias retained so existing Mission IDs continue to resolve.",
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
-          "rw-m18",
           "rw-m27",
           "rw-m28"
-        ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "selected-extract",
-          "highSchoolStandard": "direct-with-support",
-          "highSchoolAdvanced": "direct"
-        }
+        ]
       },
       "jica-rw-coffee-2026": {
+        "canonicalSourceId": "jica-en-rw-coffee-2026",
         "organization": "JICA Rwanda Office",
         "title": "A 12-Year Journey in Coffee Sector With JICA: Rwandan Farmers Share Experience",
-        "type": "webpage",
+        "assetType": "webpage",
         "url": "https://www.jica.go.jp/english/overseas/rwanda/information/press/2025/1581380_59675.html",
         "language": [
           "en"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "2026",
-        "publishedAt": "2026-03-31",
-        "verifiedAt": "2026-09-27",
         "topics": [
           "coffee",
-          "Best of Rwanda",
-          "Japan",
-          "buyers",
+          "farmers",
+          "cooperatives",
           "quality",
-          "processing",
-          "international-market"
+          "buyers",
+          "japan"
         ],
-        "supports": [
-          "JICA supported quality, processing, training and buyer connections",
-          "Best of Rwanda links producers with international buyers",
-          "Cupping roadshows were held in Japan and China",
-          "Japan and China purchased a substantial share of winning lots in 2024 and 2025"
-        ],
+        "alias": true,
+        "note": "Compatibility alias retained so existing Mission IDs continue to resolve.",
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
           "rw-m28"
+        ]
+      },
+      "jica-en-rw-coffee-2026": {
+        "organization": "JICA Rwanda Office",
+        "title": "A 12-Year Journey in Coffee Sector With JICA: Rwandan Farmers Share Experience",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/information/press/2025/1581380_59675.html",
+        "language": [
+          "en"
         ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "teacher-mediated",
-          "highSchoolStandard": "selected-extract",
-          "highSchoolAdvanced": "direct"
-        }
+        "sourceTier": "official-primary",
+        "publishedAt": "2026-03-31",
+        "topics": [
+          "coffee",
+          "farmers",
+          "cooperatives",
+          "quality",
+          "buyers",
+          "japan"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m28",
+          "rw-m40"
+        ]
       },
       "jica-rw-prism": {
+        "canonicalSourceId": "jica-jp-rw-prism",
+        "organization": "JICA",
+        "title": "ICTを活用した初等理数科学びの改善プロジェクト（PRISM）",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/oda/project/201941886/",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "education",
+          "ICT",
+          "teacher-training",
+          "math-science",
+          "PRISM"
+        ],
+        "alias": true,
+        "note": "Compatibility alias retained so existing Mission IDs continue to resolve.",
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m29",
+          "rw-m30"
+        ]
+      },
+      "jica-jp-rw-prism": {
+        "organization": "JICA",
+        "title": "ICTを活用した初等理数科学びの改善プロジェクト（PRISM）",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/oda/project/201941886/",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "education",
+          "ICT",
+          "teacher-training",
+          "math-science",
+          "PRISM"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m29",
+          "rw-m30",
+          "rw-m33",
+          "rw-m34",
+          "rw-m36",
+          "rw-m37",
+          "rw-m38",
+          "rw-m40"
+        ]
+      },
+      "jica-jp-rw-prism-newsletter": {
+        "organization": "JICA",
+        "title": "生徒向け冊子「みんなが知らないルワンダのこと」",
+        "assetType": "pdf",
+        "url": "https://www.jica.go.jp/africahiroba/ticad/ku57pq000021x7b8-att/about_africa_rwanda_student.pdf",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "ICT",
+          "education",
+          "school",
+          "Rwanda"
+        ],
+        "note": "Mission v6でPDF教材枠を使うための日本語補助資料。PRISM固有ニュースはjica-jp-rw-prismを参照。",
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m29",
+          "rw-m30"
+        ]
+      },
+      "jica-en-rw-education-sector": {
         "organization": "JICA Rwanda Office",
-        "title": "Education Sector – Project to Strengthen Primary School Mathematics and Science with the Use of ICT (PRISM)",
-        "type": "webpage",
+        "title": "Education Sector",
+        "assetType": "webpage",
         "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_03.html",
         "language": [
           "en"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "2021-2026",
-        "verifiedAt": "2026-09-27",
         "topics": [
           "education",
+          "PRISM",
           "teacher-training",
-          "mathematics",
-          "science",
-          "ICT",
-          "PRISM"
+          "ICT"
         ],
-        "supports": [
-          "PRISM ran from September 2021 to August 2026",
-          "The project aimed to improve mathematics and science lessons through stronger teacher education",
-          "ICT is used as a means to strengthen project outputs"
-        ],
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
           "rw-m29",
-          "rw-m30"
-        ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "teacher-mediated",
-          "highSchoolStandard": "direct-with-support",
-          "highSchoolAdvanced": "direct"
-        }
+          "rw-m30",
+          "rw-m33",
+          "rw-m36",
+          "rw-m37",
+          "rw-m38"
+        ]
       },
       "jica-rw-digital-project": {
+        "canonicalSourceId": "jica-jp-rw-digital-project",
         "organization": "JICA",
-        "title": "Digital & Innovation Promotion Project",
-        "type": "webpage",
+        "title": "デジタルイノベーション促進プロジェクト",
+        "assetType": "webpage",
         "url": "https://www.jica.go.jp/oda/project/202005081/",
         "language": [
           "ja"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "2022-2026",
-        "verifiedAt": "2026-09-27",
         "topics": [
-          "ICT",
+          "digital",
           "innovation",
-          "entrepreneurship",
+          "startups",
           "public-services",
-          "market-creation",
-          "government-capacity"
+          "ecosystem"
         ],
-        "supports": [
-          "The project strengthened ICT entrepreneur support",
-          "It promoted innovation through public-private collaboration and digital public services",
-          "It strengthened government capacity to coordinate ICT initiatives"
-        ],
+        "alias": true,
+        "note": "Compatibility alias retained so existing Mission IDs continue to resolve.",
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
           "rw-m31",
           "rw-m32"
-        ],
-        "resources": [
-          {
-            "title": "ICT Sector – The Digital and Innovation Promotion Project",
-            "organization": "JICA Rwanda Office",
-            "type": "webpage",
-            "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_05.html",
-            "language": [
-              "en"
-            ],
-            "use": "English sector overview"
-          }
-        ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "teacher-mediated",
-          "highSchoolStandard": "direct-Japanese",
-          "highSchoolAdvanced": "English-sector-page"
-        }
+        ]
       },
       "jica-rw-ict-sector": {
+        "canonicalSourceId": "jica-en-rw-ict-sector",
         "organization": "JICA Rwanda Office",
-        "title": "ICT Sector – JICA Intervention in Rwanda",
-        "type": "webpage",
+        "title": "ICT Sector",
+        "assetType": "webpage",
         "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_05.html",
         "language": [
           "en"
         ],
         "sourceTier": "official-primary",
-        "dataYear": "current",
-        "verifiedAt": "2026-09-27",
         "topics": [
           "ICT",
-          "innovation-ecosystem",
-          "entrepreneurs",
-          "digital-public-services",
-          "human-capacity"
+          "digital",
+          "innovation",
+          "startups",
+          "public-services"
         ],
-        "supports": [
-          "Rwanda treats ICT as a tool for transformation and knowledge-based economic development",
-          "JICA has worked with Rwanda on the innovation ecosystem and entrepreneur support"
-        ],
+        "alias": true,
+        "note": "Compatibility alias retained so existing Mission IDs continue to resolve.",
+        "verifiedAt": "2026-09-28",
         "usedByMissions": [
           "rw-m31"
+        ]
+      },
+      "jica-jp-rw-digital-project": {
+        "organization": "JICA",
+        "title": "デジタルイノベーション促進プロジェクト",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/oda/project/202005081/",
+        "language": [
+          "ja"
         ],
-        "studentAccess": {
-          "elementary": "teacher-mediated",
-          "juniorHigh": "teacher-mediated",
-          "highSchoolStandard": "direct-with-support",
-          "highSchoolAdvanced": "direct"
-        }
+        "sourceTier": "official-primary",
+        "topics": [
+          "digital",
+          "innovation",
+          "startups",
+          "public-services",
+          "ecosystem"
+        ],
+        "resources": [
+          {
+            "title": "ニューズレターVol.4",
+            "url": "https://www.jica.go.jp/oda/project/202005081/news/1581065_48803.html",
+            "assetType": "webpage",
+            "language": [
+              "ja"
+            ]
+          }
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m31",
+          "rw-m32",
+          "rw-m33",
+          "rw-m34",
+          "rw-m37",
+          "rw-m40"
+        ]
+      },
+      "jica-en-rw-ict-sector": {
+        "organization": "JICA Rwanda Office",
+        "title": "ICT Sector",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/activities/activity_05.html",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "ICT",
+          "digital",
+          "innovation",
+          "startups",
+          "public-services"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m31",
+          "rw-m32",
+          "rw-m33",
+          "rw-m37"
+        ]
+      },
+      "jica-rw-cooperation-overview": {
+        "canonicalSourceId": "jica-en-rw-cooperation-brochure-2025",
+        "organization": "JICA Rwanda Office",
+        "title": "JICA Rwanda 20 Year Anniversary Brochure",
+        "assetType": "pdf",
+        "url": "https://www.jica.go.jp/english/overseas/rwanda/others/__icsFiles/afieldfile/2026/03/19/JICARwanda_brochure2025.pdf",
+        "language": [
+          "en"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "cooperation",
+          "infrastructure",
+          "agriculture",
+          "water",
+          "education",
+          "ICT",
+          "health"
+        ],
+        "alias": true,
+        "note": "Compatibility alias retained so existing Mission IDs continue to resolve.",
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m32"
+        ]
+      },
+      "jica-jp-development-cooperation-basics": {
+        "organization": "JICA",
+        "title": "国際協力とは",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/cooperation/know/about/index.html",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "topics": [
+          "international-cooperation",
+          "ODA",
+          "actors",
+          "global-issues"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m35"
+        ]
+      },
+      "jica-jp-rw-exchange-2026": {
+        "organization": "JICA九州",
+        "title": "世界とつながる交流～ルワンダ編～",
+        "assetType": "webpage",
+        "url": "https://www.jica.go.jp/domestic/kyushu/information/topics/2026/1584844_69935.html",
+        "language": [
+          "ja"
+        ],
+        "sourceTier": "official-primary",
+        "publishedAt": "2026-08-27",
+        "topics": [
+          "school-exchange",
+          "culture",
+          "japan-rwanda",
+          "students"
+        ],
+        "verifiedAt": "2026-09-28",
+        "usedByMissions": [
+          "rw-m39"
+        ]
       }
     }
   }
