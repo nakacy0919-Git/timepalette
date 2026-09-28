@@ -14,6 +14,7 @@ import {
 
 import {
   useEffect,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -31,7 +32,7 @@ import ThinkConnectMissionGame from './ThinkConnectMissionGame';
 import MissionSuccessCelebration from './MissionSuccessCelebration';
 import GlobalChallengeMissionGame from './GlobalChallengeMissionGame';
 import SourceQuestMissionGame from './SourceQuestMissionGame';
-
+import MissionMaterialRenderer from './MissionMaterialRenderer';
 
 const TIME_MISSION_TYPES =
   new Set([
@@ -188,6 +189,36 @@ const normalizeChoice = (
   };
 };
 
+const shuffleArray = (
+  items
+) => {
+  const shuffled = [
+    ...items,
+  ];
+
+  for (
+    let i =
+      shuffled.length - 1;
+    i > 0;
+    i -= 1
+  ) {
+    const j =
+      Math.floor(
+        Math.random() *
+        (i + 1)
+      );
+
+    [
+      shuffled[i],
+      shuffled[j],
+    ] = [
+      shuffled[j],
+      shuffled[i],
+    ];
+  }
+
+  return shuffled;
+};
 
 export default function MissionPlayer({
   mission,
@@ -276,6 +307,47 @@ const answerLockedRef =
       mission
     );
 
+const randomizedChoices =
+  useMemo(
+    () => {
+      const rawChoices =
+        mission
+          ?.challenge
+          ?.choices;
+
+      if (
+        !Array.isArray(
+          rawChoices
+        )
+      ) {
+        return [];
+      }
+
+      const normalized =
+        rawChoices.map(
+          (
+            choice,
+            originalIndex
+          ) => ({
+            ...normalizeChoice(
+              choice,
+              originalIndex
+            ),
+
+            originalIndex,
+          })
+        );
+
+      return shuffleArray(
+        normalized
+      );
+    },
+    [
+      mission.id,
+      mission.learningLevelId,
+      mission.challenge?.choices,
+    ]
+  );
 
   const timePlayable =
     TIME_MISSION_TYPES.has(
@@ -554,11 +626,17 @@ const answerLockedRef =
     );
 
 
-    const correct =
-      index ===
-      mission
-        .challenge
-        .correctIndex;
+    const selectedChoice =
+  randomizedChoices[
+    index
+  ];
+
+const correct =
+  selectedChoice
+    ?.originalIndex ===
+  mission
+    .challenge
+    .correctIndex;
 
 
     if (
@@ -955,12 +1033,7 @@ const answerLockedRef =
 
 
       const choices =
-        mission
-          .challenge
-          .choices
-          .map(
-            normalizeChoice
-          );
+  randomizedChoices;
 
 
       const hasVisualChoice =
@@ -1052,12 +1125,13 @@ const answerLockedRef =
 
 
                 const correct =
-                  result ===
-                    'correct' &&
-                  index ===
-                    mission
-                      .challenge
-                      .correctIndex;
+  result ===
+    'correct' &&
+  choice
+    .originalIndex ===
+    mission
+      .challenge
+      .correctIndex;
 
 
                 const wrong =
@@ -1929,6 +2003,12 @@ const answerLockedRef =
 
                 </div>
 
+
+                                <MissionMaterialRenderer
+                  mission={mission}
+                  placement="beforeChallenge"
+                  className="mb-6"
+                />
 
                 {
                   renderGame()
