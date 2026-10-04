@@ -1,0 +1,755 @@
+{
+  "schemaVersion": "TimePalette Place Mission Prototype v1.2",
+  "countryCode": "rw",
+  "countryNameJa": "ルワンダ",
+  "countryNameEn": "Rwanda",
+  "defaultLanguage": "ja",
+  "defaultLevel": "elementary",
+
+  "country": {
+    "atlasName": "Rwanda",
+    "center": [29.8739, -1.9403],
+    "mapCenter": [29.9, -1.95],
+    "mapScale": 10000,
+
+    "capital": {
+      "name": "Kigali",
+      "coordinates": [30.0619, -1.9441]
+    },
+
+    "cities": [
+      {
+        "name": "Kigali",
+        "labelJa": "キガリ",
+        "coordinates": [30.0619, -1.9441],
+        "regionJa": "中央"
+      },
+      {
+        "name": "Huye",
+        "labelJa": "フイエ",
+        "coordinates": [29.7394, -2.5967],
+        "regionJa": "南"
+      },
+      {
+        "name": "Musanze",
+        "labelJa": "ムサンゼ",
+        "coordinates": [29.634, -1.4998],
+        "regionJa": "北"
+      },
+      {
+        "name": "Rubavu",
+        "labelJa": "ルバブ",
+        "coordinates": [29.2566, -1.7028],
+        "regionJa": "西"
+      }
+    ]
+  },
+
+  "missions": [
+    {
+      "id": "rw-place-01",
+      "type": "world-locator",
+      "points": 100,
+      "icon": "🌍",
+
+      "title": {
+        "ja": "ルワンダをさがせ！",
+        "en": "Find Rwanda!"
+      },
+
+      "instruction": {
+        "elementary": {
+          "ja": "世界地図を動かしながら、ルワンダまでたどり着こう！",
+          "en": "Explore the world map and find Rwanda!"
+        },
+        "juniorHigh": {
+          "ja": "世界→アフリカ→東アフリカの順に地図を読み、ルワンダを見つけよう。",
+          "en": "Read the map from the world to Africa and East Africa, then locate Rwanda."
+        },
+        "highSchoolStandard": {
+          "ja": "大陸・地域・周辺国の位置関係を手がかりに、ルワンダの位置を特定しよう。",
+          "en": "Use continent, region and neighboring countries to locate Rwanda."
+        },
+        "highSchoolAdvanced": {
+          "ja": "地図上の位置関係からルワンダを特定しよう。",
+          "en": "Locate Rwanda using regional geographic relationships."
+        }
+      },
+
+      "success": {
+        "headline": {
+          "ja": "ルワンダ発見！",
+          "en": "Rwanda Found!"
+        },
+        "discovery": {
+          "ja": "ルワンダはアフリカ東部にある内陸国です。世界→アフリカ→東アフリカと範囲をしぼることで、位置を確認できます。",
+          "en": "Rwanda is a landlocked country in East Africa. You located it by narrowing the map from the world to Africa and East Africa."
+        }
+      }
+    },
+
+    {
+      "id": "rw-place-02",
+      "type": "neighbor-puzzle",
+      "points": 100,
+      "icon": "🧩",
+
+      "title": {
+        "ja": "となりの国パズル",
+        "en": "Neighbor Puzzle"
+      },
+
+      "instruction": {
+        "elementary": {
+          "ja": "国カードを選んで、ルワンダのまわりの正しい場所に置こう！",
+          "en": "Place the country cards around Rwanda."
+        },
+        "juniorHigh": {
+          "ja": "ルワンダと国境を接する4か国を、方角を考えて配置しよう。",
+          "en": "Place Rwanda's four neighboring countries in the correct directions."
+        },
+        "highSchoolStandard": {
+          "ja": "国境と方角を手がかりに、周辺国の位置関係を完成させよう。",
+          "en": "Complete the border puzzle using direction and regional geography."
+        },
+        "highSchoolAdvanced": {
+          "ja": "周辺国を正しい方角に配置しよう。",
+          "en": "Place Rwanda's neighboring countries correctly."
+        }
+      },
+
+      "success": {
+        "headline": {
+          "ja": "国境パズル完成！",
+          "en": "Border Puzzle Complete!"
+        },
+        "discovery": {
+          "ja": "ルワンダは、北にウガンダ、東にタンザニア、南にブルンジ、西にコンゴ民主共和国と接しています。",
+          "en": "Rwanda borders Uganda to the north, Tanzania to the east, Burundi to the south, and the Democratic Republic of the Congo to the west."
+        }
+      }
+    },
+
+    {
+      "id": "rw-place-03",
+      "type": "shape-choice",
+      "points": 100,
+      "icon": "🗺️",
+
+      "title": {
+        "ja": "国の形を見ぬけ！",
+        "en": "Country Shape Challenge"
+      },
+
+      "instruction": {
+        "elementary": {
+          "ja": "4つの国の形を見くらべて、ルワンダを選ぼう。",
+          "en": "Compare four country shapes and choose Rwanda."
+        },
+        "juniorHigh": {
+          "ja": "周辺国のシルエットと比べながら、ルワンダの国土の形を見分けよう。",
+          "en": "Identify Rwanda by comparing its outline with neighboring countries."
+        },
+        "highSchoolStandard": {
+          "ja": "国土の輪郭と大きさに注目して、ルワンダを特定しよう。",
+          "en": "Identify Rwanda using national outline and scale."
+        },
+        "highSchoolAdvanced": {
+          "ja": "国土シルエットからルワンダを特定しよう。",
+          "en": "Identify Rwanda from its national outline."
+        }
+      },
+
+      "choices": [
+        {
+          "atlasName": "Rwanda",
+          "center": [29.9, -1.95],
+          "scale": 5200,
+          "correct": true
+        },
+        {
+          "atlasName": "Burundi",
+          "center": [29.9, -3.4],
+          "scale": 5200,
+          "correct": false
+        },
+        {
+          "atlasName": "Uganda",
+          "center": [32.3, 1.4],
+          "scale": 2100,
+          "correct": false
+        },
+        {
+          "atlasName": "Tanzania",
+          "center": [35.2, -6.2],
+          "scale": 1450,
+          "correct": false
+        }
+      ],
+
+      "success": {
+        "headline": {
+          "ja": "ルワンダの形を見ぬいた！",
+          "en": "Shape Identified!"
+        },
+        "discovery": {
+          "ja": "地図を国名だけでなく「形」として見ると、国の位置や周辺国との違いを覚えやすくなります。",
+          "en": "Looking at countries as shapes can help you remember their locations and differences from neighboring countries."
+        }
+      }
+    },
+
+    {
+      "id": "rw-place-04",
+      "type": "capital-hunt",
+      "points": 100,
+      "icon": "📍",
+
+      "title": {
+        "ja": "首都キガリを見つけよう",
+        "en": "Capital Hunt"
+      },
+
+      "instruction": {
+        "elementary": {
+          "ja": "ルワンダの国土を大きく見て、首都キガリの場所をタップしよう！",
+          "en": "Look at the enlarged Rwanda map and tap Kigali."
+        },
+        "juniorHigh": {
+          "ja": "国土全体の中で首都キガリがどこにあるか、候補地点から選ぼう。",
+          "en": "Choose Kigali's location on the enlarged country map."
+        },
+        "highSchoolStandard": {
+          "ja": "ルワンダ国内におけるキガリの位置を、東西南北の関係から判断しよう。",
+          "en": "Locate Kigali using its position within Rwanda."
+        },
+        "highSchoolAdvanced": {
+          "ja": "ルワンダ国内でキガリを特定しよう。",
+          "en": "Locate Kigali within Rwanda."
+        }
+      },
+
+      "success": {
+        "headline": {
+          "ja": "キガリ発見！",
+          "en": "Kigali Found!"
+        },
+        "discovery": {
+          "ja": "キガリはルワンダの中央部に近い場所にある首都です。政治・経済・交通の重要な中心地です。",
+          "en": "Kigali is Rwanda's capital, located near the center of the country. It is an important political, economic and transport center."
+        }
+      }
+    },
+
+    {
+      "id": "rw-place-05",
+      "type": "city-challenge",
+      "points": 100,
+      "icon": "🏙️",
+
+      "title": {
+        "ja": "4つの町を攻略せよ！",
+        "en": "Rwanda City Challenge"
+      },
+
+      "instruction": {
+        "elementary": {
+          "ja": "町の名前を見て、地図の正しい丸をタップしよう！",
+          "en": "Read the city name and tap the correct point."
+        },
+        "juniorHigh": {
+          "ja": "キガリ・フイエ・ムサンゼ・ルバブを、地図上の位置に当てはめよう。",
+          "en": "Place Kigali, Huye, Musanze and Rubavu."
+        },
+        "highSchoolStandard": {
+          "ja": "4都市の位置を確認し、ルワンダ国内の地域的な広がりを捉えよう。",
+          "en": "Map four cities and notice Rwanda's regional pattern."
+        },
+        "highSchoolAdvanced": {
+          "ja": "4都市を正しく配置しよう。",
+          "en": "Map Kigali, Huye, Musanze and Rubavu accurately."
+        }
+      },
+
+      "success": {
+        "headline": {
+          "ja": "4都市コンプリート！",
+          "en": "Four Cities Complete!"
+        },
+        "discovery": {
+          "ja": "首都キガリだけでなく、北のムサンゼ、西のルバブ、南のフイエなど、ルワンダ各地に重要な都市があります。",
+          "en": "Beyond Kigali, Rwanda has important regional cities such as Musanze in the north, Rubavu in the west and Huye in the south."
+        }
+      }
+    },
+
+    {
+      "id": "rw-place-06",
+      "type": "landscape-detective",
+      "points": 100,
+      "icon": "📸",
+
+      "title": {
+        "ja": "景色のたんてい",
+        "en": "Landscape Detective"
+      },
+
+      "instruction": {
+        "elementary": {
+          "ja": "「千の丘の国」と呼ばれるルワンダらしい景色を選ぼう！",
+          "en": "Choose the landscape that best matches Rwanda, the Land of a Thousand Hills."
+        },
+        "juniorHigh": {
+          "ja": "4つの景観を比べ、ルワンダの地形的特徴に最も合うものを選ぼう。",
+          "en": "Compare four landscapes and choose the one that best fits Rwanda."
+        },
+        "highSchoolStandard": {
+          "ja": "写真から読み取れる地形の特徴を手がかりに、ルワンダの景観を判断しよう。",
+          "en": "Use visible terrain evidence to identify Rwanda's landscape."
+        },
+        "highSchoolAdvanced": {
+          "ja": "地形的証拠から景観を判断しよう。",
+          "en": "Identify the Rwandan landscape from geographic evidence."
+        }
+      },
+
+      "landscapeChoices": [
+        {
+          "id": "desert",
+          "label": {
+            "ja": "砂漠",
+            "en": "Desert"
+          },
+          "commonsImage": {
+            "file": "File:Desert Dunes U.A.E.jpg",
+            "width": 1200
+          },
+          "correct": false
+        },
+        {
+          "id": "rwanda",
+          "label": {
+            "ja": "緑の丘",
+            "en": "Green hills"
+          },
+          "commonsImage": {
+            "file": "File:Holly Rwanda Landscape Image hills of Rwanda.jpg",
+            "width": 1200
+          },
+          "correct": true
+        },
+        {
+          "id": "beach",
+          "label": {
+            "ja": "海岸",
+            "en": "Beach"
+          },
+          "commonsImage": {
+            "file": "File:Tropical beach, Andamans Islands.jpg",
+            "width": 1200
+          },
+          "correct": false
+        },
+        {
+          "id": "snow",
+          "label": {
+            "ja": "雪山",
+            "en": "Snowy mountain"
+          },
+          "commonsImage": {
+            "file": "File:Snowmountain.jpg",
+            "width": 1200
+          },
+          "correct": false
+        }
+      ],
+
+      "success": {
+        "headline": {
+          "ja": "景色のたんてい成功！",
+          "en": "Landscape Detective Complete!"
+        },
+        "discovery": {
+          "ja": "ルワンダは丘陵地が多く、「千の丘の国」と呼ばれることで知られています。地形は景観だけでなく、人々の暮らしにも関係します。",
+          "en": "Rwanda is known as the Land of a Thousand Hills. Its hilly terrain shapes both the landscape and people's lives."
+        }
+      }
+    },
+
+    {
+      "id": "rw-place-07",
+      "type": "life-photo-evidence",
+      "points": 100,
+      "icon": "👨‍🌾",
+
+      "title": {
+        "ja": "ルワンダの暮らしをのぞこう",
+        "en": "Life in Rwanda"
+      },
+
+      "instruction": {
+        "elementary": {
+          "ja": "2枚の写真をよく見て、写真から本当にわかることを2つ選ぼう！",
+          "en": "Look at the two photos and choose two things they really show."
+        },
+        "juniorHigh": {
+          "ja": "農村と都市の写真を見比べ、写真から確認できる事実を2つ選ぼう。",
+          "en": "Compare rural and urban photos and choose two facts supported by the images."
+        },
+        "highSchoolStandard": {
+          "ja": "異なる生活場面の写真を比較し、写真資料が示す事実と過度な一般化を区別しよう。",
+          "en": "Compare two settings and distinguish photographic evidence from overgeneralization."
+        },
+        "highSchoolAdvanced": {
+          "ja": "写真資料から確認できる事実を選ぼう。",
+          "en": "Identify claims supported by the photographic evidence."
+        }
+      },
+
+      "photos": [
+        {
+          "id": "agriculture",
+          "label": {
+            "ja": "農業に関わる仕事",
+            "en": "Agricultural work"
+          },
+          "caption": {
+            "ja": "ルワンダで農業に取り組む人々",
+            "en": "People working in agriculture in Rwanda"
+          },
+          "commonsImage": {
+            "file": "File:People working in agriculture in Rwanda.jpg",
+            "width": 1200
+          }
+        },
+        {
+          "id": "market",
+          "label": {
+            "ja": "キガリの市場",
+            "en": "Kigali market"
+          },
+          "caption": {
+            "ja": "キガリのKimironko Market",
+            "en": "Kimironko Market in Kigali"
+          },
+          "commonsImage": {
+            "file": "File:Kimironko Market, Kigali.jpg",
+            "width": 1200
+          }
+        }
+      ],
+
+      "choices": [
+        {
+          "id": "farming",
+          "ja": "農業に関わる仕事をしている人々がいる",
+          "en": "Some people work in agriculture",
+          "correct": true
+        },
+        {
+          "id": "market",
+          "ja": "キガリには人々が買い物をする市場がある",
+          "en": "Kigali has markets where people shop",
+          "correct": true
+        },
+        {
+          "id": "same-life",
+          "ja": "ルワンダの人は全員同じ暮らしをしている",
+          "en": "Everyone in Rwanda lives the same way",
+          "correct": false
+        },
+        {
+          "id": "all-city",
+          "ja": "ルワンダ全体が大都市である",
+          "en": "All of Rwanda is one large city",
+          "correct": false
+        }
+      ],
+
+      "success": {
+        "headline": {
+          "ja": "写真から暮らしを発見！",
+          "en": "Life Discovered Through Photos!"
+        },
+        "discovery": {
+          "ja": "ルワンダには農業に関わる暮らしも、首都キガリの市場のような都市の暮らしもあります。1枚の写真だけで国全体を決めつけないことが大切です。",
+          "en": "Rwanda includes agricultural livelihoods as well as urban life such as markets in Kigali. One photograph cannot represent an entire country."
+        }
+      }
+    },
+
+    {
+      "id": "rw-place-08",
+      "type": "route-challenge",
+      "points": 100,
+      "icon": "🚚",
+
+      "title": {
+        "ja": "海まで荷物を運べ！",
+        "en": "Route to the Sea"
+      },
+
+      "instruction": {
+        "elementary": {
+          "ja": "海のないルワンダから、正しい国と港を選んでインド洋まで荷物を届けよう！",
+          "en": "Choose the correct country and port to move cargo from Rwanda to the Indian Ocean."
+        },
+        "juniorHigh": {
+          "ja": "ルワンダ→通過国→港→インド洋という輸送ルートを、写真を手がかりに完成させよう。",
+          "en": "Complete the Rwanda → country → port → Indian Ocean route using the photo cards."
+        },
+        "highSchoolStandard": {
+          "ja": "内陸国ルワンダの南東方向の物流ルートを、国と港の位置関係から完成させよう。",
+          "en": "Complete a southeastern transport route from landlocked Rwanda using regional geography."
+        },
+        "highSchoolAdvanced": {
+          "ja": "南東方向の物流ルートを完成させよう。",
+          "en": "Complete the southeastern regional transport route."
+        }
+      },
+
+      "route": {
+        "start": {
+          "ja": "ルワンダ",
+          "en": "Rwanda"
+        },
+
+        "countryChoices": [
+          {
+            "id": "tanzania",
+            "ja": "タンザニア",
+            "en": "Tanzania",
+            "correct": true,
+            "commonsImage": {
+              "file": "File:The view of mountain Kilimanjaro from Moshi town in Tanzania.jpg",
+              "width": 900
+            }
+          },
+          {
+            "id": "chad",
+            "ja": "チャド",
+            "en": "Chad",
+            "correct": false,
+            "commonsImage": {
+              "file": "File:ISS-42 Lake Chad and arid landscapes of the Sahara.jpg",
+              "width": 900
+            }
+          },
+          {
+            "id": "morocco",
+            "ja": "モロッコ",
+            "en": "Morocco",
+            "correct": false,
+            "commonsImage": {
+              "file": "File:Maroc, Mosquée Hassan 2, Grand Casablanca.jpg",
+              "width": 900
+            }
+          }
+        ],
+
+        "portChoices": [
+          {
+            "id": "dar",
+            "ja": "ダルエスサラーム港",
+            "en": "Port of Dar es Salaam",
+            "correct": true,
+            "commonsImage": {
+              "file": "File:Dar es salaam Port.jpg",
+              "width": 900
+            }
+          },
+          {
+            "id": "alexandria",
+            "ja": "アレクサンドリア港",
+            "en": "Port of Alexandria",
+            "correct": false,
+            "commonsImage": {
+              "file": "File:Alexandria Port.jpg",
+              "width": 900
+            }
+          },
+          {
+            "id": "casablanca",
+            "ja": "カサブランカ港",
+            "en": "Port of Casablanca",
+            "correct": false,
+            "commonsImage": {
+              "file": "File:Casablanca-port.jpg",
+              "width": 900
+            }
+          }
+        ],
+
+        "end": {
+          "ja": "インド洋",
+          "en": "Indian Ocean"
+        }
+      },
+
+      "success": {
+        "headline": {
+          "ja": "海まで到着！",
+          "en": "Cargo Reached the Sea!"
+        },
+        "discovery": {
+          "ja": "ルワンダは海に面していない内陸国です。そのため国際物流では、周辺国を通り、海港へ接続するルートが重要になります。",
+          "en": "Rwanda is landlocked, so international trade depends on transport connections through neighboring countries to seaports."
+        }
+      }
+    },
+
+    {
+      "id": "rw-place-09",
+      "type": "photo-evidence",
+      "points": 100,
+      "icon": "🔎",
+
+      "title": {
+        "ja": "写真たんてい",
+        "en": "Photo Evidence Detective"
+      },
+
+      "instruction": {
+        "elementary": {
+          "ja": "写真をよく見て、「この写真だけから本当に言えること」を選ぼう。",
+          "en": "Look carefully and choose what this photo really shows."
+        },
+        "juniorHigh": {
+          "ja": "1枚の写真から分かる事実と、写真だけでは分からない思い込みを区別しよう。",
+          "en": "Separate visible evidence from assumptions."
+        },
+        "highSchoolStandard": {
+          "ja": "都市写真を資料として読み、国全体への過度な一般化を避けよう。",
+          "en": "Read a city photograph as evidence without overgeneralizing to the whole country."
+        },
+        "highSchoolAdvanced": {
+          "ja": "写真資料の証拠と推測を区別しよう。",
+          "en": "Distinguish visual evidence from unsupported generalization."
+        }
+      },
+
+      "commonsImage": {
+        "file": "File:Kigali skyline.jpg",
+        "width": 1200
+      },
+
+      "choices": [
+        {
+          "id": "buildings",
+          "ja": "この場所には多くの建物が見える",
+          "en": "Many buildings are visible in this place",
+          "correct": true
+        },
+        {
+          "id": "everyone-city",
+          "ja": "ルワンダの人は全員都会に住んでいる",
+          "en": "Everyone in Rwanda lives in a city",
+          "correct": false
+        },
+        {
+          "id": "no-rural",
+          "ja": "ルワンダには農村がない",
+          "en": "Rwanda has no rural areas",
+          "correct": false
+        },
+        {
+          "id": "whole-country",
+          "ja": "ルワンダ全体がこの景色である",
+          "en": "All of Rwanda looks like this",
+          "correct": false
+        }
+      ],
+
+      "success": {
+        "headline": {
+          "ja": "証拠を正しく読めた！",
+          "en": "Evidence Read Correctly!"
+        },
+        "discovery": {
+          "ja": "写真から確認できる事実と、写真だけでは証明できないことを区別することは、地理資料を読むうえでとても大切です。",
+          "en": "Distinguishing what a photograph proves from what it does not prove is an important geographic literacy skill."
+        }
+      }
+    },
+
+    {
+      "id": "rw-place-10",
+      "type": "geo-master",
+      "points": 100,
+      "icon": "🏆",
+
+      "title": {
+        "ja": "ルワンダ地理マスター",
+        "en": "Rwanda Geography Master"
+      },
+
+      "instruction": {
+        "elementary": {
+          "ja": "最後は3つの鍵を集めよう！地図・首都・地理情報の3チャレンジをクリア！",
+          "en": "Collect three keys by clearing the map, capital and geography challenges!"
+        },
+        "juniorHigh": {
+          "ja": "位置・都市・地理的特徴の3つの鍵を集めて、Geography Masterをアンロックしよう。",
+          "en": "Collect three keys for location, city and geographic features."
+        },
+        "highSchoolStandard": {
+          "ja": "位置・都市・地形・内陸国という情報を統合して、最終チャレンジをクリアしよう。",
+          "en": "Synthesize location, urban geography, terrain and landlocked status."
+        },
+        "highSchoolAdvanced": {
+          "ja": "複数の地理情報を統合して最終チャレンジをクリアしよう。",
+          "en": "Synthesize multiple forms of geographic evidence."
+        }
+      },
+
+      "facts": [
+        {
+          "id": "hills",
+          "emoji": "⛰️",
+          "ja": "丘が多い地形で知られている",
+          "en": "Known for its hilly terrain",
+          "correct": true
+        },
+        {
+          "id": "landlocked",
+          "emoji": "🚫🌊",
+          "ja": "海に面していない内陸国である",
+          "en": "It is a landlocked country",
+          "correct": true
+        },
+        {
+          "id": "kigali",
+          "emoji": "🏙️",
+          "ja": "首都はキガリである",
+          "en": "Its capital is Kigali",
+          "correct": true
+        },
+        {
+          "id": "desert",
+          "emoji": "🏜️",
+          "ja": "国土の大部分が砂漠である",
+          "en": "Most of the country is desert",
+          "correct": false
+        },
+        {
+          "id": "ocean",
+          "emoji": "🌊",
+          "ja": "インド洋に面している",
+          "en": "It has a coast on the Indian Ocean",
+          "correct": false
+        }
+      ],
+
+      "success": {
+        "headline": {
+          "ja": "GEOGRAPHY MASTER アンロック！",
+          "en": "GEOGRAPHY MASTER UNLOCKED!"
+        },
+        "discovery": {
+          "ja": "ルワンダは東アフリカの内陸国で、首都はキガリ。丘陵の多い地形と、周辺国とのつながりが地理を理解する重要なポイントです。",
+          "en": "Rwanda is a landlocked East African country with Kigali as its capital. Its hilly terrain and connections with neighboring countries are key geographic features."
+        }
+      }
+    }
+  ]
+}
