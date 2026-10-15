@@ -119,29 +119,47 @@
       {
         "id": "rw-time-05",
         "domain": "time",
-        "type": "world-life-detective",
+        "type": "clock-tower-rescue",
         "points": 10,
-        "title": "世界の生活探偵｜日本では何してる？",
-        "prompt": "キガリの時刻から日本の時刻を考えて、日本のAさんが何をしている時間か推理しよう。",
-        "explanation": "同じ瞬間でも、時差があるため国によって朝・昼・夜が違います。Aさんの予定はこのゲーム内の例です。",
-        "hint": "まず23時に7時間を足し、24時を越えたら日付を1日進めよう。",
+        "title": "CLOCK TOWER RESCUE｜こわれた世界の時計台をなおせ！",
+        "prompt": "キガリの時刻を基準に、正しい時計をTokyo・Paris・Nairobi・New Yorkの時計台にはめよう。",
+        "explanation": "同じ瞬間でも都市ごとに現地時刻が異なります。正しい時計を都市へ対応させることで、時差と日付の違いを視覚的に確認できます。",
+        "hint": "まず各都市の現地時刻を考えよう。最後はTokyoが遅くなりすぎず、New Yorkが早すぎない時間帯を探してみよう。",
         "sourceIds": [
           "rw-time-zone",
           "rw-japan-time-zone"
         ],
         "challenge": {
-          "rounds": [
+          "baseZone": "Africa/Kigali",
+          "baseTime": "18:00",
+          "targets": [
             {
-              "kigaliTime": "07:00",
-              "correctActivity": "school"
+              "id": "tokyo",
+              "city": "Tokyo",
+              "country": "日本",
+              "flagCode": "jp",
+              "zone": "Asia/Tokyo"
             },
             {
-              "kigaliTime": "13:00",
-              "correctActivity": "evening"
+              "id": "paris",
+              "city": "Paris",
+              "country": "フランス",
+              "flagCode": "fr",
+              "zone": "Europe/Paris"
             },
             {
-              "kigaliTime": "20:00",
-              "correctActivity": "sleep"
+              "id": "nairobi",
+              "city": "Nairobi",
+              "country": "ケニア",
+              "flagCode": "ke",
+              "zone": "Africa/Nairobi"
+            },
+            {
+              "id": "new-york",
+              "city": "New York",
+              "country": "アメリカ",
+              "flagCode": "us",
+              "zone": "America/New_York"
             }
           ]
         }
@@ -149,280 +167,430 @@
       {
         "id": "rw-time-06",
         "domain": "time",
-        "type": "daypart-match",
+        "type": "photo-time-detective",
         "points": 10,
-        "title": "同じ瞬間の一日を比べよう",
-        "prompt": "Tokyoの時計を基準に、Kigaliではその瞬間が朝・昼・夕方・夜のどれにあたるか考えよう。",
-        "explanation": "同じ瞬間でも、時差があると地域の時計が示す時刻や生活上の時間帯は異なります。朝・昼・夕方・夜はこのゲームで使う時計上の区分です。実際の日の出・日の入り時刻を表すものではありません。",
+        "title": "PHOTO TIME DETECTIVE｜本物の写真で時間帯を見ぬけ！",
+        "prompt": "実際のTokyo・Paris・Kigaliの写真を見て、同じ瞬間の現地が朝・昼・夕方・夜のどの時間帯か考えよう。",
+        "explanation": "時差によって、同じ瞬間でも都市ごとの生活時間帯は変わります。MissionではWikimedia Commonsの実際の都市写真を使って、現地時刻と町の見え方を結びつけます。",
         "hint": "Tokyoの時刻から7時間戻し、Kigaliの時計が示す時間帯を考えよう。",
         "sourceIds": [
           "rw-time-zone",
           "rw-japan-time-zone"
         ],
         "challenge": {
-          "baseZone": "Asia/Tokyo",
-          "targetZones": [
-            "Africa/Kigali"
-          ],
-          "zoneLabels": {
-            "Asia/Tokyo": "Tokyo",
-            "Africa/Kigali": "Kigali"
-          },
-          "dayparts": {
-            "morning": [
-              "05:00",
-              "11:59"
-            ],
-            "afternoon": [
-              "12:00",
-              "16:59"
-            ],
-            "evening": [
-              "17:00",
-              "20:59"
-            ],
-            "night": [
-              "21:00",
-              "04:59"
-            ]
-          }
-        },
-        "variants": {
-          "elementary": {
-            "prompt": "Tokyoの時計を見て、Kigaliが朝・昼・夕方・夜のどれか考えよう。"
-          },
-          "juniorHigh": {
-            "prompt": "時差をもとにKigaliの時刻を考え、時間帯を選ぼう。"
-          },
-          "highSchoolStandard": {
-            "prompt": "同じ瞬間の二都市の現地時刻を比べ、時計上の時間帯を説明しよう。"
-          },
-          "highSchoolAdvanced": {
-            "prompt": "Use the time difference to identify Kigali's clock-time part of day at the same instant."
-          }
+          "baseZone": "Africa/Kigali",
+          "rounds": [
+            {
+              "baseTime": "00:30",
+              "baseZone": "Africa/Kigali",
+              "baseLabel": "RW KIGALI",
+              "targetCity": "Tokyo",
+              "targetZone": "Asia/Tokyo",
+              "flagCode": "jp"
+            },
+            {
+              "baseTime": "13:00",
+              "baseZone": "Africa/Kigali",
+              "baseLabel": "RW KIGALI",
+              "targetCity": "Tokyo",
+              "targetZone": "Asia/Tokyo",
+              "flagCode": "jp"
+            },
+            {
+              "baseTime": "18:30",
+              "baseZone": "Africa/Kigali",
+              "baseLabel": "RW KIGALI",
+              "targetCity": "Paris",
+              "targetZone": "Europe/Paris",
+              "flagCode": "fr"
+            },
+            {
+              "baseTime": "18:00",
+              "baseZone": "Asia/Tokyo",
+              "baseLabel": "JP TOKYO",
+              "targetCity": "Kigali",
+              "targetZone": "Africa/Kigali",
+              "flagCode": "rw"
+            }
+          ]
         }
       },
       {
         "id": "rw-time-07",
         "domain": "time",
-        "type": "time-adventure",
+        "type": "season-time-shift",
         "points": 10,
-        "title": "交流の予定を並べよう",
-        "prompt": "これは交流授業の練習用スケジュールです。3つの予定カードを、Kigaliでの時刻が早い順に並べ替えよう。",
-        "explanation": "予定の順番は開始する地域の現地時刻で比べます。ここにある時刻は操作練習用のシナリオで、Rwandaの学校時間を示す統計ではありません。",
-        "hint": "カードの時刻を見比べ、最も早い時刻から並べてみよう。",
+        "title": "SEASON SHIFT LAB｜1月と7月で時差は変わる？",
+        "prompt": "Kigaliを基準に、Paris・New York・Tokyo・Nairobiの1月と7月の時差を比べ、サマータイムによる変化を見つけよう。",
+        "explanation": "季節そのものが時差を変えるのではなく、サマータイムを採用する地域が季節に合わせて時計を動かすことで、Kigaliとの時差が変化します。",
+        "hint": "JANとJULの時計を見比べよう。同じ都市なのにKigaliとの差が1時間変わっていたら、サマータイムが関係している可能性があります。",
         "sourceIds": [
           "rw-time-zone"
         ],
         "challenge": {
-          "interaction": "routine-order",
-          "scenarioNote": "学習用に作った交流授業の仮想スケジュール",
-          "events": [
+          "baseTime": "18:00",
+          "rounds": [
             {
-              "id": "arrival",
-              "label": "はじめのあいさつ",
-              "localTime": "09:00"
+              "mode": "season-find",
+              "targetCity": "Paris",
+              "country": "フランス",
+              "flagCode": "fr",
+              "targetZone": "Europe/Paris",
+              "goal": "same-time",
+              "question": "Kigaliが18:00のとき、Parisも18:00になるのは1月と7月のどちら？",
+              "success": "7月はParisもKigaliも18:00！ Parisではサマータイムが使われている時期です。"
             },
             {
-              "id": "map",
-              "label": "地図を見せ合う",
-              "localTime": "10:30"
+              "mode": "season-find",
+              "targetCity": "New York",
+              "country": "アメリカ",
+              "flagCode": "us",
+              "targetZone": "America/New_York",
+              "goal": "smaller-gap",
+              "question": "KigaliとNew Yorkの時差が小さくなるのは1月と7月のどちら？",
+              "success": "7月はNew Yorkがサマータイム中なので、Kigaliとの時差が1月より1時間小さくなります。"
             },
             {
-              "id": "questions",
-              "label": "質問タイム",
-              "localTime": "14:00"
+              "mode": "constant-check",
+              "targetCity": "Tokyo",
+              "country": "日本",
+              "flagCode": "jp",
+              "targetZone": "Asia/Tokyo",
+              "question": "TokyoとKigaliの時差は、1月と7月で変わる？",
+              "success": "変わりません。TokyoもKigaliも現在サマータイムを採用していないので、時差は年間を通して7時間です。"
+            },
+            {
+              "mode": "change-hunt",
+              "cities": [
+                {
+                  "id": "paris",
+                  "name": "Paris",
+                  "country": "フランス",
+                  "flagCode": "fr",
+                  "zone": "Europe/Paris"
+                },
+                {
+                  "id": "new-york",
+                  "name": "New York",
+                  "country": "アメリカ",
+                  "flagCode": "us",
+                  "zone": "America/New_York"
+                },
+                {
+                  "id": "tokyo",
+                  "name": "Tokyo",
+                  "country": "日本",
+                  "flagCode": "jp",
+                  "zone": "Asia/Tokyo"
+                },
+                {
+                  "id": "nairobi",
+                  "name": "Nairobi",
+                  "country": "ケニア",
+                  "flagCode": "ke",
+                  "zone": "Africa/Nairobi"
+                }
+              ]
             }
-          ],
-          "correctOrder": [
-            "arrival",
-            "map",
-            "questions"
           ]
-        },
-        "variants": {
-          "elementary": {
-            "prompt": "交流授業の予定を、Kigaliの時計で早い順にならべよう。"
-          },
-          "juniorHigh": {
-            "prompt": "仮想の交流予定を現地時刻で比べ、早い順に並べ替えよう。"
-          },
-          "highSchoolStandard": {
-            "prompt": "現地時刻の情報を使い、交流スケジュールを順序づけよう。"
-          },
-          "highSchoolAdvanced": {
-            "prompt": "Order these practice exchange events by Kigali local time. The schedule is a classroom scenario, not a report of school hours."
-          }
         }
       },
       {
         "id": "rw-time-08",
         "domain": "time",
-        "type": "schedule-builder",
+        "type": "time-order-race",
         "points": 10,
-        "title": "話せる時間を見つけよう",
-        "prompt": "学習用に設定した両都市の参加可能時間を重ねて、30分のオンライン交流を始められる時刻を選ぼう。",
-        "explanation": "両方の参加可能時間が重なる範囲なら、30分の交流を設定できます。時差だけでなく、参加する人の一日の時間にも気を配って予定を考えることが大切です。",
+        "title": "TIME ORDER RACE｜世界の時計を早い順に並べろ！",
+        "prompt": "同じ瞬間の5都市を、時計が遅れている地域から進んでいる地域へ順番にタップしよう。",
+        "explanation": "世界の時間帯には東西方向の並びがあります。複数都市を比較することで、1対1の時差から世界全体の時差感覚へ広げます。",
         "hint": "一方の都市の時刻を、7時間差を考慮してもう一方の時間帯へ移してみよう。",
         "sourceIds": [
           "rw-time-zone",
           "rw-japan-time-zone"
         ],
         "challenge": {
-          "zoneA": "Asia/Tokyo",
-          "zoneB": "Africa/Kigali",
-          "windowA": [
-            "09:00",
-            "16:00"
-          ],
-          "windowB": [
-            "08:00",
-            "15:00"
-          ],
-          "minOverlapMinutes": 30,
-          "zoneLabels": {
-            "Asia/Tokyo": "Tokyo",
-            "Africa/Kigali": "Kigali"
-          },
-          "requireBothWindows": true,
-          "scenarioNote": "学習用に設定した参加可能時間で、実際の学校予定ではありません。"
-        },
-        "variants": {
-          "elementary": {
-            "prompt": "TokyoとKigali、両方で話せる時間を見つけよう。"
-          },
-          "juniorHigh": {
-            "prompt": "時差と参加できる時間を合わせて、交流開始時刻を考えよう。"
-          },
-          "highSchoolStandard": {
-            "prompt": "二都市の参加可能windowを比較し、30分間確保できる時間を選ぼう。"
-          },
-          "highSchoolAdvanced": {
-            "prompt": "Find a 30-minute meeting start time within both cities' practice availability windows."
-          }
+          "baseZone": "Africa/Kigali",
+          "baseTime": "12:00",
+          "cities": [
+            {
+              "id": "new-york",
+              "city": "New York",
+              "country": "アメリカ",
+              "flagCode": "us",
+              "zone": "America/New_York"
+            },
+            {
+              "id": "london",
+              "city": "London",
+              "country": "イギリス",
+              "flagCode": "gb",
+              "zone": "Europe/London"
+            },
+            {
+              "id": "kigali",
+              "city": "Kigali",
+              "country": "ルワンダ",
+              "flagCode": "rw",
+              "zone": "Africa/Kigali"
+            },
+            {
+              "id": "nairobi",
+              "city": "Nairobi",
+              "country": "ケニア",
+              "flagCode": "ke",
+              "zone": "Africa/Nairobi"
+            },
+            {
+              "id": "tokyo",
+              "city": "Tokyo",
+              "country": "日本",
+              "flagCode": "jp",
+              "zone": "Asia/Tokyo"
+            }
+          ]
         }
       },
       {
         "id": "rw-time-09",
         "domain": "time",
-        "type": "time-adventure",
+        "type": "school-overlap-planner",
         "points": 10,
-        "title": "時差の証拠を選ぼう",
-        "prompt": "時差についての文を読み、出典と時計の仕組みで確かめられる説明をすべて選ぼう。",
-        "explanation": "出典が示す標準時や時計表示から確認できる事実と、生活への影響について考えた意見を分けて読むことが大切です。",
-        "hint": "「いつでも同じ時刻差」と「相手の生活時間を考える必要がある」を確かめよう。出典を開いて確認できます。",
+        "title": "GLOBAL SCHOOL CONNECT｜日本から世界4地域の学校をつなげ！",
+        "prompt": "日本の学校時間08:30〜16:00を基準に、アフリカ・中東・アジア・オセアニアの学校とリアルタイム交流できる30分を見つけよう。",
+        "explanation": "オンライン国際交流では、国によって時差が異なるため、すべての学校が授業中になる時間を探す必要があります。地域によって日本と交流しやすい時間帯が大きく変わります。",
+        "hint": "日本の午後に交流しやすい地域もあれば、日本の午前に交流しやすい地域もあります。",
         "sourceIds": [
           "rw-time-zone",
           "rw-japan-time-zone"
         ],
         "challenge": {
-          "interaction": "evidence-select",
-          "requiredCount": 2,
-          "statements": [
+          "schoolStartMinutes": 510,
+          "schoolEndMinutes": 960,
+          "sessionMinutes": 30,
+          "rounds": [
             {
-              "id": "offset",
-              "label": "2026年、TokyoはKigaliより7時間進んでいる。",
-              "supported": true
+              "id": "africa-europe",
+              "icon": "🌍",
+              "regionJa": "アフリカ・ヨーロッパ",
+              "initialTimeMinutes": 720,
+              "challengeText": "日本とルワンダ・ケニア・ギリシャが学校にいる30分を探そう。",
+              "hint": "日本の午後遅めに注目。日本が午後でも、アフリカでは朝です。",
+              "learning": "日本と東アフリカの学校交流では、日本の午後とアフリカの朝が重なりやすいことが分かります。",
+              "cities": [
+                {
+                  "id": "tokyo",
+                  "city": "Tokyo",
+                  "country": "日本",
+                  "flagCode": "jp",
+                  "zone": "Asia/Tokyo"
+                },
+                {
+                  "id": "kigali",
+                  "city": "Kigali",
+                  "country": "ルワンダ",
+                  "flagCode": "rw",
+                  "zone": "Africa/Kigali"
+                },
+                {
+                  "id": "nairobi",
+                  "city": "Nairobi",
+                  "country": "ケニア",
+                  "flagCode": "ke",
+                  "zone": "Africa/Nairobi"
+                },
+                {
+                  "id": "athens",
+                  "city": "Athens",
+                  "country": "ギリシャ",
+                  "flagCode": "gr",
+                  "zone": "Europe/Athens"
+                }
+              ]
             },
             {
-              "id": "dst",
-              "label": "2026年はKigaliとTokyoの両方で夏時間の時計変更がある。",
-              "supported": false
+              "id": "middle-east",
+              "icon": "🕌",
+              "regionJa": "中東",
+              "initialTimeMinutes": 660,
+              "challengeText": "日本とUAE・カタール・バーレーンが学校にいる30分を探そう。",
+              "hint": "日本の14時台〜15時台を調べてみよう。",
+              "learning": "中東と日本では5〜6時間ほど時計がずれるため、日本の午後が中東の朝になります。",
+              "cities": [
+                {
+                  "id": "tokyo",
+                  "city": "Tokyo",
+                  "country": "日本",
+                  "flagCode": "jp",
+                  "zone": "Asia/Tokyo"
+                },
+                {
+                  "id": "dubai",
+                  "city": "Dubai",
+                  "country": "UAE",
+                  "flagCode": "ae",
+                  "zone": "Asia/Dubai"
+                },
+                {
+                  "id": "doha",
+                  "city": "Doha",
+                  "country": "カタール",
+                  "flagCode": "qa",
+                  "zone": "Asia/Qatar"
+                },
+                {
+                  "id": "manama",
+                  "city": "Manama",
+                  "country": "バーレーン",
+                  "flagCode": "bh",
+                  "zone": "Asia/Bahrain"
+                }
+              ]
             },
             {
-              "id": "instant",
-              "label": "違う現地時刻でも、二つの時計は同じ瞬間を表せる。",
-              "supported": true
+              "id": "asia",
+              "icon": "🌏",
+              "regionJa": "アジア",
+              "initialTimeMinutes": 540,
+              "challengeText": "日本・シンガポール・タイ・インドの4校が授業中になる30分を探そう。",
+              "hint": "インドの時計は日本より3時間30分遅れています。30分の時差にも注目！",
+              "learning": "時差は必ず1時間単位とは限りません。インドのように30分単位の時差をもつ地域もあります。",
+              "cities": [
+                {
+                  "id": "tokyo",
+                  "city": "Tokyo",
+                  "country": "日本",
+                  "flagCode": "jp",
+                  "zone": "Asia/Tokyo"
+                },
+                {
+                  "id": "singapore",
+                  "city": "Singapore",
+                  "country": "シンガポール",
+                  "flagCode": "sg",
+                  "zone": "Asia/Singapore"
+                },
+                {
+                  "id": "bangkok",
+                  "city": "Bangkok",
+                  "country": "タイ",
+                  "flagCode": "th",
+                  "zone": "Asia/Bangkok"
+                },
+                {
+                  "id": "delhi",
+                  "city": "Delhi",
+                  "country": "インド",
+                  "flagCode": "in",
+                  "zone": "Asia/Kolkata"
+                }
+              ]
             },
             {
-              "id": "school",
-              "label": "Rwandaのすべての学校は同じ時刻に始まる。",
-              "supported": false
+              "id": "oceania",
+              "icon": "🏝️",
+              "regionJa": "オセアニア",
+              "initialTimeMinutes": 900,
+              "challengeText": "日本・オーストラリア・ニュージーランド・PNGが学校にいる30分を探そう。",
+              "hint": "オセアニアは日本より時計が進んでいます。日本の朝を調べてみよう。",
+              "learning": "オセアニアとの学校交流では、日本の午前中が使いやすいことがあります。SydneyやAucklandは季節によって時差も変化します。",
+              "cities": [
+                {
+                  "id": "tokyo",
+                  "city": "Tokyo",
+                  "country": "日本",
+                  "flagCode": "jp",
+                  "zone": "Asia/Tokyo"
+                },
+                {
+                  "id": "sydney",
+                  "city": "Sydney",
+                  "country": "オーストラリア",
+                  "flagCode": "au",
+                  "zone": "Australia/Sydney"
+                },
+                {
+                  "id": "auckland",
+                  "city": "Auckland",
+                  "country": "ニュージーランド",
+                  "flagCode": "nz",
+                  "zone": "Pacific/Auckland"
+                },
+                {
+                  "id": "port-moresby",
+                  "city": "Port Moresby",
+                  "country": "パプアニューギニア",
+                  "flagCode": "pg",
+                  "zone": "Pacific/Port_Moresby"
+                }
+              ]
             }
           ]
-        },
-        "variants": {
-          "elementary": {
-            "prompt": "出典を見ながら、たしかに言える文を2つ選ぼう。"
-          },
-          "juniorHigh": {
-            "prompt": "時差と時計の説明を確認し、根拠のある文を選ぼう。"
-          },
-          "highSchoolStandard": {
-            "prompt": "出典が支える事実を、一般化や推測と分けて選択しよう。"
-          },
-          "highSchoolAdvanced": {
-            "prompt": "Select the statements supported by the time-zone sources. Separate evidence from unsupported generalizations."
-          }
         }
       },
       {
         "id": "rw-time-10",
         "domain": "time",
-        "type": "time-adventure",
+        "type": "time-traveler-final",
         "points": 10,
-        "title": "Final: 世界時計ミッション",
-        "prompt": "時差を使って現地時刻を合わせ、日付を確認し、交流の時間を決めよう。3つのStageを順番にクリアしてFinalを完成させよう。",
-        "explanation": "時刻を変換する力は、同じ瞬間の理解、日付の確認、相手と無理なく話せる予定づくりに役立ちます。世界の時計を考えることは、相手の時間を大切にすることにもつながります。",
-        "hint": "それぞれのStageで、時差・日付・参加できる時間を順番に確認しよう。",
+        "title": "TIME TRAVELER WORLD TOUR｜世界を飛んで到着時刻を解読せよ！",
+        "prompt": "飛行機を目的地まで動かし、時差・飛行時間・日付・サマータイム・日付変更線を使って現地の到着日時を解読しよう。",
+        "explanation": "世界を移動するとき、到着時刻は飛行時間だけでは決まりません。出発地と目的地の時差、季節による時計の違い、そして日付変更まで考える必要があります。",
+        "hint": "出発した瞬間から飛行時間ぶん進め、その瞬間を目的地の現地時刻へ読み替えよう。",
         "sourceIds": [
           "rw-time-zone",
           "rw-japan-time-zone"
         ],
         "challenge": {
-          "interaction": "final-stages",
-          "stages": [
+          "legs": [
             {
-              "id": "convert",
-              "label": "時刻を変換",
-              "type": "choice",
-              "prompt": "Tokyo 16:00と同じ瞬間のKigali時刻は？",
-              "choices": [
-                "09:00",
-                "23:00",
-                "翌日00:00"
-              ],
-              "correctIndex": 0
+              "id": "kigali-tokyo",
+              "title": "AFRICA → ASIA｜翌日の東京へ",
+              "fromCity": "Kigali",
+              "fromCountry": "ルワンダ",
+              "fromFlag": "rw",
+              "fromZone": "Africa/Kigali",
+              "toCity": "Tokyo",
+              "toCountry": "日本",
+              "toFlag": "jp",
+              "toZone": "Asia/Tokyo",
+              "departDate": "2026-01-15",
+              "departTime": "08:00",
+              "durationMinutes": 840,
+              "explanation": "Kigaliを08:00に出発し、14時間進んだ同じ瞬間をTokyoの時計で見ると05:00です。TokyoはKigaliより7時間先なので、日付は翌日の1月16日になります。"
             },
             {
-              "id": "calendar",
-              "label": "日付を確認",
-              "type": "choice",
-              "prompt": "Kigali 23:00はTokyoで何日・何時？",
-              "choices": [
-                "同じ日 06:00",
-                "次の日 06:00",
-                "前の日 16:00"
-              ],
-              "correctIndex": 1
+              "id": "tokyo-sydney",
+              "title": "ASIA → OCEANIA｜夏のSydneyへ",
+              "fromCity": "Tokyo",
+              "fromCountry": "日本",
+              "fromFlag": "jp",
+              "fromZone": "Asia/Tokyo",
+              "toCity": "Sydney",
+              "toCountry": "オーストラリア",
+              "toFlag": "au",
+              "toZone": "Australia/Sydney",
+              "departDate": "2026-07-15",
+              "departTime": "09:00",
+              "durationMinutes": 570,
+              "explanation": "7月のSydneyはTokyoより1時間時計が進んでいます。Tokyo 09:00から9時間30分飛ぶシナリオでは、Sydneyの到着時刻は同じ日の19:30になります。"
             },
             {
-              "id": "connect",
-              "label": "交流時間を考える",
-              "type": "choice",
-              "prompt": "学習用の参加可能時間が重なっているか、どこで確認する？",
-              "choices": [
-                "両都市の現地時刻を両方のwindowに照らす",
-                "UTCの数字だけを見る",
-                "Tokyoの時計だけで決める"
-              ],
-              "correctIndex": 0
+              "id": "auckland-los-angeles",
+              "title": "DATE LINE CHALLENGE｜前の日へ到着！？",
+              "fromCity": "Auckland",
+              "fromCountry": "ニュージーランド",
+              "fromFlag": "nz",
+              "fromZone": "Pacific/Auckland",
+              "toCity": "Los Angeles",
+              "toCountry": "アメリカ",
+              "toFlag": "us",
+              "toZone": "America/Los_Angeles",
+              "departDate": "2026-01-15",
+              "departTime": "08:00",
+              "durationMinutes": 720,
+              "explanation": "AucklandからLos Angelesへ東向きに大きく時差を越えると、現地の日付が戻ります。このシナリオでは12時間飛んでも、Los Angelesでは1月14日23:00。出発日の『前の日』に到着したように見えます。"
             }
           ]
-        },
-        "variants": {
-          "elementary": {
-            "prompt": "時こく・日づけ・話せる時間をたしかめて、Finalを完成させよう。"
-          },
-          "juniorHigh": {
-            "prompt": "時差変換と日付を確認し、両方に参加しやすい交流案を完成しよう。"
-          },
-          "highSchoolStandard": {
-            "prompt": "時刻変換・日付境界・参加可能windowを組み合わせ、交流計画を判断しよう。"
-          },
-          "highSchoolAdvanced": {
-            "prompt": "Complete the final challenge by combining time conversion, calendar-day reasoning and consideration of both participants' availability."
-          }
         }
       }
     ]

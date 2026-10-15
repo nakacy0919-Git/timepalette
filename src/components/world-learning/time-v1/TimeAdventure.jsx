@@ -125,58 +125,71 @@ function getMissionMeta(
     type
   ) {
     case 'time-zone-express':
-      return {
-        icon: '🚆',
-        label: 'TIME ZONE EXPRESS',
-      };
+      return { icon: '🌍', label: 'SAME-TIME HUNT' };
+
+    case 'clock-tower-rescue':
+      return { icon: '🏰', label: 'CLOCK TOWER RESCUE' };
+
+    case 'photo-time-detective':
+      return { icon: '📸', label: 'PHOTO DETECTIVE' };
+
+    case 'sound-time-detective':
+      return { icon: '🎧', label: 'SOUND DETECTIVE' };
+
+    case 'time-order-race':
+      return { icon: '✈️', label: 'TIME ORDER RACE' };
+
+    case 'global-meeting-planner':
+      return { icon: '🤝', label: 'GLOBAL PLANNER' };
+
+    case 'time-master-final':
+      return { icon: '🪐', label: 'FINAL BOSS' };
 
     case 'world-life-detective':
-      return {
-        icon: '🕵️',
-        label: 'LIFE DETECTIVE',
-      };
+      return { icon: '🕵️', label: 'LIFE DETECTIVE' };
 
     case 'time-travel-lap':
-      return {
-        icon: '⏳',
-        label: 'TIME TRAVEL',
-      };
+      return { icon: '⏳', label: 'TIME TRAVEL' };
 
     case 'clock-offset':
-      return {
-        icon: '🕒',
-        label: 'CLOCK CHALLENGE',
-      };
+    case 'time-dial':
+      return { icon: '🕒', label: 'CLOCK CHALLENGE' };
 
     case 'live-time-compare':
-      return {
-        icon: '🌍',
-        label: 'LIVE TIME',
-      };
-
-    case 'time-dial':
-      return {
-        icon: '🕒',
-        label: 'CLOCK CHALLENGE',
-      };
+      return { icon: '🌍', label: 'LIVE TIME' };
 
     case 'daypart-match':
-      return {
-        icon: '🌅',
-        label: 'DAY & NIGHT',
-      };
+      return { icon: '🌅', label: 'DAY & NIGHT' };
 
     case 'schedule-builder':
+      return { icon: '🤝', label: 'GLOBAL PLANNER' };
+
+    case 'sound-time-detective-v2':
+      return {
+        icon: '🎧',
+        label: 'SOUND TIME DETECTIVE',
+      };
+
+    case 'season-time-shift':
+      return {
+        icon: '🗓️',
+        label: 'SEASON SHIFT LAB',
+      };
+
+    case 'school-overlap-planner':
       return {
         icon: '🤝',
-        label: 'GLOBAL PLANNER',
+        label: 'SCHOOL CONNECT WINDOW',
+      };
+
+    case 'time-traveler-final':
+      return {
+        icon: '🚀',
+        label: 'TIME TRAVELER FINAL',
       };
 
     default:
-      return {
-        icon: '⏰',
-        label: 'TIME MISSION',
-      };
+      return { icon: '⏰', label: 'TIME MISSION' };
   }
 }
 
