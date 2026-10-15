@@ -46,6 +46,9 @@ import MissionPlayer from './MissionPlayer';
 import PlaceAdventureLauncher
   from './PlaceAdventureLauncher';
 
+import TimeAdventureLauncher
+  from './TimeAdventureLauncher';
+
 
 /* =========================================================
    PLAYABLE MISSION TYPES
@@ -2294,6 +2297,14 @@ export default function WorldMissionPanel({
   );
 
 
+  const [
+    timeAdventureOpen,
+    setTimeAdventureOpen,
+  ] = useState(
+    false
+  );
+
+
   const missionData =
     getMissionCountryData(
       fileLetter,
@@ -2599,6 +2610,35 @@ export default function WorldMissionPanel({
         return;
       }
 
+
+      /*
+       * ===========================================
+       * RWANDA TIME ADVENTURE v1
+       * ===========================================
+       */
+
+      if (
+        String(
+          countryCode
+        ).toLowerCase() ===
+          'rw' &&
+        domainId ===
+          'time'
+      ) {
+        setSelectedDomain(
+          domainId
+        );
+
+        setActiveMission(
+          null
+        );
+
+        setTimeAdventureOpen(
+          true
+        );
+
+        return;
+      }
 
       const adventurePackage =
         getWorldAdventureDomainPackage(
@@ -4099,6 +4139,43 @@ export default function WorldMissionPanel({
           moveToLauncher();
         }}
       />
+
+      <TimeAdventureLauncher
+        open={
+          timeAdventureOpen
+        }
+        learningLevel={
+          selectedLearningLevel
+        }
+        countryCode={
+          countryCode
+        }
+        onProgressChange={() => {
+          setProgressRevision(
+            (
+              value
+            ) =>
+              value +
+              1
+          );
+        }}
+        onClose={() => {
+          playUiSound(
+            'back'
+          );
+
+          setTimeAdventureOpen(
+            false
+          );
+
+          setSelectedDomain(
+            null
+          );
+
+          moveToLauncher();
+        }}
+      />
+
     </section>
   );
 }

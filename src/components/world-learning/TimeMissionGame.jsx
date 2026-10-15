@@ -1,5 +1,18 @@
-import { CheckCircle2, Clock3, Lightbulb, RotateCcw } from 'lucide-react';
-import { useState } from 'react';
+import { ArrowDown, ArrowUp, CheckCircle2, Clock3, ExternalLink, Lightbulb, RotateCcw } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { getLearningSources } from '../../utils/learningSourceRegistry';
+
+import InteractiveClockMission
+  from './time-v1/InteractiveClockMission';
+
+import TimeTravelLapMission
+  from './time-v1/TimeTravelLapMission';
+
+import TimeZoneExpressMission
+  from './time-v1/TimeZoneExpressMission';
+
+import WorldLifeDetectiveMission
+  from './time-v1/WorldLifeDetectiveMission';
 
 const getFallbackZoneLabel = (
   timeZone
@@ -664,24 +677,411 @@ const zoneBLabel =
   );
 }
 
-export default function TimeMissionGame({ mission, onComplete, alreadyCompleted }) {
-  const onClear = () => onComplete(mission);
+const formatMinuteOfDay = (minutes) => {
+  const normalized = ((Number(minutes) % 1440) + 1440) % 1440;
+  return `${pad2(Math.floor(normalized / 60))}:${pad2(normalized % 60)}`;
+};
 
+function ClockFace({ minutes, label }) {
+  const hourAngle = ((minutes % 720) / 720) * 360 - 90;
+  const minuteAngle = ((minutes % 60) / 60) * 360 - 90;
+  const point = (angle, length) => {
+    const radians = (angle * Math.PI) / 180;
+    return {
+      x: 100 + Math.cos(radians) * length,
+      y: 100 + Math.sin(radians) * length,
+    };
+  };
+  const hourEnd = point(hourAngle, 36);
+  const minuteEnd = point(minuteAngle, 55);
+
+  return (
+    <div className="text-center">
+      <svg viewBox="0 0 200 200" className="mx-auto h-44 w-44" role="img" aria-label={`${label}: ${formatMinuteOfDay(minutes)}`}>
+        <circle cx="100" cy="100" r="91" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="4" />
+        {Array.from({ length: 12 }, (_, index) => {
+          const angle = ((index / 12) * 360 - 90) * Math.PI / 180;
+          const outerX = 100 + Math.cos(angle) * 77;
+          const outerY = 100 + Math.sin(angle) * 77;
+          const innerX = 100 + Math.cos(angle) * 68;
+          const innerY = 100 + Math.sin(angle) * 68;
+          const textX = 100 + Math.cos(angle) * 57;
+          const textY = 100 + Math.sin(angle) * 57 + 6;
+          return (
+            <g key={index}>
+              <line x1={innerX} y1={innerY} x2={outerX} y2={outerY} stroke="#475569" strokeWidth="3" />
+              <text x={textX} y={textY} textAnchor="middle" className="fill-slate-700 text-[12px] font-bold">{index === 0 ? 12 : index}</text>
+            </g>
+          );
+        })}
+        <line x1="100" y1="100" x2={hourEnd.x} y2={hourEnd.y} stroke="#0f172a" strokeWidth="7" strokeLinecap="round" />
+        <line x1="100" y1="100" x2={minuteEnd.x} y2={minuteEnd.y} stroke="#2563eb" strokeWidth="4" strokeLinecap="round" />
+        <circle cx="100" cy="100" r="5" fill="#f97316" />
+      </svg>
+      <p className="mt-2 text-3xl font-black tabular-nums text-slate-900">{formatMinuteOfDay(minutes)}</p>
+      <p className="mt-1 text-sm font-bold text-slate-500">{label}</p>
+    </div>
+  );
+}
+
+function TimeAdventureResult({ status, mission, alreadyCompleted }) {
+  if (status === null) return null;
+  if (!status) {
+    return (
+      <div className="mt-5 rounded-2xl border border-orange-200 bg-orange-50 p-4 text-orange-800" role="status">
+        <p className="font-black">ヒントを見直して、もう一度ためそう。</p>
+        <p className="mt-1 text-sm font-bold">時差・日付・予定時間のどこを比べるか確認してみよう。</p>
+      </div>
+    );
+  }
+  return <ResultBox correct explanation={mission.explanation} points={mission.points} alreadyCompleted={alreadyCompleted} />;
+}
+
+function TimeAdventureGame({ mission, onClear, alreadyCompleted }) {
+  const challenge = mission.challenge;
+  const interaction = challenge.interaction;
+  const [status, setStatus] = useState(null);
+  const [selectedOffset, setSelectedOffset] = useState(0);
+  const [clockMinutes, setClockMinutes] = useState(0);
+  const [dateChoice, setDateChoice] = useState('');
+  const [roundAnswers, setRoundAnswers] = useState({});
+  const [routine, setRoutine] = useState(() =>
+    interaction === 'routine-order'
+      ? [...challenge.events].sort(() => Math.random() - 0.5).map((event) => event.id)
+      : [],
+  );
+  const [evidence, setEvidence] = useState([]);
+  const [stageIndex, setStageIndex] = useState(0);
+  const [stageAnswer, setStageAnswer] = useState('');
+  const [completedStages, setCompletedStages] = useState([]);
+  const [showHint, setShowHint] = useState(false);
+
+  const rounds = challenge.rounds ?? [];
+  const stages = challenge.stages ?? [];
+  const events = challenge.events ?? [];
+  const statements = useMemo(() => challenge.statements ?? [], [challenge.statements]);
+  const currentStage = stages[stageIndex];
+  const selectedEvidenceIsCorrect = useMemo(() => {
+    const supported = statements.filter((statement) => statement.supported).map((statement) => statement.id).sort();
+    return [...evidence].sort().join('|') === supported.join('|');
+  }, [evidence, statements]);
+
+  const check = () => {
+    let correct = false;
+
+    if (interaction === 'offset-slider') {
+      correct = selectedOffset === challenge.targetOffsetHours;
+    } else if (interaction === 'time-rounds') {
+      correct = rounds.length > 0 && rounds.every((_, index) => Number(roundAnswers[index]) === rounds[index].correctIndex);
+    } else if (interaction === 'clock-slider') {
+      correct = clockMinutes === challenge.targetMinutes;
+    } else if (interaction === 'date-hop') {
+      correct = dateChoice === challenge.correctId;
+    } else if (interaction === 'routine-order') {
+      correct = routine.join('|') === challenge.correctOrder.join('|');
+    } else if (interaction === 'evidence-select') {
+      correct = evidence.length === challenge.requiredCount && selectedEvidenceIsCorrect;
+    }
+
+    setStatus(correct);
+    if (correct) onClear();
+  };
+
+  const moveEvent = (eventIndex, direction) => {
+    setStatus(null);
+    setRoutine((current) => {
+      const nextIndex = eventIndex + direction;
+      if (nextIndex < 0 || nextIndex >= current.length) return current;
+      const next = [...current];
+      [next[eventIndex], next[nextIndex]] = [next[nextIndex], next[eventIndex]];
+      return next;
+    });
+  };
+
+  const toggleEvidence = (id) => {
+    setStatus(null);
+    setEvidence((current) => current.includes(id)
+      ? current.filter((item) => item !== id)
+      : [...current, id]);
+  };
+
+  const checkStage = () => {
+    const correct = Number(stageAnswer) === currentStage.correctIndex;
+    setStatus(correct);
+    if (!correct) return;
+
+    const nextCompleted = [...completedStages, currentStage.id];
+    setCompletedStages(nextCompleted);
+    setStageAnswer('');
+    if (stageIndex === stages.length - 1) {
+      onClear();
+      return;
+    }
+    setStageIndex((current) => current + 1);
+    setStatus(null);
+  };
+
+  if (interaction === 'offset-slider') {
+    const [utcHour, utcMinute] = challenge.utcTime.split(':').map(Number);
+    const displayedTime = formatMinuteOfDay((utcHour * 60) + utcMinute + (selectedOffset * 60));
+    return (
+      <div>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="rounded-3xl bg-slate-100 p-5 text-center">
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500">UTC</p>
+            <p className="mt-2 text-4xl font-black tabular-nums">{challenge.utcTime}</p>
+          </div>
+          <div className="rounded-3xl bg-blue-50 p-5 text-center">
+            <p className="text-xs font-black uppercase tracking-widest text-blue-600">{challenge.zoneLabel}</p>
+            <p className="mt-2 text-4xl font-black tabular-nums text-blue-950">{displayedTime}</p>
+            <p className="mt-1 text-sm font-bold text-blue-700">UTC {selectedOffset >= 0 ? '+' : ''}{selectedOffset}</p>
+          </div>
+        </div>
+        <label className="mt-7 block font-black text-slate-800" htmlFor={`${mission.id}-offset`}>UTC offsetを動かす</label>
+        <input id={`${mission.id}-offset`} aria-label="UTC offset" type="range" min="-12" max="14" step="1" value={selectedOffset} onChange={(event) => { setSelectedOffset(Number(event.target.value)); setStatus(null); }} className="mt-4 min-h-10 w-full accent-blue-600" />
+        <div className="flex justify-between text-xs font-bold text-slate-400"><span>UTC−12</span><span>UTC±0</span><span>UTC+14</span></div>
+        <button type="button" onClick={check} className="mt-5 w-full rounded-2xl bg-slate-950 py-4 font-black text-white">Kigaliの時刻に合わせる</button>
+        <TimeAdventureResult status={status} mission={mission} alreadyCompleted={alreadyCompleted} />
+      </div>
+    );
+  }
+
+  if (interaction === 'time-rounds') {
+    return (
+      <div className="space-y-4">
+        {rounds.map((round, index) => (
+          <label key={round.sourceTime} className="block rounded-2xl border border-slate-200 bg-white p-4">
+            <span className="block text-xs font-black uppercase tracking-wider text-slate-400">{challenge.fromLabel} · ROUND {index + 1}</span>
+            <span className="mt-1 block text-2xl font-black tabular-nums text-slate-900">{round.sourceTime}</span>
+            <span className="mt-3 block text-sm font-bold text-slate-600">{challenge.toLabel}の時刻・日付</span>
+            <select aria-label={`${challenge.fromLabel} ${round.sourceTime}の${challenge.toLabel}時刻`} value={roundAnswers[index] ?? ''} onChange={(event) => { setRoundAnswers((current) => ({ ...current, [index]: event.target.value })); setStatus(null); }} className="mt-2 min-h-12 w-full rounded-xl border-2 border-slate-200 bg-white px-3 font-bold">
+              <option value="">答えを選ぶ</option>
+              {round.choices.map((choice, choiceIndex) => <option key={choice} value={choiceIndex}>{choice}</option>)}
+            </select>
+          </label>
+        ))}
+        <button type="button" disabled={Object.keys(roundAnswers).length !== rounds.length} onClick={check} className="w-full rounded-2xl bg-slate-950 py-4 font-black text-white disabled:bg-slate-200 disabled:text-slate-400">3ラウンドを確認</button>
+        <TimeAdventureResult status={status} mission={mission} alreadyCompleted={alreadyCompleted} />
+      </div>
+    );
+  }
+
+  if (interaction === 'clock-slider') {
+    return (
+      <div>
+        <div className="grid items-center gap-4 sm:grid-cols-2">
+          <div className="rounded-3xl bg-slate-100 p-4 text-center">
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500">{challenge.fromLabel}</p>
+            <p className="mt-2 text-3xl font-black tabular-nums">{challenge.fromTime}</p>
+          </div>
+          <ClockFace minutes={clockMinutes} label={challenge.toLabel} />
+        </div>
+        <label className="mt-6 block font-black text-slate-800" htmlFor={`${mission.id}-clock`}>時計の針を動かす</label>
+        <input id={`${mission.id}-clock`} aria-label={`${challenge.toLabel}の時計`} type="range" min="0" max="1435" step={challenge.stepMinutes ?? 5} value={clockMinutes} onChange={(event) => { setClockMinutes(Number(event.target.value)); setStatus(null); }} className="mt-4 min-h-10 w-full accent-blue-600" />
+        <div className="flex justify-between text-xs font-bold text-slate-400"><span>00:00</span><span>12:00</span><span>23:55</span></div>
+        <button type="button" onClick={check} className="mt-5 w-full rounded-2xl bg-slate-950 py-4 font-black text-white">同じ瞬間の時刻を確認</button>
+        <TimeAdventureResult status={status} mission={mission} alreadyCompleted={alreadyCompleted} />
+      </div>
+    );
+  }
+
+  if (interaction === 'date-hop') {
+    return (
+      <div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <div className="rounded-2xl bg-slate-100 p-5 text-center"><p className="text-xs font-black text-slate-500">{challenge.fromLabel}</p><p className="mt-2 text-3xl font-black tabular-nums">{challenge.fromTime}</p></div>
+          <div className="rounded-2xl bg-sky-50 p-5 text-center"><p className="text-xs font-black text-sky-600">{challenge.toLabel}</p><p className="mt-2 text-2xl font-black">時刻と日付を選ぼう</p></div>
+        </div>
+        <div className="mt-5 grid gap-3">
+          {challenge.choices.map((choice) => (
+            <button key={choice.id} type="button" aria-pressed={dateChoice === choice.id} onClick={() => { setDateChoice(choice.id); setStatus(null); }} className={`min-h-14 rounded-2xl border-2 p-4 text-left font-black ${dateChoice === choice.id ? 'border-blue-500 bg-blue-50 text-blue-800' : 'border-slate-200 bg-white text-slate-700'}`}>{choice.label}</button>
+          ))}
+        </div>
+        <button type="button" disabled={!dateChoice} onClick={check} className="mt-5 w-full rounded-2xl bg-slate-950 py-4 font-black text-white disabled:bg-slate-200 disabled:text-slate-400">時刻と日付を確認</button>
+        <TimeAdventureResult status={status} mission={mission} alreadyCompleted={alreadyCompleted} />
+      </div>
+    );
+  }
+
+  if (interaction === 'routine-order') {
+    const eventById = new Map(events.map((event) => [event.id, event]));
+    return (
+      <div>
+        <p className="mb-4 rounded-2xl bg-amber-50 p-4 text-sm font-bold leading-6 text-amber-900">{challenge.scenarioNote}</p>
+        <ol className="space-y-3" aria-label="Kigali local-time schedule">
+          {routine.map((eventId, index) => {
+            const event = eventById.get(eventId);
+            return (
+              <li key={eventId} className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-blue-50 font-black text-blue-800">{index + 1}</span>
+                <span className="min-w-0 flex-1"><span className="block font-black text-slate-800">{event.label}</span><span className="text-sm font-bold tabular-nums text-slate-500">Kigali · {event.localTime}</span></span>
+                <button type="button" aria-label={`${event.label}を上へ`} disabled={index === 0} onClick={() => moveEvent(index, -1)} className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-slate-100 disabled:opacity-35"><ArrowUp size={18} /></button>
+                <button type="button" aria-label={`${event.label}を下へ`} disabled={index === routine.length - 1} onClick={() => moveEvent(index, 1)} className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-slate-100 disabled:opacity-35"><ArrowDown size={18} /></button>
+              </li>
+            );
+          })}
+        </ol>
+        <button type="button" onClick={check} className="mt-5 w-full rounded-2xl bg-slate-950 py-4 font-black text-white">この順で確認</button>
+        <TimeAdventureResult status={status} mission={mission} alreadyCompleted={alreadyCompleted} />
+      </div>
+    );
+  }
+
+  if (interaction === 'evidence-select') {
+    return (
+      <div>
+        <p className="mb-4 text-sm font-bold text-slate-600">支えられる文を{challenge.requiredCount}つ選んでください。</p>
+        <div className="space-y-3">
+          {statements.map((statement) => (
+            <label key={statement.id} className={`flex min-h-14 cursor-pointer items-start gap-3 rounded-2xl border-2 p-4 ${evidence.includes(statement.id) ? 'border-blue-500 bg-blue-50' : 'border-slate-200 bg-white'}`}>
+              <input type="checkbox" checked={evidence.includes(statement.id)} onChange={() => toggleEvidence(statement.id)} className="mt-1 h-5 w-5 accent-blue-600" />
+              <span className="font-bold leading-6 text-slate-800">{statement.label}</span>
+            </label>
+          ))}
+        </div>
+        <button type="button" onClick={() => setShowHint((current) => !current)} className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-amber-50 py-3 font-black text-amber-800"><Lightbulb size={18} />{showHint ? 'ヒントを隠す' : '見るポイント'}</button>
+        {showHint && <p className="mt-2 rounded-xl bg-amber-50 p-4 text-sm font-bold leading-6 text-amber-900">時差の数値は各都市の標準時の出典で確かめられます。学校についての一般化が出典に書かれているかも確認してください。</p>}
+        <button type="button" disabled={evidence.length !== challenge.requiredCount} onClick={check} className="mt-4 w-full rounded-2xl bg-slate-950 py-4 font-black text-white disabled:bg-slate-200 disabled:text-slate-400">根拠を確認</button>
+        <TimeAdventureResult status={status} mission={mission} alreadyCompleted={alreadyCompleted} />
+      </div>
+    );
+  }
+
+  if (interaction === 'final-stages') {
+    return (
+      <div>
+        <div className="mb-5 flex items-center gap-2" aria-label={`Stage ${stageIndex + 1} of ${stages.length}`}>
+          {stages.map((stage, index) => <span key={stage.id} className={`h-2 flex-1 rounded-full ${completedStages.includes(stage.id) ? 'bg-emerald-500' : index === stageIndex ? 'bg-blue-500' : 'bg-slate-200'}`} />)}
+        </div>
+        <div className="rounded-3xl border border-indigo-100 bg-indigo-50 p-5">
+          <p className="text-xs font-black uppercase tracking-widest text-indigo-600">STAGE {stageIndex + 1} · {currentStage.label}</p>
+          <p className="mt-3 text-lg font-black leading-7 text-slate-900">{currentStage.prompt}</p>
+        </div>
+        <div className="mt-5 space-y-3">
+          {currentStage.choices.map((choice, index) => (
+            <button key={choice} type="button" aria-pressed={Number(stageAnswer) === index} onClick={() => { setStageAnswer(String(index)); setStatus(null); }} className={`min-h-14 w-full rounded-2xl border-2 p-4 text-left font-black ${Number(stageAnswer) === index ? 'border-indigo-500 bg-indigo-50 text-indigo-800' : 'border-slate-200 bg-white text-slate-700'}`}>{choice}</button>
+          ))}
+        </div>
+        <button type="button" disabled={stageAnswer === ''} onClick={checkStage} className="mt-5 w-full rounded-2xl bg-slate-950 py-4 font-black text-white disabled:bg-slate-200 disabled:text-slate-400">{stageIndex === stages.length - 1 ? 'Finalをクリア' : '次のStageへ'}</button>
+        <TimeAdventureResult status={status} mission={mission} alreadyCompleted={alreadyCompleted} />
+      </div>
+    );
+  }
+
+  return <div className="rounded-2xl bg-orange-50 p-5 font-bold text-orange-800">このTime操作にはchallenge.interactionの設定が必要です。</div>;
+}
+
+function TimeSources({ sourceIds = [] }) {
+  const sources = getLearningSources(sourceIds);
+  if (!sources.length) return null;
+
+  return (
+    <details className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+      <summary className="cursor-pointer font-black text-slate-700">Sources &amp; Credits · 出典を確認</summary>
+      <ul className="mt-3 space-y-3">
+        {sources.map((source) => (
+          <li key={source.id} className="text-sm">
+            <p className="font-black text-slate-800">{source.titleJa || source.title}</p>
+            <p className="mt-0.5 font-bold text-slate-500">{source.organization}</p>
+            {source.sourceUrl && <a href={source.sourceUrl} target="_blank" rel="noreferrer" className="mt-1 inline-flex items-center gap-1 font-bold text-blue-700 underline">公式資料を開く <ExternalLink size={14} /></a>}
+          </li>
+        ))}
+      </ul>
+    </details>
+  );
+}
+
+function TimeMissionContent({ mission, onClear, alreadyCompleted }) {
   if (mission.type === 'live-time-compare') {
     return <LiveTimeCompare mission={mission} onClear={onClear} alreadyCompleted={alreadyCompleted} />;
   }
-
   if (mission.type === 'time-dial') {
     return <TimeDial mission={mission} onClear={onClear} alreadyCompleted={alreadyCompleted} />;
   }
-
   if (mission.type === 'daypart-match') {
     return <DaypartMatch mission={mission} onClear={onClear} alreadyCompleted={alreadyCompleted} />;
   }
-
   if (mission.type === 'schedule-builder') {
     return <ScheduleBuilder mission={mission} onClear={onClear} alreadyCompleted={alreadyCompleted} />;
   }
-
+  if (mission.type === 'time-adventure') {
+    return <TimeAdventureGame mission={mission} onClear={onClear} alreadyCompleted={alreadyCompleted} />;
+  }
   return null;
+}
+
+export default function TimeMissionGame({ mission, onComplete, alreadyCompleted }) {
+  if (
+    mission.type ===
+      'time-zone-express'
+  ) {
+    return (
+      <TimeZoneExpressMission
+        mission={mission}
+        onComplete={onComplete}
+        alreadyCompleted={alreadyCompleted}
+      />
+    );
+  }
+
+  if (
+    mission.type ===
+      'world-life-detective'
+  ) {
+    return (
+      <WorldLifeDetectiveMission
+        mission={mission}
+        onComplete={onComplete}
+        alreadyCompleted={alreadyCompleted}
+      />
+    );
+  }
+
+  if (
+    mission.type ===
+      'time-travel-lap'
+  ) {
+    return (
+      <TimeTravelLapMission
+        mission={
+          mission
+        }
+        onComplete={
+          onComplete
+        }
+        alreadyCompleted={
+          alreadyCompleted
+        }
+      />
+    );
+  }
+
+
+  if (
+    mission.type ===
+      'clock-offset'
+  ) {
+    return (
+      <InteractiveClockMission
+        mission={
+          mission
+        }
+        onComplete={
+          onComplete
+        }
+        alreadyCompleted={
+          alreadyCompleted
+        }
+      />
+    );
+  }
+
+
+  const onClear = () => onComplete(mission);
+  return (
+    <>
+      <TimeMissionContent mission={mission} onClear={onClear} alreadyCompleted={alreadyCompleted} />
+      <TimeSources sourceIds={mission.sourceIds} />
+    </>
+  );
 }
