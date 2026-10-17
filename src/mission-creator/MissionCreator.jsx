@@ -295,6 +295,7 @@ export default function MissionCreator() {
   const [demo, setDemo] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
+  const [loadingData, setLoadingData] = useState(Boolean(session));
   const [saveStage, setSaveStage] = useState('');
   const [page, setPage] = useState('dashboard');
   const [questions, setQuestions] = useState([]);
@@ -308,12 +309,18 @@ export default function MissionCreator() {
   const [inspectionError, setInspectionError] = useState('');
 
   useEffect(()=>{
-    if (!session) return;
+    if (!session) { setLoadingData(false); return; }
     let cancelled=false;
+    setLoadingData(true);
     creatorRequest('bootstrap', {}, session).then(data=>{
       if(cancelled)return;
       setUser(data.user);setQuestions(data.questions);setProgress(data.progress);
-    }).catch(()=>{if(cancelled)return;sessionStorage.removeItem('tp-mc-session');setSession('');setUser(null);});
+    }).catch((err)=>{
+      if(cancelled)return;
+      // Never keep a half-initialized session after a bootstrap failure.
+      setError(err?.message || '問題一覧を読み込めませんでした。もう一度ログインしてください。');
+      sessionStorage.removeItem('tp-mc-session');setSession('');setUser(null);
+    }).finally(()=>{if(!cancelled)setLoadingData(false);});
     return ()=>{cancelled=true;};
   },[session]);
   const act=async(action,payload={})=>{
@@ -324,12 +331,12 @@ export default function MissionCreator() {
     const teacherToken = invite ? '' : (localStorage.getItem('tp-mc-teacher-token') || '');
     const data=await creatorRequest('login',{invite,pin,teacherToken});
     if(data.needsName){setRegistrationToken(data.registrationToken);return;}
-    sessionStorage.setItem('tp-mc-session',data.session);setSession(data.session);setRegistrationToken('');
+    sessionStorage.setItem('tp-mc-session',data.session);if(data.user)setUser(data.user);setSession(data.session);setRegistrationToken('');
   }catch(e){setError(e.message);}finally{setBusy(false);}};
   const register=async(token,name)=>{setBusy(true);setError('');try{
     const data=await creatorRequest('registerTeacher',{registrationToken:token,displayName:name});
     if(data.teacherToken)localStorage.setItem('tp-mc-teacher-token',data.teacherToken);
-    sessionStorage.setItem('tp-mc-session',data.session);setSession(data.session);setRegistrationToken('');
+    sessionStorage.setItem('tp-mc-session',data.session);if(data.user)setUser(data.user);setSession(data.session);setRegistrationToken('');
   }catch(e){setError(e.message);}finally{setBusy(false);}};
   const reload=async()=>{if(demo)return;const data=await creatorRequest('bootstrap',{},session);setUser(data.user);setQuestions(data.questions);setProgress(data.progress);};
   const logout=()=>{sessionStorage.removeItem('tp-mc-session');setUser(null);setSession('');setDemo(false);setPhotos({});setError('');};
@@ -396,7 +403,7 @@ export default function MissionCreator() {
   const setManual=async(countryIso,domain,count)=>{try{await act('setProgress',{countryIso,domain,manualDone:Number(count)});await reload();}catch{/* shown */}};
   const active=demo||user;
   return <div className="mc-root">
-    {!active ? <Access onLogin={login} onRegister={register} registrationToken={registrationToken} onBack={()=>{setRegistrationToken('');setError('');}} busy={busy} error={error}/> : <>
+    {!active ? (session ? <div className="mc-access-wrap"><div role="status" className="mc-card mc-access">前回のログインを確認しています…</div></div> : <Access onLogin={login} onRegister={register} registrationToken={registrationToken} onBack={()=>{setRegistrationToken('');setError('');}} busy={busy} error={error}/>) : <>
       <header className="mc-header"><div className="mc-header-brand"><Compass size={24}/> <strong>TimePalette</strong><span>MISSION CREATOR</span></div><div className="mc-header-user"><span>{demo?'デモ（保存不可）':`${user.name} ／ ${user.role==='admin'?'管理者':'参加教師'}`}</span><button type="button" className="mc-quiet" onClick={logout}><LogOut size={17}/>終了</button></div></header>
       <div className="mc-app"><aside className="mc-sidebar"><nav>
         {[['dashboard',LayoutDashboard,'制作進捗'],['bank',BookOpen,'みんなの問題'],['editor',FilePlus2,'問題を作る']].map(([id,Icon,label])=><button key={id} className={page===id?'active':''} type="button" onClick={()=>id==='editor'?startNew(): (setPage(id),setError(''))}><Icon size={18}/>{label}</button>)}
@@ -405,9 +412,10 @@ export default function MissionCreator() {
         {demo && <div className="mc-demo-banner"><CircleHelp size={18}/>これは操作確認用の画面です。写真のWebP変換とプレビューを試せますが、保存・承認はできません。</div>}
         <div className="mc-main-heading"><div><div className="mc-eyebrow">GLOBAL COLLABORATION</div><h1>{page==='dashboard'?'制作進捗':page==='bank'?'みんなの問題':'問題を作る'}</h1><p>197か国 × 6カテゴリー × 各10問を、世界の先生たちと作る。</p></div>{page!=='editor'&&<button className="mc-primary" type="button" onClick={startNew}><FilePlus2 size={18}/>新しく作成</button>}</div>
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
-        {page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
-        {page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} selectedCountry="" countryNames={countryNames} busy={busy||demo}/>}
-        {page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>setPage('bank')} busy={busy} demo={demo} error={error} saveStage={saveStage}/>}
+        {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
+        {!loadingData && page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
+        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} selectedCountry="" countryNames={countryNames} busy={busy||demo}/>}
+        {!loadingData && page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>setPage('bank')} busy={busy} demo={demo} error={error} saveStage={saveStage}/>}
       </main></div>
       {inspection && <ReviewDialog question={inspection} photos={inspectionPhotos} loading={inspectionLoading} loadError={inspectionError} busy={busy} onClose={()=>setInspection(null)} onEdit={startEdit} onReview={async(q,status)=>{const done=await review(q,status);if(done)setInspection(null);}}/>}
     </>}

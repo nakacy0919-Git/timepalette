@@ -17,10 +17,11 @@ function tpSha_(input) {
 }
 function tpProps_() { return PropertiesService.getScriptProperties(); }
 function tpPepper_() { const x=tpProps_().getProperty('TP_PEPPER'); if(!x)throw Error('Not configured');return x; }
+let TP_MC_SPREADSHEET_FOR_REQUEST = null;
 function tpTable_(name) {
   const id = tpProps_().getProperty('TP_DB_SHEET_ID');
   if (!id) throw Error('Mission Creator is not configured');
-  const sh = SpreadsheetApp.openById(id).getSheetByName(name);
+  const sh = (TP_MC_SPREADSHEET_FOR_REQUEST || (TP_MC_SPREADSHEET_FOR_REQUEST = SpreadsheetApp.openById(id))).getSheetByName(name);
   if (!sh) throw Error('Missing database tab');
   return sh;
 }
@@ -31,11 +32,23 @@ function tpRows_(name) {
     _row: i + 2, ...Object.fromEntries(keys.map((key, j) => [key, row[j]])),
   })).filter(record => String(record[keys[0]] || '').trim());
 }
+function tpTeacherRows_() {
+  // Access controls are rechecked against this short-lived cache on every action.
+  const cache = CacheService.getScriptCache(), key = 'tp-teacher-list-fast-v1';
+  const cached = cache.get(key);
+  if (cached) {
+    try { return JSON.parse(cached); } catch (_) { cache.remove(key); }
+  }
+  const rows = tpRows_('Teachers');
+  const encoded = JSON.stringify(rows);
+  if (encoded.length < 90000) cache.put(key, encoded, 45);
+  return rows;
+}
 function tpCell_(v) {
   const value = v == null ? '' : String(v);
   return /^[=+\-@]/.test(value) ? "'" + value : value; // sheet formula injection defense
 }
-function tpAppend_(name, head, data) { tpTable_(name).appendRow(head.map(k=>tpCell_(data[k]))); }
+function tpAppend_(name, head, data) { tpTable_(name).appendRow(head.map(k=>tpCell_(data[k]))); if(name==='Teachers')CacheService.getScriptCache().remove('tp-teacher-list-fast-v1'); }
 function tpReplace_(name, head, row, data) { tpTable_(name).getRange(row, 1, 1, head.length).setValues([head.map(k=>tpCell_(data[k]))]); }
 function tpWithLock_(fn) {
   const lock = LockService.getScriptLock(); lock.waitLock(12000);
@@ -101,7 +114,7 @@ function configureTeacherPinFromSettings() {
 function tpNewSession_(member) {
   const session=tpRandom_();
   CacheService.getScriptCache().put('session_'+tpSha_(session),JSON.stringify({id:member.id,name:member.name,role:member.role}),3600);
-  return {session,expiresInSeconds:3600};
+  return {session,expiresInSeconds:3600,user:{id:member.id,name:member.name,role:member.role}};
 }
 function tpSharedLogin_(args) {
   const pin=String(args.pin||'');
@@ -117,7 +130,7 @@ function tpSharedLogin_(args) {
   const token=String(args.teacherToken||'');
   if(/^[a-f0-9]{64}$/.test(token)){
     const hash=tpSha_(tpPepper_()+':teacher-device:'+token);
-    const member=tpRows_('Teachers').find(x=>x.role==='teacher'&&x.inviteHash===hash&&tpBool_(x.active));
+    const member=tpTeacherRows_().find(x=>x.role==='teacher'&&x.inviteHash===hash&&tpBool_(x.active));
     if(member)return tpNewSession_(member);
   }
   // A short-lived enrollment token gives no access to questions or assets.
@@ -147,13 +160,13 @@ function tpLogin_(args) {
   const cache=CacheService.getScriptCache(), failKey='fail_'+inviteHash.slice(0,45);
   const failed=Number(cache.get(failKey)||0);
   if(failed>=5)throw Error('試行回数の上限です。15分後に再試行してください。');
-  const member=tpRows_('Teachers').find(x=>x.inviteHash===inviteHash && tpBool_(x.active));
+  const member=tpTeacherRows_().find(x=>x.inviteHash===inviteHash && tpBool_(x.active));
   const success=!!member && member.pinHash===tpSha_(pepper+':pin:'+invite+':'+pin);
   if(!success){cache.put(failKey,String(failed+1),900);throw Error('招待コードまたはPINが正しくありません。');}
   cache.remove(failKey);
   const session=tpRandom_();
   cache.put('session_'+tpSha_(session),JSON.stringify({id:member.id,name:member.name,role:member.role}),3600);
-  return {session,expiresInSeconds:3600};
+  return {session,expiresInSeconds:3600,user:{id:member.id,name:member.name,role:member.role}};
 }
 function tpUser_(args) {
   const session=String(args.session||'');
@@ -161,7 +174,7 @@ function tpUser_(args) {
   const text=CacheService.getScriptCache().get('session_'+tpSha_(session));
   if(!text)throw Error('ログインの有効期限が切れました。もう一度ログインしてください。');
   const user=JSON.parse(text);
-  const member=tpRows_('Teachers').find(x=>x.id===user.id && tpBool_(x.active));
+  const member=tpTeacherRows_().find(x=>x.id===user.id && tpBool_(x.active));
   if(!member || member.role!==user.role)throw Error('アカウントを確認できませんでした。');
   return user;
 }
