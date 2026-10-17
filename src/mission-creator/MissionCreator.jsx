@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowLeft, BookOpen, Camera, CheckCircle2, CircleHelp, Clock3, Compass, FilePlus2, Globe2, LayoutDashboard, LockKeyhole, LogOut, Pencil, Search, ShieldCheck, UploadCloud } from 'lucide-react';
+import { ArrowLeft, BookOpen, Camera, CheckCircle2, CircleHelp, Clock3, Compass, FilePlus2, Globe2, LayoutDashboard, LockKeyhole, LogOut, Pencil, Search, ShieldCheck, UploadCloud, ChevronDown, ExternalLink, X } from 'lucide-react';
 import { getWorldLearningCountries } from '../utils/worldLearningRegistry';
 import { creatorRequest } from './api';
 import { blobToBase64, optimizeImage } from './image';
@@ -81,7 +81,7 @@ function CountryPicker({ countries, value, onChange, label = '国を選択' }) {
   return <div className="mc-country-picker" ref={rootRef}>
     <button type="button" className="mc-country-trigger" aria-haspopup="listbox" aria-expanded={open} aria-label={label} onClick={toggle}>
       {selected ? <><CountryFlag country={selected}/><span className="mc-country-selected-name">{selected.name}</span></> : <span>国を選択</span>}
-      <span className="mc-country-trigger-chevron" aria-hidden="true">⌄</span>
+      <ChevronDown className="mc-country-trigger-chevron" size={19} aria-hidden="true" />
     </button>
     {open && <div className="mc-country-popover">
       <input ref={inputRef} type="search" className="mc-country-search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="国名・英語名・国コードで検索" aria-label="国を検索" />
@@ -137,34 +137,65 @@ function ProgressBadge({ value }) {
   return <div className="mc-progress-line"><span style={{ width: `${Math.min(TARGET, value) * 10}%` }} /></div>;
 }
 
-function PhotoSlot({ slot, preview, name, onPick, busy }) {
+function PhotoSlot({ slot, preview, name, onPick, busy, isCorrect, singlePhoto }) {
   return (
-    <label className="mc-photo-slot">
+    <label className={`mc-photo-slot${isCorrect ? ' mc-answer-correct' : ''}`}>
+      {isCorrect && <span className="mc-correct-badge"><CheckCircle2 size={14} />正答の写真</span>}
       {preview ? <img src={preview} alt={`写真${slot}`} /> : <div className="mc-photo-empty"><Camera size={30} /><span>写真{slot}を選択</span></div>}
-      <span className="mc-photo-caption">{slot === 1 ? '① 正答の写真' : `誤答の写真 ${slot}`}</span>
+      <span className="mc-photo-caption">{singlePhoto ? '観察する写真' : isCorrect ? '① 正答の写真' : `誤答の写真 ${slot}`}</span>
       <small>{name || (preview ? '保存済みの画像' : 'JPEG / PNG / WebP')}</small>
       <input type="file" accept="image/jpeg,image/png,image/webp" disabled={busy} onChange={(e) => { const file = e.target.files?.[0]; if (file) onPick(slot, file); e.target.value = ''; }} />
     </label>
   );
 }
 
+// Source URLs, attribution and editorial notes are for teachers and administrators.
+// They are never part of the learner-facing preview.
+function ReferencePanel({ form }) {
+  const links = (form.sources || []).map(v => String(v || '').trim()).filter(safeHttp);
+  const notes = String(form.notes || '').trim();
+  return <section className="mc-reference-panel" aria-label="出典・参考資料（先生用）">
+    <h4><BookOpen size={17} /> 出典・参考資料（先生用）</h4>
+    {links.length ? <div className="mc-reference-links">{links.map((url, i) =>
+      <a href={url} target="_blank" rel="noopener noreferrer" key={`${url}-${i}`}>
+        <ExternalLink size={15} /><span>参考URL {i + 1}：{url}</span>
+      </a>)}</div> : <p className="mc-reference-empty">参考URLはまだ登録されていません。</p>}
+    {notes ? <div className="mc-reference-notes"><strong>解説・出典・制作メモ</strong><p>{notes}</p></div>
+      : <p className="mc-reference-empty">出典・解説メモはまだ登録されていません。</p>}
+    <p className="mc-reference-caution">リンク先の内容・写真の掲載条件は、公開前に管理者が確認してください。</p>
+  </section>;
+}
+
 function QuestionPreview({ form, photos }) {
+  const [showTeacherDetails, setShowTeacherDetails] = useState(true);
   const photoMode = form.type === 'photo1' || form.type === 'photo4';
   const photoCount = form.type === 'photo4' ? 4 : 1;
   return (
     <section className="mc-preview" aria-label="問題プレビュー">
-      <div className="mc-eyebrow">LEARNER PREVIEW</div>
-      <h3>生徒に見える問題のイメージ</h3>
-      <p className="mc-prompt">{form.prompt.trim() || 'ここに問題文が表示されます。'}</p>
+      <div className="mc-eyebrow">MISSION PREVIEW</div>
+      <h3>問題の表示を確認</h3>
+      <div className="mc-preview-modes" role="group" aria-label="プレビューモード">
+        <button type="button" className={showTeacherDetails ? 'active' : ''} aria-pressed={showTeacherDetails} onClick={()=>setShowTeacherDetails(true)}>先生確認</button>
+        <button type="button" className={!showTeacherDetails ? 'active' : ''} aria-pressed={!showTeacherDetails} onClick={()=>setShowTeacherDetails(false)}>生徒表示</button>
+      </div>
+      <p className="mc-preview-mode-hint">{showTeacherDetails
+        ? '編集・承認用：緑色は正答です。出典やメモも確認できます。'
+        : '生徒の表示イメージ：正答の色・出典メモを隠しています。'}</p>
+      <p className="mc-prompt">{String(form.prompt || '').trim() || 'ここに問題文が表示されます。'}</p>
       {photoMode && <div className={`mc-preview-grid ${photoCount === 1 ? 'mc-one-photo' : ''}`}>
-        {Array.from({ length: photoCount }, (_, i) => i + 1).map(slot => <div key={slot}>
-          {photos[slot]?.preview ? <img src={photos[slot].preview} alt={`選択肢${slot}`} /> : <div className="mc-placeholder"><Camera />写真{slot}</div>}
-          <small>{form.type === 'photo4' ? `選択肢 ${slot}` : '観察する写真'}</small>
-        </div>)}
+        {Array.from({ length: photoCount }, (_, i) => i + 1).map(slot => {
+          const isCorrect = form.type === 'photo4' && slot === 1 && showTeacherDetails;
+          return <div key={slot} className={`mc-preview-option${isCorrect ? ' mc-answer-correct' : ''}`}>
+            {isCorrect && <span className="mc-correct-badge"><CheckCircle2 size={14}/>正答</span>}
+            {photos[slot]?.preview ? <img src={photos[slot].preview} alt={`選択肢${slot}`} /> : <div className="mc-placeholder"><Camera />写真{slot}</div>}
+            <small>{form.type === 'photo4' ? `選択肢 ${slot}` : '観察する写真'}</small>
+          </div>;
+        })}
       </div>}
-      {form.type === 'text4' && <div className="mc-choice-grid">{[form.answer, ...form.choices].map((c, i) => <div key={i}>{String.fromCharCode(65 + i)}. {c || '（未入力）'}</div>)}</div>}
-      {form.type === 'web' && <p className="mc-hint">Webページの直接埋め込みはサイト側の許可が必要です。保存時はURLを記録します。</p>}
-      {form.sources.filter(safeHttp).map((url, i) => <a href={url} key={`${url}-${i}`} target="_blank" rel="noopener noreferrer" className="mc-link">参考資料 {i + 1} を開く ↗</a>)}
+      {form.type === 'text4' && <div className="mc-choice-grid">{[form.answer, ...form.choices].map((c, i) =>
+        <div key={i} className={showTeacherDetails && i === 0 ? 'mc-answer-correct' : ''}>{showTeacherDetails && i===0 && <CheckCircle2 size={15} aria-label="正答" />} {String.fromCharCode(65 + i)}. {c || '（未入力）'}</div>)}</div>}
+      {form.type === 'web' && <p className="mc-hint">Webを使う問題は参考URLを保存します。外部ページの埋め込みには掲載元の許可が必要です。</p>}
+      {showTeacherDetails && <ReferencePanel form={form} />}
     </section>
   );
 }
@@ -178,7 +209,7 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
       <div className="mc-fields-row"><div className="mc-country-field"><span>国</span><CountryPicker countries={form.countries || []} value={form.countryIso} onChange={iso => update('countryIso', iso)} label="問題を作成する国" /></div><label>カテゴリー <select value={form.domain} onChange={e => update('domain', e.target.value)}>{DOMAINS.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label></div>
       <label>問題の形式 <select value={form.type} onChange={e => update('type', e.target.value)}>{TYPES.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label>
       <label>問題文・活動の指示 <textarea rows={4} value={form.prompt} maxLength={2000} onChange={e => update('prompt', e.target.value)} placeholder="例：写真を見て、ネパールで人気の料理を選んでください。" /></label>
-      {photoCount > 0 && <div className="mc-stack"><div className="mc-helper-title"><UploadCloud size={18}/> 写真をアップロード</div><p className="mc-muted">写真はこの端末内でWebPに変換されます。4択では①が正答、②〜④が誤答です。ゲーム公開時の表示順は変更できます。</p><div className="mc-upload-grid">{Array.from({ length: photoCount }, (_, i) => i + 1).map(n => <PhotoSlot key={n} slot={n} name={photos[n]?.name} preview={photos[n]?.preview} onPick={onPhoto} busy={busy}/>)}</div></div>}
+      {photoCount > 0 && <div className="mc-stack"><div className="mc-helper-title"><UploadCloud size={18}/> 写真をアップロード</div><p className="mc-muted">写真はこの端末内でWebPに変換されます。4択では①が正答、②〜④が誤答です。ゲーム公開時の表示順は変更できます。</p><div className="mc-upload-grid">{Array.from({ length: photoCount }, (_, i) => i + 1).map(n => <PhotoSlot key={n} slot={n} name={photos[n]?.name} preview={photos[n]?.preview} onPick={onPhoto} busy={busy} isCorrect={form.type==='photo4' && n===1} singlePhoto={form.type==='photo1'}/>)}</div></div>}
       {form.type === 'text4' && <div className="mc-stack"><label>正しい答え <input value={form.answer} onChange={e => update('answer', e.target.value)} placeholder="正解の選択肢" /></label>{form.choices.map((v, i) => <label key={i}>まちがいの選択肢 {i + 1} <input value={v} onChange={e => update('choices', form.choices.map((c, j) => i === j ? e.target.value : c))}/></label>)}</div>}
       {!['text4', 'photo4'].includes(form.type) && <label>模範解答・参考となる回答（任意） <textarea rows={2} value={form.answer} onChange={e => update('answer', e.target.value)} /></label>}
       <label>参考Webページなど（任意） <input type="url" placeholder="https://..." value={form.sources[0] || ''} onChange={e => update('sources', [e.target.value, form.sources[1] || ''])}/></label>
@@ -194,15 +225,41 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
   </div>;
 }
 
-function QuestionBank({ questions, user, onEdit, onReview, selectedCountry, countryNames, busy }) {
+function QuestionBank({ questions, user, onEdit, onReview, onInspect, selectedCountry, countryNames, busy }) {
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState('');
   const visible = questions.filter(q => (filter === 'all' || q.status === filter) && (!selectedCountry || q.countryIso === selectedCountry) && [q.prompt, q.countryName, q.authorName, q.domain].join(' ').toLowerCase().includes(search.toLowerCase()));
   return <section className="mc-card mc-section"><div className="mc-section-top"><div><div className="mc-eyebrow">MISSION BANK</div><h2>集まった問題</h2></div><span className="mc-count">{formatNumber(visible.length)} 件</span></div>
     <div className="mc-filter-row"><label className="mc-search"><Search size={18}/><input placeholder="国・内容・作成者で検索" value={search} onChange={e => setSearch(e.target.value)}/></label><select value={filter} onChange={e => setFilter(e.target.value)}><option value="all">すべての状態</option>{Object.entries(statusJa).map(([id,v])=><option key={id} value={id}>{v}</option>)}</select></div>
-    {visible.length === 0 ? <p className="mc-empty">該当する問題はありません。</p> : <div className="mc-bank-list">{visible.slice(0, 200).map(q => <article className="mc-question-row" key={q.id}><div className="mc-question-main"><div className="mc-question-meta"><span className="mc-status">{statusJa[q.status] || q.status}</span> {countryNames[q.countryIso] || q.countryName} · {DOMAINS.find(d => d[0]===q.domain)?.[1] || q.domain} · 作成：{q.authorName}</div><h3>{q.prompt || '（問題文未入力）'}</h3><small>{TYPES.find(t => t[0]===q.type)?.[1]}　{q.updatedAt ? `最終更新：${q.updatedAt.slice(0,10)}` : ''}</small>{q.reviewNote && <p className="mc-review-note">管理者からのコメント：{q.reviewNote}</p>}</div><div className="mc-question-actions">{(user?.role === 'admin' || user?.id === q.authorId) && <button className="mc-outline mc-small" type="button" onClick={()=>onEdit(q)}><Pencil size={15}/>編集</button>}{user?.role === 'admin' && <><button className="mc-small mc-outline" type="button" disabled={busy} onClick={()=>onReview(q,'needs_revision')}>差し戻し</button><button className="mc-small mc-primary" type="button" disabled={busy || q.status !== 'submitted'} onClick={()=>onReview(q,'approved')}>承認</button></>}</div></article>)}</div>}
+    {visible.length === 0 ? <p className="mc-empty">該当する問題はありません。</p> : <div className="mc-bank-list">{visible.slice(0, 200).map(q => <article className="mc-question-row" key={q.id}><div className="mc-question-main"><div className="mc-question-meta"><span className="mc-status">{statusJa[q.status] || q.status}</span> {countryNames[q.countryIso] || q.countryName} · {DOMAINS.find(d => d[0]===q.domain)?.[1] || q.domain} · 作成：{q.authorName}</div><h3>{q.prompt || '（問題文未入力）'}</h3><small>{TYPES.find(t => t[0]===q.type)?.[1]}　{q.updatedAt ? `最終更新：${q.updatedAt.slice(0,10)}` : ''}</small>{q.reviewNote && <p className="mc-review-note">管理者からのコメント：{q.reviewNote}</p>}</div><div className="mc-question-actions">{(user?.role === 'admin' || user?.id === q.authorId) && <button className="mc-outline mc-small" type="button" onClick={()=>onEdit(q)}><Pencil size={15}/>編集</button>}{user?.role === 'admin' && <><button className="mc-small mc-outline" type="button" onClick={()=>onInspect(q)}><Search size={15}/>内容・出典確認</button><button className="mc-small mc-outline" type="button" disabled={busy} onClick={()=>onReview(q,'needs_revision')}>差し戻し</button><button className="mc-small mc-primary" type="button" disabled={busy || q.status !== 'submitted'} onClick={()=>onInspect(q)}>確認して承認</button></>}</div></article>)}</div>}
     {visible.length > 200 && <p className="mc-hint">先頭200件まで表示しています。検索条件を絞ってください。</p>}
   </section>;
+}
+
+// Administrators can review the actual stored images, correct answer, sources and notes
+// before approving; the private images are loaded through the authenticated API.
+function ReviewDialog({ question, photos, loading, loadError, busy, onClose, onReview, onEdit }) {
+  useEffect(() => {
+    const onEscape = event => { if (event.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onEscape);
+    return () => document.removeEventListener('keydown', onEscape);
+  }, [onClose]);
+  return <div className="mc-review-backdrop" onMouseDown={e => { if(e.target === e.currentTarget) onClose(); }}>
+    <section role="dialog" aria-modal="true" aria-label="管理者の問題確認" className="mc-review-dialog">
+      <div className="mc-review-dialog-header">
+        <div><div className="mc-eyebrow">ADMIN REVIEW</div><h2>承認前の内容・出典確認</h2><p>{question.countryName} ・作成：{question.authorName} ・状態：{statusJa[question.status] || question.status}</p></div>
+        <button className="mc-outline mc-small" type="button" onClick={onClose} aria-label="閉じる"><X size={17}/>閉じる</button>
+      </div>
+      {loading && <p role="status" className="mc-save-progress">保存済みの写真を読み込んでいます…</p>}
+      {loadError && <p role="alert" className="mc-error">{loadError}</p>}
+      <div className="mc-review-dialog-body"><QuestionPreview form={question} photos={photos} /></div>
+      <div className="mc-review-dialog-actions">
+        <button className="mc-outline" type="button" disabled={busy} onClick={()=>{onClose();onEdit(question);}}><Pencil size={16}/>編集画面を開く</button>
+        <button className="mc-outline" type="button" disabled={busy} onClick={()=>onReview(question,'needs_revision')}>差し戻し</button>
+        <button className="mc-primary" type="button" disabled={busy || loading || Boolean(loadError) || question.status !== 'submitted'} onClick={()=>onReview(question,'approved')}><ShieldCheck size={16}/>承認する</button>
+      </div>
+    </section>
+  </div>;
 }
 
 function Dashboard({ countries, selectedCountry, setSelectedCountry, questions, progress, user, onSetProgress, busy }) {
@@ -245,6 +302,10 @@ export default function MissionCreator() {
   const [selectedCountry, setSelectedCountry] = useState(countries[0]?.iso || 'rw');
   const [form, setForm] = useState(EMPTY);
   const [photos, setPhotos] = useState({});
+  const [inspection, setInspection] = useState(null);
+  const [inspectionPhotos, setInspectionPhotos] = useState({});
+  const [inspectionLoading, setInspectionLoading] = useState(false);
+  const [inspectionError, setInspectionError] = useState('');
 
   useEffect(()=>{
     if (!session) return;
@@ -309,11 +370,28 @@ export default function MissionCreator() {
       setError(`${e.message} 保存済みの問題や写真が残っている可能性があります。「みんなの問題」の状態を確認してから再試行してください。`);
     }finally{setBusy(false);setSaveStage('');}
   };
+  const inspect=async(q)=>{
+    if(user?.role!=='admin')return;
+    setInspection(q);setInspectionPhotos({});setInspectionError('');
+    const media=Array.isArray(q.media)?q.media:[];
+    if(demo||media.length===0){setInspectionLoading(false);return;}
+    setInspectionLoading(true);
+    try{
+      const results=await Promise.allSettled(media.map(async photo=>{
+        const data=await creatorRequest('getMedia',{questionId:q.id,slot:photo.slot},session);
+        return {slot:Number(photo.slot),preview:`data:image/webp;base64,${data.base64}`};
+      }));
+      const done=results.filter(r=>r.status==='fulfilled').map(r=>r.value);
+      setInspectionPhotos(Object.fromEntries(done.map(item=>[item.slot,{preview:item.preview}])));
+      if(results.some(r=>r.status==='rejected'))setInspectionError('一部の写真を読み込めませんでした。画像を確認するまで承認しないでください。');
+    }catch(e){setInspectionError(e.message || '写真の確認に失敗しました。');}
+    finally{setInspectionLoading(false);}
+  };
   const review=async(q,status)=>{
-    if(status==='approved' && !window.confirm('この問題を承認しますか？'))return;
+    if(status==='approved' && !window.confirm('この問題を承認しますか？'))return false;
     const reviewNote=status==='needs_revision'?window.prompt('先生への修正コメント（キャンセルで中止）',''):'';
-    if(status==='needs_revision'&&reviewNote===null)return;
-    try{await act('reviewQuestion',{questionId:q.id,status,reviewNote});await reload();}catch{/* shown */}
+    if(status==='needs_revision'&&reviewNote===null)return false;
+    try{await act('reviewQuestion',{questionId:q.id,status,reviewNote});await reload();return true;}catch{/* shown */return false;}
   };
   const setManual=async(countryIso,domain,count)=>{try{await act('setProgress',{countryIso,domain,manualDone:Number(count)});await reload();}catch{/* shown */}};
   const active=demo||user;
@@ -328,9 +406,10 @@ export default function MissionCreator() {
         <div className="mc-main-heading"><div><div className="mc-eyebrow">GLOBAL COLLABORATION</div><h1>{page==='dashboard'?'制作進捗':page==='bank'?'みんなの問題':'問題を作る'}</h1><p>197か国 × 6カテゴリー × 各10問を、世界の先生たちと作る。</p></div>{page!=='editor'&&<button className="mc-primary" type="button" onClick={startNew}><FilePlus2 size={18}/>新しく作成</button>}</div>
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
-        {page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} selectedCountry="" countryNames={countryNames} busy={busy||demo}/>}
+        {page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} selectedCountry="" countryNames={countryNames} busy={busy||demo}/>}
         {page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>setPage('bank')} busy={busy} demo={demo} error={error} saveStage={saveStage}/>}
       </main></div>
+      {inspection && <ReviewDialog question={inspection} photos={inspectionPhotos} loading={inspectionLoading} loadError={inspectionError} busy={busy} onClose={()=>setInspection(null)} onEdit={startEdit} onReview={async(q,status)=>{const done=await review(q,status);if(done)setInspection(null);}}/>}
     </>}
   </div>;
 }
