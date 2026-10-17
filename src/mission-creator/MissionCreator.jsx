@@ -225,38 +225,71 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
   </div>;
 }
 
+async function loadStoredPhotos(question, session, onPhoto, onProgress) {
+  const count = question.type === 'photo4' ? 4 : question.type === 'photo1' ? 1 : 0;
+  if (!count) return;
+  const media = Array.isArray(question.media) ? question.media : [];
+  const slots = new Set(media.map(item => Number(item.slot)));
+  if (media.length !== count || slots.size !== count ||
+      Array.from({length:count},(_,i)=>i+1).some(i=>!slots.has(i))) {
+    throw Error('保存済み写真の登録情報が不足しています。');
+  }
+  const failures = [];
+  for (let i = 0; i < media.length; i++) {
+    const item = media[i];
+    const slot = Number(item.slot);
+    if (onProgress) onProgress('写真 ' + (i+1) + '/' + media.length + ' を読み込んでいます…');
+    try {
+      const result = await creatorRequest('getMedia',
+        {questionId:question.id, slot}, session);
+      if (!result || typeof result.base64 !== 'string' || !result.base64) {
+        throw Error('画像データが空です');
+      }
+      onPhoto(slot, {
+        preview:'data:image/webp;base64,' + result.base64,
+        name:item.fileName
+      });
+    } catch (err) {
+      failures.push('写真'+slot+'：'+(err?.message || '取得失敗'));
+    }
+  }
+  if (failures.length) throw Error(failures.join(' ／ '));
+}
+
 function QuestionBank({ questions, user, onEdit, onReview, onInspect, selectedCountry, countryNames, busy }) {
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState('');
   const visible = questions.filter(q => (filter === 'all' || q.status === filter) && (!selectedCountry || q.countryIso === selectedCountry) && [q.prompt, q.countryName, q.authorName, q.domain].join(' ').toLowerCase().includes(search.toLowerCase()));
   return <section className="mc-card mc-section"><div className="mc-section-top"><div><div className="mc-eyebrow">MISSION BANK</div><h2>集まった問題</h2></div><span className="mc-count">{formatNumber(visible.length)} 件</span></div>
     <div className="mc-filter-row"><label className="mc-search"><Search size={18}/><input placeholder="国・内容・作成者で検索" value={search} onChange={e => setSearch(e.target.value)}/></label><select value={filter} onChange={e => setFilter(e.target.value)}><option value="all">すべての状態</option>{Object.entries(statusJa).map(([id,v])=><option key={id} value={id}>{v}</option>)}</select></div>
-    {visible.length === 0 ? <p className="mc-empty">該当する問題はありません。</p> : <div className="mc-bank-list">{visible.slice(0, 200).map(q => <article className="mc-question-row" key={q.id}><div className="mc-question-main"><div className="mc-question-meta"><span className="mc-status">{statusJa[q.status] || q.status}</span> {countryNames[q.countryIso] || q.countryName} · {DOMAINS.find(d => d[0]===q.domain)?.[1] || q.domain} · 作成：{q.authorName}</div><h3>{q.prompt || '（問題文未入力）'}</h3><small>{TYPES.find(t => t[0]===q.type)?.[1]}　{q.updatedAt ? `最終更新：${q.updatedAt.slice(0,10)}` : ''}</small>{q.reviewNote && <p className="mc-review-note">管理者からのコメント：{q.reviewNote}</p>}</div><div className="mc-question-actions">{(user?.role === 'admin' || user?.id === q.authorId) && <button className="mc-outline mc-small" type="button" onClick={()=>onEdit(q)}><Pencil size={15}/>編集</button>}{user?.role === 'admin' && <><button className="mc-small mc-outline" type="button" onClick={()=>onInspect(q)}><Search size={15}/>内容・出典確認</button><button className="mc-small mc-outline" type="button" disabled={busy} onClick={()=>onReview(q,'needs_revision')}>差し戻し</button><button className="mc-small mc-primary" type="button" disabled={busy || q.status !== 'submitted'} onClick={()=>onInspect(q)}>確認して承認</button></>}</div></article>)}</div>}
+    {visible.length === 0 ? <p className="mc-empty">該当する問題はありません。</p> : <div className="mc-bank-list">{visible.slice(0, 200).map(q => <article className="mc-question-row" key={q.id}><div className="mc-question-main"><div className="mc-question-meta"><span className="mc-status">{statusJa[q.status] || q.status}</span> {countryNames[q.countryIso] || q.countryName} · {DOMAINS.find(d => d[0]===q.domain)?.[1] || q.domain} · 作成：{q.authorName}</div><h3>{q.prompt || '（問題文未入力）'}</h3><small>{TYPES.find(t => t[0]===q.type)?.[1]}　{q.updatedAt ? `最終更新：${q.updatedAt.slice(0,10)}` : ''}</small>{q.reviewNote && <p className="mc-review-note">管理者からのコメント：{q.reviewNote}</p>}</div><div className="mc-question-actions">{(user?.role === 'admin' || user?.id === q.authorId) && <button className="mc-outline mc-small" type="button" onClick={()=>onEdit(q)}><Pencil size={15}/>編集</button>}<button className="mc-small mc-outline" type="button" onClick={()=>onInspect(q)}><Search size={15}/>{user?.role === 'admin' ? '内容・出典確認' : '問題・写真を見る'}</button>{user?.role === 'admin' && <><button className="mc-small mc-outline" type="button" disabled={busy} onClick={()=>onReview(q,'needs_revision')}>差し戻し</button><button className="mc-small mc-primary" type="button" disabled={busy || q.status !== 'submitted'} onClick={()=>onInspect(q)}>確認して承認</button></>}</div></article>)}</div>}
     {visible.length > 200 && <p className="mc-hint">先頭200件まで表示しています。検索条件を絞ってください。</p>}
   </section>;
 }
 
 // Administrators can review the actual stored images, correct answer, sources and notes
 // before approving; the private images are loaded through the authenticated API.
-function ReviewDialog({ question, photos, loading, loadError, busy, onClose, onReview, onEdit }) {
+function ReviewDialog({ question, photos, loading, loadingText, loadError, busy, onClose, onReview, onEdit, onRetry, isAdmin, canEdit }) {
   useEffect(() => {
     const onEscape = event => { if (event.key === 'Escape') onClose(); };
     document.addEventListener('keydown', onEscape);
     return () => document.removeEventListener('keydown', onEscape);
   }, [onClose]);
   return <div className="mc-review-backdrop" onMouseDown={e => { if(e.target === e.currentTarget) onClose(); }}>
-    <section role="dialog" aria-modal="true" aria-label="管理者の問題確認" className="mc-review-dialog">
+    <section role="dialog" aria-modal="true" aria-label="問題と写真の確認" className="mc-review-dialog">
       <div className="mc-review-dialog-header">
-        <div><div className="mc-eyebrow">ADMIN REVIEW</div><h2>承認前の内容・出典確認</h2><p>{question.countryName} ・作成：{question.authorName} ・状態：{statusJa[question.status] || question.status}</p></div>
+        <div><div className="mc-eyebrow">{isAdmin ? 'ADMIN REVIEW' : 'TEACHER VIEW'}</div><h2>{isAdmin ? '承認前の内容・出典確認' : 'みんなの問題・写真を確認'}</h2><p>{question.countryName} ・作成：{question.authorName} ・状態：{statusJa[question.status] || question.status}</p></div>
         <button className="mc-outline mc-small" type="button" onClick={onClose} aria-label="閉じる"><X size={17}/>閉じる</button>
       </div>
-      {loading && <p role="status" className="mc-save-progress">保存済みの写真を読み込んでいます…</p>}
-      {loadError && <p role="alert" className="mc-error">{loadError}</p>}
+      {loading && <p role="status" aria-live="polite" className="mc-save-progress">{loadingText || '保存済みの写真を読み込んでいます…'}</p>}
+      {loadError && <div role="alert" className="mc-error"><p>{loadError}</p><button type="button" className="mc-outline mc-small" disabled={loading} onClick={onRetry}>写真を再読み込み</button></div>}
       <div className="mc-review-dialog-body"><QuestionPreview form={question} photos={photos} /></div>
       <div className="mc-review-dialog-actions">
-        <button className="mc-outline" type="button" disabled={busy} onClick={()=>{onClose();onEdit(question);}}><Pencil size={16}/>編集画面を開く</button>
-        <button className="mc-outline" type="button" disabled={busy} onClick={()=>onReview(question,'needs_revision')}>差し戻し</button>
-        <button className="mc-primary" type="button" disabled={busy || loading || Boolean(loadError) || question.status !== 'submitted'} onClick={()=>onReview(question,'approved')}><ShieldCheck size={16}/>承認する</button>
+        {canEdit && <button className="mc-outline" type="button" disabled={busy} onClick={()=>{onClose();onEdit(question);}}><Pencil size={16}/>編集画面を開く</button>}
+        {isAdmin && <>
+          <button className="mc-outline" type="button" disabled={busy} onClick={()=>onReview(question,'needs_revision')}>差し戻し</button>
+          <button className="mc-primary" type="button" disabled={busy || loading || Boolean(loadError) || question.status !== 'submitted'} onClick={()=>onReview(question,'approved')}><ShieldCheck size={16}/>承認する</button>
+        </>}
       </div>
     </section>
   </div>;
@@ -307,6 +340,7 @@ export default function MissionCreator() {
   const [inspectionPhotos, setInspectionPhotos] = useState({});
   const [inspectionLoading, setInspectionLoading] = useState(false);
   const [inspectionError, setInspectionError] = useState('');
+  const [inspectionLoadingText, setInspectionLoadingText] = useState('');
 
   useEffect(()=>{
     if (!session) { setLoadingData(false); return; }
@@ -341,9 +375,22 @@ export default function MissionCreator() {
   const reload=async()=>{if(demo)return;const data=await creatorRequest('bootstrap',{},session);setUser(data.user);setQuestions(data.questions);setProgress(data.progress);};
   const logout=()=>{sessionStorage.removeItem('tp-mc-session');setUser(null);setSession('');setDemo(false);setPhotos({});setError('');};
   const startNew=()=>{setForm({...EMPTY,countryIso:selectedCountry,countryName:countryNames[selectedCountry],countries});setPhotos({});setError('');setPage('editor');};
-  const startEdit=async(q)=>{setError('');setForm({...EMPTY,...q,countries,choices:Array.isArray(q.choices)?[...q.choices,'','',''].slice(0,3):['','',''],sources:Array.isArray(q.sources)?[...q.sources,'',''].slice(0,2):['','']});setPhotos({});setPage('editor');if(demo || !q.media?.length)return;
-    // Preview media by authenticated GAS read; files remain private in Drive.
-    for(const photo of q.media){try{const d=await creatorRequest('getMedia',{questionId:q.id,slot:photo.slot},session);setPhotos(old=>({...old,[photo.slot]:{preview:`data:image/webp;base64,${d.base64}`,name:photo.fileName}}));}catch{/* Preview remains empty; no public Drive link is exposed. */}}
+  const startEdit=async(q)=>{
+    setError('');
+    setForm({...EMPTY,...q,countries,
+      choices:Array.isArray(q.choices)?[...q.choices,'','',''].slice(0,3):['','',''],
+      sources:Array.isArray(q.sources)?[...q.sources,'',''].slice(0,2):['','']});
+    setPhotos({});
+    setPage('editor');
+    if(demo)return;
+    try {
+      await loadStoredPhotos(q,session,(slot,item)=>{
+        setPhotos(old=>old[slot]?.blob ? old : {...old,[slot]:item});
+      });
+    } catch(e) {
+      setError('保存済み写真の読み込みに失敗しました：'
+        +e.message+'。Googleドライブ内の元画像は変更されていません。');
+    }
   };
   const pickPhoto=async(slot,file)=>{try{const next=await optimizeImage(file);setPhotos(old=>{if(old[slot]?.preview?.startsWith('blob:'))URL.revokeObjectURL(old[slot].preview);return {...old,[slot]:{...next,preview:next.previewUrl,name:`${file.name} → WebP (${Math.round(next.blob.size/1024)}KB)`}};});setError('');}catch(e){setError(e.message);}};
   const persist=async(submit)=>{
@@ -378,21 +425,25 @@ export default function MissionCreator() {
     }finally{setBusy(false);setSaveStage('');}
   };
   const inspect=async(q)=>{
-    if(user?.role!=='admin')return;
-    setInspection(q);setInspectionPhotos({});setInspectionError('');
-    const media=Array.isArray(q.media)?q.media:[];
-    if(demo||media.length===0){setInspectionLoading(false);return;}
+    if(!user || (user.role!=='admin' &&
+       q.authorId!==user.id && q.status==='draft'))return;
+    setInspection(q);
+    setInspectionPhotos({});
+    setInspectionError('');
+    setInspectionLoadingText('');
+    if(demo)return;
     setInspectionLoading(true);
-    try{
-      const results=await Promise.allSettled(media.map(async photo=>{
-        const data=await creatorRequest('getMedia',{questionId:q.id,slot:photo.slot},session);
-        return {slot:Number(photo.slot),preview:`data:image/webp;base64,${data.base64}`};
-      }));
-      const done=results.filter(r=>r.status==='fulfilled').map(r=>r.value);
-      setInspectionPhotos(Object.fromEntries(done.map(item=>[item.slot,{preview:item.preview}])));
-      if(results.some(r=>r.status==='rejected'))setInspectionError('一部の写真を読み込めませんでした。画像を確認するまで承認しないでください。');
-    }catch(e){setInspectionError(e.message || '写真の確認に失敗しました。');}
-    finally{setInspectionLoading(false);}
+    try {
+      await loadStoredPhotos(q,session,
+        (slot,item)=>setInspectionPhotos(old=>({...old,[slot]:item})),
+        setInspectionLoadingText);
+    } catch(e) {
+      setInspectionError('写真の読み込みに失敗しました：'
+        +e.message+'。元の写真は上書きされていません。');
+    } finally {
+      setInspectionLoading(false);
+      setInspectionLoadingText('');
+    }
   };
   const review=async(q,status)=>{
     if(status==='approved' && !window.confirm('この問題を承認しますか？'))return false;
@@ -417,7 +468,7 @@ export default function MissionCreator() {
         {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} selectedCountry="" countryNames={countryNames} busy={busy||demo}/>}
         {!loadingData && page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>setPage('bank')} busy={busy} demo={demo} error={error} saveStage={saveStage}/>}
       </main></div>
-      {inspection && <ReviewDialog question={inspection} photos={inspectionPhotos} loading={inspectionLoading} loadError={inspectionError} busy={busy} onClose={()=>setInspection(null)} onEdit={startEdit} onReview={async(q,status)=>{const done=await review(q,status);if(done)setInspection(null);}}/>}
+      {inspection && <ReviewDialog question={inspection} photos={inspectionPhotos} loading={inspectionLoading} loadingText={inspectionLoadingText} loadError={inspectionError} busy={busy} onClose={()=>setInspection(null)} onEdit={startEdit} onRetry={()=>inspect(inspection)} isAdmin={user?.role==='admin'} canEdit={user?.role==='admin'||user?.id===inspection.authorId} onReview={async(q,status)=>{const done=await review(q,status);if(done)setInspection(null);}}/>}
     </>}
   </div>;
 }
