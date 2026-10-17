@@ -72,4 +72,17 @@ assert.equal(call({action:'setProgress',session:teacherSession,countryIso:'rw',d
 assert.equal(call({action:'setProgress',session:adminSession,countryIso:'rw',domain:'time',manualDone:10}).ok,true);
 const dash=call({action:'bootstrap',session:teacherSession});assert.equal(dash.data.questions[0].status,'approved');assert.equal(dash.data.progress['rw:time'],10);
 const m=call({action:'getMedia',session:teacherSession,questionId:qid,slot:1});assert.equal(m.ok,true);assert.equal(m.data.base64,webp);
-console.log('PASS: shared PIN, first-time enrollment, restored device, identity separation, admin invite, roles, photos, review, progress');
+assert.equal(call({action:'deleteQuestion',session:teacherSession,questionId:qid}).ok,false);
+assert.equal(call({action:'deleteQuestion',session:adminSession,questionId:qid}).ok,true);
+const archivedTeacher=call({action:'bootstrap',session:teacherSession});
+assert.equal(archivedTeacher.data.questions.some(q=>q.id===qid),false);
+const archivedAdmin=call({action:'bootstrap',session:adminSession});
+assert.equal(archivedAdmin.data.questions.find(q=>q.id===qid).status,'deleted');
+assert.equal(call({action:'getMedia',session:teacherSession,questionId:qid,slot:1}).ok,false);
+assert.equal(call({action:'getMedia',session:adminSession,questionId:qid,slot:1}).ok,true);
+assert.equal(call({action:'reviewQuestion',session:adminSession,questionId:qid,status:'needs_revision'}).ok,false);
+assert.equal(call({action:'restoreQuestion',session:teacherSession,questionId:qid}).ok,false);
+assert.equal(call({action:'restoreQuestion',session:adminSession,questionId:qid}).ok,true);
+assert.equal(call({action:'bootstrap',session:teacherSession}).data.questions.find(q=>q.id===qid).status,'submitted');
+assert.equal(call({action:'getMedia',session:teacherSession,questionId:qid,slot:1}).ok,true);
+console.log('PASS: login, roles, photos, review, progress, archive and restore');

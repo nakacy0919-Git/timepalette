@@ -26,7 +26,7 @@ const EMPTY = {
   updatedAt: '',
 };
 const statusJa = {
-  draft: '下書き', submitted: '提出済み', needs_revision: '要修正', approved: '承認済み', published: '公開済み',
+  draft: '下書き', submitted: '提出済み', needs_revision: '要修正', approved: '承認済み', published: '公開済み', deleted: '削除済み',
 };
 const formatNumber = (value) => new Intl.NumberFormat('ja-JP').format(value);
 const safeHttp = (url) => /^https?:\/\//i.test(String(url || ''));
@@ -256,13 +256,19 @@ async function loadStoredPhotos(question, session, onPhoto, onProgress) {
   if (failures.length) throw Error(failures.join(' ／ '));
 }
 
-function QuestionBank({ questions, user, onEdit, onReview, onInspect, selectedCountry, countryNames, busy }) {
+function QuestionBank({ questions, user, onEdit, onReview, onInspect, onDelete, onRestore, selectedCountry, countryNames, busy }) {
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState('');
-  const visible = questions.filter(q => (filter === 'all' || q.status === filter) && (!selectedCountry || q.countryIso === selectedCountry) && [q.prompt, q.countryName, q.authorName, q.domain].join(' ').toLowerCase().includes(search.toLowerCase()));
+  const visible = questions.filter(q => (filter === 'all' ? q.status !== 'deleted' : q.status === filter) && (!selectedCountry || q.countryIso === selectedCountry) && [q.prompt, q.countryName, q.authorName, q.domain].join(' ').toLowerCase().includes(search.toLowerCase()));
   return <section className="mc-card mc-section"><div className="mc-section-top"><div><div className="mc-eyebrow">MISSION BANK</div><h2>集まった問題</h2></div><span className="mc-count">{formatNumber(visible.length)} 件</span></div>
-    <div className="mc-filter-row"><label className="mc-search"><Search size={18}/><input placeholder="国・内容・作成者で検索" value={search} onChange={e => setSearch(e.target.value)}/></label><select value={filter} onChange={e => setFilter(e.target.value)}><option value="all">すべての状態</option>{Object.entries(statusJa).map(([id,v])=><option key={id} value={id}>{v}</option>)}</select></div>
-    {visible.length === 0 ? <p className="mc-empty">該当する問題はありません。</p> : <div className="mc-bank-list">{visible.slice(0, 200).map(q => <article className="mc-question-row" key={q.id}><div className="mc-question-main"><div className="mc-question-meta"><span className="mc-status">{statusJa[q.status] || q.status}</span> {countryNames[q.countryIso] || q.countryName} · {DOMAINS.find(d => d[0]===q.domain)?.[1] || q.domain} · 作成：{q.authorName}</div><h3>{q.prompt || '（問題文未入力）'}</h3><small>{TYPES.find(t => t[0]===q.type)?.[1]}　{q.updatedAt ? `最終更新：${q.updatedAt.slice(0,10)}` : ''}</small>{q.reviewNote && <p className="mc-review-note">管理者からのコメント：{q.reviewNote}</p>}</div><div className="mc-question-actions">{(user?.role === 'admin' || user?.id === q.authorId) && <button className="mc-outline mc-small" type="button" onClick={()=>onEdit(q)}><Pencil size={15}/>編集</button>}<button className="mc-small mc-outline" type="button" onClick={()=>onInspect(q)}><Search size={15}/>{user?.role === 'admin' ? '内容・出典確認' : '問題・写真を見る'}</button>{user?.role === 'admin' && <><button className="mc-small mc-outline" type="button" disabled={busy} onClick={()=>onReview(q,'needs_revision')}>差し戻し</button><button className="mc-small mc-primary" type="button" disabled={busy || q.status !== 'submitted'} onClick={()=>onInspect(q)}>確認して承認</button></>}</div></article>)}</div>}
+    <div className="mc-filter-row"><label className="mc-search"><Search size={18}/><input placeholder="国・内容・作成者で検索" value={search} onChange={e => setSearch(e.target.value)}/></label><select value={filter} onChange={e => setFilter(e.target.value)}><option value="all">すべての状態</option>{Object.entries(statusJa).filter(([id])=>user?.role==='admin'||id!=='deleted').map(([id,v])=><option key={id} value={id}>{v}</option>)}</select></div>
+    {visible.length === 0 ? <p className="mc-empty">該当する問題はありません。</p> : <div className="mc-bank-list">{visible.slice(0, 200).map(q => <article className="mc-question-row" key={q.id}><div className="mc-question-main"><div className="mc-question-meta"><span className="mc-status">{statusJa[q.status] || q.status}</span> {countryNames[q.countryIso] || q.countryName} · {DOMAINS.find(d => d[0]===q.domain)?.[1] || q.domain} · 作成：{q.authorName}</div><h3>{q.prompt || '（問題文未入力）'}</h3><small>{TYPES.find(t => t[0]===q.type)?.[1]}　{q.updatedAt ? `最終更新：${q.updatedAt.slice(0,10)}` : ''}</small>{q.reviewNote && <p className="mc-review-note">管理者からのコメント：{q.reviewNote}</p>}</div><div className="mc-question-actions">{(user?.role === 'admin' || user?.id === q.authorId) && q.status !== 'deleted' && <button className="mc-outline mc-small" type="button" onClick={()=>onEdit(q)}><Pencil size={15}/>編集</button>}<button className="mc-small mc-outline" type="button" onClick={()=>onInspect(q)}><Search size={15}/>{user?.role === 'admin' ? '内容・出典確認' : '問題・写真を見る'}</button>{user?.role === 'admin' && (q.status === 'deleted'
+ ? <button type="button" className="mc-outline mc-small" disabled={busy} onClick={()=>onRestore(q)}>復元</button>
+ : <>
+   <button className="mc-small mc-outline" type="button" disabled={busy || q.status === 'published'} onClick={()=>onReview(q,'needs_revision')}>差し戻し</button>
+   <button className="mc-small mc-primary" type="button" disabled={busy || q.status !== 'submitted'} onClick={()=>onInspect(q)}>確認して承認</button>
+   {['submitted','needs_revision','approved'].includes(q.status) && <button type="button" className="mc-small mc-outline" style={{color:'#af2c36',borderColor:'#e8b4bb'}} disabled={busy} onClick={()=>onDelete(q)}>削除</button>}
+ </>)}</div></article>)}</div>}
     {visible.length > 200 && <p className="mc-hint">先頭200件まで表示しています。検索条件を絞ってください。</p>}
   </section>;
 }
@@ -302,7 +308,7 @@ function Dashboard({ countries, selectedCountry, setSelectedCountry, questions, 
     for (const q of questions) {
       const key = `${q.countryIso}:${q.domain}`;
       out[key] ||= { submitted: 0, approved: 0 };
-      if (q.status !== 'draft') out[key].submitted += 1;
+      if (!['draft','deleted'].includes(q.status)) out[key].submitted += 1;
       if (['approved', 'published'].includes(q.status)) out[key].approved += 1;
     }
     return out;
@@ -310,7 +316,7 @@ function Dashboard({ countries, selectedCountry, setSelectedCountry, questions, 
   const getValue = (iso, domain) => Math.min(TARGET, Math.max(Number(progress[`${iso}:${domain}`] || 0), totals[`${iso}:${domain}`]?.approved || 0));
   const overall = countries.reduce((a, c) => a + DOMAINS.reduce((b, [d]) => b + getValue(c.iso, d), 0), 0);
   const country = countries.find(c => c.iso === selectedCountry);
-  return <div className="mc-stack"><div className="mc-summary-grid"><div className="mc-stat"><span>対象国</span><strong>{countries.length}</strong><small>国・地域の登録数</small></div><div className="mc-stat"><span>制作目標</span><strong>{formatNumber(countries.length * 60)}</strong><small>6カテゴリー × 10問</small></div><div className="mc-stat"><span>完成として登録</span><strong>{formatNumber(overall)}</strong><small>承認・管理者の完成登録</small></div><div className="mc-stat"><span>提出済み</span><strong>{formatNumber(questions.filter(q => q.status !== 'draft').length)}</strong><small>下書きを除く投稿数</small></div></div>
+  return <div className="mc-stack"><div className="mc-summary-grid"><div className="mc-stat"><span>対象国</span><strong>{countries.length}</strong><small>国・地域の登録数</small></div><div className="mc-stat"><span>制作目標</span><strong>{formatNumber(countries.length * 60)}</strong><small>6カテゴリー × 10問</small></div><div className="mc-stat"><span>完成として登録</span><strong>{formatNumber(overall)}</strong><small>承認・管理者の完成登録</small></div><div className="mc-stat"><span>提出済み</span><strong>{formatNumber(questions.filter(q => !['draft','deleted'].includes(q.status)).length)}</strong><small>下書きを除く投稿数</small></div></div>
     <section className="mc-card mc-section"><div className="mc-section-top"><div><div className="mc-eyebrow">COUNTRY PROGRESS</div><h2>国ごとの制作状況</h2></div><Globe2 size={24}/></div>
       <div className="mc-filter-row"><label className="mc-search"><Search size={18}/><input value={filter} onChange={e=>setFilter(e.target.value)} placeholder="国を検索"/></label><CountryPicker countries={countries} value={selectedCountry} onChange={setSelectedCountry} label="制作進捗を表示する国" /></div>
       {country && <div className="mc-progress-grid">{DOMAINS.map(([domain,label])=>{const key=`${country.iso}:${domain}`;const value=getValue(country.iso,domain);const count=totals[key] || { submitted: 0, approved: 0 };return <article className="mc-progress-card" key={domain}><span>{label}</span><strong>{value}<small>/10</small></strong><ProgressBadge value={value}/><small>提出 {count.submitted} ／ 承認 {count.approved}</small>{user?.role==='admin' && ['place','time'].includes(domain) && <div className="mc-manual-progress"><label>自作分の完成数</label><input type="number" min="0" max="10" defaultValue={Number(progress[key]||0)} key={`${key}-${progress[key]}`} id={`progress-${domain}`} /><button disabled={busy} className="mc-outline mc-small" onClick={()=>onSetProgress(country.iso,domain,document.getElementById(`progress-${domain}`).value)}>登録</button></div>}</article>})}</div>}
@@ -451,6 +457,18 @@ export default function MissionCreator() {
     if(status==='needs_revision'&&reviewNote===null)return false;
     try{await act('reviewQuestion',{questionId:q.id,status,reviewNote});await reload();return true;}catch{/* shown */return false;}
   };
+  const archiveQuestion=async(q)=>{
+    if(user?.role!=='admin'||busy)return;
+    if(!window.confirm('この問題を削除済みに移動しますか？\n\n'+q.countryName+'：'+String(q.prompt||'').slice(0,90)+'\n\n写真は残り、復元できます。'))return;
+    try{await act('deleteQuestion',{questionId:q.id});await reload();}
+    catch{/* error displayed by act */}
+  };
+  const restoreQuestion=async(q)=>{
+    if(user?.role!=='admin'||busy)return;
+    if(!window.confirm('この問題を提出済みとして復元しますか？'))return;
+    try{await act('restoreQuestion',{questionId:q.id});await reload();}
+    catch{/* error displayed by act */}
+  };
   const setManual=async(countryIso,domain,count)=>{try{await act('setProgress',{countryIso,domain,manualDone:Number(count)});await reload();}catch{/* shown */}};
   const active=demo||user;
   return <div className="mc-root">
@@ -458,14 +476,14 @@ export default function MissionCreator() {
       <header className="mc-header"><div className="mc-header-brand"><Compass size={24}/> <strong>TimePalette</strong><span>MISSION CREATOR</span></div><div className="mc-header-user"><span>{demo?'デモ（保存不可）':`${user.name} ／ ${user.role==='admin'?'管理者':'参加教師'}`}</span><button type="button" className="mc-quiet" onClick={logout}><LogOut size={17}/>終了</button></div></header>
       <div className="mc-app"><aside className="mc-sidebar"><nav>
         {[['dashboard',LayoutDashboard,'制作進捗'],['bank',BookOpen,'みんなの問題'],['editor',FilePlus2,'問題を作る']].map(([id,Icon,label])=><button key={id} className={page===id?'active':''} type="button" onClick={()=>id==='editor'?startNew(): (setPage(id),setError(''))}><Icon size={18}/>{label}</button>)}
-        {user?.role==='admin' && <div className="mc-admin-hint"><ShieldCheck size={17}/>問題一覧で全問題の編集・承認ができます。</div>}
+        {user?.role==='admin' && <div className="mc-admin-hint"><ShieldCheck size={17}/>問題一覧で問題の編集・承認・削除・復元ができます。</div>}
       </nav><p>Google Sheets ＋ Drive 連携<br/>Chrome / Edge 推奨</p></aside><main className="mc-main">
         {demo && <div className="mc-demo-banner"><CircleHelp size={18}/>これは操作確認用の画面です。写真のWebP変換とプレビューを試せますが、保存・承認はできません。</div>}
         <div className="mc-main-heading"><div><div className="mc-eyebrow">GLOBAL COLLABORATION</div><h1>{page==='dashboard'?'制作進捗':page==='bank'?'みんなの問題':'問題を作る'}</h1><p>197か国 × 6カテゴリー × 各10問を、世界の先生たちと作る。</p></div>{page!=='editor'&&<button className="mc-primary" type="button" onClick={startNew}><FilePlus2 size={18}/>新しく作成</button>}</div>
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
         {!loadingData && page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
-        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} selectedCountry="" countryNames={countryNames} busy={busy||demo}/>}
+        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onDelete={archiveQuestion} onRestore={restoreQuestion} selectedCountry="" countryNames={countryNames} busy={busy||demo}/>}
         {!loadingData && page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>setPage('bank')} busy={busy} demo={demo} error={error} saveStage={saveStage}/>}
       </main></div>
       {inspection && <ReviewDialog question={inspection} photos={inspectionPhotos} loading={inspectionLoading} loadingText={inspectionLoadingText} loadError={inspectionError} busy={busy} onClose={()=>setInspection(null)} onEdit={startEdit} onRetry={()=>inspect(inspection)} isAdmin={user?.role==='admin'} canEdit={user?.role==='admin'||user?.id===inspection.authorId} onReview={async(q,status)=>{const done=await review(q,status);if(done)setInspection(null);}}/>}

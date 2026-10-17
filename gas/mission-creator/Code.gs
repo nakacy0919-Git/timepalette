@@ -194,7 +194,7 @@ function tpBootstrap_(user) {
   const qs=tpRows_('Questions'),media=tpRows_('Media'),progress=tpRows_('Progress');
   // MVP supports <= 2,000 submissions. Add pagination before a wider rollout.
   if(qs.length>2000)throw Error('一覧が大きくなりました。管理者がページ分割を設定してください。');
-  return {user,questions:qs.filter(q=>user.role==='admin'||q.authorId===user.id||q.status!=='draft').map(q=>{
+  return {user,questions:qs.filter(q=>(user.role==='admin'||q.status!=='deleted')&&(user.role==='admin'||q.authorId===user.id||q.status!=='draft')).map(q=>{
     const item=tpOutputQuestion_(q,media);
     if(user.role!=='admin'&&q.authorId!==user.id)item.reviewNote='';
     return item;
@@ -211,6 +211,7 @@ function tpSaveQuestion_(args,user) {
   return tpWithLock_(()=>{
     const previous=id?tpQuestion_(id):null;
     if(id&&!previous)throw Error('編集対象が見つかりませんでした。');
+    if(previous && previous.status==='deleted')throw Error('削除済みの問題は復元してから編集してください。');
     if(previous && user.role!=='admin' && previous.authorId!==user.id)throw Error('他の先生の問題は編集できません。');
     if(previous && user.role!=='admin' && ['approved','published'].includes(previous.status))throw Error('承認後の修正は管理者へご相談ください。');
     const now=tpNow_();
@@ -225,12 +226,13 @@ function tpUpload_(args,user) {
   const q=tpQuestion_(id);
   if(!q || (user.role!=='admin' && q.authorId!==user.id))throw Error('画像を追加する権限がありません。');
   if(user.role!=='admin'&&['approved','published'].includes(q.status))throw Error('承認済みの問題には追加できません。');
+  if(q.status==='deleted')throw Error('削除済みの問題には写真を追加できません。');
   if(!['photo4','photo1'].includes(q.type)||(q.type==='photo1'&&slot!==1))throw Error('写真のスロットを確認してください。');
   const bytes=Utilities.base64Decode(base64);
   if(bytes.length<16||bytes.length>1228800||String.fromCharCode(...bytes.slice(0,4))!=='RIFF'||String.fromCharCode(...bytes.slice(8,12))!=='WEBP')throw Error('WebP画像は1.2MB以下でアップロードしてください。');
   return tpWithLock_(()=>{
     const latest=tpQuestion_(id);
-    if(!latest||(user.role!=='admin'&&['approved','published'].includes(latest.status)))throw Error('編集権限がありません。');
+    if(!latest||latest.status==='deleted'||(user.role!=='admin'&&['approved','published'].includes(latest.status)))throw Error('編集権限がありません。');
     const name=q.id+'_P0'+slot+'.webp';
     const file=tpMediaFolder_().createFile(Utilities.newBlob(bytes,'image/webp',name));
     // The folder is PRIVATE, and no public file-sharing permission is set.
@@ -246,7 +248,7 @@ function tpSubmit_(args,user) {
   return tpWithLock_(()=>{
     const q=tpQuestion_(args.questionId);
     if(!q||(user.role!=='admin'&&q.authorId!==user.id))throw Error('問題が見つかりません。');
-    if(['approved','published'].includes(q.status))throw Error('承認済みの問題は再提出できません。');
+    if(['approved','published','deleted'].includes(q.status))throw Error('承認済み・削除済みの問題は再提出できません。');
     if(!q.prompt || !q.countryIso || !q.domain)throw Error('国・カテゴリー・問題文を入力してください。');
     if(q.type==='text4'&&(!q.answer||tpParse_(q.choicesJson).filter(Boolean).length!==3))throw Error('4択の正答と誤答3つが必要です。');
     if(q.type==='photo4'&&tpRows_('Media').filter(m=>m.questionId===q.id).length!==4)throw Error('写真4択には画像4枚が必要です。');
@@ -261,10 +263,28 @@ function tpReview_(args,user) {
   return tpWithLock_(()=>{
     const q=tpQuestion_(args.questionId);
     if(!q)throw Error('問題が見つかりません。');
-    if(q.status==='published')throw Error('公開済み問題は変更できません。');
+    if(['published','deleted'].includes(q.status))throw Error('公開済み・削除済みの問題は審査を変更できません。');
     if(!q.prompt||!q.countryIso)throw Error('未完成の問題です。');
     if(args.status==='approved'&&q.status!=='submitted')throw Error('提出済みの問題のみ承認できます。');
     q.status=args.status;q.updatedAt=tpNow_();q.reviewNote=String(args.reviewNote||'').slice(0,1000);
+    tpReplace_('Questions',TP_QHEAD,q._row,q);
+    return {questionId:q.id,status:q.status};
+  });
+}
+function tpSetDeleted_(args,user,restore){
+  tpAdmin_(user);
+  return tpWithLock_(()=>{
+    const q=tpQuestion_(args.questionId);
+    if(!q)throw Error('対象の問題が見つかりません。');
+    if(restore){
+      if(q.status!=='deleted')throw Error('削除済みだけ復元できます。');
+      q.status='submitted';
+    }else{
+      if(!['submitted','needs_revision','approved'].includes(q.status))
+        throw Error('提出済みの問題のみ削除できます。');
+      q.status='deleted';
+    }
+    q.updatedAt=tpNow_();
     tpReplace_('Questions',TP_QHEAD,q._row,q);
     return {questionId:q.id,status:q.status};
   });
@@ -282,7 +302,7 @@ function tpProgress_(args,user) {
 }
 function tpGetMedia_(args,user) {
   const q=tpQuestion_(args.questionId);
-  if(!q || (user.role!=='admin'&&q.authorId!==user.id&&q.status==='draft'))throw Error('問題が見つかりません。');
+  if(!q || (user.role!=='admin'&&(q.status==='deleted'||(q.authorId!==user.id&&q.status==='draft'))))throw Error('問題が見つかりません。');
   const media=tpRows_('Media').find(m=>m.questionId===q.id&&Number(m.slot)===Number(args.slot));
   if(!media)throw Error('写真が見つかりません。');
   const blob=DriveApp.getFileById(media.fileId).getBlob();
@@ -308,6 +328,8 @@ function doPost(e) {
       case 'reviewQuestion':data=tpReview_(body,user);break;
       case 'setProgress':data=tpProgress_(body,user);break;
       case 'getMedia':data=tpGetMedia_(body,user);break;
+      case 'deleteQuestion':data=tpSetDeleted_(body,user,false);break;
+      case 'restoreQuestion':data=tpSetDeleted_(body,user,true);break;
       default:throw Error('Unsupported action');
     }
     return tpResponse_({ok:true,data});
