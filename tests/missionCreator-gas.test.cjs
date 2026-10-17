@@ -71,6 +71,12 @@ assert.equal(call({action:'saveQuestion',session:teacherSession,question:{id:qid
 assert.equal(call({action:'setProgress',session:teacherSession,countryIso:'rw',domain:'time',manualDone:10}).ok,false);
 assert.equal(call({action:'setProgress',session:adminSession,countryIso:'rw',domain:'time',manualDone:10}).ok,true);
 const dash=call({action:'bootstrap',session:teacherSession});assert.equal(dash.data.questions[0].status,'approved');assert.equal(dash.data.progress['rw:time'],10);
+const batch=call({action:'getMediaBatch',
+  session:teacherSession,questionId:qid});
+assert.equal(batch.ok,true);
+assert.equal(batch.data.photos.length,4);
+assert.equal(batch.data.photos.find(p=>p.slot===1).base64,webp);
+assert.equal(batch.data.errors.length,0);
 const m=call({action:'getMedia',session:teacherSession,questionId:qid,slot:1});assert.equal(m.ok,true);assert.equal(m.data.base64,webp);
 assert.equal(call({action:'deleteQuestion',session:teacherSession,questionId:qid}).ok,false);
 assert.equal(call({action:'deleteQuestion',session:adminSession,questionId:qid}).ok,true);

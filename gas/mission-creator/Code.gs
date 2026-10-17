@@ -300,14 +300,52 @@ function tpProgress_(args,user) {
     return row;
   });
 }
+function tpGetMediaBatch_(args,user) {
+    const q=tpQuestion_(args.questionId);
+    if(!q || (user.role!=='admin' &&
+      (q.status==='deleted' ||
+      (q.authorId!==user.id && q.status==='draft'))))
+      throw Error('問題が見つかりません。');
+
+    const rows=tpRows_('Media')
+      .filter(m=>m.questionId===q.id)
+      .sort((a,b)=>Number(a.slot)-Number(b.slot));
+
+    const photos=[],errors=[];
+    let total=0;
+
+    for(const item of rows){
+      const slot=Number(item.slot);
+      if(![1,2,3,4].includes(slot))continue;
+      try{
+        const bytes=DriveApp.getFileById(item.fileId)
+          .getBlob().getBytes();
+
+        if(bytes.length>1228800)
+          throw Error('画像サイズ超過');
+
+        if(total+bytes.length>2400000)
+          throw Error('一括取得容量超過');
+
+        total+=bytes.length;
+        photos.push({
+          slot,
+          base64:Utilities.base64Encode(bytes)
+        });
+      }catch(e){
+        errors.push({slot,message:'個別取得が必要です'});
+      }
+    }
+    return {photos,errors};
+  }
 function tpGetMedia_(args,user) {
   const q=tpQuestion_(args.questionId);
   if(!q || (user.role!=='admin'&&(q.status==='deleted'||(q.authorId!==user.id&&q.status==='draft'))))throw Error('問題が見つかりません。');
   const media=tpRows_('Media').find(m=>m.questionId===q.id&&Number(m.slot)===Number(args.slot));
   if(!media)throw Error('写真が見つかりません。');
-  const blob=DriveApp.getFileById(media.fileId).getBlob();
-  if(blob.getBytes().length>1228800)throw Error('画像が大きすぎます。');
-  return {base64:Utilities.base64Encode(blob.getBytes()),mime:'image/webp'};
+  const bytes=DriveApp.getFileById(media.fileId).getBlob().getBytes();
+  if(bytes.length>1228800)throw Error('画像が大きすぎます。');
+  return {base64:Utilities.base64Encode(bytes),mime:'image/webp'};
 }
 function tpResponse_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
@@ -327,6 +365,7 @@ function doPost(e) {
       case 'submitQuestion':data=tpSubmit_(body,user);break;
       case 'reviewQuestion':data=tpReview_(body,user);break;
       case 'setProgress':data=tpProgress_(body,user);break;
+      case 'getMediaBatch':data=tpGetMediaBatch_(body,user);break;
       case 'getMedia':data=tpGetMedia_(body,user);break;
       case 'deleteQuestion':data=tpSetDeleted_(body,user,false);break;
       case 'restoreQuestion':data=tpSetDeleted_(body,user,true);break;

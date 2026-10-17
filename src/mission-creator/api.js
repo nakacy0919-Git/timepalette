@@ -11,7 +11,9 @@ export class CreatorApiError extends Error {
 export async function creatorRequest(action, payload = {}, session = '') {
   let response;
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 40000);
+  const timeoutMs = action === 'getMediaBatch' ? 16000
+    : action === 'getMedia' ? 19000 : 40000;
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
   try {
     response = await fetch(ENDPOINT, {
       method: 'POST',
@@ -21,7 +23,7 @@ export async function creatorRequest(action, payload = {}, session = '') {
     });
   } catch (error) {
     if (error?.name === 'AbortError') {
-      throw new CreatorApiError('Google連携が40秒以内に応答しませんでした。通信またはGoogle側の処理を確認してください。', 'timeout');
+      throw new CreatorApiError('Google連携が制限時間内に応答しませんでした。通信またはGoogle側の処理を確認してください。', 'timeout');
     }
     throw new CreatorApiError('接続できませんでした。通信環境を確認してください。', 'network');
   } finally {

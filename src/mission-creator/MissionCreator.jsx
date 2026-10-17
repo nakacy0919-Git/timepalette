@@ -225,35 +225,69 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
   </div>;
 }
 
-async function loadStoredPhotos(question, session, onPhoto, onProgress) {
-  const count = question.type === 'photo4' ? 4 : question.type === 'photo1' ? 1 : 0;
-  if (!count) return;
-  const media = Array.isArray(question.media) ? question.media : [];
-  const slots = new Set(media.map(item => Number(item.slot)));
-  if (media.length !== count || slots.size !== count ||
-      Array.from({length:count},(_,i)=>i+1).some(i=>!slots.has(i))) {
+async function loadStoredPhotos(question,session,onPhoto,onProgress){
+  const count=question.type==='photo4'?4:question.type==='photo1'?1:0;
+  if(!count)return;
+
+  const media=Array.isArray(question.media)?question.media:[];
+  const missing=new Map(media.map(p=>[Number(p.slot),p]));
+
+  if(missing.size!==count ||
+    Array.from({length:count},(_,i)=>i+1).some(slot=>!missing.has(slot)))
     throw Error('保存済み写真の登録情報が不足しています。');
-  }
-  const failures = [];
-  for (let i = 0; i < media.length; i++) {
-    const item = media[i];
-    const slot = Number(item.slot);
-    if (onProgress) onProgress('写真 ' + (i+1) + '/' + media.length + ' を読み込んでいます…');
-    try {
-      const result = await creatorRequest('getMedia',
-        {questionId:question.id, slot}, session);
-      if (!result || typeof result.base64 !== 'string' || !result.base64) {
-        throw Error('画像データが空です');
+
+  let batchError='';
+  onProgress?.('写真'+count+'枚をまとめて読み込んでいます…');
+
+  try{
+    const result=await creatorRequest(
+      'getMediaBatch',{questionId:question.id},session
+    );
+    if(!Array.isArray(result?.photos))
+      throw Error('一括取得の応答が不正です');
+
+    for(const photo of result.photos){
+      const slot=Number(photo.slot);
+      if(missing.has(slot) && typeof photo.base64==='string'
+         && photo.base64.length>0){
+        onPhoto(slot,{
+          preview:'data:image/webp;base64,'+photo.base64,
+          name:missing.get(slot).fileName
+        });
+        missing.delete(slot);
       }
-      onPhoto(slot, {
-        preview:'data:image/webp;base64,' + result.base64,
-        name:item.fileName
-      });
-    } catch (err) {
-      failures.push('写真'+slot+'：'+(err?.message || '取得失敗'));
     }
+  }catch(err){
+    batchError=err?.message||'一括取得失敗';
   }
-  if (failures.length) throw Error(failures.join(' ／ '));
+
+  if(missing.size===0)return;
+
+  onProgress?.('残り'+missing.size+'枚を並行して再取得しています…');
+
+  const failures=await Promise.all(
+    [...missing.entries()].map(async ([slot,item])=>{
+      try{
+        const result=await creatorRequest(
+          'getMedia',{questionId:question.id,slot},session
+        );
+        if(!result?.base64)throw Error('空の画像データ');
+        onPhoto(slot,{
+          preview:'data:image/webp;base64,'+result.base64,
+          name:item.fileName
+        });
+        return null;
+      }catch(err){
+        return '写真'+slot+'：'+(err?.message||'取得失敗');
+      }
+    })
+  );
+
+  const errors=failures.filter(Boolean);
+  if(errors.length){
+    throw Error(errors.join(' ／ ')+
+      (batchError?'（一括取得：'+batchError+'）':''));
+  }
 }
 
 function QuestionBank({ questions, user, onEdit, onReview, onInspect, onDelete, onRestore, selectedCountry, countryNames, busy }) {
