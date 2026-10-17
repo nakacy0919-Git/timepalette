@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, BookOpen, Camera, CheckCircle2, CircleHelp, Clock3, Compass, FilePlus2, Globe2, LayoutDashboard, LockKeyhole, LogOut, Pencil, Search, ShieldCheck, UploadCloud } from 'lucide-react';
 import { getWorldLearningCountries } from '../utils/worldLearningRegistry';
 import { creatorRequest } from './api';
@@ -33,8 +33,66 @@ const safeHttp = (url) => /^https?:\/\//i.test(String(url || ''));
 
 function useCountries() {
   return useMemo(() => getWorldLearningCountries().map((c) => ({
-    iso: c.iso.toLowerCase(), name: c.nameJa, flag: c.flagEmoji,
+    iso: c.iso.toLowerCase(), name: c.nameJa, nameEn: c.nameEn, flag: c.flagEmoji, flagUrl: c.flagUrl,
   })), []);
+}
+
+// Actual flag images are used instead of relying on Windows rendering of flag emoji
+// inside a native <select>. The source URLs come from TimePalette's country data.
+function CountryFlag({ country }) {
+  const [failed, setFailed] = useState(false);
+  useEffect(() => { setFailed(false); }, [country?.flagUrl]);
+  const title = country ? `${country.name}の国旗` : '国旗';
+  return <span className="mc-country-flag" role="img" aria-label={title}>
+    {country?.flagUrl && !failed
+      ? <img src={country.flagUrl} alt="" loading="lazy" onError={() => setFailed(true)} />
+      : <span aria-hidden="true">{country?.flag || '🌍'}</span>}
+  </span>;
+}
+
+// Searchable picker: 197 country flags are visible in the menu on desktop and tablet.
+function CountryPicker({ countries, value, onChange, label = '国を選択' }) {
+  const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState('');
+  const rootRef = useRef(null);
+  const inputRef = useRef(null);
+  const selected = countries.find(c => c.iso === value);
+  const normalizedQuery = query.trim().toLocaleLowerCase();
+  const matches = countries.filter(c =>
+    !normalizedQuery || [c.name, c.nameEn, c.iso].some(s =>
+      String(s || '').toLocaleLowerCase().includes(normalizedQuery))
+  );
+  useEffect(() => {
+    if (!open) return undefined;
+    const onPointer = e => { if (!rootRef.current?.contains(e.target)) setOpen(false); };
+    const onKey = e => { if (e.key === 'Escape') setOpen(false); };
+    document.addEventListener('pointerdown', onPointer);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('pointerdown', onPointer);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+  const toggle = () => {
+    setOpen(v => !v);
+    setQuery('');
+    if (!open) window.requestAnimationFrame(() => inputRef.current?.focus());
+  };
+  return <div className="mc-country-picker" ref={rootRef}>
+    <button type="button" className="mc-country-trigger" aria-haspopup="listbox" aria-expanded={open} aria-label={label} onClick={toggle}>
+      {selected ? <><CountryFlag country={selected}/><span className="mc-country-selected-name">{selected.name}</span></> : <span>国を選択</span>}
+      <span className="mc-country-trigger-chevron" aria-hidden="true">⌄</span>
+    </button>
+    {open && <div className="mc-country-popover">
+      <input ref={inputRef} type="search" className="mc-country-search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="国名・英語名・国コードで検索" aria-label="国を検索" />
+      <div className="mc-country-options" role="listbox" aria-label={label}>
+        {matches.length ? matches.map(c => <button type="button" role="option" aria-selected={c.iso === value} className={'mc-country-option'+(c.iso===value?' selected':'')} key={c.iso} onClick={()=>{onChange(c.iso);setOpen(false);setQuery('');}}>
+          <CountryFlag country={c}/><span className="mc-country-option-name">{c.name}</span><small>{c.iso.toUpperCase()}</small>
+        </button>) : <p className="mc-country-empty">該当する国がありません。</p>}
+      </div>
+      <div className="mc-country-option-count">{matches.length} / {countries.length} か国</div>
+    </div>}
+  </div>;
 }
 
 function Access({ onLogin, onRegister, onDemo, busy, error, registrationToken, onBack }) {
@@ -111,13 +169,13 @@ function QuestionPreview({ form, photos }) {
   );
 }
 
-function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, busy, demo, error }) {
+function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, busy, demo, error, saveStage }) {
   const update = (k, value) => setForm(prev => ({ ...prev, [k]: value }));
   const photoCount = form.type === 'photo4' ? 4 : form.type === 'photo1' ? 1 : 0;
   return <div className="mc-editor-grid">
     <section className="mc-card mc-section">
       <div className="mc-section-top"><div><div className="mc-eyebrow">MISSION EDITOR</div><h2>{form.id ? '問題を編集' : '新しい問題を作る'}</h2></div><button className="mc-quiet" onClick={onCancel} type="button"><ArrowLeft size={17} />一覧へ</button></div>
-      <div className="mc-fields-row"><label>国 <select value={form.countryIso} onChange={e => update('countryIso', e.target.value)} required>{form.countryIso === '' && <option value="">国を選択</option>}{form.countries?.map(c => <option key={c.iso} value={c.iso}>{c.flag} {c.name}</option>)}</select></label><label>カテゴリー <select value={form.domain} onChange={e => update('domain', e.target.value)}>{DOMAINS.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label></div>
+      <div className="mc-fields-row"><div className="mc-country-field"><span>国</span><CountryPicker countries={form.countries || []} value={form.countryIso} onChange={iso => update('countryIso', iso)} label="問題を作成する国" /></div><label>カテゴリー <select value={form.domain} onChange={e => update('domain', e.target.value)}>{DOMAINS.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label></div>
       <label>問題の形式 <select value={form.type} onChange={e => update('type', e.target.value)}>{TYPES.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label>
       <label>問題文・活動の指示 <textarea rows={4} value={form.prompt} maxLength={2000} onChange={e => update('prompt', e.target.value)} placeholder="例：写真を見て、ネパールで人気の料理を選んでください。" /></label>
       {photoCount > 0 && <div className="mc-stack"><div className="mc-helper-title"><UploadCloud size={18}/> 写真をアップロード</div><p className="mc-muted">写真はこの端末内でWebPに変換されます。4択では①が正答、②〜④が誤答です。ゲーム公開時の表示順は変更できます。</p><div className="mc-upload-grid">{Array.from({ length: photoCount }, (_, i) => i + 1).map(n => <PhotoSlot key={n} slot={n} name={photos[n]?.name} preview={photos[n]?.preview} onPick={onPhoto} busy={busy}/>)}</div></div>}
@@ -128,6 +186,7 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
       <label>解説・出典・アイデア（任意） <textarea rows={3} value={form.notes} onChange={e => update('notes', e.target.value)} placeholder="教材の出典や、写真・Webページをどう使うかなど" /></label>
       <p className="mc-hint">外部サイトの写真や記事を転載・埋め込む場合は、管理者が掲載条件を確認します。</p>
       {error && <p role="alert" className="mc-error">{error}</p>}
+      {busy && saveStage && <p role="status" aria-live="polite" className="mc-save-progress">{saveStage}</p>}
       <div className="mc-actions"><button className="mc-outline" disabled={busy || demo} type="button" onClick={onSave}>{busy ? '保存中…' : '下書きを保存'}</button><button className="mc-primary" disabled={busy || demo} type="button" onClick={onSubmit}>{busy ? '処理中…' : '確認して提出する'}</button></div>
       {demo && <p className="mc-demo-note">デモ中：写真の変換やプレビューは可能ですが、サーバーへの保存・提出はできません。</p>}
     </section>
@@ -163,9 +222,9 @@ function Dashboard({ countries, selectedCountry, setSelectedCountry, questions, 
   const country = countries.find(c => c.iso === selectedCountry);
   return <div className="mc-stack"><div className="mc-summary-grid"><div className="mc-stat"><span>対象国</span><strong>{countries.length}</strong><small>国・地域の登録数</small></div><div className="mc-stat"><span>制作目標</span><strong>{formatNumber(countries.length * 60)}</strong><small>6カテゴリー × 10問</small></div><div className="mc-stat"><span>完成として登録</span><strong>{formatNumber(overall)}</strong><small>承認・管理者の完成登録</small></div><div className="mc-stat"><span>提出済み</span><strong>{formatNumber(questions.filter(q => q.status !== 'draft').length)}</strong><small>下書きを除く投稿数</small></div></div>
     <section className="mc-card mc-section"><div className="mc-section-top"><div><div className="mc-eyebrow">COUNTRY PROGRESS</div><h2>国ごとの制作状況</h2></div><Globe2 size={24}/></div>
-      <div className="mc-filter-row"><label className="mc-search"><Search size={18}/><input value={filter} onChange={e=>setFilter(e.target.value)} placeholder="国を検索"/></label><select value={selectedCountry} onChange={e=>setSelectedCountry(e.target.value)}>{countries.map(c=><option key={c.iso} value={c.iso}>{c.flag} {c.name}</option>)}</select></div>
+      <div className="mc-filter-row"><label className="mc-search"><Search size={18}/><input value={filter} onChange={e=>setFilter(e.target.value)} placeholder="国を検索"/></label><CountryPicker countries={countries} value={selectedCountry} onChange={setSelectedCountry} label="制作進捗を表示する国" /></div>
       {country && <div className="mc-progress-grid">{DOMAINS.map(([domain,label])=>{const key=`${country.iso}:${domain}`;const value=getValue(country.iso,domain);const count=totals[key] || { submitted: 0, approved: 0 };return <article className="mc-progress-card" key={domain}><span>{label}</span><strong>{value}<small>/10</small></strong><ProgressBadge value={value}/><small>提出 {count.submitted} ／ 承認 {count.approved}</small>{user?.role==='admin' && ['place','time'].includes(domain) && <div className="mc-manual-progress"><label>自作分の完成数</label><input type="number" min="0" max="10" defaultValue={Number(progress[key]||0)} key={`${key}-${progress[key]}`} id={`progress-${domain}`} /><button disabled={busy} className="mc-outline mc-small" onClick={()=>onSetProgress(country.iso,domain,document.getElementById(`progress-${domain}`).value)}>登録</button></div>}</article>})}</div>}
-      <h3 className="mc-subheading">ほかの国の一覧</h3><div className="mc-country-list">{countries.filter(c=>c.name.includes(filter) || c.iso.includes(filter.toLowerCase())).slice(0,197).map(c=><button key={c.iso} type="button" className={c.iso===selectedCountry?'mc-country selected':'mc-country'} onClick={()=>{setSelectedCountry(c.iso);window.scrollTo({top:0,behavior:'smooth'});}}><span>{c.flag} {c.name}</span><span>{DOMAINS.reduce((sum,[d])=>sum+getValue(c.iso,d),0)}/60</span></button>)}</div>
+      <h3 className="mc-subheading">ほかの国の一覧</h3><div className="mc-country-list">{countries.filter(c=>c.name.includes(filter) || c.iso.includes(filter.toLowerCase())).map(c=><button key={c.iso} type="button" className={c.iso===selectedCountry?'mc-country selected':'mc-country'} onClick={()=>{setSelectedCountry(c.iso);window.scrollTo({top:0,behavior:'smooth'});}}><span className="mc-country-grid-name"><CountryFlag country={c}/><span>{c.name}</span></span><span>{DOMAINS.reduce((sum,[d])=>sum+getValue(c.iso,d),0)}/60</span></button>)}</div>
     </section>
   </div>;
 }
@@ -179,6 +238,7 @@ export default function MissionCreator() {
   const [demo, setDemo] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
+  const [saveStage, setSaveStage] = useState('');
   const [page, setPage] = useState('dashboard');
   const [questions, setQuestions] = useState([]);
   const [progress, setProgress] = useState({});
@@ -217,11 +277,11 @@ export default function MissionCreator() {
     // Preview media by authenticated GAS read; files remain private in Drive.
     for(const photo of q.media){try{const d=await creatorRequest('getMedia',{questionId:q.id,slot:photo.slot},session);setPhotos(old=>({...old,[photo.slot]:{preview:`data:image/webp;base64,${d.base64}`,name:photo.fileName}}));}catch{/* Preview remains empty; no public Drive link is exposed. */}}
   };
-  const pickPhoto=async(slot,file)=>{try{const next=await optimizeImage(file);setPhotos(old=>{if(old[slot]?.preview?.startsWith('blob:'))URL.revokeObjectURL(old[slot].preview);return {...old,[slot]:{...next,name:`${file.name} → WebP (${Math.round(next.blob.size/1024)}KB)`}};});setError('');}catch(e){setError(e.message);}};
+  const pickPhoto=async(slot,file)=>{try{const next=await optimizeImage(file);setPhotos(old=>{if(old[slot]?.preview?.startsWith('blob:'))URL.revokeObjectURL(old[slot].preview);return {...old,[slot]:{...next,preview:next.previewUrl,name:`${file.name} → WebP (${Math.round(next.blob.size/1024)}KB)`}};});setError('');}catch(e){setError(e.message);}};
   const persist=async(submit)=>{
     if(demo||busy)return;
     if(!form.countryIso || !form.prompt.trim()){setError('国と問題文を入力してください。');return;}
-    setBusy(true);setError('');
+    setBusy(true);setError('');setSaveStage('問題文をGoogleスプレッドシートに保存しています…');
     const country=countries.find(c=>c.iso===form.countryIso);
     try{
       const result=await creatorRequest('saveQuestion',{question:{...form,countryName:country?.name||form.countryName,choices:form.choices,sources:form.sources,countries:undefined}},session);
@@ -229,13 +289,25 @@ export default function MissionCreator() {
       // Keep the server ID if a later image upload fails, so retry does not duplicate the question.
       setForm(prev => ({ ...prev, id: savedId }));
       const total=form.type==='photo4'?4:form.type==='photo1'?1:0;
-      for(let slot=1;slot<=total;slot++){
-        if(photos[slot]?.blob){await creatorRequest('uploadImage',{questionId:savedId,slot,base64:await blobToBase64(photos[slot].blob)},session);}
+      const pendingSlots=Array.from({length:total},(_,index)=>index+1).filter(slot=>Boolean(photos[slot]?.blob));
+      for(let index=0;index<pendingSlots.length;index++){
+        const slot=pendingSlots[index];
+        setSaveStage(`写真 ${index+1}/${pendingSlots.length} をGoogleドライブに保存しています…`);
+        await creatorRequest('uploadImage',{questionId:savedId,slot,base64:await blobToBase64(photos[slot].blob)},session);
+        // A successful photo is already on Drive. Do not upload it again if a later step fails.
+        setPhotos(prev => prev[slot]?.blob===photos[slot].blob
+          ? {...prev,[slot]:{...prev[slot],blob:undefined}}
+          : prev);
       }
-      if(submit)await creatorRequest('submitQuestion',{questionId:savedId},session);
+      if(submit){
+        setSaveStage('提出処理を完了しています…');
+        await creatorRequest('submitQuestion',{questionId:savedId},session);
+      }
+      setSaveStage('保存した問題の一覧を更新しています…');
       await reload();setPage('bank');setPhotos({});setError('');
-    }catch(e){setError(e.message);}
-    finally{setBusy(false);}
+    }catch(e){
+      setError(`${e.message} 保存済みの問題や写真が残っている可能性があります。「みんなの問題」の状態を確認してから再試行してください。`);
+    }finally{setBusy(false);setSaveStage('');}
   };
   const review=async(q,status)=>{
     if(status==='approved' && !window.confirm('この問題を承認しますか？'))return;
@@ -257,7 +329,7 @@ export default function MissionCreator() {
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
         {page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} selectedCountry="" countryNames={countryNames} busy={busy||demo}/>}
-        {page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>setPage('bank')} busy={busy} demo={demo} error={error}/>}
+        {page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>setPage('bank')} busy={busy} demo={demo} error={error} saveStage={saveStage}/>}
       </main></div>
     </>}
   </div>;
