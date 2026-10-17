@@ -95,7 +95,7 @@ function CountryPicker({ countries, value, onChange, label = '国を選択' }) {
   </div>;
 }
 
-function Access({ onLogin, onRegister, onDemo, busy, error, registrationToken, onBack }) {
+function Access({ onLogin, onRegister, busy, error, registrationToken, onBack }) {
   const [pin, setPin] = useState('');
   const [name, setName] = useState('');
   const [adminMode, setAdminMode] = useState(() => Boolean(new URLSearchParams(window.location.search).get('invite')));
@@ -124,8 +124,8 @@ function Access({ onLogin, onRegister, onDemo, busy, error, registrationToken, o
         </form>
         {error && <p role="alert" className="mc-error">{error}</p>}
         {registrationToken ? <button type="button" className="mc-text-btn" onClick={onBack}>ログインに戻る</button> : <>
-          <button className="mc-text-btn" type="button" onClick={onDemo}>画面だけ試す（デモ・保存不可）</button>
-          <button className="mc-text-btn" type="button" onClick={() => { setAdminMode(v => !v); setPin(''); }}>{adminMode ? '先生用のログインに戻る' : '管理者の方はこちら'}</button>
+
+          <button className="mc-text-btn" type="button" onClick={() => { setAdminMode(v => !v); setPin(''); }}>{adminMode ? '先生用のログインに戻る' : '管理者ログインはこちら'}</button>
         </>}
         <p className="mc-hint"><LockKeyhole size={14}/>先生用のパスコードは関係者にのみお伝えください。管理者の承認は別のログインが必要です。</p>
       </div>
@@ -396,7 +396,7 @@ export default function MissionCreator() {
   const setManual=async(countryIso,domain,count)=>{try{await act('setProgress',{countryIso,domain,manualDone:Number(count)});await reload();}catch{/* shown */}};
   const active=demo||user;
   return <div className="mc-root">
-    {!active ? <Access onLogin={login} onRegister={register} registrationToken={registrationToken} onBack={()=>{setRegistrationToken('');setError('');}} busy={busy} error={error} onDemo={()=>{setDemo(true);setUser({id:'DEMO',name:'デモ',role:'teacher'});setError('');}}/> : <>
+    {!active ? <Access onLogin={login} onRegister={register} registrationToken={registrationToken} onBack={()=>{setRegistrationToken('');setError('');}} busy={busy} error={error}/> : <>
       <header className="mc-header"><div className="mc-header-brand"><Compass size={24}/> <strong>TimePalette</strong><span>MISSION CREATOR</span></div><div className="mc-header-user"><span>{demo?'デモ（保存不可）':`${user.name} ／ ${user.role==='admin'?'管理者':'参加教師'}`}</span><button type="button" className="mc-quiet" onClick={logout}><LogOut size={17}/>終了</button></div></header>
       <div className="mc-app"><aside className="mc-sidebar"><nav>
         {[['dashboard',LayoutDashboard,'制作進捗'],['bank',BookOpen,'みんなの問題'],['editor',FilePlus2,'問題を作る']].map(([id,Icon,label])=><button key={id} className={page===id?'active':''} type="button" onClick={()=>id==='editor'?startNew(): (setPage(id),setError(''))}><Icon size={18}/>{label}</button>)}
