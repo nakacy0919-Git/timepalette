@@ -1,0 +1,19 @@
+TimePalette Mission Creator - READY package (2026-10-17)
+
+EASIEST INSTALL: download TimePalette_Mission_Creator_OneClick_SIMPLE_PIN.ps1, then run
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$HOME\Downloads\TimePalette_Mission_Creator_OneClick_SIMPLE_PIN.ps1"
+
+OR (ZIP only) run one line:
+Expand-Archive -LiteralPath "$HOME\Downloads\TimePalette_Mission_Creator_SIMPLE_PIN_20261017.zip" -DestinationPath "$HOME\Downloads\TimePalette_MC_Package" -Force; powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$HOME\Downloads\TimePalette_MC_Package\INSTALL_WINDOWS.ps1"
+
+REPLACE after backup: vite.config.js
+ADD: mission-creator.html, src/mission-creator/**, api/mission-creator.js,
+gas/mission-creator/Code.gs, tests/missionCreator-*.test.*,
+.env.mission-creator.example, MISSION_CREATOR_SETUP.md, INSTALL_WINDOWS.ps1, PATCH_FILES.txt
+
+NEVER MODIFY: src/App.jsx, index.html, src/data/**, existing mission/game code.
+
+REQUIREMENTS: Git, Node 22.12+/24+, npm; clean Git worktree.
+GAS still needs manual setup for real saving.
+
+TEACHER LOGIN CHANGE: shared 4-digit PIN; first use sets display name and device token. Admin remains invite+PIN.
