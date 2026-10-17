@@ -49,6 +49,9 @@ import PlaceAdventureLauncher
 import TimeAdventureLauncher
   from './TimeAdventureLauncher';
 
+import LanguageAdventureLauncher
+  from './LanguageAdventureLauncher';
+
 
 /* =========================================================
    PLAYABLE MISSION TYPES
@@ -2305,6 +2308,14 @@ export default function WorldMissionPanel({
   );
 
 
+  const [
+    languageAdventureOpen,
+    setLanguageAdventureOpen,
+  ] = useState(
+    false
+  );
+
+
   const missionData =
     getMissionCountryData(
       fileLetter,
@@ -2639,6 +2650,35 @@ export default function WorldMissionPanel({
 
         return;
       }
+
+      if (
+        String(
+          countryCode
+        ).toLowerCase() ===
+          'rw' &&
+        domainId ===
+          'language'
+      ) {
+        /*
+         * Language Adventure has its own full-screen portal.
+         * Keep the parent panel out of the legacy mission-list view
+         * while the portal is opening.
+         */
+        setSelectedDomain(
+          null
+        );
+
+        setActiveMission(
+          null
+        );
+
+        setLanguageAdventureOpen(
+          true
+        );
+
+        return;
+      }
+
 
       const adventurePackage =
         getWorldAdventureDomainPackage(
@@ -4176,6 +4216,41 @@ export default function WorldMissionPanel({
         }}
       />
 
+      <LanguageAdventureLauncher
+        open={
+          languageAdventureOpen
+        }
+        learningLevel={
+          selectedLearningLevel
+        }
+        countryCode={
+          countryCode
+        }
+        onProgressChange={() => {
+          setProgressRevision(
+            (
+              value
+            ) =>
+              value +
+              1
+          );
+        }}
+        onClose={() => {
+          playUiSound(
+            'back'
+          );
+
+          setLanguageAdventureOpen(
+            false
+          );
+
+          setSelectedDomain(
+            null
+          );
+
+          moveToLauncher();
+        }}
+      />
     </section>
   );
 }
