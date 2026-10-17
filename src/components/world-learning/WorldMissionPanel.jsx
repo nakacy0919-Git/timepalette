@@ -52,6 +52,9 @@ import TimeAdventureLauncher
 import LanguageAdventureLauncher
   from './LanguageAdventureLauncher';
 
+import LifeCultureAdventureLauncher
+  from './LifeCultureAdventureLauncher';
+
 
 /* =========================================================
    PLAYABLE MISSION TYPES
@@ -2316,6 +2319,14 @@ export default function WorldMissionPanel({
   );
 
 
+  const [
+    lifeCultureAdventureOpen,
+    setLifeCultureAdventureOpen,
+  ] = useState(
+    false
+  );
+
+
   const missionData =
     getMissionCountryData(
       fileLetter,
@@ -2673,6 +2684,36 @@ export default function WorldMissionPanel({
         );
 
         setLanguageAdventureOpen(
+          true
+        );
+
+        return;
+      }
+
+
+      /*
+       * ===========================================
+       * RWANDA LIFE & CULTURE ADVENTURE v1
+       * ===========================================
+       */
+
+      if (
+        String(
+          countryCode
+        ).toLowerCase() ===
+          'rw' &&
+        domainId ===
+          'lifeCulture'
+      ) {
+        setSelectedDomain(
+          null
+        );
+
+        setActiveMission(
+          null
+        );
+
+        setLifeCultureAdventureOpen(
           true
         );
 
@@ -4215,6 +4256,43 @@ export default function WorldMissionPanel({
           moveToLauncher();
         }}
       />
+
+      <LifeCultureAdventureLauncher
+        open={
+          lifeCultureAdventureOpen
+        }
+        learningLevel={
+          selectedLearningLevel
+        }
+        countryCode={
+          countryCode
+        }
+        onProgressChange={() => {
+          setProgressRevision(
+            (
+              value
+            ) =>
+              value +
+              1
+          );
+        }}
+        onClose={() => {
+          playUiSound(
+            'back'
+          );
+
+          setLifeCultureAdventureOpen(
+            false
+          );
+
+          setSelectedDomain(
+            null
+          );
+
+          moveToLauncher();
+        }}
+      />
+
 
       <LanguageAdventureLauncher
         open={

@@ -1,0 +1,758 @@
+{
+  "rw": {
+    "countryCode": "rw",
+    "domain": "lifeCulture",
+    "version": "1.0.0",
+    "title": {
+      "ja": "ルワンダ 生活文化アドベンチャー",
+      "en": "Rwanda Life & Culture Adventure"
+    },
+    "description": {
+      "ja": "JICA海外協力隊の世界日記やルワンダ政府資料を読み、暮らし・食・交通・市場・文化をゲームで発見します。",
+      "en": "Read authentic sources and discover everyday life in Rwanda through games."
+    },
+    "missions": [
+      {
+        "id": "rw-lifeCulture-m1",
+        "domain": "lifeCulture",
+        "type": "source-game",
+        "points": 16,
+        "icon": "🏫",
+        "title": "SCHOOL DAY TIME QUEST",
+        "titleJa": "学校の1日を並べよう",
+        "prompt": "右のJICA世界日記を読んで、ルワンダの学校の1日を正しい順番に並べよう。",
+        "action": "記事の中から「朝・休み時間・昼・放課後」の手がかりを探そう。",
+        "source": {
+          "title": "甘いもの好き？それとも、辛いもの好き？～配属先の紹介～",
+          "organization": "JICA海外協力隊の世界日記",
+          "author": "松岡 怜奈",
+          "url": "https://world-diary.jica.go.jp/matsuokarena/culture/post.php",
+          "embed": true,
+          "published": "2021-11-18"
+        },
+        "references": [
+          {
+            "label": "JICA世界日記",
+            "title": "甘いもの好き？それとも、辛いもの好き？～配属先の紹介～",
+            "url": "https://world-diary.jica.go.jp/matsuokarena/culture/post.php"
+          }
+        ],
+        "interaction": {
+          "type": "timeline-order",
+          "items": [
+            {
+              "id": "a",
+              "label": "1時間目が始まる",
+              "detail": "7:20",
+              "order": 1
+            },
+            {
+              "id": "b",
+              "label": "Break timeで甘いteaを飲む",
+              "detail": "午前中・20分",
+              "order": 2
+            },
+            {
+              "id": "c",
+              "label": "先生たちと昼食を食べる",
+              "detail": "ビュッフェ形式",
+              "order": 3
+            },
+            {
+              "id": "d",
+              "label": "最後の授業が終わる",
+              "detail": "17:00",
+              "order": 4
+            }
+          ]
+        },
+        "success": {
+          "headline": "SCHOOL DAY DISCOVERED!",
+          "discovery": "授業は40分。朝7:20から始まり、最後の授業は17:00に終わります。"
+        }
+      },
+      {
+        "id": "rw-lifeCulture-m2",
+        "domain": "lifeCulture",
+        "type": "source-game",
+        "points": 16,
+        "icon": "🍲",
+        "title": "RWANDAN FOOD MATCH",
+        "titleJa": "食べものカードをマッチ！",
+        "prompt": "家庭料理の記事を読み、食材・料理と説明を正しくつなげよう。",
+        "action": "左のカードと右の説明を1組ずつマッチしよう。",
+        "source": {
+          "title": "ルワンダの家庭料理",
+          "organization": "JICA海外協力隊の世界日記",
+          "author": "田口 雄太",
+          "url": "https://world-diary.jica.go.jp/taguchiyuta/life/post_2.php",
+          "embed": true,
+          "published": "2022-08-10"
+        },
+        "references": [
+          {
+            "label": "JICA世界日記",
+            "title": "ルワンダの家庭料理",
+            "url": "https://world-diary.jica.go.jp/taguchiyuta/life/post_2.php"
+          }
+        ],
+        "interaction": {
+          "type": "card-match",
+          "pairs": [
+            {
+              "id": "beans",
+              "left": "🫘 豆",
+              "right": "主食としてよく使われる"
+            },
+            {
+              "id": "ibitoke",
+              "left": "🍌 イビトチ",
+              "right": "火を通して食べる調理用バナナ"
+            },
+            {
+              "id": "maize",
+              "left": "🌽 トウモロコシ",
+              "right": "主食の一つ"
+            },
+            {
+              "id": "igisafuria",
+              "left": "🍲 イジサフリア",
+              "right": "肉・バナナ・豆などを煮込む家庭料理"
+            }
+          ]
+        },
+        "success": {
+          "headline": "FOOD MATCH COMPLETE!",
+          "discovery": "豆・芋・トウモロコシ・調理用バナナなどがルワンダの食生活を支えています。"
+        }
+      },
+      {
+        "id": "rw-lifeCulture-m3",
+        "domain": "lifeCulture",
+        "type": "source-game",
+        "points": 18,
+        "icon": "🚌",
+        "title": "MOVE AROUND RWANDA",
+        "titleJa": "移動手段を使い分けよう",
+        "prompt": "JICA世界日記を読み、場面に合う交通手段をマッチしよう。",
+        "action": "徒歩・イガーレ・モト・バスの特徴を記事から探そう。",
+        "source": {
+          "title": "生活の足～交通手段について",
+          "organization": "JICA海外協力隊の世界日記",
+          "author": "小郷 智子",
+          "url": "https://world-diary.jica.go.jp/ogotomoko/person/post_11.php",
+          "embed": true,
+          "published": "2018-03-29"
+        },
+        "references": [
+          {
+            "label": "JICA世界日記",
+            "title": "生活の足～交通手段について",
+            "url": "https://world-diary.jica.go.jp/ogotomoko/person/post_11.php"
+          }
+        ],
+        "interaction": {
+          "type": "card-match",
+          "pairs": [
+            {
+              "id": "walk",
+              "left": "🚶 徒歩",
+              "right": "日常の基本的な移動"
+            },
+            {
+              "id": "igare",
+              "left": "🚲 イガーレ",
+              "right": "近場や荷物運びにも使う自転車タクシー"
+            },
+            {
+              "id": "moto",
+              "left": "🏍️ モト",
+              "right": "急ぐ時や遠方・山あいにも便利"
+            },
+            {
+              "id": "bus",
+              "left": "🚌 バス",
+              "right": "主要都市から地方へ向かう長距離交通"
+            }
+          ]
+        },
+        "success": {
+          "headline": "TRANSPORT MASTER!",
+          "discovery": "距離・荷物・道路状況に合わせて、さまざまな移動手段が使われています。"
+        }
+      },
+      {
+        "id": "rw-lifeCulture-m4",
+        "domain": "lifeCulture",
+        "type": "source-game",
+        "points": 18,
+        "icon": "🧺",
+        "title": "FRIDAY MARKET HUNT",
+        "titleJa": "金曜日の市場で証拠探し",
+        "prompt": "市場の記事を読み、「記事に本当に書かれていること」を4つ見つけよう。",
+        "action": "思い込みではなく、右の記事を根拠に選ぼう。",
+        "source": {
+          "title": "ルワンダ版花金？金曜日に賑わう市場",
+          "organization": "JICA海外協力隊の世界日記",
+          "author": "松岡 怜奈",
+          "url": "https://world-diary.jica.go.jp/matsuokarena/life/post_9.php",
+          "embed": true,
+          "published": "2022-08-30"
+        },
+        "references": [
+          {
+            "label": "JICA世界日記",
+            "title": "ルワンダ版花金？金曜日に賑わう市場",
+            "url": "https://world-diary.jica.go.jp/matsuokarena/life/post_9.php"
+          }
+        ],
+        "interaction": {
+          "type": "multi-evidence",
+          "required": 4,
+          "options": [
+            {
+              "id": "f1",
+              "label": "金曜日の午後はお店が増える",
+              "correct": true
+            },
+            {
+              "id": "f2",
+              "label": "他の曜日でも玉ねぎ・トマト・ジャガイモ・米などは買える",
+              "correct": true
+            },
+            {
+              "id": "f3",
+              "label": "金曜日には野菜・果物・キテンゲなどを持った人が集まる",
+              "correct": true
+            },
+            {
+              "id": "f4",
+              "label": "頭の上や自転車で商品を運ぶ人がいる",
+              "correct": true
+            },
+            {
+              "id": "x1",
+              "label": "市場は金曜日以外は完全に閉まっている",
+              "correct": false
+            },
+            {
+              "id": "x2",
+              "label": "商品を運ぶ人は全員自動車を使う",
+              "correct": false
+            }
+          ]
+        },
+        "success": {
+          "headline": "MARKET EVIDENCE FOUND!",
+          "discovery": "金曜日の午後は市場がぐっとにぎやかになり、さまざまな品物と運び方が見られます。"
+        }
+      },
+      {
+        "id": "rw-lifeCulture-m5",
+        "domain": "lifeCulture",
+        "type": "source-game",
+        "points": 18,
+        "icon": "💃",
+        "title": "DANCE & CELEBRATION",
+        "titleJa": "伝統ダンスはいつ踊る？",
+        "prompt": "伝統ダンスの記事を読み、3つの質問に答えよう。",
+        "action": "「いつ・どんな場面で・どう準備するか」を探そう。",
+        "source": {
+          "title": "ルワンダの伝統ダンスを踊ってみた",
+          "organization": "JICA海外協力隊の世界日記",
+          "author": "松岡 怜奈",
+          "url": "https://world-diary.jica.go.jp/matsuokarena/culture/post_10.php",
+          "embed": true,
+          "published": "2022-09-28"
+        },
+        "references": [
+          {
+            "label": "JICA世界日記",
+            "title": "ルワンダの伝統ダンスを踊ってみた",
+            "url": "https://world-diary.jica.go.jp/matsuokarena/culture/post_10.php"
+          }
+        ],
+        "interaction": {
+          "type": "single-choice-flow",
+          "questions": [
+            {
+              "id": "q1",
+              "prompt": "記事では、伝統ダンスはどんな時に披露されると書かれている？",
+              "choices": [
+                {
+                  "label": "イベントや結婚式などのお祝い",
+                  "correct": true
+                },
+                {
+                  "label": "毎朝の通学前",
+                  "correct": false
+                },
+                {
+                  "label": "授業中だけ",
+                  "correct": false
+                }
+              ],
+              "retry": "記事の最初の方に「お祝い時」の説明があります。"
+            },
+            {
+              "id": "q2",
+              "prompt": "この記事でダンスを行ったきっかけは？",
+              "choices": [
+                {
+                  "label": "ボランティアの送別会",
+                  "correct": true
+                },
+                {
+                  "label": "市場の開店",
+                  "correct": false
+                },
+                {
+                  "label": "バスの開通",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "id": "q3",
+              "prompt": "記事では、試合やセレモニーの練習を始める時期についてどんな様子が紹介されている？",
+              "choices": [
+                {
+                  "label": "本番1〜3日前に始めることも多い",
+                  "correct": true
+                },
+                {
+                  "label": "必ず1年前から始める",
+                  "correct": false
+                },
+                {
+                  "label": "練習は一切しない",
+                  "correct": false
+                }
+              ]
+            }
+          ]
+        },
+        "success": {
+          "headline": "CULTURE IN MOTION!",
+          "discovery": "伝統ダンスは、お祝い・イベント・送別など、人が集まる大切な場面で登場します。"
+        }
+      },
+      {
+        "id": "rw-lifeCulture-m6",
+        "domain": "lifeCulture",
+        "type": "source-game",
+        "points": 20,
+        "icon": "🥘",
+        "title": "IGISAFURIA COOKING QUEST",
+        "titleJa": "特別な料理の作り方を追え！",
+        "prompt": "イギサフリアの記事を読み、調理の流れを正しい順番に並べよう。",
+        "action": "材料の準備から煮込み・完成までを追跡しよう。",
+        "source": {
+          "title": "ルワンダ料理～イギサフリアと命の頂き方について",
+          "organization": "JICA海外協力隊の世界日記",
+          "author": "小郷 智子",
+          "url": "https://world-diary.jica.go.jp/ogotomoko/life/post_12.php",
+          "embed": true,
+          "published": "2018-04-18"
+        },
+        "references": [
+          {
+            "label": "JICA世界日記",
+            "title": "ルワンダ料理～イギサフリアと命の頂き方について",
+            "url": "https://world-diary.jica.go.jp/ogotomoko/life/post_12.php"
+          }
+        ],
+        "interaction": {
+          "type": "timeline-order",
+          "items": [
+            {
+              "id": "i1",
+              "label": "材料を準備する",
+              "detail": "肉・イビトチなど",
+              "order": 1
+            },
+            {
+              "id": "i2",
+              "label": "食材を切る",
+              "detail": "野菜や肉を食べやすくする",
+              "order": 2
+            },
+            {
+              "id": "i3",
+              "label": "味付けして水を加える",
+              "detail": "にんにく・ピーナッツ粉・トマト系など",
+              "order": 3
+            },
+            {
+              "id": "i4",
+              "label": "炭火でじっくり煮込む",
+              "detail": "材料に火が通るまで",
+              "order": 4
+            }
+          ]
+        },
+        "success": {
+          "headline": "COOKING QUEST CLEAR!",
+          "discovery": "イギサフリアは、特別な日に家族や客と食べることもある、時間をかけて作る煮込み料理です。"
+        }
+      },
+      {
+        "id": "rw-lifeCulture-m7",
+        "domain": "lifeCulture",
+        "type": "source-game",
+        "points": 20,
+        "icon": "🤝",
+        "title": "UMUGANDA COMMUNITY MISSION",
+        "titleJa": "みんなで地域をよくする",
+        "prompt": "公式資料をもとに、Umuganda（共同作業）の意味と活動をマッチしよう。",
+        "action": "「一緒に働くこと」が地域にどうつながるか考えよう。",
+        "source": {
+          "title": "People & Culture / Umuganda",
+          "organization": "Government of Rwanda",
+          "url": "https://www.gov.rw/about",
+          "embed": false,
+          "summaryPoints": [
+            "ルワンダ政府はUmugandaを「Community work（共同作業）」として紹介しています。",
+            "文化的価値としてunity、social cohesion、hard workなどが挙げられています。",
+            "公的資料では道路、水路、学校、保健施設など地域のための共同作業例が紹介されています。"
+          ]
+        },
+        "references": [
+          {
+            "label": "Government of Rwanda",
+            "title": "About Rwanda — People & Culture",
+            "url": "https://www.gov.rw/about"
+          },
+          {
+            "label": "Rwanda National Police",
+            "title": "Umuganda, Security, Social Cohesion and Development",
+            "url": "https://police.gov.rw/uploads/tx_download/MAGASINE_POLICE_08.pdf"
+          }
+        ],
+        "interaction": {
+          "type": "card-match",
+          "pairs": [
+            {
+              "id": "u1",
+              "left": "🤝 Umuganda",
+              "right": "地域の人が一緒に行うcommunity work"
+            },
+            {
+              "id": "u2",
+              "left": "🛣️ 道路・水路",
+              "right": "共同作業で整備されることがある"
+            },
+            {
+              "id": "u3",
+              "left": "🏫 学校・保健施設",
+              "right": "地域づくりの対象になることがある"
+            },
+            {
+              "id": "u4",
+              "left": "💬 地域の対話",
+              "right": "人々とリーダーが話す機会にもなる"
+            }
+          ]
+        },
+        "success": {
+          "headline": "COMMUNITY POWER!",
+          "discovery": "Umugandaは、地域のために人々が一緒に働くルワンダ独自のcommunity workです。"
+        }
+      },
+      {
+        "id": "rw-lifeCulture-m8",
+        "domain": "lifeCulture",
+        "type": "source-game",
+        "points": 20,
+        "icon": "🌾",
+        "title": "UMUGANURA HARVEST DAY",
+        "titleJa": "収穫を祝う日の意味を探ろう",
+        "prompt": "ルワンダ政府の資料を読み、Umuganuraについて3問に答えよう。",
+        "action": "「収穫」だけでなく、何を一緒に祝う日なのか探そう。",
+        "source": {
+          "title": "Umuganura / Harvest Day",
+          "organization": "Government of Rwanda",
+          "url": "https://www.gov.rw/about",
+          "embed": false,
+          "summaryPoints": [
+            "Umuganuraはharvest day（収穫を祝う日）として紹介されています。",
+            "国のさまざまな成果を祝い、今後さらに努力することを確かめる機会でもあります。",
+            "2026年の公式行事では伝統舞踊、成果の紹介、意見交換、食事を分かち合う場面が報告されています。"
+          ]
+        },
+        "references": [
+          {
+            "label": "Government of Rwanda",
+            "title": "About Rwanda — People & Culture",
+            "url": "https://www.gov.rw/about"
+          },
+          {
+            "label": "Nyarugenge District",
+            "title": "The National Harvest Day (Umuganura) Celebrated in Nyarugenge",
+            "url": "https://nyarugenge.gov.rw/en/news/news-details/the-national-harvest-day-umuganura-celebrated-in-nyarugenge"
+          }
+        ],
+        "interaction": {
+          "type": "single-choice-flow",
+          "questions": [
+            {
+              "id": "q1",
+              "prompt": "Umuganuraは何をもとにした行事？",
+              "choices": [
+                {
+                  "label": "収穫を祝う行事",
+                  "correct": true
+                },
+                {
+                  "label": "自動車の展示会",
+                  "correct": false
+                },
+                {
+                  "label": "入学試験",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "id": "q2",
+              "prompt": "政府資料では、収穫以外に何を祝う日として説明されている？",
+              "choices": [
+                {
+                  "label": "さまざまな分野での成果",
+                  "correct": true
+                },
+                {
+                  "label": "個人の買い物の量",
+                  "correct": false
+                },
+                {
+                  "label": "外国旅行の回数",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "id": "q3",
+              "prompt": "2026年の公式行事で実際に行われたことは？",
+              "choices": [
+                {
+                  "label": "伝統舞踊や食事の分かち合い",
+                  "correct": true
+                },
+                {
+                  "label": "雪合戦",
+                  "correct": false
+                },
+                {
+                  "label": "新幹線の試乗",
+                  "correct": false
+                }
+              ]
+            }
+          ]
+        },
+        "success": {
+          "headline": "HARVEST DAY DISCOVERED!",
+          "discovery": "Umuganuraは、収穫・成果・つながりをみんなで確かめる文化的な行事です。"
+        }
+      },
+      {
+        "id": "rw-lifeCulture-m9",
+        "domain": "lifeCulture",
+        "type": "source-game",
+        "points": 22,
+        "icon": "☕",
+        "title": "COFFEE SURPRISE DETECTIVE",
+        "titleJa": "コーヒーの意外な事実",
+        "prompt": "JICAルワンダ事務所の記事を読み、「書いてある / わからない」に分けよう。",
+        "action": "有名な産品と日常の習慣が同じとは限らない。根拠を探そう。",
+        "source": {
+          "title": "【観光】ルワンダの学校でコーヒーの授業",
+          "organization": "JICA海外協力隊の世界日記・ルワンダ事務所",
+          "author": "JICA Rwanda",
+          "url": "https://world-diary.jica.go.jp/JICA_Rwanda/cat2354/post_3.php",
+          "embed": true
+        },
+        "references": [
+          {
+            "label": "JICA世界日記",
+            "title": "【観光】ルワンダの学校でコーヒーの授業",
+            "url": "https://world-diary.jica.go.jp/JICA_Rwanda/cat2354/post_3.php"
+          }
+        ],
+        "interaction": {
+          "type": "fact-sort",
+          "statements": [
+            {
+              "id": "s1",
+              "text": "ルワンダでは、日常的にコーヒーを飲む習慣はあまり一般的ではない。",
+              "answer": "fact"
+            },
+            {
+              "id": "s2",
+              "text": "小さな売店のアフリカン茶は、カフェのコーヒーより安い例が紹介されている。",
+              "answer": "fact"
+            },
+            {
+              "id": "s3",
+              "text": "ルワンダのすべての人が毎日必ずコーヒーを飲む。",
+              "answer": "assumption"
+            },
+            {
+              "id": "s4",
+              "text": "若い世代を中心にコーヒーへの意識の変化も見られる。",
+              "answer": "fact"
+            }
+          ]
+        },
+        "success": {
+          "headline": "SURPRISE FACT FOUND!",
+          "discovery": "「有名な産品＝みんなの日常習慣」とは限りません。資料で確かめることが大切です。"
+        }
+      },
+      {
+        "id": "rw-lifeCulture-m10",
+        "domain": "lifeCulture",
+        "type": "source-game",
+        "points": 30,
+        "icon": "🎒",
+        "title": "LIFE & CULTURE PASSPORT",
+        "titleJa": "生活文化パスポート FINAL",
+        "prompt": "これまでの資料を思い出し、5問のFinal Challengeをクリアしよう。",
+        "action": "学校・食・交通・地域・文化をつなげて答えよう。",
+        "source": {
+          "title": "Life & Culture Source Gallery",
+          "organization": "JICA / Government of Rwanda",
+          "url": "https://world-diary.jica.go.jp/ogotomoko/life/",
+          "embed": false,
+          "summaryPoints": [
+            "学校生活・食・交通・市場・伝統ダンスはJICA海外協力隊の世界日記を根拠に学びました。",
+            "UmugandaとUmuganuraはルワンダ政府・公的機関の資料を根拠に学びました。",
+            "Finalは「覚えた量」だけでなく、どの資料がどの事実を支えていたかを思い出すChallengeです。"
+          ]
+        },
+        "references": [
+          {
+            "label": "JICA",
+            "title": "学校生活",
+            "url": "https://world-diary.jica.go.jp/matsuokarena/culture/post.php"
+          },
+          {
+            "label": "JICA",
+            "title": "交通手段",
+            "url": "https://world-diary.jica.go.jp/ogotomoko/person/post_11.php"
+          },
+          {
+            "label": "JICA",
+            "title": "市場",
+            "url": "https://world-diary.jica.go.jp/matsuokarena/life/post_9.php"
+          },
+          {
+            "label": "Government of Rwanda",
+            "title": "People & Culture",
+            "url": "https://www.gov.rw/about"
+          }
+        ],
+        "interaction": {
+          "type": "single-choice-flow",
+          "questions": [
+            {
+              "id": "f1",
+              "prompt": "学校の記事で、1時間目が始まる時刻は？",
+              "choices": [
+                {
+                  "label": "7:20",
+                  "correct": true
+                },
+                {
+                  "label": "10:30",
+                  "correct": false
+                },
+                {
+                  "label": "13:00",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "id": "f2",
+              "prompt": "長距離移動の主力として紹介されたものは？",
+              "choices": [
+                {
+                  "label": "バス",
+                  "correct": true
+                },
+                {
+                  "label": "新幹線",
+                  "correct": false
+                },
+                {
+                  "label": "地下鉄",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "id": "f3",
+              "prompt": "金曜日の市場で増えるものは？",
+              "choices": [
+                {
+                  "label": "野菜・果物・キテンゲなどを売る人や店",
+                  "correct": true
+                },
+                {
+                  "label": "雪だるま",
+                  "correct": false
+                },
+                {
+                  "label": "電車のホーム",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "id": "f4",
+              "prompt": "Umugandaは何？",
+              "choices": [
+                {
+                  "label": "地域の共同作業",
+                  "correct": true
+                },
+                {
+                  "label": "料理の名前",
+                  "correct": false
+                },
+                {
+                  "label": "通貨の名前",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "id": "f5",
+              "prompt": "Umuganuraは何を祝う文化とつながっている？",
+              "choices": [
+                {
+                  "label": "収穫と成果",
+                  "correct": true
+                },
+                {
+                  "label": "飛行機の速さ",
+                  "correct": false
+                },
+                {
+                  "label": "冬の雪",
+                  "correct": false
+                }
+              ]
+            }
+          ]
+        },
+        "success": {
+          "headline": "LIFE & CULTURE PASSPORT COMPLETE!",
+          "discovery": "資料を根拠に、ルワンダの暮らし・食・交通・地域・文化をつなげて理解できました。"
+        }
+      }
+    ]
+  }
+}
