@@ -2,6 +2,7 @@ import {
   CalendarClock,
   Clock3,
   ExternalLink,
+  GraduationCap,
   Hourglass,
   Languages,
   Map,
@@ -155,6 +156,49 @@ export default function ToolsMenu({
         )}
 
       </div>
+
+      <a
+        href="/mission-creator.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => {
+          playUiSound('open');
+          onClose?.();
+        }}
+        className="
+          flex
+          items-center
+          justify-between
+          gap-4
+          border-t
+          border-slate-100
+          bg-blue-50/60
+          px-5
+          py-4
+          transition
+          hover:bg-blue-50
+          focus-visible:outline
+          focus-visible:outline-2
+          focus-visible:outline-blue-600
+        "
+      >
+        <div className="flex items-center gap-3">
+          <GraduationCap
+            size={20}
+            strokeWidth={1.7}
+            className="text-blue-700"
+          />
+          <div>
+            <p className="text-sm font-semibold text-slate-900">
+              For Teachers
+            </p>
+            <p className="text-xs text-slate-500">
+              Mission Creator・問題を作成する
+            </p>
+          </div>
+        </div>
+        <ExternalLink size={16} className="text-slate-400" aria-hidden="true" />
+      </a>
 
       <a
         href="https://pacemark.pic-speak-story.com/"

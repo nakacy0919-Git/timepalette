@@ -1,5 +1,7 @@
 import {
   Compass,
+  ExternalLink,
+  GraduationCap,
   Menu,
   Route,
   Trophy,
@@ -508,6 +510,44 @@ export default function MainHeader({
               )}
 
             </div>
+
+            <a
+              href="/mission-creator.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                playUiSound('open');
+                setMobileOpen(false);
+              }}
+              className="
+                mt-3
+                flex
+                w-full
+                items-center
+                justify-between
+                gap-3
+                border
+                border-blue-100
+                bg-blue-50
+                px-4
+                py-4
+                text-left
+                transition
+                hover:bg-blue-100
+                focus-visible:outline
+                focus-visible:outline-2
+                focus-visible:outline-blue-600
+              "
+            >
+              <span className="flex items-center gap-3">
+                <GraduationCap size={20} strokeWidth={1.7} className="text-blue-700" />
+                <span>
+                  <span className="block text-sm font-semibold text-slate-900">For Teachers</span>
+                  <span className="mt-1 block text-xs text-slate-500">Mission Creator・問題を作成する</span>
+                </span>
+              </span>
+              <ExternalLink size={16} className="shrink-0 text-slate-400" aria-hidden="true" />
+            </a>
 
           </div>
 
