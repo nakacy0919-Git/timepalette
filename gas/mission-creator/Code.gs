@@ -306,7 +306,7 @@ function tpGetMedia_(args,user) {
   const media=tpRows_('Media').find(m=>m.questionId===q.id&&Number(m.slot)===Number(args.slot));
   if(!media)throw Error('写真が見つかりません。');
   const blob=DriveApp.getFileById(media.fileId).getBlob();
-  if(blob.getSize()>1228800)throw Error('画像が大きすぎます。');
+  if(blob.getBytes().length>1228800)throw Error('画像が大きすぎます。');
   return {base64:Utilities.base64Encode(blob.getBytes()),mime:'image/webp'};
 }
 function tpResponse_(obj) {
