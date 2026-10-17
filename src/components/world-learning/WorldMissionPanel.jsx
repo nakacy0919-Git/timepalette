@@ -55,6 +55,9 @@ import LanguageAdventureLauncher
 import LifeCultureAdventureLauncher
   from './LifeCultureAdventureLauncher';
 
+import ThinkConnectAdventureLauncher
+  from './ThinkConnectAdventureLauncher';
+
 
 /* =========================================================
    PLAYABLE MISSION TYPES
@@ -2326,6 +2329,13 @@ export default function WorldMissionPanel({
     false
   );
 
+  const [
+    thinkConnectAdventureOpen,
+    setThinkConnectAdventureOpen,
+  ] = useState(
+    false
+  );
+
 
   const missionData =
     getMissionCountryData(
@@ -2714,6 +2724,36 @@ export default function WorldMissionPanel({
         );
 
         setLifeCultureAdventureOpen(
+          true
+        );
+
+        return;
+      }
+
+
+      /*
+       * ===========================================
+       * RWANDA THINK & CONNECT ADVENTURE v1
+       * ===========================================
+       */
+
+      if (
+        String(
+          countryCode
+        ).toLowerCase() ===
+          'rw' &&
+        domainId ===
+          'thinkConnect'
+      ) {
+        setSelectedDomain(
+          null
+        );
+
+        setActiveMission(
+          null
+        );
+
+        setThinkConnectAdventureOpen(
           true
         );
 
@@ -4282,6 +4322,43 @@ export default function WorldMissionPanel({
           );
 
           setLifeCultureAdventureOpen(
+            false
+          );
+
+          setSelectedDomain(
+            null
+          );
+
+          moveToLauncher();
+        }}
+      />
+
+
+      <ThinkConnectAdventureLauncher
+        open={
+          thinkConnectAdventureOpen
+        }
+        learningLevel={
+          selectedLearningLevel
+        }
+        countryCode={
+          countryCode
+        }
+        onProgressChange={() => {
+          setProgressRevision(
+            (
+              value
+            ) =>
+              value +
+              1
+          );
+        }}
+        onClose={() => {
+          playUiSound(
+            'back'
+          );
+
+          setThinkConnectAdventureOpen(
             false
           );
 
