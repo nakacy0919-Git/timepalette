@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, BookOpen, Camera, CheckCircle2, CircleHelp, Clock3, Compass, FilePlus2, Globe2, LayoutDashboard, LockKeyhole, LogOut, Pencil, Search, ShieldCheck, UploadCloud, ChevronDown, ExternalLink, X } from 'lucide-react';
 import { getWorldLearningCountries } from '../utils/worldLearningRegistry';
 import { creatorRequest } from './api';
@@ -290,13 +290,13 @@ async function loadStoredPhotos(question,session,onPhoto,onProgress){
   }
 }
 
-function QuestionBank({ questions, user, onEdit, onReview, onInspect, onDelete, onRestore, selectedCountry, countryNames, busy }) {
+function QuestionBank({ questions, user, onEdit, onReview, onInspect, onPrefetch, onDelete, onRestore, selectedCountry, countryNames, busy }) {
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState('');
   const visible = questions.filter(q => (filter === 'all' ? q.status !== 'deleted' : q.status === filter) && (!selectedCountry || q.countryIso === selectedCountry) && [q.prompt, q.countryName, q.authorName, q.domain].join(' ').toLowerCase().includes(search.toLowerCase()));
   return <section className="mc-card mc-section"><div className="mc-section-top"><div><div className="mc-eyebrow">MISSION BANK</div><h2>集まった問題</h2></div><span className="mc-count">{formatNumber(visible.length)} 件</span></div>
     <div className="mc-filter-row"><label className="mc-search"><Search size={18}/><input placeholder="国・内容・作成者で検索" value={search} onChange={e => setSearch(e.target.value)}/></label><select value={filter} onChange={e => setFilter(e.target.value)}><option value="all">すべての状態</option>{Object.entries(statusJa).filter(([id])=>user?.role==='admin'||id!=='deleted').map(([id,v])=><option key={id} value={id}>{v}</option>)}</select></div>
-    {visible.length === 0 ? <p className="mc-empty">該当する問題はありません。</p> : <div className="mc-bank-list">{visible.slice(0, 200).map(q => <article className="mc-question-row" key={q.id}><div className="mc-question-main"><div className="mc-question-meta"><span className="mc-status">{statusJa[q.status] || q.status}</span> {countryNames[q.countryIso] || q.countryName} · {DOMAINS.find(d => d[0]===q.domain)?.[1] || q.domain} · 作成：{q.authorName}</div><h3>{q.prompt || '（問題文未入力）'}</h3><small>{TYPES.find(t => t[0]===q.type)?.[1]}　{q.updatedAt ? `最終更新：${q.updatedAt.slice(0,10)}` : ''}</small>{q.reviewNote && <p className="mc-review-note">管理者からのコメント：{q.reviewNote}</p>}</div><div className="mc-question-actions">{(user?.role === 'admin' || user?.id === q.authorId) && q.status !== 'deleted' && <button className="mc-outline mc-small" type="button" onClick={()=>onEdit(q)}><Pencil size={15}/>編集</button>}<button className="mc-small mc-outline" type="button" onClick={()=>onInspect(q)}><Search size={15}/>{user?.role === 'admin' ? '内容・出典確認' : '問題・写真を見る'}</button>{user?.role === 'admin' && (q.status === 'deleted'
+    {visible.length === 0 ? <p className="mc-empty">該当する問題はありません。</p> : <div className="mc-bank-list">{visible.slice(0, 200).map(q => <article className="mc-question-row" key={q.id}><div className="mc-question-main"><div className="mc-question-meta"><span className="mc-status">{statusJa[q.status] || q.status}</span> {countryNames[q.countryIso] || q.countryName} · {DOMAINS.find(d => d[0]===q.domain)?.[1] || q.domain} · 作成：{q.authorName}</div><h3>{q.prompt || '（問題文未入力）'}</h3><small>{TYPES.find(t => t[0]===q.type)?.[1]}　{q.updatedAt ? `最終更新：${q.updatedAt.slice(0,10)}` : ''}</small>{q.reviewNote && <p className="mc-review-note">管理者からのコメント：{q.reviewNote}</p>}</div><div className="mc-question-actions">{(user?.role === 'admin' || user?.id === q.authorId) && q.status !== 'deleted' && <button className="mc-outline mc-small" type="button" onClick={()=>onEdit(q)}><Pencil size={15}/>編集</button>}<button className="mc-small mc-outline" type="button" onPointerEnter={()=>onPrefetch(q)} onFocus={()=>onPrefetch(q)} onClick={()=>onInspect(q)}><Search size={15}/>{user?.role === 'admin' ? '内容・出典確認' : '問題・写真を見る'}</button>{user?.role === 'admin' && (q.status === 'deleted'
  ? <button type="button" className="mc-outline mc-small" disabled={busy} onClick={()=>onRestore(q)}>復元</button>
  : <>
    <button className="mc-small mc-outline" type="button" disabled={busy || q.status === 'published'} onClick={()=>onReview(q,'needs_revision')}>差し戻し</button>
@@ -381,6 +381,93 @@ export default function MissionCreator() {
   const [inspectionLoading, setInspectionLoading] = useState(false);
   const [inspectionError, setInspectionError] = useState('');
   const [inspectionLoadingText, setInspectionLoadingText] = useState('');
+  const photoCacheRef=useRef(new Map());
+  const photoPendingRef=useRef(new Map());
+  const photoCacheEpochRef=useRef(0);
+
+  useEffect(()=>{
+    photoCacheEpochRef.current+=1;
+    photoCacheRef.current.clear();
+    photoPendingRef.current.clear();
+  },[session]);
+
+  const loadPhotosFast=useCallback(async(q,onPhoto=()=>{},onProgress)=>{
+    const key=q.id+':'+String(q.updatedAt||'');
+    const saved=photoCacheRef.current.get(key);
+
+    if(saved){
+      for(const [slot,item] of Object.entries(saved))
+        onPhoto(Number(slot),item);
+      return;
+    }
+
+    const existing=photoPendingRef.current.get(key);
+    if(existing){
+      onProgress?.('先読みした写真を表示しています…');
+      const items=await existing;
+      for(const [slot,item] of Object.entries(items))
+        onPhoto(Number(slot),item);
+      return;
+    }
+
+    const epoch=photoCacheEpochRef.current;
+    const collected={};
+
+    const task=loadStoredPhotos(q,session,(slot,item)=>{
+      collected[slot]=item;
+      onPhoto(Number(slot),item);
+    },onProgress).then(()=>{
+      if(photoCacheEpochRef.current===epoch){
+        photoCacheRef.current.set(key,collected);
+        while(photoCacheRef.current.size>4){
+          photoCacheRef.current.delete(
+            photoCacheRef.current.keys().next().value
+          );
+        }
+      }
+      return collected;
+    });
+
+    photoPendingRef.current.set(key,task);
+
+    try{
+      await task;
+    }finally{
+      if(photoPendingRef.current.get(key)===task)
+        photoPendingRef.current.delete(key);
+    }
+  },[session]);
+
+  const prefetchPhotos=useCallback((q)=>{
+    if(!session||!user||loadingData||
+       q.status==='deleted'||!q.media?.length)return;
+    loadPhotosFast(q).catch(()=>{});
+  },[session,user,loadingData,loadPhotosFast]);
+
+  useEffect(()=>{
+    if(!session||!user||loadingData||page!=='bank')return;
+
+    let disposed=false;
+    const candidates=questions
+      .filter(q=>q.status!=='deleted'&&q.media?.length)
+      .slice(0,2);
+
+    const timer=setTimeout(async()=>{
+      for(const q of candidates){
+        if(disposed)break;
+        try{
+          await loadPhotosFast(q);
+        }catch{
+          // Failed prefetch must never block normal browsing.
+        }
+      }
+    },650);
+
+    return ()=>{
+      disposed=true;
+      clearTimeout(timer);
+    };
+  },[session,user,loadingData,page,questions,loadPhotosFast]);
 
   useEffect(()=>{
     if (!session) { setLoadingData(false); return; }
@@ -413,7 +500,7 @@ export default function MissionCreator() {
     sessionStorage.setItem('tp-mc-session',data.session);if(data.user)setUser(data.user);setSession(data.session);setRegistrationToken('');
   }catch(e){setError(e.message);}finally{setBusy(false);}};
   const reload=async()=>{if(demo)return;const data=await creatorRequest('bootstrap',{},session);setUser(data.user);setQuestions(data.questions);setProgress(data.progress);};
-  const logout=()=>{sessionStorage.removeItem('tp-mc-session');setUser(null);setSession('');setDemo(false);setPhotos({});setError('');};
+  const logout=()=>{photoCacheEpochRef.current+=1;photoCacheRef.current.clear();photoPendingRef.current.clear();sessionStorage.removeItem('tp-mc-session');setUser(null);setSession('');setDemo(false);setPhotos({});setError('');};
   const startNew=()=>{setForm({...EMPTY,countryIso:selectedCountry,countryName:countryNames[selectedCountry],countries});setPhotos({});setError('');setPage('editor');};
   const startEdit=async(q)=>{
     setError('');
@@ -424,7 +511,7 @@ export default function MissionCreator() {
     setPage('editor');
     if(demo)return;
     try {
-      await loadStoredPhotos(q,session,(slot,item)=>{
+      await loadPhotosFast(q,(slot,item)=>{
         setPhotos(old=>old[slot]?.blob ? old : {...old,[slot]:item});
       });
     } catch(e) {
@@ -474,7 +561,7 @@ export default function MissionCreator() {
     if(demo)return;
     setInspectionLoading(true);
     try {
-      await loadStoredPhotos(q,session,
+      await loadPhotosFast(q,
         (slot,item)=>setInspectionPhotos(old=>({...old,[slot]:item})),
         setInspectionLoadingText);
     } catch(e) {
@@ -517,7 +604,7 @@ export default function MissionCreator() {
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
         {!loadingData && page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
-        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onDelete={archiveQuestion} onRestore={restoreQuestion} selectedCountry="" countryNames={countryNames} busy={busy||demo}/>}
+        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} selectedCountry="" countryNames={countryNames} busy={busy||demo}/>}
         {!loadingData && page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>setPage('bank')} busy={busy} demo={demo} error={error} saveStage={saveStage}/>}
       </main></div>
       {inspection && <ReviewDialog question={inspection} photos={inspectionPhotos} loading={inspectionLoading} loadingText={inspectionLoadingText} loadError={inspectionError} busy={busy} onClose={()=>setInspection(null)} onEdit={startEdit} onRetry={()=>inspect(inspection)} isAdmin={user?.role==='admin'} canEdit={user?.role==='admin'||user?.id===inspection.authorId} onReview={async(q,status)=>{const done=await review(q,status);if(done)setInspection(null);}}/>}
