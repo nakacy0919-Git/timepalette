@@ -197,9 +197,9 @@ assert.equal(call({action:'uploadImage',session:adminSession,questionId:publicId
 assert.equal(call({action:'reviewQuestion',session:adminSession,questionId:publicId,status:'approved'}).ok,true);
 const publicBefore=JSON.parse(run('doGet')({parameter:{action:'publishedCatalog',countryIso:'rw',domain:'lifeCulture'}}).s);
 assert.equal(publicBefore.data.questions.some(q=>q.id===publicId),false);
-assert.equal(call({action:'setPublication',session:teacherSession,questionId:publicId,mode:'publish',rightsConfirmed:true,rightsBasis:'Self authored, consented'}).ok,false);
-assert.equal(call({action:'setPublication',session:adminSession,questionId:publicId,mode:'publish',rightsConfirmed:false,rightsBasis:'Self authored, consented'}).ok,false);
-assert.equal(call({action:'setPublication',session:adminSession,questionId:publicId,mode:'publish',rightsConfirmed:true,rightsBasis:'Self authored, consented'}).ok,true);
+assert.equal(call({action:'setPublication',session:teacherSession,questionId:publicId,mode:'publish',rightsConfirmed:true}).ok,false);
+assert.equal(call({action:'setPublication',session:adminSession,questionId:publicId,mode:'publish',rightsConfirmed:false}).ok,false);
+assert.equal(call({action:'setPublication',session:adminSession,questionId:publicId,mode:'publish',rightsConfirmed:true}).ok,true);
 const publicAfter=JSON.parse(run('doGet')({parameter:{action:'publishedCatalog',countryIso:'rw',domain:'lifeCulture'}}).s);
 assert.equal(publicAfter.data.questions.find(q=>q.id===publicId).type,'photoText4');
 assert.equal('fileId' in publicAfter.data.questions.find(q=>q.id===publicId),false);

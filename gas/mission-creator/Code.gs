@@ -638,13 +638,11 @@ function tpPublicRelease_(args,user){
     if(mode==='publish'){
       if(q.status!=='approved')throw Error('承認済みの問題のみ公開できます。');
       if(args.rightsConfirmed!==true)throw Error('画像・文章の公開利用権を確認してください。');
-      const basis=String(args.rightsBasis||'').trim().slice(0,350);
-      if(basis.length<5)throw Error('公開できる根拠を5文字以上で入力してください。');
       tpPublicValidate_(q);
       const count=tpRows_('Questions').filter(item=>item.status==='published' &&
         item.countryIso===q.countryIso && item.domain===q.domain).length;
       if(count>=10)throw Error('この国・カテゴリーは公開上限10問です。');
-      tpPublicationAudit_(q,'publish',user,basis);
+      tpPublicationAudit_(q,'publish',user,'admin_confirmed');
       q.status='published';
     }else{
       if(q.status!=='published')throw Error('公開済みの問題のみ公開停止できます。');

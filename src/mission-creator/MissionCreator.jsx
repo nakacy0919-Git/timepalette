@@ -820,21 +820,16 @@ export default function MissionCreator() {
   };
   const publication=async(q,mode)=>{
     if(user?.role!=='admin'||busy||demo)return;
-    let rightsBasis='';
     if(mode==='publish'){
       if(q.countryIso!=='rw'||q.domain!=='lifeCulture'){
         window.alert('初回の公開テストはルワンダの生活・文化のみ対応しています。');return;
       }
-      rightsBasis=window.prompt('写真・文章を一般公開できる根拠を入力してください。例：自身で撮影し掲載許諾を取得済み（キャンセルで中止）','');
-      if(rightsBasis===null)return;
-      rightsBasis=rightsBasis.trim();
-      if(rightsBasis.length<5){window.alert('公開の根拠を5文字以上で記録してください。');return;}
       if(!window.confirm('写真・出典・内容・公開権利を確認済みですか？\nTimePalette本体に公開します。'))return;
     }else if(!window.confirm('この問題をTimePaletteから公開停止しますか？'))return;
     setBusy(true);setError('');
     try{
       const result=await creatorRequest('setPublication',{
-        questionId:q.id,mode,rightsConfirmed:mode==='publish',rightsBasis
+        questionId:q.id,mode,rightsConfirmed:mode==='publish'
       },session);
       setQuestions(previous=>previous.map(item=>item.id===q.id?
         {...item,status:result.status,updatedAt:result.updatedAt}:item));
