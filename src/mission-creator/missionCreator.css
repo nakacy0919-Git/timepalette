@@ -250,3 +250,20 @@
     transition: none;
   }
 }
+
+
+/* Mission bank simplified moderator actions 2026-10-18 */
+.mc-question-actions .mc-quick-pass{min-width:106px}
+.mc-passed-label{display:inline-flex;align-items:center;gap:6px;color:#187346;background:#eefbf3;border:1px solid #bee8cd;border-radius:9px;padding:8px 12px;font-size:.76rem;font-weight:800}
+.mc-bank-more{position:relative;flex:0 0 auto}
+.mc-bank-more>summary{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:36px;padding:7px 12px;border:1px solid #cbd8e7;border-radius:9px;color:#265174;background:#fff;cursor:pointer;list-style:none;font-size:.75rem;font-weight:750}
+.mc-bank-more>summary::-webkit-details-marker{display:none}
+.mc-bank-more>summary:hover{background:#eef6ff}
+.mc-bank-more>summary:focus-visible{outline:3px solid #8dc5f7;outline-offset:2px}
+.mc-bank-more-menu{position:absolute;right:0;bottom:calc(100% + 5px);z-index:12;min-width:155px;display:grid;gap:4px;padding:7px;background:#fff;border:1px solid #d6e3f0;border-radius:11px;box-shadow:0 12px 28px #133e672a}
+.mc-bank-more-menu button{display:flex;align-items:center;gap:9px;width:100%;padding:10px 12px;text-align:left;background:#fff;border:0;border-radius:7px;color:#294763;font-size:.78rem;font-weight:700;white-space:nowrap}
+.mc-bank-more-menu button:hover{background:#eef6ff}
+.mc-bank-more-menu .mc-delete-action{color:#ac2936}
+.mc-bank-more-menu .mc-delete-action:hover{background:#fff0f2}
+.mc-question-row:has(.mc-bank-more[open]){z-index:6}
+@media(max-width:650px){.mc-question-actions .mc-quick-pass{flex:1 1 135px}.mc-bank-more{flex:1 1 auto}.mc-bank-more>summary{width:100%}.mc-bank-more-menu{min-width:160px}}

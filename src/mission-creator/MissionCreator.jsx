@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowLeft, BookOpen, Camera, CheckCircle2, CircleHelp, Clock3, Compass, FilePlus2, Globe2, LayoutDashboard, LockKeyhole, LogOut, Pencil, Search, ShieldCheck, UploadCloud, ChevronDown, ChevronRight, ExternalLink, X } from 'lucide-react';
+import { ArrowLeft, BookOpen, Camera, CheckCircle2, CircleHelp, Clock3, Compass, FilePlus2, Globe2, LayoutDashboard, LockKeyhole, LogOut, Pencil, Search, ShieldCheck, UploadCloud, ChevronDown, ChevronRight, MoreHorizontal, ExternalLink, X } from 'lucide-react';
 import { getWorldLearningCountries } from '../utils/worldLearningRegistry';
 import { creatorRequest } from './api';
 import { blobToBase64, optimizeImage } from './image';
@@ -292,7 +292,7 @@ async function loadStoredPhotos(question,session,onPhoto,onProgress){
 function QuestionBank({
   questions, user, onEdit, onReview, onInspect,
   onPrefetch, onDelete, onRestore,
-  selectedCountry, countryNames, busy
+  selectedCountry, countryNames, busy, reviewingIds
 }) {
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState('');
@@ -407,74 +407,34 @@ function QuestionBank({
               </div>
 
               <div className="mc-question-actions">
-                {(user?.role === 'admin' ||
-                  user?.id === q.authorId) &&
-                  q.status !== 'deleted' && (
-                    <button
-                      className="mc-outline mc-small"
-                      type="button"
-                      onClick={() => onEdit(q)}
-                    >
-                      <Pencil size={15}/>
-                      編集
-                    </button>
-                  )}
-
-                <button
-                  className="mc-outline mc-small"
-                  type="button"
-                  onPointerEnter={() => onPrefetch(q)}
-                  onFocus={() => onPrefetch(q)}
-                  onClick={() => onInspect(q)}
-                >
-                  <Search size={15}/>
-                  {user?.role === 'admin'
-                    ? '内容・出典確認'
-                    : '問題・写真を見る'}
-                </button>
-
-                {user?.role === 'admin' && (
+                {user?.role === 'admin' ? (
                   q.status === 'deleted' ? (
-                    <button
-                      type="button"
-                      className="mc-outline mc-small"
-                      disabled={busy}
-                      onClick={() => onRestore(q)}
-                    >
-                      復元
-                    </button>
+                    <button type="button" className="mc-outline mc-small" disabled={busy} onClick={() => onRestore(q)}>復元</button>
                   ) : (
                     <>
-                      <button
-                        className="mc-small mc-outline"
-                        type="button"
-                        disabled={busy || q.status === 'published'}
-                        onClick={() => onReview(q, 'needs_revision')}
-                      >
-                        差し戻し
-                      </button>
-
-                      <button
-                        className="mc-small mc-primary"
-                        type="button"
-                        disabled={busy || q.status !== 'submitted'}
-                        onClick={() => onInspect(q)}
-                      >
-                        確認して承認
-                      </button>
-
-                      {['submitted', 'needs_revision', 'approved']
-                        .includes(q.status) && (
-                          <button
-                            type="button"
-                            className="mc-small mc-outline mc-delete-action"
-                            disabled={busy}
-                            onClick={() => onDelete(q)}
-                          >
-                            削除
-                          </button>
-                        )}
+                      {['draft','submitted','needs_revision'].includes(q.status) && (
+                        <button type="button" className="mc-primary mc-small mc-quick-pass" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onReview(q,'approved')}>
+                          <CheckCircle2 size={16}/>{reviewingIds?.has(q.id) ? '処理中…' : '合格'}
+                        </button>
+                      )}
+                      {q.status === 'approved' && <span className="mc-passed-label"><CheckCircle2 size={16}/>合格済み</span>}
+                      {!['published','needs_revision'].includes(q.status) && (
+                        <button type="button" className="mc-outline mc-small" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onReview(q,'needs_revision')}>修正依頼</button>
+                      )}
+                      {q.status !== 'published' && (
+                        <details className="mc-bank-more">
+                          <summary aria-label="その他の操作"><MoreHorizontal size={18}/>その他</summary>
+                          <div className="mc-bank-more-menu">
+                            <button type="button" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onEdit(q)}><Pencil size={15}/>編集</button>
+                            <button type="button" className="mc-delete-action" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onDelete(q)}>削除</button>
+                          </div>
+                        </details>
+                      )}
                     </>
+                  )
+                ) : (
+                  user?.id === q.authorId && !['approved','published','deleted'].includes(q.status) && (
+                    <button type="button" className="mc-outline mc-small" disabled={busy} onClick={() => onEdit(q)}><Pencil size={15}/>編集</button>
                   )
                 )}
               </div>
@@ -495,7 +455,7 @@ function QuestionBank({
 
 // Administrators can review the actual stored images, correct answer, sources and notes
 // before approving; the private images are loaded through the authenticated API.
-function ReviewDialog({ question, photos, loading, loadingText, loadError, busy, onClose, onReview, onEdit, onRetry, isAdmin, canEdit }) {
+function ReviewDialog({ question, photos, loading, loadingText, loadError, reviewError, busy, onClose, onReview, onEdit, onRetry, isAdmin, canEdit }) {
   useEffect(() => {
     const onEscape = event => { if (event.key === 'Escape') onClose(); };
     document.addEventListener('keydown', onEscape);
@@ -509,12 +469,13 @@ function ReviewDialog({ question, photos, loading, loadingText, loadError, busy,
       </div>
       {loading && <p role="status" aria-live="polite" className="mc-save-progress">{loadingText || '保存済みの写真を読み込んでいます…'}</p>}
       {loadError && <div role="alert" className="mc-error"><p>{loadError}</p><button type="button" className="mc-outline mc-small" disabled={loading} onClick={onRetry}>写真を再読み込み</button></div>}
+      {reviewError && <p role="alert" className="mc-error">{reviewError}</p>}
       <div className="mc-review-dialog-body"><QuestionPreview form={question} photos={photos} /></div>
       <div className="mc-review-dialog-actions">
         {canEdit && <button className="mc-outline" type="button" disabled={busy} onClick={()=>{onClose();onEdit(question);}}><Pencil size={16}/>編集画面を開く</button>}
         {isAdmin && <>
-          <button className="mc-outline" type="button" disabled={busy} onClick={()=>onReview(question,'needs_revision')}>差し戻し</button>
-          <button className="mc-primary" type="button" disabled={busy || loading || Boolean(loadError) || question.status !== 'submitted'} onClick={()=>onReview(question,'approved')}><ShieldCheck size={16}/>承認する</button>
+          {!['published','needs_revision','deleted'].includes(question.status) && <button className="mc-outline" type="button" disabled={busy} onClick={()=>onReview(question,'needs_revision')}>修正依頼</button>}
+          {['draft','submitted','needs_revision'].includes(question.status) && <button className="mc-primary" type="button" disabled={busy} onClick={()=>onReview(question,'approved')}><CheckCircle2 size={16}/>合格</button>}
         </>}
       </div>
     </section>
@@ -566,6 +527,9 @@ export default function MissionCreator() {
   const [inspectionPhotos, setInspectionPhotos] = useState({});
   const [inspectionLoading, setInspectionLoading] = useState(false);
   const [inspectionError, setInspectionError] = useState('');
+  const [reviewError, setReviewError] = useState('');
+  const [reviewingIds, setReviewingIds] = useState(new Set());
+  const reviewingRef=useRef(new Set());
   const [inspectionLoadingText, setInspectionLoadingText] = useState('');
   const initialBootstrapRef=useRef(null);
   const photoCacheRef=useRef(new Map());
@@ -579,7 +543,11 @@ export default function MissionCreator() {
   },[session]);
 
   const loadPhotosFast=useCallback(async(q,onPhoto=()=>{},onProgress)=>{
-    const key=q.id+':'+String(q.updatedAt||'');
+    // Image timestamps (not review status) determine cache invalidation.
+    const stamp=q.media?.length
+      ? q.media.map(m=>String(m.slot)+':'+String(m.createdAt||q.updatedAt||'')).join('|')
+      : String(q.updatedAt||'');
+    const key=q.id+':'+stamp;
     const saved=photoCacheRef.current.get(key);
 
     if(saved){
@@ -606,7 +574,7 @@ export default function MissionCreator() {
     },onProgress).then(()=>{
       if(photoCacheEpochRef.current===epoch){
         photoCacheRef.current.set(key,collected);
-        while(photoCacheRef.current.size>4){
+        while(photoCacheRef.current.size>8){
           photoCacheRef.current.delete(
             photoCacheRef.current.keys().next().value
           );
@@ -639,16 +607,11 @@ export default function MissionCreator() {
       .filter(q=>q.status!=='deleted'&&q.media?.length)
       .slice(0,2);
 
-    const timer=setTimeout(async()=>{
-      for(const q of candidates){
-        if(disposed)break;
-        try{
-          await loadPhotosFast(q);
-        }catch{
-          // Failed prefetch must never block normal browsing.
-        }
-      }
-    },650);
+    const timer=setTimeout(()=>{
+      if(disposed)return;
+      // Prefetch two nearby photo questions concurrently, never blocking UI.
+      candidates.forEach(q=>{loadPhotosFast(q).catch(()=>{});});
+    },450);
 
     return ()=>{
       disposed=true;
@@ -753,6 +716,7 @@ export default function MissionCreator() {
     setInspection(q);
     setInspectionPhotos({});
     setInspectionError('');
+    setReviewError('');
     setInspectionLoadingText('');
     if(demo)return;
     setInspectionLoading(true);
@@ -769,10 +733,33 @@ export default function MissionCreator() {
     }
   };
   const review=async(q,status)=>{
-    if(status==='approved' && !window.confirm('この問題を承認しますか？'))return false;
-    const reviewNote=status==='needs_revision'?window.prompt('先生への修正コメント（キャンセルで中止）',''):'';
-    if(status==='needs_revision'&&reviewNote===null)return false;
-    try{await act('reviewQuestion',{questionId:q.id,status,reviewNote});await reload();return true;}catch{/* shown */return false;}
+    if(demo || busy || reviewingRef.current.has(q.id))return false;
+    let reviewNote='';
+    if(status==='needs_revision'){
+      const note=window.prompt('修正してほしい内容を入力してください（キャンセルで中止）',q.reviewNote||'');
+      if(note===null)return false;
+      reviewNote=note.trim();
+      if(!reviewNote){window.alert('修正内容を入力してください。');return false;}
+    }
+    reviewingRef.current.add(q.id);
+    setReviewingIds(new Set(reviewingRef.current));
+    setReviewError('');
+    setError('');
+    try{
+      const result=await creatorRequest('reviewQuestion',{questionId:q.id,status,reviewNote},session);
+      const updated={status:result.status,updatedAt:result.updatedAt,reviewNote:result.reviewNote};
+      setQuestions(prev=>prev.map(item=>item.id===q.id?{...item,...updated}:item));
+      setInspection(prev=>prev?.id===q.id?{...prev,...updated}:prev);
+      return true;
+    }catch(e){
+      const message=e?.message||'更新に失敗しました。';
+      setError(message);
+      if(inspection?.id===q.id)setReviewError('合格・修正依頼の処理に失敗しました：'+message);
+      return false;
+    }finally{
+      reviewingRef.current.delete(q.id);
+      setReviewingIds(new Set(reviewingRef.current));
+    }
   };
   const archiveQuestion=async(q)=>{
     if(user?.role!=='admin'||busy)return;
@@ -800,10 +787,10 @@ export default function MissionCreator() {
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
         {!loadingData && page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
-        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} selectedCountry="" countryNames={countryNames} busy={busy||demo}/>}
+        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} selectedCountry="" countryNames={countryNames} busy={busy||demo} reviewingIds={reviewingIds}/>}
         {!loadingData && page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>setPage('bank')} busy={busy} demo={demo} error={error} saveStage={saveStage}/>}
       </main></div>
-      {inspection && <ReviewDialog question={inspection} photos={inspectionPhotos} loading={inspectionLoading} loadingText={inspectionLoadingText} loadError={inspectionError} busy={busy} onClose={()=>setInspection(null)} onEdit={startEdit} onRetry={()=>inspect(inspection)} isAdmin={user?.role==='admin'} canEdit={user?.role==='admin'||user?.id===inspection.authorId} onReview={async(q,status)=>{const done=await review(q,status);if(done)setInspection(null);}}/>}
+      {inspection && <ReviewDialog question={inspection} photos={inspectionPhotos} loading={inspectionLoading} loadingText={inspectionLoadingText} loadError={inspectionError} reviewError={reviewError} busy={busy || reviewingIds.has(inspection.id)} onClose={()=>setInspection(null)} onEdit={startEdit} onRetry={()=>inspect(inspection)} isAdmin={user?.role==='admin'} canEdit={user?.role==='admin'||user?.id===inspection.authorId} onReview={async(q,status)=>{const done=await review(q,status);if(done)setInspection(null);}}/>}
     </>}
   </div>;
 }

@@ -250,7 +250,7 @@ function tpSources_(list) {
 function tpParse_(s) {try { return JSON.parse(String(s||'[]')); }catch{return [];}}
 function tpOutputQuestion_(q,media) {
   const { _row, choicesJson, sourcesJson, ...other }=q;
-  return {...other,choices:tpParse_(choicesJson),sources:tpParse_(sourcesJson),media:media.filter(m=>m.questionId===q.id).map(m=>({id:m.id,slot:Number(m.slot),fileName:m.fileName}))};
+  return {...other,choices:tpParse_(choicesJson),sources:tpParse_(sourcesJson),media:media.filter(m=>m.questionId===q.id).map(m=>({id:m.id,slot:Number(m.slot),fileName:m.fileName,createdAt:m.createdAt}))};
 }
 function tpBootstrap_(user) {
   const qs=tpRows_('Questions'),media=tpRows_('Media'),progress=tpRows_('Progress');
@@ -321,16 +321,26 @@ function tpSubmit_(args,user) {
 }
 function tpReview_(args,user) {
   tpAdmin_(user);
-  if(!['approved','needs_revision'].includes(args.status))throw Error('承認または差し戻しを選んでください。');
+  if(!['approved','needs_revision'].includes(args.status))throw Error('合格または修正依頼を選んでください。');
   return tpWithLock_(()=>{
     const q=tpQuestion_(args.questionId);
     if(!q)throw Error('問題が見つかりません。');
-    if(['published','deleted'].includes(q.status))throw Error('公開済み・削除済みの問題は審査を変更できません。');
-    if(!q.prompt||!q.countryIso)throw Error('未完成の問題です。');
-    if(args.status==='approved'&&q.status!=='submitted')throw Error('提出済みの問題のみ承認できます。');
-    q.status=args.status;q.updatedAt=tpNow_();q.reviewNote=String(args.reviewNote||'').slice(0,1000);
+    if(['published','deleted'].includes(q.status))throw Error('公開済み・削除済みの問題は変更できません。');
+    if(!q.prompt||!q.countryIso||!TP_DOMAINS.includes(q.domain)||!TP_TYPES.includes(q.type))throw Error('国・カテゴリー・問題文を確認してください。');
+    if(args.status==='approved'){
+      if(!['draft','submitted','needs_revision'].includes(q.status))throw Error('この問題はすでに合格済みです。');
+      if(q.type==='text4'&&(!q.answer||tpParse_(q.choicesJson).filter(v=>String(v||'').trim()).length!==3))throw Error('4択の正答と誤答3つが必要です。');
+      if(q.type==='photo4'||q.type==='photo1'){
+        const slots=tpRows_('Media').filter(m=>m.questionId===q.id).map(m=>Number(m.slot));
+        const expected=q.type==='photo4'?[1,2,3,4]:[1];
+        if(slots.length!==expected.length||expected.some(slot=>!slots.includes(slot)))throw Error('写真が揃っていません。写真を登録してから合格にしてください。');
+      }
+    }
+    q.status=args.status;
+    q.updatedAt=tpNow_();
+    q.reviewNote=args.status==='approved'?'':String(args.reviewNote||'').slice(0,1000);
     tpReplace_('Questions',TP_QHEAD,q._row,q);
-    return {questionId:q.id,status:q.status};
+    return {questionId:q.id,status:q.status,updatedAt:q.updatedAt,reviewNote:q.reviewNote};
   });
 }
 function tpSetDeleted_(args,user,restore){
@@ -342,7 +352,7 @@ function tpSetDeleted_(args,user,restore){
       if(q.status!=='deleted')throw Error('削除済みだけ復元できます。');
       q.status='submitted';
     }else{
-      if(!['submitted','needs_revision','approved'].includes(q.status))
+      if(!['draft','submitted','needs_revision','approved'].includes(q.status))
         throw Error('提出済みの問題のみ削除できます。');
       q.status='deleted';
     }

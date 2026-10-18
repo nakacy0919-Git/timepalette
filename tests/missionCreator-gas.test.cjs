@@ -126,6 +126,24 @@ const cachedBatch=call({
 assert.equal(cachedBatch.ok,true);
 assert.equal(cachedBatch.data.perf.cacheHits,4);
 assert.equal(parallelPhotoRequests,previousParallelRequests);
+// Fast admin moderation: incomplete drafts cannot pass; completed drafts can.
+const fastSaved=call({action:'saveQuestion',session:adminSession,question:{countryIso:'rw',countryName:'ルワンダ',domain:'lifeCulture',type:'photo4',prompt:'Fast moderation of a complete draft'}});
+assert.equal(fastSaved.ok,true);
+const fastId=fastSaved.data.question.id;
+assert.equal(call({action:'reviewQuestion',session:adminSession,questionId:fastId,status:'approved'}).ok,false);
+for(let i=1;i<=4;i++)assert.equal(call({action:'uploadImage',session:adminSession,questionId:fastId,slot:i,base64:webp}).ok,true);
+const approvedDraft=call({action:'reviewQuestion',session:adminSession,questionId:fastId,status:'approved'});
+assert.equal(approvedDraft.ok,true);
+assert.equal(approvedDraft.data.status,'approved');
+assert.equal(typeof approvedDraft.data.updatedAt,'string');
+assert.equal(approvedDraft.data.reviewNote,'');
+const teacherVisible=call({action:'bootstrap',session:other.session}).data.questions.find(q=>q.id===fastId);
+assert.equal(teacherVisible.status,'approved');
+assert.equal(Boolean(teacherVisible.media[0].createdAt),true);
+assert.equal(call({action:'reviewQuestion',session:adminSession,questionId:fastId,status:'needs_revision',reviewNote:'Please revise'}).ok,true);
+assert.equal(call({action:'reviewQuestion',session:adminSession,questionId:fastId,status:'approved'}).ok,true);
+const adminDraft=call({action:'saveQuestion',session:adminSession,question:{countryIso:'rw',countryName:'ルワンダ',domain:'lifeCulture',type:'free',prompt:'A draft to delete'}}).data.question.id;
+assert.equal(call({action:'deleteQuestion',session:adminSession,questionId:adminDraft}).ok,true);
 const m=call({action:'getMedia',session:teacherSession,questionId:qid,slot:1});assert.equal(m.ok,true);assert.equal(m.data.base64,webp);
 assert.equal(call({action:'deleteQuestion',session:teacherSession,questionId:qid}).ok,false);
 assert.equal(call({action:'deleteQuestion',session:adminSession,questionId:qid}).ok,true);
