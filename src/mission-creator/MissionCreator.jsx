@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowLeft, BookOpen, Camera, CheckCircle2, CircleHelp, Clock3, Compass, FilePlus2, Globe2, LayoutDashboard, LockKeyhole, LogOut, Pencil, Search, ShieldCheck, UploadCloud, ChevronDown, ExternalLink, X } from 'lucide-react';
+import { ArrowLeft, BookOpen, Camera, CheckCircle2, CircleHelp, Clock3, Compass, FilePlus2, Globe2, LayoutDashboard, LockKeyhole, LogOut, Pencil, Search, ShieldCheck, UploadCloud, ChevronDown, ChevronRight, ExternalLink, X } from 'lucide-react';
 import { getWorldLearningCountries } from '../utils/worldLearningRegistry';
 import { creatorRequest } from './api';
 import { blobToBase64, optimizeImage } from './image';
@@ -288,21 +288,209 @@ async function loadStoredPhotos(question,session,onPhoto,onProgress){
   }
 }
 
-function QuestionBank({ questions, user, onEdit, onReview, onInspect, onPrefetch, onDelete, onRestore, selectedCountry, countryNames, busy }) {
+
+function QuestionBank({
+  questions, user, onEdit, onReview, onInspect,
+  onPrefetch, onDelete, onRestore,
+  selectedCountry, countryNames, busy
+}) {
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState('');
-  const visible = questions.filter(q => (filter === 'all' ? q.status !== 'deleted' : q.status === filter) && (!selectedCountry || q.countryIso === selectedCountry) && [q.prompt, q.countryName, q.authorName, q.domain].join(' ').toLowerCase().includes(search.toLowerCase()));
-  return <section className="mc-card mc-section"><div className="mc-section-top"><div><div className="mc-eyebrow">MISSION BANK</div><h2>集まった問題</h2></div><span className="mc-count">{formatNumber(visible.length)} 件</span></div>
-    <div className="mc-filter-row"><label className="mc-search"><Search size={18}/><input placeholder="国・内容・作成者で検索" value={search} onChange={e => setSearch(e.target.value)}/></label><select value={filter} onChange={e => setFilter(e.target.value)}><option value="all">すべての状態</option>{Object.entries(statusJa).filter(([id])=>user?.role==='admin'||id!=='deleted').map(([id,v])=><option key={id} value={id}>{v}</option>)}</select></div>
-    {visible.length === 0 ? <p className="mc-empty">該当する問題はありません。</p> : <div className="mc-bank-list">{visible.slice(0, 200).map(q => <article className="mc-question-row" key={q.id}><div className="mc-question-main"><div className="mc-question-meta"><span className="mc-status">{statusJa[q.status] || q.status}</span> {countryNames[q.countryIso] || q.countryName} · {DOMAINS.find(d => d[0]===q.domain)?.[1] || q.domain} · 作成：{q.authorName}</div><h3>{q.prompt || '（問題文未入力）'}</h3><small>{TYPES.find(t => t[0]===q.type)?.[1]}　{q.updatedAt ? `最終更新：${q.updatedAt.slice(0,10)}` : ''}</small>{q.reviewNote && <p className="mc-review-note">管理者からのコメント：{q.reviewNote}</p>}</div><div className="mc-question-actions">{(user?.role === 'admin' || user?.id === q.authorId) && q.status !== 'deleted' && <button className="mc-outline mc-small" type="button" onClick={()=>onEdit(q)}><Pencil size={15}/>編集</button>}<button className="mc-small mc-outline" type="button" onPointerEnter={()=>onPrefetch(q)} onFocus={()=>onPrefetch(q)} onClick={()=>onInspect(q)}><Search size={15}/>{user?.role === 'admin' ? '内容・出典確認' : '問題・写真を見る'}</button>{user?.role === 'admin' && (q.status === 'deleted'
- ? <button type="button" className="mc-outline mc-small" disabled={busy} onClick={()=>onRestore(q)}>復元</button>
- : <>
-   <button className="mc-small mc-outline" type="button" disabled={busy || q.status === 'published'} onClick={()=>onReview(q,'needs_revision')}>差し戻し</button>
-   <button className="mc-small mc-primary" type="button" disabled={busy || q.status !== 'submitted'} onClick={()=>onInspect(q)}>確認して承認</button>
-   {['submitted','needs_revision','approved'].includes(q.status) && <button type="button" className="mc-small mc-outline" style={{color:'#af2c36',borderColor:'#e8b4bb'}} disabled={busy} onClick={()=>onDelete(q)}>削除</button>}
- </>)}</div></article>)}</div>}
-    {visible.length > 200 && <p className="mc-hint">先頭200件まで表示しています。検索条件を絞ってください。</p>}
-  </section>;
+
+  const visible = questions.filter(q =>
+    (filter === 'all'
+      ? q.status !== 'deleted'
+      : q.status === filter) &&
+    (!selectedCountry || q.countryIso === selectedCountry) &&
+    [q.prompt, q.countryName, q.authorName, q.domain]
+      .join(' ')
+      .toLowerCase()
+      .includes(search.toLowerCase())
+  );
+
+  return (
+    <section className="mc-card mc-section">
+      <div className="mc-section-top">
+        <div>
+          <div className="mc-eyebrow">MISSION BANK</div>
+          <h2>集まった問題</h2>
+        </div>
+        <span className="mc-count">
+          {formatNumber(visible.length)} 件
+        </span>
+      </div>
+
+      <div className="mc-filter-row">
+        <label className="mc-search">
+          <Search size={18}/>
+          <input
+            placeholder="国・内容・作成者で検索"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+          />
+        </label>
+        <select
+          aria-label="問題の状態で絞り込み"
+          value={filter}
+          onChange={e => setFilter(e.target.value)}
+        >
+          <option value="all">すべての状態</option>
+          {Object.entries(statusJa)
+            .filter(([id]) =>
+              user?.role === 'admin' || id !== 'deleted'
+            )
+            .map(([id, label]) => (
+              <option key={id} value={id}>{label}</option>
+            ))}
+        </select>
+      </div>
+
+      {visible.length === 0 ? (
+        <p className="mc-empty">
+          該当する問題はありません。
+        </p>
+      ) : (
+        <div className="mc-bank-list">
+          {visible.slice(0, 200).map(q => (
+            <article className="mc-question-row" key={q.id}>
+              <button
+                type="button"
+                className="mc-question-cover"
+                aria-label={
+                  '問題・写真を確認：' +
+                  String(q.prompt || '問題文未入力').slice(0, 140)
+                }
+                onClick={() => onInspect(q)}
+                onPointerEnter={() => onPrefetch(q)}
+                onFocus={() => onPrefetch(q)}
+              />
+
+              <div className="mc-question-main">
+                <div className="mc-question-meta">
+                  <span className="mc-status">
+                    {statusJa[q.status] || q.status}
+                  </span>
+                  <span className="mc-question-meta-location">
+                    {countryNames[q.countryIso] || q.countryName}
+                    {' · '}
+                    {DOMAINS.find(d => d[0] === q.domain)?.[1] || q.domain}
+                  </span>
+                  <span className="mc-question-author">
+                    作成：{q.authorName}
+                  </span>
+                </div>
+
+                <h3>
+                  {q.prompt || '（問題文未入力）'}
+                </h3>
+
+                <div className="mc-question-subline">
+                  <small>
+                    {TYPES.find(t => t[0] === q.type)?.[1] || '問題'}
+                    {q.updatedAt
+                      ? ' ・ 最終更新：' +
+                        String(q.updatedAt).slice(0, 10)
+                      : ''}
+                  </small>
+                  <span className="mc-question-view-hint">
+                    <Search size={14}/>
+                    クリックして詳細を見る
+                    <ChevronRight size={15}/>
+                  </span>
+                </div>
+
+                {q.reviewNote && (
+                  <p className="mc-review-note">
+                    管理者からのコメント：{q.reviewNote}
+                  </p>
+                )}
+              </div>
+
+              <div className="mc-question-actions">
+                {(user?.role === 'admin' ||
+                  user?.id === q.authorId) &&
+                  q.status !== 'deleted' && (
+                    <button
+                      className="mc-outline mc-small"
+                      type="button"
+                      onClick={() => onEdit(q)}
+                    >
+                      <Pencil size={15}/>
+                      編集
+                    </button>
+                  )}
+
+                <button
+                  className="mc-outline mc-small"
+                  type="button"
+                  onPointerEnter={() => onPrefetch(q)}
+                  onFocus={() => onPrefetch(q)}
+                  onClick={() => onInspect(q)}
+                >
+                  <Search size={15}/>
+                  {user?.role === 'admin'
+                    ? '内容・出典確認'
+                    : '問題・写真を見る'}
+                </button>
+
+                {user?.role === 'admin' && (
+                  q.status === 'deleted' ? (
+                    <button
+                      type="button"
+                      className="mc-outline mc-small"
+                      disabled={busy}
+                      onClick={() => onRestore(q)}
+                    >
+                      復元
+                    </button>
+                  ) : (
+                    <>
+                      <button
+                        className="mc-small mc-outline"
+                        type="button"
+                        disabled={busy || q.status === 'published'}
+                        onClick={() => onReview(q, 'needs_revision')}
+                      >
+                        差し戻し
+                      </button>
+
+                      <button
+                        className="mc-small mc-primary"
+                        type="button"
+                        disabled={busy || q.status !== 'submitted'}
+                        onClick={() => onInspect(q)}
+                      >
+                        確認して承認
+                      </button>
+
+                      {['submitted', 'needs_revision', 'approved']
+                        .includes(q.status) && (
+                          <button
+                            type="button"
+                            className="mc-small mc-outline mc-delete-action"
+                            disabled={busy}
+                            onClick={() => onDelete(q)}
+                          >
+                            削除
+                          </button>
+                        )}
+                    </>
+                  )
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+
+      {visible.length > 200 && (
+        <p className="mc-hint">
+          先頭200件まで表示しています。
+          検索条件を絞ってください。
+        </p>
+      )}
+    </section>
+  );
 }
 
 // Administrators can review the actual stored images, correct answer, sources and notes
