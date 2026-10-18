@@ -478,19 +478,14 @@ function ImageMaterial({
   material,
 }) {
   const imageUrl =
-    material?.url ??
+    material?.url ||
     (
-      source?.assetType ===
-        'image' &&
+      source?.assetType === 'image' &&
       source?.url &&
-      !isDataUrl(
-        source.url
-      )
-    )
-      ? source.url
-      : getOriginalSourceUrl(
-          source
-        );
+      !isDataUrl(source.url)
+        ? source.url
+        : getOriginalSourceUrl(source)
+    );
 
   if (!imageUrl) {
     return (
