@@ -16,6 +16,7 @@ const TYPES = [
   ['text4', '文章による4択'],
   ['photo4', '写真4枚の4択'],
   ['photo1', '写真1枚で考える'],
+  ['photoText4', '写真1枚＋文章4択'],
   ['free', '自由回答・話し合い'],
   ['web', 'Webサイトなどの資料を利用'],
 ];
@@ -166,7 +167,7 @@ function ReferencePanel({ form }) {
 
 function QuestionPreview({ form, photos }) {
   const [showTeacherDetails, setShowTeacherDetails] = useState(true);
-  const photoMode = form.type === 'photo1' || form.type === 'photo4';
+  const photoMode = ['photo1', 'photo4', 'photoText4'].includes(form.type);
   const photoCount = form.type === 'photo4' ? 4 : 1;
   return (
     <section className="mc-preview" aria-label="問題プレビュー">
@@ -190,7 +191,7 @@ function QuestionPreview({ form, photos }) {
           </div>;
         })}
       </div>}
-      {form.type === 'text4' && <div className="mc-choice-grid">{[form.answer, ...form.choices].map((c, i) =>
+      {['text4', 'photoText4'].includes(form.type) && <div className="mc-choice-grid">{[form.answer, ...form.choices].map((c, i) =>
         <div key={i} className={showTeacherDetails && i === 0 ? 'mc-answer-correct' : ''}>{showTeacherDetails && i===0 && <CheckCircle2 size={15} aria-label="正答" />} {String.fromCharCode(65 + i)}. {c || '（未入力）'}</div>)}</div>}
       {form.type === 'web' && <p className="mc-hint">Webを使う問題は参考URLを保存します。外部ページの埋め込みには掲載元の許可が必要です。</p>}
       {showTeacherDetails && <ReferencePanel form={form} />}
@@ -200,7 +201,7 @@ function QuestionPreview({ form, photos }) {
 
 function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, busy, demo, error, saveStage, isAdmin, photoLoadBusy, photoLoadError, onRetryPhotos }) {
   const update = (k, value) => setForm(prev => ({ ...prev, [k]: value }));
-  const photoCount = form.type === 'photo4' ? 4 : form.type === 'photo1' ? 1 : 0;
+  const photoCount = form.type === 'photo4' ? 4 : ['photo1', 'photoText4'].includes(form.type) ? 1 : 0;
   return <div className="mc-editor-grid">
     <section className="mc-card mc-section">
       <div className="mc-section-top"><div><div className="mc-eyebrow">MISSION EDITOR</div><h2>{form.id ? '問題を編集' : '新しい問題を作る'}</h2></div><button className="mc-quiet" onClick={onCancel} type="button"><ArrowLeft size={17} />一覧へ</button></div>
@@ -213,8 +214,8 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
           {photoLoadError && <button type="button" className="mc-outline mc-small" onClick={onRetryPhotos} disabled={photoLoadBusy}>写真表示を再試行</button>}
         </div>}
         <div className="mc-helper-title"><UploadCloud size={18}/> 写真をアップロード</div><p className="mc-muted">写真はこの端末内でWebPに変換されます。4択では①が正答、②〜④が誤答です。ゲーム公開時の表示順は変更できます。</p><div className="mc-upload-grid">{Array.from({ length: photoCount }, (_, i) => i + 1).map(n => <PhotoSlot key={n} slot={n} name={photos[n]?.name || form.media?.find(m=>Number(m.slot)===n)?.fileName} preview={photos[n]?.preview} onPick={onPhoto} busy={busy} isCorrect={form.type==='photo4' && n===1} singlePhoto={form.type==='photo1'}/>)}</div></div>}
-      {form.type === 'text4' && <div className="mc-stack"><label>正しい答え <input value={form.answer} onChange={e => update('answer', e.target.value)} placeholder="正解の選択肢" /></label>{form.choices.map((v, i) => <label key={i}>まちがいの選択肢 {i + 1} <input value={v} onChange={e => update('choices', form.choices.map((c, j) => i === j ? e.target.value : c))}/></label>)}</div>}
-      {!['text4', 'photo4'].includes(form.type) && <label>模範解答・参考となる回答（任意） <textarea rows={2} value={form.answer} onChange={e => update('answer', e.target.value)} /></label>}
+      {['text4','photoText4'].includes(form.type) && <div className="mc-stack"><label>正しい答え <input value={form.answer} onChange={e => update('answer', e.target.value)} placeholder="正解の選択肢" /></label>{form.choices.map((v, i) => <label key={i}>まちがいの選択肢 {i + 1} <input value={v} onChange={e => update('choices', form.choices.map((c, j) => i === j ? e.target.value : c))}/></label>)}</div>}
+      {!['text4', 'photo4', 'photoText4'].includes(form.type) && <label>模範解答・参考となる回答（任意） <textarea rows={2} value={form.answer} onChange={e => update('answer', e.target.value)} /></label>}
       <label>参考Webページなど（任意） <input type="url" placeholder="https://..." value={form.sources[0] || ''} onChange={e => update('sources', [e.target.value, form.sources[1] || ''])}/></label>
       <label>参考URLをもう1件（任意） <input type="url" placeholder="https://..." value={form.sources[1] || ''} onChange={e => update('sources', [form.sources[0] || '', e.target.value])}/></label>
       <label>解説・出典・アイデア（任意） <textarea rows={3} value={form.notes} onChange={e => update('notes', e.target.value)} placeholder="教材の出典や、写真・Webページをどう使うかなど" /></label>
@@ -229,7 +230,7 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
 }
 
 async function loadStoredPhotos(question,session,onPhoto,onProgress){
-  const count=question.type==='photo4'?4:question.type==='photo1'?1:0;
+  const count=question.type==='photo4'?4:['photo1','photoText4'].includes(question.type)?1:0;
   if(!count)return;
 
   const media=Array.isArray(question.media)?question.media:[];
@@ -708,7 +709,7 @@ export default function MissionCreator() {
     setBusy(true);setError('');setSaveStage('問題文をGoogleスプレッドシートに保存しています…');
     const country=countries.find(c=>c.iso===form.countryIso);
     try{
-      const total=form.type==='photo4'?4:form.type==='photo1'?1:0;
+      const total=form.type==='photo4'?4:['photo1','photoText4'].includes(form.type)?1:0;
       const pendingSlots=Array.from({length:total},(_,index)=>index+1).filter(slot=>Boolean(photos[slot]?.blob));
       const instantFinalize=submit && pendingSlots.length===0;
       const finalize=instantFinalize?(user?.role==='admin'?'approved':'submitted'):undefined;

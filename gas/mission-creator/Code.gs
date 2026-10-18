@@ -4,7 +4,7 @@
  * Run setupMissionCreator() and createTeacherInvite() ONLY from script editor.
  */
 const TP_DOMAINS = ['place', 'time', 'language', 'lifeCulture', 'japanConnection', 'thinkConnect'];
-const TP_TYPES = ['text4', 'photo4', 'photo1', 'free', 'web'];
+const TP_TYPES = ['text4', 'photo4', 'photo1', 'photoText4', 'free', 'web'];
 const TP_QHEAD = ['id', 'countryIso', 'countryName', 'domain', 'type', 'prompt', 'answer', 'choicesJson', 'sourcesJson', 'notes', 'authorId', 'authorName', 'status', 'reviewNote', 'createdAt', 'updatedAt'];
 const TP_MHEAD = ['id', 'questionId', 'slot', 'fileId', 'fileName', 'size', 'createdAt'];
 const TP_THEADE = ['id', 'name', 'role', 'inviteHash', 'pinHash', 'active'];
@@ -303,7 +303,7 @@ function tpUpload_(args,user) {
   if(!q || (user.role!=='admin' && q.authorId!==user.id))throw Error('画像を追加する権限がありません。');
   if(user.role!=='admin'&&['approved','published'].includes(q.status))throw Error('承認済みの問題には追加できません。');
   if(q.status==='deleted')throw Error('削除済みの問題には写真を追加できません。');
-  if(!['photo4','photo1'].includes(q.type)||(q.type==='photo1'&&slot!==1))throw Error('写真のスロットを確認してください。');
+  if(!['photo4','photo1','photoText4'].includes(q.type)||(['photo1','photoText4'].includes(q.type)&&slot!==1))throw Error('写真のスロットを確認してください。');
   const bytes=Utilities.base64Decode(base64);
   if(bytes.length<16||bytes.length>1228800||String.fromCharCode(...bytes.slice(0,4))!=='RIFF'||String.fromCharCode(...bytes.slice(8,12))!=='WEBP')throw Error('WebP画像は1.2MB以下でアップロードしてください。');
   return tpWithLock_(()=>{
@@ -326,9 +326,9 @@ function tpSubmit_(args,user) {
     if(!q||(user.role!=='admin'&&q.authorId!==user.id))throw Error('問題が見つかりません。');
     if(['approved','published','deleted'].includes(q.status))throw Error('承認済み・削除済みの問題は再提出できません。');
     if(!q.prompt || !q.countryIso || !q.domain)throw Error('国・カテゴリー・問題文を入力してください。');
-    if(q.type==='text4'&&(!q.answer||tpParse_(q.choicesJson).filter(Boolean).length!==3))throw Error('4択の正答と誤答3つが必要です。');
+    if(['text4','photoText4'].includes(q.type)&&(!q.answer||tpParse_(q.choicesJson).filter(Boolean).length!==3))throw Error('4択の正答と誤答3つが必要です。');
     if(q.type==='photo4'&&tpRows_('Media').filter(m=>m.questionId===q.id).length!==4)throw Error('写真4択には画像4枚が必要です。');
-    if(q.type==='photo1'&&!tpRows_('Media').some(m=>m.questionId===q.id&&Number(m.slot)===1))throw Error('写真が1枚必要です。');
+    if(['photo1','photoText4'].includes(q.type)&&!tpRows_('Media').some(m=>m.questionId===q.id&&Number(m.slot)===1))throw Error('写真が1枚必要です。');
     q.status='submitted';q.updatedAt=tpNow_();tpReplace_('Questions',TP_QHEAD,q._row,q);
     return {questionId:q.id,status:'submitted'};
   });
@@ -343,8 +343,8 @@ function tpReview_(args,user) {
     if(!q.prompt||!q.countryIso||!TP_DOMAINS.includes(q.domain)||!TP_TYPES.includes(q.type))throw Error('国・カテゴリー・問題文を確認してください。');
     if(args.status==='approved'){
       if(!['draft','submitted','needs_revision'].includes(q.status))throw Error('この問題はすでに合格済みです。');
-      if(q.type==='text4'&&(!q.answer||tpParse_(q.choicesJson).filter(v=>String(v||'').trim()).length!==3))throw Error('4択の正答と誤答3つが必要です。');
-      if(q.type==='photo4'||q.type==='photo1'){
+      if(['text4','photoText4'].includes(q.type)&&(!q.answer||tpParse_(q.choicesJson).filter(v=>String(v||'').trim()).length!==3))throw Error('4択の正答と誤答3つが必要です。');
+      if(q.type==='photo4'||q.type==='photo1'||q.type==='photoText4'){
         const slots=tpRows_('Media').filter(m=>m.questionId===q.id).map(m=>Number(m.slot));
         const expected=q.type==='photo4'?[1,2,3,4]:[1];
         if(slots.length!==expected.length||expected.some(slot=>!slots.includes(slot)))throw Error('写真が揃っていません。写真を登録してから合格にしてください。');

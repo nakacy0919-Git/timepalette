@@ -176,4 +176,13 @@ const missingPhotos=call({action:'saveQuestion',session:adminSession,finalize:'a
   countryIso:'rw',countryName:'Rwanda',domain:'lifeCulture',type:'photo4',prompt:'Missing media'
 }});
 assert.equal(missingPhotos.ok,false);
+const quizDraft=call({action:'saveQuestion',session:teacherSession,question:{countryIso:'fm',countryName:'Micronesia',domain:'lifeCulture',type:'photoText4',prompt:'What is happening?',answer:'Correct',choices:['Wrong A','Wrong B','Wrong C'],sources:[],notes:''}});
+assert.equal(quizDraft.ok,true);
+const quizId=quizDraft.data.question.id;
+assert.equal(call({action:'submitQuestion',session:teacherSession,questionId:quizId}).ok,false);
+assert.equal(call({action:'uploadImage',session:teacherSession,questionId:quizId,slot:1,base64:webp}).ok,true);
+assert.equal(call({action:'submitQuestion',session:teacherSession,questionId:quizId}).ok,true);
+const quizApproved=call({action:'reviewQuestion',session:adminSession,questionId:quizId,status:'approved'});
+assert.equal(quizApproved.ok,true);
+assert.equal(call({action:'bootstrap',session:teacherSession}).data.questions.find(q=>q.id===quizId).type,'photoText4');
 console.log('PASS: login, roles, photos, review, progress, archive, atomic editing and restore');
