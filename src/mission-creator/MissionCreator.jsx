@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, BookOpen, Camera, CheckCircle2, CircleHelp, Clock3, Compass, FilePlus2, Globe2, LayoutDashboard, LockKeyhole, LogOut, Pencil, Search, ShieldCheck, UploadCloud, ChevronDown, ChevronRight, MoreHorizontal, ExternalLink, X } from 'lucide-react';
 import { getWorldLearningCountries } from '../utils/worldLearningRegistry';
 import { creatorRequest } from './api';
+import { filterBankQuestions } from './filterBankQuestions.js';
 import { blobToBase64, optimizeImage } from './image';
 
 const DOMAINS = [
@@ -302,21 +303,13 @@ async function loadStoredPhotos(question,session,onPhoto,onProgress){
 function QuestionBank({
   questions, user, onEdit, onReview, onInspect,
   onPrefetch, onDelete, onRestore,
-  selectedCountry, countryNames, busy, reviewingIds
+  selectedCountry, countryNames, busy, reviewingIds,
+  filter, onFilterChange, search, onSearchChange
 }) {
-  const [filter, setFilter] = useState('all');
-  const [search, setSearch] = useState('');
 
-  const visible = questions.filter(q =>
-    (filter === 'all'
-      ? q.status !== 'deleted'
-      : q.status === filter) &&
-    (!selectedCountry || q.countryIso === selectedCountry) &&
-    [q.prompt, q.countryName, q.authorName, q.domain]
-      .join(' ')
-      .toLowerCase()
-      .includes(search.toLowerCase())
-  );
+  const visible = filterBankQuestions(questions, {
+    filter, search, selectedCountry
+  });
 
   return (
     <section className="mc-card mc-section">
@@ -336,13 +329,13 @@ function QuestionBank({
           <input
             placeholder="国・内容・作成者で検索"
             value={search}
-            onChange={e => setSearch(e.target.value)}
+            onChange={e => onSearchChange(e.target.value)}
           />
         </label>
         <select
           aria-label="問題の状態で絞り込み"
           value={filter}
-          onChange={e => setFilter(e.target.value)}
+          onChange={e => onFilterChange(e.target.value)}
         >
           <option value="all">すべての状態</option>
           {Object.entries(statusJa)
@@ -531,6 +524,10 @@ export default function MissionCreator() {
   const [photoLoadError,setPhotoLoadError] = useState('');
   const editTokenRef=useRef(0);
   const [page, setPage] = useState('dashboard');
+  // null = role-dependent default; admins start with drafts.
+  const [bankFilter, setBankFilter] = useState(null);
+  const [bankSearch, setBankSearch] = useState('');
+  const previousPageRef = useRef('dashboard');
   const [questions, setQuestions] = useState([]);
   const [progress, setProgress] = useState({});
   const [selectedCountry, setSelectedCountry] = useState(countries[0]?.iso || 'rw');
@@ -548,6 +545,17 @@ export default function MissionCreator() {
   const photoCacheRef=useRef(new Map());
   const photoPendingRef=useRef(new Map());
   const photoCacheEpochRef=useRef(0);
+
+  // Return to the first remaining item after leaving the editor.
+  useEffect(() => {
+    const previous = previousPageRef.current;
+    previousPageRef.current = page;
+    if (previous !== 'editor' || page !== 'bank') return;
+    const frame = window.requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [page]);
 
   useEffect(()=>{
     photoCacheEpochRef.current+=1;
@@ -616,9 +624,12 @@ export default function MissionCreator() {
     if(!session||!user||loadingData||page!=='bank')return;
 
     let disposed=false;
-    const candidates=questions
-      .filter(q=>q.status!=='deleted'&&q.media?.length)
-      .slice(0,2);
+    const currentFilter = bankFilter ??
+      (user?.role === 'admin' ? 'draft' : 'all');
+    const candidates = filterBankQuestions(questions, {
+      filter: currentFilter,
+      search: bankSearch
+    }).filter(q=>q.media?.length).slice(0,2);
 
     const timer=setTimeout(()=>{
       if(disposed)return;
@@ -630,7 +641,7 @@ export default function MissionCreator() {
       disposed=true;
       clearTimeout(timer);
     };
-  },[session,user,loadingData,page,questions,loadPhotosFast]);
+  },[session,user,loadingData,page,questions,loadPhotosFast,bankFilter,bankSearch]);
 
   useEffect(()=>{
     if (!session) { setLoadingData(false); return; }
@@ -672,7 +683,7 @@ export default function MissionCreator() {
     sessionStorage.setItem('tp-mc-session',data.session);if(data.user)setUser(data.user);if(data.bootstrap)initialBootstrapRef.current={session:data.session,data:data.bootstrap};setSession(data.session);setRegistrationToken('');
   }catch(e){setError(e.message);}finally{setBusy(false);}};
   const reload=async()=>{if(demo)return;const data=await creatorRequest('bootstrap',{},session);setUser(data.user);setQuestions(data.questions);setProgress(data.progress);};
-  const logout=()=>{initialBootstrapRef.current=null;photoCacheEpochRef.current+=1;photoCacheRef.current.clear();photoPendingRef.current.clear();sessionStorage.removeItem('tp-mc-session');setUser(null);setSession('');setDemo(false);setPhotos({});setError('');};
+  const logout=()=>{setBankFilter(null);setBankSearch('');initialBootstrapRef.current=null;photoCacheEpochRef.current+=1;photoCacheRef.current.clear();photoPendingRef.current.clear();sessionStorage.removeItem('tp-mc-session');setUser(null);setSession('');setDemo(false);setPhotos({});setError('');};
   const startNew=()=>{editTokenRef.current+=1;setPhotoLoadBusy(false);setPhotoLoadError('');setForm({...EMPTY,countryIso:selectedCountry,countryName:countryNames[selectedCountry],countries});setPhotos({});setError('');setPage('editor');};
   const loadEditorPhotoPreview=(q,token)=>{
     if(demo||!Array.isArray(q.media)||!q.media.length){setPhotoLoadBusy(false);return;}
@@ -829,7 +840,11 @@ export default function MissionCreator() {
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
         {!loadingData && page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
-        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} selectedCountry="" countryNames={countryNames} busy={busy||demo} reviewingIds={reviewingIds}/>}
+        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} selectedCountry="" countryNames={countryNames} busy={busy||demo} reviewingIds={reviewingIds}
+          filter={bankFilter ?? (user?.role === 'admin' ? 'draft' : 'all')}
+          onFilterChange={setBankFilter}
+          search={bankSearch}
+          onSearchChange={setBankSearch}/>}
         {!loadingData && page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>{editTokenRef.current+=1;setPage('bank');}} busy={busy} demo={demo} error={error} saveStage={saveStage} isAdmin={user?.role==='admin'} photoLoadBusy={photoLoadBusy} photoLoadError={photoLoadError} onRetryPhotos={retryEditorPhotos}/>}
       </main></div>
       {inspection && <ReviewDialog question={inspection} photos={inspectionPhotos} loading={inspectionLoading} loadingText={inspectionLoadingText} loadError={inspectionError} reviewError={reviewError} busy={busy || reviewingIds.has(inspection.id)} onClose={()=>setInspection(null)} onEdit={startEdit} onRetry={()=>inspect(inspection)} isAdmin={user?.role==='admin'} canEdit={user?.role==='admin'||user?.id===inspection.authorId} onReview={async(q,status)=>{const done=await review(q,status);if(done)setInspection(null);}}/>}
