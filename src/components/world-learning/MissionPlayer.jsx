@@ -253,6 +253,8 @@ export default function MissionPlayer({
       null
     );
 
+  const creatorExplanationRef = useRef(null);
+
 
   const completedThisSessionRef =
     useRef(
@@ -307,6 +309,10 @@ const answerLockedRef =
       mission
     );
 
+  // Teacher-published missions have a deliberate select -> confirm -> learn flow.
+  // Legacy adventures keep their existing one-tap behavior.
+  const isCreatorMission = Boolean(mission?.creatorQuestionId);
+
 const randomizedChoices =
   useMemo(
     () => {
@@ -348,6 +354,21 @@ const randomizedChoices =
       mission.challenge?.choices,
     ]
   );
+
+  const isPublishedPhotoFour =
+    isCreatorMission &&
+    randomizedChoices.length === 4 &&
+    randomizedChoices.every(choice => Boolean(choice.image));
+
+  useEffect(() => {
+    if (isCreatorMission && result === 'correct') {
+      creatorExplanationRef.current?.scrollIntoView({
+        behavior: window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+          ? 'auto' : 'smooth',
+        block: 'nearest',
+      });
+    }
+  }, [isCreatorMission, result, mission.id]);
 
   const timePlayable =
     TIME_MISSION_TYPES.has(
@@ -581,7 +602,7 @@ const randomizedChoices =
       );
 
 
-      setCelebration({
+      if (!isCreatorMission) setCelebration({
         firstClear,
 
         points:
@@ -605,7 +626,7 @@ const randomizedChoices =
     };
 
 
-  const handleChoiceClick =
+  const evaluateChoice =
   (
     index
   ) => {
@@ -706,6 +727,22 @@ const correct =
     );
   };
 
+  const handleChoiceClick = (index) => {
+    if (answerLockedRef.current) return;
+    if (isCreatorMission) {
+      // Selection alone must never reveal the answer or complete the mission.
+      setSelectedIndex(index);
+      setResult(null);
+      return;
+    }
+    evaluateChoice(index);
+  };
+
+  const submitCreatorAnswer = () => {
+    if (!isCreatorMission || selectedIndex === null ||
+        result === 'wrong' || answerLockedRef.current) return;
+    evaluateChoice(selectedIndex);
+  };
 
   const goBackToList =
     () => {
@@ -1096,7 +1133,15 @@ const correct =
 
           <div
             className={
-              hasVisualChoice
+              isPublishedPhotoFour
+                ? `
+                  grid
+                  grid-cols-1
+                  gap-3
+                  sm:grid-cols-2
+                  md:gap-4
+                `
+                : hasVisualChoice
                 ? `
                   grid
                   grid-cols-2
@@ -1205,6 +1250,8 @@ const correct =
                       'correct'
                     }
 
+                    aria-pressed={selected}
+
                     onClick={
   () =>
     handleChoiceClick(
@@ -1215,27 +1262,24 @@ const correct =
                     className={`
                       group
                       relative
-                      min-h-[132px]
                       overflow-hidden
                       rounded-[26px]
                       border-2
-                      p-5
                       text-left
                       transition-all
                       duration-200
-                      md:min-h-[154px]
-                      md:p-6
+                      ${isPublishedPhotoFour ? 'min-h-0 p-3 md:p-3' : 'min-h-[132px] p-5 md:min-h-[154px] md:p-6'}
 
                       ${choiceClass}
                     `}
                   >
 
                     <div
-                      className="
+                      className={`
                         flex
                         h-full
-                        gap-4
-                      "
+                        ${isPublishedPhotoFour ? 'flex-col gap-2' : 'gap-4'}
+                      `}
                     >
 
                       <span
@@ -1297,6 +1341,9 @@ const correct =
                               alt={
                                 choice.alt
                               }
+
+                              loading="eager"
+                              decoding="async"
 
                               className="
                                 h-full
@@ -1830,7 +1877,7 @@ const correct =
                   </p>
 
 
-                  {mission.explanation && (
+                  {mission.explanation && !isCreatorMission && (
                     <div
                       className="
                         mt-6
@@ -2013,6 +2060,35 @@ const correct =
                 {
                   renderGame()
                 }
+
+                {isCreatorMission && result === 'correct' && (
+                  <section
+                    ref={creatorExplanationRef}
+                    role="status"
+                    aria-live="polite"
+                    className="mt-6 rounded-[24px] border border-emerald-200 bg-emerald-50 p-5 md:p-6"
+                  >
+                    <div className="flex items-center gap-3 text-emerald-800">
+                      <CheckCircle2 size={26} className="shrink-0" />
+                      <h3 className="text-lg font-black md:text-xl">
+                        正解！学びを深めよう
+                      </h3>
+                    </div>
+                    {mission.explanation && (
+                      <div className="mt-4 rounded-2xl bg-white p-4 md:p-5">
+                        <p className="text-xs font-black tracking-[0.12em] text-blue-600">
+                          DISCOVERY NOTE / 解説
+                        </p>
+                        <p className="mt-3 whitespace-pre-wrap text-sm font-medium leading-7 text-slate-700 md:text-base">
+                          {mission.explanation}
+                        </p>
+                      </div>
+                    )}
+                    <p className="mt-4 text-sm font-bold text-emerald-800">
+                      解説を読んだら、下のボタンから次に進もう。
+                    </p>
+                  </section>
+                )}
 
               </main>
 
@@ -2223,6 +2299,27 @@ const correct =
                     />
                   </button>
 
+                ) : isCreatorMission && choicePlayable &&
+  !specializedPlayable ? (
+                  <button
+                    type="button"
+                    onClick={submitCreatorAnswer}
+                    disabled={selectedIndex === null || result === 'wrong'}
+                    className={`
+                      inline-flex min-w-[190px] items-center justify-center
+                      rounded-2xl px-5 py-3.5 text-sm font-black
+                      transition md:min-w-[220px] md:text-base
+                      ${selectedIndex === null || result === 'wrong'
+                        ? 'cursor-not-allowed bg-slate-100 text-slate-400'
+                        : 'bg-blue-600 text-white shadow-lg hover:bg-blue-700'}
+                    `}
+                  >
+                    {result === 'wrong'
+                      ? '別の選択肢を選ぼう'
+                      : selectedIndex === null
+                        ? '選択肢を選んでください'
+                        : '回答する'}
+                  </button>
                 ) : choicePlayable &&
   !specializedPlayable ? (
 
