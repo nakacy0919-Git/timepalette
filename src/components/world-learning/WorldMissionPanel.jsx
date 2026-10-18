@@ -11,9 +11,12 @@ import {
 } from 'lucide-react';
 
 import {
+  useEffect,
   useRef,
   useState,
 } from 'react';
+
+import { normalizePublishedCatalog } from '../../utils/publishedMissionCatalog.js';
 
 import {
   createPortal,
@@ -2337,6 +2340,27 @@ export default function WorldMissionPanel({
   );
 
 
+  const [creatorMissions,setCreatorMissions] = useState([]);
+  const [creatorLoading,setCreatorLoading] = useState(true);
+  const [creatorError,setCreatorError] = useState('');
+  const [creatorRefresh,setCreatorRefresh] = useState(0);
+  useEffect(()=>{
+    if(String(countryCode||'').toLowerCase()!=='rw')return;
+    let cancelled=false;
+    setCreatorLoading(true);setCreatorError('');
+    fetch('/api/mission-public?action=catalog&country=rw&domain=lifeCulture', {cache:'no-store'})
+      .then(async(response)=>{
+        if(!response.ok)throw new Error('Catalog request failed');
+        const data=await response.json();
+        if(!data?.ok||!Array.isArray(data.questions))throw new Error('Invalid catalog');
+        return normalizePublishedCatalog(data.questions);
+      })
+      .then(missions=>{if(!cancelled)setCreatorMissions(missions);})
+      .catch(()=>{if(!cancelled){setCreatorError('公開問題を取得できませんでした。');setCreatorMissions([]);}})
+      .finally(()=>{if(!cancelled)setCreatorLoading(false);});
+    return ()=>{cancelled=true;};
+  },[countryCode,selectedDomain,creatorRefresh]);
+
   const missionData =
     getMissionCountryData(
       fileLetter,
@@ -2396,6 +2420,7 @@ export default function WorldMissionPanel({
     [];
 
 
+  const isCreatorLifeCulture = String(countryCode||'').toLowerCase()==='rw' && selectedDomain==='lifeCulture';
   const selectedAdventurePackage =
     selectedDomain
       ? getWorldAdventureDomainPackage(
@@ -2464,7 +2489,7 @@ export default function WorldMissionPanel({
 
   const visibleMissions =
     selectedDomain
-      ? selectedAdventurePackage
+      ? isCreatorLifeCulture ? creatorMissions.map(m=>applyLearningLevelToMission(m,selectedLearningLevel)) : selectedAdventurePackage
         ? selectedAdventurePackage.missions.map(
             (mission) =>
               applyLearningLevelToMission(
@@ -2715,17 +2740,9 @@ export default function WorldMissionPanel({
         domainId ===
           'lifeCulture'
       ) {
-        setSelectedDomain(
-          null
-        );
-
-        setActiveMission(
-          null
-        );
-
-        setLifeCultureAdventureOpen(
-          true
-        );
+        setSelectedDomain('lifeCulture');
+        setActiveMission(null);
+        moveToLauncher();
 
         return;
       }
@@ -2929,7 +2946,7 @@ export default function WorldMissionPanel({
       mission
     ) => {
       const result =
-        selectedAdventurePackage
+        selectedAdventurePackage && !isCreatorLifeCulture
           ? completeWorldAdventureMission({
               countryCode,
               domainId:
@@ -3497,8 +3514,9 @@ export default function WorldMissionPanel({
                               ).length;
 
 
+                        const creatorDomain = String(countryCode||'').toLowerCase()==='rw' && domain.id==='lifeCulture';
                         const totalCount =
-                          adventurePackage
+                          creatorDomain ? 10 : adventurePackage
                             ? adventurePackage.missions.length
                             : isRwandaPlace
                               ? 10
@@ -3609,7 +3627,7 @@ export default function WorldMissionPanel({
                                   "
                                 >
                                   {
-                                    completeCount
+                                    creatorDomain ? creatorMissions.length : completeCount
                                   }
                                   {' / '}
                                   {
@@ -3825,6 +3843,14 @@ export default function WorldMissionPanel({
                 </div>
 
 
+                {isCreatorLifeCulture && (
+                  <div className="mb-5 rounded-2xl border border-blue-200 bg-blue-50 p-5 text-sm font-bold text-blue-900">
+                    {creatorLoading ? '公開ミッションを読み込み中…' : creatorError ? creatorError :
+                      creatorMissions.length===0 ? '生活・文化のミッションは現在制作中です。公開 0 / 10 問' :
+                      '先生たちが作成したミッションを公開中：'+creatorMissions.length+' / 10 問。残りは現在制作中です。'}
+                    {creatorError && <button className="ml-3 underline" type="button" onClick={()=>setCreatorRefresh(x=>x+1)}>再試行</button>}
+                  </div>
+                )}
                 <div
                   className="
                     grid

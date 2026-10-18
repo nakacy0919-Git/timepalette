@@ -9,6 +9,7 @@ const TP_QHEAD = ['id', 'countryIso', 'countryName', 'domain', 'type', 'prompt',
 const TP_MHEAD = ['id', 'questionId', 'slot', 'fileId', 'fileName', 'size', 'createdAt'];
 const TP_THEADE = ['id', 'name', 'role', 'inviteHash', 'pinHash', 'active'];
 const TP_PHEAD = ['key', 'countryIso', 'domain', 'manualDone', 'updatedAt'];
+const TP_PUBHEAD = ['id', 'questionId', 'action', 'adminId', 'rightsBasis', 'createdAt'];
 
 function tpRandom_() { return Utilities.getUuid().replace(/-/g, '') + Utilities.getUuid().replace(/-/g, ''); }
 function tpSha_(input) {
@@ -595,6 +596,106 @@ function authorizeMissionCreatorPhotoFetch(){
   return 'Drive API authorization OK';
 }
 
+
+// Publication MVP: only Rwanda / Life & Culture is enabled during validation.
+// Other countries and domains must never leak private Drive images.
+function tpPublicEligible_(q){
+  return q && q.countryIso==='rw' && q.domain==='lifeCulture' &&
+    ['text4','photo4','photoText4'].includes(String(q.type));
+}
+function tpPublicValidate_(q){
+  if(!tpPublicEligible_(q) || !String(q.prompt||'').trim())
+    throw Error('現在はルワンダの生活・文化のみ公開テストできます。');
+  if(['text4','photoText4'].includes(q.type)){
+    const wrong=tpParse_(q.choicesJson).map(v=>String(v||'').trim());
+    if(!String(q.answer||'').trim()||wrong.length!==3||wrong.some(v=>!v)||
+       new Set([String(q.answer).trim(),...wrong]).size!==4)
+      throw Error('4択の正答・誤答が不足または重複しています。');
+  }
+  if(q.type==='photo4' && !/写真スロット\s*([1-4])/i.test(String(q.answer||'')))
+    throw Error('写真4択の正解スロットを確認してください。');
+  const media=tpRows_('Media').filter(m=>m.questionId===q.id);
+  const slots=media.map(m=>Number(m.slot));
+  const expected=q.type==='photo4'?[1,2,3,4]:q.type==='photoText4'?[1]:[];
+  if(slots.length!==expected.length||expected.some(n=>!slots.includes(n)))
+    throw Error('公開に必要な写真が揃っていません。');
+}
+function tpPublicationAudit_(q,action,user,basis){
+  const book=SpreadsheetApp.openById(tpProps_().getProperty('TP_DB_SHEET_ID'));
+  let sh=book.getSheetByName('PublicationLog');
+  if(!sh){sh=book.insertSheet('PublicationLog');sh.appendRow(TP_PUBHEAD);}
+  const record={id:Utilities.getUuid(),questionId:q.id,action,
+    adminId:user.id,rightsBasis:basis||'',createdAt:tpNow_()};
+  sh.appendRow(TP_PUBHEAD.map(key=>tpCell_(record[key])));
+}
+function tpPublicRelease_(args,user){
+  tpAdmin_(user);
+  const mode=String(args.mode||'');
+  if(!['publish','unpublish'].includes(mode))throw Error('公開処理を確認してください。');
+  return tpWithLock_(()=>{
+    const q=tpQuestion_(args.questionId);
+    if(!q)throw Error('問題が見つかりません。');
+    if(mode==='publish'){
+      if(q.status!=='approved')throw Error('承認済みの問題のみ公開できます。');
+      if(args.rightsConfirmed!==true)throw Error('画像・文章の公開利用権を確認してください。');
+      const basis=String(args.rightsBasis||'').trim().slice(0,350);
+      if(basis.length<5)throw Error('公開できる根拠を5文字以上で入力してください。');
+      tpPublicValidate_(q);
+      const count=tpRows_('Questions').filter(item=>item.status==='published' &&
+        item.countryIso===q.countryIso && item.domain===q.domain).length;
+      if(count>=10)throw Error('この国・カテゴリーは公開上限10問です。');
+      tpPublicationAudit_(q,'publish',user,basis);
+      q.status='published';
+    }else{
+      if(q.status!=='published')throw Error('公開済みの問題のみ公開停止できます。');
+      tpPublicationAudit_(q,'unpublish',user,'');
+      q.status='approved';
+    }
+    q.updatedAt=tpNow_();
+    tpReplace_('Questions',TP_QHEAD,q._row,q);
+    return {questionId:q.id,status:q.status,updatedAt:q.updatedAt};
+  });
+}
+function tpPublicCatalog_(args){
+  const country=String(args.countryIso||'').toLowerCase();
+  const domain=String(args.domain||'');
+  if(country!=='rw'||domain!=='lifeCulture')return {questions:[]};
+  const media=tpRows_('Media');
+  const questions=tpRows_('Questions').filter(q=>q.status==='published' &&
+    q.countryIso===country && q.domain===domain && tpPublicEligible_(q))
+    .slice(0,10).map(q=>({
+      id:q.id,countryIso:q.countryIso,domain:q.domain,type:q.type,
+      prompt:String(q.prompt||'').slice(0,2000),
+      answer:String(q.answer||'').slice(0,1500),
+      choices:tpParse_(q.choicesJson).map(x=>String(x||'').slice(0,600)),
+      explanation:String(q.notes||'').slice(0,3500),
+      sources:tpParse_(q.sourcesJson).filter(x=>/^https?:\/\//i.test(String(x))).slice(0,2),
+      media:media.filter(m=>m.questionId===q.id).map(m=>({slot:Number(m.slot)}))
+    }));
+  return {questions};
+}
+function tpPublicPhoto_(args){
+  const questionId=String(args.questionId||'');
+  const slot=Number(args.slot);
+  if(!/^[a-f0-9-]{36}$/i.test(questionId)||![1,2,3,4].includes(slot))
+    throw Error('Image is unavailable');
+  const q=tpQuestion_(questionId);
+  if(q?.status!=='published'||!tpPublicEligible_(q))throw Error('Image is unavailable');
+  const media=tpRows_('Media').find(m=>m.questionId===q.id&&Number(m.slot)===slot);
+  if(!media)throw Error('Image is unavailable');
+  let base64=tpPhotoCacheRead_(media.fileId);
+  if(!base64){
+    const bytes=DriveApp.getFileById(String(media.fileId)).getBlob().getBytes();
+    if(bytes.length<16||bytes.length>1228800||
+       String.fromCharCode(...bytes.slice(0,4))!=='RIFF'||
+       String.fromCharCode(...bytes.slice(8,12))!=='WEBP')
+      throw Error('Image is unavailable');
+    base64=Utilities.base64Encode(bytes);
+    tpPhotoCacheWrite_(media.fileId,base64);
+  }
+  return {base64,mime:'image/webp'};
+}
+
 function tpResponse_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
 }
@@ -626,6 +727,7 @@ function doPost(e) {
       case 'uploadImage':data=tpUpload_(body,user);break;
       case 'submitQuestion':data=tpSubmit_(body,user);break;
       case 'reviewQuestion':data=tpReview_(body,user);break;
+      case 'setPublication':data=tpPublicRelease_(body,user);break;
       case 'setProgress':data=tpProgress_(body,user);break;
       case 'getMediaBatch':data=tpGetMediaBatch_(body,user);break;
       case 'getMedia':data=tpGetMedia_(body,user);break;
@@ -640,4 +742,13 @@ function doPost(e) {
     return tpResponse_({ok:false,error:msg.slice(0,260)});
   }
 }
-function doGet() {return ContentService.createTextOutput('TimePalette Mission Creator backend is running.');}
+function doGet(e) {
+  const action=String(e?.parameter?.action||'');
+  if(action!=='publishedCatalog'&&action!=='publishedPhoto')
+    return ContentService.createTextOutput('TimePalette Mission Creator backend is running.');
+  try{
+    const data=action==='publishedCatalog'
+      ?tpPublicCatalog_(e.parameter):tpPublicPhoto_(e.parameter);
+    return tpResponse_({ok:true,data});
+  }catch(_){return tpResponse_({ok:false,error:'Resource is unavailable'});}
+}

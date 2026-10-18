@@ -478,6 +478,7 @@ function ImageMaterial({
   material,
 }) {
   const imageUrl =
+    material?.url ??
     (
       source?.assetType ===
         'image' &&

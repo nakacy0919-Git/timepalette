@@ -185,4 +185,28 @@ assert.equal(call({action:'submitQuestion',session:teacherSession,questionId:qui
 const quizApproved=call({action:'reviewQuestion',session:adminSession,questionId:quizId,status:'approved'});
 assert.equal(quizApproved.ok,true);
 assert.equal(call({action:'bootstrap',session:teacherSession}).data.questions.find(q=>q.id===quizId).type,'photoText4');
-console.log('PASS: login, roles, photos, review, progress, archive, atomic editing and restore');
+// Publication gate: teachers cannot publish; rights confirmation is required.
+const liveDraft=call({action:'saveQuestion',session:adminSession,question:{
+  countryIso:'rw',countryName:'Rwanda',domain:'lifeCulture',type:'photoText4',
+  prompt:'A published photo question?',answer:'Yes',choices:['No','Maybe','Unknown'],
+  sources:[],notes:'Source reviewed'
+}});
+assert.equal(liveDraft.ok,true);
+const publicId=liveDraft.data.question.id;
+assert.equal(call({action:'uploadImage',session:adminSession,questionId:publicId,slot:1,base64:webp}).ok,true);
+assert.equal(call({action:'reviewQuestion',session:adminSession,questionId:publicId,status:'approved'}).ok,true);
+const publicBefore=JSON.parse(run('doGet')({parameter:{action:'publishedCatalog',countryIso:'rw',domain:'lifeCulture'}}).s);
+assert.equal(publicBefore.data.questions.some(q=>q.id===publicId),false);
+assert.equal(call({action:'setPublication',session:teacherSession,questionId:publicId,mode:'publish',rightsConfirmed:true,rightsBasis:'Self authored, consented'}).ok,false);
+assert.equal(call({action:'setPublication',session:adminSession,questionId:publicId,mode:'publish',rightsConfirmed:false,rightsBasis:'Self authored, consented'}).ok,false);
+assert.equal(call({action:'setPublication',session:adminSession,questionId:publicId,mode:'publish',rightsConfirmed:true,rightsBasis:'Self authored, consented'}).ok,true);
+const publicAfter=JSON.parse(run('doGet')({parameter:{action:'publishedCatalog',countryIso:'rw',domain:'lifeCulture'}}).s);
+assert.equal(publicAfter.data.questions.find(q=>q.id===publicId).type,'photoText4');
+assert.equal('fileId' in publicAfter.data.questions.find(q=>q.id===publicId),false);
+const publicPhoto=JSON.parse(run('doGet')({parameter:{action:'publishedPhoto',questionId:publicId,slot:1}}).s);
+assert.equal(publicPhoto.ok,true);
+assert.equal(publicPhoto.data.base64,webp);
+assert.equal(call({action:'setPublication',session:adminSession,questionId:publicId,mode:'unpublish'}).ok,true);
+const unpubPhoto=JSON.parse(run('doGet')({parameter:{action:'publishedPhoto',questionId:publicId,slot:1}}).s);
+assert.equal(unpubPhoto.ok,false);
+console.log('PASS: login, roles, photos, review, progress, publication and restore');

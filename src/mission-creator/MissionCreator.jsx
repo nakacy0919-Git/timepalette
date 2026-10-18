@@ -302,7 +302,7 @@ async function loadStoredPhotos(question,session,onPhoto,onProgress){
 
 function QuestionBank({
   questions, user, onEdit, onReview, onInspect,
-  onPrefetch, onDelete, onRestore,
+  onPrefetch, onDelete, onRestore, onPublication,
   selectedCountry, countryNames, busy, reviewingIds,
   filter, onFilterChange, search, onSearchChange
 }) {
@@ -420,7 +420,11 @@ function QuestionBank({
                           <CheckCircle2 size={16}/>{reviewingIds?.has(q.id) ? '処理中…' : '合格'}
                         </button>
                       )}
-                      {q.status === 'approved' && <span className="mc-passed-label"><CheckCircle2 size={16}/>合格済み</span>}
+                      {q.status === 'approved' && <>
+                        <span className="mc-passed-label"><CheckCircle2 size={16}/>合格済み</span>
+                        <button type="button" className="mc-primary mc-small" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onPublication(q,'publish')}>TimePaletteに公開</button>
+                      </>}
+                      {q.status === 'published' && <button type="button" className="mc-outline mc-small" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onPublication(q,'unpublish')}>公開停止</button>}
                       {!['published','needs_revision'].includes(q.status) && (
                         <button type="button" className="mc-outline mc-small" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onReview(q,'needs_revision')}>修正依頼</button>
                       )}
@@ -814,6 +818,31 @@ export default function MissionCreator() {
       setReviewingIds(new Set(reviewingRef.current));
     }
   };
+  const publication=async(q,mode)=>{
+    if(user?.role!=='admin'||busy||demo)return;
+    let rightsBasis='';
+    if(mode==='publish'){
+      if(q.countryIso!=='rw'||q.domain!=='lifeCulture'){
+        window.alert('初回の公開テストはルワンダの生活・文化のみ対応しています。');return;
+      }
+      rightsBasis=window.prompt('写真・文章を一般公開できる根拠を入力してください。例：自身で撮影し掲載許諾を取得済み（キャンセルで中止）','');
+      if(rightsBasis===null)return;
+      rightsBasis=rightsBasis.trim();
+      if(rightsBasis.length<5){window.alert('公開の根拠を5文字以上で記録してください。');return;}
+      if(!window.confirm('写真・出典・内容・公開権利を確認済みですか？\nTimePalette本体に公開します。'))return;
+    }else if(!window.confirm('この問題をTimePaletteから公開停止しますか？'))return;
+    setBusy(true);setError('');
+    try{
+      const result=await creatorRequest('setPublication',{
+        questionId:q.id,mode,rightsConfirmed:mode==='publish',rightsBasis
+      },session);
+      setQuestions(previous=>previous.map(item=>item.id===q.id?
+        {...item,status:result.status,updatedAt:result.updatedAt}:item));
+      setInspection(previous=>previous?.id===q.id?
+        {...previous,status:result.status}:previous);
+    }catch(e){setError(e?.message||'公開処理に失敗しました。');}
+    finally{setBusy(false);}
+  };
   const archiveQuestion=async(q)=>{
     if(user?.role!=='admin'||busy)return;
     if(!window.confirm('この問題を削除済みに移動しますか？\n\n'+q.countryName+'：'+String(q.prompt||'').slice(0,90)+'\n\n写真は残り、復元できます。'))return;
@@ -840,7 +869,7 @@ export default function MissionCreator() {
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
         {!loadingData && page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
-        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} selectedCountry="" countryNames={countryNames} busy={busy||demo} reviewingIds={reviewingIds}
+        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} onPublication={publication} selectedCountry="" countryNames={countryNames} busy={busy||demo} reviewingIds={reviewingIds}
           filter={bankFilter ?? (user?.role === 'admin' ? 'draft' : 'all')}
           onFilterChange={setBankFilter}
           search={bankSearch}
