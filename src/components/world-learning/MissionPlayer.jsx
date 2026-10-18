@@ -355,6 +355,7 @@ const randomizedChoices =
     ]
   );
 
+  // tpPhotoLayoutPhase2: affect only teacher-published photo four-choice.
   const isPublishedPhotoFour =
     isCreatorMission &&
     randomizedChoices.length === 4 &&
@@ -1137,9 +1138,9 @@ const correct =
                 ? `
                   grid
                   grid-cols-1
-                  gap-3
+                  gap-2
                   sm:grid-cols-2
-                  md:gap-4
+                  md:gap-3
                 `
                 : hasVisualChoice
                 ? `
@@ -1268,7 +1269,7 @@ const correct =
                       text-left
                       transition-all
                       duration-200
-                      ${isPublishedPhotoFour ? 'min-h-0 p-3 md:p-3' : 'min-h-[132px] p-5 md:min-h-[154px] md:p-6'}
+                      ${isPublishedPhotoFour ? 'min-h-0 p-1.5 md:p-1.5' : 'min-h-[132px] p-5 md:min-h-[154px] md:p-6'}
 
                       ${choiceClass}
                     `}
@@ -1278,27 +1279,18 @@ const correct =
                       className={`
                         flex
                         h-full
-                        ${isPublishedPhotoFour ? 'flex-col gap-2' : 'gap-4'}
+                        ${isPublishedPhotoFour ? 'flex-col gap-0' : 'gap-4'}
                       `}
                     >
 
                       <span
-                        className="
-                          flex
-                          h-10
-                          w-10
-                          shrink-0
-                          items-center
-                          justify-center
-                          rounded-full
-                          bg-slate-100
-                          text-sm
-                          font-black
-                          text-slate-500
-                          md:h-11
-                          md:w-11
-                          md:text-base
-                        "
+                        className={`
+                          flex shrink-0 items-center justify-center rounded-full
+                          text-sm font-black text-slate-600 md:text-base
+                          ${isPublishedPhotoFour
+                            ? 'absolute left-3 top-3 z-10 h-9 w-9 border border-white bg-white/95 shadow-md'
+                            : 'h-10 w-10 bg-slate-100 md:h-11 md:w-11'}
+                        `}
                       >
                         {[
                           'A',
@@ -1324,14 +1316,12 @@ const correct =
 
                         {choice.image && (
                           <div
-                            className="
-                              mb-4
-                              aspect-[16/9]
-                              w-full
-                              overflow-hidden
-                              rounded-[20px]
-                              bg-slate-100
-                            "
+                            className={`
+                              aspect-[16/9] w-full overflow-hidden bg-slate-100
+                              ${isPublishedPhotoFour
+                                ? 'mb-0 max-h-[24dvh] rounded-[14px]'
+                                : 'mb-4 rounded-[20px]'}
+                            `}
                           >
                             <img
                               src={
@@ -1378,14 +1368,11 @@ const correct =
 
 
                         <span
-                          className="
-                            text-base
-                            font-black
-                            leading-7
-                            text-slate-800
-                            md:text-lg
-                            md:leading-8
-                          "
+                          className={`
+                            text-base font-black leading-7 text-slate-800
+                            md:text-lg md:leading-8
+                            ${isPublishedPhotoFour ? 'sr-only' : ''}
+                          `}
                         >
                           {
                             choice.label
@@ -1812,17 +1799,9 @@ const correct =
           >
 
             <div
-              className="
-                mx-auto
-                grid
-                w-full
-                max-w-[1380px]
-                gap-6
-                p-4
-                md:p-6
-                lg:grid-cols-[360px_minmax(0,1fr)]
-                xl:grid-cols-[400px_minmax(0,1fr)]
-              "
+              className={isPublishedPhotoFour
+                ? 'mx-auto grid w-full max-w-[1380px] gap-3 p-2 sm:p-3 lg:grid-cols-[minmax(240px,280px)_minmax(0,1fr)] xl:grid-cols-[minmax(250px,300px)_minmax(0,1fr)]'
+                : 'mx-auto grid w-full max-w-[1380px] gap-6 p-4 md:p-6 lg:grid-cols-[360px_minmax(0,1fr)] xl:grid-cols-[400px_minmax(0,1fr)]'}
             >
 
               {/* LEFT:
@@ -1837,15 +1816,9 @@ const correct =
               >
 
                 <div
-                  className="
-                    rounded-[28px]
-                    border
-                    border-slate-200
-                    bg-white
-                    p-6
-                    shadow-[0_14px_36px_rgba(15,23,42,0.08)]
-                    md:p-7
-                  "
+                  className={isPublishedPhotoFour
+                    ? 'rounded-[22px] border border-slate-200 bg-white p-4 shadow-[0_14px_36px_rgba(15,23,42,0.08)]'
+                    : 'rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_14px_36px_rgba(15,23,42,0.08)] md:p-7'}
                 >
 
                   <p
@@ -1974,30 +1947,15 @@ const correct =
                   INTERACTIVE AREA */}
 
               <main
-                className="
-                  min-w-0
-                  rounded-[30px]
-                  border
-                  border-slate-200
-                  bg-white
-                  p-5
-                  shadow-[0_14px_36px_rgba(15,23,42,0.07)]
-                  md:p-7
-                  xl:p-8
-                "
+                className={isPublishedPhotoFour
+                  ? 'min-w-0 rounded-[22px] border border-slate-200 bg-white p-2 shadow-[0_14px_36px_rgba(15,23,42,0.07)] sm:p-3'
+                  : 'min-w-0 rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_14px_36px_rgba(15,23,42,0.07)] md:p-7 xl:p-8'}
               >
 
                 <div
-                  className="
-                    mb-5
-                    flex
-                    items-center
-                    justify-between
-                    gap-3
-                    border-b
-                    border-slate-100
-                    pb-4
-                  "
+                  className={isPublishedPhotoFour
+                    ? 'hidden'
+                    : 'mb-5 flex items-center justify-between gap-3 border-b border-slate-100 pb-4'}
                 >
 
                   <div>
