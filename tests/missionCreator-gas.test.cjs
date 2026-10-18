@@ -14,6 +14,7 @@ class Book {
  getSheetByName(n){return this.tabs.find(x=>x.name===n);}
 }
 const files=new Map(),folders=new Map();
+let parallelPhotoRequests=0;
 const env={
  Utilities:{
   getUuid:()=>crypto.randomUUID(),
@@ -25,8 +26,31 @@ const env={
  },
  SpreadsheetApp:{create:()=>{const id='sheet'+(++last);const b=new Book(id);sheets.set(id,b);return b;},openById:(id)=>sheets.get(id)},
  DriveApp:{createFolder:()=>{const id='folder'+(++last);const f={getId:()=>id,createFile:blob=>{const fileId='file'+(++last);files.set(fileId,blob);return {getId:()=>fileId};}};folders.set(id,f);return f;},getFolderById:id=>folders.get(id),getFileById:id=>({getBlob:()=>files.get(id)})},
- PropertiesService:{getScriptProperties:()=>({getProperty:k=>props[k],setProperties:v=>Object.assign(props,v),setProperty:(k,v)=>{props[k]=v;},deleteProperty:k=>{delete props[k];}})},
- CacheService:{getScriptCache:()=>({get:k=>cache.get(k)||null,put:(k,v)=>cache.set(k,v),remove:k=>cache.delete(k)})},
+  ScriptApp:{getOAuthToken:()=>'mock-token'},
+  UrlFetchApp:{fetchAll:requests=>{
+    parallelPhotoRequests++;
+    return requests.map(request=>{
+      const match=String(request.url).match(/\/files\/([^?]+)/);
+      const id=match?decodeURIComponent(match[1]):'';
+      const blob=files.get(id);
+      return {
+        getResponseCode:()=>blob?200:404,
+        getBlob:()=>blob
+      };
+    });
+  }},
+  PropertiesService:{getScriptProperties:()=>({getProperty:k=>props[k],setProperties:v=>Object.assign(props,v),setProperty:(k,v)=>{props[k]=v;},deleteProperty:k=>{delete props[k];}})},
+  CacheService:{getScriptCache:()=>({
+    get:k=>cache.get(k)||null,
+    put:(k,v)=>cache.set(k,v),
+    remove:k=>cache.delete(k),
+    getAll:keys=>Object.fromEntries(
+      keys.filter(k=>cache.has(k)).map(k=>[k,cache.get(k)])
+    ),
+    putAll:items=>{
+      for(const [k,v] of Object.entries(items))cache.set(k,v);
+    }
+  })},
  LockService:{getScriptLock:()=>({waitLock:()=>{},releaseLock:()=>{}})},
  ContentService:{MimeType:{JSON:'json'},createTextOutput:s=>({s,setMimeType(){return this;}})},
  Logger:{log:()=>{}},
@@ -91,6 +115,17 @@ assert.equal(batch.ok,true);
 assert.equal(batch.data.photos.length,4);
 assert.equal(batch.data.photos.find(p=>p.slot===1).base64,webp);
 assert.equal(batch.data.errors.length,0);
+assert.equal(batch.data.perf.parallel,true);
+assert.equal(parallelPhotoRequests>0,true);
+const previousParallelRequests=parallelPhotoRequests;
+const cachedBatch=call({
+  action:'getMediaBatch',
+  session:teacherSession,
+  questionId:qid
+});
+assert.equal(cachedBatch.ok,true);
+assert.equal(cachedBatch.data.perf.cacheHits,4);
+assert.equal(parallelPhotoRequests,previousParallelRequests);
 const m=call({action:'getMedia',session:teacherSession,questionId:qid,slot:1});assert.equal(m.ok,true);assert.equal(m.data.base64,webp);
 assert.equal(call({action:'deleteQuestion',session:teacherSession,questionId:qid}).ok,false);
 assert.equal(call({action:'deleteQuestion',session:adminSession,questionId:qid}).ok,true);

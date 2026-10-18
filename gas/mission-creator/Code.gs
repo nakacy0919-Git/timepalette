@@ -362,53 +362,215 @@ function tpProgress_(args,user) {
     return row;
   });
 }
-function tpGetMediaBatch_(args,user) {
-    const q=tpQuestion_(args.questionId);
-    if(!q || (user.role!=='admin' &&
-      (q.status==='deleted' ||
-      (q.authorId!==user.id && q.status==='draft'))))
-      throw Error('問題が見つかりません。');
 
-    const rows=tpRows_('Media')
-      .filter(m=>m.questionId===q.id)
-      .sort((a,b)=>Number(a.slot)-Number(b.slot));
-
-    const photos=[],errors=[];
-    let total=0;
-
-    for(const item of rows){
-      const slot=Number(item.slot);
-      if(![1,2,3,4].includes(slot))continue;
-      try{
-        const bytes=DriveApp.getFileById(item.fileId)
-          .getBlob().getBytes();
-
-        if(bytes.length>1228800)
-          throw Error('画像サイズ超過');
-
-        if(total+bytes.length>2400000)
-          throw Error('一括取得容量超過');
-
-        total+=bytes.length;
-        photos.push({
-          slot,
-          base64:Utilities.base64Encode(bytes)
-        });
-      }catch(e){
-        errors.push({slot,message:'個別取得が必要です'});
-      }
-    }
-    return {photos,errors};
-  }
-function tpGetMedia_(args,user) {
-  const q=tpQuestion_(args.questionId);
-  if(!q || (user.role!=='admin'&&(q.status==='deleted'||(q.authorId!==user.id&&q.status==='draft'))))throw Error('問題が見つかりません。');
-  const media=tpRows_('Media').find(m=>m.questionId===q.id&&Number(m.slot)===Number(args.slot));
-  if(!media)throw Error('写真が見つかりません。');
-  const bytes=DriveApp.getFileById(media.fileId).getBlob().getBytes();
-  if(bytes.length>1228800)throw Error('画像が大きすぎます。');
-  return {base64:Utilities.base64Encode(bytes),mime:'image/webp'};
+function tpPhotoCacheKey_(fileId){
+  return 'tp-webp-v3-'+tpSha_(String(fileId)).slice(0,28);
 }
+
+// The shared cache contains only image bytes.
+// Every request must pass session and question authorization first.
+function tpPhotoCacheRead_(fileId){
+  try{
+    const cache=CacheService.getScriptCache();
+    const prefix=tpPhotoCacheKey_(fileId);
+    const count=Number(cache.get(prefix+':n'));
+
+    if(!Number.isInteger(count)||count<1||count>30)
+      return null;
+
+    const keys=Array.from({length:count},(_,i)=>prefix+':'+i);
+    const stored=cache.getAll(keys);
+
+    if(keys.some(key=>typeof stored[key]!=='string'))
+      return null;
+
+    const base64=keys.map(key=>stored[key]).join('');
+    return base64.length<=1700000 ? base64 : null;
+  }catch(e){
+    return null;
+  }
+}
+
+function tpPhotoCacheWrite_(fileId,base64){
+  try{
+    const size=60000;
+    const count=Math.ceil(base64.length/size);
+    if(count<1||count>30)return;
+
+    const prefix=tpPhotoCacheKey_(fileId);
+    const pieces={};
+
+    for(let i=0;i<count;i++)
+      pieces[prefix+':'+i]=base64.slice(i*size,(i+1)*size);
+
+    const cache=CacheService.getScriptCache();
+    cache.putAll(pieces,1200);
+    cache.put(prefix+':n',String(count),1200);
+  }catch(e){
+    // A cache failure must never prevent photo viewing.
+  }
+}
+
+function tpPhotoBase64Length_(base64){
+  const padding=base64.endsWith('==')?2:base64.endsWith('=')?1:0;
+  return Math.floor(base64.length*3/4)-padding;
+}
+
+function tpGetMediaBatch_(args,user){
+  const started=Date.now();
+  const q=tpQuestion_(args.questionId);
+
+  if(!q || (user.role!=='admin' &&
+    (q.status==='deleted' ||
+     (q.authorId!==user.id && q.status==='draft'))))
+    throw Error('問題が見つかりません。');
+
+  const rows=tpRows_('Media')
+    .filter(m=>m.questionId===q.id)
+    .sort((a,b)=>Number(a.slot)-Number(b.slot));
+
+  const photos=[];
+  const errors=[];
+  const missing=[];
+  let total=0;
+  let cacheHits=0;
+
+  for(const item of rows){
+    const slot=Number(item.slot);
+    if(![1,2,3,4].includes(slot))continue;
+
+    const cached=tpPhotoCacheRead_(item.fileId);
+    if(!cached){
+      missing.push(item);
+      continue;
+    }
+
+    const size=tpPhotoBase64Length_(cached);
+    if(size>1228800 || total+size>2400000){
+      errors.push({slot,message:'個別取得が必要です'});
+      continue;
+    }
+
+    total+=size;
+    photos.push({slot,base64:cached});
+    cacheHits++;
+  }
+
+  // Concurrent Google Drive API reads for cache misses.
+  // DriveApp remains the fallback if API access is unavailable.
+  let responses=null;
+  let parallel=false;
+
+  if(missing.length>1 &&
+     typeof UrlFetchApp!=='undefined' &&
+     typeof ScriptApp!=='undefined'){
+    try{
+      const token=ScriptApp.getOAuthToken();
+      const requests=missing.map(item=>({
+        url:'https://www.googleapis.com/drive/v3/files/'
+          +encodeURIComponent(String(item.fileId))+'?alt=media',
+        method:'get',
+        headers:{Authorization:'Bearer '+token},
+        muteHttpExceptions:true,
+        timeoutSeconds:8
+      }));
+
+      responses=UrlFetchApp.fetchAll(requests);
+      parallel=Array.isArray(responses) &&
+        responses.length===missing.length;
+    }catch(e){
+      Logger.log('Parallel photo retrieval fallback');
+    }
+  }
+
+  for(let i=0;i<missing.length;i++){
+    const item=missing[i];
+    const slot=Number(item.slot);
+
+    try{
+      const response=parallel?responses[i]:null;
+      const bytes=response && response.getResponseCode()===200
+        ? response.getBlob().getBytes()
+        : DriveApp.getFileById(item.fileId).getBlob().getBytes();
+
+      if(bytes.length>1228800)
+        throw Error('Photo too large');
+
+      if(total+bytes.length>2400000)
+        throw Error('Batch size limit');
+
+      const base64=Utilities.base64Encode(bytes);
+      total+=bytes.length;
+
+      photos.push({slot,base64});
+      tpPhotoCacheWrite_(item.fileId,base64);
+    }catch(e){
+      errors.push({slot,message:'個別取得が必要です'});
+    }
+  }
+
+  photos.sort((a,b)=>a.slot-b.slot);
+
+  return {
+    photos,
+    errors,
+    perf:{
+      cacheHits,
+      parallel,
+      elapsedMs:Date.now()-started
+    }
+  };
+}
+
+function tpGetMedia_(args,user){
+  const q=tpQuestion_(args.questionId);
+
+  if(!q || (user.role!=='admin' &&
+    (q.status==='deleted' ||
+     (q.authorId!==user.id && q.status==='draft'))))
+    throw Error('問題が見つかりません。');
+
+  const media=tpRows_('Media').find(
+    m=>m.questionId===q.id&&Number(m.slot)===Number(args.slot)
+  );
+  if(!media)throw Error('写真が見つかりません。');
+
+  let base64=tpPhotoCacheRead_(media.fileId);
+
+  if(!base64){
+    const bytes=DriveApp.getFileById(media.fileId)
+      .getBlob().getBytes();
+
+    if(bytes.length>1228800)
+      throw Error('画像が大きすぎます。');
+
+    base64=Utilities.base64Encode(bytes);
+    tpPhotoCacheWrite_(media.fileId,base64);
+  }
+
+  return {base64,mime:'image/webp'};
+}
+
+// Run from the Apps Script editor once before deploying.
+function authorizeMissionCreatorPhotoFetch(){
+  const response=UrlFetchApp.fetch(
+    'https://www.googleapis.com/drive/v3/about?fields=kind',
+    {
+      headers:{
+        Authorization:'Bearer '+ScriptApp.getOAuthToken()
+      },
+      muteHttpExceptions:true,
+      timeoutSeconds:8
+    }
+  );
+
+  const status=response.getResponseCode();
+  if(status!==200)
+    throw Error('Drive API authorization failed: HTTP '+status);
+
+  return 'Drive API authorization OK';
+}
+
 function tpResponse_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
 }
