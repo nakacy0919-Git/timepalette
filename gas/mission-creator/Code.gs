@@ -26,11 +26,36 @@ function tpTable_(name) {
   return sh;
 }
 function tpRows_(name) {
-  const sh = tpTable_(name), values = sh.getDataRange().getValues();
-  const keys = values.shift() || [];
-  return values.map((row, i) => ({
-    _row: i + 2, ...Object.fromEntries(keys.map((key, j) => [key, row[j]])),
-  })).filter(record => String(record[keys[0]] || '').trim());
+  const cache=CacheService.getScriptCache();
+  const key='tp-rows-speed-v1-'+name;
+  const enabled=['Questions','Media','Progress'].includes(name);
+  if(enabled){
+    const saved=cache.get(key);
+    if(saved){
+      try{return JSON.parse(saved);}
+      catch(e){cache.remove(key);}
+    }
+  }
+  const sh=tpTable_(name),values=sh.getDataRange().getValues();
+  const keys=values.shift()||[];
+  const rows=values.map((row,i)=>({
+    _row:i+2,
+    ...Object.fromEntries(keys.map((k,j)=>[k,row[j]]))
+  })).filter(record=>String(record[keys[0]]||'').trim());
+  if(enabled){
+    const packed=JSON.stringify(rows);
+    if(packed.length<50000){
+      try{cache.put(key,packed,45);}
+      catch(e){/* Cache is optional. */}
+    }
+  }
+  return rows;
+}
+function tpInvalidateRows_(name){
+  const cache=CacheService.getScriptCache();
+  if(name==='Teachers')cache.remove('tp-teacher-list-fast-v1');
+  if(['Questions','Media','Progress'].includes(name))
+    cache.remove('tp-rows-speed-v1-'+name);
 }
 function tpTeacherRows_() {
   // Access controls are rechecked against this short-lived cache on every action.
@@ -48,8 +73,8 @@ function tpCell_(v) {
   const value = v == null ? '' : String(v);
   return /^[=+\-@]/.test(value) ? "'" + value : value; // sheet formula injection defense
 }
-function tpAppend_(name, head, data) { tpTable_(name).appendRow(head.map(k=>tpCell_(data[k]))); if(name==='Teachers')CacheService.getScriptCache().remove('tp-teacher-list-fast-v1'); }
-function tpReplace_(name, head, row, data) { tpTable_(name).getRange(row, 1, 1, head.length).setValues([head.map(k=>tpCell_(data[k]))]); }
+function tpAppend_(name, head, data) { tpTable_(name).appendRow(head.map(k=>tpCell_(data[k]))); tpInvalidateRows_(name); }
+function tpReplace_(name, head, row, data) { tpTable_(name).getRange(row, 1, 1, head.length).setValues([head.map(k=>tpCell_(data[k]))]); tpInvalidateRows_(name); }
 function tpWithLock_(fn) {
   const lock = LockService.getScriptLock(); lock.waitLock(12000);
   try { return fn(); } finally { lock.releaseLock(); }
@@ -96,6 +121,44 @@ function createTeacherInvite(name, pin, role) {
 /* Shared teacher passcode is configured in Script Properties, NOT in GitHub.
  * 4-digit PIN is a convenience gate for a trusted pilot, NOT a strong identity factor.
  */
+function configureAdminPinFromSettings(){
+  const p=tpProps_();
+  const pin=String(p.getProperty('TP_ADMIN_PIN_TO_SET')||'');
+  if(!/^\d{4}$/.test(pin))
+    throw Error('TP_ADMIN_PIN_TO_SET must be a 4-digit PIN');
+  const admins=tpTeacherRows_().filter(
+    x=>x.role==='admin'&&tpBool_(x.active)
+  );
+  if(admins.length!==1)
+    throw Error('Exactly one active admin account is required');
+  p.setProperty(
+    'TP_SIMPLE_ADMIN_PIN_HASH',
+    tpSha_(tpPepper_()+':simple-admin:'+pin)
+  );
+  p.deleteProperty('TP_ADMIN_PIN_TO_SET');
+  return 'Admin PIN configured successfully';
+}
+function tpSimpleAdminLogin_(args){
+  const pin=String(args.pin||'');
+  const cache=CacheService.getScriptCache();
+  const expected=tpProps_().getProperty('TP_SIMPLE_ADMIN_PIN_HASH');
+  if(!expected)throw Error('管理者PINが未設定です。');
+  const attempts=Number(cache.get('tp-admin-pin-errors')||0);
+  if(attempts>=5)
+    throw Error('試行回数の上限です。15分後に再試行してください。');
+  if(!/^\d{4}$/.test(pin)||
+    tpSha_(tpPepper_()+':simple-admin:'+pin)!==expected){
+    cache.put('tp-admin-pin-errors',String(attempts+1),900);
+    throw Error('管理者PINが正しくありません。');
+  }
+  const admins=tpTeacherRows_().filter(
+    x=>x.role==='admin'&&tpBool_(x.active)
+  );
+  if(admins.length!==1)
+    throw Error('管理者アカウントを確認してください。');
+  cache.remove('tp-admin-pin-errors');
+  return tpNewSession_(admins[0]);
+}
 function configureSharedTeacherPin(pin) {
   if(!/^\d{4}$/.test(String(pin)))throw Error('4桁の数字を指定してください。');
   tpProps_().setProperty('TP_SHARED_TEACHER_PIN_HASH',tpSha_(tpPepper_()+':shared-teacher:'+pin));
@@ -113,8 +176,8 @@ function configureTeacherPinFromSettings() {
 }
 function tpNewSession_(member) {
   const session=tpRandom_();
-  CacheService.getScriptCache().put('session_'+tpSha_(session),JSON.stringify({id:member.id,name:member.name,role:member.role}),3600);
-  return {session,expiresInSeconds:3600,user:{id:member.id,name:member.name,role:member.role}};
+  CacheService.getScriptCache().put('session_'+tpSha_(session),JSON.stringify({id:member.id,name:member.name,role:member.role}),21600);
+  return {session,expiresInSeconds:21600,user:{id:member.id,name:member.name,role:member.role}};
 }
 function tpSharedLogin_(args) {
   const pin=String(args.pin||'');
@@ -153,6 +216,7 @@ function tpRegisterTeacher_(args) {
   });
 }
 function tpLogin_(args) {
+  if(args.adminMode===true)return tpSimpleAdminLogin_(args);
   const invite=String(args.invite||'').trim(),pin=String(args.pin||'');
   if(!invite)return tpSharedLogin_(args);
   if(!/^[a-f0-9]{64}$/.test(invite)||!/^\d{4}$/.test(pin))throw Error('招待コードまたはPINが正しくありません。');
@@ -164,9 +228,7 @@ function tpLogin_(args) {
   const success=!!member && member.pinHash===tpSha_(pepper+':pin:'+invite+':'+pin);
   if(!success){cache.put(failKey,String(failed+1),900);throw Error('招待コードまたはPINが正しくありません。');}
   cache.remove(failKey);
-  const session=tpRandom_();
-  cache.put('session_'+tpSha_(session),JSON.stringify({id:member.id,name:member.name,role:member.role}),3600);
-  return {session,expiresInSeconds:3600,user:{id:member.id,name:member.name,role:member.role}};
+  return tpNewSession_(member);
 }
 function tpUser_(args) {
   const session=String(args.session||'');
@@ -354,8 +416,22 @@ function doPost(e) {
   try {
     const body=JSON.parse(e?.postData?.contents||'{}');
     const action=String(body.action||'');
-    if(action==='login')return tpResponse_({ok:true,data:tpLogin_(body)});
-    if(action==='registerTeacher')return tpResponse_({ok:true,data:tpRegisterTeacher_(body)});
+    if(action==='login'){
+      const data=tpLogin_(body);
+      if(body.withBootstrap && data.session && data.user){
+        try{data.bootstrap=tpBootstrap_(data.user);}
+        catch(e){Logger.log('Initial data loading deferred');}
+      }
+      return tpResponse_({ok:true,data});
+    }
+    if(action==='registerTeacher'){
+      const data=tpRegisterTeacher_(body);
+      if(body.withBootstrap && data.session && data.user){
+        try{data.bootstrap=tpBootstrap_(data.user);}
+        catch(e){Logger.log('Initial data loading deferred');}
+      }
+      return tpResponse_({ok:true,data});
+    }
     const user=tpUser_(body);
     let data;
     switch(action){

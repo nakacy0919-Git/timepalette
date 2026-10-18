@@ -98,12 +98,11 @@ function CountryPicker({ countries, value, onChange, label = '国を選択' }) {
 function Access({ onLogin, onRegister, busy, error, registrationToken, onBack }) {
   const [pin, setPin] = useState('');
   const [name, setName] = useState('');
-  const [adminMode, setAdminMode] = useState(() => Boolean(new URLSearchParams(window.location.search).get('invite')));
-  const [invite, setInvite] = useState(() => new URLSearchParams(window.location.search).get('invite') || '');
+  const [adminMode, setAdminMode] = useState(false);
   const submit = (event) => {
     event.preventDefault();
     if (registrationToken) onRegister(registrationToken, name.trim());
-    else onLogin({ pin, invite: adminMode ? invite.trim() : '' });
+    else onLogin({ pin, adminMode });
   };
   return (
     <main className="mc-access-wrap">
@@ -117,10 +116,9 @@ function Access({ onLogin, onRegister, busy, error, registrationToken, onBack })
             <p>初回の登録です。問題の作成者として表示する名前を入力してください。</p>
             <label>お名前（初回のみ） <input autoFocus value={name} maxLength={60} onChange={e => setName(e.target.value)} placeholder="例：中西先生" required autoComplete="name" /></label>
           </> : <>
-            {adminMode && <label>管理者専用の招待コード <input value={invite} onChange={e => setInvite(e.target.value)} placeholder="管理者の招待コード" required autoComplete="off" /></label>}
             <label>{adminMode ? '管理者PIN（4桁）' : '先生用共通パスコード（4桁）'} <input value={pin} onChange={e => setPin(e.target.value.replace(/\D/g, '').slice(0, 4))} placeholder="4桁を入力" inputMode="numeric" type="password" minLength={4} maxLength={4} required autoComplete="off" /></label>
           </>}
-          <button className="mc-primary" type="submit" disabled={busy || (registrationToken ? !name.trim() : pin.length !== 4 || (adminMode && !invite.trim()))}>{busy ? '確認中…' : registrationToken ? '問題作成を始める' : 'ログインする'}</button>
+          <button className="mc-primary" type="submit" disabled={busy || (registrationToken ? !name.trim() : pin.length !== 4)}>{busy ? '確認中…' : registrationToken ? '問題作成を始める' : 'ログインする'}</button>
         </form>
         {error && <p role="alert" className="mc-error">{error}</p>}
         {registrationToken ? <button type="button" className="mc-text-btn" onClick={onBack}>ログインに戻る</button> : <>
@@ -381,6 +379,7 @@ export default function MissionCreator() {
   const [inspectionLoading, setInspectionLoading] = useState(false);
   const [inspectionError, setInspectionError] = useState('');
   const [inspectionLoadingText, setInspectionLoadingText] = useState('');
+  const initialBootstrapRef=useRef(null);
   const photoCacheRef=useRef(new Map());
   const photoPendingRef=useRef(new Map());
   const photoCacheEpochRef=useRef(0);
@@ -471,6 +470,15 @@ export default function MissionCreator() {
 
   useEffect(()=>{
     if (!session) { setLoadingData(false); return; }
+    const ready=initialBootstrapRef.current;
+    if(ready && ready.session===session){
+      initialBootstrapRef.current=null;
+      setUser(ready.data.user);
+      setQuestions(ready.data.questions);
+      setProgress(ready.data.progress);
+      setLoadingData(false);
+      return;
+    }
     let cancelled=false;
     setLoadingData(true);
     creatorRequest('bootstrap', {}, session).then(data=>{
@@ -488,19 +496,19 @@ export default function MissionCreator() {
     setBusy(true);setError('');
     try{return await creatorRequest(action,payload,session);}catch(e){setError(e.message);throw e;}finally{setBusy(false);}
   };
-  const login=async({invite,pin})=>{setBusy(true);setError('');try{
-    const teacherToken = invite ? '' : (localStorage.getItem('tp-mc-teacher-token') || '');
-    const data=await creatorRequest('login',{invite,pin,teacherToken});
+  const login=async({adminMode,pin})=>{setBusy(true);setError('');try{
+    const teacherToken = adminMode ? '' : (localStorage.getItem('tp-mc-teacher-token') || '');
+    const data=await creatorRequest('login',{pin,adminMode,teacherToken,withBootstrap:true});
     if(data.needsName){setRegistrationToken(data.registrationToken);return;}
-    sessionStorage.setItem('tp-mc-session',data.session);if(data.user)setUser(data.user);setSession(data.session);setRegistrationToken('');
+    sessionStorage.setItem('tp-mc-session',data.session);if(data.user)setUser(data.user);if(data.bootstrap)initialBootstrapRef.current={session:data.session,data:data.bootstrap};setSession(data.session);setRegistrationToken('');
   }catch(e){setError(e.message);}finally{setBusy(false);}};
   const register=async(token,name)=>{setBusy(true);setError('');try{
-    const data=await creatorRequest('registerTeacher',{registrationToken:token,displayName:name});
+    const data=await creatorRequest('registerTeacher',{registrationToken:token,displayName:name,withBootstrap:true});
     if(data.teacherToken)localStorage.setItem('tp-mc-teacher-token',data.teacherToken);
-    sessionStorage.setItem('tp-mc-session',data.session);if(data.user)setUser(data.user);setSession(data.session);setRegistrationToken('');
+    sessionStorage.setItem('tp-mc-session',data.session);if(data.user)setUser(data.user);if(data.bootstrap)initialBootstrapRef.current={session:data.session,data:data.bootstrap};setSession(data.session);setRegistrationToken('');
   }catch(e){setError(e.message);}finally{setBusy(false);}};
   const reload=async()=>{if(demo)return;const data=await creatorRequest('bootstrap',{},session);setUser(data.user);setQuestions(data.questions);setProgress(data.progress);};
-  const logout=()=>{photoCacheEpochRef.current+=1;photoCacheRef.current.clear();photoPendingRef.current.clear();sessionStorage.removeItem('tp-mc-session');setUser(null);setSession('');setDemo(false);setPhotos({});setError('');};
+  const logout=()=>{initialBootstrapRef.current=null;photoCacheEpochRef.current+=1;photoCacheRef.current.clear();photoPendingRef.current.clear();sessionStorage.removeItem('tp-mc-session');setUser(null);setSession('');setDemo(false);setPhotos({});setError('');};
   const startNew=()=>{setForm({...EMPTY,countryIso:selectedCountry,countryName:countryNames[selectedCountry],countries});setPhotos({});setError('');setPage('editor');};
   const startEdit=async(q)=>{
     setError('');

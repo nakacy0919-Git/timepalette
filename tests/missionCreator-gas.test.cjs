@@ -55,6 +55,15 @@ const teacher=run("createTeacherInvite('Teacher','1234','teacher')");const admin
 assert.equal(call({action:'login',invite:teacher,pin:'0000'}).ok,false);
 const teacherSession=call({action:'login',invite:teacher,pin:'1234'}).data.session;
 const adminSession=call({action:'login',invite:admin,pin:'9876'}).data.session;
+assert.equal(call({action:'login',adminMode:true,pin:'2468'}).ok,false);
+props.TP_ADMIN_PIN_TO_SET='2468';
+assert.equal(run('configureAdminPinFromSettings()'),'Admin PIN configured successfully');
+assert.equal(props.TP_ADMIN_PIN_TO_SET,undefined);
+assert.equal(call({action:'login',adminMode:true,pin:'0000'}).ok,false);
+const simpleAdmin=call({action:'login',adminMode:true,pin:'2468'});
+assert.equal(simpleAdmin.ok,true);
+assert.equal(simpleAdmin.data.user.role,'admin');
+assert.equal(simpleAdmin.data.expiresInSeconds,21600);
 assert(teacherSession&&adminSession);
 const saved=call({action:'saveQuestion',session:teacherSession,question:{countryIso:'rw',countryName:'ルワンダ',domain:'language',type:'photo4',prompt:'Which photo is correct?',answer:'',choices:[],sources:['https://example.org'],notes:'test'}});
 assert.equal(saved.ok,true);const qid=saved.data.question.id;
@@ -70,6 +79,11 @@ assert.equal(call({action:'reviewQuestion',session:adminSession,questionId:qid,s
 assert.equal(call({action:'saveQuestion',session:teacherSession,question:{id:qid,countryIso:'rw',countryName:'ルワンダ',domain:'language',type:'photo4',prompt:'Edit after approval'}}).ok,false);
 assert.equal(call({action:'setProgress',session:teacherSession,countryIso:'rw',domain:'time',manualDone:10}).ok,false);
 assert.equal(call({action:'setProgress',session:adminSession,countryIso:'rw',domain:'time',manualDone:10}).ok,true);
+const combined=call({
+  action:'login',adminMode:true,pin:'2468',withBootstrap:true
+});
+assert.equal(combined.ok,true);
+assert.equal(combined.data.bootstrap.questions.some(q=>q.id===qid),true);
 const dash=call({action:'bootstrap',session:teacherSession});assert.equal(dash.data.questions[0].status,'approved');assert.equal(dash.data.progress['rw:time'],10);
 const batch=call({action:'getMediaBatch',
   session:teacherSession,questionId:qid});
