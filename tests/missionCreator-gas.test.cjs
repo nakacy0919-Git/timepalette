@@ -158,4 +158,22 @@ assert.equal(call({action:'restoreQuestion',session:teacherSession,questionId:qi
 assert.equal(call({action:'restoreQuestion',session:adminSession,questionId:qid}).ok,true);
 assert.equal(call({action:'bootstrap',session:teacherSession}).data.questions.find(q=>q.id===qid).status,'submitted');
 assert.equal(call({action:'getMedia',session:teacherSession,questionId:qid,slot:1}).ok,true);
-console.log('PASS: login, roles, photos, review, progress, archive and restore');
+// One write for an edited existing question with saved photos (no Drive reads).
+const fastAdminEdit=call({action:'saveQuestion',session:adminSession,finalize:'approved',question:{
+  id:qid,countryIso:'rw',countryName:'Rwanda',domain:'language',type:'photo4',
+  prompt:'Edited and approved in one request',answer:'',choices:[],sources:[],notes:'text-only edit'
+}});
+assert.equal(fastAdminEdit.ok,true);
+assert.equal(fastAdminEdit.data.question.status,'approved');
+const retained=call({action:'bootstrap',session:adminSession}).data.questions.find(q=>q.id===qid);
+assert.equal(retained.media.length,4);
+assert.equal(retained.status,'approved');
+assert.equal(retained.prompt,'Edited and approved in one request');
+assert.equal(call({action:'saveQuestion',session:teacherSession,finalize:'approved',question:{
+  id:qid,countryIso:'rw',domain:'language',type:'photo4',prompt:'Attempted approval'
+}}).ok,false);
+const missingPhotos=call({action:'saveQuestion',session:adminSession,finalize:'approved',question:{
+  countryIso:'rw',countryName:'Rwanda',domain:'lifeCulture',type:'photo4',prompt:'Missing media'
+}});
+assert.equal(missingPhotos.ok,false);
+console.log('PASS: login, roles, photos, review, progress, archive, atomic editing and restore');

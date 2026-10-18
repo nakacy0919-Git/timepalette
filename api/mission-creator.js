@@ -29,7 +29,20 @@ export default async function handler(req, res) {
     try { result = JSON.parse(content); } catch { throw new Error('Non-JSON upstream response'); }
     if (!upstream.ok) return res.status(502).json({ ok: false, error: 'Googleの保存処理に失敗しました。' });
     return res.status(200).json(result);
-  } catch {
-    return res.status(502).json({ ok: false, error: 'Google連携に接続できません。設定や公開状態を確認してください。' });
+  } catch (err) {
+    const kind=err?.name==='TimeoutError'||err?.name==='AbortError'
+      ? 'google_timeout'
+      : err?.message==='Non-JSON upstream response'
+        ? 'google_response' : 'google_network';
+    // Never log credentials, PINs, question contents or raw upstream errors.
+    console.error('Mission Creator Google upstream failure',{
+      action:String(payload.action||'').slice(0,45),kind
+    });
+    const message=kind==='google_timeout'
+      ? 'Google側の応答が遅れています。保存操作の場合は再送信前に一覧を確認してください。'
+      : kind==='google_response'
+        ? 'Googleから正しい形式の応答が返っていません。管理者に連絡してください。'
+        : 'Googleとの通信に失敗しました。時間をおいて再試行してください。';
+    return res.status(kind==='google_timeout'?504:502).json({ok:false,code:kind,error:message});
   }
 }

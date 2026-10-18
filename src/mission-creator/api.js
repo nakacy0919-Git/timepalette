@@ -11,8 +11,8 @@ export class CreatorApiError extends Error {
 export async function creatorRequest(action, payload = {}, session = '') {
   let response;
   const controller = new AbortController();
-  const timeoutMs = action === 'getMediaBatch' ? 16000
-    : action === 'getMedia' ? 19000 : 40000;
+  const timeoutMs = action === 'getMediaBatch' ? 12000
+    : action === 'getMedia' ? 16000 : 40000;
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
   try {
     response = await fetch(ENDPOINT, {

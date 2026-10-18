@@ -139,7 +139,7 @@ function PhotoSlot({ slot, preview, name, onPick, busy, isCorrect, singlePhoto }
   return (
     <label className={`mc-photo-slot${isCorrect ? ' mc-answer-correct' : ''}`}>
       {isCorrect && <span className="mc-correct-badge"><CheckCircle2 size={14} />正答の写真</span>}
-      {preview ? <img src={preview} alt={`写真${slot}`} /> : <div className="mc-photo-empty"><Camera size={30} /><span>写真{slot}を選択</span></div>}
+      {preview ? <img src={preview} alt={`写真${slot}`} /> : <div className="mc-photo-empty"><Camera size={30} /><span>{name ? `写真${slot}：保存済み（クリックして差し替え）` : `写真${slot}を選択`}</span></div>}
       <span className="mc-photo-caption">{singlePhoto ? '観察する写真' : isCorrect ? '① 正答の写真' : `誤答の写真 ${slot}`}</span>
       <small>{name || (preview ? '保存済みの画像' : 'JPEG / PNG / WebP')}</small>
       <input type="file" accept="image/jpeg,image/png,image/webp" disabled={busy} onChange={(e) => { const file = e.target.files?.[0]; if (file) onPick(slot, file); e.target.value = ''; }} />
@@ -198,7 +198,7 @@ function QuestionPreview({ form, photos }) {
   );
 }
 
-function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, busy, demo, error, saveStage }) {
+function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, busy, demo, error, saveStage, isAdmin, photoLoadBusy, photoLoadError, onRetryPhotos }) {
   const update = (k, value) => setForm(prev => ({ ...prev, [k]: value }));
   const photoCount = form.type === 'photo4' ? 4 : form.type === 'photo1' ? 1 : 0;
   return <div className="mc-editor-grid">
@@ -207,7 +207,12 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
       <div className="mc-fields-row"><div className="mc-country-field"><span>国</span><CountryPicker countries={form.countries || []} value={form.countryIso} onChange={iso => update('countryIso', iso)} label="問題を作成する国" /></div><label>カテゴリー <select value={form.domain} onChange={e => update('domain', e.target.value)}>{DOMAINS.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label></div>
       <label>問題の形式 <select value={form.type} onChange={e => update('type', e.target.value)}>{TYPES.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label>
       <label>問題文・活動の指示 <textarea rows={4} value={form.prompt} maxLength={2000} onChange={e => update('prompt', e.target.value)} placeholder="例：写真を見て、ネパールで人気の料理を選んでください。" /></label>
-      {photoCount > 0 && <div className="mc-stack"><div className="mc-helper-title"><UploadCloud size={18}/> 写真をアップロード</div><p className="mc-muted">写真はこの端末内でWebPに変換されます。4択では①が正答、②〜④が誤答です。ゲーム公開時の表示順は変更できます。</p><div className="mc-upload-grid">{Array.from({ length: photoCount }, (_, i) => i + 1).map(n => <PhotoSlot key={n} slot={n} name={photos[n]?.name} preview={photos[n]?.preview} onPick={onPhoto} busy={busy} isCorrect={form.type==='photo4' && n===1} singlePhoto={form.type==='photo1'}/>)}</div></div>}
+      {photoCount > 0 && <div className="mc-stack">
+        {Boolean(form.id) && <div className="mc-existing-media-status" role="status">
+          <span>既存の写真はGoogle Driveに保存済みです。{photoLoadBusy ? 'プレビューを読み込んでいます…' : photoLoadError ? 'プレビューだけを取得できませんでした。画像は保持されています。' : ''}</span>
+          {photoLoadError && <button type="button" className="mc-outline mc-small" onClick={onRetryPhotos} disabled={photoLoadBusy}>写真表示を再試行</button>}
+        </div>}
+        <div className="mc-helper-title"><UploadCloud size={18}/> 写真をアップロード</div><p className="mc-muted">写真はこの端末内でWebPに変換されます。4択では①が正答、②〜④が誤答です。ゲーム公開時の表示順は変更できます。</p><div className="mc-upload-grid">{Array.from({ length: photoCount }, (_, i) => i + 1).map(n => <PhotoSlot key={n} slot={n} name={photos[n]?.name || form.media?.find(m=>Number(m.slot)===n)?.fileName} preview={photos[n]?.preview} onPick={onPhoto} busy={busy} isCorrect={form.type==='photo4' && n===1} singlePhoto={form.type==='photo1'}/>)}</div></div>}
       {form.type === 'text4' && <div className="mc-stack"><label>正しい答え <input value={form.answer} onChange={e => update('answer', e.target.value)} placeholder="正解の選択肢" /></label>{form.choices.map((v, i) => <label key={i}>まちがいの選択肢 {i + 1} <input value={v} onChange={e => update('choices', form.choices.map((c, j) => i === j ? e.target.value : c))}/></label>)}</div>}
       {!['text4', 'photo4'].includes(form.type) && <label>模範解答・参考となる回答（任意） <textarea rows={2} value={form.answer} onChange={e => update('answer', e.target.value)} /></label>}
       <label>参考Webページなど（任意） <input type="url" placeholder="https://..." value={form.sources[0] || ''} onChange={e => update('sources', [e.target.value, form.sources[1] || ''])}/></label>
@@ -216,7 +221,7 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
       <p className="mc-hint">外部サイトの写真や記事を転載・埋め込む場合は、管理者が掲載条件を確認します。</p>
       {error && <p role="alert" className="mc-error">{error}</p>}
       {busy && saveStage && <p role="status" aria-live="polite" className="mc-save-progress">{saveStage}</p>}
-      <div className="mc-actions"><button className="mc-outline" disabled={busy || demo} type="button" onClick={onSave}>{busy ? '保存中…' : '下書きを保存'}</button><button className="mc-primary" disabled={busy || demo} type="button" onClick={onSubmit}>{busy ? '処理中…' : '確認して提出する'}</button></div>
+      <div className="mc-actions"><button className="mc-outline" disabled={busy || demo} type="button" onClick={onSave}>{busy ? '保存中…' : isAdmin && form.id ? '変更を保存' : '下書きを保存'}</button><button className="mc-primary" disabled={busy || demo} type="button" onClick={onSubmit}>{busy ? '処理中…' : isAdmin ? '保存して合格' : '確認して提出する'}</button></div>
       {demo && <p className="mc-demo-note">デモ中：写真の変換やプレビューは可能ですが、サーバーへの保存・提出はできません。</p>}
     </section>
     <QuestionPreview form={form} photos={photos}/>
@@ -257,6 +262,10 @@ async function loadStoredPhotos(question,session,onPhoto,onProgress){
     }
   }catch(err){
     batchError=err?.message||'一括取得失敗';
+    if(['502','504','timeout','network','google_timeout','google_response','google_network'].includes(String(err?.code||''))||
+       batchError.includes('Google連携に接続できません')){
+      throw Error('Googleから写真を一時的に取得できません。元の写真は保存されています。');
+    }
   }
 
   if(missing.size===0)return;
@@ -517,6 +526,9 @@ export default function MissionCreator() {
   const [error, setError] = useState('');
   const [loadingData, setLoadingData] = useState(Boolean(session));
   const [saveStage, setSaveStage] = useState('');
+  const [photoLoadBusy,setPhotoLoadBusy] = useState(false);
+  const [photoLoadError,setPhotoLoadError] = useState('');
+  const editTokenRef=useRef(0);
   const [page, setPage] = useState('dashboard');
   const [questions, setQuestions] = useState([]);
   const [progress, setProgress] = useState({});
@@ -660,23 +672,34 @@ export default function MissionCreator() {
   }catch(e){setError(e.message);}finally{setBusy(false);}};
   const reload=async()=>{if(demo)return;const data=await creatorRequest('bootstrap',{},session);setUser(data.user);setQuestions(data.questions);setProgress(data.progress);};
   const logout=()=>{initialBootstrapRef.current=null;photoCacheEpochRef.current+=1;photoCacheRef.current.clear();photoPendingRef.current.clear();sessionStorage.removeItem('tp-mc-session');setUser(null);setSession('');setDemo(false);setPhotos({});setError('');};
-  const startNew=()=>{setForm({...EMPTY,countryIso:selectedCountry,countryName:countryNames[selectedCountry],countries});setPhotos({});setError('');setPage('editor');};
-  const startEdit=async(q)=>{
+  const startNew=()=>{editTokenRef.current+=1;setPhotoLoadBusy(false);setPhotoLoadError('');setForm({...EMPTY,countryIso:selectedCountry,countryName:countryNames[selectedCountry],countries});setPhotos({});setError('');setPage('editor');};
+  const loadEditorPhotoPreview=(q,token)=>{
+    if(demo||!Array.isArray(q.media)||!q.media.length){setPhotoLoadBusy(false);return;}
+    setPhotoLoadBusy(true);
+    setPhotoLoadError('');
+    void loadPhotosFast(q,(slot,item)=>{
+      if(editTokenRef.current!==token)return;
+      setPhotos(old=>old[slot]?.blob ? old : {...old,[slot]:item});
+    }).catch(()=>{
+      if(editTokenRef.current===token)setPhotoLoadError('preview_unavailable');
+    }).finally(()=>{
+      if(editTokenRef.current===token)setPhotoLoadBusy(false);
+    });
+  };
+  const startEdit=(q)=>{
+    const token=++editTokenRef.current;
     setError('');
+    setPhotoLoadError('');
     setForm({...EMPTY,...q,countries,
       choices:Array.isArray(q.choices)?[...q.choices,'','',''].slice(0,3):['','',''],
       sources:Array.isArray(q.sources)?[...q.sources,'',''].slice(0,2):['','']});
     setPhotos({});
     setPage('editor');
-    if(demo)return;
-    try {
-      await loadPhotosFast(q,(slot,item)=>{
-        setPhotos(old=>old[slot]?.blob ? old : {...old,[slot]:item});
-      });
-    } catch(e) {
-      setError('保存済み写真の読み込みに失敗しました：'
-        +e.message+'。Googleドライブ内の元画像は変更されていません。');
-    }
+    loadEditorPhotoPreview(q,token);
+  };
+  const retryEditorPhotos=()=>{
+    const token=++editTokenRef.current;
+    loadEditorPhotoPreview(form,token);
   };
   const pickPhoto=async(slot,file)=>{try{const next=await optimizeImage(file);setPhotos(old=>{if(old[slot]?.preview?.startsWith('blob:'))URL.revokeObjectURL(old[slot].preview);return {...old,[slot]:{...next,preview:next.previewUrl,name:`${file.name} → WebP (${Math.round(next.blob.size/1024)}KB)`}};});setError('');}catch(e){setError(e.message);}};
   const persist=async(submit)=>{
@@ -685,12 +708,14 @@ export default function MissionCreator() {
     setBusy(true);setError('');setSaveStage('問題文をGoogleスプレッドシートに保存しています…');
     const country=countries.find(c=>c.iso===form.countryIso);
     try{
-      const result=await creatorRequest('saveQuestion',{question:{...form,countryName:country?.name||form.countryName,choices:form.choices,sources:form.sources,countries:undefined}},session);
+      const total=form.type==='photo4'?4:form.type==='photo1'?1:0;
+      const pendingSlots=Array.from({length:total},(_,index)=>index+1).filter(slot=>Boolean(photos[slot]?.blob));
+      const instantFinalize=submit && pendingSlots.length===0;
+      const finalize=instantFinalize?(user?.role==='admin'?'approved':'submitted'):undefined;
+      const result=await creatorRequest('saveQuestion',{question:{...form,countryName:country?.name||form.countryName,choices:form.choices,sources:form.sources,countries:undefined},...(finalize?{finalize}:{})},session);
       const savedId=result.question.id;
       // Keep the server ID if a later image upload fails, so retry does not duplicate the question.
       setForm(prev => ({ ...prev, id: savedId }));
-      const total=form.type==='photo4'?4:form.type==='photo1'?1:0;
-      const pendingSlots=Array.from({length:total},(_,index)=>index+1).filter(slot=>Boolean(photos[slot]?.blob));
       for(let index=0;index<pendingSlots.length;index++){
         const slot=pendingSlots[index];
         setSaveStage(`写真 ${index+1}/${pendingSlots.length} をGoogleドライブに保存しています…`);
@@ -700,12 +725,28 @@ export default function MissionCreator() {
           ? {...prev,[slot]:{...prev[slot],blob:undefined}}
           : prev);
       }
-      if(submit){
-        setSaveStage('提出処理を完了しています…');
-        await creatorRequest('submitQuestion',{questionId:savedId},session);
+      if(submit&&!instantFinalize){
+        setSaveStage(user?.role==='admin'?'保存した写真を確認して合格にしています…':'提出処理を完了しています…');
+        if(user?.role==='admin'){
+          // Approved questions remain approved after an admin photo replacement.
+          if(form.status!=='approved')
+            await creatorRequest('reviewQuestion',{questionId:savedId,status:'approved'},session);
+        }else{
+          await creatorRequest('submitQuestion',{questionId:savedId},session);
+        }
       }
-      setSaveStage('保存した問題の一覧を更新しています…');
-      await reload();setPage('bank');setPhotos({});setError('');
+      if(pendingSlots.length===0){
+        const updated={...result.question,media:Array.isArray(form.media)?form.media:[]};
+        setQuestions(prev=>{
+          const exists=prev.some(item=>item.id===savedId);
+          return exists?prev.map(item=>item.id===savedId?updated:item):[updated,...prev];
+        });
+      }else{
+        setSaveStage('新しい写真情報を反映しています…');
+        await reload();
+      }
+      editTokenRef.current+=1;
+      setPage('bank');setPhotos({});setError('');
     }catch(e){
       setError(`${e.message} 保存済みの問題や写真が残っている可能性があります。「みんなの問題」の状態を確認してから再試行してください。`);
     }finally{setBusy(false);setSaveStage('');}
@@ -788,7 +829,7 @@ export default function MissionCreator() {
         {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
         {!loadingData && page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
         {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} selectedCountry="" countryNames={countryNames} busy={busy||demo} reviewingIds={reviewingIds}/>}
-        {!loadingData && page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>setPage('bank')} busy={busy} demo={demo} error={error} saveStage={saveStage}/>}
+        {!loadingData && page==='editor'&&<Editor form={form} setForm={setForm} photos={photos} onPhoto={pickPhoto} onSave={()=>persist(false)} onSubmit={()=>persist(true)} onCancel={()=>{editTokenRef.current+=1;setPage('bank');}} busy={busy} demo={demo} error={error} saveStage={saveStage} isAdmin={user?.role==='admin'} photoLoadBusy={photoLoadBusy} photoLoadError={photoLoadError} onRetryPhotos={retryEditorPhotos}/>}
       </main></div>
       {inspection && <ReviewDialog question={inspection} photos={inspectionPhotos} loading={inspectionLoading} loadingText={inspectionLoadingText} loadError={inspectionError} reviewError={reviewError} busy={busy || reviewingIds.has(inspection.id)} onClose={()=>setInspection(null)} onEdit={startEdit} onRetry={()=>inspect(inspection)} isAdmin={user?.role==='admin'} canEdit={user?.role==='admin'||user?.id===inspection.authorId} onReview={async(q,status)=>{const done=await review(q,status);if(done)setInspection(null);}}/>}
     </>}

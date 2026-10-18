@@ -264,6 +264,9 @@ function tpBootstrap_(user) {
 }
 function tpSaveQuestion_(args,user) {
   const p=args.question||{},id=String(p.id||'');
+  const finalize=String(args.finalize||'');
+  if(!['','submitted','approved'].includes(finalize))throw Error('保存処理を確認してください。');
+  if(finalize==='approved'&&user.role!=='admin')throw Error('合格は管理者のみ実行できます。');
   const iso=String(p.countryIso||'').toLowerCase().trim();
   if(!/^[a-z]{2}$/.test(iso)||!TP_DOMAINS.includes(p.domain)||!TP_TYPES.includes(p.type))throw Error('国・カテゴリー・問題形式を確認してください。');
   const prompt=String(p.prompt||'').trim(),answer=String(p.answer||'').trim();
@@ -274,10 +277,21 @@ function tpSaveQuestion_(args,user) {
     const previous=id?tpQuestion_(id):null;
     if(id&&!previous)throw Error('編集対象が見つかりませんでした。');
     if(previous && previous.status==='deleted')throw Error('削除済みの問題は復元してから編集してください。');
+    if(previous && previous.status==='published')throw Error('公開済みの問題は編集できません。');
     if(previous && user.role!=='admin' && previous.authorId!==user.id)throw Error('他の先生の問題は編集できません。');
     if(previous && user.role!=='admin' && ['approved','published'].includes(previous.status))throw Error('承認後の修正は管理者へご相談ください。');
     const now=tpNow_();
-    const row={id:previous?.id||Utilities.getUuid(),countryIso:iso,countryName:String(p.countryName||'').slice(0,90),domain:p.domain,type:p.type,prompt,answer,choicesJson:JSON.stringify(choices),sourcesJson:JSON.stringify(sources),notes:String(p.notes||''),authorId:previous?.authorId||user.id,authorName:previous?.authorName||user.name,status:previous?.status==='approved'&&user.role==='admin'?'approved':'draft',reviewNote:previous?.reviewNote||'',createdAt:previous?.createdAt||now,updatedAt:now};
+    const row={id:previous?.id||Utilities.getUuid(),countryIso:iso,countryName:String(p.countryName||'').slice(0,90),domain:p.domain,type:p.type,prompt,answer,choicesJson:JSON.stringify(choices),sourcesJson:JSON.stringify(sources),notes:String(p.notes||''),authorId:previous?.authorId||user.id,authorName:previous?.authorName||user.name,status:finalize||(previous&&user.role==='admin'?previous.status:'draft'),reviewNote:previous?.reviewNote||'',createdAt:previous?.createdAt||now,updatedAt:now};
+    if(finalize){
+      if(!row.prompt||!row.countryIso||!row.domain)throw Error('国・カテゴリー・問題文を入力してください。');
+      if(row.type==='text4'&&(!row.answer||tpParse_(row.choicesJson).filter(v=>String(v||'').trim()).length!==3))throw Error('4択の正答と誤答3つが必要です。');
+      if(row.type==='photo4'||row.type==='photo1'){
+        const slots=tpRows_('Media').filter(m=>m.questionId===row.id).map(m=>Number(m.slot));
+        const expected=row.type==='photo4'?[1,2,3,4]:[1];
+        if(slots.length!==expected.length||expected.some(slot=>!slots.includes(slot)))throw Error('写真の登録が不足しています。再アップロードせずに写真登録情報を確認してください。');
+      }
+      if(finalize==='approved')row.reviewNote='';
+    }
     if(previous)tpReplace_('Questions',TP_QHEAD,previous._row,row);else tpAppend_('Questions',TP_QHEAD,row);
     return {question:tpOutputQuestion_(row,[])};
   });
