@@ -1105,7 +1105,7 @@ const correct =
                 className="
                   inline-flex
                   items-center
-                  gap-2
+                  gap-1.5
                   rounded-full
                   bg-blue-600
                   px-7
@@ -1138,7 +1138,7 @@ const correct =
                 ? `
                   grid
                   grid-cols-1
-                  gap-2
+                  gap-1.5
                   sm:grid-cols-2
                   md:gap-3
                 `
@@ -1269,7 +1269,7 @@ const correct =
                       text-left
                       transition-all
                       duration-200
-                      ${isPublishedPhotoFour ? 'min-h-0 p-1.5 md:p-1.5' : 'min-h-[132px] p-5 md:min-h-[154px] md:p-6'}
+                      ${isPublishedPhotoFour ? 'min-h-0 p-1 md:p-1' : 'min-h-[132px] p-5 md:min-h-[154px] md:p-6'}
 
                       ${choiceClass}
                     `}
@@ -1317,7 +1317,7 @@ const correct =
                         {choice.image && (
                           <div
                             className={`
-                              aspect-[16/9] w-full overflow-hidden bg-slate-100
+                              aspect-[4/3] w-full overflow-hidden bg-slate-100
                               ${isPublishedPhotoFour
                                 ? 'mb-0 max-h-[24dvh] rounded-[14px]'
                                 : 'mb-4 rounded-[20px]'}
@@ -1697,7 +1697,7 @@ const correct =
                     flex
                     flex-wrap
                     items-center
-                    gap-2
+                    gap-1.5
                   "
                 >
 
@@ -2088,7 +2088,7 @@ const correct =
                 className="
                   flex
                   items-center
-                  gap-2
+                  gap-1.5
                 "
               >
 
@@ -2102,7 +2102,7 @@ const correct =
                   className="
                     inline-flex
                     items-center
-                    gap-2
+                    gap-1.5
                     rounded-xl
                     border
                     border-slate-200
@@ -2226,7 +2226,7 @@ const correct =
                       min-w-[205px]
                       items-center
                       justify-center
-                      gap-2
+                      gap-1.5
                       rounded-[16px]
                       bg-gradient-to-r
                       from-blue-600
@@ -2324,7 +2324,7 @@ const correct =
                       min-w-[160px]
                       items-center
                       justify-center
-                      gap-2
+                      gap-1.5
                       rounded-xl
                       bg-slate-950
                       px-5
