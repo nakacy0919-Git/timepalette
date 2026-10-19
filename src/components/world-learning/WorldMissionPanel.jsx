@@ -2341,19 +2341,28 @@ export default function WorldMissionPanel({
 
 
   const [creatorMissions,setCreatorMissions] = useState([]);
-  const [creatorLoading,setCreatorLoading] = useState(true);
+  const [creatorLoading,setCreatorLoading] = useState(false);
   const [creatorError,setCreatorError] = useState('');
   const [creatorRefresh,setCreatorRefresh] = useState(0);
   useEffect(()=>{
-    if(String(countryCode||'').toLowerCase()!=='rw')return;
+    const iso=String(countryCode||'').toLowerCase();
+    const domain=String(selectedDomain||'');
+    if(!domain || !/^[a-z]{2}$/.test(iso)){
+      setCreatorMissions([]);setCreatorLoading(false);setCreatorError('');
+      return;
+    }
     let cancelled=false;
-    setCreatorLoading(true);setCreatorError('');
-    fetch('/api/mission-public?action=catalog&country=rw&domain=lifeCulture', {cache:'no-store'})
+    setCreatorMissions([]);setCreatorLoading(true);setCreatorError('');
+    const url='/api/mission-public?action=catalog&country='+encodeURIComponent(iso)+
+      '&domain='+encodeURIComponent(domain);
+    fetch(url,{cache:'no-store'})
       .then(async(response)=>{
         if(!response.ok)throw new Error('Catalog request failed');
         const data=await response.json();
         if(!data?.ok||!Array.isArray(data.questions))throw new Error('Invalid catalog');
-        return normalizePublishedCatalog(data.questions);
+        // Only display missions from the actively selected country/category.
+        return normalizePublishedCatalog(data.questions.filter(q=>
+          String(q.countryIso||'').toLowerCase()===iso && q.domain===domain));
       })
       .then(missions=>{if(!cancelled)setCreatorMissions(missions);})
       .catch(()=>{if(!cancelled){setCreatorError('公開問題を取得できませんでした。');setCreatorMissions([]);}})
@@ -2420,7 +2429,7 @@ export default function WorldMissionPanel({
     [];
 
 
-  const isCreatorLifeCulture = String(countryCode||'').toLowerCase()==='rw' && selectedDomain==='lifeCulture';
+  const hasCreatorMissions = creatorMissions.length > 0;
   const selectedAdventurePackage =
     selectedDomain
       ? getWorldAdventureDomainPackage(
@@ -2487,27 +2496,16 @@ export default function WorldMissionPanel({
     );
 
 
-  const visibleMissions =
-    selectedDomain
-      ? isCreatorLifeCulture ? creatorMissions.map(m=>applyLearningLevelToMission(m,selectedLearningLevel)) : selectedAdventurePackage
-        ? selectedAdventurePackage.missions.map(
-            (mission) =>
-              applyLearningLevelToMission(
-                {
-                  ...mission,
-                  domain: selectedDomain,
-                },
-                selectedLearningLevel
-              )
-          )
-        : missions.filter(
-            (
-              mission
-            ) =>
-              mission.domain ===
-              selectedDomain
-          )
-      : [];
+  const builtInMissions = selectedDomain
+    ? selectedAdventurePackage
+      ? selectedAdventurePackage.missions.map(mission=>
+          applyLearningLevelToMission({...mission,domain:selectedDomain},selectedLearningLevel))
+      : missions.filter(mission=>mission.domain===selectedDomain)
+    : [];
+  // Published teacher missions are added to (not substituted for) existing adventures.
+  const visibleMissions = selectedDomain
+    ? [...builtInMissions,...creatorMissions.map(m=>applyLearningLevelToMission(m,selectedLearningLevel))]
+    : [];
 
 
   const recommendedMission =
@@ -3514,13 +3512,9 @@ export default function WorldMissionPanel({
                               ).length;
 
 
-                        const creatorDomain = String(countryCode||'').toLowerCase()==='rw' && domain.id==='lifeCulture';
-                        const totalCount =
-                          creatorDomain ? 10 : adventurePackage
-                            ? adventurePackage.missions.length
-                            : isRwandaPlace
-                              ? 10
-                              : domainMissions.length;
+                        const totalCount = adventurePackage
+                          ? adventurePackage.missions.length
+                          : isRwandaPlace ? 10 : domainMissions.length;
 
 
                         return (
@@ -3627,7 +3621,7 @@ export default function WorldMissionPanel({
                                   "
                                 >
                                   {
-                                    creatorDomain ? creatorMissions.length : completeCount
+                                    completeCount
                                   }
                                   {' / '}
                                   {
@@ -3843,11 +3837,10 @@ export default function WorldMissionPanel({
                 </div>
 
 
-                {isCreatorLifeCulture && (
+                {(creatorLoading || creatorError || hasCreatorMissions) && (
                   <div className="mb-5 rounded-2xl border border-blue-200 bg-blue-50 p-5 text-sm font-bold text-blue-900">
                     {creatorLoading ? '公開ミッションを読み込み中…' : creatorError ? creatorError :
-                      creatorMissions.length===0 ? '生活・文化のミッションは現在制作中です。公開 0 / 10 問' :
-                      '先生たちが作成したミッションを公開中：'+creatorMissions.length+' / 10 問。残りは現在制作中です。'}
+                      '先生たちが作成したミッション：'+creatorMissions.length+' 問（公開枠は最大10問）'}
                     {creatorError && <button className="ml-3 underline" type="button" onClick={()=>setCreatorRefresh(x=>x+1)}>再試行</button>}
                   </div>
                 )}

@@ -20,7 +20,7 @@ export function toPublishedMission(q){
     if(q.type==='photoText4'&&!q.media?.some(m=>m.slot===1))return null;
   }
   return {
-    id:'rw-mc-'+q.id,domain:q.domain,type:'single-choice',
+    id:String(q.countryIso||'rw').toLowerCase()+'-mc-'+q.id,domain:q.domain,type:'single-choice',
     title:String(q.prompt).trim().split(/[\n。！？?]/)[0].slice(0,50),
     prompt:String(q.prompt).trim(),points:10,requiredForMastery:false,
     challenge:{choices,correctIndex},

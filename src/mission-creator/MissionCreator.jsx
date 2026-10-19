@@ -3,6 +3,8 @@ import { ArrowLeft, BookOpen, Camera, CheckCircle2, CircleHelp, Clock3, Compass,
 import { getWorldLearningCountries } from '../utils/worldLearningRegistry';
 import { creatorRequest } from './api';
 import { filterBankQuestions } from './filterBankQuestions.js';
+import PublishedMissionManager from './PublishedMissionManager.jsx';
+import { BULK_LIMIT, createBulkPlan, eligibleForBulk, executeBulkPlan } from './bulkActions.js';
 import { blobToBase64, optimizeImage } from './image';
 
 const DOMAINS = [
@@ -304,12 +306,40 @@ function QuestionBank({
   questions, user, onEdit, onReview, onInspect,
   onPrefetch, onDelete, onRestore, onPublication,
   selectedCountry, countryNames, busy, reviewingIds,
-  filter, onFilterChange, search, onSearchChange
+  filter, onFilterChange, search, onSearchChange,
+  onBulkAction, bulkProgress, bulkReport
 }) {
 
   const visible = filterBankQuestions(questions, {
     filter, search, selectedCountry
   });
+  const [bulkMode, setBulkMode] = useState('approve');
+  const [selectedIds, setSelectedIds] = useState(() => new Set());
+  const eligibleVisible = visible.slice(0, 200).filter(q => eligibleForBulk(q, bulkMode));
+  const eligibleIds = eligibleVisible.slice(0, BULK_LIMIT).map(q => q.id);
+  const checkedIds = eligibleIds.filter(id => selectedIds.has(id));
+  const allChecked = eligibleIds.length > 0 && eligibleIds.every(id => selectedIds.has(id));
+  useEffect(() => { setSelectedIds(new Set()); }, [filter, search]);
+  useEffect(() => {
+    setSelectedIds(previous => {
+      const fresh = new Set([...previous].filter(id => eligibleVisible.some(q => q.id === id)));
+      return fresh.size === previous.size ? previous : fresh;
+    });
+  }, [questions, bulkMode]);
+  const toggleBulkSelection = (id, checked) => {
+    setSelectedIds(previous => {
+      const next = new Set(previous);
+      if (checked) {
+        if (next.size >= BULK_LIMIT) return previous;
+        next.add(id);
+      } else next.delete(id);
+      return next;
+    });
+  };
+  const submitBulk = async () => {
+    const ok = await onBulkAction(bulkMode, checkedIds);
+    if (ok) setSelectedIds(new Set());
+  };
 
   return (
     <section className="mc-card mc-section">
@@ -348,6 +378,45 @@ function QuestionBank({
         </select>
       </div>
 
+      {user?.role === 'admin' && (
+        <section className="mc-bulk-panel" aria-label="管理者の一括処理">
+          <div className="mc-bulk-top">
+            <div><strong>一括管理</strong><p>問題を確認して選択し、承認と公開は別々に実行します。</p></div>
+            <label className="mc-bulk-mode-label">操作
+              <select value={bulkMode} disabled={busy} onChange={event => {
+                const mode = event.target.value;
+                setBulkMode(mode);
+                setSelectedIds(new Set());
+                onFilterChange(mode === 'approve' ? 'draft' : 'approved');
+              }}>
+                <option value="approve">下書きを一括承認</option>
+                <option value="publish">承認済みを一括公開（国・カテゴリー自動判定）</option>
+              </select>
+            </label>
+          </div>
+          <div className="mc-bulk-controls">
+            <label className="mc-bulk-checkall">
+              <input type="checkbox" checked={allChecked} disabled={busy || eligibleIds.length===0}
+                onChange={event=>setSelectedIds(event.target.checked ? new Set(eligibleIds) : new Set())}/>
+              表示中の対象を選択（最大{BULK_LIMIT}件）
+            </label>
+            <span className="mc-bulk-count">対象 {eligibleVisible.length}件・選択 {checkedIds.length}件</span>
+            <button type="button" className="mc-primary mc-small" disabled={busy || checkedIds.length===0}
+              onClick={submitBulk}>{bulkMode==='approve' ? '選択した下書きを一括承認' : '選択した承認済みを一括公開'}</button>
+          </div>
+          {bulkMode === 'publish' && <p className="mc-bulk-note">国・カテゴリーは問題に登録された情報から自動判定します。各国・各カテゴリー10問まで。写真・出典・公開権利を確認してから実行してください。</p>}
+          {bulkProgress && <p className="mc-save-progress" role="status" aria-live="polite">{bulkProgress}</p>}
+          {bulkReport && <div className="mc-bulk-result" role="status">
+            <strong>{bulkReport.mode==='approve'?'一括承認':'一括公開'}：成功 {bulkReport.done.length}件 / 失敗 {bulkReport.failed.length}件</strong>
+            {bulkReport.failed.length>0 && <>
+              <p>失敗した問題は自動再送していません。一覧の最新状態を確認してください。</p>
+              <ul>{bulkReport.failed.map(x=><li key={x.id}>{x.title || x.id}：{x.reason}</li>)}</ul>
+            </>}
+            {!bulkReport.refreshed && <p>一覧の再取得に失敗しました。画面を更新して結果を確認してください。</p>}
+          </div>}
+        </section>
+      )}
+
       {visible.length === 0 ? (
         <p className="mc-empty">
           該当する問題はありません。
@@ -356,6 +425,14 @@ function QuestionBank({
         <div className="mc-bank-list">
           {visible.slice(0, 200).map(q => (
             <article className="mc-question-row" key={q.id}>
+              {user?.role === 'admin' && eligibleForBulk(q, bulkMode) && (
+                <label className="mc-bulk-item-select">
+                  <input type="checkbox" checked={selectedIds.has(q.id)} disabled={busy}
+                    onChange={event=>toggleBulkSelection(q.id,event.target.checked)}
+                    aria-label={'一括' + (bulkMode==='approve'?'承認':'公開') + '対象：' + String(q.prompt||'').slice(0,60)}/>
+                  <span>一括対象に選択</span>
+                </label>
+              )}
               <button
                 type="button"
                 className="mc-question-cover"
@@ -531,6 +608,9 @@ export default function MissionCreator() {
   // null = role-dependent default; admins start with drafts.
   const [bankFilter, setBankFilter] = useState(null);
   const [bankSearch, setBankSearch] = useState('');
+  const [bulkRunning, setBulkRunning] = useState(false);
+  const [bulkProgress, setBulkProgress] = useState('');
+  const [bulkReport, setBulkReport] = useState(null);
   const previousPageRef = useRef('dashboard');
   const [questions, setQuestions] = useState([]);
   const [progress, setProgress] = useState({});
@@ -821,9 +901,6 @@ export default function MissionCreator() {
   const publication=async(q,mode)=>{
     if(user?.role!=='admin'||busy||demo)return;
     if(mode==='publish'){
-      if(q.countryIso!=='rw'||q.domain!=='lifeCulture'){
-        window.alert('初回の公開テストはルワンダの生活・文化のみ対応しています。');return;
-      }
       if(!window.confirm('写真・出典・内容・公開権利を確認済みですか？\nTimePalette本体に公開します。'))return;
     }else if(!window.confirm('この問題をTimePaletteから公開停止しますか？'))return;
     setBusy(true);setError('');
@@ -837,6 +914,29 @@ export default function MissionCreator() {
         {...previous,status:result.status}:previous);
     }catch(e){setError(e?.message||'公開処理に失敗しました。');}
     finally{setBusy(false);}
+  };
+  const bulkAction=async(mode,ids)=>{
+    if(user?.role!=='admin'||busy||bulkRunning||demo)return false;
+    let plan;
+    try { plan=createBulkPlan(mode,ids,questions,user.role); }
+    catch(e){ setError(e?.message||'一括処理を開始できませんでした。'); return false; }
+    const label=mode==='approve'?'一括承認':'一括公開';
+    const message=mode==='approve'
+      ? '選択した' + plan.items.length + '件の下書きを承認済みにします。個々の問題内容と写真を確認済みですか？\n公開はまだ行いません。'
+      : '選択した' + plan.items.length + '件をTimePaletteに公開します。\n全件の写真・出典・解答・公開利用権を確認済みですか？';
+    if(!window.confirm(message))return false;
+    setBusy(true);setBulkRunning(true);setBulkReport(null);setBulkProgress('');setError('');
+    try{
+      const result=await executeBulkPlan(plan,
+        (action,payload)=>creatorRequest(action,payload,session),
+        info=>setBulkProgress('' + label + '：' + info.current + '/' + info.total + ' 件 ' + (info.stage==='running'?'処理中':'完了') + ' ・ ' + info.title));
+      let refreshed=true;
+      try{await reload();}
+      catch(_){refreshed=false;setError('処理結果の一覧を再取得できませんでした。画面を更新して状態を確認してください。');}
+      setBulkReport({...result,refreshed});
+      return true;
+    }catch(e){setError(e?.message||label+'に失敗しました。');return false;}
+    finally{setBusy(false);setBulkRunning(false);setBulkProgress('');}
   };
   const archiveQuestion=async(q)=>{
     if(user?.role!=='admin'||busy)return;
@@ -856,15 +956,18 @@ export default function MissionCreator() {
     {!active ? (session ? <div className="mc-access-wrap"><div role="status" className="mc-card mc-access">前回のログインを確認しています…</div></div> : <Access onLogin={login} onRegister={register} registrationToken={registrationToken} onBack={()=>{setRegistrationToken('');setError('');}} busy={busy} error={error}/>) : <>
       <header className="mc-header"><div className="mc-header-brand"><Compass size={24}/> <strong>TimePalette</strong><span>MISSION CREATOR</span></div><div className="mc-header-user"><span>{demo?'デモ（保存不可）':`${user.name} ／ ${user.role==='admin'?'管理者':'参加教師'}`}</span><button type="button" className="mc-quiet" onClick={logout}><LogOut size={17}/>終了</button></div></header>
       <div className="mc-app"><aside className="mc-sidebar"><nav>
-        {[['dashboard',LayoutDashboard,'制作進捗'],['bank',BookOpen,'みんなの問題'],['editor',FilePlus2,'問題を作る']].map(([id,Icon,label])=><button key={id} className={page===id?'active':''} type="button" onClick={()=>id==='editor'?startNew(): (setPage(id),setError(''))}><Icon size={18}/>{label}</button>)}
+        {[['dashboard',LayoutDashboard,'制作進捗'],['bank',BookOpen,'みんなの問題'],['publication',ShieldCheck,'公開ミッション管理'],['editor',FilePlus2,'問題を作る']].filter(([id])=>id!=='publication'||user?.role==='admin').map(([id,Icon,label])=><button key={id} className={page===id?'active':''} type="button" onClick={()=>id==='editor'?startNew(): (setPage(id),setError(''))}><Icon size={18}/>{label}</button>)}
         {user?.role==='admin' && <div className="mc-admin-hint"><ShieldCheck size={17}/>問題一覧で問題の編集・承認・削除・復元ができます。</div>}
       </nav><p>Google Sheets ＋ Drive 連携<br/>Chrome / Edge 推奨</p></aside><main className="mc-main">
         {demo && <div className="mc-demo-banner"><CircleHelp size={18}/>これは操作確認用の画面です。写真のWebP変換とプレビューを試せますが、保存・承認はできません。</div>}
-        <div className="mc-main-heading"><div><div className="mc-eyebrow">GLOBAL COLLABORATION</div><h1>{page==='dashboard'?'制作進捗':page==='bank'?'みんなの問題':'問題を作る'}</h1><p>197か国 × 6カテゴリー × 各10問を、世界の先生たちと作る。</p></div>{page!=='editor'&&<button className="mc-primary" type="button" onClick={startNew}><FilePlus2 size={18}/>新しく作成</button>}</div>
+        <div className="mc-main-heading"><div><div className="mc-eyebrow">GLOBAL COLLABORATION</div><h1>{page==='dashboard'?'制作進捗':page==='bank'?'みんなの問題':page==='publication'?'公開ミッション管理':'問題を作る'}</h1><p>197か国 × 6カテゴリー × 各10問を、世界の先生たちと作る。</p></div>{page!=='editor'&&<button className="mc-primary" type="button" onClick={startNew}><FilePlus2 size={18}/>新しく作成</button>}</div>
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
         {!loadingData && page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
-        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} onPublication={publication} selectedCountry="" countryNames={countryNames} busy={busy||demo} reviewingIds={reviewingIds}
+        {!loadingData && page==='publication' && user?.role==='admin' &&
+          <PublishedMissionManager countries={countries} questions={questions} session={session}
+            busy={busy||demo} onPublication={publication} onInspect={inspect}/>}
+        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} onPublication={publication} onBulkAction={bulkAction} bulkProgress={bulkProgress} bulkReport={bulkReport} selectedCountry="" countryNames={countryNames} busy={busy||demo||bulkRunning} reviewingIds={reviewingIds}
           filter={bankFilter ?? (user?.role === 'admin' ? 'draft' : 'all')}
           onFilterChange={setBankFilter}
           search={bankSearch}

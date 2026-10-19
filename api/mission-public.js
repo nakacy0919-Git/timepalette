@@ -1,12 +1,14 @@
 // Read-only published questions and photos. No Sheets ID, Drive file ID or teacher session leaks.
 const GOOGLE_URL_PATTERN=/^https:\/\/script\.google\.com\/macros\/s\//;
+const PUBLIC_DOMAINS=new Set(['place','time','language','lifeCulture','japanConnection','thinkConnect']);
 export default async function handler(req,res){
   res.setHeader('X-Content-Type-Options','nosniff');
   if(req.method!=='GET')return res.status(405).json({ok:false,error:'GET only'});
   const action=String(req.query.action||'catalog');
   const iso=String(req.query.country||'rw').toLowerCase();
   const domain=String(req.query.domain||'lifeCulture');
-  if(!['catalog','image'].includes(action)||iso!=='rw'||domain!=='lifeCulture')
+  if(!['catalog','image'].includes(action) ||
+     (action==='catalog' && (!/^[a-z]{2}$/.test(iso)||!PUBLIC_DOMAINS.has(domain))))
     return res.status(400).json({ok:false,error:'Unsupported public scope'});
   const endpoint=process.env.MISSION_CREATOR_GAS_URL;
   if(!endpoint||!GOOGLE_URL_PATTERN.test(endpoint))
