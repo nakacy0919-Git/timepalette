@@ -1,6 +1,7 @@
 import {useEffect,useMemo,useState} from 'react';
 import {creatorRequest} from './api';
 import {PUBLIC_DOMAINS,reconcilePublishedOrder,movePublishedOrder,identicalOrder} from './publicationOrder.js';
+import R2PilotPanel from './R2PilotPanel.jsx';
 
 export default function PublishedMissionManager({countries,questions,session,busy,onPublication,onInspect}){
   const [countryIso,setCountryIso]=useState('rw');
@@ -120,6 +121,7 @@ export default function PublishedMissionManager({countries,questions,session,bus
           onClick={()=>onPublication(q,'publish')}>TimePaletteに公開</button>
       </div>
     </div>)}
+    {new URLSearchParams(window.location.search).get('r2pilot')==='1' && <R2PilotPanel countryIso={countryIso} domain={domain} published={published} session={session}/>}
     <p className="mc-muted">写真・問題・出典の確認を終えてから公開してください。公開停止しても原本は削除されません。</p>
   </section>;
 }
