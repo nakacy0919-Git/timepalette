@@ -1085,7 +1085,7 @@ const correct =
 
 
       return (
-        <div>
+        <div className={isPublishedPhotoFour ? "tp-photo-four-game" : undefined}>
 
           {isListening && (
             <div
@@ -1140,7 +1140,7 @@ const correct =
                   grid-cols-1
                   gap-2
                   sm:grid-cols-2
-                  md:gap-3
+                  md:gap-3 tp-photo-four-grid
                 `
                 : hasVisualChoice
                 ? `
@@ -1316,7 +1316,7 @@ const correct =
 
                         {choice.image && (
                           <div
-                            className={`
+                            className={`${isPublishedPhotoFour ? 'tp-photo-four-frame ' : ''}
                               w-full overflow-hidden bg-slate-100
                               ${isPublishedPhotoFour
                                 ? 'aspect-[4/3] mb-0 max-h-[28dvh] rounded-[14px]'
@@ -1565,7 +1565,36 @@ const correct =
         </style>
 
 
-        <MissionSuccessCelebration
+                {isPublishedPhotoFour && (
+          <style>{`
+            /* Only teacher-published, four-photo missions. */
+            @media (min-width: 1024px) and (min-height: 650px) {
+              .tp-photo-four-stage { min-height: 100%; align-items: start; }
+              .tp-photo-four-main { display: flex; flex-direction: column; min-height: 0; }
+              .tp-photo-four-game { display: flex; flex: 0 0 auto; flex-direction: column; min-height: 0; }
+              .tp-photo-four-grid {
+                /* tp-photo-four-layout-v6: reserve space for header and answer bar */
+                flex: 0 0 auto;
+                min-height: 0;
+                height: min(520px, calc(100dvh - 300px));
+                grid-template-rows: repeat(2, minmax(0, 1fr));
+              }
+              .tp-photo-four-grid > button { min-height: 0; height: 100%; }
+              .tp-photo-four-grid > button > div { min-height: 0; }
+              .tp-photo-four-grid > button > div > div { min-height: 0; }
+              .tp-photo-four-frame {
+                width: 100%; height: 100%; max-height: none;
+                aspect-ratio: auto;
+              }
+              .tp-photo-four-frame img { object-fit: contain; }
+            }
+            @media (max-width: 1023px), (max-height: 649px) {
+              .tp-photo-four-frame { aspect-ratio: 16 / 9; max-height: 24dvh; }
+              .tp-photo-four-frame img { object-fit: contain; }
+            }
+          `}</style>
+        )}
+<MissionSuccessCelebration
           celebration={
             celebration
           }
@@ -1800,7 +1829,7 @@ const correct =
 
             <div
               className={isPublishedPhotoFour
-                ? 'mx-auto grid w-full max-w-[1380px] gap-3 p-2 sm:p-3 lg:grid-cols-[minmax(240px,280px)_minmax(0,1fr)] xl:grid-cols-[minmax(250px,300px)_minmax(0,1fr)]'
+                ? 'tp-photo-four-stage mx-auto grid w-full max-w-[1380px] gap-3 p-2 sm:p-3 lg:grid-cols-[minmax(240px,280px)_minmax(0,1fr)] xl:grid-cols-[minmax(250px,300px)_minmax(0,1fr)]'
                 : 'mx-auto grid w-full max-w-[1380px] gap-6 p-4 md:p-6 lg:grid-cols-[360px_minmax(0,1fr)] xl:grid-cols-[400px_minmax(0,1fr)]'}
             >
 
@@ -1948,7 +1977,7 @@ const correct =
 
               <main
                 className={isPublishedPhotoFour
-                  ? 'min-w-0 rounded-[22px] border border-slate-200 bg-white p-2 shadow-[0_14px_36px_rgba(15,23,42,0.07)] sm:p-3'
+                  ? 'tp-photo-four-main min-w-0 rounded-[22px] border border-slate-200 bg-white p-2 shadow-[0_14px_36px_rgba(15,23,42,0.07)] sm:p-3'
                   : 'min-w-0 rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_14px_36px_rgba(15,23,42,0.07)] md:p-7 xl:p-8'}
               >
 
