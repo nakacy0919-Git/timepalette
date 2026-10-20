@@ -7,9 +7,18 @@ function imageUrl(questionId,slot,r2MediaBase){
     return r2MediaBase+'P0'+slot+'.webp';
   return '/api/mission-public?action=image&questionId='+encodeURIComponent(questionId)+'&slot='+slot;
 }
+function videoEmbedValid(video){return !!video&&/^[A-Za-z0-9_-]{11}$/.test(String(video.youtubeId||''))&&
+  Number.isInteger(Number(video.startSeconds||0))&&Number(video.startSeconds||0)>=0&&
+  (!Number(video.endSeconds||0)||Number(video.endSeconds)>Number(video.startSeconds||0));}
 export function toPublishedMission(q){
-  if(!q||!['photo4','photoText4','text4'].includes(q.type)||
+  if(!q||!['photo4','photoText4','text4','video4','videoReflect'].includes(q.type)||
      !/^[a-f0-9-]{36}$/i.test(String(q.id||''))||!String(q.prompt||'').trim())return null;
+  const common={id:String(q.countryIso||'rw').toLowerCase()+'-mc-'+q.id,domain:q.domain,
+    title:String(q.prompt).trim().split(/[\n。！？?]/)[0].slice(0,50),prompt:String(q.prompt).trim(),
+    points:10,requiredForMastery:false,creatorQuestionId:q.id,author:q.creator||null,video:q.video||null,
+    explanation:String(q.explanation||'').slice(0,3500),sourceUrls:Array.isArray(q.sources)?q.sources:[]};
+  if(['video4','videoReflect'].includes(q.type)&&!videoEmbedValid(q.video))return null;
+  if(q.type==='videoReflect')return {...common,type:'creator-video-reflection',reflection:q.video};
   let choices,correctIndex;
   if(q.type==='photo4'){
     const match=String(q.answer||'').match(/写真スロット\s*([1-4])/i);
@@ -25,7 +34,7 @@ export function toPublishedMission(q){
     if(q.type==='photoText4'&&!q.media?.some(m=>m.slot===1))return null;
   }
   return {
-    id:String(q.countryIso||'rw').toLowerCase()+'-mc-'+q.id,domain:q.domain,type:'single-choice',
+    ...common,type:'single-choice',
     title:String(q.prompt).trim().split(/[\n。！？?]/)[0].slice(0,50),
     prompt:String(q.prompt).trim(),points:10,requiredForMastery:false,
     challenge:{choices,correctIndex},

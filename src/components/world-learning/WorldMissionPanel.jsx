@@ -89,6 +89,7 @@ const INTERACTIVE_MISSION_TYPES = new Set([
   'evidence-check',
   'question-creator',
   'creator-capstone',
+  'creator-video-reflection',
 ]);
 
 

@@ -1,17 +1,44 @@
-import {HEX_64, UUID, DOMAINS, TYPES, sha256, randomHex, derivePassword,
+import {HEX_64, UUID, TYPES, sha256, randomHex, derivePassword,
   passwordValid, isoValid, domainValid, response, ok, ApiFault, requireThat, hex,
   parseArray, now, safeAccount, checkScope} from './security.js';
 
 const TTL_SECONDS=6*3600, IMAGE_MAX=1228800;
-const MATCH_STATUS=new Set(['draft','submitted','needs_revision','approved','published','deleted']);
+
 const corsHeaders={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'};
-const photoType=t=>['photo4','photo1','photoText4'].includes(t);
+
 function statusCode(err){return err instanceof ApiFault?err.status:500;}
 function errResponse(err){return response({ok:false,error:err instanceof ApiFault?err.message:'サーバー処理に失敗しました。'},statusCode(err));}
+function parseObject(value){try {const x=JSON.parse(value||'{}');return x&&typeof x==='object'&&!Array.isArray(x)?x:{};} catch {return {};}}
+function cleanProfile(input){
+ const p=input&&typeof input==='object'?input:{};
+ return {name:String(p.name||'').replace(/[<>\r\n]/g,'').trim().slice(0,60),
+  school:String(p.school||'').replace(/[<>\r\n]/g,'').trim().slice(0,100),
+  region:String(p.region||'').replace(/[<>\r\n]/g,'').trim().slice(0,80),
+  bio:String(p.bio||'').replace(/[<>]/g,'').trim().slice(0,450),consent:p.consent===true};
+}
+function parseYoutubeId(value){
+ const text=String(value||'').trim();if(/^[A-Za-z0-9_-]{11}$/.test(text))return text;
+ try {const url=new URL(text);if(url.protocol!=='https:')return '';const host=url.hostname.toLowerCase();
+  if(host==='youtu.be'){const id=url.pathname.slice(1);return /^[A-Za-z0-9_-]{11}$/.test(id)?id:'';}
+  if(!['youtube.com','www.youtube.com','m.youtube.com','youtube-nocookie.com','www.youtube-nocookie.com'].includes(host))return '';
+  const parts=url.pathname.split('/').filter(Boolean);const id=parts[0]==='watch'?url.searchParams.get('v'):['shorts','embed','live'].includes(parts[0])?parts[1]:'';
+  return /^[A-Za-z0-9_-]{11}$/.test(id||'')?id:'';
+ }catch{return '';}
+}
+function cleanVideo(input){
+ const p=input&&typeof input==='object'?input:{};const youtubeId=parseYoutubeId(p.youtubeUrl||p.youtubeId);
+ const start=Number(p.startSeconds||0),end=Number(p.endSeconds||0);
+ const startSeconds=Number.isInteger(start)&&start>=0&&start<=21600?start:0;
+ const endSeconds=Number.isInteger(end)&&end>startSeconds&&end<=21600?end:0;
+ const minChars=Number.isInteger(Number(p.minChars))?Math.max(1,Math.min(1000,Number(p.minChars))):80;
+ const maxChars=Number.isInteger(Number(p.maxChars))?Math.max(minChars,Math.min(3000,Number(p.maxChars))):600;
+ return {youtubeId,startSeconds,endSeconds,minChars,maxChars,keywordMode:p.keywordMode==='any'?'any':'all',
+ keywords:(Array.isArray(p.keywords)?p.keywords:String(p.keywords||'').split(/[、,\n]/)).slice(0,8).map(s=>String(s).trim().slice(0,30)).filter(Boolean)};
+}
 function rowToQuestion(q,media=[]){return {
  id:q.id,countryIso:q.country_iso,countryName:q.country_name,domain:q.domain,type:q.type,
  prompt:q.prompt,answer:q.answer,choices:parseArray(q.choices_json),sources:parseArray(q.sources_json),
- notes:q.notes,authorId:q.author_id,authorName:q.author_name,status:q.status,reviewNote:q.review_note,
+ notes:q.notes,authorId:q.author_id,authorName:q.author_name,authorProfile:parseObject(q.author_profile_json),video:parseObject(q.video_json),authorProfileVerified:q.author_profile_verified===1,status:q.status,reviewNote:q.review_note,
  createdAt:q.created_at,updatedAt:q.updated_at,
  media:media.map(m=>({id:m.id,slot:m.slot,fileName:m.file_name,createdAt:m.created_at}))};}
 function visible(q,user){return user.role==='admin'||(q.status!=='deleted'&&(q.author_id===user.id||q.status!=='draft'));}
@@ -22,11 +49,18 @@ async function getQuestion(env,id){requireThat(UUID.test(String(id||'')),'問題
 async function getMediaRows(env,id){return (await env.DB.prepare('SELECT * FROM media WHERE question_id=? ORDER BY slot').bind(id).all()).results;}
 async function assertComplete(env,q){
  requireThat(q.prompt.trim()&&isoValid(q.country_iso)&&domainValid(q.domain)&&TYPES.includes(q.type),'国・カテゴリー・問題文を入力してください。');
- if(['text4','photoText4'].includes(q.type)){
+ if(['text4','photoText4','video4'].includes(q.type)){
   const wrong=parseArray(q.choices_json).map(s=>String(s).trim());
   requireThat(q.answer.trim()&&wrong.length===3&&wrong.every(Boolean)&&new Set([q.answer.trim(),...wrong]).size===4,'4択の正答・誤答3つを確認してください。');
  }
  if(q.type==='photo4')requireThat(/写真スロット\s*([1-4])/i.test(q.answer),'写真4択の正解スロットを確認してください。');
+ if(['video4','videoReflect'].includes(q.type)){
+  const video=parseObject(q.video_json);
+  requireThat(/^[A-Za-z0-9_-]{11}$/.test(video.youtubeId||''),'有効なYouTube URLを入力してください。');
+  requireThat(video.endSeconds===0||video.endSeconds>video.startSeconds,'動画の開始・終了時間を確認してください。');
+  requireThat(video.endSeconds===0||video.endSeconds-video.startSeconds<=1800,'動画の指定範囲は30分以内にしてください。');
+  if(q.type==='videoReflect')requireThat(video.minChars>=1&&video.maxChars>=video.minChars&&video.maxChars<=3000,'記述の文字数条件を確認してください。');
+ }
  const want=mediaSlots(q.type);if(want.length){const rows=await getMediaRows(env,q.id);
   requireThat(rows.length===want.length&&want.every(slot=>rows.some(m=>m.slot===slot&&m.r2_status==='ready'&&m.r2_object_key)),
     '必要な画像のR2登録が揃っていません。');
@@ -170,20 +204,23 @@ async function saveQuestion(env,user,args){
  requireThat(prompt.length<=2000&&answer.length<=1500&&notes.length<=5000,'文章が長すぎます。');
  const choices=(Array.isArray(p.choices)?p.choices:[]).slice(0,3).map(x=>String(x??'').slice(0,600));
  const sources=(Array.isArray(p.sources)?p.sources:[]).slice(0,2).map(x=>String(x||'').trim().slice(0,1500)).filter(x=>/^https?:\/\//i.test(x));
+  const profile=cleanProfile(p.authorProfile);
+  const video=cleanVideo(p.video);
  let prev=null;if(id)prev=await getQuestion(env,id);
  if(prev){ownerOrAdmin(prev,user);requireThat(!['published','deleted'].includes(prev.status),'公開中・削除済みの問題は編集できません。');
   if(user.role!=='admin')requireThat(!['approved'].includes(prev.status),'承認済みの修正は管理者へ相談してください。');}
  const stamp=now(),qid=prev?.id||crypto.randomUUID();
  const next={id:qid,country_iso:iso,country_name:String(p.countryName||'').slice(0,90),domain:p.domain,type:p.type,prompt,answer,
  choices_json:JSON.stringify(choices),sources_json:JSON.stringify(sources),notes,
- author_id:prev?.author_id||user.id,author_name:prev?.author_name||user.name,
+ author_id:prev?.author_id||user.id,author_name:(profile.name && (!prev||user.role==='admin'||prev.author_id===user.id))?profile.name:(prev?.author_name||user.name),
+  author_profile_json:JSON.stringify(profile),video_json:JSON.stringify(video),author_profile_verified:0,
  status:finalize||(prev&&user.role==='admin'?prev.status:'draft'),review_note:prev?.review_note||'',created_at:prev?.created_at||stamp,updated_at:stamp};
  if(finalize)await assertComplete(env,next);
- if(prev){const r=await env.DB.prepare(`UPDATE questions SET country_iso=?,country_name=?,domain=?,type=?,prompt=?,answer=?,choices_json=?,sources_json=?,notes=?,status=?,review_note=?,updated_at=?,version=version+1 WHERE id=? AND version=? AND status NOT IN('published','deleted')`)
-  .bind(next.country_iso,next.country_name,next.domain,next.type,next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.status,next.review_note,next.updated_at,qid,prev.version).run();
+ if(prev){const r=await env.DB.prepare(`UPDATE questions SET country_iso=?,country_name=?,domain=?,type=?,prompt=?,answer=?,choices_json=?,sources_json=?,notes=?,author_name=?,author_profile_json=?,video_json=?,author_profile_verified=0,status=?,review_note=?,updated_at=?,version=version+1 WHERE id=? AND version=? AND status NOT IN('published','deleted')`)
+  .bind(next.country_iso,next.country_name,next.domain,next.type,next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.author_name,next.author_profile_json,next.video_json,next.status,next.review_note,next.updated_at,qid,prev.version).run();
   requireThat(r.meta.changes===1,'他の先生が更新しました。再読み込みしてください。',409);
- }else{await env.DB.prepare(`INSERT INTO questions(id,country_iso,country_name,domain,type,prompt,answer,choices_json,sources_json,notes,author_id,author_name,status,review_note,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`)
-  .bind(qid,next.country_iso,next.country_name,next.domain,next.type,next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.author_id,next.author_name,next.status,next.review_note,next.created_at,next.updated_at).run();}
+ }else{await env.DB.prepare(`INSERT INTO questions(id,country_iso,country_name,domain,type,prompt,answer,choices_json,sources_json,notes,author_id,author_name,author_profile_json,video_json,author_profile_verified,status,review_note,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`)
+  .bind(qid,next.country_iso,next.country_name,next.domain,next.type,next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.author_id,next.author_name,next.author_profile_json,next.video_json,0,next.status,next.review_note,next.created_at,next.updated_at).run();}
  return {question:rowToQuestion(next,prev?await getMediaRows(env,qid):[])};
 }
 function b64ToBytes(s){const binary=atob(s);const result=new Uint8Array(binary.length);for(let i=0;i<binary.length;i++)result[i]=binary.charCodeAt(i);return result;}
@@ -251,10 +288,11 @@ async function publish(env,user,args){adminOnly(user);const mode=String(args.mod
  const q=await getQuestion(env,args.questionId),stamp=now(),was=q.status;
  if(mode==='publish'){
  requireThat(was==='approved'&&args.rightsConfirmed===true,'承認済みの問題と公開利用権を確認してください。');
- requireThat(['text4','photo4','photoText4'].includes(q.type),'この形式は公開できません。');await assertComplete(env,q);
- const r=await env.DB.prepare(`UPDATE questions SET status='published',updated_at=?,version=version+1 WHERE id=? AND status='approved'
+ requireThat(['text4','photo4','photoText4','video4','videoReflect'].includes(q.type),'この形式は公開できません。');await assertComplete(env,q);
+ const profile=cleanProfile(parseObject(q.author_profile_json));const profileVerified=profile.consent&&args.profileRightsConfirmed===true?1:0;
+ const r=await env.DB.prepare(`UPDATE questions SET status='published',author_profile_verified=?,updated_at=?,version=version+1 WHERE id=? AND status='approved'
  AND (SELECT COUNT(*) FROM questions WHERE country_iso=? AND domain=? AND status='published')<10`)
- .bind(stamp,q.id,q.country_iso,q.domain).run();requireThat(r.meta.changes===1,'公開条件が変更されました。10問上限を確認してください。',409);
+ .bind(profileVerified,stamp,q.id,q.country_iso,q.domain).run();requireThat(r.meta.changes===1,'公開条件が変更されました。10問上限を確認してください。',409);
  }else{
  requireThat(was==='published','公開中の問題のみ停止できます。');
  // Legacy R2 v2 route is authorized by this manifest. Revoke BEFORE marking D1 unpublished.
@@ -288,7 +326,8 @@ async function publicCatalog(env,url){
  const rows=(await env.DB.prepare("SELECT * FROM questions WHERE country_iso=? AND domain=? AND status='published'").bind(iso,domain).all()).results;
  const qmap=new Map(rows.map(q=>[q.id,q]));const media=(await env.DB.prepare(`SELECT m.question_id,m.slot FROM media m JOIN questions q ON q.id=m.question_id WHERE q.country_iso=? AND q.domain=? AND q.status='published' AND m.r2_status='ready'`).bind(iso,domain).all()).results;
  const byQ=new Map();for(const m of media){if(!byQ.has(m.question_id))byQ.set(m.question_id,[]);byQ.get(m.question_id).push({slot:m.slot});}
- const questions=ids.filter(id=>qmap.has(id)).map(id=>{const q=qmap.get(id);return {id:q.id,countryIso:q.country_iso,domain:q.domain,type:q.type,prompt:q.prompt.slice(0,2000),answer:q.answer.slice(0,1500),choices:parseArray(q.choices_json),explanation:q.notes.slice(0,3500),sources:parseArray(q.sources_json).filter(s=>/^https?:\/\//i.test(String(s))).slice(0,2),media:byQ.get(q.id)||[]};});
+ const questions=ids.filter(id=>qmap.has(id)).map(id=>{const q=qmap.get(id);return {id:q.id,countryIso:q.country_iso,domain:q.domain,type:q.type,prompt:q.prompt.slice(0,2000),answer:q.answer.slice(0,1500),choices:parseArray(q.choices_json),explanation:q.notes.slice(0,3500),sources:parseArray(q.sources_json).filter(s=>/^https?:\/\//i.test(String(s))).slice(0,2),media:byQ.get(q.id)||[],video:parseObject(q.video_json),
+ creator:q.author_profile_verified===1&&parseObject(q.author_profile_json).consent===true?cleanProfile(parseObject(q.author_profile_json)):{name:'教材協力者',school:'',region:'',bio:'',consent:false}};});
  return new Response(JSON.stringify({ok:true,questions}),{headers:{...corsHeaders,'Content-Type':'application/json'}});
 }
 async function publicImage(env,url){

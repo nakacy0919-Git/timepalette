@@ -33,6 +33,7 @@ import MissionSuccessCelebration from './MissionSuccessCelebration';
 import GlobalChallengeMissionGame from './GlobalChallengeMissionGame';
 import SourceQuestMissionGame from './SourceQuestMissionGame';
 import MissionMaterialRenderer from './MissionMaterialRenderer';
+import {CreatorVideoEmbed,CreatorVideoReflectionGame} from './CreatorVideoMission.jsx';
 
 const TIME_MISSION_TYPES =
   new Set([
@@ -833,6 +834,7 @@ const correct =
 
   const renderGame =
     () => {
+      if(mission.type==='creator-video-reflection')return <CreatorVideoReflectionGame key={mission.id} mission={mission} onComplete={handleMissionComplete}/>;
       if (
         sourceQuestPlayable
       ) {
@@ -2036,6 +2038,46 @@ const correct =
                   </span>
 
                 </div>
+
+
+                                {isCreatorMission && mission.author?.name && <details className="mb-3 rounded-xl bg-blue-50 p-3 text-sm text-slate-700">
+
+
+
+                                  <summary className="cursor-pointer font-bold text-blue-800">作成者：{mission.author.name}（詳細を見る）</summary>
+
+
+
+                                  <div className="mt-2 space-y-1">
+
+
+
+                                    {mission.author.school && <p>学校・団体：{mission.author.school}</p>}
+
+
+
+                                    {mission.author.region && <p>地域：{mission.author.region}</p>}
+
+
+
+                                    {mission.author.bio && <p className="whitespace-pre-wrap">{mission.author.bio}</p>}
+
+
+
+                                    {!mission.author.school&&!mission.author.region&&!mission.author.bio&&<p>プロフィール詳細は登録されていません。</p>}
+
+
+
+                                  </div>
+
+
+
+                                </details>}
+
+
+
+                                {mission.video && mission.type!=='creator-video-reflection' && <CreatorVideoEmbed key={mission.id} video={mission.video}/>}
+
 
 
                                 <MissionMaterialRenderer

@@ -6,6 +6,7 @@ import { filterBankQuestions } from './filterBankQuestions.js';
 import PublishedMissionManager from './PublishedMissionManager.jsx';
 import { BULK_LIMIT, createBulkPlan, eligibleForBulk, executeBulkPlan } from './bulkActions.js';
 import { blobToBase64, optimizeImage } from './image';
+import {videoEmbedUrl} from '../utils/creatorVideo.js';
 
 const DOMAINS = [
   ['place', '場所・地理'],
@@ -22,11 +23,14 @@ const TYPES = [
   ['photoText4', '写真1枚＋文章4択'],
   ['free', '自由回答・話し合い'],
   ['web', 'Webサイトなどの資料を利用'],
+  ['video4', 'YouTube動画＋4択'],
+  ['videoReflect', 'YouTube動画＋感想・記述'],
 ];
 const TARGET = 10;
 const EMPTY = {
   id: '', countryIso: '', countryName: '', domain: 'language', type: 'text4',
   prompt: '', answer: '', choices: ['', '', ''], sources: ['', ''], notes: '',
+  authorProfile:{name:'',school:'',region:'',bio:'',consent:false},video:{youtubeUrl:'',startSeconds:0,endSeconds:0,minChars:80,maxChars:600,keywords:[],keywordMode:'all'},
   updatedAt: '',
 };
 const statusJa = {
@@ -212,9 +216,14 @@ function QuestionPreview({ form, photos }) {
           </div>;
         })}
       </div>}
-      {['text4', 'photoText4'].includes(form.type) && <div className="mc-choice-grid">{[form.answer, ...form.choices].map((c, i) =>
+       {['text4', 'photoText4','video4'].includes(form.type) && <div className="mc-choice-grid">{[form.answer, ...form.choices].map((c, i) =>
         <div key={i} className={showTeacherDetails && i === 0 ? 'mc-answer-correct' : ''}>{showTeacherDetails && i===0 && <CheckCircle2 size={15} aria-label="正答" />} {String.fromCharCode(65 + i)}. {c || '（未入力）'}</div>)}</div>}
-      {form.type === 'web' && <p className="mc-hint">Webを使う問題は参考URLを保存します。外部ページの埋め込みには掲載元の許可が必要です。</p>}
+       {['video4','videoReflect'].includes(form.type) && videoEmbedUrl(form.video) && <div className="mc-stack">
+         <p className="mc-hint">生徒画面に表示する動画</p>
+         <iframe title="動画プレビュー" src={videoEmbedUrl(form.video)} style={{width:'100%',aspectRatio:'16/9',border:0,borderRadius:10}} loading="lazy" allow="encrypted-media; picture-in-picture" allowFullScreen/>
+         {form.type==='videoReflect' && <p className="mc-hint">{form.video?.minChars||80}〜{form.video?.maxChars||600}文字、キーワード：{form.video?.keywords?.join('、')||'指定なし'}</p>}
+       </div>}
+       {form.type === 'web' && <p className="mc-hint">Webを使う問題は参考URLを保存します。外部ページの埋め込みには掲載元の許可が必要です。</p>}
       {showTeacherDetails && <ReferencePanel form={form} />}
     </section>
   );
@@ -222,21 +231,44 @@ function QuestionPreview({ form, photos }) {
 
 function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, busy, demo, error, saveStage, isAdmin, photoLoadBusy, photoLoadError, onRetryPhotos }) {
   const update = (k, value) => setForm(prev => ({ ...prev, [k]: value }));
+  const updateProfile=(k,v)=>setForm(prev=>({...prev,authorProfile:{...(prev.authorProfile||{}),[k]:v}}));
+  const updateVideo=(k,v)=>setForm(prev=>({...prev,video:{...(prev.video||{}),[k]:v}}));
   const photoCount = form.type === 'photo4' ? 4 : ['photo1', 'photoText4'].includes(form.type) ? 1 : 0;
   return <div className="mc-editor-grid">
     <section className="mc-card mc-section">
       <div className="mc-section-top"><div><div className="mc-eyebrow">MISSION EDITOR</div><h2>{form.id ? '問題を編集' : '新しい問題を作る'}</h2></div><button className="mc-quiet" onClick={onCancel} type="button"><ArrowLeft size={17} />一覧へ</button></div>
       <div className="mc-fields-row"><div className="mc-country-field"><span>国</span><CountryPicker countries={form.countries || []} value={form.countryIso} onChange={iso => update('countryIso', iso)} label="問題を作成する国" /></div><label>カテゴリー <select value={form.domain} onChange={e => update('domain', e.target.value)}>{DOMAINS.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label></div>
       <label>問題の形式 <select value={form.type} onChange={e => update('type', e.target.value)}>{TYPES.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label>
-      <label>問題文・活動の指示 <textarea rows={4} value={form.prompt} maxLength={2000} onChange={e => update('prompt', e.target.value)} placeholder="例：写真を見て、ネパールで人気の料理を選んでください。" /></label>
-      {photoCount > 0 && <div className="mc-stack">
+       <fieldset className="mc-stack" style={{border:'1px solid #dbeafe',borderRadius:12,padding:12,marginTop:12}}><legend>作成者プロフィール</legend>
+         <label>表示する作成者名 <input value={form.authorProfile?.name||''} maxLength={60} onChange={e=>updateProfile('name',e.target.value)} placeholder="例：山田 花子"/></label>
+         <label>学校・団体（任意） <input value={form.authorProfile?.school||''} maxLength={100} onChange={e=>updateProfile('school',e.target.value)}/></label>
+         <label>地域・国（任意） <input value={form.authorProfile?.region||''} maxLength={80} onChange={e=>updateProfile('region',e.target.value)}/></label>
+         <label>紹介文（任意） <textarea rows={2} maxLength={450} value={form.authorProfile?.bio||''} onChange={e=>updateProfile('bio',e.target.value)}/></label>
+         <label><input type="checkbox" checked={form.authorProfile?.consent===true} onChange={e=>updateProfile('consent',e.target.checked)}/> 名前・プロフィールを本番サイトに公開することに同意します（管理者による公開確認が必要）</label>
+         <small>共通PINでの作成者名は本人確認済みではありません。管理者が公開前に確認します。</small>
+       </fieldset>
+       <label>問題文・活動の指示 <textarea rows={4} value={form.prompt} maxLength={2000} onChange={e => update('prompt', e.target.value)} placeholder="例：写真を見て、ネパールで人気の料理を選んでください。" /></label>
+       {['video4','videoReflect'].includes(form.type) && <fieldset className="mc-stack" style={{border:'1px solid #bfdbfe',borderRadius:12,padding:12,marginTop:12}}><legend>YouTube教材</legend>
+         <label>YouTube動画のURL <input type="url" value={form.video?.youtubeUrl||(form.video?.youtubeId?'https://www.youtube.com/watch?v='+form.video.youtubeId:'')} onChange={e=>updateVideo('youtubeUrl',e.target.value)} placeholder="https://www.youtube.com/watch?v=..." /></label>
+         <div className="mc-fields-row"><label>開始位置（秒） <input type="number" min={0} max={21600} value={form.video?.startSeconds??0} onChange={e=>updateVideo('startSeconds',Number(e.target.value))}/></label>
+         <label>終了位置（秒・0は最後まで） <input type="number" min={0} max={21600} value={form.video?.endSeconds??0} onChange={e=>updateVideo('endSeconds',Number(e.target.value))}/></label></div>
+         <small>動画URLと開始・終了秒を指定できます。YouTube側が埋め込みを禁止している場合は、外部リンクで視聴します。</small>
+         {form.type==='videoReflect' && <>
+           <div className="mc-fields-row"><label>最低文字数 <input type="number" min={1} max={1000} value={form.video?.minChars??80} onChange={e=>updateVideo('minChars',Number(e.target.value))}/></label>
+           <label>最大文字数 <input type="number" min={1} max={3000} value={form.video?.maxChars??600} onChange={e=>updateVideo('maxChars',Number(e.target.value))}/></label></div>
+           <label>必要なキーワード（カンマ区切り・最大8語、任意） <input value={(form.video?.keywords||[]).join('、')} onChange={e=>updateVideo('keywords',e.target.value.split(/[、,]/).map(x=>x.trim()))}/></label>
+           <label>キーワード条件 <select value={form.video?.keywordMode||'all'} onChange={e=>updateVideo('keywordMode',e.target.value)}><option value="all">すべて含む</option><option value="any">いずれかを含む</option></select></label>
+           <small>クリア判定は文字数・キーワードの形式条件のみです。内容の良し悪しは自動採点しません。</small>
+         </>}
+       </fieldset>}
+       {photoCount > 0 && <div className="mc-stack">
         {Boolean(form.id) && <div className="mc-existing-media-status" role="status">
           <span>既存の写真は保存済みです。{photoLoadBusy ? 'プレビューを読み込んでいます…' : photoLoadError ? 'プレビューだけを取得できませんでした。画像は保持されています。' : ''}</span>
           {photoLoadError && <button type="button" className="mc-outline mc-small" onClick={onRetryPhotos} disabled={photoLoadBusy}>写真表示を再試行</button>}
         </div>}
         <div className="mc-helper-title"><UploadCloud size={18}/> 写真をアップロード</div><p className="mc-muted">写真はこの端末内でWebPに変換されます。4択では①が正答、②〜④が誤答です。ゲーム公開時の表示順は変更できます。</p><div className="mc-upload-grid">{Array.from({ length: photoCount }, (_, i) => i + 1).map(n => <PhotoSlot key={n} slot={n} name={photos[n]?.name || form.media?.find(m=>Number(m.slot)===n)?.fileName} preview={photos[n]?.preview} onPick={onPhoto} busy={busy} isCorrect={form.type==='photo4' && n===1} singlePhoto={form.type==='photo1'}/>)}</div></div>}
-      {['text4','photoText4'].includes(form.type) && <div className="mc-stack"><label>正しい答え <input value={form.answer} onChange={e => update('answer', e.target.value)} placeholder="正解の選択肢" /></label>{form.choices.map((v, i) => <label key={i}>まちがいの選択肢 {i + 1} <input value={v} onChange={e => update('choices', form.choices.map((c, j) => i === j ? e.target.value : c))}/></label>)}</div>}
-      {!['text4', 'photo4', 'photoText4'].includes(form.type) && <label>模範解答・参考となる回答（任意） <textarea rows={2} value={form.answer} onChange={e => update('answer', e.target.value)} /></label>}
+       {['text4','photoText4','video4'].includes(form.type) && <div className="mc-stack"><label>正しい答え <input value={form.answer} onChange={e => update('answer', e.target.value)} placeholder="正解の選択肢" /></label>{form.choices.map((v, i) => <label key={i}>まちがいの選択肢 {i + 1} <input value={v} onChange={e => update('choices', form.choices.map((c, j) => i === j ? e.target.value : c))}/></label>)}</div>}
+       {!['text4', 'photo4', 'photoText4','video4'].includes(form.type) && <label>模範解答・参考となる回答（任意） <textarea rows={2} value={form.answer} onChange={e => update('answer', e.target.value)} /></label>}
       <label>参考Webページなど（任意） <input type="url" placeholder="https://..." value={form.sources[0] || ''} onChange={e => update('sources', [e.target.value, form.sources[1] || ''])}/></label>
       <label>参考URLをもう1件（任意） <input type="url" placeholder="https://..." value={form.sources[1] || ''} onChange={e => update('sources', [form.sources[0] || '', e.target.value])}/></label>
       <label>解説・出典・アイデア（任意） <textarea rows={3} value={form.notes} onChange={e => update('notes', e.target.value)} placeholder="教材の出典や、写真・Webページをどう使うかなど" /></label>
@@ -328,9 +360,15 @@ function QuestionBank({
   onBulkAction, bulkProgress, bulkReport
 }) {
 
-  const visible = filterBankQuestions(questions, {
-    filter, search, selectedCountry
-  });
+  const [authorFilter,setAuthorFilter]=useState('');
+  const [typeFilter,setTypeFilter]=useState('');
+  const [sortMode,setSortMode]=useState('latest');
+  const [authorDetails,setAuthorDetails]=useState(null);
+  const authors=[...new Set(questions.map(q=>q.authorName).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ja'));
+  const statusCounts=Object.fromEntries(Object.keys(statusJa).map(key=>[key,questions.filter(q=>q.status===key).length]));
+  const visible=filterBankQuestions(questions,{filter,search,selectedCountry}).filter(q=>
+     (!authorFilter||q.authorName===authorFilter)&&(!typeFilter||q.type===typeFilter))
+    .sort((a,b)=>sortMode==='oldest'?String(a.updatedAt).localeCompare(String(b.updatedAt)):String(b.updatedAt).localeCompare(String(a.updatedAt)));
   const [bulkMode, setBulkMode] = useState('approve');
   const [selectedIds, setSelectedIds] = useState(() => new Set());
   const eligibleVisible = visible.slice(0, 200).filter(q => eligibleForBulk(q, bulkMode));
@@ -371,8 +409,11 @@ function QuestionBank({
         </span>
       </div>
 
-      <div className="mc-filter-row">
-        <label className="mc-search">
+       {user?.role==='admin' && <div className="mc-filter-row" aria-label="状態ごとの問題件数" style={{gap:8,flexWrap:'wrap'}}>
+         {Object.entries(statusCounts).map(([status,count])=><button key={status} type="button" className="mc-outline mc-small" onClick={()=>onFilterChange(status)}>{statusJa[status]}：{count}</button>)}
+       </div>}
+       <div className="mc-filter-row">
+         <label className="mc-search">
           <Search size={18}/>
           <input
             placeholder="国・内容・作成者で検索"
@@ -396,8 +437,13 @@ function QuestionBank({
         </select>
       </div>
 
-      {user?.role === 'admin' && (
-        <section className="mc-bulk-panel" aria-label="管理者の一括処理">
+       <div className="mc-filter-row" style={{gap:8,flexWrap:'wrap'}}>
+         <label>作成者<select aria-label="作成者で絞り込む" value={authorFilter} onChange={e=>setAuthorFilter(e.target.value)}><option value="">すべて</option>{authors.map(a=><option key={a} value={a}>{a}</option>)}</select></label>
+         <label>形式<select aria-label="問題形式で絞り込む" value={typeFilter} onChange={e=>setTypeFilter(e.target.value)}><option value="">すべて</option>{TYPES.map(([id,label])=><option key={id} value={id}>{label}</option>)}</select></label>
+         <label>更新順<select aria-label="並び替え" value={sortMode} onChange={e=>setSortMode(e.target.value)}><option value="latest">新しい順</option><option value="oldest">古い順</option></select></label>
+       </div>
+       {user?.role === 'admin' && (
+         <section className="mc-bulk-panel" aria-label="管理者の一括処理">
           <div className="mc-bulk-top">
             <div><strong>一括管理</strong><p>問題を確認して選択し、承認と公開は別々に実行します。</p></div>
             <label className="mc-bulk-mode-label">操作
@@ -473,9 +519,7 @@ function QuestionBank({
                     {' · '}
                     {DOMAINS.find(d => d[0] === q.domain)?.[1] || q.domain}
                   </span>
-                  <span className="mc-question-author">
-                    作成：{q.authorName}
-                  </span>
+                   <button type="button" className="mc-question-author" style={{position:'relative',zIndex:2}} onClick={()=>setAuthorDetails(q)} title="作成者情報を見る">作成：{q.authorName||'不明'} <span aria-hidden="true">ⓘ</span></button>
                 </div>
 
                 <h3>
@@ -545,8 +589,15 @@ function QuestionBank({
         </div>
       )}
 
-      {visible.length > 200 && (
-        <p className="mc-hint">
+       {authorDetails&&<div className="mc-review-backdrop" onMouseDown={e=>{if(e.target===e.currentTarget)setAuthorDetails(null)}}><section role="dialog" aria-modal="true" className="mc-review-dialog" aria-label="作成者の詳細" style={{maxWidth:500}}>
+         <div className="mc-review-dialog-header"><h2>作成者プロフィール</h2><button className="mc-outline mc-small" type="button" onClick={()=>setAuthorDetails(null)}>閉じる</button></div>
+         <div className="mc-review-dialog-body"><h3>{authorDetails.authorProfile?.name||authorDetails.authorName||'未登録'}</h3>
+         <p>所属：{authorDetails.authorProfile?.school||'未登録'}</p><p>地域：{authorDetails.authorProfile?.region||'未登録'}</p>
+         <p style={{whiteSpace:'pre-wrap'}}>{authorDetails.authorProfile?.bio||'紹介文は登録されていません。'}</p>
+         <small>公開同意：{authorDetails.authorProfile?.consent?'あり':'未確認'}・本番公開確認：{authorDetails.authorProfileVerified?'済み':'未確認'}</small></div>
+       </section></div>}
+       {visible.length > 200 && (
+         <p className="mc-hint">
           先頭200件まで表示しています。
           検索条件を絞ってください。
         </p>
@@ -935,8 +986,12 @@ export default function MissionCreator() {
     }else if(!window.confirm('この問題をTimePaletteから公開停止しますか？'))return false;
     setBusy(true);setError('');
     try{
-      const result=await creatorRequest('setPublication',{
-        questionId:q.id,mode,rightsConfirmed:mode==='publish',countryIso:q.countryIso,domain:q.domain
+       let profileRightsConfirmed=false;
+       if(mode==='publish' && q.authorProfile?.consent && q.authorProfile?.name){
+         profileRightsConfirmed=window.confirm('作成者本人の同意と、名前・学校・紹介文の公開権利を確認しましたか？\nキャンセルの場合はプロフィールを公開せずに問題のみ公開します。');
+       }
+       const result=await creatorRequest('setPublication',{
+         questionId:q.id,mode,rightsConfirmed:mode==='publish',profileRightsConfirmed,countryIso:q.countryIso,domain:q.domain
       },session);
       setQuestions(previous=>previous.map(item=>item.id===q.id?
         {...item,status:result.status,updatedAt:result.updatedAt}:item));

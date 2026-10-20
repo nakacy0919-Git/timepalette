@@ -3,7 +3,7 @@ const enc = new TextEncoder();
 export const HEX_64 = /^[0-9a-f]{64}$/i;
 export const UUID = /^[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}$/i;
 export const DOMAINS = ['place','time','language','lifeCulture','japanConnection','thinkConnect'];
-export const TYPES = ['text4','photo4','photo1','photoText4','free','web'];
+export const TYPES = ['text4','photo4','photo1','photoText4','free','web','video4','videoReflect'];
 export function hex(bytes){return [...bytes].map(x=>x.toString(16).padStart(2,'0')).join('');}
 export function randomHex(n=32){return hex(crypto.getRandomValues(new Uint8Array(n)));}
 export async function sha256(value){return hex(new Uint8Array(await crypto.subtle.digest('SHA-256',typeof value==='string'?enc.encode(value):value)));}
