@@ -7,7 +7,7 @@ export const TYPES = ['text4','photo4','photo1','photoText4','free','web'];
 export function hex(bytes){return [...bytes].map(x=>x.toString(16).padStart(2,'0')).join('');}
 export function randomHex(n=32){return hex(crypto.getRandomValues(new Uint8Array(n)));}
 export async function sha256(value){return hex(new Uint8Array(await crypto.subtle.digest('SHA-256',typeof value==='string'?enc.encode(value):value)));}
-export async function derivePassword(password,salt,iterations=180000){
+export async function derivePassword(password,salt,iterations=100000){
   const key=await crypto.subtle.importKey('raw',enc.encode(password),'PBKDF2',false,['deriveBits']);
   const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt:Uint8Array.from(salt.match(/.{2}/g).map(x=>parseInt(x,16))),iterations,hash:'SHA-256'},key,256);
   return hex(new Uint8Array(bits));

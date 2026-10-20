@@ -69,7 +69,7 @@ async function login(env,args){
  if(!t){const match=(await env.DB.prepare('SELECT * FROM teachers WHERE name=? LIMIT 2').bind(account).all()).results;if(match.length===1)t=match[0];}
  let authorized=false;
  if(t&&t.active===1&&t.password_salt&&t.password_hash&&passwordValid(password)){
-  const calculated=await derivePassword(password,t.password_salt,Number(t.password_iterations||180000));
+  const calculated=await derivePassword(password,t.password_salt,Number(t.password_iterations||100000));
   authorized=calculated===t.password_hash;
  }
  if(!authorized){await noteFailure(env,key);throw new ApiFault('アカウント名またはパスワードが正しくありません。',401);}
@@ -87,7 +87,7 @@ async function register(env,args){
  const claimed=await env.DB.prepare('UPDATE enrollments SET used_at=? WHERE token_hash=? AND used_at IS NULL AND expires_at>?')
   .bind(stamp,hash,stamp).run();
  requireThat(claimed.meta.changes===1,'招待登録が競合しました。管理者にお問い合わせください。',409);
- const updated=await env.DB.prepare('UPDATE teachers SET password_salt=?,password_hash=?,password_iterations=180000,auth_version=auth_version+1,updated_at=? WHERE id=? AND active=1')
+ const updated=await env.DB.prepare('UPDATE teachers SET password_salt=?,password_hash=?,password_iterations=100000,auth_version=auth_version+1,updated_at=? WHERE id=? AND active=1')
   .bind(salt,digest,stamp,enrollment.teacher_id).run();
  requireThat(updated.meta.changes===1,'教師アカウントを登録できませんでした。管理者にご連絡ください。',409);
  await env.DB.prepare('DELETE FROM sessions WHERE teacher_id=?').bind(enrollment.teacher_id).run();
