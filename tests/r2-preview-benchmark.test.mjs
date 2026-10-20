@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createMissionPublicHandler} from '../api/mission-public.js';
-import {isPreviewR2Request,readPreviewR2IfPublished} from '../lib/r2-preview-photo.js';
+import {isPreviewR2Request,readPreviewR2IfPublished,PREVIEW_AUTH_TTL_MS,PREVIEW_CDN_TTL_SECONDS} from '../lib/r2-preview-photo.js';
 
 const id = '12345678-1234-1234-1234-123456789abc';
 const env = {VERCEL_ENV:'preview',R2_ACCOUNT_ID:'a'.repeat(32),
@@ -16,8 +16,10 @@ async function withFixture(fn,options={}){
   const requests=[];
   Object.assign(process.env,env,{MISSION_CREATOR_GAS_URL:'https://script.google.com/macros/s/test/exec'});
   const r2Calls=[];
+  const authorizationCache=new Map();
   const handler=createMissionPublicHandler({r2Reader:args=>readPreviewR2IfPublished({
     ...args,
+    authorizationCache,clock:()=>options.now??1000,
     // Explicit S3 transport fake: never contacts a live R2 endpoint in tests.
     createClient:()=>({
       async send(command){
@@ -90,4 +92,38 @@ test('ordinary image requests continue using GAS without touching R2',async()=>{
     assert.equal(r2Calls.length,0);
     assert.equal(urls.length,1);
   });
+});
+
+test('warm grant removes redundant GAS authorization while retaining bounded CDN lifetime',async()=>{
+  await withFixture(async (urls,handler,r2Calls)=>{
+    const query={action:'image',questionId:id,slot:'1',r2pilot:'1',bench:'1'};
+    const cold=response();await handler({method:'GET',query},cold);
+    const warm=response();await handler({method:'GET',query},warm);
+    assert.equal(cold.statusCode,200);assert.equal(warm.statusCode,200);
+    assert.equal(cold.headers['X-TimePalette-Auth-Cache'],'MISS');
+    assert.equal(warm.headers['X-TimePalette-Auth-Cache'],'HIT');
+    assert.match(warm.headers['Server-Timing'],/publication;dur=0/);
+    assert.match(warm.headers['Server-Timing'],/r2;dur=/);
+    assert.equal(warm.headers['Cache-Control'],`public, s-maxage=${PREVIEW_CDN_TTL_SECONDS}, max-age=0`);
+    assert.equal(urls.length,1,'GAS catalog should be fetched once');
+    assert.equal(r2Calls.length,2);
+  });
+});
+test('expired grant rechecks GAS and blocks a stopped publication',async()=>{
+  const options={now:1000,unpublished:false};
+  await withFixture(async (urls,handler,r2Calls)=>{
+    const query={action:'image',questionId:id,slot:'1',r2pilot:'1',bench:'2'};
+    const first=response();await handler({method:'GET',query},first);
+    assert.equal(first.statusCode,200);
+    options.unpublished=true;
+    options.now+=PREVIEW_AUTH_TTL_MS+1;
+    const second=response();await handler({method:'GET',query},second);
+    assert.equal(second.statusCode,404);
+    assert.equal(r2Calls.length,1,'expired/denied publication must not read R2');
+    assert.deepEqual(urls.map(url=>url.searchParams.get('action')),
+      ['publishedCatalog','publishedCatalog','publishedPhoto']);
+  },options);
+});
+test('publication TTL and CDN TTL stay strictly under prior 30-second bound',()=>{
+  assert.ok(PREVIEW_AUTH_TTL_MS/1000+PREVIEW_CDN_TTL_SECONDS <= 30);
 });

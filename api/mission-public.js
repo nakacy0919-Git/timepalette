@@ -1,9 +1,24 @@
 // Read-only published questions and photos. No Sheets ID, Drive file ID or teacher session leaks.
-import {isPreviewR2Request,readPreviewR2IfPublished} from '../lib/r2-preview-photo.js';
+import {isPreviewR2Request,readPreviewR2IfPublished,PREVIEW_CDN_TTL_SECONDS} from '../lib/r2-preview-photo.js';
 const GOOGLE_URL_PATTERN=/^https:\/\/script\.google\.com\/macros\/s\//;
 const PUBLIC_DOMAINS=new Set(['place','time','language','lifeCulture','japanConnection','thinkConnect']);
+function sendPreviewTimings(req,res,stats,started){
+  if(process.env.VERCEL_ENV!=='preview'||!req.query?.bench)return;
+  // Numeric durations only; no server IDs, keys, credentials, question text, or URLs.
+  const timing = [
+    `publication;dur=${Number(stats.publishedMs||0)}`,
+    `r2;dur=${Number(stats.r2Ms||0)}`,
+    `gasPhoto;dur=${Number(stats.gasPhotoMs||0)}`,
+    `server;dur=${Math.round(performance.now()-started)}`,
+  ];
+  res.setHeader('Server-Timing',timing.join(', '));
+  if(stats.publishedCacheHit!==undefined){
+    res.setHeader('X-TimePalette-Auth-Cache',stats.publishedCacheHit?'HIT':'MISS');
+  }
+}
 export function createMissionPublicHandler({r2Reader=readPreviewR2IfPublished}={}) {
   return async function handler(req,res){
+  const started=performance.now(),stats={};
   res.setHeader('X-Content-Type-Options','nosniff');
   if(req.method!=='GET')return res.status(405).json({ok:false,error:'GET only'});
   const action=String(req.query.action||'catalog');
@@ -30,11 +45,13 @@ export function createMissionPublicHandler({r2Reader=readPreviewR2IfPublished}={
   // Even for R2, the public GAS catalog is checked first for current publication.
   if(action==='image' && isPreviewR2Request(req.query,process.env)){
     try {
-      const bytes=await r2Reader({endpoint,questionId,slot,env:process.env});
+      const bytes=await r2Reader({endpoint,questionId,slot,env:process.env,timings:stats});
       if(bytes){
         res.setHeader('Content-Type','image/webp');
-        res.setHeader('Cache-Control','public, s-maxage=30, max-age=0');
+        // 15s authorization + 12s CDN <= the earlier 30s revocation allowance.
+        res.setHeader('Cache-Control',`public, s-maxage=${PREVIEW_CDN_TTL_SECONDS}, max-age=0`);
         res.setHeader('X-TimePalette-Image-Source','r2');
+        sendPreviewTimings(req,res,stats,started);
         return res.status(200).send(bytes);
       }
     }catch(_){
@@ -43,9 +60,11 @@ export function createMissionPublicHandler({r2Reader=readPreviewR2IfPublished}={
     }
   }
   try{
+    const gasStart=performance.now();
     const response=await fetch(url,{redirect:'follow',signal:AbortSignal.timeout(22000)});
     if(!response.ok)throw new Error('GAS status');
     const txt=await response.text();
+    stats.gasPhotoMs=Math.round(performance.now()-gasStart);
     if(txt.length>2_000_000)throw new Error('Response too large');
     let payload;try{payload=JSON.parse(txt);}catch{throw new Error('Invalid JSON');}
     if(!payload?.ok) return res.status(404).json({ok:false,error:'Not available'});
@@ -65,6 +84,7 @@ export function createMissionPublicHandler({r2Reader=readPreviewR2IfPublished}={
     res.setHeader('Content-Type','image/webp');
     res.setHeader('Cache-Control','public, s-maxage=30, max-age=0');
     if(action==='image')res.setHeader('X-TimePalette-Image-Source','gas');
+    sendPreviewTimings(req,res,stats,started);
     return res.status(200).send(bytes);
   }catch(_){return res.status(502).json({ok:false,error:'公開ミッションの読み込みに失敗しました。しばらくして再試行してください。'});}
 }

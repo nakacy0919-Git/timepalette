@@ -23,8 +23,13 @@ async function benchmarkPhoto(id,slot,r2){
     throw Error('画像形式が正しくありません');
   const bytes=await response.arrayBuffer();
   if(bytes.byteLength<16)throw Error('画像が空です');
+  const timingHeader=response.headers.get('Server-Timing')||'';
+  const measures=Object.fromEntries([...timingHeader.matchAll(
+    /(publication|r2|gasPhoto|server);dur=(\d+(?:\.\d+)?)/g)]
+    .map(match=>[match[1],Number(match[2])]));
   return {milliseconds:Math.round(performance.now()-start),bytes:bytes.byteLength,
-    source:response.headers.get('X-TimePalette-Image-Source')||'unknown'};
+    source:response.headers.get('X-TimePalette-Image-Source')||'unknown',
+    authCache:response.headers.get('X-TimePalette-Auth-Cache')||'—', measures};
 }
 export default function R2PilotPanel({countryIso,domain,published,session}){
   const photos=useMemo(()=>published.filter(q=>['photo4','photoText4'].includes(q.type))
@@ -58,7 +63,7 @@ export default function R2PilotPanel({countryIso,domain,published,session}){
       const second=await benchmarkPhoto(selected.id,selected.slot,true);
       if(first.bytes!==second.bytes)throw Error('取得画像のサイズが一致しません。確認が必要です。');
       if(second.source!=='r2')throw Error('R2経由ではありません（'+second.source+'）。対象写真をR2に試験コピーしてください。');
-      setComparison(`ブラウザー実測：従来GAS ${first.milliseconds}ms / R2 ${second.milliseconds}ms （${Math.round(first.bytes/1024)}KB、キャッシュ回避）`);
+      setComparison(`ブラウザー実測：従来GAS ${first.milliseconds}ms / R2 ${second.milliseconds}ms （${Math.round(first.bytes/1024)}KB） | R2内訳：公開確認 ${second.measures.publication??'—'}ms / R2取得 ${second.measures.r2??'—'}ms / Vercel全体 ${second.measures.server??'—'}ms | 公開確認キャッシュ ${second.authCache}`);
     }catch(e){setError(e.message);}
     finally{setBusy(false);}
   };
@@ -84,6 +89,6 @@ export default function R2PilotPanel({countryIso,domain,published,session}){
     {result&&<p role="status" className="mc-save-progress">{result}</p>}
     {comparison&&<p role="status" className="mc-save-progress">{comparison}</p>}
     {error&&<p role="alert" className="mc-error">{error}</p>}
-    <p className="mc-muted">比較ボタンは2方式で同じ写真を取得し、ブラウザーからの通信時間を測定します。画像のダウンロード時間を含みますが、画面への描画時間は含みません。</p>
+    <p className="mc-muted">比較ボタンは写真のブラウザーダウンロード時間とVercel内部の所要時間を計測します。公開確認を15秒間だけ再利用し、R2写真のCDN有効期間を12秒に制限します（公開停止の反映まで最大約27秒）。本番配信には適用されません。</p>
   </section>;
 }
