@@ -1,5 +1,48 @@
 // Vercel server-side proxy: prevents cross-origin GAS fetches from the browser.
 // Only MISSION_CREATOR_GAS_URL is server-side. Never use VITE_ for this variable.
+// Preview-only reliability workaround for Google's intermittent one-time
+// ContentService redirect 404s. Only login is retried; never retry writes.
+const LOGIN_REDIRECT_STATUSES = new Set([301, 302, 303, 307, 308]);
+function safeContentRedirect(location) {
+  if (!location) return null;
+  try {
+    const target = new URL(location);
+    if (target.protocol !== 'https:' || target.hostname !== 'script.googleusercontent.com' ||
+        target.pathname !== '/macros/echo') return null;
+    return target.href;
+  } catch { return null; }
+}
+async function fetchLoginWithRecovery(endpoint, payload) {
+  const signal = AbortSignal.timeout(23000); // entire operation, not each hop
+  let latest;
+  for (let attempt = 0; attempt < 2; attempt++) {
+    latest = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload),
+      redirect: 'manual', signal,
+    });
+    // Apps Script ContentService returns a one-time Google-hosted response URL.
+    // The POST payload must never be forwarded to the redirect destination.
+    for (let hop = 0; LOGIN_REDIRECT_STATUSES.has(latest.status); hop++) {
+      if (hop >= 3) throw new Error('Too many Google redirects');
+      const next = safeContentRedirect(latest.headers.get('location'));
+      if (!next) throw new Error('Unexpected Google redirect');
+      latest = await fetch(next, {method: 'GET', redirect: 'manual', signal});
+    }
+    // Only the known HTML 404 defect may cause another POST. A login creates
+    // transient sessions, not question/media/publication records.
+    if (attempt === 0 && latest.status === 404 &&
+        latest.url?.startsWith('https://script.googleusercontent.com/macros/echo?') &&
+        /^\s*</.test(await latest.clone().text())) {
+      await new Promise(resolve => setTimeout(resolve, 450));
+      continue;
+    }
+    return latest;
+  }
+  return latest;
+}
+
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -17,13 +60,15 @@ export default async function handler(req, res) {
     return res.status(413).json({ ok: false, error: 'ファイルが大きすぎます。' });
   }
   try {
-    const upstream = await fetch(endpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify(payload),
-      redirect: 'follow',
-      signal: AbortSignal.timeout(25000),
-    });
+    const upstream = payload.action === 'login' && process.env.VERCEL_ENV === 'preview'
+      ? await fetchLoginWithRecovery(endpoint, payload)
+      : await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload),
+          redirect: 'follow',
+          signal: AbortSignal.timeout(25000),
+        });
     const content = await upstream.text();
     let result;
     try { result = JSON.parse(content); } catch {
