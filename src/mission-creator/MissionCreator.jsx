@@ -103,18 +103,13 @@ function Access({ onLogin, onRegister, busy, error, registrationToken, onBack, c
   const [pin, setPin] = useState('');
   const [name, setName] = useState('');
   const [adminMode, setAdminMode] = useState(false);
-  const [account, setAccount] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirm, setConfirm] = useState('');
   const submit = event => {
     event.preventDefault();
-    if(cloudflare){
-      if(registrationToken){if(password!==confirm)return;onRegister(registrationToken,password);}
-      else onLogin({account:account.trim(),password});
-    }else if(registrationToken)onRegister(registrationToken,name.trim());
+    if(cloudflare) onLogin({pin});
+    else if(registrationToken)onRegister(registrationToken,name.trim());
     else onLogin({pin,adminMode});
   };
-  const invalid=cloudflare?(registrationToken?password.length<12||password!==confirm:!account.trim()||password.length<12)
+  const invalid=cloudflare?pin.length!==4
     :(registrationToken?!name.trim():pin.length!==4);
   return <main className="mc-access-wrap"><div className="mc-access mc-card">
     <div className="mc-logo"><Compass size={24}/><span>TimePalette</span></div>
@@ -122,19 +117,14 @@ function Access({ onLogin, onRegister, busy, error, registrationToken, onBack, c
     <h1>世界のミッションを、一緒に作ろう。</h1>
     <p>国を選んで問題を作成。写真をWebPに変換して提出できます。</p>
     <form className="mc-stack" onSubmit={submit}>
-      {cloudflare ? <>
-        {registrationToken ? <p>管理者から届いた招待リンクです。12文字以上の新しいパスワードを設定してください。ログインIDは登録後に確認できます。</p>
-          : <label>ログインID（管理者から届いた12桁のID）<input autoFocus value={account} onChange={e=>setAccount(e.target.value)} maxLength={80} required autoComplete="username"/></label>}
-        <label>{registrationToken?'新しいパスワード（12文字以上）':'パスワード'}<input type="password" value={password} onChange={e=>setPassword(e.target.value)} minLength={12} maxLength={128} required autoComplete={registrationToken?'new-password':'current-password'}/></label>
-        {registrationToken && <label>新しいパスワード（確認）<input type="password" value={confirm} onChange={e=>setConfirm(e.target.value)} minLength={12} maxLength={128} required autoComplete="new-password"/></label>}
-      </> : registrationToken ? <><p>初回登録です。お名前を入力してください。</p><label>お名前<input autoFocus value={name} maxLength={60} onChange={e=>setName(e.target.value)} required autoComplete="name"/></label></> :
+      {cloudflare ? <label>4桁のログインコード<input autoFocus type="password" inputMode="numeric" pattern="[0-9]*" value={pin} onChange={e=>setPin(e.target.value.replace(/\D/g,'').slice(0,4))} maxLength={4} minLength={4} required autoComplete="off" /></label> : registrationToken ? <><p>初回登録です。お名前を入力してください。</p><label>お名前<input autoFocus value={name} maxLength={60} onChange={e=>setName(e.target.value)} required autoComplete="name"/></label></> :
       <label>{adminMode?'管理者PIN（4桁）':'先生用共通パスコード（4桁）'}<input value={pin} onChange={e=>setPin(e.target.value.replace(/\D/g,'').slice(0,4))} inputMode="numeric" type="password" minLength={4} maxLength={4} required autoComplete="off"/></label>}
       <button className="mc-primary" type="submit" disabled={busy||invalid}>{busy?'確認中…':registrationToken?'登録して始める':'ログインする'}</button>
     </form>
     {error&&<p role="alert" className="mc-error">{error}</p>}
     {registrationToken?<button type="button" className="mc-text-btn" onClick={onBack}>ログインに戻る</button>:
       !cloudflare&&<button type="button" className="mc-text-btn" onClick={()=>{setAdminMode(v=>!v);setPin('');}}>{adminMode?'先生用のログインに戻る':'管理者ログインはこちら'}</button>}
-    <p className="mc-hint"><LockKeyhole size={14}/>{cloudflare?'管理者から個別に発行された招待リンクで初回登録します。':'PINは関係者のみに共有してください。'}</p>
+    <p className="mc-hint"><LockKeyhole size={14}/>{cloudflare?'先生・管理者ともに数字4桁だけでログインできます。':'PINは関係者のみに共有してください。'}</p>
   </div></main>;
 }
 
@@ -797,7 +787,7 @@ export default function MissionCreator() {
   };
   const login=async({adminMode,pin,account,password})=>{setBusy(true);setError('');try{
     const teacherToken = adminMode ? '' : (localStorage.getItem('tp-mc-teacher-token') || '');
-    const data=await creatorRequest('login',cloudflare?{account,password,withBootstrap:true}:{pin,adminMode,teacherToken,withBootstrap:true});
+    const data=await creatorRequest('login',cloudflare?{pin,withBootstrap:true}:{pin,adminMode,teacherToken,withBootstrap:true});
     if(data.needsName){setRegistrationToken(data.registrationToken);return;}
     sessionStorage.setItem('tp-mc-session',data.session);if(data.user)setUser(data.user);if(data.bootstrap)initialBootstrapRef.current={session:data.session,data:data.bootstrap};setSession(data.session);setRegistrationToken('');
   }catch(e){setError(e.message);}finally{setBusy(false);}};
@@ -995,7 +985,7 @@ export default function MissionCreator() {
   const setManual=async(countryIso,domain,count)=>{try{await act('setProgress',{countryIso,domain,manualDone:Number(count)});await reload();}catch{/* shown */}};
   const active=demo||user;
   return <div className="mc-root">
-    {!active ? (session ? <div className="mc-access-wrap"><div role="status" className="mc-card mc-access">前回のログインを確認しています…</div></div> : <Access cloudflare={cloudflare} onLogin={login} onRegister={register} registrationToken={registrationToken} onBack={()=>{setRegistrationToken('');setError('');}} busy={busy} error={error}/>) : <>
+    {!active ? (session ? <div className="mc-access-wrap"><div role="status" className="mc-card mc-access">前回のログインを確認しています…</div></div> : <Access cloudflare={cloudflare} onLogin={login} onRegister={register} registrationToken={cloudflare?'':registrationToken} onBack={()=>{setRegistrationToken('');setError('');}} busy={busy} error={error}/>) : <>
       <header className="mc-header"><div className="mc-header-brand"><Compass size={24}/> <strong>TimePalette</strong><span>MISSION CREATOR</span></div><div className="mc-header-user"><span>{demo?'デモ（保存不可）':`${user.name} ／ ${user.role==='admin'?'管理者':'参加教師'}`}</span><button type="button" className="mc-quiet" onClick={logout}><LogOut size={17}/>終了</button></div></header>
       <div className="mc-app"><aside className="mc-sidebar"><nav>
         {[['dashboard',LayoutDashboard,'制作進捗'],['bank',BookOpen,'みんなの問題'],['publication',ShieldCheck,'公開ミッション管理'],['editor',FilePlus2,'問題を作る']].filter(([id])=>id!=='publication'||user?.role==='admin').map(([id,Icon,label])=><button key={id} className={page===id?'active':''} type="button" onClick={()=>id==='editor'?startNew(): (setPage(id),setError(''))}><Icon size={18}/>{label}</button>)}
@@ -1005,7 +995,7 @@ export default function MissionCreator() {
         <div className="mc-main-heading"><div><div className="mc-eyebrow">GLOBAL COLLABORATION</div><h1>{page==='dashboard'?'制作進捗':page==='bank'?'みんなの問題':page==='publication'?'公開ミッション管理':'問題を作る'}</h1><p>197か国 × 6カテゴリー × 各10問を、世界の先生たちと作る。</p></div>{page!=='editor'&&<button className="mc-primary" type="button" onClick={startNew}><FilePlus2 size={18}/>新しく作成</button>}</div>
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
-        {!loadingData && page==='dashboard'&&<><Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>{cloudflare&&user?.role==='admin'&&<TeacherAccessPanel session={session}/>}</>}
+        {!loadingData && page==='dashboard'&&<><Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/></>}
         {!loadingData && page==='publication' && user?.role==='admin' &&
           <PublishedMissionManager cloudflare={cloudflare} countries={countries} questions={questions} session={session}
             busy={busy||demo} onPublication={publication} onInspect={inspect}

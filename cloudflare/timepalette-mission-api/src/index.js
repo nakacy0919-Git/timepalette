@@ -1,5 +1,5 @@
 import {HEX_64, UUID, DOMAINS, TYPES, sha256, randomHex, derivePassword,
-  passwordValid, isoValid, domainValid, response, ok, ApiFault, requireThat,
+  passwordValid, isoValid, domainValid, response, ok, ApiFault, requireThat, hex,
   parseArray, now, safeAccount, checkScope} from './security.js';
 
 const TTL_SECONDS=6*3600, IMAGE_MAX=1228800;
@@ -61,7 +61,47 @@ async function noteFailure(env,key){
  await env.DB.prepare(`INSERT INTO login_failures(account_key,count,expires_at) VALUES(?,1,?) ON CONFLICT(account_key) DO UPDATE SET count=CASE WHEN expires_at<=? THEN 1 ELSE count+1 END, expires_at=CASE WHEN expires_at<=? THEN excluded.expires_at ELSE expires_at END`)
  .bind(key,expires,now(),now()).run();
 }
+// Quick entry uses HMAC of the short code with the private Worker bridge secret.
+// No PIN or keyed digest is ever stored in public source, GitHub, or the browser.
+const TP_SHARED_TEACHER_ID = '83c94f36-e591-49ce-9ea9-7205a167ec14';
+const pinEq=(a,b)=>{if(typeof a!=='string'||typeof b!=='string'||a.length!==64||b.length!==64)return false;let x=0;for(let i=0;i<64;i++)x|=a.charCodeAt(i)^b.charCodeAt(i);return x===0;};
+async function quickPinDigest(env,role,pin){
+ const key=await crypto.subtle.importKey('raw',new TextEncoder().encode(env.TP_BRIDGE_SECRET),{name:'HMAC',hash:'SHA-256'},false,['sign']);
+ const sig=await crypto.subtle.sign('HMAC',key,new TextEncoder().encode('tp-quick-v1|'+role+'|'+pin));
+ return hex(new Uint8Array(sig));
+}
+async function quickLogin(env,args){
+ const pin=String(args.pin||'');
+ requireThat(/^\d{4}$/.test(pin),'4桁の数字を入力してください。');
+ requireThat(/^[0-9a-f]{64}$/i.test(String(env.TP_QUICK_TEACHER_HASH||''))&&
+  /^[0-9a-f]{64}$/i.test(String(env.TP_QUICK_ADMIN_HASH||''))&&
+  typeof env.TP_BRIDGE_SECRET==='string'&&env.TP_BRIDGE_SECRET.length>=48,
+  '簡単ログインを準備しています。管理者にご連絡ください。',503);
+ // Global cooldown limits online guesses of 4-digit codes; a coordinated attacker
+ // could still cause temporary denial of login. Restrict access further at Vercel/WAF.
+ const key=await throttle(env,'quick-pin-gateway-v1');
+ const [teacherDigest,adminDigest]=await Promise.all([
+  quickPinDigest(env,'teacher',pin),quickPinDigest(env,'admin',pin)]);
+ const teacher=pinEq(teacherDigest,env.TP_QUICK_TEACHER_HASH);
+ const admin=pinEq(adminDigest,env.TP_QUICK_ADMIN_HASH);
+ if(!teacher&&!admin){await noteFailure(env,key);throw new ApiFault('ログインコードが正しくありません。',401);}
+ await env.DB.prepare('DELETE FROM login_failures WHERE account_key=?').bind(key).run();
+ let member;
+ if(admin){
+  const members=(await env.DB.prepare("SELECT * FROM teachers WHERE role='admin' AND active=1 LIMIT 2").all()).results;
+  requireThat(members.length===1,'管理者アカウントを確認できません。',503);
+  member=members[0];
+ }else{
+  await env.DB.prepare("INSERT OR IGNORE INTO teachers(id,name,role,active,auth_version,login_id,created_at,updated_at) VALUES(?,'共通教師','teacher',1,0,'shared-teacher',?,?)")
+   .bind(TP_SHARED_TEACHER_ID,now(),now()).run();
+  member=await env.DB.prepare("SELECT * FROM teachers WHERE id=? AND role='teacher' AND active=1")
+   .bind(TP_SHARED_TEACHER_ID).first();
+  requireThat(member,'共通教師アカウントを確認できません。',503);
+ }
+ return startSession(env,member,args.withBootstrap===true);
+}
 async function login(env,args){
+ if(typeof args.pin!=='undefined')return quickLogin(env,args);
  const account=safeAccount(args.account),password=args.password;
  requireThat(account&&typeof password==='string'&&password.length<=128,'アカウント名とパスワードを入力してください。');
  const key=await throttle(env,account);
