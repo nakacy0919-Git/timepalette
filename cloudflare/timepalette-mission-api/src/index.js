@@ -35,8 +35,17 @@ function cleanVideo(input){
  return {youtubeId,startSeconds,endSeconds,minChars,maxChars,keywordMode:p.keywordMode==='any'?'any':'all',
  keywords:(Array.isArray(p.keywords)?p.keywords:String(p.keywords||'').split(/[、,\n]/)).slice(0,8).map(s=>String(s).trim().slice(0,30)).filter(Boolean)};
 }
+function storedQuestionType(type){
+ return type==='video4'?'text4':type==='videoReflect'?'free':type;
+}
+function logicalQuestionType(q){
+ const video=parseObject(q.video_json);
+ if(q.type==='text4'&&video.mode==='video4')return 'video4';
+ if(q.type==='free'&&video.mode==='videoReflect')return 'videoReflect';
+ return q.type;
+}
 function rowToQuestion(q,media=[]){return {
- id:q.id,countryIso:q.country_iso,countryName:q.country_name,domain:q.domain,type:q.type,
+ id:q.id,countryIso:q.country_iso,countryName:q.country_name,domain:q.domain,type:logicalQuestionType(q),
  prompt:q.prompt,answer:q.answer,choices:parseArray(q.choices_json),sources:parseArray(q.sources_json),
  notes:q.notes,authorId:q.author_id,authorName:q.author_name,authorProfile:parseObject(q.author_profile_json),video:parseObject(q.video_json),authorProfileVerified:q.author_profile_verified===1,status:q.status,reviewNote:q.review_note,
  createdAt:q.created_at,updatedAt:q.updated_at,
@@ -205,7 +214,7 @@ async function saveQuestion(env,user,args){
  const choices=(Array.isArray(p.choices)?p.choices:[]).slice(0,3).map(x=>String(x??'').slice(0,600));
  const sources=(Array.isArray(p.sources)?p.sources:[]).slice(0,2).map(x=>String(x||'').trim().slice(0,1500)).filter(x=>/^https?:\/\//i.test(x));
   const profile=cleanProfile(p.authorProfile);
-  const video=cleanVideo(p.video);
+  const video=cleanVideo(p.video);video.mode=['video4','videoReflect'].includes(p.type)?p.type:'';
  let prev=null;if(id)prev=await getQuestion(env,id);
  if(prev){ownerOrAdmin(prev,user);requireThat(!['published','deleted'].includes(prev.status),'公開中・削除済みの問題は編集できません。');
   if(user.role!=='admin')requireThat(!['approved'].includes(prev.status),'承認済みの修正は管理者へ相談してください。');}
@@ -217,10 +226,10 @@ async function saveQuestion(env,user,args){
  status:finalize||(prev&&user.role==='admin'?prev.status:'draft'),review_note:prev?.review_note||'',created_at:prev?.created_at||stamp,updated_at:stamp};
  if(finalize)await assertComplete(env,next);
  if(prev){const r=await env.DB.prepare(`UPDATE questions SET country_iso=?,country_name=?,domain=?,type=?,prompt=?,answer=?,choices_json=?,sources_json=?,notes=?,author_name=?,author_profile_json=?,video_json=?,author_profile_verified=0,status=?,review_note=?,updated_at=?,version=version+1 WHERE id=? AND version=? AND status NOT IN('published','deleted')`)
-  .bind(next.country_iso,next.country_name,next.domain,next.type,next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.author_name,next.author_profile_json,next.video_json,next.status,next.review_note,next.updated_at,qid,prev.version).run();
+  .bind(next.country_iso,next.country_name,next.domain,storedQuestionType(next.type),next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.author_name,next.author_profile_json,next.video_json,next.status,next.review_note,next.updated_at,qid,prev.version).run();
   requireThat(r.meta.changes===1,'他の先生が更新しました。再読み込みしてください。',409);
  }else{await env.DB.prepare(`INSERT INTO questions(id,country_iso,country_name,domain,type,prompt,answer,choices_json,sources_json,notes,author_id,author_name,author_profile_json,video_json,author_profile_verified,status,review_note,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`)
-  .bind(qid,next.country_iso,next.country_name,next.domain,next.type,next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.author_id,next.author_name,next.author_profile_json,next.video_json,0,next.status,next.review_note,next.created_at,next.updated_at).run();}
+  .bind(qid,next.country_iso,next.country_name,next.domain,storedQuestionType(next.type),next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.author_id,next.author_name,next.author_profile_json,next.video_json,0,next.status,next.review_note,next.created_at,next.updated_at).run();}
  return {question:rowToQuestion(next,prev?await getMediaRows(env,qid):[])};
 }
 function b64ToBytes(s){const binary=atob(s);const result=new Uint8Array(binary.length);for(let i=0;i<binary.length;i++)result[i]=binary.charCodeAt(i);return result;}
@@ -251,14 +260,14 @@ async function uploadImage(env,user,args){
 async function editStatus(env,user,args,mode){
  const q=await getQuestion(env,args.questionId),stamp=now();
  if(mode==='submit'){
-  ownerOrAdmin(q,user);requireThat(!['approved','published','deleted'].includes(q.status),'再提出できない状態です。');await assertComplete(env,q);
+  ownerOrAdmin(q,user);requireThat(!['approved','published','deleted'].includes(q.status),'再提出できない状態です。');await assertComplete(env,{...q,type:logicalQuestionType(q)});
   await env.DB.prepare("UPDATE questions SET status='submitted',updated_at=?,version=version+1 WHERE id=? AND status IN('draft','submitted','needs_revision')").bind(stamp,q.id).run();
   return {questionId:q.id,status:'submitted'};
  }
  adminOnly(user);
  if(mode==='review'){
   requireThat(['approved','needs_revision'].includes(args.status)&&!['published','deleted'].includes(q.status),'承認状態を確認してください。');
-  if(args.status==='approved')await assertComplete(env,q);
+  if(args.status==='approved')await assertComplete(env,{...q,type:logicalQuestionType(q)});
   const note=args.status==='approved'?'':String(args.reviewNote||'').slice(0,1000);
   const r=await env.DB.prepare("UPDATE questions SET status=?,review_note=?,updated_at=?,version=version+1 WHERE id=? AND status NOT IN('published','deleted')")
     .bind(args.status,note,stamp,q.id).run();requireThat(r.meta.changes===1,'公開状態が変わりました。',409);
@@ -288,7 +297,7 @@ async function publish(env,user,args){adminOnly(user);const mode=String(args.mod
  const q=await getQuestion(env,args.questionId),stamp=now(),was=q.status;
  if(mode==='publish'){
  requireThat(was==='approved'&&args.rightsConfirmed===true,'承認済みの問題と公開利用権を確認してください。');
- requireThat(['text4','photo4','photoText4','video4','videoReflect'].includes(q.type),'この形式は公開できません。');await assertComplete(env,q);
+ requireThat(['text4','photo4','photoText4','video4','videoReflect'].includes(logicalQuestionType(q)),'この形式は公開できません。');await assertComplete(env,{...q,type:logicalQuestionType(q)});
  const profile=cleanProfile(parseObject(q.author_profile_json));const profileVerified=profile.consent&&args.profileRightsConfirmed===true?1:0;
  const r=await env.DB.prepare(`UPDATE questions SET status='published',author_profile_verified=?,updated_at=?,version=version+1 WHERE id=? AND status='approved'
  AND (SELECT COUNT(*) FROM questions WHERE country_iso=? AND domain=? AND status='published')<10`)
@@ -326,7 +335,7 @@ async function publicCatalog(env,url){
  const rows=(await env.DB.prepare("SELECT * FROM questions WHERE country_iso=? AND domain=? AND status='published'").bind(iso,domain).all()).results;
  const qmap=new Map(rows.map(q=>[q.id,q]));const media=(await env.DB.prepare(`SELECT m.question_id,m.slot FROM media m JOIN questions q ON q.id=m.question_id WHERE q.country_iso=? AND q.domain=? AND q.status='published' AND m.r2_status='ready'`).bind(iso,domain).all()).results;
  const byQ=new Map();for(const m of media){if(!byQ.has(m.question_id))byQ.set(m.question_id,[]);byQ.get(m.question_id).push({slot:m.slot});}
- const questions=ids.filter(id=>qmap.has(id)).map(id=>{const q=qmap.get(id);return {id:q.id,countryIso:q.country_iso,domain:q.domain,type:q.type,prompt:q.prompt.slice(0,2000),answer:q.answer.slice(0,1500),choices:parseArray(q.choices_json),explanation:q.notes.slice(0,3500),sources:parseArray(q.sources_json).filter(s=>/^https?:\/\//i.test(String(s))).slice(0,2),media:byQ.get(q.id)||[],video:parseObject(q.video_json),
+ const questions=ids.filter(id=>qmap.has(id)).map(id=>{const q=qmap.get(id);return {id:q.id,countryIso:q.country_iso,domain:q.domain,type:logicalQuestionType(q),prompt:q.prompt.slice(0,2000),answer:q.answer.slice(0,1500),choices:parseArray(q.choices_json),explanation:q.notes.slice(0,3500),sources:parseArray(q.sources_json).filter(s=>/^https?:\/\//i.test(String(s))).slice(0,2),media:byQ.get(q.id)||[],video:parseObject(q.video_json),
  creator:q.author_profile_verified===1&&parseObject(q.author_profile_json).consent===true?cleanProfile(parseObject(q.author_profile_json)):{name:'教材協力者',school:'',region:'',bio:'',consent:false}};});
  return new Response(JSON.stringify({ok:true,questions}),{headers:{...corsHeaders,'Content-Type':'application/json'}});
 }
