@@ -32,3 +32,6 @@ dist-ssr
 **/*.private.sql
 **/timepalette-d1-private-data-import*/
 **/TimePalette Mission Creator — PRIVATE*/
+
+.vercel
+.env*
