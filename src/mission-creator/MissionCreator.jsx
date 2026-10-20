@@ -99,40 +99,68 @@ function CountryPicker({ countries, value, onChange, label = '国を選択' }) {
   </div>;
 }
 
-function Access({ onLogin, onRegister, busy, error, registrationToken, onBack }) {
+function Access({ onLogin, onRegister, busy, error, registrationToken, onBack, cloudflare }) {
   const [pin, setPin] = useState('');
   const [name, setName] = useState('');
   const [adminMode, setAdminMode] = useState(false);
-  const submit = (event) => {
+  const [account, setAccount] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirm, setConfirm] = useState('');
+  const submit = event => {
     event.preventDefault();
-    if (registrationToken) onRegister(registrationToken, name.trim());
-    else onLogin({ pin, adminMode });
+    if(cloudflare){
+      if(registrationToken){if(password!==confirm)return;onRegister(registrationToken,password);}
+      else onLogin({account:account.trim(),password});
+    }else if(registrationToken)onRegister(registrationToken,name.trim());
+    else onLogin({pin,adminMode});
   };
-  return (
-    <main className="mc-access-wrap">
-      <div className="mc-access mc-card">
-        <div className="mc-logo"><Compass size={24} /><span>TimePalette</span></div>
-        <div className="mc-eyebrow">TEACHER WORKSPACE</div>
-        <h1>世界のミッションを、一緒に作ろう。</h1>
-        <p>国を選んで問題を作成。写真は自動でWebPに変換し、プレビューして提出できます。</p>
-        <form onSubmit={submit} className="mc-stack">
-          {registrationToken ? <>
-            <p>初回の登録です。問題の作成者として表示する名前を入力してください。</p>
-            <label>お名前（初回のみ） <input autoFocus value={name} maxLength={60} onChange={e => setName(e.target.value)} placeholder="例：中西先生" required autoComplete="name" /></label>
-          </> : <>
-            <label>{adminMode ? '管理者PIN（4桁）' : '先生用共通パスコード（4桁）'} <input value={pin} onChange={e => setPin(e.target.value.replace(/\D/g, '').slice(0, 4))} placeholder="4桁を入力" inputMode="numeric" type="password" minLength={4} maxLength={4} required autoComplete="off" /></label>
-          </>}
-          <button className="mc-primary" type="submit" disabled={busy || (registrationToken ? !name.trim() : pin.length !== 4)}>{busy ? '確認中…' : registrationToken ? '問題作成を始める' : 'ログインする'}</button>
-        </form>
-        {error && <p role="alert" className="mc-error">{error}</p>}
-        {registrationToken ? <button type="button" className="mc-text-btn" onClick={onBack}>ログインに戻る</button> : <>
+  const invalid=cloudflare?(registrationToken?password.length<12||password!==confirm:!account.trim()||password.length<12)
+    :(registrationToken?!name.trim():pin.length!==4);
+  return <main className="mc-access-wrap"><div className="mc-access mc-card">
+    <div className="mc-logo"><Compass size={24}/><span>TimePalette</span></div>
+    <div className="mc-eyebrow">TEACHER WORKSPACE</div>
+    <h1>世界のミッションを、一緒に作ろう。</h1>
+    <p>国を選んで問題を作成。写真をWebPに変換して提出できます。</p>
+    <form className="mc-stack" onSubmit={submit}>
+      {cloudflare ? <>
+        {registrationToken ? <p>管理者から届いた招待リンクです。12文字以上の新しいパスワードを設定してください。ログインIDは登録後に確認できます。</p>
+          : <label>ログインID（管理者から届いた12桁のID）<input autoFocus value={account} onChange={e=>setAccount(e.target.value)} maxLength={80} required autoComplete="username"/></label>}
+        <label>{registrationToken?'新しいパスワード（12文字以上）':'パスワード'}<input type="password" value={password} onChange={e=>setPassword(e.target.value)} minLength={12} maxLength={128} required autoComplete={registrationToken?'new-password':'current-password'}/></label>
+        {registrationToken && <label>新しいパスワード（確認）<input type="password" value={confirm} onChange={e=>setConfirm(e.target.value)} minLength={12} maxLength={128} required autoComplete="new-password"/></label>}
+      </> : registrationToken ? <><p>初回登録です。お名前を入力してください。</p><label>お名前<input autoFocus value={name} maxLength={60} onChange={e=>setName(e.target.value)} required autoComplete="name"/></label></> :
+      <label>{adminMode?'管理者PIN（4桁）':'先生用共通パスコード（4桁）'}<input value={pin} onChange={e=>setPin(e.target.value.replace(/\D/g,'').slice(0,4))} inputMode="numeric" type="password" minLength={4} maxLength={4} required autoComplete="off"/></label>}
+      <button className="mc-primary" type="submit" disabled={busy||invalid}>{busy?'確認中…':registrationToken?'登録して始める':'ログインする'}</button>
+    </form>
+    {error&&<p role="alert" className="mc-error">{error}</p>}
+    {registrationToken?<button type="button" className="mc-text-btn" onClick={onBack}>ログインに戻る</button>:
+      !cloudflare&&<button type="button" className="mc-text-btn" onClick={()=>{setAdminMode(v=>!v);setPin('');}}>{adminMode?'先生用のログインに戻る':'管理者ログインはこちら'}</button>}
+    <p className="mc-hint"><LockKeyhole size={14}/>{cloudflare?'管理者から個別に発行された招待リンクで初回登録します。':'PINは関係者のみに共有してください。'}</p>
+  </div></main>;
+}
 
-          <button className="mc-text-btn" type="button" onClick={() => { setAdminMode(v => !v); setPin(''); }}>{adminMode ? '先生用のログインに戻る' : '管理者ログインはこちら'}</button>
-        </>}
-        <p className="mc-hint"><LockKeyhole size={14}/>先生用のパスコードは関係者にのみお伝えください。管理者の承認は別のログインが必要です。</p>
-      </div>
-    </main>
-  );
+function TeacherAccessPanel({session}){
+ const [teachers,setTeachers]=useState([]),[loading,setLoading]=useState(false),[error,setError]=useState(''),[invite,setInvite]=useState('');
+ const [newName,setNewName]=useState('');
+ const refresh=async()=>{setLoading(true);setError('');try{const result=await creatorRequest('listTeachers',{},session);setTeachers(result.teachers||[]);}catch(e){setError(e.message);}finally{setLoading(false);}};
+ const create=async()=>{if(!newName.trim())return;setLoading(true);setError('');setInvite('');try{
+  const result=await creatorRequest('createTeacher',{name:newName.trim()},session);
+  const url=new URL(window.location.href);url.search='';url.hash='';url.searchParams.set('enroll',result.enrollmentToken);setInvite(url.toString());setNewName('');
+  const updated=await creatorRequest('listTeachers',{},session);setTeachers(updated.teachers||[]);
+ }catch(e){setError(e.message);}finally{setLoading(false);}};
+ const issue=async(t)=>{setLoading(true);setError('');setInvite('');try{const result=await creatorRequest('issueInvite',{teacherId:t.id},session);
+  const url=new URL(window.location.href);url.search='';url.hash='';url.searchParams.set('enroll',result.enrollmentToken);setInvite(url.toString());
+ }catch(e){setError(e.message);}finally{setLoading(false);}};
+ return <section className="mc-card mc-section" aria-label="先生のアカウント設定"><h2>先生のアカウント設定</h2>
+ <p>既存の先生に新しい招待リンクを発行します。リンクは7日間・1回限り有効です。個別に送ってください。</p>
+ <div className="mc-fields-row"><label>新しく先生を登録<input value={newName} onChange={e=>setNewName(e.target.value)} maxLength={60} placeholder="お名前"/></label>
+ <button type="button" className="mc-primary mc-small" disabled={loading||newName.trim().length<2} onClick={create}>登録して招待リンクを発行</button></div>
+ <button type="button" className="mc-outline mc-small" disabled={loading} onClick={refresh}>先生一覧を表示／更新</button>
+ {error&&<p className="mc-error" role="alert">{error}</p>}
+ {teachers.map(t=><div key={t.id} className="mc-public-item"><span>{t.name}（ID: {t.loginId}／{t.role==='admin'?'管理者':'教師'}／{t.configured?'設定済み':'未設定'}）</span>
+  <button type="button" className="mc-outline mc-small" disabled={loading||!t.active} onClick={()=>issue(t)}>招待・パスワード再設定リンクを発行</button></div>)}
+ {invite&&<div><label>発行されたリンク（この画面を閉じると表示されません）<input readOnly value={invite} onFocus={e=>e.target.select()}/></label>
+ <button className="mc-outline mc-small" type="button" onClick={()=>navigator.clipboard.writeText(invite)}>リンクをコピー</button></div>}
+ </section>;
 }
 
 function ProgressBadge({ value }) {
@@ -213,7 +241,7 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
       <label>問題文・活動の指示 <textarea rows={4} value={form.prompt} maxLength={2000} onChange={e => update('prompt', e.target.value)} placeholder="例：写真を見て、ネパールで人気の料理を選んでください。" /></label>
       {photoCount > 0 && <div className="mc-stack">
         {Boolean(form.id) && <div className="mc-existing-media-status" role="status">
-          <span>既存の写真はGoogle Driveに保存済みです。{photoLoadBusy ? 'プレビューを読み込んでいます…' : photoLoadError ? 'プレビューだけを取得できませんでした。画像は保持されています。' : ''}</span>
+          <span>既存の写真は保存済みです。{photoLoadBusy ? 'プレビューを読み込んでいます…' : photoLoadError ? 'プレビューだけを取得できませんでした。画像は保持されています。' : ''}</span>
           {photoLoadError && <button type="button" className="mc-outline mc-small" onClick={onRetryPhotos} disabled={photoLoadBusy}>写真表示を再試行</button>}
         </div>}
         <div className="mc-helper-title"><UploadCloud size={18}/> 写真をアップロード</div><p className="mc-muted">写真はこの端末内でWebPに変換されます。4択では①が正答、②〜④が誤答です。ゲーム公開時の表示順は変更できます。</p><div className="mc-upload-grid">{Array.from({ length: photoCount }, (_, i) => i + 1).map(n => <PhotoSlot key={n} slot={n} name={photos[n]?.name || form.media?.find(m=>Number(m.slot)===n)?.fileName} preview={photos[n]?.preview} onPick={onPhoto} busy={busy} isCorrect={form.type==='photo4' && n===1} singlePhoto={form.type==='photo1'}/>)}</div></div>}
@@ -594,7 +622,19 @@ export default function MissionCreator() {
   const countries = useCountries();
   const countryNames = useMemo(()=>Object.fromEntries(countries.map(c=>[c.iso,c.name])),[countries]);
   const [session, setSession] = useState(()=>sessionStorage.getItem('tp-mc-session') || '');
-  const [registrationToken, setRegistrationToken] = useState('');
+  const [registrationToken, setRegistrationToken] = useState(()=>{
+    const t=new URLSearchParams(window.location.search).get('enroll');
+    if(t && /^[a-f0-9]{64}$/i.test(t)){
+      const url=new URL(window.location.href);url.searchParams.delete('enroll');
+      window.history.replaceState({},'',url.pathname+url.search+url.hash);
+      return t;
+    }
+    return '';
+  });
+  const [cloudflare, setCloudflare] = useState(null);
+  useEffect(()=>{let cancelled=false;fetch('/api/mission-backend',{cache:'no-store'})
+    .then(r=>r.json()).then(d=>{if(!cancelled)setCloudflare(d.backend==='cloudflare');})
+    .catch(()=>{if(!cancelled)setCloudflare(false);});return()=>{cancelled=true;};},[]);
   const [user, setUser] = useState(null);
   const [demo, setDemo] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -755,19 +795,19 @@ export default function MissionCreator() {
     setBusy(true);setError('');
     try{return await creatorRequest(action,payload,session);}catch(e){setError(e.message);throw e;}finally{setBusy(false);}
   };
-  const login=async({adminMode,pin})=>{setBusy(true);setError('');try{
+  const login=async({adminMode,pin,account,password})=>{setBusy(true);setError('');try{
     const teacherToken = adminMode ? '' : (localStorage.getItem('tp-mc-teacher-token') || '');
-    const data=await creatorRequest('login',{pin,adminMode,teacherToken,withBootstrap:true});
+    const data=await creatorRequest('login',cloudflare?{account,password,withBootstrap:true}:{pin,adminMode,teacherToken,withBootstrap:true});
     if(data.needsName){setRegistrationToken(data.registrationToken);return;}
     sessionStorage.setItem('tp-mc-session',data.session);if(data.user)setUser(data.user);if(data.bootstrap)initialBootstrapRef.current={session:data.session,data:data.bootstrap};setSession(data.session);setRegistrationToken('');
   }catch(e){setError(e.message);}finally{setBusy(false);}};
   const register=async(token,name)=>{setBusy(true);setError('');try{
-    const data=await creatorRequest('registerTeacher',{registrationToken:token,displayName:name,withBootstrap:true});
+    const data=await creatorRequest('registerTeacher',cloudflare?{registrationToken:token,password:name,withBootstrap:true}:{registrationToken:token,displayName:name,withBootstrap:true});
     if(data.teacherToken)localStorage.setItem('tp-mc-teacher-token',data.teacherToken);
     sessionStorage.setItem('tp-mc-session',data.session);if(data.user)setUser(data.user);if(data.bootstrap)initialBootstrapRef.current={session:data.session,data:data.bootstrap};setSession(data.session);setRegistrationToken('');
   }catch(e){setError(e.message);}finally{setBusy(false);}};
   const reload=async()=>{if(demo)return;const data=await creatorRequest('bootstrap',{},session);setUser(data.user);setQuestions(data.questions);setProgress(data.progress);};
-  const logout=()=>{setBankFilter(null);setBankSearch('');initialBootstrapRef.current=null;photoCacheEpochRef.current+=1;photoCacheRef.current.clear();photoPendingRef.current.clear();sessionStorage.removeItem('tp-mc-session');setUser(null);setSession('');setDemo(false);setPhotos({});setError('');};
+  const logout=()=>{if(cloudflare&&session)void creatorRequest('logout',{},session).catch(()=>{});setBankFilter(null);setBankSearch('');initialBootstrapRef.current=null;photoCacheEpochRef.current+=1;photoCacheRef.current.clear();photoPendingRef.current.clear();sessionStorage.removeItem('tp-mc-session');setUser(null);setSession('');setDemo(false);setPhotos({});setError('');};
   const startNew=()=>{editTokenRef.current+=1;setPhotoLoadBusy(false);setPhotoLoadError('');setForm({...EMPTY,countryIso:selectedCountry,countryName:countryNames[selectedCountry],countries});setPhotos({});setError('');setPage('editor');};
   const loadEditorPhotoPreview=(q,token)=>{
     if(demo||!Array.isArray(q.media)||!q.media.length){setPhotoLoadBusy(false);return;}
@@ -801,7 +841,7 @@ export default function MissionCreator() {
   const persist=async(submit)=>{
     if(demo||busy)return;
     if(!form.countryIso || !form.prompt.trim()){setError('国と問題文を入力してください。');return;}
-    setBusy(true);setError('');setSaveStage('問題文をGoogleスプレッドシートに保存しています…');
+    setBusy(true);setError('');setSaveStage('問題文を保存しています…');
     const country=countries.find(c=>c.iso===form.countryIso);
     try{
       const total=form.type==='photo4'?4:['photo1','photoText4'].includes(form.type)?1:0;
@@ -814,7 +854,7 @@ export default function MissionCreator() {
       setForm(prev => ({ ...prev, id: savedId }));
       for(let index=0;index<pendingSlots.length;index++){
         const slot=pendingSlots[index];
-        setSaveStage(`写真 ${index+1}/${pendingSlots.length} をGoogleドライブに保存しています…`);
+        setSaveStage(`写真 ${index+1}/${pendingSlots.length} を保存しています…`);
         await creatorRequest('uploadImage',{questionId:savedId,slot,base64:await blobToBase64(photos[slot].blob)},session);
         // A successful photo is already on Drive. Do not upload it again if a later step fails.
         setPhotos(prev => prev[slot]?.blob===photos[slot].blob
@@ -955,19 +995,19 @@ export default function MissionCreator() {
   const setManual=async(countryIso,domain,count)=>{try{await act('setProgress',{countryIso,domain,manualDone:Number(count)});await reload();}catch{/* shown */}};
   const active=demo||user;
   return <div className="mc-root">
-    {!active ? (session ? <div className="mc-access-wrap"><div role="status" className="mc-card mc-access">前回のログインを確認しています…</div></div> : <Access onLogin={login} onRegister={register} registrationToken={registrationToken} onBack={()=>{setRegistrationToken('');setError('');}} busy={busy} error={error}/>) : <>
+    {!active ? (session ? <div className="mc-access-wrap"><div role="status" className="mc-card mc-access">前回のログインを確認しています…</div></div> : <Access cloudflare={cloudflare} onLogin={login} onRegister={register} registrationToken={registrationToken} onBack={()=>{setRegistrationToken('');setError('');}} busy={busy} error={error}/>) : <>
       <header className="mc-header"><div className="mc-header-brand"><Compass size={24}/> <strong>TimePalette</strong><span>MISSION CREATOR</span></div><div className="mc-header-user"><span>{demo?'デモ（保存不可）':`${user.name} ／ ${user.role==='admin'?'管理者':'参加教師'}`}</span><button type="button" className="mc-quiet" onClick={logout}><LogOut size={17}/>終了</button></div></header>
       <div className="mc-app"><aside className="mc-sidebar"><nav>
         {[['dashboard',LayoutDashboard,'制作進捗'],['bank',BookOpen,'みんなの問題'],['publication',ShieldCheck,'公開ミッション管理'],['editor',FilePlus2,'問題を作る']].filter(([id])=>id!=='publication'||user?.role==='admin').map(([id,Icon,label])=><button key={id} className={page===id?'active':''} type="button" onClick={()=>id==='editor'?startNew(): (setPage(id),setError(''))}><Icon size={18}/>{label}</button>)}
         {user?.role==='admin' && <div className="mc-admin-hint"><ShieldCheck size={17}/>問題一覧で問題の編集・承認・削除・復元ができます。</div>}
-      </nav><p>Google Sheets ＋ Drive 連携<br/>Chrome / Edge 推奨</p></aside><main className="mc-main">
+      </nav><p>{cloudflare?'Cloudflare D1 ＋ R2':'Google Sheets ＋ Drive'} 連携<br/>Chrome / Edge 推奨</p></aside><main className="mc-main">
         {demo && <div className="mc-demo-banner"><CircleHelp size={18}/>これは操作確認用の画面です。写真のWebP変換とプレビューを試せますが、保存・承認はできません。</div>}
         <div className="mc-main-heading"><div><div className="mc-eyebrow">GLOBAL COLLABORATION</div><h1>{page==='dashboard'?'制作進捗':page==='bank'?'みんなの問題':page==='publication'?'公開ミッション管理':'問題を作る'}</h1><p>197か国 × 6カテゴリー × 各10問を、世界の先生たちと作る。</p></div>{page!=='editor'&&<button className="mc-primary" type="button" onClick={startNew}><FilePlus2 size={18}/>新しく作成</button>}</div>
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
-        {!loadingData && page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
+        {!loadingData && page==='dashboard'&&<><Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>{cloudflare&&user?.role==='admin'&&<TeacherAccessPanel session={session}/>}</>}
         {!loadingData && page==='publication' && user?.role==='admin' &&
-          <PublishedMissionManager countries={countries} questions={questions} session={session}
+          <PublishedMissionManager cloudflare={cloudflare} countries={countries} questions={questions} session={session}
             busy={busy||demo} onPublication={publication} onInspect={inspect}
             onEditPublished={async q=>{const ok=await publication(q,'unpublish');if(ok)startEdit({...q,status:'approved'});}}/>}
         {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} onPublication={publication} onBulkAction={bulkAction} bulkProgress={bulkProgress} bulkReport={bulkReport} selectedCountry="" countryNames={countryNames} busy={busy||demo||bulkRunning} reviewingIds={reviewingIds}

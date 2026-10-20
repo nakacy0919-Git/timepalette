@@ -1,4 +1,5 @@
 import {liveEnabled,adminVerified,stopMedia,publishMedia} from '../lib/r2-live-media.js';
+import {cloudflareCreator} from '../lib/timepalette-cloudflare-proxy.js';
 // Vercel server-side proxy: prevents cross-origin GAS fetches from the browser.
 // Only MISSION_CREATOR_GAS_URL is server-side. Never use VITE_ for this variable.
 // Preview-only reliability workaround for Google's intermittent one-time
@@ -48,6 +49,7 @@ export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   if (req.method !== 'POST') return res.status(405).json({ ok: false, error: 'POST only' });
+  if (process.env.MISSION_CREATOR_BACKEND === 'cloudflare') return cloudflareCreator(req,res);
   const endpoint = process.env.MISSION_CREATOR_GAS_URL;
   if (!endpoint || !/^https:\/\/script\.google\.com\/macros\/s\//.test(endpoint)) {
     return res.status(503).json({ ok: false, code: 'not_configured', error: 'Mission CreatorのGoogle連携はまだ設定されていません。' });

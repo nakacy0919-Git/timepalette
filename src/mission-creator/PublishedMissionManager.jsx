@@ -3,7 +3,7 @@ import {creatorRequest} from './api';
 import {PUBLIC_DOMAINS,reconcilePublishedOrder,movePublishedOrder,identicalOrder} from './publicationOrder.js';
 import R2PilotPanel from './R2PilotPanel.jsx';
 
-export default function PublishedMissionManager({countries,questions,session,busy,onPublication,onInspect,onEditPublished}){
+export default function PublishedMissionManager({cloudflare=false,countries,questions,session,busy,onPublication,onInspect,onEditPublished}){
   const [countryIso,setCountryIso]=useState('rw');
   const [domain,setDomain]=useState('lifeCulture');
   const [countrySearch,setCountrySearch]=useState('');
@@ -111,7 +111,7 @@ export default function PublishedMissionManager({countries,questions,session,bus
               aria-label={q.prompt+'を下へ'} onClick={()=>setOrder(previous=>movePublishedOrder(previous,id,1))}>↓</button>
             <button className="mc-outline mc-small" type="button" disabled={!canEdit} onClick={()=>onInspect(q)}>確認</button>
             <button className="mc-outline mc-small" type="button" disabled={!canEdit||dirty} onClick={()=>onEditPublished(q)}>編集</button>
-            {['photo4','photoText4'].includes(q.type)&&<button className="mc-outline mc-small" type="button" disabled={!canEdit} onClick={()=>syncImage(q)}>画像を再同期</button>}
+            {!cloudflare&&['photo4','photoText4'].includes(q.type)&&<button className="mc-outline mc-small" type="button" disabled={!canEdit} onClick={()=>syncImage(q)}>画像を再同期</button>}
             <button className="mc-outline mc-small" type="button" disabled={!canEdit||dirty}
               onClick={()=>onPublication(q,'unpublish')}>公開停止</button>
           </div>

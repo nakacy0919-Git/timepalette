@@ -1,4 +1,5 @@
 import {liveEnabled,markCatalogReady} from '../lib/r2-live-media.js';
+import {cloudflarePublic} from '../lib/timepalette-cloudflare-proxy.js';
 // Read-only published questions and photos. No Sheets ID, Drive file ID or teacher session leaks.
 import {isPreviewR2Request,readPreviewR2IfPublished,PREVIEW_CDN_TTL_SECONDS} from '../lib/r2-preview-photo.js';
 const GOOGLE_URL_PATTERN=/^https:\/\/script\.google\.com\/macros\/s\//;
@@ -22,6 +23,7 @@ export function createMissionPublicHandler({r2Reader=readPreviewR2IfPublished}={
   const started=performance.now(),stats={};
   res.setHeader('X-Content-Type-Options','nosniff');
   if(req.method!=='GET')return res.status(405).json({ok:false,error:'GET only'});
+  if(process.env.MISSION_CREATOR_BACKEND==='cloudflare')return cloudflarePublic(req,res);
   const action=String(req.query.action||'catalog');
   const iso=String(req.query.country||'rw').toLowerCase();
   const domain=String(req.query.domain||'lifeCulture');

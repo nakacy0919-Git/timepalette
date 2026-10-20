@@ -25,3 +25,10 @@ dist-ssr
 .dev-backups/
 *.bak
 *.backup_*
+
+# Wrangler local state and TimePalette private credentials/media
+**/.wrangler/
+**/.dev.vars
+**/*.private.sql
+**/timepalette-d1-private-data-import*/
+**/TimePalette Mission Creator — PRIVATE*/
