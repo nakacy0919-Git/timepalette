@@ -40,6 +40,8 @@ export default function R2PilotPanel({countryIso,domain,published,session}){
   const [result,setResult]=useState('');
   const [comparison,setComparison]=useState('');
   const [error,setError]=useState('');
+  const [gatewayUrl,setGatewayUrl]=useState('');
+  const [gatewayResult,setGatewayResult]=useState('');
   useEffect(()=>{setIndex(0);setResult('');setComparison('');setError('');},[countryIso,domain]);
   if(countryIso!=='rw'||domain!=='lifeCulture')return null;
   const selected=photos[index]||photos[0];
@@ -52,6 +54,43 @@ export default function R2PilotPanel({countryIso,domain,published,session}){
       setResult(action==='check'?`接続OK：${r.latencyMs}ms`
         :`${{copy:'コピー',read:'R2読込',delete:'試験コピー削除'}[action]}：${r.latencyMs}ms`+
         (r.bytes?`、${Math.round(r.bytes/1024)}KB、SHA-256 ${r.sha256.slice(0,12)}…`:''));
+    }catch(e){setError(e.message);}
+    finally{setBusy(false);}
+  };
+  const testGateway=async()=>{
+    if(busy||!selected)return;
+    setBusy(true);setError('');setGatewayResult('');
+    try{
+      const base=new URL(gatewayUrl.trim());
+      if(base.protocol!=='https:'||!base.hostname.endsWith('.workers.dev')||base.pathname!=='/')
+        throw Error('Cloudflareから発行された https://...workers.dev/ のURLを入力してください。');
+      const leased=await fetch('/api/mission-r2-public-pilot',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({action:'lease',questionId:selected.id,slot:selected.slot,session})
+      });
+      const grant=await leased.json();
+      if(!leased.ok||!grant.ok)throw Error(grant.error||'アクセス許可に失敗しました');
+      const times=[];
+      try{
+        for(let i=0;i<3;i++){
+          const url=new URL(grant.gatewayPath,base);
+          url.searchParams.set('bench',String(Date.now())+'-'+i);
+          const start=performance.now();
+          const response=await fetch(url,{cache:'no-store'});
+          if(!response.ok||response.headers.get('Content-Type')!=='image/webp')
+            throw Error('Workerが画像を返しません（HTTP '+response.status+'）');
+          const bytes=await response.arrayBuffer();
+          if(bytes.byteLength<16)throw Error('画像データが空です');
+          times.push(Math.round(performance.now()-start));
+        }
+        setGatewayResult('Cloudflare Worker直配信：'+times.map(t=>t+'ms').join(' / ')+
+          '（平均 '+Math.round(times.reduce((a,b)=>a+b,0)/times.length)+'ms、354KB前後、30秒間の試験許可）');
+      }finally{
+        await fetch('/api/mission-r2-public-pilot',{
+          method:'POST',headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({action:'revoke',questionId:selected.id,slot:selected.slot,session})
+        }).catch(()=>{});
+      }
     }catch(e){setError(e.message);}
     finally{setBusy(false);}
   };
@@ -85,6 +124,14 @@ export default function R2PilotPanel({countryIso,domain,published,session}){
       <button className="mc-outline mc-small" disabled={busy||!selected} onClick={()=>run('delete')}>試験コピーを削除</button>
       <button className="mc-primary mc-small" disabled={busy||!selected} onClick={compare}>ブラウザーでGASとR2を比較</button>
     </div>
+    <div style={{marginTop:14,display:'flex',flexWrap:'wrap',gap:8,alignItems:'center'}}>
+      <label style={{flex:'1 1 270px'}}>Cloudflare Worker URL（https://...workers.dev/）
+        <input type="url" value={gatewayUrl} onChange={e=>setGatewayUrl(e.target.value)} placeholder="https://timepalette-r2-image-pilot.xxxxx.workers.dev/" />
+      </label>
+      <button className="mc-primary mc-small" type="button" disabled={busy||!selected||!gatewayUrl}
+        onClick={testGateway}>Cloudflare Worker直配信を3回測定</button>
+    </div>
+    {gatewayResult&&<p role="status" className="mc-save-progress">{gatewayResult}</p>}
     {busy&&<p role="status">処理中です…</p>}
     {result&&<p role="status" className="mc-save-progress">{result}</p>}
     {comparison&&<p role="status" className="mc-save-progress">{comparison}</p>}
