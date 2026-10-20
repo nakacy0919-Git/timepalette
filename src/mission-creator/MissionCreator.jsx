@@ -304,7 +304,7 @@ async function loadStoredPhotos(question,session,onPhoto,onProgress){
 
 function QuestionBank({
   questions, user, onEdit, onReview, onInspect,
-  onPrefetch, onDelete, onRestore, onPublication,
+  onPrefetch, onDelete, onRestore, onPublication, onEditPublished,
   selectedCountry, countryNames, busy, reviewingIds,
   filter, onFilterChange, search, onSearchChange,
   onBulkAction, bulkProgress, bulkReport
@@ -501,7 +501,7 @@ function QuestionBank({
                         <span className="mc-passed-label"><CheckCircle2 size={16}/>合格済み</span>
                         <button type="button" className="mc-primary mc-small" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onPublication(q,'publish')}>TimePaletteに公開</button>
                       </>}
-                      {q.status === 'published' && <button type="button" className="mc-outline mc-small" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onPublication(q,'unpublish')}>公開停止</button>}
+                      {q.status === 'published' && <><button type="button" className="mc-outline mc-small" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onEditPublished(q)}>編集（公開停止）</button><button type="button" className="mc-outline mc-small" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onPublication(q,'unpublish')}>公開停止</button></>}
                       {!['published','needs_revision'].includes(q.status) && (
                         <button type="button" className="mc-outline mc-small" disabled={busy || reviewingIds?.has(q.id)} onClick={() => onReview(q,'needs_revision')}>修正依頼</button>
                       )}
@@ -842,7 +842,7 @@ export default function MissionCreator() {
         await reload();
       }
       editTokenRef.current+=1;
-      setPage('bank');setPhotos({});setError('');
+      setPage('bank');if(form.status==='approved')setBankFilter('approved');setPhotos({});setError('');
     }catch(e){
       setError(`${e.message} 保存済みの問題や写真が残っている可能性があります。「みんなの問題」の状態を確認してから再試行してください。`);
     }finally{setBusy(false);setSaveStage('');}
@@ -899,20 +899,22 @@ export default function MissionCreator() {
     }
   };
   const publication=async(q,mode)=>{
-    if(user?.role!=='admin'||busy||demo)return;
+    if(user?.role!=='admin'||busy||demo)return false;
     if(mode==='publish'){
-      if(!window.confirm('写真・出典・内容・公開権利を確認済みですか？\nTimePalette本体に公開します。'))return;
-    }else if(!window.confirm('この問題をTimePaletteから公開停止しますか？'))return;
+      if(!window.confirm('写真・出典・内容・公開権利を確認済みですか？\nTimePalette本体に公開します。'))return false;
+    }else if(!window.confirm('この問題をTimePaletteから公開停止しますか？'))return false;
     setBusy(true);setError('');
     try{
       const result=await creatorRequest('setPublication',{
-        questionId:q.id,mode,rightsConfirmed:mode==='publish'
+        questionId:q.id,mode,rightsConfirmed:mode==='publish',countryIso:q.countryIso,domain:q.domain
       },session);
       setQuestions(previous=>previous.map(item=>item.id===q.id?
         {...item,status:result.status,updatedAt:result.updatedAt}:item));
       setInspection(previous=>previous?.id===q.id?
         {...previous,status:result.status}:previous);
-    }catch(e){setError(e?.message||'公開処理に失敗しました。');}
+      if(result.r2MediaStatus==='pending')window.alert('問題は公開済みです。写真の高速配信への同期が未完了です。公開ミッション管理の「画像を再同期」を実行できます。');
+      return true;
+    }catch(e){setError(e?.message||'公開処理に失敗しました。');return false;}
     finally{setBusy(false);}
   };
   const bulkAction=async(mode,ids)=>{
@@ -966,8 +968,10 @@ export default function MissionCreator() {
         {!loadingData && page==='dashboard'&&<Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/>}
         {!loadingData && page==='publication' && user?.role==='admin' &&
           <PublishedMissionManager countries={countries} questions={questions} session={session}
-            busy={busy||demo} onPublication={publication} onInspect={inspect}/>}
+            busy={busy||demo} onPublication={publication} onInspect={inspect}
+            onEditPublished={async q=>{const ok=await publication(q,'unpublish');if(ok)startEdit({...q,status:'approved'});}}/>}
         {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} onPublication={publication} onBulkAction={bulkAction} bulkProgress={bulkProgress} bulkReport={bulkReport} selectedCountry="" countryNames={countryNames} busy={busy||demo||bulkRunning} reviewingIds={reviewingIds}
+          onEditPublished={async q=>{const ok=await publication(q,'unpublish');if(ok)startEdit({...q,status:'approved'});}}
           filter={bankFilter ?? (user?.role === 'admin' ? 'draft' : 'all')}
           onFilterChange={setBankFilter}
           search={bankSearch}

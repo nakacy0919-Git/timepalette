@@ -43,7 +43,7 @@ export function createBulkPlan(mode, ids, questions, role) {
       }
     }
   }
-  return { mode, items: items.map(q => ({ id: q.id, title: String(q.prompt || '').slice(0, 70) })) };
+  return { mode, items: items.map(q => ({ id: q.id, countryIso: q.countryIso, domain: q.domain, title: String(q.prompt || '').slice(0, 70) })) };
 }
 
 export async function executeBulkPlan(plan, request, onProgress = () => {}) {
@@ -61,7 +61,7 @@ export async function executeBulkPlan(plan, request, onProgress = () => {}) {
         await request('reviewQuestion', { questionId: item.id, status: 'approved' });
       } else {
         // Must be paired with the administrator's explicit batch rights confirmation.
-        await request('setPublication', { questionId: item.id, mode: 'publish', rightsConfirmed: true });
+        await request('setPublication', { questionId: item.id, mode: 'publish', rightsConfirmed: true, countryIso: item.countryIso, domain: item.domain });
       }
       done.push(item);
     } catch (error) {

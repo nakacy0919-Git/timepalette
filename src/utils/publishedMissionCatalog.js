@@ -1,5 +1,10 @@
 // Transform only validated, published Mission Creator questions into playable missions.
-function imageUrl(questionId,slot){
+function imageUrl(questionId,slot,r2MediaBase){
+  // Catalog-controlled R2 URL; unknown origins cannot become media URLs.
+  if(typeof r2MediaBase==='string' &&
+    r2MediaBase.startsWith('https://timepalette-r2-image-pilot.timepalette-images.workers.dev/v2/') &&
+    r2MediaBase.endsWith('/') && !r2MediaBase.includes('?'))
+    return r2MediaBase+'P0'+slot+'.webp';
   return '/api/mission-public?action=image&questionId='+encodeURIComponent(questionId)+'&slot='+slot;
 }
 export function toPublishedMission(q){
@@ -11,7 +16,7 @@ export function toPublishedMission(q){
     if(!match||![1,2,3,4].every(slot=>q.media?.some(m=>m.slot===slot)))return null;
     correctIndex=Number(match[1])-1;
     choices=[1,2,3,4].map(slot=>({id:'photo-'+slot,label:'写真 '+slot,
-      image:imageUrl(q.id,slot),alt:'候補写真 '+slot}));
+      image:imageUrl(q.id,slot,q.r2MediaBase),alt:'候補写真 '+slot}));
   }else{
     const wrong=Array.isArray(q.choices)?q.choices:[];
     choices=[q.answer,...wrong].map(x=>String(x||'').trim());
@@ -26,7 +31,7 @@ export function toPublishedMission(q){
     challenge:{choices,correctIndex},
     explanation:String(q.explanation||'').slice(0,3500),
     materials:q.type==='photoText4'?[{id:'mc-media-'+q.id,type:'image',
-      url:imageUrl(q.id,1),role:'primary',alt:'問題を考えるための写真',
+      url:imageUrl(q.id,1,q.r2MediaBase),role:'primary',alt:'問題を考えるための写真',
       display:{placement:'beforeChallenge',aspectRatio:'16:9'}}]:[],
     sourceUrls:Array.isArray(q.sources)?q.sources:[],creatorQuestionId:q.id
   };

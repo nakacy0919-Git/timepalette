@@ -1,3 +1,4 @@
+import {liveEnabled,adminVerified,stopMedia,publishMedia} from '../lib/r2-live-media.js';
 // Vercel server-side proxy: prevents cross-origin GAS fetches from the browser.
 // Only MISSION_CREATOR_GAS_URL is server-side. Never use VITE_ for this variable.
 // Preview-only reliability workaround for Google's intermittent one-time
@@ -60,6 +61,13 @@ export default async function handler(req, res) {
     return res.status(413).json({ ok: false, error: 'ファイルが大きすぎます。' });
   }
   try {
+    // Remove public media authorization BEFORE a verified admin stops publication.
+    // This fails closed if GAS later fails; no unauthorized caller can revoke.
+    if(liveEnabled() && payload.action==='setPublication' && payload.mode==='unpublish'){
+      const verified=await adminVerified(endpoint,payload.session,payload.questionId,payload.countryIso,payload.domain);
+      if(!verified)return res.status(403).json({ok:false,error:'管理者または公開問題を確認できませんでした。'});
+      await stopMedia({id:payload.questionId});
+    }
     const upstream = payload.action === 'login' && process.env.VERCEL_ENV === 'preview'
       ? await fetchLoginWithRecovery(endpoint, payload)
       : await fetch(endpoint, {
@@ -98,6 +106,18 @@ export default async function handler(req, res) {
       throw new Error('Non-JSON upstream response');
     }
     if (!upstream.ok) return res.status(502).json({ ok: false, error: 'Googleの保存処理に失敗しました。' });
+    if(result?.ok && liveEnabled() && payload.action==='setPublication' && payload.mode==='publish'){
+      // GAS publication is authoritative; only the matching published catalog can
+      // authorize live images. On sync errors the old GAS photo route remains valid.
+      try{
+        const media=await publishMedia({id:payload.questionId,iso:payload.countryIso,
+          domain:payload.domain,endpoint});
+        result.data={...result.data,r2MediaStatus:media.status};
+      }catch(error){
+        console.error('Production R2 media sync pending',{kind:String(error?.name||'upstream').slice(0,32)});
+        result.data={...result.data,r2MediaStatus:'pending'};
+      }
+    }
     return res.status(200).json(result);
   } catch (err) {
     const kind=err?.name==='TimeoutError'||err?.name==='AbortError'

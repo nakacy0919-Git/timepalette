@@ -3,7 +3,7 @@ import {creatorRequest} from './api';
 import {PUBLIC_DOMAINS,reconcilePublishedOrder,movePublishedOrder,identicalOrder} from './publicationOrder.js';
 import R2PilotPanel from './R2PilotPanel.jsx';
 
-export default function PublishedMissionManager({countries,questions,session,busy,onPublication,onInspect}){
+export default function PublishedMissionManager({countries,questions,session,busy,onPublication,onInspect,onEditPublished}){
   const [countryIso,setCountryIso]=useState('rw');
   const [domain,setDomain]=useState('lifeCulture');
   const [countrySearch,setCountrySearch]=useState('');
@@ -46,6 +46,17 @@ export default function PublishedMissionManager({countries,questions,session,bus
     // Questions are refreshed after publication; id signature triggers a new order fetch.
   },[countryIso,domain,session,publishedKey,revision]);
 
+  const syncImage=async q=>{
+    setSaving(true);setNotice('');setError('');
+    try{
+      const response=await fetch('/api/mission-media-sync',{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({questionId:q.id,countryIso:q.countryIso,domain:q.domain,session})});
+      const data=await response.json();
+      if(!response.ok||!data.ok)throw Error(data.error||'同期に失敗');
+      setNotice('写真のR2同期が完了しました。TimePaletteで画像を再読み込みしてください。');
+    }catch(e){setError('写真の同期に失敗しました：'+e.message);}
+    finally{setSaving(false);}
+  };
   const save=async()=>{
     if(!canEdit||!dirty||order.length!==published.length)return;
     if(!window.confirm('この国・カテゴリーの公開ミッション順を保存しますか？'))return;
@@ -99,6 +110,8 @@ export default function PublishedMissionManager({countries,questions,session,bus
             <button className="mc-outline mc-small" type="button" disabled={!canEdit||index===order.length-1}
               aria-label={q.prompt+'を下へ'} onClick={()=>setOrder(previous=>movePublishedOrder(previous,id,1))}>↓</button>
             <button className="mc-outline mc-small" type="button" disabled={!canEdit} onClick={()=>onInspect(q)}>確認</button>
+            <button className="mc-outline mc-small" type="button" disabled={!canEdit||dirty} onClick={()=>onEditPublished(q)}>編集</button>
+            {['photo4','photoText4'].includes(q.type)&&<button className="mc-outline mc-small" type="button" disabled={!canEdit} onClick={()=>syncImage(q)}>画像を再同期</button>}
             <button className="mc-outline mc-small" type="button" disabled={!canEdit||dirty}
               onClick={()=>onPublication(q,'unpublish')}>公開停止</button>
           </div>

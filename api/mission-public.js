@@ -1,3 +1,4 @@
+import {liveEnabled,markCatalogReady} from '../lib/r2-live-media.js';
 // Read-only published questions and photos. No Sheets ID, Drive file ID or teacher session leaks.
 import {isPreviewR2Request,readPreviewR2IfPublished,PREVIEW_CDN_TTL_SECONDS} from '../lib/r2-preview-photo.js';
 const GOOGLE_URL_PATTERN=/^https:\/\/script\.google\.com\/macros\/s\//;
@@ -70,8 +71,9 @@ export function createMissionPublicHandler({r2Reader=readPreviewR2IfPublished}={
     if(!payload?.ok) return res.status(404).json({ok:false,error:'Not available'});
     if(action==='catalog'){
       if(!Array.isArray(payload?.data?.questions))throw new Error('Invalid catalog');
-      res.setHeader('Cache-Control','public, s-maxage=15, max-age=0');
-      return res.status(200).json({ok:true,questions:payload.data.questions});
+      const questions=liveEnabled()?await markCatalogReady(payload.data.questions).catch(()=>payload.data.questions):payload.data.questions;
+      res.setHeader('Cache-Control','public, s-maxage=5, max-age=0');
+      return res.status(200).json({ok:true,questions});
     }
     const data=payload?.data;
     if(!data||data.mime!=='image/webp'||typeof data.base64!=='string'||

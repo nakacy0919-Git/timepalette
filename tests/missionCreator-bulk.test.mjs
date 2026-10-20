@@ -51,7 +51,7 @@ test('publication only calls existing publication endpoint with rights confirmat
   const plan=createBulkPlan('publish',['a'],[approved('a')],'admin');
   const result=await executeBulkPlan(plan,async(action,payload)=>calls.push({action,payload}));
   assert.equal(result.done.length,1);
-  assert.deepEqual(calls,[{action:'setPublication',payload:{questionId:'a',mode:'publish',rightsConfirmed:true}}]);
+  assert.deepEqual(calls,[{action:'setPublication',payload:{questionId:'a',mode:'publish',rightsConfirmed:true,countryIso:'rw',domain:'lifeCulture'}}]);
 });
 
 test('unknown or empty plans do not call backend',async()=>{
