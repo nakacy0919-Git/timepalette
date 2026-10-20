@@ -34,7 +34,7 @@ test('published, admin-verified photo receives only a 30 second lease',async()=>
  await f.handler({method:'POST',body:{action:'lease',questionId:id,slot:1,session:sess}},res);
  assert.equal(res.statusCode,200);
  assert.equal(res.body.expiresAt,1760000030000);
- assert.deepEqual(f.calls,['getPublicationOrder','publishedCatalog','publishedCatalog']);
+ assert.deepEqual(f.calls,['getPublicationOrder','publishedCatalog']);
  assert.deepEqual(f.commands.map(x=>x.kind),['HeadObjectCommand','PutObjectCommand']);
  assert.equal(f.commands[1].parameters.Key,leaseKey(id,1));
  const value=JSON.parse(String(f.commands[1].parameters.Body));
@@ -59,4 +59,47 @@ test('invalid session is rejected before any storage or media access',async()=>w
  const f=fixture(),res=mockRes();
  await f.handler({method:'POST',body:{action:'lease',questionId:id,slot:1,session:'not-a-session'}},res);
  assert.equal(res.statusCode,403);assert.deepEqual(f.calls,[]);assert.deepEqual(f.commands,[]);
+}));
+test('admin and publication GAS reads start concurrently',async()=>withEnv(async()=>{
+ const actions=[];
+ let releaseAdmin,releaseCatalog;
+ const adminWait=new Promise(resolve=>{releaseAdmin=resolve;});
+ const catalogWait=new Promise(resolve=>{releaseCatalog=resolve;});
+ const fetcher=async (url,opt={})=>{
+   const action=opt.method==='POST'?JSON.parse(opt.body).action:new URL(url).searchParams.get('action');
+   actions.push(action);
+   if(action==='getPublicationOrder')await adminWait;
+   else if(action==='publishedCatalog')await catalogWait;
+   else throw Error('Unrecognized request');
+   const data=action==='getPublicationOrder'?{ok:true,data:{countryIso:'rw',domain:'lifeCulture',questionIds:[id]}}:
+     {ok:true,data:{questions:[{id,countryIso:'rw',domain:'lifeCulture',type:'photo4',media:[{slot:1}]}]}};
+   return {ok:true,text:async()=>JSON.stringify(data)};
+ };
+ const commands=[];
+ const createClient=()=>({send:async command=>{
+   commands.push(command.constructor.name);return command.constructor.name==='HeadObjectCommand'?{ContentLength:200}:{};
+ },destroy(){}});
+ const handler=createR2PublicPilotHandler({fetcher,createClient,now:()=>1760000000000});
+ const res=mockRes();
+ const pending=handler({method:'POST',body:{action:'lease',questionId:id,slot:1,session:sess}},res);
+ await new Promise(resolve=>setImmediate(resolve));
+ assert.deepEqual(actions,['getPublicationOrder','publishedCatalog']);
+ releaseAdmin();releaseCatalog();await pending;
+ assert.equal(res.statusCode,200);
+ assert.deepEqual(commands,['HeadObjectCommand','PutObjectCommand']);
+}));
+test('GAS timeout identifies admin stage without exposing session secrets',async()=>withEnv(async()=>{
+ const fetcher=async (url,opt={})=>{
+   const action=opt.method==='POST'?JSON.parse(opt.body).action:new URL(url).searchParams.get('action');
+   if(action==='getPublicationOrder'){const e=new Error('secret message');e.name='TimeoutError';throw e;}
+   return {ok:true,text:async()=>JSON.stringify({ok:true,data:{questions:[{id,countryIso:'rw',domain:'lifeCulture',type:'photo4',media:[{slot:1}]}]}})};
+ };
+ const handler=createR2PublicPilotHandler({fetcher,createClient:()=>{throw Error('R2 must not be called');}});
+ const res=mockRes();
+ const old=console.error;console.error=()=>{};
+ try{await handler({method:'POST',body:{action:'lease',questionId:id,slot:1,session:sess}},res);}
+ finally{console.error=old;}
+ assert.equal(res.statusCode,504);
+ assert.match(res.body.error,/管理者確認/);
+ assert.doesNotMatch(JSON.stringify(res.body),/secret|aaaaaa/i);
 }));
