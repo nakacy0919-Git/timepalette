@@ -26,7 +26,32 @@ export default async function handler(req, res) {
     });
     const content = await upstream.text();
     let result;
-    try { result = JSON.parse(content); } catch { throw new Error('Non-JSON upstream response'); }
+    try { result = JSON.parse(content); } catch {
+      // Safe metadata only: never record HTML, credentials, PIN, Google script URL, or question data.
+      let hostname = 'unknown';
+      try {
+        const remoteHost = new URL(upstream.url).hostname;
+        hostname = remoteHost === 'script.google.com' ? 'script.google.com'
+          : remoteHost === 'script.googleusercontent.com' ? 'script.googleusercontent.com'
+          : remoteHost.endsWith('.googleusercontent.com') ? 'googleusercontent.com' : 'other';
+      } catch {}
+      const contentType = String(upstream.headers?.get?.('content-type') || '')
+        .split(';')[0].trim().toLowerCase();
+      const safeType = ['text/html', 'text/plain', 'application/json', 'application/octet-stream']
+        .includes(contentType) ? contentType : 'other';
+      const safeStatus = Number.isInteger(upstream.status) ? upstream.status : 0;
+      const isHtml = /^\s*</.test(content);
+      const metadata = { status: safeStatus, type: safeType, host: hostname,
+        redirected: Boolean(upstream.redirected), html: isHtml, length: content.length };
+      console.error('Mission Creator invalid GAS reply metadata', metadata);
+      if (process.env.VERCEL_ENV === 'preview') {
+        const info = 'HTTP ' + safeStatus + ' / ' + safeType + ' / ' + hostname
+          + ' / HTML ' + (isHtml ? 'yes' : 'no') + ' / ' + content.length + ' bytes';
+        return res.status(502).json({ ok: false, code: 'google_response',
+          error: 'Google応答診断：' + info });
+      }
+      throw new Error('Non-JSON upstream response');
+    }
     if (!upstream.ok) return res.status(502).json({ ok: false, error: 'Googleの保存処理に失敗しました。' });
     return res.status(200).json(result);
   } catch (err) {
