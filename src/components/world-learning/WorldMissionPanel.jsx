@@ -2504,8 +2504,19 @@ export default function WorldMissionPanel({
       : missions.filter(mission=>mission.domain===selectedDomain)
     : [];
   // Published teacher missions are added to (not substituted for) existing adventures.
+  // Rwanda Language Adventure owns its original bilingual missions.
+  // The teacher-published mission list must not render those objects.
+  const rwandaLanguageTeacherList =
+    String(countryCode || '').toLowerCase() === 'rw' &&
+    selectedDomain === 'language';
+
   const visibleMissions = selectedDomain
-    ? [...builtInMissions,...creatorMissions.map(m=>applyLearningLevelToMission(m,selectedLearningLevel))]
+    ? [
+        ...(rwandaLanguageTeacherList ? [] : builtInMissions),
+        ...creatorMissions.map(m =>
+          applyLearningLevelToMission(m, selectedLearningLevel)
+        ),
+      ]
     : [];
 
 
