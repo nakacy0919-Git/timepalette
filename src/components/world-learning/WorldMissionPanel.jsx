@@ -2705,12 +2705,11 @@ export default function WorldMissionPanel({
           'language'
       ) {
         /*
-         * Language Adventure has its own full-screen portal.
-         * Keep the parent panel out of the legacy mission-list view
-         * while the portal is opening.
+         * Load teacher-published missions while keeping
+         * the existing full-screen Language Adventure.
          */
         setSelectedDomain(
-          null
+          domainId
         );
 
         setActiveMission(
@@ -2945,7 +2944,7 @@ export default function WorldMissionPanel({
       mission
     ) => {
       const result =
-        selectedAdventurePackage && !isCreatorLifeCulture
+        selectedAdventurePackage && !mission?.creatorQuestionId
           ? completeWorldAdventureMission({
               countryCode,
               domainId:
@@ -4395,6 +4394,12 @@ export default function WorldMissionPanel({
         open={
           languageAdventureOpen
         }
+        creatorMissionCount={creatorMissions.length}
+        onOpenCreatorMissions={() => {
+          setLanguageAdventureOpen(false);
+          setActiveMission(null);
+          moveToLauncher();
+        }}
         learningLevel={
           selectedLearningLevel
         }

@@ -16,6 +16,8 @@ export default function LanguageAdventureLauncher({
   learningLevel,
   countryCode = 'rw',
   onProgressChange,
+  creatorMissionCount = 0,
+  onOpenCreatorMissions,
 }) {
   if (
     !open ||
@@ -69,6 +71,16 @@ export default function LanguageAdventureLauncher({
         />
       </button>
 
+
+      {creatorMissionCount > 0 && (
+        <button
+          type="button"
+          onClick={onOpenCreatorMissions}
+          className="fixed bottom-5 right-5 z-[13000] rounded-2xl bg-emerald-700 px-5 py-3 text-sm font-black text-white shadow-2xl hover:bg-emerald-600"
+        >
+          先生の公開ミッション（{creatorMissionCount}問）を見る
+        </button>
+      )}
 
       <LanguageAdventure
         initialLevel={
