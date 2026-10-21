@@ -6,6 +6,10 @@ import worker from '../src/index.js';
 const db=new DatabaseSync(':memory:');db.exec('PRAGMA foreign_keys=ON');
 const original=new URL('../../timepalette-r2-worker/migrations/0001_init_mission_creator.sql',import.meta.url);
 db.exec(fs.readFileSync(original,'utf8'));db.exec(fs.readFileSync(new URL('../../timepalette-r2-worker/migrations/0002_auth.sql',import.meta.url),'utf8'));
+db.exec(fs.readFileSync(
+  new URL('../../timepalette-r2-worker/migrations/0003_creator_video.sql',import.meta.url),
+  'utf8'
+));
 const wrapped={
  prepare(sql){return{_args:[],bind(...args){this._args=args;return this;},first(){return db.prepare(sql).get(...this._args)||null;},all(){return{results:db.prepare(sql).all(...this._args)};},run(){const data=db.prepare(sql).run(...this._args);return {meta:{changes:data.changes}}}};},
  async batch(statements){const out=[];db.exec('BEGIN');try{for(const s of statements)out.push(s.run());db.exec('COMMIT');return out;}catch(e){db.exec('ROLLBACK');throw e;}}
@@ -55,3 +59,121 @@ assert.equal(newTeacher.data.teacher.loginId.length,12);
 const newReg=await invoke('registerTeacher',{registrationToken:newTeacher.data.enrollmentToken,password:'welcome-new-teacher-password'});
 assert.equal(newReg.data.user.name,'Global Teacher');
 console.log('PASS integration: admin creates teacher and sends one-time onboarding invite');
+
+
+// VIDEO_AUTHOR_INTEGRATION_V1
+const videoTeacher = (await invoke('login', {
+  account: tid.replaceAll('-', '').slice(0, 12),
+  password: 'new-password-is-long-enough'
+})).data.session;
+const sampleVideo = {
+  youtubeUrl: 'https://youtu.be/dQw4w9WgXcQ',
+  startSeconds: 15,
+  endSeconds: 90,
+  minChars: 5,
+  maxChars: 100,
+  keywords: ['learn', 'notice'],
+  keywordMode: 'all'
+};
+
+const sampleProfile = {
+  name: 'Test Teacher',
+  school: 'Test School',
+  region: 'Test Region',
+  bio: 'Educational content creator',
+  consent: true
+};
+
+for (const [type, domain, profileConsent] of [
+  ['video4', 'language', true],
+  ['videoReflect', 'lifeCulture', false]
+]) {
+  const saved = await invoke('saveQuestion', {
+    session: videoTeacher,
+    question: {
+      countryIso: 'rw',
+      countryName: 'Rwanda',
+      domain,
+      type,
+      prompt: 'Test video learning mission',
+      answer: type === 'video4' ? 'Correct' : '',
+      choices: type === 'video4'
+        ? ['Wrong A', 'Wrong B', 'Wrong C'] : [],
+      authorProfile: sampleProfile,
+      video: sampleVideo
+    }
+  });
+
+  const id = saved.data.question.id;
+  assert.ok(id);
+
+  await invoke('submitQuestion', {
+    session: videoTeacher, questionId: id
+  });
+
+  await invoke('reviewQuestion', {
+    session: admin, questionId: id, status: 'approved'
+  });
+
+  // A teacher must not publish an approved question.
+  await invoke('setPublication', {
+    session: videoTeacher,
+    questionId: id,
+    mode: 'publish',
+    rightsConfirmed: true
+  }, 403);
+
+  await invoke('setPublication', {
+    session: admin,
+    questionId: id,
+    mode: 'publish',
+    rightsConfirmed: true,
+    profileRightsConfirmed: profileConsent
+  });
+
+  const url = 'https://fake/public/catalog?country=rw&domain=' + domain;
+  const response = await worker.fetch(new Request(url), env);
+  assert.equal(response.status, 200);
+
+  const catalog = await response.json();
+  const item = catalog.questions.find(q => q.id === id);
+
+  assert.ok(item);
+  assert.equal(item.type, type);
+  assert.equal(item.video.youtubeId, 'dQw4w9WgXcQ');
+  assert.equal(item.creator.consent, profileConsent);
+
+  if (profileConsent) {
+    assert.equal(item.creator.name, 'Test Teacher');
+  } else {
+    assert.notEqual(item.creator.name, 'Test Teacher');
+  }
+
+  const stored = db.prepare(
+    'SELECT type,video_json,author_profile_verified ' +
+    'FROM questions WHERE id=?'
+  ).get(id);
+
+  assert.equal(
+    stored.type, type === 'video4' ? 'text4' : 'free'
+  );
+  assert.equal(JSON.parse(stored.video_json).mode, type);
+  assert.equal(
+    stored.author_profile_verified,
+    profileConsent ? 1 : 0
+  );
+
+  await invoke('setPublication', {
+    session: admin,
+    questionId: id,
+    mode: 'unpublish'
+  });
+
+  const after = await worker.fetch(new Request(url), env);
+  const remaining = (await after.json()).questions;
+  assert.equal(remaining.some(q => q.id === id), false);
+
+  console.log('PASS video integration:', type);
+}
+
+console.log('PASS video author profile privacy and publication');
