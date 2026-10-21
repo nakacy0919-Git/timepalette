@@ -15,7 +15,7 @@ export function toPublishedMission(q){
      !/^[a-f0-9-]{36}$/i.test(String(q.id||''))||!String(q.prompt||'').trim())return null;
   const common={id:String(q.countryIso||'rw').toLowerCase()+'-mc-'+q.id,domain:q.domain,
     title:String(q.prompt).trim().split(/[\n。！？?]/)[0].slice(0,50),prompt:String(q.prompt).trim(),
-    points:10,requiredForMastery:false,creatorQuestionId:q.id,author:q.creator||null,video:q.video||null,
+    points:10,requiredForMastery:false,creatorQuestionId:q.id,author:q.creator||null,video:q.video||null,learning:q.learning||null,
     explanation:String(q.explanation||'').slice(0,3500),sourceUrls:Array.isArray(q.sources)?q.sources:[]};
   if(['video4','videoReflect'].includes(q.type)&&!videoEmbedValid(q.video))return null;
   if(q.type==='videoReflect')return {...common,type:'creator-video-reflection',reflection:q.video};

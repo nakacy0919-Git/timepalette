@@ -10,6 +10,10 @@ db.exec(fs.readFileSync(
   new URL('../../timepalette-r2-worker/migrations/0003_creator_video.sql',import.meta.url),
   'utf8'
 ));
+db.exec(fs.readFileSync(
+  new URL('../../timepalette-r2-worker/migrations/0004_creator_learning.sql',import.meta.url),
+  'utf8'
+));
 const wrapped={
  prepare(sql){return{_args:[],bind(...args){this._args=args;return this;},first(){return db.prepare(sql).get(...this._args)||null;},all(){return{results:db.prepare(sql).all(...this._args)};},run(){const data=db.prepare(sql).run(...this._args);return {meta:{changes:data.changes}}}};},
  async batch(statements){const out=[];db.exec('BEGIN');try{for(const s of statements)out.push(s.run());db.exec('COMMIT');return out;}catch(e){db.exec('ROLLBACK');throw e;}}

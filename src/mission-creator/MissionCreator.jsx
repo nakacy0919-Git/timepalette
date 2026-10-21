@@ -26,11 +26,17 @@ const TYPES = [
   ['video4', 'YouTube動画＋4択'],
   ['videoReflect', 'YouTube動画＋感想・記述'],
 ];
+const LEVEL_OPTIONS = [
+  ['elementary','小学生'],['juniorHigh','中学生'],
+  ['highSchoolStandard','高校生'],['highSchoolAdvanced','高校生 Challenge（英語版）'],
+];
+const STANDARD_LEVELS = ['elementary','juniorHigh','highSchoolStandard'];
 const TARGET = 10;
 const EMPTY = {
   id: '', countryIso: '', countryName: '', domain: 'language', type: 'text4',
   prompt: '', answer: '', choices: ['', '', ''], sources: ['', ''], notes: '',
   authorProfile:{name:'',school:'',region:'',bio:'',consent:false},video:{youtubeUrl:'',startSeconds:0,endSeconds:0,minChars:80,maxChars:600,keywords:[],keywordMode:'all'},
+  learning:{levels:[...STANDARD_LEVELS],challenge:{promptEn:'',answerEn:'',choicesEn:['','',''],explanationEn:''}},
   updatedAt: '',
 };
 const statusJa = {
@@ -233,12 +239,33 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
   const update = (k, value) => setForm(prev => ({ ...prev, [k]: value }));
   const updateProfile=(k,v)=>setForm(prev=>({...prev,authorProfile:{...(prev.authorProfile||{}),[k]:v}}));
   const updateVideo=(k,v)=>setForm(prev=>({...prev,video:{...(prev.video||{}),[k]:v}}));
+  const updateLearning=(next)=>setForm(prev=>({...prev,learning:{...(prev.learning||EMPTY.learning),...next}}));
+  const updateEnglish=(k,v)=>setForm(prev=>({...prev,learning:{...(prev.learning||EMPTY.learning),challenge:{...(prev.learning?.challenge||EMPTY.learning.challenge),[k]:v}}}));
   const photoCount = form.type === 'photo4' ? 4 : ['photo1', 'photoText4'].includes(form.type) ? 1 : 0;
   return <div className="mc-editor-grid">
     <section className="mc-card mc-section">
       <div className="mc-section-top"><div><div className="mc-eyebrow">MISSION EDITOR</div><h2>{form.id ? '問題を編集' : '新しい問題を作る'}</h2></div><button className="mc-quiet" onClick={onCancel} type="button"><ArrowLeft size={17} />一覧へ</button></div>
       <div className="mc-fields-row"><div className="mc-country-field"><span>国</span><CountryPicker countries={form.countries || []} value={form.countryIso} onChange={iso => update('countryIso', iso)} label="問題を作成する国" /></div><label>カテゴリー <select value={form.domain} onChange={e => update('domain', e.target.value)}>{DOMAINS.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label></div>
       <label>問題の形式 <select value={form.type} onChange={e => update('type', e.target.value)}>{TYPES.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label>
+       <fieldset className="mc-stack" style={{border:'1px solid #bfdce9',borderRadius:12,padding:12,marginTop:12}}>
+         <legend>対象学習レベル（複数選択可）</legend>
+         <p className="mc-muted">同じ問題を複数のレベルに公開できます。選択していないレベルには表示されません。</p>
+         {LEVEL_OPTIONS.map(([id,label])=><label key={id} style={{display:'flex',alignItems:'center',gap:9}}>
+           <input type="checkbox" style={{width:'auto'}} checked={(form.learning?.levels||STANDARD_LEVELS).includes(id)}
+             onChange={e=>{const current=form.learning?.levels||STANDARD_LEVELS;updateLearning({levels:e.target.checked?[...new Set([...current,id])]:current.filter(x=>x!==id)});}}/>{label}
+         </label>)}
+         {(form.learning?.levels||STANDARD_LEVELS).includes('highSchoolAdvanced')&&<div className="mc-stack" style={{borderTop:'1px solid #dbeafe',paddingTop:12}}>
+           <strong>Challenge用の英語教材（必須）</strong>
+           <label>English mission prompt<textarea rows={3} maxLength={2000} value={form.learning?.challenge?.promptEn||''} onChange={e=>updateEnglish('promptEn',e.target.value)}/></label>
+           {['text4','photoText4','video4'].includes(form.type)&&<>
+             <label>Correct answer (English)<input maxLength={1500} value={form.learning?.challenge?.answerEn||''} onChange={e=>updateEnglish('answerEn',e.target.value)}/></label>
+             {[0,1,2].map(i=><label key={i}>Wrong answer {i+1} (English)<input maxLength={600} value={form.learning?.challenge?.choicesEn?.[i]||''}
+               onChange={e=>updateEnglish('choicesEn',[0,1,2].map(j=>i===j?e.target.value:(form.learning?.challenge?.choicesEn?.[j]||'')))}/></label>)}
+           </>}
+           <label>Explanation (English, optional)<textarea rows={2} maxLength={3500} value={form.learning?.challenge?.explanationEn||''} onChange={e=>updateEnglish('explanationEn',e.target.value)}/></label>
+           <p className="mc-hint">Challengeでは英語版を表示します。英語の正確さは先生・管理者が確認してください。ゲーム操作ボタン全体の英語化は次の段階で対応します。</p>
+         </div>}
+       </fieldset>
        <label>問題文・活動の指示 <textarea rows={4} value={form.prompt} maxLength={2000} onChange={e => update('prompt', e.target.value)} placeholder="例：写真を見て、ネパールで人気の料理を選んでください。" /></label>
        {['video4','videoReflect'].includes(form.type) && <fieldset className="mc-stack" style={{border:'1px solid #bfdbfe',borderRadius:12,padding:12,marginTop:12}}><legend>YouTube教材</legend>
          <label>YouTube動画のURL <input type="url" value={form.video?.youtubeUrl||(form.video?.youtubeId?'https://www.youtube.com/watch?v='+form.video.youtubeId:'')} onChange={e=>updateVideo('youtubeUrl',e.target.value)} placeholder="https://www.youtube.com/watch?v=..." /></label>

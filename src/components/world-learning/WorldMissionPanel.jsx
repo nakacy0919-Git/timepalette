@@ -17,6 +17,7 @@ import {
 } from 'react';
 
 import { normalizePublishedCatalog } from '../../utils/publishedMissionCatalog.js';
+import { forCreatorLearningLevel } from '../../utils/creatorMissionLevels.js';
 import { isCreatorFirstDomain, combineDomainMissions } from '../../utils/creatorFirstMissionPolicy.js';
 
 import {
@@ -2431,7 +2432,10 @@ export default function WorldMissionPanel({
     [];
 
 
-  const hasCreatorMissions = creatorMissions.length > 0;
+  const availableCreatorMissions = creatorMissions
+    .map(mission => forCreatorLearningLevel(mission, selectedLearningLevel))
+    .filter(Boolean);
+  const hasCreatorMissions = availableCreatorMissions.length > 0;
   const selectedAdventurePackage =
     selectedDomain
       ? getWorldAdventureDomainPackage(
@@ -2511,7 +2515,7 @@ export default function WorldMissionPanel({
     ? combineDomainMissions(
         selectedDomain,
         builtInMissions,
-        creatorMissions.map(m => applyLearningLevelToMission(m, selectedLearningLevel))
+        availableCreatorMissions.map(m => applyLearningLevelToMission(m, selectedLearningLevel))
       )
     : [];
 
@@ -3854,7 +3858,7 @@ export default function WorldMissionPanel({
                 {(creatorLoading || creatorError || hasCreatorMissions) && (
                   <div className="mb-5 rounded-2xl border border-blue-200 bg-blue-50 p-5 text-sm font-bold text-blue-900">
                     {creatorLoading ? '公開ミッションを読み込み中…' : creatorError ? creatorError :
-                      '先生たちが作成したミッション：'+creatorMissions.length+' 問（公開枠は最大10問）'}
+                      'このレベルで遊べる公開ミッション：'+availableCreatorMissions.length+' 問（公開枠は最大10問）'}
                     {creatorError && <button className="ml-3 underline" type="button" onClick={()=>setCreatorRefresh(x=>x+1)}>再試行</button>}
                   </div>
                 )}
@@ -4406,7 +4410,7 @@ export default function WorldMissionPanel({
         open={
           languageAdventureOpen
         }
-        creatorMissionCount={creatorMissions.length}
+        creatorMissionCount={availableCreatorMissions.length}
         onOpenCreatorMissions={() => {
           setLanguageAdventureOpen(false);
           setActiveMission(null);

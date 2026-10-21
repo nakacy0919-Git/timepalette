@@ -35,6 +35,20 @@ function cleanVideo(input){
  return {youtubeId,startSeconds,endSeconds,minChars,maxChars,keywordMode:p.keywordMode==='any'?'any':'all',
  keywords:(Array.isArray(p.keywords)?p.keywords:String(p.keywords||'').split(/[、,\n]/)).slice(0,8).map(s=>String(s).trim().slice(0,30)).filter(Boolean)};
 }
+const LEARNING_LEVELS = ['elementary','juniorHigh','highSchoolStandard','highSchoolAdvanced'];
+const DEFAULT_LEARNING_LEVELS = ['elementary','juniorHigh','highSchoolStandard'];
+function cleanLearning(input){
+ const p=input&&typeof input==='object'?input:{};
+ const levels=Array.isArray(p.levels)
+  ? [...new Set(p.levels.filter(level=>LEARNING_LEVELS.includes(level)))].slice(0,4)
+  : [...DEFAULT_LEARNING_LEVELS];
+ const en=p.challenge&&typeof p.challenge==='object'?p.challenge:{};
+ const trim=(v,max)=>String(v||'').trim().slice(0,max);
+ return {levels,challenge:{promptEn:trim(en.promptEn,2000),answerEn:trim(en.answerEn,1500),
+  choicesEn:(Array.isArray(en.choicesEn)?en.choicesEn:[]).slice(0,3).map(x=>trim(x,600)),
+  explanationEn:trim(en.explanationEn,3500)}};
+}
+
 function storedQuestionType(type){
  return type==='video4'?'text4':type==='videoReflect'?'free':type;
 }
@@ -47,7 +61,7 @@ function logicalQuestionType(q){
 function rowToQuestion(q,media=[]){return {
  id:q.id,countryIso:q.country_iso,countryName:q.country_name,domain:q.domain,type:logicalQuestionType(q),
  prompt:q.prompt,answer:q.answer,choices:parseArray(q.choices_json),sources:parseArray(q.sources_json),
- notes:q.notes,authorId:q.author_id,authorName:q.author_name,authorProfile:parseObject(q.author_profile_json),video:parseObject(q.video_json),authorProfileVerified:q.author_profile_verified===1,status:q.status,reviewNote:q.review_note,
+ notes:q.notes,learning:cleanLearning(parseObject(q.learning_json)),authorId:q.author_id,authorName:q.author_name,authorProfile:parseObject(q.author_profile_json),video:parseObject(q.video_json),authorProfileVerified:q.author_profile_verified===1,status:q.status,reviewNote:q.review_note,
  createdAt:q.created_at,updatedAt:q.updated_at,
  media:media.map(m=>({id:m.id,slot:m.slot,fileName:m.file_name,createdAt:m.created_at}))};}
 function visible(q,user){return user.role==='admin'||(q.status!=='deleted'&&(q.author_id===user.id||q.status!=='draft'));}
@@ -57,6 +71,16 @@ function mediaSlots(type){return type==='photo4'?[1,2,3,4]:['photoText4','photo1
 async function getQuestion(env,id){requireThat(UUID.test(String(id||'')),'問題IDを確認してください。');const q=await env.DB.prepare('SELECT * FROM questions WHERE id=?').bind(id).first();requireThat(q,'問題が見つかりません。',404);return q;}
 async function getMediaRows(env,id){return (await env.DB.prepare('SELECT * FROM media WHERE question_id=? ORDER BY slot').bind(id).all()).results;}
 async function assertComplete(env,q){
+ const learning=cleanLearning(parseObject(q.learning_json));
+ requireThat(learning.levels.length>0,'対象学習レベルを1つ以上選択してください。');
+ if(learning.levels.includes('highSchoolAdvanced')){
+  const en=learning.challenge;
+  requireThat(en.promptEn,'Challenge用の英語問題文が必要です。');
+  if(['text4','photoText4','video4'].includes(q.type)){
+   const options=[en.answerEn,...en.choicesEn];
+   requireThat(options.length===4&&options.every(Boolean)&&new Set(options).size===4,'Challenge用の英語正答・誤答3つを入力してください。');
+  }
+ }
  requireThat(q.prompt.trim()&&isoValid(q.country_iso)&&domainValid(q.domain)&&TYPES.includes(q.type),'国・カテゴリー・問題文を入力してください。');
  if(['text4','photoText4','video4'].includes(q.type)){
   const wrong=parseArray(q.choices_json).map(s=>String(s).trim());
@@ -214,6 +238,7 @@ async function saveQuestion(env,user,args){
  const choices=(Array.isArray(p.choices)?p.choices:[]).slice(0,3).map(x=>String(x??'').slice(0,600));
  const sources=(Array.isArray(p.sources)?p.sources:[]).slice(0,2).map(x=>String(x||'').trim().slice(0,1500)).filter(x=>/^https?:\/\//i.test(x));
   const profile=cleanProfile(p.authorProfile);
+  const learning=cleanLearning(p.learning);
   const video=cleanVideo(p.video);video.mode=['video4','videoReflect'].includes(p.type)?p.type:'';
  let prev=null;if(id)prev=await getQuestion(env,id);
  if(prev){ownerOrAdmin(prev,user);requireThat(!['published','deleted'].includes(prev.status),'公開中・削除済みの問題は編集できません。');
@@ -222,14 +247,14 @@ async function saveQuestion(env,user,args){
  const next={id:qid,country_iso:iso,country_name:String(p.countryName||'').slice(0,90),domain:p.domain,type:p.type,prompt,answer,
  choices_json:JSON.stringify(choices),sources_json:JSON.stringify(sources),notes,
  author_id:prev?.author_id||user.id,author_name:(profile.name && (!prev||user.role==='admin'||prev.author_id===user.id))?profile.name:(prev?.author_name||user.name),
-  author_profile_json:JSON.stringify(profile),video_json:JSON.stringify(video),author_profile_verified:0,
+  author_profile_json:JSON.stringify(profile),video_json:JSON.stringify(video),learning_json:JSON.stringify(learning),author_profile_verified:0,
  status:finalize||(prev&&user.role==='admin'?prev.status:'draft'),review_note:prev?.review_note||'',created_at:prev?.created_at||stamp,updated_at:stamp};
  if(finalize)await assertComplete(env,next);
- if(prev){const r=await env.DB.prepare(`UPDATE questions SET country_iso=?,country_name=?,domain=?,type=?,prompt=?,answer=?,choices_json=?,sources_json=?,notes=?,author_name=?,author_profile_json=?,video_json=?,author_profile_verified=0,status=?,review_note=?,updated_at=?,version=version+1 WHERE id=? AND version=? AND status NOT IN('published','deleted')`)
-  .bind(next.country_iso,next.country_name,next.domain,storedQuestionType(next.type),next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.author_name,next.author_profile_json,next.video_json,next.status,next.review_note,next.updated_at,qid,prev.version).run();
+ if(prev){const r=await env.DB.prepare(`UPDATE questions SET country_iso=?,country_name=?,domain=?,type=?,prompt=?,answer=?,choices_json=?,sources_json=?,notes=?,author_name=?,author_profile_json=?,video_json=?,learning_json=?,author_profile_verified=0,status=?,review_note=?,updated_at=?,version=version+1 WHERE id=? AND version=? AND status NOT IN('published','deleted')`)
+  .bind(next.country_iso,next.country_name,next.domain,storedQuestionType(next.type),next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.author_name,next.author_profile_json,next.video_json,next.learning_json,next.status,next.review_note,next.updated_at,qid,prev.version).run();
   requireThat(r.meta.changes===1,'他の先生が更新しました。再読み込みしてください。',409);
- }else{await env.DB.prepare(`INSERT INTO questions(id,country_iso,country_name,domain,type,prompt,answer,choices_json,sources_json,notes,author_id,author_name,author_profile_json,video_json,author_profile_verified,status,review_note,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`)
-  .bind(qid,next.country_iso,next.country_name,next.domain,storedQuestionType(next.type),next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.author_id,next.author_name,next.author_profile_json,next.video_json,0,next.status,next.review_note,next.created_at,next.updated_at).run();}
+ }else{await env.DB.prepare(`INSERT INTO questions(id,country_iso,country_name,domain,type,prompt,answer,choices_json,sources_json,notes,author_id,author_name,author_profile_json,video_json,learning_json,author_profile_verified,status,review_note,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`)
+  .bind(qid,next.country_iso,next.country_name,next.domain,storedQuestionType(next.type),next.prompt,next.answer,next.choices_json,next.sources_json,next.notes,next.author_id,next.author_name,next.author_profile_json,next.video_json,next.learning_json,0,next.status,next.review_note,next.created_at,next.updated_at).run();}
  return {question:rowToQuestion(next,prev?await getMediaRows(env,qid):[])};
 }
 function b64ToBytes(s){const binary=atob(s);const result=new Uint8Array(binary.length);for(let i=0;i<binary.length;i++)result[i]=binary.charCodeAt(i);return result;}
@@ -335,7 +360,7 @@ async function publicCatalog(env,url){
  const rows=(await env.DB.prepare("SELECT * FROM questions WHERE country_iso=? AND domain=? AND status='published'").bind(iso,domain).all()).results;
  const qmap=new Map(rows.map(q=>[q.id,q]));const media=(await env.DB.prepare(`SELECT m.question_id,m.slot FROM media m JOIN questions q ON q.id=m.question_id WHERE q.country_iso=? AND q.domain=? AND q.status='published' AND m.r2_status='ready'`).bind(iso,domain).all()).results;
  const byQ=new Map();for(const m of media){if(!byQ.has(m.question_id))byQ.set(m.question_id,[]);byQ.get(m.question_id).push({slot:m.slot});}
- const questions=ids.filter(id=>qmap.has(id)).map(id=>{const q=qmap.get(id);return {id:q.id,countryIso:q.country_iso,domain:q.domain,type:logicalQuestionType(q),prompt:q.prompt.slice(0,2000),answer:q.answer.slice(0,1500),choices:parseArray(q.choices_json),explanation:q.notes.slice(0,3500),sources:parseArray(q.sources_json).filter(s=>/^https?:\/\//i.test(String(s))).slice(0,2),media:byQ.get(q.id)||[],video:parseObject(q.video_json),
+ const questions=ids.filter(id=>qmap.has(id)).map(id=>{const q=qmap.get(id);return {id:q.id,countryIso:q.country_iso,domain:q.domain,type:logicalQuestionType(q),prompt:q.prompt.slice(0,2000),answer:q.answer.slice(0,1500),choices:parseArray(q.choices_json),explanation:q.notes.slice(0,3500),sources:parseArray(q.sources_json).filter(s=>/^https?:\/\//i.test(String(s))).slice(0,2),media:byQ.get(q.id)||[],video:parseObject(q.video_json),learning:cleanLearning(parseObject(q.learning_json)),
  creator:q.author_profile_verified===1&&parseObject(q.author_profile_json).consent===true?cleanProfile(parseObject(q.author_profile_json)):{name:'教材協力者',school:'',region:'',bio:'',consent:false}};});
  return new Response(JSON.stringify({ok:true,questions}),{headers:{...corsHeaders,'Content-Type':'application/json'}});
 }
