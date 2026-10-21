@@ -4,6 +4,7 @@ import { getWorldLearningCountries } from '../utils/worldLearningRegistry';
 import { creatorRequest } from './api';
 import { filterBankQuestions } from './filterBankQuestions.js';
 import PublishedMissionManager from './PublishedMissionManager.jsx';
+import MissionFactoryImport from './MissionFactoryImport.jsx';
 import { BULK_LIMIT, createBulkPlan, eligibleForBulk, executeBulkPlan } from './bulkActions.js';
 import { blobToBase64, optimizeImage } from './image';
 import {videoEmbedUrl} from '../utils/creatorVideo.js';
@@ -1070,13 +1071,14 @@ export default function MissionCreator() {
     {!active ? (session ? <div className="mc-access-wrap"><div role="status" className="mc-card mc-access">前回のログインを確認しています…</div></div> : <Access cloudflare={cloudflare} onLogin={login} onRegister={register} registrationToken={cloudflare?'':registrationToken} onBack={()=>{setRegistrationToken('');setError('');}} busy={busy} error={error}/>) : <>
       <header className="mc-header"><div className="mc-header-brand"><Compass size={24}/> <strong>TimePalette</strong><span>MISSION CREATOR</span></div><div className="mc-header-user"><span>{demo?'デモ（保存不可）':`${user.name} ／ ${user.role==='admin'?'管理者':'参加教師'}`}</span><button type="button" className="mc-quiet" onClick={logout}><LogOut size={17}/>終了</button></div></header>
       <div className="mc-app"><aside className="mc-sidebar"><nav>
-        {[['dashboard',LayoutDashboard,'制作進捗'],['bank',BookOpen,'みんなの問題'],['publication',ShieldCheck,'公開ミッション管理'],['editor',FilePlus2,'問題を作る']].filter(([id])=>id!=='publication'||user?.role==='admin').map(([id,Icon,label])=><button key={id} className={page===id?'active':''} type="button" onClick={()=>id==='editor'?startNew(): (setPage(id),setError(''))}><Icon size={18}/>{label}</button>)}
+        {[['dashboard',LayoutDashboard,'制作進捗'],['bank',BookOpen,'みんなの問題'],['publication',ShieldCheck,'公開ミッション管理'],['factory',UploadCloud,'AI 5問一括登録'],['editor',FilePlus2,'問題を作る']].filter(([id])=>id!=='publication'||user?.role==='admin').map(([id,Icon,label])=><button key={id} className={page===id?'active':''} type="button" onClick={()=>id==='editor'?startNew(): (setPage(id),setError(''))}><Icon size={18}/>{label}</button>)}
         {user?.role==='admin' && <div className="mc-admin-hint"><ShieldCheck size={17}/>問題一覧で問題の編集・承認・削除・復元ができます。</div>}
       </nav><p>{cloudflare?'Cloudflare D1 ＋ R2':'Google Sheets ＋ Drive'} 連携<br/>Chrome / Edge 推奨</p></aside><main className="mc-main">
         {demo && <div className="mc-demo-banner"><CircleHelp size={18}/>これは操作確認用の画面です。写真のWebP変換とプレビューを試せますが、保存・承認はできません。</div>}
-        <div className="mc-main-heading"><div><div className="mc-eyebrow">GLOBAL COLLABORATION</div><h1>{page==='dashboard'?'制作進捗':page==='bank'?'みんなの問題':page==='publication'?'公開ミッション管理':'問題を作る'}</h1><p>197か国 × 6カテゴリー × 各10問を、世界の先生たちと作る。</p></div>{page!=='editor'&&<button className="mc-primary" type="button" onClick={startNew}><FilePlus2 size={18}/>新しく作成</button>}</div>
+        <div className="mc-main-heading"><div><div className="mc-eyebrow">GLOBAL COLLABORATION</div><h1>{page==='dashboard'?'制作進捗':page==='bank'?'みんなの問題':page==='publication'?'公開ミッション管理':page==='factory'?'AI 5問一括登録':'問題を作る'}</h1><p>197か国 × 6カテゴリー × 各10問を、世界の先生たちと作る。</p></div>{page!=='editor'&&<button className="mc-primary" type="button" onClick={startNew}><FilePlus2 size={18}/>新しく作成</button>}</div>
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
+        {!loadingData && page==='factory'&&<MissionFactoryImport session={session} questions={questions} user={user} demo={demo} onDone={reload}/>}
         {!loadingData && page==='dashboard'&&<><Dashboard countries={countries} selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} questions={questions} progress={progress} user={user} onSetProgress={setManual} busy={busy||demo}/></>}
         {!loadingData && page==='publication' && user?.role==='admin' &&
           <PublishedMissionManager cloudflare={cloudflare} countries={countries} questions={questions} session={session}

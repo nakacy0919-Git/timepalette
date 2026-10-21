@@ -1,0 +1,54 @@
+{
+  "version": "timepalette-mission-factory/v1",
+  "questions": [
+    {
+      "countryIso": "rw",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【テンプレート1・要修正】画像の内容と一致する説明を選びましょう。",
+      "answer": "選択肢A（正答）",
+      "choices": ["選択肢B", "選択肢C", "選択肢D"],
+      "notes": "出典と正答の理由を必ず確認して書き換えてください。",
+      "sources": [],
+      "learning": {"levels": ["elementary", "juniorHigh"]},
+      "images": {"1": "images/question-01.png"}
+    },
+    {
+      "countryIso": "rw", "domain": "lifeCulture", "type": "photoText4",
+      "prompt": "【テンプレート2・要修正】写真からわかることは何でしょう？",
+      "answer": "選択肢A（正答）", "choices": ["選択肢B", "選択肢C", "選択肢D"],
+      "notes": "出典・画像と問題文の整合性を確認。", "sources": [],
+      "learning": {"levels": ["juniorHigh", "highSchoolStandard"]},
+      "images": {"1": "images/question-02.png"}
+    },
+    {
+      "countryIso": "rw", "domain": "japanConnection", "type": "photoText4",
+      "prompt": "【テンプレート3・要修正】日本とのつながりを考えましょう。",
+      "answer": "選択肢A（正答）", "choices": ["選択肢B", "選択肢C", "選択肢D"],
+      "notes": "日本とのつながりを裏付ける出典を確認。", "sources": [],
+      "learning": {"levels": ["juniorHigh", "highSchoolStandard"]},
+      "images": {"1": "images/question-03.png"}
+    },
+    {
+      "countryIso": "rw", "domain": "language", "type": "photoText4",
+      "prompt": "【テンプレート4・要修正】写真の場面でふさわしい表現を選びましょう。",
+      "answer": "選択肢A（正答）", "choices": ["選択肢B", "選択肢C", "選択肢D"],
+      "notes": "語句の意味・使われる場面・発音情報を確認。", "sources": [],
+      "learning": {"levels": ["elementary", "juniorHigh"]},
+      "images": {"1": "images/question-04.png"}
+    },
+    {
+      "countryIso": "rw", "domain": "thinkConnect", "type": "photoText4",
+      "prompt": "【テンプレート5・要修正】写真から比較できることを選びましょう。",
+      "answer": "選択肢A（正答）", "choices": ["選択肢B", "選択肢C", "選択肢D"],
+      "notes": "多様な視点で答えを検証。", "sources": [],
+      "learning": {"levels": ["juniorHigh", "highSchoolStandard", "highSchoolAdvanced"], "challenge": {
+        "promptEn": "Which statement best describes the image?",
+        "answerEn": "Correct statement",
+        "choicesEn": ["Wrong statement B", "Wrong statement C", "Wrong statement D"],
+        "explanationEn": "Explain why the correct answer is supported by the image."
+      }},
+      "images": {"1": "images/question-05.png"}
+    }
+  ]
+}
