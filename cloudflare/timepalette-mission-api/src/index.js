@@ -44,9 +44,17 @@ function cleanLearning(input){
   : [...DEFAULT_LEARNING_LEVELS];
  const en=p.challenge&&typeof p.challenge==='object'?p.challenge:{};
  const trim=(v,max)=>String(v||'').trim().slice(0,max);
- return {levels,challenge:{promptEn:trim(en.promptEn,2000),answerEn:trim(en.answerEn,1500),
+ const base={levels,challenge:{promptEn:trim(en.promptEn,2000),answerEn:trim(en.answerEn,1500),
   choicesEn:(Array.isArray(en.choicesEn)?en.choicesEn:[]).slice(0,3).map(x=>trim(x,600)),
   explanationEn:trim(en.explanationEn,3500)}};
+ const v=p.voice&&typeof p.voice==='object'&&!Array.isArray(p.voice)?p.voice:null;
+ if(!v)return base;
+ const rawLang=trim(v.lang||'en-US',35);
+ const lang=/^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8}){0,3}$/i.test(rawLang)?rawLang:'en-US';
+ const alternatives=(Array.isArray(v.alternatives)?v.alternatives:[]).slice(0,5)
+   .map(x=>trim(x,180)).filter(Boolean);
+ return {...base,voice:{enabled:v.enabled===true,lang,prompt:trim(v.prompt,350),
+   target:trim(v.target,180),alternatives}};
 }
 
 function storedQuestionType(type){
@@ -73,6 +81,10 @@ async function getMediaRows(env,id){return (await env.DB.prepare('SELECT * FROM 
 async function assertComplete(env,q){
  const learning=cleanLearning(parseObject(q.learning_json));
  requireThat(learning.levels.length>0,'対象学習レベルを1つ以上選択してください。');
+ if(learning.voice?.enabled){
+  requireThat(learning.voice.target,'音声練習のお手本文を入力してください。');
+  requireThat(/^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8}){0,3}$/i.test(learning.voice.lang),'音声認識言語コードが不正です。');
+ }
  if(learning.levels.includes('highSchoolAdvanced')){
   const en=learning.challenge;
   requireThat(en.promptEn,'Challenge用の英語問題文が必要です。');

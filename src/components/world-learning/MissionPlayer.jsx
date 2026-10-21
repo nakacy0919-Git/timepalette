@@ -34,6 +34,7 @@ import GlobalChallengeMissionGame from './GlobalChallengeMissionGame';
 import SourceQuestMissionGame from './SourceQuestMissionGame';
 import MissionMaterialRenderer from './MissionMaterialRenderer';
 import {CreatorVideoEmbed,CreatorVideoReflectionGame} from './CreatorVideoMission.jsx';
+import CreatorVoicePractice from './CreatorVoicePractice.jsx';
 
 const TIME_MISSION_TYPES =
   new Set([
@@ -2085,6 +2086,9 @@ const correct =
                   placement="beforeChallenge"
                   className="mb-6"
                 />
+
+                {isCreatorMission && mission.voice?.enabled &&
+                  <CreatorVoicePractice key={mission.id} mission={mission}/>}
 
                 {
                   renderGame()

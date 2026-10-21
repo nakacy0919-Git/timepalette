@@ -37,7 +37,8 @@ const EMPTY = {
   id: '', countryIso: '', countryName: '', domain: 'language', type: 'text4',
   prompt: '', answer: '', choices: ['', '', ''], sources: ['', ''], notes: '',
   authorProfile:{name:'',school:'',region:'',bio:'',consent:false},video:{youtubeUrl:'',startSeconds:0,endSeconds:0,minChars:80,maxChars:600,keywords:[],keywordMode:'all'},
-  learning:{levels:[...STANDARD_LEVELS],challenge:{promptEn:'',answerEn:'',choicesEn:['','',''],explanationEn:''}},
+  learning:{levels:[...STANDARD_LEVELS],challenge:{promptEn:'',answerEn:'',choicesEn:['','',''],explanationEn:''},
+    voice:{enabled:false,lang:'en-US',prompt:'',target:'',alternatives:[]}},
   updatedAt: '',
 };
 const statusJa = {
@@ -242,6 +243,8 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
   const updateVideo=(k,v)=>setForm(prev=>({...prev,video:{...(prev.video||{}),[k]:v}}));
   const updateLearning=(next)=>setForm(prev=>({...prev,learning:{...(prev.learning||EMPTY.learning),...next}}));
   const updateEnglish=(k,v)=>setForm(prev=>({...prev,learning:{...(prev.learning||EMPTY.learning),challenge:{...(prev.learning?.challenge||EMPTY.learning.challenge),[k]:v}}}));
+  const updateVoice=(k,v)=>setForm(prev=>({...prev,learning:{...(prev.learning||EMPTY.learning),
+    voice:{...EMPTY.learning.voice,...(prev.learning?.voice||{}),[k]:v}}}));
   const photoCount = form.type === 'photo4' ? 4 : ['photo1', 'photoText4'].includes(form.type) ? 1 : 0;
   return <div className="mc-editor-grid">
     <section className="mc-card mc-section">
@@ -265,6 +268,27 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
            </>}
            <label>Explanation (English, optional)<textarea rows={2} maxLength={3500} value={form.learning?.challenge?.explanationEn||''} onChange={e=>updateEnglish('explanationEn',e.target.value)}/></label>
            <p className="mc-hint">Challengeでは英語版を表示します。英語の正確さは先生・管理者が確認してください。ゲーム操作ボタン全体の英語化は次の段階で対応します。</p>
+         </div>}
+       </fieldset>
+       <fieldset className="mc-stack" style={{border:'1px solid #bae6fd',borderRadius:12,padding:12,marginTop:12}}>
+         <legend>声で練習する（音声認識・任意）</legend>
+         <label style={{display:'flex',alignItems:'center',gap:8}}><input type="checkbox" style={{width:'auto'}}
+           checked={form.learning?.voice?.enabled===true} onChange={e=>updateVoice('enabled',e.target.checked)}/>
+           この問題に音声練習を付ける</label>
+         {form.learning?.voice?.enabled===true && <div className="mc-stack">
+           <p className="mc-hint">4択の正解判定は従来どおりです。音声練習は得点に影響しません。</p>
+           <label>発話言語コード（BCP 47）<input value={form.learning?.voice?.lang||'en-US'} maxLength={35}
+             onChange={e=>updateVoice('lang',e.target.value)} placeholder="en-US / fr-FR / sw-KE"/></label>
+           <p className="mc-hint">対応可否は端末・ブラウザごとに異なります。対応していない言語は手入力で練習できます。</p>
+           <label>発話する場面の指示（任意）<textarea rows={2} maxLength={350}
+             value={form.learning?.voice?.prompt||''} onChange={e=>updateVoice('prompt',e.target.value)}
+             placeholder="例：写真の人に、英語で挨拶してみましょう。"/></label>
+           <label>お手本の表現（必須）<input maxLength={180} value={form.learning?.voice?.target||''}
+             onChange={e=>updateVoice('target',e.target.value)} placeholder="Nice to meet you"/></label>
+           <label>許容する言い換え（任意・1行に1つ、最大5件）<textarea rows={3}
+             value={(form.learning?.voice?.alternatives||[]).join('\n')}
+             onChange={e=>updateVoice('alternatives',e.target.value.split(/\r?\n/).slice(0,5))}/></label>
+           <p className="mc-hint">学習者の音声認識が外部サービスを使用する場合があります。TimePaletteでは録音データ・認識結果を保存しません。音声認識は発音の精密な採点ではありません。</p>
          </div>}
        </fieldset>
        <label>問題文・活動の指示 <textarea rows={4} value={form.prompt} maxLength={2000} onChange={e => update('prompt', e.target.value)} placeholder="例：写真を見て、ネパールで人気の料理を選んでください。" /></label>

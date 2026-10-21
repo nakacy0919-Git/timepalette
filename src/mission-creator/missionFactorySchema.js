@@ -88,9 +88,21 @@ export function validateFactoryManifest(manifest,existingQuestions=[]) {
           new Set([challenge.answerEn,...challenge.choicesEn]).size!==4))
         throw new Error(`${label}: Challengeには英語の正答と誤答3つが必要です。`);
     }
+    const rawVoice=raw.learning?.voice;
+    let voice;
+    if(rawVoice!==undefined){
+      if(!rawVoice||typeof rawVoice!=='object'||Array.isArray(rawVoice))throw new Error(`${label}: voice設定が不正です。`);
+      const enabled=rawVoice.enabled===true;
+      const lang=stringField(rawVoice.lang||'en-US',`${label} voice.lang`,35,{required:true});
+      if(!/^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8}){0,3}$/i.test(lang))throw new Error(`${label}: 発話言語コードが不正です。`);
+      const target=stringField(rawVoice.target||'',`${label} voice.target`,180,{required:enabled});
+      const promptVoice=stringField(rawVoice.prompt||'',`${label} voice.prompt`,350);
+      const alternatives=stringArray(rawVoice.alternatives||[],`${label} voice.alternatives`,5,180,{required:false});
+      voice={enabled,lang,target,prompt:promptVoice,alternatives};
+    }
     const images=normalizedImages(raw.images,type,label);
     const question={countryIso,domain,type,prompt,answer,choices,
-      notes,sources,learning:{levels:[...levels],challenge},
+      notes,sources,learning:{levels:[...levels],challenge,...(voice?{voice}:{})},
       authorProfile:{name:'',school:'',region:'',bio:'',consent:false}};
     const key=normalizedFactoryPrompt(question);
     if(seen.has(key))throw new Error(`${label}: ZIP内で問題文が重複しています。`);
