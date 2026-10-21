@@ -239,14 +239,6 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
       <div className="mc-section-top"><div><div className="mc-eyebrow">MISSION EDITOR</div><h2>{form.id ? '問題を編集' : '新しい問題を作る'}</h2></div><button className="mc-quiet" onClick={onCancel} type="button"><ArrowLeft size={17} />一覧へ</button></div>
       <div className="mc-fields-row"><div className="mc-country-field"><span>国</span><CountryPicker countries={form.countries || []} value={form.countryIso} onChange={iso => update('countryIso', iso)} label="問題を作成する国" /></div><label>カテゴリー <select value={form.domain} onChange={e => update('domain', e.target.value)}>{DOMAINS.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label></div>
       <label>問題の形式 <select value={form.type} onChange={e => update('type', e.target.value)}>{TYPES.map(([id, text]) => <option key={id} value={id}>{text}</option>)}</select></label>
-       <fieldset className="mc-stack" style={{border:'1px solid #dbeafe',borderRadius:12,padding:12,marginTop:12}}><legend>作成者プロフィール</legend>
-         <label>表示する作成者名 <input value={form.authorProfile?.name||''} maxLength={60} onChange={e=>updateProfile('name',e.target.value)} placeholder="例：山田 花子"/></label>
-         <label>学校・団体（任意） <input value={form.authorProfile?.school||''} maxLength={100} onChange={e=>updateProfile('school',e.target.value)}/></label>
-         <label>地域・国（任意） <input value={form.authorProfile?.region||''} maxLength={80} onChange={e=>updateProfile('region',e.target.value)}/></label>
-         <label>紹介文（任意） <textarea rows={2} maxLength={450} value={form.authorProfile?.bio||''} onChange={e=>updateProfile('bio',e.target.value)}/></label>
-         <label><input type="checkbox" checked={form.authorProfile?.consent===true} onChange={e=>updateProfile('consent',e.target.checked)}/> 名前・プロフィールを本番サイトに公開することに同意します（管理者による公開確認が必要）</label>
-         <small>共通PINでの作成者名は本人確認済みではありません。管理者が公開前に確認します。</small>
-       </fieldset>
        <label>問題文・活動の指示 <textarea rows={4} value={form.prompt} maxLength={2000} onChange={e => update('prompt', e.target.value)} placeholder="例：写真を見て、ネパールで人気の料理を選んでください。" /></label>
        {['video4','videoReflect'].includes(form.type) && <fieldset className="mc-stack" style={{border:'1px solid #bfdbfe',borderRadius:12,padding:12,marginTop:12}}><legend>YouTube教材</legend>
          <label>YouTube動画のURL <input type="url" value={form.video?.youtubeUrl||(form.video?.youtubeId?'https://www.youtube.com/watch?v='+form.video.youtubeId:'')} onChange={e=>updateVideo('youtubeUrl',e.target.value)} placeholder="https://www.youtube.com/watch?v=..." /></label>
@@ -273,6 +265,14 @@ function Editor({ form, setForm, photos, onPhoto, onSave, onSubmit, onCancel, bu
       <label>参考URLをもう1件（任意） <input type="url" placeholder="https://..." value={form.sources[1] || ''} onChange={e => update('sources', [form.sources[0] || '', e.target.value])}/></label>
       <label>解説・出典・アイデア（任意） <textarea rows={3} value={form.notes} onChange={e => update('notes', e.target.value)} placeholder="教材の出典や、写真・Webページをどう使うかなど" /></label>
       <p className="mc-hint">外部サイトの写真や記事を転載・埋め込む場合は、管理者が掲載条件を確認します。</p>
+       <fieldset className="mc-stack" style={{border:'1px solid #dbeafe',borderRadius:12,padding:12,marginTop:12}}><legend>作成者プロフィール</legend>
+         <label>表示する作成者名 <input value={form.authorProfile?.name||''} maxLength={60} onChange={e=>updateProfile('name',e.target.value)} placeholder="例：山田 花子"/></label>
+         <label>学校・団体（任意） <input value={form.authorProfile?.school||''} maxLength={100} onChange={e=>updateProfile('school',e.target.value)}/></label>
+         <label>地域・国（任意） <input value={form.authorProfile?.region||''} maxLength={80} onChange={e=>updateProfile('region',e.target.value)}/></label>
+         <label>紹介文（任意） <textarea rows={2} maxLength={450} value={form.authorProfile?.bio||''} onChange={e=>updateProfile('bio',e.target.value)}/></label>
+         <label><input type="checkbox" checked={form.authorProfile?.consent===true} onChange={e=>updateProfile('consent',e.target.checked)}/> 名前・プロフィールを本番サイトに公開することに同意します（管理者による公開確認が必要）</label>
+         <small>共通PINでの作成者名は本人確認済みではありません。管理者が公開前に確認します。</small>
+       </fieldset>
       {error && <p role="alert" className="mc-error">{error}</p>}
       {busy && saveStage && <p role="status" aria-live="polite" className="mc-save-progress">{saveStage}</p>}
       <div className="mc-actions"><button className="mc-outline" disabled={busy || demo} type="button" onClick={onSave}>{busy ? '保存中…' : isAdmin && form.id ? '変更を保存' : '下書きを保存'}</button><button className="mc-primary" disabled={busy || demo} type="button" onClick={onSubmit}>{busy ? '処理中…' : isAdmin ? '保存して合格' : '確認して提出する'}</button></div>
