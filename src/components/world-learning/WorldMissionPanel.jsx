@@ -17,6 +17,7 @@ import {
 } from 'react';
 
 import { normalizePublishedCatalog } from '../../utils/publishedMissionCatalog.js';
+import { isCreatorFirstDomain, combineDomainMissions } from '../../utils/creatorFirstMissionPolicy.js';
 
 import {
   createPortal,
@@ -2497,26 +2498,21 @@ export default function WorldMissionPanel({
     );
 
 
-  const builtInMissions = selectedDomain
+  // Place and Time keep their built-in missions; four other categories
+  // display ONLY approved/published Mission Creator questions.
+  // Original JSON packages are intentionally retained for rollback.
+  const builtInMissions = selectedDomain && !isCreatorFirstDomain(selectedDomain)
     ? selectedAdventurePackage
       ? selectedAdventurePackage.missions.map(mission=>
           applyLearningLevelToMission({...mission,domain:selectedDomain},selectedLearningLevel))
       : missions.filter(mission=>mission.domain===selectedDomain)
     : [];
-  // Published teacher missions are added to (not substituted for) existing adventures.
-  // Rwanda Language Adventure owns its original bilingual missions.
-  // The teacher-published mission list must not render those objects.
-  const rwandaLanguageTeacherList =
-    String(countryCode || '').toLowerCase() === 'rw' &&
-    selectedDomain === 'language';
-
   const visibleMissions = selectedDomain
-    ? [
-        ...(rwandaLanguageTeacherList ? [] : builtInMissions),
-        ...creatorMissions.map(m =>
-          applyLearningLevelToMission(m, selectedLearningLevel)
-        ),
-      ]
+    ? combineDomainMissions(
+        selectedDomain,
+        builtInMissions,
+        creatorMissions.map(m => applyLearningLevelToMission(m, selectedLearningLevel))
+      )
     : [];
 
 
@@ -2643,6 +2639,15 @@ export default function WorldMissionPanel({
       setMissionClear(
         null
       );
+
+      // Creator-first domains never launch legacy built-in adventures.
+      // This precedes country-specific branches, including Rwanda.
+      if (isCreatorFirstDomain(domainId)) {
+        setSelectedDomain(domainId);
+        setActiveMission(null);
+        moveToLauncher();
+        return;
+      }
 
 
       /*
@@ -3631,13 +3636,11 @@ export default function WorldMissionPanel({
                                     backdrop-blur
                                   "
                                 >
-                                  {
-                                    completeCount
-                                  }
-                                  {' / '}
-                                  {
-                                    totalCount
-                                  }
+                                  {isCreatorFirstDomain(domain.id) ? (
+                                    'Creator謨呎攝'
+                                  ) : (
+                                    <>{completeCount} / {totalCount}</>
+                                  )}
                                 </span>
                               </div>
 
@@ -4059,11 +4062,9 @@ export default function WorldMissionPanel({
                                   selectedDomainTheme.accent,
                               }}
                             >
-                              {
-                                getMissionNumber(
-                                  mission.id
-                                )
-                              }
+                              {isCreatorFirstDomain(selectedDomain)
+                                ? `M${String(visibleMissions.indexOf(mission) + 1).padStart(2, '0')}`
+                                : getMissionNumber(mission.id)}
                             </p>
 
 
