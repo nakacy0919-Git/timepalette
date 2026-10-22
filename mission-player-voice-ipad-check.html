@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>TimePalette | Phase 3B iPad 診断</title>
+  <style>
+    /* A visible test HUD over the real MissionPlayer (rendered in a portal). */
+    #tp-voice-diag-hud {
+      position: fixed; z-index: 2147483647;
+      bottom: max(8px, env(safe-area-inset-bottom)); left: max(8px, env(safe-area-inset-left));
+      max-width: min(290px, calc(100vw - 16px));
+      padding: 9px 11px; background: rgba(15, 23, 42, .97);
+      border: 2px solid #38bdf8; border-radius: 12px;
+      color: #fff; font: 600 12px/1.4 -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      box-shadow: 0 12px 28px rgba(0,0,0,.25); pointer-events: none;
+    }
+    #tp-voice-diag-hud strong { color: #a7f3d0; font-size: 24px; }
+    #tp-voice-diag-hud .status { color: #fde68a; font-size: 11px; margin-top: 3px; }
+    #tp-voice-diag-hud .env { color: #dbeafe; font-size: 10px; margin-top: 4px; font-weight: 500; }
+    #tp-voice-diag-hud .help { color: #cbd5e1; font-size: 10px; margin-top: 4px; font-weight: 400; }
+  </style>
+</head>
+<body style="margin:0;background:#f8fafc">
+  <div id="root"></div>
+  <aside id="tp-voice-diag-hud" role="status" aria-live="polite">
+    <div>4択ミッション完了回数： <strong id="tp-diag-count">0</strong></div>
+    <div class="status" id="tp-diag-event">初期状態：未クリア</div>
+    <div class="env" id="tp-diag-env">ブラウザ機能を確認中…</div>
+    <div class="help">音声成功でも0、4択正解で1に変化するか確認</div>
+  </aside>
+  <script type="module">
+    import React from 'react';
+    import {createRoot} from 'react-dom/client';
+    import '/src/index.css';
+    import MissionPlayer from '/src/components/world-learning/MissionPlayer.jsx';
+    import {toPublishedMission} from '/src/utils/publishedMissionCatalog.js';
+
+    const h = React.createElement;
+    const sourceQuestion = {
+      id: '11111111-1111-4111-8111-111111111111',
+      countryIso: 'us', countryName: 'アメリカ合衆国', domain: 'language', type: 'text4',
+      prompt: '【iPad診断専用】初対面の挨拶として適切なのは？',
+      answer: 'Nice to meet you.',
+      choices: ['See you yesterday.', 'Good night yesterday.', 'I am lunchtime.'],
+      explanation: '初対面の挨拶を英語で練習しました。',
+      sources: [],
+      learning: {
+        levels: ['elementary','juniorHigh','highSchoolStandard'],
+        voice: {
+          enabled: true, lang: 'en-US',
+          prompt: '初めて会った人に英語で挨拶しましょう。',
+          target: 'Nice to meet you.',
+          alternatives: ["It's nice to meet you.", 'Pleased to meet you.']
+        }
+      }
+    };
+    const mission = toPublishedMission(sourceQuestion);
+    if (!mission || mission.creatorQuestionId !== sourceQuestion.id ||
+        mission.voice?.enabled !== true || mission.challenge?.choices?.length !== 4) {
+      throw new Error('Local mission conversion failed. No database changes.');
+    }
+
+    const support = Boolean(window.SpeechRecognition || window.webkitSpeechRecognition);
+    const secure = window.isSecureContext === true;
+    document.getElementById('tp-diag-env').textContent =
+      'HTTPS安全接続：' + (secure ? 'OK' : 'NG') +
+      ' ／ 音声認識API：' + (support ? '対応' : '非対応');
+
+    const domain = {id:'language',name:'ことば',icon:'🌐'};
+    const diag = {completed: 0};
+    window.__timepalette_voice_diagnostic = diag;
+    function setEvent(message) {
+      document.getElementById('tp-diag-count').textContent = String(diag.completed);
+      document.getElementById('tp-diag-event').textContent = message;
+    }
+    function App() {
+      const [open, setOpen] = React.useState(true);
+      return h(React.Fragment, null,
+        h('main', {style:{padding:'24px 14px',maxWidth:720,margin:'auto',fontFamily:'system-ui'}},
+          h('h1', {style:{fontSize:22,fontWeight:750,marginBottom:12}}, 'TimePalette | Phase 3B iPad実機診断'),
+          h('p', null, '固定のサンプル問題を使用。教師ログイン・問題公開・D1/R2への書き込みは行いません。'),
+          h('p', {style:{fontSize:13,color:'#334155',marginTop:10}}, '読み上げ → マイク → 誤答 → 正答の順番で試してください。'),
+          h('button', {
+            type:'button', onClick:()=>setOpen(true),
+            style:{background:'#2563eb',color:'#fff',padding:'12px 17px',border:0,borderRadius:12,marginTop:18,fontSize:16}
+          }, 'ミッションを開き直す'),
+          h('button', {
+            type:'button', onClick:()=>window.location.reload(),
+            style:{background:'#e2e8f0',color:'#0f172a',padding:'12px 17px',border:0,borderRadius:12,marginLeft:8,marginTop:18,fontSize:16}
+          }, '回数を0にリセット')
+        ),
+        open && h(MissionPlayer, {
+          mission, domain, alreadyCompleted:false,
+          onClose:()=>setOpen(false),
+          onBackToList:()=>setOpen(false),
+          onComplete:()=>{
+            diag.completed += 1;
+            setEvent('4択の正解イベントを受信');
+          }
+        })
+      );
+    }
+    createRoot(document.getElementById('root')).render(h(App));
+  </script>
+</body>
+</html>

@@ -9,6 +9,7 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
         missionCreator: resolve(import.meta.dirname, 'mission-creator.html'),
+        voiceIpadDiagnostic: resolve(import.meta.dirname, 'mission-player-voice-ipad-check.html'),
       },
     },
   },
