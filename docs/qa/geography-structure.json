@@ -1,0 +1,346 @@
+{
+  "generatedAt": "2026-10-26T13:34:57.973Z",
+  "scope": "A/B structural and scoring audit; does not prove factual or visual accuracy",
+  "countries": 28,
+  "missions": 280,
+  "errors": 0,
+  "contentPending": 28,
+  "rows": [
+    {
+      "country": "af",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "al",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "dz",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "ad",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "ao",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "ag",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "ar",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "am",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "au",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "at",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "az",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bs",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bh",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bd",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bb",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "by",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "be",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bz",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bj",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bt",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bo",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "ba",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bw",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "br",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bn",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bg",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bf",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bi",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    }
+  ]
+}

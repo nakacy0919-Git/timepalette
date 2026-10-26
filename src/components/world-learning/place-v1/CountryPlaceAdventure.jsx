@@ -25,6 +25,9 @@ function layoutCities(cities,projection){
   return points;
 }
 function GeoMap({p,world=false,countries=[p],cities=[],onCountry,onCity,labels=true,numbered=false}){
+  const [view,setView]=useState({x:0,y:0,w:720,h:360});
+  const zoom=factor=>setView(v=>{const w=Math.max(90,Math.min(720,v.w*factor)),h=w/2;return {x:Math.max(0,Math.min(720-w,v.x+(v.w-w)/2)),y:Math.max(0,Math.min(360-h,v.y+(v.h-h)/2)),w,h};});
+  const pan=(dx,dy)=>setView(v=>({...v,x:Math.max(0,Math.min(720-v.w,v.x+dx*v.w*.25)),y:Math.max(0,Math.min(360-v.h,v.y+dy*v.h*.25))}));
   const projection=useMemo(()=>{
     if(world)return geoNaturalEarth1().fitExtent([[10,10],[710,345]],collection(features));
     if(countries.length===1)return geoMercator().fitExtent([[40,30],[680,320]],collection(countries.map(land)));
@@ -35,7 +38,7 @@ function GeoMap({p,world=false,countries=[p],cities=[],onCountry,onCity,labels=t
   const path=geoPath(projection);
   const mapFeatures=world?features:features.filter(f=>countries.some(c=>sameCountry(f,c)));
   const chooseCountry=(f)=>{const c=countries.find(c=>sameCountry(f,c));onCountry?.(c?.countryCode||c?.iso||f.properties.name);};
-  return <svg className="tp-geo-map" viewBox="0 0 720 360" aria-label={world?'世界地図':'国・都市の地図'}>
+  return <svg className="tp-geo-map" viewBox={world?`${view.x} ${view.y} ${view.w} ${view.h}`:"0 0 720 360"} aria-label={world?'世界地図':'国・都市の地図'}>
     <rect width="720" height="360" rx="16" fill="#e0f2fe"/>
     <defs><clipPath id={`geo-clip-${p.countryCode}`}><rect x="0" y="0" width="720" height="360" rx="16"/></clipPath></defs>
     <g clipPath={`url(#geo-clip-${p.countryCode})`}>
@@ -49,6 +52,14 @@ function GeoMap({p,world=false,countries=[p],cities=[],onCountry,onCity,labels=t
       <text textAnchor="middle" y="5" fontSize="15" fontWeight="bold" pointerEvents="none">{i+1}</text>
       {labels&&<text x={x>550?-25:25} textAnchor={x>550?'end':'start'} y="-12" fontSize="13" pointerEvents="none" fontWeight="bold" paintOrder="stroke" stroke="white" strokeWidth="4" fill="#0f172a">{numbered?i+1:c.name}</text>}
     </g>)}
+    {world&&<foreignObject x={view.x+view.w/720*10} y={view.y+view.w/720*8} width={view.w/720*400} height={view.w/720*60}>
+      <div className="tp-geo-map-controls" style={{transform:`scale(${view.w/720})`,transformOrigin:'top left',width:380}}>
+        <button type="button" aria-label="地図を拡大" onClick={()=>zoom(.5)}>＋</button><button type="button" aria-label="地図を縮小" onClick={()=>zoom(2)}>−</button>
+        <button type="button" aria-label="地図を北へ移動" onClick={()=>pan(0,-1)}>↑</button><button type="button" aria-label="地図を南へ移動" onClick={()=>pan(0,1)}>↓</button>
+        <button type="button" aria-label="地図を西へ移動" onClick={()=>pan(-1,0)}>←</button><button type="button" aria-label="地図を東へ移動" onClick={()=>pan(1,0)}>→</button>
+        <button type="button" aria-label="地図全体を表示" onClick={()=>setView({x:0,y:0,w:720,h:360})}>全体</button>
+      </div>
+    </foreignObject>}
   </svg>;
 }
 function Photo({photo,small=false,onStatus}){
@@ -72,7 +83,7 @@ export default function CountryPlaceAdventure({countryCode,initialLevel='element
     {index==null?<>
       <header className="tp-geo-home-header"><span>🌍 PLACE & GEOGRAPHY</span><h1>{p.nameJa} 地理アドベンチャー</h1><p>{p.nameEn} · 地図・写真・ルートを探る10のミッション</p><strong>{p.missions.filter(m=>done.includes(m.id)).length} / 10 CLEAR</strong></header>
       {!p.qa.releaseReady&&<p className="tp-geo-preview">制作・検証中：写真・地理・ルートの内容確認は未完了です。</p>}
-      <div className="tp-geo-mission-grid">{p.missions.map((m,i)=><button type="button" key={m.id} data-mission={i+1} onClick={()=>setIndex(i)}><span>P{String(i+1).padStart(2,'0')} {done.includes(m.id)?'✓':''}</span><h2>{m.title}</h2><p>{m.type}</p></button>)}</div>
+      <div className="tp-geo-mission-grid">{p.missions.map((m,i)=><button type="button" key={m.id} data-mission={i+1} onClick={()=>setIndex(i)}><span>P{String(i+1).padStart(2,'0')} {done.includes(m.id)?'✓':''}</span><h2>{m.title}</h2><p>{['世界から位置を絞る','国境と方角を読む','輪郭を比べる','首都の場所を確かめる','都市の位置をつなぐ','景観の手がかりを探す','写真が示す事実を読む','港と海域のつながりを考える','事実と推測を分ける','3つの鍵で総仕上げ'][i]}</p></button>)}</div>
     </>:<Mission key={p.missions[index].id} p={p} index={index} level={initialLevel} wasDone={done.includes(p.missions[index].id)} onBack={()=>setIndex(null)} onNext={()=>setIndex(index<9?index+1:null)} onComplete={()=>{const result=completePlaceMission(p.countryCode,p.missions[index].id);setDone(result.progress.completedMissionIds);completeWorldMission(p.countryCode,p.missions[index].id);onProgressChange?.();}}/>}
   </div>;
 }

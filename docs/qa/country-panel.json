@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-10-26T13:34:57.643Z",
+  "source": "Mock published API responses; not a live publication check",
+  "categories": 4,
+  "questionsPerCategory": 12,
+  "legacyFallback": false,
+  "learningLevelFilter": "PASS",
+  "missingPhotoBlocksClear": "PASS",
+  "browserErrors": [],
+  "result": "PASS"
+}

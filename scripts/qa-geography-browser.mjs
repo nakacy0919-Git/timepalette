@@ -31,6 +31,7 @@ for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
     const p=getGeographyPackage(country.countryCode);
     await page.goto(`http://127.0.0.1:4178/tests/geography-browser.html?country=${p.countryCode}`,{waitUntil:'domcontentloaded'});
     for(let i=0;i<10;i++){
+      if(process.env.QA_MISSIONS&&!process.env.QA_MISSIONS.split(',').includes(String(i+1)))continue;
       const row={country:p.countryCode,mission:i+1,viewport:`${viewport.width}x${viewport.height}`,interaction:'PENDING',layout:'PENDING',images:'PENDING'};
       try{
         await page.locator(`[data-mission="${i+1}"]`).click();
@@ -41,6 +42,7 @@ for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
         if(['au','ao'].includes(p.countryCode)&&[1,5,9].includes(i))await page.screenshot({path:`docs/qa/browser/${p.countryCode}-P${i+1}-${viewport.width}-review.png`});
         const click=async sel=>{const loc=root.locator(sel).first();if(await loc.evaluate(e=>e.tagName.toLowerCase()==='path'))await loc.press('Enter');else if(await loc.evaluate(e=>e.tagName.toLowerCase()==='g'))await loc.locator('circle[data-hit],circle').last().click();else await loc.click();};
         const notClear=async()=>{if(await page.getByRole('dialog',{name:'Mission clear'}).count())throw Error('Incorrect action cleared mission');};
+        if(i===0){const map=root.locator('svg.tp-geo-map');const initial=await map.getAttribute('viewBox');await root.getByRole('button',{name:'地図を拡大',exact:true}).click();if(await map.getAttribute('viewBox')===initial)throw Error('Zoom did not change map');await root.getByRole('button',{name:'地図を東へ移動',exact:true}).click();await root.getByRole('button',{name:'地図全体を表示',exact:true}).click();if(await map.getAttribute('viewBox')!==initial)throw Error('Map reset failed');row.mapNavigation='PASS';}
         const wrongCity=p.cities.find(c=>c.id!==p.capitalId).id;
         const wrongCountry=await root.locator('[data-country]').evaluateAll((els,code)=>els.find(e=>e.dataset.country!==code)?.dataset.country,p.countryCode);
         switch(i){
