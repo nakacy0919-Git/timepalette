@@ -53,7 +53,7 @@ export default function WorldAdventureHome({
         const completed =
           countryProgress
             ?.completedMissionIds
-            ?.length ??
+            ?.filter(id=>country.missionData?.missions?.some(m=>m.id===id)).length ??
           0;
 
         return {

@@ -91,7 +91,7 @@ export default function PublishedMissionManager({cloudflare=false,countries,ques
           {PUBLIC_DOMAINS.map(([value,label])=><option key={value} value={value}>{label}</option>)}
         </select></div>
     </div>
-    <div className="mc-public-heading"><h3>公開済み {published.length} / 10問</h3>
+    <div className="mc-public-heading"><h3>公開済み {published.length}問</h3>
       <button className="mc-outline mc-small" type="button" disabled={saving||loading}
         onClick={()=>setRevision(n=>n+1)}>順番を再取得</button></div>
     {loading && <p className="mc-save-progress" role="status">公開順序を読み込んでいます…</p>}
@@ -124,13 +124,12 @@ export default function PublishedMissionManager({cloudflare=false,countries,ques
         onClick={save}>この順番を保存</button>
     </div>
     <div className="mc-public-heading"><h3>承認済みの問題を追加</h3><span className="mc-count">{approved.length}件</span></div>
-    {published.length>=10 && <p className="mc-hint">公開枠が10問に達しています。公開停止すると追加できます。</p>}
     {approved.length===0 && <p className="mc-empty">追加できる承認済み問題はありません。</p>}
     {approved.map(q=><div className="mc-public-item" key={q.id}>
       <div className="mc-public-text"><strong>{q.prompt}</strong><small>作成：{q.authorName||'不明'}</small></div>
       <div className="mc-public-actions">
         <button className="mc-outline mc-small" type="button" disabled={!canEdit} onClick={()=>onInspect(q)}>確認</button>
-        <button className="mc-primary mc-small" type="button" disabled={!canEdit||dirty||published.length>=10}
+        <button className="mc-primary mc-small" type="button" disabled={!canEdit||dirty}
           onClick={()=>onPublication(q,'publish')}>TimePaletteに公開</button>
       </div>
     </div>)}

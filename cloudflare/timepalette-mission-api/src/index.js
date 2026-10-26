@@ -324,11 +324,11 @@ async function setProgress(env,user,args){adminOnly(user);const iso=String(args.
 }
 async function scopedPublished(env,iso,domain){const r=(await env.DB.prepare("SELECT id FROM questions WHERE country_iso=? AND domain=? AND status='published' ORDER BY created_at,id").bind(iso,domain).all()).results.map(x=>x.id);
  const saved=await env.DB.prepare('SELECT question_ids_json FROM publication_order WHERE key=?').bind(`${iso}:${domain}`).first();
- const priority=parseArray(saved?.question_ids_json).filter(x=>r.includes(x));return [...new Set([...priority,...r])].slice(0,10);}
+ const priority=parseArray(saved?.question_ids_json).filter(x=>r.includes(x));return [...new Set([...priority,...r])];}
 async function saveOrder(env,iso,domain,ids){await env.DB.prepare('INSERT INTO publication_order(key,question_ids_json,updated_at) VALUES(?,?,?) ON CONFLICT(key) DO UPDATE SET question_ids_json=excluded.question_ids_json,updated_at=excluded.updated_at')
  .bind(`${iso}:${domain}`,JSON.stringify(ids),now()).run();}
 async function orderAction(env,user,args,set){adminOnly(user);const iso=String(args.countryIso||'').toLowerCase(),domain=String(args.domain||'');checkScope(iso,domain);const ids=await scopedPublished(env,iso,domain);
- if(set){const desired=args.questionIds;requireThat(Array.isArray(desired)&&desired.length===ids.length&&desired.length<=10&&new Set(desired).size===desired.length&&desired.every(x=>ids.includes(x)),'公開順序が変更されています。再読み込みしてください。',409);await saveOrder(env,iso,domain,desired);return {countryIso:iso,domain,questionIds:desired};}
+ if(set){const desired=args.questionIds;requireThat(Array.isArray(desired)&&desired.length===ids.length&&new Set(desired).size===desired.length&&desired.every(x=>ids.includes(x)),'公開順序が変更されています。再読み込みしてください。',409);await saveOrder(env,iso,domain,desired);return {countryIso:iso,domain,questionIds:desired};}
  return {countryIso:iso,domain,questionIds:ids};}
 async function publish(env,user,args){adminOnly(user);const mode=String(args.mode||'');requireThat(['publish','unpublish'].includes(mode),'公開操作を確認してください。');
  const q=await getQuestion(env,args.questionId),stamp=now(),was=q.status;
@@ -336,9 +336,8 @@ async function publish(env,user,args){adminOnly(user);const mode=String(args.mod
  requireThat(was==='approved'&&args.rightsConfirmed===true,'承認済みの問題と公開利用権を確認してください。');
  requireThat(['text4','photo4','photoText4','video4','videoReflect'].includes(logicalQuestionType(q)),'この形式は公開できません。');await assertComplete(env,{...q,type:logicalQuestionType(q)});
  const profile=cleanProfile(parseObject(q.author_profile_json));const profileVerified=profile.consent&&args.profileRightsConfirmed===true?1:0;
- const r=await env.DB.prepare(`UPDATE questions SET status='published',author_profile_verified=?,updated_at=?,version=version+1 WHERE id=? AND status='approved'
- AND (SELECT COUNT(*) FROM questions WHERE country_iso=? AND domain=? AND status='published')<10`)
- .bind(profileVerified,stamp,q.id,q.country_iso,q.domain).run();requireThat(r.meta.changes===1,'公開条件が変更されました。10問上限を確認してください。',409);
+ const r=await env.DB.prepare(`UPDATE questions SET status='published',author_profile_verified=?,updated_at=?,version=version+1 WHERE id=? AND status='approved'`)
+ .bind(profileVerified,stamp,q.id).run();requireThat(r.meta.changes===1,'公開条件が変更されました。一覧を更新してください。',409);
  }else{
  requireThat(was==='published','公開中の問題のみ停止できます。');
  // Legacy R2 v2 route is authorized by this manifest. Revoke BEFORE marking D1 unpublished.

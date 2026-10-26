@@ -733,7 +733,7 @@ function calculateCountryStats(
     totalMissions > 0
       ? Math.round(
           (
-            completedIds.length /
+            missions.filter(m=>completedSet.has(m.id)).length /
             totalMissions
           ) *
             100
@@ -743,7 +743,7 @@ function calculateCountryStats(
 
   return {
     completedCount:
-      completedIds.length,
+      missions.filter(m=>completedSet.has(m.id)).length,
 
     totalMissions,
 

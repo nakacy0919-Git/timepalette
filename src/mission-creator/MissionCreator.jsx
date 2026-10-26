@@ -520,7 +520,7 @@ function QuestionBank({
             <button type="button" className="mc-primary mc-small" disabled={busy || checkedIds.length===0}
               onClick={submitBulk}>{bulkMode==='approve' ? '選択した下書きを一括承認' : '選択した承認済みを一括公開'}</button>
           </div>
-          {bulkMode === 'publish' && <p className="mc-bulk-note">国・カテゴリーは問題に登録された情報から自動判定します。各国・各カテゴリー10問まで。写真・出典・公開権利を確認してから実行してください。</p>}
+          {bulkMode === 'publish' && <p className="mc-bulk-note">国・カテゴリーは問題に登録された情報から自動判定します。写真・出典・公開権利を確認してから実行してください。</p>}
           {bulkProgress && <p className="mc-save-progress" role="status" aria-live="polite">{bulkProgress}</p>}
           {bulkReport && <div className="mc-bulk-result" role="status">
             <strong>{bulkReport.mode==='approve'?'一括承認':'一括公開'}：成功 {bulkReport.done.length}件 / 失敗 {bulkReport.failed.length}件</strong>

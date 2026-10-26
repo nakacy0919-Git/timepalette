@@ -1,0 +1,4169 @@
+{
+  "af": {
+    "iso": "af",
+    "atlasId": "004",
+    "atlasName": "Afghanistan",
+    "name": "Afghanistan",
+    "center": [
+      66.496586,
+      34.164262
+    ],
+    "countryCode": "af",
+    "nameEn": "Afghanistan",
+    "nameJa": "アフガニスタン",
+    "group": "A",
+    "continent": "Asia",
+    "cities": [
+      {
+        "id": "af-city-0",
+        "name": "Kabul",
+        "coordinates": [
+          69.181314,
+          34.518636
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "カブール",
+        "isCapital": true
+      },
+      {
+        "id": "af-city-1",
+        "name": "Kandahar",
+        "coordinates": [
+          65.694946,
+          31.61002
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "af-city-2",
+        "name": "Jalalabad",
+        "coordinates": [
+          70.436104,
+          34.441527
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "af-city-3",
+        "name": "Herat",
+        "coordinates": [
+          62.169993,
+          34.330009
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "af-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "pk",
+        "atlasId": "586",
+        "atlasName": "Pakistan",
+        "name": "Pakistan",
+        "center": [
+          68.545632,
+          29.328389
+        ]
+      },
+      {
+        "iso": "ir",
+        "atlasId": "364",
+        "atlasName": "Iran",
+        "name": "Iran",
+        "center": [
+          54.931495,
+          32.166225
+        ]
+      },
+      {
+        "iso": "tm",
+        "atlasId": "795",
+        "atlasName": "Turkmenistan",
+        "name": "Turkmenistan",
+        "center": [
+          58.676647,
+          39.855246
+        ]
+      },
+      {
+        "iso": "uz",
+        "atlasId": "860",
+        "atlasName": "Uzbekistan",
+        "name": "Uzbekistan",
+        "center": [
+          64.005429,
+          41.693603
+        ]
+      },
+      {
+        "iso": "tj",
+        "atlasId": "762",
+        "atlasName": "Tajikistan",
+        "name": "Tajikistan",
+        "center": [
+          72.587276,
+          38.199835
+        ]
+      },
+      {
+        "iso": "cn",
+        "atlasId": "156",
+        "atlasName": "China",
+        "name": "China",
+        "center": [
+          106.337289,
+          32.498178
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": true,
+    "factJa": "ヒンドゥークシュ山脈を含む山地が広がる",
+    "observationJa": "山地と谷",
+    "route": {
+      "via": "Pakistan",
+      "port": "Karachi",
+      "sea": "Arabian Sea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Monk_Caves_in_Bamiyan_Valley.jpg/960px-Monk_Caves_in_Bamiyan_Valley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monk_Caves_in_Bamiyan_Valley.jpg",
+      "credit": "Tracy Hunter from Kabul, Afghanistan",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "captionJa": "バーミヤン渓谷の文化的景観",
+      "captionEn": "Cultural Landscape of the Bamiyan Valley",
+      "descriptionJa": "岩壁には多くの石窟寺院が残り、仏教文化とシルクロード交流の歴史を伝えています。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/afghanistan/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "岩壁に複数の穴や空洞が見える",
+    "sceneCategory": "caves",
+    "visibleClaimJa": "岩壁に複数の穴や空洞が見える"
+  },
+  "al": {
+    "iso": "al",
+    "atlasId": "008",
+    "atlasName": "Albania",
+    "name": "Albania",
+    "center": [
+      20.11384,
+      40.654855
+    ],
+    "countryCode": "al",
+    "nameEn": "Albania",
+    "nameJa": "アルバニア",
+    "group": "A",
+    "continent": "Europe",
+    "cities": [
+      {
+        "id": "al-city-0",
+        "name": "Tirana",
+        "coordinates": [
+          19.818883,
+          41.327541
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ティラナ",
+        "isCapital": true
+      },
+      {
+        "id": "al-city-1",
+        "name": "Elbasan",
+        "coordinates": [
+          20.083828,
+          41.121507
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "al-city-2",
+        "name": "Shkodër",
+        "coordinates": [
+          19.51885,
+          42.068452
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "al-city-3",
+        "name": "Durrës",
+        "coordinates": [
+          19.448208,
+          41.3178
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "al-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "me",
+        "atlasId": "499",
+        "atlasName": "Montenegro",
+        "name": "Montenegro",
+        "center": [
+          19.143727,
+          42.803101
+        ]
+      },
+      {
+        "iso": "xk",
+        "atlasId": "-99",
+        "atlasName": "Kosovo",
+        "name": "Kosovo",
+        "center": [
+          20.860719,
+          42.593587
+        ]
+      },
+      {
+        "iso": "mk",
+        "atlasId": "807",
+        "atlasName": "Macedonia",
+        "name": "North Macedonia",
+        "center": [
+          21.555839,
+          41.558223
+        ]
+      },
+      {
+        "iso": "gr",
+        "atlasId": "300",
+        "atlasName": "Greece",
+        "name": "Greece",
+        "center": [
+          21.72568,
+          39.492763
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "山地とアドリア海・イオニア海沿岸を持つ",
+    "observationJa": "丘と建物",
+    "route": {
+      "via": "Albania",
+      "port": "Durres",
+      "sea": "Adriatic Sea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Berat_Albania.jpg/960px-Berat_Albania.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Berat_Albania.jpg",
+      "credit": "godo godaj",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "captionJa": "ベラトとジロカストラの歴史地区",
+      "captionEn": "Historic Centres of Berat and Gjirokastra",
+      "descriptionJa": "石造りの家々や城塞が残り、オスマン帝国時代の都市文化と宗教の共存を伝えています。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/albania/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "市街地を流れる川と、その奥に山地が見える",
+    "sceneCategory": "river-city",
+    "visibleClaimJa": "市街地を流れる川と、その奥に山地が見える"
+  },
+  "dz": {
+    "iso": "dz",
+    "atlasId": "012",
+    "atlasName": "Algeria",
+    "name": "Algeria",
+    "center": [
+      2.808241,
+      27.397406
+    ],
+    "countryCode": "dz",
+    "nameEn": "Algeria",
+    "nameJa": "アルジェリア",
+    "group": "A",
+    "continent": "Africa",
+    "cities": [
+      {
+        "id": "dz-city-0",
+        "name": "Algiers",
+        "coordinates": [
+          3.048607,
+          36.765011
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "アルジェ",
+        "isCapital": true
+      },
+      {
+        "id": "dz-city-1",
+        "name": "Oran",
+        "coordinates": [
+          -0.621919,
+          35.711948
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "dz-city-2",
+        "name": "Constantine",
+        "coordinates": [
+          6.599948,
+          36.359989
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "dz-city-3",
+        "name": "Blida",
+        "coordinates": [
+          2.829998,
+          36.420347
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "dz-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "tn",
+        "atlasId": "788",
+        "atlasName": "Tunisia",
+        "name": "Tunisia",
+        "center": [
+          9.007881,
+          33.687263
+        ]
+      },
+      {
+        "iso": "ly",
+        "atlasId": "434",
+        "atlasName": "Libya",
+        "name": "Libya",
+        "center": [
+          18.011015,
+          26.638944
+        ]
+      },
+      {
+        "iso": "ne",
+        "atlasId": "562",
+        "atlasName": "Niger",
+        "name": "Niger",
+        "center": [
+          9.504356,
+          17.446195
+        ]
+      },
+      {
+        "iso": "ml",
+        "atlasId": "466",
+        "atlasName": "Mali",
+        "name": "Mali",
+        "center": [
+          -2.038455,
+          18.692713
+        ]
+      },
+      {
+        "iso": "mr",
+        "atlasId": "478",
+        "atlasName": "Mauritania",
+        "name": "Mauritania",
+        "center": [
+          -9.740299,
+          19.587062
+        ]
+      },
+      {
+        "iso": "eh",
+        "atlasId": "732",
+        "atlasName": "W. Sahara",
+        "name": "Western Sahara",
+        "center": [
+          -12.630304,
+          23.967592
+        ]
+      },
+      {
+        "iso": "ma",
+        "atlasId": "504",
+        "atlasName": "Morocco",
+        "name": "Morocco",
+        "center": [
+          -7.187296,
+          31.650723
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "西サハラは地位が争われている地域です。",
+    "landlocked": false,
+    "factJa": "北は地中海に面し、内陸にはサハラ砂漠が広がる",
+    "observationJa": "岩の地形",
+    "route": {
+      "via": "Algeria",
+      "port": "Algiers",
+      "sea": "Mediterranean Sea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/The_tassili_of_Algeria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_tassili_of_Algeria.jpg",
+      "credit": "raandree",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "captionJa": "タッシリ・ナジェール",
+      "captionEn": "Tassili n'Ajjer",
+      "descriptionJa": "奇岩が連なる砂漠地帯に多くの岩絵が残り、古代のサハラが緑豊かだったことを示します。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/algeria/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "砂丘と露出した岩が見える",
+    "sceneCategory": "desert",
+    "visibleClaimJa": "砂丘と露出した岩が見える"
+  },
+  "ad": {
+    "iso": "ad",
+    "atlasId": "020",
+    "atlasName": "Andorra",
+    "name": "Andorra",
+    "center": [
+      1.539409,
+      42.547643
+    ],
+    "countryCode": "ad",
+    "nameEn": "Andorra",
+    "nameJa": "アンドラ",
+    "group": "A",
+    "continent": "Europe",
+    "cities": [
+      {
+        "id": "ad-city-0",
+        "name": "Andorra la Vella",
+        "coordinates": [
+          1.526594,
+          42.510753
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "アンドラ・ラ・ベリャ",
+        "isCapital": true
+      },
+      {
+        "id": "ad-town-1",
+        "name": "Encamp",
+        "coordinates": [
+          1.5836,
+          42.5363
+        ],
+        "source": "editorial-coordinate-pending-verification"
+      },
+      {
+        "id": "ad-town-2",
+        "name": "Sant Julia de Loria",
+        "coordinates": [
+          1.4913,
+          42.4637
+        ],
+        "source": "editorial-coordinate-pending-verification"
+      }
+    ],
+    "capitalId": "ad-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "fr",
+        "atlasId": "-99",
+        "atlasName": "France",
+        "name": "France",
+        "center": [
+          2.552275,
+          46.696113
+        ]
+      },
+      {
+        "iso": "es",
+        "atlasId": "724",
+        "atlasName": "Spain",
+        "name": "Spain",
+        "center": [
+          -3.464718,
+          40.090953
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": true,
+    "factJa": "ピレネー山脈にある、海に面しない国",
+    "observationJa": "山地の谷",
+    "route": {
+      "via": "Spain",
+      "port": "Barcelona",
+      "sea": "Mediterranean Sea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Refuge_perafita_andorra.jpg/960px-Refuge_perafita_andorra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Refuge_perafita_andorra.jpg",
+      "credit": "Aliento Más Allá",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "captionJa": "マドリウ＝ペラフィタ＝クラロ渓谷",
+      "captionEn": "Madriu-Perafita-Claror Valley",
+      "descriptionJa": "氷河がつくった渓谷に牧草地や石造りの小屋が残り、山岳地域の伝統的な暮らしを伝えます。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/andorra/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "雪の残る斜面に、低い石造りの建物が見える",
+    "sceneCategory": "snow-refuge",
+    "visibleClaimJa": "雪の残る斜面に、低い石造りの建物が見える"
+  },
+  "ao": {
+    "iso": "ao",
+    "atlasId": "024",
+    "atlasName": "Angola",
+    "name": "Angola",
+    "center": [
+      17.984249,
+      -12.182762
+    ],
+    "countryCode": "ao",
+    "nameEn": "Angola",
+    "nameJa": "アンゴラ",
+    "group": "A",
+    "continent": "Africa",
+    "cities": [
+      {
+        "id": "ao-city-0",
+        "name": "Luanda",
+        "coordinates": [
+          13.232481,
+          -8.83634
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ルアンダ",
+        "isCapital": true
+      },
+      {
+        "id": "ao-city-1",
+        "name": "Huambo",
+        "coordinates": [
+          15.758064,
+          -12.74804
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "ao-city-2",
+        "name": "Lobito",
+        "coordinates": [
+          13.54123,
+          -12.370009
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "ao-city-3",
+        "name": "Benguela",
+        "coordinates": [
+          13.407233,
+          -12.578264
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "ao-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "cd",
+        "atlasId": "180",
+        "atlasName": "Dem. Rep. Congo",
+        "name": "Democratic Republic of the Congo",
+        "center": [
+          23.458829,
+          -1.858167
+        ]
+      },
+      {
+        "iso": "cg",
+        "atlasId": "178",
+        "atlasName": "Congo",
+        "name": "Republic of the Congo",
+        "center": [
+          15.9005,
+          0.142331
+        ]
+      },
+      {
+        "iso": "zm",
+        "atlasId": "894",
+        "atlasName": "Zambia",
+        "name": "Zambia",
+        "center": [
+          26.395298,
+          -14.660804
+        ]
+      },
+      {
+        "iso": "na",
+        "atlasId": "516",
+        "atlasName": "Namibia",
+        "name": "Namibia",
+        "center": [
+          17.108166,
+          -20.575298
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "カビンダ州はコンゴ共和国・コンゴ民主共和国とも接します。",
+    "landlocked": false,
+    "factJa": "大西洋沿岸と内陸の高原を持つ",
+    "observationJa": "水の流れ",
+    "route": {
+      "via": "Angola",
+      "port": "Luanda",
+      "sea": "Atlantic Ocean",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Kalandula_waterfalls_of_the_Lucala-River_in_Malange%2C_Angola.JPG/960px-Kalandula_waterfalls_of_the_Lucala-River_in_Malange%2C_Angola.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kalandula_waterfalls_of_the_Lucala-River_in_Malange,_Angola.JPG",
+      "credit": "Paulo César Santos",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "captionJa": "アンゴラのカランドゥーラ滝",
+      "captionEn": "Kalandula Falls, Angola",
+      "descriptionJa": "ルカラ川にかかる滝です。写真では崖から落ちる水と周辺の樹木を確認できます。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/angola/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "樹木の間から、幅広い滝が落ちている",
+    "sceneCategory": "waterfall",
+    "visibleClaimJa": "樹木の間から、幅広い滝が落ちている"
+  },
+  "ag": {
+    "iso": "ag",
+    "atlasId": "028",
+    "atlasName": "Antigua and Barb.",
+    "name": "Antigua and Barbuda",
+    "center": [
+      -61.790612,
+      17.352249
+    ],
+    "countryCode": "ag",
+    "nameEn": "Antigua and Barbuda",
+    "nameJa": "アンティグア・バーブーダ",
+    "group": "A",
+    "continent": "North America",
+    "cities": [
+      {
+        "id": "ag-city-0",
+        "name": "St. John's",
+        "coordinates": [
+          -61.850034,
+          17.118036
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "セントジョンズ",
+        "isCapital": true
+      },
+      {
+        "id": "ag-town-1",
+        "name": "All Saints",
+        "coordinates": [
+          -61.7944,
+          17.0667
+        ],
+        "source": "editorial-coordinate-pending-verification"
+      },
+      {
+        "id": "ag-town-2",
+        "name": "Codrington",
+        "coordinates": [
+          -61.8204,
+          17.6364
+        ],
+        "source": "editorial-coordinate-pending-verification"
+      }
+    ],
+    "capitalId": "ag-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "kn",
+        "atlasId": "659",
+        "atlasName": "St. Kitts and Nevis",
+        "name": "Saint Kitts and Nevis",
+        "center": [
+          -62.757975,
+          17.336558
+        ]
+      },
+      {
+        "iso": "dm",
+        "atlasId": "212",
+        "atlasName": "Dominica",
+        "name": "Dominica",
+        "center": [
+          -61.344958,
+          15.458829
+        ]
+      }
+    ],
+    "neighborKind": "sea-region",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "アンティグア島とバーブーダ島などからなる",
+    "observationJa": "沿岸の建物",
+    "route": {
+      "via": "Antigua and Barbuda",
+      "port": "Saint John's",
+      "sea": "Caribbean Sea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Nelson%27s_Dockyard_Antigua.jpg/960px-Nelson%27s_Dockyard_Antigua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nelson%27s_Dockyard_Antigua.jpg",
+      "credit": "Kognos",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "captionJa": "アンティグア海軍造船所",
+      "captionEn": "Antigua Naval Dockyard",
+      "descriptionJa": "英国海軍の拠点だった港湾施設が残り、帆船時代の軍事とカリブ海交易の歴史を伝えます。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/antigua-barbuda/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "水辺に白い建物とヤシの木が見える",
+    "sceneCategory": "dockyard",
+    "visibleClaimJa": "水辺に白い建物とヤシの木が見える"
+  },
+  "ar": {
+    "iso": "ar",
+    "atlasId": "032",
+    "atlasName": "Argentina",
+    "name": "Argentina",
+    "center": [
+      -64.173331,
+      -33.501159
+    ],
+    "countryCode": "ar",
+    "nameEn": "Argentina",
+    "nameJa": "アルゼンチン",
+    "group": "A",
+    "continent": "South America",
+    "cities": [
+      {
+        "id": "ar-city-0",
+        "name": "Buenos Aires",
+        "coordinates": [
+          -58.432513,
+          -34.610715
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ブエノスアイレス",
+        "isCapital": true
+      },
+      {
+        "id": "ar-city-1",
+        "name": "Córdoba",
+        "coordinates": [
+          -64.18424,
+          -31.398012
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "ar-city-2",
+        "name": "Rosario",
+        "coordinates": [
+          -60.668253,
+          -32.949184
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "ar-city-3",
+        "name": "Mendoza",
+        "coordinates": [
+          -68.818557,
+          -32.881384
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "ar-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "cl",
+        "atlasId": "152",
+        "atlasName": "Chile",
+        "name": "Chile",
+        "center": [
+          -72.318871,
+          -38.151771
+        ]
+      },
+      {
+        "iso": "bo",
+        "atlasId": "068",
+        "atlasName": "Bolivia",
+        "name": "Bolivia",
+        "center": [
+          -64.593433,
+          -16.666015
+        ]
+      },
+      {
+        "iso": "py",
+        "atlasId": "600",
+        "atlasName": "Paraguay",
+        "name": "Paraguay",
+        "center": [
+          -60.146394,
+          -21.674509
+        ]
+      },
+      {
+        "iso": "br",
+        "atlasId": "076",
+        "atlasName": "Brazil",
+        "name": "Brazil",
+        "center": [
+          -49.55945,
+          -12.098687
+        ]
+      },
+      {
+        "iso": "uy",
+        "atlasId": "858",
+        "atlasName": "Uruguay",
+        "name": "Uruguay",
+        "center": [
+          -55.966942,
+          -32.961127
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "西にアンデス山脈、東に大西洋がある",
+    "observationJa": "氷と山",
+    "route": {
+      "via": "Argentina",
+      "port": "Buenos Aires",
+      "sea": "Atlantic Ocean",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Iguazu_Falls.jpg/960px-Iguazu_Falls.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iguazu_Falls.jpg",
+      "credit": "Emesbe at Dutch Wikipedia",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "captionJa": "イグアス国立公園",
+      "captionEn": "Iguazú National Park",
+      "descriptionJa": "多数の滝が亜熱帯林の中に連なり、水量と広がりで世界有数の壮大な景観を生み出します。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/argentine/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "森林の中に多数の滝が連なっている",
+    "sceneCategory": "forest-falls",
+    "visibleClaimJa": "森林の中に多数の滝が連なっている"
+  },
+  "am": {
+    "iso": "am",
+    "atlasId": "051",
+    "atlasName": "Armenia",
+    "name": "Armenia",
+    "center": [
+      44.800564,
+      40.459077
+    ],
+    "countryCode": "am",
+    "nameEn": "Armenia",
+    "nameJa": "アルメニア",
+    "group": "A",
+    "continent": "Asia",
+    "cities": [
+      {
+        "id": "am-city-0",
+        "name": "Yerevan",
+        "coordinates": [
+          44.511606,
+          40.183097
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "エレバン",
+        "isCapital": true
+      },
+      {
+        "id": "am-city-1",
+        "name": "Gyumri",
+        "coordinates": [
+          43.847494,
+          40.789434
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "am-city-2",
+        "name": "Vanadzor",
+        "coordinates": [
+          44.488282,
+          40.812766
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "am-city-3",
+        "name": "Gavarr",
+        "coordinates": [
+          45.126667,
+          40.358889
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "am-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "ge",
+        "atlasId": "268",
+        "atlasName": "Georgia",
+        "name": "Georgia",
+        "center": [
+          43.735724,
+          41.870087
+        ]
+      },
+      {
+        "iso": "az",
+        "atlasId": "031",
+        "atlasName": "Azerbaijan",
+        "name": "Azerbaijan",
+        "center": [
+          47.210994,
+          40.402387
+        ]
+      },
+      {
+        "iso": "ir",
+        "atlasId": "364",
+        "atlasName": "Iran",
+        "name": "Iran",
+        "center": [
+          54.931495,
+          32.166225
+        ]
+      },
+      {
+        "iso": "tr",
+        "atlasId": "792",
+        "atlasName": "Turkey",
+        "name": "Turkey",
+        "center": [
+          34.508268,
+          39.345388
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": true,
+    "factJa": "南コーカサスの山地に位置する内陸国",
+    "observationJa": "建物と山地",
+    "route": {
+      "via": "Georgia",
+      "port": "Poti",
+      "sea": "Black Sea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Geghard_Monastery_exterior_with_cliffs_in_snow_2026.jpg/960px-Geghard_Monastery_exterior_with_cliffs_in_snow_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Geghard_Monastery_exterior_with_cliffs_in_snow_2026.jpg",
+      "credit": "Furkan Akkurt",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "captionJa": "アルメニア、ゲガルド修道院周辺",
+      "captionEn": "Cliffs near Geghard Monastery, Armenia",
+      "descriptionJa": "修道院周辺の岩山と積雪が写っています。雪のある一日の写真だけで年間の気候は判断できません。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/armenia/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "岩山のふもとに積雪と通路が見える",
+    "sceneCategory": "snow-cliff",
+    "visibleClaimJa": "岩山のふもとに積雪と通路が見える"
+  },
+  "au": {
+    "iso": "au",
+    "atlasId": "036",
+    "atlasName": "Australia",
+    "name": "Australia",
+    "center": [
+      134.04972,
+      -24.129522
+    ],
+    "countryCode": "au",
+    "nameEn": "Australia",
+    "nameJa": "オーストラリア",
+    "group": "A",
+    "continent": "Oceania",
+    "cities": [
+      {
+        "id": "au-city-0",
+        "name": "Canberra",
+        "coordinates": [
+          149.129026,
+          -35.283029
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "キャンベラ",
+        "isCapital": true
+      },
+      {
+        "id": "au-city-1",
+        "name": "Sydney",
+        "coordinates": [
+          151.212548,
+          -33.871373
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "au-city-2",
+        "name": "Melbourne",
+        "coordinates": [
+          144.97307,
+          -37.818086
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "au-city-3",
+        "name": "Brisbane",
+        "coordinates": [
+          153.033147,
+          -27.453085
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "au-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "id",
+        "atlasId": "360",
+        "atlasName": "Indonesia",
+        "name": "Indonesia",
+        "center": [
+          101.892949,
+          -0.954404
+        ]
+      },
+      {
+        "iso": "pg",
+        "atlasId": "598",
+        "atlasName": "Papua New Guinea",
+        "name": "Papua New Guinea",
+        "center": [
+          143.910216,
+          -5.695285
+        ]
+      },
+      {
+        "iso": "nz",
+        "atlasId": "554",
+        "atlasName": "New Zealand",
+        "name": "New Zealand",
+        "center": [
+          172.787,
+          -39.759
+        ]
+      }
+    ],
+    "neighborKind": "sea-region",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "インド洋と太平洋の間にあり、広い乾燥地域も持つ",
+    "observationJa": "岩の地形",
+    "route": {
+      "via": "Australia",
+      "port": "Sydney",
+      "sea": "Pacific Ocean",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Great_Barrier_Reef_%28aerial_view%29.JPG/960px-Great_Barrier_Reef_%28aerial_view%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Barrier_Reef_(aerial_view).JPG",
+      "credit": "Nerdge at English Wikipedia",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "captionJa": "グレート・バリア・リーフ",
+      "captionEn": "Great Barrier Reef",
+      "descriptionJa": "多数のサンゴ礁と島々からなる巨大な生態系で、ウミガメや多彩な魚が暮らしています。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/australia/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "航空機の翼の下に、浅い海とサンゴ礁が見える",
+    "sceneCategory": "reef",
+    "visibleClaimJa": "航空機の翼の下に、浅い海とサンゴ礁が見える"
+  },
+  "at": {
+    "iso": "at",
+    "atlasId": "040",
+    "atlasName": "Austria",
+    "name": "Austria",
+    "center": [
+      14.130515,
+      47.518859
+    ],
+    "countryCode": "at",
+    "nameEn": "Austria",
+    "nameJa": "オーストリア",
+    "group": "A",
+    "continent": "Europe",
+    "cities": [
+      {
+        "id": "at-city-0",
+        "name": "Vienna",
+        "coordinates": [
+          16.364693,
+          48.201961
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ウィーン",
+        "isCapital": true
+      },
+      {
+        "id": "at-city-1",
+        "name": "Linz",
+        "coordinates": [
+          14.288781,
+          48.319233
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "at-city-2",
+        "name": "Graz",
+        "coordinates": [
+          15.410005,
+          47.077758
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "at-city-3",
+        "name": "Salzburg",
+        "coordinates": [
+          13.04002,
+          47.810478
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "at-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "de",
+        "atlasId": "276",
+        "atlasName": "Germany",
+        "name": "Germany",
+        "center": [
+          9.678348,
+          50.961733
+        ]
+      },
+      {
+        "iso": "cz",
+        "atlasId": "203",
+        "atlasName": "Czechia",
+        "name": "Czechia",
+        "center": [
+          15.377555,
+          49.882364
+        ]
+      },
+      {
+        "iso": "sk",
+        "atlasId": "703",
+        "atlasName": "Slovakia",
+        "name": "Slovakia",
+        "center": [
+          19.049868,
+          48.734044
+        ]
+      },
+      {
+        "iso": "hu",
+        "atlasId": "348",
+        "atlasName": "Hungary",
+        "name": "Hungary",
+        "center": [
+          19.447867,
+          47.086841
+        ]
+      },
+      {
+        "iso": "si",
+        "atlasId": "705",
+        "atlasName": "Slovenia",
+        "name": "Slovenia",
+        "center": [
+          14.915312,
+          46.06076
+        ]
+      },
+      {
+        "iso": "it",
+        "atlasId": "380",
+        "atlasName": "Italy",
+        "name": "Italy",
+        "center": [
+          11.076907,
+          44.732482
+        ]
+      },
+      {
+        "iso": "ch",
+        "atlasId": "756",
+        "atlasName": "Switzerland",
+        "name": "Switzerland",
+        "center": [
+          7.463965,
+          46.719114
+        ]
+      },
+      {
+        "iso": "li",
+        "atlasId": "438",
+        "atlasName": "Liechtenstein",
+        "name": "Liechtenstein",
+        "center": [
+          9.559439,
+          47.111405
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": true,
+    "factJa": "アルプス山脈とドナウ川に関わる内陸国",
+    "observationJa": "山と湖",
+    "route": {
+      "via": "Slovenia",
+      "port": "Koper",
+      "sea": "Adriatic Sea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Schonbrunn_Palace.jpg/960px-Schonbrunn_Palace.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Schonbrunn_Palace.jpg",
+      "credit": "Truete",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "captionJa": "シェーンブルン宮殿と庭園群",
+      "captionEn": "Palace and Gardens of Schönbrunn",
+      "descriptionJa": "ハプスブルク家の夏の宮殿で、豪華な部屋と広大な庭園が帝国時代の文化を伝えます。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/austria/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "黄色い建物の前に、馬車が見える",
+    "sceneCategory": "palace",
+    "visibleClaimJa": "黄色い建物の前に、馬車が見える"
+  },
+  "az": {
+    "iso": "az",
+    "atlasId": "031",
+    "atlasName": "Azerbaijan",
+    "name": "Azerbaijan",
+    "center": [
+      47.210994,
+      40.402387
+    ],
+    "countryCode": "az",
+    "nameEn": "Azerbaijan",
+    "nameJa": "アゼルバイジャン",
+    "group": "A",
+    "continent": "Asia",
+    "cities": [
+      {
+        "id": "az-city-0",
+        "name": "Baku",
+        "coordinates": [
+          49.860271,
+          40.397218
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "バクー",
+        "isCapital": true
+      },
+      {
+        "id": "az-city-1",
+        "name": "Ganca",
+        "coordinates": [
+          46.350028,
+          40.684996
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "az-city-2",
+        "name": "Sumqayt",
+        "coordinates": [
+          49.629983,
+          40.580015
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "az-city-3",
+        "name": "Naxcivan",
+        "coordinates": [
+          45.412205,
+          39.20922
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "az-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "ru",
+        "atlasId": "643",
+        "atlasName": "Russia",
+        "name": "Russia",
+        "center": [
+          44.686469,
+          58.249357
+        ]
+      },
+      {
+        "iso": "ge",
+        "atlasId": "268",
+        "atlasName": "Georgia",
+        "name": "Georgia",
+        "center": [
+          43.735724,
+          41.870087
+        ]
+      },
+      {
+        "iso": "am",
+        "atlasId": "051",
+        "atlasName": "Armenia",
+        "name": "Armenia",
+        "center": [
+          44.800564,
+          40.459077
+        ]
+      },
+      {
+        "iso": "ir",
+        "atlasId": "364",
+        "atlasName": "Iran",
+        "name": "Iran",
+        "center": [
+          54.931495,
+          32.166225
+        ]
+      },
+      {
+        "iso": "tr",
+        "atlasId": "792",
+        "atlasName": "Turkey",
+        "name": "Turkey",
+        "center": [
+          34.508268,
+          39.345388
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "トルコとは飛び地ナヒチェヴァンで接します。",
+    "landlocked": true,
+    "factJa": "カスピ海に面するが、外洋への海岸を持たない",
+    "observationJa": "岩の地形",
+    "route": {
+      "via": "Georgia",
+      "port": "Poti",
+      "sea": "Black Sea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Old_city_baku_azerbaijan6.jpg/960px-Old_city_baku_azerbaijan6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Old_city_baku_azerbaijan6.jpg",
+      "credit": "Самый древний",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "captionJa": "城壁都市バクーと乙女の塔",
+      "captionEn": "Walled City of Baku and Maiden Tower",
+      "descriptionJa": "城壁内に宮殿、塔、隊商宿が残り、ペルシャやトルコなどとの文化交流を伝えます。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/azerbaijan/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "高い位置から、密集した市街地を見下ろしている",
+    "sceneCategory": "city",
+    "visibleClaimJa": "高い位置から、密集した市街地を見下ろしている"
+  },
+  "bs": {
+    "iso": "bs",
+    "atlasId": "044",
+    "atlasName": "Bahamas",
+    "name": "The Bahamas",
+    "center": [
+      -77.146688,
+      26.401789
+    ],
+    "countryCode": "bs",
+    "nameEn": "The Bahamas",
+    "nameJa": "バハマ",
+    "group": "B",
+    "continent": "North America",
+    "cities": [
+      {
+        "id": "bs-city-0",
+        "name": "Nassau",
+        "coordinates": [
+          -77.350044,
+          25.08339
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ナッソー",
+        "isCapital": true
+      },
+      {
+        "id": "bs-city-1",
+        "name": "Freeport",
+        "coordinates": [
+          -78.700013,
+          26.533276
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "bs-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "us",
+        "atlasId": "840",
+        "atlasName": "United States of America",
+        "name": "United States of America",
+        "center": [
+          -97.482602,
+          39.538479
+        ]
+      },
+      {
+        "iso": "cu",
+        "atlasId": "192",
+        "atlasName": "Cuba",
+        "name": "Cuba",
+        "center": [
+          -77.975855,
+          21.334024
+        ]
+      },
+      {
+        "iso": "ht",
+        "atlasId": "332",
+        "atlasName": "Haiti",
+        "name": "Haiti",
+        "center": [
+          -72.224051,
+          19.263784
+        ]
+      }
+    ],
+    "neighborKind": "sea-region",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "大西洋に多数の島と浅い海が広がる",
+    "observationJa": "海と砂浜",
+    "route": {
+      "via": "The Bahamas",
+      "port": "Nassau",
+      "sea": "Atlantic Ocean",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Spiaggia_Exuma.JPG/960px-Spiaggia_Exuma.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spiaggia_Exuma.JPG",
+      "credit": "Cappo80",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "captionJa": "エグズーマ諸島",
+      "captionEn": "Exuma Islands",
+      "descriptionJa": "白い砂浜と浅い青色の海が広がり、サンゴ礁や海洋生物を間近に観察できます。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/bahamas/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "白い砂浜と浅い青色の海が見える",
+    "sceneCategory": "beach",
+    "visibleClaimJa": "白い砂浜と浅い青色の海が見える"
+  },
+  "bh": {
+    "iso": "bh",
+    "atlasId": "048",
+    "atlasName": "Bahrain",
+    "name": "Bahrain",
+    "center": [
+      50.554816,
+      26.055972
+    ],
+    "countryCode": "bh",
+    "nameEn": "Bahrain",
+    "nameJa": "バーレーン",
+    "group": "B",
+    "continent": "Asia",
+    "cities": [
+      {
+        "id": "bh-city-0",
+        "name": "Manama",
+        "coordinates": [
+          50.583052,
+          26.236136
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "マナーマ",
+        "isCapital": true
+      },
+      {
+        "id": "bh-town-1",
+        "name": "Muharraq",
+        "coordinates": [
+          50.6119,
+          26.2572
+        ],
+        "source": "editorial-coordinate-pending-verification"
+      },
+      {
+        "id": "bh-town-2",
+        "name": "Riffa",
+        "coordinates": [
+          50.555,
+          26.13
+        ],
+        "source": "editorial-coordinate-pending-verification"
+      }
+    ],
+    "capitalId": "bh-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "sa",
+        "atlasId": "682",
+        "atlasName": "Saudi Arabia",
+        "name": "Saudi Arabia",
+        "center": [
+          44.6996,
+          23.806908
+        ]
+      },
+      {
+        "iso": "qa",
+        "atlasId": "634",
+        "atlasName": "Qatar",
+        "name": "Qatar",
+        "center": [
+          51.143509,
+          25.237383
+        ]
+      },
+      {
+        "iso": "ir",
+        "atlasId": "364",
+        "atlasName": "Iran",
+        "name": "Iran",
+        "center": [
+          54.931495,
+          32.166225
+        ]
+      }
+    ],
+    "neighborKind": "sea-region",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "ペルシャ湾に浮かぶ島国",
+    "observationJa": "石造りの建物",
+    "route": {
+      "via": "Bahrain",
+      "port": "Khalifa Bin Salman",
+      "sea": "Persian Gulf",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Qal%27at_al-Bahrain_1.jpg/960px-Qal%27at_al-Bahrain_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qal%27at_al-Bahrain_1.jpg",
+      "credit": "Beireke1",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "captionJa": "カルアト・アル＝バーレーン",
+      "captionEn": "Qal'at al-Bahrain",
+      "descriptionJa": "古代ディルムン文明から続く都市遺跡で、交易の中心だった島の歴史を伝えます。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/bahrain/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "乾いた地面の上に、厚い石造りの城壁が見える",
+    "sceneCategory": "fort",
+    "visibleClaimJa": "乾いた地面の上に、厚い石造りの城壁が見える"
+  },
+  "bd": {
+    "iso": "bd",
+    "atlasId": "050",
+    "atlasName": "Bangladesh",
+    "name": "Bangladesh",
+    "center": [
+      89.684963,
+      24.214956
+    ],
+    "countryCode": "bd",
+    "nameEn": "Bangladesh",
+    "nameJa": "バングラデシュ",
+    "group": "B",
+    "continent": "Asia",
+    "cities": [
+      {
+        "id": "bd-city-0",
+        "name": "Dhaka",
+        "coordinates": [
+          90.406634,
+          23.725006
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ダッカ",
+        "isCapital": true
+      },
+      {
+        "id": "bd-city-1",
+        "name": "Chattogram",
+        "coordinates": [
+          91.798022,
+          22.331938
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bd-city-2",
+        "name": "Khulna",
+        "coordinates": [
+          89.558055,
+          22.841933
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bd-city-3",
+        "name": "Rajshahi",
+        "coordinates": [
+          88.603074,
+          24.37693
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "bd-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "in",
+        "atlasId": "356",
+        "atlasName": "India",
+        "name": "India",
+        "center": [
+          79.358105,
+          22.686852
+        ]
+      },
+      {
+        "iso": "mm",
+        "atlasId": "104",
+        "atlasName": "Myanmar",
+        "name": "Myanmar",
+        "center": [
+          95.804497,
+          21.573855
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "大河川が運ぶ土砂でできたデルタが広がる",
+    "observationJa": "樹木と水",
+    "route": {
+      "via": "Bangladesh",
+      "port": "Chattogram",
+      "sea": "Bay of Bengal",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/SUNDARBAN.jpg/960px-SUNDARBAN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:SUNDARBAN.jpg",
+      "credit": "Shahid BDWiki",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "captionJa": "シュンドルボン",
+      "captionEn": "The Sundarbans",
+      "descriptionJa": "世界最大級のマングローブ林で、ベンガルトラや多様な水鳥が暮らしています。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/bangladesh/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "水辺と樹木の近くに、ワニが見える",
+    "sceneCategory": "mangrove",
+    "visibleClaimJa": "水辺と樹木の近くに、ワニが見える"
+  },
+  "bb": {
+    "iso": "bb",
+    "atlasId": "052",
+    "atlasName": "Barbados",
+    "name": "Barbados",
+    "center": [
+      -59.568966,
+      13.163709
+    ],
+    "countryCode": "bb",
+    "nameEn": "Barbados",
+    "nameJa": "バルバドス",
+    "group": "B",
+    "continent": "North America",
+    "cities": [
+      {
+        "id": "bb-city-0",
+        "name": "Bridgetown",
+        "coordinates": [
+          -59.616527,
+          13.102003
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ブリッジタウン",
+        "isCapital": true
+      },
+      {
+        "id": "bb-town-1",
+        "name": "Speightstown",
+        "coordinates": [
+          -59.6412,
+          13.2507
+        ],
+        "source": "editorial-coordinate-pending-verification"
+      },
+      {
+        "id": "bb-town-2",
+        "name": "Oistins",
+        "coordinates": [
+          -59.5429,
+          13.0707
+        ],
+        "source": "editorial-coordinate-pending-verification"
+      }
+    ],
+    "capitalId": "bb-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "lc",
+        "atlasId": "662",
+        "atlasName": "Saint Lucia",
+        "name": "Saint Lucia",
+        "center": [
+          -60.980094,
+          13.892371
+        ]
+      },
+      {
+        "iso": "vc",
+        "atlasId": "670",
+        "atlasName": "St. Vin. and Gren.",
+        "name": "Saint Vincent and the Grenadines",
+        "center": [
+          -61.3359,
+          13.0879
+        ]
+      },
+      {
+        "iso": "gd",
+        "atlasId": "308",
+        "atlasName": "Grenada",
+        "name": "Grenada",
+        "center": [
+          -61.680461,
+          12.113156
+        ]
+      }
+    ],
+    "neighborKind": "sea-region",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "小アンティル諸島の東側、大西洋に位置する島国",
+    "observationJa": "建物の並び",
+    "route": {
+      "via": "Barbados",
+      "port": "Bridgetown",
+      "sea": "Atlantic Ocean",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Aerial_view_of_Bridgetown_Barbados.jpg/960px-Aerial_view_of_Bridgetown_Barbados.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Bridgetown_Barbados.jpg",
+      "credit": "Barry haynes",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "captionJa": "歴史都市ブリッジタウンと軍事施設",
+      "captionEn": "Historic Bridgetown and its Garrison",
+      "descriptionJa": "英国植民地時代の街路や港湾施設が残り、大西洋交易の歴史を伝えています。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/barbados/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "入り江と建物が並ぶ街を上空から見ている",
+    "sceneCategory": "harbor-city",
+    "visibleClaimJa": "入り江と建物が並ぶ街を上空から見ている"
+  },
+  "by": {
+    "iso": "by",
+    "atlasId": "112",
+    "atlasName": "Belarus",
+    "name": "Belarus",
+    "center": [
+      28.417701,
+      53.821888
+    ],
+    "countryCode": "by",
+    "nameEn": "Belarus",
+    "nameJa": "ベラルーシ",
+    "group": "B",
+    "continent": "Europe",
+    "cities": [
+      {
+        "id": "by-city-0",
+        "name": "Minsk",
+        "coordinates": [
+          27.564681,
+          53.901923
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ミンスク",
+        "isCapital": true
+      },
+      {
+        "id": "by-city-1",
+        "name": "Homyel",
+        "coordinates": [
+          31.000009,
+          52.430016
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "by-city-2",
+        "name": "Mahilyow",
+        "coordinates": [
+          30.32465,
+          53.898505
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "by-city-3",
+        "name": "Vitsyebsk",
+        "coordinates": [
+          30.18533,
+          55.18871
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "by-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "lv",
+        "atlasId": "428",
+        "atlasName": "Latvia",
+        "name": "Latvia",
+        "center": [
+          25.458723,
+          57.066872
+        ]
+      },
+      {
+        "iso": "lt",
+        "atlasId": "440",
+        "atlasName": "Lithuania",
+        "name": "Lithuania",
+        "center": [
+          24.089932,
+          55.103703
+        ]
+      },
+      {
+        "iso": "pl",
+        "atlasId": "616",
+        "atlasName": "Poland",
+        "name": "Poland",
+        "center": [
+          19.490468,
+          51.990316
+        ]
+      },
+      {
+        "iso": "ru",
+        "atlasId": "643",
+        "atlasName": "Russia",
+        "name": "Russia",
+        "center": [
+          44.686469,
+          58.249357
+        ]
+      },
+      {
+        "iso": "ua",
+        "atlasId": "804",
+        "atlasName": "Ukraine",
+        "name": "Ukraine",
+        "center": [
+          32.140865,
+          49.724739
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": true,
+    "factJa": "海に面せず、平野や森林・湖が広がる",
+    "observationJa": "樹木",
+    "route": {
+      "via": "Lithuania",
+      "port": "Klaipeda",
+      "sea": "Baltic Sea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Mir-Castle.jpg/960px-Mir-Castle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mir-Castle.jpg",
+      "credit": "Torarne",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "captionJa": "ミール城",
+      "captionEn": "Mir Castle Complex",
+      "descriptionJa": "ゴシック、ルネサンス、バロックの特徴が混ざる城で、地域の複雑な歴史を映しています。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/belarus/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "水辺に赤い屋根と塔を持つ城が見える",
+    "sceneCategory": "castle",
+    "visibleClaimJa": "水辺に赤い屋根と塔を持つ城が見える"
+  },
+  "be": {
+    "iso": "be",
+    "atlasId": "056",
+    "atlasName": "Belgium",
+    "name": "Belgium",
+    "center": [
+      4.800448,
+      50.785392
+    ],
+    "countryCode": "be",
+    "nameEn": "Belgium",
+    "nameJa": "ベルギー",
+    "group": "B",
+    "continent": "Europe",
+    "cities": [
+      {
+        "id": "be-city-0",
+        "name": "Brussels",
+        "coordinates": [
+          4.331371,
+          50.835263
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ブリュッセル",
+        "isCapital": true
+      },
+      {
+        "id": "be-city-1",
+        "name": "Antwerpen",
+        "coordinates": [
+          4.413071,
+          51.222319
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "be-city-2",
+        "name": "Liège",
+        "coordinates": [
+          5.580011,
+          50.629996
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "be-city-3",
+        "name": "Gent",
+        "coordinates": [
+          3.700022,
+          51.029998
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "be-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "fr",
+        "atlasId": "-99",
+        "atlasName": "France",
+        "name": "France",
+        "center": [
+          2.552275,
+          46.696113
+        ]
+      },
+      {
+        "iso": "lu",
+        "atlasId": "442",
+        "atlasName": "Luxembourg",
+        "name": "Luxembourg",
+        "center": [
+          6.07762,
+          49.733732
+        ]
+      },
+      {
+        "iso": "de",
+        "atlasId": "276",
+        "atlasName": "Germany",
+        "name": "Germany",
+        "center": [
+          9.678348,
+          50.961733
+        ]
+      },
+      {
+        "iso": "nl",
+        "atlasId": "528",
+        "atlasName": "Netherlands",
+        "name": "Netherlands",
+        "center": [
+          5.61144,
+          52.422211
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "北海に面し、河川と港が内陸を海につなぐ",
+    "observationJa": "建物の並び",
+    "route": {
+      "via": "Belgium",
+      "port": "Antwerp",
+      "sea": "North Sea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Grand-Place_de_Bruxelles%2C_Brussels.jpg/960px-Grand-Place_de_Bruxelles%2C_Brussels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grand-Place_de_Bruxelles,_Brussels.jpg",
+      "credit": "Xinyuan Dang",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "captionJa": "ブリュッセルのグラン＝プラス",
+      "captionEn": "Grand-Place of Brussels",
+      "descriptionJa": "豪華なギルドハウスと市庁舎が囲む広場で、ヨーロッパ都市建築の傑作です。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/belgium/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "広場を囲むように、装飾のある建物が並んでいる",
+    "sceneCategory": "square",
+    "visibleClaimJa": "広場を囲むように、装飾のある建物が並んでいる"
+  },
+  "bz": {
+    "iso": "bz",
+    "atlasId": "084",
+    "atlasName": "Belize",
+    "name": "Belize",
+    "center": [
+      -88.712962,
+      17.202068
+    ],
+    "countryCode": "bz",
+    "nameEn": "Belize",
+    "nameJa": "ベリーズ",
+    "group": "B",
+    "continent": "North America",
+    "cities": [
+      {
+        "id": "bz-city-0",
+        "name": "Belmopan",
+        "coordinates": [
+          -88.767073,
+          17.252033
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ベルモパン",
+        "isCapital": true
+      },
+      {
+        "id": "bz-city-1",
+        "name": "Belize City",
+        "coordinates": [
+          -88.188374,
+          17.498711
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bz-city-2",
+        "name": "Orange Walk",
+        "coordinates": [
+          -88.55998,
+          18.090432
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bz-city-3",
+        "name": "El Cayo",
+        "coordinates": [
+          -89.061003,
+          17.155998
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "bz-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "mx",
+        "atlasId": "484",
+        "atlasName": "Mexico",
+        "name": "Mexico",
+        "center": [
+          -102.289448,
+          23.919988
+        ]
+      },
+      {
+        "iso": "gt",
+        "atlasId": "320",
+        "atlasName": "Guatemala",
+        "name": "Guatemala",
+        "center": [
+          -90.497134,
+          14.982133
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "カリブ海に面し、沖合にサンゴ礁がある",
+    "observationJa": "青い海",
+    "route": {
+      "via": "Belize",
+      "port": "Belize City",
+      "sea": "Caribbean Sea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/The_Great_Blue_Hole%2C_Belize.png/960px-The_Great_Blue_Hole%2C_Belize.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Great_Blue_Hole,_Belize.png",
+      "credit": "SentinelHub",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "captionJa": "グレート・ブルーホール",
+      "captionEn": "Great Blue Hole",
+      "descriptionJa": "円形に近い巨大な海底陥没穴で、濃い青色とサンゴ礁の景観が宇宙からも目立ちます。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/belize/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "浅い海の中に、丸く濃い青色をした深い部分が見える",
+    "sceneCategory": "blue-hole",
+    "visibleClaimJa": "浅い海の中に、丸く濃い青色をした深い部分が見える"
+  },
+  "bj": {
+    "iso": "bj",
+    "atlasId": "204",
+    "atlasName": "Benin",
+    "name": "Benin",
+    "center": [
+      2.352018,
+      10.324775
+    ],
+    "countryCode": "bj",
+    "nameEn": "Benin",
+    "nameJa": "ベナン",
+    "group": "B",
+    "continent": "Africa",
+    "cities": [
+      {
+        "id": "bj-city-0",
+        "name": "Porto-Novo",
+        "coordinates": [
+          2.616626,
+          6.483311
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ポルトノボ",
+        "isCapital": true
+      },
+      {
+        "id": "bj-city-1",
+        "name": "Cotonou",
+        "coordinates": [
+          2.404355,
+          6.36298
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bj-city-2",
+        "name": "Djougou",
+        "coordinates": [
+          1.680042,
+          9.700427
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bj-city-3",
+        "name": "Parakou",
+        "coordinates": [
+          2.620036,
+          9.34001
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "bj-city-0",
+    "capitalNote": "Porto-Novo is the capital; Cotonou hosts many government offices.",
+    "neighbors": [
+      {
+        "iso": "tg",
+        "atlasId": "768",
+        "atlasName": "Togo",
+        "name": "Togo",
+        "center": [
+          1.058113,
+          8.80722
+        ]
+      },
+      {
+        "iso": "bf",
+        "atlasId": "854",
+        "atlasName": "Burkina Faso",
+        "name": "Burkina Faso",
+        "center": [
+          -1.36388,
+          12.673048
+        ]
+      },
+      {
+        "iso": "ne",
+        "atlasId": "562",
+        "atlasName": "Niger",
+        "name": "Niger",
+        "center": [
+          9.504356,
+          17.446195
+        ]
+      },
+      {
+        "iso": "ng",
+        "atlasId": "566",
+        "atlasName": "Nigeria",
+        "name": "Nigeria",
+        "center": [
+          7.50322,
+          9.439799
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "南はギニア湾に面し、南北に長い国土を持つ",
+    "observationJa": "建物",
+    "route": {
+      "via": "Benin",
+      "port": "Cotonou",
+      "sea": "Gulf of Guinea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Royal_Palaces_of_Abomey-133491.jpg/960px-Royal_Palaces_of_Abomey-133491.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Palaces_of_Abomey-133491.jpg",
+      "credit": "Karalyn Monteil",
+      "license": "CC BY-SA 3.0 igo",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+      "captionJa": "アボメイの王宮群",
+      "captionEn": "Royal Palaces of Abomey",
+      "descriptionJa": "ダホメ王国の歴代王が築いた宮殿群で、壁画や建物が王国の歴史を伝えます。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/benin/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "赤茶色の壁と低い建物が見える",
+    "sceneCategory": "earth-wall",
+    "visibleClaimJa": "赤茶色の壁と低い建物が見える"
+  },
+  "bt": {
+    "iso": "bt",
+    "atlasId": "064",
+    "atlasName": "Bhutan",
+    "name": "Bhutan",
+    "center": [
+      90.040294,
+      27.536685
+    ],
+    "countryCode": "bt",
+    "nameEn": "Bhutan",
+    "nameJa": "ブータン",
+    "group": "B",
+    "continent": "Asia",
+    "cities": [
+      {
+        "id": "bt-city-0",
+        "name": "Thimphu",
+        "coordinates": [
+          89.639014,
+          27.472986
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ティンプー",
+        "isCapital": true
+      },
+      {
+        "id": "bt-city-1",
+        "name": "Paro",
+        "coordinates": [
+          89.416777,
+          27.42937
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bt-city-2",
+        "name": "Punakha",
+        "coordinates": [
+          89.864135,
+          27.584154
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bt-city-3",
+        "name": "Wangdue Prodrang",
+        "coordinates": [
+          89.916697,
+          27.433296
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "bt-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "cn",
+        "atlasId": "156",
+        "atlasName": "China",
+        "name": "China",
+        "center": [
+          106.337289,
+          32.498178
+        ]
+      },
+      {
+        "iso": "in",
+        "atlasId": "356",
+        "atlasName": "India",
+        "name": "India",
+        "center": [
+          79.358105,
+          22.686852
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": true,
+    "factJa": "ヒマラヤ山脈の南側に位置する内陸国",
+    "observationJa": "山と建物",
+    "route": {
+      "via": "India",
+      "port": "Kolkata",
+      "sea": "Bay of Bengal",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Paro_Taktsang.jpg/960px-Paro_Taktsang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paro_Taktsang.jpg",
+      "credit": "Goyaldevender",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "captionJa": "タクツァン僧院",
+      "captionEn": "Paro Taktsang",
+      "descriptionJa": "切り立った岩壁に建つ仏教寺院で、「虎の巣」と呼ばれるブータンを象徴する景観です。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/bhutan/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "急な崖に沿って、複数の建物が建てられている",
+    "sceneCategory": "cliff-monastery",
+    "visibleClaimJa": "急な崖に沿って、複数の建物が建てられている"
+  },
+  "bo": {
+    "iso": "bo",
+    "atlasId": "068",
+    "atlasName": "Bolivia",
+    "name": "Bolivia",
+    "center": [
+      -64.593433,
+      -16.666015
+    ],
+    "countryCode": "bo",
+    "nameEn": "Bolivia",
+    "nameJa": "ボリビア",
+    "group": "B",
+    "continent": "South America",
+    "cities": [
+      {
+        "id": "bo-city-0",
+        "name": "Sucre (constitutional capital)",
+        "coordinates": [
+          -65.259516,
+          -19.040971
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "スクレ（憲法上）",
+        "isCapital": true
+      },
+      {
+        "id": "bo-city-1",
+        "name": "Santa Cruz",
+        "coordinates": [
+          -63.227942,
+          -17.751972
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bo-city-2",
+        "name": "La Paz",
+        "coordinates": [
+          -68.151931,
+          -16.496028
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bo-city-3",
+        "name": "Cochabamba",
+        "coordinates": [
+          -66.169977,
+          -17.410011
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "bo-city-0",
+    "capitalNote": "Sucre is the constitutional capital; La Paz is the seat of government.",
+    "neighbors": [
+      {
+        "iso": "pe",
+        "atlasId": "604",
+        "atlasName": "Peru",
+        "name": "Peru",
+        "center": [
+          -72.90016,
+          -12.976679
+        ]
+      },
+      {
+        "iso": "br",
+        "atlasId": "076",
+        "atlasName": "Brazil",
+        "name": "Brazil",
+        "center": [
+          -49.55945,
+          -12.098687
+        ]
+      },
+      {
+        "iso": "py",
+        "atlasId": "600",
+        "atlasName": "Paraguay",
+        "name": "Paraguay",
+        "center": [
+          -60.146394,
+          -21.674509
+        ]
+      },
+      {
+        "iso": "ar",
+        "atlasId": "032",
+        "atlasName": "Argentina",
+        "name": "Argentina",
+        "center": [
+          -64.173331,
+          -33.501159
+        ]
+      },
+      {
+        "iso": "cl",
+        "atlasId": "152",
+        "atlasName": "Chile",
+        "name": "Chile",
+        "center": [
+          -72.318871,
+          -38.151771
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": true,
+    "factJa": "西のアンデス高地と東の低地を持つ内陸国",
+    "observationJa": "白い地表",
+    "route": {
+      "via": "Chile",
+      "port": "Arica",
+      "sea": "Pacific Ocean",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Salar_de_Uyuni_Bolivia.jpg/960px-Salar_de_Uyuni_Bolivia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Salar_de_Uyuni_Bolivia.jpg",
+      "credit": "Entropy1963",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "captionJa": "ウユニ塩湖",
+      "captionEn": "Salar de Uyuni",
+      "descriptionJa": "世界最大の塩原で、雨季には薄い水が空を映し、巨大な鏡のように見えます。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/bolivia/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "白く平らな地表に、多角形の模様が見える",
+    "sceneCategory": "salt-flat",
+    "visibleClaimJa": "白く平らな地表に、多角形の模様が見える"
+  },
+  "ba": {
+    "iso": "ba",
+    "atlasId": "070",
+    "atlasName": "Bosnia and Herz.",
+    "name": "Bosnia and Herzegovina",
+    "center": [
+      18.06841,
+      44.091051
+    ],
+    "countryCode": "ba",
+    "nameEn": "Bosnia and Herzegovina",
+    "nameJa": "ボスニア・ヘルツェゴビナ",
+    "group": "B",
+    "continent": "Europe",
+    "cities": [
+      {
+        "id": "ba-city-0",
+        "name": "Sarajevo",
+        "coordinates": [
+          18.383002,
+          43.850022
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "サラエボ",
+        "isCapital": true
+      },
+      {
+        "id": "ba-city-1",
+        "name": "Banja Luka",
+        "coordinates": [
+          17.179974,
+          44.780405
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "ba-city-2",
+        "name": "Zenica",
+        "coordinates": [
+          17.919981,
+          44.219974
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "ba-city-3",
+        "name": "Mostar",
+        "coordinates": [
+          17.820039,
+          43.350492
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "ba-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "hr",
+        "atlasId": "191",
+        "atlasName": "Croatia",
+        "name": "Croatia",
+        "center": [
+          16.37241,
+          45.805799
+        ]
+      },
+      {
+        "iso": "rs",
+        "atlasId": "688",
+        "atlasName": "Serbia",
+        "name": "Republic of Serbia",
+        "center": [
+          20.787989,
+          44.189919
+        ]
+      },
+      {
+        "iso": "me",
+        "atlasId": "499",
+        "atlasName": "Montenegro",
+        "name": "Montenegro",
+        "center": [
+          19.143727,
+          42.803101
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "ネウムに短い海岸があり、内陸国ではありません。",
+    "landlocked": false,
+    "factJa": "山地が多く、ネウムに短いアドリア海岸を持つ",
+    "observationJa": "橋と川",
+    "route": {
+      "via": "Bosnia and Herzegovina",
+      "port": "Neum",
+      "sea": "Adriatic Sea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Bridge_of_mostar.JPG/960px-Bridge_of_mostar.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bridge_of_mostar.JPG",
+      "credit": "Vikiçizer",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "captionJa": "モスタル旧市街と古橋",
+      "captionEn": "Old Bridge Area of Mostar",
+      "descriptionJa": "ネレトヴァ川に架かる石橋は、異なる文化を結ぶ町の象徴として再建されました。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/bosnia/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "川の両岸を、大きなアーチ形の橋が結んでいる",
+    "sceneCategory": "bridge",
+    "visibleClaimJa": "川の両岸を、大きなアーチ形の橋が結んでいる"
+  },
+  "bw": {
+    "iso": "bw",
+    "atlasId": "072",
+    "atlasName": "Botswana",
+    "name": "Botswana",
+    "center": [
+      24.179216,
+      -22.102634
+    ],
+    "countryCode": "bw",
+    "nameEn": "Botswana",
+    "nameJa": "ボツワナ",
+    "group": "B",
+    "continent": "Africa",
+    "cities": [
+      {
+        "id": "bw-city-0",
+        "name": "Gaborone",
+        "coordinates": [
+          25.911948,
+          -24.646314
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ハボローネ",
+        "isCapital": true
+      },
+      {
+        "id": "bw-city-1",
+        "name": "Francistown",
+        "coordinates": [
+          27.500016,
+          -21.17004
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bw-city-2",
+        "name": "Lobatse",
+        "coordinates": [
+          25.680024,
+          -25.219612
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bw-city-3",
+        "name": "Molepolole",
+        "coordinates": [
+          25.510009,
+          -24.399972
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "bw-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "na",
+        "atlasId": "516",
+        "atlasName": "Namibia",
+        "name": "Namibia",
+        "center": [
+          17.108166,
+          -20.575298
+        ]
+      },
+      {
+        "iso": "zm",
+        "atlasId": "894",
+        "atlasName": "Zambia",
+        "name": "Zambia",
+        "center": [
+          26.395298,
+          -14.660804
+        ]
+      },
+      {
+        "iso": "zw",
+        "atlasId": "716",
+        "atlasName": "Zimbabwe",
+        "name": "Zimbabwe",
+        "center": [
+          29.925444,
+          -18.91164
+        ]
+      },
+      {
+        "iso": "za",
+        "atlasId": "710",
+        "atlasName": "South Africa",
+        "name": "South Africa",
+        "center": [
+          23.665734,
+          -29.708776
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": true,
+    "factJa": "カラハリの乾燥地域とオカバンゴの湿地を持つ内陸国",
+    "observationJa": "水と草地",
+    "route": {
+      "via": "South Africa",
+      "port": "Durban",
+      "sea": "Indian Ocean",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Okavango_Delta%2C_Botswana.jpg/960px-Okavango_Delta%2C_Botswana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Okavango_Delta,_Botswana.jpg",
+      "credit": "Joachim Huber",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "captionJa": "オカバンゴ・デルタ",
+      "captionEn": "Okavango Delta",
+      "descriptionJa": "川が海へ流れず内陸で湿地をつくり、ゾウやカバ、多くの鳥を支えています。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/botswana/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "草地の間を、水路が枝分かれして流れている",
+    "sceneCategory": "delta",
+    "visibleClaimJa": "草地の間を、水路が枝分かれして流れている"
+  },
+  "br": {
+    "iso": "br",
+    "atlasId": "076",
+    "atlasName": "Brazil",
+    "name": "Brazil",
+    "center": [
+      -49.55945,
+      -12.098687
+    ],
+    "countryCode": "br",
+    "nameEn": "Brazil",
+    "nameJa": "ブラジル",
+    "group": "B",
+    "continent": "South America",
+    "cities": [
+      {
+        "id": "br-city-0",
+        "name": "Brasília",
+        "coordinates": [
+          -47.917998,
+          -15.781394
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ブラジリア",
+        "isCapital": true
+      },
+      {
+        "id": "br-city-1",
+        "name": "São Paulo",
+        "coordinates": [
+          -46.626966,
+          -23.556734
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "br-city-2",
+        "name": "Rio de Janeiro",
+        "coordinates": [
+          -43.212117,
+          -22.907308
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "br-city-3",
+        "name": "Belo Horizonte",
+        "coordinates": [
+          -43.91695,
+          -19.91308
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "br-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "uy",
+        "atlasId": "858",
+        "atlasName": "Uruguay",
+        "name": "Uruguay",
+        "center": [
+          -55.966942,
+          -32.961127
+        ]
+      },
+      {
+        "iso": "ar",
+        "atlasId": "032",
+        "atlasName": "Argentina",
+        "name": "Argentina",
+        "center": [
+          -64.173331,
+          -33.501159
+        ]
+      },
+      {
+        "iso": "py",
+        "atlasId": "600",
+        "atlasName": "Paraguay",
+        "name": "Paraguay",
+        "center": [
+          -60.146394,
+          -21.674509
+        ]
+      },
+      {
+        "iso": "bo",
+        "atlasId": "068",
+        "atlasName": "Bolivia",
+        "name": "Bolivia",
+        "center": [
+          -64.593433,
+          -16.666015
+        ]
+      },
+      {
+        "iso": "pe",
+        "atlasId": "604",
+        "atlasName": "Peru",
+        "name": "Peru",
+        "center": [
+          -72.90016,
+          -12.976679
+        ]
+      },
+      {
+        "iso": "co",
+        "atlasId": "170",
+        "atlasName": "Colombia",
+        "name": "Colombia",
+        "center": [
+          -73.174347,
+          3.373111
+        ]
+      },
+      {
+        "iso": "ve",
+        "atlasId": "862",
+        "atlasName": "Venezuela",
+        "name": "Venezuela",
+        "center": [
+          -64.599381,
+          7.182476
+        ]
+      },
+      {
+        "iso": "gy",
+        "atlasId": "328",
+        "atlasName": "Guyana",
+        "name": "Guyana",
+        "center": [
+          -58.942643,
+          5.124317
+        ]
+      },
+      {
+        "iso": "sr",
+        "atlasId": "740",
+        "atlasName": "Suriname",
+        "name": "Suriname",
+        "center": [
+          -55.91094,
+          4.143987
+        ]
+      },
+      {
+        "iso": "gf",
+        "atlasId": "250",
+        "atlasName": "France",
+        "name": "France (French Guiana)",
+        "center": [
+          -53,
+          4
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "フランス領ギアナはフランスの海外県です。",
+    "landlocked": false,
+    "factJa": "アマゾン川流域と大西洋沿岸を持つ",
+    "observationJa": "水の流れ",
+    "route": {
+      "via": "Brazil",
+      "port": "Santos",
+      "sea": "Atlantic Ocean",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/IG_-_Waterfall_trail_on_the_Brazilian_side_of_Iguazu_Falls%2C_2023.jpg/960px-IG_-_Waterfall_trail_on_the_Brazilian_side_of_Iguazu_Falls%2C_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:IG_-_Waterfall_trail_on_the_Brazilian_side_of_Iguazu_Falls,_2023.jpg",
+      "credit": "Josep M. Gracia",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "captionJa": "ブラジル側イグアス国立公園の遊歩道",
+      "captionEn": "Viewpoint trail in Iguacu National Park, Brazil",
+      "descriptionJa": "ブラジル側の国立公園で撮影された遊歩道です。森林の中の通路から、人が景観を訪れるための施設を読み取れます。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/brazil/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "樹木の間に、手すりのある遊歩道が見える",
+    "sceneCategory": "forest-walk",
+    "visibleClaimJa": "樹木の間に、手すりのある遊歩道が見える"
+  },
+  "bn": {
+    "iso": "bn",
+    "atlasId": "096",
+    "atlasName": "Brunei",
+    "name": "Brunei",
+    "center": [
+      114.551943,
+      4.448298
+    ],
+    "countryCode": "bn",
+    "nameEn": "Brunei",
+    "nameJa": "ブルネイ",
+    "group": "B",
+    "continent": "Asia",
+    "cities": [
+      {
+        "id": "bn-city-0",
+        "name": "Bandar Seri Begawan",
+        "coordinates": [
+          114.933284,
+          4.883331
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "バンダルスリブガワン",
+        "isCapital": true
+      },
+      {
+        "id": "bn-town-1",
+        "name": "Kuala Belait",
+        "coordinates": [
+          114.192,
+          4.5833
+        ],
+        "source": "editorial-coordinate-pending-verification"
+      },
+      {
+        "id": "bn-town-2",
+        "name": "Tutong",
+        "coordinates": [
+          114.65,
+          4.8
+        ],
+        "source": "editorial-coordinate-pending-verification"
+      }
+    ],
+    "capitalId": "bn-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "my",
+        "atlasId": "458",
+        "atlasName": "Malaysia",
+        "name": "Malaysia",
+        "center": [
+          113.83708,
+          2.528667
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "ボルネオ島北部にあり、国土は二つの部分に分かれる",
+    "observationJa": "建物と水",
+    "route": {
+      "via": "Brunei",
+      "port": "Muara",
+      "sea": "South China Sea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/KAMPONG_AYER%2C_BRUNEI.jpg/960px-KAMPONG_AYER%2C_BRUNEI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:KAMPONG_AYER,_BRUNEI.jpg",
+      "credit": "JERRYE AND ROY KLOTZ MD",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "captionJa": "カンポン・アイール",
+      "captionEn": "Kampong Ayer",
+      "descriptionJa": "川の上に家、学校、商店が広がる大規模な水上集落で、長い暮らしの歴史があります。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/brunei/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "水上の建物をつなぐ、板張りの通路が見える",
+    "sceneCategory": "water-village",
+    "visibleClaimJa": "水上の建物をつなぐ、板張りの通路が見える"
+  },
+  "bg": {
+    "iso": "bg",
+    "atlasId": "100",
+    "atlasName": "Bulgaria",
+    "name": "Bulgaria",
+    "center": [
+      25.15709,
+      42.508785
+    ],
+    "countryCode": "bg",
+    "nameEn": "Bulgaria",
+    "nameJa": "ブルガリア",
+    "group": "B",
+    "continent": "Europe",
+    "cities": [
+      {
+        "id": "bg-city-0",
+        "name": "Sofia",
+        "coordinates": [
+          23.314708,
+          42.685295
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ソフィア",
+        "isCapital": true
+      },
+      {
+        "id": "bg-city-1",
+        "name": "Plovdiv",
+        "coordinates": [
+          24.753982,
+          42.153976
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bg-city-2",
+        "name": "Varna",
+        "coordinates": [
+          27.895289,
+          43.215643
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bg-city-3",
+        "name": "Burgas",
+        "coordinates": [
+          27.474643,
+          42.5146
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "bg-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "ro",
+        "atlasId": "642",
+        "atlasName": "Romania",
+        "name": "Romania",
+        "center": [
+          24.972624,
+          45.733237
+        ]
+      },
+      {
+        "iso": "rs",
+        "atlasId": "688",
+        "atlasName": "Serbia",
+        "name": "Republic of Serbia",
+        "center": [
+          20.787989,
+          44.189919
+        ]
+      },
+      {
+        "iso": "mk",
+        "atlasId": "807",
+        "atlasName": "Macedonia",
+        "name": "North Macedonia",
+        "center": [
+          21.555839,
+          41.558223
+        ]
+      },
+      {
+        "iso": "gr",
+        "atlasId": "300",
+        "atlasName": "Greece",
+        "name": "Greece",
+        "center": [
+          21.72568,
+          39.492763
+        ]
+      },
+      {
+        "iso": "tr",
+        "atlasId": "792",
+        "atlasName": "Turkey",
+        "name": "Turkey",
+        "center": [
+          34.508268,
+          39.345388
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": false,
+    "factJa": "黒海に面し、北側をドナウ川が流れる",
+    "observationJa": "建物",
+    "route": {
+      "via": "Bulgaria",
+      "port": "Varna",
+      "sea": "Black Sea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Rila_monastery_-_bulgaria.JPG/960px-Rila_monastery_-_bulgaria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rila_monastery_-_bulgaria.JPG",
+      "credit": "Biso",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "captionJa": "リラ修道院",
+      "captionEn": "Rila Monastery",
+      "descriptionJa": "山中に建つブルガリア正教会の中心地で、鮮やかな壁画と石造建築が残っています。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/bulgaria/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "斜面の近くに、アーチが連なる建物の中庭が見える",
+    "sceneCategory": "courtyard",
+    "visibleClaimJa": "斜面の近くに、アーチが連なる建物の中庭が見える"
+  },
+  "bf": {
+    "iso": "bf",
+    "atlasId": "854",
+    "atlasName": "Burkina Faso",
+    "name": "Burkina Faso",
+    "center": [
+      -1.36388,
+      12.673048
+    ],
+    "countryCode": "bf",
+    "nameEn": "Burkina Faso",
+    "nameJa": "ブルキナファソ",
+    "group": "B",
+    "continent": "Africa",
+    "cities": [
+      {
+        "id": "bf-city-0",
+        "name": "Ouagadougou",
+        "coordinates": [
+          -1.52667,
+          12.372262
+        ],
+        "source": "natural-earth-10m-places",
+        "labelJa": "ワガドゥグー",
+        "isCapital": true
+      },
+      {
+        "id": "bf-city-1",
+        "name": "Bobo Dioulasso",
+        "coordinates": [
+          -4.289981,
+          11.179975
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bf-city-2",
+        "name": "Koudougou",
+        "coordinates": [
+          -2.369995,
+          12.250478
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bf-city-3",
+        "name": "Ouahigouya",
+        "coordinates": [
+          -2.419992,
+          13.570424
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "bf-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "ml",
+        "atlasId": "466",
+        "atlasName": "Mali",
+        "name": "Mali",
+        "center": [
+          -2.038455,
+          18.692713
+        ]
+      },
+      {
+        "iso": "ne",
+        "atlasId": "562",
+        "atlasName": "Niger",
+        "name": "Niger",
+        "center": [
+          9.504356,
+          17.446195
+        ]
+      },
+      {
+        "iso": "bj",
+        "atlasId": "204",
+        "atlasName": "Benin",
+        "name": "Benin",
+        "center": [
+          2.352018,
+          10.324775
+        ]
+      },
+      {
+        "iso": "tg",
+        "atlasId": "768",
+        "atlasName": "Togo",
+        "name": "Togo",
+        "center": [
+          1.058113,
+          8.80722
+        ]
+      },
+      {
+        "iso": "gh",
+        "atlasId": "288",
+        "atlasName": "Ghana",
+        "name": "Ghana",
+        "center": [
+          -1.036941,
+          7.717639
+        ]
+      },
+      {
+        "iso": "ci",
+        "atlasId": "384",
+        "atlasName": "Côte d'Ivoire",
+        "name": "Ivory Coast",
+        "center": [
+          -5.568618,
+          7.49139
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": true,
+    "factJa": "西アフリカに位置する、海に面しない国",
+    "observationJa": "石造りの遺構",
+    "route": {
+      "via": "Ghana",
+      "port": "Tema",
+      "sea": "Gulf of Guinea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/2016.05-441-134ap_archeology%2Cexcavation_Lorop%C3%A9ni_Ruins_nr.Lorop%C3%A9ni%28Poni_Prv.%29%2CBF_sun15may2016-1119h.jpg/960px-2016.05-441-134ap_archeology%2Cexcavation_Lorop%C3%A9ni_Ruins_nr.Lorop%C3%A9ni%28Poni_Prv.%29%2CBF_sun15may2016-1119h.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016.05-441-134ap_archeology,excavation_Lorop%C3%A9ni_Ruins_nr.Lorop%C3%A9ni(Poni_Prv.),BF_sun15may2016-1119h.jpg",
+      "credit": "Rik Schuiling / TropCrop-TCS",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "captionJa": "ロロペニの遺跡群",
+      "captionEn": "Ruins of Loropéni",
+      "descriptionJa": "高い石壁に囲まれた遺跡で、金交易に関わった集落の歴史を伝えています。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/burkinafaso/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "樹木のある場所に、低い石積みの遺構が見える",
+    "sceneCategory": "ruins",
+    "visibleClaimJa": "樹木のある場所に、低い石積みの遺構が見える"
+  },
+  "bi": {
+    "iso": "bi",
+    "atlasId": "108",
+    "atlasName": "Burundi",
+    "name": "Burundi",
+    "center": [
+      29.917086,
+      -3.332836
+    ],
+    "countryCode": "bi",
+    "nameEn": "Burundi",
+    "nameJa": "ブルンジ",
+    "group": "B",
+    "continent": "Africa",
+    "cities": [
+      {
+        "id": "bi-city-0",
+        "name": "Gitega",
+        "coordinates": [
+          29.93218,
+          -3.42733
+        ],
+        "source": "https://ungegn.un.org/dashboard/cities/details?id=3419",
+        "labelJa": "ギテガ",
+        "isCapital": true
+      },
+      {
+        "id": "bi-city-1",
+        "name": "Bujumbura",
+        "coordinates": [
+          29.360006,
+          -3.376087
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bi-city-2",
+        "name": "Muyinga",
+        "coordinates": [
+          30.31726,
+          -2.852347
+        ],
+        "source": "natural-earth-10m-places"
+      },
+      {
+        "id": "bi-city-3",
+        "name": "Ruyigi",
+        "coordinates": [
+          30.243997,
+          -3.481002
+        ],
+        "source": "natural-earth-10m-places"
+      }
+    ],
+    "capitalId": "bi-city-0",
+    "capitalNote": "",
+    "neighbors": [
+      {
+        "iso": "rw",
+        "atlasId": "646",
+        "atlasName": "Rwanda",
+        "name": "Rwanda",
+        "center": [
+          30.103894,
+          -1.897196
+        ]
+      },
+      {
+        "iso": "cd",
+        "atlasId": "180",
+        "atlasName": "Dem. Rep. Congo",
+        "name": "Democratic Republic of the Congo",
+        "center": [
+          23.458829,
+          -1.858167
+        ]
+      },
+      {
+        "iso": "tz",
+        "atlasId": "834",
+        "atlasName": "Tanzania",
+        "name": "United Republic of Tanzania",
+        "center": [
+          34.959183,
+          -6.051866
+        ]
+      }
+    ],
+    "neighborKind": "land-border",
+    "neighborNote": "",
+    "landlocked": true,
+    "factJa": "タンガニーカ湖に面する内陸国",
+    "observationJa": "水の流れ",
+    "route": {
+      "via": "Tanzania",
+      "port": "Dar es Salaam",
+      "sea": "Indian Ocean",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Bujumbura_%26_Lake_Tanganyika.JPG/960px-Bujumbura_%26_Lake_Tanganyika.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bujumbura_%26_Lake_Tanganyika.JPG",
+      "credit": "Andreas31",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "captionJa": "ブルンジ、ブジュンブラとタンガニーカ湖",
+      "captionEn": "Bujumbura and Lake Tanganyika, Burundi",
+      "descriptionJa": "湖岸の先にブジュンブラの市街地と山地が見えます。湖は国境を越えて広がり、海とは異なる水域です。",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "sources": [
+      {
+        "id": "natural-earth-50m",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+        "use": "country identity, cartographic label position and continent"
+      },
+      {
+        "id": "natural-earth-10m-places",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson",
+        "use": "city point coordinates; approximate cartographic points, not administrative extents"
+      },
+      {
+        "id": "mofa",
+        "url": "https://www.mofa.go.jp/mofaj/area/brundi/data.html",
+        "use": "country reference; review pending"
+      }
+    ],
+    "qa": {
+      "releaseReady": false,
+      "geographyReview": "pending",
+      "photoReview": "visually-reviewed",
+      "routeReview": "pending"
+    },
+    "landscapeCueJa": "湖の岸辺の向こうに、市街地と山地が見える",
+    "sceneCategory": "lake-city",
+    "visibleClaimJa": "湖の岸辺の向こうに、市街地と山地が見える"
+  }
+}

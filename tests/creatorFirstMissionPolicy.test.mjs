@@ -18,11 +18,9 @@ for (const domain of ['place','time']) {
     assert.deepEqual(combineDomainMissions(domain,builtIn,published), [...builtIn,...published]);
   });
 }
-test('country-specific creator-first routing precedes Rwanda legacy routing', () => {
+test('country panel has no embedded mission-bank import or legacy Creator adventure launchers', () => {
   const panel = readFileSync('src/components/world-learning/WorldMissionPanel.jsx','utf8');
-  const start = panel.indexOf('const selectDomain =');
-  assert.ok(start >= 0);
-  const intercept = panel.indexOf('if (isCreatorFirstDomain(domainId))',start);
-  const oldRwanda = panel.indexOf('RWANDA PLACE ADVENTURE v1',start);
-  assert.ok(intercept > start && oldRwanda > intercept);
+  assert.equal(/missions_.*json|LanguageAdventureLauncher|LifeCultureAdventureLauncher|ThinkConnectAdventureLauncher/.test(panel),false);
+  assert.ok(panel.includes('fetchPublishedCountry'));
+  assert.ok(panel.includes('forCreatorLearningLevel'));
 });

@@ -180,4 +180,17 @@ for (const [type, domain, profileConsent] of [
   console.log('PASS video integration:', type);
 }
 
-console.log('PASS video author profile privacy and publication');
+console.log('PASS video author profile privacy and publication');// The full Creator bank is publishable: the 11th question must not be silently hidden.
+for(let i=0;i<12;i++){
+ const q=(await invoke('saveQuestion',{session:admin,question:{countryIso:'au',countryName:'Australia',domain:'thinkConnect',type:'text4',prompt:'Publication coverage '+i,answer:'A',choices:['B','C','D']}})).data.question;
+ await invoke('reviewQuestion',{session:admin,questionId:q.id,status:'approved'});
+ await invoke('setPublication',{session:admin,questionId:q.id,mode:'publish',rightsConfirmed:true});
+}
+const fullCatalog=await (await worker.fetch(new Request('https://fake/public/catalog?country=au&domain=thinkConnect'),env)).json();
+assert.equal(fullCatalog.questions.length,12);
+const order=(await invoke('getPublicationOrder',{session:admin,countryIso:'au',domain:'thinkConnect'})).data.questionIds;
+assert.equal(order.length,12);
+await invoke('setPublicationOrder',{session:admin,countryIso:'au',domain:'thinkConnect',questionIds:[...order].reverse()});
+const reordered=await (await worker.fetch(new Request('https://fake/public/catalog?country=au&domain=thinkConnect'),env)).json();
+assert.deepEqual(reordered.questions.map(q=>q.id),[...order].reverse());
+console.log('PASS integration: publish and reorder more than ten questions without truncation');

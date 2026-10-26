@@ -15,16 +15,16 @@ test('admin can plan draft-only approvals; non-admin and unsupported states are 
   assert.throws(()=>createBulkPlan('approve',['a','a'],[draft('a')],'admin'),/重複/);
 });
 
-test('published scope is inferred from each question, with separate country/domain quotas', () => {
+test('published scope is inferred from each question, without a ten-question publication ceiling', () => {
   assert.equal(eligibleForBulk(approved('a'),'publish'),true);
   assert.equal(eligibleForBulk({...approved('a'),countryIso:'jp',domain:'language'},'publish'),true);
   assert.equal(eligibleForBulk({...approved('a'),type:'free'},'publish'),false);
   assert.throws(()=>createBulkPlan('publish',['a'],[draft('a')],'admin'),/状態/);
-  assert.throws(()=>createBulkPlan('publish',['a'],[approved('a'),...Array.from({length:10},(_,i)=>published('p'+i))],'admin'),/残り0問/);
+  assert.equal(createBulkPlan('publish',['a'],[approved('a'),...Array.from({length:10},(_,i)=>published('p'+i))],'admin').items.length,1);
   const jp={...approved('j'),countryIso:'jp',domain:'language'};
   const questions=[approved('a'),jp,...Array.from({length:9},(_,i)=>published('p'+i))];
   assert.deepEqual(createBulkPlan('publish',['a','j'],questions,'admin').items.map(x=>x.id),['a','j']);
-  assert.throws(()=>createBulkPlan('publish',['a'],[...questions,published('t')],'admin'),/残り0問/);
+  assert.equal(createBulkPlan('publish',['a'],[...questions,published('t')],'admin').items.length,1);
 });
 
 test('selection is bounded to protect sequential API usage',()=>{

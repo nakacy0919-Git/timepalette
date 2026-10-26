@@ -1,0 +1,85 @@
+import fs from 'node:fs';
+import {createServer} from 'vite';
+import {chromium} from 'playwright';
+import {geographyCountries,getGeographyPackage} from '../src/utils/geographyRegistry.js';
+const server=await createServer({server:{host:'127.0.0.1',port:4178,strictPort:true}});await server.listen();
+let browser;
+fs.mkdirSync('docs/qa/browser',{recursive:true});
+const report={generatedAt:new Date().toISOString(),scope:'UI correct/incorrect and layout; live photos assessed separately',imageTransport:process.env.QA_CACHED_IMAGES?'Downloaded Commons bytes, local QA response; live browser TLS remains unverified':'Remote Commons',rows:[]};
+const reportPath=process.env.QA_REPORT_PATH||'docs/qa/geography-browser.json';
+const selected=geographyCountries.filter(p=>(!process.env.QA_GROUP||p.group===process.env.QA_GROUP)&&(!process.env.QA_COUNTRIES||process.env.QA_COUNTRIES.split(',').includes(p.countryCode)));
+try{
+for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
+  browser=await chromium.launch({executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE||undefined,headless:true,proxy:process.env.QA_USE_PROXY&&process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY,bypass:'127.0.0.1,localhost'}:undefined,args:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?['--no-sandbox','--disable-dev-shm-usage','--disable-gpu','--single-process','--no-zygote','--use-gl=angle','--use-angle=swiftshader','--in-process-gpu']:[]});
+
+  const context=await browser.newContext({viewport});
+  const page=await context.newPage();page.setDefaultTimeout(5000);
+  // Network images are NOT replaced with fixtures: failures remain visible and recorded.
+  const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  if(process.env.QA_CACHED_IMAGES){
+    await page.route('https://{upload,thumb}.wikimedia.org/**',route=>{
+      const c=geographyCountries.find(c=>new URL(c.photo.url).href===new URL(route.request().url()).href);
+      if(!c)return route.abort();
+      const root=process.env.QA_CACHED_IMAGES;
+      const updated=root+'/'+c.countryCode+'-new.jpg',original=root+'/'+c.countryCode+'.jpg';
+      const file=fs.existsSync(updated)?updated:original;
+      const bytes=fs.readFileSync(file),mime=bytes[0]===137?'image/png':bytes.toString('ascii',0,4)==='RIFF'?'image/webp':'image/jpeg';
+      return route.fulfill({body:bytes,contentType:mime});
+    });
+  }
+  for(const country of selected){
+    const p=getGeographyPackage(country.countryCode);
+    await page.goto(`http://127.0.0.1:4178/tests/geography-browser.html?country=${p.countryCode}`,{waitUntil:'domcontentloaded'});
+    for(let i=0;i<10;i++){
+      const row={country:p.countryCode,mission:i+1,viewport:`${viewport.width}x${viewport.height}`,interaction:'PENDING',layout:'PENDING',images:'PENDING'};
+      try{
+        await page.locator(`[data-mission="${i+1}"]`).click();
+        const root=page.getByTestId('geography-mission');await root.waitFor();
+        if([5,6,8].includes(i))await page.waitForFunction(()=>[...document.images].every(i=>i.complete),null,{timeout:8000}).catch(()=>{});
+        const bounds=await root.evaluate(el=>{const r=el.getBoundingClientRect();const outside=[...el.querySelectorAll('button,svg,img')].filter(e=>{const b=e.getBoundingClientRect();return b.width&&b.height&&(b.bottom>innerHeight+1||b.top<0||b.right>innerWidth+1||b.left<0)}).map(e=>e.tagName+':'+(e.getAttribute('data-answer')||e.getAttribute('data-city')||e.textContent).slice(0,50));return {height:r.height,scrollHeight:el.scrollHeight,clientHeight:el.clientHeight,outside};});
+        row.layout=bounds.outside.length||bounds.scrollHeight>bounds.clientHeight+2?'FAIL':'PASS';row.overflow=bounds;
+        if(['au','ao'].includes(p.countryCode)&&[1,5,9].includes(i))await page.screenshot({path:`docs/qa/browser/${p.countryCode}-P${i+1}-${viewport.width}-review.png`});
+        const click=async sel=>{const loc=root.locator(sel).first();if(await loc.evaluate(e=>e.tagName.toLowerCase()==='path'))await loc.press('Enter');else if(await loc.evaluate(e=>e.tagName.toLowerCase()==='g'))await loc.locator('circle[data-hit],circle').last().click();else await loc.click();};
+        const notClear=async()=>{if(await page.getByRole('dialog',{name:'Mission clear'}).count())throw Error('Incorrect action cleared mission');};
+        const wrongCity=p.cities.find(c=>c.id!==p.capitalId).id;
+        const wrongCountry=await root.locator('[data-country]').evaluateAll((els,code)=>els.find(e=>e.dataset.country!==code)?.dataset.country,p.countryCode);
+        switch(i){
+          case 0:await click(`[data-country="${wrongCountry}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);break;
+          case 1:{const a=p.neighbors[0],b=p.neighbors[1];if(b){await click(`[data-card="${a.iso}"]`);await click(`[data-slot="${b.iso}"]`);await notClear();}else{await click(`[data-slot="${a.iso}"]`);await notClear();}for(const n of p.neighbors){await click(`[data-card="${n.iso}"]`);await click(`[data-slot="${n.iso}"]`);}break;}
+          case 2:case 5:{const wrong=root.locator('[data-answer]').filter({hasNot:page.locator('never')});const id=await wrong.evaluateAll((els,code)=>els.find(e=>e.dataset.answer!==code)?.dataset.answer,p.countryCode);await click(`[data-answer="${id}"]`);await notClear();await click(`[data-answer="${p.countryCode}"]`);break;}
+          case 3:await click(`[data-city="${wrongCity}"]`);await notClear();await click(`[data-city="${p.capitalId}"]`);break;
+          case 4:await click(`[data-city="${p.cities[1].id}"]`);await notClear();for(const c of p.cities)await click(`[data-city="${c.id}"]`);break;
+          case 6:await click('[data-answer="climate"]');await root.getByRole('button',{name:'2つの説明を確かめる'}).click();await notClear();await click('[data-answer="climate"]');await click('[data-answer="visible"]');await click('[data-answer="limited"]');await root.getByRole('button',{name:'2つの説明を確かめる'}).click();break;
+          case 7:await click('[data-answer="port-Rotterdam"]');await notClear();await click(`[data-answer="via-${p.route.via}"]`);await click(`[data-answer="port-${p.route.port}"]`);break;
+          case 8:await click('[data-answer="weather"]');await notClear();await click('[data-answer="limited"]');break;
+          case 9:await click(`[data-country="${wrongCountry}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);await click(`[data-city="${wrongCity}"]`);await notClear();await click(`[data-city="${p.capitalId}"]`);await click('[data-answer="wrong-fact"]');await notClear();await click('[data-answer="fact"]');break;
+        }
+        await page.getByRole('dialog',{name:'Mission clear'}).waitFor();row.interaction='PASS';
+        row.images=await page.locator('img').evaluateAll(imgs=>imgs.length?imgs.every(im=>im.complete&&im.naturalWidth>0)?'LOADED':'UNVERIFIED':'NONE');
+        if(process.env.QA_CACHED_IMAGES&&row.images==='LOADED')row.images='LOCAL_COMMONS_RENDER_PASS';
+        if(row.layout==='FAIL')await page.screenshot({path:`docs/qa/browser/${p.countryCode}-P${i+1}-${viewport.width}-layout.png`});
+        await page.getByRole('button',{name:'一覧へ',exact:true}).click();
+      }catch(e){row.interaction='FAIL';row.error=e.message;await page.screenshot({path:`docs/qa/browser/${p.countryCode}-P${i+1}-${viewport.width}-failure.png`}).catch(()=>{});await page.goto(`http://127.0.0.1:4178/tests/geography-browser.html?country=${p.countryCode}`,{waitUntil:'domcontentloaded'});}
+      row.browserErrors=[...errors];report.rows.push(row);
+    }
+    const beforeReplay=await page.evaluate(code=>JSON.parse(localStorage.getItem('timepalette-place-progress-v1:'+code)||'{}').completedMissionIds||[],p.countryCode);
+    await page.locator('[data-mission="1"]').click();
+    await page.locator(`[data-country="${p.countryCode}"]`).first().press('Enter');
+    await page.getByRole('dialog',{name:'Mission clear'}).waitFor();
+    const afterReplay=await page.evaluate(code=>JSON.parse(localStorage.getItem('timepalette-place-progress-v1:'+code)||'{}').completedMissionIds||[],p.countryCode);
+    report.rows.filter(r=>r.country===p.countryCode&&r.viewport===`${viewport.width}x${viewport.height}`).forEach(r=>r.replayDoesNotDuplicate=afterReplay.length===beforeReplay.length&&new Set(afterReplay).size===afterReplay.length);
+    await page.reload();
+    const saved=await page.evaluate(code=>JSON.parse(localStorage.getItem('timepalette-place-progress-v1:'+code)||'{}'),p.countryCode);
+    report.rows.filter(r=>r.country===p.countryCode&&r.viewport===`${viewport.width}x${viewport.height}`).forEach(r=>r.progressSaved=saved.completedMissionIds?.includes(`${p.countryCode}-place-${String(r.mission).padStart(2,'0')}`)||false);
+    console.log(p.countryCode,viewport.width,report.rows.filter(r=>r.country===p.countryCode&&r.viewport===`${viewport.width}x${viewport.height}`).map(r=>r.interaction==='PASS'&&r.layout==='PASS'?'✓':'✗').join(''));
+    fs.writeFileSync(reportPath+'.running',JSON.stringify(report,null,2)+'\n');
+  }
+  await context.close();await browser.close();
+}
+}finally{await browser?.close().catch(()=>{});await server.close();}
+report.finishedAt=new Date().toISOString();
+fs.writeFileSync(reportPath+'.running',JSON.stringify(report,null,2)+'\n');
+fs.renameSync(reportPath+'.running',reportPath);
+const failed=report.rows.filter(r=>r.interaction!=='PASS'||r.layout!=='PASS'||!r.progressSaved);
+console.log('Checks:',report.rows.length,'Failures:',failed.length);
+if(failed.length)process.exitCode=1;
