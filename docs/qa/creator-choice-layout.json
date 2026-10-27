@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T21:43:37.740Z",
+  "checkedAt": "2026-10-27T22:27:57.556Z",
   "scope": "Local browser, real bundled photo, simulated viewports; not physical iPad",
   "rows": [
     {
@@ -7,6 +7,9 @@
         "width": 1024,
         "height": 768
       },
+      "photoExplanation": true,
+      "pointsOnce": true,
+      "wrongRetry": true,
       "result": "PASS",
       "noFalseVideo": true,
       "allControlsVisible": true,
@@ -18,6 +21,9 @@
         "width": 820,
         "height": 1180
       },
+      "photoExplanation": true,
+      "pointsOnce": true,
+      "wrongRetry": true,
       "result": "PASS",
       "noFalseVideo": true,
       "allControlsVisible": true,
@@ -29,6 +35,9 @@
         "width": 1440,
         "height": 900
       },
+      "photoExplanation": true,
+      "pointsOnce": true,
+      "wrongRetry": true,
       "result": "PASS",
       "noFalseVideo": true,
       "allControlsVisible": true,
