@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-27T21:43:37.740Z",
+  "scope": "Local browser, real bundled photo, simulated viewports; not physical iPad",
+  "rows": [
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "result": "PASS",
+      "noFalseVideo": true,
+      "allControlsVisible": true,
+      "wrongRejected": true,
+      "correctAccepted": true
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "result": "PASS",
+      "noFalseVideo": true,
+      "allControlsVisible": true,
+      "wrongRejected": true,
+      "correctAccepted": true
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "result": "PASS",
+      "noFalseVideo": true,
+      "allControlsVisible": true,
+      "wrongRejected": true,
+      "correctAccepted": true
+    }
+  ]
+}

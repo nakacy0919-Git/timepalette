@@ -1,0 +1,3 @@
+import React from 'react';import{createRoot}from'react-dom/client';import CreatorChoicePlayer from '../src/components/world-learning/CreatorChoicePlayer.jsx';import '../src/index.css';
+const mission={id:'qa',prompt:'写真のような青い石は、古くからアフガニスタンで産出されてきました。JICAによると、日本の奈良・正倉院に伝わる宝物にもアフガニスタン原産の石が使われています。その石は何でしょう？',video:{},materials:[{type:'image',url:'/geography/photos/af.jpg'}],challenge:{choices:['ラピスラズリ','水晶','大理石','琥珀'],correctIndex:0},explanation:'ラピスラズリは、青い色が特徴の石です。'};
+createRoot(document.getElementById('root')).render(<CreatorChoicePlayer mission={mission} position={1} total={2} onClose={()=>{}} onComplete={()=>{}}/>);

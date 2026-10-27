@@ -14,7 +14,7 @@ try{
  await page.waitForFunction(()=>document.body.textContent.includes('0 / 12 問クリア'));
  for(const domain of domains){
   await page.locator(`[data-domain="${domain}"]`).click();
-  assert.equal(await page.locator('button').filter({hasText:'Question '+domain+' '}).count(),12);
+  assert.equal(await page.locator('.tp-world-mission-card').count(),12);
   await page.getByRole('button',{name:'← 6つのカテゴリーへ'}).click();
  }
  await page.locator('[data-domain="place"]').click();
@@ -24,7 +24,7 @@ try{
  await page.getByRole('button',{name:'← 6つのカテゴリーへ'}).click();
  await page.getByRole('button',{name:'Challenge',exact:true}).click();
  await page.locator('[data-domain="language"]').click();
- assert.equal(await page.locator('button').filter({hasText:'Question language '}).count(),0);
+ assert.equal(await page.locator('.tp-world-mission-card').count(),0);
  assert.deepEqual(errors,[]);
  await page.route('https://{upload,thumb}.wikimedia.org/**',route=>route.abort());
  await page.route('**/geography/photos/**',route=>route.abort());

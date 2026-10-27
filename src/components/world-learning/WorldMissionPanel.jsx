@@ -1,3 +1,5 @@
+import CreatorChoicePlayer from './CreatorChoicePlayer.jsx';
+import './creatorMissionPresentation.css';
 import {forCreatorLearningLevel} from '../../utils/creatorMissionLevels.js';
 import {useEffect,useState} from 'react';
 import {MISSION_DOMAINS} from '../../utils/missionDomains.js';
@@ -61,7 +63,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
       const available=adventureCount(d.id)+levelCatalog.filter(m=>m.domain===d.id).length;
       const adventureDone=d.id==='place'?[...placeDone].filter(id=>id.startsWith(countryCode+'-place-')).length:d.id==='time'?[...completed].filter(id=>id.startsWith(countryCode+'-time-')).length:0;
       const done=Math.min(adventureDone,adventureCount(d.id))+levelCatalog.filter(m=>m.domain===d.id&&completed.has(m.id)).length;
-      return <button key={d.id} type="button" data-domain={d.id} onClick={()=>pick(d.id)} className="min-h-36 rounded-3xl p-5 text-left text-white shadow transition hover:brightness-110" style={{background:colors[i]}}>
+      return <button key={d.id} type="button" data-domain={d.id} onClick={()=>pick(d.id)} className="tp-world-category min-h-36 rounded-3xl p-5 text-left text-white shadow transition hover:brightness-110" style={{'--category-accent':colors[i]}}>
         <span className="text-3xl">{d.icon}</span><h3 className="mt-2 text-lg font-black">{d.labelJa}</h3><p className="text-sm opacity-90">{d.labelEn}</p>
         <p className="mt-3 text-sm font-bold">{loading?'公開数を確認中…':error?'公開数を取得できません':`${Math.min(done,available)} / ${available} 問クリア`}</p>
       </button>;
@@ -71,11 +73,11 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
       {adventureCount(domain)>0&&<button type="button" className="mb-5 rounded-2xl bg-blue-600 px-6 py-4 font-bold text-white" onClick={()=>setAdventure(domain)}>{domain==='place'?'地理':'時間・時差'}アドベンチャーを始める（10ミッション）</button>}
       <>
         {loading?<p role="status">公開問題を読み込み中…</p>:error?<div role="alert">公開問題を取得できませんでした。<button className="ml-3 underline" onClick={retry}>再試行</button></div>:<p className="mb-4 text-sm text-slate-600">Mission Creatorから公開中：{missions.length}問{!missions.length?'。公開問題を準備中です。':''}</p>}
-        <div className="grid gap-3 sm:grid-cols-2">{missions.map((m,i)=><button key={m.id} type="button" onClick={()=>setActive(m)} className="rounded-2xl border-2 border-slate-200 p-4 text-left hover:border-blue-400"><span className="text-xs font-bold text-blue-600">MISSION {String(i+1).padStart(2,'0')} {completed.has(m.id)?'✓':''}</span><h4 className="mt-2 font-bold">{m.title}</h4></button>)}</div>
+        <div className="grid gap-3 sm:grid-cols-2">{missions.map((m,i)=><button key={m.id} type="button" onClick={()=>setActive(m)} className="tp-world-mission-card text-left"><span className="text-xs font-bold text-blue-600">MISSION {String(i+1).padStart(2,'0')} {completed.has(m.id)?'✓':''}</span><h4 className="font-bold">ミッション {i+1}</h4><small>{completed.has(m.id)?'クリア済み · もう一度挑戦':'手がかりを見つけて冒険へ →'}</small></button>)}</div>
       </>
     </>}
     {error&&!domain&&<button type="button" className="mt-3 text-sm underline" onClick={retry}>公開問題の読み込みを再試行</button>}
-    {active&&<MissionPlayer key={active.id} mission={{...active,learningLevelId:level,learningLevelLabel:levels.find(l=>l[0]===level)?.[1]}} domain={meta} alreadyCompleted={completed.has(active.id)} onClose={()=>setActive(null)} onBackToList={()=>setActive(null)} onComplete={m=>{completeWorldMission(countryCode,m?.id||active.id);revise(n=>n+1);}} missionPosition={missions.findIndex(m=>m.id===active.id)+1} totalMissions={missions.length}/>}
+    {active?.type==='single-choice'?<CreatorChoicePlayer key={active.id} mission={active} position={missions.findIndex(m=>m.id===active.id)+1} total={missions.length} alreadyCompleted={completed.has(active.id)} onClose={()=>setActive(null)} onComplete={m=>{completeWorldMission(countryCode,m.id);revise(n=>n+1);}} onNext={missions.findIndex(m=>m.id===active.id)<missions.length-1?()=>setActive(missions[missions.findIndex(m=>m.id===active.id)+1]):null}/>:active&&<MissionPlayer key={active.id} mission={{...active,learningLevelId:level,learningLevelLabel:levels.find(l=>l[0]===level)?.[1]}} domain={meta} alreadyCompleted={completed.has(active.id)} onClose={()=>setActive(null)} onBackToList={()=>setActive(null)} onComplete={m=>{completeWorldMission(countryCode,m?.id||active.id);revise(n=>n+1);}} missionPosition={missions.findIndex(m=>m.id===active.id)+1} totalMissions={missions.length}/>}
     <PlaceAdventureLauncher open={adventure==='place'} countryCode={countryCode} learningLevel={level} onClose={()=>{setAdventure(null);syncPlace();}} onProgressChange={syncPlace}/>
     <TimeAdventureLauncher open={adventure==='time'} countryCode={countryCode} learningLevel={level} onClose={()=>{setAdventure(null);revise(n=>n+1);}} onProgressChange={()=>revise(n=>n+1)}/>
   </section>;
