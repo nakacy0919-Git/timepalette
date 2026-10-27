@@ -37,6 +37,7 @@ import {
   ComposableMap,
   Geographies,
   Geography,
+  Graticule,
   ZoomableGroup,
 } from 'react-simple-maps';
 
@@ -85,12 +86,9 @@ const countryByAtlasName =
     )
   );
 
-const DEFAULT_MAP_CENTER = [
-  5,
-  6,
-];
+const DEFAULT_MAP_CENTER = [0, 0];
 
-const DEFAULT_MAP_ZOOM = 1.18;
+const DEFAULT_MAP_ZOOM = 1;
 
 const MAP_MIN_ZOOM = 1;
 
@@ -2268,17 +2266,15 @@ lg:px-6
 
 
                   <ComposableMap
-  projection="geoEqualEarth"
+  projection="geoEquirectangular"
   projectionConfig={{
-    scale: 170,
+    scale: 180,
 
-    center: [
-      0,
-      5,
-    ],
+    center: [0, 0],
   }}
   width={1200}
   height={590}
+  data-testid="country-selection-flat-map"
   className="
     h-full
     w-full
@@ -2311,6 +2307,7 @@ lg:px-6
     }}
   >
 
+    <Graticule step={[30,30]} stroke="#83b6c6" strokeWidth={0.45} strokeOpacity={0.4} fill="none" pointerEvents="none" />
     <Geographies
       geography={
         worldAtlas
