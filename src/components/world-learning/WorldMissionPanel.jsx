@@ -1,3 +1,4 @@
+import {Globe,Clock,MessagesSquare,House,Handshake,Scale,ArrowUpRight} from 'lucide-react';
 import CreatorChoicePlayer from './CreatorChoicePlayer.jsx';
 import './creatorMissionPresentation.css';
 import {forCreatorLearningLevel} from '../../utils/creatorMissionLevels.js';
@@ -13,6 +14,7 @@ import TimeAdventureLauncher from './TimeAdventureLauncher';
 import MissionPlayer from './MissionPlayer';
 
 const levels=[['elementary','小学生'],['juniorHigh','中学生'],['highSchoolStandard','高校生'],['highSchoolAdvanced','Challenge']];
+const categoryDesign=[{Icon:Globe,tone:'#def5fc',ink:'#216c85',hint:'地図をひらいて、世界を探検！'},{Icon:Clock,tone:'#eee6ff',ink:'#685196',hint:'世界の「いま」をのぞいてみよう'},{Icon:MessagesSquare,tone:'#ffe7ee',ink:'#95485f',hint:'ことばでつながる、世界の仲間'},{Icon:House,tone:'#e0f5e9',ink:'#2e7256',hint:'暮らしの中の発見を集めよう'},{Icon:Handshake,tone:'#fff0ce',ink:'#875b20',hint:'日本と世界、つながりを探そう'},{Icon:Scale,tone:'#e3edff',ink:'#46659b',hint:'比べて考える、新しい見方'}];
 const colors=['#0284c7','#7c3aed','#db2777','#059669','#dc2626','#d97706'];
 export default function WorldMissionPanel({countryCode,countryNameEn,countryNameJa='',flagUrl=''}){
   // Remounting on country changes prevents previous-country missions and progress from flashing.
@@ -59,13 +61,15 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
       <div><h2 className="text-xl font-black text-slate-900">{countryNameJa||countryNameEn}</h2><p className="text-sm text-slate-500">{countryNameEn} · World Adventure</p></div>
     </header>
     <div className="mb-5 flex flex-wrap gap-2" aria-label="学習レベル">{levels.map(([id,label])=><button key={id} type="button" aria-pressed={level===id} onClick={()=>setLevel(id)} className={'rounded-full border px-4 py-2 font-bold '+(level===id?'bg-slate-900 text-white':'bg-white text-slate-700')}>{label}</button>)}</div>
-    {!domain?<div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">{MISSION_DOMAINS.map((d,i)=>{
+    {!domain?<div className="tp-category-grid">{MISSION_DOMAINS.map((d,i)=>{
       const available=adventureCount(d.id)+levelCatalog.filter(m=>m.domain===d.id).length;
       const adventureDone=d.id==='place'?[...placeDone].filter(id=>id.startsWith(countryCode+'-place-')).length:d.id==='time'?[...completed].filter(id=>id.startsWith(countryCode+'-time-')).length:0;
       const done=Math.min(adventureDone,adventureCount(d.id))+levelCatalog.filter(m=>m.domain===d.id&&completed.has(m.id)).length;
-      return <button key={d.id} type="button" data-domain={d.id} onClick={()=>pick(d.id)} className="tp-world-category min-h-36 rounded-3xl p-5 text-left text-white shadow transition hover:brightness-110" style={{'--category-accent':colors[i]}}>
-        <span className="text-3xl">{d.icon}</span><h3 className="mt-2 text-lg font-black">{d.labelJa}</h3><p className="text-sm opacity-90">{d.labelEn}</p>
-        <p className="mt-3 text-sm font-bold">{loading?'公開数を確認中…':error?'公開数を取得できません':`${Math.min(done,available)} / ${available} 問クリア`}</p>
+      const {Icon,tone,ink,hint}=categoryDesign[i];
+      return <button key={d.id} type="button" data-domain={d.id} onClick={()=>pick(d.id)} className="tp-world-category tp-category-pass" style={{'--category-accent':colors[i],'--category-tone':tone,'--category-ink':ink}}>
+        <span className="tp-category-art" aria-hidden="true"><span className="tp-category-orbit"/><span className="tp-category-icon"><Icon size={38} strokeWidth={2.1}/></span><span className="tp-category-spark">✧</span></span>
+        <span className="tp-category-body"><span className="tp-category-kicker">WORLD DISCOVERY · {String(i+1).padStart(2,'0')}</span><h3>{d.labelJa}</h3><span className="tp-category-english">{d.labelEn}</span><span className="tp-category-hint">{hint}</span></span>
+        <span className="tp-category-bottom"><span className="tp-category-progress">{loading?'公開数を確認中…':error?'公開数を取得できません':`${Math.min(done,available)} / ${available} 問クリア`}{!loading&&!error&&<span className="tp-category-meter" aria-hidden="true"><span style={{width:`${available?Math.min(done,available)/available*100:0}%`}}/></span>}</span><span className="tp-category-go" aria-hidden="true"><ArrowUpRight size={21}/></span></span>
       </button>;
     })}</div>:<>
       <button type="button" onClick={()=>setDomain(null)} className="mb-4 rounded-full border px-4 py-2 font-bold">← 6つのカテゴリーへ</button>

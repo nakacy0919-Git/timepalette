@@ -12,6 +12,7 @@ try{
  });
  await page.goto('http://127.0.0.1:4181/tests/geography-browser.html?country=au&panel=1');
  await page.waitForFunction(()=>document.body.textContent.includes('0 / 12 問クリア'));
+ for(const viewport of [{width:1024,height:768},{width:820,height:1180},{width:1440,height:900}]){await page.setViewportSize(viewport);assert.equal(await page.locator('.tp-category-icon svg').count(),6);const outside=await page.locator('.tp-category-pass').evaluateAll(els=>els.some(e=>{const r=e.getBoundingClientRect();return r.bottom>innerHeight||r.right>innerWidth||e.scrollWidth>e.clientWidth+1}));assert.equal(outside,false);await page.screenshot({animations:'disabled',path:`docs/qa/browser/category-passes-${viewport.width}.png`});}await page.setViewportSize({width:1024,height:768});
  for(const domain of domains){
   await page.locator(`[data-domain="${domain}"]`).click();
   assert.equal(await page.locator('.tp-world-mission-card').count(),12);
@@ -44,6 +45,6 @@ try{
  assert.equal(await page.getByRole('dialog',{name:'Mission clear'}).count(),0);
  assert.ok((await page.locator('.tp-geo-feedback').textContent()).includes('写真を読み込めていない'));
 
- fs.writeFileSync('docs/qa/country-panel.json',JSON.stringify({generatedAt:new Date().toISOString(),source:'Mock published API responses; not a live publication check',categories:6,questionsPerCategory:12,missionTickets:{viewports:3,fourCardsWithinViewport:true,opensPlayer:true,noQuestionSpoilers:true},legacyFallback:false,learningLevelFilter:'PASS',missingPhotoBlocksClear:'PASS',browserErrors:errors,result:'PASS'},null,2)+'\n');
+ fs.writeFileSync('docs/qa/country-panel.json',JSON.stringify({generatedAt:new Date().toISOString(),source:'Mock published API responses; not a live publication check',categories:6,categoryPasses:{viewports:3,vectorIcons:6,allCardsVisible:true},questionsPerCategory:12,missionTickets:{viewports:3,fourCardsWithinViewport:true,opensPlayer:true,noQuestionSpoilers:true},legacyFallback:false,learningLevelFilter:'PASS',missingPhotoBlocksClear:'PASS',browserErrors:errors,result:'PASS'},null,2)+'\n');
  console.log('PASS: all six Creator categories, four with no legacy fallback, twelve questions each, learning levels, no browser errors');
 }finally{await browser.close();await server.close();}

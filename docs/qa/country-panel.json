@@ -1,7 +1,12 @@
 {
-  "generatedAt": "2026-10-27T22:54:14.237Z",
+  "generatedAt": "2026-10-27T23:00:52.837Z",
   "source": "Mock published API responses; not a live publication check",
   "categories": 6,
+  "categoryPasses": {
+    "viewports": 3,
+    "vectorIcons": 6,
+    "allCardsVisible": true
+  },
   "questionsPerCategory": 12,
   "missionTickets": {
     "viewports": 3,
