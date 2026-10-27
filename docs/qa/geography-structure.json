@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-10-27T13:49:47.345Z",
-  "scope": "A/B structural and scoring audit with field-specific capital-name evidence; coordinates and other content require separate review",
+  "generatedAt": "2026-10-27T14:35:02.619Z",
+  "scope": "Structural, scoring, border and field-specific source evidence audit; browser evidence is separate",
+  "warnings": 0,
   "countries": 28,
   "missions": 280,
   "errors": 0,
   "capitalNamesVerified": 11,
-  "contentPending": 28,
+  "contentPending": 17,
   "rows": [
     {
       "country": "af",
@@ -21,14 +22,18 @@
         "exceptions": []
       },
       "correctedGeography": {
-        "reviewedCityPoints": 0,
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
         "issues": []
       },
       "content": {
-        "releaseReady": false,
-        "geographyReview": "pending",
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
         "photoReview": "visually-reviewed",
-        "routeReview": "pending"
+        "routeReview": "geographic-schematic-reviewed"
       }
     },
     {
@@ -45,14 +50,18 @@
         "exceptions": []
       },
       "correctedGeography": {
-        "reviewedCityPoints": 0,
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
         "issues": []
       },
       "content": {
-        "releaseReady": false,
-        "geographyReview": "pending",
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
         "photoReview": "visually-reviewed",
-        "routeReview": "pending"
+        "routeReview": "geographic-schematic-reviewed"
       }
     },
     {
@@ -69,14 +78,18 @@
         "exceptions": []
       },
       "correctedGeography": {
-        "reviewedCityPoints": 0,
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
         "issues": []
       },
       "content": {
-        "releaseReady": false,
-        "geographyReview": "pending",
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
         "photoReview": "visually-reviewed",
-        "routeReview": "pending"
+        "routeReview": "geographic-schematic-reviewed"
       }
     },
     {
@@ -93,14 +106,18 @@
         "exceptions": []
       },
       "correctedGeography": {
-        "reviewedCityPoints": 2,
+        "reviewedCityPoints": 3,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
         "issues": []
       },
       "content": {
-        "releaseReady": false,
-        "geographyReview": "pending",
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
         "photoReview": "visually-reviewed",
-        "routeReview": "pending"
+        "routeReview": "geographic-schematic-reviewed"
       }
     },
     {
@@ -117,14 +134,18 @@
         "exceptions": []
       },
       "correctedGeography": {
-        "reviewedCityPoints": 0,
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
         "issues": []
       },
       "content": {
-        "releaseReady": false,
-        "geographyReview": "pending",
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
         "photoReview": "visually-reviewed",
-        "routeReview": "pending"
+        "routeReview": "geographic-schematic-reviewed"
       }
     },
     {
@@ -141,14 +162,18 @@
         "exceptions": []
       },
       "correctedGeography": {
-        "reviewedCityPoints": 2,
+        "reviewedCityPoints": 3,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
         "issues": []
       },
       "content": {
-        "releaseReady": false,
-        "geographyReview": "pending",
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
         "photoReview": "visually-reviewed",
-        "routeReview": "pending"
+        "routeReview": "geographic-schematic-reviewed"
       }
     },
     {
@@ -165,14 +190,18 @@
         "exceptions": []
       },
       "correctedGeography": {
-        "reviewedCityPoints": 0,
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
         "issues": []
       },
       "content": {
-        "releaseReady": false,
-        "geographyReview": "pending",
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
         "photoReview": "visually-reviewed",
-        "routeReview": "pending"
+        "routeReview": "geographic-schematic-reviewed"
       }
     },
     {
@@ -189,14 +218,18 @@
         "exceptions": []
       },
       "correctedGeography": {
-        "reviewedCityPoints": 0,
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
         "issues": []
       },
       "content": {
-        "releaseReady": false,
-        "geographyReview": "pending",
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
         "photoReview": "visually-reviewed",
-        "routeReview": "pending"
+        "routeReview": "geographic-schematic-reviewed"
       }
     },
     {
@@ -213,14 +246,18 @@
         "exceptions": []
       },
       "correctedGeography": {
-        "reviewedCityPoints": 0,
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
         "issues": []
       },
       "content": {
-        "releaseReady": false,
-        "geographyReview": "pending",
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
         "photoReview": "visually-reviewed",
-        "routeReview": "pending"
+        "routeReview": "geographic-schematic-reviewed"
       }
     },
     {
@@ -237,14 +274,18 @@
         "exceptions": []
       },
       "correctedGeography": {
-        "reviewedCityPoints": 0,
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
         "issues": []
       },
       "content": {
-        "releaseReady": false,
-        "geographyReview": "pending",
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
         "photoReview": "visually-reviewed",
-        "routeReview": "pending"
+        "routeReview": "geographic-schematic-reviewed"
       }
     },
     {
@@ -261,14 +302,18 @@
         "exceptions": []
       },
       "correctedGeography": {
-        "reviewedCityPoints": 0,
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
         "issues": []
       },
       "content": {
-        "releaseReady": false,
-        "geographyReview": "pending",
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
         "photoReview": "visually-reviewed",
-        "routeReview": "pending"
+        "routeReview": "geographic-schematic-reviewed"
       }
     },
     {
@@ -286,6 +331,10 @@
       },
       "correctedGeography": {
         "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
         "issues": []
       },
       "content": {
@@ -312,6 +361,10 @@
         "reviewedCityPoints": 0,
         "issues": []
       },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -334,6 +387,10 @@
       },
       "correctedGeography": {
         "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
         "issues": []
       },
       "content": {
@@ -360,6 +417,10 @@
         "reviewedCityPoints": 0,
         "issues": []
       },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -382,6 +443,10 @@
       },
       "correctedGeography": {
         "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
         "issues": []
       },
       "content": {
@@ -408,6 +473,10 @@
         "reviewedCityPoints": 0,
         "issues": []
       },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -430,6 +499,10 @@
       },
       "correctedGeography": {
         "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
         "issues": []
       },
       "content": {
@@ -456,6 +529,10 @@
         "reviewedCityPoints": 0,
         "issues": []
       },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -478,6 +555,10 @@
       },
       "correctedGeography": {
         "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
         "issues": []
       },
       "content": {
@@ -504,6 +585,10 @@
         "reviewedCityPoints": 0,
         "issues": []
       },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -526,6 +611,10 @@
       },
       "correctedGeography": {
         "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
         "issues": []
       },
       "content": {
@@ -560,6 +649,10 @@
         "reviewedCityPoints": 0,
         "issues": []
       },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -582,6 +675,10 @@
       },
       "correctedGeography": {
         "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
         "issues": []
       },
       "content": {
@@ -608,6 +705,10 @@
         "reviewedCityPoints": 0,
         "issues": []
       },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -630,6 +731,10 @@
       },
       "correctedGeography": {
         "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
         "issues": []
       },
       "content": {
@@ -656,6 +761,10 @@
         "reviewedCityPoints": 0,
         "issues": []
       },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -678,6 +787,10 @@
       },
       "correctedGeography": {
         "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
         "issues": []
       },
       "content": {

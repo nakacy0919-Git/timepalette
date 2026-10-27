@@ -1,4 +1,4 @@
-import {getGeographyPackage} from './geographyRegistry.js';
+import {getReleasedGeographyPackage} from './geographyRegistry.js';
 import {getPublishedSummary} from './publishedMissionSummary.js';
 import rwanda from '../data/place_r.json' with {type:'json'};
 import {getWorldAdventureDomainPackage} from './worldAdventureRegistry.js';
@@ -14,7 +14,7 @@ export const CREATOR_DOMAINS = ['language','lifeCulture','japanConnection','thin
 export const isCreatorDomain = domain => CREATOR_DOMAINS.includes(domain);
 // The country directory no longer depends on any embedded mission bank.
 export const makeCountryMissionShell = country => {
-  const geo=getGeographyPackage(country?.iso);
+  const geo=getReleasedGeographyPackage(country?.iso);
   const place=(geo?.missions||(country?.iso==='rw'?rwanda.missions:[])).map(m=>({...m,domain:'place'}));
   const time=country?.iso==='rw'?(getWorldAdventureDomainPackage('rw','time')?.missions||[]).map(m=>({...m,domain:'time'})):[];
   const missions=[...place,...time,...getPublishedSummary(country?.iso)];

@@ -1,0 +1,780 @@
+{
+  "generatedAt": "2026-10-27T14:35:23.257Z",
+  "scope": "A 110 mission content/source and local browser acceptance. Two viewport sizes, mouse/keyboard plus touch emulation. No claim of physical iPad Safari, production deployment or Creator publication.",
+  "countries": 11,
+  "missions": 110,
+  "checks": 440,
+  "errors": 0,
+  "rows": [
+    {
+      "country": "af",
+      "mission": 1,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "af",
+      "mission": 2,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "af",
+      "mission": 3,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "af",
+      "mission": 4,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "af",
+      "mission": 5,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "af",
+      "mission": 6,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "af",
+      "mission": 7,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "af",
+      "mission": 8,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "af",
+      "mission": 9,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "af",
+      "mission": 10,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "mission": 1,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "mission": 2,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "mission": 3,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "mission": 4,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "mission": 5,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "mission": 6,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "mission": 7,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "mission": 8,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "mission": 9,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "mission": 10,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "mission": 1,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "mission": 2,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "mission": 3,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "mission": 4,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "mission": 5,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "mission": 6,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "mission": 7,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "mission": 8,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "mission": 9,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "mission": 10,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "mission": 1,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "mission": 2,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "mission": 3,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "mission": 4,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "mission": 5,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "mission": 6,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "mission": 7,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "mission": 8,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "mission": 9,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "mission": 10,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "mission": 1,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "mission": 2,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "mission": 3,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "mission": 4,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "mission": 5,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "mission": 6,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "mission": 7,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "mission": 8,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "mission": 9,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "mission": 10,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "mission": 1,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "mission": 2,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "mission": 3,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "mission": 4,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "mission": 5,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "mission": 6,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "mission": 7,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "mission": 8,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "mission": 9,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "mission": 10,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "mission": 1,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "mission": 2,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "mission": 3,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "mission": 4,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "mission": 5,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "mission": 6,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "mission": 7,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "mission": 8,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "mission": 9,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "mission": 10,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "mission": 1,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "mission": 2,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "mission": 3,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "mission": 4,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "mission": 5,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "mission": 6,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "mission": 7,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "mission": 8,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "mission": 9,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "mission": 10,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "mission": 1,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "mission": 2,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "mission": 3,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "mission": 4,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "mission": 5,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "mission": 6,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "mission": 7,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "mission": 8,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "mission": 9,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "mission": 10,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "mission": 1,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "mission": 2,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "mission": 3,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "mission": 4,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "mission": 5,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "mission": 6,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "mission": 7,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "mission": 8,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "mission": 9,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "mission": 10,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "mission": 1,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "mission": 2,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "mission": 3,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "mission": 4,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "mission": 5,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "mission": 6,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "mission": 7,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "mission": 8,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "mission": 9,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "mission": 10,
+      "checks": 4,
+      "result": "PASS",
+      "issues": []
+    }
+  ]
+}

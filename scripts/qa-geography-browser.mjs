@@ -1,18 +1,20 @@
 import fs from 'node:fs';
 import {createServer} from 'vite';
 import {chromium} from 'playwright';
-import {geographyCountries,getGeographyPackage} from '../src/utils/geographyRegistry.js';
+import {geographyCountries,getGeographyPackage,geographyCandidates} from '../src/utils/geographyRegistry.js';
+const touch=process.env.QA_TOUCH==='1';
+const activate=loc=>touch?loc.tap():loc.click();
 const server=await createServer({server:{host:'127.0.0.1',port:4178,strictPort:true}});await server.listen();
 let browser;
 fs.mkdirSync('docs/qa/browser',{recursive:true});
-const report={generatedAt:new Date().toISOString(),scope:'UI correct/incorrect and layout; live photos assessed separately',imageTransport:process.env.QA_CACHED_IMAGES?'Downloaded Commons bytes, local QA response; live browser TLS remains unverified':'Remote Commons',rows:[]};
+const report={generatedAt:new Date().toISOString(),inputMode:touch?'Touch emulation (Chromium); not physical Safari':'Mouse and keyboard',scope:'UI correct/incorrect and layout; live photos assessed separately',imageTransport:process.env.QA_CACHED_IMAGES?'QA network interception enabled':'Production same-origin Commons assets; no network interception',rows:[]};
 const reportPath=process.env.QA_REPORT_PATH||'docs/qa/geography-browser.json';
 const selected=geographyCountries.filter(p=>(!process.env.QA_GROUP||p.group===process.env.QA_GROUP)&&(!process.env.QA_COUNTRIES||process.env.QA_COUNTRIES.split(',').includes(p.countryCode)));
 try{
 for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
   browser=await chromium.launch({executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE||undefined,headless:true,proxy:process.env.QA_USE_PROXY&&process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY,bypass:'127.0.0.1,localhost'}:undefined,args:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?['--no-sandbox','--disable-dev-shm-usage','--disable-gpu','--single-process','--no-zygote','--use-gl=angle','--use-angle=swiftshader','--in-process-gpu']:[]});
 
-  const context=await browser.newContext({viewport});
+  const context=await browser.newContext({viewport,...(touch?{hasTouch:true,isMobile:true,deviceScaleFactor:2}:{})});
   const page=await context.newPage();page.setDefaultTimeout(5000);
   // Network images are NOT replaced with fixtures: failures remain visible and recorded.
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -40,18 +42,35 @@ for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
         const bounds=await root.evaluate(el=>{const r=el.getBoundingClientRect();const outside=[...el.querySelectorAll('button,svg,img')].filter(e=>{const b=e.getBoundingClientRect();return b.width&&b.height&&(b.bottom>innerHeight+1||b.top<0||b.right>innerWidth+1||b.left<0)}).map(e=>e.tagName+':'+(e.getAttribute('data-answer')||e.getAttribute('data-city')||e.textContent).slice(0,50));return {height:r.height,scrollHeight:el.scrollHeight,clientHeight:el.clientHeight,outside};});
         row.layout=bounds.outside.length||bounds.scrollHeight>bounds.clientHeight+2?'FAIL':'PASS';row.overflow=bounds;
         if(['au','ao'].includes(p.countryCode)&&[1,5,9].includes(i))await page.screenshot({path:`docs/qa/browser/${p.countryCode}-P${i+1}-${viewport.width}-review.png`});
-        const click=async sel=>{const loc=root.locator(sel).first();if(await loc.evaluate(e=>e.tagName.toLowerCase()==='path'))await loc.press('Enter');else if(await loc.evaluate(e=>e.tagName.toLowerCase()==='g'))await loc.locator('circle[data-hit],circle').last().click();else await loc.click();};
+        const click=async sel=>{
+          let loc=root.locator(sel).first();
+          if(touch&&await root.locator('g'+sel).count())loc=root.locator('g'+sel).first();
+          const tag=await loc.evaluate(e=>e.tagName.toLowerCase());
+          if(tag==='path'&&!touch)await loc.press('Enter');
+          else if(tag==='path'){
+            const point=await loc.evaluate(el=>{
+              const b=el.getBBox(),m=el.getScreenCTM(),points=[];
+              for(const x of [.5,.25,.75,.05,.95])for(const y of [.5,.25,.75,.05,.95])points.push(new DOMPoint(b.x+b.width*x,b.y+b.height*y));
+              const length=el.getTotalLength();for(let n=0;n<100;n++)points.push(el.getPointAtLength(length*n/100));
+              for(const p of points){const q=p.matrixTransform(m);if(q.x>=0&&q.y>=0&&q.x<innerWidth&&q.y<innerHeight&&document.elementFromPoint(q.x,q.y)===el)return {x:q.x,y:q.y};}
+              return null;
+            });
+            if(!point)throw Error('No visible touch target: '+sel);
+            await page.touchscreen.tap(point.x,point.y);
+          }else if(tag==='g')await activate(loc.locator('circle[data-hit],circle').last());
+          else await activate(loc);
+        };
         const notClear=async()=>{if(await page.getByRole('dialog',{name:'Mission clear'}).count())throw Error('Incorrect action cleared mission');};
         if(i===0){const map=root.locator('svg.tp-geo-map');const initial=await map.getAttribute('viewBox');await root.getByRole('button',{name:'地図を拡大',exact:true}).click();if(await map.getAttribute('viewBox')===initial)throw Error('Zoom did not change map');await root.getByRole('button',{name:'地図を東へ移動',exact:true}).click();await root.getByRole('button',{name:'地図全体を表示',exact:true}).click();if(await map.getAttribute('viewBox')!==initial)throw Error('Map reset failed');row.mapNavigation='PASS';}
         const wrongCity=p.cities.find(c=>c.id!==p.capitalId).id;
-        const wrongCountry=await root.locator('[data-country]').evaluateAll((els,code)=>els.find(e=>e.dataset.country!==code)?.dataset.country,p.countryCode);
+        const wrongCountry=geographyCandidates(p).find(c=>c.countryCode!==p.countryCode).countryCode;
         switch(i){
           case 0:await click(`[data-country="${wrongCountry}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);break;
           case 1:{const a=p.neighbors[0],b=p.neighbors[1];if(b){await click(`[data-card="${a.iso}"]`);await click(`[data-slot="${b.iso}"]`);await notClear();}else{await click(`[data-slot="${a.iso}"]`);await notClear();}for(const n of p.neighbors){await click(`[data-card="${n.iso}"]`);await click(`[data-slot="${n.iso}"]`);}break;}
           case 2:case 5:{const wrong=root.locator('[data-answer]').filter({hasNot:page.locator('never')});const id=await wrong.evaluateAll((els,code)=>els.find(e=>e.dataset.answer!==code)?.dataset.answer,p.countryCode);await click(`[data-answer="${id}"]`);await notClear();await click(`[data-answer="${p.countryCode}"]`);break;}
           case 3:await click(`[data-city="${wrongCity}"]`);await notClear();await click(`[data-city="${p.capitalId}"]`);break;
           case 4:await click(`[data-city="${p.cities[1].id}"]`);await notClear();for(const c of p.cities)await click(`[data-city="${c.id}"]`);break;
-          case 6:await click('[data-answer="climate"]');await root.getByRole('button',{name:'2つの説明を確かめる'}).click();await notClear();await click('[data-answer="climate"]');await click('[data-answer="visible"]');await click('[data-answer="limited"]');await root.getByRole('button',{name:'2つの説明を確かめる'}).click();break;
+          case 6:await click('[data-answer="climate"]');await activate(root.getByRole('button',{name:'2つの説明を確かめる'}));await notClear();await click('[data-answer="climate"]');await click('[data-answer="visible"]');await click('[data-answer="limited"]');await activate(root.getByRole('button',{name:'2つの説明を確かめる'}));break;
           case 7:await click('[data-answer="port-Rotterdam"]');await notClear();await click(`[data-answer="via-${p.route.via}"]`);await click(`[data-answer="port-${p.route.port}"]`);break;
           case 8:await click('[data-answer="weather"]');await notClear();await click('[data-answer="limited"]');break;
           case 9:await click(`[data-country="${wrongCountry}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);await click(`[data-city="${wrongCity}"]`);await notClear();await click(`[data-city="${p.capitalId}"]`);await click('[data-answer="wrong-fact"]');await notClear();await click('[data-answer="fact"]');break;

@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'src/**'
+      - 'public/geography/**'
       - 'api/**'
       - 'lib/**'
       - 'gas/**'
@@ -36,6 +37,7 @@ jobs:
       - run: npm run build
       - run: npm run qa:geography
       - run: npm run qa:images
+      - run: npm run qa:assets
       - run: npx playwright install --with-deps chromium
       - run: npm run qa:browser
       - if: inputs.release == true

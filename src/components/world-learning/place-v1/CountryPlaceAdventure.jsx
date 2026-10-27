@@ -49,7 +49,7 @@ function GeoMap({p,world=false,countries=[p],cities=[],onCountry,onCity,labels=t
     <g clipPath={`url(#geo-clip-${p.countryCode})`}>
     {mapFeatures.map(f=><path key={(f.id||'')+'-'+f.properties.name} d={path(f)} fill={world?'#cbd5e1':countries.findIndex(c=>sameCountry(f,c))===0?'#fef3c7':palette[(countries.findIndex(c=>sameCountry(f,c))-1+10)%10]} stroke="#fff" strokeWidth={world?.6:1.2} role={onCountry?'button':undefined} tabIndex={onCountry?0:undefined} aria-label={onCountry?f.properties.name:undefined} data-country={countries.find(c=>sameCountry(f,c))?.countryCode||f.properties.name} onClick={()=>chooseCountry(f)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();chooseCountry(f);}}}/>)}
     </g>
-    {onCountry&&countries.map(c=>{const f=land(c);if(!f)return null;const b=geoBounds(f),small=Math.abs(b[1][0]-b[0][0])<2;const xy=projection(c.center);return small&&<g key={c.iso} transform={`translate(${xy})`} role="button" tabIndex="0" aria-label={c.nameEn||c.name} data-country={c.countryCode||c.iso} onClick={()=>onCountry(c.countryCode||c.iso)} onKeyDown={e=>{if(e.key==='Enter')onCountry(c.countryCode||c.iso);}}><circle r="11" fill="#fbbf24" stroke="#0f172a"/><text x="14" y="4" fontSize="12">●</text></g>;})}
+    {onCountry&&countries.map(c=>{const f=land(c);if(!f)return null;const b=geoBounds(f),screen=path.bounds(f),small=Math.abs(b[1][0]-b[0][0])<2||(world&&(screen[1][0]-screen[0][0]<20||screen[1][1]-screen[0][1]<12));const xy=projection(c.center);return small&&<g key={c.iso} transform={`translate(${xy})`} role="button" tabIndex="0" aria-label={c.nameEn||c.name} data-country={c.countryCode||c.iso} onClick={()=>onCountry(c.countryCode||c.iso)} onKeyDown={e=>{if(e.key==='Enter')onCountry(c.countryCode||c.iso);}}><circle r="11" fill="#fbbf24" stroke="#0f172a"/><text x="14" y="4" fontSize="12">●</text></g>;})}
     {layoutCities(cities,projection,mapHeight).map(({city:c,actual,x,y},i)=><g key={c.id} transform={`translate(${x},${y})`} role="button" tabIndex="0" aria-label={c.name} data-city={c.id} onClick={()=>onCity?.(c.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onCity?.(c.id);}}}>
       <line x1={actual[0]-x} y1={actual[1]-y} x2="0" y2="0" stroke="#0f172a" strokeWidth="1" pointerEvents="none"/>
       <circle cx={actual[0]-x} cy={actual[1]-y} r="3" fill="#0f172a" pointerEvents="none"/>
@@ -57,8 +57,8 @@ function GeoMap({p,world=false,countries=[p],cities=[],onCountry,onCity,labels=t
       <text textAnchor="middle" y="5" fontSize="15" fontWeight="bold" pointerEvents="none">{i+1}</text>
       {labels&&<text x={x>550?-25:25} textAnchor={x>550?'end':'start'} y="-12" fontSize="13" pointerEvents="none" fontWeight="bold" paintOrder="stroke" stroke="white" strokeWidth="4" fill="#0f172a">{numbered?i+1:c.name}</text>}
     </g>)}
-    {world&&<foreignObject x={view.x+view.w/720*10} y={view.y+view.w/720*8} width={view.w/720*400} height={view.w/720*60}>
-      <div className="tp-geo-map-controls" style={{transform:`scale(${view.w/720})`,transformOrigin:'top left',width:380}}>
+    {world&&<foreignObject style={{pointerEvents:'none'}} x={view.x+view.w/720*10} y={view.y+view.w/720*8} width={view.w/720*400} height={view.w/720*60}>
+      <div className="tp-geo-map-controls" style={{pointerEvents:'auto',transform:`scale(${view.w/720})`,transformOrigin:'top left',width:380}}>
         <button type="button" aria-label="地図を拡大" onClick={()=>zoom(.5)}>＋</button><button type="button" aria-label="地図を縮小" onClick={()=>zoom(2)}>−</button>
         <button type="button" aria-label="地図を北へ移動" onClick={()=>pan(0,-1)}>↑</button><button type="button" aria-label="地図を南へ移動" onClick={()=>pan(0,1)}>↓</button>
         <button type="button" aria-label="地図を西へ移動" onClick={()=>pan(-1,0)}>←</button><button type="button" aria-label="地図を東へ移動" onClick={()=>pan(1,0)}>→</button>
@@ -70,7 +70,7 @@ function GeoMap({p,world=false,countries=[p],cities=[],onCountry,onCity,labels=t
 function Photo({photo,small=false,onStatus}){
   const [failed,setFailed]=useState(false);
   return <figure className={small?'tp-geo-photo small':'tp-geo-photo'}>
-    {failed?<div role="alert">写真を読み込めません。出典を確認してください。</div>:<img src={photo.url} alt={small?'景観の候補写真':photo.captionJa} onLoad={()=>onStatus?.(true)} onError={()=>{setFailed(true);onStatus?.(false);}} loading="eager"/>}
+    {failed?<div role="alert">写真を読み込めません。出典を確認してください。</div>:<img src={photo.deliveryUrl||photo.url} alt={small?'景観の候補写真':photo.captionJa} onLoad={()=>onStatus?.(true)} onError={()=>{setFailed(true);onStatus?.(false);}} loading="eager"/>}
     <figcaption>{small?<span>{photo.credit} / {photo.license}</span>:<>{photo.captionJa} · <a href={photo.sourceUrl} target="_blank" rel="noreferrer">{photo.credit} / {photo.license}</a></>}</figcaption>
   </figure>;
 }

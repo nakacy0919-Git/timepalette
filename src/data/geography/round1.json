@@ -18,39 +18,43 @@
         "id": "af-city-0",
         "name": "Kabul",
         "coordinates": [
-          69.181314,
-          34.518636
+          69.17233,
+          34.52813
         ],
-        "source": "natural-earth-10m-places",
+        "source": "https://www.geonames.org/1138958/",
         "labelJa": "カブール",
-        "isCapital": true
+        "isCapital": true,
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "af-city-1",
         "name": "Kandahar",
         "coordinates": [
-          65.694946,
-          31.61002
+          65.71013,
+          31.61332
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/1138336/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "af-city-2",
         "name": "Jalalabad",
         "coordinates": [
-          70.436104,
-          34.441527
+          70.45153,
+          34.42647
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/1139715/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "af-city-3",
         "name": "Herat",
         "coordinates": [
-          62.169993,
-          34.330009
+          62.19967,
+          34.34817
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/1140026/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "af-city-0",
@@ -157,13 +161,21 @@
         "id": "mofa",
         "url": "https://www.mofa.go.jp/mofaj/area/afghanistan/data.html",
         "use": "country reference; review pending"
+      },
+      {
+        "id": "geonames-cities-af",
+        "url": "https://download.geonames.org/export/dump/cities5000.zip",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All displayed A-group approximate city points; individual IDs recorded in city-coordinate-review.json"
       }
     ],
     "qa": {
-      "releaseReady": false,
-      "geographyReview": "pending",
+      "releaseReady": true,
+      "geographyReview": "source-reviewed",
       "photoReview": "visually-reviewed",
-      "routeReview": "pending"
+      "routeReview": "geographic-schematic-reviewed"
     },
     "landscapeCueJa": "岩壁に複数の穴や空洞が見える",
     "sceneCategory": "caves",
@@ -188,39 +200,43 @@
         "id": "al-city-0",
         "name": "Tirana",
         "coordinates": [
-          19.818883,
-          41.327541
+          19.81866,
+          41.32744
         ],
-        "source": "natural-earth-10m-places",
+        "source": "https://www.geonames.org/3183875/",
         "labelJa": "ティラナ",
-        "isCapital": true
+        "isCapital": true,
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "al-city-1",
         "name": "Elbasan",
         "coordinates": [
-          20.083828,
-          41.121507
+          20.08224,
+          41.11138
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/783263/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "al-city-2",
         "name": "Shkodër",
         "coordinates": [
-          19.51885,
-          42.068452
+          19.51258,
+          42.06828
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/3184081/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "al-city-3",
         "name": "Durrës",
         "coordinates": [
-          19.448208,
-          41.3178
+          19.45469,
+          41.32355
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/3185728/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "al-city-0",
@@ -307,13 +323,21 @@
         "id": "mofa",
         "url": "https://www.mofa.go.jp/mofaj/area/albania/data.html",
         "use": "country reference; review pending"
+      },
+      {
+        "id": "geonames-cities-al",
+        "url": "https://download.geonames.org/export/dump/cities5000.zip",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All displayed A-group approximate city points; individual IDs recorded in city-coordinate-review.json"
       }
     ],
     "qa": {
-      "releaseReady": false,
-      "geographyReview": "pending",
+      "releaseReady": true,
+      "geographyReview": "source-reviewed",
       "photoReview": "visually-reviewed",
-      "routeReview": "pending"
+      "routeReview": "geographic-schematic-reviewed"
     },
     "landscapeCueJa": "市街地を流れる川と、その奥に山地が見える",
     "sceneCategory": "river-city",
@@ -338,39 +362,43 @@
         "id": "dz-city-0",
         "name": "Algiers",
         "coordinates": [
-          3.048607,
-          36.765011
+          3.08746,
+          36.73225
         ],
-        "source": "natural-earth-10m-places",
+        "source": "https://www.geonames.org/2507480/",
         "labelJa": "アルジェ",
-        "isCapital": true
+        "isCapital": true,
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "dz-city-1",
         "name": "Oran",
         "coordinates": [
-          -0.621919,
-          35.711948
+          -0.63588,
+          35.69906
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/2485926/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "dz-city-2",
         "name": "Constantine",
         "coordinates": [
-          6.599948,
-          36.359989
+          6.61472,
+          36.365
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/2501152/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "dz-city-3",
         "name": "Blida",
         "coordinates": [
-          2.829998,
-          36.420347
+          2.8277,
+          36.47004
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/2503769/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "dz-city-0",
@@ -487,13 +515,21 @@
         "id": "mofa",
         "url": "https://www.mofa.go.jp/mofaj/area/algeria/data.html",
         "use": "country reference; review pending"
+      },
+      {
+        "id": "geonames-cities-dz",
+        "url": "https://download.geonames.org/export/dump/cities5000.zip",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All displayed A-group approximate city points; individual IDs recorded in city-coordinate-review.json"
       }
     ],
     "qa": {
-      "releaseReady": false,
-      "geographyReview": "pending",
+      "releaseReady": true,
+      "geographyReview": "source-reviewed",
       "photoReview": "visually-reviewed",
-      "routeReview": "pending"
+      "routeReview": "geographic-schematic-reviewed"
     },
     "landscapeCueJa": "砂丘と露出した岩が見える",
     "sceneCategory": "desert",
@@ -518,12 +554,13 @@
         "id": "ad-city-0",
         "name": "Andorra la Vella",
         "coordinates": [
-          1.526594,
-          42.510753
+          1.52109,
+          42.50779
         ],
-        "source": "natural-earth-10m-places",
+        "source": "https://www.geonames.org/3041563/",
         "labelJa": "アンドラ・ラ・ベリャ",
-        "isCapital": true
+        "isCapital": true,
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ad-town-1",
@@ -532,8 +569,8 @@
           1.58014,
           42.53474
         ],
-        "source": "https://www.geonames.org/3040686/encamp.html",
-        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
+        "source": "https://www.geonames.org/3040686/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ad-town-2",
@@ -542,8 +579,8 @@
           1.49129,
           42.46372
         ],
-        "source": "https://www.geonames.org/3039163/sant-julia-de-loria.html",
-        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
+        "source": "https://www.geonames.org/3039163/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "ad-city-0",
@@ -618,13 +655,21 @@
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "use": "Encamp and Sant Julia de Loria approximate populated-place points; individual source URLs stored per city; checked 2026-10-27"
+      },
+      {
+        "id": "geonames-cities-ad",
+        "url": "https://download.geonames.org/export/dump/cities5000.zip",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All displayed A-group approximate city points; individual IDs recorded in city-coordinate-review.json"
       }
     ],
     "qa": {
-      "releaseReady": false,
-      "geographyReview": "pending",
+      "releaseReady": true,
+      "geographyReview": "source-reviewed",
       "photoReview": "visually-reviewed",
-      "routeReview": "pending"
+      "routeReview": "geographic-schematic-reviewed"
     },
     "landscapeCueJa": "雪の残る斜面に、低い石造りの建物が見える",
     "sceneCategory": "snow-refuge",
@@ -649,39 +694,43 @@
         "id": "ao-city-0",
         "name": "Luanda",
         "coordinates": [
-          13.232481,
-          -8.83634
+          13.23432,
+          -8.83682
         ],
-        "source": "natural-earth-10m-places",
+        "source": "https://www.geonames.org/2240449/",
         "labelJa": "ルアンダ",
-        "isCapital": true
+        "isCapital": true,
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ao-city-1",
         "name": "Huambo",
         "coordinates": [
-          15.758064,
-          -12.74804
+          15.73917,
+          -12.77611
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/3348313/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ao-city-2",
         "name": "Lobito",
         "coordinates": [
-          13.54123,
-          -12.370009
+          13.53601,
+          -12.3644
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/3347939/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ao-city-3",
         "name": "Benguela",
         "coordinates": [
-          13.407233,
-          -12.578264
+          13.40268,
+          -12.57674
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/3351663/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "ao-city-0",
@@ -768,13 +817,21 @@
         "id": "mofa",
         "url": "https://www.mofa.go.jp/mofaj/area/angola/data.html",
         "use": "country reference; review pending"
+      },
+      {
+        "id": "geonames-cities-ao",
+        "url": "https://download.geonames.org/export/dump/cities5000.zip",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All displayed A-group approximate city points; individual IDs recorded in city-coordinate-review.json"
       }
     ],
     "qa": {
-      "releaseReady": false,
-      "geographyReview": "pending",
+      "releaseReady": true,
+      "geographyReview": "source-reviewed",
       "photoReview": "visually-reviewed",
-      "routeReview": "pending"
+      "routeReview": "geographic-schematic-reviewed"
     },
     "landscapeCueJa": "樹木の間から、幅広い滝が落ちている",
     "sceneCategory": "waterfall",
@@ -799,12 +856,13 @@
         "id": "ag-city-0",
         "name": "St. John's",
         "coordinates": [
-          -61.850034,
-          17.118036
+          -61.84329,
+          17.12096
         ],
-        "source": "natural-earth-10m-places",
+        "source": "https://www.geonames.org/3576022/",
         "labelJa": "セントジョンズ",
-        "isCapital": true
+        "isCapital": true,
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ag-town-1",
@@ -813,8 +871,8 @@
           -61.79303169250488,
           17.0667130475053
         ],
-        "source": "https://www.geonames.org/3576397/all-saints.html",
-        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
+        "source": "https://www.geonames.org/3576397/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ag-town-2",
@@ -823,8 +881,8 @@
           -61.82437,
           17.6394
         ],
-        "source": "https://www.geonames.org/3576311/codrington.html",
-        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
+        "source": "https://www.geonames.org/3576311/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "ag-city-0",
@@ -899,13 +957,21 @@
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "use": "All Saints and Codrington approximate populated-place points; checked 2026-10-27"
+      },
+      {
+        "id": "geonames-cities-ag",
+        "url": "https://download.geonames.org/export/dump/cities5000.zip",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All displayed A-group approximate city points; individual IDs recorded in city-coordinate-review.json"
       }
     ],
     "qa": {
-      "releaseReady": false,
-      "geographyReview": "pending",
+      "releaseReady": true,
+      "geographyReview": "source-reviewed",
       "photoReview": "visually-reviewed",
-      "routeReview": "pending"
+      "routeReview": "geographic-schematic-reviewed"
     },
     "landscapeCueJa": "水辺に白い建物とヤシの木が見える",
     "sceneCategory": "dockyard",
@@ -930,39 +996,43 @@
         "id": "ar-city-0",
         "name": "Buenos Aires",
         "coordinates": [
-          -58.432513,
-          -34.610715
+          -58.37723,
+          -34.61315
         ],
-        "source": "natural-earth-10m-places",
+        "source": "https://www.geonames.org/3435910/",
         "labelJa": "ブエノスアイレス",
-        "isCapital": true
+        "isCapital": true,
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ar-city-1",
         "name": "Córdoba",
         "coordinates": [
-          -64.18424,
-          -31.398012
+          -64.18853,
+          -31.40648
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/3860259/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ar-city-2",
         "name": "Rosario",
         "coordinates": [
-          -60.668253,
-          -32.949184
+          -60.63932,
+          -32.94682
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/3838583/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ar-city-3",
         "name": "Mendoza",
         "coordinates": [
-          -68.818557,
-          -32.881384
+          -68.84582,
+          -32.88946
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/3844421/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "ar-city-0",
@@ -1064,13 +1134,21 @@
         "id": "argentina-port-buenos-aires",
         "url": "https://www.argentina.gob.ar/economia/agencia-nacional-de-puertos-y-navegacion/puertos/buenos-aires",
         "use": "Port Buenos Aires location in Rio de la Plata; checked 2026-10-27; does not certify current routes or schedules"
+      },
+      {
+        "id": "geonames-cities-ar",
+        "url": "https://download.geonames.org/export/dump/cities5000.zip",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All displayed A-group approximate city points; individual IDs recorded in city-coordinate-review.json"
       }
     ],
     "qa": {
-      "releaseReady": false,
-      "geographyReview": "pending",
+      "releaseReady": true,
+      "geographyReview": "source-reviewed",
       "photoReview": "visually-reviewed",
-      "routeReview": "pending"
+      "routeReview": "geographic-schematic-reviewed"
     },
     "landscapeCueJa": "森林の中に多数の滝が連なっている",
     "sceneCategory": "forest-falls",
@@ -1095,39 +1173,43 @@
         "id": "am-city-0",
         "name": "Yerevan",
         "coordinates": [
-          44.511606,
-          40.183097
+          44.5126,
+          40.17765
         ],
-        "source": "natural-earth-10m-places",
+        "source": "https://www.geonames.org/616052/",
         "labelJa": "エレバン",
-        "isCapital": true
+        "isCapital": true,
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "am-city-1",
         "name": "Gyumri",
         "coordinates": [
-          43.847494,
-          40.789434
+          43.84635,
+          40.79305
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/616635/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "am-city-2",
         "name": "Vanadzor",
         "coordinates": [
-          44.488282,
-          40.812766
+          44.49704,
+          40.8074
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/616530/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "am-city-3",
-        "name": "Gavarr",
+        "name": "Gavar",
         "coordinates": [
-          45.126667,
-          40.358889
+          45.12386,
+          40.35398
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/616599/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "am-city-0",
@@ -1214,13 +1296,21 @@
         "id": "mofa",
         "url": "https://www.mofa.go.jp/mofaj/area/armenia/data.html",
         "use": "country reference; review pending"
+      },
+      {
+        "id": "geonames-cities-am",
+        "url": "https://download.geonames.org/export/dump/cities5000.zip",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All displayed A-group approximate city points; individual IDs recorded in city-coordinate-review.json"
       }
     ],
     "qa": {
-      "releaseReady": false,
-      "geographyReview": "pending",
+      "releaseReady": true,
+      "geographyReview": "source-reviewed",
       "photoReview": "visually-reviewed",
-      "routeReview": "pending"
+      "routeReview": "geographic-schematic-reviewed"
     },
     "landscapeCueJa": "岩山のふもとに積雪と通路が見える",
     "sceneCategory": "snow-cliff",
@@ -1245,39 +1335,43 @@
         "id": "au-city-0",
         "name": "Canberra",
         "coordinates": [
-          149.129026,
-          -35.283029
+          149.12807,
+          -35.28346
         ],
-        "source": "natural-earth-10m-places",
+        "source": "https://www.geonames.org/2172517/",
         "labelJa": "キャンベラ",
-        "isCapital": true
+        "isCapital": true,
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "au-city-1",
         "name": "Sydney",
         "coordinates": [
-          151.212548,
-          -33.871373
+          151.20732,
+          -33.86785
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/2147714/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "au-city-2",
         "name": "Melbourne",
         "coordinates": [
-          144.97307,
-          -37.818086
+          144.96332,
+          -37.814
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/2158177/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "au-city-3",
         "name": "Brisbane",
         "coordinates": [
-          153.033147,
-          -27.453085
+          153.02809,
+          -27.46794
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/2174003/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "au-city-0",
@@ -1354,13 +1448,21 @@
         "id": "mofa",
         "url": "https://www.mofa.go.jp/mofaj/area/australia/data.html",
         "use": "country reference; review pending"
+      },
+      {
+        "id": "geonames-cities-au",
+        "url": "https://download.geonames.org/export/dump/cities5000.zip",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All displayed A-group approximate city points; individual IDs recorded in city-coordinate-review.json"
       }
     ],
     "qa": {
-      "releaseReady": false,
-      "geographyReview": "pending",
+      "releaseReady": true,
+      "geographyReview": "source-reviewed",
       "photoReview": "visually-reviewed",
-      "routeReview": "pending"
+      "routeReview": "geographic-schematic-reviewed"
     },
     "landscapeCueJa": "航空機の翼の下に、浅い海とサンゴ礁が見える",
     "sceneCategory": "reef",
@@ -1385,39 +1487,43 @@
         "id": "at-city-0",
         "name": "Vienna",
         "coordinates": [
-          16.364693,
-          48.201961
+          16.37208,
+          48.20849
         ],
-        "source": "natural-earth-10m-places",
+        "source": "https://www.geonames.org/2761369/",
         "labelJa": "ウィーン",
-        "isCapital": true
+        "isCapital": true,
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "at-city-1",
         "name": "Linz",
         "coordinates": [
-          14.288781,
-          48.319233
+          14.28611,
+          48.30639
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/2772400/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "at-city-2",
         "name": "Graz",
         "coordinates": [
-          15.410005,
-          47.077758
+          15.44197,
+          47.06733
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/2778067/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "at-city-3",
         "name": "Salzburg",
         "coordinates": [
-          13.04002,
-          47.810478
+          13.04399,
+          47.79941
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/2766824/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "at-city-0",
@@ -1544,13 +1650,21 @@
         "id": "mofa",
         "url": "https://www.mofa.go.jp/mofaj/area/austria/data.html",
         "use": "country reference; review pending"
+      },
+      {
+        "id": "geonames-cities-at",
+        "url": "https://download.geonames.org/export/dump/cities5000.zip",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All displayed A-group approximate city points; individual IDs recorded in city-coordinate-review.json"
       }
     ],
     "qa": {
-      "releaseReady": false,
-      "geographyReview": "pending",
+      "releaseReady": true,
+      "geographyReview": "source-reviewed",
       "photoReview": "visually-reviewed",
-      "routeReview": "pending"
+      "routeReview": "geographic-schematic-reviewed"
     },
     "landscapeCueJa": "黄色い建物の前に、馬車が見える",
     "sceneCategory": "palace",
@@ -1575,39 +1689,43 @@
         "id": "az-city-0",
         "name": "Baku",
         "coordinates": [
-          49.860271,
-          40.397218
+          49.89201,
+          40.37767
         ],
-        "source": "natural-earth-10m-places",
+        "source": "https://www.geonames.org/587084/",
         "labelJa": "バクー",
-        "isCapital": true
+        "isCapital": true,
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "az-city-1",
         "name": "Ganca",
         "coordinates": [
-          46.350028,
-          40.684996
+          46.36134,
+          40.68157
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/586523/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "az-city-2",
-        "name": "Sumqayt",
+        "name": "Sumqayit",
         "coordinates": [
-          49.629983,
-          40.580015
+          49.66861,
+          40.58972
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/584923/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "az-city-3",
         "name": "Naxcivan",
         "coordinates": [
-          45.412205,
-          39.20922
+          45.41222,
+          39.20889
         ],
-        "source": "natural-earth-10m-places"
+        "source": "https://www.geonames.org/147429/",
+        "coordinateReview": "GeoNames country and populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "az-city-0",
@@ -1704,13 +1822,21 @@
         "id": "mofa",
         "url": "https://www.mofa.go.jp/mofaj/area/azerbaijan/data.html",
         "use": "country reference; review pending"
+      },
+      {
+        "id": "geonames-cities-az",
+        "url": "https://download.geonames.org/export/dump/cities5000.zip",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All displayed A-group approximate city points; individual IDs recorded in city-coordinate-review.json"
       }
     ],
     "qa": {
-      "releaseReady": false,
-      "geographyReview": "pending",
+      "releaseReady": true,
+      "geographyReview": "source-reviewed",
       "photoReview": "visually-reviewed",
-      "routeReview": "pending"
+      "routeReview": "geographic-schematic-reviewed"
     },
     "landscapeCueJa": "高い位置から、密集した市街地を見下ろしている",
     "sceneCategory": "city",

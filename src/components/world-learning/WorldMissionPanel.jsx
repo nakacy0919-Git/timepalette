@@ -5,7 +5,7 @@ import {savePublishedSummary} from '../../utils/publishedMissionSummary.js';
 import {fetchPublishedCountry} from '../../utils/publishedMissionCatalog.js';
 import {getCountryProgress,completeWorldMission} from '../../utils/worldProgressStorage';
 import {getPlaceProgress} from '../../utils/placeProgressStorage';
-import {getGeographyPackage} from '../../utils/geographyRegistry.js';
+import {getReleasedGeographyPackage} from '../../utils/geographyRegistry.js';
 import PlaceAdventureLauncher from './PlaceAdventureLauncher';
 import TimeAdventureLauncher from './TimeAdventureLauncher';
 import MissionPlayer from './MissionPlayer';
@@ -35,7 +35,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     return ()=>controller.abort();
   },[countryCode,refresh]);
   const retry=()=>{setLoading(true);setError('');setRefresh(n=>n+1);};
-  const geo=getGeographyPackage(countryCode);
+  const geo=getReleasedGeographyPackage(countryCode);
   const completed=new Set(getCountryProgress(countryCode).completedMissionIds);
   const placeDone=new Set(getPlaceProgress(countryCode).completedMissionIds);
   const meta=MISSION_DOMAINS.find(d=>d.id===domain);

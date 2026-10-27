@@ -22,6 +22,7 @@ try{
  assert.equal(await page.locator('button').filter({hasText:'Question language '}).count(),0);
  assert.deepEqual(errors,[]);
  await page.route('https://{upload,thumb}.wikimedia.org/**',route=>route.abort());
+ await page.route('**/geography/photos/**',route=>route.abort());
  await page.goto('http://127.0.0.1:4181/tests/geography-browser.html?country=au');
  await page.locator('[data-mission="6"]').click();
  await page.getByRole('alert').first().waitFor();

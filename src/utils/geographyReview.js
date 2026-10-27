@@ -23,3 +23,14 @@ export function auditGeographicCorrections(country, corrections){
     if(country.route[key]!==value)issues.push('reviewed route correction changed: '+key);
   return {reviewedCityPoints:Object.keys(corrections?.cities||{}).length,issues};
 }
+
+export function auditContentReview(country, review){
+  if(!review)return {status:'pending',issues:[]};
+  const issues=[];
+  if(country.factJa!==review.factJa)issues.push('reviewed terrain fact changed');
+  if(JSON.stringify(country.route)!==JSON.stringify(review.route))issues.push('reviewed schematic route changed');
+  for(const key of ['factSources','routeSources'])
+    if(!review[key]?.length||review[key].some(url=>!/^https:\/\//.test(url)))issues.push('missing content sources: '+key);
+  if(review.pedagogy?.status!=='reviewed')issues.push('pedagogy review pending');
+  return {status:issues.length?'stale':'verified',issues};
+}

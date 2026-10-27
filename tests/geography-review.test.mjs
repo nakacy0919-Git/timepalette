@@ -20,16 +20,30 @@ test('missing evidence remains pending, and a missing source cannot certify a ca
   assert.equal(auditCapitalReview(country).status,'pending');
   assert.equal(auditCapitalReview(country,{...reviews.au,sourceUrl:''}).status,'stale');
 });
-test('four supplemental A-group city points match the reviewed source records',()=>{
+test('all 42 A-group city points match the reviewed source records',()=>{
   let total=0;
   for(const [code,review] of Object.entries(corrections)){
     const result=auditGeographicCorrections(getGeographyPackage(code),review);
     assert.deepEqual(result.issues,[],code);total+=result.reviewedCityPoints;
   }
-  assert.equal(total,4);
+  assert.equal(total,42);
 });
 test('swapped city latitude and longitude invalidates the coordinate review',()=>{
   const country=structuredClone(getGeographyPackage('ag'));
   country.cities.find(c=>c.id==='ag-town-2').coordinates.reverse();
   assert.ok(auditGeographicCorrections(country,corrections.ag).issues.length>0);
+});
+
+test('terrain and route evidence detects a changed transit country',async()=>{
+  const {default:content}=await import('../src/data/geography/content-review.json',{with:{type:'json'}});
+  const {auditContentReview}=await import('../src/utils/geographyReview.js');
+  for(const [code,review] of Object.entries(content))assert.equal(auditContentReview(getGeographyPackage(code),review).status,'verified',code);
+  const changed=structuredClone(getGeographyPackage('am'));changed.route.via='Turkey';
+  assert.equal(auditContentReview(changed,content.am).status,'stale');
+});
+
+test('the live directory exposes accepted A packages and keeps B data for QA',async()=>{
+ const {geographyCountries,getReleasedGeographyPackage}=await import('../src/utils/geographyRegistry.js');
+ for(const p of geographyCountries)assert.equal(Boolean(getReleasedGeographyPackage(p.countryCode)),p.group==='A');
+ assert.ok(getGeographyPackage('br'));
 });

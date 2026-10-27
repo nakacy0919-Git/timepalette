@@ -1,9 +1,11 @@
 import packages from '../data/geography/round1.json' with {type:'json'};
+import photoAssets from '../data/geography/photo-assets.json' with {type:'json'};
 export const GEOGRAPHY_TYPES=['world-locator','neighbor-puzzle','shape-choice','capital-hunt','city-challenge','landscape-detective','life-photo-evidence','route-challenge','photo-evidence','geo-master'];
 export const GEOGRAPHY_TITLES=['国をさがせ！','周辺の国・地域パズル','国の形を見ぬけ！','首都を見つけよう','都市を攻略せよ！','景色のたんてい','写真から読み取ろう','海まで荷物を運べ！','証拠と推測を分けよう','地理マスター'];
-export const geographyCountries=Object.values(packages);
+export const geographyCountries=Object.values(packages).map(p=>({...p,photo:{...p.photo,deliveryUrl:photoAssets[p.countryCode]?.publicPath}}));
+const indexedPackages=Object.fromEntries(geographyCountries.map(p=>[p.countryCode,p]));
 export function getGeographyPackage(code){
-  const p=packages[String(code||'').toLowerCase()];
+  const p=indexedPackages[String(code||'').toLowerCase()];
   if(!p)return null;
   return {...p,missions:GEOGRAPHY_TYPES.map((type,i)=>({id:`${p.countryCode}-place-${String(i+1).padStart(2,'0')}`,type,points:100,title:GEOGRAPHY_TITLES[i]}))};
 }
@@ -33,3 +35,6 @@ export function geographyCandidates(p){
   const rotate=seed%4;
   return [...choices.slice(rotate),...choices.slice(0,rotate)];
 }
+
+// Keep unfinished packages available to QA without exposing them in the country directory.
+export function getReleasedGeographyPackage(code){const p=getGeographyPackage(code);return p?.qa.releaseReady?p:null;}

@@ -86,6 +86,11 @@ for code,changes in corrections.items():
  for city in out[code]['cities']:city.update(changes.get('cities',{}).get(city['id'],{}))
  out[code]['route'].update(changes.get('route',{}))
  out[code]['sources'].append(changes['source'])
+ if changes.get('citySource') and not any(s['id']==changes['citySource']['id'] for s in out[code]['sources']):out[code]['sources'].append(changes['citySource'])
+content_reviews=json.load(open('src/data/geography/content-review.json'))
+for code,review in content_reviews.items():
+ if out[code]['factJa']!=review['factJa'] or out[code]['route']!=review['route']:raise ValueError('Content review is stale: '+code)
+ out[code]['qa'].update(releaseReady=True,geographyReview='source-reviewed',routeReview='geographic-schematic-reviewed')
 Path('src/data/geography').mkdir(exist_ok=True)
 Path('src/data/geography/round1.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
 print('Created new packages:',len(out),'countries; independent from missions_*.json')
