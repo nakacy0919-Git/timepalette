@@ -16,36 +16,38 @@
 
 ## 国別一覧
 
-|グループ|国|P01〜P10操作・表示|写真内容|教材内容の最終照合|
-|---|---|---|---|---|
-|A|Afghanistan（af）|20/20 合格|目視照合済み|未完了|
-|A|Albania（al）|20/20 合格|目視照合済み|未完了|
-|A|Algeria（dz）|20/20 合格|目視照合済み|未完了|
-|A|Andorra（ad）|20/20 合格|目視照合済み|未完了|
-|A|Angola（ao）|20/20 合格|目視照合済み|未完了|
-|A|Antigua and Barbuda（ag）|20/20 合格|目視照合済み|未完了|
-|A|Argentina（ar）|20/20 合格|目視照合済み|未完了|
-|A|Armenia（am）|20/20 合格|目視照合済み|未完了|
-|A|Australia（au）|20/20 合格|目視照合済み|未完了|
-|A|Austria（at）|20/20 合格|目視照合済み|未完了|
-|A|Azerbaijan（az）|20/20 合格|目視照合済み|未完了|
-|B|The Bahamas（bs）|20/20 合格|目視照合済み|未完了|
-|B|Bahrain（bh）|20/20 合格|目視照合済み|未完了|
-|B|Bangladesh（bd）|20/20 合格|目視照合済み|未完了|
-|B|Barbados（bb）|20/20 合格|目視照合済み|未完了|
-|B|Belarus（by）|20/20 合格|目視照合済み|未完了|
-|B|Belgium（be）|20/20 合格|目視照合済み|未完了|
-|B|Belize（bz）|20/20 合格|目視照合済み|未完了|
-|B|Benin（bj）|20/20 合格|目視照合済み|未完了|
-|B|Bhutan（bt）|20/20 合格|目視照合済み|未完了|
-|B|Bolivia（bo）|20/20 合格|目視照合済み|未完了|
-|B|Bosnia and Herzegovina（ba）|20/20 合格|目視照合済み|未完了|
-|B|Botswana（bw）|20/20 合格|目視照合済み|未完了|
-|B|Brazil（br）|20/20 合格|目視照合済み|未完了|
-|B|Brunei（bn）|20/20 合格|目視照合済み|未完了|
-|B|Bulgaria（bg）|20/20 合格|目視照合済み|未完了|
-|B|Burkina Faso（bf）|20/20 合格|目視照合済み|未完了|
-|B|Burundi（bi）|20/20 合格|目視照合済み|未完了|
+追記：2026-10-27、A11か国の首都名を外務省資料と照合。都市座標・P04/P10全体の教材内容の合格を意味しない。出典と確認範囲は [首都名照合記録](A_CAPITAL_SOURCE_REVIEW.md) を参照。
+
+|グループ|国|P01〜P10操作・表示|写真内容|首都名|教材内容の最終照合|
+|---|---|---|---|---|---|
+|A|Afghanistan（af）|20/20 合格|目視照合済み|外務省照合済み|未完了|
+|A|Albania（al）|20/20 合格|目視照合済み|外務省照合済み|未完了|
+|A|Algeria（dz）|20/20 合格|目視照合済み|外務省照合済み|未完了|
+|A|Andorra（ad）|20/20 合格|目視照合済み|外務省照合済み|未完了|
+|A|Angola（ao）|20/20 合格|目視照合済み|外務省照合済み|未完了|
+|A|Antigua and Barbuda（ag）|20/20 合格|目視照合済み|外務省照合済み|未完了|
+|A|Argentina（ar）|20/20 合格|目視照合済み|外務省照合済み|未完了|
+|A|Armenia（am）|20/20 合格|目視照合済み|外務省照合済み|未完了|
+|A|Australia（au）|20/20 合格|目視照合済み|外務省照合済み|未完了|
+|A|Austria（at）|20/20 合格|目視照合済み|外務省照合済み|未完了|
+|A|Azerbaijan（az）|20/20 合格|目視照合済み|外務省照合済み|未完了|
+|B|The Bahamas（bs）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Bahrain（bh）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Bangladesh（bd）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Barbados（bb）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Belarus（by）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Belgium（be）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Belize（bz）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Benin（bj）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Bhutan（bt）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Bolivia（bo）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Bosnia and Herzegovina（ba）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Botswana（bw）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Brazil（br）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Brunei（bn）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Bulgaria（bg）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Burkina Faso（bf）|20/20 合格|目視照合済み|未照合|未完了|
+|B|Burundi（bi）|20/20 合格|目視照合済み|未照合|未完了|
 
 ## 全280問の検査結果
 
@@ -345,7 +347,7 @@
 |dz|[Commons](https://commons.wikimedia.org/wiki/File:The_tassili_of_Algeria.jpg)|[外務省](https://www.mofa.go.jp/mofaj/area/algeria/data.html)|
 |ad|[Commons](https://commons.wikimedia.org/wiki/File:Refuge_perafita_andorra.jpg)|[外務省](https://www.mofa.go.jp/mofaj/area/andorra/data.html)|
 |ao|[Commons](https://commons.wikimedia.org/wiki/File:Kalandula_waterfalls_of_the_Lucala-River_in_Malange,_Angola.JPG)|[外務省](https://www.mofa.go.jp/mofaj/area/angola/data.html)|
-|ag|[Commons](https://commons.wikimedia.org/wiki/File:Nelson%27s_Dockyard_Antigua.jpg)|[外務省](https://www.mofa.go.jp/mofaj/area/antigua-barbuda/data.html)|
+|ag|[Commons](https://commons.wikimedia.org/wiki/File:Nelson%27s_Dockyard_Antigua.jpg)|[外務省](https://www.mofa.go.jp/mofaj/area/antigua/data.html)|
 |ar|[Commons](https://commons.wikimedia.org/wiki/File:Iguazu_Falls.jpg)|[外務省](https://www.mofa.go.jp/mofaj/area/argentine/data.html)|
 |am|[Commons](https://commons.wikimedia.org/wiki/File:Geghard_Monastery_exterior_with_cliffs_in_snow_2026.jpg)|[外務省](https://www.mofa.go.jp/mofaj/area/armenia/data.html)|
 |au|[Commons](https://commons.wikimedia.org/wiki/File:Great_Barrier_Reef_(aerial_view).JPG)|[外務省](https://www.mofa.go.jp/mofaj/area/australia/data.html)|

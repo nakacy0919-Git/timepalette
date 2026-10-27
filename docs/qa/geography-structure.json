@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-10-26T13:34:57.973Z",
-  "scope": "A/B structural and scoring audit; does not prove factual or visual accuracy",
+  "generatedAt": "2026-10-27T13:25:11.489Z",
+  "scope": "A/B structural and scoring audit with field-specific capital-name evidence; coordinates and other content require separate review",
   "countries": 28,
   "missions": 280,
   "errors": 0,
+  "capitalNamesVerified": 11,
   "contentPending": 28,
   "rows": [
     {
@@ -11,6 +12,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -23,6 +28,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -35,6 +44,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -47,6 +60,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -59,6 +76,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -71,6 +92,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -83,6 +108,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -95,6 +124,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -107,6 +140,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -119,6 +156,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -131,6 +172,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -143,6 +188,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -155,6 +204,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -167,6 +220,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -179,6 +236,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -191,6 +252,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -203,6 +268,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -215,6 +284,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -227,6 +300,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -239,6 +316,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -251,6 +332,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -263,6 +348,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -275,6 +364,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -287,6 +380,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -299,6 +396,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -311,6 +412,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -323,6 +428,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",
@@ -335,6 +444,10 @@
       "missions": 10,
       "structural": "PASS",
       "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
       "content": {
         "releaseReady": false,
         "geographyReview": "pending",

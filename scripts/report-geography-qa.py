@@ -1,12 +1,12 @@
 import json
 from pathlib import Path
-p=json.load(open('src/data/geography/round1.json'));r=json.load(open('docs/qa/geography-browser.json'));rows=r['rows'];images=json.load(open('docs/qa/geography-images.json'))
+p=json.load(open('src/data/geography/round1.json'));r=json.load(open('docs/qa/geography-browser.json'));rows=r['rows'];images=json.load(open('docs/qa/geography-images.json'));capitals=json.load(open('src/data/geography/capital-review.json'))
 lines=['# 第1ラウンド QA結果一覧','', '2026-10-26 JST。**操作検査合格 ≠ 教材内容の全項目合格。本番リリース判定：保留。**','',
 '## 検査集計','',f'- 対象：A 11か国110問、B 17か国170問、計280問。',f'- ブラウザ正誤操作：{sum(x["interaction"]=="PASS" for x in rows)} / {len(rows)} 件。1024×768と820×1180。',f'- 画面内の主要要素：{sum(x["layout"]=="PASS" for x in rows)} / {len(rows)} 件。',f'- 保存・再読込：{sum(x.get("progressSaved",False) for x in rows)} / {len(rows)} 件。',f'- 再クリア重複防止：{sum(x.get("replayDoesNotDuplicate",False) for x in rows)} / {len(rows)} 件。',f'- 画像：Commons 28点存在確認、実画像と場所説明を目視照合。ブラウザ表示検査はローカルQA応答で実画像を表示。', '- 外部URLのブラウザ読込：環境のTLS証明書エラーで未合格。証明書検証を無効化していない。', '- 地理・物流ルート・誤答の教材内容：28か国とも最終レビュー未完了。', '- ルワンダ旧版10問、時差、実機iPad Safari、本番約400問の実公開：この集計の対象外。','',
-'## 国別一覧','', '|グループ|国|P01〜P10操作・表示|写真内容|教材内容の最終照合|', '|---|---|---|---|---|']
+'## 国別一覧','', '追記：2026-10-27、A11か国の首都名を外務省資料と照合。都市座標・P04/P10全体の教材内容の合格を意味しない。出典と確認範囲は [首都名照合記録](A_CAPITAL_SOURCE_REVIEW.md) を参照。','', '|グループ|国|P01〜P10操作・表示|写真内容|首都名|教材内容の最終照合|', '|---|---|---|---|---|---|']
 for code,c in p.items():
  a=[x for x in rows if x['country']==code];s='20/20 合格' if len(a)==20 and all(x['interaction']=='PASS' and x['layout']=='PASS' for x in a) else '要確認'
- lines.append(f"|{c['group']}|{c['nameEn']}（{code}）|{s}|目視照合済み|未完了|")
+ lines.append(f"|{c['group']}|{c['nameEn']}（{code}）|{s}|目視照合済み|{'外務省照合済み' if code in capitals else '未照合'}|未完了|")
 lines+=['','## 全280問の検査結果','','写真欄の「実画像表示」は取得したCommons実画像のローカル表示を意味し、外部URLのTLS読込合格ではない。','','|国|問|横向き 正誤／表示|縦向き 正誤／表示|保存・再クリア|写真|地理・教育内容|','|---|---|---|---|---|---|---|']
 for code,c in p.items():
  for n in range(1,11):

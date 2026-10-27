@@ -7,7 +7,7 @@ al|AL|ME XK MK GR|Albania|Durres|Adriatic Sea|山地とアドリア海・イオ�
 dz|DZ|TN LY NE ML MR EH MA|Algeria|Algiers|Mediterranean Sea|北は地中海に面し、内陸にはサハラ砂漠が広がる|岩の地形|algeria
 ad|AD|FR ES|Spain|Barcelona|Mediterranean Sea|ピレネー山脈にある、海に面しない国|山地の谷|andorra
 ao|AO|CD CG ZM NA|Angola|Luanda|Atlantic Ocean|大西洋沿岸と内陸の高原を持つ|水の流れ|angola
-ag|AG|KN DM|Antigua and Barbuda|Saint John's|Caribbean Sea|アンティグア島とバーブーダ島などからなる|沿岸の建物|antigua-barbuda
+ag|AG|KN DM|Antigua and Barbuda|Saint John's|Caribbean Sea|アンティグア島とバーブーダ島などからなる|沿岸の建物|antigua
 ar|AR|CL BO PY BR UY|Argentina|Buenos Aires|Atlantic Ocean|西にアンデス山脈、東に大西洋がある|氷と山|argentine
 am|AM|GE AZ IR TR|Georgia|Poti|Black Sea|南コーカサスの山地に位置する内陸国|建物と山地|armenia
 au|AU|ID PG NZ|Australia|Sydney|Pacific Ocean|インド洋と太平洋の間にあり、広い乾燥地域も持つ|岩の地形|australia
