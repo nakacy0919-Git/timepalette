@@ -11,3 +11,15 @@ export function auditCapitalReview(country, review) {
     issues.push('capital review date missing');
   return {status:issues.length?'stale':'verified', issues};
 }
+
+export function auditGeographicCorrections(country, corrections){
+  const issues=[];
+  for(const [id,review] of Object.entries(corrections?.cities||{})){
+    const city=country.cities.find(c=>c.id===id);
+    if(!city||city.source!==review.source||JSON.stringify(city.coordinates)!==JSON.stringify(review.coordinates))
+      issues.push('reviewed city point changed: '+id);
+  }
+  for(const [key,value] of Object.entries(corrections?.route||{}))
+    if(country.route[key]!==value)issues.push('reviewed route correction changed: '+key);
+  return {reviewedCityPoints:Object.keys(corrections?.cities||{}).length,issues};
+}

@@ -1,0 +1,68 @@
+{
+  "ag": {
+    "cities": {
+      "ag-town-1": {
+        "coordinates": [
+          -61.79303169250488,
+          17.0667130475053
+        ],
+        "source": "https://www.geonames.org/3576397/all-saints.html",
+        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
+      },
+      "ag-town-2": {
+        "coordinates": [
+          -61.82437,
+          17.6394
+        ],
+        "source": "https://www.geonames.org/3576311/codrington.html",
+        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
+      }
+    },
+    "source": {
+      "id": "geonames-ag-towns",
+      "url": "https://www.geonames.org/search.html?country=AG",
+      "credit": "GeoNames",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "use": "All Saints and Codrington approximate populated-place points; checked 2026-10-27"
+    }
+  },
+  "ar": {
+    "route": {
+      "noteJa": "港はラプラタ川の河口域にあり、大西洋へつながります。地理上の模式ルートであり、現在の運航・通行条件を保証しません。"
+    },
+    "source": {
+      "id": "argentina-port-buenos-aires",
+      "url": "https://www.argentina.gob.ar/economia/agencia-nacional-de-puertos-y-navegacion/puertos/buenos-aires",
+      "use": "Port Buenos Aires location in Rio de la Plata; checked 2026-10-27; does not certify current routes or schedules"
+    }
+  },
+  "ad": {
+    "cities": {
+      "ad-town-1": {
+        "coordinates": [
+          1.58014,
+          42.53474
+        ],
+        "source": "https://www.geonames.org/3040686/encamp.html",
+        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
+      },
+      "ad-town-2": {
+        "coordinates": [
+          1.49129,
+          42.46372
+        ],
+        "source": "https://www.geonames.org/3039163/sant-julia-de-loria.html",
+        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
+      }
+    },
+    "source": {
+      "id": "geonames-ad-towns",
+      "url": "https://www.geonames.org/3040686/encamp.html",
+      "credit": "GeoNames",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "use": "Encamp and Sant Julia de Loria approximate populated-place points; individual source URLs stored per city; checked 2026-10-27"
+    }
+  }
+}

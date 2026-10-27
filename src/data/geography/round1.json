@@ -529,19 +529,21 @@
         "id": "ad-town-1",
         "name": "Encamp",
         "coordinates": [
-          1.5836,
-          42.5363
+          1.58014,
+          42.53474
         ],
-        "source": "editorial-coordinate-pending-verification"
+        "source": "https://www.geonames.org/3040686/encamp.html",
+        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ad-town-2",
         "name": "Sant Julia de Loria",
         "coordinates": [
-          1.4913,
-          42.4637
+          1.49129,
+          42.46372
         ],
-        "source": "editorial-coordinate-pending-verification"
+        "source": "https://www.geonames.org/3039163/sant-julia-de-loria.html",
+        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "ad-city-0",
@@ -608,6 +610,14 @@
         "id": "mofa",
         "url": "https://www.mofa.go.jp/mofaj/area/andorra/data.html",
         "use": "country reference; review pending"
+      },
+      {
+        "id": "geonames-ad-towns",
+        "url": "https://www.geonames.org/3040686/encamp.html",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "Encamp and Sant Julia de Loria approximate populated-place points; individual source URLs stored per city; checked 2026-10-27"
       }
     ],
     "qa": {
@@ -800,19 +810,21 @@
         "id": "ag-town-1",
         "name": "All Saints",
         "coordinates": [
-          -61.7944,
-          17.0667
+          -61.79303169250488,
+          17.0667130475053
         ],
-        "source": "editorial-coordinate-pending-verification"
+        "source": "https://www.geonames.org/3576397/all-saints.html",
+        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
       },
       {
         "id": "ag-town-2",
         "name": "Codrington",
         "coordinates": [
-          -61.8204,
-          17.6364
+          -61.82437,
+          17.6394
         ],
-        "source": "editorial-coordinate-pending-verification"
+        "source": "https://www.geonames.org/3576311/codrington.html",
+        "coordinateReview": "GeoNames populated-place point checked 2026-10-27; approximate city marker"
       }
     ],
     "capitalId": "ag-city-0",
@@ -879,6 +891,14 @@
         "id": "mofa",
         "url": "https://www.mofa.go.jp/mofaj/area/antigua/data.html",
         "use": "country reference; review pending"
+      },
+      {
+        "id": "geonames-ag-towns",
+        "url": "https://www.geonames.org/search.html?country=AG",
+        "credit": "GeoNames",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "use": "All Saints and Codrington approximate populated-place points; checked 2026-10-27"
       }
     ],
     "qa": {
@@ -1009,7 +1029,7 @@
       "port": "Buenos Aires",
       "sea": "Atlantic Ocean",
       "domestic": true,
-      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+      "noteJa": "港はラプラタ川の河口域にあり、大西洋へつながります。地理上の模式ルートであり、現在の運航・通行条件を保証しません。"
     },
     "photo": {
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Iguazu_Falls.jpg/960px-Iguazu_Falls.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1039,6 +1059,11 @@
         "id": "mofa",
         "url": "https://www.mofa.go.jp/mofaj/area/argentine/data.html",
         "use": "country reference; review pending"
+      },
+      {
+        "id": "argentina-port-buenos-aires",
+        "url": "https://www.argentina.gob.ar/economia/agencia-nacional-de-puertos-y-navegacion/puertos/buenos-aires",
+        "use": "Port Buenos Aires location in Rio de la Plata; checked 2026-10-27; does not certify current routes or schedules"
       }
     ],
     "qa": {

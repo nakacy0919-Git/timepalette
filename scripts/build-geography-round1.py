@@ -81,6 +81,11 @@ for line in rows.splitlines():
 reviews=json.load(open('src/data/geography/photo-review.json'))
 for code,review in reviews.items():
  out[code]['photo'].update(review['photo']);out[code]['qa']['photoReview']='visually-reviewed';out[code].update({k:v for k,v in review.items() if k!='photo'})
+corrections=json.load(open('src/data/geography/geographic-corrections.json'))
+for code,changes in corrections.items():
+ for city in out[code]['cities']:city.update(changes.get('cities',{}).get(city['id'],{}))
+ out[code]['route'].update(changes.get('route',{}))
+ out[code]['sources'].append(changes['source'])
 Path('src/data/geography').mkdir(exist_ok=True)
 Path('src/data/geography/round1.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
 print('Created new packages:',len(out),'countries; independent from missions_*.json')

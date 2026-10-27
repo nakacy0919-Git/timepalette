@@ -7,7 +7,7 @@ lines=['# 第1ラウンド QA結果一覧','', '2026-10-26 JST。**操作検査�
 for code,c in p.items():
  a=[x for x in rows if x['country']==code];s='20/20 合格' if len(a)==20 and all(x['interaction']=='PASS' and x['layout']=='PASS' for x in a) else '要確認'
  lines.append(f"|{c['group']}|{c['nameEn']}（{code}）|{s}|目視照合済み|{'外務省照合済み' if code in capitals else '未照合'}|未完了|")
-lines+=['','## 全280問の検査結果','','写真欄の「実画像表示」は取得したCommons実画像のローカル表示を意味し、外部URLのTLS読込合格ではない。','','|国|問|横向き 正誤／表示|縦向き 正誤／表示|保存・再クリア|写真|地理・教育内容|','|---|---|---|---|---|---|---|']
+lines+=['','2026-10-27追加修正・部分再検査：[都市点・国境・港の記録](A_GEOGRAPHIC_CORRECTIONS.md)。下記560件は前回の全問記録を保持し、追加修正後の再検査範囲は別レポートで明示する。','','## 全280問の検査結果','','写真欄の「実画像表示」は取得したCommons実画像のローカル表示を意味し、外部URLのTLS読込合格ではない。','','|国|問|横向き 正誤／表示|縦向き 正誤／表示|保存・再クリア|写真|地理・教育内容|','|---|---|---|---|---|---|---|']
 for code,c in p.items():
  for n in range(1,11):
   a=[x for x in rows if x['country']==code and x['mission']==n];states=[]
