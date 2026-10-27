@@ -1,8 +1,14 @@
 {
-  "generatedAt": "2026-10-27T21:42:50.258Z",
+  "generatedAt": "2026-10-27T22:54:14.237Z",
   "source": "Mock published API responses; not a live publication check",
   "categories": 6,
   "questionsPerCategory": 12,
+  "missionTickets": {
+    "viewports": 3,
+    "fourCardsWithinViewport": true,
+    "opensPlayer": true,
+    "noQuestionSpoilers": true
+  },
   "legacyFallback": false,
   "learningLevelFilter": "PASS",
   "missingPhotoBlocksClear": "PASS",

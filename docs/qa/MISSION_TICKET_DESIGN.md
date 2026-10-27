@@ -1,0 +1,5 @@
+# Mission discovery tickets — 2026-10-28
+
+Replaces plain rows with numbered discovery tickets, four light accent palettes, ticket borders, geometric decorative emblems, departure affordance and completed stamp. Category and number remain explicit; no prompt/answer spoilers or invented mission-specific facts. Journey progress counts only visible level/category missions. All tickets stay unlocked and directly selectable. No scoring, catalog, publication or backend changes.
+
+QA: six categories ×12 mocked API missions retained; Challenge filtering, geography launcher and failed-photo guard pass. Four-mission Brazil fixture fits 1024×768, 820×1180 and 1440×900; no horizontal/card overflow, no question spoilers, each first ticket opens player. Seeded completion shows exactly one completed ticket and progress value 1. Screenshots visually reviewed. Hover/focus styles, touch-sized full-card target and reduced-motion overrides included. More missions can require list scrolling. Physical iPad and full enclosing production country-page viewport are not certified by this standalone panel fixture.
