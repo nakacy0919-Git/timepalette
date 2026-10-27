@@ -8,7 +8,7 @@ for(const country of countries)for(let mission=1;mission<=10;mission++){
  const checks=reports.flatMap(r=>r.rows.filter(x=>x.country===country.countryCode&&x.mission===mission));
  const issues=[];
  if(checks.length!==4)issues.push('missing mouse/touch or viewport case');
- for(const c of checks)if(c.interaction!=='PASS'||c.layout!=='PASS'||!c.progressSaved||!c.replayDoesNotDuplicate||c.browserErrors.length||![6,7,9].includes(mission)&&c.images!=='NONE'||[6,7,9].includes(mission)&&c.images!=='LOADED')issues.push('failed browser case: '+c.viewport);
+ for(const c of checks)if(c.interaction!=='PASS'||c.firstCompletionLabel!=='PASS'||c.layout!=='PASS'||!c.progressSaved||!c.replayDoesNotDuplicate||c.browserErrors.length||![6,7,9].includes(mission)&&c.images!=='NONE'||[6,7,9].includes(mission)&&c.images!=='LOADED')issues.push('failed browser case: '+c.viewport);
  if(!country.qa.releaseReady)issues.push('content acceptance pending');
  rows.push({country:country.countryCode,mission,checks:checks.length,result:issues.length?'FAIL':'PASS',issues});
 }

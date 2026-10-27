@@ -1,0 +1,205 @@
+{
+  "checkedAt": "2026-10-27T14:54:15.384Z",
+  "origin": "https://timepalette.pic-speak-story.com",
+  "scope": "Production same-origin photo byte and status verification; content and browser decode are recorded separately",
+  "images": 28,
+  "errors": 0,
+  "rows": [
+    {
+      "country": "af",
+      "status": 200,
+      "bytes": 216502,
+      "expectedSha256": "df439968336d1f82e0f1fe764de176148dc44a103235bcaebe0886cf43e90877",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "status": 200,
+      "bytes": 217284,
+      "expectedSha256": "da262d35df92b37185380707bd1f997301fb8052639948fa2adcc2f046b05aa5",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "status": 200,
+      "bytes": 108475,
+      "expectedSha256": "4c428d9de9d93d20460f4bc01447e212ba8aae16f9c6334875520f8add0b5823",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "status": 200,
+      "bytes": 197758,
+      "expectedSha256": "b6907fb756d47915399dc153e8fa4074f51b1077410f615bfc15281bfe6c9ed5",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "status": 200,
+      "bytes": 153556,
+      "expectedSha256": "8da8636de6cdf1d308a0652d53b880aebf3afd8a021270085c72ddf1f837770e",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "status": 200,
+      "bytes": 207181,
+      "expectedSha256": "3c33e88892d5c22441a912966c5f6d82656d8a06e5b55663948ac78888b5c57c",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "status": 200,
+      "bytes": 145968,
+      "expectedSha256": "f50195f765add21970b6abf71d0a6a7dfedb24f72037fb71c006ec0ec4c82c07",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "status": 200,
+      "bytes": 400961,
+      "expectedSha256": "fa914e62ea72445c75a13a2f7da0c0b431ab8e56ea79bea3cb6c94e28af27e1e",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "status": 200,
+      "bytes": 76812,
+      "expectedSha256": "882b497c5050500e967d4e2d3f6df18adee2d7b2b5c689d7a1817f3c7871af74",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "status": 200,
+      "bytes": 184165,
+      "expectedSha256": "afd0986b12a7a32e7ee96936e449b0c563d6d9adfc6a93c3a0d1751d583814e2",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "status": 200,
+      "bytes": 160084,
+      "expectedSha256": "b2d04ee7de237c366cdb9e31160a8b2fa2d358ee478c1f60dafe170c013025fb",
+      "issues": []
+    },
+    {
+      "country": "bs",
+      "status": 200,
+      "bytes": 45700,
+      "expectedSha256": "dc6b192c1a2ce520f78e8544500e62f66ac595337cf7db923f4c5cbc3634c36a",
+      "issues": []
+    },
+    {
+      "country": "bh",
+      "status": 200,
+      "bytes": 294819,
+      "expectedSha256": "92b0f0604282aa9090799ec19211408b8526ff88e9f9e42773432ea8e98ca3e1",
+      "issues": []
+    },
+    {
+      "country": "bd",
+      "status": 200,
+      "bytes": 285947,
+      "expectedSha256": "132164a5638fbf357def1566a95f91f203f1cd3461e5d222c599a1aef4b41e11",
+      "issues": []
+    },
+    {
+      "country": "bb",
+      "status": 200,
+      "bytes": 239552,
+      "expectedSha256": "596ba1d5c50e5a8eac68cf99d611273aba95d8576e20bce1dac697f3017d1597",
+      "issues": []
+    },
+    {
+      "country": "by",
+      "status": 200,
+      "bytes": 143127,
+      "expectedSha256": "33726a194ee06aa37c8370966ba52020a6e6d6de709aed2edba3bf8f2016a0d7",
+      "issues": []
+    },
+    {
+      "country": "be",
+      "status": 200,
+      "bytes": 160311,
+      "expectedSha256": "4869a9db30762d9799d9080754a9227fe893c45d17ba8784d9369024ce9e4b20",
+      "issues": []
+    },
+    {
+      "country": "bz",
+      "status": 200,
+      "bytes": 953778,
+      "expectedSha256": "6913ee560f68dbf3169797322e62f86108acc6d00862cdee0569f7a0293b488e",
+      "issues": []
+    },
+    {
+      "country": "bj",
+      "status": 200,
+      "bytes": 276353,
+      "expectedSha256": "1ce108b2ac1aaee8eebc964f3994f8116ebfb8d0e74478db3e86c2ab59ab9a69",
+      "issues": []
+    },
+    {
+      "country": "bt",
+      "status": 200,
+      "bytes": 263660,
+      "expectedSha256": "a72cf4c32b649840710d208f9e64a2c7ff231fe35681a65e3622c1f2fd011736",
+      "issues": []
+    },
+    {
+      "country": "bo",
+      "status": 200,
+      "bytes": 208702,
+      "expectedSha256": "a4e2ee121c6cf3233d12d440b192ca6a97aa23eec281779a4135383693e7803b",
+      "issues": []
+    },
+    {
+      "country": "ba",
+      "status": 200,
+      "bytes": 221798,
+      "expectedSha256": "d632fb96b6333c7beb1c82c6f2d5cf726d815d2d51e16e622cd7aaa2ff18165b",
+      "issues": []
+    },
+    {
+      "country": "bw",
+      "status": 200,
+      "bytes": 168378,
+      "expectedSha256": "c77d341112c13e2584cd912535823c8139c5499949437ee21dd97f9a8847170e",
+      "issues": []
+    },
+    {
+      "country": "br",
+      "status": 200,
+      "bytes": 242116,
+      "expectedSha256": "444b4f91bf4652c3661b3f1a22c8cd429b6d32717ec2c4b5f51778c5e01666dd",
+      "issues": []
+    },
+    {
+      "country": "bn",
+      "status": 200,
+      "bytes": 402048,
+      "expectedSha256": "7e5f7eeb6005f8034e10b35ce04e10da183fd0602e6d3963b3e9bb936b47cca2",
+      "issues": []
+    },
+    {
+      "country": "bg",
+      "status": 200,
+      "bytes": 202989,
+      "expectedSha256": "bed10688f813ae2b276af184b53e85d280b99ad692365b7286ce433bd61ed44e",
+      "issues": []
+    },
+    {
+      "country": "bf",
+      "status": 200,
+      "bytes": 300488,
+      "expectedSha256": "93bc3a9187719f34d819367ebb6e041aac0c6e6a8a19aab0f85bd59d29ebc1e6",
+      "issues": []
+    },
+    {
+      "country": "bi",
+      "status": 200,
+      "bytes": 226525,
+      "expectedSha256": "3e7afbd1c9ad5662836efafbd5f0e745e4a16b9c29ae0615b44717e4c787e7d9",
+      "issues": []
+    }
+  ]
+}

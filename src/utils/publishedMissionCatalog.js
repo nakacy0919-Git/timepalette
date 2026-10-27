@@ -53,7 +53,7 @@ export function normalizePublishedCatalog(questions){
 
 // Each country/domain is requested explicitly. Never fall back to embedded missions.
 export async function fetchPublishedCountry(countryIso,{signal,fetcher=fetch}={}){
-  const domains=['language','lifeCulture','japanConnection','thinkConnect'];
+  const domains=['place','time','language','lifeCulture','japanConnection','thinkConnect'];
   const groups=await Promise.all(domains.map(async domain=>{
     const response=await fetcher('/api/mission-public?action=catalog&country='+encodeURIComponent(countryIso)+'&domain='+domain,{cache:'no-store',signal});
     if(!response.ok)throw Error('Catalog request failed');

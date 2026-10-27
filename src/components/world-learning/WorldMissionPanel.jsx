@@ -1,6 +1,6 @@
 import {forCreatorLearningLevel} from '../../utils/creatorMissionLevels.js';
 import {useEffect,useState} from 'react';
-import {MISSION_DOMAINS,isCreatorDomain} from '../../utils/missionDomains.js';
+import {MISSION_DOMAINS} from '../../utils/missionDomains.js';
 import {savePublishedSummary} from '../../utils/publishedMissionSummary.js';
 import {fetchPublishedCountry} from '../../utils/publishedMissionCatalog.js';
 import {getCountryProgress,completeWorldMission} from '../../utils/worldProgressStorage';
@@ -46,10 +46,9 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     for(const id of getPlaceProgress(countryCode).completedMissionIds)if(allowed.has(id)||countryCode==='rw'&&/^rw-place-\d{2}$/.test(id))completeWorldMission(countryCode,id);
     revise(n=>n+1);
   };
+  const adventureCount=id=>((id==='place'&&(geo||countryCode==='rw'))||(id==='time'&&countryCode==='rw'))?10:0;
   const pick=id=>{
     setActive(null);
-    if(id==='place'&&(geo||countryCode==='rw')){setAdventure('place');return;}
-    if(id==='time'&&countryCode==='rw'){setAdventure('time');return;}
     setDomain(id);
   };
   return <section className="rounded-3xl bg-white p-4 shadow-sm md:p-6" data-testid="country-missions">
@@ -59,19 +58,21 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     </header>
     <div className="mb-5 flex flex-wrap gap-2" aria-label="学習レベル">{levels.map(([id,label])=><button key={id} type="button" aria-pressed={level===id} onClick={()=>setLevel(id)} className={'rounded-full border px-4 py-2 font-bold '+(level===id?'bg-slate-900 text-white':'bg-white text-slate-700')}>{label}</button>)}</div>
     {!domain?<div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">{MISSION_DOMAINS.map((d,i)=>{
-      const available=d.id==='place'?(geo?10:countryCode==='rw'?10:0):d.id==='time'?(countryCode==='rw'?10:0):levelCatalog.filter(m=>m.domain===d.id).length;
-      const done=d.id==='place'?[...placeDone].filter(id=>id.startsWith(countryCode+'-place-')).length:levelCatalog.filter(m=>m.domain===d.id&&completed.has(m.id)).length;
+      const available=adventureCount(d.id)+levelCatalog.filter(m=>m.domain===d.id).length;
+      const adventureDone=d.id==='place'?[...placeDone].filter(id=>id.startsWith(countryCode+'-place-')).length:d.id==='time'?[...completed].filter(id=>id.startsWith(countryCode+'-time-')).length:0;
+      const done=Math.min(adventureDone,adventureCount(d.id))+levelCatalog.filter(m=>m.domain===d.id&&completed.has(m.id)).length;
       return <button key={d.id} type="button" data-domain={d.id} onClick={()=>pick(d.id)} className="min-h-36 rounded-3xl p-5 text-left text-white shadow transition hover:brightness-110" style={{background:colors[i]}}>
         <span className="text-3xl">{d.icon}</span><h3 className="mt-2 text-lg font-black">{d.labelJa}</h3><p className="text-sm opacity-90">{d.labelEn}</p>
-        <p className="mt-3 text-sm font-bold">{isCreatorDomain(d.id)?loading?'公開数を確認中…':error?'公開数を取得できません':`${done} / ${available} 問クリア`:`${Math.min(done,available)} / ${available} 問クリア`}</p>
+        <p className="mt-3 text-sm font-bold">{loading?'公開数を確認中…':error?'公開数を取得できません':`${Math.min(done,available)} / ${available} 問クリア`}</p>
       </button>;
     })}</div>:<>
       <button type="button" onClick={()=>setDomain(null)} className="mb-4 rounded-full border px-4 py-2 font-bold">← 6つのカテゴリーへ</button>
       <h3 className="mb-3 text-xl font-black">{meta?.icon} {meta?.labelJa}</h3>
-      {isCreatorDomain(domain)?<>
+      {adventureCount(domain)>0&&<button type="button" className="mb-5 rounded-2xl bg-blue-600 px-6 py-4 font-bold text-white" onClick={()=>setAdventure(domain)}>{domain==='place'?'地理':'時間・時差'}アドベンチャーを始める（10ミッション）</button>}
+      <>
         {loading?<p role="status">公開問題を読み込み中…</p>:error?<div role="alert">公開問題を取得できませんでした。<button className="ml-3 underline" onClick={retry}>再試行</button></div>:<p className="mb-4 text-sm text-slate-600">Mission Creatorから公開中：{missions.length}問{!missions.length?'。公開問題を準備中です。':''}</p>}
         <div className="grid gap-3 sm:grid-cols-2">{missions.map((m,i)=><button key={m.id} type="button" onClick={()=>setActive(m)} className="rounded-2xl border-2 border-slate-200 p-4 text-left hover:border-blue-400"><span className="text-xs font-bold text-blue-600">MISSION {String(i+1).padStart(2,'0')} {completed.has(m.id)?'✓':''}</span><h4 className="mt-2 font-bold">{m.title}</h4></button>)}</div>
-      </>:<p className="rounded-xl bg-slate-50 p-4">この国の{meta?.labelJa}アドベンチャーは準備中です。</p>}
+      </>
     </>}
     {error&&!domain&&<button type="button" className="mt-3 text-sm underline" onClick={retry}>公開問題の読み込みを再試行</button>}
     {active&&<MissionPlayer key={active.id} mission={{...active,learningLevelId:level,learningLevelLabel:levels.find(l=>l[0]===level)?.[1]}} domain={meta} alreadyCompleted={completed.has(active.id)} onClose={()=>setActive(null)} onBackToList={()=>setActive(null)} onComplete={m=>{completeWorldMission(countryCode,m?.id||active.id);revise(n=>n+1);}} missionPosition={missions.findIndex(m=>m.id===active.id)+1} totalMissions={missions.length}/>}

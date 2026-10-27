@@ -46,6 +46,7 @@ for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
           let loc=root.locator(sel).first();
           if(touch&&await root.locator('g'+sel).count())loc=root.locator('g'+sel).first();
           const tag=await loc.evaluate(e=>e.tagName.toLowerCase());
+          if(tag==='g'&&await loc.getAttribute('data-city')){const name=await loc.locator('circle[data-hit]').getAttribute('aria-label');await activate(root.getByRole('button',{name,exact:true}));return;}
           if(tag==='path'&&!touch)await loc.press('Enter');
           else if(tag==='path'){
             const point=await loc.evaluate(el=>{
@@ -75,7 +76,7 @@ for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
           case 8:await click('[data-answer="weather"]');await notClear();await click('[data-answer="limited"]');break;
           case 9:await click(`[data-country="${wrongCountry}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);await click(`[data-city="${wrongCity}"]`);await notClear();await click(`[data-city="${p.capitalId}"]`);await click('[data-answer="wrong-fact"]');await notClear();await click('[data-answer="fact"]');break;
         }
-        await page.getByRole('dialog',{name:'Mission clear'}).waitFor();row.interaction='PASS';
+        await page.getByRole('dialog',{name:'Mission clear'}).waitFor();if(!(await page.getByRole('dialog',{name:'Mission clear'}).textContent()).includes('初回クリア · 100 WP'))throw Error('First completion mislabeled as replay');row.firstCompletionLabel='PASS';row.interaction='PASS';
         row.images=await page.locator('img').evaluateAll(imgs=>imgs.length?imgs.every(im=>im.complete&&im.naturalWidth>0)?'LOADED':'UNVERIFIED':'NONE');
         if(process.env.QA_CACHED_IMAGES&&row.images==='LOADED')row.images='LOCAL_COMMONS_RENDER_PASS';
         if(row.layout==='FAIL')await page.screenshot({path:`docs/qa/browser/${p.countryCode}-P${i+1}-${viewport.width}-layout.png`});
@@ -101,6 +102,11 @@ for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
 report.finishedAt=new Date().toISOString();
 fs.writeFileSync(reportPath+'.running',JSON.stringify(report,null,2)+'\n');
 fs.renameSync(reportPath+'.running',reportPath);
+// Full runs refresh A acceptance evidence too; CI must not reuse stale checked-in rows.
+if(!process.env.QA_COUNTRIES&&!process.env.QA_MISSIONS&&(!process.env.QA_GROUP||process.env.QA_GROUP==='A')){
+ const aCodes=new Set(geographyCountries.filter(p=>p.group==='A').map(p=>p.countryCode));
+ fs.writeFileSync(`docs/qa/geography-A-${touch?'touch':'release'}-browser.json`,JSON.stringify({...report,scope:'A group full browser run',rows:report.rows.filter(r=>aCodes.has(r.country))},null,2)+'\n');
+}
 const failed=report.rows.filter(r=>r.interaction!=='PASS'||r.layout!=='PASS'||!r.progressSaved);
 console.log('Checks:',report.rows.length,'Failures:',failed.length);
 if(failed.length)process.exitCode=1;

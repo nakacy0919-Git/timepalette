@@ -3,7 +3,7 @@ import {createServer} from 'vite';import {chromium} from 'playwright';
 const server=await createServer({server:{host:'127.0.0.1',port:4181,strictPort:true}});await server.listen();
 const browser=await chromium.launch({executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE||undefined,headless:true,args:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?['--no-sandbox','--disable-dev-shm-usage','--disable-gpu','--single-process','--no-zygote','--use-gl=angle','--use-angle=swiftshader','--in-process-gpu']:[]});
 try{
- const page=await browser.newPage({viewport:{width:1024,height:768}}),domains=['language','lifeCulture','japanConnection','thinkConnect'],errors=[];
+ const page=await browser.newPage({viewport:{width:1024,height:768}}),domains=['place','time','language','lifeCulture','japanConnection','thinkConnect'],errors=[];
  page.on('pageerror',e=>errors.push(e.message));
  await page.route('**/api/mission-public?**',route=>{
   const u=new URL(route.request().url()),country=u.searchParams.get('country'),domain=u.searchParams.get('domain');
@@ -17,6 +17,11 @@ try{
   assert.equal(await page.locator('button').filter({hasText:'Question '+domain+' '}).count(),12);
   await page.getByRole('button',{name:'← 6つのカテゴリーへ'}).click();
  }
+ await page.locator('[data-domain="place"]').click();
+ await page.getByRole('button',{name:'地理アドベンチャーを始める（10ミッション）',exact:true}).click();
+ await page.getByRole('heading',{name:'オーストラリア 地理アドベンチャー'}).waitFor();
+ await page.getByRole('button',{name:'Place Adventureを閉じる',exact:true}).click();
+ await page.getByRole('button',{name:'← 6つのカテゴリーへ'}).click();
  await page.getByRole('button',{name:'Challenge',exact:true}).click();
  await page.locator('[data-domain="language"]').click();
  assert.equal(await page.locator('button').filter({hasText:'Question language '}).count(),0);
@@ -30,6 +35,6 @@ try{
  assert.equal(await page.getByRole('dialog',{name:'Mission clear'}).count(),0);
  assert.ok((await page.locator('.tp-geo-feedback').textContent()).includes('写真を読み込めていない'));
 
- fs.writeFileSync('docs/qa/country-panel.json',JSON.stringify({generatedAt:new Date().toISOString(),source:'Mock published API responses; not a live publication check',categories:4,questionsPerCategory:12,legacyFallback:false,learningLevelFilter:'PASS',missingPhotoBlocksClear:'PASS',browserErrors:errors,result:'PASS'},null,2)+'\n');
- console.log('PASS: four Creator-only categories, twelve questions each, learning levels, no browser errors');
+ fs.writeFileSync('docs/qa/country-panel.json',JSON.stringify({generatedAt:new Date().toISOString(),source:'Mock published API responses; not a live publication check',categories:6,questionsPerCategory:12,legacyFallback:false,learningLevelFilter:'PASS',missingPhotoBlocksClear:'PASS',browserErrors:errors,result:'PASS'},null,2)+'\n');
+ console.log('PASS: all six Creator categories, four with no legacy fallback, twelve questions each, learning levels, no browser errors');
 }finally{await browser.close();await server.close();}
