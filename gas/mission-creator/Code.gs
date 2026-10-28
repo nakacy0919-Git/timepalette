@@ -641,9 +641,6 @@ function tpPublicRelease_(args,user){
       if(q.status!=='approved')throw Error('承認済みの問題のみ公開できます。');
       if(args.rightsConfirmed!==true)throw Error('画像・文章の公開利用権を確認してください。');
       tpPublicValidate_(q);
-      const count=tpRows_('Questions').filter(item=>item.status==='published' &&
-        item.countryIso===q.countryIso && item.domain===q.domain).length;
-      if(count>=10)throw Error('この国・カテゴリーは公開上限10問です。');
       tpPublicationAudit_(q,'publish',user,'admin_confirmed');
       q.status='published';
     }else{
@@ -677,7 +674,7 @@ function tpOrderRecord_(iso,domain){
   for(let i=1;i<rows.length;i++){
     if(String(rows[i][0])!==key)continue;
     const parsed=tpParse_(rows[i][1]);
-    return {row:i+1,ids:Array.isArray(parsed)?parsed.filter(id=>/^[a-f0-9-]{36}$/i.test(String(id))).slice(0,10):[]};
+    return {row:i+1,ids:Array.isArray(parsed)?parsed.filter(id=>/^[a-f0-9-]{36}$/i.test(String(id))):[]};
   }
   return null;
 }
@@ -713,7 +710,7 @@ function tpSetPublicationOrder_(args,user){
   return tpWithLock_(()=>{
     const ids=args.questionIds;
     const current=tpPublicOrderedRows_(iso,domain).map(q=>q.id);
-    if(!Array.isArray(ids)||ids.length>10||ids.length!==current.length||
+    if(!Array.isArray(ids)||ids.length!==current.length||
        new Set(ids).size!==ids.length||ids.some(id=>!current.includes(id)))
       throw Error('公開ミッションが変更されています。再読み込みしてから順番を保存してください。');
     tpOrderSave_(iso,domain,ids);
@@ -742,7 +739,7 @@ function tpPublicCatalog_(args){
   if(!/^[a-z]{2}$/.test(country)||!TP_DOMAINS.includes(domain))return {questions:[]};
   const media=tpRows_('Media');
   const questions=tpPublicOrderedRows_(country,domain)
-    .slice(0,10).map(q=>({
+    .map(q=>({
       id:q.id,countryIso:q.countryIso,domain:q.domain,type:q.type,
       prompt:String(q.prompt||'').slice(0,2000),
       answer:String(q.answer||'').slice(0,1500),

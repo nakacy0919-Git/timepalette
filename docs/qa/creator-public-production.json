@@ -1,0 +1,9736 @@
+{
+  "checkedAt": "2026-10-27T14:54:48.751Z",
+  "origin": "https://timepalette.pic-speak-story.com",
+  "scope": "Read-only published catalogs; not access to private drafts or a publication action",
+  "recheckedFailedScopes": 2,
+  "countries": 197,
+  "scopes": 1182,
+  "published": 156,
+  "playable": 156,
+  "errors": 0,
+  "rows": [
+    {
+      "country": "ad",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ae",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ae",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ae",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ae",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ae",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ae",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "af",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "4ca8e63a-5c53-4be4-aee4-2f8e24331df9"
+      ],
+      "issues": []
+    },
+    {
+      "country": "af",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "af",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "af",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "af",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "af",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "al",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "al",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "al",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "al",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "al",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "al",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "am",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "am",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "am",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "am",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "am",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "am",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "abaece70-affe-4424-96f4-e435c7badd12"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "at",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "at",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "at",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "at",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "at",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "at",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "au",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "au",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "au",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "au",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "au",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "au",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "az",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "az",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "az",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "az",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "az",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "az",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ba",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ba",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ba",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ba",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ba",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ba",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bb",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bb",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bb",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bb",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bb",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bb",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bd",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bd",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bd",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "88aa333e-eb85-41ee-86e3-c06c38b45e2b",
+        "a0f1f089-ede3-4c08-b941-44012c519bdc"
+      ],
+      "issues": []
+    },
+    {
+      "country": "bd",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bd",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bd",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "be",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "be",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "be",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "be",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "be",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "be",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bf",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bf",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bf",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bf",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bf",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bf",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bg",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bg",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bg",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bg",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bg",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bg",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bh",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bh",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bh",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bh",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bh",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bh",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bi",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bi",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bi",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bi",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bi",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bi",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bj",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bj",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bj",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bj",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bj",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bj",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bn",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bn",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bn",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bn",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bn",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bn",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bo",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bo",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bo",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "94760568-bc44-42d4-a1ee-e437f5a25e08"
+      ],
+      "issues": []
+    },
+    {
+      "country": "bo",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bo",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bo",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "br",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "97f1c76b-4f3e-47f3-b09e-c16d199acfb4"
+      ],
+      "issues": []
+    },
+    {
+      "country": "br",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "br",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "9c08cb52-0242-459b-a629-ac4e3f78cf35"
+      ],
+      "issues": []
+    },
+    {
+      "country": "br",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "br",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "br",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bs",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bs",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bs",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bs",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bs",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bs",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bt",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "868117d0-1c32-4c77-bd41-1818f1561310"
+      ],
+      "issues": []
+    },
+    {
+      "country": "bt",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bt",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "677e204d-bb1b-422c-ba45-fc7b0ab7b06c"
+      ],
+      "issues": []
+    },
+    {
+      "country": "bt",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bt",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bt",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bw",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bw",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bw",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "1884a56f-2414-42eb-8db1-903f955f9032",
+        "1a3ed792-0ca4-443c-af9b-ca4b32289f44"
+      ],
+      "issues": []
+    },
+    {
+      "country": "bw",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bw",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bw",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "by",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "by",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "by",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "by",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "by",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "by",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bz",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bz",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bz",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "60bbb6dd-3940-48fc-b073-eb45539e4575",
+        "7f1438cb-2c2c-4b7b-99e7-0b205e35a257"
+      ],
+      "issues": []
+    },
+    {
+      "country": "bz",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bz",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "bz",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ca",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ca",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ca",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ca",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ca",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ca",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cd",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cd",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cd",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cd",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cd",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cd",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cf",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cf",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cf",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cf",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cf",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cf",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cg",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cg",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cg",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cg",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cg",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cg",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ch",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ch",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ch",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ch",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ch",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ch",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ci",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ci",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ci",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ci",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ci",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ci",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cl",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cl",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cl",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "0e751ef3-2c73-46b9-9eaa-9bb09fd66011"
+      ],
+      "issues": []
+    },
+    {
+      "country": "cl",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cl",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cl",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cm",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "63ba43ff-ab9d-486b-8bc7-06a90e6fb3d3"
+      ],
+      "issues": []
+    },
+    {
+      "country": "cm",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cm",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "cafd443d-651b-4492-9981-a95122e058c4",
+        "8b550fa8-9a67-447d-814f-aa763b970e59"
+      ],
+      "issues": []
+    },
+    {
+      "country": "cm",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cm",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cm",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cn",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cn",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cn",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "5c98cf38-f760-4bc7-a388-a0245756c364"
+      ],
+      "issues": []
+    },
+    {
+      "country": "cn",
+      "domain": "place",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "36ea5c4a-6f36-45c2-9230-76059868aebf"
+      ],
+      "issues": []
+    },
+    {
+      "country": "cn",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cn",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "co",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "co",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "co",
+      "domain": "lifeCulture",
+      "published": 3,
+      "playable": 3,
+      "questionIds": [
+        "695f77b0-2975-4bfb-bb79-f10d00c208b9",
+        "7e320b56-9b5a-44fa-b378-dacc927b384e",
+        "4c44939f-8f9a-4420-a90b-34c98f688c5d"
+      ],
+      "issues": []
+    },
+    {
+      "country": "co",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "co",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "co",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cr",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cr",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cr",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "725e9f3a-4279-4a4b-afbc-1778eeec641b"
+      ],
+      "issues": []
+    },
+    {
+      "country": "cr",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cr",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cr",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cu",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cu",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cu",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cu",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cu",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cu",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cv",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cv",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cv",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cv",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cv",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cv",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cy",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cy",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cy",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cy",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cy",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cy",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cz",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cz",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cz",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cz",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cz",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "cz",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "de",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "1ec01c6d-d07b-4e3d-abfc-e08c431c49eb"
+      ],
+      "issues": []
+    },
+    {
+      "country": "de",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "de",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "de",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "de",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "de",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dj",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dj",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dj",
+      "domain": "lifeCulture",
+      "published": 3,
+      "playable": 3,
+      "questionIds": [
+        "264d5650-eb65-4d1e-be7c-b3967d8cf282",
+        "87058d9d-169e-453e-8a28-894aa33266e8",
+        "71b18b3a-26e7-4531-a88b-20af12ed9d1a"
+      ],
+      "issues": []
+    },
+    {
+      "country": "dj",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dj",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dj",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dk",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dk",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dk",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dk",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dk",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dk",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dm",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dm",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dm",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dm",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dm",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dm",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "do",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "do",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "do",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "26ead0a5-7c32-4dfb-b473-513253783f56"
+      ],
+      "issues": []
+    },
+    {
+      "country": "do",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "do",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "do",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ec",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ec",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ec",
+      "domain": "lifeCulture",
+      "published": 3,
+      "playable": 3,
+      "questionIds": [
+        "b3024c14-e8fe-42fb-a228-0a67e4083441",
+        "600f3b0b-1b45-41d0-aaa8-6f043ed4aa34",
+        "58c026d8-68c6-4b87-9ab9-291117ca8af6"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ec",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ec",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ec",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ee",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ee",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ee",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ee",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ee",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ee",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "eg",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "eg",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "eg",
+      "domain": "lifeCulture",
+      "published": 3,
+      "playable": 3,
+      "questionIds": [
+        "29249e79-261c-4fb3-8c91-6f0b6ba39113",
+        "63b9c651-7c85-4907-997f-f028b7c4edad",
+        "d2138dac-5f60-4a34-9329-e38447586063"
+      ],
+      "issues": []
+    },
+    {
+      "country": "eg",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "eg",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "eg",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "eh",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "eh",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "eh",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "eh",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "eh",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "eh",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "er",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "er",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "er",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "er",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "er",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "er",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "es",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "a62e5995-8049-455d-aa5f-36de913abf8d"
+      ],
+      "issues": []
+    },
+    {
+      "country": "es",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "es",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "es",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "es",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "es",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "et",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "480998b2-e1fd-4c7d-a36a-48fb56c98621"
+      ],
+      "issues": []
+    },
+    {
+      "country": "et",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "et",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "b70bde27-d198-4799-a9df-2c96d7e0c23a"
+      ],
+      "issues": []
+    },
+    {
+      "country": "et",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "et",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "et",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fi",
+      "domain": "japanConnection",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "658f516d-e6c8-421a-aaf7-db96bfe8ed69",
+        "32151f6e-50d8-4598-92a1-1f47a05d3c5d"
+      ],
+      "issues": []
+    },
+    {
+      "country": "fi",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fi",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "ea762c1a-a373-41e2-a396-e96b10da2c64",
+        "1f287bb0-c0c3-4d1c-9494-8ea12cf7338e"
+      ],
+      "issues": []
+    },
+    {
+      "country": "fi",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fi",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fi",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fj",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "d1d9cf15-c519-4a23-bdc0-7bec2198c8c3"
+      ],
+      "issues": []
+    },
+    {
+      "country": "fj",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fj",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "531a9010-2a04-4339-bdc1-47bcb59a9eda",
+        "43418768-bfdd-4527-baf5-898b60ffd343"
+      ],
+      "issues": []
+    },
+    {
+      "country": "fj",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fj",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fj",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fm",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fm",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fm",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "b2d5ae63-f55d-47ac-a7c0-ed6ad15cfcc2"
+      ],
+      "issues": []
+    },
+    {
+      "country": "fm",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fm",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fm",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fr",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "cf21f6f3-2104-4e6f-bb78-55bbf34b8f1e"
+      ],
+      "issues": []
+    },
+    {
+      "country": "fr",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fr",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fr",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fr",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "fr",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ga",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ga",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ga",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "7f92bba2-e1ce-45b5-a35b-df55a2589f57"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ga",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ga",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ga",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gb",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gb",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gb",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gb",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gb",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gb",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gd",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gd",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gd",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gd",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gd",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gd",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ge",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ge",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ge",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ge",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ge",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ge",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gh",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gh",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gh",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "6bb59d56-dc63-4001-ba46-baf540e39b52"
+      ],
+      "issues": []
+    },
+    {
+      "country": "gh",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gh",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gh",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gm",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gm",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gm",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gm",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gm",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gm",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gn",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gn",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gn",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gn",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gn",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gn",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gq",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gq",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gq",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gq",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gq",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gq",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gr",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gr",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gr",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gr",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gr",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gr",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gt",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "8b745932-7144-422b-a72c-df9f3f07a324"
+      ],
+      "issues": []
+    },
+    {
+      "country": "gt",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gt",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "476daf65-5209-4507-b6e7-c01cecd4c5b1"
+      ],
+      "issues": []
+    },
+    {
+      "country": "gt",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gt",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gt",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gw",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gw",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gw",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gw",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gw",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gw",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gy",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gy",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gy",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gy",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gy",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "gy",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hn",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "3ee379cc-8dba-41c3-9c26-6d87eaa5b9d9"
+      ],
+      "issues": []
+    },
+    {
+      "country": "hn",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hn",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "0aec8a15-14d4-4c1a-aa67-f4b720e3a615",
+        "05e41d62-69ea-492b-96cf-f19bf92cc22c"
+      ],
+      "issues": []
+    },
+    {
+      "country": "hn",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hn",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hn",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hr",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hr",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hr",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hr",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hr",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hr",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ht",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ht",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ht",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ht",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ht",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ht",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hu",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hu",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hu",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hu",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hu",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "hu",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "id",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "id",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "id",
+      "domain": "lifeCulture",
+      "published": 3,
+      "playable": 3,
+      "questionIds": [
+        "ade359d4-f281-42f8-a424-a358384181b8",
+        "50865f0b-6b4d-41cc-9921-e7d63208e72b",
+        "f9b574d3-c7a5-4ee5-a9c3-37ac3517ac67"
+      ],
+      "issues": []
+    },
+    {
+      "country": "id",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "id",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "id",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ie",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ie",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ie",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ie",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ie",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ie",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "il",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "il",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "il",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "il",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "il",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "il",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "in",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "in",
+      "domain": "language",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "08b85822-ae1b-44f6-8e76-5901e199d8be"
+      ],
+      "issues": []
+    },
+    {
+      "country": "in",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "e85589f1-1be1-4ec1-942e-d5ffae878e09",
+        "20bc1ad0-cfbc-43c4-833c-66c2bf32076f"
+      ],
+      "issues": []
+    },
+    {
+      "country": "in",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "in",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "in",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "iq",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "iq",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "iq",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "iq",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "iq",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "iq",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ir",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ir",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ir",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ir",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ir",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ir",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "is",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "is",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "is",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "is",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "is",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "is",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "it",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "65e36238-63e7-4a43-8369-6480270dcc21"
+      ],
+      "issues": []
+    },
+    {
+      "country": "it",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "it",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "it",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "it",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "it",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jm",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "6b00f6c0-031c-4474-b11f-2b9223f333c4"
+      ],
+      "issues": []
+    },
+    {
+      "country": "jm",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jm",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "5b7b1d25-acfc-495b-bd5d-4a584ce98e6d"
+      ],
+      "issues": []
+    },
+    {
+      "country": "jm",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jm",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jm",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jo",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jo",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jo",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "0e53343f-dcb7-430f-bdee-fb89a91d5865"
+      ],
+      "issues": []
+    },
+    {
+      "country": "jo",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jo",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jo",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jp",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jp",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jp",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jp",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jp",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "jp",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ke",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ke",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ke",
+      "domain": "lifeCulture",
+      "published": 4,
+      "playable": 4,
+      "questionIds": [
+        "d1297600-f098-4d7d-8f63-b4d937150e78",
+        "a9da5805-6987-4e43-9f4e-2fdb1b27d94b",
+        "1b905f10-9678-40c1-b4a1-ee6f86920104",
+        "5e6440ef-f849-4213-8298-944db7e23260"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ke",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ke",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ke",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kg",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kg",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kg",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "cd0c1511-69de-4466-87cd-071b0e242de4",
+        "9a34232a-b2a4-4e56-a6be-dc95c6c60bbc"
+      ],
+      "issues": []
+    },
+    {
+      "country": "kg",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kg",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kg",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kh",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "e211e3c0-31b6-4edb-a61f-504e9ef799b6"
+      ],
+      "issues": []
+    },
+    {
+      "country": "kh",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kh",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "1761a03b-4441-44e7-b88a-009b24030ed4"
+      ],
+      "issues": []
+    },
+    {
+      "country": "kh",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kh",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kh",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ki",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ki",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ki",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "57ce6fea-0c51-4d6f-9d8c-28db5a27cf83",
+        "dddf3a2b-95f6-4557-aa85-ab7b72f5697b"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ki",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ki",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ki",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "km",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "km",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "km",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "km",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "km",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "km",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kn",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kn",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kn",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kn",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kn",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kn",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kp",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kp",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kp",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kp",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kp",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kp",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kr",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kr",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kr",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kr",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kr",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kr",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kw",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kw",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kw",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kw",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kw",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kw",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kz",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kz",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kz",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kz",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kz",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "kz",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "la",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "92ce86b2-9466-485c-9e69-728c13a300ab"
+      ],
+      "issues": []
+    },
+    {
+      "country": "la",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "la",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "la",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "la",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "la",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lb",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lb",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lb",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lb",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lb",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lb",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lc",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "062ccc79-d8a2-43c6-802b-d3bfa23e28b5"
+      ],
+      "issues": []
+    },
+    {
+      "country": "lc",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lc",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "e275c3c4-c8d0-41b2-8eb8-88c7babdd31e"
+      ],
+      "issues": []
+    },
+    {
+      "country": "lc",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lc",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lc",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "li",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "li",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "li",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "li",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "li",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "li",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lk",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lk",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lk",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "187bd638-32e7-4811-841e-46abe4aacae2",
+        "1608593b-c610-4d3c-ad79-1a6afc2fd3de"
+      ],
+      "issues": []
+    },
+    {
+      "country": "lk",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lk",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lk",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lr",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lr",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lr",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lr",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lr",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lr",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ls",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ls",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ls",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ls",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ls",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ls",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lt",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lt",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lt",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lt",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lt",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lt",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lu",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lu",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lu",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lu",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lu",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lu",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lv",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lv",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lv",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lv",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lv",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "lv",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ly",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ly",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ly",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ly",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ly",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ly",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ma",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ma",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ma",
+      "domain": "lifeCulture",
+      "published": 3,
+      "playable": 3,
+      "questionIds": [
+        "0c301c74-0716-4076-9243-b6228c25a207",
+        "adeb45e1-4f49-4186-85be-b8db1387c8fa",
+        "cb53d19e-268d-488c-a5c0-07b26639471d"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ma",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ma",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ma",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mc",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mc",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mc",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mc",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mc",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mc",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "md",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "md",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "md",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "md",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "md",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "md",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "me",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "me",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "me",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "me",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "me",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "me",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mg",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mg",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mg",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "da255357-84fc-4fea-b0fa-7568c047d55a",
+        "28ca3a77-60de-4379-b0f9-be224450785b"
+      ],
+      "issues": []
+    },
+    {
+      "country": "mg",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mg",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mg",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mh",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "f614cd52-741f-4315-bfea-e4753a09d780"
+      ],
+      "issues": []
+    },
+    {
+      "country": "mh",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mh",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "9a2dfd04-249f-456c-b92a-38fd43301e48"
+      ],
+      "issues": []
+    },
+    {
+      "country": "mh",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mh",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mh",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mk",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mk",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mk",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mk",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mk",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mk",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ml",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ml",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ml",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ml",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ml",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ml",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mm",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mm",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mm",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "1924f662-e1c7-4caa-ad8b-f9cb63826e83"
+      ],
+      "issues": []
+    },
+    {
+      "country": "mm",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mm",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mm",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mn",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "f6341a79-27e2-4561-a25f-b0bcf4adbf03"
+      ],
+      "issues": []
+    },
+    {
+      "country": "mn",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mn",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mn",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mn",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mn",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mr",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mr",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mr",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mr",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mr",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mr",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mt",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mt",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mt",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mt",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mt",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mt",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mu",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mu",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mu",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mu",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mu",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mu",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mv",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mv",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mv",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "71c7710a-48cb-4b25-afdb-94c1a4740636"
+      ],
+      "issues": []
+    },
+    {
+      "country": "mv",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mv",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mv",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mw",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "8b52d4ca-fe68-4716-b5f4-280cc748b315"
+      ],
+      "issues": []
+    },
+    {
+      "country": "mw",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mw",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "4f6c9cf7-d8c4-43a4-8515-8d81989721bb"
+      ],
+      "issues": []
+    },
+    {
+      "country": "mw",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mw",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mw",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mx",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mx",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mx",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "c2dc0b4e-3e28-41bc-bb3f-64c643f10b2b"
+      ],
+      "issues": []
+    },
+    {
+      "country": "mx",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mx",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mx",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "my",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "my",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "my",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "3c406ddf-e846-4a88-8c8a-a322fef02121",
+        "e3bc1faf-694b-4a9e-a0e9-ec77a2993d3f"
+      ],
+      "issues": []
+    },
+    {
+      "country": "my",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "my",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "my",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mz",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "5b1da02d-f7c8-4bfa-ad01-0ef56a507b9c"
+      ],
+      "issues": []
+    },
+    {
+      "country": "mz",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mz",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mz",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mz",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "mz",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "na",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "na",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "na",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "9f257ada-7d29-418d-990c-9fe7c26a02ea",
+        "ad64a0ff-331f-4f15-a3a6-5b23b50c6bb9"
+      ],
+      "issues": []
+    },
+    {
+      "country": "na",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "na",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "na",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ne",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ne",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ne",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ne",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ne",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ne",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ng",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ng",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ng",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ng",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ng",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ng",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ni",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ni",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ni",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "f13b9c3e-f2e2-47c0-856e-dab2549f3f49"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ni",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ni",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ni",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nl",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nl",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nl",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nl",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nl",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nl",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "no",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "no",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "no",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "no",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "no",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "no",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "np",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "np",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "np",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "667dca1f-5e67-4df0-a5cd-94eca6bd127c",
+        "2948bd6c-ef1a-489a-a294-7cfff5e49be1"
+      ],
+      "issues": []
+    },
+    {
+      "country": "np",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "np",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "np",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nr",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nr",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nr",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nr",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nr",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nr",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nz",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nz",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nz",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nz",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nz",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "nz",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "om",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "om",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "om",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "om",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "om",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "om",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pa",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pa",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pa",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "450c1a47-3bb3-4ed2-a460-b2d2305b6f9c"
+      ],
+      "issues": []
+    },
+    {
+      "country": "pa",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pa",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pa",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pe",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "98db707c-fc30-4d21-827e-1a40a86ef8a8"
+      ],
+      "issues": []
+    },
+    {
+      "country": "pe",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pe",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pe",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pe",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pe",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pg",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "08cd486f-11ae-4488-b39b-d6b74b129ee9"
+      ],
+      "issues": []
+    },
+    {
+      "country": "pg",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pg",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pg",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pg",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pg",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ph",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "9264368e-e019-40ed-8051-9f768433d0f3"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ph",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ph",
+      "domain": "lifeCulture",
+      "published": 3,
+      "playable": 3,
+      "questionIds": [
+        "2c368bd4-448b-4574-92dc-9b1fc8b2f5b4",
+        "c4bc57d5-dec0-4054-816f-497e606fdc3a",
+        "ee4b0dab-307b-406d-bd78-1337d54c2725"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ph",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ph",
+      "domain": "thinkConnect",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "50ecad40-f53e-4bff-b898-f69d188d7689"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ph",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pk",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pk",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pk",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pk",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pk",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pk",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pl",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pl",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pl",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pl",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pl",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pl",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ps",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ps",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ps",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ps",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ps",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ps",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pt",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pt",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pt",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pt",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pt",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pt",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pw",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "1b741820-efa9-4c86-96cf-fbbf28301c63"
+      ],
+      "issues": []
+    },
+    {
+      "country": "pw",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pw",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "a49b5855-9090-4849-aea4-ef33fef44280"
+      ],
+      "issues": []
+    },
+    {
+      "country": "pw",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pw",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "pw",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "py",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "py",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "py",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "d01c470c-c3d5-474b-8d38-ea7e19c4a307"
+      ],
+      "issues": []
+    },
+    {
+      "country": "py",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "py",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "py",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "qa",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "qa",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "qa",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "qa",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "qa",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "qa",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ro",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ro",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ro",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ro",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ro",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ro",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "rs",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "rs",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "rs",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "cc9288e0-662c-4cbd-9a7f-23158df30bad"
+      ],
+      "issues": []
+    },
+    {
+      "country": "rs",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "rs",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "rs",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ru",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ru",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ru",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ru",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ru",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ru",
+      "domain": "time",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "80e90379-a106-4faa-8673-23d735cd14e8"
+      ],
+      "issues": []
+    },
+    {
+      "country": "rw",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "rw",
+      "domain": "language",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "d2a695c3-e8fc-41be-a1bb-fec11e1129c7"
+      ],
+      "issues": []
+    },
+    {
+      "country": "rw",
+      "domain": "lifeCulture",
+      "published": 4,
+      "playable": 4,
+      "questionIds": [
+        "241dc131-c531-4806-b022-ffb39d3845b9",
+        "39323b67-eea7-445b-9433-9c5f623ba829",
+        "206005b4-2402-48cc-9fc7-a3a80d954a39",
+        "ac547616-a986-4b94-aee5-80ccd37bf54d"
+      ],
+      "issues": []
+    },
+    {
+      "country": "rw",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "rw",
+      "domain": "thinkConnect",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "804cd748-ca15-44ed-920c-d86a8b1a16ff"
+      ],
+      "issues": []
+    },
+    {
+      "country": "rw",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sa",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sa",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sa",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sa",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sa",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sa",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sb",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "2c8f621c-30c5-4139-87af-96af38dd43ec"
+      ],
+      "issues": []
+    },
+    {
+      "country": "sb",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sb",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "0c7016c0-a5c4-4e60-ad95-52ddba51c4cd"
+      ],
+      "issues": []
+    },
+    {
+      "country": "sb",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sb",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sb",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sc",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sc",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sc",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sc",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sc",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sc",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sd",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sd",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sd",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "af33434d-067b-439e-ae7f-684df3e89619",
+        "13d7b901-080c-438c-bec6-de9e2a9b7ef7"
+      ],
+      "issues": []
+    },
+    {
+      "country": "sd",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sd",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sd",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "se",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "se",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "se",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "se",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "se",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "se",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sg",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sg",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sg",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sg",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sg",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sg",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "si",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "si",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "si",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "si",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "si",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "si",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sk",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sk",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sk",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sk",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sk",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sk",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sl",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sl",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sl",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sl",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sl",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sl",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sm",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sm",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sm",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sm",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sm",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sm",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sn",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "3535edab-c16c-4723-b747-bbdcc49aadad"
+      ],
+      "issues": []
+    },
+    {
+      "country": "sn",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sn",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sn",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sn",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sn",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "so",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "so",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "so",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "so",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "so",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "so",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sr",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sr",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sr",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sr",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sr",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sr",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ss",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ss",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ss",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ss",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ss",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ss",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "st",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "st",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "st",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "st",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "st",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "st",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sv",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sv",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sv",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "1fee3549-55e4-4b2b-a72a-bddf5eaf5bdd",
+        "5dfccece-bd77-4f90-9850-446f4bea2475"
+      ],
+      "issues": []
+    },
+    {
+      "country": "sv",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sv",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sv",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sy",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sy",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sy",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sy",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sy",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sy",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sz",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sz",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sz",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sz",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sz",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "sz",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "td",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "td",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "td",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "td",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "td",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "td",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tg",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tg",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tg",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tg",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tg",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tg",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "th",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "4c050542-d914-4a2c-8a96-039e3944e8e6"
+      ],
+      "issues": []
+    },
+    {
+      "country": "th",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "th",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "02908676-56db-4676-b7bf-c75d24d55567"
+      ],
+      "issues": []
+    },
+    {
+      "country": "th",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "th",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "th",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tj",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tj",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tj",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "b970c0f3-27b3-49cd-ac94-446a7dc6b45e"
+      ],
+      "issues": []
+    },
+    {
+      "country": "tj",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tj",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tj",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tl",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tl",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tl",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "06c926df-5187-4b66-8609-80138237673c",
+        "acc385ee-3867-4125-8799-568df423da3b"
+      ],
+      "issues": []
+    },
+    {
+      "country": "tl",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tl",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tl",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tm",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tm",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tm",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tm",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tm",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tm",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tn",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "24de50ee-f26d-4d78-bfd7-2c88f7662dbe"
+      ],
+      "issues": []
+    },
+    {
+      "country": "tn",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tn",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "543f7dc4-3506-49c3-aeba-300dffd9746e",
+        "f3208461-eb4d-4387-9215-e6ccd3500e8e"
+      ],
+      "issues": []
+    },
+    {
+      "country": "tn",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tn",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tn",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "to",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "to",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "to",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "d70d1aaa-2e41-4306-9861-bfd16846b6cf"
+      ],
+      "issues": []
+    },
+    {
+      "country": "to",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "to",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "to",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tr",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tr",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tr",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "56aed6b7-7929-4d44-86fe-1d622c57922a",
+        "2e921573-5427-4cf7-8ca4-b9a88050e7aa"
+      ],
+      "issues": []
+    },
+    {
+      "country": "tr",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tr",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tr",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tt",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tt",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tt",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tt",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tt",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tt",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tv",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tv",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tv",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tv",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tv",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tv",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tw",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tw",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tw",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tw",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tw",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tw",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tz",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tz",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tz",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "6a1b8e43-3fbd-421e-b5bb-c42872c08e47",
+        "edf1b9b4-c8b6-4448-9157-3e279874cdd9"
+      ],
+      "issues": []
+    },
+    {
+      "country": "tz",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tz",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "tz",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ua",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ua",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ua",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ua",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ua",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ua",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ug",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "ad9e8339-eac0-451a-bf7d-689d3d2b59d8"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ug",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ug",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "d2ae56f1-29d8-42a7-8031-4c97ae4688a9"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ug",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ug",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ug",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "us",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "us",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "us",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "us",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "us",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "us",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "uy",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "uy",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "uy",
+      "domain": "lifeCulture",
+      "published": 3,
+      "playable": 3,
+      "questionIds": [
+        "f63b13ad-3831-43d0-8c09-e585000bdbbb",
+        "9a80afc4-6a5a-4b7e-a8a1-9bf8249687ab",
+        "a1ed854f-f9e8-4127-840c-4aa4fb453c98"
+      ],
+      "issues": []
+    },
+    {
+      "country": "uy",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "uy",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "uy",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "uz",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "1fcc8449-ba1d-4f5b-af68-2d4feda28af8"
+      ],
+      "issues": []
+    },
+    {
+      "country": "uz",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "uz",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "uz",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "uz",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "uz",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "va",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "va",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "va",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "va",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "va",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "va",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vc",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vc",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vc",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vc",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vc",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vc",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ve",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ve",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ve",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ve",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ve",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ve",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vn",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "774ef23c-8d2b-432c-9317-8e1bc9aba28f"
+      ],
+      "issues": []
+    },
+    {
+      "country": "vn",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vn",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "863a1674-c78d-40d4-a51f-efa2e1a7395f"
+      ],
+      "issues": []
+    },
+    {
+      "country": "vn",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vn",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vn",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vu",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "b300c018-3c06-4ebf-b2c0-c7f595ffb046"
+      ],
+      "issues": []
+    },
+    {
+      "country": "vu",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vu",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "9ecfddc8-8ad5-4769-a23c-9f1502e9be55"
+      ],
+      "issues": []
+    },
+    {
+      "country": "vu",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vu",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "vu",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ws",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "35ece6c1-9f50-42f9-b7b0-d728fc4a5396"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ws",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ws",
+      "domain": "lifeCulture",
+      "published": 2,
+      "playable": 2,
+      "questionIds": [
+        "3f7c34d7-a53d-4bd2-8281-5d47e886dd5c",
+        "54ae58fc-d46a-4221-b861-43096fa69e34"
+      ],
+      "issues": []
+    },
+    {
+      "country": "ws",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ws",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ws",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ye",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ye",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ye",
+      "domain": "lifeCulture",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ye",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ye",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "ye",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "za",
+      "domain": "japanConnection",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "za",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "za",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "f4d2a0d8-f91a-4486-b220-b6b5076b1acd"
+      ],
+      "issues": []
+    },
+    {
+      "country": "za",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "za",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "za",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "zm",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "9bd3f261-e522-4bd8-b933-9fd6c1d73ce8"
+      ],
+      "issues": []
+    },
+    {
+      "country": "zm",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "zm",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "0f4f2e10-2b9e-46a7-a31e-91e9dd690ff0"
+      ],
+      "issues": []
+    },
+    {
+      "country": "zm",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "zm",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "zm",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "zw",
+      "domain": "japanConnection",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "2b6461fd-a68a-4cc7-acf3-9f764ab313cb"
+      ],
+      "issues": []
+    },
+    {
+      "country": "zw",
+      "domain": "language",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "zw",
+      "domain": "lifeCulture",
+      "published": 1,
+      "playable": 1,
+      "questionIds": [
+        "37610ae2-25ae-4f6b-a95e-74c8be780205"
+      ],
+      "issues": []
+    },
+    {
+      "country": "zw",
+      "domain": "place",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "zw",
+      "domain": "thinkConnect",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    },
+    {
+      "country": "zw",
+      "domain": "time",
+      "published": 0,
+      "playable": 0,
+      "questionIds": [],
+      "issues": []
+    }
+  ]
+}

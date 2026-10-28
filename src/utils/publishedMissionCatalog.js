@@ -11,7 +11,7 @@ function videoEmbedValid(video){return !!video&&/^[A-Za-z0-9_-]{11}$/.test(Strin
   Number.isInteger(Number(video.startSeconds||0))&&Number(video.startSeconds||0)>=0&&
   (!Number(video.endSeconds||0)||Number(video.endSeconds)>Number(video.startSeconds||0));}
 export function toPublishedMission(q){
-  if(!q||!['photo4','photoText4','text4','video4','videoReflect'].includes(q.type)||
+  if(!q||!/^[a-z]{2}$/.test(String(q.countryIso||''))||!['place','time','language','lifeCulture','japanConnection','thinkConnect'].includes(q.domain)||!['photo4','photoText4','text4','video4','videoReflect'].includes(q.type)||
      !/^[a-f0-9-]{36}$/i.test(String(q.id||''))||!String(q.prompt||'').trim())return null;
   const common={id:String(q.countryIso||'rw').toLowerCase()+'-mc-'+q.id,domain:q.domain,
     title:String(q.prompt).trim().split(/[\n。！？?]/)[0].slice(0,50),prompt:String(q.prompt).trim(),
@@ -47,6 +47,21 @@ export function toPublishedMission(q){
   };
 }
 export function normalizePublishedCatalog(questions){
-  return (Array.isArray(questions)?questions:[]).slice(0,10)
+  return (Array.isArray(questions)?questions:[])
     .map(toPublishedMission).filter(Boolean);
+}
+
+// Each country/domain is requested explicitly. Never fall back to embedded missions.
+export async function fetchPublishedCountry(countryIso,{signal,fetcher=fetch}={}){
+  const domains=['place','time','language','lifeCulture','japanConnection','thinkConnect'];
+  const groups=await Promise.all(domains.map(async domain=>{
+    const response=await fetcher('/api/mission-public?action=catalog&country='+encodeURIComponent(countryIso)+'&domain='+domain,{cache:'no-store',signal});
+    if(!response.ok)throw Error('Catalog request failed');
+    const payload=await response.json();
+    if(!payload?.ok||!Array.isArray(payload.questions))throw Error('Invalid catalog');
+    if(payload.questions.some(q=>q.countryIso!==countryIso||q.domain!==domain))throw Error('Catalog scope mismatch');
+    return normalizePublishedCatalog(payload.questions);
+  }));
+  const seen=new Set();
+  return groups.flat().filter(m=>{if(seen.has(m.id))return false;seen.add(m.id);return true;});
 }

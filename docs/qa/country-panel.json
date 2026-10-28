@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-10-27T23:34:09.209Z",
+  "source": "Mock published API responses; not a live publication check",
+  "directGeographyLaunch": {
+    "aGroup": true,
+    "rwanda": true,
+    "noIntermediateStart": true
+  },
+  "categories": 6,
+  "categoryPasses": {
+    "viewports": 3,
+    "vectorIcons": 6,
+    "allCardsVisible": true
+  },
+  "questionsPerCategory": 12,
+  "missionTickets": {
+    "viewports": 3,
+    "fourCardsWithinViewport": true,
+    "opensPlayer": true,
+    "noQuestionSpoilers": true
+  },
+  "legacyFallback": false,
+  "learningLevelFilter": "PASS",
+  "missingPhotoBlocksClear": "PASS",
+  "browserErrors": [],
+  "result": "PASS"
+}

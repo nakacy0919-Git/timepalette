@@ -1,0 +1,233 @@
+{
+  "checkedAt": "2026-10-27T14:07:56.371Z",
+  "method": "Actual Chrome image navigation and decode; original network bytes downloaded without mocks or TLS overrides",
+  "references": 28,
+  "loaded": 28,
+  "failed": 0,
+  "rows": [
+    {
+      "country": "af",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monk_Caves_in_Bamiyan_Valley.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 720,
+      "sha256": "df439968336d1f82e0f1fe764de176148dc44a103235bcaebe0886cf43e90877"
+    },
+    {
+      "country": "al",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Berat_Albania.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 637,
+      "sha256": "da262d35df92b37185380707bd1f997301fb8052639948fa2adcc2f046b05aa5"
+    },
+    {
+      "country": "dz",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_tassili_of_Algeria.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 640,
+      "sha256": "4c428d9de9d93d20460f4bc01447e212ba8aae16f9c6334875520f8add0b5823"
+    },
+    {
+      "country": "ad",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Refuge_perafita_andorra.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 720,
+      "sha256": "b6907fb756d47915399dc153e8fa4074f51b1077410f615bfc15281bfe6c9ed5"
+    },
+    {
+      "country": "ao",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kalandula_waterfalls_of_the_Lucala-River_in_Malange,_Angola.JPG",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 720,
+      "sha256": "8da8636de6cdf1d308a0652d53b880aebf3afd8a021270085c72ddf1f837770e"
+    },
+    {
+      "country": "ag",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nelson%27s_Dockyard_Antigua.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 720,
+      "sha256": "3c33e88892d5c22441a912966c5f6d82656d8a06e5b55663948ac78888b5c57c"
+    },
+    {
+      "country": "ar",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iguazu_Falls.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 720,
+      "sha256": "f50195f765add21970b6abf71d0a6a7dfedb24f72037fb71c006ec0ec4c82c07"
+    },
+    {
+      "country": "am",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Geghard_Monastery_exterior_with_cliffs_in_snow_2026.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 1280,
+      "sha256": "fa914e62ea72445c75a13a2f7da0c0b431ab8e56ea79bea3cb6c94e28af27e1e"
+    },
+    {
+      "country": "au",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Barrier_Reef_(aerial_view).JPG",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 720,
+      "sha256": "882b497c5050500e967d4e2d3f6df18adee2d7b2b5c689d7a1817f3c7871af74"
+    },
+    {
+      "country": "at",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Schonbrunn_Palace.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 643,
+      "sha256": "afd0986b12a7a32e7ee96936e449b0c563d6d9adfc6a93c3a0d1751d583814e2"
+    },
+    {
+      "country": "az",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Old_city_baku_azerbaijan6.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 568,
+      "sha256": "b2d04ee7de237c366cdb9e31160a8b2fa2d358ee478c1f60dafe170c013025fb"
+    },
+    {
+      "country": "bs",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spiaggia_Exuma.JPG",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 639,
+      "sha256": "dc6b192c1a2ce520f78e8544500e62f66ac595337cf7db923f4c5cbc3634c36a"
+    },
+    {
+      "country": "bh",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qal%27at_al-Bahrain_1.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 1280,
+      "sha256": "92b0f0604282aa9090799ec19211408b8526ff88e9f9e42773432ea8e98ca3e1"
+    },
+    {
+      "country": "bd",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:SUNDARBAN.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 596,
+      "sha256": "132164a5638fbf357def1566a95f91f203f1cd3461e5d222c599a1aef4b41e11"
+    },
+    {
+      "country": "bb",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Bridgetown_Barbados.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 640,
+      "sha256": "596ba1d5c50e5a8eac68cf99d611273aba95d8576e20bce1dac697f3017d1597"
+    },
+    {
+      "country": "by",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mir-Castle.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 469,
+      "sha256": "33726a194ee06aa37c8370966ba52020a6e6d6de709aed2edba3bf8f2016a0d7"
+    },
+    {
+      "country": "be",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grand-Place_de_Bruxelles,_Brussels.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 609,
+      "sha256": "4869a9db30762d9799d9080754a9227fe893c45d17ba8784d9369024ce9e4b20"
+    },
+    {
+      "country": "bz",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Great_Blue_Hole,_Belize.png",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 611,
+      "sha256": "6913ee560f68dbf3169797322e62f86108acc6d00862cdee0569f7a0293b488e"
+    },
+    {
+      "country": "bj",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Palaces_of_Abomey-133491.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 720,
+      "sha256": "1ce108b2ac1aaee8eebc964f3994f8116ebfb8d0e74478db3e86c2ab59ab9a69"
+    },
+    {
+      "country": "bt",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paro_Taktsang.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 640,
+      "sha256": "a72cf4c32b649840710d208f9e64a2c7ff231fe35681a65e3622c1f2fd011736"
+    },
+    {
+      "country": "bo",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Salar_de_Uyuni_Bolivia.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 720,
+      "sha256": "a4e2ee121c6cf3233d12d440b192ca6a97aa23eec281779a4135383693e7803b"
+    },
+    {
+      "country": "ba",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bridge_of_mostar.JPG",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 720,
+      "sha256": "d632fb96b6333c7beb1c82c6f2d5cf726d815d2d51e16e622cd7aaa2ff18165b"
+    },
+    {
+      "country": "bw",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Okavango_Delta,_Botswana.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 638,
+      "sha256": "c77d341112c13e2584cd912535823c8139c5499949437ee21dd97f9a8847170e"
+    },
+    {
+      "country": "br",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:IG_-_Waterfall_trail_on_the_Brazilian_side_of_Iguazu_Falls,_2023.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 638,
+      "sha256": "444b4f91bf4652c3661b3f1a22c8cd429b6d32717ec2c4b5f51778c5e01666dd"
+    },
+    {
+      "country": "bn",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:KAMPONG_AYER,_BRUNEI.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 1473,
+      "sha256": "7e5f7eeb6005f8034e10b35ce04e10da183fd0602e6d3963b3e9bb936b47cca2"
+    },
+    {
+      "country": "bg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rila_monastery_-_bulgaria.JPG",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 720,
+      "sha256": "bed10688f813ae2b276af184b53e85d280b99ad692365b7286ce433bd61ed44e"
+    },
+    {
+      "country": "bf",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016.05-441-134ap_archeology,excavation_Lorop%C3%A9ni_Ruins_nr.Lorop%C3%A9ni(Poni_Prv.),BF_sun15may2016-1119h.jpg",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 640,
+      "sha256": "93bc3a9187719f34d819367ebb6e041aac0c6e6a8a19aab0f85bd59d29ebc1e6"
+    },
+    {
+      "country": "bi",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bujumbura_%26_Lake_Tanganyika.JPG",
+      "externalBrowserLoad": "LOADED",
+      "width": 960,
+      "height": 721,
+      "sha256": "3e7afbd1c9ad5662836efafbd5f0e745e4a16b9c29ae0615b44717e4c787e7d9"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "generatedAt": "2026-10-27T14:29:02.751Z",
+  "inputMode": "Touch emulation (Chromium); not physical Safari",
+  "scope": "UI correct/incorrect and layout; live photos assessed separately",
+  "imageTransport": "Production same-origin Commons assets; no network interception",
+  "rows": [
+    {
+      "country": "az",
+      "mission": 1,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 2,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 3,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 4,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 5,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 6,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 7,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 8,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 9,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 10,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 1,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 2,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 3,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 4,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 5,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 6,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 7,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 8,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 9,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "az",
+      "mission": 10,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    }
+  ],
+  "finishedAt": "2026-10-27T14:29:17.817Z"
+}

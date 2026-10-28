@@ -1,0 +1,804 @@
+{
+  "generatedAt": "2026-10-27T14:35:02.619Z",
+  "scope": "Structural, scoring, border and field-specific source evidence audit; browser evidence is separate",
+  "warnings": 0,
+  "countries": 28,
+  "missions": 280,
+  "errors": 0,
+  "capitalNamesVerified": 11,
+  "contentPending": 17,
+  "rows": [
+    {
+      "country": "af",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
+        "photoReview": "visually-reviewed",
+        "routeReview": "geographic-schematic-reviewed"
+      }
+    },
+    {
+      "country": "al",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
+        "photoReview": "visually-reviewed",
+        "routeReview": "geographic-schematic-reviewed"
+      }
+    },
+    {
+      "country": "dz",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
+        "photoReview": "visually-reviewed",
+        "routeReview": "geographic-schematic-reviewed"
+      }
+    },
+    {
+      "country": "ad",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 3,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
+        "photoReview": "visually-reviewed",
+        "routeReview": "geographic-schematic-reviewed"
+      }
+    },
+    {
+      "country": "ao",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
+        "photoReview": "visually-reviewed",
+        "routeReview": "geographic-schematic-reviewed"
+      }
+    },
+    {
+      "country": "ag",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 3,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
+        "photoReview": "visually-reviewed",
+        "routeReview": "geographic-schematic-reviewed"
+      }
+    },
+    {
+      "country": "ar",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
+        "photoReview": "visually-reviewed",
+        "routeReview": "geographic-schematic-reviewed"
+      }
+    },
+    {
+      "country": "am",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
+        "photoReview": "visually-reviewed",
+        "routeReview": "geographic-schematic-reviewed"
+      }
+    },
+    {
+      "country": "au",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
+        "photoReview": "visually-reviewed",
+        "routeReview": "geographic-schematic-reviewed"
+      }
+    },
+    {
+      "country": "at",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
+        "photoReview": "visually-reviewed",
+        "routeReview": "geographic-schematic-reviewed"
+      }
+    },
+    {
+      "country": "az",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "verified",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 4,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "verified",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": true,
+        "geographyReview": "source-reviewed",
+        "photoReview": "visually-reviewed",
+        "routeReview": "geographic-schematic-reviewed"
+      }
+    },
+    {
+      "country": "bs",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bh",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bd",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bb",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "by",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "be",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bz",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bj",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bt",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bo",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "ba",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bw",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": [
+          {
+            "country": "bw",
+            "neighbor": "zm",
+            "reason": "Kazungula river border is not represented in the 50m topology",
+            "sourceUrl": "https://www.jica.go.jp/english/information/seminar/2024/20250304.html",
+            "checkedAt": "2026-10-27"
+          }
+        ]
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "br",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bn",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bg",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bf",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    },
+    {
+      "country": "bi",
+      "missions": 10,
+      "structural": "PASS",
+      "issues": [],
+      "capitalName": {
+        "status": "pending",
+        "issues": []
+      },
+      "landBorders": {
+        "issues": [],
+        "exceptions": []
+      },
+      "correctedGeography": {
+        "reviewedCityPoints": 0,
+        "issues": []
+      },
+      "contentReview": {
+        "status": "pending",
+        "issues": []
+      },
+      "content": {
+        "releaseReady": false,
+        "geographyReview": "pending",
+        "photoReview": "visually-reviewed",
+        "routeReview": "pending"
+      }
+    }
+  ]
+}

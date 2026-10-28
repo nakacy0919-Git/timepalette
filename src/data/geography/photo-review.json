@@ -1,0 +1,434 @@
+{
+  "af": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Monk_Caves_in_Bamiyan_Valley.jpg/960px-Monk_Caves_in_Bamiyan_Valley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monk_Caves_in_Bamiyan_Valley.jpg",
+      "credit": "Tracy Hunter from Kabul, Afghanistan",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "岩壁に複数の穴や空洞が見える",
+    "sceneCategory": "caves",
+    "visibleClaimJa": "岩壁に複数の穴や空洞が見える"
+  },
+  "al": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Berat_Albania.jpg/960px-Berat_Albania.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Berat_Albania.jpg",
+      "credit": "godo godaj",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "市街地を流れる川と、その奥に山地が見える",
+    "sceneCategory": "river-city",
+    "visibleClaimJa": "市街地を流れる川と、その奥に山地が見える"
+  },
+  "dz": {
+    "photo": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/The_tassili_of_Algeria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_tassili_of_Algeria.jpg",
+      "credit": "raandree",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "砂丘と露出した岩が見える",
+    "sceneCategory": "desert",
+    "visibleClaimJa": "砂丘と露出した岩が見える"
+  },
+  "ad": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Refuge_perafita_andorra.jpg/960px-Refuge_perafita_andorra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Refuge_perafita_andorra.jpg",
+      "credit": "Aliento Más Allá",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "雪の残る斜面に、低い石造りの建物が見える",
+    "sceneCategory": "snow-refuge",
+    "visibleClaimJa": "雪の残る斜面に、低い石造りの建物が見える"
+  },
+  "ao": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Kalandula_waterfalls_of_the_Lucala-River_in_Malange%2C_Angola.JPG/960px-Kalandula_waterfalls_of_the_Lucala-River_in_Malange%2C_Angola.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kalandula_waterfalls_of_the_Lucala-River_in_Malange,_Angola.JPG",
+      "credit": "Paulo César Santos",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred.",
+      "captionJa": "アンゴラのカランドゥーラ滝",
+      "captionEn": "Kalandula Falls, Angola",
+      "descriptionJa": "ルカラ川にかかる滝です。写真では崖から落ちる水と周辺の樹木を確認できます。"
+    },
+    "landscapeCueJa": "樹木の間から、幅広い滝が落ちている",
+    "sceneCategory": "waterfall",
+    "visibleClaimJa": "樹木の間から、幅広い滝が落ちている"
+  },
+  "ag": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Nelson%27s_Dockyard_Antigua.jpg/960px-Nelson%27s_Dockyard_Antigua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nelson%27s_Dockyard_Antigua.jpg",
+      "credit": "Kognos",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "水辺に白い建物とヤシの木が見える",
+    "sceneCategory": "dockyard",
+    "visibleClaimJa": "水辺に白い建物とヤシの木が見える"
+  },
+  "ar": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Iguazu_Falls.jpg/960px-Iguazu_Falls.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iguazu_Falls.jpg",
+      "credit": "Emesbe at Dutch Wikipedia",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "森林の中に多数の滝が連なっている",
+    "sceneCategory": "forest-falls",
+    "visibleClaimJa": "森林の中に多数の滝が連なっている"
+  },
+  "am": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Geghard_Monastery_exterior_with_cliffs_in_snow_2026.jpg/960px-Geghard_Monastery_exterior_with_cliffs_in_snow_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Geghard_Monastery_exterior_with_cliffs_in_snow_2026.jpg",
+      "credit": "Furkan Akkurt",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred.",
+      "captionJa": "アルメニア、ゲガルド修道院周辺",
+      "captionEn": "Cliffs near Geghard Monastery, Armenia",
+      "descriptionJa": "修道院周辺の岩山と積雪が写っています。雪のある一日の写真だけで年間の気候は判断できません。"
+    },
+    "landscapeCueJa": "岩山のふもとに積雪と通路が見える",
+    "sceneCategory": "snow-cliff",
+    "visibleClaimJa": "岩山のふもとに積雪と通路が見える"
+  },
+  "au": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Great_Barrier_Reef_%28aerial_view%29.JPG/960px-Great_Barrier_Reef_%28aerial_view%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Barrier_Reef_(aerial_view).JPG",
+      "credit": "Nerdge at English Wikipedia",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "航空機の翼の下に、浅い海とサンゴ礁が見える",
+    "sceneCategory": "reef",
+    "visibleClaimJa": "航空機の翼の下に、浅い海とサンゴ礁が見える"
+  },
+  "at": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Schonbrunn_Palace.jpg/960px-Schonbrunn_Palace.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Schonbrunn_Palace.jpg",
+      "credit": "Truete",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "黄色い建物の前に、馬車が見える",
+    "sceneCategory": "palace",
+    "visibleClaimJa": "黄色い建物の前に、馬車が見える"
+  },
+  "az": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Old_city_baku_azerbaijan6.jpg/960px-Old_city_baku_azerbaijan6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Old_city_baku_azerbaijan6.jpg",
+      "credit": "Самый древний",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "高い位置から、密集した市街地を見下ろしている",
+    "sceneCategory": "city",
+    "visibleClaimJa": "高い位置から、密集した市街地を見下ろしている"
+  },
+  "bs": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Spiaggia_Exuma.JPG/960px-Spiaggia_Exuma.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spiaggia_Exuma.JPG",
+      "credit": "Cappo80",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "白い砂浜と浅い青色の海が見える",
+    "sceneCategory": "beach",
+    "visibleClaimJa": "白い砂浜と浅い青色の海が見える"
+  },
+  "bh": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Qal%27at_al-Bahrain_1.jpg/960px-Qal%27at_al-Bahrain_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qal%27at_al-Bahrain_1.jpg",
+      "credit": "Beireke1",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "乾いた地面の上に、厚い石造りの城壁が見える",
+    "sceneCategory": "fort",
+    "visibleClaimJa": "乾いた地面の上に、厚い石造りの城壁が見える"
+  },
+  "bd": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/SUNDARBAN.jpg/960px-SUNDARBAN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:SUNDARBAN.jpg",
+      "credit": "Shahid BDWiki",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "水辺と樹木の近くに、ワニが見える",
+    "sceneCategory": "mangrove",
+    "visibleClaimJa": "水辺と樹木の近くに、ワニが見える"
+  },
+  "bb": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Aerial_view_of_Bridgetown_Barbados.jpg/960px-Aerial_view_of_Bridgetown_Barbados.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Bridgetown_Barbados.jpg",
+      "credit": "Barry haynes",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "入り江と建物が並ぶ街を上空から見ている",
+    "sceneCategory": "harbor-city",
+    "visibleClaimJa": "入り江と建物が並ぶ街を上空から見ている"
+  },
+  "by": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Mir-Castle.jpg/960px-Mir-Castle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mir-Castle.jpg",
+      "credit": "Torarne",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "水辺に赤い屋根と塔を持つ城が見える",
+    "sceneCategory": "castle",
+    "visibleClaimJa": "水辺に赤い屋根と塔を持つ城が見える"
+  },
+  "be": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Grand-Place_de_Bruxelles%2C_Brussels.jpg/960px-Grand-Place_de_Bruxelles%2C_Brussels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grand-Place_de_Bruxelles,_Brussels.jpg",
+      "credit": "Xinyuan Dang",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "広場を囲むように、装飾のある建物が並んでいる",
+    "sceneCategory": "square",
+    "visibleClaimJa": "広場を囲むように、装飾のある建物が並んでいる"
+  },
+  "bz": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/The_Great_Blue_Hole%2C_Belize.png/960px-The_Great_Blue_Hole%2C_Belize.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Great_Blue_Hole,_Belize.png",
+      "credit": "SentinelHub",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "浅い海の中に、丸く濃い青色をした深い部分が見える",
+    "sceneCategory": "blue-hole",
+    "visibleClaimJa": "浅い海の中に、丸く濃い青色をした深い部分が見える"
+  },
+  "bj": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Royal_Palaces_of_Abomey-133491.jpg/960px-Royal_Palaces_of_Abomey-133491.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Palaces_of_Abomey-133491.jpg",
+      "credit": "Karalyn Monteil",
+      "license": "CC BY-SA 3.0 igo",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "赤茶色の壁と低い建物が見える",
+    "sceneCategory": "earth-wall",
+    "visibleClaimJa": "赤茶色の壁と低い建物が見える"
+  },
+  "bt": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Paro_Taktsang.jpg/960px-Paro_Taktsang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paro_Taktsang.jpg",
+      "credit": "Goyaldevender",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "急な崖に沿って、複数の建物が建てられている",
+    "sceneCategory": "cliff-monastery",
+    "visibleClaimJa": "急な崖に沿って、複数の建物が建てられている"
+  },
+  "bo": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Salar_de_Uyuni_Bolivia.jpg/960px-Salar_de_Uyuni_Bolivia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Salar_de_Uyuni_Bolivia.jpg",
+      "credit": "Entropy1963",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "白く平らな地表に、多角形の模様が見える",
+    "sceneCategory": "salt-flat",
+    "visibleClaimJa": "白く平らな地表に、多角形の模様が見える"
+  },
+  "ba": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Bridge_of_mostar.JPG/960px-Bridge_of_mostar.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bridge_of_mostar.JPG",
+      "credit": "Vikiçizer",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "川の両岸を、大きなアーチ形の橋が結んでいる",
+    "sceneCategory": "bridge",
+    "visibleClaimJa": "川の両岸を、大きなアーチ形の橋が結んでいる"
+  },
+  "bw": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Okavango_Delta%2C_Botswana.jpg/960px-Okavango_Delta%2C_Botswana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Okavango_Delta,_Botswana.jpg",
+      "credit": "Joachim Huber",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "草地の間を、水路が枝分かれして流れている",
+    "sceneCategory": "delta",
+    "visibleClaimJa": "草地の間を、水路が枝分かれして流れている"
+  },
+  "br": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/IG_-_Waterfall_trail_on_the_Brazilian_side_of_Iguazu_Falls%2C_2023.jpg/960px-IG_-_Waterfall_trail_on_the_Brazilian_side_of_Iguazu_Falls%2C_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:IG_-_Waterfall_trail_on_the_Brazilian_side_of_Iguazu_Falls,_2023.jpg",
+      "credit": "Josep M. Gracia",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred.",
+      "captionJa": "ブラジル側イグアス国立公園の遊歩道",
+      "captionEn": "Viewpoint trail in Iguacu National Park, Brazil",
+      "descriptionJa": "ブラジル側の国立公園で撮影された遊歩道です。森林の中の通路から、人が景観を訪れるための施設を読み取れます。"
+    },
+    "landscapeCueJa": "樹木の間に、手すりのある遊歩道が見える",
+    "sceneCategory": "forest-walk",
+    "visibleClaimJa": "樹木の間に、手すりのある遊歩道が見える"
+  },
+  "bn": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/KAMPONG_AYER%2C_BRUNEI.jpg/960px-KAMPONG_AYER%2C_BRUNEI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:KAMPONG_AYER,_BRUNEI.jpg",
+      "credit": "JERRYE AND ROY KLOTZ MD",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "水上の建物をつなぐ、板張りの通路が見える",
+    "sceneCategory": "water-village",
+    "visibleClaimJa": "水上の建物をつなぐ、板張りの通路が見える"
+  },
+  "bg": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Rila_monastery_-_bulgaria.JPG/960px-Rila_monastery_-_bulgaria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rila_monastery_-_bulgaria.JPG",
+      "credit": "Biso",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "斜面の近くに、アーチが連なる建物の中庭が見える",
+    "sceneCategory": "courtyard",
+    "visibleClaimJa": "斜面の近くに、アーチが連なる建物の中庭が見える"
+  },
+  "bf": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/2016.05-441-134ap_archeology%2Cexcavation_Lorop%C3%A9ni_Ruins_nr.Lorop%C3%A9ni%28Poni_Prv.%29%2CBF_sun15may2016-1119h.jpg/960px-2016.05-441-134ap_archeology%2Cexcavation_Lorop%C3%A9ni_Ruins_nr.Lorop%C3%A9ni%28Poni_Prv.%29%2CBF_sun15may2016-1119h.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016.05-441-134ap_archeology,excavation_Lorop%C3%A9ni_Ruins_nr.Lorop%C3%A9ni(Poni_Prv.),BF_sun15may2016-1119h.jpg",
+      "credit": "Rik Schuiling / TropCrop-TCS",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred."
+    },
+    "landscapeCueJa": "樹木のある場所に、低い石積みの遺構が見える",
+    "sceneCategory": "ruins",
+    "visibleClaimJa": "樹木のある場所に、低い石積みの遺構が見える"
+  },
+  "bi": {
+    "photo": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Bujumbura_%26_Lake_Tanganyika.JPG/960px-Bujumbura_%26_Lake_Tanganyika.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bujumbura_%26_Lake_Tanganyika.JPG",
+      "credit": "Andreas31",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "contentVerified": true,
+      "reviewedAt": "2026-10-26",
+      "reviewBasis": "Visual inspection and Commons location description; national generalization not inferred.",
+      "captionJa": "ブルンジ、ブジュンブラとタンガニーカ湖",
+      "captionEn": "Bujumbura and Lake Tanganyika, Burundi",
+      "descriptionJa": "湖岸の先にブジュンブラの市街地と山地が見えます。湖は国境を越えて広がり、海とは異なる水域です。"
+    },
+    "landscapeCueJa": "湖の岸辺の向こうに、市街地と山地が見える",
+    "sceneCategory": "lake-city",
+    "visibleClaimJa": "湖の岸辺の向こうに、市街地と山地が見える"
+  }
+}

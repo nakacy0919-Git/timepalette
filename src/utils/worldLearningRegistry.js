@@ -1,3 +1,4 @@
+import {makeCountryMissionShell} from './missionDomains.js';
 const countryModules =
   import.meta.glob(
     '../data/countries_*.json',
@@ -5,16 +6,6 @@ const countryModules =
       eager: true,
     }
   );
-
-const missionModules =
-  import.meta.glob(
-    '../data/missions_*.json',
-    {
-      eager: true,
-    }
-  );
-
-const REQUIRED_MISSION_COUNT = 40;
 
 const REQUIRED_DOMAINS = [
   'place',
@@ -137,126 +128,6 @@ function getLanguages(
   return country.languages;
 }
 
-function hasRequiredDomains(
-  missionData
-) {
-  const domains =
-    missionData
-      ?.design
-      ?.domains;
-
-  if (
-    !Array.isArray(domains)
-  ) {
-    return false;
-  }
-
-  const domainIds =
-    new Set(
-      domains.map(
-        (domain) =>
-          domain.id
-      )
-    );
-
-  return REQUIRED_DOMAINS.every(
-    (domainId) =>
-      domainIds.has(
-        domainId
-      )
-  );
-}
-
-export function isCompleteMissionPackage(
-  missionData
-) {
-  if (!missionData) {
-    return false;
-  }
-
-  if (
-    missionData.totalMissions !==
-    REQUIRED_MISSION_COUNT
-  ) {
-    return false;
-  }
-
-  if (
-    !Array.isArray(
-      missionData.missions
-    ) ||
-    missionData.missions.length !==
-      REQUIRED_MISSION_COUNT
-  ) {
-    return false;
-  }
-
-  if (
-    !hasRequiredDomains(
-      missionData
-    )
-  ) {
-    return false;
-  }
-
-  const missionIds =
-    missionData.missions.map(
-      (mission) =>
-        mission.id
-    );
-
-  if (
-    new Set(missionIds).size !==
-    missionIds.length
-  ) {
-    return false;
-  }
-
-  const validMissions =
-    missionData.missions.every(
-      (mission) =>
-        Boolean(
-          mission?.id &&
-          mission?.domain &&
-          mission?.type &&
-          mission?.title &&
-          mission?.prompt &&
-          Number.isFinite(
-            Number(
-              mission?.points
-            )
-          )
-        )
-    );
-
-  if (!validMissions) {
-    return false;
-  }
-
-  const totalPoints =
-    missionData.missions.reduce(
-      (
-        total,
-        mission
-      ) =>
-        total +
-        Number(
-          mission.points || 0
-        ),
-      0
-    );
-
-  if (
-    Number(
-      missionData.maxWorldPoints
-    ) !== totalPoints
-  ) {
-    return false;
-  }
-
-  return true;
-}
-
 export function getWorldLearningCountries() {
   const countries = [];
 
@@ -279,16 +150,6 @@ export function getWorldLearningCountries() {
       const countryData =
         unwrapModule(module);
 
-      const missionPath =
-        `../data/missions_${fileLetter}.json`;
-
-      const missionGroup =
-        unwrapModule(
-          missionModules[
-            missionPath
-          ]
-        );
-
       Object.entries(
         countryData
       ).forEach(
@@ -299,15 +160,8 @@ export function getWorldLearningCountries() {
           const normalizedIso =
             iso.toLowerCase();
 
-          const missionData =
-            missionGroup?.[
-              normalizedIso
-            ] ?? null;
-
-          const live =
-            isCompleteMissionPackage(
-              missionData
-            );
+          const missionData = makeCountryMissionShell(country);
+          const live = true; // Country access is independent of publication/completion counts.
 
           const languages =
             getLanguages(country);
@@ -461,6 +315,5 @@ export function getWorldLearningCountry(
 }
 
 export {
-  REQUIRED_MISSION_COUNT,
   REQUIRED_DOMAINS,
 };

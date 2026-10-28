@@ -1,3 +1,4 @@
+import {normalizeLoginCode} from './loginCode.js';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, BookOpen, Camera, CheckCircle2, CircleHelp, Clock3, Compass, FilePlus2, Globe2, LayoutDashboard, LockKeyhole, LogOut, Pencil, Search, ShieldCheck, UploadCloud, ChevronDown, ChevronRight, MoreHorizontal, ExternalLink, X } from 'lucide-react';
 import { getWorldLearningCountries } from '../utils/worldLearningRegistry';
@@ -129,8 +130,8 @@ function Access({ onLogin, onRegister, busy, error, registrationToken, onBack, c
     <h1>世界のミッションを、一緒に作ろう。</h1>
     <p>国を選んで問題を作成。写真をWebPに変換して提出できます。</p>
     <form className="mc-stack" onSubmit={submit}>
-      {cloudflare ? <label>4桁のログインコード<input autoFocus type="password" inputMode="numeric" pattern="[0-9]*" value={pin} onChange={e=>setPin(e.target.value.replace(/\D/g,'').slice(0,4))} maxLength={4} minLength={4} required autoComplete="off" /></label> : registrationToken ? <><p>初回登録です。お名前を入力してください。</p><label>お名前<input autoFocus value={name} maxLength={60} onChange={e=>setName(e.target.value)} required autoComplete="name"/></label></> :
-      <label>{adminMode?'管理者PIN（4桁）':'先生用共通パスコード（4桁）'}<input value={pin} onChange={e=>setPin(e.target.value.replace(/\D/g,'').slice(0,4))} inputMode="numeric" type="password" minLength={4} maxLength={4} required autoComplete="off"/></label>}
+      {cloudflare ? <label>4桁のログインコード<input autoFocus type="password" inputMode="numeric" pattern="[0-9]*" value={pin} onChange={e=>setPin(normalizeLoginCode(e.target.value))} maxLength={4} minLength={4} required autoComplete="off" /></label> : registrationToken ? <><p>初回登録です。お名前を入力してください。</p><label>お名前<input autoFocus value={name} maxLength={60} onChange={e=>setName(e.target.value)} required autoComplete="name"/></label></> :
+      <label>{adminMode?'管理者PIN（4桁）':'先生用共通パスコード（4桁）'}<input value={pin} onChange={e=>setPin(normalizeLoginCode(e.target.value))} inputMode="numeric" type="password" minLength={4} maxLength={4} required autoComplete="off"/></label>}
       <button className="mc-primary" type="submit" disabled={busy||invalid}>{busy?'確認中…':registrationToken?'登録して始める':'ログインする'}</button>
     </form>
     {error&&<p role="alert" className="mc-error">{error}</p>}
@@ -520,7 +521,7 @@ function QuestionBank({
             <button type="button" className="mc-primary mc-small" disabled={busy || checkedIds.length===0}
               onClick={submitBulk}>{bulkMode==='approve' ? '選択した下書きを一括承認' : '選択した承認済みを一括公開'}</button>
           </div>
-          {bulkMode === 'publish' && <p className="mc-bulk-note">国・カテゴリーは問題に登録された情報から自動判定します。各国・各カテゴリー10問まで。写真・出典・公開権利を確認してから実行してください。</p>}
+          {bulkMode === 'publish' && <p className="mc-bulk-note">国・カテゴリーは問題に登録された情報から自動判定します。写真・出典・公開権利を確認してから実行してください。</p>}
           {bulkProgress && <p className="mc-save-progress" role="status" aria-live="polite">{bulkProgress}</p>}
           {bulkReport && <div className="mc-bulk-result" role="status">
             <strong>{bulkReport.mode==='approve'?'一括承認':'一括公開'}：成功 {bulkReport.done.length}件 / 失敗 {bulkReport.failed.length}件</strong>

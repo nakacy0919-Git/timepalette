@@ -19,3 +19,8 @@ test('invalid source questions are excluded',()=>{
   assert.deepEqual(normalizePublishedCatalog([{id,type:'free',prompt:'Test'}]),[]);
   assert.deepEqual(normalizePublishedCatalog([{id,type:'photoText4',prompt:'Test',answer:'A',choices:['B','C','D'],media:[]}]),[]);
 });
+
+test('catalog keeps more than ten published questions and country identity',()=>{
+  const questions=Array.from({length:18},(_,i)=>({id:`12345678-1234-1234-1234-${String(i).padStart(12,'0')}`,countryIso:'au',domain:'language',type:'text4',prompt:'Question '+i,answer:'A',choices:['B','C','D']}));
+  const missions=normalizePublishedCatalog(questions);assert.equal(missions.length,18);assert.ok(missions.every(m=>m.id.startsWith('au-mc-')));
+});

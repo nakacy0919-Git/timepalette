@@ -1,0 +1,273 @@
+{
+  "af": {
+    "checkedAt": "2026-10-27",
+    "factJa": "ヒンドゥークシュ山脈を含む山地が広がる",
+    "factSources": [
+      "https://whc.unesco.org/en/list/208/"
+    ],
+    "route": {
+      "via": "Pakistan",
+      "port": "Karachi",
+      "sea": "Arabian Sea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "routeSources": [
+      "https://kpt.gov.pk/pages/62/KICT%28Karachi-International-Container-Terminal%29"
+    ],
+    "routeScope": "Geographic schematic only. Domestic coastal port, or a directly bordering transit country with a coastal port. No claim of current border opening, operating service, shortest route or current trade volume.",
+    "sourceAccess": "Official-source web text or indexed excerpts; source retrieval does not assert a current transport service.",
+    "pedagogy": {
+      "status": "reviewed",
+      "basis": "P01/P02/P03 use maps and shapes; P04/P05 practise city locations; P06/P07/P09 distinguish directly visible evidence from unsupported national generalizations; P08 is a geographic schematic, not a current service; P10 reuses three independently scored keys. Same activity structure across levels, with level-specific prompts, not four distinct difficulty banks.",
+      "limits": "No assessment of live classroom learning outcomes. Physical iPad Safari not exercised."
+    }
+  },
+  "al": {
+    "checkedAt": "2026-10-27",
+    "factJa": "山地とアドリア海・イオニア海沿岸を持つ",
+    "factSources": [
+      "https://openjicareport.jica.go.jp/pdf/11428026_01.pdf"
+    ],
+    "route": {
+      "via": "Albania",
+      "port": "Durres",
+      "sea": "Adriatic Sea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "routeSources": [
+      "https://durresport.al/port-access/"
+    ],
+    "routeScope": "Geographic schematic only. Domestic coastal port, or a directly bordering transit country with a coastal port. No claim of current border opening, operating service, shortest route or current trade volume.",
+    "sourceAccess": "Official-source web text or indexed excerpts; source retrieval does not assert a current transport service.",
+    "pedagogy": {
+      "status": "reviewed",
+      "basis": "P01/P02/P03 use maps and shapes; P04/P05 practise city locations; P06/P07/P09 distinguish directly visible evidence from unsupported national generalizations; P08 is a geographic schematic, not a current service; P10 reuses three independently scored keys. Same activity structure across levels, with level-specific prompts, not four distinct difficulty banks.",
+      "limits": "No assessment of live classroom learning outcomes. Physical iPad Safari not exercised."
+    }
+  },
+  "dz": {
+    "checkedAt": "2026-10-27",
+    "factJa": "北は地中海に面し、内陸にはサハラ砂漠が広がる",
+    "factSources": [
+      "https://whc.unesco.org/en/list/179/",
+      "https://whc.unesco.org/en/list/565/"
+    ],
+    "route": {
+      "via": "Algeria",
+      "port": "Algiers",
+      "sea": "Mediterranean Sea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "routeSources": [
+      "https://whc.unesco.org/en/list/565/",
+      "https://www.maersk.com/local-information/europe/algeria"
+    ],
+    "routeScope": "Geographic schematic only. Domestic coastal port, or a directly bordering transit country with a coastal port. No claim of current border opening, operating service, shortest route or current trade volume.",
+    "sourceAccess": "Official-source web text or indexed excerpts; source retrieval does not assert a current transport service.",
+    "pedagogy": {
+      "status": "reviewed",
+      "basis": "P01/P02/P03 use maps and shapes; P04/P05 practise city locations; P06/P07/P09 distinguish directly visible evidence from unsupported national generalizations; P08 is a geographic schematic, not a current service; P10 reuses three independently scored keys. Same activity structure across levels, with level-specific prompts, not four distinct difficulty banks.",
+      "limits": "No assessment of live classroom learning outcomes. Physical iPad Safari not exercised."
+    }
+  },
+  "ad": {
+    "checkedAt": "2026-10-27",
+    "factJa": "ピレネー山脈にある、海に面しない国",
+    "factSources": [
+      "https://visitandorra.com/en/visitor-information/"
+    ],
+    "route": {
+      "via": "Spain",
+      "port": "Barcelona",
+      "sea": "Mediterranean Sea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "routeSources": [
+      "https://www.portdebarcelona.cat/en/business-and-services/doing-business-port/why-do-business-port/logistics-leader-southern-europe-and-mediterranean"
+    ],
+    "routeScope": "Geographic schematic only. Domestic coastal port, or a directly bordering transit country with a coastal port. No claim of current border opening, operating service, shortest route or current trade volume.",
+    "sourceAccess": "Official-source web text or indexed excerpts; source retrieval does not assert a current transport service.",
+    "pedagogy": {
+      "status": "reviewed",
+      "basis": "P01/P02/P03 use maps and shapes; P04/P05 practise city locations; P06/P07/P09 distinguish directly visible evidence from unsupported national generalizations; P08 is a geographic schematic, not a current service; P10 reuses three independently scored keys. Same activity structure across levels, with level-specific prompts, not four distinct difficulty banks.",
+      "limits": "No assessment of live classroom learning outcomes. Physical iPad Safari not exercised."
+    }
+  },
+  "ao": {
+    "checkedAt": "2026-10-27",
+    "factJa": "大西洋沿岸と内陸の高原を持つ",
+    "factSources": [
+      "https://unfccc.int/sites/default/files/NDC/2022-06/NDC%20Angola.pdf"
+    ],
+    "route": {
+      "via": "Angola",
+      "port": "Luanda",
+      "sea": "Atlantic Ocean",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "routeSources": [
+      "https://www.portoluanda.co.ao/porto-de-luanda-participa-na-mediterranean-ports-and-logistics-2025-em-barcelona/"
+    ],
+    "routeScope": "Geographic schematic only. Domestic coastal port, or a directly bordering transit country with a coastal port. No claim of current border opening, operating service, shortest route or current trade volume.",
+    "sourceAccess": "Official-source web text or indexed excerpts; source retrieval does not assert a current transport service.",
+    "pedagogy": {
+      "status": "reviewed",
+      "basis": "P01/P02/P03 use maps and shapes; P04/P05 practise city locations; P06/P07/P09 distinguish directly visible evidence from unsupported national generalizations; P08 is a geographic schematic, not a current service; P10 reuses three independently scored keys. Same activity structure across levels, with level-specific prompts, not four distinct difficulty banks.",
+      "limits": "No assessment of live classroom learning outcomes. Physical iPad Safari not exercised."
+    }
+  },
+  "ag": {
+    "checkedAt": "2026-10-27",
+    "factJa": "アンティグア島とバーブーダ島などからなる",
+    "factSources": [
+      "https://www.visitantiguabarbuda.com/faq/"
+    ],
+    "route": {
+      "via": "Antigua and Barbuda",
+      "port": "Saint John's",
+      "sea": "Caribbean Sea",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "routeSources": [
+      "https://antiguacruiseport.com/",
+      "https://antiguacruiseport.com/port/"
+    ],
+    "routeScope": "Geographic schematic only. Domestic coastal port, or a directly bordering transit country with a coastal port. No claim of current border opening, operating service, shortest route or current trade volume.",
+    "sourceAccess": "Official-source web text or indexed excerpts; source retrieval does not assert a current transport service.",
+    "pedagogy": {
+      "status": "reviewed",
+      "basis": "P01/P02/P03 use maps and shapes; P04/P05 practise city locations; P06/P07/P09 distinguish directly visible evidence from unsupported national generalizations; P08 is a geographic schematic, not a current service; P10 reuses three independently scored keys. Same activity structure across levels, with level-specific prompts, not four distinct difficulty banks.",
+      "limits": "No assessment of live classroom learning outcomes. Physical iPad Safari not exercised."
+    }
+  },
+  "ar": {
+    "checkedAt": "2026-10-27",
+    "factJa": "西にアンデス山脈、東に大西洋がある",
+    "factSources": [
+      "https://www.argentina.gob.ar/pais/territorio/clima",
+      "https://www.argentina.gob.ar/rionegro"
+    ],
+    "route": {
+      "via": "Argentina",
+      "port": "Buenos Aires",
+      "sea": "Atlantic Ocean",
+      "domestic": true,
+      "noteJa": "港はラプラタ川の河口域にあり、大西洋へつながります。地理上の模式ルートであり、現在の運航・通行条件を保証しません。"
+    },
+    "routeSources": [
+      "https://www.argentina.gob.ar/economia/agencia-nacional-de-puertos-y-navegacion/puertos/buenos-aires"
+    ],
+    "routeScope": "Geographic schematic only. Domestic coastal port, or a directly bordering transit country with a coastal port. No claim of current border opening, operating service, shortest route or current trade volume.",
+    "sourceAccess": "Official-source web text or indexed excerpts; source retrieval does not assert a current transport service.",
+    "pedagogy": {
+      "status": "reviewed",
+      "basis": "P01/P02/P03 use maps and shapes; P04/P05 practise city locations; P06/P07/P09 distinguish directly visible evidence from unsupported national generalizations; P08 is a geographic schematic, not a current service; P10 reuses three independently scored keys. Same activity structure across levels, with level-specific prompts, not four distinct difficulty banks.",
+      "limits": "No assessment of live classroom learning outcomes. Physical iPad Safari not exercised."
+    }
+  },
+  "am": {
+    "checkedAt": "2026-10-27",
+    "factJa": "南コーカサスの山地に位置する内陸国",
+    "factSources": [
+      "https://un.mfa.am/en/statements/2022/10/04/statement-by-davit-knyazyan-deputy-permanent-representative-of-armenia-to-the-united-nations-at-the/10698",
+      "https://www.mfa.am/en/speeches/2003/10/22/shugarian/1493"
+    ],
+    "route": {
+      "via": "Georgia",
+      "port": "Poti",
+      "sea": "Black Sea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "routeSources": [
+      "https://www.apmterminals.com/en/poti/our-port/our-port"
+    ],
+    "routeScope": "Geographic schematic only. Domestic coastal port, or a directly bordering transit country with a coastal port. No claim of current border opening, operating service, shortest route or current trade volume.",
+    "sourceAccess": "Official-source web text or indexed excerpts; source retrieval does not assert a current transport service.",
+    "pedagogy": {
+      "status": "reviewed",
+      "basis": "P01/P02/P03 use maps and shapes; P04/P05 practise city locations; P06/P07/P09 distinguish directly visible evidence from unsupported national generalizations; P08 is a geographic schematic, not a current service; P10 reuses three independently scored keys. Same activity structure across levels, with level-specific prompts, not four distinct difficulty banks.",
+      "limits": "No assessment of live classroom learning outcomes. Physical iPad Safari not exercised."
+    }
+  },
+  "au": {
+    "checkedAt": "2026-10-27",
+    "factJa": "インド洋と太平洋の間にあり、広い乾燥地域も持つ",
+    "factSources": [
+      "https://www.ga.gov.au/scientific-topics/national-location-information/landforms/deserts",
+      "https://www.ga.gov.au/scientific-topics/marine-and-coastal/maritime-jurisdiction/knowledge/what-is-maritime-jurisdiction"
+    ],
+    "route": {
+      "via": "Australia",
+      "port": "Sydney",
+      "sea": "Pacific Ocean",
+      "domestic": true,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "routeSources": [
+      "https://www.portauthoritynsw.com.au/port-operations/sydney-harbour/sydney-harbour-daily-vessel-movements",
+      "https://www.climatechange.environment.nsw.gov.au/impacts-climate-change/natural-environment/oceans"
+    ],
+    "routeScope": "Geographic schematic only. Domestic coastal port, or a directly bordering transit country with a coastal port. No claim of current border opening, operating service, shortest route or current trade volume.",
+    "sourceAccess": "Official-source web text or indexed excerpts; source retrieval does not assert a current transport service.",
+    "pedagogy": {
+      "status": "reviewed",
+      "basis": "P01/P02/P03 use maps and shapes; P04/P05 practise city locations; P06/P07/P09 distinguish directly visible evidence from unsupported national generalizations; P08 is a geographic schematic, not a current service; P10 reuses three independently scored keys. Same activity structure across levels, with level-specific prompts, not four distinct difficulty banks.",
+      "limits": "No assessment of live classroom learning outcomes. Physical iPad Safari not exercised."
+    }
+  },
+  "at": {
+    "checkedAt": "2026-10-27",
+    "factJa": "アルプス山脈とドナウ川に関わる内陸国",
+    "factSources": [
+      "https://www.bmeia.gv.at/oev-wien/about-austria/geography"
+    ],
+    "route": {
+      "via": "Slovenia",
+      "port": "Koper",
+      "sea": "Adriatic Sea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "routeSources": [
+      "https://www.luka-kp.si/en/news/in-ten-years-almost-six-times-more-containers-for-austria/"
+    ],
+    "routeScope": "Geographic schematic only. Domestic coastal port, or a directly bordering transit country with a coastal port. No claim of current border opening, operating service, shortest route or current trade volume.",
+    "sourceAccess": "Official-source web text or indexed excerpts; source retrieval does not assert a current transport service.",
+    "pedagogy": {
+      "status": "reviewed",
+      "basis": "P01/P02/P03 use maps and shapes; P04/P05 practise city locations; P06/P07/P09 distinguish directly visible evidence from unsupported national generalizations; P08 is a geographic schematic, not a current service; P10 reuses three independently scored keys. Same activity structure across levels, with level-specific prompts, not four distinct difficulty banks.",
+      "limits": "No assessment of live classroom learning outcomes. Physical iPad Safari not exercised."
+    }
+  },
+  "az": {
+    "checkedAt": "2026-10-27",
+    "factJa": "カスピ海に面するが、外洋への海岸を持たない",
+    "factSources": [
+      "https://tehranconvention.org/en/tc"
+    ],
+    "route": {
+      "via": "Georgia",
+      "port": "Poti",
+      "sea": "Black Sea",
+      "domestic": false,
+      "noteJa": "地理上の接続を学ぶ模式ルートです。現在の国境通行・運航・貿易条件を示すものではありません。"
+    },
+    "routeSources": [
+      "https://www.apmterminals.com/en/poti/our-port/our-port"
+    ],
+    "routeScope": "Geographic schematic only. Domestic coastal port, or a directly bordering transit country with a coastal port. No claim of current border opening, operating service, shortest route or current trade volume.",
+    "sourceAccess": "Official-source web text or indexed excerpts; source retrieval does not assert a current transport service.",
+    "pedagogy": {
+      "status": "reviewed",
+      "basis": "P01/P02/P03 use maps and shapes; P04/P05 practise city locations; P06/P07/P09 distinguish directly visible evidence from unsupported national generalizations; P08 is a geographic schematic, not a current service; P10 reuses three independently scored keys. Same activity structure across levels, with level-specific prompts, not four distinct difficulty banks.",
+      "limits": "No assessment of live classroom learning outcomes. Physical iPad Safari not exercised."
+    }
+  }
+}

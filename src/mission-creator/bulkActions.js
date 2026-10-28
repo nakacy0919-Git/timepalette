@@ -2,7 +2,7 @@
 // No new backend endpoint, role bypass, or auto-publication is introduced.
 export const BULK_LIMIT = 30;
 const PUBLIC_DOMAINS = new Set(['place','time','language','lifeCulture','japanConnection','thinkConnect']);
-const PUBLIC_TYPES = new Set(['text4','photo4','photoText4']);
+const PUBLIC_TYPES = new Set(['text4','photo4','photoText4','video4','videoReflect']);
 
 export function eligibleForBulk(question, mode) {
   if (!question || !question.id) return false;
@@ -26,22 +26,6 @@ export function createBulkPlan(mode, ids, questions, role) {
   const items = ids.map(id => byId.get(id));
   if (items.some(q => !eligibleForBulk(q, mode))) {
     throw new Error('選択した問題の状態が変わっています。一覧を更新して選び直してください。');
-  }
-  if (mode === 'publish') {
-    // Every country/domain has an independent 10-question published quota.
-    const selectedPerScope = new Map();
-    for (const q of items) {
-      const key = String(q.countryIso).toLowerCase()+':'+q.domain;
-      selectedPerScope.set(key,(selectedPerScope.get(key)||0)+1);
-    }
-    for (const [key, selected] of selectedPerScope) {
-      const published=questions.filter(q=>
-        String(q.countryIso||'').toLowerCase()+':'+q.domain===key &&
-        q.status==='published').length;
-      if(published+selected>10){
-        throw new Error(key+' の公開枠は残り'+Math.max(0,10-published)+'問です。選択数を減らしてください。');
-      }
-    }
   }
   return { mode, items: items.map(q => ({ id: q.id, countryIso: q.countryIso, domain: q.domain, title: String(q.prompt || '').slice(0, 70) })) };
 }

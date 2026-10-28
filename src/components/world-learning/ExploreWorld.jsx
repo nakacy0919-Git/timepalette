@@ -1,3 +1,5 @@
+import countryFlags from '../../data/exploreCountryFlags.json';
+import './exploreWorldToolbar.css';
 import {
   ArrowLeft,
   ArrowRight,
@@ -37,6 +39,7 @@ import {
   ComposableMap,
   Geographies,
   Geography,
+  Graticule,
   ZoomableGroup,
 } from 'react-simple-maps';
 
@@ -85,12 +88,9 @@ const countryByAtlasName =
     )
   );
 
-const DEFAULT_MAP_CENTER = [
-  5,
-  6,
-];
+const DEFAULT_MAP_CENTER = [0, 0];
 
-const DEFAULT_MAP_ZOOM = 1.18;
+const DEFAULT_MAP_ZOOM = 1;
 
 const MAP_MIN_ZOOM = 1;
 
@@ -733,7 +733,7 @@ function calculateCountryStats(
     totalMissions > 0
       ? Math.round(
           (
-            completedIds.length /
+            missions.filter(m=>completedSet.has(m.id)).length /
             totalMissions
           ) *
             100
@@ -743,7 +743,7 @@ function calculateCountryStats(
 
   return {
     completedCount:
-      completedIds.length,
+      missions.filter(m=>completedSet.has(m.id)).length,
 
     totalMissions,
 
@@ -988,12 +988,13 @@ function CountryCard({
 
 function CountrySelectionLanding({
   onChooseMode,
+  onBackHome,
 }) {
   return (
     <div
       className="
         relative
-        h-[calc(100dvh-68px)]
+        h-[100dvh]
         min-h-[650px]
         overflow-hidden
         bg-[#07111f]
@@ -1001,6 +1002,7 @@ function CountrySelectionLanding({
       "
     >
 
+      {onBackHome&&<button type="button" onClick={onBackHome} className="absolute left-4 top-4 z-50 rounded-full bg-white/95 px-4 py-2 text-sm font-bold text-slate-700" aria-label="ホームに戻る">← ホーム</button>}
       <style>
         {`
           @keyframes tp-world-drift {
@@ -1467,7 +1469,12 @@ lg:px-6
    EXPLORE WORLD
 ========================================================= */
 
-export default function ExploreWorld() {
+function CountryHoverFlag({country}){
+ const [failed,setFailed]=useState(false);
+ return failed?<span aria-label={country.nameJa+'の国旗'} className="text-2xl">{country.flagEmoji}</span>:<img src={countryFlags.flags[country.iso]||country.flagUrl||`https://flagcdn.com/w80/${country.iso}.png`} alt={country.nameJa+'の国旗'} width="48" height="32" className="tp-explore-flag" onError={()=>setFailed(true)}/>;
+}
+
+export default function ExploreWorld({onBackHome}={}) {
   const [
     activeCountry,
     setActiveCountry,
@@ -1823,7 +1830,7 @@ if (
   !activeMode
 ) {
   return (
-    <CountrySelectionLanding
+    <CountrySelectionLanding onBackHome={onBackHome}
       onChooseMode={
         chooseMode
       }
@@ -1838,7 +1845,7 @@ if (
   <div
     className="
       relative
-      h-[calc(100dvh-68px)]
+      h-[100dvh]
       min-h-[620px]
       overflow-hidden
       bg-[#dff4ff]
@@ -1950,98 +1957,7 @@ lg:px-6
             HEADER
         ================================================== */}
 
-        <div
-          className="
-            flex
-            shrink-0
-            items-end
-            justify-between
-            gap-4
-            border-b
-            border-slate-200
-            pb-5
-          "
-        >
-
-          <div>
-
-            <p
-              className="
-                text-[10px]
-                font-black
-                tracking-[0.20em]
-                text-blue-500
-              "
-            >
-              WORLD ADVENTURE
-            </p>
-
-
-            <h1
-              className="
-                mt-1
-                text-3xl
-                font-black
-                tracking-[-0.04em]
-                text-slate-950
-                md:text-4xl
-              "
-            >
-              国を選ぼう
-            </h1>
-
-          </div>
-
-
-          <div
-            className="
-              hidden
-              items-center
-              gap-2
-              rounded-full
-              bg-white
-              px-4
-              py-2
-              text-xs
-              font-black
-              text-slate-500
-              shadow-sm
-              md:flex
-            "
-          >
-
-            <Globe2
-              size={15}
-              className="text-blue-500"
-            />
-
-            {
-              liveCountries.length
-            } COUNTRIES
-
-          </div>
-
-        </div>
-
-
-        
-            {/* ===============================================
-                MODE BAR
-            ================================================ */}
-
-            <div
-  className="
-    mt-4
-    flex
-    shrink-0
-    items-center
-    gap-2
-    overflow-x-auto
-    pb-1
-  "
->
-
-  {/* BACK TO MODE SELECTION */}
+        <div className="tp-explore-toolbar"><div className="tp-explore-title"><p>WORLD ADVENTURE</p><h1>国を選ぼう</h1></div><div className="tp-explore-modes" role="group" aria-label="国の選び方">  {/* BACK TO MODE SELECTION */}
 
   <button
     type="button"
@@ -2156,8 +2072,8 @@ lg:px-6
       );
     }
   )}
+</div><span className="tp-explore-count"><Globe2 size={15}/>{liveCountries.length} COUNTRIES</span></div>
 
-</div>
 
             {/* ===============================================
                 CONTENT
@@ -2165,7 +2081,7 @@ lg:px-6
 
             <div
               className="
-                mt-4
+                mt-2
                 min-h-0
                 flex-1
                 overflow-hidden
@@ -2202,6 +2118,7 @@ lg:px-6
                   {hoveredCountry && (
 
                     <div
+                      data-testid="hovered-country"
                       className="
                         absolute
                         left-5
@@ -2221,16 +2138,8 @@ lg:px-6
                       "
                     >
 
-                      <span
-                        className="
-                          text-2xl
-                        "
-                      >
-                        {
-                          hoveredCountry
-                            .flagEmoji
-                        }
-                      </span>
+                      <CountryHoverFlag key={hoveredCountry.iso} country={hoveredCountry}/>
+
 
 
                       <div>
@@ -2268,17 +2177,15 @@ lg:px-6
 
 
                   <ComposableMap
-  projection="geoEqualEarth"
+  projection="geoEquirectangular"
   projectionConfig={{
-    scale: 170,
+    scale: 180,
 
-    center: [
-      0,
-      5,
-    ],
+    center: [0, 0],
   }}
   width={1200}
   height={590}
+  data-testid="country-selection-flat-map"
   className="
     h-full
     w-full
@@ -2311,6 +2218,7 @@ lg:px-6
     }}
   >
 
+    <Graticule step={[30,30]} stroke="#83b6c6" strokeWidth={0.45} strokeOpacity={0.4} fill="none" pointerEvents="none" />
     <Geographies
       geography={
         worldAtlas

@@ -1,0 +1,47 @@
+{
+  "scope": "Actual App, local browser viewports; not physical iPad",
+  "rows": [
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "noTopNavigation": true,
+      "homeToolsOpensTimer": true,
+      "mapFillsViewport": true,
+      "countrySelection": true,
+      "inlineModeButtons": true,
+      "brazilFlagUrl": true,
+      "flagsDecoded": 197,
+      "result": "PASS"
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "noTopNavigation": true,
+      "homeToolsOpensTimer": true,
+      "mapFillsViewport": true,
+      "countrySelection": true,
+      "inlineModeButtons": true,
+      "brazilFlagUrl": true,
+      "flagsDecoded": 197,
+      "result": "PASS"
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "noTopNavigation": true,
+      "homeToolsOpensTimer": true,
+      "mapFillsViewport": true,
+      "countrySelection": true,
+      "inlineModeButtons": true,
+      "brazilFlagUrl": true,
+      "flagsDecoded": 197,
+      "result": "PASS"
+    }
+  ]
+}
