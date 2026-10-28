@@ -1,0 +1,773 @@
+{
+  "generatedAt": "2026-10-28T03:49:52.320Z",
+  "inputMode": "Mouse and keyboard",
+  "scope": "UI correct/incorrect and layout; live photos assessed separately",
+  "imageTransport": "Production same-origin Commons assets; no network interception",
+  "rows": [
+    {
+      "country": "af",
+      "mission": 1,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 2,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 3,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 4,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 5,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 6,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 7,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 8,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 9,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 10,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 1,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 2,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 3,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 4,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 5,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 6,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 7,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 8,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 9,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 10,
+      "viewport": "1920x1080",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 972,
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 1,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 2,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 3,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 4,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 5,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 6,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 7,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 8,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 9,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "af",
+      "mission": 10,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 1,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 2,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 3,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 4,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 5,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 6,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 7,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 8,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 9,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "LOADED",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 10,
+      "viewport": "1440x900",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "rwandaShell": "PASS",
+      "overflow": {
+        "height": 792,
+        "scrollHeight": 790,
+        "clientHeight": 790,
+        "outside": []
+      },
+      "firstCompletionLabel": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    }
+  ],
+  "finishedAt": "2026-10-28T03:50:44.460Z"
+}

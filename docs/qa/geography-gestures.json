@@ -1,0 +1,66 @@
+{
+  "scope": "Chromium CDP real touch event simulation; not physical iPad Safari or subjective audio loudness",
+  "reducedMotion": "PASS",
+  "rows": [
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "pinch": true,
+      "fingerPan": true,
+      "reset": true,
+      "centralFeedback": true,
+      "audio": true,
+      "mute": true,
+      "confetti": true,
+      "replayNoDuplicate": true,
+      "result": "PASS"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "pinch": true,
+      "fingerPan": true,
+      "reset": true,
+      "centralFeedback": true,
+      "audio": true,
+      "mute": true,
+      "confetti": true,
+      "replayNoDuplicate": true,
+      "result": "PASS"
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "pinch": true,
+      "fingerPan": true,
+      "reset": true,
+      "centralFeedback": true,
+      "audio": true,
+      "mute": true,
+      "confetti": true,
+      "replayNoDuplicate": true,
+      "result": "PASS"
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "pinch": true,
+      "fingerPan": true,
+      "reset": true,
+      "centralFeedback": true,
+      "audio": true,
+      "mute": true,
+      "confetti": true,
+      "replayNoDuplicate": true,
+      "result": "PASS"
+    }
+  ]
+}

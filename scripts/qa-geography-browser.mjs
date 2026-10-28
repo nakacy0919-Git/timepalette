@@ -12,7 +12,7 @@ const report={generatedAt:new Date().toISOString(),inputMode:touch?'Touch emulat
 const reportPath=process.env.QA_REPORT_PATH||'docs/qa/geography-browser.json';
 const selected=geographyCountries.filter(p=>(!process.env.QA_GROUP||p.group===process.env.QA_GROUP)&&(!process.env.QA_COUNTRIES||process.env.QA_COUNTRIES.split(',').includes(p.countryCode)));
 try{
-for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
+for(const viewport of (process.env.QA_VIEWPORTS?JSON.parse(process.env.QA_VIEWPORTS):[{width:1024,height:768},{width:820,height:1180}])){
   browser=await chromium.launch({executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE||undefined,headless:true,proxy:process.env.QA_USE_PROXY&&process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY,bypass:'127.0.0.1,localhost'}:undefined,args:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?['--no-sandbox','--disable-dev-shm-usage','--disable-gpu','--single-process','--no-zygote','--use-gl=angle','--use-angle=swiftshader','--in-process-gpu']:[]});
 
   const context=await browser.newContext({viewport,...(touch?{hasTouch:true,isMobile:true,deviceScaleFactor:2}:{})});
@@ -64,7 +64,7 @@ for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
           else await activate(loc);
         };
         const notClear=async()=>{if(await page.getByRole('dialog',{name:'Mission clear'}).count())throw Error('Incorrect action cleared mission');};
-        if(i===0){const map=root.locator('svg.tp-geo-map');const initial=await map.getAttribute('viewBox');await root.getByRole('button',{name:'地図を拡大',exact:true}).click();if(await map.getAttribute('viewBox')===initial)throw Error('Zoom did not change map');await root.getByRole('button',{name:'地図を東へ移動',exact:true}).click();await root.getByRole('button',{name:'地図全体を表示',exact:true}).click();if(await map.getAttribute('viewBox')!==initial)throw Error('Map reset failed');row.mapNavigation='PASS';}
+        if(i===0){const map=root.locator('svg.tp-geo-map');const initial=await map.getAttribute('data-zoom');await root.getByRole('button',{name:'地図を拡大',exact:true}).click();if(await map.getAttribute('data-zoom')===initial)throw Error('Zoom did not change map');if(await root.getByRole('button',{name:'地図を東へ移動',exact:true}).count())throw Error('Direction arrow should be removed');await root.getByRole('button',{name:'地図全体を表示',exact:true}).click();if(await map.getAttribute('data-zoom')!==initial)throw Error('Map reset failed');row.mapNavigation='PASS';}
         const wrongCity=p.cities.find(c=>c.id!==p.capitalId).id;
         const wrongCountry=geographyCandidates(p).find(c=>c.countryCode!==p.countryCode).countryCode;
         switch(i){
