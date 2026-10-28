@@ -1,3 +1,4 @@
+import {toggleBoundedSelection, selectedAnswersCorrect, routeAnswersCorrect} from '../../../utils/rwandaAnswerContract.js';
 import {
   Check,
   ChevronLeft,
@@ -4775,31 +4776,7 @@ function LifePhotoEvidence({
         (
           current
         ) => {
-          if (
-            current.includes(
-              id
-            )
-          ) {
-            return current.filter(
-              (
-                item
-              ) =>
-                item !==
-                id
-            );
-          }
-
-          if (
-            current.length >=
-            2
-          ) {
-            return current;
-          }
-
-          return [
-            ...current,
-            id,
-          ];
+          return toggleBoundedSelection(current, id, 2);
         }
       );
     };
@@ -4807,35 +4784,7 @@ function LifePhotoEvidence({
 
   const check =
     () => {
-      const correctIds =
-        new Set(
-          mission
-            .choices
-            .filter(
-              (
-                item
-              ) =>
-                item.correct
-            )
-            .map(
-              (
-                item
-              ) =>
-                item.id
-            )
-        );
-
-      const correct =
-        selected.length ===
-        2 &&
-        selected.every(
-          (
-            id
-          ) =>
-            correctIds.has(
-              id
-            )
-        );
+      const correct = selectedAnswersCorrect(selected, mission.choices, 2);
 
       if (
         correct
@@ -5219,36 +5168,7 @@ function RouteChallenge({
 
   const check =
     () => {
-      const countryItem =
-        mission
-          .route
-          .countryChoices
-          .find(
-            (
-              item
-            ) =>
-              item.id ===
-              country
-          );
-
-      const portItem =
-        mission
-          .route
-          .portChoices
-          .find(
-            (
-              item
-            ) =>
-              item.id ===
-              port
-          );
-
-      if (
-        countryItem
-          ?.correct &&
-        portItem
-          ?.correct
-      ) {
+      if (routeAnswersCorrect(country, port, mission.route)) {
         onClear();
       } else {
         setWrong(
@@ -5971,31 +5891,7 @@ function GeoMaster({
         (
           current
         ) => {
-          if (
-            current.includes(
-              id
-            )
-          ) {
-            return current.filter(
-              (
-                item
-              ) =>
-                item !==
-                id
-            );
-          }
-
-          if (
-            current.length >=
-            3
-          ) {
-            return current;
-          }
-
-          return [
-            ...current,
-            id,
-          ];
+          return toggleBoundedSelection(current, id, 3);
         }
       );
     };
@@ -6003,35 +5899,7 @@ function GeoMaster({
 
   const checkFacts =
     () => {
-      const correctIds =
-        new Set(
-          mission
-            .facts
-            .filter(
-              (
-                item
-              ) =>
-                item.correct
-            )
-            .map(
-              (
-                item
-              ) =>
-                item.id
-            )
-        );
-
-      const correct =
-        selectedFacts.length ===
-        3 &&
-        selectedFacts.every(
-          (
-            id
-          ) =>
-            correctIds.has(
-              id
-            )
-        );
+      const correct = selectedAnswersCorrect(selectedFacts, mission.facts, 3);
 
       if (
         correct

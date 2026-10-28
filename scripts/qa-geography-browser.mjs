@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import {answerFingerprint} from './geography-answer-fingerprint.mjs';
+import {getRwandaFormat} from '../src/utils/geographyRwandaFormat.js';
 import {createServer} from 'vite';
 import {chromium} from 'playwright';
 import {geographyCountries,getGeographyPackage,geographyCandidates} from '../src/utils/geographyRegistry.js';
@@ -8,7 +10,7 @@ const activate=loc=>touch?loc.tap():loc.click();
 const server=await createServer({server:{host:'127.0.0.1',port:qaPort,strictPort:true}});await server.listen();
 let browser;
 fs.mkdirSync('docs/qa/browser',{recursive:true});
-const report={generatedAt:new Date().toISOString(),inputMode:touch?'Touch emulation (Chromium); not physical Safari':'Mouse and keyboard',scope:'UI correct/incorrect and layout; live photos assessed separately',imageTransport:process.env.QA_CACHED_IMAGES?'QA network interception enabled':'Production same-origin Commons assets; no network interception',rows:[]};
+const report={answerFingerprint:answerFingerprint(),generatedAt:new Date().toISOString(),inputMode:touch?'Touch emulation (Chromium); not physical Safari':'Mouse and keyboard',scope:'UI correct/incorrect and layout; live photos assessed separately',imageTransport:process.env.QA_CACHED_IMAGES?'QA network interception enabled':'Production same-origin Commons assets; no network interception',rows:[]};
 const reportPath=process.env.QA_REPORT_PATH||'docs/qa/geography-browser.json';
 const selected=geographyCountries.filter(p=>(!process.env.QA_GROUP||p.group===process.env.QA_GROUP)&&(!process.env.QA_COUNTRIES||process.env.QA_COUNTRIES.split(',').includes(p.countryCode)));
 try{
@@ -16,7 +18,7 @@ for(const viewport of (process.env.QA_VIEWPORTS?JSON.parse(process.env.QA_VIEWPO
   browser=await chromium.launch({executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE||undefined,headless:true,proxy:process.env.QA_USE_PROXY&&process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY,bypass:'127.0.0.1,localhost'}:undefined,args:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?['--no-sandbox','--disable-dev-shm-usage','--disable-gpu','--single-process','--no-zygote','--use-gl=angle','--use-angle=swiftshader','--in-process-gpu']:[]});
 
   const context=await browser.newContext({viewport,...(touch?{hasTouch:true,isMobile:true,deviceScaleFactor:2}:{})});
-  const page=await context.newPage();page.setDefaultTimeout(5000);
+  const page=await context.newPage();page.setDefaultTimeout(5000);page.setDefaultNavigationTimeout(30000);
   // Network images are NOT replaced with fixtures: failures remain visible and recorded.
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   if(process.env.QA_CACHED_IMAGES){
@@ -32,17 +34,18 @@ for(const viewport of (process.env.QA_VIEWPORTS?JSON.parse(process.env.QA_VIEWPO
   }
   for(const country of selected){
     const p=getGeographyPackage(country.countryCode);
+    const format=getRwandaFormat(p);
     await page.goto(`http://127.0.0.1:${qaPort}/tests/geography-browser.html?country=${p.countryCode}`,{waitUntil:'domcontentloaded'});
     for(let i=0;i<10;i++){
       if(process.env.QA_MISSIONS&&!process.env.QA_MISSIONS.split(',').includes(String(i+1)))continue;
       const row={country:p.countryCode,mission:i+1,viewport:`${viewport.width}x${viewport.height}`,interaction:'PENDING',layout:'PENDING',images:'PENDING'};
       try{
         await page.locator(`[data-mission="${i+1}"]`).click();
-        const root=page.getByTestId('geography-mission');await root.waitFor();if(await page.locator('.tp-geo-sidebar [data-mission]').count()!==10)throw Error('Missing Rwanda-style 10 mission navigation');row.rwandaShell='PASS';
+        const root=page.getByTestId('geography-mission');await root.waitFor();if(await page.locator('.tp-geo-sidebar [data-mission]').count()!==10)throw Error('Missing Rwanda-style 10 mission navigation');row.rwandaShell='PASS';row.answerContract='Rwanda sequence, bounded choice and explicit departure v1';
         if([5,6,8].includes(i))await page.waitForFunction(()=>[...document.images].every(i=>i.complete),null,{timeout:8000}).catch(()=>{});
         const bounds=await root.evaluate(el=>{const r=el.getBoundingClientRect();const outside=[...el.querySelectorAll('button,svg,img')].filter(e=>{const b=e.getBoundingClientRect();return b.width&&b.height&&(b.bottom>innerHeight+1||b.top<0||b.right>innerWidth+1||b.left<0)}).map(e=>e.tagName+':'+(e.getAttribute('data-answer')||e.getAttribute('data-city')||e.textContent).slice(0,50));return {height:r.height,scrollHeight:el.scrollHeight,clientHeight:el.clientHeight,outside};});
         row.layout=bounds.outside.length||bounds.scrollHeight>bounds.clientHeight+2?'FAIL':'PASS';row.overflow=bounds;
-        if(['au','ao'].includes(p.countryCode)&&[1,5,9].includes(i))await page.screenshot({path:`docs/qa/browser/${p.countryCode}-P${i+1}-${viewport.width}-review.png`});
+        if(['au','ao','af'].includes(p.countryCode)&&[1,5,6,7,9].includes(i))await page.screenshot({path:`docs/qa/browser/${p.countryCode}-P${i+1}-${viewport.width}-review.png`});
         const click=async sel=>{
           let loc=root.locator(sel).first();
           if(touch&&await root.locator('g'+sel).count())loc=root.locator('g'+sel).first();
@@ -59,24 +62,30 @@ for(const viewport of (process.env.QA_VIEWPORTS?JSON.parse(process.env.QA_VIEWPO
             });
             if(!point)throw Error('No visible touch target: '+sel);
             await page.touchscreen.tap(point.x,point.y);
-          }else if(tag==='g'&&await loc.getAttribute('data-continent'))await activate(loc.locator('rect'));
+          }else if(tag==='g'&&(await loc.getAttribute('data-continent')||await loc.getAttribute('data-region')))await activate(loc.locator('rect'));
           else if(tag==='g')await activate(loc.locator('circle[data-hit],circle').last());
           else await activate(loc);
         };
         const notClear=async()=>{if(await page.getByRole('dialog',{name:'Mission clear'}).count())throw Error('Incorrect action cleared mission');};
         if(i===0){const map=root.locator('svg.tp-geo-map');const initial=await map.getAttribute('data-zoom');await root.getByRole('button',{name:'地図を拡大',exact:true}).click();if(await map.getAttribute('data-zoom')===initial)throw Error('Zoom did not change map');if(await root.getByRole('button',{name:'地図を東へ移動',exact:true}).count())throw Error('Direction arrow should be removed');await root.getByRole('button',{name:'地図全体を表示',exact:true}).click();if(await map.getAttribute('data-zoom')!==initial)throw Error('Map reset failed');row.mapNavigation='PASS';}
+        const dragCardToSlot=async(card,slot)=>{
+          const a=await root.locator(`[data-card="${card}"]`).boundingBox(),b=await root.locator(`[data-slot="${slot}"]`).boundingBox();
+          const start={x:a.x+a.width/2,y:a.y+a.height/2},end={x:b.x+b.width/2,y:b.y+b.height/2};
+          if(touch){const cdp=await context.newCDPSession(page);const point=(x,y)=>({x,y,id:1,radiusX:3,radiusY:3,force:1});await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[point(start.x,start.y)]});for(let n=1;n<=10;n++)await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[point(start.x+(end.x-start.x)*n/10,start.y+(end.y-start.y)*n/10)]});await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await cdp.detach();}
+          else{await page.mouse.move(start.x,start.y);await page.mouse.down();await page.mouse.move(end.x,end.y,{steps:10});await page.mouse.up();}
+        };
         const wrongCity=p.cities.find(c=>c.id!==p.capitalId).id;
         const wrongCountry=geographyCandidates(p).find(c=>c.countryCode!==p.countryCode).countryCode;
         switch(i){
-          case 0:{const key=p.continent.replaceAll(' ','');const expected=key[0].toLowerCase()+key.slice(1);await click(`[data-continent="${expected==='asia'?'africa':'asia'}"]`);await notClear();await click(`[data-continent="${expected}"]`);await notClear();const wrong=await root.locator('path[data-country]').evaluateAll((els,code)=>els.filter(e=>e.dataset.country!==code).sort((a,b)=>{const x=a.getBBox(),y=b.getBBox();return y.width*y.height-x.width*x.height;})[0]?.dataset.country,p.countryCode);await click(`[data-country="${wrong}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);await notClear();await click(`[data-country="${p.neighbors[0].iso}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);break;}
-          case 1:{const a=p.neighbors[0],b=p.neighbors[1];if(b){await click(`[data-card="${a.iso}"]`);await click(`[data-slot="${b.iso}"]`);await notClear();}else{await click(`[data-slot="${a.iso}"]`);await notClear();}for(const n of p.neighbors){await click(`[data-card="${n.iso}"]`);await click(`[data-slot="${n.iso}"]`);}break;}
+          case 0:{const key=p.continent.replaceAll(' ','');const expected=key[0].toLowerCase()+key.slice(1);await click(`[data-continent="${expected==='asia'?'africa':'asia'}"]`);await notClear();await click(`[data-continent="${expected}"]`);await notClear();const wrongRegion=format.regionChoices.find(r=>r[0]!==format.region)[0];await click(`[data-region="${wrongRegion}"]`);await notClear();await click(`[data-region="${format.region}"]`);await notClear();await click(`[data-country="${p.neighbors[0].iso}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);break;}
+          case 1:{const a=p.neighbors[0],b=p.neighbors[1];if(b){await click(`[data-card="${a.iso}"]`);await click(`[data-slot="${b.iso}"]`);await notClear();}else{await click(`[data-slot="${a.iso}"]`);await notClear();}for(const [j,n] of p.neighbors.entries()){if(j===0){await dragCardToSlot(n.iso,n.iso);row.cardDrag='PASS';}else{await click(`[data-card="${n.iso}"]`);await click(`[data-slot="${n.iso}"]`);}}break;}
           case 2:case 5:{const wrong=root.locator('[data-answer]').filter({hasNot:page.locator('never')});const id=await wrong.evaluateAll((els,code)=>els.find(e=>e.dataset.answer!==code)?.dataset.answer,p.countryCode);await click(`[data-answer="${id}"]`);await notClear();await click(`[data-answer="${p.countryCode}"]`);break;}
           case 3:await click(`[data-city="${wrongCity}"]`);await notClear();await click(`[data-city="${p.capitalId}"]`);break;
           case 4:await click(`[data-city="${p.cities[1].id}"]`);await notClear();for(const c of p.cities)await click(`[data-city="${c.id}"]`);break;
-          case 6:await click('[data-answer="climate"]');await activate(root.getByRole('button',{name:'2つの説明を確かめる'}));await notClear();await click('[data-answer="climate"]');await click('[data-answer="visible"]');await click('[data-answer="limited"]');await activate(root.getByRole('button',{name:'2つの説明を確かめる'}));break;
-          case 7:await click('[data-answer="port-Rotterdam"]');await notClear();await click(`[data-answer="via-${p.route.via}"]`);await click(`[data-answer="port-${p.route.port}"]`);break;
+          case 6:await click('[data-answer="same"]');await click('[data-answer="whole"]');await activate(root.getByRole('button',{name:'2つ選んで答え合わせ'}));await notClear();await click('[data-answer="visible"]');if(await root.locator('[aria-pressed="true"]').count()!==2)throw Error('Two-selection limit broken');await click('[data-answer="same"]');await click('[data-answer="whole"]');await click('[data-answer="visible"]');await click('[data-answer="culture"]');await activate(root.getByRole('button',{name:'2つ選んで答え合わせ'}));break;
+          case 7:{const wrongVia=await root.locator('[data-answer^="via-"]').evaluateAll((els,via)=>els.find(e=>e.dataset.answer!=='via-'+via).dataset.answer,p.route.via);const wrongPort=await root.locator('[data-answer^="port-"]').evaluateAll((els,port)=>els.find(e=>e.dataset.answer!=='port-'+port).dataset.answer,p.route.port);await click(`[data-answer="${wrongVia}"]`);await click(`[data-answer="${wrongPort}"]`);await notClear();await activate(root.getByRole('button',{name:'🚚 トラックを出発させる！'}));await notClear();await click(`[data-answer="via-${p.route.via}"]`);await click(`[data-answer="port-${p.route.port}"]`);await notClear();await activate(root.getByRole('button',{name:'🚚 トラックを出発させる！'}));break;}
           case 8:await click('[data-answer="weather"]');await notClear();await click('[data-answer="limited"]');break;
-          case 9:await click(`[data-country="${wrongCountry}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);await click(`[data-city="${wrongCity}"]`);await notClear();await click(`[data-city="${p.capitalId}"]`);await click('[data-answer="wrong-fact"]');await notClear();await click('[data-answer="fact"]');break;
+          case 9:await click(`[data-country="${p.neighbors[0].iso}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);await click(`[data-city="${wrongCity}"]`);await notClear();await click(`[data-city="${p.capitalId}"]`);await click('[data-fact="wrong-capital"]');await click('[data-fact="wrong-coast"]');await click('[data-fact="terrain"]');await activate(root.getByRole('button',{name:'🔑 最後の鍵をアンロック！'}));await notClear();await click('[data-fact="capital"]');if(await root.locator('[aria-pressed="true"]').count()!==3)throw Error('Three-selection limit broken');await click('[data-fact="wrong-capital"]');await click('[data-fact="wrong-coast"]');await click('[data-fact="capital"]');await click('[data-fact="route"]');await activate(root.getByRole('button',{name:'🔑 最後の鍵をアンロック！'}));break;
         }
         await page.getByRole('dialog',{name:'Mission clear'}).waitFor();if(!(await page.getByRole('dialog',{name:'Mission clear'}).textContent()).includes('初回クリア · 100 WP'))throw Error('First completion mislabeled as replay');row.firstCompletionLabel='PASS';row.interaction='PASS';
         row.images=await page.locator('img').evaluateAll(imgs=>imgs.length?imgs.every(im=>im.complete&&im.naturalWidth>0)?'LOADED':'UNVERIFIED':'NONE');
@@ -88,7 +97,7 @@ for(const viewport of (process.env.QA_VIEWPORTS?JSON.parse(process.env.QA_VIEWPO
     }
     const beforeReplay=await page.evaluate(code=>JSON.parse(localStorage.getItem('timepalette-place-progress-v1:'+code)||'{}').completedMissionIds||[],p.countryCode);
     await page.locator('[data-mission="1"]').click();
-    const continent=p.continent.replaceAll(' ','');await page.locator(`[data-continent="${continent[0].toLowerCase()+continent.slice(1)}"]`).press('Enter');await page.locator(`[data-country="${p.countryCode}"]`).first().press('Enter');await page.locator(`[data-country="${p.countryCode}"]`).first().press('Enter');
+    const continent=p.continent.replaceAll(' ','');await page.locator(`[data-continent="${continent[0].toLowerCase()+continent.slice(1)}"]`).press('Enter');await page.locator(`[data-region="${format.region}"]`).first().press('Enter');await page.locator(`[data-country="${p.countryCode}"]`).first().press('Enter');
     await page.getByRole('dialog',{name:'Mission clear'}).waitFor();
     const afterReplay=await page.evaluate(code=>JSON.parse(localStorage.getItem('timepalette-place-progress-v1:'+code)||'{}').completedMissionIds||[],p.countryCode);
     report.rows.filter(r=>r.country===p.countryCode&&r.viewport===`${viewport.width}x${viewport.height}`).forEach(r=>r.replayDoesNotDuplicate=afterReplay.length===beforeReplay.length&&new Set(afterReplay).size===afterReplay.length);
