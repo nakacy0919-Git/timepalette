@@ -10,6 +10,9 @@
       "homeToolsOpensTimer": true,
       "mapFillsViewport": true,
       "countrySelection": true,
+      "inlineModeButtons": true,
+      "brazilFlagUrl": true,
+      "flagsDecoded": 197,
       "result": "PASS"
     },
     {
@@ -21,6 +24,9 @@
       "homeToolsOpensTimer": true,
       "mapFillsViewport": true,
       "countrySelection": true,
+      "inlineModeButtons": true,
+      "brazilFlagUrl": true,
+      "flagsDecoded": 197,
       "result": "PASS"
     },
     {
@@ -32,6 +38,9 @@
       "homeToolsOpensTimer": true,
       "mapFillsViewport": true,
       "countrySelection": true,
+      "inlineModeButtons": true,
+      "brazilFlagUrl": true,
+      "flagsDecoded": 197,
       "result": "PASS"
     }
   ]
