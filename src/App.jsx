@@ -235,7 +235,7 @@ export default function App() {
 
         case 'explore':
           return (
-            <ExploreWorld />
+            <ExploreWorld onBackHome={goHome}/>
           );
 
         case 'timer':
@@ -324,7 +324,7 @@ export default function App() {
 
       <div className="min-h-screen bg-slate-100 font-sans">
 
-        <MainHeader
+        {!isFullWidth&&<MainHeader
           activeTab={
             activeTab
           }
@@ -340,7 +340,7 @@ export default function App() {
           onSelectTool={
             openTool
           }
-        />
+        />}
 
         <main
           className={

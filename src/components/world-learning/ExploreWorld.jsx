@@ -986,12 +986,13 @@ function CountryCard({
 
 function CountrySelectionLanding({
   onChooseMode,
+  onBackHome,
 }) {
   return (
     <div
       className="
         relative
-        h-[calc(100dvh-68px)]
+        h-[100dvh]
         min-h-[650px]
         overflow-hidden
         bg-[#07111f]
@@ -999,6 +1000,7 @@ function CountrySelectionLanding({
       "
     >
 
+      {onBackHome&&<button type="button" onClick={onBackHome} className="absolute left-4 top-4 z-50 rounded-full bg-white/95 px-4 py-2 text-sm font-bold text-slate-700" aria-label="ホームに戻る">← ホーム</button>}
       <style>
         {`
           @keyframes tp-world-drift {
@@ -1465,7 +1467,7 @@ lg:px-6
    EXPLORE WORLD
 ========================================================= */
 
-export default function ExploreWorld() {
+export default function ExploreWorld({onBackHome}={}) {
   const [
     activeCountry,
     setActiveCountry,
@@ -1821,7 +1823,7 @@ if (
   !activeMode
 ) {
   return (
-    <CountrySelectionLanding
+    <CountrySelectionLanding onBackHome={onBackHome}
       onChooseMode={
         chooseMode
       }
@@ -1836,7 +1838,7 @@ if (
   <div
     className="
       relative
-      h-[calc(100dvh-68px)]
+      h-[100dvh]
       min-h-[620px]
       overflow-hidden
       bg-[#dff4ff]

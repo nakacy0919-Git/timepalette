@@ -1,3 +1,4 @@
+import HomeToolsButton from '../navigation/HomeToolsButton';
 import {
   ArrowRight,
   Compass,
@@ -33,6 +34,7 @@ import {
 
 export default function WorldAdventureHome({
   onExploreWorld,
+  onOpenTool,
 }) {
   
   const liveCountries =
@@ -110,7 +112,7 @@ export default function WorldAdventureHome({
     <div
       className="
         relative
-        h-[calc(100dvh-68px)]
+        h-[100dvh]
         min-h-[650px]
         overflow-hidden
         bg-slate-950
@@ -118,6 +120,7 @@ export default function WorldAdventureHome({
       "
     >
 
+      <HomeToolsButton onSelectTool={onOpenTool}/>
       {/* =====================================================
           BACKGROUND
       ====================================================== */}
