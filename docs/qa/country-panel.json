@@ -1,6 +1,11 @@
 {
-  "generatedAt": "2026-10-27T23:10:51.279Z",
+  "generatedAt": "2026-10-27T23:34:09.209Z",
   "source": "Mock published API responses; not a live publication check",
+  "directGeographyLaunch": {
+    "aGroup": true,
+    "rwanda": true,
+    "noIntermediateStart": true
+  },
   "categories": 6,
   "categoryPasses": {
     "viewports": 3,

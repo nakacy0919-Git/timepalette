@@ -53,6 +53,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
   const adventureCount=id=>((id==='place'&&(geo||countryCode==='rw'))||(id==='time'&&countryCode==='rw'))?10:0;
   const pick=id=>{
     setActive(null);
+    if(id==='place'&&adventureCount(id)>0){setDomain(null);setAdventure('place');return;}
     setDomain(id);
   };
   return <section className="rounded-3xl bg-white p-4 shadow-sm md:p-6" data-testid="country-missions">
@@ -74,7 +75,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     })}</div>:<>
       <button type="button" onClick={()=>setDomain(null)} className="mb-4 rounded-full border px-4 py-2 font-bold">← 6つのカテゴリーへ</button>
       <h3 className="mb-3 text-xl font-black">{meta?.icon} {meta?.labelJa}</h3>
-      {adventureCount(domain)>0&&<button type="button" className="mb-5 rounded-2xl bg-blue-600 px-6 py-4 font-bold text-white" onClick={()=>setAdventure(domain)}>{domain==='place'?'地理':'時間・時差'}アドベンチャーを始める（10ミッション）</button>}
+      {domain!=='place'&&adventureCount(domain)>0&&<button type="button" className="mb-5 rounded-2xl bg-blue-600 px-6 py-4 font-bold text-white" onClick={()=>setAdventure(domain)}>{domain==='place'?'地理':'時間・時差'}アドベンチャーを始める（10ミッション）</button>}
       <>
         {loading?<p role="status">公開問題を読み込み中…</p>:error?<div role="alert">公開問題を取得できませんでした。<button className="ml-3 underline" onClick={retry}>再試行</button></div>:<p className="mb-4 text-sm text-slate-600">Mission Creatorから公開中：{missions.length}問{!missions.length?'。公開問題を準備中です。':''}</p>}
         {!!missions.length&&<div className="tp-mission-journey"><div><span>YOUR ADVENTURE</span><h4>{countryNameJa||countryNameEn}の発見を集めよう！</h4><p>気になるミッションを選んで、探検スタート。</p></div><div className="tp-journey-progress"><strong>{missions.filter(m=>completed.has(m.id)).length}<small> / {missions.length}</small></strong><span>ミッションクリア</span><progress aria-label="ミッションのクリア数" value={missions.filter(m=>completed.has(m.id)).length} max={missions.length}/></div></div>}

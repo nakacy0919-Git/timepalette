@@ -3,8 +3,9 @@ import {createServer} from 'vite';
 import {chromium} from 'playwright';
 import {geographyCountries,getGeographyPackage,geographyCandidates} from '../src/utils/geographyRegistry.js';
 const touch=process.env.QA_TOUCH==='1';
+const qaPort=Number(process.env.QA_PORT||4178);
 const activate=loc=>touch?loc.tap():loc.click();
-const server=await createServer({server:{host:'127.0.0.1',port:4178,strictPort:true}});await server.listen();
+const server=await createServer({server:{host:'127.0.0.1',port:qaPort,strictPort:true}});await server.listen();
 let browser;
 fs.mkdirSync('docs/qa/browser',{recursive:true});
 const report={generatedAt:new Date().toISOString(),inputMode:touch?'Touch emulation (Chromium); not physical Safari':'Mouse and keyboard',scope:'UI correct/incorrect and layout; live photos assessed separately',imageTransport:process.env.QA_CACHED_IMAGES?'QA network interception enabled':'Production same-origin Commons assets; no network interception',rows:[]};
@@ -31,13 +32,13 @@ for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
   }
   for(const country of selected){
     const p=getGeographyPackage(country.countryCode);
-    await page.goto(`http://127.0.0.1:4178/tests/geography-browser.html?country=${p.countryCode}`,{waitUntil:'domcontentloaded'});
+    await page.goto(`http://127.0.0.1:${qaPort}/tests/geography-browser.html?country=${p.countryCode}`,{waitUntil:'domcontentloaded'});
     for(let i=0;i<10;i++){
       if(process.env.QA_MISSIONS&&!process.env.QA_MISSIONS.split(',').includes(String(i+1)))continue;
       const row={country:p.countryCode,mission:i+1,viewport:`${viewport.width}x${viewport.height}`,interaction:'PENDING',layout:'PENDING',images:'PENDING'};
       try{
         await page.locator(`[data-mission="${i+1}"]`).click();
-        const root=page.getByTestId('geography-mission');await root.waitFor();
+        const root=page.getByTestId('geography-mission');await root.waitFor();if(await page.locator('.tp-geo-sidebar [data-mission]').count()!==10)throw Error('Missing Rwanda-style 10 mission navigation');row.rwandaShell='PASS';
         if([5,6,8].includes(i))await page.waitForFunction(()=>[...document.images].every(i=>i.complete),null,{timeout:8000}).catch(()=>{});
         const bounds=await root.evaluate(el=>{const r=el.getBoundingClientRect();const outside=[...el.querySelectorAll('button,svg,img')].filter(e=>{const b=e.getBoundingClientRect();return b.width&&b.height&&(b.bottom>innerHeight+1||b.top<0||b.right>innerWidth+1||b.left<0)}).map(e=>e.tagName+':'+(e.getAttribute('data-answer')||e.getAttribute('data-city')||e.textContent).slice(0,50));return {height:r.height,scrollHeight:el.scrollHeight,clientHeight:el.clientHeight,outside};});
         row.layout=bounds.outside.length||bounds.scrollHeight>bounds.clientHeight+2?'FAIL':'PASS';row.overflow=bounds;
@@ -58,7 +59,8 @@ for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
             });
             if(!point)throw Error('No visible touch target: '+sel);
             await page.touchscreen.tap(point.x,point.y);
-          }else if(tag==='g')await activate(loc.locator('circle[data-hit],circle').last());
+          }else if(tag==='g'&&await loc.getAttribute('data-continent'))await activate(loc.locator('rect'));
+          else if(tag==='g')await activate(loc.locator('circle[data-hit],circle').last());
           else await activate(loc);
         };
         const notClear=async()=>{if(await page.getByRole('dialog',{name:'Mission clear'}).count())throw Error('Incorrect action cleared mission');};
@@ -66,7 +68,7 @@ for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
         const wrongCity=p.cities.find(c=>c.id!==p.capitalId).id;
         const wrongCountry=geographyCandidates(p).find(c=>c.countryCode!==p.countryCode).countryCode;
         switch(i){
-          case 0:await click(`[data-country="${wrongCountry}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);break;
+          case 0:{const key=p.continent.replaceAll(' ','');const expected=key[0].toLowerCase()+key.slice(1);await click(`[data-continent="${expected==='asia'?'africa':'asia'}"]`);await notClear();await click(`[data-continent="${expected}"]`);await notClear();const wrong=await root.locator('path[data-country]').evaluateAll((els,code)=>els.filter(e=>e.dataset.country!==code).sort((a,b)=>{const x=a.getBBox(),y=b.getBBox();return y.width*y.height-x.width*x.height;})[0]?.dataset.country,p.countryCode);await click(`[data-country="${wrong}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);await notClear();await click(`[data-country="${p.neighbors[0].iso}"]`);await notClear();await click(`[data-country="${p.countryCode}"]`);break;}
           case 1:{const a=p.neighbors[0],b=p.neighbors[1];if(b){await click(`[data-card="${a.iso}"]`);await click(`[data-slot="${b.iso}"]`);await notClear();}else{await click(`[data-slot="${a.iso}"]`);await notClear();}for(const n of p.neighbors){await click(`[data-card="${n.iso}"]`);await click(`[data-slot="${n.iso}"]`);}break;}
           case 2:case 5:{const wrong=root.locator('[data-answer]').filter({hasNot:page.locator('never')});const id=await wrong.evaluateAll((els,code)=>els.find(e=>e.dataset.answer!==code)?.dataset.answer,p.countryCode);await click(`[data-answer="${id}"]`);await notClear();await click(`[data-answer="${p.countryCode}"]`);break;}
           case 3:await click(`[data-city="${wrongCity}"]`);await notClear();await click(`[data-city="${p.capitalId}"]`);break;
@@ -81,12 +83,12 @@ for(const viewport of [{width:1024,height:768},{width:820,height:1180}]){
         if(process.env.QA_CACHED_IMAGES&&row.images==='LOADED')row.images='LOCAL_COMMONS_RENDER_PASS';
         if(row.layout==='FAIL')await page.screenshot({path:`docs/qa/browser/${p.countryCode}-P${i+1}-${viewport.width}-layout.png`});
         await page.getByRole('button',{name:'一覧へ',exact:true}).click();
-      }catch(e){row.interaction='FAIL';row.error=e.message;await page.screenshot({path:`docs/qa/browser/${p.countryCode}-P${i+1}-${viewport.width}-failure.png`}).catch(()=>{});await page.goto(`http://127.0.0.1:4178/tests/geography-browser.html?country=${p.countryCode}`,{waitUntil:'domcontentloaded'});}
+      }catch(e){row.interaction='FAIL';row.error=e.message;await page.screenshot({path:`docs/qa/browser/${p.countryCode}-P${i+1}-${viewport.width}-failure.png`}).catch(()=>{});await page.goto(`http://127.0.0.1:${qaPort}/tests/geography-browser.html?country=${p.countryCode}`,{waitUntil:'domcontentloaded'});}
       row.browserErrors=[...errors];report.rows.push(row);
     }
     const beforeReplay=await page.evaluate(code=>JSON.parse(localStorage.getItem('timepalette-place-progress-v1:'+code)||'{}').completedMissionIds||[],p.countryCode);
     await page.locator('[data-mission="1"]').click();
-    await page.locator(`[data-country="${p.countryCode}"]`).first().press('Enter');
+    const continent=p.continent.replaceAll(' ','');await page.locator(`[data-continent="${continent[0].toLowerCase()+continent.slice(1)}"]`).press('Enter');await page.locator(`[data-country="${p.countryCode}"]`).first().press('Enter');await page.locator(`[data-country="${p.countryCode}"]`).first().press('Enter');
     await page.getByRole('dialog',{name:'Mission clear'}).waitFor();
     const afterReplay=await page.evaluate(code=>JSON.parse(localStorage.getItem('timepalette-place-progress-v1:'+code)||'{}').completedMissionIds||[],p.countryCode);
     report.rows.filter(r=>r.country===p.countryCode&&r.viewport===`${viewport.width}x${viewport.height}`).forEach(r=>r.replayDoesNotDuplicate=afterReplay.length===beforeReplay.length&&new Set(afterReplay).size===afterReplay.length);

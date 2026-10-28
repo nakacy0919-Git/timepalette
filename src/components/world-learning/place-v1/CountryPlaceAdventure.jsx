@@ -7,6 +7,7 @@ import {neighborDirection} from '../../../utils/geographyTopology.js';
 import {completeWorldMission} from '../../../utils/worldProgressStorage';
 import {getPlaceProgress,completePlaceMission} from '../../../utils/placeProgressStorage';
 import './countryPlaceAdventure.css';
+import {CONTINENTS} from './geographyContinents.js';
 
 const features=feature(atlas,atlas.objects.countries).features;
 const palette=['#e87932','#8b5cf6','#16a34a','#0891b2','#d946ef','#dc2626','#ca8a04','#2563eb','#64748b','#0d9488'];
@@ -27,30 +28,32 @@ function layoutCities(cities,projection,height=360){
   }
   return points;
 }
-function GeoMap({p,world=false,countries=[p],cities=[],onCountry,onCity,labels=true,numbered=false}){
+function GeoMap({p,world=false,countries=[p],cities=[],onCountry,onCity,labels=true,numbered=false,continentMode=false,onContinent,scope=null}){
   const portrait=useSyncExternalStore(subscribePortrait,portraitSnapshot,()=>false);
   const mapHeight=!world&&cities.length&&portrait?720:360;
   const [view,setView]=useState({x:0,y:0,w:720,h:360});
   const zoom=factor=>setView(v=>{const w=Math.max(90,Math.min(720,v.w*factor)),h=w/2;return {x:Math.max(0,Math.min(720-w,v.x+(v.w-w)/2)),y:Math.max(0,Math.min(360-h,v.y+(v.h-h)/2)),w,h};});
   const pan=(dx,dy)=>setView(v=>({...v,x:Math.max(0,Math.min(720-v.w,v.x+dx*v.w*.25)),y:Math.max(0,Math.min(360-v.h,v.y+dy*v.h*.25))}));
   const projection=useMemo(()=>{
+    if(scope)return geoMercator().rotate(scope==='oceania'?[-150,0]:[0,0]).fitExtent([[30,25],[690,335]],collection(features.filter(f=>CONTINENTS[scope].countries.has(f.properties.name))));
     if(world)return geoNaturalEarth1().fitExtent([[10,10],[710,345]],collection(features));
     if(countries.length===1)return geoMercator().fitExtent([[40,30],[680,mapHeight-40]],collection(countries.map(land)));
     // Context maps show the border region; full national silhouettes remain on the cards.
     const bounds=geoBounds(land(p)),dx=Math.max(5,(bounds[1][0]-bounds[0][0])*.6),dy=Math.max(4,(bounds[1][1]-bounds[0][1])*.6);
     return geoMercator().fitExtent([[40,30],[680,320]],{type:'MultiPoint',coordinates:[[Math.max(-179,bounds[0][0]-dx),Math.max(-75,bounds[0][1]-dy)],[Math.min(179,bounds[1][0]+dx),Math.min(75,bounds[1][1]+dy)]]});
-  },[world,countries,p,mapHeight]);
+  },[world,countries,p,mapHeight,scope]);
   const path=geoPath(projection);
-  const mapFeatures=world?features:features.filter(f=>countries.some(c=>sameCountry(f,c)));
+  const mapFeatures=scope?features.filter(f=>CONTINENTS[scope].countries.has(f.properties.name)):world?features:features.filter(f=>countries.some(c=>sameCountry(f,c)));
   const cityLayout=layoutCities(cities,projection,mapHeight);
-  const chooseCountry=(f)=>{const c=countries.find(c=>sameCountry(f,c));onCountry?.(c?.countryCode||c?.iso||f.properties.name);};
-  return <svg className="tp-geo-map" viewBox={world?`${view.x} ${view.y} ${view.w} ${view.h}`:`0 0 720 ${mapHeight}`} aria-label={world?'世界地図':'国・都市の地図'}>
+  const chooseCountry=(f)=>{if(continentMode){const key=Object.keys(CONTINENTS).find(k=>CONTINENTS[k].countries.has(f.properties.name));if(key)onContinent?.(key);return;}const c=countries.find(c=>sameCountry(f,c));onCountry?.(c?.countryCode||c?.iso||f.properties.name);};
+  return <div className="tp-geo-map-wrap"><svg className="tp-geo-map" viewBox={world?`${view.x} ${view.y} ${view.w} ${view.h}`:`0 0 720 ${mapHeight}`} aria-label={world?'世界地図':'国・都市の地図'}>
     <rect width="720" height={mapHeight} rx="16" fill="#e0f2fe"/>
     <defs><clipPath id={`geo-clip-${p.countryCode}`}><rect x="0" y="0" width="720" height={mapHeight} rx="16"/></clipPath></defs>
     <g clipPath={`url(#geo-clip-${p.countryCode})`}>
-    {mapFeatures.map(f=><path key={(f.id||'')+'-'+f.properties.name} d={path(f)} fill={world?'#cbd5e1':countries.findIndex(c=>sameCountry(f,c))===0?'#fef3c7':palette[(countries.findIndex(c=>sameCountry(f,c))-1+10)%10]} stroke="#fff" strokeWidth={world?.6:1.2} role={onCountry?'button':undefined} tabIndex={onCountry?0:undefined} aria-label={onCountry?f.properties.name:undefined} data-country={countries.find(c=>sameCountry(f,c))?.countryCode||f.properties.name} onClick={()=>chooseCountry(f)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();chooseCountry(f);}}}/>)}
+    {mapFeatures.map(f=><path key={(f.id||'')+'-'+f.properties.name} d={path(f)} fill={continentMode?(Object.values(CONTINENTS).find(c=>c.countries.has(f.properties.name))?.color||'#dbe4ed'):world?'#cbd5e1':countries.findIndex(c=>sameCountry(f,c))===0?'#fef3c7':palette[(countries.findIndex(c=>sameCountry(f,c))-1+10)%10]} stroke="#fff" strokeWidth={world?.6:1.2} role={onCountry||continentMode?'button':undefined} tabIndex={onCountry||continentMode?0:undefined} aria-label={onCountry?f.properties.name:undefined} data-country={countries.find(c=>sameCountry(f,c))?.countryCode||countries.find(c=>sameCountry(f,c))?.iso||f.properties.name} onClick={()=>chooseCountry(f)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();chooseCountry(f);}}}/>)}
     </g>
-    {onCountry&&countries.map(c=>{const f=land(c);if(!f)return null;const b=geoBounds(f),screen=path.bounds(f),small=Math.abs(b[1][0]-b[0][0])<2||(world&&(screen[1][0]-screen[0][0]<20||screen[1][1]-screen[0][1]<12));const xy=projection(c.center);return small&&<g key={c.iso} transform={`translate(${xy})`} role="button" tabIndex="0" aria-label={c.nameEn||c.name} data-country={c.countryCode||c.iso} onClick={()=>onCountry(c.countryCode||c.iso)} onKeyDown={e=>{if(e.key==='Enter')onCountry(c.countryCode||c.iso);}}><circle r="11" fill="#fbbf24" stroke="#0f172a"/><text x="14" y="4" fontSize="12">●</text></g>;})}
+    {continentMode&&Object.entries(CONTINENTS).map(([key,c])=>{const xy=projection(c.labelPosition);return <g key={key} transform={`translate(${xy})`} role="button" tabIndex="0" aria-label={c.ja} data-continent={key} onClick={()=>onContinent(key)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onContinent(key);}}}><rect x="-43" y="-15" width="86" height="30" rx="15" fill="#334155"/><text textAnchor="middle" y="4" fontSize="11" fontWeight="bold" fill="white" pointerEvents="none">{c.ja}</text></g>;})}
+    {onCountry&&countries.filter(c=>!scope||CONTINENTS[scope].countries.has(c.atlasName)).map(c=>{const f=land(c);if(!f)return null;const b=geoBounds(f),screen=path.bounds(f),small=Math.abs(b[1][0]-b[0][0])<2||(world&&(screen[1][0]-screen[0][0]<20||screen[1][1]-screen[0][1]<12));const xy=projection(c.center);return small&&<g key={c.iso} transform={`translate(${xy})`} role="button" tabIndex="0" aria-label={c.nameEn||c.name} data-country={c.countryCode||c.iso} onClick={()=>onCountry(c.countryCode||c.iso)} onKeyDown={e=>{if(e.key==='Enter')onCountry(c.countryCode||c.iso);}}><circle r="11" fill="#fbbf24" stroke="#0f172a"/><text x="14" y="4" fontSize="12">●</text></g>;})}
     {labels&&cityLayout.map(({city:c,x,y},i)=><text key={'label-'+c.id} x={x+(x>550?-25:25)} y={y-12} textAnchor={x>550?'end':'start'} fontSize="13" fontWeight="bold" paintOrder="stroke" stroke="white" strokeWidth="4" fill="#0f172a" onClick={()=>onCity?.(c.id)}>{numbered?i+1:c.name}</text>)}
     {cityLayout.map(({city:c,actual,x,y},i)=><g key={c.id} transform={`translate(${x},${y})`} data-city={c.id} onClick={()=>onCity?.(c.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onCity?.(c.id);}}}>
       <line x1={actual[0]-x} y1={actual[1]-y} x2="0" y2="0" stroke="#0f172a" strokeWidth="1" pointerEvents="none"/>
@@ -58,15 +61,12 @@ function GeoMap({p,world=false,countries=[p],cities=[],onCountry,onCity,labels=t
       <circle data-hit="true" role="button" tabIndex="0" aria-label={c.name} r="22" fill="#ffffff" fillOpacity=".85" stroke="#0f172a" strokeWidth="1.5"/>
       <text textAnchor="middle" y="5" fontSize="15" fontWeight="bold" pointerEvents="none">{i+1}</text>
     </g>)}
-    {world&&<foreignObject style={{pointerEvents:'none'}} x={view.x+view.w/720*10} y={view.y+view.w/720*8} width={view.w/720*400} height={view.w/720*60}>
-      <div className="tp-geo-map-controls" style={{pointerEvents:'auto',transform:`scale(${view.w/720})`,transformOrigin:'top left',width:380}}>
+  </svg>{world&&<div className="tp-geo-map-controls">
         <button type="button" aria-label="地図を拡大" onClick={()=>zoom(.5)}>＋</button><button type="button" aria-label="地図を縮小" onClick={()=>zoom(2)}>−</button>
         <button type="button" aria-label="地図を北へ移動" onClick={()=>pan(0,-1)}>↑</button><button type="button" aria-label="地図を南へ移動" onClick={()=>pan(0,1)}>↓</button>
         <button type="button" aria-label="地図を西へ移動" onClick={()=>pan(-1,0)}>←</button><button type="button" aria-label="地図を東へ移動" onClick={()=>pan(1,0)}>→</button>
-        <button type="button" aria-label="地図全体を表示" onClick={()=>setView({x:0,y:0,w:720,h:360})}>全体</button>
-      </div>
-    </foreignObject>}
-  </svg>;
+        <button type="button" aria-label="地図全体を表示" onClick={()=>setView({x:0,y:0,w:720,h:360})}>↺</button>
+      </div>}</div>;
 }
 function Photo({photo,small=false,onStatus}){
   const [failed,setFailed]=useState(false);
@@ -81,20 +81,26 @@ const support={
  highSchoolStandard:'場所ごとの違いと、資料から言える範囲を意識しよう。',
  highSchoolAdvanced:'地理的な接続と資料の限界を検討し、判断の根拠を説明してみよう。',
 };
+const missionIcons=['🌍','🧩','🗺️','📍','🏙️','📸','🧑‍🌾','🚚','🔎','🔑'];
+const learningLevels=[['elementary','小学生'],['juniorHigh','中学生'],['highSchoolStandard','高校生'],['highSchoolAdvanced','Challenge']];
 export default function CountryPlaceAdventure({countryCode,initialLevel='elementary',onProgressChange}){
   const p=getGeographyPackage(countryCode);
-  const [index,setIndex]=useState(null),[done,setDone]=useState(()=>getPlaceProgress(countryCode).completedMissionIds);
+  const [index,setIndex]=useState(0),[run,setRun]=useState(0),[level,setLevel]=useState(initialLevel),[done,setDone]=useState(()=>getPlaceProgress(countryCode).completedMissionIds);
   if(!p)return <p>この国の地理アドベンチャーは準備中です。</p>;
-  return <div className="tp-geo-adventure">
-    {index==null?<>
-      <header className="tp-geo-home-header"><span>🌍 PLACE & GEOGRAPHY</span><h1>{p.nameJa} 地理アドベンチャー</h1><p>{p.nameEn} · 地図・写真・ルートを探る10のミッション</p><strong>{p.missions.filter(m=>done.includes(m.id)).length} / 10 CLEAR</strong></header>
-      {!p.qa.releaseReady&&<p className="tp-geo-preview">制作・検証中：写真・地理・ルートの内容確認は未完了です。</p>}
-      <div className="tp-geo-mission-grid">{p.missions.map((m,i)=><button type="button" key={m.id} data-mission={i+1} onClick={()=>setIndex(i)}><span>P{String(i+1).padStart(2,'0')} {done.includes(m.id)?'✓':''}</span><h2>{m.title}</h2><p>{['世界から位置を絞る','国境と方角を読む','輪郭を比べる','首都の場所を確かめる','都市の位置をつなぐ','景観の手がかりを探す','写真が示す事実を読む','港と海域のつながりを考える','事実と推測を分ける','3つの鍵で総仕上げ'][i]}</p></button>)}</div>
-    </>:<Mission key={p.missions[index].id} p={p} index={index} level={initialLevel} wasDone={done.includes(p.missions[index].id)} onBack={()=>setIndex(null)} onNext={()=>setIndex(index<9?index+1:null)} onComplete={()=>{const result=completePlaceMission(p.countryCode,p.missions[index].id);setDone(result.progress.completedMissionIds);completeWorldMission(p.countryCode,p.missions[index].id);onProgressChange?.();}}/>}
+  const completed=p.missions.filter(m=>done.includes(m.id)).length;
+  const go=i=>{setIndex(i);setRun(n=>n+1);};
+  return <div className="tp-geo-adventure tp-geo-rwanda-layout">
+    <header className="tp-geo-adventure-header"><div className="tp-geo-brand-icon" aria-hidden="true">🌍</div><div><small>TIMEPALETTE · WORLD ADVENTURE</small><h1>{p.nameEn} · Place & Geography Adventure</h1></div><label><span className="sr-only">学習レベル</span><select aria-label="学習レベル" value={level} onChange={e=>setLevel(e.target.value)}>{learningLevels.map(([id,label])=><option key={id} value={id}>{label}</option>)}</select></label></header>
+    <div className="tp-geo-adventure-body"><aside className="tp-geo-sidebar"><div className="tp-geo-progress"><small>YOUR PROGRESS</small><div><strong>{completed}<small>/10</small></strong><strong>{completed*100}<small> WP</small></strong></div><span>missions · {p.nameJa}</span></div><nav aria-label="地理の10ミッション">{p.missions.map((m,i)=><button key={m.id} type="button" data-mission={i+1} aria-current={index===i?'step':undefined} onClick={()=>go(i)}><span className="tp-geo-nav-icon" aria-hidden="true">{done.includes(m.id)?'✓':missionIcons[i]}</span><span><small>P{String(i+1).padStart(2,'0')}</small><span>{m.title}</span></span></button>)}</nav></aside>
+    <div className="tp-geo-workspace">{!p.qa.releaseReady&&<p className="tp-geo-preview">制作・検証中：内容確認は未完了です。</p>}
+    <Mission key={p.missions[index].id+'-'+run} p={p} index={index} level={level} wasDone={done.includes(p.missions[index].id)} onBack={()=>go(index)} onNext={()=>go(index<9?index+1:0)} onComplete={()=>{const result=completePlaceMission(p.countryCode,p.missions[index].id);setDone(result.progress.completedMissionIds);completeWorldMission(p.countryCode,p.missions[index].id);onProgressChange?.();}}/>
+    </div></div>
   </div>;
 }
 function Mission({p,index,level,wasDone,onBack,onNext,onComplete}){
   const [completedOnEntry]=useState(wasDone);
+  const [locatorStage,setLocatorStage]=useState(0);
+  const continentKey=Object.keys(CONTINENTS).find(k=>k.toLowerCase()===p.continent.replaceAll(' ','').toLowerCase());
   const [error,setError]=useState(''),[cleared,setCleared]=useState(false),[selected,setSelected]=useState(null),[answer,setAnswer]=useState({}),[step,setStep]=useState(0),[imageState,setImageState]=useState({});
   const candidates=geographyCandidates(p);
   const mission=p.missions[index];
@@ -105,7 +111,7 @@ function Mission({p,index,level,wasDone,onBack,onNext,onComplete}){
   const choice=(id,label,action)=> <button key={id} type="button" data-answer={id} className="tp-geo-answer" onClick={action||(()=>verify(id))}>{label}</button>;
   const capital=p.cities.find(c=>c.id===p.capitalId);
   const instructions=[
-    `${p.continent}にある${p.nameJa}を世界地図で見つけよう。小さい国は丸いマーカーでも選べます。`,
+    `${CONTINENTS[continentKey]?.ja||p.continent}にある${p.nameJa}を世界地図で見つけよう。小さい国は丸いマーカーでも選べます。`,
     p.neighborKind==='land-border'?'色つきの国・地域を地図で確認し、カードを同じ色の欄へ置こう。陸上の国境を接する相手を扱います。':'陸上の国境を接する国はありません。海を隔てた周辺の国を、地図と同じ色の欄へ置こう。',
     `${p.nameJa}の輪郭を確認してから、同じ国の形を選ぼう。各図の縮尺は異なります。`,
     `${p.nameJa}の首都${capital.name}を地図で見つけよう。`,
@@ -120,10 +126,10 @@ function Mission({p,index,level,wasDone,onBack,onNext,onComplete}){
   const finalSelect=(key,value,expected)=>{if(value!==expected){setError('その鍵はまだ開きません。地図・首都・資料を確認しよう。');return;}setError('');const a=finalAnswer(key,value);if(key==='fact')verify(a);else setStep(step+1);};
   const discovery=index===9?`${p.nameJa}の首都は${capital.name}。${p.factJa}。`:index===1?`${p.neighborKind==='land-border'?'陸上の国境で接する相手':'海を隔てた周辺の国・地域'}：${p.neighbors.map(n=>n.name).join('、')}。${p.neighborNote}`:index===2?'各輪郭図の縮尺は異なります。形の比較だけでは国土面積の大小は分かりません。':index===7?`${p.route.via}の${p.route.port}港から${p.route.sea}につながる模式ルートです。${p.route.noteJa}`:index===6||index===8?'写真は一つの場所・日時を切り取った資料です。人口や年間の気候、国全体の様子を判断するには、他の地域や統計の資料も必要です。':index===5?`${p.photo.captionJa}。${p.photo.descriptionJa}`:p.factJa;
   return <div className="tp-geo-screen" data-testid="geography-mission" data-mission-type={mission.type}>
-    <header className="tp-geo-top"><button onClick={onBack} type="button">← 一覧</button><span>{p.nameJa} · P{String(index+1).padStart(2,'0')} / 10</span><span>{completedOnEntry?'復習':'100 WP'}</span></header>
+    <header className="tp-geo-top"><span>YOUR MISSION · {p.nameJa} · P{String(index+1).padStart(2,'0')} / 10</span><span>{completedOnEntry?'復習':'100 WP'}</span></header>
     <div className="tp-geo-question"><h1>{mission.title}</h1><p>{instructions[index]}</p><small>{support[level]||support.elementary}</small></div>
     <main className="tp-geo-main">
-      {index===0&&<GeoMap p={p} world countries={candidates} onCountry={verify}/>}
+      {index===0&&<div className="tp-geo-locator"><div className="tp-geo-stage"><strong>{['CONTINENT QUEST','COUNTRY QUEST','NEIGHBOR QUEST'][locatorStage]} · STAGE {locatorStage+1} / 3</strong><span>{['世界地図から、大陸を選ぼう。','大陸の地図から、国を見つけよう。','周辺の国との位置関係を確認して、もう一度選ぼう。'][locatorStage]}</span><span className="tp-geo-stage-dots" aria-hidden="true">{[0,1,2].map(i=><i key={i} className={locatorStage>=i?'active':''}/>)}</span></div>{locatorStage===0?<GeoMap key="continent" p={p} world continentMode onContinent={key=>{if(key===continentKey){setError('');setLocatorStage(1);}else setError('まだ別の大陸です。位置の手がかりを確かめよう。');}}/>:locatorStage===1?<GeoMap key="country" p={p} world scope={continentKey} countries={candidates} onCountry={id=>{if(id===p.countryCode){setError('');setLocatorStage(2);}else setError('もう一度、国の位置を確かめよう。');}}/>:<GeoMap key="neighbors" p={p} countries={[p,...p.neighbors]} onCountry={verify}/>}</div>}
       {index===1&&<div className="tp-geo-split"><div><GeoMap p={p} countries={[p,...p.neighbors]}/><p className="tp-geo-note">{(p.neighborKind==='land-border'?'拡大図。方角は代表点から共有国境への目安。':'拡大図。方角は国の代表点同士の目安。')+p.neighborNote}</p></div><div className="tp-geo-puzzle"><div className="tp-geo-neighbor-cards">{p.neighbors.map(n=><button key={n.iso} type="button" aria-pressed={selected===n.iso} data-card={n.iso} onClick={()=>setSelected(n.iso)}>{n.name}<CountryShape country={n}/></button>)}</div><div className="tp-geo-slots">{p.neighbors.map((n,i)=><button key={n.iso} type="button" data-slot={n.iso} style={{borderColor:palette[i]}} onClick={()=>{if(!selected){setError('先に国・地域カードを選ぼう。');return;}if(selected!==n.iso){setError('色と形、位置関係を確認しよう。');return;}setError('');const a={...answer,[n.iso]:selected};setAnswer(a);setSelected(null);if(Object.keys(a).length===p.neighbors.length)verify(a);}}><span style={{background:palette[i]}}>{i+1}</span> {neighborDirection(p,n)?neighborDirection(p,n)+(p.neighborKind==='land-border'?'の国境':'側'):'短い国境'}：{answer[n.iso]?n.name:'カードを置く'}</button>)}</div></div></div>}
       {index===2&&<div className="tp-geo-split"><div><p className="tp-geo-note">参照：{p.nameJa}の国土</p><CountryShape country={p}/></div><div className="tp-geo-choice-grid">{candidates.map((c,i)=><button type="button" key={c.countryCode} data-answer={c.countryCode} aria-label={`形 ${i+1}`} onClick={()=>verify(c.countryCode)}><span>{i+1}</span><CountryShape country={c} label={`候補 ${i+1}`}/></button>)}</div></div>}
       {(index===3||index===4)&&<GeoMap p={p} cities={p.cities} labels={index===3||step===0&&level==='elementary'} onCity={id=>{if(index===3){verify(id);return;}if(id!==p.cities[step].id){setError('町の位置をもう一度確認しよう。');return;}setError('');const a={...answer,[id]:id};setAnswer(a);if(step===p.cities.length-1)verify(a);else setStep(step+1);}}/>}
