@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node --test tests/shared-language-data.test.mjs && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:language": "node --test tests/shared-language-data.test.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.27.0",
