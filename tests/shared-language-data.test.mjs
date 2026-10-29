@@ -14,8 +14,8 @@ const globStatement = "const countryModules = import.meta.glob('../data/countrie
 assert.ok(source.includes(globStatement), 'Unexpected glob declaration: update test adapter');
 const executable = source.replace(globStatement, 'const countryModules = providedModules;')
   .replace(/\bexport\s+(?=const|function)/g, '');
-const { getSharedExchangeCountryCodes, getSharedLanguagePackage, SHARED_EXCHANGE_MISSION_COUNT } =
-  new Function('providedModules', executable + '\nreturn {getSharedExchangeCountryCodes,getSharedLanguagePackage,SHARED_EXCHANGE_MISSION_COUNT};')(countryModules);
+const { getSharedExchangeCountryCodes, getSharedLanguagePackage, SHARED_EXCHANGE_MISSION_COUNT, getSpanishLanguagePackage, SPANISH_EXCHANGE_COUNTRY_CODES, isSpanishExchangeCountry } =
+  new Function('providedModules', executable + '\nreturn {getSharedExchangeCountryCodes,getSharedLanguagePackage,SHARED_EXCHANGE_MISSION_COUNT,getSpanishLanguagePackage,SPANISH_EXCHANGE_COUNTRY_CODES,isSpanishExchangeCountry};')(countryModules);
 
 test('all 197 source countries have exactly 10 playable, unique language missions', () => {
   const codes = getSharedExchangeCountryCodes();
@@ -50,4 +50,42 @@ test('profile personalization and country-specific partners are available', () =
   assert.match(al.missions[3].speech.steps[3].partnerPhrase,/Albania/);
   assert.match(getSharedLanguagePackage('rw').missions[3].speech.steps[3].partnerPhrase,/Rwanda/);
   assert.ok(al.missions.every(m => !JSON.stringify(m).includes('Can you hear me?')));
+});
+
+
+test('Spanish is an additional option for exactly 20 sovereign countries', () => {
+  assert.equal(SPANISH_EXCHANGE_COUNTRY_CODES.length,20);
+  assert.equal(new Set(SPANISH_EXCHANGE_COUNTRY_CODES).size,20);
+  for (const code of getSharedExchangeCountryCodes()) {
+    assert.equal(Boolean(getSpanishLanguagePackage(code)),isSpanishExchangeCountry(code),code);
+    assert.ok(getSharedLanguagePackage(code),code+' still supports English');
+  }
+  for (const code of ['br','us','jp','rw','pr']) {
+    assert.equal(getSpanishLanguagePackage(code),null);
+  }
+});
+
+test('Spanish has 200 cumulative, independent missions and the proper recognition locale', () => {
+  const allSpanishIds=new Set();
+  for (const iso of SPANISH_EXCHANGE_COUNTRY_CODES) {
+    const spanish=getSpanishLanguagePackage(iso);
+    const english=getSharedLanguagePackage(iso);
+    assert.ok(spanish,iso);
+    assert.equal(spanish.missions.length,10,iso);
+    for (const [i,m] of spanish.missions.entries()) {
+      assert.equal(m.buildStatus,'ready',iso);
+      assert.equal(m.speech.steps.length,i+1,iso);
+      assert.match(m.speech.languageCode,/^es-(ES|MX)$/);
+      assert.ok(m.speech.steps.every(t=>t.phrase&&t.translation&&t.kana&&t.partnerPhrase));
+      assert.ok(m.id.startsWith(iso+'-language-es-'));
+      assert.ok(!english.missions.some(e=>e.id===m.id));
+      assert.ok(!allSpanishIds.has(m.id));
+      allSpanishIds.add(m.id);
+    }
+    assert.equal(spanish.missions.at(-1).finalGoal,true);
+    const fields=new Set(spanish.missions[1].speech.fields.map(f=>f.id));
+    for (const field of ['name','homeCountry','city','school','hobby','food']) assert.ok(fields.has(field));
+    assert.ok(spanish.missions[3].speech.steps[3].partnerPhrase.includes('Soy de'));
+  }
+  assert.equal(allSpanishIds.size,200);
 });

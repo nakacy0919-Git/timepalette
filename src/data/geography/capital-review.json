@@ -1,0 +1,103 @@
+{
+  "af": {
+    "nameEn": "Kabul",
+    "nameJa": "カブール",
+    "sourceUrl": "https://www.mofa.go.jp/mofaj/area/afghanistan/data.html",
+    "sourceSection": "一般事情 / 3 首都",
+    "sourceUpdatedAt": "2021-05-14",
+    "checkedAt": "2026-10-27",
+    "scope": "capital-name-only; does not verify city coordinates or complete P04/P10 content",
+    "note": "資料更新日は2021年。首都名だけを照合し、政体・国旗・現在の通行条件を確認した資料として扱わない。"
+  },
+  "al": {
+    "nameEn": "Tirana",
+    "nameJa": "ティラナ",
+    "sourceUrl": "https://www.mofa.go.jp/mofaj/area/albania/data.html",
+    "sourceSection": "一般事情 / 3 首都",
+    "sourceUpdatedAt": "2026-06-10",
+    "checkedAt": "2026-10-27",
+    "scope": "capital-name-only; does not verify city coordinates or complete P04/P10 content",
+    "note": "外務省はティラナ県と表記。都市ティラナとの名称照合に限り、行政区域や人口は教材に転記しない。"
+  },
+  "dz": {
+    "nameEn": "Algiers",
+    "nameJa": "アルジェ",
+    "sourceUrl": "https://www.mofa.go.jp/mofaj/area/algeria/data.html",
+    "sourceSection": "一般事情 / 3 首都",
+    "sourceUpdatedAt": "2025-09-16",
+    "checkedAt": "2026-10-27",
+    "scope": "capital-name-only; does not verify city coordinates or complete P04/P10 content"
+  },
+  "ad": {
+    "nameEn": "Andorra la Vella",
+    "nameJa": "アンドラ・ラ・ベリャ",
+    "sourceUrl": "https://www.mofa.go.jp/mofaj/area/andorra/data.html",
+    "sourceSection": "一般事情 / 3 首都",
+    "sourceUpdatedAt": "2026-05-12",
+    "checkedAt": "2026-10-27",
+    "scope": "capital-name-only; does not verify city coordinates or complete P04/P10 content"
+  },
+  "ao": {
+    "nameEn": "Luanda",
+    "nameJa": "ルアンダ",
+    "sourceUrl": "https://www.mofa.go.jp/mofaj/area/angola/data.html",
+    "sourceSection": "一般事情 / 3 首都",
+    "sourceUpdatedAt": "2026-06-03",
+    "checkedAt": "2026-10-27",
+    "scope": "capital-name-only; does not verify city coordinates or complete P04/P10 content"
+  },
+  "ag": {
+    "nameEn": "St. John's",
+    "nameJa": "セントジョンズ",
+    "sourceUrl": "https://www.mofa.go.jp/mofaj/area/antigua/data.html",
+    "sourceSection": "一般事情 / 3 首都",
+    "sourceUpdatedAt": "2025-05-27",
+    "checkedAt": "2026-10-27",
+    "scope": "capital-name-only; does not verify city coordinates or complete P04/P10 content"
+  },
+  "ar": {
+    "nameEn": "Buenos Aires",
+    "nameJa": "ブエノスアイレス",
+    "sourceUrl": "https://www.mofa.go.jp/mofaj/area/argentine/data.html",
+    "sourceSection": "一般事情 / 3 首都",
+    "sourceUpdatedAt": "2026-04-23",
+    "checkedAt": "2026-10-27",
+    "scope": "capital-name-only; does not verify city coordinates or complete P04/P10 content"
+  },
+  "am": {
+    "nameEn": "Yerevan",
+    "nameJa": "エレバン",
+    "sourceUrl": "https://www.mofa.go.jp/mofaj/area/armenia/data.html",
+    "sourceSection": "一般事情 / 3 首都",
+    "sourceUpdatedAt": "2026-05-26",
+    "checkedAt": "2026-10-27",
+    "scope": "capital-name-only; does not verify city coordinates or complete P04/P10 content"
+  },
+  "au": {
+    "nameEn": "Canberra",
+    "nameJa": "キャンベラ",
+    "sourceUrl": "https://www.mofa.go.jp/mofaj/area/australia/data.html",
+    "sourceSection": "一般事情 / 3 首都",
+    "sourceUpdatedAt": "2026-08-19",
+    "checkedAt": "2026-10-27",
+    "scope": "capital-name-only; does not verify city coordinates or complete P04/P10 content"
+  },
+  "at": {
+    "nameEn": "Vienna",
+    "nameJa": "ウィーン",
+    "sourceUrl": "https://www.mofa.go.jp/mofaj/area/austria/data.html",
+    "sourceSection": "一般事情 / 3 首都",
+    "sourceUpdatedAt": "2026-04-01",
+    "checkedAt": "2026-10-27",
+    "scope": "capital-name-only; does not verify city coordinates or complete P04/P10 content"
+  },
+  "az": {
+    "nameEn": "Baku",
+    "nameJa": "バクー",
+    "sourceUrl": "https://www.mofa.go.jp/mofaj/area/azerbaijan/data.html",
+    "sourceSection": "一般事情 / 3 首都",
+    "sourceUpdatedAt": "2026-05-14",
+    "checkedAt": "2026-10-27",
+    "scope": "capital-name-only; does not verify city coordinates or complete P04/P10 content"
+  }
+}

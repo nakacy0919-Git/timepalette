@@ -248,6 +248,11 @@ function scheduleSound(
       break;
 
 
+    case 'wrong':
+      createTone(context,{frequency:349.23,endFrequency:329.63,duration:0.2,gain:0.018,type:'sine'});
+      createTone(context,{frequency:293.66,endFrequency:293.66,start:0.14,duration:0.24,gain:0.014,type:'sine'});
+      break;
+
     case 'success':
 
       /*

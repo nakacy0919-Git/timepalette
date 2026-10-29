@@ -1,0 +1,320 @@
+{
+  "generatedAt": "2026-10-27T13:51:09.778Z",
+  "scope": "UI correct/incorrect and layout; live photos assessed separately",
+  "imageTransport": "Remote Commons",
+  "rows": [
+    {
+      "country": "ad",
+      "mission": 1,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "ad",
+      "mission": 4,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "ad",
+      "mission": 10,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "ag",
+      "mission": 1,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "ag",
+      "mission": 4,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "ag",
+      "mission": 10,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 1,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 4,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 10,
+      "viewport": "1024x768",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 736,
+        "scrollHeight": 736,
+        "clientHeight": 736,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "ad",
+      "mission": 1,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "ad",
+      "mission": 4,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "ad",
+      "mission": 10,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "ag",
+      "mission": 1,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "ag",
+      "mission": 4,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "ag",
+      "mission": 10,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 1,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "mapNavigation": "PASS",
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 4,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    },
+    {
+      "country": "au",
+      "mission": 10,
+      "viewport": "820x1180",
+      "interaction": "PASS",
+      "layout": "PASS",
+      "images": "NONE",
+      "overflow": {
+        "height": 1148,
+        "scrollHeight": 1148,
+        "clientHeight": 1148,
+        "outside": []
+      },
+      "browserErrors": [],
+      "replayDoesNotDuplicate": true,
+      "progressSaved": true
+    }
+  ],
+  "finishedAt": "2026-10-27T13:51:28.997Z"
+}

@@ -33,6 +33,8 @@ import MissionSuccessCelebration from './MissionSuccessCelebration';
 import GlobalChallengeMissionGame from './GlobalChallengeMissionGame';
 import SourceQuestMissionGame from './SourceQuestMissionGame';
 import MissionMaterialRenderer from './MissionMaterialRenderer';
+import {CreatorVideoEmbed,CreatorVideoReflectionGame} from './CreatorVideoMission.jsx';
+import CreatorVoicePractice from './CreatorVoicePractice.jsx';
 
 const TIME_MISSION_TYPES =
   new Set([
@@ -833,6 +835,7 @@ const correct =
 
   const renderGame =
     () => {
+      if(mission.type==='creator-video-reflection')return <CreatorVideoReflectionGame key={mission.id} mission={mission} onComplete={handleMissionComplete}/>;
       if (
         sourceQuestPlayable
       ) {
@@ -1085,7 +1088,7 @@ const correct =
 
 
       return (
-        <div>
+        <div className={isPublishedPhotoFour ? "tp-photo-four-game" : undefined}>
 
           {isListening && (
             <div
@@ -1140,7 +1143,7 @@ const correct =
                   grid-cols-1
                   gap-2
                   sm:grid-cols-2
-                  md:gap-3
+                  md:gap-3 tp-photo-four-grid
                 `
                 : hasVisualChoice
                 ? `
@@ -1269,7 +1272,7 @@ const correct =
                       text-left
                       transition-all
                       duration-200
-                      ${isPublishedPhotoFour ? 'min-h-0 p-1.5 md:p-1.5' : 'min-h-[132px] p-5 md:min-h-[154px] md:p-6'}
+                      ${isPublishedPhotoFour ? 'min-h-0 p-1 md:p-1' : 'min-h-[132px] p-5 md:min-h-[154px] md:p-6'}
 
                       ${choiceClass}
                     `}
@@ -1316,11 +1319,11 @@ const correct =
 
                         {choice.image && (
                           <div
-                            className={`
-                              aspect-[16/9] w-full overflow-hidden bg-slate-100
+                            className={`${isPublishedPhotoFour ? 'tp-photo-four-frame ' : ''}
+                              w-full overflow-hidden bg-slate-100
                               ${isPublishedPhotoFour
-                                ? 'mb-0 max-h-[24dvh] rounded-[14px]'
-                                : 'mb-4 rounded-[20px]'}
+                                ? 'aspect-[4/3] mb-0 max-h-[28dvh] rounded-[14px]'
+                                : 'aspect-[16/9] mb-4 rounded-[20px]'}
                             `}
                           >
                             <img
@@ -1565,7 +1568,36 @@ const correct =
         </style>
 
 
-        <MissionSuccessCelebration
+                {isPublishedPhotoFour && (
+          <style>{`
+            /* Only teacher-published, four-photo missions. */
+            @media (min-width: 1024px) and (min-height: 650px) {
+              .tp-photo-four-stage { min-height: 100%; align-items: start; }
+              .tp-photo-four-main { display: flex; flex-direction: column; min-height: 0; }
+              .tp-photo-four-game { display: flex; flex: 0 0 auto; flex-direction: column; min-height: 0; }
+              .tp-photo-four-grid {
+                /* tp-photo-four-layout-v6: reserve space for header and answer bar */
+                flex: 0 0 auto;
+                min-height: 0;
+                height: min(520px, calc(100dvh - 300px));
+                grid-template-rows: repeat(2, minmax(0, 1fr));
+              }
+              .tp-photo-four-grid > button { min-height: 0; height: 100%; }
+              .tp-photo-four-grid > button > div { min-height: 0; }
+              .tp-photo-four-grid > button > div > div { min-height: 0; }
+              .tp-photo-four-frame {
+                width: 100%; height: 100%; max-height: none;
+                aspect-ratio: auto;
+              }
+              .tp-photo-four-frame img { object-fit: contain; }
+            }
+            @media (max-width: 1023px), (max-height: 649px) {
+              .tp-photo-four-frame { aspect-ratio: 16 / 9; max-height: 24dvh; }
+              .tp-photo-four-frame img { object-fit: contain; }
+            }
+          `}</style>
+        )}
+<MissionSuccessCelebration
           celebration={
             celebration
           }
@@ -1800,7 +1832,7 @@ const correct =
 
             <div
               className={isPublishedPhotoFour
-                ? 'mx-auto grid w-full max-w-[1380px] gap-3 p-2 sm:p-3 lg:grid-cols-[minmax(240px,280px)_minmax(0,1fr)] xl:grid-cols-[minmax(250px,300px)_minmax(0,1fr)]'
+                ? 'tp-photo-four-stage mx-auto grid w-full max-w-[1380px] gap-3 p-2 sm:p-3 lg:grid-cols-[minmax(240px,280px)_minmax(0,1fr)] xl:grid-cols-[minmax(250px,300px)_minmax(0,1fr)]'
                 : 'mx-auto grid w-full max-w-[1380px] gap-6 p-4 md:p-6 lg:grid-cols-[360px_minmax(0,1fr)] xl:grid-cols-[400px_minmax(0,1fr)]'}
             >
 
@@ -1948,7 +1980,7 @@ const correct =
 
               <main
                 className={isPublishedPhotoFour
-                  ? 'min-w-0 rounded-[22px] border border-slate-200 bg-white p-2 shadow-[0_14px_36px_rgba(15,23,42,0.07)] sm:p-3'
+                  ? 'tp-photo-four-main min-w-0 rounded-[22px] border border-slate-200 bg-white p-2 shadow-[0_14px_36px_rgba(15,23,42,0.07)] sm:p-3'
                   : 'min-w-0 rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_14px_36px_rgba(15,23,42,0.07)] md:p-7 xl:p-8'}
               >
 
@@ -2009,11 +2041,54 @@ const correct =
                 </div>
 
 
+                                {isCreatorMission && mission.author?.name && <details className="mb-3 rounded-xl bg-blue-50 p-3 text-sm text-slate-700">
+
+
+
+                                  <summary className="cursor-pointer font-bold text-blue-800">作成者：{mission.author.name}（詳細を見る）</summary>
+
+
+
+                                  <div className="mt-2 space-y-1">
+
+
+
+                                    {mission.author.school && <p>学校・団体：{mission.author.school}</p>}
+
+
+
+                                    {mission.author.region && <p>地域：{mission.author.region}</p>}
+
+
+
+                                    {mission.author.bio && <p className="whitespace-pre-wrap">{mission.author.bio}</p>}
+
+
+
+                                    {!mission.author.school&&!mission.author.region&&!mission.author.bio&&<p>プロフィール詳細は登録されていません。</p>}
+
+
+
+                                  </div>
+
+
+
+                                </details>}
+
+
+
+                                {mission.video && mission.type!=='creator-video-reflection' && <CreatorVideoEmbed key={mission.id} video={mission.video}/>}
+
+
+
                                 <MissionMaterialRenderer
                   mission={mission}
                   placement="beforeChallenge"
                   className="mb-6"
                 />
+
+                {isCreatorMission && mission.voice?.enabled &&
+                  <CreatorVoicePractice key={mission.id} mission={mission}/>}
 
                 {
                   renderGame()

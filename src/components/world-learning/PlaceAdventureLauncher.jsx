@@ -6,8 +6,8 @@ import {
   createPortal,
 } from 'react-dom';
 
-import PlaceAdventure
-  from './place-v1/PlaceAdventure';
+import PlaceAdventure from './place-v1/PlaceAdventure';
+import CountryPlaceAdventure from './place-v1/CountryPlaceAdventure';
 
 
 export default function PlaceAdventureLauncher({
@@ -26,6 +26,7 @@ export default function PlaceAdventureLauncher({
   }
 
 
+  const Adventure = countryCode === 'rw' ? PlaceAdventure : CountryPlaceAdventure;
   return createPortal(
     <div
       className="
@@ -70,7 +71,7 @@ export default function PlaceAdventureLauncher({
       </button>
 
 
-      <PlaceAdventure
+      <Adventure
         initialLevel={
           learningLevel
         }

@@ -8,18 +8,32 @@
     "build": "node --test tests/shared-language-data.test.mjs && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "test": "node --test tests/*.test.mjs && node tests/missionCreator-gas.test.cjs && node cloudflare/timepalette-mission-api/tests/integration.mjs && node cloudflare/timepalette-mission-api/tests/quick-pin.mjs",
+    "qa:geography": "node scripts/qa-place-geography.mjs",
+    "qa:images": "node scripts/qa-geography-images.mjs",
+    "qa:browser": "node scripts/qa-geography-browser.mjs",
+    "qa:release": "node scripts/qa-place-geography.mjs --release",
+    "qa:assets": "node scripts/qa-geography-assets.mjs",
+    "qa:release:a": "node scripts/qa-place-geography.mjs --group=A --release && node scripts/qa-geography-assets.mjs && node scripts/qa-geography-acceptance.mjs",
     "test:language": "node --test tests/shared-language-data.test.mjs"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "3.1142.0",
+    "d3-geo": "^3.1.1",
+    "jszip": "3.10.1",
     "lucide-react": "^1.27.0",
     "prop-types": "^15.8.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-simple-maps": "^3.0.0",
-    "world-atlas": "^2.0.2"
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2",
+    "d3-selection": "2.0.0",
+    "d3-zoom": "2.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
@@ -31,5 +45,8 @@
     "postcss": "^8.5.23",
     "tailwindcss": "^3.4.19",
     "vite": "^8.1.1"
+  },
+  "overrides": {
+    "d3-color": "3.1.0"
   }
 }

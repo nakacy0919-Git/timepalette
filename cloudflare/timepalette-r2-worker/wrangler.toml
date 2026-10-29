@@ -1,0 +1,15 @@
+name = "timepalette-r2-image-pilot"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "timepalette-public-webp"
+
+# TimePalette Mission Creator relational data. Not used by the current image Worker yet.
+[[d1_databases]]
+binding = "DB"
+database_name = "timepalette-mission-db"
+database_id = "69c01e7a-e51c-4128-85d3-d4da2e761d73"
+migrations_dir = "migrations"

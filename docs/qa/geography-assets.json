@@ -1,0 +1,176 @@
+{
+  "generatedAt": "2026-10-28T03:53:59.276Z",
+  "scope": "Delivered original Commons bytes and attribution; geographic content reviewed separately",
+  "images": 28,
+  "errors": 0,
+  "rows": [
+    {
+      "country": "af",
+      "publicPath": "/geography/photos/af.jpg",
+      "sha256": "df439968336d1f82e0f1fe764de176148dc44a103235bcaebe0886cf43e90877",
+      "issues": []
+    },
+    {
+      "country": "al",
+      "publicPath": "/geography/photos/al.jpg",
+      "sha256": "da262d35df92b37185380707bd1f997301fb8052639948fa2adcc2f046b05aa5",
+      "issues": []
+    },
+    {
+      "country": "dz",
+      "publicPath": "/geography/photos/dz.jpg",
+      "sha256": "4c428d9de9d93d20460f4bc01447e212ba8aae16f9c6334875520f8add0b5823",
+      "issues": []
+    },
+    {
+      "country": "ad",
+      "publicPath": "/geography/photos/ad.jpg",
+      "sha256": "b6907fb756d47915399dc153e8fa4074f51b1077410f615bfc15281bfe6c9ed5",
+      "issues": []
+    },
+    {
+      "country": "ao",
+      "publicPath": "/geography/photos/ao.jpg",
+      "sha256": "8da8636de6cdf1d308a0652d53b880aebf3afd8a021270085c72ddf1f837770e",
+      "issues": []
+    },
+    {
+      "country": "ag",
+      "publicPath": "/geography/photos/ag.jpg",
+      "sha256": "3c33e88892d5c22441a912966c5f6d82656d8a06e5b55663948ac78888b5c57c",
+      "issues": []
+    },
+    {
+      "country": "ar",
+      "publicPath": "/geography/photos/ar.jpg",
+      "sha256": "f50195f765add21970b6abf71d0a6a7dfedb24f72037fb71c006ec0ec4c82c07",
+      "issues": []
+    },
+    {
+      "country": "am",
+      "publicPath": "/geography/photos/am.jpg",
+      "sha256": "fa914e62ea72445c75a13a2f7da0c0b431ab8e56ea79bea3cb6c94e28af27e1e",
+      "issues": []
+    },
+    {
+      "country": "au",
+      "publicPath": "/geography/photos/au.jpg",
+      "sha256": "882b497c5050500e967d4e2d3f6df18adee2d7b2b5c689d7a1817f3c7871af74",
+      "issues": []
+    },
+    {
+      "country": "at",
+      "publicPath": "/geography/photos/at.jpg",
+      "sha256": "afd0986b12a7a32e7ee96936e449b0c563d6d9adfc6a93c3a0d1751d583814e2",
+      "issues": []
+    },
+    {
+      "country": "az",
+      "publicPath": "/geography/photos/az.jpg",
+      "sha256": "b2d04ee7de237c366cdb9e31160a8b2fa2d358ee478c1f60dafe170c013025fb",
+      "issues": []
+    },
+    {
+      "country": "bs",
+      "publicPath": "/geography/photos/bs.jpg",
+      "sha256": "dc6b192c1a2ce520f78e8544500e62f66ac595337cf7db923f4c5cbc3634c36a",
+      "issues": []
+    },
+    {
+      "country": "bh",
+      "publicPath": "/geography/photos/bh.jpg",
+      "sha256": "92b0f0604282aa9090799ec19211408b8526ff88e9f9e42773432ea8e98ca3e1",
+      "issues": []
+    },
+    {
+      "country": "bd",
+      "publicPath": "/geography/photos/bd.jpg",
+      "sha256": "132164a5638fbf357def1566a95f91f203f1cd3461e5d222c599a1aef4b41e11",
+      "issues": []
+    },
+    {
+      "country": "bb",
+      "publicPath": "/geography/photos/bb.jpg",
+      "sha256": "596ba1d5c50e5a8eac68cf99d611273aba95d8576e20bce1dac697f3017d1597",
+      "issues": []
+    },
+    {
+      "country": "by",
+      "publicPath": "/geography/photos/by.jpg",
+      "sha256": "33726a194ee06aa37c8370966ba52020a6e6d6de709aed2edba3bf8f2016a0d7",
+      "issues": []
+    },
+    {
+      "country": "be",
+      "publicPath": "/geography/photos/be.jpg",
+      "sha256": "4869a9db30762d9799d9080754a9227fe893c45d17ba8784d9369024ce9e4b20",
+      "issues": []
+    },
+    {
+      "country": "bz",
+      "publicPath": "/geography/photos/bz.png",
+      "sha256": "6913ee560f68dbf3169797322e62f86108acc6d00862cdee0569f7a0293b488e",
+      "issues": []
+    },
+    {
+      "country": "bj",
+      "publicPath": "/geography/photos/bj.jpg",
+      "sha256": "1ce108b2ac1aaee8eebc964f3994f8116ebfb8d0e74478db3e86c2ab59ab9a69",
+      "issues": []
+    },
+    {
+      "country": "bt",
+      "publicPath": "/geography/photos/bt.jpg",
+      "sha256": "a72cf4c32b649840710d208f9e64a2c7ff231fe35681a65e3622c1f2fd011736",
+      "issues": []
+    },
+    {
+      "country": "bo",
+      "publicPath": "/geography/photos/bo.jpg",
+      "sha256": "a4e2ee121c6cf3233d12d440b192ca6a97aa23eec281779a4135383693e7803b",
+      "issues": []
+    },
+    {
+      "country": "ba",
+      "publicPath": "/geography/photos/ba.jpg",
+      "sha256": "d632fb96b6333c7beb1c82c6f2d5cf726d815d2d51e16e622cd7aaa2ff18165b",
+      "issues": []
+    },
+    {
+      "country": "bw",
+      "publicPath": "/geography/photos/bw.jpg",
+      "sha256": "c77d341112c13e2584cd912535823c8139c5499949437ee21dd97f9a8847170e",
+      "issues": []
+    },
+    {
+      "country": "br",
+      "publicPath": "/geography/photos/br.jpg",
+      "sha256": "444b4f91bf4652c3661b3f1a22c8cd429b6d32717ec2c4b5f51778c5e01666dd",
+      "issues": []
+    },
+    {
+      "country": "bn",
+      "publicPath": "/geography/photos/bn.jpg",
+      "sha256": "7e5f7eeb6005f8034e10b35ce04e10da183fd0602e6d3963b3e9bb936b47cca2",
+      "issues": []
+    },
+    {
+      "country": "bg",
+      "publicPath": "/geography/photos/bg.jpg",
+      "sha256": "bed10688f813ae2b276af184b53e85d280b99ad692365b7286ce433bd61ed44e",
+      "issues": []
+    },
+    {
+      "country": "bf",
+      "publicPath": "/geography/photos/bf.jpg",
+      "sha256": "93bc3a9187719f34d819367ebb6e041aac0c6e6a8a19aab0f85bd59d29ebc1e6",
+      "issues": []
+    },
+    {
+      "country": "bi",
+      "publicPath": "/geography/photos/bi.jpg",
+      "sha256": "3e7afbd1c9ad5662836efafbd5f0e745e4a16b9c29ae0615b44717e4c787e7d9",
+      "issues": []
+    }
+  ]
+}

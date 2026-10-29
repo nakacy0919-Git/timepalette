@@ -1,6 +1,7 @@
 import { GripVertical, Sparkles } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { getWorldAdventureDomainPackage } from '../../../utils/worldAdventureRegistry';
+import { getSpanishLanguagePackage, isSpanishExchangeCountry } from '../../../utils/sharedLanguageExchange';
 import { completeWorldAdventureMission, getWorldAdventureDomainProgress } from '../../../utils/worldAdventureProgress';
 import MissionSuccessCelebration from '../MissionSuccessCelebration';
 import SourceStudyReader from '../SourceStudyReader';
@@ -24,7 +25,11 @@ export default function LanguageAdventure({
   onProgressChange,
 }) {
   const normalizedCountry = String(countryCode).trim().toLowerCase();
-  const packageData = getWorldAdventureDomainPackage(normalizedCountry,'language');
+  const [languageChoice,setLanguageChoice] = useState('en');
+  const spanishAvailable = isSpanishExchangeCountry(normalizedCountry);
+  const packageData = languageChoice==='es' && spanishAvailable
+    ? getSpanishLanguagePackage(normalizedCountry)
+    : getWorldAdventureDomainPackage(normalizedCountry,'language');
   const missions = useMemo(()=>packageData?.missions ?? [],[packageData]);
   const [activeIndex,setActiveIndex] = useState(0);
   const [progress,setProgress] = useState(()=>getWorldAdventureDomainProgress(normalizedCountry,'language'));
@@ -32,6 +37,13 @@ export default function LanguageAdventure({
   const [leftWidth,setLeftWidth] = useState(430);
   const cleanupRef = useRef(null);
   const advanceTimerRef = useRef(null);
+  const chooseLanguage = (value) => {
+    if(value===languageChoice || (value==='es'&&!spanishAvailable)) return;
+    if(advanceTimerRef.current){window.clearTimeout(advanceTimerRef.current);advanceTimerRef.current=null;}
+    setCelebration(null);
+    setActiveIndex(0);
+    setLanguageChoice(value);
+  };
 
   useEffect(
     () => () => {
@@ -282,6 +294,12 @@ export default function LanguageAdventure({
           </div>
         </div>
 
+        {spanishAvailable && <div className="flex flex-wrap items-center gap-2 border-t border-white/10 px-4 py-2.5" aria-label="練習する言語を選択">
+          <span className="mr-2 text-xs font-bold text-violet-200">練習する言語</span>
+          <button type="button" aria-pressed={languageChoice==='en'} onClick={()=>chooseLanguage('en')} className={'rounded-xl px-4 py-2 text-sm font-black '+(languageChoice==='en'?'bg-white text-violet-900':'bg-white/10 text-white')}>🌎 English</button>
+          <button type="button" aria-pressed={languageChoice==='es'} onClick={()=>chooseLanguage('es')} className={'rounded-xl px-4 py-2 text-sm font-black '+(languageChoice==='es'?'bg-white text-violet-900':'bg-white/10 text-white')}>🇪🇸 Español</button>
+          <span className="ml-auto text-xs text-violet-200">各10ミッション・進捗は別々</span>
+        </div>}
         <div className="border-t border-white/10 bg-white/5 px-4 py-2.5">
           <div className="flex items-center gap-3">
             <p className="shrink-0 text-[8px] font-black tracking-[0.18em] text-violet-200">MISSION</p>

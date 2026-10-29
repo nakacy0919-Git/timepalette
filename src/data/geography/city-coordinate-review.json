@@ -1,0 +1,893 @@
+{
+  "checkedAt": "2026-10-27",
+  "sourceUrl": "https://download.geonames.org/export/dump/cities5000.zip",
+  "sourceSha256": "53c265f85cb3289d435a1ab089df4673343f28839088bcc736d7685fb810129d",
+  "license": "CC BY 4.0",
+  "scope": "Named populated-place WGS84 reference points; not administrative extents or survey accuracy",
+  "cities": 42,
+  "pending": 0,
+  "rows": [
+    {
+      "country": "af",
+      "cityId": "af-city-0",
+      "name": "Kabul",
+      "coordinates": [
+        69.17233,
+        34.52813
+      ],
+      "previousCoordinates": [
+        69.181314,
+        34.518636
+      ],
+      "referenceName": "Kabul",
+      "geonameId": "1138958",
+      "featureCode": "PPLC",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 1.339,
+      "sourceUrl": "https://www.geonames.org/1138958/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "af",
+      "cityId": "af-city-1",
+      "name": "Kandahar",
+      "coordinates": [
+        65.71013,
+        31.61332
+      ],
+      "previousCoordinates": [
+        65.694946,
+        31.61002
+      ],
+      "referenceName": "Kandahār",
+      "geonameId": "1138336",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 1.484,
+      "sourceUrl": "https://www.geonames.org/1138336/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "af",
+      "cityId": "af-city-2",
+      "name": "Jalalabad",
+      "coordinates": [
+        70.45153,
+        34.42647
+      ],
+      "previousCoordinates": [
+        70.436104,
+        34.441527
+      ],
+      "referenceName": "Jalālābād",
+      "geonameId": "1139715",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 2.192,
+      "sourceUrl": "https://www.geonames.org/1139715/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "af",
+      "cityId": "af-city-3",
+      "name": "Herat",
+      "coordinates": [
+        62.19967,
+        34.34817
+      ],
+      "previousCoordinates": [
+        62.169993,
+        34.330009
+      ],
+      "referenceName": "Herāt",
+      "geonameId": "1140026",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 3.392,
+      "sourceUrl": "https://www.geonames.org/1140026/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "al",
+      "cityId": "al-city-0",
+      "name": "Tirana",
+      "coordinates": [
+        19.81866,
+        41.32744
+      ],
+      "previousCoordinates": [
+        19.818883,
+        41.327541
+      ],
+      "referenceName": "Tirana",
+      "geonameId": "3183875",
+      "featureCode": "PPLC",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.022,
+      "sourceUrl": "https://www.geonames.org/3183875/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "al",
+      "cityId": "al-city-1",
+      "name": "Elbasan",
+      "coordinates": [
+        20.08224,
+        41.11138
+      ],
+      "previousCoordinates": [
+        20.083828,
+        41.121507
+      ],
+      "referenceName": "Elbasan",
+      "geonameId": "783263",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 1.134,
+      "sourceUrl": "https://www.geonames.org/783263/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "al",
+      "cityId": "al-city-2",
+      "name": "Shkodër",
+      "coordinates": [
+        19.51258,
+        42.06828
+      ],
+      "previousCoordinates": [
+        19.51885,
+        42.068452
+      ],
+      "referenceName": "Shkodër",
+      "geonameId": "3184081",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.518,
+      "sourceUrl": "https://www.geonames.org/3184081/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "al",
+      "cityId": "al-city-3",
+      "name": "Durrës",
+      "coordinates": [
+        19.45469,
+        41.32355
+      ],
+      "previousCoordinates": [
+        19.448208,
+        41.3178
+      ],
+      "referenceName": "Durrës",
+      "geonameId": "3185728",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.838,
+      "sourceUrl": "https://www.geonames.org/3185728/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "dz",
+      "cityId": "dz-city-0",
+      "name": "Algiers",
+      "coordinates": [
+        3.08746,
+        36.73225
+      ],
+      "previousCoordinates": [
+        3.048607,
+        36.765011
+      ],
+      "referenceName": "Algiers",
+      "geonameId": "2507480",
+      "featureCode": "PPLC",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 5.025,
+      "sourceUrl": "https://www.geonames.org/2507480/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "dz",
+      "cityId": "dz-city-1",
+      "name": "Oran",
+      "coordinates": [
+        -0.63588,
+        35.69906
+      ],
+      "previousCoordinates": [
+        -0.621919,
+        35.711948
+      ],
+      "referenceName": "Oran",
+      "geonameId": "2485926",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 1.909,
+      "sourceUrl": "https://www.geonames.org/2485926/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "dz",
+      "cityId": "dz-city-2",
+      "name": "Constantine",
+      "coordinates": [
+        6.61472,
+        36.365
+      ],
+      "previousCoordinates": [
+        6.599948,
+        36.359989
+      ],
+      "referenceName": "Constantine",
+      "geonameId": "2501152",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 1.435,
+      "sourceUrl": "https://www.geonames.org/2501152/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "dz",
+      "cityId": "dz-city-3",
+      "name": "Blida",
+      "coordinates": [
+        2.8277,
+        36.47004
+      ],
+      "previousCoordinates": [
+        2.829998,
+        36.420347
+      ],
+      "referenceName": "Blida",
+      "geonameId": "2503769",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 5.529,
+      "sourceUrl": "https://www.geonames.org/2503769/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ad",
+      "cityId": "ad-city-0",
+      "name": "Andorra la Vella",
+      "coordinates": [
+        1.52109,
+        42.50779
+      ],
+      "previousCoordinates": [
+        1.526594,
+        42.510753
+      ],
+      "referenceName": "Andorra la Vella",
+      "geonameId": "3041563",
+      "featureCode": "PPLC",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.559,
+      "sourceUrl": "https://www.geonames.org/3041563/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ad",
+      "cityId": "ad-town-1",
+      "name": "Encamp",
+      "coordinates": [
+        1.58014,
+        42.53474
+      ],
+      "previousCoordinates": [
+        1.58014,
+        42.53474
+      ],
+      "referenceName": "Encamp",
+      "geonameId": "3040686",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.0,
+      "sourceUrl": "https://www.geonames.org/3040686/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ad",
+      "cityId": "ad-town-2",
+      "name": "Sant Julia de Loria",
+      "coordinates": [
+        1.49129,
+        42.46372
+      ],
+      "previousCoordinates": [
+        1.49129,
+        42.46372
+      ],
+      "referenceName": "Sant Julià de Lòria",
+      "geonameId": "3039163",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.0,
+      "sourceUrl": "https://www.geonames.org/3039163/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ao",
+      "cityId": "ao-city-0",
+      "name": "Luanda",
+      "coordinates": [
+        13.23432,
+        -8.83682
+      ],
+      "previousCoordinates": [
+        13.232481,
+        -8.83634
+      ],
+      "referenceName": "Luanda",
+      "geonameId": "2240449",
+      "featureCode": "PPLC",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.209,
+      "sourceUrl": "https://www.geonames.org/2240449/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ao",
+      "cityId": "ao-city-1",
+      "name": "Huambo",
+      "coordinates": [
+        15.73917,
+        -12.77611
+      ],
+      "previousCoordinates": [
+        15.758064,
+        -12.74804
+      ],
+      "referenceName": "Huambo",
+      "geonameId": "3348313",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 3.734,
+      "sourceUrl": "https://www.geonames.org/3348313/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ao",
+      "cityId": "ao-city-2",
+      "name": "Lobito",
+      "coordinates": [
+        13.53601,
+        -12.3644
+      ],
+      "previousCoordinates": [
+        13.54123,
+        -12.370009
+      ],
+      "referenceName": "Lobito",
+      "geonameId": "3347939",
+      "featureCode": "PPL",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.843,
+      "sourceUrl": "https://www.geonames.org/3347939/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ao",
+      "cityId": "ao-city-3",
+      "name": "Benguela",
+      "coordinates": [
+        13.40268,
+        -12.57674
+      ],
+      "previousCoordinates": [
+        13.407233,
+        -12.578264
+      ],
+      "referenceName": "Benguela",
+      "geonameId": "3351663",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.522,
+      "sourceUrl": "https://www.geonames.org/3351663/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ag",
+      "cityId": "ag-city-0",
+      "name": "St. John's",
+      "coordinates": [
+        -61.84329,
+        17.12096
+      ],
+      "previousCoordinates": [
+        -61.850034,
+        17.118036
+      ],
+      "referenceName": "Saint John’s",
+      "geonameId": "3576022",
+      "featureCode": "PPLC",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.787,
+      "sourceUrl": "https://www.geonames.org/3576022/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ag",
+      "cityId": "ag-town-1",
+      "name": "All Saints",
+      "coordinates": [
+        -61.79303169250488,
+        17.0667130475053
+      ],
+      "previousCoordinates": [
+        -61.79303169250488,
+        17.0667130475053
+      ],
+      "referenceName": "All Saints",
+      "geonameId": "3576397",
+      "featureCode": "PPL",
+      "referenceDataset": "individual GeoNames record",
+      "changeKm": 0.0,
+      "sourceUrl": "https://www.geonames.org/3576397/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ag",
+      "cityId": "ag-town-2",
+      "name": "Codrington",
+      "coordinates": [
+        -61.82437,
+        17.6394
+      ],
+      "previousCoordinates": [
+        -61.82437,
+        17.6394
+      ],
+      "referenceName": "Codrington",
+      "geonameId": "3576311",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.0,
+      "sourceUrl": "https://www.geonames.org/3576311/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ar",
+      "cityId": "ar-city-0",
+      "name": "Buenos Aires",
+      "coordinates": [
+        -58.37723,
+        -34.61315
+      ],
+      "previousCoordinates": [
+        -58.432513,
+        -34.610715
+      ],
+      "referenceName": "Buenos Aires",
+      "geonameId": "3435910",
+      "featureCode": "PPLC",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 5.066,
+      "sourceUrl": "https://www.geonames.org/3435910/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ar",
+      "cityId": "ar-city-1",
+      "name": "Córdoba",
+      "coordinates": [
+        -64.18853,
+        -31.40648
+      ],
+      "previousCoordinates": [
+        -64.18424,
+        -31.398012
+      ],
+      "referenceName": "Córdoba",
+      "geonameId": "3860259",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 1.026,
+      "sourceUrl": "https://www.geonames.org/3860259/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ar",
+      "cityId": "ar-city-2",
+      "name": "Rosario",
+      "coordinates": [
+        -60.63932,
+        -32.94682
+      ],
+      "previousCoordinates": [
+        -60.668253,
+        -32.949184
+      ],
+      "referenceName": "Rosario",
+      "geonameId": "3838583",
+      "featureCode": "PPLA2",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 2.713,
+      "sourceUrl": "https://www.geonames.org/3838583/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "ar",
+      "cityId": "ar-city-3",
+      "name": "Mendoza",
+      "coordinates": [
+        -68.84582,
+        -32.88946
+      ],
+      "previousCoordinates": [
+        -68.818557,
+        -32.881384
+      ],
+      "referenceName": "Mendoza",
+      "geonameId": "3844421",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 2.699,
+      "sourceUrl": "https://www.geonames.org/3844421/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "am",
+      "cityId": "am-city-0",
+      "name": "Yerevan",
+      "coordinates": [
+        44.5126,
+        40.17765
+      ],
+      "previousCoordinates": [
+        44.511606,
+        40.183097
+      ],
+      "referenceName": "Yerevan",
+      "geonameId": "616052",
+      "featureCode": "PPLC",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.612,
+      "sourceUrl": "https://www.geonames.org/616052/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "am",
+      "cityId": "am-city-1",
+      "name": "Gyumri",
+      "coordinates": [
+        43.84635,
+        40.79305
+      ],
+      "previousCoordinates": [
+        43.847494,
+        40.789434
+      ],
+      "referenceName": "Gyumri",
+      "geonameId": "616635",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.413,
+      "sourceUrl": "https://www.geonames.org/616635/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "am",
+      "cityId": "am-city-2",
+      "name": "Vanadzor",
+      "coordinates": [
+        44.49704,
+        40.8074
+      ],
+      "previousCoordinates": [
+        44.488282,
+        40.812766
+      ],
+      "referenceName": "Vanadzor",
+      "geonameId": "616530",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.948,
+      "sourceUrl": "https://www.geonames.org/616530/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "am",
+      "cityId": "am-city-3",
+      "name": "Gavar",
+      "coordinates": [
+        45.12386,
+        40.35398
+      ],
+      "previousCoordinates": [
+        45.126667,
+        40.358889
+      ],
+      "referenceName": "Gavar",
+      "geonameId": "616599",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.595,
+      "sourceUrl": "https://www.geonames.org/616599/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "au",
+      "cityId": "au-city-0",
+      "name": "Canberra",
+      "coordinates": [
+        149.12807,
+        -35.28346
+      ],
+      "previousCoordinates": [
+        149.129026,
+        -35.283029
+      ],
+      "referenceName": "Canberra",
+      "geonameId": "2172517",
+      "featureCode": "PPLC",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.099,
+      "sourceUrl": "https://www.geonames.org/2172517/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "au",
+      "cityId": "au-city-1",
+      "name": "Sydney",
+      "coordinates": [
+        151.20732,
+        -33.86785
+      ],
+      "previousCoordinates": [
+        151.212548,
+        -33.871373
+      ],
+      "referenceName": "Sydney",
+      "geonameId": "2147714",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.622,
+      "sourceUrl": "https://www.geonames.org/2147714/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "au",
+      "cityId": "au-city-2",
+      "name": "Melbourne",
+      "coordinates": [
+        144.96332,
+        -37.814
+      ],
+      "previousCoordinates": [
+        144.97307,
+        -37.818086
+      ],
+      "referenceName": "Melbourne",
+      "geonameId": "2158177",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.97,
+      "sourceUrl": "https://www.geonames.org/2158177/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "au",
+      "cityId": "au-city-3",
+      "name": "Brisbane",
+      "coordinates": [
+        153.02809,
+        -27.46794
+      ],
+      "previousCoordinates": [
+        153.033147,
+        -27.453085
+      ],
+      "referenceName": "Brisbane",
+      "geonameId": "2174003",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 1.726,
+      "sourceUrl": "https://www.geonames.org/2174003/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "at",
+      "cityId": "at-city-0",
+      "name": "Vienna",
+      "coordinates": [
+        16.37208,
+        48.20849
+      ],
+      "previousCoordinates": [
+        16.364693,
+        48.201961
+      ],
+      "referenceName": "Vienna",
+      "geonameId": "2761369",
+      "featureCode": "PPLC",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.909,
+      "sourceUrl": "https://www.geonames.org/2761369/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "at",
+      "cityId": "at-city-1",
+      "name": "Linz",
+      "coordinates": [
+        14.28611,
+        48.30639
+      ],
+      "previousCoordinates": [
+        14.288781,
+        48.319233
+      ],
+      "referenceName": "Linz",
+      "geonameId": "2772400",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 1.442,
+      "sourceUrl": "https://www.geonames.org/2772400/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "at",
+      "cityId": "at-city-2",
+      "name": "Graz",
+      "coordinates": [
+        15.44197,
+        47.06733
+      ],
+      "previousCoordinates": [
+        15.410005,
+        47.077758
+      ],
+      "referenceName": "Graz",
+      "geonameId": "2778067",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 2.684,
+      "sourceUrl": "https://www.geonames.org/2778067/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "at",
+      "cityId": "at-city-3",
+      "name": "Salzburg",
+      "coordinates": [
+        13.04399,
+        47.79941
+      ],
+      "previousCoordinates": [
+        13.04002,
+        47.810478
+      ],
+      "referenceName": "Salzburg",
+      "geonameId": "2766824",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 1.266,
+      "sourceUrl": "https://www.geonames.org/2766824/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "az",
+      "cityId": "az-city-0",
+      "name": "Baku",
+      "coordinates": [
+        49.89201,
+        40.37767
+      ],
+      "previousCoordinates": [
+        49.860271,
+        40.397218
+      ],
+      "referenceName": "Baku",
+      "geonameId": "587084",
+      "featureCode": "PPLC",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 3.457,
+      "sourceUrl": "https://www.geonames.org/587084/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "az",
+      "cityId": "az-city-1",
+      "name": "Ganca",
+      "coordinates": [
+        46.36134,
+        40.68157
+      ],
+      "previousCoordinates": [
+        46.350028,
+        40.684996
+      ],
+      "referenceName": "Ganja",
+      "geonameId": "586523",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 1.027,
+      "sourceUrl": "https://www.geonames.org/586523/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "az",
+      "cityId": "az-city-2",
+      "name": "Sumqayit",
+      "coordinates": [
+        49.66861,
+        40.58972
+      ],
+      "previousCoordinates": [
+        49.629983,
+        40.580015
+      ],
+      "referenceName": "Sumgayit",
+      "geonameId": "584923",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 3.436,
+      "sourceUrl": "https://www.geonames.org/584923/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    },
+    {
+      "country": "az",
+      "cityId": "az-city-3",
+      "name": "Naxcivan",
+      "coordinates": [
+        45.41222,
+        39.20889
+      ],
+      "previousCoordinates": [
+        45.412205,
+        39.20922
+      ],
+      "referenceName": "Naxçıvan",
+      "geonameId": "147429",
+      "featureCode": "PPLA",
+      "referenceDataset": "cities5000.zip",
+      "changeKm": 0.037,
+      "sourceUrl": "https://www.geonames.org/147429/",
+      "checkedAt": "2026-10-27",
+      "status": "verified-approximate-populated-place-point"
+    }
+  ]
+}

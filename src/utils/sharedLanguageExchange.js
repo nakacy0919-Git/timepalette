@@ -87,6 +87,7 @@ export function getSharedLanguagePackage(iso) {
     speech: {
       goal: `STEP ${index+1}/10：${ja}（${index+1}フレーズ）`,
       // Profile is shared with all countries and can be revised at any time.
+      languageCode: 'en-US',
       fields: index===0 ? [] : PROFILE_FIELDS,
       steps: turns.slice(0,index+1),
     },
@@ -101,4 +102,103 @@ export function getSharedLanguagePackage(iso) {
   };
   cache.set(code,result);
   return result;
+}
+
+
+// Spanish is available as an additional choice in these 20 sovereign countries.
+export const SPANISH_EXCHANGE_COUNTRY_CODES = Object.freeze([
+ 'ar','bo','cl','co','cr','cu','do','ec','es','gq',
+ 'gt','hn','mx','ni','pa','pe','py','sv','uy','ve',
+]);
+const spanishCountrySet = new Set(SPANISH_EXCHANGE_COUNTRY_CODES);
+export const isSpanishExchangeCountry = iso => spanishCountrySet.has(String(iso || '').trim().toLowerCase());
+const spanishNames = {
+ ar:'Argentina',bo:'Bolivia',cl:'Chile',co:'Colombia',cr:'Costa Rica',
+ cu:'Cuba',do:'República Dominicana',ec:'Ecuador',es:'España',gq:'Guinea Ecuatorial',
+ gt:'Guatemala',hn:'Honduras',mx:'México',ni:'Nicaragua',pa:'Panamá',
+ pe:'Perú',py:'Paraguay',sv:'El Salvador',uy:'Uruguay',ve:'Venezuela',
+};
+const spanishProfileFields = [
+ {id:'name',label:'名前（アルファベット）',placeholder:'Sara'},
+ {id:'nameKana',label:'名前の読み（任意・カタカナ）',placeholder:'サラ',required:false},
+ {id:'homeCountry',label:'出身国（スペイン語）',placeholder:'Japón'},
+ {id:'city',label:'住んでいる街（アルファベット）',placeholder:'Anjo'},
+ {id:'school',label:'学校名（アルファベット）',placeholder:'Anjo High School'},
+ {id:'hobby',label:'趣味（スペイン語の動詞の原形）',placeholder:'jugar al fútbol'},
+ {id:'food',label:'好きな食べ物（スペイン語）',placeholder:'sushi'},
+];
+const spanishTitles=[
+ ['スペイン語であいさつ','Saluda en español'],
+ ['自分の名前を伝える','Preséntate'],
+ ['相手の名前を聞く','Pregunta el nombre'],
+ ['出身地と住む街を話す','Tu país y ciudad'],
+ ['自分の学校を紹介する','Tu escuela'],
+ ['趣味について話す','Tus aficiones'],
+ ['好きな食べ物を話す','Tu comida favorita'],
+ ['相手の文化に関心を示す','Conoce su cultura'],
+ ['学校生活について交流する','La vida escolar'],
+ ['お礼を伝えて別れる','¡Hasta pronto!'],
+];
+function makeSpanishTurns(code){
+ const name=spanishNames[code];
+ const nameJa=countryIndex[code].nameJa || name;
+ return [
+  {label:'¡HOLA!',partnerPhrase:'¡Hola!',partnerJa:'こんにちは！',
+    phrase:'¡Hola! Mucho gusto.',translation:'こんにちは！はじめまして。',kana:'オラ！ムーチョ グスト。'},
+  {label:'MI NOMBRE',partnerPhrase:'¿Cómo te llamas?',partnerJa:'名前は何ですか？',
+    phrase:'Me llamo {{name}}.',translation:'私は{{name}}です。',kana:'メ ジャモ {{nameKana}}。'},
+  {label:'TU NOMBRE',partnerPhrase:'¡Mucho gusto!',partnerJa:'はじめまして！',
+    phrase:'¿Cómo te llamas?',translation:'あなたの名前は何ですか？',kana:'コモ テ ジャマス？'},
+  {label:'MI PAÍS',partnerPhrase:'Me llamo Alex. Soy de '+name+'. ¿De dónde eres?',
+    partnerJa:'私はアレックス。出身は'+nameJa+'です。あなたはどこから？',
+    phrase:'Soy de {{homeCountry}}. Vivo en {{city}}.',
+    translation:'私は{{homeCountry}}出身で、{{city}}に住んでいます。',
+    kana:'ソイ デ {{homeCountry}}。ビボ エン {{city}}。'},
+  {label:'MI ESCUELA',partnerPhrase:'¿A qué escuela vas?',partnerJa:'どこの学校に通っていますか？',
+    phrase:'Estudio en {{school}}. ¿Y tú?',translation:'私は{{school}}で勉強しています。あなたは？',
+    kana:'エストゥディオ エン {{school}}。イ トゥ？'},
+  {label:'MIS AFICIONES',partnerPhrase:'¿Qué te gusta hacer?',partnerJa:'何をするのが好きですか？',
+    phrase:'Me gusta {{hobby}}. ¿Y a ti?',translation:'私は{{hobby}}が好きです。あなたは？',
+    kana:'メ グスタ {{hobby}}。イ ア ティ？'},
+  {label:'MI COMIDA',partnerPhrase:'¿Cuál es tu comida favorita?',partnerJa:'好きな食べ物は何ですか？',
+    phrase:'Me gusta comer {{food}}. ¿Y a ti?',translation:'私は{{food}}を食べるのが好きです。あなたは？',
+    kana:'メ グスタ コメール {{food}}。イ ア ティ？'},
+  {label:'TU CULTURA',partnerPhrase:'En mi país tenemos muchas tradiciones.',partnerJa:'私の国にはいろいろな伝統があります。',
+    phrase:'¡Qué interesante! Cuéntame más sobre tu país.',
+    translation:'おもしろそう！あなたの国についてもっと教えてください。',
+    kana:'ケ インテレサンテ！クエンタメ マス ソブレ トゥ パイス。'},
+  {label:'LA ESCUELA',partnerPhrase:'¿Cómo es la vida escolar en tu país?',partnerJa:'あなたの国の学校生活はどんな感じですか？',
+    phrase:'En mi escuela aprendemos muchas cosas. ¿Y en la tuya?',
+    translation:'私の学校では多くのことを学びます。あなたの学校は？',
+    kana:'エン ミ エスクエラ アプレンデモス ムーチャス コサス。イ エン ラ トゥジャ？'},
+  {label:'¡ADIÓS!',partnerPhrase:'¡Gracias por compartir tu historia!',partnerJa:'いろいろ教えてくれてありがとう！',
+    phrase:'¡Gracias por hablar conmigo! ¡Hasta pronto!',
+    translation:'お話ししてくれてありがとう！また会いましょう！',
+    kana:'グラシアス ポル アブラール コンミゴ！アスタ プロント！'},
+ ];
+}
+const spanishPackageCache = new Map();
+export function getSpanishLanguagePackage(iso){
+ const code=String(iso || '').trim().toLowerCase();
+ if(!isSpanishExchangeCountry(code)||!countryIndex[code])return null;
+ if(spanishPackageCache.has(code))return spanishPackageCache.get(code);
+ const country=countryIndex[code], turns=makeSpanishTurns(code);
+ const locale=code==='es'||code==='gq'?'es-ES':'es-MX';
+ const missions=spanishTitles.map(([ja,en],index)=>({
+   id:code+'-language-es-'+String(index+1).padStart(2,'0'),
+   domain:'language',type:'conversation-practice',buildStatus:'ready',
+   icon:index===9?'🏆':'🗣️',points:10,finalGoal:index===9,
+   title:{ja,en},action:'スペイン語を聞いてマイクで答えよう。前のフレーズも繰り返して使います。',
+   speech:{languageCode:locale,
+     goal:'PASO '+(index+1)+'/10：'+ja+'（'+(index+1)+'フレーズ）',
+     fields:index===0?[]:spanishProfileFields,
+     steps:turns.slice(0,index+1)},
+ }));
+ const result={schemaVersion:'TimePalette Shared Spanish Exchange v1',
+  countryCode:code,domain:'language',
+  country:{nameJa:country.nameJa||code,nameEn:country.nameEn||code,flag:country.flagEmoji||'🌍'},
+  featuredLanguage:{name:'Spanish',nativeName:'Español',noteJa:'スペイン語圏20か国で段階的にあいさつから文化交流まで練習します。'},
+  missions};
+ spanishPackageCache.set(code,result);
+ return result;
 }

@@ -28,6 +28,8 @@ const normalize =
       value
     )
       .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
       .replace(
         /[’']/g,
         "'"
@@ -222,9 +224,8 @@ const protectPersonalNameInTranscript =
 
     if (
       !normalizedName ||
-      !normalizedTarget.includes(
-        `my name is ${normalizedName}`
-      )
+      !normalizedTarget.includes(`my name is ${normalizedName}`) &&
+      !normalizedTarget.includes(`me llamo ${normalizedName}`)
     ) {
       return raw;
     }
@@ -241,8 +242,9 @@ const protectPersonalNameInTranscript =
      * "my name is" and the next fixed phrase
      * is treated as the personal-name slot.
      */
-    const namePattern =
-      /\b(my\s+name\s+is)\s+(.+?)(?=\s+nice\s+to\s+meet\s+you\b|[.!?]*$)/i;
+    const namePattern = normalizedTarget.includes('me llamo ')
+      ? /\b(me\s+llamo)\s+(.+?)(?=[.!?]*$)/i
+      : /\b(my\s+name\s+is)\s+(.+?)(?=\s+nice\s+to\s+meet\s+you\b|[.!?]*$)/i;
 
 
     if (
@@ -267,7 +269,8 @@ const protectPersonalNameInTranscript =
 
 const speak =
   (
-    text
+    text,
+    languageCode = 'en-US'
   ) => {
     if (
       typeof window === 'undefined' ||
@@ -291,8 +294,11 @@ const speak =
       );
 
 
-    utterance.lang =
-      'en-US';
+    utterance.lang = languageCode;
+    const voices = window.speechSynthesis.getVoices();
+    const voice = voices.find(v => v.lang.toLowerCase()===languageCode.toLowerCase()) ||
+      voices.find(v => v.lang.toLowerCase().startsWith(languageCode.split('-')[0].toLowerCase()));
+    if (voice) utterance.voice = voice;
 
     utterance.rate =
       0.82;
@@ -956,7 +962,7 @@ function SpeechFeedbackFX({
 }
 
 
-function useSpeechRecognition() {
+function useSpeechRecognition(languageCode = 'en-US') {
   const recognitionRef =
     useRef(
       null
@@ -1098,8 +1104,7 @@ function useSpeechRecognition() {
         new Recognition();
 
 
-      recognition.lang =
-        'en-US';
+      recognition.lang = languageCode;
 
       /*
        * Chrome's Web Speech implementation is more stable when one
@@ -1798,6 +1803,7 @@ function ProfileSetup({
   values,
   onChange,
   onReady,
+  languageName = '英語',
 }) {
   const ready =
     fields.every(field => field.required === false || String(values[field.id] ?? '').trim());
@@ -1836,7 +1842,7 @@ function ProfileSetup({
           text-slate-950
         "
       >
-        自分の英語にしてから練習しよう
+        自分の{languageName}にしてから練習しよう
       </h3>
 
 
@@ -1950,6 +1956,7 @@ function SpeechCard({
   partnerPhrase,
   partnerJa,
   onEditProfile,
+  languageCode = 'en-US',
   showKana,
   onToggleKana,
   index,
@@ -2091,7 +2098,7 @@ function SpeechCard({
         <div className="mt-3 rounded-2xl border border-blue-200 bg-blue-50 p-4">
           <div className="flex items-center justify-between gap-2">
             <span className="text-xs font-black text-blue-800">🌍 相手の声 / PARTNER</span>
-            <button type="button" onClick={() => speak(partnerPhrase)} className="rounded-xl bg-white px-3 py-2 text-xs font-black text-blue-700">
+            <button type="button" onClick={() => speak(partnerPhrase, languageCode)} className="rounded-xl bg-white px-3 py-2 text-xs font-black text-blue-700">
               ▶ 相手の声を聞く
             </button>
           </div>
@@ -2532,17 +2539,25 @@ export default function CommunicationStage({
   const fields =
     mission?.speech?.fields ??
     [];
+  const languageCode = mission?.speech?.languageCode || 'en-US';
+  const isSpanish = languageCode.startsWith('es');
+  const profileStorageKey = isSpanish ? 'timepalette_language_global_profile_es' : 'timepalette_language_global_profile';
+  const countryProfileKey = isSpanish ? `timepalette_language_profile_${countryCode}_es` : `timepalette_language_profile_${countryCode}`;
 
 
   const storedProfile =
     useMemo(
       () =>
         ({
-          ...load(`timepalette_language_profile_${countryCode}`, {}),
-          ...load('timepalette_language_global_profile', {}),
+          ...(isSpanish ? (() => {const en=load('timepalette_language_global_profile',{}); return {name:en.name,nameKana:en.nameKana,city:en.city,school:en.school};})() : {}),
+          ...load(countryProfileKey, {}),
+          ...load(profileStorageKey, {}),
         }),
       [
         countryCode,
+        countryProfileKey,
+        profileStorageKey,
+        isSpanish,
       ]
     );
 
@@ -2635,7 +2650,7 @@ export default function CommunicationStage({
 
 
   const speech =
-    useSpeechRecognition();
+    useSpeechRecognition(languageCode);
 
 
   useEffect(
@@ -2950,14 +2965,14 @@ export default function CommunicationStage({
   const startPractice =
     () => {
       save(
-        `timepalette_language_profile_${countryCode}`,
+        countryProfileKey,
         {
           ...storedProfile,
           ...values,
         }
       );
 
-      save('timepalette_language_global_profile', {
+      save(profileStorageKey, {
         ...storedProfile, ...values,
       });
       setSetupDone(
@@ -3287,6 +3302,7 @@ export default function CommunicationStage({
         "
       >
         <ProfileSetup
+          languageName={isSpanish ? 'スペイン語' : '英語'}
           fields={
             fields
           }
@@ -3336,6 +3352,7 @@ export default function CommunicationStage({
         }
         partnerPhrase={partnerPhrase}
         partnerJa={partnerJa}
+        languageCode={languageCode}
         onEditProfile={fields.length ? () => setSetupDone(false) : null}
         translation={
           translation
@@ -3377,7 +3394,7 @@ export default function CommunicationStage({
         }
         onListen={() =>
           speak(
-            phrase
+            phrase,languageCode
           )
         }
         onStart={

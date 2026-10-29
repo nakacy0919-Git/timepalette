@@ -209,4 +209,39 @@ assert.equal(publicPhoto.data.base64,webp);
 assert.equal(call({action:'setPublication',session:adminSession,questionId:publicId,mode:'unpublish'}).ok,true);
 const unpubPhoto=JSON.parse(run('doGet')({parameter:{action:'publishedPhoto',questionId:publicId,slot:1}}).s);
 assert.equal(unpubPhoto.ok,false);
+// Published order: only the admin can reorder, only an exact current scope can be saved.
+function makePublishedOrderQuestion(title){
+  const saved=call({action:'saveQuestion',session:adminSession,question:{
+    countryIso:'ph',countryName:'Philippines',domain:'language',type:'text4',
+    prompt:title,answer:'Correct',choices:['Wrong A','Wrong B','Wrong C'],sources:[],notes:'Test'
+  }});
+  assert.equal(saved.ok,true);
+  const id=saved.data.question.id;
+  assert.equal(call({action:'reviewQuestion',session:adminSession,questionId:id,status:'approved'}).ok,true);
+  assert.equal(call({action:'setPublication',session:adminSession,questionId:id,mode:'publish',rightsConfirmed:true}).ok,true);
+  return id;
+}
+const o1=makePublishedOrderQuestion('Published order one');
+const o2=makePublishedOrderQuestion('Published order two');
+const orderRequest=(session,ids)=>call({action:'setPublicationOrder',session,
+  countryIso:'ph',domain:'language',questionIds:ids});
+assert.equal(orderRequest(teacherSession,[o2,o1]).ok,false);
+assert.equal(orderRequest(adminSession,[o1]).ok,false);
+assert.equal(orderRequest(adminSession,[o1,o1]).ok,false);
+assert.equal(orderRequest(adminSession,[o2,o1]).ok,true);
+const readOrder=()=>call({action:'getPublicationOrder',session:adminSession,
+  countryIso:'ph',domain:'language'});
+assert.deepEqual(Array.from(readOrder().data.questionIds),[o2,o1]);
+assert.equal(call({action:'getPublicationOrder',session:teacherSession,
+  countryIso:'ph',domain:'language'}).ok,false);
+const orderCatalog=()=>JSON.parse(run('doGet')({parameter:{action:'publishedCatalog',countryIso:'ph',domain:'language'}}).s).data.questions.map(q=>q.id);
+assert.deepEqual(orderCatalog(),[o2,o1]);
+const o3=makePublishedOrderQuestion('Published order third');
+assert.deepEqual(orderCatalog(),[o2,o1,o3]);
+assert.equal(call({action:'setPublication',session:adminSession,questionId:o2,mode:'unpublish'}).ok,true);
+assert.deepEqual(orderCatalog(),[o1,o3]);
+assert.equal(call({action:'setPublication',session:adminSession,questionId:o2,mode:'publish',rightsConfirmed:true}).ok,true);
+assert.deepEqual(orderCatalog(),[o1,o3,o2]);
+assert.equal(orderRequest(adminSession,[o2,o1]).ok,false);
+console.log('PASS: publication ordering, access control, scope and republish append');
 console.log('PASS: login, roles, photos, review, progress, publication and restore');

@@ -10,6 +10,7 @@ const TP_MHEAD = ['id', 'questionId', 'slot', 'fileId', 'fileName', 'size', 'cre
 const TP_THEADE = ['id', 'name', 'role', 'inviteHash', 'pinHash', 'active'];
 const TP_PHEAD = ['key', 'countryIso', 'domain', 'manualDone', 'updatedAt'];
 const TP_PUBHEAD = ['id', 'questionId', 'action', 'adminId', 'rightsBasis', 'createdAt'];
+const TP_ORDERHEAD = ['key','questionIdsJson','updatedAt'];
 
 function tpRandom_() { return Utilities.getUuid().replace(/-/g, '') + Utilities.getUuid().replace(/-/g, ''); }
 function tpSha_(input) {
@@ -597,15 +598,16 @@ function authorizeMissionCreatorPhotoFetch(){
 }
 
 
-// Publication MVP: only Rwanda / Life & Culture is enabled during validation.
-// Other countries and domains must never leak private Drive images.
+// Published content uses the country and domain recorded on each question.
+// Never expose non-published items or unsupported game formats.
 function tpPublicEligible_(q){
-  return q && q.countryIso==='rw' && q.domain==='lifeCulture' &&
+  return q && /^[a-z]{2}$/.test(String(q.countryIso||'').toLowerCase()) &&
+    TP_DOMAINS.includes(String(q.domain)) &&
     ['text4','photo4','photoText4'].includes(String(q.type));
 }
 function tpPublicValidate_(q){
   if(!tpPublicEligible_(q) || !String(q.prompt||'').trim())
-    throw Error('現在はルワンダの生活・文化のみ公開テストできます。');
+    throw Error('この国・カテゴリーまたは問題形式は公開に対応していません。');
   if(['text4','photoText4'].includes(q.type)){
     const wrong=tpParse_(q.choicesJson).map(v=>String(v||'').trim());
     if(!String(q.answer||'').trim()||wrong.length!==3||wrong.some(v=>!v)||
@@ -639,9 +641,6 @@ function tpPublicRelease_(args,user){
       if(q.status!=='approved')throw Error('承認済みの問題のみ公開できます。');
       if(args.rightsConfirmed!==true)throw Error('画像・文章の公開利用権を確認してください。');
       tpPublicValidate_(q);
-      const count=tpRows_('Questions').filter(item=>item.status==='published' &&
-        item.countryIso===q.countryIso && item.domain===q.domain).length;
-      if(count>=10)throw Error('この国・カテゴリーは公開上限10問です。');
       tpPublicationAudit_(q,'publish',user,'admin_confirmed');
       q.status='published';
     }else{
@@ -651,17 +650,96 @@ function tpPublicRelease_(args,user){
     }
     q.updatedAt=tpNow_();
     tpReplace_('Questions',TP_QHEAD,q._row,q);
+    // Publication is authoritative even if the optional ordering sheet is unavailable.
+    try{tpPublicOrderOnChange_(q,mode);}catch(e){Logger.log('Publication order sync skipped: '+e);}
     return {questionId:q.id,status:q.status,updatedAt:q.updatedAt};
   });
+}
+// Public order is separate from Questions: no destructive schema migration is required.
+function tpOrderSheet_(create){
+  const book=TP_MC_SPREADSHEET_FOR_REQUEST ||
+    (TP_MC_SPREADSHEET_FOR_REQUEST=SpreadsheetApp.openById(tpProps_().getProperty('TP_DB_SHEET_ID')));
+  let sheet=book.getSheetByName('PublicationOrder');
+  if(!sheet && create){
+    sheet=book.insertSheet('PublicationOrder');
+    sheet.getRange(1,1,1,TP_ORDERHEAD.length).setValues([TP_ORDERHEAD]);
+  }
+  return sheet;
+}
+function tpOrderRecord_(iso,domain){
+  const sheet=tpOrderSheet_(false);
+  if(!sheet)return null;
+  const rows=sheet.getDataRange().getValues();
+  const key=iso+':'+domain;
+  for(let i=1;i<rows.length;i++){
+    if(String(rows[i][0])!==key)continue;
+    const parsed=tpParse_(rows[i][1]);
+    return {row:i+1,ids:Array.isArray(parsed)?parsed.filter(id=>/^[a-f0-9-]{36}$/i.test(String(id))):[]};
+  }
+  return null;
+}
+function tpOrderSave_(iso,domain,ids){
+  const sheet=tpOrderSheet_(true);
+  const old=tpOrderRecord_(iso,domain);
+  const values=[iso+':'+domain,JSON.stringify(ids),tpNow_()];
+  if(old)sheet.getRange(old.row,1,1,TP_ORDERHEAD.length).setValues([values]);
+  else sheet.appendRow(values);
+}
+function tpPublicOrderedRows_(iso,domain){
+  const qs=tpRows_('Questions').filter(q=>q.status==='published' &&
+    String(q.countryIso||'').toLowerCase()===iso && q.domain===domain && tpPublicEligible_(q));
+  const order=tpOrderRecord_(iso,domain)?.ids||[];
+  const rank=new Map(order.map((id,index)=>[id,index]));
+  return qs.sort((a,b)=>(rank.get(a.id)??1000)-(rank.get(b.id)??1000));
+}
+function tpPublicOrderRequestScope_(args){
+  const iso=String(args.countryIso||'').toLowerCase();
+  const domain=String(args.domain||'');
+  if(!/^[a-z]{2}$/.test(iso)||!TP_DOMAINS.includes(domain))
+    throw Error('国・カテゴリーを確認してください。');
+  return {iso,domain};
+}
+function tpGetPublicationOrder_(args,user){
+  tpAdmin_(user);
+  const {iso,domain}=tpPublicOrderRequestScope_(args);
+  return {countryIso:iso,domain,questionIds:tpPublicOrderedRows_(iso,domain).map(q=>q.id)};
+}
+function tpSetPublicationOrder_(args,user){
+  tpAdmin_(user);
+  const {iso,domain}=tpPublicOrderRequestScope_(args);
+  return tpWithLock_(()=>{
+    const ids=args.questionIds;
+    const current=tpPublicOrderedRows_(iso,domain).map(q=>q.id);
+    if(!Array.isArray(ids)||ids.length!==current.length||
+       new Set(ids).size!==ids.length||ids.some(id=>!current.includes(id)))
+      throw Error('公開ミッションが変更されています。再読み込みしてから順番を保存してください。');
+    tpOrderSave_(iso,domain,ids);
+    return {countryIso:iso,domain,questionIds:ids};
+  });
+}
+// Keep an existing explicit order consistent when a question is stopped or republished.
+function tpPublicOrderOnChange_(q,mode){
+  const existing=tpOrderRecord_(q.countryIso,q.domain);
+  if(!existing){
+    if(mode!=='publish')return;
+    // First publication in this scope: preserve older published questions, append the new one.
+    const old=tpRows_('Questions').filter(item=>item.status==='published' &&
+      item.countryIso===q.countryIso && item.domain===q.domain &&
+      item.id!==q.id && tpPublicEligible_(item)).map(item=>item.id);
+    tpOrderSave_(q.countryIso,q.domain,[...old,q.id]);
+    return;
+  }
+  const next=existing.ids.filter(id=>id!==q.id);
+  if(mode==='publish')next.push(q.id);
+  tpOrderSave_(q.countryIso,q.domain,next);
 }
 function tpPublicCatalog_(args){
   const country=String(args.countryIso||'').toLowerCase();
   const domain=String(args.domain||'');
-  if(country!=='rw'||domain!=='lifeCulture')return {questions:[]};
+  if(!/^[a-z]{2}$/.test(country)||!TP_DOMAINS.includes(domain))return {questions:[]};
   const media=tpRows_('Media');
-  const questions=tpRows_('Questions').filter(q=>q.status==='published' &&
-    q.countryIso===country && q.domain===domain && tpPublicEligible_(q))
-    .slice(0,10).map(q=>({
+  const questions=tpPublicOrderedRows_(country,domain)
+    .map(q=>({
       id:q.id,countryIso:q.countryIso,domain:q.domain,type:q.type,
       prompt:String(q.prompt||'').slice(0,2000),
       answer:String(q.answer||'').slice(0,1500),
@@ -726,6 +804,8 @@ function doPost(e) {
       case 'submitQuestion':data=tpSubmit_(body,user);break;
       case 'reviewQuestion':data=tpReview_(body,user);break;
       case 'setPublication':data=tpPublicRelease_(body,user);break;
+      case 'getPublicationOrder':data=tpGetPublicationOrder_(body,user);break;
+      case 'setPublicationOrder':data=tpSetPublicationOrder_(body,user);break;
       case 'setProgress':data=tpProgress_(body,user);break;
       case 'getMediaBatch':data=tpGetMediaBatch_(body,user);break;
       case 'getMedia':data=tpGetMedia_(body,user);break;
