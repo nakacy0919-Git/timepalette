@@ -2698,15 +2698,11 @@ export default function WorldMissionPanel({
       }
 
       if (
-        String(
-          countryCode
-        ).toLowerCase() ===
-          'rw' &&
-        domainId ===
-          'language'
+        domainId === 'language' &&
+        getWorldAdventureDomainPackage(countryCode, 'language')
       ) {
         /*
-         * Language Adventure has its own full-screen portal.
+         * Shared Language Adventure has its own full-screen portal for all countries.
          * Keep the parent panel out of the legacy mission-list view
          * while the portal is opening.
          */
