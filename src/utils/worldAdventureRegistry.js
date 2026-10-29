@@ -1,3 +1,4 @@
+import { getSharedLanguagePackage } from './sharedLanguageExchange.js';
 const adventureModules = import.meta.glob(
   '../data/world-adventure/**/*.json',
   { eager: true },
@@ -10,6 +11,7 @@ export const getWorldAdventureDomainPackage = (countryCode, domainId) => {
   const domain = String(domainId || '').trim();
 
   if (!country || !domain) return null;
+  if (domain === 'language') return getSharedLanguagePackage(country);
 
   for (const [path, module] of Object.entries(adventureModules)) {
     const normalizedPath = path.replaceAll('\\', '/');
