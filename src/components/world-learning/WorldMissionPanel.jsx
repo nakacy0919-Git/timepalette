@@ -11,6 +11,9 @@ import {getPlaceProgress} from '../../utils/placeProgressStorage';
 import {getReleasedGeographyPackage} from '../../utils/geographyRegistry.js';
 import PlaceAdventureLauncher from './PlaceAdventureLauncher';
 import TimeAdventureLauncher from './TimeAdventureLauncher';
+import LanguageAdventureLauncher from './LanguageAdventureLauncher';
+import { getWorldAdventureDomainProgress } from '../../utils/worldAdventureProgress';
+import { getSharedLanguagePackage, isSpanishExchangeCountry } from '../../utils/sharedLanguageExchange';
 import MissionPlayer from './MissionPlayer';
 
 const levels=[['elementary','小学生'],['juniorHigh','中学生'],['highSchoolStandard','高校生'],['highSchoolAdvanced','Challenge']];
@@ -50,10 +53,13 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     for(const id of getPlaceProgress(countryCode).completedMissionIds)if(allowed.has(id)||countryCode==='rw'&&/^rw-place-\d{2}$/.test(id))completeWorldMission(countryCode,id);
     revise(n=>n+1);
   };
-  const adventureCount=id=>((id==='place'&&(geo||countryCode==='rw'))||(id==='time'&&countryCode==='rw'))?10:0;
+  const adventureCount=id=>id==='language'&&getSharedLanguagePackage(countryCode)
+    ? (isSpanishExchangeCountry(countryCode)?20:10)
+    : ((id==='place'&&(geo||countryCode==='rw'))||(id==='time'&&countryCode==='rw'))?10:0;
   const pick=id=>{
     setActive(null);
     if(id==='place'&&adventureCount(id)>0){setDomain(null);setAdventure('place');return;}
+    if(id==='language'&&adventureCount(id)>0){setDomain(null);setAdventure('language');return;}
     setDomain(id);
   };
   return <section className="rounded-3xl bg-white p-4 shadow-sm md:p-6" data-testid="country-missions">
@@ -64,7 +70,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     <div className="mb-5 flex flex-wrap gap-2" aria-label="学習レベル">{levels.map(([id,label])=><button key={id} type="button" aria-pressed={level===id} onClick={()=>setLevel(id)} className={'rounded-full border px-4 py-2 font-bold '+(level===id?'bg-slate-900 text-white':'bg-white text-slate-700')}>{label}</button>)}</div>
     {!domain?<div className="tp-category-grid">{MISSION_DOMAINS.map((d,i)=>{
       const available=adventureCount(d.id)+levelCatalog.filter(m=>m.domain===d.id).length;
-      const adventureDone=d.id==='place'?[...placeDone].filter(id=>id.startsWith(countryCode+'-place-')).length:d.id==='time'?[...completed].filter(id=>id.startsWith(countryCode+'-time-')).length:0;
+      const adventureDone=d.id==='place'?[...placeDone].filter(id=>id.startsWith(countryCode+'-place-')).length:d.id==='time'?[...completed].filter(id=>id.startsWith(countryCode+'-time-')).length:d.id==='language'?getWorldAdventureDomainProgress(countryCode,'language').completedMissionIds.filter(id=>id.startsWith(countryCode+'-language-shared-')||id.startsWith(countryCode+'-language-es-')).length:0;
       const done=Math.min(adventureDone,adventureCount(d.id))+levelCatalog.filter(m=>m.domain===d.id&&completed.has(m.id)).length;
       const {Icon,tone,ink,hint}=categoryDesign[i];
       return <button key={d.id} type="button" data-domain={d.id} onClick={()=>pick(d.id)} className="tp-world-category tp-category-pass" style={{'--category-accent':colors[i],'--category-tone':tone,'--category-ink':ink}}>
@@ -90,5 +96,6 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     {active?.type==='single-choice'?<CreatorChoicePlayer key={active.id} mission={active} position={missions.findIndex(m=>m.id===active.id)+1} total={missions.length} alreadyCompleted={completed.has(active.id)} onClose={()=>setActive(null)} onComplete={m=>{completeWorldMission(countryCode,m.id);revise(n=>n+1);}} onNext={missions.findIndex(m=>m.id===active.id)<missions.length-1?()=>setActive(missions[missions.findIndex(m=>m.id===active.id)+1]):null}/>:active&&<MissionPlayer key={active.id} mission={{...active,learningLevelId:level,learningLevelLabel:levels.find(l=>l[0]===level)?.[1]}} domain={meta} alreadyCompleted={completed.has(active.id)} onClose={()=>setActive(null)} onBackToList={()=>setActive(null)} onComplete={m=>{completeWorldMission(countryCode,m?.id||active.id);revise(n=>n+1);}} missionPosition={missions.findIndex(m=>m.id===active.id)+1} totalMissions={missions.length}/>}
     <PlaceAdventureLauncher open={adventure==='place'} countryCode={countryCode} learningLevel={level} onClose={()=>{setAdventure(null);syncPlace();}} onProgressChange={syncPlace}/>
     <TimeAdventureLauncher open={adventure==='time'} countryCode={countryCode} learningLevel={level} onClose={()=>{setAdventure(null);revise(n=>n+1);}} onProgressChange={()=>revise(n=>n+1)}/>
+    <LanguageAdventureLauncher open={adventure==='language'} countryCode={countryCode} learningLevel={level} creatorMissionCount={levelCatalog.filter(m=>m.domain==='language').length} onOpenCreatorMissions={()=>{setAdventure(null);setDomain('language');}} onClose={()=>{setAdventure(null);revise(n=>n+1);}} onProgressChange={()=>revise(n=>n+1)}/>
   </section>;
 }
