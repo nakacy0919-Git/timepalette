@@ -1800,15 +1800,7 @@ function ProfileSetup({
   onReady,
 }) {
   const ready =
-    fields.every(
-      (
-        field
-      ) =>
-        String(
-          values[field.id] ??
-          ''
-        ).trim()
-    );
+    fields.every(field => field.required === false || String(values[field.id] ?? '').trim());
 
 
   return (
@@ -1820,6 +1812,9 @@ function ProfileSetup({
         max-w-3xl
         flex-col
         justify-center
+        overflow-y-auto
+        px-2
+        py-4
       "
     >
       <p
@@ -1952,6 +1947,9 @@ function SpeechCard({
   phrase,
   translation,
   kana,
+  partnerPhrase,
+  partnerJa,
+  onEditProfile,
   showKana,
   onToggleKana,
   index,
@@ -2056,6 +2054,11 @@ function SpeechCard({
           }
 
 
+          {onEditProfile && (
+            <button type="button" onClick={onEditProfile} className="rounded-xl bg-slate-100 px-3 py-2.5 text-[11px] font-black text-slate-700">
+              プロフィール編集
+            </button>
+          )}
           <button
             type="button"
             onClick={
@@ -2084,6 +2087,18 @@ function SpeechCard({
       </div>
 
 
+      {partnerPhrase && (
+        <div className="mt-3 rounded-2xl border border-blue-200 bg-blue-50 p-4">
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-xs font-black text-blue-800">🌍 相手の声 / PARTNER</span>
+            <button type="button" onClick={() => speak(partnerPhrase)} className="rounded-xl bg-white px-3 py-2 text-xs font-black text-blue-700">
+              ▶ 相手の声を聞く
+            </button>
+          </div>
+          <p className="mt-2 text-lg font-bold text-slate-900">{partnerPhrase}</p>
+          {partnerJa && <p className="mt-1 text-xs text-slate-600">{partnerJa}</p>}
+        </div>
+      )}
       <div
         className="
           mt-4
@@ -2522,10 +2537,10 @@ export default function CommunicationStage({
   const storedProfile =
     useMemo(
       () =>
-        load(
-          `timepalette_language_profile_${countryCode}`,
-          {}
-        ),
+        ({
+          ...load(`timepalette_language_profile_${countryCode}`, {}),
+          ...load('timepalette_language_global_profile', {}),
+        }),
       [
         countryCode,
       ]
@@ -2542,12 +2557,13 @@ export default function CommunicationStage({
   );
 
 
+  const profileIsReady = fields.every(field =>
+    field.required === false || String(storedProfile[field.id] ?? '').trim()
+  );
   const [
     setupDone,
     setSetupDone,
-  ] = useState(
-    fields.length === 0
-  );
+  ] = useState(profileIsReady);
 
 
   const [
@@ -2647,13 +2663,7 @@ export default function CommunicationStage({
       speech.reset();
 
 
-      if (
-        fields.length > 0
-      ) {
-        setSetupDone(
-          false
-        );
-      }
+      setSetupDone(profileIsReady);
     },
     [
       mission?.id,
@@ -2667,7 +2677,8 @@ export default function CommunicationStage({
       if (
         !finished ||
         mission?.type ===
-          'online-exchange-final'
+          'online-exchange-final' ||
+        mission?.finalGoal
       ) {
         return;
       }
@@ -2748,6 +2759,7 @@ export default function CommunicationStage({
     ...savedSchool,
     ...storedProfile,
     ...values,
+    nameKana: values.nameKana || storedProfile.nameKana || values.name || '',
   };
 
 
@@ -2860,6 +2872,8 @@ export default function CommunicationStage({
       current.kana,
       allValues
     );
+  const partnerPhrase = fill(current.partnerPhrase, allValues);
+  const partnerJa = fill(current.partnerJa, allValues);
 
 
   /*
@@ -2943,6 +2957,9 @@ export default function CommunicationStage({
         }
       );
 
+      save('timepalette_language_global_profile', {
+        ...storedProfile, ...values,
+      });
       setSetupDone(
         true
       );
@@ -3236,8 +3253,7 @@ export default function CommunicationStage({
           average
         }
         final={
-          mission?.type ===
-          'online-exchange-final'
+          mission?.type === 'online-exchange-final' || Boolean(mission?.finalGoal)
         }
         onFinish={() =>
           onClear(
@@ -3318,6 +3334,9 @@ export default function CommunicationStage({
         phrase={
           phrase
         }
+        partnerPhrase={partnerPhrase}
+        partnerJa={partnerJa}
+        onEditProfile={fields.length ? () => setSetupDone(false) : null}
         translation={
           translation
         }
