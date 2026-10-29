@@ -19,6 +19,7 @@ function LiveClocks({places}) {
 }
 export default function CountryTimeMission({mission,onComplete,alreadyCompleted}) {
   const [selected,setSelected]=useState(null);
+  const [wasCompleted]=useState(Boolean(alreadyCompleted));
   const [solved,setSolved]=useState(false);
   const [attempted,setAttempted]=useState(false);
   const [dial,setDial]=useState(0);
@@ -36,7 +37,7 @@ export default function CountryTimeMission({mission,onComplete,alreadyCompleted}
     <div className="flex flex-wrap gap-3"><button type="button" disabled={selected===null||solved} onClick={submit} className="rounded-xl bg-orange-600 px-6 py-3 font-black text-white disabled:opacity-40">答え合わせ</button><button type="button" onClick={()=>setHint(!hint)} className="rounded-xl border px-5 py-3 font-bold">考え方のヒント</button></div>
     {hint&&<p className="rounded-xl bg-sky-50 p-4">同じ瞬間をUTC（世界共通の基準）でつなごう。変換先のオフセット − 変換元のオフセットを足します。24:00を超えたら翌日、00:00より前なら前日です。季節の問題では2つの指定日を別々に比べます。</p>}
     {attempted&&!correct&&!solved&&<p role="status" className="text-sm text-slate-600">もう一度考えてみよう。時計・日付・オフセットを確認して、答えを変更できます。</p>}
-    {solved&&<div role="status" className="rounded-2xl bg-emerald-50 p-5"><h3 className="font-black text-emerald-800">ミッションクリア！{alreadyCompleted?'（クリア済みの復習）':''}</h3><p className="mt-2 leading-7">{mission.explanation}</p></div>}
+    {solved&&<div role="status" className="rounded-2xl bg-emerald-50 p-5"><h3 className="font-black text-emerald-800">ミッションクリア！{wasCompleted?'（クリア済みの復習）':''}</h3><p className="mt-2 leading-7">{mission.explanation}</p></div>}
     <p className="text-xs text-slate-500">出典：<a href={TIME_SOURCE} target="_blank" rel="noreferrer" className="underline">IANA Time Zone Database {TIME_DATA_VERSION}</a>。指定日の制度に基づく問題です。</p>
   </div>;
 }
