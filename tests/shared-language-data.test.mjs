@@ -1,12 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
 
 // Execute only the pure curriculum generator with the same country data Vite loads.
 // Replace import.meta.glob with an explicit in-memory map for the Node test runner.
 const dataDir = new URL('../src/data/', import.meta.url);
-const files = readdirSync(dataDir).filter(name => /^countries_[a-z]\\.json$/.test(name));
+const files = readdirSync(dataDir).filter(name => /^countries_[a-z]\.json$/.test(name));
 const countryModules = Object.fromEntries(files.map(name => [
   name, { default: JSON.parse(readFileSync(new URL(name,dataDir), 'utf8')) },
 ]));
@@ -14,7 +13,7 @@ const source = readFileSync(new URL('../src/utils/sharedLanguageExchange.js',imp
 const globStatement = "const countryModules = import.meta.glob('../data/countries_*.json', { eager: true });";
 assert.ok(source.includes(globStatement), 'Unexpected glob declaration: update test adapter');
 const executable = source.replace(globStatement, 'const countryModules = providedModules;')
-  .replace(/\\bexport\\s+(?=const|function)/g, '');
+  .replace(/\bexport\s+(?=const|function)/g, '');
 const { getSharedExchangeCountryCodes, getSharedLanguagePackage, SHARED_EXCHANGE_MISSION_COUNT } =
   new Function('providedModules', executable + '\nreturn {getSharedExchangeCountryCodes,getSharedLanguagePackage,SHARED_EXCHANGE_MISSION_COUNT};')(countryModules);
 
