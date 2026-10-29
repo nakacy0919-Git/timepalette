@@ -1,3 +1,4 @@
+import CountryTimeMission from './CountryTimeMission.jsx';
 import TimeMissionGame
   from '../TimeMissionGame';
 
@@ -34,6 +35,8 @@ export default function TimeMissionRouter({
   onComplete,
   alreadyCompleted,
 }) {
+
+  if (mission?.universalTime) return <CountryTimeMission {...{mission,onComplete,alreadyCompleted}} />;
 
   if (
     mission?.type ===
