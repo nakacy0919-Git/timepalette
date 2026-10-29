@@ -11,8 +11,7 @@ import {
   useState,
 } from 'react';
 
-import timeData
-  from '../../../data/world-adventure/time/time_r.json';
+import { getTimePackage } from '../../../utils/time197.js';
 
 import {
   completeWorldAdventureMission,
@@ -364,8 +363,7 @@ export default function TimeAdventure({
     ).toLowerCase();
 
   const packageData =
-    timeData?.[normalizedCountry] ??
-    timeData?.rw;
+    getTimePackage(normalizedCountry);
 
   const level =
     initialLevel ??
@@ -654,7 +652,7 @@ export default function TimeAdventure({
                   md:text-5xl
                 "
               >
-                Rwanda Time Adventure
+                {packageData.countryNameEn} Time Adventure
               </h1>
 
               <p
@@ -685,7 +683,7 @@ export default function TimeAdventure({
                     font-black
                   "
                 >
-                  🇷🇼 Rwanda
+                  {packageData.countryNameJa}
                 </span>
 
                 <span
@@ -997,7 +995,7 @@ export default function TimeAdventure({
                     text-amber-300
                   "
                 >
-                  RWANDA TIME ADVENTURE
+                  {packageData.countryNameEn.toUpperCase()} TIME ADVENTURE
                 </p>
 
                 <h2

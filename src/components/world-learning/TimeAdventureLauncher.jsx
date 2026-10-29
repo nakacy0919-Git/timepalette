@@ -64,6 +64,7 @@ export default function TimeAdventureLauncher({
       </button>
 
       <TimeAdventure
+        key={countryCode}
         initialLevel={learningLevel}
         countryCode={countryCode}
         onProgressChange={onProgressChange}

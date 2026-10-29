@@ -1,3 +1,4 @@
+import {getTimePackage} from '../../utils/time197.js';
 import {Globe,Clock,MessagesSquare,House,Handshake,Scale,ArrowUpRight} from 'lucide-react';
 import CreatorChoicePlayer from './CreatorChoicePlayer.jsx';
 import './creatorMissionPresentation.css';
@@ -46,7 +47,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
   const completed=new Set(getCountryProgress(countryCode).completedMissionIds);
   const placeDone=new Set(getPlaceProgress(countryCode).completedMissionIds);
   const meta=MISSION_DOMAINS.find(d=>d.id===domain);
-  const levelCatalog=catalog.map(m=>forCreatorLearningLevel(m,level)).filter(Boolean);
+  const levelCatalog=catalog.filter(m=>m.domain!=='time'||!getTimePackage(countryCode)).map(m=>forCreatorLearningLevel(m,level)).filter(Boolean);
   const missions=levelCatalog.filter(m=>m.domain===domain);
   const syncPlace=()=>{
     const allowed=new Set((geo?.missions||[]).map(m=>m.id));
@@ -55,10 +56,11 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
   };
   const adventureCount=id=>id==='language'&&getSharedLanguagePackage(countryCode)
     ? (isSpanishExchangeCountry(countryCode)?20:10)
-    : ((id==='place'&&(geo||countryCode==='rw'))||(id==='time'&&countryCode==='rw'))?10:0;
+    : ((id==='place'&&(geo||countryCode==='rw'))||(id==='time'&&getTimePackage(countryCode)))?10:0;
   const pick=id=>{
     setActive(null);
     if(id==='place'&&adventureCount(id)>0){setDomain(null);setAdventure('place');return;}
+    if(id==='time'&&adventureCount(id)>0){setDomain(null);setAdventure('time');return;}
     if(id==='language'&&adventureCount(id)>0){setDomain(null);setAdventure('language');return;}
     setDomain(id);
   };
@@ -70,7 +72,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     <div className="mb-5 flex flex-wrap gap-2" aria-label="学習レベル">{levels.map(([id,label])=><button key={id} type="button" aria-pressed={level===id} onClick={()=>setLevel(id)} className={'rounded-full border px-4 py-2 font-bold '+(level===id?'bg-slate-900 text-white':'bg-white text-slate-700')}>{label}</button>)}</div>
     {!domain?<div className="tp-category-grid">{MISSION_DOMAINS.map((d,i)=>{
       const available=adventureCount(d.id)+levelCatalog.filter(m=>m.domain===d.id).length;
-      const adventureDone=d.id==='place'?[...placeDone].filter(id=>id.startsWith(countryCode+'-place-')).length:d.id==='time'?[...completed].filter(id=>id.startsWith(countryCode+'-time-')).length:d.id==='language'?getWorldAdventureDomainProgress(countryCode,'language').completedMissionIds.filter(id=>id.startsWith(countryCode+'-language-shared-')||id.startsWith(countryCode+'-language-es-')).length:0;
+      const adventureDone=d.id==='time'?getWorldAdventureDomainProgress(countryCode,'time').completedMissionIds.filter(id=>id.startsWith(countryCode+'-time-')).length:d.id==='place'?[...placeDone].filter(id=>id.startsWith(countryCode+'-place-')).length:d.id==='time'?[...completed].filter(id=>id.startsWith(countryCode+'-time-')).length:d.id==='language'?getWorldAdventureDomainProgress(countryCode,'language').completedMissionIds.filter(id=>id.startsWith(countryCode+'-language-shared-')||id.startsWith(countryCode+'-language-es-')).length:0;
       const done=Math.min(adventureDone,adventureCount(d.id))+levelCatalog.filter(m=>m.domain===d.id&&completed.has(m.id)).length;
       const {Icon,tone,ink,hint}=categoryDesign[i];
       return <button key={d.id} type="button" data-domain={d.id} onClick={()=>pick(d.id)} className="tp-world-category tp-category-pass" style={{'--category-accent':colors[i],'--category-tone':tone,'--category-ink':ink}}>
