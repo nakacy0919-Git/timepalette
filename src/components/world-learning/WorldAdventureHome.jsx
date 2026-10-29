@@ -1,15 +1,11 @@
+import { getWorldAdventureDomainProgress } from '../../utils/worldAdventureProgress';
 import HomeToolsButton from '../navigation/HomeToolsButton';
 import {
   ArrowRight,
   Compass,
   Globe2,
-  Volume2,
-  VolumeX,
 } from 'lucide-react';
 
-import {
-  useState,
-} from 'react';
 
 import timePaletteLogo
   from '../../assets/branding/timepalette_global_adventure_logo.png';
@@ -26,9 +22,7 @@ import {
 } from '../../utils/worldLearningRegistry';
 
 import {
-  getUiSoundEnabled,
   playUiSound,
-  setUiSoundEnabled,
 } from '../../utils/uiSound';
 
 
@@ -52,11 +46,12 @@ export default function WorldAdventureHome({
             country.iso
           );
 
-        const completed =
-          countryProgress
-            ?.completedMissionIds
-            ?.filter(id=>country.missionData?.missions?.some(m=>m.id===id)).length ??
-          0;
+        const completedIds = new Set([
+          ...(countryProgress?.completedMissionIds ?? []),
+          ...getWorldAdventureDomainProgress(country.iso, 'time').completedMissionIds,
+        ]);
+        const availableIds = new Set(country.missionData?.missions?.map(m=>m.id) ?? []);
+        const completed = [...completedIds].filter(id=>availableIds.has(id)).length;
 
         return {
           completed:

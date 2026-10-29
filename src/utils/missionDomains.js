@@ -16,7 +16,7 @@ export const isCreatorDomain = domain => CREATOR_DOMAINS.includes(domain);
 export const makeCountryMissionShell = country => {
   const geo=getReleasedGeographyPackage(country?.iso);
   const place=(geo?.missions||(country?.iso==='rw'?rwanda.missions:[])).map(m=>({...m,domain:'place'}));
-  const time=country?.iso==='rw'?(getWorldAdventureDomainPackage('rw','time')?.missions||[]).map(m=>({...m,domain:'time'})):[];
+  const time=(getWorldAdventureDomainPackage(country?.iso,'time')?.missions||[]).map(m=>({...m,domain:'time'}));
   const missions=[...place,...time,...getPublishedSummary(country?.iso)];
   return {countryNameEn:country?.nameEn||'',countryNameJa:country?.nameJa||'',design:{domains:MISSION_DOMAINS},missions,totalMissions:missions.length,maxWorldPoints:missions.reduce((n,m)=>n+(Number(m.points)||0),0)};
 };
