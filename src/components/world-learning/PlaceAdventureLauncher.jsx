@@ -5,9 +5,10 @@ import {
 import {
   createPortal,
 } from 'react-dom';
+import {lazy,Suspense} from 'react';
 
-import PlaceAdventure from './place-v1/PlaceAdventure';
-import CountryPlaceAdventure from './place-v1/CountryPlaceAdventure';
+const PlaceAdventure=lazy(()=>import('./place-v1/PlaceAdventure'));
+import {getPlaceAdventurePackage} from '../../utils/geography197.js';
 
 
 export default function PlaceAdventureLauncher({
@@ -26,7 +27,8 @@ export default function PlaceAdventureLauncher({
   }
 
 
-  const Adventure = countryCode === 'rw' ? PlaceAdventure : CountryPlaceAdventure;
+  const curriculum = getPlaceAdventurePackage(countryCode);
+  if(!curriculum)return null;
   return createPortal(
     <div
       className="
@@ -71,7 +73,10 @@ export default function PlaceAdventureLauncher({
       </button>
 
 
-      <Adventure
+      <Suspense fallback={<p role="status" className="p-10 text-center font-bold">地図を読み込み中…</p>}>
+      <PlaceAdventure
+        key={countryCode}
+        packageData={curriculum}
         initialLevel={
           learningLevel
         }
@@ -82,6 +87,7 @@ export default function PlaceAdventureLauncher({
           onProgressChange
         }
       />
+      </Suspense>
     </div>,
     document.body
   );

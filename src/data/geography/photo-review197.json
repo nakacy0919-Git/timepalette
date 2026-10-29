@@ -1,0 +1,104 @@
+{
+  "reviewedAt": "2026-10-30",
+  "scope": "Contact sheets of all 394 photographs visually inspected; named metadata and licenses resolved. Review does not independently geolocate every camera position.",
+  "corrections": [
+    {
+      "iso": "ma",
+      "slot": 1,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:South_Panorama_Taza_Morocco_Nov25_A7CR_09655-62_PanoC.jpg",
+      "captionJa": "モロッコ・タザの街並み",
+      "review": "Replaced unrelated, historical drawing, object close-up, or ambiguous search result after visual scene review."
+    },
+    {
+      "iso": "ni",
+      "slot": 1,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_from_Cathedral_Roof_-_Leon_-_Nicaragua_(31439823582).jpg",
+      "captionJa": "ニカラグア・レオン大聖堂の屋上から見た街と山々",
+      "review": "Replaced unrelated, historical drawing, object close-up, or ambiguous search result after visual scene review."
+    },
+    {
+      "iso": "gw",
+      "slot": 2,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Memorial_building_independence_Guinea-Bissau_Madina_de_Bo%C3%A9.jpg",
+      "captionJa": "ギニアビサウ・マディナ・ド・ボエの建物",
+      "review": "Caption adjusted to the actual named scene and image type."
+    },
+    {
+      "iso": "nr",
+      "slot": 2,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Living_on_a_Blue_Planet_-_Nauru.jpg",
+      "captionJa": "ナオエロ（旧称ナウル）の海岸",
+      "review": "Caption adjusted to the actual named scene and image type."
+    },
+    {
+      "iso": "vc",
+      "slot": 2,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wallibou,_Hot_ashes_falling_into_newly_eroded_ash_YORYM-TA0047.jpg",
+      "captionJa": "セントビンセント島・ワリブーの1902年噴火後の景観",
+      "review": "Caption adjusted to the actual named scene and image type."
+    },
+    {
+      "iso": "td",
+      "slot": 2,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:S46-84-051_-_STS-046_-_Ennedi_Plateau,_Chad-Sudan_Border,_Africa_-_DPLA_-_a597da0ede3522f40d8d97f275c9fc90.jpg",
+      "captionJa": "チャド・エネディ高地の衛星写真",
+      "review": "Caption adjusted to the actual named scene and image type."
+    },
+    {
+      "iso": "gn",
+      "slot": 2,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Landschaft_bei_Dalaba_263.jpg",
+      "captionJa": "ギニア・ダラバ周辺の高地",
+      "review": "Replaced unrelated, historical drawing, object close-up, or ambiguous search result after visual scene review."
+    },
+    {
+      "iso": "kr",
+      "slot": 1,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Exterior_front_view_of_Daejojeon_Hall_with_blue_sky_at_Changdeokgung_Palace_in_Seoul.jpg",
+      "captionJa": "韓国・ソウルの昌徳宮",
+      "review": "Replaced unrelated, historical drawing, object close-up, or ambiguous search result after visual scene review."
+    },
+    {
+      "iso": "ls",
+      "slot": 1,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:685_Thaba_Bosiu.jpg",
+      "captionJa": "レソト・タバ・ボシウ",
+      "review": "Replaced unrelated, historical drawing, object close-up, or ambiguous search result after visual scene review."
+    },
+    {
+      "iso": "ma",
+      "slot": 2,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kasbah_ait_ben_haddou.jpg",
+      "captionJa": "モロッコ・アイット・ベン・ハドゥ",
+      "review": "Replaced unrelated, historical drawing, object close-up, or ambiguous search result after visual scene review."
+    },
+    {
+      "iso": "np",
+      "slot": 1,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kathmandu_Durbar_Square,_Shiva_Parvati_Temple,_Nepal_(edit).jpg",
+      "captionJa": "ネパール・カトマンズのダルバール広場",
+      "review": "Replaced unrelated, historical drawing, object close-up, or ambiguous search result after visual scene review."
+    },
+    {
+      "iso": "np",
+      "slot": 2,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Namche_Bazaar_facing_Kongde_Ri_towards_west.jpg",
+      "captionJa": "ネパール・ナムチェバザールの町と山々",
+      "review": "Replaced unrelated, historical drawing, object close-up, or ambiguous search result after visual scene review."
+    },
+    {
+      "iso": "sl",
+      "slot": 1,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bunce_Island_Beach.jpg",
+      "captionJa": "シエラレオネ・バンス島の海岸",
+      "review": "Replaced unrelated, historical drawing, object close-up, or ambiguous search result after visual scene review."
+    },
+    {
+      "iso": "ss",
+      "slot": 2,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fishing_Families.jpg",
+      "captionJa": "南スーダン・スッド湿地で暮らす漁業の家族",
+      "review": "Replaced unrelated, historical drawing, object close-up, or ambiguous search result after visual scene review."
+    }
+  ]
+}

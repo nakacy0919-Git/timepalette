@@ -42,8 +42,9 @@ test('terrain and route evidence detects a changed transit country',async()=>{
   assert.equal(auditContentReview(changed,content.am).status,'stale');
 });
 
-test('the live directory exposes accepted A packages and keeps B data for QA',async()=>{
+test('the live directory exposes the 197-country curriculum and retains the older review archive',async()=>{
  const {geographyCountries,getReleasedGeographyPackage}=await import('../src/utils/geographyRegistry.js');
- for(const p of geographyCountries)assert.equal(Boolean(getReleasedGeographyPackage(p.countryCode)),p.group==='A');
+ for(const p of geographyCountries)assert.equal(Boolean(getReleasedGeographyPackage(p.countryCode)),true);
+ assert.equal(getReleasedGeographyPackage('jp').missions.length,10);
  assert.ok(getGeographyPackage('br'));
 });

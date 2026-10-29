@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node --test tests/shared-language-data.test.mjs && vite build",
+    "build": "node --test tests/shared-language-data.test.mjs tests/geography197.test.mjs tests/creatorProductionProgress.test.mjs && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "node --test tests/*.test.mjs && node tests/missionCreator-gas.test.cjs && node cloudflare/timepalette-mission-api/tests/integration.mjs && node cloudflare/timepalette-mission-api/tests/quick-pin.mjs",

@@ -1,0 +1,285 @@
+{
+  "sources": [
+    {
+      "file": "countryInfo.txt",
+      "sha256": "5c710efde90ee4cca15001c9f6a97ae7a74c7020b365504913ddc3afeb6d3671",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "MK.zip",
+      "sha256": "c600f5773cd440b481e4627ecbcb6784616686c9f2c27f0e2b50f1cee47ef716",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "MV.zip",
+      "sha256": "674338d9669072dd4c16447fcfdb90b65bc302e83b212d374fd9d33233c66387",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "SB.zip",
+      "sha256": "e64d28590ae795c005f55eca902f6c18e87f1db044619b4689f1bec3d9504f01",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "VC.zip",
+      "sha256": "3d6dec0811a78a60d58cba530b43e0ec7eb19858619d2b820e65c296e4b56f3c",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "TL.zip",
+      "sha256": "4540253ea623859658b3bc26f0f2960673904ec5b7e40c80b2bdb6641903c750",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "world-port-index.geojson",
+      "sha256": "c9665ad8fe8c9c20c17458e1d430e9a40b6135771a55b11555a9e8eda252b6d1",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "AD.zip",
+      "sha256": "e924b3187015f0d85cecc43f1842ad82d518437ce9282a642f53a6f49fb27c14",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "MC.zip",
+      "sha256": "cdcd664b18bb7172b4980fdc798f1827c9e52ef52c3bdb37603799506e5a697c",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "QA.zip",
+      "sha256": "6dee9e2303c35e73a47914c99674b80821080d7fb571e493b1c662d26027433f",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "ports.geojson",
+      "sha256": "c5a5028f5187a5e1b9fe7f0fab99804a8be7482099a2365d404fb7e9dd6b5457",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "TO.zip",
+      "sha256": "6446767e4a477ed656b3f925e080fb2f6468cb16a3704c11fdfb0c0890c8cd4f",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "DM.zip",
+      "sha256": "2cc862ffe7909fe2cdd84ac8415aee180e81300635ed083a712070cfb5bfa17b",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "SM.zip",
+      "sha256": "fcf95a210e285375526a826c10c852680117cd3b7e70d4ff995ce12381dad34e",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "ST.zip",
+      "sha256": "b9f76a03068b2922f0483386d32dce69aa1d631eb1112eb92780ce7871b44bbb",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "coastline.geojson",
+      "sha256": "6f75ae0e0de157b14946e2255eb1f5486d9a13819032e26d4610852d296788f6",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "BN.zip",
+      "sha256": "eb16d267e863a84ce7f5edc2705343ffa374ea528166b4427f39dafa853491a1",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "CV.zip",
+      "sha256": "ef375961065f03720d0d7e3cf399be5b59e13cd30cc3f494717bb760a3c4607c",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "FM.zip",
+      "sha256": "4f07d58d139b467a464e91c7bda24fc7b5a337c1476172cccaf5b54093ee66e6",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "VA.zip",
+      "sha256": "451a34700de27c053f65c97f6dc8a3067b1eb3a5475848ef7e331bc2f944fab7",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "PS.zip",
+      "sha256": "1be78a41e78af65be5f4d32f2612a3b652e9c5b78299c766a28c1c3ff8307756",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "EH.zip",
+      "sha256": "29fdcd94859e5ec6077bf51542c72f588f410e83e2e900c3ba887996472e7d52",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "SI.zip",
+      "sha256": "a125228a361053568515e6fda6398ad95923d7aca59107532dd96b911df76bed",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "KM.zip",
+      "sha256": "e64086f441270cbb5dbac16de1419da9cbc99289d6f5d23344e1e34f99e99a92",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "NR.zip",
+      "sha256": "0f2aac59ef64e46dbf4d8e33e83c5eed1289a33fb77c0d45d7d056e7e29908a1",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "PW.zip",
+      "sha256": "b6cf31945f6479ba5f769b80713a3aab32b2755aa7befdb6bf7060b59483f56d",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "cities.geojson",
+      "sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "KI.zip",
+      "sha256": "94ee30a2f6a0a7d16d41754b92158ddf46ff3a7b4ec21c47cc73469c2da40878",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "LI.zip",
+      "sha256": "30ad04a8758c827e45b757f3966fd6a3e61376fd5d58c989934cc98c5c1de754",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "TT.zip",
+      "sha256": "e50e97fe2e63ad7f518bc9812fb67ca2f8e0bd17053681fb2f67e4d5b817953d",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "WS.zip",
+      "sha256": "a721b18124fcb8b6253d1a0c97df90b65cad79a8d06676acb8efc68351fabfa6",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "KN.zip",
+      "sha256": "0d158e2a9287629de0e9937814e482e0ac94bfacdb6b899b0ca421d038b63271",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "LK.zip",
+      "sha256": "f3e40c5c63ede33feeb59bc0a3d1222bfdbc6fde2a5281aeb3ae9cf5b6572684",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "ME.zip",
+      "sha256": "1a6362d076d53bd514627e87680e91f92bc407e24721c8255e8dc5dd3413b4a3",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "AG.zip",
+      "sha256": "11442c8b12fd8a704bddc55af94cdd380a9ca5a342eb8ebe6788bf33f1a201a5",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "MH.zip",
+      "sha256": "8d2bed56b8ce233c1be5abce3d83bbfe6e850aa70007bf90f437af1c652dc09f",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "VU.zip",
+      "sha256": "bfc45c37363a79084e82fcbdc6a4293633d982344b91ce8a71038c58a8b24cc1",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "SC.zip",
+      "sha256": "463f5ccbf68e2e8be66e0d21526efd0f0d650252041613994f089a5a42ba148e",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "MT.zip",
+      "sha256": "6ed343492e6cb56deb776189e58463379af52d706aefadf5f47a4eb982e58eb5",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "LC.zip",
+      "sha256": "916eff004e9c73f6dbf44f677fe80e4cb6cd4287b743cf1cb400ca4e92bcb4e3",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "MU.zip",
+      "sha256": "afde717394ee5d97284d75054b6e9d150061aa7fdd7829bbb55666fe9e734a1b",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "BS.zip",
+      "sha256": "91eefdef71dd9dd59a4e256c101dff5bb72ab3390caaff20b78b846fb49f472e",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "GD.zip",
+      "sha256": "35165440fc0e45a292e001532588c52002d82a6d98222338bef848323ec0b726",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "TV.zip",
+      "sha256": "fdfccc4ab0a0c9efc25b85f9bd96e7884845b4239b6b67a522ce491c5e0d164b",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "LU.zip",
+      "sha256": "ca1a1c2cfa8f015b4337d366b584090ed62a05334be7782b3f167b65a714b9f2",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "IL.zip",
+      "sha256": "9500ad610147422eefae0016226109f5a39603e81fbbdc4a809018b45d9d7822",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "BB.zip",
+      "sha256": "cc8682c8dbdd22eaf9cde21dc389e425f32942d05554638be584691718a0aa9c",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "SG.zip",
+      "sha256": "8999b62b96f12d4d2c2ddad8d7c6e927ba09cb589ef43b5228fc320effd2a034",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "BH.zip",
+      "sha256": "09ce52852a6d668ca2a35a82ebadf5b6bfa96268ddef6391d0a5ebd6a9c83d98",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "countries.geojson",
+      "sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+      "retrievedAt": "2026-10-30"
+    },
+    {
+      "file": "cities15000.zip",
+      "sha256": "c89ba6601c29c98a717ef8ad021cdebe47f0de3f1c2ebe0a66f5fe7d60cdc352",
+      "retrievedAt": "2026-10-30"
+    }
+  ],
+  "sourceUrls": {
+    "countries": "https://github.com/nvkelso/natural-earth-vector/tree/master/geojson",
+    "places": "https://download.geonames.org/export/dump/",
+    "capitalReference": "https://www.mofa.go.jp/mofaj/area/",
+    "naturalEarthLicense": "Public domain",
+    "geoNamesLicense": "CC BY 4.0"
+  },
+  "nearestMethod": "Coastline vertices densified to <=0.01 degree, 3-D unit-sphere nearest-neighbor search; approximate distance; no centroid proxy.",
+  "capitalRoleNotes": {
+    "gq": "2026年1月にシウダ・デ・ラ・パスへの遷都が宣言されました。マラボには引き続き首都機能が残ります。",
+    "za": "行政の首都プレトリアを探します。立法の中心はケープタウン、司法の中心はブルームフォンテーンです。",
+    "lk": "首都スリ・ジャヤワルダナプラ・コッテを扱います。コロンボとは区別します。",
+    "bo": "憲法上の首都はスクレ。政府所在地ラパスとは区別します。",
+    "nl": "首都はアムステルダム。政府・議会の所在地ハーグとは区別します。",
+    "ch": "ベルンは連邦政府所在地（連邦都市）です。",
+    "nr": "正式な首都は定められていないため、政府機関があるヤレン地区を探します。",
+    "pw": "マルキョク州のンゲルルムッドを探します。旧首都コロールとは区別します。",
+    "ps": "パレスチナが首都と主張する東エルサレムを扱います。行政の中心ラマッラとは区別します。国際的な地位には争いがあります。",
+    "il": "イスラエルが首都とするエルサレムを扱います。国際的な地位には争いがあります。",
+    "eh": "西サハラの地位には争いがあり、確定した首都を問う問題にはしません。主要都市アイウンを探します。",
+    "id": "この教材では現時点の首都ジャカルタを扱います。ヌサンタラへの首都移転計画とは区別します。",
+    "ye": "憲法上の首都サヌアを扱います。臨時の政府所在地アデンとは区別します。",
+    "my": "首都はクアラルンプール。行政の中心プトラジャヤとは区別します。",
+    "bj": "首都はポルトノボ。コトヌーとは区別します。",
+    "bi": "政治上の首都はギテガ。ブジュンブラとは区別します。"
+  }
+}

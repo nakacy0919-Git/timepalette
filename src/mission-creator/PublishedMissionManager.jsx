@@ -1,4 +1,5 @@
-import {getPublishedTimeMissions} from '../utils/creatorProductionProgress.js';
+import {describePublishedPlaceMission} from '../utils/geography197.js';
+import {getPublishedPlaceMissions,getPublishedTimeMissions} from '../utils/creatorProductionProgress.js';
 import {useEffect,useMemo,useState} from 'react';
 import {creatorRequest} from './api';
 import {PUBLIC_DOMAINS,reconcilePublishedOrder,movePublishedOrder,identicalOrder} from './publicationOrder.js';
@@ -19,7 +20,8 @@ export default function PublishedMissionManager({cloudflare=false,countries,ques
   const scope=useMemo(()=>questions.filter(q=>
     String(q.countryIso||'').toLowerCase()===countryIso && q.domain===domain),
     [questions,countryIso,domain]);
-  const builtInTime=domain==='time'?getPublishedTimeMissions(countryIso):[];
+  const builtInTime=domain==='time'?getPublishedTimeMissions(countryIso):domain==='place'?getPublishedPlaceMissions(countryIso):[];
+  const builtInLabel=domain==='place'?'場所・地図':'時間・時差';
   const published=scope.filter(q=>q.status==='published');
   const approved=scope.filter(q=>q.status==='approved');
   const byId=useMemo(()=>new Map(published.map(q=>[q.id,q])),[published]);
@@ -93,12 +95,12 @@ export default function PublishedMissionManager({cloudflare=false,countries,ques
           {PUBLIC_DOMAINS.map(([value,label])=><option key={value} value={value}>{label}</option>)}
         </select></div>
     </div>
-    {builtInTime.length>0 && <section aria-label="本編の時差ミッション" data-testid="mc-published-time-missions">
-      <div className="mc-public-heading"><h3>本編の時間・時差：公開済み {builtInTime.length}問</h3></div>
+    {builtInTime.length>0 && <section aria-label={`本編の${builtInLabel}ミッション`} data-testid={domain==='place'?'mc-published-place-missions':'mc-published-time-missions'}>
+      <div className="mc-public-heading"><h3>本編の{builtInLabel}：公開済み {builtInTime.length}問</h3></div>
       <p className="mc-muted">TimePaletteの公開版と同じ問題データです。各国の制作進捗に自動反映されます。体験型ミッションのため、編集・公開停止・順序変更は本編側で管理します。</p>
       <div className="mc-public-list">{builtInTime.map((mission,index)=><details className="mc-built-in-time-item" key={mission.id}>
-        <summary className="mc-public-text"><strong>{String(index+1).padStart(2,'0')} · {mission.title}</strong><small>{mission.cityJa} · 公開済み · 4択</small></summary>
-        <div className="mc-public-text"><p>{mission.prompt}</p><ol type="A">{mission.options.map(option=><li key={option.label}>{option.label}{option.correct?'（正解）':''}</li>)}</ol><p>解説：{mission.explanation}</p></div>
+        <summary className="mc-public-text"><strong>{String(index+1).padStart(2,'0')} · {typeof mission.title==='string'?mission.title:mission.title?.ja}</strong><small>{mission.cityJa} · 公開済み · {domain==='place'?'地図・写真の体験型':'4択'}</small></summary>
+        <div className="mc-public-text">{domain==='place'?<><p>{describePublishedPlaceMission(countryIso,mission).prompt}</p><p>正解・達成条件：{describePublishedPlaceMission(countryIso,mission).answer}</p><p>解説：{describePublishedPlaceMission(countryIso,mission).explanation}</p></>:<><p>{mission.prompt}</p><ol type="A">{mission.options.map(option=><li key={option.label}>{option.label}{option.correct?'（正解）':''}</li>)}</ol><p>解説：{mission.explanation}</p></>}</div>
       </details>)}</div>
     </section>}
     <div className="mc-public-heading"><h3>{builtInTime.length?'Creator投稿の公開済み':'公開済み'} {published.length}問</h3>

@@ -1,3 +1,5 @@
+import {getPublishedPlaceMissions} from './geography197.js';
+export {getPublishedPlaceMissions};
 import {getTimePackage} from './time197.js';
 
 // Built-in missions are releases, not teacher submissions. Never fabricate
@@ -12,4 +14,8 @@ export function getTimeReleaseSummary(countries) {
     const count=getPublishedTimeMissions(country.iso).length;
     return {countries:summary.countries+(count>0?1:0),missions:summary.missions+count};
   },{countries:0,missions:0});
+}
+
+export function getPlaceReleaseSummary(countries){
+ return countries.reduce((summary,country)=>{const count=getPublishedPlaceMissions(country.iso).length;return {countries:summary.countries+(count>0?1:0),missions:summary.missions+count};},{countries:0,missions:0});
 }

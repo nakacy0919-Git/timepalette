@@ -1,3 +1,4 @@
+import {getGeography197Package} from './geography197.js';
 import packages from '../data/geography/round1.json' with {type:'json'};
 import photoAssets from '../data/geography/photo-assets.json' with {type:'json'};
 export const GEOGRAPHY_TYPES=['world-locator','neighbor-puzzle','shape-choice','capital-hunt','city-challenge','landscape-detective','life-photo-evidence','route-challenge','photo-evidence','geo-master'];
@@ -37,4 +38,4 @@ export function geographyCandidates(p){
 }
 
 // Keep unfinished packages available to QA without exposing them in the country directory.
-export function getReleasedGeographyPackage(code){const p=getGeographyPackage(code);return p?.qa.releaseReady?p:null;}
+export function getReleasedGeographyPackage(code){return getGeography197Package(code);}

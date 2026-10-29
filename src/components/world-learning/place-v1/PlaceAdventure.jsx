@@ -1,3 +1,4 @@
+import GeographyMission197 from './GeographyMission197.jsx';
 import {
   Check,
   ChevronLeft,
@@ -6464,6 +6465,7 @@ function MissionGame({
   language,
   onClear,
 }) {
+  if (mission.universalGeography) return <GeographyMission197 {...{mission,language,onClear}} />;
   switch (
     mission.type
   ) {
@@ -6629,20 +6631,22 @@ export default function PlaceAdventure({
     'rw',
 
   onProgressChange,
+  packageData,
 }) {
+  const curriculum = packageData ?? data;
   const [
     level,
     setLevel,
   ] = useState(
     initialLevel ||
-    data.defaultLevel
+    curriculum.defaultLevel
   );
 
   const [
     language,
     setLanguage,
   ] = useState(
-    data.defaultLanguage
+    curriculum.defaultLanguage
   );
 
   const [
@@ -6672,7 +6676,7 @@ export default function PlaceAdventure({
 
 
   const mission =
-    data.missions[
+    curriculum.missions[
       currentIndex
     ];
 
@@ -6701,7 +6705,7 @@ export default function PlaceAdventure({
         id
       ) => {
         const item =
-          data.missions.find(
+          curriculum.missions.find(
             (
               candidate
             ) =>
@@ -6784,7 +6788,7 @@ export default function PlaceAdventure({
       if (
         index < 0 ||
         index >=
-        data.missions.length
+        curriculum.missions.length
       ) {
         return;
       }
@@ -6891,7 +6895,7 @@ export default function PlaceAdventure({
 
         isFinal:
           currentIndex ===
-          data.missions.length -
+          curriculum.missions.length -
           1,
       });
     };
@@ -6899,9 +6903,9 @@ export default function PlaceAdventure({
 
   const nextMission =
     currentIndex <
-    data.missions.length -
+    curriculum.missions.length -
     1
-      ? data.missions[
+      ? curriculum.missions[
           currentIndex +
           1
         ]
@@ -7054,7 +7058,7 @@ export default function PlaceAdventure({
                   md:text-2xl
                 "
               >
-                Rwanda · Place & Geography Adventure
+                {curriculum.countryNameEn} · Place & Geography Adventure
               </h1>
             </div>
           </div>
@@ -7314,7 +7318,7 @@ export default function PlaceAdventure({
               "
             >
               {
-                data.missions.map(
+                curriculum.missions.map(
                   (
                     item,
                     index
@@ -7773,7 +7777,7 @@ export default function PlaceAdventure({
                   disabled={
                     !isDone ||
                     currentIndex ===
-                    data.missions.length -
+                    curriculum.missions.length -
                     1
                   }
                   onClick={() =>
