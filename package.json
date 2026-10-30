@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node --test tests/shared-language-data.test.mjs tests/speechDiagnostics.test.mjs tests/multilingual-wave1.test.mjs tests/geography197.test.mjs tests/creatorProductionProgress.test.mjs tests/uiSound.test.mjs && vite build",
+    "build": "node --test tests/shared-language-data.test.mjs tests/speechDiagnostics.test.mjs tests/languageLayout.test.mjs tests/multilingual-wave1.test.mjs tests/geography197.test.mjs tests/creatorProductionProgress.test.mjs tests/uiSound.test.mjs && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "node --test tests/*.test.mjs && node tests/missionCreator-gas.test.cjs && node cloudflare/timepalette-mission-api/tests/integration.mjs && node cloudflare/timepalette-mission-api/tests/quick-pin.mjs",
@@ -15,7 +15,7 @@
     "qa:release": "node scripts/qa-place-geography.mjs --release",
     "qa:assets": "node scripts/qa-geography-assets.mjs",
     "qa:release:a": "node scripts/qa-place-geography.mjs --group=A --release && node scripts/qa-geography-assets.mjs && node scripts/qa-geography-acceptance.mjs",
-    "test:language": "node --test tests/shared-language-data.test.mjs tests/multilingual-wave1.test.mjs tests/speechDiagnostics.test.mjs"
+    "test:language": "node --test tests/shared-language-data.test.mjs tests/multilingual-wave1.test.mjs tests/speechDiagnostics.test.mjs tests/languageLayout.test.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "3.1142.0",

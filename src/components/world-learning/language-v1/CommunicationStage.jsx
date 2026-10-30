@@ -1480,7 +1480,7 @@ function AccuracyGauge({
 
   return (
     <div
-      className="
+      className="tp-language-accuracy
         flex
         h-full
         min-h-[170px]
@@ -1517,7 +1517,7 @@ function AccuracyGauge({
       >
         <svg
           viewBox="0 0 200 112"
-          className="
+          className="tp-language-accuracy-arc
             h-full
             w-full
             overflow-visible
@@ -1593,7 +1593,7 @@ function AccuracyGauge({
 
 
       <p
-        className={`
+        className={`tp-language-accuracy-value
           -mt-2
           text-5xl
           font-black
@@ -1669,7 +1669,7 @@ function ProfileSetup({
 
   return (
     <div
-      className="
+      className="tp-language-profile-scroll
         mx-auto
         flex
         h-full
@@ -1832,7 +1832,7 @@ function SpeechCard({
 }) {
   return (
     <div
-      className="
+      className="tp-language-speech-card
         mx-auto
         flex
         h-full
@@ -1842,7 +1842,7 @@ function SpeechCard({
       "
     >
       <div
-        className="
+        className="tp-language-speech-header
           flex
           items-center
           justify-between
@@ -1954,19 +1954,19 @@ function SpeechCard({
 
 
       {partnerPhrase && (
-        <div className="mt-3 rounded-2xl border border-blue-200 bg-blue-50 p-4">
+        <div className="tp-language-partner-card mt-3 rounded-2xl border border-blue-200 bg-blue-50 p-4">
           <div className="flex items-center justify-between gap-2">
             <span className="text-xs font-black text-blue-800">🌍 相手の声 / PARTNER</span>
             <button type="button" onClick={() => speak(partnerPhrase, languageCode)} className="rounded-xl bg-white px-3 py-2 text-xs font-black text-blue-700">
               ▶ 相手の声を聞く
             </button>
           </div>
-          <p className="mt-2 text-lg font-bold text-slate-900">{partnerPhrase}</p>
+          <p className="tp-language-partner-phrase mt-2 text-lg font-bold text-slate-900">{partnerPhrase}</p>
           {partnerJa && <p className="mt-1 text-xs text-slate-600">{partnerJa}</p>}
         </div>
       )}
       <div
-        className="
+        className="tp-language-target-card
           mt-4
           rounded-[30px]
           bg-slate-950
@@ -1978,7 +1978,7 @@ function SpeechCard({
         "
       >
         <p
-          className="
+          className="tp-language-target-phrase
             text-3xl
             font-black
             leading-[1.35]
@@ -2036,7 +2036,7 @@ function SpeechCard({
 
 
       <div
-        className="
+        className="tp-language-record-actions
           mt-4
           flex
           items-center
@@ -2051,7 +2051,7 @@ function SpeechCard({
               ? onStop
               : onStart
           }
-          className={`
+          className={`tp-language-record-button
             inline-flex
             min-w-[190px]
             items-center
@@ -2165,7 +2165,7 @@ function SpeechCard({
 
 
       <div
-        className="
+        className="tp-language-results
           mt-4
           grid
           gap-4
@@ -2173,7 +2173,7 @@ function SpeechCard({
         "
       >
         <div
-          className="
+          className="tp-language-transcript
             min-h-[170px]
             rounded-2xl
             border
@@ -2194,7 +2194,7 @@ function SpeechCard({
           </p>
 
           <p
-            className="
+            className="tp-language-transcript-text
               mt-4
               text-2xl
               font-black
@@ -3147,7 +3147,7 @@ export default function CommunicationStage({
   ) {
     return (
       <section
-        className="
+        className="tp-language-stage
           h-full
           min-h-0
           overflow-hidden
@@ -3184,7 +3184,7 @@ export default function CommunicationStage({
 
   return (
     <section
-      className="
+      className="tp-language-stage
         h-full
         min-h-0
         overflow-hidden

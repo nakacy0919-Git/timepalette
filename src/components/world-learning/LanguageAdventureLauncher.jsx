@@ -34,7 +34,8 @@ export default function LanguageAdventureLauncher({
         fixed
         inset-0
         z-[12000]
-        overflow-y-auto
+        h-[100dvh]
+        overflow-hidden
         bg-slate-100
       "
     >
@@ -46,12 +47,12 @@ export default function LanguageAdventureLauncher({
         aria-label="Language Adventureを閉じる"
         className="
           fixed
-          right-5
-          top-5
+          right-2
+          top-2
           z-[13000]
           flex
-          h-12
-          w-12
+          h-10
+          w-10
           items-center
           justify-center
           rounded-full
