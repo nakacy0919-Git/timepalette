@@ -15,34 +15,13 @@ import {
 import {
   playUiSound,
 } from '../../../utils/uiSound';
+import {normalizeSpeechText} from '../../../utils/multilingualSpeechText.js';
 
 
 const PASS_SCORE = 80;
 
 
-const normalize =
-  (
-    value = ''
-  ) =>
-    String(
-      value
-    )
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(
-        /[’']/g,
-        "'"
-      )
-      .replace(
-        /[^a-z0-9'\s]/g,
-        ' '
-      )
-      .replace(
-        /\s+/g,
-        ' '
-      )
-      .trim();
+const normalize = normalizeSpeechText;
 
 
 const calculateAccuracy =
@@ -222,30 +201,22 @@ const protectPersonalNameInTranscript =
       );
 
 
-    if (
-      !normalizedName ||
-      !normalizedTarget.includes(`my name is ${normalizedName}`) &&
-      !normalizedTarget.includes(`me llamo ${normalizedName}`)
-    ) {
-      return raw;
-    }
-
-
-    /*
-     * Examples:
-     *
-     * hi my name is Cohen
-     *
-     * hi my name is Cohen nice to meet you
-     *
-     * Everything recognized between
-     * "my name is" and the next fixed phrase
-     * is treated as the personal-name slot.
-     */
-    const namePattern = normalizedTarget.includes('me llamo ')
-      ? /\b(me\s+llamo)\s+(.+?)(?=[.!?]*$)/i
-      : /\b(my\s+name\s+is)\s+(.+?)(?=\s+nice\s+to\s+meet\s+you\b|[.!?]*$)/i;
-
+    const namePatterns = [
+      ['my name is', /\b(my\s+name\s+is)\s+(.+?)(?=\s+nice\s+to\s+meet\s+you\b|[.!?]*$)/i],
+      ['me llamo', /\b(me\s+llamo)\s+(.+?)(?=[.!?]*$)/i],
+      ["je m'appelle", /\b(je\s+m['’]appelle)\s+(.+?)(?=[.!?]*$)/i],
+      ['meu nome e', /\b(meu\s+nome\s+[éèe])\s+(.+?)(?=[.!?]*$)/i],
+      ['ich heisse', /\b(ich\s+hei(?:ß|ss)e)\s+(.+?)(?=[.!?]*$)/i],
+      ['mi chiamo', /\b(mi\s+chiamo)\s+(.+?)(?=[.!?]*$)/i],
+      ['ik heet', /\b(ik\s+heet)\s+(.+?)(?=[.!?]*$)/i],
+      ['nama saya', /\b(nama\s+saya)\s+(.+?)(?=[.!?]*$)/i],
+      ['jag heter', /\b(jag\s+heter)\s+(.+?)(?=[.!?]*$)/i],
+      ['ma numesc', /\b(m[ăa]\s+numesc)\s+(.+?)(?=[.!?]*$)/i],
+    ];
+    const namePattern=namePatterns.find(([prefix])=>
+      normalizedName && normalizedTarget.includes(prefix+' '+normalizedName)
+    )?.[1];
+    if(!namePattern)return raw;
 
     if (
       !namePattern.test(
@@ -2540,16 +2511,19 @@ export default function CommunicationStage({
     mission?.speech?.fields ??
     [];
   const languageCode = mission?.speech?.languageCode || 'en-US';
+  const isEnglish = languageCode.startsWith('en');
   const isSpanish = languageCode.startsWith('es');
-  const profileStorageKey = isSpanish ? 'timepalette_language_global_profile_es' : 'timepalette_language_global_profile';
-  const countryProfileKey = isSpanish ? `timepalette_language_profile_${countryCode}_es` : `timepalette_language_profile_${countryCode}`;
+  const languageKey = languageCode.split('-')[0].toLowerCase();
+  const profileStorageKey = isEnglish ? 'timepalette_language_global_profile' : `timepalette_language_global_profile_${languageKey}`;
+  const countryProfileKey = isEnglish ? `timepalette_language_profile_${countryCode}` : `timepalette_language_profile_${countryCode}_${languageKey}`;
+  const languageName = ({es:'スペイン語',fr:'フランス語',pt:'ポルトガル語',de:'ドイツ語',it:'イタリア語',nl:'オランダ語',ms:'マレー語',sv:'スウェーデン語',ro:'ルーマニア語'})[languageKey] || '英語';
 
 
   const storedProfile =
     useMemo(
       () =>
         ({
-          ...(isSpanish ? (() => {const en=load('timepalette_language_global_profile',{}); return {name:en.name,nameKana:en.nameKana,city:en.city,school:en.school};})() : {}),
+          ...(!isEnglish ? (() => {const en=load('timepalette_language_global_profile',{}); return {name:en.name,nameKana:en.nameKana,city:en.city,school:en.school};})() : {}),
           ...load(countryProfileKey, {}),
           ...load(profileStorageKey, {}),
         }),
@@ -2557,7 +2531,7 @@ export default function CommunicationStage({
         countryCode,
         countryProfileKey,
         profileStorageKey,
-        isSpanish,
+        isEnglish,
       ]
     );
 
@@ -3302,7 +3276,7 @@ export default function CommunicationStage({
         "
       >
         <ProfileSetup
-          languageName={isSpanish ? 'スペイン語' : '英語'}
+          languageName={languageName}
           fields={
             fields
           }
