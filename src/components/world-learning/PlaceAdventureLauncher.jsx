@@ -5,7 +5,7 @@ import {
 import {
   createPortal,
 } from 'react-dom';
-import {lazy,Suspense} from 'react';
+import {lazy,Suspense,useEffect} from 'react';
 
 const PlaceAdventure=lazy(()=>import('./place-v1/PlaceAdventure'));
 import {getPlaceAdventurePackage} from '../../utils/geography197.js';
@@ -18,6 +18,7 @@ export default function PlaceAdventureLauncher({
   countryCode = 'rw',
   onProgressChange,
 }) {
+  useEffect(()=>{if(!open)return;const previous=document.body.style.overflow;document.body.style.overflow='hidden';return()=>{document.body.style.overflow=previous;};},[open]);
   if (
     !open ||
     typeof document ===
@@ -35,7 +36,7 @@ export default function PlaceAdventureLauncher({
         fixed
         inset-0
         z-[12000]
-        overflow-y-auto
+        overflow-hidden
         bg-slate-100
       "
     >
@@ -47,12 +48,12 @@ export default function PlaceAdventureLauncher({
         aria-label="Place Adventureを閉じる"
         className="
           fixed
-          right-5
-          top-5
+          right-2
+          top-2
           z-[13000]
           flex
-          h-12
-          w-12
+          h-9
+          w-9
           items-center
           justify-center
           rounded-full

@@ -31,16 +31,16 @@ export function getGeography197Package(code){
  const titles=[`${name}をさがせ！`,p.neighborKind==='land-border'?'となりの国パズル':'いちばん近い国と方角を探せ！','国の形を見ぬけ！',`${p.capitalRoleJa}${p.capitalNameJa}を見つけよう`,'4つの地点を攻略せよ！','景色のたんてい',`${name}の景観を読み取ろう`,'海まで荷物を運べ！','写真たんてい',`${name}地理マスター`];
  const titlesEn=[`Find ${p.nameEn}!`,'Neighbor and Direction Puzzle','Country Shape Challenge',`Find ${capital.name}!`,'Four Places Challenge','Landscape Detective','Read Two Photographs','Route to the Sea','Photo Evidence Detective',`${p.nameEn} Geography Master`];
  const prompts=[
-  `${name}の首都・主な国土がある大陸を選び、地域→周辺の地図の順に${name}を見つけよう。小さい国は丸いマーカーも使えます。`,
-  p.neighborKind==='land-border'?`${name}と陸で国境を接する国・地域のカードを、地図の色と位置関係を手がかりに配置しよう。4枚ずつ進めます。`:`${name}の国土に最も近い国を選び、いちばん近い海岸から見た方角を答えよう。首都間の距離ではありません。`,
-  `4つのシルエットを見くらべて、${name}を選ぼう。島々や海外領土を含み、各図の縮尺は異なります。`,
-  `${name}の${p.capitalRoleJa}「${p.capitalNameJa}」の場所を、拡大地図の点から選ぼう。${p.capitalNote}`,
-  '名前と位置を確認してから、4つの地点を順に選ぼう。都市国家では実在する地区・建物・広場も使います。',
-  `資料の写真「${photo?.captionJa??name+'の景観'}」を観察しよう。参照写真を閉じて、4枚から同じ場所の景観を見つけよう。`,
-  `${name}の2枚の写真とキャプションを見比べよう。資料から確かめられることと、資料の限界について正しい説明を2つ選ぼう。`,
-  `${name}から海へ。${!p.route.domestic?'通過する国を順につなぎ、':'国内の'}海港までの模式ルートを完成させよう。`,
-  '写真とキャプションをよく見て、この資料だけで本当に言える範囲を選ぼう。',
-  `${name}の位置・${p.capitalRoleJa}・地理情報の3つの鍵を集めよう。`,
+  `${name}はどこ？まず地図の大陸名をタップし、次の地図で${name}を選ぼう。`,
+  p.neighborKind==='land-border'?'①国のカードを選ぶ。②地図の色に合う「国境」の枠をタップ。すべて配置しよう。':`${name}に海岸間で最も近い国を4択から選び、次にその方角を選ぼう。`,
+  `お手本と同じ${name}の形を、4つから1つ選ぼう。各図の縮尺は異なります。`,
+  `地図の4つの点から、${p.capitalRoleJa}「${p.capitalNameJa}」をタップしよう。`,
+  '最初に4地点の位置を確認。「スタート」を押し、指定された地点を順にタップしよう。',
+  'お手本の景色を覚え、「4枚から探す」を押そう。同じ写真を1枚選ぼう。',
+  '2枚の写真と説明を見比べ、正しい説明を2つ選んで「確かめる」を押そう。',
+  '参照ルートを覚えて「出発」。国と海港を順に選び、同じルートを完成させよう。',
+  '写真と説明から確かに言えることを、4つから1つ選ぼう。',
+  '①国の位置 → ②首都・政府所在地 → ③正しい地理情報3つ。順に答えて3つの鍵を集めよう。',
  ];
  const promptsEn=[`Choose the continent containing ${p.nameEn}'s capital/main territory, then locate the country on the regional and surrounding maps. Small countries have round markers.`,p.neighborKind==='land-border'?`Place the cards of countries/regions sharing a land border with ${p.nameEn}. Work in batches of four.`:`Find the nearest country by coastline-to-coastline distance, then choose the direction from the closest shore of ${p.nameEn}. This is not a capital-to-capital comparison.`,`Identify ${p.nameEn} from four silhouettes. Islands and overseas territories are included; scales differ.`,`Find ${capital.name} on the enlarged map. Read the note about the capital's role.`, 'Learn four actual locations and select them in order. City-states may use districts, buildings or squares.',`Study the reference photograph (${photo?.captionEn??p.nameEn}), close it, and identify the same scene among four photographs.`,`Compare two photographs and their captions. Select two statements about the evidence and its limits.`,`Connect ${p.nameEn} to a seaport using the schematic route.`, 'Choose the claim that this photograph and caption can actually support.',`Collect the location, capital and geography keys for ${p.nameEn}.`];
  const discoveries=[`${name}の位置を、大陸→地域→周辺の順に確認できました。`,p.neighborKind==='land-border'?`${name}と陸で接する相手：${p.neighbors.map(n=>n.nameJa).join('、')}。${p.neighborNote}`:`地図上で最も近い対象国は${p.nearest.countryNameJa}、近い海岸から見た方角は${p.nearest.direction}。距離は約${Math.round(p.nearest.distanceKm)}kmです。${p.nearest.definitionJa}`,'国土の形と国土面積は別の情報です。輪郭図の縮尺が違うため、絵の大きさだけで面積は比較できません。',`${name}の${p.capitalRoleJa}は${p.capitalNameJa}。${p.capitalNote}地図の番号と地名を照合して、国内の位置を確認できました。`,`実在する4地点：${p.cities.map(c=>c.labelJa||c.name).join('、')}。番号の丸は押しやすく配置し、線の先が実際の位置です。`,`「${photo?.captionJa??name+'の景観'}」という場所の景観を見つけました。1か所の写真を国全体に一般化しないことも大切です。`,'写真は特定の場所・場面の資料です。キャプションで場所や被写体を確認できますが、2枚だけで国全体の暮らし・人口・年間の気候は分かりません。',`${p.route.countries.map(c=>c.nameJa).join(' → ')} → ${p.route.port}港 → 海。${p.route.noteJa}`,'資料が示す場所・場面の一例と、国全体についての主張は区別します。',`${name}の${p.capitalRoleJa}は${p.capitalNameJa}。${p.factJa}${p.capitalNote}`];
