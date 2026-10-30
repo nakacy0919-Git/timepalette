@@ -1,5 +1,6 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {Mic2} from 'lucide-react';
+import {flagEmojiFromCode} from '../../../utils/countryFlagEmoji.js';
 import {getWorldAdventureDomainPackage} from '../../../utils/worldAdventureRegistry';
 import {getAvailableExchangeLanguages,getExchangeLanguagePackage} from '../../../utils/multilingualExchange.js';
 import {getSpeechLanguageName} from '../../../utils/speechRecognitionDiagnostics.js';
@@ -10,11 +11,6 @@ import SourceReadingMission from './SourceReadingMission';
 import CommunicationStage from './CommunicationStage';
 import SpeechRecognitionDiagnostic from './SpeechRecognitionDiagnostic';
 import './languageAdventureLayout.css';
-
-// ISO 3166-1 alpha-2 flags are used even when country data lacks flagEmoji.
-const flagFromIso=iso=>/^[a-z]{2}$/.test(iso)
-  ? String.fromCodePoint(...[...iso.toUpperCase()].map(letter=>127397+letter.charCodeAt(0)))
-  : '🌍';
 
 const textOf=(value,language='ja')=>
   typeof value==='string'?value:(value?.[language]??value?.ja??value?.en??'');
@@ -38,7 +34,7 @@ export default function LanguageAdventure({
   const missions=useMemo(()=>packageData?.missions??[],[packageData]);
   const activeMission=missions[activeIndex]||missions[0];
   const country=packageData?.country??{};
-  const countryFlag=flagFromIso(iso);
+  const countryFlag=flagEmojiFromCode(iso);
   const selectedLocale=activeMission?.speech?.languageCode||'en-US';
   const selectedName=getSpeechLanguageName(selectedLocale);
   const completedSet=new Set(progress?.completedMissionIds??[]);
