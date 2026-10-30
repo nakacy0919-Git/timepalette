@@ -3,7 +3,7 @@
 // Language eligibility lists include sovereign countries only; do not infer a
 // country's everyday home language from its official-language designation.
 // Browser speech-recognition and speech-synthesis support require device checks.
-import {getSharedLanguagePackage, getSpanishLanguagePackage, isSpanishExchangeCountry} from './sharedLanguageExchange.js';
+import {getSharedLanguagePackage, getSharedExchangeCountryCodes, getSpanishLanguagePackage, isSpanishExchangeCountry} from './sharedLanguageExchange.js';
 
 const COMMON_TITLES=[
  ['あいさつしよう','Greetings'],['自分の名前を言おう','Introduce yourself'],
