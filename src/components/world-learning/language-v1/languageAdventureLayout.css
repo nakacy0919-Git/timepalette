@@ -312,3 +312,15 @@
   .tp-language-example-speaker{font-size:11px;padding:7px 10px}
   .tp-language-partner-audio span{display:none}
 }
+
+/* Letter icons make Canada's English/French options identifiable without using another country flag. */
+.tp-language-choice-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:23px;height:23px;border-radius:50%;
+  padding:0 3px;background:#eee9fc;color:#6137bf;
+  font-size:9px;font-weight:950;letter-spacing:-.025em;
+}
+.tp-language-choice-pill.is-selected .tp-language-choice-icon{background:#fff;color:#5e32c8}
+@media(max-width:520px){
+  .tp-language-choice-icon{min-width:19px;height:19px;font-size:8px}
+}
