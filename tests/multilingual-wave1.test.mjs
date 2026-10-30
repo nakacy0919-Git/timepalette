@@ -12,7 +12,7 @@ assert.ok(sharedSource.includes(glob));
 const sharedBody=sharedSource.replace(glob,"const countryModules = providedModules;").replace(/\bexport\s+(?=const|function)/g,'');
 const shared=new Function('providedModules',sharedBody+'\nreturn {getSharedLanguagePackage,getSharedExchangeCountryCodes,getSpanishLanguagePackage,isSpanishExchangeCountry};')(modules);
 const multiSource=readFileSync(new URL('../src/utils/multilingualExchange.js',import.meta.url),'utf8');
-const importLine="import {getSharedLanguagePackage, getSpanishLanguagePackage, isSpanishExchangeCountry} from './sharedLanguageExchange.js';";
+const importLine="import {getSharedLanguagePackage, getSharedExchangeCountryCodes, getSpanishLanguagePackage, isSpanishExchangeCountry} from './sharedLanguageExchange.js';";
 assert.ok(multiSource.includes(importLine));
 const multiBody=multiSource.replace(importLine,'').replace(/\bexport\s+(?=const|function)/g,'');
 const m=new Function('getSharedLanguagePackage','getSharedExchangeCountryCodes','getSpanishLanguagePackage','isSpanishExchangeCountry',
