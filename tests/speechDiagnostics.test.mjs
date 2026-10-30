@@ -36,7 +36,7 @@ test('accent tolerant shared accuracy with word-level edit distance',()=>{
   assert.equal(calculateSpeechAccuracy('Bonjour je m’appelle Sara','bonjour je mappelle sara'),100);
   assert.equal(calculateSpeechAccuracy('Ich heiße Sara','ich heisse sara'),100);
   assert.equal(calculateSpeechAccuracy('Bună! Mă numesc Sara.','buna ma numesc sara'),100);
-  assert.equal(calculateSpeechAccuracy('Hello nice to meet you','hello nice to'),80);
+  assert.equal(calculateSpeechAccuracy('Hello nice to meet you','hello nice to meet'),80);
   assert.equal(calculateSpeechAccuracy('Hello nice to meet you','hello nice'),40);
 });
 
