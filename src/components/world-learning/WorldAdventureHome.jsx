@@ -1,4 +1,5 @@
 import { getWorldAdventureDomainProgress } from '../../utils/worldAdventureProgress';
+import {getPlaceProgress} from '../../utils/placeProgressStorage.js';
 import HomeToolsButton from '../navigation/HomeToolsButton';
 import {
   ArrowRight,
@@ -48,6 +49,7 @@ export default function WorldAdventureHome({
 
         const completedIds = new Set([
           ...(countryProgress?.completedMissionIds ?? []),
+          ...getPlaceProgress(country.iso).completedMissionIds,
           ...getWorldAdventureDomainProgress(country.iso, 'time').completedMissionIds,
         ]);
         const availableIds = new Set(country.missionData?.missions?.map(m=>m.id) ?? []);
