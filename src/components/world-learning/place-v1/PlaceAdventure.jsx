@@ -4644,7 +4644,7 @@ function LandscapeDetective({
             (
               choice
             ) => (
-              <button
+              <MissionChoiceButton
                 key={
                   choice.id
                 }
@@ -4706,13 +4706,10 @@ function LandscapeDetective({
                   "
                 >
                   {
-                    t(
-                      choice.label,
-                      language
-                    )
+                    <MissionChoiceText>{t(choice.label,language)}</MissionChoiceText>
                   }
                 </div>
-              </button>
+              </MissionChoiceButton>
             )
           )
         }
@@ -5091,8 +5088,8 @@ function PhotoChoiceCard({
   onClick,
 }) {
   return (
-    <button
-      type="button"
+    <MissionChoiceButton
+      type="button" aria-pressed={selected}
       onClick={
         onClick
       }
@@ -5155,13 +5152,10 @@ function PhotoChoiceCard({
         "
       >
         {
-          t(
-            item,
-            language
-          )
+          <MissionChoiceText>{t(item,language)}</MissionChoiceText>
         }
       </div>
-    </button>
+    </MissionChoiceButton>
   );
 }
 
