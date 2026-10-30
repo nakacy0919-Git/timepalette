@@ -1,7 +1,7 @@
 import { GripVertical, Sparkles } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { getWorldAdventureDomainPackage } from '../../../utils/worldAdventureRegistry';
-import { getSpanishLanguagePackage, isSpanishExchangeCountry } from '../../../utils/sharedLanguageExchange';
+import {getAvailableExchangeLanguages,getExchangeLanguagePackage} from '../../../utils/multilingualExchange.js';
 import { completeWorldAdventureMission, getWorldAdventureDomainProgress } from '../../../utils/worldAdventureProgress';
 import MissionSuccessCelebration from '../MissionSuccessCelebration';
 import SourceStudyReader from '../SourceStudyReader';
@@ -26,10 +26,8 @@ export default function LanguageAdventure({
 }) {
   const normalizedCountry = String(countryCode).trim().toLowerCase();
   const [languageChoice,setLanguageChoice] = useState('en');
-  const spanishAvailable = isSpanishExchangeCountry(normalizedCountry);
-  const packageData = languageChoice==='es' && spanishAvailable
-    ? getSpanishLanguagePackage(normalizedCountry)
-    : getWorldAdventureDomainPackage(normalizedCountry,'language');
+  const languageOptions = getAvailableExchangeLanguages(normalizedCountry);
+  const packageData = getExchangeLanguagePackage(normalizedCountry,languageChoice) || getWorldAdventureDomainPackage(normalizedCountry,'language');
   const missions = useMemo(()=>packageData?.missions ?? [],[packageData]);
   const [activeIndex,setActiveIndex] = useState(0);
   const [progress,setProgress] = useState(()=>getWorldAdventureDomainProgress(normalizedCountry,'language'));
@@ -38,7 +36,7 @@ export default function LanguageAdventure({
   const cleanupRef = useRef(null);
   const advanceTimerRef = useRef(null);
   const chooseLanguage = (value) => {
-    if(value===languageChoice || (value==='es'&&!spanishAvailable)) return;
+    if(value===languageChoice || !languageOptions.some(option=>option.id===value)) return;
     if(advanceTimerRef.current){window.clearTimeout(advanceTimerRef.current);advanceTimerRef.current=null;}
     setCelebration(null);
     setActiveIndex(0);
@@ -294,11 +292,17 @@ export default function LanguageAdventure({
           </div>
         </div>
 
-        {spanishAvailable && <div className="flex flex-wrap items-center gap-2 border-t border-white/10 px-4 py-2.5" aria-label="練習する言語を選択">
-          <span className="mr-2 text-xs font-bold text-violet-200">練習する言語</span>
-          <button type="button" aria-pressed={languageChoice==='en'} onClick={()=>chooseLanguage('en')} className={'rounded-xl px-4 py-2 text-sm font-black '+(languageChoice==='en'?'bg-white text-violet-900':'bg-white/10 text-white')}>🌎 English</button>
-          <button type="button" aria-pressed={languageChoice==='es'} onClick={()=>chooseLanguage('es')} className={'rounded-xl px-4 py-2 text-sm font-black '+(languageChoice==='es'?'bg-white text-violet-900':'bg-white/10 text-white')}>🇪🇸 Español</button>
-          <span className="ml-auto text-xs text-violet-200">各10ミッション・進捗は別々</span>
+        {languageOptions.length > 1 && <div className="border-t border-white/10 px-4 py-2.5" aria-label="練習する言語を選択">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="mr-2 text-xs font-bold text-violet-200">練習する言語</span>
+            {languageOptions.map(option=><button type="button" key={option.id}
+              aria-pressed={languageChoice===option.id}
+              onClick={()=>chooseLanguage(option.id)}
+              className={'rounded-xl px-3 py-2 text-xs font-black '+(languageChoice===option.id?'bg-white text-violet-900':'bg-white/10 text-white')}>
+              {option.nativeName}{option.status==='pilot'?' · 試験公開':''}
+            </button>)}
+          </div>
+          <p className="mt-1.5 text-[10px] text-violet-200">各言語10ミッション・クリア記録は独立しています。試験公開言語の音声認識・読み上げは端末によって利用できない場合があります。</p>
         </div>}
         <div className="border-t border-white/10 bg-white/5 px-4 py-2.5">
           <div className="flex items-center gap-3">
