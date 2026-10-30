@@ -14,7 +14,7 @@ import PlaceAdventureLauncher from './PlaceAdventureLauncher';
 import TimeAdventureLauncher from './TimeAdventureLauncher';
 import LanguageAdventureLauncher from './LanguageAdventureLauncher';
 import { getWorldAdventureDomainProgress } from '../../utils/worldAdventureProgress';
-import { getSharedLanguagePackage, isSpanishExchangeCountry } from '../../utils/sharedLanguageExchange';
+import {getAvailableExchangeLanguages,getExchangeLanguageMissionCount} from '../../utils/multilingualExchange.js';
 import MissionPlayer from './MissionPlayer';
 
 const levels=[['elementary','小学生'],['juniorHigh','中学生'],['highSchoolStandard','高校生'],['highSchoolAdvanced','Challenge']];
@@ -54,8 +54,10 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     for(const id of getPlaceProgress(countryCode).completedMissionIds)if(allowed.has(id)||countryCode==='rw'&&/^rw-place-\d{2}$/.test(id))completeWorldMission(countryCode,id);
     revise(n=>n+1);
   };
-  const adventureCount=id=>id==='language'&&getSharedLanguagePackage(countryCode)
-    ? (isSpanishExchangeCountry(countryCode)?20:10)
+  const languageOptions=getAvailableExchangeLanguages(countryCode);
+  const languageMissionPrefixes=languageOptions.map(option=>countryCode+'-language-'+(option.id==='en'?'shared':option.id)+'-');
+  const adventureCount=id=>id==='language'&&languageOptions.length
+    ? getExchangeLanguageMissionCount(countryCode)
     : ((id==='place'&&(geo||countryCode==='rw'))||(id==='time'&&getTimePackage(countryCode)))?10:0;
   const pick=id=>{
     setActive(null);
@@ -72,7 +74,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     <div className="mb-5 flex flex-wrap gap-2" aria-label="学習レベル">{levels.map(([id,label])=><button key={id} type="button" aria-pressed={level===id} onClick={()=>setLevel(id)} className={'rounded-full border px-4 py-2 font-bold '+(level===id?'bg-slate-900 text-white':'bg-white text-slate-700')}>{label}</button>)}</div>
     {!domain?<div className="tp-category-grid">{MISSION_DOMAINS.map((d,i)=>{
       const available=adventureCount(d.id)+levelCatalog.filter(m=>m.domain===d.id).length;
-      const adventureDone=d.id==='time'?getWorldAdventureDomainProgress(countryCode,'time').completedMissionIds.filter(id=>id.startsWith(countryCode+'-time-')).length:d.id==='place'?[...placeDone].filter(id=>id.startsWith(countryCode+'-place-')).length:d.id==='time'?[...completed].filter(id=>id.startsWith(countryCode+'-time-')).length:d.id==='language'?getWorldAdventureDomainProgress(countryCode,'language').completedMissionIds.filter(id=>id.startsWith(countryCode+'-language-shared-')||id.startsWith(countryCode+'-language-es-')).length:0;
+      const adventureDone=d.id==='time'?getWorldAdventureDomainProgress(countryCode,'time').completedMissionIds.filter(id=>id.startsWith(countryCode+'-time-')).length:d.id==='place'?[...placeDone].filter(id=>id.startsWith(countryCode+'-place-')).length:d.id==='time'?[...completed].filter(id=>id.startsWith(countryCode+'-time-')).length:d.id==='language'?getWorldAdventureDomainProgress(countryCode,'language').completedMissionIds.filter(id=>languageMissionPrefixes.some(prefix=>id.startsWith(prefix))).length:0;
       const done=Math.min(adventureDone,adventureCount(d.id))+levelCatalog.filter(m=>m.domain===d.id&&completed.has(m.id)).length;
       const {Icon,tone,ink,hint}=categoryDesign[i];
       return <button key={d.id} type="button" data-domain={d.id} onClick={()=>pick(d.id)} className="tp-world-category tp-category-pass" style={{'--category-accent':colors[i],'--category-tone':tone,'--category-ink':ink}}>
