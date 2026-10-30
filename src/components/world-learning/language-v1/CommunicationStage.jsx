@@ -1,5 +1,5 @@
 import {
-  Headphones,
+  Volume2,
   Mic,
   RotateCcw,
   Square,
@@ -1925,56 +1925,27 @@ function SpeechCard({
               プロフィール編集
             </button>
           )}
-          <button
-            type="button"
-            onClick={
-              onListen
-            }
-            className="
-              inline-flex
-              items-center
-              gap-2
-              rounded-xl
-              bg-blue-50
-              px-3
-              py-2.5
-              text-[11px]
-              font-black
-              text-blue-700
-            "
-          >
-            <Headphones
-              size={16}
-            />
-
-            お手本
-          </button>
+          {partnerPhrase && <button type="button"
+            onClick={()=>speak(partnerPhrase,languageCode)}
+            aria-label="相手の発話を聞く"
+            title={partnerJa||partnerPhrase}
+            className="tp-language-partner-audio inline-flex items-center gap-1 rounded-lg px-2 py-2 text-xs font-bold text-slate-500 hover:bg-violet-50 hover:text-violet-700">
+            <Volume2 size={15}/>
+            <span>相手の発話</span>
+          </button>}
         </div>
       </div>
 
 
-      {partnerPhrase && (
-        <div className="tp-language-partner-card mt-3 rounded-2xl border border-blue-200 bg-blue-50 p-4">
-          <div className="flex items-center justify-between gap-2">
-            <span className="text-xs font-black text-blue-800">🌍 相手の声 / PARTNER</span>
-            <button type="button" onClick={() => speak(partnerPhrase, languageCode)} className="rounded-xl bg-white px-3 py-2 text-xs font-black text-blue-700">
-              ▶ 相手の声を聞く
-            </button>
-          </div>
-          <p className="tp-language-partner-phrase mt-2 text-lg font-bold text-slate-900">{partnerPhrase}</p>
-          {partnerJa && <p className="mt-1 text-xs text-slate-600">{partnerJa}</p>}
-        </div>
-      )}
       <div
         className="tp-language-target-card
           mt-4
           rounded-[30px]
-          bg-slate-950
+          bg-violet-50
           px-6
           py-6
           text-center
-          text-white
-          shadow-xl
+          text-slate-950
         "
       >
         <p
@@ -1998,7 +1969,7 @@ function SpeechCard({
                 mt-3
                 text-base
                 font-bold
-                text-white/65
+                text-slate-500
                 md:text-lg
               "
             >
@@ -2017,13 +1988,13 @@ function SpeechCard({
               className="
                 mt-2
                 rounded-xl
-                bg-white/10
+                bg-white/80
                 px-3
                 py-2
                 text-sm
                 font-black
                 tracking-wide
-                text-amber-200
+                text-violet-700
               "
             >
               {
@@ -2032,6 +2003,13 @@ function SpeechCard({
             </p>
           )
         }
+        <button type="button" onClick={onListen}
+          aria-label={languageName+'のお手本音声を再生'}
+          title="この例文を読み上げる"
+          className="tp-language-example-speaker">
+          <Volume2 size={19}/>
+          <span>お手本を聞く</span>
+        </button>
       </div>
 
 
