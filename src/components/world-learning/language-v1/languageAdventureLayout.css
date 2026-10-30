@@ -99,7 +99,7 @@
 .tp-language-v2 .tp-language-speech-card{
   width:100%;max-width:none;min-height:0;height:100%;
   overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;
-  justify-content:center;
+  justify-content:flex-start;
 }
 .tp-language-v2 .tp-language-speech-card>.tp-language-speech-header{flex:none;gap:5px}
 .tp-language-v2 .tp-language-partner-card{
