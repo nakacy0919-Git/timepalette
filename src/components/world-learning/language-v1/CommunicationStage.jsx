@@ -2512,7 +2512,6 @@ export default function CommunicationStage({
     [];
   const languageCode = mission?.speech?.languageCode || 'en-US';
   const isEnglish = languageCode.startsWith('en');
-  const isSpanish = languageCode.startsWith('es');
   const languageKey = languageCode.split('-')[0].toLowerCase();
   const profileStorageKey = isEnglish ? 'timepalette_language_global_profile' : `timepalette_language_global_profile_${languageKey}`;
   const countryProfileKey = isEnglish ? `timepalette_language_profile_${countryCode}` : `timepalette_language_profile_${countryCode}_${languageKey}`;
