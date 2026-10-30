@@ -8,6 +8,7 @@ import SourceStudyReader from '../SourceStudyReader';
 import SourceReadingMission from './SourceReadingMission';
 import CommunicationMission from './CommunicationMission';
 import CommunicationStage from './CommunicationStage';
+import SpeechRecognitionDiagnostic from './SpeechRecognitionDiagnostic';
 
 const LEVEL_META = {
   elementary:{icon:'🧒',label:'小学生'},
@@ -26,6 +27,8 @@ export default function LanguageAdventure({
 }) {
   const normalizedCountry = String(countryCode).trim().toLowerCase();
   const [languageChoice,setLanguageChoice] = useState('en');
+  const [diagnosticOpen,setDiagnosticOpen] = useState(false);
+  const [diagnostics,setDiagnostics] = useState({});
   const languageOptions = getAvailableExchangeLanguages(normalizedCountry);
   const packageData = getExchangeLanguagePackage(normalizedCountry,languageChoice) || getWorldAdventureDomainPackage(normalizedCountry,'language');
   const missions = useMemo(()=>packageData?.missions ?? [],[packageData]);
@@ -40,6 +43,7 @@ export default function LanguageAdventure({
     if(advanceTimerRef.current){window.clearTimeout(advanceTimerRef.current);advanceTimerRef.current=null;}
     setCelebration(null);
     setActiveIndex(0);
+    setDiagnosticOpen(false);
     setLanguageChoice(value);
   };
 
@@ -279,6 +283,13 @@ export default function LanguageAdventure({
         }}
       />
 
+      {diagnosticOpen && <SpeechRecognitionDiagnostic
+        key={normalizedCountry+'-'+languageChoice}
+        locale={packageData?.missions?.[0]?.speech?.languageCode||'en-US'}
+        languageName={languageOptions.find(x=>x.id===languageChoice)?.nameJa||'英語'}
+        onResult={result=>setDiagnostics(prev=>({...prev,[result.locale]:result}))}
+        onClose={()=>setDiagnosticOpen(false)}
+      />}
       <header className="shrink-0 bg-gradient-to-r from-slate-950 via-violet-950 to-fuchsia-950 text-white shadow-lg">
         <div className="flex items-center justify-between gap-4 px-5 py-3 pr-20">
           <div className="min-w-0">
@@ -299,11 +310,19 @@ export default function LanguageAdventure({
               aria-pressed={languageChoice===option.id}
               onClick={()=>chooseLanguage(option.id)}
               className={'rounded-xl px-3 py-2 text-xs font-black '+(languageChoice===option.id?'bg-white text-violet-900':'bg-white/10 text-white')}>
-              {option.nativeName}{option.status==='pilot'?' · 試験公開':''}
+              {option.nativeName}{option.status==='pilot'?' · 試験公開':''}{diagnostics[option.locale]?.status==='matched'?' ✓':''}
             </button>)}
           </div>
           <p className="mt-1.5 text-[10px] text-violet-200">各言語10ミッション・クリア記録は独立しています。試験公開言語の音声認識・読み上げは端末によって利用できない場合があります。</p>
         </div>}
+        <div className="flex flex-wrap items-center justify-between gap-2 border-t border-white/10 bg-white/5 px-4 py-2">
+          <div className="text-[11px] text-violet-100">
+            音声認識：{diagnostics[packageData?.missions?.[0]?.speech?.languageCode||'en-US']?.status==='matched'?'この端末で挨拶の文字起こしと一致を確認':diagnostics[packageData?.missions?.[0]?.speech?.languageCode||'en-US']?.status?'診断済み（再確認を推奨）':'この端末では未検証'}
+          </div>
+          <button type="button" onClick={()=>setDiagnosticOpen(true)} className="rounded-xl border border-violet-300 bg-white px-3 py-2 text-xs font-black text-violet-900 hover:bg-violet-50">
+            🎙 音声認識チェック
+          </button>
+        </div>
         <div className="border-t border-white/10 bg-white/5 px-4 py-2.5">
           <div className="flex items-center gap-3">
             <p className="shrink-0 text-[8px] font-black tracking-[0.18em] text-violet-200">MISSION</p>
