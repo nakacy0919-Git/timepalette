@@ -19,7 +19,7 @@ export function MissionChoiceText({children}){
       }
       const height=Math.max(20,button.clientHeight-paddingY-otherHeight-4);
       if(!width)return;
-      const max=Math.min(30,Math.max(18,button.clientHeight*.24));
+      const max=Math.min(20,Math.max(15,button.clientHeight*.16));
       // Measure the actual wrapped text in the actual button, including Japanese.
       let font=max;
       label.style.fontSize=font+'px';

@@ -64,3 +64,8 @@
 .place-legacy[data-type=life-photo-evidence]>div>div:nth-child(2)>.grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}
 .place-legacy[data-type=photo-evidence]>div{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1.1fr) minmax(0,1fr)}
 .place-legacy[data-type=photo-evidence]>div>div.grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}
+
+/* Answers submit as soon as the requested number has been selected. */
+.geo-activity[data-index="6"] .geo-scene{grid-template-rows:minmax(0,1.1fr) minmax(0,1fr)}
+.geo-activity[data-index="9"] .geo-scene>div:last-child:not(:first-child):not([data-testid]){grid-template-rows:minmax(0,1fr)}
+.place-legacy[data-type=life-photo-evidence]>div>div:nth-child(2){grid-template-rows:auto minmax(0,1fr)}

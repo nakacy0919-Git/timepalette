@@ -4761,90 +4761,15 @@ function LifePhotoEvidence({
     );
 
 
-  const toggle =
-    (
-      id
-    ) => {
-      setWrong(
-        false
-      );
-
-      setSelected(
-        (
-          current
-        ) => {
-          if (
-            current.includes(
-              id
-            )
-          ) {
-            return current.filter(
-              (
-                item
-              ) =>
-                item !==
-                id
-            );
-          }
-
-          if (
-            current.length >=
-            2
-          ) {
-            return current;
-          }
-
-          return [
-            ...current,
-            id,
-          ];
-        }
-      );
-    };
-
-
-  const check =
-    () => {
-      const correctIds =
-        new Set(
-          mission
-            .choices
-            .filter(
-              (
-                item
-              ) =>
-                item.correct
-            )
-            .map(
-              (
-                item
-              ) =>
-                item.id
-            )
-        );
-
-      const correct =
-        selected.length ===
-        2 &&
-        selected.every(
-          (
-            id
-          ) =>
-            correctIds.has(
-              id
-            )
-        );
-
-      if (
-        correct
-      ) {
-        onClear();
-      } else {
-        setWrong(
-          true
-        );
-      }
-    };
+  const toggle = (id) => {
+    setWrong(false);
+    const next = selected.includes(id) ? selected.filter(value => value !== id) : [...selected, id];
+    setSelected(next);
+    if (next.length === 2) {
+      if (next.every(value => mission.choices.some(choice => choice.id === value && choice.correct))) onClear();
+      else { setWrong(true); setSelected([]); playUiSound('wrong'); }
+    }
+  };
 
 
   return (
@@ -5037,29 +4962,7 @@ function LifePhotoEvidence({
           }
         </div>
 
-        <MissionChoiceButton
-          type="button"
-          disabled={
-            selected.length !==
-            2
-          }
-          onClick={
-            check
-          }
-          className="
-            mt-5
-            w-full
-            rounded-2xl
-            bg-blue-600
-            px-5
-            py-4
-            font-black
-            text-white
-            disabled:bg-slate-300
-          "
-        >
-          2つ選んで答え合わせ
-        </MissionChoiceButton>
+
       </div>
 
 
@@ -5954,99 +5857,17 @@ function GeoMaster({
     };
 
 
-  const toggleFact =
-    (
-      id
-    ) => {
-      setWrong(
-        false
-      );
-
-      setSelectedFacts(
-        (
-          current
-        ) => {
-          if (
-            current.includes(
-              id
-            )
-          ) {
-            return current.filter(
-              (
-                item
-              ) =>
-                item !==
-                id
-            );
-          }
-
-          if (
-            current.length >=
-            3
-          ) {
-            return current;
-          }
-
-          return [
-            ...current,
-            id,
-          ];
-        }
-      );
-    };
-
-
-  const checkFacts =
-    () => {
-      const correctIds =
-        new Set(
-          mission
-            .facts
-            .filter(
-              (
-                item
-              ) =>
-                item.correct
-            )
-            .map(
-              (
-                item
-              ) =>
-                item.id
-            )
-        );
-
-      const correct =
-        selectedFacts.length ===
-        3 &&
-        selectedFacts.every(
-          (
-            id
-          ) =>
-            correctIds.has(
-              id
-            )
-        );
-
-      if (
-        correct
-      ) {
-        setKeys([
-          true,
-          true,
-          true,
-        ]);
-
-        window.setTimeout(
-          onClear,
-          450
-        );
-      } else {
-        setWrong(
-          true
-        );
-      }
-    };
+  const toggleFact = (id) => {
+    setWrong(false);
+    const next = selectedFacts.includes(id) ? selectedFacts.filter(value => value !== id) : [...selectedFacts, id];
+    setSelectedFacts(next);
+    if (next.length === 3) {
+      if (next.every(value => mission.facts.some(fact => fact.id === value && fact.correct))) {
+        setKeys([true, true, true]);
+        window.setTimeout(onClear, 450);
+      } else { setWrong(true); setSelectedFacts([]); playUiSound('wrong'); }
+    }
+  };
 
 
   return (
@@ -6403,33 +6224,7 @@ function GeoMaster({
             </div>
 
 
-            <MissionChoiceButton
-              type="button"
-              disabled={
-                selectedFacts.length !==
-                3
-              }
-              onClick={
-                checkFacts
-              }
-              className="
-                mt-5
-                w-full
-                rounded-2xl
-                bg-gradient-to-r
-                from-amber-500
-                via-orange-500
-                to-pink-500
-                px-5
-                py-4
-                text-lg
-                font-black
-                text-white
-                disabled:bg-slate-300
-              "
-            >
-              🔑 最後の鍵をアンロック！
-            </MissionChoiceButton>
+
 
 
             <RetryMessage
