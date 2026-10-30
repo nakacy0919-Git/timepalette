@@ -5116,45 +5116,13 @@ function RouteChallenge({
     );
 
 
-  const check =
-    () => {
-      const countryItem =
-        mission
-          .route
-          .countryChoices
-          .find(
-            (
-              item
-            ) =>
-              item.id ===
-              country
-          );
-
-      const portItem =
-        mission
-          .route
-          .portChoices
-          .find(
-            (
-              item
-            ) =>
-              item.id ===
-              port
-          );
-
-      if (
-        countryItem
-          ?.correct &&
-        portItem
-          ?.correct
-      ) {
-        onClear();
-      } else {
-        setWrong(
-          true
-        );
-      }
-    };
+  const checkRoute = (nextCountry, nextPort) => {
+    setWrong(false);
+    if (!nextCountry || !nextPort) return;
+    if (mission.route.countryChoices.some(item => item.id === nextCountry && item.correct) &&
+        mission.route.portChoices.some(item => item.id === nextPort && item.correct)) onClear();
+    else { setWrong(true); setCountry(null); setPort(null); playUiSound('wrong'); }
+  };
 
 
   return (
@@ -5324,9 +5292,7 @@ function RouteChallenge({
                       item.id
                     );
 
-                    setWrong(
-                      false
-                    );
+                    checkRoute(item.id, port);
                   }}
                 />
               )
@@ -5384,9 +5350,7 @@ function RouteChallenge({
                       item.id
                     );
 
-                    setWrong(
-                      false
-                    );
+                    checkRoute(country, item.id);
                   }}
                 />
               )
@@ -5396,34 +5360,7 @@ function RouteChallenge({
       </div>
 
 
-      <button
-        type="button"
-        disabled={
-          !country ||
-          !port
-        }
-        onClick={
-          check
-        }
-        className="
-          mt-6
-          w-full
-          rounded-2xl
-          bg-gradient-to-r
-          from-emerald-600
-          to-cyan-600
-          px-5
-          py-4
-          text-lg
-          font-black
-          text-white
-          shadow-lg
-          disabled:bg-slate-300
-          disabled:shadow-none
-        "
-      >
-        🚚 トラックを出発させる！
-      </button>
+
 
 
       <RetryMessage
