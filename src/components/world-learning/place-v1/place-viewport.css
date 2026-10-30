@@ -49,3 +49,18 @@
 @media(max-width:1100px){.place-workspace{grid-template-columns:1fr;grid-template-rows:40px minmax(0,1fr);gap:6px;padding:6px}.place-sidebar{display:flex;gap:8px;align-items:stretch}.place-progress{width:100px;flex-shrink:0;padding:3px 8px}.place-progress strong{font-size:18px}.place-progress>span{font-size:10px}.place-mission-nav{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:1fr;flex:1;gap:3px}.place-mission-nav button{padding:4px;justify-content:center}.place-mission-label{display:none}.place-main{padding:10px;gap:6px}.place-brand small{display:none}.place-instruction{padding:8px 10px}.place-instruction p{font-size:14px}}
 @media(max-height:700px){.place-viewport{grid-template-rows:44px minmax(0,1fr)}.place-main{padding:8px;gap:5px;grid-template-rows:auto auto minmax(0,1fr) 32px}.place-instruction{padding:6px 10px}.place-instruction p{font-size:13px;line-height:1.4}.place-mission-heading h2{font-size:17px}.place-brand h1{font-size:15px}.place-header{padding-top:3px;padding-bottom:3px}.place-mission-nav button{padding:3px 6px}.geo-scene button{font-size:12px;padding:6px 9px}.geo-scene [data-card]{font-size:10px;padding:4px;min-height:52px}.geo-scene [data-slot]{font-size:11px;min-height:44px}.geo-scene .geo-stage{font-size:12px}.geo-feedback-row>p{font-size:11px}}
 @media(max-width:700px){.place-settings select{max-width:92px}.place-settings button{font-size:10px;padding:5px}.place-brand h1{font-size:13px}.place-progress{width:74px}.place-progress>span{display:none}.place-mission-heading h2{font-size:16px}.place-instruction{gap:6px}.place-instruction strong{font-size:10px}.place-instruction p{font-size:12px}.geo-scene{column-gap:6px}.geo-activity[data-index="1"] .geo-scene,.geo-activity[data-index="4"] .geo-scene,.geo-activity[data-index="6"] .geo-scene,.geo-activity[data-index="8"] .geo-scene>div{grid-template-columns:minmax(0,1fr) minmax(170px,44%)}.geo-scene button{font-size:11px;padding:5px}.geo-scene [data-testid=geography197-map]>div>span{display:none}}
+
+/* Photo evidence: photographs first, then a balanced four-choice grid. */
+.geo-scene figcaption{display:none}
+.geo-activity[data-index="6"] .geo-scene{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1.1fr) minmax(0,1fr) 40px}
+.geo-activity[data-index="6"] .geo-scene>div:first-child{grid-column:1;grid-row:1;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(0,1fr)}
+.geo-activity[data-index="6"] .geo-scene>div:nth-child(2){grid-column:1;grid-row:2;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}
+.geo-activity[data-index="6"] .geo-scene>button{grid-column:1;grid-row:3}
+.geo-activity[data-index="8"] .geo-scene>div{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1.1fr) minmax(0,1fr)}
+.geo-activity[data-index="8"] .geo-scene>div>div{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}
+.place-legacy[data-type=life-photo-evidence]>div{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1.1fr) minmax(0,1fr)}
+.place-legacy[data-type=life-photo-evidence]>div>div:first-child{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(0,1fr)}
+.place-legacy[data-type=life-photo-evidence]>div>div:first-child>div>div:last-child{display:none}
+.place-legacy[data-type=life-photo-evidence]>div>div:nth-child(2)>.grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}
+.place-legacy[data-type=photo-evidence]>div{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1.1fr) minmax(0,1fr)}
+.place-legacy[data-type=photo-evidence]>div>div.grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}
