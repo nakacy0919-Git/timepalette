@@ -153,7 +153,7 @@ export default function LanguageAdventure({
               aria-pressed={languageChoice===option.id}
               onClick={()=>switchLanguage(option.id)}
               className={'tp-language-choice-pill'+(languageChoice===option.id?' is-selected':'')}>
-              <span className="tp-language-choice-dot" aria-hidden="true"/>
+              <span className="tp-language-choice-icon" aria-hidden="true">{option.id.toUpperCase()}</span>
               {option.nativeName}
               {diagnostics[option.locale]?.status==='matched'&&<span aria-label="音声認識チェック済み">✓</span>}
             </button>)}
