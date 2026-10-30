@@ -202,7 +202,7 @@ export function getExchangeLanguagePackage(countryCode,languageId){
   {id:'nameKana',label:'名前の読み（任意・カタカナ）',placeholder:'サラ',required:false},
   {id:'homeCountry',label:'出身国（'+info.nameJa+'）',placeholder:info.profile.homeCountry},
   {id:'city',label:'住んでいる街（アルファベット）',placeholder:'Anjo'},
-  {id:'school',label:'学校名（アルファベット）',placeholder:'Anjo High School'},
+  {id:'school',label:'学校名（アルファベット）',placeholder:'Riverside High School'},
   {id:'hobby',label:'趣味（'+info.nameJa+'）',placeholder:info.profile.hobby},
   {id:'food',label:'好きな食べ物（'+info.nameJa+'）',placeholder:info.profile.food},
  ];

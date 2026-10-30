@@ -103,3 +103,16 @@ test('seventeen future languages stay registered but unpublished',()=>{
  const published=new Set(m.FIRST_WAVE_LANGUAGES.map(x=>x.id));
  assert.ok(FUTURE_LANGUAGE_CANDIDATES.every(x=>!published.has(x.id) && x.status==='pending-device-and-linguistic-review'));
 });
+
+test('every supported language displays a neutral US-style school name example',()=>{
+  for(const code of shared.getSharedExchangeCountryCodes()){
+    for(const option of m.getAvailableExchangeLanguages(code)){
+      const pack=m.getExchangeLanguagePackage(code,option.id);
+      const school=pack?.missions?.[1]?.speech?.fields?.find(field=>field.id==='school');
+      assert.ok(school,code+' '+option.id+' missing school field');
+      assert.equal(school.placeholder,'Riverside High School',code+' '+option.id);
+    }
+  }
+  assert.ok(!sharedSource.includes('Anjo High School'));
+  assert.ok(!multiSource.includes('Anjo High School'));
+});

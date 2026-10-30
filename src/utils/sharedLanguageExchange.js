@@ -16,7 +16,7 @@ const PROFILE_FIELDS = [
   { id: 'nameKana', label: '名前の読み（任意・カタカナ）', placeholder: 'サラ', required: false },
   { id: 'homeCountry', label: '出身の国（英語）', placeholder: 'Japan' },
   { id: 'city', label: '住んでいる場所（英語）', placeholder: 'Anjo, Aichi' },
-  { id: 'school', label: '学校名（英語）', placeholder: 'ABC Elementary School' },
+  { id: 'school', label: '学校名（英語）', placeholder: 'Riverside High School' },
   { id: 'hobby', label: '趣味（英語）', placeholder: 'playing soccer' },
   { id: 'food', label: '好きな食べ物（英語）', placeholder: 'sushi' },
 ];
@@ -123,7 +123,7 @@ const spanishProfileFields = [
  {id:'nameKana',label:'名前の読み（任意・カタカナ）',placeholder:'サラ',required:false},
  {id:'homeCountry',label:'出身国（スペイン語）',placeholder:'Japón'},
  {id:'city',label:'住んでいる街（アルファベット）',placeholder:'Anjo'},
- {id:'school',label:'学校名（アルファベット）',placeholder:'Anjo High School'},
+ {id:'school',label:'学校名（アルファベット）',placeholder:'Riverside High School'},
  {id:'hobby',label:'趣味（スペイン語の動詞の原形）',placeholder:'jugar al fútbol'},
  {id:'food',label:'好きな食べ物（スペイン語）',placeholder:'sushi'},
 ];
