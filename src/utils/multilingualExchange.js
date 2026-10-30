@@ -125,7 +125,7 @@ export const FIRST_WAVE_LANGUAGES = Object.freeze([
   id:'ms',name:'Malay',nativeName:'Bahasa Melayu',nameJa:'マレー語',locale:'ms-MY',
   countries:['my','bn','sg'],
   profile:{homeCountry:'Jepun',hobby:'bermain bola sepak',food:'sushi'},
-  phrases:['Helo! Apa khabar?','Nama saya {{name}}.','Siapa nama awak?',
+  phrases:['Helo! Gembira berkenalan!','Nama saya {{name}}.','Siapa nama awak?',
    'Negara saya ialah {{homeCountry}}. Saya tinggal di {{city}}.',
    'Sekolah saya bernama {{school}}. Awak pula?',
    'Saya suka {{hobby}}. Awak pula?','Saya suka makan {{food}}. Awak pula?',
