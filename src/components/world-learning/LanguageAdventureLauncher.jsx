@@ -34,7 +34,8 @@ export default function LanguageAdventureLauncher({
         fixed
         inset-0
         z-[12000]
-        overflow-y-auto
+        h-[100dvh]
+        overflow-hidden
         bg-slate-100
       "
     >
