@@ -20,6 +20,8 @@ The new modules pass targeted ESLint. MissionCreator and PublishedMissionManager
 
 Mission Creator reads the same live curriculum for its 10/10 completion totals and read-only published-question descriptions. Built-in releases are not fabricated Creator submissions or approvals. Existing GAS deployment and setup functions are untouched.
 
+Production interaction checks completed on 2026-10-30: Nepal's ten activities reach 10/10 and 1,000 WP; the neighbor puzzle rejects a mismatched card; an island nearest-country/direction challenge clears for Naoero → Kiribati → east. Detailed Vatican review found Natural Earth's generalized outline inadequate for its museum locations. `boundary-overrides197.json` supplies the public-domain geoBoundaries/Wikimedia detailed outline, with source and original hash retained; regression checks require all four sourced Vatican points to lie inside it. Other map boundaries/coastlines remain generalized and are identified as such in the map control legend. Home journey totals include completed Place Adventure records.
+
 ## Rebuild
 
 `scripts/build-geography197.py --source-dir <download-directory>` creates country/map/source data from the listed public datasets. It requires Shapely, NumPy and SciPy. `scripts/build-geography197-photos.py` resolves Commons metadata and licenses, uses an identified educational API client, preserves complete pinned photo pairs, and saves local optimized images. Review broad search fallbacks visually before any replacement release.

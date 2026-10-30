@@ -81,3 +81,9 @@ test('all 394 country photographs are local, non-empty, licensed and match their
   for(const photo of p.photos){assert.match(photo.deliveryUrl,/^\/geography\/photos/);const file='public'+photo.deliveryUrl;assert.ok(existsSync(file),file);const bytes=readFileSync(file);assert.ok(bytes.length>2000,file);assert.equal(createHash('sha256').update(bytes).digest('hex'),photo.sha256,file);assert.ok(/CC BY|CC0|Public domain/i.test(photo.license),file);assert.ok(photo.credit&&photo.sourceUrl&&photo.captionJa);seen.add(file);}
  }assert.equal(seen.size,394);
 });
+
+test('Vatican detail boundary contains all four sourced places, including its northern museums',()=>{
+ const p=getGeography197Package('va'),boundary=countryFeatures197('va')[0];
+ for(const c of p.cities)assert.ok(geoContains(boundary,c.coordinates),c.name);
+ assert.ok(p.sources.some(s=>s.name.includes('geoBoundaries')));
+});

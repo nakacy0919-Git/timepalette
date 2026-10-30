@@ -1,5 +1,7 @@
-import world from '../data/geography/world197.json' with {type:'json'};
+import boundaries from '../data/geography/boundary-overrides197.json' with {type:'json'};
+import sourceWorld from '../data/geography/world197.json' with {type:'json'};
 import {geoBounds,geoMercator,geoNaturalEarth1} from 'd3-geo';
+const world={...sourceWorld,features:sourceWorld.features.map(f=>boundaries[f.id]?{...f,geometry:boundaries[f.id].geometry}:f)};
 export const geographyWorld197=world;
 export const countryFeatures197=iso=>world.features.filter(f=>f.properties.iso===iso);
 const collection=features=>({type:'FeatureCollection',features});
