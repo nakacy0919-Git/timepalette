@@ -23,7 +23,7 @@ function getAudioContext() {
   }
 
   if (
-    !audioContext
+    !audioContext || audioContext.state === 'closed'
   ) {
     audioContext =
       new AudioContextClass();
@@ -253,92 +253,17 @@ function scheduleSound(
       createTone(context,{frequency:293.66,endFrequency:293.66,start:0.14,duration:0.24,gain:0.014,type:'sine'});
       break;
 
+    case 'correct':
+      // A short, clear two-note bell for an intermediate correct action.
+      createTone(context,{frequency:587.33,start:0,duration:.3,gain:.045,attack:.012});
+      createTone(context,{frequency:880,start:.085,duration:.36,gain:.038,attack:.014});
+      break;
+
     case 'success':
-
-      /*
-       * D major系の柔らかいチャイム。
-       * 高音を抑えて、
-       * 「ゲームの正解音」より
-       * 心地よい通知音に寄せる。
-       */
-
-      createTone(
-        context,
-        {
-          frequency:
-            293.66,
-
-          endFrequency:
-            293.66,
-
-          duration:
-            0.22,
-
-          gain:
-            0.012,
-
-          type:
-            'sine',
-
-          attack:
-            0.028,
-        }
-      );
-
-
-      createTone(
-        context,
-        {
-          start:
-            0.075,
-
-          frequency:
-            369.99,
-
-          endFrequency:
-            369.99,
-
-          duration:
-            0.24,
-
-          gain:
-            0.011,
-
-          type:
-            'sine',
-
-          attack:
-            0.03,
-        }
-      );
-
-
-      createTone(
-        context,
-        {
-          start:
-            0.15,
-
-          frequency:
-            440,
-
-          endFrequency:
-            440,
-
-          duration:
-            0.3,
-
-          gain:
-            0.011,
-
-          type:
-            'triangle',
-
-          attack:
-            0.035,
-        }
-      );
-
+      // A smooth D-major bell arpeggio for mission completion.
+      [587.33,739.99,880,1174.66].forEach((frequency,index)=>
+        createTone(context,{frequency,start:index*.085,duration:.46,gain:index===3?.03:.043,attack:.014}));
+      createTone(context,{frequency:293.66,start:0,duration:.58,gain:.018,attack:.018});
       break;
 
 
@@ -370,45 +295,31 @@ function scheduleSound(
 }
 
 
-export function playUiSound(
-  sound = 'tap'
-) {
-  if (
-    !getUiSoundEnabled()
-  ) {
-    return;
-  }
+// Call from a pointer/keyboard gesture so delayed completion animations can
+// play on Safari too. Muting remains an explicit, persistent user preference.
+export function prepareUiSound(){
+  if(!getUiSoundEnabled())return;
+  try{
+    const context=getAudioContext();
+    if(context&&context.state!=='running')context.resume().catch(()=>{});
+  }catch{/* Audio availability must never prevent an answer. */}
+}
 
-
-  const context =
-    getAudioContext();
-
-
-  if (!context) {
-    return;
-  }
-
-
-  if (
-    context.state ===
-    'suspended'
-  ) {
-    context
-      .resume()
-      .then(() => {
-        scheduleSound(
-          context,
-          sound
-        );
-      })
-      .catch(() => {});
-
-    return;
-  }
-
-
-  scheduleSound(
-    context,
-    sound
-  );
+const lastPositiveSound=new Map();
+export function playUiSound(sound='tap'){
+  if(!getUiSoundEnabled())return;
+  try{
+    const context=getAudioContext();if(!context)return;
+    const play=()=>{
+      if(context.state!=='running')return;
+      if(sound==='success'||sound==='correct'){
+        const now=Date.now(),previous=lastPositiveSound.get(sound);
+        if(previous!==undefined&&now-previous<100)return;
+        lastPositiveSound.set(sound,now);
+      }
+      scheduleSound(context,sound);
+    };
+    if(context.state!=='running')context.resume().then(play).catch(()=>{});
+    else play();
+  }catch{/* Keep silent when the browser cannot provide audio. */}
 }

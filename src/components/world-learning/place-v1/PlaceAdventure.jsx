@@ -1,3 +1,4 @@
+import MissionChoiceButton,{MissionChoiceText} from './MissionChoiceButton.jsx';
 import './place-viewport.css';
 import GeographyMission197 from './GeographyMission197.jsx';
 import {
@@ -30,7 +31,7 @@ import data
   from '../../../data/place_r.json';
 
 import {
-  playUiSound,
+  playUiSound,prepareUiSound,getUiSoundEnabled,setUiSoundEnabled,
 } from '../../../utils/uiSound';
 
 import {
@@ -1112,7 +1113,7 @@ function WorldLocator({
       );
 
       playUiSound(
-        'success'
+        'correct'
       );
 
       window.setTimeout(
@@ -3456,7 +3457,7 @@ function NeighborPuzzle({
       );
 
       playUiSound(
-        'success'
+        'correct'
       );
 
       if (
@@ -4479,6 +4480,8 @@ function CityChallenge({
         return;
       }
 
+      playUiSound('correct');
+
       setIndex(
         (
           value
@@ -4991,11 +4994,12 @@ function LifePhotoEvidence({
                   );
 
                 return (
-                  <button
+                  <MissionChoiceButton
                     key={
                       choice.id
                     }
                     type="button"
+                    aria-pressed={active}
                     onClick={() =>
                       toggle(
                         choice.id
@@ -5029,14 +5033,14 @@ function LifePhotoEvidence({
                         language
                       )
                     }
-                  </button>
+                  </MissionChoiceButton>
                 );
               }
             )
           }
         </div>
 
-        <button
+        <MissionChoiceButton
           type="button"
           disabled={
             selected.length !==
@@ -5058,7 +5062,7 @@ function LifePhotoEvidence({
           "
         >
           2つ選んで答え合わせ
-        </button>
+        </MissionChoiceButton>
       </div>
 
 
@@ -5603,7 +5607,7 @@ function PhotoEvidence({
             (
               choice
             ) => (
-              <button
+              <MissionChoiceButton
                 key={
                   choice.id
                 }
@@ -5635,7 +5639,7 @@ function PhotoEvidence({
                     language
                   )
                 }
-              </button>
+              </MissionChoiceButton>
             )
           )
         }
@@ -5942,9 +5946,8 @@ function GeoMaster({
           )
       );
 
-      setWrong(
-        false
-      );
+      setWrong(false);
+      playUiSound('correct');
 
       window.setTimeout(
         () =>
@@ -6343,11 +6346,12 @@ function GeoMaster({
                       );
 
                     return (
-                      <button
+                      <MissionChoiceButton
                         key={
                           item.id
                         }
                         type="button"
+                        aria-pressed={active}
                         onClick={() =>
                           toggleFact(
                             item.id
@@ -6394,13 +6398,10 @@ function GeoMaster({
                           "
                         >
                           {
-                            t(
-                              item,
-                              language
-                            )
+                            <MissionChoiceText>{t(item,language)}</MissionChoiceText>
                           }
                         </p>
-                      </button>
+                      </MissionChoiceButton>
                     );
                   }
                 )
@@ -6408,7 +6409,7 @@ function GeoMaster({
             </div>
 
 
-            <button
+            <MissionChoiceButton
               type="button"
               disabled={
                 selectedFacts.length !==
@@ -6434,7 +6435,7 @@ function GeoMaster({
               "
             >
               🔑 最後の鍵をアンロック！
-            </button>
+            </MissionChoiceButton>
 
 
             <RetryMessage
@@ -6631,6 +6632,7 @@ export default function PlaceAdventure({
   packageData,
 }) {
   const curriculum = packageData ?? data;
+  const [soundEnabled,setSoundEnabled]=useState(getUiSoundEnabled);
   const [
     level,
     setLevel,
@@ -6905,7 +6907,7 @@ export default function PlaceAdventure({
 
 
   return (
-    <div className="place-viewport" data-testid="place-viewport">
+    <div className="place-viewport" data-testid="place-viewport" onPointerDownCapture={prepareUiSound} onKeyDownCapture={event=>{if(event.key==='Enter'||event.key===' ')prepareUiSound();}}>
       <PlaceMissionSuccessModal celebration={celebration}
         nextMission={nextMission?t(nextMission.title,language):null}
         onNext={()=>{setCelebration(null);go(nextMission?currentIndex+1:0);}}
@@ -6914,6 +6916,7 @@ export default function PlaceAdventure({
       <header className="place-header">
         <div className="place-brand"><span aria-hidden="true">🌍</span><h1 title={curriculum.countryNameEn}>{curriculum.countryNameJa} <small>· Place & Geography</small></h1></div>
         <div className="place-settings">
+          <button type="button" aria-label={soundEnabled?'効果音をオフにする':'効果音をオンにする'} aria-pressed={soundEnabled} onClick={()=>{const next=!soundEnabled;setSoundEnabled(next);setUiSoundEnabled(next);if(next)playUiSound('correct');}}>{soundEnabled?'音 ON':'音 OFF'}</button>
           <select aria-label="学習レベル" value={level} onChange={event=>setLevel(event.target.value)}>
             {LEVELS.map(item=><option key={item.id} value={item.id}>{item.icon} {language==='ja'?item.ja:item.en}</option>)}
           </select>

@@ -1,0 +1,15 @@
+.mission-choice{position:relative}
+.mission-choice.mission-choice--text{display:flex;align-items:center;justify-content:center;padding:8px 20px;text-align:center}
+.mission-choice-label{display:block;flex:1 1 auto;min-width:0;width:100%;font-size:18px;font-weight:750;line-height:1.4;white-space:normal;overflow-wrap:anywhere;word-break:normal}
+.mission-choice[aria-pressed=true]{border-color:#059669;background-color:#ecfdf5;color:#064e3b;box-shadow:inset 0 0 0 2px #059669}
+.mission-choice[aria-pressed=true]::after{content:'';position:absolute;right:8px;top:7px;width:8px;height:13px;border:solid #047857;border-width:0 3px 3px 0;transform:rotate(45deg);pointer-events:none}
+.geo-scene .mission-choice.mission-choice--text,.place-legacy .mission-choice.mission-choice--text{padding:8px 20px}
+.geo-scene [data-card] .mission-choice-label{font-weight:800}
+.geo-scene [data-card]{padding:7px;gap:5px;min-height:74px}
+.geo-scene [data-slot]{font-size:clamp(13px,1.2vw,17px)}
+.geo-scene button:not(.mission-choice)[class*=bg-emerald]{font-size:clamp(14px,1.25vw,18px)}
+.place-legacy .mission-choice-label{font-weight:750;line-height:1.4}
+.place-legacy[data-type=geo-master] .mission-choice{display:flex;flex-direction:column;justify-content:center;gap:6px}
+.place-legacy[data-type=geo-master] .mission-choice>div:first-child{font-size:24px;line-height:1}
+.place-legacy[data-type=geo-master] .mission-choice>p{margin:0;width:100%}
+@media(max-height:700px){.geo-scene .mission-choice.mission-choice--text,.place-legacy .mission-choice.mission-choice--text{padding:8px 16px}.geo-scene [data-card]{min-height:64px}}
