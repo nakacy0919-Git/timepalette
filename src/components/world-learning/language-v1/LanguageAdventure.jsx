@@ -7,10 +7,14 @@ import {completeWorldAdventureMission,getWorldAdventureDomainProgress} from '../
 import MissionSuccessCelebration from '../MissionSuccessCelebration';
 import SourceStudyReader from '../SourceStudyReader';
 import SourceReadingMission from './SourceReadingMission';
-import CommunicationMission from './CommunicationMission';
 import CommunicationStage from './CommunicationStage';
 import SpeechRecognitionDiagnostic from './SpeechRecognitionDiagnostic';
 import './languageAdventureLayout.css';
+
+// ISO 3166-1 alpha-2 flags are used even when country data lacks flagEmoji.
+const flagFromIso=iso=>/^[a-z]{2}$/.test(iso)
+  ? String.fromCodePoint(...[...iso.toUpperCase()].map(letter=>127397+letter.charCodeAt(0)))
+  : '🌍';
 
 const textOf=(value,language='ja')=>
   typeof value==='string'?value:(value?.[language]??value?.ja??value?.en??'');
@@ -34,6 +38,7 @@ export default function LanguageAdventure({
   const missions=useMemo(()=>packageData?.missions??[],[packageData]);
   const activeMission=missions[activeIndex]||missions[0];
   const country=packageData?.country??{};
+  const countryFlag=flagFromIso(iso);
   const selectedLocale=activeMission?.speech?.languageCode||'en-US';
   const selectedName=getSpeechLanguageName(selectedLocale);
   const completedSet=new Set(progress?.completedMissionIds??[]);
@@ -112,19 +117,6 @@ export default function LanguageAdventure({
         </div>
       </div>
       <div className="tp-language-header-controls">
-        <span className="tp-language-country-label" title={country.nameJa||country.nameEn}>
-          <span aria-hidden="true">{country.flag||'🌍'}</span>
-          <span>{country.nameJa||country.nameEn||iso.toUpperCase()}</span>
-        </span>
-        {options.length>1&&<label className="tp-language-select-label">
-          <span className="sr-only">練習する言語</span>
-          <select aria-label="練習する言語" value={languageChoice}
-            onChange={event=>switchLanguage(event.target.value)}>
-            {options.map(option=><option key={option.id} value={option.id}>
-              {option.nativeName}{option.status==='pilot'?'（試験公開）':''}
-            </option>)}
-          </select>
-        </label>}
         <button type="button" className="tp-language-diagnostic-button"
           title="音声認識チェック" aria-label={selectedName+'の音声認識チェック'}
           onClick={()=>setDiagnosticOpen(true)}>
@@ -155,6 +147,22 @@ export default function LanguageAdventure({
         </div>
       </nav>
       <section className="tp-language-content" aria-labelledby="tp-language-current-title">
+        <div className="tp-language-country-tabs" aria-label={(country.nameJa||country.nameEn||iso)+'で練習できる言語'}>
+          <div className="tp-language-country-identity">
+            <span className="tp-language-flag" aria-hidden="true">{countryFlag}</span>
+            <strong>{country.nameJa||country.nameEn||iso.toUpperCase()}</strong>
+          </div>
+          <div className="tp-language-official-choices" aria-label="練習する言語">
+            {options.map(option=><button type="button" key={option.id}
+              aria-pressed={languageChoice===option.id}
+              onClick={()=>switchLanguage(option.id)}
+              className={'tp-language-choice-pill'+(languageChoice===option.id?' is-selected':'')}>
+              <span className="tp-language-choice-dot" aria-hidden="true"/>
+              {option.nativeName}
+              {diagnostics[option.locale]?.status==='matched'&&<span aria-label="音声認識チェック済み">✓</span>}
+            </button>)}
+          </div>
+        </div>
         <div className="tp-language-mission-heading">
           <span className="tp-language-heading-kicker">Mission {activeIndex+1}</span>
           <h2 id="tp-language-current-title">{textOf(activeMission?.title)}</h2>
@@ -171,8 +179,6 @@ export default function LanguageAdventure({
             <CommunicationStage key={activeMission.id} mission={activeMission}
               countryCode={iso} onClear={complete}/>}
         </div>
-        <CommunicationMission
-          countryCode={iso} country={country} languageName={selectedName}/>
       </section>
     </main>
   </div>;
