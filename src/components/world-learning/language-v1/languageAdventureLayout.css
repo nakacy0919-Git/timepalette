@@ -192,3 +192,135 @@
 @media (prefers-reduced-motion:reduce){
   .tp-language-v2 .tp-language-mission-button{transition:none}
 }
+
+
+/* Language Adventure v3: country & language identity stays in the main viewport. */
+.tp-language-country-tabs{
+  flex:none;display:flex;align-items:center;gap:clamp(8px,1.3vw,16px);
+  min-width:0;min-height:48px;padding:6px clamp(9px,1.4vw,17px);
+  border-radius:15px;border:1px solid #e5def9;
+  background:linear-gradient(110deg,#f7f4ff,#fff 85%);
+}
+.tp-language-country-identity{
+  display:flex;align-items:center;gap:8px;min-width:0;flex:none;
+  font-size:clamp(12px,1.1vw,16px);font-weight:900;color:#30224f;
+  white-space:nowrap;
+}
+.tp-language-flag{font-size:clamp(22px,2.5vw,35px);line-height:1}
+.tp-language-official-choices{
+  display:flex;align-items:center;gap:7px;min-width:0;
+  overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;
+  padding:2px 0;
+}
+.tp-language-choice-pill{
+  display:inline-flex;align-items:center;gap:6px;flex:none;white-space:nowrap;
+  padding:7px clamp(9px,1vw,13px);border-radius:999px;
+  background:#fff;border:1px solid #ded7f1;color:#594c79;
+  font-size:clamp(11px,1vw,13px);font-weight:850;
+  transition:background .15s,border-color .15s,color .15s;
+}
+.tp-language-choice-pill:hover{background:#f3eeff;border-color:#b5a1ef}
+.tp-language-choice-pill.is-selected{
+  color:#fff;border-color:#6736e8;background:#6736e8;box-shadow:0 2px 8px #663bea28;
+}
+.tp-language-choice-dot{height:7px;width:7px;border-radius:50%;background:#b9add9;flex:none}
+.tp-language-choice-pill.is-selected .tp-language-choice-dot{background:#fff}
+.tp-language-v2 .tp-language-stage{
+  max-width:100%;min-width:0;
+  background:linear-gradient(180deg,#fcfbff,#faf9ff);
+  border:1px solid #e8e3f7;
+}
+.tp-language-v2 .tp-language-speech-card{
+  overflow-x:hidden;align-items:stretch;width:100%;max-width:none;
+  padding-inline:clamp(1px,1vw,13px);
+}
+.tp-language-v2 .tp-language-speech-card > .tp-language-speech-header,
+.tp-language-v2 .tp-language-speech-card > .tp-language-target-card,
+.tp-language-v2 .tp-language-speech-card > .tp-language-record-actions,
+.tp-language-v2 .tp-language-speech-card > .tp-language-results{
+  width:100%;min-width:0;max-width:960px;margin-left:auto;margin-right:auto;
+}
+.tp-language-v2 .tp-language-speech-card>.tp-language-speech-header{
+  margin-top:auto;flex-wrap:wrap;row-gap:6px;
+}
+.tp-language-v2 .tp-language-target-card{
+  position:relative;max-width:790px;
+  margin-top:clamp(8px,1.6vh,16px);
+  padding:clamp(16px,2.2vh,25px) clamp(16px,2.2vw,30px);
+  border:1px solid #d9cdf7;
+  background:linear-gradient(125deg,#e9e2ff,#f9f6ff 68%,#f5f0ff);
+  color:#31214f;border-radius:22px;
+  box-shadow:0 8px 25px #51379c0b;
+}
+.tp-language-v2 .tp-language-target-phrase{
+  color:#2c204c;font-size:clamp(23px,3vw,38px);
+  font-weight:900;letter-spacing:-.025em;
+}
+.tp-language-example-speaker{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:9px 15px;border:1px solid #c5b4f4;border-radius:999px;
+  margin:clamp(10px,1.7vh,18px) auto 0;
+  background:#fff;color:#6135c5;font-size:13px;font-weight:850;
+  box-shadow:0 2px 7px #5d36a70f;
+}
+.tp-language-example-speaker:hover{background:#f4efff;border-color:#9d86f1}
+.tp-language-example-speaker:active{transform:translateY(1px)}
+.tp-language-partner-audio{white-space:nowrap}
+.tp-language-v2 .tp-language-speech-card > .tp-language-results{
+  max-width:960px;min-width:0;margin-top:clamp(9px,1.8vh,15px);
+  margin-bottom:auto;grid-template-columns:minmax(0,1fr) minmax(148px,190px);
+  align-items:stretch;
+}
+.tp-language-v2 .tp-language-results > *{min-width:0;max-width:100%}
+.tp-language-v2 .tp-language-transcript,
+.tp-language-v2 .tp-language-accuracy{min-width:0;overflow:hidden}
+.tp-language-v2 .tp-language-accuracy > div{
+  width:min(100%,150px)!important;min-width:0;height:clamp(46px,8vh,66px);
+}
+.tp-language-v2 .tp-language-accuracy-arc{
+  display:block;width:100%!important;max-width:100%;height:100%!important;
+}
+.tp-language-v2 .tp-language-target-card .tp-language-example-speaker{
+  touch-action:manipulation;
+}
+@media(max-width:870px){
+  .tp-language-country-tabs{min-height:42px;padding:5px 9px}
+  .tp-language-flag{font-size:25px}
+  .tp-language-choice-pill{padding:6px 9px}
+  .tp-language-v2 .tp-language-target-card{padding:14px 12px;max-width:670px}
+  .tp-language-v2 .tp-language-speech-card{padding-inline:2px}
+}
+@media(max-height:740px){
+  .tp-language-country-tabs{min-height:36px;padding-block:3px}
+  .tp-language-choice-pill{padding-block:4px}
+  .tp-language-flag{font-size:22px}
+  .tp-language-v2 .tp-language-target-card{padding:10px 12px}
+  .tp-language-example-speaker{padding:6px 12px;margin-top:7px}
+  .tp-language-v2 .tp-language-results{margin-top:7px}
+}
+@media(max-width:520px){
+  .tp-language-country-tabs{gap:6px;min-height:35px;padding:4px}
+  .tp-language-flag{font-size:20px}
+  .tp-language-country-identity{font-size:10px;gap:3px}
+  .tp-language-official-choices{gap:4px}
+  .tp-language-choice-pill{font-size:10px;padding:5px 6px;gap:3px}
+  .tp-language-v2 .tp-language-speech-card > .tp-language-results{
+    grid-template-columns:minmax(0,1fr);width:100%;
+  }
+  .tp-language-v2 .tp-language-target-phrase{font-size:clamp(18px,4.6vw,25px)}
+  .tp-language-v2 .tp-language-target-card{padding:12px 8px}
+  .tp-language-example-speaker{font-size:11px;padding:7px 10px}
+  .tp-language-partner-audio span{display:none}
+}
+
+/* Letter icons make Canada's English/French options identifiable without using another country flag. */
+.tp-language-choice-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:23px;height:23px;border-radius:50%;
+  padding:0 3px;background:#eee9fc;color:#6137bf;
+  font-size:9px;font-weight:950;letter-spacing:-.025em;
+}
+.tp-language-choice-pill.is-selected .tp-language-choice-icon{background:#fff;color:#5e32c8}
+@media(max-width:520px){
+  .tp-language-choice-icon{min-width:19px;height:19px;font-size:8px}
+}
