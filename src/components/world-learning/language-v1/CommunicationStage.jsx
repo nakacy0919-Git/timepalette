@@ -16,6 +16,7 @@ import {
   playUiSound,
 } from '../../../utils/uiSound';
 import {normalizeSpeechText} from '../../../utils/multilingualSpeechText.js';
+import {calculateSpeechAccuracy,getSpeechLanguageName,getSpeechRecognitionErrorMessage} from '../../../utils/speechRecognitionDiagnostics.js';
 
 
 const PASS_SCORE = 80;
@@ -24,123 +25,8 @@ const PASS_SCORE = 80;
 const normalize = normalizeSpeechText;
 
 
-const calculateAccuracy =
-  (
-    target,
-    transcript
-  ) => {
-    const a =
-      normalize(
-        target
-      )
-        .split(
-          ' '
-        )
-        .filter(
-          Boolean
-        );
-
-    const b =
-      normalize(
-        transcript
-      )
-        .split(
-          ' '
-        )
-        .filter(
-          Boolean
-        );
-
-
-    if (
-      a.length === 0 ||
-      b.length === 0
-    ) {
-      return 0;
-    }
-
-
-    const matrix =
-      Array.from(
-        {
-          length:
-            a.length + 1,
-        },
-        () =>
-          Array(
-            b.length + 1
-          ).fill(
-            0
-          )
-      );
-
-
-    for (
-      let i = 0;
-      i <= a.length;
-      i += 1
-    ) {
-      matrix[i][0] =
-        i;
-    }
-
-
-    for (
-      let j = 0;
-      j <= b.length;
-      j += 1
-    ) {
-      matrix[0][j] =
-        j;
-    }
-
-
-    for (
-      let i = 1;
-      i <= a.length;
-      i += 1
-    ) {
-      for (
-        let j = 1;
-        j <= b.length;
-        j += 1
-      ) {
-        const cost =
-          a[i - 1] ===
-          b[j - 1]
-            ? 0
-            : 1;
-
-
-        matrix[i][j] =
-          Math.min(
-            matrix[i - 1][j] + 1,
-            matrix[i][j - 1] + 1,
-            matrix[i - 1][j - 1] + cost
-          );
-      }
-    }
-
-
-    const distance =
-      matrix[a.length][b.length];
-
-
-    return Math.max(
-      0,
-      Math.round(
-        (
-          1 -
-          distance /
-            Math.max(
-              a.length,
-              b.length
-            )
-        ) *
-          100
-      )
-    );
-  };
+// The diagnostic and real missions now use the exact same scoring function.
+const calculateAccuracy = calculateSpeechAccuracy;
 
 
 /*
@@ -1206,7 +1092,7 @@ function useSpeechRecognition(languageCode = 'en-US') {
             keepRecordingRef.current
           ) {
             setError(
-              '音声は入りましたが、英語として認識できませんでした。もう一度はっきり話してください。'
+              getSpeechRecognitionErrorMessage('no-match',languageCode)
             );
           }
         };
@@ -1243,7 +1129,7 @@ function useSpeechRecognition(languageCode = 'en-US') {
             );
 
             setError(
-              'マイクの使用が許可されていません。Chromeのアドレスバー左側からマイクを許可してください。'
+              getSpeechRecognitionErrorMessage(code,languageCode)
             );
 
             return;
@@ -1262,7 +1148,7 @@ function useSpeechRecognition(languageCode = 'en-US') {
             );
 
             setError(
-              'マイク入力を取得できません。WindowsとChromeの入力マイクを確認してください。'
+              getSpeechRecognitionErrorMessage(code,languageCode)
             );
 
             return;
@@ -1281,7 +1167,7 @@ function useSpeechRecognition(languageCode = 'en-US') {
             );
 
             setError(
-              'Chromeの音声認識サービスに接続できません。インターネット接続を確認して、もう一度「話す」を押してください。'
+              getSpeechRecognitionErrorMessage(code,languageCode)
             );
 
             return;
@@ -1290,7 +1176,8 @@ function useSpeechRecognition(languageCode = 'en-US') {
 
           if (
             code ===
-            'language-not-supported'
+            'language-not-supported' ||
+            code === 'language-unavailable'
           ) {
             keepRecordingRef.current =
               false;
@@ -1300,7 +1187,7 @@ function useSpeechRecognition(languageCode = 'en-US') {
             );
 
             setError(
-              'このブラウザーでは英語(en-US)の音声認識を開始できません。Chromeを最新版にしてください。'
+              getSpeechRecognitionErrorMessage(code,languageCode)
             );
 
             return;
@@ -1320,7 +1207,7 @@ function useSpeechRecognition(languageCode = 'en-US') {
 
 
           setError(
-            `音声認識エラー: ${code}`
+            getSpeechRecognitionErrorMessage(code,languageCode)
           );
         };
 
@@ -1390,7 +1277,7 @@ function useSpeechRecognition(languageCode = 'en-US') {
         !Recognition
       ) {
         setError(
-          'このブラウザーではWeb Speech APIを使えません。Google Chromeで開いてください。'
+          getSpeechRecognitionErrorMessage('unsupported',languageCode)
         );
 
         return;
@@ -1403,7 +1290,7 @@ function useSpeechRecognition(languageCode = 'en-US') {
         !window.isSecureContext
       ) {
         setError(
-          '音声認識には安全な接続が必要です。localhost または HTTPS で開いてください。'
+          getSpeechRecognitionErrorMessage('insecure-context',languageCode)
         );
 
         return;
@@ -1928,6 +1815,7 @@ function SpeechCard({
   partnerJa,
   onEditProfile,
   languageCode = 'en-US',
+  languageName = '英語',
   showKana,
   onToggleKana,
   index,
@@ -2317,7 +2205,7 @@ function SpeechCard({
           >
             {
               transcript ||
-              '話した英語がここに表示されます'
+              `話した${languageName}がここに表示されます`
             }
           </p>
 
@@ -2515,7 +2403,7 @@ export default function CommunicationStage({
   const languageKey = languageCode.split('-')[0].toLowerCase();
   const profileStorageKey = isEnglish ? 'timepalette_language_global_profile' : `timepalette_language_global_profile_${languageKey}`;
   const countryProfileKey = isEnglish ? `timepalette_language_profile_${countryCode}` : `timepalette_language_profile_${countryCode}_${languageKey}`;
-  const languageName = ({es:'スペイン語',fr:'フランス語',pt:'ポルトガル語',de:'ドイツ語',it:'イタリア語',nl:'オランダ語',ms:'マレー語',sv:'スウェーデン語',ro:'ルーマニア語'})[languageKey] || '英語';
+  const languageName = getSpeechLanguageName(languageCode);
 
 
   const storedProfile =
@@ -3326,6 +3214,7 @@ export default function CommunicationStage({
         partnerPhrase={partnerPhrase}
         partnerJa={partnerJa}
         languageCode={languageCode}
+        languageName={languageName}
         onEditProfile={fields.length ? () => setSetupDone(false) : null}
         translation={
           translation
