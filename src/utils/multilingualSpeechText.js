@@ -10,6 +10,7 @@ export function normalizeSpeechText(value=''){
   .replace(/æ/g,'ae')
   .replace(/ł/g,'l')
   .replace(/[’‘]/g,"'")
+  .replace(/(?<=\p{L})'(?=\p{L})/gu,'')
   .replace(/[^\p{L}\p{N}'\s]/gu,' ')
   .replace(/\s+/g,' ')
   .trim();
