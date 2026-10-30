@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readdirSync,readFileSync} from 'node:fs';
 import {normalizeSpeechText} from '../src/utils/multilingualSpeechText.js';
+import {FUTURE_LANGUAGE_CANDIDATES} from '../src/utils/languageRolloutCandidates.js';
 
 const dataDir=new URL('../src/data/',import.meta.url);
 const files=readdirSync(dataDir).filter(name=>/^countries_[a-z]\.json$/.test(name));
@@ -94,4 +95,11 @@ test('main screen, profile, and creator integration have no missing language-pic
  assert.match(get('components/world-learning/language-v1/CommunicationStage.jsx'),/normalizeSpeechText/);
  assert.match(get('components/world-learning/language-v1/CommunicationStage.jsx'),/languageKey/);
  assert.match(get('mission-creator/MissionCreator.jsx'),/getExchangeLanguageMissionCount/);
+});
+
+test('seventeen future languages stay registered but unpublished',()=>{
+ assert.equal(FUTURE_LANGUAGE_CANDIDATES.length,17);
+ assert.equal(new Set(FUTURE_LANGUAGE_CANDIDATES.map(x=>x.id)).size,17);
+ const published=new Set(m.FIRST_WAVE_LANGUAGES.map(x=>x.id));
+ assert.ok(FUTURE_LANGUAGE_CANDIDATES.every(x=>!published.has(x.id) && x.status==='pending-device-and-linguistic-review'));
 });
