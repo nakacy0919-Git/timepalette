@@ -65,5 +65,5 @@ test('mic test UI wired to real recognition callbacks, opt-in copy and mission s
   assert.match(stage,/getSpeechRecognitionErrorMessage\(code,languageCode\)/);
   assert.match(stage,/languageName/);
   assert.match(adventure,/SpeechRecognitionDiagnostic/);
-  assert.match(adventure,/diagnostics\[option\.locale\]/);
+  assert.match(adventure,/diagnostics\[selectedLocale\]/);
 });
