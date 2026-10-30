@@ -1,0 +1,9 @@
+# Geography viewport layout
+
+The geography player uses the visible viewport height (`100dvh`) rather than a vertically expanding document. A compact header and mission navigation leave a bounded main area with a persistent task instruction, activity and footer. At widths up to 1100px, the ten mission buttons move into one horizontal row. Maps, photographs and answer groups share the remaining space through grids with explicit minimum sizes.
+
+The ten generated activity types have separate layouts for their learning and answering phases. Interactive map controls, answer buttons, submit actions and feedback remain in the activity area. Source details open separately so expanding attribution cannot displace the question. Photograph attribution remains on the image and the full attribution is available in the source panel. City labels in the learning phase are non-interactive to distinguish them from the Start action.
+
+Rwanda retains its original activity content and scoring. Scoped layout rules fit those original activities into the same shell, including the neighbor board, photograph comparison and route challenge. The celebration card uses a compact layout with navigation outside its potentially long discovery note.
+
+Validation: production browser checks at a CSS viewport of 1363×936 found no main/activity overflow and no answer buttons outside the activity bounds in all ten generated initial scenes and all ten original Rwanda scenes. Additional checks cover the city answering phase, four-photo selection and route answering phase. These are desktop browser checks; a physical iPad/Safari run was not available in the verification environment. Responsive rules cover tablet-width navigation, portrait photo stacking, shorter viewports and dynamic browser chrome. The release build also gates on all existing 197-country scoring, geography, photo and Creator progress tests.

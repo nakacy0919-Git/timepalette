@@ -53,7 +53,7 @@ export default function GeographyMission197({mission,language='ja',onClear}){
  const routePath=p.route.countryPath.slice(p.route.domestic?0:1);
  const routeNames=p.route.countries.slice(p.route.domestic?0:1);
  const routeStage=Math.min(stage,routePath.length);
- const cityChoices=p.cities.map((c,i)=><button key={c.id} type="button" className="rounded-xl border bg-white px-3 py-2 text-sm font-bold" onClick={()=>setReference(!reference)}>{i+1}. {en?c.name:c.labelJa||c.name}</button>);
+ const cityChoices=p.cities.map((c,i)=><div key={c.id} className="rounded-xl border bg-white px-3 py-2 text-sm font-bold">{i+1}. {en?c.name:c.labelJa||c.name}</div>);
  let game=null;
  if(idx===0){
   const keys=continentalKey(p.continent);
