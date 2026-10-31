@@ -1508,7 +1508,7 @@ function AccuracyGauge({
 
 
       <div
-        className="
+        className="tp-language-accuracy-meter
           relative
           mt-1
           h-[92px]
