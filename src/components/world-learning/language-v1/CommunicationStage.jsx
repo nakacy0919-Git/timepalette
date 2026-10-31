@@ -1508,7 +1508,7 @@ function AccuracyGauge({
 
 
       <div
-        className="
+        className="tp-language-accuracy-meter
           relative
           mt-1
           h-[92px]
@@ -2486,6 +2486,17 @@ export default function CommunicationStage({
     useRef(
       null
     );
+  // A completed practice session may notify its parent only once.
+  // The original onClear callback changes identity on parent renders, so
+  // depending on it re-armed the old timer after the clear dialog closed.
+  const clearNotifiedRef = useRef(false);
+  const onClearRef = useRef(onClear);
+  onClearRef.current = onClear;
+  const completeOnce = () => {
+    if (clearNotifiedRef.current) return;
+    clearNotifiedRef.current = true;
+    onClearRef.current?.(mission);
+  };
 
 
   const speech =
@@ -2509,6 +2520,7 @@ export default function CommunicationStage({
       setFinished(
         false
       );
+      clearNotifiedRef.current = false;
 
       setAutoCheckPending(
         false
@@ -2530,8 +2542,8 @@ export default function CommunicationStage({
     () => {
       if (
         !finished ||
-        mission?.type ===
-          'online-exchange-final' ||
+        clearNotifiedRef.current ||
+        mission?.type === 'online-exchange-final' ||
         mission?.finalGoal
       ) {
         return;
@@ -2553,9 +2565,7 @@ export default function CommunicationStage({
             autoMissionClearRef.current =
               null;
 
-            onClear?.(
-              mission
-            );
+            completeOnce();
           },
           650
         );
@@ -2578,7 +2588,7 @@ export default function CommunicationStage({
       finished,
       mission?.id,
       mission?.type,
-      onClear,
+      mission?.finalGoal,
     ]
   );
 
@@ -3109,11 +3119,7 @@ export default function CommunicationStage({
         final={
           mission?.type === 'online-exchange-final' || Boolean(mission?.finalGoal)
         }
-        onFinish={() =>
-          onClear(
-            mission
-          )
-        }
+        onFinish={completeOnce}
       />
     );
   }

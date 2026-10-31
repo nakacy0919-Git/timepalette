@@ -25,10 +25,11 @@ export default function LanguageAdventure({
   const [diagnosticOpen,setDiagnosticOpen]=useState(false);
   const [diagnostics,setDiagnostics]=useState({});
   const [activeIndex,setActiveIndex]=useState(0);
+  const [practiceRound,setPracticeRound]=useState(0);
+  const missionListRef=useRef(null);
   const [flagImageFailed,setFlagImageFailed]=useState(false);
   const [progress,setProgress]=useState(()=>getWorldAdventureDomainProgress(iso,'language'));
   const [celebration,setCelebration]=useState(null);
-  const advanceTimerRef=useRef(null);
   const options=getAvailableExchangeLanguages(iso);
   const packageData=getExchangeLanguagePackage(iso,languageChoice)||
     getWorldAdventureDomainPackage(iso,'language');
@@ -41,17 +42,28 @@ export default function LanguageAdventure({
   const completedSet=new Set(progress?.completedMissionIds??[]);
   const completedCount=missions.filter(m=>completedSet.has(m.id)).length;
 
-  useEffect(()=>()=>{if(advanceTimerRef.current)window.clearTimeout(advanceTimerRef.current);},[]);
   useEffect(()=>setFlagImageFailed(false),[iso]);
-  const dismissCelebration=()=>{
-    if(advanceTimerRef.current){window.clearTimeout(advanceTimerRef.current);advanceTimerRef.current=null;}
-    setCelebration(null);
+  // Closing is independent of changing mission: never schedule a delayed re-open.
+  const dismissCelebration=()=>setCelebration(null);
+  const restartCurrentMission=()=>{
+    dismissCelebration();
+    setPracticeRound(round=>round+1);
+  };
+  const backToMissionList=()=>{
+    restartCurrentMission();
+    missionListRef.current?.focus();
+  };
+  const selectMission=index=>{
+    dismissCelebration();
+    setActiveIndex(index);
+    setPracticeRound(round=>round+1);
   };
   const switchLanguage=value=>{
     if(value===languageChoice||!options.some(o=>o.id===value))return;
     dismissCelebration();
     setDiagnosticOpen(false);
     setActiveIndex(0);
+    setPracticeRound(round=>round+1);
     setLanguageChoice(value);
   };
   const unlock=index=>{
@@ -73,19 +85,11 @@ export default function LanguageAdventure({
       firstClear:result.isNewCompletion,points:Number(mission.points??0),
       title:textOf(mission.title),nextIndex,
     });
-    if(nextIndex!==null){
-      if(advanceTimerRef.current)window.clearTimeout(advanceTimerRef.current);
-      advanceTimerRef.current=window.setTimeout(()=>{
-        setCelebration(null);
-        setActiveIndex(nextIndex);
-        advanceTimerRef.current=null;
-      },1900);
-    }
   };
   const advance=()=>{
     const nextIndex=celebration?.nextIndex;
     dismissCelebration();
-    if(Number.isInteger(nextIndex))setActiveIndex(nextIndex);
+    if(Number.isInteger(nextIndex))selectMission(nextIndex);
   };
   if(!packageData||!missions.length){
     return <div className="tp-language-v2 tp-language-empty">言語ミッションのデータがありません</div>;
@@ -96,8 +100,11 @@ export default function LanguageAdventure({
       nextMission={Number.isInteger(celebration?.nextIndex)?
         {title:textOf(missions[celebration.nextIndex]?.title)}:null}
       onNext={advance}
-      onBackToList={dismissCelebration}
-      onDismiss={dismissCelebration}
+      onBackToList={backToMissionList}
+      onRetry={restartCurrentMission}
+      onDismiss={backToMissionList}
+      backLabel="ミッション一覧へ"
+      finishLabel="ミッションに戻る"
     />
     {diagnosticOpen&&<SpeechRecognitionDiagnostic
       key={iso+'-'+selectedLocale}
@@ -124,7 +131,7 @@ export default function LanguageAdventure({
       </div>
     </header>
     <main className="tp-language-layout">
-      <nav className="tp-language-sidebar" aria-label="言語ミッション一覧">
+      <nav ref={missionListRef} tabIndex={-1} className="tp-language-sidebar" aria-label="言語ミッション一覧">
         <div className="tp-language-sidebar-inner">
           {missions.map((mission,index)=>{
             const isDone=completedSet.has(mission.id);
@@ -134,7 +141,7 @@ export default function LanguageAdventure({
               aria-current={active?'step':undefined}
               aria-label={'Mission '+(index+1)+' '+textOf(mission.title)+(isDone?' クリア済み':'')}
               className={'tp-language-mission-button'+(active?' is-active':'')+(isDone?' is-done':'')}
-              onClick={()=>setActiveIndex(index)}>
+              onClick={()=>selectMission(index)}>
               <span className="tp-language-mission-copy">
                 <span className="tp-language-mission-number">Mission {index+1}</span>
                 <span className="tp-language-mission-label">{textOf(mission.title)}</span>
@@ -180,7 +187,7 @@ export default function LanguageAdventure({
               <SourceStudyReader key={'reader-'+activeMission.id}
                 source={activeMission.source} className="h-full min-h-0"/>
             </div>:
-            <CommunicationStage key={activeMission.id} mission={activeMission}
+            <CommunicationStage key={activeMission.id+'-'+practiceRound} mission={activeMission}
               countryCode={iso} onClear={complete}/>}
         </div>
       </section>

@@ -340,3 +340,65 @@
   .tp-language-flag{min-width:25px;min-height:18px}
   .tp-language-flag img{width:27px}
 }
+
+
+/* Language Adventure v4: a larger, motivating Accuracy display.
+   The old 150px / 66px gauge restrictions are intentionally superseded. */
+.tp-language-v2 .tp-language-speech-card > .tp-language-results{
+  grid-template-columns:minmax(0,1fr) minmax(235px,285px);
+  align-items:stretch;
+}
+.tp-language-v2 .tp-language-accuracy{
+  min-height:clamp(190px,27vh,250px);
+  padding:clamp(10px,1.6vh,17px) 12px;
+  border:1px solid #dad5ee;
+  background:linear-gradient(170deg,#ffffff,#f7f4ff);
+  box-shadow:0 6px 24px rgba(84,54,148,.06);
+}
+.tp-language-v2 .tp-language-accuracy > .tp-language-accuracy-meter{
+  width:min(100%,255px)!important;
+  height:clamp(104px,15vh,143px)!important;
+  max-width:100%;min-width:0;
+  flex:none;
+}
+.tp-language-v2 .tp-language-accuracy-arc{
+  display:block;width:100%!important;height:100%!important;
+  max-width:none;
+}
+.tp-language-v2 .tp-language-accuracy-value{
+  font-size:clamp(42px,4.4vw,64px)!important;
+  line-height:1.03;
+  margin-top:-3px;
+}
+.tp-language-v2 .tp-language-accuracy-value span{
+  font-size:clamp(16px,1.8vw,24px);
+}
+@media(max-width:870px){
+  .tp-language-v2 .tp-language-speech-card > .tp-language-results{
+    grid-template-columns:minmax(0,1fr) minmax(184px,235px);
+  }
+  .tp-language-v2 .tp-language-accuracy{
+    min-height:clamp(165px,24vh,215px);
+  }
+  .tp-language-v2 .tp-language-accuracy > .tp-language-accuracy-meter{
+    height:clamp(88px,12vh,118px)!important;
+  }
+}
+@media(max-height:680px){
+  .tp-language-v2 .tp-language-accuracy{
+    min-height:150px;padding:6px;
+  }
+  .tp-language-v2 .tp-language-accuracy > .tp-language-accuracy-meter{
+    height:85px!important;
+  }
+  .tp-language-v2 .tp-language-accuracy-value{font-size:40px!important}
+}
+@media(max-width:520px){
+  .tp-language-v2 .tp-language-speech-card > .tp-language-results{
+    grid-template-columns:minmax(0,1fr);
+  }
+  .tp-language-v2 .tp-language-accuracy{min-height:170px}
+  .tp-language-v2 .tp-language-accuracy > .tp-language-accuracy-meter{
+    height:95px!important;width:min(100%,230px)!important;
+  }
+}

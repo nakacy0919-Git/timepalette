@@ -76,6 +76,9 @@ export default function MissionSuccessCelebration({
   onNext,
   onBackToList,
   onDismiss,
+  onRetry = null,
+  backLabel = 'Mission一覧',
+  finishLabel = 'Adventureへ戻る',
 }) {
   if (!celebration) {
     return null;
@@ -525,7 +528,7 @@ export default function MissionSuccessCelebration({
             "
           >
             <List size={19} />
-            Mission一覧
+            {backLabel}
           </button>
 
           <button
@@ -533,10 +536,7 @@ export default function MissionSuccessCelebration({
             onClick={
               nextMission
                 ? onNext
-                : (
-                  onBackToList ??
-                  onDismiss
-                )
+                : (onRetry ?? onBackToList ?? onDismiss)
             }
             className="
               inline-flex
@@ -560,7 +560,7 @@ export default function MissionSuccessCelebration({
           >
             {nextMission
               ? '次のMissionへ'
-              : 'Adventureへ戻る'}
+              : (onRetry ? 'もう一度練習' : finishLabel)}
 
             <ArrowRight
               size={21}
@@ -569,7 +569,15 @@ export default function MissionSuccessCelebration({
         </div>
 
 
-        <button
+        {onRetry && nextMission && <button
+          type="button"
+          onClick={onRetry}
+          className="mt-4 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl border border-violet-200 bg-violet-50 px-5 py-2.5 text-sm font-black text-violet-700 transition hover:bg-violet-100"
+        >
+          ↻ 同じMissionをもう一度
+        </button>}
+
+        {!onRetry && <button
           type="button"
           onClick={onDismiss}
           className="
@@ -584,7 +592,7 @@ export default function MissionSuccessCelebration({
           "
         >
           この画面を閉じる
-        </button>
+        </button>}
       </div>
     </div>
   );
