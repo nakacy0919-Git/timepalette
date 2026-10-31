@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {flagEmojiFromCode} from '../src/utils/countryFlagEmoji.js';
+import {countryFlagImageUrl} from '../src/utils/countryFlagImage.js';
+import {readdirSync} from 'node:fs';
 
 const read=rel=>readFileSync(new URL('../src/'+rel,import.meta.url),'utf8');
 
@@ -16,7 +18,7 @@ test('Canada and all ISO country codes show their own flag, never a generic glob
 
 test('language selector is visible alongside current country, with no redundant footer note',()=>{
   const adventure=read('components/world-learning/language-v1/LanguageAdventure.jsx');
-  assert.match(adventure,/flagEmojiFromCode\(iso\)/);
+  assert.match(adventure,/countryFlagImageUrl\(iso\)/);
   assert.match(adventure,/className="tp-language-country-tabs"/);
   assert.match(adventure,/className="tp-language-official-choices"/);
   assert.match(adventure,/aria-pressed=\{languageChoice===option\.id\}/);
@@ -47,4 +49,33 @@ test('speaking card is compact and has no horizontal overflow on tablets',()=>{
   assert.match(css,/@media\(max-width:870px\)/);
   assert.match(css,/@media\(max-width:520px\)/);
   assert.match(css,/tp-language-example-speaker/);
+});
+
+
+test('country flag image URLs are stable for Canada and all country codes',()=>{
+  assert.equal(countryFlagImageUrl('ca'),'https://flagcdn.com/w80/ca.png');
+  assert.equal(countryFlagImageUrl('CA'),'https://flagcdn.com/w80/ca.png');
+  assert.equal(countryFlagImageUrl('fr'),'https://flagcdn.com/w80/fr.png');
+  assert.equal(countryFlagImageUrl('kz'),'https://flagcdn.com/w80/kz.png');
+  assert.equal(countryFlagImageUrl('??'),null);
+  assert.equal(countryFlagImageUrl(''),null);
+  const dir=new URL('../src/data/',import.meta.url);
+  const files=readdirSync(dir).filter(name=>/^countries_[a-z]\.json$/.test(name));
+  const countries=Object.assign({},...files.map(name=>JSON.parse(readFileSync(new URL(name,dir),'utf8'))));
+  assert.equal(Object.keys(countries).length,197);
+  for(const code of Object.keys(countries)){
+    assert.equal(countryFlagImageUrl(code),'https://flagcdn.com/w80/'+code+'.png',code);
+  }
+});
+
+test('Language Adventure displays an IMG flag and gracefully falls back if offline',()=>{
+  const c=read('components/world-learning/language-v1/LanguageAdventure.jsx');
+  const css=read('components/world-learning/language-v1/languageAdventureLayout.css');
+  assert.match(c,/const countryFlagUrl=countryFlagImageUrl\(iso\)/);
+  assert.match(c,/<img src=\{countryFlagUrl\} alt=""/);
+  assert.match(c,/onError=\{\(\)=>setFlagImageFailed\(true\)\}/);
+  assert.match(c,/<Globe2 size=\{25\}\/>/);
+  assert.doesNotMatch(c,/const countryFlag=flagEmojiFromCode\(iso\)/);
+  assert.match(css,/\.tp-language-flag img\{/);
+  assert.match(css,/aspect-ratio:40\/27/);
 });
