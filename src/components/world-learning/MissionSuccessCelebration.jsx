@@ -592,7 +592,7 @@ export default function MissionSuccessCelebration({
           "
         >
           この画面を閉じる
-        </button>}}
+        </button>}
       </div>
     </div>
   );
