@@ -324,3 +324,19 @@
 @media(max-width:520px){
   .tp-language-choice-icon{min-width:19px;height:19px;font-size:8px}
 }
+
+
+/* Flag PNGs are platform independent: Windows may render 🇨🇦 as literal "CA". */
+.tp-language-flag{
+  display:inline-flex;align-items:center;justify-content:center;flex:none;
+  min-width:34px;min-height:24px;color:#7146d2;
+}
+.tp-language-flag img{
+  display:block;width:clamp(30px,2.7vw,40px);height:auto;aspect-ratio:40/27;
+  border-radius:3px;border:1px solid #e3dfef;object-fit:cover;
+  box-shadow:0 1px 4px rgba(28,15,60,.12);
+}
+@media(max-width:520px){
+  .tp-language-flag{min-width:25px;min-height:18px}
+  .tp-language-flag img{width:27px}
+}
