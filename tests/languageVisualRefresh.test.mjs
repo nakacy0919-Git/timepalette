@@ -18,7 +18,7 @@ test('Canada and all ISO country codes show their own flag, never a generic glob
 
 test('language selector is visible alongside current country, with no redundant footer note',()=>{
   const adventure=read('components/world-learning/language-v1/LanguageAdventure.jsx');
-  assert.match(adventure,/flagEmojiFromCode\(iso\)/);
+  assert.match(adventure,/countryFlagImageUrl\(iso\)/);
   assert.match(adventure,/className="tp-language-country-tabs"/);
   assert.match(adventure,/className="tp-language-official-choices"/);
   assert.match(adventure,/aria-pressed=\{languageChoice===option\.id\}/);
