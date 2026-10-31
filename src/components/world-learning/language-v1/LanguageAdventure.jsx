@@ -1,6 +1,6 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
-import {Mic2} from 'lucide-react';
-import {flagEmojiFromCode} from '../../../utils/countryFlagEmoji.js';
+import {Globe2,Mic2} from 'lucide-react';
+import {countryFlagImageUrl} from '../../../utils/countryFlagImage.js';
 import {getWorldAdventureDomainPackage} from '../../../utils/worldAdventureRegistry';
 import {getAvailableExchangeLanguages,getExchangeLanguagePackage} from '../../../utils/multilingualExchange.js';
 import {getSpeechLanguageName} from '../../../utils/speechRecognitionDiagnostics.js';
@@ -25,6 +25,7 @@ export default function LanguageAdventure({
   const [diagnosticOpen,setDiagnosticOpen]=useState(false);
   const [diagnostics,setDiagnostics]=useState({});
   const [activeIndex,setActiveIndex]=useState(0);
+  const [flagImageFailed,setFlagImageFailed]=useState(false);
   const [progress,setProgress]=useState(()=>getWorldAdventureDomainProgress(iso,'language'));
   const [celebration,setCelebration]=useState(null);
   const advanceTimerRef=useRef(null);
@@ -34,13 +35,14 @@ export default function LanguageAdventure({
   const missions=useMemo(()=>packageData?.missions??[],[packageData]);
   const activeMission=missions[activeIndex]||missions[0];
   const country=packageData?.country??{};
-  const countryFlag=flagEmojiFromCode(iso);
+  const countryFlagUrl=countryFlagImageUrl(iso);
   const selectedLocale=activeMission?.speech?.languageCode||'en-US';
   const selectedName=getSpeechLanguageName(selectedLocale);
   const completedSet=new Set(progress?.completedMissionIds??[]);
   const completedCount=missions.filter(m=>completedSet.has(m.id)).length;
 
   useEffect(()=>()=>{if(advanceTimerRef.current)window.clearTimeout(advanceTimerRef.current);},[]);
+  useEffect(()=>setFlagImageFailed(false),[iso]);
   const dismissCelebration=()=>{
     if(advanceTimerRef.current){window.clearTimeout(advanceTimerRef.current);advanceTimerRef.current=null;}
     setCelebration(null);
@@ -145,7 +147,13 @@ export default function LanguageAdventure({
       <section className="tp-language-content" aria-labelledby="tp-language-current-title">
         <div className="tp-language-country-tabs" aria-label={(country.nameJa||country.nameEn||iso)+'で練習できる言語'}>
           <div className="tp-language-country-identity">
-            <span className="tp-language-flag" aria-hidden="true">{countryFlag}</span>
+            <span className="tp-language-flag" aria-hidden="true">
+              {countryFlagUrl&&!flagImageFailed?
+                <img src={countryFlagUrl} alt="" width="40" height="27"
+                  decoding="async" loading="eager"
+                  onError={()=>setFlagImageFailed(true)}/>:
+                <Globe2 size={25}/>}
+            </span>
             <strong>{country.nameJa||country.nameEn||iso.toUpperCase()}</strong>
           </div>
           <div className="tp-language-official-choices" aria-label="練習する言語">
