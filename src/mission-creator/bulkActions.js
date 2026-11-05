@@ -6,7 +6,8 @@ const PUBLIC_TYPES = new Set(['text4','photo4','photoText4','video4','videoRefle
 
 export function eligibleForBulk(question, mode) {
   if (!question || !question.id) return false;
-  if (mode === 'approve') return question.status === 'draft';
+  // Teachers' incomplete drafts are not ready for administrative batch approval.
+  if (mode === 'approve') return question.status === 'submitted';
   return mode === 'publish' && question.status === 'approved' &&
     /^[a-z]{2}$/.test(String(question.countryIso||'').toLowerCase()) &&
     PUBLIC_DOMAINS.has(question.domain) && PUBLIC_TYPES.has(question.type);
