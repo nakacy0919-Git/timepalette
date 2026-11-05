@@ -9,7 +9,7 @@ const published = (id) => ({...draft(id), status:'published'});
 
 test('admin can approve submitted teacher questions, never unsubmitted drafts', () => {
   assert.equal(eligibleForBulk(draft('a'),'approve'),false);
-  assert.throws(()=>createBulkPlan('approve',['a'],[submitted('a')],'admin'),/状態/);
+  assert.throws(()=>createBulkPlan('approve',['a'],[draft('a')],'admin'),/状態/);
   assert.equal(eligibleForBulk(submitted('a'),'approve'),true);
   assert.equal(eligibleForBulk(approved('a'),'approve'),false);
   assert.deepEqual(createBulkPlan('approve',['a'],[submitted('a')],'admin').items.map(x=>x.id),['a']);
