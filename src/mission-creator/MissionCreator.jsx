@@ -413,25 +413,43 @@ function QuestionBank({
   onPrefetch, onDelete, onRestore, onPublication, onEditPublished,
   selectedCountry, countryNames, busy, reviewingIds,
   filter, onFilterChange, search, onSearchChange,
-  onBulkAction, bulkProgress, bulkReport
+  onBulkAction, bulkProgress, bulkReport, onRefresh
 }) {
 
   const [authorFilter,setAuthorFilter]=useState('');
+  const [countryFilter,setCountryFilter]=useState('');
+  const [domainFilter,setDomainFilter]=useState('');
   const [typeFilter,setTypeFilter]=useState('');
   const [sortMode,setSortMode]=useState('latest');
+  const [shownCount,setShownCount]=useState(100);
   const [authorDetails,setAuthorDetails]=useState(null);
   const authors=[...new Set(questions.map(q=>q.authorName).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ja'));
+  const countryOptions=[...new Map(questions.filter(q=>q.countryIso).map(q=>
+    [q.countryIso,countryNames[q.countryIso]||q.countryName||q.countryIso]))]
+    .sort((a,b)=>a[1].localeCompare(b[1],'ja'));
   const statusCounts=Object.fromEntries(Object.keys(statusJa).map(key=>[key,questions.filter(q=>q.status===key).length]));
-  const visible=filterBankQuestions(questions,{filter,search,selectedCountry}).filter(q=>
+  const visible=filterBankQuestions(questions,{
+    filter,search,selectedCountry:countryFilter||selectedCountry,selectedDomain:domainFilter
+  }).filter(q=>
      (!authorFilter||q.authorName===authorFilter)&&(!typeFilter||q.type===typeFilter))
     .sort((a,b)=>sortMode==='oldest'?String(a.updatedAt).localeCompare(String(b.updatedAt)):String(b.updatedAt).localeCompare(String(a.updatedAt)));
   const [bulkMode, setBulkMode] = useState('approve');
   const [selectedIds, setSelectedIds] = useState(() => new Set());
-  const eligibleVisible = visible.slice(0, 200).filter(q => eligibleForBulk(q, bulkMode));
-  const eligibleIds = eligibleVisible.slice(0, BULK_LIMIT).map(q => q.id);
-  const checkedIds = eligibleIds.filter(id => selectedIds.has(id));
-  const allChecked = eligibleIds.length > 0 && eligibleIds.every(id => selectedIds.has(id));
-  useEffect(() => { setSelectedIds(new Set()); }, [filter, search]);
+  const shown=visible.slice(0,shownCount);
+  const eligibleVisible=shown.filter(q=>eligibleForBulk(q,bulkMode));
+  const eligibleIds=eligibleVisible.map(q=>q.id);
+  const checkedIds=eligibleIds.filter(id=>selectedIds.has(id)).slice(0,BULK_LIMIT);
+  const allChecked=eligibleIds.length>0&&eligibleIds.slice(0,BULK_LIMIT).every(id=>selectedIds.has(id));
+  const selectStage=status=>{
+    if(status==='submitted')setBulkMode('approve');
+    if(status==='approved')setBulkMode('publish');
+    onFilterChange(status);
+    setSelectedIds(new Set());
+  };
+  useEffect(()=>{
+    setSelectedIds(new Set());
+    setShownCount(100);
+  },[filter,search,authorFilter,countryFilter,domainFilter,typeFilter,sortMode]);
   useEffect(() => {
     setSelectedIds(previous => {
       const fresh = new Set([...previous].filter(id => eligibleVisible.some(q => q.id === id)));
@@ -458,16 +476,33 @@ function QuestionBank({
       <div className="mc-section-top">
         <div>
           <div className="mc-eyebrow">MISSION BANK</div>
-          <h2>集まった問題</h2>
+          <h2>{user?.role==='admin'?'先生からの投稿を確認・承認・公開':'集まった問題'}</h2>
         </div>
         <span className="mc-count">
           {formatNumber(visible.length)} 件
         </span>
       </div>
 
-       {user?.role==='admin' && <div className="mc-filter-row" aria-label="状態ごとの問題件数" style={{gap:8,flexWrap:'wrap'}}>
-         {Object.entries(statusCounts).map(([status,count])=><button key={status} type="button" className="mc-outline mc-small" onClick={()=>onFilterChange(status)}>{statusJa[status]}：{count}</button>)}
-       </div>}
+       {user?.role==='admin' && <>
+         <section className="mc-review-stages" aria-label="管理者の審査・公開ワークフロー">
+           {[
+             ['submitted','1. 投稿を確認','先生が提出した問題を審査'],
+             ['approved','2. 公開待ち','承認済みの問題をまとめて公開'],
+             ['published','3. 公開中','公開済みの問題を確認']
+           ].map(([status,label,description])=><button type="button" key={status}
+             className={'mc-review-stage'+(filter===status?' active':'')}
+             aria-pressed={filter===status} disabled={busy} onClick={()=>selectStage(status)}>
+             <span className="mc-review-stage-count">{statusCounts[status]||0}件</span>
+             <strong>{label}</strong><small>{description}</small>
+           </button>)}
+         </section>
+         <div className="mc-filter-row" aria-label="その他の問題状態" style={{gap:8,flexWrap:'wrap'}}>
+           {Object.entries(statusCounts).filter(([status])=>!['submitted','approved','published'].includes(status))
+             .map(([status,count])=><button key={status} type="button" className="mc-outline mc-small"
+             disabled={busy} onClick={()=>selectStage(status)}>{statusJa[status]}：{count}</button>)}
+           <button type="button" className="mc-outline mc-small" disabled={busy} onClick={onRefresh}>新しい投稿を取得</button>
+         </div>
+       </>
        <div className="mc-filter-row">
          <label className="mc-search">
           <Search size={18}/>
@@ -480,7 +515,7 @@ function QuestionBank({
         <select
           aria-label="問題の状態で絞り込み"
           value={filter}
-          onChange={e => onFilterChange(e.target.value)}
+          onChange={e => selectStage(e.target.value)}
         >
           <option value="all">すべての状態</option>
           {Object.entries(statusJa)
@@ -494,6 +529,12 @@ function QuestionBank({
       </div>
 
        <div className="mc-filter-row" style={{gap:8,flexWrap:'wrap'}}>
+         <label>国<select aria-label="国で絞り込む" value={countryFilter} onChange={e=>setCountryFilter(e.target.value)}>
+           <option value="">すべての国</option>{countryOptions.map(([iso,name])=><option key={iso} value={iso}>{name}</option>)}
+         </select></label>
+         <label>カテゴリー<select aria-label="カテゴリーで絞り込む" value={domainFilter} onChange={e=>setDomainFilter(e.target.value)}>
+           <option value="">すべてのカテゴリー</option>{DOMAINS.map(([id,label])=><option key={id} value={id}>{label}</option>)}
+         </select></label>
          <label>作成者<select aria-label="作成者で絞り込む" value={authorFilter} onChange={e=>setAuthorFilter(e.target.value)}><option value="">すべて</option>{authors.map(a=><option key={a} value={a}>{a}</option>)}</select></label>
          <label>形式<select aria-label="問題形式で絞り込む" value={typeFilter} onChange={e=>setTypeFilter(e.target.value)}><option value="">すべて</option>{TYPES.map(([id,label])=><option key={id} value={id}>{label}</option>)}</select></label>
          <label>更新順<select aria-label="並び替え" value={sortMode} onChange={e=>setSortMode(e.target.value)}><option value="latest">新しい順</option><option value="oldest">古い順</option></select></label>
