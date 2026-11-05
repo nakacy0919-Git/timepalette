@@ -579,7 +579,7 @@ function QuestionBank({
               className="mc-primary mc-small" disabled={busy} onClick={()=>selectStage('approved')}>
               次へ：承認済みの問題を公開
             </button>}
-            {!bulkReport.refreshed && <p>一覧の再取得に失敗しました。画面を更新して結果を確認してください。</p>
+            {!bulkReport.refreshed && <p>一覧の再取得に失敗しました。画面を更新して結果を確認してください。</p>}
           </div>}
         </section>
       )}
