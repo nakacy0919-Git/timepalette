@@ -48,3 +48,23 @@ test('all does not show deleted; approved is selectable', () => {
     ['2']
   );
 });
+
+test('moderation queue filters submissions by country and category', () => {
+  const submitted = [
+    {...original[0],id:'11',status:'submitted'},
+    {...original[2],id:'12',status:'submitted'},
+    {...original[1],id:'13',status:'submitted'}
+  ];
+  assert.deepEqual(
+    filterBankQuestions(submitted,{filter:'submitted',selectedCountry:'rw',selectedDomain:'lifeCulture'})
+      .map(q=>q.id),['11','13']
+  );
+  assert.deepEqual(
+    filterBankQuestions(submitted,{filter:'submitted',selectedCountry:'mn',selectedDomain:'language'})
+      .map(q=>q.id),['12']
+  );
+  assert.deepEqual(
+    filterBankQuestions(submitted,{filter:'submitted',selectedCountry:'rw',selectedDomain:'language'})
+      .map(q=>q.id),[]
+  );
+});
