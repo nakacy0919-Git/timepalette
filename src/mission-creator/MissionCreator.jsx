@@ -502,7 +502,7 @@ function QuestionBank({
              disabled={busy} onClick={()=>selectStage(status)}>{statusJa[status]}：{count}</button>)}
            <button type="button" className="mc-outline mc-small" disabled={busy} onClick={onRefresh}>新しい投稿を取得</button>
          </div>
-       </>
+       </>}
        <div className="mc-filter-row">
          <label className="mc-search">
           <Search size={18}/>
