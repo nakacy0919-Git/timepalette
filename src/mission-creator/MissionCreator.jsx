@@ -704,7 +704,7 @@ function QuestionBank({
          <button className="mc-outline" type="button" onClick={()=>setShownCount(previous=>previous+100)}>
            さらに100件を表示
          </button>
-       </div>
+       </div>}
     </section>
   );
 }
