@@ -1116,7 +1116,7 @@ export default function MissionCreator() {
     catch(e){ setError(e?.message||'一括処理を開始できませんでした。'); return false; }
     const label=mode==='approve'?'一括承認':'一括公開';
     const message=mode==='approve'
-      ? '選択した' + plan.items.length + '件の下書きを承認済みにします。個々の問題内容と写真を確認済みですか？\n公開はまだ行いません。'
+      ? '先生が提出した' + plan.items.length + '件を承認済みにします。問題・正解・出典・写真を確認済みですか？\n公開はまだ行いません。'
       : '選択した' + plan.items.length + '件をTimePaletteに公開します。\n全件の写真・出典・解答・公開利用権を確認済みですか？';
     if(!window.confirm(message))return false;
     setBusy(true);setBulkRunning(true);setBulkReport(null);setBulkProgress('');setError('');
