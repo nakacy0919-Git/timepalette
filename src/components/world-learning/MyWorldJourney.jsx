@@ -6,12 +6,6 @@ import worldAtlas from 'world-atlas/countries-110m.json';
 const dateLabel = timestamp => timestamp
   ? new Date(timestamp).toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' })
   : '';
-const missionLabel = id => {
-  const match = String(id).match(/-(\d{2})$/);
-  if (match) return 'ミッション ' + Number(match[1]);
-  return '投稿ミッション';
-};
-
 function JourneyMap({ countries, selectedIso, onSelect }) {
   const lookup = useMemo(() => {
     const name = new Map();
@@ -189,15 +183,16 @@ export default function MyWorldJourney({ summary, onClose, onExplore }) {
             <h2 className="flex items-center gap-2 text-base font-black"><Check size={19} className="text-emerald-300" /> この国でクリアしたミッション</h2>
             {selected && selected.completedIds.length
               ? <div className="mt-3 grid max-h-[306px] grid-cols-1 gap-2 overflow-y-auto pr-1 sm:grid-cols-2 lg:grid-cols-1">
-                {selected.domains.flatMap(d => d.ids.map(id => ({ id, label: d.label, icon: d.icon }))).map(({ id, label, icon }) =>
-                  <div key={id} className="flex min-w-0 items-center gap-2.5 rounded-xl border border-emerald-200/10 bg-emerald-300/[0.07] px-3 py-2.5">
+                {selected.completedRecords.map(record => {
+                  const domain = selected.domains.find(d => d.id === record.domain);
+                  return <div key={record.id} className="flex min-w-0 items-center gap-2.5 rounded-xl border border-emerald-200/10 bg-emerald-300/[0.07] px-3 py-2.5">
                     <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-emerald-300/15 text-emerald-200"><Check size={16} /></span>
                     <span className="min-w-0 flex-1">
-                      <span className="block truncate text-[12px] font-bold">{icon} {label}</span>
-                      <span className="block truncate text-[11px] text-slate-400">{missionLabel(id)}</span>
+                      <span className="block truncate text-[12px] font-bold">{record.title}</span>
+                      <span className="block truncate text-[11px] text-slate-400">{domain ? domain.icon + ' ' + domain.label : '過去の学習記録'}</span>
                     </span>
-                  </div>
-                )}
+                  </div>;
+                })}
               </div>
               : <div className="flex h-36 flex-col items-center justify-center gap-2 text-sm text-slate-400"><Globe2 size={31} className="text-slate-500" /> この国の最初の発見を集めよう</div>}
             <p className="mt-3 text-[11px] text-slate-500">この端末に保存された学習記録を表示しています。</p>
