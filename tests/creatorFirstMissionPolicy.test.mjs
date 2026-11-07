@@ -18,9 +18,10 @@ for (const domain of ['place','time']) {
     assert.deepEqual(combineDomainMissions(domain,builtIn,published), [...builtIn,...published]);
   });
 }
-test('country panel has no embedded mission-bank import or legacy Creator adventure launchers', () => {
+test('country panel excludes legacy creator domain banks while preserving the shared language adventure', () => {
   const panel = readFileSync('src/components/world-learning/WorldMissionPanel.jsx','utf8');
-  assert.equal(/missions_.*json|LanguageAdventureLauncher|LifeCultureAdventureLauncher|ThinkConnectAdventureLauncher/.test(panel),false);
+  assert.equal(/missions_.*json|LifeCultureAdventureLauncher|ThinkConnectAdventureLauncher/.test(panel),false);
+  assert.ok(panel.includes('LanguageAdventureLauncher')); // Existing 10-step shared exchange remains playable.
   assert.ok(panel.includes('fetchPublishedCountry'));
   assert.ok(panel.includes('forCreatorLearningLevel'));
 });
