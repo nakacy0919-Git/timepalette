@@ -1,5 +1,7 @@
-import { getWorldAdventureDomainProgress } from '../../utils/worldAdventureProgress';
-import {getPlaceProgress} from '../../utils/placeProgressStorage.js';
+import { lazy, Suspense, useState } from 'react';
+import { buildLearnerJourney } from '../../utils/learnerJourneyProgress.js';
+import JourneySummaryCard from './JourneySummaryCard.jsx';
+const MyWorldJourney = lazy(() => import('./MyWorldJourney.jsx'));
 import HomeToolsButton from '../navigation/HomeToolsButton';
 import {
   ArrowRight,
@@ -13,10 +15,6 @@ import timePaletteLogo
 
 import openingBackground
   from '../../assets/opening/timepalette_opening_background.png';
-
-import {
-  getCountryProgress,
-} from '../../utils/worldProgressStorage';
 
 import {
   getLiveWorldLearningCountries,
@@ -36,64 +34,8 @@ export default function WorldAdventureHome({
     getLiveWorldLearningCountries();
 
 
-  const journeyTotals =
-    liveCountries.reduce(
-      (
-        totals,
-        country
-      ) => {
-        const countryProgress =
-          getCountryProgress(
-            country.iso
-          );
-
-        const completedIds = new Set([
-          ...(countryProgress?.completedMissionIds ?? []),
-          ...getPlaceProgress(country.iso).completedMissionIds,
-          ...getWorldAdventureDomainProgress(country.iso, 'time').completedMissionIds,
-        ]);
-        const availableIds = new Set(country.missionData?.missions?.map(m=>m.id) ?? []);
-        const completed = [...completedIds].filter(id=>availableIds.has(id)).length;
-
-        return {
-          completed:
-            totals.completed +
-            completed,
-
-          total:
-            totals.total +
-            Number(
-              country.totalMissions ??
-                0
-            ),
-        };
-      },
-      {
-        completed: 0,
-        total: 0,
-      }
-    );
-
-
-  const completedCount =
-    journeyTotals.completed;
-
-
-  const totalMissionCount =
-    journeyTotals.total;
-
-
-  const journeyPercent =
-    totalMissionCount > 0
-      ? Math.round(
-          (
-            completedCount /
-            totalMissionCount
-          ) *
-            100
-        )
-      : 0;
-
+  const [showJourney, setShowJourney] = useState(false);
+  const journey = buildLearnerJourney(liveCountries);
 
    const startAdventure =
     () => {
@@ -634,270 +576,30 @@ export default function WorldAdventureHome({
           </div>
 
 
-          {/* =================================================
-              RIGHT / JOURNEY
-          ================================================== */}
-
-          <div
-            id="journey"
-            className="
-              hidden
-              lg:block
-              lg:justify-self-end
-            "
-          >
-
-            <div
-              className="
-                w-[350px]
-                rounded-[30px]
-                border
-                border-white/15
-                bg-[#06101f]/52
-                p-6
-                shadow-[0_30px_85px_rgba(0,0,0,0.34)]
-                backdrop-blur-2xl
-                xl:w-[380px]
-              "
-            >
-
-              {/* HEADER */}
-
-              <div
-                className="
-                  flex
-                  items-start
-                  justify-between
-                "
-              >
-
-                <div>
-
-                  <p
-                    className="
-                      text-[9px]
-                      font-black
-                      tracking-[0.20em]
-                      text-cyan-300
-                    "
-                  >
-                    YOUR JOURNEY
-                  </p>
-
-
-                  <h2
-                    className="
-                      mt-2
-                      text-xl
-                      font-black
-                      tracking-tight
-                      text-white
-                    "
-                  >
-                    World Explorer
-                  </h2>
-
-                </div>
-
-
-                <div
-                  className="
-                    flex
-                    h-14
-                    w-14
-                    items-center
-                    justify-center
-                    rounded-2xl
-                    border
-                    border-white/10
-                    bg-white/10
-                    text-3xl
-                    shadow-inner
-                  "
-                >
-                  🌍
-                </div>
-
-              </div>
-
-
-              {/* STATS */}
-
-              <div
-                className="
-                  mt-6
-                  grid
-                  grid-cols-2
-                  gap-3
-                "
-              >
-
-                <div
-                  className="
-                    rounded-2xl
-                    border
-                    border-white/10
-                    bg-white/[0.06]
-                    p-4
-                  "
-                >
-
-                  <p
-                    className="
-                      text-2xl
-                      font-black
-                      text-white
-                    "
-                  >
-                    {
-                      liveCountries.length
-                    }
-                  </p>
-
-
-                  <p
-                    className="
-                      mt-1
-                      text-[9px]
-                      font-black
-                      tracking-[0.14em]
-                      text-white/40
-                    "
-                  >
-                    COUNTRIES
-                  </p>
-
-                </div>
-
-
-                <div
-                  className="
-                    rounded-2xl
-                    border
-                    border-cyan-300/15
-                    bg-cyan-300/[0.07]
-                    p-4
-                  "
-                >
-
-                  <p
-                    className="
-                      text-2xl
-                      font-black
-                      text-cyan-300
-                    "
-                  >
-                    {
-                      completedCount
-                    }
-                  </p>
-
-
-                  <p
-                    className="
-                      mt-1
-                      text-[9px]
-                      font-black
-                      tracking-[0.14em]
-                      text-white/40
-                    "
-                  >
-                    MISSIONS
-                  </p>
-
-                </div>
-
-              </div>
-
-
-              {/* PROGRESS */}
-
-              <div
-                className="
-                  mt-6
-                "
-              >
-
-                <div
-                  className="
-                    flex
-                    items-end
-                    justify-between
-                  "
-                >
-
-                  <p
-                    className="
-                      text-xs
-                      font-black
-                      text-white/50
-                    "
-                  >
-                    {
-                      completedCount
-                    }
-                    {' / '}
-                    {
-                      totalMissionCount
-                    }
-                  </p>
-
-
-                  <p
-                    className="
-                      text-xl
-                      font-black
-                      text-white
-                    "
-                  >
-                    {
-                      journeyPercent
-                    }%
-                  </p>
-
-                </div>
-
-
-                <div
-                  className="
-                    mt-3
-                    h-2
-                    overflow-hidden
-                    rounded-full
-                    bg-white/10
-                  "
-                >
-
-                  <div
-                    className="
-                      h-full
-                      rounded-full
-                      bg-gradient-to-r
-                      from-blue-500
-                      via-cyan-300
-                      to-emerald-300
-                      shadow-[0_0_18px_rgba(34,211,238,0.65)]
-                      transition-all
-                      duration-700
-                    "
-                    style={{
-                      width:
-                        `${journeyPercent}%`,
-                    }}
-                  />
-
-                </div>
-
-              </div>
-
-            </div>
-
+          {/* Personal progress: the opening, BGM and adventure CTA stay unchanged. */}
+          <div id="journey" className="hidden lg:block lg:justify-self-end">
+            <JourneySummaryCard summary={journey} onOpen={() => setShowJourney(true)} />
           </div>
+
 
         </div>
 
       </div>
 
+      {/* On smaller iPads and phones, keep a compact progress entry without taking a row. */}
+      <button type="button" onClick={() => setShowJourney(true)}
+        className="absolute bottom-5 right-4 z-20 inline-flex items-center gap-2 rounded-2xl border border-cyan-100/35 bg-[#07172c]/85 px-4 py-3 text-xs font-black text-white shadow-[0_14px_40px_rgba(0,0,0,0.4)] backdrop-blur-xl lg:hidden">
+        <span className="text-base">🌍</span>
+        世界探究 <span className="text-cyan-200">{journey.exploredCountries}/{journey.totalCountries}</span>
+        <ArrowRight size={16}/>
+      </button>
+      {showJourney && (
+        <Suspense fallback={<div role="status" className="fixed inset-0 z-[100] flex items-center justify-center bg-[#061123] text-cyan-100">進捗を読み込み中…</div>}>
+          <MyWorldJourney summary={journey}
+            onClose={() => setShowJourney(false)}
+            onExplore={() => { setShowJourney(false); startAdventure(); }} />
+        </Suspense>
+      )}
     </div>
   );
 }
