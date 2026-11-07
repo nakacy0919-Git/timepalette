@@ -45,14 +45,27 @@ export function buildLearnerJourney(countries, {
   const entries = safeArray(countries).filter(c => COUNTRY_CODE.test(c?.iso || '')).map(country => {
     const iso = country.iso;
     const known = new Map();
+    const titles = new Map();
     for (const mission of safeArray(country.missionData?.missions)) {
       addMission(known, mission?.id, mission?.domain);
+      const title = typeof mission?.title === 'string' ? mission.title :
+        (mission?.title?.ja || mission?.titleJa || mission?.prompt || '');
+      if (mission?.id && title) titles.set(mission.id, String(title).slice(0, 120));
     }
+    const sharedTitles = ['世界にあいさつ', '自分の名前を伝えよう', '相手の名前を聞こう',
+      '出身国と住む場所', '学校について話そう', '好きなことを聞こう',
+      '食文化を聞こう', '文化をもっと知ろう', '学校生活を比べよう', '世界とつながろう'];
     // Shared 10-step English exchange journeys are available for every country.
     for (let i = 1; i <= 10; i += 1) {
       const index = String(i).padStart(2, '0');
-      addMission(known, iso + '-language-shared-' + index, 'language');
-      if (SPANISH_COUNTRIES.has(iso)) addMission(known, iso + '-language-es-' + index, 'language');
+      const englishId = iso + '-language-shared-' + index;
+      addMission(known, englishId, 'language');
+      titles.set(englishId, sharedTitles[i - 1]);
+      if (SPANISH_COUNTRIES.has(iso)) {
+        const spanishId = iso + '-language-es-' + index;
+        addMission(known, spanishId, 'language');
+        titles.set(spanishId, 'スペイン語コミュニケーション ' + i);
+      }
     }
 
     const saved = world?.countries?.[iso] || {};
@@ -100,6 +113,10 @@ export function buildLearnerJourney(countries, {
       completedIds, completedCount, availableCount,
       explored: completedCount > 0, lastAt: latest || null,
       domains, unclassified,
+      completedRecords: completedIds.map(id => ({
+        id, domain: domainFromId(iso, id, known),
+        title: titles.get(id) || (id.includes('-mc-') ? '投稿ミッション' : 'ミッション ' + (id.match(/-(\d{2})$/)?.[1] || '')),
+      })),
     };
   });
   const explored = entries.filter(c => c.explored);
