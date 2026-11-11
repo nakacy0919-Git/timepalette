@@ -1,3 +1,4 @@
+import {createPortal} from 'react-dom';
 import {
   Volume2,
   Mic,
@@ -1663,6 +1664,40 @@ function ProfileSetup({
   onReady,
   languageName = '英語',
 }) {
+  const [editingIndex, setEditingIndex] = useState(null);
+  const editorRef = useRef(null);
+  const editorInputRef = useRef(null);
+  const editingField = fields[editingIndex];
+  useEffect(() => {
+    if (editingIndex === null) return;
+    const viewport = window.visualViewport;
+    const update = () => {
+      if (!editorRef.current) return;
+      editorRef.current.style.height = `${viewport?.height ?? window.innerHeight}px`;
+      editorRef.current.style.top = `${viewport?.offsetTop ?? 0}px`;
+    };
+    update();
+    viewport?.addEventListener('resize', update);
+    viewport?.addEventListener('scroll', update);
+    window.addEventListener('resize', update);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    editorInputRef.current?.focus({preventScroll:true});
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      viewport?.removeEventListener('resize', update);
+      viewport?.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, [editingIndex]);
+  const finishEditing = () => {
+    editorInputRef.current?.blur();
+    setEditingIndex(null);
+  };
+  const nextField = () => {
+    if (editingIndex < fields.length - 1) setEditingIndex(editingIndex + 1);
+    else finishEditing();
+  };
   const ready =
     fields.every(field => field.required === false || String(values[field.id] ?? '').trim());
 
@@ -1681,6 +1716,26 @@ function ProfileSetup({
         py-4
       "
     >
+      {editingField && createPortal(
+        <section ref={editorRef} className="tp-language-input-editor" role="dialog" aria-modal="true" aria-label="プロフィール入力" onKeyDown={event => {if(event.key === 'Escape') finishEditing();}}>
+          <header className="tp-language-input-editor-header">
+            <strong>プロフィール入力</strong>
+            <span>{editingIndex + 1} / {fields.length}</span>
+            <button type="button" onClick={finishEditing}>閉じる</button>
+          </header>
+          <form className="tp-language-input-editor-form" onSubmit={event => {event.preventDefault(); nextField();}}>
+            <label htmlFor="tp-language-focused-input">{editingField.label}</label>
+            <input id="tp-language-focused-input" ref={editorInputRef}
+              value={values[editingField.id] ?? ''}
+              onChange={event => onChange(editingField.id,event.target.value)}
+              placeholder={editingField.placeholder} autoComplete="off" autoCapitalize="none" spellCheck={false}
+              enterKeyHint={editingIndex < fields.length - 1 ? 'next' : 'done'}/>
+            <footer className="tp-language-input-editor-actions">
+              <button type="button" disabled={editingIndex === 0} onPointerDown={event => event.preventDefault()} onClick={() => setEditingIndex(editingIndex - 1)}>戻る</button>
+              <button type="submit" onPointerDown={event => event.preventDefault()}>{editingIndex < fields.length - 1 ? '次へ' : '完了'}</button>
+            </footer>
+          </form>
+        </section>, document.body)}
       <p
         className="
           text-[10px]
@@ -1714,7 +1769,7 @@ function ProfileSetup({
         {
           fields.map(
             (
-              field
+              field, fieldIndex
             ) => (
               <label
                 key={
@@ -1737,6 +1792,7 @@ function ProfileSetup({
                 </span>
 
                 <input
+                  onFocus={() => setEditingIndex(fieldIndex)}
                   value={
                     values[field.id] ??
                     ''
