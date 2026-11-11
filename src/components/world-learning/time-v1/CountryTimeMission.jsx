@@ -18,7 +18,7 @@ function LiveClocks({places}) {
   useEffect(()=>{const timer=setInterval(()=>setNow(Date.now()),1000);return()=>clearInterval(timer);},[]);
   return <div className="mb-5 rounded-2xl bg-sky-50 p-4"><h3 className="font-black">世界の「いま」</h3><p className="mb-3 text-xs text-slate-600">下の問題は指定日で考えます。こちらの時計は現在時刻です。</p><div className="grid gap-3 sm:grid-cols-2">{places.map((p,i)=><div key={i}><p className="font-bold">{p.cityJa}</p><p className="font-mono text-xl">{formatStamp(p.zone,now)}</p></div>)}</div></div>;
 }
-export default function CountryTimeMission({mission,onComplete,alreadyCompleted}) {
+export default function CountryTimeMission({mission,onComplete,alreadyCompleted,onNext,isLastMission,countryCode}) {
   const [selected,setSelected]=useState(null);
   const [wasCompleted]=useState(Boolean(alreadyCompleted));
   const [solved,setSolved]=useState(false);
@@ -35,7 +35,7 @@ export default function CountryTimeMission({mission,onComplete,alreadyCompleted}
     const correct=mission.options[index].correct;
     setSelected(index);
     setFeedback(correct?'correct':'wrong');
-    playUiSound(correct?'correct':'wrong');
+    playUiSound(correct?'powerup':'wrong');
     if(correct){setSolved(true);onComplete?.(mission);}
   }
   function dismissFeedback(){
@@ -44,7 +44,7 @@ export default function CountryTimeMission({mission,onComplete,alreadyCompleted}
     locked.current=false;
   }
   return <div data-testid="country-time-mission" data-mission-id={mission.id} className="space-y-5">
-    <p className="rounded-xl bg-amber-50 p-3 text-sm font-bold">対象：{mission.cityJa}（{mission.zone}）／複数の時間帯がある国も、この都市で考えます。</p>
+    <p className="time-target-country rounded-xl bg-amber-50 p-3 text-sm font-bold">{countryCode&&<img src={`https://flagcdn.com/w160/${countryCode}.png`} alt="" className="time-country-flag"/>}対象：{mission.cityJa}（{mission.zone}）／複数の時間帯がある国も、この都市で考えます。</p>
     {mission.liveZones&&<LiveClocks places={mission.liveZones}/>}
     {!!mission.clocks.length&&<div className="time-question-clocks grid gap-4 sm:grid-cols-2">{mission.clocks.map((c,i)=><div key={i} className="rounded-2xl border bg-slate-50 p-4 text-center"><h3 className="font-black">{c.label}</h3>{c.hidden&&!solved?<div className="py-9 text-3xl" aria-label="この時計の時刻を解こう">⏰ ？</div>:<><ClockFace minutes={localParts(c.zone,c.instant).minutes} label={`${c.label} ${formatStamp(c.zone,c.instant)}`}/><p className="font-mono text-lg font-black">{formatStamp(c.zone,c.instant)}</p><p className="text-xs text-slate-600">{formatOffset(offsetAt(c.zone,c.instant))}</p></>}</div>)}</div>}
     {mission.dial&&<div className="time-practice-clock rounded-2xl bg-orange-50 p-4"><label className="font-black" htmlFor="time-practice-dial">練習用の時計：{target?.label} {dialTime}</label><ClockFace minutes={dial} label={`練習用の時計 ${dialTime}`}/><input id="time-practice-dial" className="w-full accent-orange-500" type="range" min="0" max="1435" step="5" value={dial} onChange={e=>setDial(Number(e.target.value))}/><p className="text-xs text-slate-600">針を動かして考えたら、日付も含めて下の4択から回答しよう。</p></div>}
@@ -55,8 +55,10 @@ export default function CountryTimeMission({mission,onComplete,alreadyCompleted}
       <div className="time-answer-card">
         <div className="time-answer-symbol" aria-hidden="true">{feedback==='correct'?'✓':'↻'}</div>
         <h2 id="time-answer-title">{feedback==='correct'?'CORRECT!':'Try it again!'}</h2>
-        <p>{feedback==='correct'?'Mission cleared! Great work!':'もう一度、時計と日付を確かめよう。'}</p>
-        <button type="button" autoFocus onClick={dismissFeedback}>{feedback==='correct'?'解説を見る':'もう一度チャレンジ'}</button>
+        {feedback==='correct'?<>
+          <div className="time-answer-explanation"><h3>解説</h3><p>{mission.explanation}</p></div>
+          <button type="button" autoFocus onClick={()=>{dismissFeedback();onNext?.();}}>{isLastMission?'COMPLETE! へ':'次の問題へ →'}</button>
+        </>:<><p>もう一度、時計と日付を確かめよう。</p><button type="button" autoFocus onClick={dismissFeedback}>もう一度チャレンジ</button></>}
       </div>
     </div>}
     {hint&&<p className="rounded-xl bg-sky-50 p-4">同じ瞬間をUTC（世界共通の基準）でつなごう。変換先のオフセット − 変換元のオフセットを足します。24:00を超えたら翌日、00:00より前なら前日です。季節の問題では2つの指定日を別々に比べます。</p>}

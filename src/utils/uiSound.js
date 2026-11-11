@@ -259,6 +259,15 @@ function scheduleSound(
       createTone(context,{frequency:880,start:.085,duration:.36,gain:.038,attack:.014});
       break;
 
+    case 'powerup':
+      // Warm ascending D-major roll, resolving into a sustained chord.
+      [146.83,185,220,293.66,369.99,440,587.33,739.99].forEach((frequency,index)=>{
+        createTone(context,{frequency,endFrequency:frequency*1.015,start:index*.065,duration:.36,gain:.027,attack:.035,type:'sine'});
+      });
+      [293.66,369.99,440,587.33].forEach(frequency=>
+        createTone(context,{frequency,start:.5,duration:.85,gain:.023,attack:.05,type:'sine'}));
+      break;
+
     case 'success':
       // A smooth D-major bell arpeggio for mission completion.
       [587.33,739.99,880,1174.66].forEach((frequency,index)=>

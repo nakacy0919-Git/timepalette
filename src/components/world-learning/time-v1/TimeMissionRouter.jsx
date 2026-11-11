@@ -34,9 +34,12 @@ export default function TimeMissionRouter({
   mission,
   onComplete,
   alreadyCompleted,
+  onNext,
+  isLastMission,
+  countryCode,
 }) {
 
-  if (mission?.universalTime) return <CountryTimeMission {...{mission,onComplete,alreadyCompleted}} />;
+  if (mission?.universalTime) return <CountryTimeMission {...{mission,onComplete,alreadyCompleted,onNext,isLastMission,countryCode}} />;
 
   if (
     mission?.type ===

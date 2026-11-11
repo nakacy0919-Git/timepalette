@@ -92,3 +92,12 @@
  [data-testid="country-time-mission"] fieldset.time-instant-options > button {margin:0;padding:10px;font-size:14px;border-radius:12px;}
 }
 @media(prefers-reduced-motion:reduce){.time-answer-card,.is-wrong .time-answer-symbol {animation:none;}.time-instant-options button {transition:none;}}
+.time-adventure-identity .time-country-flag,.time-country-flag {width:76px;height:48px;object-fit:contain;border-radius:6px;flex-shrink:0;filter:drop-shadow(0 2px 5px #0003);}
+.time-target-country {display:flex;align-items:center;gap:12px;}
+.time-answer-card {max-width:760px;width:100%;max-height:calc(100dvh - 40px);overflow-y:auto;padding:12px;}
+.time-answer-card .time-answer-symbol {width:84px;height:84px;font-size:58px;margin-bottom:12px;}
+.time-answer-card h2 {font-size:clamp(36px,6vw,64px);}
+.time-answer-explanation {margin:18px auto 8px;padding:16px 22px;background:#ffffff12;border:1px solid #ffffff25;border-radius:18px;text-align:left;}
+.time-answer-explanation h3 {color:#86efac;font-size:14px;font-weight:900;}
+.time-answer-card .time-answer-explanation p {font-size:18px;line-height:1.7;margin:6px 0;}
+@media(max-height:650px){.time-answer-card .time-answer-symbol{width:56px;height:56px;font-size:36px;margin-bottom:6px;}.time-answer-card h2{font-size:36px;}.time-answer-explanation{margin-top:10px;padding:10px 16px;}.time-answer-card .time-answer-explanation p{font-size:16px;}}

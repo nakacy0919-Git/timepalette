@@ -1,4 +1,5 @@
 import './timeAdventureLayout.css';
+import {playUiSound} from '../../../utils/uiSound.js';
 import {
   Check,
   ChevronLeft,
@@ -493,9 +494,6 @@ export default function TimeAdventure({
         });
 
       setProgress(result.progress);
-      if (result.isNewCompletion && missions.every(item => result.progress.completedMissionIds.includes(item.id))) {
-        setShowComplete(true);
-      }
 
       onProgressChange?.(
         result.progress
@@ -552,7 +550,7 @@ export default function TimeAdventure({
     >
       <header className="time-adventure-topbar bg-gradient-to-r from-slate-950 via-amber-950 to-orange-900 text-white">
         <div className="time-adventure-identity">
-          <span aria-hidden="true">⏰</span>
+          <img className="time-country-flag" src={`https://flagcdn.com/w160/${normalizedCountry}.png`} alt={`${packageData.countryNameJa}の国旗`} />
           <h1>{packageData.countryNameEn} Time Adventure</h1>
           <span className="time-level-badge">{levelMeta.icon} {levelMeta.label}</span>
         </div>
@@ -829,6 +827,12 @@ export default function TimeAdventure({
               key={
                 `${activeMission.id}-${level}`
               }
+              countryCode={normalizedCountry}
+              isLastMission={activeIndex===missions.length-1}
+              onNext={()=>{
+                if(activeIndex<missions.length-1){setActiveIndex(index=>index+1);}
+                else if(missions.every(item=>completedSet.has(item.id))){playUiSound('powerup');setShowComplete(true);}
+              }}
               mission={
                 activeMission
               }
