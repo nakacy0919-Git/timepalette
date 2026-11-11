@@ -29,6 +29,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
   const [domain,setDomain]=useState(null);
   const [adventure,setAdventure]=useState(null);
   const [active,setActive]=useState(null);
+  const [pendingStart,setPendingStart]=useState(null);
   const [catalog,setCatalog]=useState([]);
   const [loading,setLoading]=useState(true);
   const [error,setError]=useState('');
@@ -49,6 +50,16 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
   const meta=MISSION_DOMAINS.find(d=>d.id===domain);
   const levelCatalog=catalog.filter(m=>m.domain!=='time'||!getTimePackage(countryCode)).map(m=>forCreatorLearningLevel(m,level)).filter(Boolean);
   const missions=levelCatalog.filter(m=>m.domain===domain);
+  // Start once after the chosen category's published catalog is ready.
+  // Clearing the request lets learners close the player and use the list normally.
+  useEffect(()=>{
+    if(!pendingStart||loading||error)return;
+    const first=catalog.filter(m=>m.domain!=='time'||!getTimePackage(countryCode))
+      .map(m=>forCreatorLearningLevel(m,level))
+      .find(m=>m?.domain===pendingStart);
+    setPendingStart(null);
+    if(first)setActive(first);
+  },[pendingStart,loading,error,catalog,countryCode,level]);
   const syncPlace=()=>{
     const allowed=new Set((geo?.missions||[]).map(m=>m.id));
     for(const id of getPlaceProgress(countryCode).completedMissionIds)if(allowed.has(id)||countryCode==='rw'&&/^rw-place-\d{2}$/.test(id))completeWorldMission(countryCode,id);
@@ -61,10 +72,12 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     : ((id==='place'&&(geo||countryCode==='rw'))||(id==='time'&&getTimePackage(countryCode)))?10:0;
   const pick=id=>{
     setActive(null);
+    setPendingStart(null);
     if(id==='place'&&adventureCount(id)>0){setDomain(null);setAdventure('place');return;}
     if(id==='time'&&adventureCount(id)>0){setDomain(null);setAdventure('time');return;}
     if(id==='language'&&adventureCount(id)>0){setDomain(null);setAdventure('language');return;}
     setDomain(id);
+    setPendingStart(id);
   };
   return <section className="rounded-3xl bg-white p-4 shadow-sm md:p-6" data-testid="country-missions">
     <header className="mb-4 flex items-center gap-3">
@@ -84,13 +97,13 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
         <span className="tp-category-bottom"><span className="tp-category-progress">{loading?'公開数を確認中…':error?'公開数を取得できません':`${Math.min(done,available)} / ${available} 問クリア`}{!loading&&!error&&<span className="tp-category-meter" aria-hidden="true"><span style={{width:`${available?Math.min(done,available)/available*100:0}%`}}/></span>}</span><span className="tp-category-go" aria-hidden="true"><ArrowUpRight size={21}/></span></span>
       </button>;
     })}</div>:<>
-      <button type="button" onClick={()=>setDomain(null)} className="mb-4 rounded-full border px-4 py-2 font-bold">← 6つのカテゴリーへ</button>
+      <button type="button" onClick={()=>{setPendingStart(null);setDomain(null);}} className="mb-4 rounded-full border px-4 py-2 font-bold">← 6つのカテゴリーへ</button>
       <h3 className="mb-3 text-xl font-black">{meta?.icon} {meta?.labelJa}</h3>
       {domain!=='place'&&adventureCount(domain)>0&&<button type="button" className="mb-5 rounded-2xl bg-blue-600 px-6 py-4 font-bold text-white" onClick={()=>setAdventure(domain)}>{domain==='place'?'地理':'時間・時差'}アドベンチャーを始める（10ミッション）</button>}
       <>
         {loading?<p role="status">公開問題を読み込み中…</p>:error?<div role="alert">公開問題を取得できませんでした。<button className="ml-3 underline" onClick={retry}>再試行</button></div>:<p className="mb-4 text-sm text-slate-600">Mission Creatorから公開中：{missions.length}問{!missions.length?'。公開問題を準備中です。':''}</p>}
         {!!missions.length&&<div className="tp-mission-journey"><div><span>YOUR ADVENTURE</span><h4>{countryNameJa||countryNameEn}の発見を集めよう！</h4><p>気になるミッションを選んで、探検スタート。</p></div><div className="tp-journey-progress"><strong>{missions.filter(m=>completed.has(m.id)).length}<small> / {missions.length}</small></strong><span>ミッションクリア</span><progress aria-label="ミッションのクリア数" value={missions.filter(m=>completed.has(m.id)).length} max={missions.length}/></div></div>}
-        <div className="tp-mission-grid">{missions.map((m,i)=>{const done=completed.has(m.id);return <button key={m.id} type="button" onClick={()=>setActive(m)} className={'tp-world-mission-card tp-mission-ticket '+(done?'is-cleared':'')} style={{'--ticket-tone':['#ddf5fb','#fff0cd','#eae5ff','#ffe5e8'][i%4],'--ticket-ink':['#1d6680','#855316','#65509b','#94465c'][i%4]}}>
+        <div className="tp-mission-grid">{missions.map((m,i)=>{const done=completed.has(m.id);return <button key={m.id} type="button" onClick={()=>{setPendingStart(null);setActive(m);}} className={'tp-world-mission-card tp-mission-ticket '+(done?'is-cleared':'')} style={{'--ticket-tone':['#ddf5fb','#fff0cd','#eae5ff','#ffe5e8'][i%4],'--ticket-ink':['#1d6680','#855316','#65509b','#94465c'][i%4]}}>
           <span className="tp-ticket-art" aria-hidden="true"><span className="tp-ticket-orbit"/><span className="tp-ticket-icon">{['◇','✧','◎','✦'][i%4]}</span><span className="tp-ticket-number">{String(i+1).padStart(2,'0')}</span></span>
           <span className="tp-ticket-content"><span className="tp-ticket-kicker">{meta?.icon} {meta?.labelJa} <span className="tp-ticket-status">{done?'✓ CLEAR':'探検ミッション'}</span></span><span className="tp-ticket-title">ミッション {i+1}</span><span className="tp-ticket-invitation">{done?'発見を振り返ってみよう':'どんな発見が待っているかな？'}</span><span className="tp-ticket-action">{done?'もう一度チャレンジ':'探検に出発する'} <span aria-hidden="true">➜</span></span></span>
           {done&&<span className="tp-ticket-stamp" aria-hidden="true">★</span>}
