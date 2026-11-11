@@ -18,3 +18,16 @@
 /* Larger category copy for classroom tablets. */
 .tp-category-pass h3{font-size:24px;line-height:1.35}.tp-category-english{font-size:13px}.tp-category-hint{font-size:14px;line-height:1.5}.tp-category-progress{font-size:14px}.tp-category-kicker{font-size:10px}
 @media(min-width:1101px) and (max-width:1250px){.tp-category-pass h3{font-size:22px}.tp-category-grid .tp-category-pass{grid-template-columns:72px minmax(0,1fr)}.tp-category-body{padding-left:12px;padding-right:12px}}
+/* Put the six entry choices before country reference information. */
+@media (min-width:768px) {
+ [data-testid="country-missions"] .tp-category-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}
+ [data-testid="country-missions"] .tp-category-pass {min-height:140px;grid-template-columns:58px minmax(0,1fr);border-radius:16px!important;}
+ [data-testid="country-missions"] .tp-category-body {padding:10px 10px 6px;}
+ [data-testid="country-missions"] .tp-category-pass h3 {font-size:19px;margin:2px 0;}
+ [data-testid="country-missions"] .tp-category-kicker {display:none;}
+ [data-testid="country-missions"] .tp-category-hint {font-size:12px;margin-top:4px;}
+ [data-testid="country-missions"] .tp-category-icon {width:44px;height:52px;border-radius:12px;}
+ [data-testid="country-missions"] .tp-category-icon svg {width:28px;height:28px;}
+ [data-testid="country-missions"] .tp-category-bottom {padding:6px 10px;}
+ [data-testid="country-missions"] .tp-category-progress {font-size:12px;}
+}

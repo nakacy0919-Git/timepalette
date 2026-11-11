@@ -530,6 +530,45 @@ export default function CountryDetailOverlay({
           <div>
 
             {/* =====================================================
+                WORLD ADVENTURE V2
+                Heroに重ね、最初の選択をすぐ見せる。
+            ====================================================== */}
+            <section
+              className="
+                relative
+                z-20
+                mt-4
+                scroll-mt-4
+                px-4
+                pb-10
+                md:mt-4
+                md:px-7
+                lg:px-10
+              "
+            >
+
+              <WorldMissionPanel
+                countryCode={
+                  iso
+                }
+                fileLetter={
+                  fileLetter
+                }
+                countryNameEn={
+                  countryData.nameEn
+                }
+                countryNameJa={
+                  countryData.nameJa
+                }
+                flagUrl={
+                  countryData.flagUrl
+                }
+              />
+
+            </section>
+
+
+            {/* =====================================================
                 COUNTRY HERO
                 V2: 情報だけ。ここにはCTAを置かない。
             ====================================================== */}
@@ -719,45 +758,6 @@ export default function CountryDetailOverlay({
                 </div>
 
               </div>
-
-            </section>
-
-
-            {/* =====================================================
-                WORLD ADVENTURE V2
-                Heroに重ね、最初の選択をすぐ見せる。
-            ====================================================== */}
-            <section
-              className="
-                relative
-                z-20
-                -mt-12
-                scroll-mt-4
-                px-4
-                pb-10
-                md:-mt-14
-                md:px-7
-                lg:px-10
-              "
-            >
-
-              <WorldMissionPanel
-                countryCode={
-                  iso
-                }
-                fileLetter={
-                  fileLetter
-                }
-                countryNameEn={
-                  countryData.nameEn
-                }
-                countryNameJa={
-                  countryData.nameJa
-                }
-                flagUrl={
-                  countryData.flagUrl
-                }
-              />
 
             </section>
 

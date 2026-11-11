@@ -71,6 +71,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
       {flagUrl&&<img src={flagUrl} alt="" className="h-9 w-14 rounded object-contain"/>}
       <div><h2 className="text-xl font-black text-slate-900">{countryNameJa||countryNameEn}</h2><p className="text-sm text-slate-500">{countryNameEn} · World Adventure</p></div>
     </header>
+    <p className="mb-3 font-bold text-slate-700">まずは、6つのミッションから選ぼう！</p>
     <div className="mb-5 flex flex-wrap gap-2" aria-label="学習レベル">{levels.map(([id,label])=><button key={id} type="button" aria-pressed={level===id} onClick={()=>setLevel(id)} className={'rounded-full border px-4 py-2 font-bold '+(level===id?'bg-slate-900 text-white':'bg-white text-slate-700')}>{label}</button>)}</div>
     {!domain?<div className="tp-category-grid">{MISSION_DOMAINS.map((d,i)=>{
       const available=adventureCount(d.id)+levelCatalog.filter(m=>m.domain===d.id).length;

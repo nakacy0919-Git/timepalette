@@ -1,3 +1,4 @@
+import './timeAdventureLayout.css';
 import {
   Check,
   ChevronLeft,
@@ -212,6 +213,7 @@ function MissionCard({
       disabled={!unlocked}
       onClick={onClick}
       className={`
+        time-mission-card
         w-full
         rounded-[22px]
         border-2
@@ -468,6 +470,8 @@ export default function TimeAdventure({
       );
     };
 
+  const [showComplete, setShowComplete] = useState(false);
+
   const handleComplete =
     (
       mission
@@ -488,9 +492,10 @@ export default function TimeAdventure({
             0,
         });
 
-      setProgress(
-        result.progress
-      );
+      setProgress(result.progress);
+      if (result.isNewCompletion && missions.every(item => result.progress.completedMissionIds.includes(item.id))) {
+        setShowComplete(true);
+      }
 
       onProgressChange?.(
         result.progress
@@ -536,253 +541,45 @@ export default function TimeAdventure({
       activeMission.type
     );
 
-  const progressPercent =
-    missions.length
-      ? (
-          completedCount /
-          missions.length
-        ) *
-        100
-      : 0;
-
-
   return (
     <div
       className="
+        time-adventure
         min-h-screen
         bg-slate-100
         text-slate-900
       "
     >
-      <header
-        className="
-          relative
-          overflow-hidden
-          bg-gradient-to-r
-          from-slate-950
-          via-amber-950
-          to-orange-900
-          text-white
-        "
-      >
-        <div
-          className="
-            absolute
-            -left-24
-            -top-24
-            h-72
-            w-72
-            rounded-full
-            bg-amber-400/20
-            blur-3xl
-          "
-        />
-
-        <div
-          className="
-            absolute
-            -bottom-28
-            right-24
-            h-72
-            w-72
-            rounded-full
-            bg-orange-500/20
-            blur-3xl
-          "
-        />
-
-        <div
-          className="
-            relative
-            mx-auto
-            flex
-            max-w-[1500px]
-            flex-col
-            gap-6
-            px-6
-            py-8
-            lg:flex-row
-            lg:items-end
-            lg:justify-between
-          "
-        >
-          <div
-            className="
-              flex
-              items-start
-              gap-4
-            "
-          >
-            <div
-              className="
-                flex
-                h-16
-                w-16
-                shrink-0
-                items-center
-                justify-center
-                rounded-[22px]
-                bg-white/10
-                text-4xl
-                ring-1
-                ring-white/20
-              "
-            >
-              ⏰
-            </div>
-
-            <div>
-              <p
-                className="
-                  text-[10px]
-                  font-black
-                  tracking-[0.24em]
-                  text-amber-300
-                "
-              >
-                EXPLORE · LEARN · CONNECT
-              </p>
-
-              <h1
-                className="
-                  mt-2
-                  text-3xl
-                  font-black
-                  tracking-tight
-                  md:text-5xl
-                "
-              >
-                {packageData.countryNameEn} Time Adventure
-              </h1>
-
-              <p
-                className="
-                  mt-2
-                  font-bold
-                  text-amber-100/80
-                "
-              >
-                時間・時差 · Time & Time Zones
-              </p>
-
-              <div
-                className="
-                  mt-4
-                  flex
-                  flex-wrap
-                  gap-2
-                "
-              >
-                <span
-                  className="
-                    rounded-full
-                    bg-white/10
-                    px-3
-                    py-1.5
-                    text-xs
-                    font-black
-                  "
-                >
-                  {packageData.countryNameJa}
-                </span>
-
-                <span
-                  className="
-                    rounded-full
-                    bg-white/10
-                    px-3
-                    py-1.5
-                    text-xs
-                    font-black
-                  "
-                >
-                  {levelMeta.icon}
-                  {' '}
-                  {levelMeta.label}
-                </span>
-
-                <span
-                  className="
-                    rounded-full
-                    bg-amber-400
-                    px-3
-                    py-1.5
-                    text-xs
-                    font-black
-                    text-slate-950
-                  "
-                >
-                  {missions.length}
-                  {' '}
-                  MISSIONS
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="
-              w-full
-              max-w-lg
-            "
-          >
-            <div
-              className="
-                flex
-                justify-between
-                text-xs
-                font-black
-              "
-            >
-              <span
-                className="
-                  tracking-[0.18em]
-                  text-amber-200
-                "
-              >
-                ADVENTURE PROGRESS
-              </span>
-
-              <span>
-                {completedCount}
-                {' / '}
-                {missions.length}
-              </span>
-            </div>
-
-            <div
-              className="
-                mt-2
-                h-3
-                overflow-hidden
-                rounded-full
-                bg-white/15
-              "
-            >
-              <div
-                className="
-                  h-full
-                  rounded-full
-                  bg-gradient-to-r
-                  from-yellow-300
-                  via-amber-300
-                  to-orange-400
-                  transition-all
-                  duration-500
-                "
-                style={{
-                  width:
-                    `${progressPercent}%`,
-                }}
-              />
-            </div>
-          </div>
+      <header className="time-adventure-topbar bg-gradient-to-r from-slate-950 via-amber-950 to-orange-900 text-white">
+        <div className="time-adventure-identity">
+          <span aria-hidden="true">⏰</span>
+          <h1>{packageData.countryNameEn} Time Adventure</h1>
+          <span className="time-level-badge">{levelMeta.icon} {levelMeta.label}</span>
+        </div>
+        <div className="time-mission-lights" aria-label={`ミッション進捗 ${completedCount} / ${missions.length}`}>
+          {missions.map((mission,index)=><button key={mission.id} type="button"
+            disabled={!isUnlocked(index)} onClick={()=>setActiveIndex(index)}
+            aria-label={`ミッション${index+1}：${completedSet.has(mission.id)?'クリア済み':'未クリア'}`}
+            aria-current={activeIndex===index?'step':undefined}
+            className={`time-mission-light ${completedSet.has(mission.id)?'is-complete':''}`}>
+              {completedSet.has(mission.id)?'✓':index+1}
+          </button>)}
+          <strong>{completedCount}/{missions.length}</strong>
         </div>
       </header>
+      {showComplete && <div className="time-complete-overlay" role="dialog" aria-modal="true" aria-labelledby="time-complete-title">
+        <div className="time-complete-confetti" aria-hidden="true">{Array.from({length:48},(_,i)=><i key={i} style={{'--i':i,'--hue':`${i*47%360}`}}/>)}</div>
+        <div className="time-complete-card"><div className="time-complete-trophy" aria-hidden="true">🏆</div>
+          <h2 id="time-complete-title">COMPLETE!</h2><p>{packageData.countryNameEn} Time Adventure</p><strong>ALL {missions.length} MISSIONS CLEARED</strong>
+          <p>Great work, Time Traveler!</p><button type="button" autoFocus onClick={()=>setShowComplete(false)}>ミッションを振り返る</button>
+        </div>
+      </div>}
+
 
 
       <main
         className="
+          time-adventure-layout
           mx-auto
           grid
           max-w-[1500px]
@@ -904,6 +701,7 @@ export default function TimeAdventure({
         >
           <div
             className="
+              time-mission-heading
               rounded-[34px]
               bg-gradient-to-br
               from-slate-950
@@ -987,16 +785,7 @@ export default function TimeAdventure({
               </div>
 
               <div>
-                <p
-                  className="
-                    text-xs
-                    font-black
-                    tracking-[0.18em]
-                    text-amber-300
-                  "
-                >
-                  {packageData.countryNameEn.toUpperCase()} TIME ADVENTURE
-                </p>
+
 
                 <h2
                   className="
@@ -1026,6 +815,7 @@ export default function TimeAdventure({
 
           <div
             className="
+              time-mission-activity
               mt-5
               rounded-[34px]
               border
