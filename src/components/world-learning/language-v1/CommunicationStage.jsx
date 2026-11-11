@@ -1675,7 +1675,7 @@ function ProfileSetup({
         h-full
         max-w-3xl
         flex-col
-        justify-center
+        justify-start
         overflow-y-auto
         px-2
         py-4

@@ -27,6 +27,7 @@ export default function LanguageAdventure({
   const [activeIndex,setActiveIndex]=useState(0);
   const [practiceRound,setPracticeRound]=useState(0);
   const missionListRef=useRef(null);
+  const viewportRef=useRef(null);
   const [flagImageFailed,setFlagImageFailed]=useState(false);
   const [progress,setProgress]=useState(()=>getWorldAdventureDomainProgress(iso,'language'));
   const [celebration,setCelebration]=useState(null);
@@ -43,6 +44,30 @@ export default function LanguageAdventure({
   const completedCount=missions.filter(m=>completedSet.has(m.id)).length;
 
   useEffect(()=>setFlagImageFailed(false),[iso]);
+  useEffect(()=>{
+    const viewport=window.visualViewport;
+    let frame;
+    const update=()=>{
+      cancelAnimationFrame(frame);
+      frame=requestAnimationFrame(()=>{
+        const root=viewportRef.current;
+        if(!root)return;
+        // Keyboard changes the visual viewport on iPad even when 100dvh stays unchanged.
+        // Pinch zoom should keep its normal browser behavior.
+        if(viewport && Math.abs(viewport.scale-1)<.05){
+          root.style.setProperty('--tp-language-visible-height',`${Math.round(Math.min(window.innerHeight,viewport.height))}px`);
+        }else root.style.removeProperty('--tp-language-visible-height');
+        const focused=document.activeElement;
+        if(focused instanceof HTMLElement && root.contains(focused) && focused.closest('.tp-language-profile-scroll')){
+          focused.scrollIntoView({block:'nearest',inline:'nearest',behavior:'instant'});
+        }
+      });
+    };
+    update();
+    viewport?.addEventListener('resize',update);
+    window.addEventListener('resize',update);
+    return ()=>{cancelAnimationFrame(frame);viewport?.removeEventListener('resize',update);window.removeEventListener('resize',update);};
+  },[]);
   // Closing is independent of changing mission: never schedule a delayed re-open.
   const dismissCelebration=()=>setCelebration(null);
   const restartCurrentMission=()=>{
@@ -94,7 +119,7 @@ export default function LanguageAdventure({
   if(!packageData||!missions.length){
     return <div className="tp-language-v2 tp-language-empty">言語ミッションのデータがありません</div>;
   }
-  return <div className="tp-language-v2" data-testid="language-adventure-v2">
+  return <div ref={viewportRef} className="tp-language-v2" data-testid="language-adventure-v2">
     <MissionSuccessCelebration
       celebration={celebration}
       nextMission={Number.isInteger(celebration?.nextIndex)?
