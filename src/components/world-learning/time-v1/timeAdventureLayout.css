@@ -75,3 +75,20 @@
 @keyframes time-complete-pop {from {opacity:0;transform:scale(.65);}to {opacity:1;transform:scale(1);}}
 @media(prefers-reduced-motion:reduce) {.time-complete-card,.time-complete-confetti i {animation:none;}.time-complete-confetti i {top:calc(var(--i) * 2%);}}
 @media(max-width:767px) {.time-adventure-topbar {padding:12px 16px;}.time-mission-lights {gap:5px;}.time-mission-light {width:25px;height:25px;}}
+.time-instant-options button {width:100%;min-height:48px;transition:transform .15s,background .15s;}
+.time-instant-options button:active {transform:scale(.98);}
+.time-instant-options button:focus-visible {outline:3px solid #f59e0b;outline-offset:2px;}
+.time-choice-letter {display:grid;place-items:center;flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e8f0;font-size:12px;}
+.time-answer-feedback {position:fixed;inset:0;z-index:13500;display:grid;place-items:center;background:#020617e8;padding:24px;overflow:hidden;}
+.time-answer-card {position:relative;text-align:center;color:white;animation:time-complete-pop .45s ease-out;}
+.time-answer-symbol {display:grid;place-items:center;width:120px;height:120px;margin:0 auto 20px;border:8px solid currentColor;border-radius:50%;font-size:80px;font-weight:900;line-height:1;}
+.is-correct .time-answer-symbol {color:#4ade80;box-shadow:0 0 70px #22c55e80;}
+.is-wrong .time-answer-symbol {color:#fbbf24;animation:time-answer-wobble .45s;}
+.time-answer-card h2 {font-size:clamp(40px,8vw,84px);font-weight:1000;line-height:1.2;color:#fde047;}
+.time-answer-card p {margin:18px 0;font-size:20px;}
+.time-answer-card > button {margin-top:12px;padding:14px 28px;border-radius:30px;background:#facc15;color:#422006;font-weight:900;min-height:48px;}
+@keyframes time-answer-wobble {25%,75%{transform:rotate(-12deg);}50%{transform:rotate(12deg);}}
+@media(min-width:768px){
+ [data-testid="country-time-mission"] fieldset.time-instant-options > button {margin:0;padding:10px;font-size:14px;border-radius:12px;}
+}
+@media(prefers-reduced-motion:reduce){.time-answer-card,.is-wrong .time-answer-symbol {animation:none;}.time-instant-options button {transition:none;}}
