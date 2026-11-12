@@ -1,8 +1,7 @@
 import {useEffect,useRef,useState} from 'react';
 
-export function safeSourceUrl(value){
- try{const url=new URL(value);return ['https:','http:'].includes(url.protocol)?url.href:null;}catch{return null;}
-}
+import {safeSourceUrl} from '../../utils/safeSourceUrl.js';
+export {safeSourceUrl};
 
 export function ExplanationLinks({text,onOpen}){
  return String(text||'').split(/(https?:\/\/[^\s<>「」『』【】（）]+)/g).map((part,index)=>{
