@@ -603,7 +603,7 @@ function authorizeMissionCreatorPhotoFetch(){
 function tpPublicEligible_(q){
   return q && /^[a-z]{2}$/.test(String(q.countryIso||'').toLowerCase()) &&
     TP_DOMAINS.includes(String(q.domain)) &&
-    ['text4','photo4','photoText4'].includes(String(q.type));
+    ['text4','photo4','photoText4','photo1','free'].includes(String(q.type));
 }
 function tpPublicValidate_(q){
   if(!tpPublicEligible_(q) || !String(q.prompt||'').trim())
@@ -618,7 +618,7 @@ function tpPublicValidate_(q){
     throw Error('写真4択の正解スロットを確認してください。');
   const media=tpRows_('Media').filter(m=>m.questionId===q.id);
   const slots=media.map(m=>Number(m.slot));
-  const expected=q.type==='photo4'?[1,2,3,4]:q.type==='photoText4'?[1]:[];
+  const expected=q.type==='photo4'?[1,2,3,4]:['photoText4','photo1'].includes(q.type)?[1]:[];
   if(slots.length!==expected.length||expected.some(n=>!slots.includes(n)))
     throw Error('公開に必要な写真が揃っていません。');
 }
