@@ -3,6 +3,8 @@ import {getLiveWorldLearningCountries,getWorldLearningCountry} from '../../utils
 import {MISSION_DOMAINS} from '../../utils/missionDomains.js';
 import {buildLearnerJourney} from '../../utils/learnerJourneyProgress.js';
 import {readLesson,lessonUrl,setLearningScope,clearLearningData,completionReport} from '../../utils/classroomSession.js';
+import LearningNotebook from './LearningNotebook.jsx';
+import LearningBackupControls from './LearningBackupControls.jsx';
 import WorldMissionPanel from './WorldMissionPanel.jsx';
 import './classroomHub.css';
 const levels=[['elementary','小学生'],['juniorHigh','中学生'],['highSchoolStandard','高校生'],['highSchoolAdvanced','Challenge']];
@@ -28,6 +30,7 @@ export default function ClassroomHub({onHome}) {
     {running?<>
       <p className="tp-classroom-notice">{mode==='personal'?'記録はこのブラウザーに保存されます。':mode==='demo'?'実演の記録は個人記録に加算されません。再読み込みで実演の記録は消えます。':'この練習の記録と入力内容は再読み込みで消えます。終了時は「記録と入力を消して終了」を押してください。'}</p>
       <div className="tp-classroom-actions"><button onClick={download}>クリア記録を保存</button>{mode!=='personal'&&<button onClick={()=>{clearLearningData();stop();}}>記録と入力を消して終了</button>}</div>
+      <LearningNotebook country={country} domain={domain} level={level} countryName={selected.nameJa} domainName={MISSION_DOMAINS.find(d=>d.id===domain)?.labelJa} levelName={levels.find(l=>l[0]===level)?.[1]}/>
       <WorldMissionPanel key={country+domain+level+mode} countryCode={selected.iso} countryNameJa={selected.nameJa} countryNameEn={selected.nameEn} flagUrl={selected.flagUrl} initialLevel={level} initialDomain={domain}/>
     </>:<>
       <h1>今日の学習を始めよう</h1><p>先生は同じ教材へのリンクを配り、生徒は自分のペースで取り組めます。</p>
@@ -42,7 +45,8 @@ export default function ClassroomHub({onHome}) {
         <button onClick={()=>start('demo')}>先生の実演を始める<small>実演用の記録で授業を進める</small></button>
       </div>}
       <div className="tp-classroom-actions"><button onClick={copy}>生徒用リンクをコピー</button><button onClick={download}>この端末のクリア記録を保存</button><button onClick={()=>setResetConfirm(true)}>この端末の学習記録・入力を消す</button></div>
-      {resetConfirm&&<div role="alertdialog" aria-label="学習記録の削除確認" className="tp-classroom-confirm"><p>このブラウザーのクリア記録と、Language Adventureの名前・学校などの入力を消します。元に戻せません。必要なら先にクリア記録を保存してください。</p><button onClick={()=>setResetConfirm(false)}>キャンセル</button><button onClick={()=>{try{clearLearningData();setNotice('学習記録と入力を削除しました。');setResetConfirm(false);setRevision(v=>v+1);}catch{setNotice('削除できませんでした。ブラウザーのサイトデータ設定を確認してください。');}}}>削除する</button></div>}
+      <LearningBackupControls journey={()=>buildLearnerJourney(countries)} onRestored={()=>setRevision(v=>v+1)}/>
+      {resetConfirm&&<div role="alertdialog" aria-label="学習記録の削除確認" className="tp-classroom-confirm"><p>このブラウザーのクリア記録と、Language Adventureの名前・学校などの入力、目標・振り返りを消します。元に戻せません。必要なら先にクリア記録を保存してください。</p><button onClick={()=>setResetConfirm(false)}>キャンセル</button><button onClick={()=>{try{clearLearningData();setNotice('学習記録と入力を削除しました。');setResetConfirm(false);setRevision(v=>v+1);}catch{setNotice('削除できませんでした。ブラウザーのサイトデータ設定を確認してください。');}}}>削除する</button></div>}
       <p className="tp-classroom-notice">名前はニックネーム、学校は架空の名前でも練習できます。音声認識はブラウザー側のサービスで処理される場合があります。学校の方針に合わせ、マイクを使わず入力でも取り組めます。</p>
       <table><caption>授業での活用例</caption><thead><tr><th>学年</th><th>生徒が自分で使う</th><th>先生が使う</th></tr></thead><tbody>{uses.map(row=><tr key={row[0]}>{row.map((cell,i)=>i===0?<th key={i}>{cell}</th>:<td key={i}>{cell}</td>)}</tr>)}</tbody></table>
       <p>公開教材の数は国・カテゴリ・レベルで異なります。Challenge用の公開教材がない場合は、通常の高校生レベルを選んでください。クリア記録は練習の記録で、本人確認を伴う成績評価ではありません。</p>
