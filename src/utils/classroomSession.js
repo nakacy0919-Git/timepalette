@@ -20,14 +20,15 @@ export function setLearningScope(value) { scope = ['personal','shared','demo'].i
 export function getLearningScope() { return scope; }
 // Demo and shared-device sessions are deliberately memory-only and disappear on reload.
 export function learningStorage() {
-  if (scope !== 'personal') return {
-    getItem: key => memory.get(scope + ':' + key) ?? null,
-    setItem: (key,value) => memory.set(scope + ':' + key,String(value)),
-    removeItem: key => memory.delete(scope + ':' + key),
+  const activeScope = scope;
+  if (activeScope !== 'personal') return {
+    getItem: key => memory.get(activeScope + ':' + key) ?? null,
+    setItem: (key,value) => memory.set(activeScope + ':' + key,String(value)),
+    removeItem: key => memory.delete(activeScope + ':' + key),
   };
   try { return typeof window !== 'undefined' ? window.localStorage : null; } catch { return null; }
 }
-const isLearnerKey = key => /^timepalette_(world_learning_v1|world_adventure_v1|language_)/.test(key) || key.startsWith('timepalette-place-progress-v1:');
+const isLearnerKey = key => /^timepalette_(world_learning_v1|world_adventure_v1|learning_notes_v1|language_)/.test(key) || key.startsWith('timepalette-place-progress-v1:');
 export function clearLearningData() {
   if (scope !== 'personal') { for (const key of memory.keys()) if (key.startsWith(scope + ':')) memory.delete(key); return; }
   const storage = learningStorage(); if (!storage) throw new Error('保存領域を利用できません。');
