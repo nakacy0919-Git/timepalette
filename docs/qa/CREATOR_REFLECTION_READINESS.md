@@ -31,3 +31,15 @@ deployment or publication of those 16 is performed by preparing this change.
 At least the historical wording of the Philippines graduation/tree-planting
 question needs editorial checking: available primary sources describe bills,
 not proof of the universal legal requirement asserted in its prompt.
+
+## Verification — 2026-11-13 JST
+
+- Full suite: 183 Node tests plus GAS, Worker integration and quick PIN checks pass.
+- Standard production build and QA-only build pass; targeted player/helper lint passes.
+- Protected Vercel preview `dpl_2iVG19U6ETgDGEWJPZMxLU3FJ6J1` is ready.
+- Browser: photo and plain-text flows start disabled, accept a substantive answer
+  with explicit self-check, then show the learner response, reference and explanation
+  in the modal. Each submission increments the fixture once. Screenshot confirms
+  the loaded image, explanation and footer controls fit the tested desktop viewport.
+- This is browser verification, not a physical-iPad test. iPad keyboard/portrait
+  and production release of the Worker remain separate release checks.
