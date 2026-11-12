@@ -194,3 +194,25 @@ await invoke('setPublicationOrder',{session:admin,countryIso:'au',domain:'thinkC
 const reordered=await (await worker.fetch(new Request('https://fake/public/catalog?country=au&domain=thinkConnect'),env)).json();
 assert.deepEqual(reordered.questions.map(q=>q.id),[...order].reverse());
 console.log('PASS integration: publish and reorder more than ten questions without truncation');
+
+// Open responses must retain normal admin, rights, media and revocation guards.
+const reflectionTeacher=(await invoke('login',{account:tid.replaceAll('-','').slice(0,12),password:'new-password-is-long-enough'})).data.session;
+for(const type of ['photo1','free']){
+ const q=(await invoke('saveQuestion',{session:admin,question:{countryIso:'be',countryName:'Belgium',domain:'thinkConnect',type,prompt:'Describe the evidence '+type,answer:'A reference interpretation',notes:'Compare your reasons.'}})).data.question;
+ if(type==='photo1'){
+  await invoke('reviewQuestion',{session:admin,questionId:q.id,status:'approved'},400);
+  await invoke('uploadImage',{session:admin,questionId:q.id,slot:1,base64:photoBytes.toString('base64')});
+ }
+ await invoke('reviewQuestion',{session:admin,questionId:q.id,status:'approved'});
+ await invoke('setPublication',{session:reflectionTeacher,questionId:q.id,mode:'publish',rightsConfirmed:true},403);
+ await invoke('setPublication',{session:admin,questionId:q.id,mode:'publish',rightsConfirmed:false},400);
+ await invoke('setPublication',{session:admin,questionId:q.id,mode:'publish',rightsConfirmed:true});
+ const url='https://fake/public/catalog?country=be&domain=thinkConnect';
+ const published=(await (await worker.fetch(new Request(url),env)).json()).questions.find(x=>x.id===q.id);
+ assert.equal(published.type,type);assert.equal(published.answer,'A reference interpretation');
+ assert.equal(published.media.length,type==='photo1'?1:0);
+ await invoke('setPublication',{session:admin,questionId:q.id,mode:'unpublish'});
+ assert.equal((await (await worker.fetch(new Request(url),env)).json()).questions.some(x=>x.id===q.id),false);
+ if(type==='photo1')assert.equal((await worker.fetch(new Request('https://fake/public/image?questionId='+q.id+'&slot=1'),env)).status,404);
+}
+console.log('PASS integration: photo/free reflection publication retains role, rights, image and revocation checks');
