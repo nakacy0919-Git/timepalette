@@ -20,12 +20,12 @@ import MissionPlayer from './MissionPlayer';
 const levels=[['elementary','小学生'],['juniorHigh','中学生'],['highSchoolStandard','高校生'],['highSchoolAdvanced','Challenge']];
 const categoryDesign=[{Icon:Globe,tone:'#def5fc',ink:'#216c85',hint:'地図をひらいて、世界を探検！'},{Icon:Clock,tone:'#eee6ff',ink:'#685196',hint:'世界の「いま」をのぞいてみよう'},{Icon:MessagesSquare,tone:'#ffe7ee',ink:'#95485f',hint:'ことばでつながる、世界の仲間'},{Icon:House,tone:'#e0f5e9',ink:'#2e7256',hint:'暮らしの中の発見を集めよう'},{Icon:Handshake,tone:'#fff0ce',ink:'#875b20',hint:'日本と世界、つながりを探そう'},{Icon:Scale,tone:'#e3edff',ink:'#46659b',hint:'比べて考える、新しい見方'}];
 const colors=['#0284c7','#7c3aed','#db2777','#059669','#dc2626','#d97706'];
-export default function WorldMissionPanel({countryCode,countryNameEn,countryNameJa='',flagUrl=''}){
+export default function WorldMissionPanel({countryCode,countryNameEn,countryNameJa='',flagUrl='',initialLevel='elementary',initialDomain=null}){
   // Remounting on country changes prevents previous-country missions and progress from flashing.
-  return <CountryMissions key={countryCode} {...{countryCode,countryNameEn,countryNameJa,flagUrl}}/>;
+  return <CountryMissions key={countryCode} {...{countryCode,countryNameEn,countryNameJa,flagUrl,initialLevel,initialDomain}}/>;
 }
-function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
-  const [level,setLevel]=useState('elementary');
+function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl,initialLevel,initialDomain}){
+  const [level,setLevel]=useState(levels.some(l=>l[0]===initialLevel)?initialLevel:'elementary');
   const [domain,setDomain]=useState(null);
   const [adventure,setAdventure]=useState(null);
   const [active,setActive]=useState(null);
@@ -79,6 +79,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     setDomain(id);
     setPendingStart(id);
   };
+  useEffect(()=>{if(initialDomain&&MISSION_DOMAINS.some(d=>d.id===initialDomain))pick(initialDomain);},[initialDomain]);
   return <section className="rounded-3xl bg-white p-4 shadow-sm md:p-6" data-testid="country-missions">
     <header className="mb-4 flex items-center gap-3">
       {flagUrl&&<img src={flagUrl} alt="" className="h-9 w-14 rounded object-contain"/>}
