@@ -57,7 +57,7 @@ zero known advisories at review time; no dependencies were changed.
 
 ## Validation
 
-- Full `npm test`: 175 Node tests, GAS access-control suite, Worker integration
+- Full `npm test`: 180 Node tests, GAS access-control suite, Worker integration
   suite and quick-PIN role-isolation suite passed.
 - Added tests for lesson URL sanitization, actual progress-store isolation,
   selective deletion, export data minimization and unsafe source URLs.
@@ -66,3 +66,27 @@ zero known advisories at review time; no dependencies were changed.
   reach the local preview and the desktop accessibility provider was unavailable.
   iPad layout and clipboard/download interactions therefore still need a real
   browser check before merging. No production deployment was performed.
+
+## Follow-up: practical classroom preparation
+
+- Completion backup and confirmed restore merge records across devices without
+  deleting newer progress. Files exclude profiles, answers and notebook text;
+  imported records do not award additional points. This remains self-reported
+  practice, not verified assessment.
+- Import validates the entire file before writes: 1 MB, at most 250 country
+  entries and 20,000 mission entries, country/identifier/category constraints,
+  no duplicate country/mission records, and explicit field selection. Storage
+  write failures attempt rollback and show an error rather than success.
+- A notebook stores the latest goal, evidence-based discovery and next question
+  per country/category/level (600 characters each, most recent 200 lessons).
+  Personal mode persists locally; shared/demo mode uses memory only. The learner
+  deletion action also clears notebooks. Print/PDF output includes the full text;
+  notebooks are excluded from completion backup to avoid moving free text.
+- Fixed retained memory-storage adapters following a later mode switch.
+- Local-source suffix checks now normalize trailing DNS dots; source iframes
+  no longer permit form submission. DNS rebinding and third-party tracking are
+  not solved by a URL string check.
+- Additional tests cover real restore across progress stores, merge idempotency,
+  data minimization, malformed/oversized imports, rollback, retained storage
+  scope and trailing-dot local URLs. Full suites and build passed; targeted lint
+  passed. Browser/iPad visual validation remains pending.
