@@ -1,0 +1,534 @@
+{
+  "version": "timepalette-mission-factory/v1",
+  "questions": [
+    {
+      "countryIso": "bz",
+      "domain": "lifeCulture",
+      "type": "text4",
+      "prompt": "ベリーズ南部のガリフナ文化で知られるプンタの音楽。公式観光案内が紹介する音の特徴は？",
+      "answer": "太鼓のリズムを楽しむ音楽",
+      "choices": [
+        "大きな鐘の音を中心にした音楽",
+        "弦楽器だけで奏でる音楽",
+        "足音だけで拍子を取る音楽"
+      ],
+      "notes": "公式観光案内は、プンタを太鼓のリズムと結び付けて紹介しています。音楽の一例であり、全ての住民が同じ音楽を好むという意味ではありません。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.travelbelize.org/culture/garifuna/"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "lifeCulture",
+      "type": "text4",
+      "prompt": "ベリーズの11月19日のガリフナ・セトルメント・デーは、主に何を記念する日でしょう？",
+      "answer": "ガリフナの人々の到着と社会への貢献",
+      "choices": [
+        "国の独立と新しい国旗の制定",
+        "首都が内陸へ移った出来事",
+        "日本との外交関係が始まった出来事"
+      ],
+      "notes": "公式観光案内は、1823年に大きな集団が到着したことと、その貢献を記念する日と説明しています。国の独立記念日とは別です。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.travelbelize.org/culture/garifuna/"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "lifeCulture",
+      "type": "text4",
+      "prompt": "ベリーズのマヤ文化を紹介する説明として、公式観光案内に合うのは？",
+      "answer": "今も受け継がれ、暮らしの中にある文化",
+      "choices": [
+        "遺跡の中にだけ残り、現在の担い手はいない文化",
+        "外国の博物館でだけ学べる文化",
+        "国の全ての地域で同じ形を取る文化"
+      ],
+      "notes": "公式観光案内は、マヤ文化が現在も生きていると紹介しています。遺跡だけでなく、現在の人々の暮らしにも目を向けましょう。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.travelbelize.org/culture/maya/"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "lifeCulture",
+      "type": "text4",
+      "prompt": "マヤのチョコレート作り体験では、カカオを細かくする工程にどんな道具を使いますか？",
+      "answer": "伝統的な石の道具",
+      "choices": [
+        "木の織機",
+        "太鼓のばち",
+        "釣り用の網"
+      ],
+      "notes": "公式観光案内の体験紹介では、カカオを伝統的な石の道具でひく工程が説明されています。全ての工場で同じ方法を使うという意味ではありません。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.travelbelize.org/attraction/maya-chocolate-making-experience/"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "japanConnection",
+      "type": "text4",
+      "prompt": "外務省の資料によると、日本とベリーズが外交関係を開いたのは何年でしょう？",
+      "answer": "1982年",
+      "choices": [
+        "1962年",
+        "1972年",
+        "1992年"
+      ],
+      "notes": "外務省は1982年11月3日を外交関係開設日としています。1981年の独立承認とは区別して読みましょう。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.mofa.go.jp/mofaj/area/belize/data.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "japanConnection",
+      "type": "text4",
+      "prompt": "外務省の説明では、ベリーズに日本大使館の実館が新設されたのは何年でしょう？",
+      "answer": "2019年",
+      "choices": [
+        "1981年",
+        "1999年",
+        "2009年"
+      ],
+      "notes": "外務省は2019年1月に在ベリーズ日本国大使館の実館を新設したと説明しています。以前の兼轄や名誉領事館の設置とは異なります。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.mofa.go.jp/mofaj/area/belize/data.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "japanConnection",
+      "type": "text4",
+      "prompt": "JICAの資料によると、ベリーズへの青年海外協力隊の派遣が始まったのは何年でしょう？",
+      "answer": "2000年",
+      "choices": [
+        "1980年",
+        "1990年",
+        "2010年"
+      ],
+      "notes": "JICAのボランティア事業のページは、2000年に派遣が始まったと説明しています。人数は時点で変わるため、ここでは開始年を確かめています。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.jica.go.jp/overseas/belize/activities/volunteer/index.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "japanConnection",
+      "type": "text4",
+      "prompt": "JICAが紹介する、ベリーズへの協力隊派遣分野に含まれる組合せは？",
+      "answer": "環境教育・小学校教育・スポーツ",
+      "choices": [
+        "宇宙飛行士訓練・月面探査・衛星打上げ",
+        "高速鉄道運転・地下鉄建設・新幹線整備",
+        "深海採掘・製鉄炉建設・原油精製"
+      ],
+      "notes": "JICAは教育、環境、スポーツ、社会福祉などの分野を挙げています。現地の人々と協力する活動であり、一方だけが教える関係に限定されません。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.jica.go.jp/overseas/belize/activities/volunteer/index.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "japanConnection",
+      "type": "text4",
+      "prompt": "大使館が報告したJapan Day 2022で、来場者が体験した日本文化の組合せは？",
+      "answer": "空手の実演・もちつき・書道",
+      "choices": [
+        "歌舞伎公演・相撲の本場所・流鏑馬大会",
+        "茶摘み・雪像作り・田植え",
+        "花火大会・盆栽競売・駅伝大会"
+      ],
+      "notes": "大使館の報告には空手、もちつき、書道、コスプレなどが挙げられています。これは2022年の催しの記録です。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.bz.emb-japan.go.jp/itpr_ja/11_000001_00109.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "japanConnection",
+      "type": "text4",
+      "prompt": "2022年11月に大使館がベリーズで開いた、外交関係40周年を記念する催しは？",
+      "answer": "アニメ映画の上映会",
+      "choices": [
+        "両国合同のオリンピック予選",
+        "日本の大学入学試験",
+        "初めての国交交渉"
+      ],
+      "notes": "大使館は2022年11月22〜24日にアニメ上映会を開催したと報告しています。既に続いてきた外交関係を記念する文化交流でした。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.bz.emb-japan.go.jp/itpr_ja/11_000001_00116.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "japanConnection",
+      "type": "text4",
+      "prompt": "ベリーズでの協力隊事業20周年を記念し、JICAと郵便サービスが紹介したものは？",
+      "answer": "協力隊の活動を表す記念切手",
+      "choices": [
+        "両国で共通に使う新通貨",
+        "協力隊専用の旅券",
+        "全国の学校の新しい制服"
+      ],
+      "notes": "JICAの記念行事報告では、地域と共に活動する協力隊を表した切手が紹介されています。貨幣や旅券とは異なります。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.jica.go.jp/english/overseas/belize/others/20th/20th_02.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "japanConnection",
+      "type": "text4",
+      "prompt": "ベリーズを含むJICAのカリブ災害管理プロジェクトで、洪水への備えとして計画されたものは？",
+      "answer": "ハザードマップ・早期警報・防災訓練",
+      "choices": [
+        "全ての住民の国外移住",
+        "観光案内板だけの増設",
+        "国境での入国検査の強化"
+      ],
+      "notes": "2009〜2011年の事業説明では、地域のデータに基づく洪水ハザードマップ、計画、警報、訓練が挙げられています。過去の計画を説明する問題です。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.jica.go.jp/english/overseas/belize/activities/activity01.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "japanConnection",
+      "type": "text4",
+      "prompt": "JICAのカリブ災害管理プロジェクトで、ベリーズ側の実施機関として挙げられたNEMOは？",
+      "answer": "国家の防災を担う機関",
+      "choices": [
+        "国立の美術館",
+        "国際郵便の販売部門",
+        "日本文化の民間サークル"
+      ],
+      "notes": "JICAはNational Emergency Management Organizationを実施機関として記載しています。協力は現地の防災機関と進める仕組みでした。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.jica.go.jp/english/overseas/belize/activities/activity01.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "thinkConnect",
+      "type": "text4",
+      "prompt": "プンタを一曲聞いて「ベリーズの人は全員この音楽だけを聞く」とまとめました。紹介文を直すなら？",
+      "answer": "ガリフナ文化の音楽の一例として紹介する",
+      "choices": [
+        "聞いた一曲を国の全ての音楽の代表と決める",
+        "音楽の名前を消し、全住民の習慣と書く",
+        "自分の好みに合うかだけで文化を評価する"
+      ],
+      "notes": "公式観光案内は多様な文化を紹介しています。一つの事例から全住民の好みを決めず、どの文化の例なのかを示しましょう。これは資料を踏まえた判断問題です。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.travelbelize.org/culture/"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "thinkConnect",
+      "type": "text4",
+      "prompt": "マヤのチョコレート作りと日本の伝統的な食品作りを比較します。工程の意味を調べる問いは？",
+      "answer": "道具を使う理由や、作り手が大切にすることは何か",
+      "choices": [
+        "どちらの食べ物が自分の好みか",
+        "写真の背景が同じ色か",
+        "商品名に同じ文字があるか"
+      ],
+      "notes": "材料や道具に加え、その理由や担い手の考えを尋ねると、工程と暮らしの関係を考えられます。比較の観点を選ぶ問題です。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.travelbelize.org/attraction/maya-chocolate-making-experience/"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "thinkConnect",
+      "type": "text4",
+      "prompt": "ガリフナの記念日を、日本の地域行事と比べる展示を作ります。歴史への理解を深める項目は？",
+      "answer": "何を記念し、誰がどのように受け継いでいるか",
+      "choices": [
+        "開催日の数字が同じかだけ",
+        "会場が日本から近いかだけ",
+        "観光客に人気があるかだけ"
+      ],
+      "notes": "記念する出来事と担い手を調べると、日付だけでは分からない行事の背景を比較できます。比較のための問いとして判断しましょう。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.travelbelize.org/culture/garifuna/"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "thinkConnect",
+      "type": "text4",
+      "prompt": "ベリーズの交流相手に「公用語が英語だから家庭でも全員英語だけを使うよね」と聞こうとしています。よりよい質問は？",
+      "answer": "家庭や学校で、どんな言葉を使っていますか",
+      "choices": [
+        "英語以外を使わないと約束できますか",
+        "全ての家庭が同じだと確認できますか",
+        "言葉の違いはないので質問をやめますか"
+      ],
+      "notes": "外務省は英語のほかにスペイン語、ベリーズ・クレオール語、モパン語などを挙げています。相手の経験を、決め付けずに尋ねましょう。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.mofa.go.jp/mofaj/area/belize/data.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "thinkConnect",
+      "type": "text4",
+      "prompt": "2009〜2011年の洪水対策の事業説明を見つけました。現在の状況も紹介するなら、次にすることは？",
+      "answer": "当時の計画と、その後の実施・現在の情報を区別して調べる",
+      "choices": [
+        "当時の計画を全て現在の完成実績として紹介する",
+        "事業の終了年だけを消して現在の話にする",
+        "別の国の結果をそのままベリーズの結果にする"
+      ],
+      "notes": "計画に書かれていることと、実際の成果や現在の状況は同じではありません。資料の時点と情報の種類を区別する判断問題です。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.jica.go.jp/english/overseas/belize/activities/activity01.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "thinkConnect",
+      "type": "text4",
+      "prompt": "日本とベリーズの防災を比べる授業です。地域に合う対策を考えるには、何を比べるとよいでしょう？",
+      "answer": "災害の種類・地形・地域の暮らし",
+      "choices": [
+        "両国の国旗の色だけ",
+        "大使館の建物の高さだけ",
+        "国名のアルファベットの数だけ"
+      ],
+      "notes": "JICAの事業説明では地理や洪水リスク、地域の自然・社会データが重視されています。地域の条件を比べることが対策を考える手がかりになります。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.jica.go.jp/english/overseas/belize/activities/activity01.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "thinkConnect",
+      "type": "text4",
+      "prompt": "Japan Dayの記事だけで「日本とベリーズの関係はアニメだけ」と結論付けました。関係を広く調べるなら？",
+      "answer": "教育・環境・スポーツなどの協力資料も読む",
+      "choices": [
+        "記事のコスプレ写真だけを拡大する",
+        "催しの参加人数だけを比べる",
+        "日本のアニメ作品数だけを数える"
+      ],
+      "notes": "文化交流は関係の一部です。JICAの教育・環境・スポーツなどの協力も調べると、複数のつながりを捉えられます。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.jica.go.jp/overseas/belize/activities/volunteer/index.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "thinkConnect",
+      "type": "text4",
+      "prompt": "ベリーズの文化紹介に使う音楽を、交流相手が送ってくれました。授業動画を公開する前にすることは？",
+      "answer": "録音した人や演奏者に、公開してよい範囲を確認する",
+      "choices": [
+        "送ってもらったので無条件で公開する",
+        "演奏者名を消せば確認は不要と考える",
+        "長さを短くすれば誰にも聞かず公開する"
+      ],
+      "notes": "文化を紹介するときは、受け取ることと公開してよいことを分けて確認しましょう。これは交流場面を想定した情報の扱いの判断問題で、個別の権利を確定するものではありません。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.travelbelize.org/culture/garifuna/"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "thinkConnect",
+      "type": "text4",
+      "prompt": "伝統文化を今も伝えるマヤの人への質問を考えます。現在の暮らしを知るための問いは？",
+      "answer": "受け継いだ工夫と、今の暮らしで変わった点はありますか",
+      "choices": [
+        "昔と全く同じ生活しかしていませんよね",
+        "遺跡以外には文化がないのですよね",
+        "新しい道具を使うと文化はなくなりますよね"
+      ],
+      "notes": "マヤ文化は今も続く文化として紹介されています。変化を否定せず、受け継ぐ点と変わる点の両方を尋ねると現在の姿を学べます。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.travelbelize.org/culture/maya/"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bz",
+      "domain": "thinkConnect",
+      "type": "text4",
+      "prompt": "協力隊の活動紹介を読んで、国際協力について発表します。資料に合う、相互理解につながるまとめは？",
+      "answer": "現地の人々の経験も聞き、共に課題に取り組む関係",
+      "choices": [
+        "日本側が教え、相手から学ぶことはない関係",
+        "同じ活動をどの地域にもそのまま当てはめる関係",
+        "活動の分野を一つだけに決め付ける関係"
+      ],
+      "notes": "JICAは地域と共に活動する姿や多様な分野の活動を紹介しています。相手の経験や必要なことを理解する姿勢が、交流と協力を考える基盤になります。\n資料確認：2026年11月12日。",
+      "sources": [
+        "https://www.jica.go.jp/english/overseas/belize/others/20th/20th_02.html"
+      ],
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    }
+  ]
+}
