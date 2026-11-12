@@ -1,3 +1,5 @@
+import ClassroomHub from './components/world-learning/ClassroomHub.jsx';
+import {readLesson,setLearningScope} from './utils/classroomSession.js';
 import {
   useRef,
   useState,
@@ -84,7 +86,7 @@ export default function App() {
     setShowOpening,
   ] = useState(() => {
     if (
-      hasMeetingLink()
+      hasMeetingLink() || readLesson(window.location.search)
     ) {
       return false;
     }
@@ -102,6 +104,7 @@ export default function App() {
       return 'timeDiff';
     }
 
+    if(readLesson(window.location.search)) return 'classroom';
     return 'home';
   });
 
@@ -221,6 +224,8 @@ export default function App() {
       switch (
         activeTab
       ) {
+        case 'classroom':
+          return <ClassroomHub onHome={()=>{setLearningScope('personal');goHome();}}/>;
         case 'home':
           return (
             <WorldAdventureHome
@@ -295,6 +300,7 @@ export default function App() {
     };
 
   const isFullWidth =
+    activeTab === 'classroom' ||
     activeTab === 'home' ||
     activeTab ===
       'explore';
@@ -305,14 +311,14 @@ export default function App() {
 
   return (
     <>
-      <ThemeMusicController
+      {activeTab !== 'classroom' && <ThemeMusicController
         ref={
           themeMusicRef
         }
         visible={
           showThemeControl
         }
-      />
+      />}
 
       {showOpening && (
         <OpeningSplash
@@ -342,6 +348,7 @@ export default function App() {
           }
         />}
 
+        {activeTab !== 'classroom' && <button type="button" onClick={()=>{setShowOpening(false);navigateTo('classroom');}} className="fixed bottom-4 left-4 z-[1050] rounded-full border border-slate-300 bg-white px-4 py-3 font-bold text-slate-800 shadow" aria-label="授業・個人学習の設定">🏫 授業・個人学習</button>}
         <main
           className={
             isFullWidth
