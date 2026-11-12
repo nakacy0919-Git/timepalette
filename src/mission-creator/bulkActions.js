@@ -2,7 +2,7 @@
 // No new backend endpoint, role bypass, or auto-publication is introduced.
 export const BULK_LIMIT = 30;
 const PUBLIC_DOMAINS = new Set(['place','time','language','lifeCulture','japanConnection','thinkConnect']);
-const PUBLIC_TYPES = new Set(['text4','photo4','photoText4','video4','videoReflect']);
+const PUBLIC_TYPES = new Set(['text4','photo4','photoText4','video4','videoReflect','photo1','free']);
 
 export function eligibleForBulk(question, mode) {
   if (!question || !question.id) return false;
