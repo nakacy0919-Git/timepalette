@@ -24,8 +24,10 @@ test('demo and shared learning are separated from personal records and each othe
 });
 test('reset deletes learning inputs and progress but preserves creator login and settings',()=>{
  setLearningScope('personal');learningStorage().setItem('timepalette_language_global_profile','private');
+ learningStorage().setItem('timepalette_learning_notes_v1','reflection');
  learningStorage().setItem('mission_creator_session','untouched');learningStorage().setItem('timepalette_ui_sound_v1','off');
  clearLearningData();assert.equal(learningStorage().getItem('timepalette_language_global_profile'),null);
+ assert.equal(learningStorage().getItem('timepalette_learning_notes_v1'),null);
  assert.equal(learningStorage().getItem('mission_creator_session'),'untouched');assert.equal(learningStorage().getItem('timepalette_ui_sound_v1'),'off');
 });
 test('summary explicitly selects completion counts rather than profile or raw responses',()=>{
@@ -33,6 +35,6 @@ test('summary explicitly selects completion counts rather than profile or raw re
  assert.ok(!JSON.stringify(report).includes('private'));assert.ok(!JSON.stringify(report).includes('secret'));
 });
 test('source viewer rejects active schemes, credentials and local network addresses',()=>{
- for(const url of ['javascript:alert(1)','data:text/html,hi','http://example.org','https://user:password@example.org','https://127.0.0.1','https://2130706433','https://[::1]','https://10.0.0.1','https://school.local','https://school.internal','https://localhost','https://example.org:444'])assert.equal(safeSourceUrl(url),null,url);
+ for(const url of ['javascript:alert(1)','data:text/html,hi','http://example.org','https://user:password@example.org','https://127.0.0.1','https://2130706433','https://[::1]','https://10.0.0.1','https://school.local','https://school.local.','https://school.internal.','https://school.internal','https://localhost','https://example.org:444'])assert.equal(safeSourceUrl(url),null,url);
  assert.equal(safeSourceUrl('https://www.unesco.org/en'),'https://www.unesco.org/en');
 });
