@@ -1,3 +1,4 @@
+import {learningStorage} from '../../../utils/classroomSession.js';
 import {
   Check,
   Save,
@@ -1058,8 +1059,7 @@ function QuestionSeeds({
 
 
       try {
-        window
-          .localStorage
+        learningStorage()
           .setItem(
             `timepalette_language_question_seeds_${countryCode}`,
             JSON.stringify(
