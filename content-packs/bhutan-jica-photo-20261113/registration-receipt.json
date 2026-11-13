@@ -1,0 +1,33 @@
+{
+  "dateJst": "2026-11-13",
+  "countryIso": "bt",
+  "format": "photoText4",
+  "photoCount": 10,
+  "newQuestions": {
+    "lifeCulture": 6,
+    "thinkConnect": 4
+  },
+  "publication": "draft-only; no approval or publish action",
+  "batches": [
+    {
+      "file": "Bhutan_JICA_Photo_01.zip",
+      "success": 5,
+      "duplicateSkipped": 0,
+      "failed": 0
+    },
+    {
+      "file": "Bhutan_JICA_Photo_02.zip",
+      "success": 5,
+      "duplicateSkipped": 0,
+      "failed": 0
+    }
+  ],
+  "finalBank": {
+    "draft": 62,
+    "approved": 16,
+    "published": 1139,
+    "needs_revision": 2,
+    "deleted": 13
+  },
+  "verification": "Both batch result headings showed 5 saved / 0 duplicate / 0 failure; loaded original lunch photo and four choices confirmed in Creator student preview"
+}
