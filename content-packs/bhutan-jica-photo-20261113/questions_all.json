@@ -1,0 +1,275 @@
+{
+  "version": "timepalette-mission-factory/v1",
+  "questions": [
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "ブータンで隊員が食べた昼食です。皿の白い粒と、おかずの置き方を見てください。この写真で、主食として盛られているものはどれでしょう？\n\n一つ選び、写真のどこを手がかりにしたか話してみましょう。",
+      "answer": "ご飯",
+      "choices": [
+        "パン",
+        "いもをつぶしたもの",
+        "麺"
+      ],
+      "notes": "【解説】皿の右側に白い米粒のまとまりが見えます。記事でも、ご飯に数品のおかずを添える食事が紹介されています。\n【観察と推測】米粒や盛り付けは写真から観察できます。味や、全ての家庭での食べ方までは、この一枚では分かりません。\n【話してみよう】写真のどこを手がかりに選びましたか。別の見方や追加で知りたいことも話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／鈴木育則「ブータンの食事は？」／2022-11-25\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_19.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_3397.JPG\n【範囲】隊員が記録した場所・時点の一例です。国全体・全住民の習慣と断定しません。\n【制作】写真１枚＋文章４択。写真は記事掲載の実写で、AI生成・再構成ではありません。\n【公開状態】下書きのみ。公開時の写真利用条件の最終確認は未了です。出典記載を利用許諾取得とみなしません。\n資料確認：2026年11月13日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_19.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_3397.JPG"
+      ],
+      "images": {
+        "1": "images/IMG_3397.JPG"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "ブータンの屋外で、赤い細長い食材が広げられています。重ねずに並べた様子を手がかりに、何をしている場面か選びましょう。\n\n一つ選び、写真のどこを手がかりにしたか話してみましょう。",
+      "answer": "唐辛子を乾燥させている",
+      "choices": [
+        "唐辛子を油で揚げている",
+        "唐辛子を水で洗っている",
+        "唐辛子を鍋で煮ている"
+      ],
+      "notes": "【解説】日が当たる場所に唐辛子を広げています。記事の写真説明も、乾燥中の唐辛子であることを確かめています。\n【観察と推測】広げ方と屋外の様子は手がかりです。乾燥に必要な日数や辛さは、写真だけでは決められません。\n【話してみよう】写真のどこを手がかりに選びましたか。別の見方や追加で知りたいことも話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／鈴木育則「ブータンの食事は？」／2022-11-25\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_19.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_6051.JPG\n【範囲】隊員が記録した場所・時点の一例です。国全体・全住民の習慣と断定しません。\n【制作】写真１枚＋文章４択。写真は記事掲載の実写で、AI生成・再構成ではありません。\n【公開状態】下書きのみ。公開時の写真利用条件の最終確認は未了です。出典記載を利用許諾取得とみなしません。\n資料確認：2026年11月13日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_19.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_6051.JPG"
+      ],
+      "images": {
+        "1": "images/IMG_6051.JPG"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "ブータンのお茶の時間です。かごの小さな粒と、カップの中を見比べてください。この記事で「ザオ」と呼ばれる食べ物は、どのように楽しむものとして紹介されているでしょう？\n\n一つ選び、写真のどこを手がかりにしたか話してみましょう。",
+      "answer": "お茶に入れて楽しむ",
+      "choices": [
+        "お茶の葉を包んで取り出す",
+        "茶器を磨くために使う",
+        "火をおこす燃料にする"
+      ],
+      "notes": "【解説】かごの粒と似たものがカップにも入っています。隊員は、米を揚げたあられのようなザオを、お茶に入れる習慣を紹介しています。\n【観察と推測】粒がカップに入っていることは見えます。原料や呼び名は記事で確かめる情報です。\n【話してみよう】写真のどこを手がかりに選びましたか。別の見方や追加で知りたいことも話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／鈴木育則「ブータンのティータイム」／2023-09-22\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_65.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_6796.JPG\n【範囲】隊員が記録した場所・時点の一例です。国全体・全住民の習慣と断定しません。\n【制作】写真１枚＋文章４択。写真は記事掲載の実写で、AI生成・再構成ではありません。\n【公開状態】下書きのみ。公開時の写真利用条件の最終確認は未了です。出典記載を利用許諾取得とみなしません。\n資料確認：2026年11月13日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_65.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_6796.JPG"
+      ],
+      "images": {
+        "1": "images/IMG_6796.JPG"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "ブータンで隊員が食べた「チョウメン」です。麺の形や、野菜との混ざり方を手がかりに、日本の料理ならどれに近いものとして紹介されているか選びましょう。\n\n一つ選び、写真のどこを手がかりにしたか話してみましょう。",
+      "answer": "焼きそば",
+      "choices": [
+        "汁の多いラーメン",
+        "巻きずし",
+        "茶わん蒸し"
+      ],
+      "notes": "【解説】皿に麺と具が混ざって盛られています。記事ではチョウメンを焼きそばにたとえつつ、日本のものとは味が違うと説明しています。\n【観察と推測】麺の形や汁の見え方は手がかりです。味まで日本の焼きそばと同じだと決め付けないようにしましょう。\n【話してみよう】写真のどこを手がかりに選びましたか。別の見方や追加で知りたいことも話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／鈴木育則「ブータンでの食事」／2023-09-15\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_64.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_6355.JPG\n【範囲】隊員が記録した場所・時点の一例です。国全体・全住民の習慣と断定しません。\n【制作】写真１枚＋文章４択。写真は記事掲載の実写で、AI生成・再構成ではありません。\n【公開状態】下書きのみ。公開時の写真利用条件の最終確認は未了です。出典記載を利用許諾取得とみなしません。\n資料確認：2026年11月13日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_64.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_6355.JPG"
+      ],
+      "images": {
+        "1": "images/IMG_6355.JPG"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "ブータンで隊員が見つけた、袋入りの細長い食材です。これは「プタ」に使う乾燥麺として紹介されています。記事によると、日本のそばと共通する原料はどれでしょう？\n\n一つ選び、写真のどこを手がかりにしたか話してみましょう。",
+      "answer": "ソバ",
+      "choices": [
+        "とうもろこし",
+        "大豆",
+        "じゃがいも"
+      ],
+      "notes": "【解説】袋の中に細長い乾燥麺が見えます。記事はソバの麺を紹介し、プタはゆでた麺を薬味やバター・油と混ぜる料理だと説明しています。\n【観察と推測】麺の形は見えますが、原料を形だけで断定することはできません。袋の表示や記事で確かめます。\n【話してみよう】写真のどこを手がかりに選びましたか。別の見方や追加で知りたいことも話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／鈴木育則「ブータンのお蕎麦」／2024-02-04\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_121.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_5678.JPG\n【範囲】隊員が記録した場所・時点の一例です。国全体・全住民の習慣と断定しません。\n【制作】写真１枚＋文章４択。写真は記事掲載の実写で、AI生成・再構成ではありません。\n【公開状態】下書きのみ。公開時の写真利用条件の最終確認は未了です。出典記載を利用許諾取得とみなしません。\n資料確認：2026年11月13日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_121.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_5678.JPG"
+      ],
+      "images": {
+        "1": "images/IMG_5678.JPG"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "ブータンのお茶の写真です。右側の器に入った、ピンク色に見える飲み物に注目しましょう。記事で「スジャ」と呼んでいるのは、どの種類のお茶でしょう？\n\n一つ選び、写真のどこを手がかりにしたか話してみましょう。",
+      "answer": "バター茶",
+      "choices": [
+        "日本の緑茶",
+        "レモン入りの紅茶",
+        "麦茶"
+      ],
+      "notes": "【解説】記事の写真説明は、この飲み物をスジャと紹介しています。本文ではスジャをバター茶と説明しています。\n【観察と推測】写真で確かめられるのは色や器です。材料や味は色だけで当てず、記事の情報と結び付けましょう。\n【話してみよう】写真のどこを手がかりに選びましたか。別の見方や追加で知りたいことも話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／鈴木育則「ブータンのティータイム」／2023-09-22\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_65.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_0826.JPG\n【範囲】隊員が記録した場所・時点の一例です。国全体・全住民の習慣と断定しません。\n【制作】写真１枚＋文章４択。写真は記事掲載の実写で、AI生成・再構成ではありません。\n【公開状態】下書きのみ。公開時の写真利用条件の最終確認は未了です。出典記載を利用許諾取得とみなしません。\n資料確認：2026年11月13日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_65.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_0826.JPG"
+      ],
+      "images": {
+        "1": "images/IMG_0826.JPG"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "ブータンの「ルンタ」を写した写真です。小さな旗が連なっています。運動会の万国旗と形が似ていることに気づきました。文化を比べるときの説明として、最も適切なのはどれでしょう？\n\n一つ選び、写真のどこを手がかりにしたか話してみましょう。",
+      "answer": "形の共通点を示し、それぞれの意味や使う場面を調べる",
+      "choices": [
+        "形が似ているので、どちらも同じ競技の道具だと決める",
+        "色が多いので、どちらも国旗だと決める",
+        "旗が連なるので、使う目的も全て同じだと決める"
+      ],
+      "notes": "【解説】隊員はルンタを経文旗として紹介しています。形を比べることは出発点になりますが、宗教的な意味や使う場面も確かめて比較します。\n【観察と推測】旗の色や連なりは写真で観察できます。込められた意味は、形だけでは決まりません。\n【話してみよう】写真のどこを手がかりに選びましたか。別の見方や追加で知りたいことも話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／鈴木育則「ルンタ」／2023-03-24\nhttps://world-diary.jica.go.jp/suzukiikunori/culture/post_29.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_2654.JPG\n【範囲】隊員が記録した場所・時点の一例です。国全体・全住民の習慣と断定しません。\n【制作】写真１枚＋文章４択。写真は記事掲載の実写で、AI生成・再構成ではありません。\n【公開状態】下書きのみ。公開時の写真利用条件の最終確認は未了です。出典記載を利用許諾取得とみなしません。\n資料確認：2026年11月13日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/culture/post_29.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_2654.JPG"
+      ],
+      "images": {
+        "1": "images/IMG_2654.JPG"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "ブータンのプナカで隊員が訪れた吊り橋です。通路や両側の様子を見てください。写真からの観察と、追加調査が必要なことを正しく分けた説明はどれでしょう？\n\n一つ選び、写真のどこを手がかりにしたか話してみましょう。",
+      "answer": "細い通路は見えるが、渡れる人数の上限は案内などで確かめる",
+      "choices": [
+        "通路が細いので、毎日一人しか渡れないと分かる",
+        "旗があるので、橋は車両専用だと分かる",
+        "山が見えるので、橋の正確な長さも分かる"
+      ],
+      "notes": "【解説】細い通路と両側の構造、旗などが写っています。記事はプナカの吊り橋を紹介しますが、写真だけで利用上限や正確な長さを決めることはできません。\n【観察と推測】見える特徴から疑問を作り、利用条件は現地の案内などで確認する、という情報の読み方の問題です。\n【話してみよう】写真のどこを手がかりに選びましたか。別の見方や追加で知りたいことも話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／鈴木育則「吊り橋」／2023-12-08\nhttps://world-diary.jica.go.jp/suzukiikunori/cat2357/post_77.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_8530.JPG\n【範囲】隊員が記録した場所・時点の一例です。国全体・全住民の習慣と断定しません。\n【制作】写真１枚＋文章４択。写真は記事掲載の実写で、AI生成・再構成ではありません。\n【公開状態】下書きのみ。公開時の写真利用条件の最終確認は未了です。出典記載を利用許諾取得とみなしません。\n資料確認：2026年11月13日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/cat2357/post_77.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_8530.JPG"
+      ],
+      "images": {
+        "1": "images/IMG_8530.JPG"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "ブータンのティンプーで隊員が撮った田園風景です。緑の区画と周りの山に注目しましょう。この一枚から言える範囲を守った説明はどれでしょう？\n\n一つ選び、写真のどこを手がかりにしたか話してみましょう。",
+      "answer": "この場所では、山に囲まれた土地に田が広がっている",
+      "choices": [
+        "ブータン全土が、この写真と同じ平らな田である",
+        "どの家庭も、自分の田だけで米を育てている",
+        "この写真だけで、国全体の米の収穫量が分かる"
+      ],
+      "notes": "【解説】記事の写真説明はティンプー市内の田園風景としています。山と田の配置は見えますが、一つの場所を全国の土地利用に当てはめることはできません。\n【観察と推測】観察した地域と、結論を述べる範囲を揃えましょう。全国の状況には別の資料が必要です。\n【話してみよう】写真のどこを手がかりに選びましたか。別の見方や追加で知りたいことも話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／鈴木育則「ブータンの食事は？」／2022-11-25\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_19.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/db39b71ecbb93e31d9a2461ef2ba27d64bad3965.JPG\n【範囲】隊員が記録した場所・時点の一例です。国全体・全住民の習慣と断定しません。\n【制作】写真１枚＋文章４択。写真は記事掲載の実写で、AI生成・再構成ではありません。\n【公開状態】下書きのみ。公開時の写真利用条件の最終確認は未了です。出典記載を利用許諾取得とみなしません。\n資料確認：2026年11月13日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_19.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/db39b71ecbb93e31d9a2461ef2ba27d64bad3965.JPG"
+      ],
+      "images": {
+        "1": "images/db39b71ecbb93e31d9a2461ef2ba27d64bad3965.JPG"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "ブータンの店先に、白くて四角い品物がつるされています。「お餅に似ている」と感じました。写真から考えた予想を確かめる方法として、最も適切なのはどれでしょう？\n\n一つ選び、写真のどこを手がかりにしたか話してみましょう。",
+      "answer": "見た目の予想と事実を分け、品物の名前や材料を記事で確かめる",
+      "choices": [
+        "白くて四角いので、材料は必ず米だと決める",
+        "日本のお餅に似ているので、味も同じだと決める",
+        "店先につるしてあるので、食べ物ではないと決める"
+      ],
+      "notes": "【解説】この記事で紹介された品物はチュゴという乾燥チーズです。隊員も最初は餅のように見えたと記しています。似た形でも材料は異なることがあります。\n【観察と推測】白い色や四角い形、つるされた様子は観察できます。材料や硬さは、それだけでは断定できません。\n【話してみよう】写真のどこを手がかりに選びましたか。別の見方や追加で知りたいことも話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／鈴木育則「チュゴ」／2024-03-08\nhttps://world-diary.jica.go.jp/suzukiikunori/cat2357/post_104.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_4273.JPG\n【範囲】隊員が記録した場所・時点の一例です。国全体・全住民の習慣と断定しません。\n【制作】写真１枚＋文章４択。写真は記事掲載の実写で、AI生成・再構成ではありません。\n【公開状態】下書きのみ。公開時の写真利用条件の最終確認は未了です。出典記載を利用許諾取得とみなしません。\n資料確認：2026年11月13日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/cat2357/post_104.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_4273.JPG"
+      ],
+      "images": {
+        "1": "images/IMG_4273.JPG"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    }
+  ]
+}
