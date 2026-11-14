@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-12",
+  "productionPublication": {
+    "before": 874,
+    "newlyPublished": 265,
+    "after": 1139,
+    "failed": 0,
+    "newlyApprovedDrafts": 179,
+    "previouslyApprovedPublished": 86,
+    "approvedButUnsupported": 16,
+    "needsRevisionUnchanged": 2,
+    "deletedUnchanged": 13
+  },
+  "newContent": {
+    "country": "bz",
+    "draftsRegistered": 23,
+    "lifeCulture": 4,
+    "japanConnection": 9,
+    "thinkConnect": 10,
+    "importBatches": [
+      5,
+      5,
+      5,
+      5,
+      3
+    ],
+    "duplicateSkipped": 0,
+    "failed": 0,
+    "published": false
+  },
+  "verification": {
+    "countryDomainCatalogsValidated": 27,
+    "photoCountriesSampled": [
+      "au",
+      "at",
+      "az"
+    ],
+    "sampleImagesValid": 3,
+    "studentUi": "Belgium lifeCulture mission 1 opened; incorrect retry and correct explanation/next-mission controls observed"
+  },
+  "remaining": "15 photo1 questions and 1 free-response question are unsupported by current publication endpoint. They remain approved, not published."
+}

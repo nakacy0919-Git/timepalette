@@ -23,5 +23,6 @@ export function forCreatorLearningLevel(mission, level) {
         new Set(englishChoices).size !== 4) return null;
     localized.challenge = {...mission.challenge, choices:englishChoices, correctIndex:0};
   }
+  if(mission.type==='creator-reflection')localized.referenceAnswer=String(en.answerEn||'').trim();
   return localized;
 }

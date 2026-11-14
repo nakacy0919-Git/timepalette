@@ -1,3 +1,4 @@
+import {learningStorage} from '../../../utils/classroomSession.js';
 import {createPortal} from 'react-dom';
 import {
   Volume2,
@@ -177,8 +178,7 @@ const load =
   ) => {
     try {
       const raw =
-        window
-          .localStorage
+        learningStorage()
           .getItem(
             key
           );
@@ -203,8 +203,7 @@ const save =
     value
   ) => {
     try {
-      window
-        .localStorage
+      learningStorage()
         .setItem(
           key,
           JSON.stringify(

@@ -334,7 +334,7 @@ async function publish(env,user,args){adminOnly(user);const mode=String(args.mod
  const q=await getQuestion(env,args.questionId),stamp=now(),was=q.status;
  if(mode==='publish'){
  requireThat(was==='approved'&&args.rightsConfirmed===true,'承認済みの問題と公開利用権を確認してください。');
- requireThat(['text4','photo4','photoText4','video4','videoReflect'].includes(logicalQuestionType(q)),'この形式は公開できません。');await assertComplete(env,{...q,type:logicalQuestionType(q)});
+ requireThat(['text4','photo4','photoText4','video4','videoReflect','photo1','free'].includes(logicalQuestionType(q)),'この形式は公開できません。');await assertComplete(env,{...q,type:logicalQuestionType(q)});
  const profile=cleanProfile(parseObject(q.author_profile_json));const profileVerified=profile.consent&&args.profileRightsConfirmed===true?1:0;
  const r=await env.DB.prepare(`UPDATE questions SET status='published',author_profile_verified=?,updated_at=?,version=version+1 WHERE id=? AND status='approved'`)
  .bind(profileVerified,stamp,q.id).run();requireThat(r.meta.changes===1,'公開条件が変更されました。一覧を更新してください。',409);

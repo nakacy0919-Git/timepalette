@@ -1,0 +1,13 @@
+{
+  "dateJst": "2026-11-14",
+  "countryIso": "bo",
+  "prepared": 10,
+  "registered": 0,
+  "status": "pending-authentication",
+  "published": 0,
+  "categories": {"lifeCulture": 6, "japanConnection": 1, "thinkConnect": 3},
+  "format": "photoText4",
+  "distinctPhotographs": 9,
+  "validation": "two five-question manifests pass; photographs visually inspected; no collages",
+  "batches": ["Bolivia_JICA_Photo_01.zip", "Bolivia_JICA_Photo_02.zip"]
+}

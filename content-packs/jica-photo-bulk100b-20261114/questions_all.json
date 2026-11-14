@@ -1,0 +1,2705 @@
+{
+  "version": "timepalette-mission-factory/v1",
+  "questions": [
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ブータン】昼食の皿を使って「料理の種類が多い」と説明します。種類の数え方として比較に使いやすいのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "主食・おかずなどの分類基準を決めて数える",
+      "choices": [
+        "器の数をそのまま料理の種類数とする",
+        "写真の赤い部分だけを一種類とする",
+        "皿の外周を等分して数える"
+      ],
+      "notes": "【解説】一つの皿に複数の料理があるため、器の数と料理の種類は一致しません。分類基準を明示して比較します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンの食事は？」／2022-11-25／「ブータンの食事は？」／記事表示日：2022-11-25\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_19.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_3397.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_19.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_3397.JPG"
+      ],
+      "images": {
+        "1": "images/bt_01.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ブータン】写真の昼食を初めて知る相手に紹介します。食べ方を決め付けない説明は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "皿の料理を示し、食べる順番は本人に尋ねる",
+      "choices": [
+        "皿の左から食べるのが全員の決まりとする",
+        "汁物は最後にしか飲まないとする",
+        "器の色が食べる順番を表すとする"
+      ],
+      "notes": "【解説】配置から食べる順番までは分かりません。見える盛り付けを伝え、実際の食べ方は確かめます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンの食事は？」／2022-11-25／「ブータンの食事は？」／記事表示日：2022-11-25\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_19.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_3397.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_19.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_3397.JPG"
+      ],
+      "images": {
+        "1": "images/bt_01.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ブータン】唐辛子を広げた場面の変化を記録します。「乾いた」と判断する比較資料は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "同じ試料の重さを同じ条件で継続して測った記録",
+      "choices": [
+        "撮影者の人数を毎回変えた記録",
+        "写真の彩度だけを上げた画像",
+        "置いた場所の名前だけの一覧"
+      ],
+      "notes": "【解説】写真の色だけで乾燥度は測れません。重さの変化など、同じ基準の測定を観察と組み合わせます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンの食事は？」／2022-11-25／「ブータンの食事は？」／記事表示日：2022-11-25\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_19.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_6051.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_19.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_6051.JPG"
+      ],
+      "images": {
+        "1": "images/bt_02.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ブータン】赤い唐辛子の写真に「食卓で使うまで」を加えるなら、次に集めたい情報は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "乾燥後の保管方法や料理での使い方",
+      "choices": [
+        "写真を見た人の国籍だけ",
+        "赤い物の人気投票だけ",
+        "建物の階数だけ"
+      ],
+      "notes": "【解説】写真は一工程を切り取っています。前後の工程を調べると食と暮らしのつながりが見えてきます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンの食事は？」／2022-11-25／「ブータンの食事は？」／記事表示日：2022-11-25\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_19.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_6051.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_19.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_6051.JPG"
+      ],
+      "images": {
+        "1": "images/bt_02.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ブータン】ザオとお茶の場面を「飲み物だけ」と分類しました。見直す手がかりは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "飲み物に加える粒状の食べ物も写っている",
+      "choices": [
+        "器に取っ手があると食事ではなくなる",
+        "温かい物は全て飲み物になる",
+        "かごがあると飲み物は存在しなくなる"
+      ],
+      "notes": "【解説】食べ物と飲み物を組み合わせる例です。一つの分類に無理に当てはめず、写った要素を整理します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンのティータイム」／2023-09-22／「ブータンのティータイム」／記事表示日：2023-09-22\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_65.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_6796.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_65.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_6796.JPG"
+      ],
+      "images": {
+        "1": "images/bt_03.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ブータン】ザオを紹介する展示で、同じ名前の読み方が資料によって違います。どう整理しますか？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "出典ごとの表記を記し、指している物を照合する",
+      "choices": [
+        "読み方が違う資料は全て別の料理とする",
+        "日本語表記だけで現地の発音を確定する",
+        "一番短い表記以外を根拠なく削除する"
+      ],
+      "notes": "【解説】他言語の音を日本語に写すと表記が揺れることがあります。写真と説明を照合し、出典を残します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンのティータイム」／2023-09-22／「ブータンのティータイム」／記事表示日：2023-09-22\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_65.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_6796.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_65.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_6796.JPG"
+      ],
+      "images": {
+        "1": "images/bt_03.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ブータン】つるされたチュゴを紹介する写真に、売り方の説明を足します。写真だけでは確定しないのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "一つずつ買えるか、まとめて買うか",
+      "choices": [
+        "品物がひもにつながっていること",
+        "白っぽい小さな品物があること",
+        "複数の品物が並んでいること"
+      ],
+      "notes": "【解説】陳列の姿と販売単位は別です。見える配置から購入のルールまでは断定できません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンでの食事」／2023-09-15／「ブータンでの食事」／記事表示日：2023-09-15\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_64.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_6355.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_64.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_6355.JPG"
+      ],
+      "images": {
+        "1": "images/bt_04.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ブータン】チュゴの作り方を図にするため、記事から工程を抜き出しました。信頼できる図にするには？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "確認した工程と、まだ分からない工程を区別する",
+      "choices": [
+        "写真にない工程を想像で埋めて断定する",
+        "別の食品の工程を同じ物として流用する",
+        "完成品の色だけで作業時間を決める"
+      ],
+      "notes": "【解説】写真は完成品の手がかりです。工程図には記述の根拠と未確認の部分を示します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンでの食事」／2023-09-15／「ブータンでの食事」／記事表示日：2023-09-15\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_64.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_6355.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_64.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_6355.JPG"
+      ],
+      "images": {
+        "1": "images/bt_04.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ブータン】麺料理の写真を料理名当ての教材にします。名前の根拠として最も確かなのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "写真が載った記事の料理名の説明",
+      "choices": [
+        "日本の料理と似ているという自分の印象",
+        "皿の形だけから付けた名前",
+        "麺の長さを推測して付けた名前"
+      ],
+      "notes": "【解説】似た外見の料理にも別の名前があります。記事がこの料理をどう紹介しているかを確認します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンのお蕎麦」／2024-02-04／「ブータンのお蕎麦」／記事表示日：2024-02-04\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_121.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_5678.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_121.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_5678.JPG"
+      ],
+      "images": {
+        "1": "images/bt_05.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ブータン】チョウメンの写真を使い、食文化がつながる経路を調べます。調査の入口として適切なのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "料理名や材料、地域間の交流の記録を調べる",
+      "choices": [
+        "麺がある国は全て同じ文化とする",
+        "似た料理は必ず同じ人が考案したとする",
+        "器が同じ色なら歴史も同じとする"
+      ],
+      "notes": "【解説】外見の類似は問いの入口です。伝わり方の結論には歴史や交流を示す別の資料が必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンのお蕎麦」／2024-02-04／「ブータンのお蕎麦」／記事表示日：2024-02-04\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_121.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_5678.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_121.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_5678.JPG"
+      ],
+      "images": {
+        "1": "images/bt_05.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ブータン】乾燥麺の袋を展示します。小さな文字が読みづらい児童への工夫は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "必要な表示を拡大し、元の袋も一緒に示す",
+      "choices": [
+        "読めない部分を推測した文字で置き換える",
+        "文字を細くして同じ場所に詰める",
+        "原材料の説明を全て省く"
+      ],
+      "notes": "【解説】原画像と拡大表示を組み合わせれば、情報の出所を確かめながら読み取れます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンのティータイム」／2023-09-22／「ブータンのティータイム」／記事表示日：2023-09-22\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_65.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_0826.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_65.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_0826.JPG"
+      ],
+      "images": {
+        "1": "images/bt_06.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ブータン】袋入りの麺の写真を「地域の食材と製品」の資料にします。調べるとよい違いは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "原料を育てる場所と、製品を作る場所",
+      "choices": [
+        "袋の上下で国籍が変わるか",
+        "文字の大きさで味が変わるか",
+        "撮影者の服で材料が変わるか"
+      ],
+      "notes": "【解説】栽培地、加工地、販売地は同じとは限りません。表示や製造者の情報を分けて調べます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンのティータイム」／2023-09-22／「ブータンのティータイム」／記事表示日：2023-09-22\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_65.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_0826.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_65.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_0826.JPG"
+      ],
+      "images": {
+        "1": "images/bt_06.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ブータン】連なるルンタの写真を白黒印刷しました。元写真にあって伝わりにくくなる情報は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "旗ごとの色の違い",
+      "choices": [
+        "旗が連なる配置そのもの",
+        "ひもがあるという形の手がかり全て",
+        "写真が撮影されたという事実"
+      ],
+      "notes": "【解説】白黒でも形や位置は伝わりますが、色の区別は弱まります。色名の補足などで伝えられます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ルンタ」／2023-03-24／「ルンタ」／記事表示日：2023-03-24\nhttps://world-diary.jica.go.jp/suzukiikunori/culture/post_29.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_2654.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/culture/post_29.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_2654.JPG"
+      ],
+      "images": {
+        "1": "images/bt_07.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ブータン】ルンタについての説明を交流相手が補足してくれました。発表原稿への反映は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "その人の説明として出所を示し、記事と照らす",
+      "choices": [
+        "一人の話を全住民の共通見解とする",
+        "記事と違う表現は確認せず全て消す",
+        "本人の言葉を自分の体験として発表する"
+      ],
+      "notes": "【解説】担い手の声も一つの情報源です。誰の経験・説明かを残し、複数の資料を照合します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ルンタ」／2023-03-24／「ルンタ」／記事表示日：2023-03-24\nhttps://world-diary.jica.go.jp/suzukiikunori/culture/post_29.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_2654.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/culture/post_29.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_2654.JPG"
+      ],
+      "images": {
+        "1": "images/bt_07.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "place",
+      "type": "photoText4",
+      "prompt": "【ブータン】吊り橋の写真と地図を組み合わせます。地図で確かめると役立つことは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "橋の両側の集落や道の位置関係",
+      "choices": [
+        "橋を渡った人全員の気持ち",
+        "写真に写る人の職業",
+        "橋を作った人の好物"
+      ],
+      "notes": "【解説】写真は橋の姿、地図は周囲との位置関係を伝えます。資料ごとの役割を生かします。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「吊り橋」／2023-12-08／「吊り橋」／記事表示日：2023-12-08\nhttps://world-diary.jica.go.jp/suzukiikunori/cat2357/post_77.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_8530.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/cat2357/post_77.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_8530.JPG"
+      ],
+      "images": {
+        "1": "images/bt_08.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ブータン】橋の写真を見た生徒が「揺れそう」と言いました。観察記録の書き方は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "細長いつり橋という観察と、揺れの予想を分ける",
+      "choices": [
+        "揺れの大きさを測った結果として書く",
+        "怖いと感じた人数を橋の長さにする",
+        "予想を事実にするため撮影日を消す"
+      ],
+      "notes": "【解説】形から予想を立てることはできますが、実際の揺れを測ったことにはなりません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「吊り橋」／2023-12-08／「吊り橋」／記事表示日：2023-12-08\nhttps://world-diary.jica.go.jp/suzukiikunori/cat2357/post_77.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_8530.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/cat2357/post_77.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_8530.JPG"
+      ],
+      "images": {
+        "1": "images/bt_08.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "place",
+      "type": "photoText4",
+      "prompt": "【ブータン】田園と山の写真に、標高の情報を足したいと思いました。参照する資料は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "撮影地点を確かめた上で地形図などを見る",
+      "choices": [
+        "写真の緑の濃さだけで標高を決める",
+        "雲の数をそのまま標高にする",
+        "写真のファイルサイズを高さとする"
+      ],
+      "notes": "【解説】山が見えるだけでは地点の標高は分かりません。場所を特定して地形資料を参照します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンの食事は？」／2022-11-25／「ブータンの食事は？」／記事表示日：2022-11-25\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_19.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/db39b71ecbb93e31d9a2461ef2ba27d64bad3965.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_19.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/db39b71ecbb93e31d9a2461ef2ba27d64bad3965.JPG"
+      ],
+      "images": {
+        "1": "images/bt_09.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ブータン】田園の写真に写る土地の使われ方を授業で調べます。継続的な変化を知るには？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "同じ範囲の異なる年代の地図や航空写真を比べる",
+      "choices": [
+        "今の写真を拡大しただけで過去とする",
+        "遠景を切り取って別の年代とする",
+        "写真の緑を増やして農地面積の増加とする"
+      ],
+      "notes": "【解説】時間をまたぐ土地利用の変化には、時点と範囲が対応する資料が必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「ブータンの食事は？」／2022-11-25／「ブータンの食事は？」／記事表示日：2022-11-25\nhttps://world-diary.jica.go.jp/suzukiikunori/life/post_19.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/db39b71ecbb93e31d9a2461ef2ba27d64bad3965.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/life/post_19.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/db39b71ecbb93e31d9a2461ef2ba27d64bad3965.JPG"
+      ],
+      "images": {
+        "1": "images/bt_09.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ブータン】スジャを飲んだ人の感想を紹介します。感想と材料の情報を分けた文は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "材料は記事で確認し、飲み手の好みは本人の感想と示す",
+      "choices": [
+        "好評なら全て甘い材料だとする",
+        "苦手な人がいれば材料の記録を消す",
+        "器が同じなら全員同じ感想とする"
+      ],
+      "notes": "【解説】材料は確かめる情報、好みは個人の経験です。それぞれの根拠を区別して紹介します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「チュゴ」／2024-03-08／「チュゴ」／記事表示日：2024-03-08\nhttps://world-diary.jica.go.jp/suzukiikunori/cat2357/post_104.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_4273.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/cat2357/post_104.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_4273.JPG"
+      ],
+      "images": {
+        "1": "images/bt_10.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bt",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ブータン】お茶の写真を起点に「歓迎の場」を交流で調べます。答えを誘導しにくい質問は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "来客のとき、あなたの家では何を出すことがありますか",
+      "choices": [
+        "来客には必ず写真のお茶だけを出しますよね",
+        "飲み物を出さない家は歓迎していませんよね",
+        "日本と同じ飲み物だけが正しいですよね"
+      ],
+      "notes": "【解説】写真を国全体の決まりにせず、相手の家庭での経験を自由に話せる問いにします。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／JICA海外協力隊の世界日記／鈴木育則「チュゴ」／2024-03-08／「チュゴ」／記事表示日：2024-03-08\nhttps://world-diary.jica.go.jp/suzukiikunori/cat2357/post_104.php\n【原画像】https://world-diary.jica.go.jp/suzukiikunori/IMG_4273.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/suzukiikunori/cat2357/post_104.php",
+        "https://world-diary.jica.go.jp/suzukiikunori/IMG_4273.JPG"
+      ],
+      "images": {
+        "1": "images/bt_10.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ボリビア】朝食写真を家庭の食事と比べるワークシートです。比較の基準として使いやすいのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "主食、飲み物、食べる場などを同じ欄で記録する",
+      "choices": [
+        "自分の好みに近い方を必ず正解にする",
+        "写真の大きい方を品数が多いとする",
+        "器の色だけで食文化全体を分類する"
+      ],
+      "notes": "【解説】同じ観点を使うと共通点と違いを整理できます。一食から国全体の優劣を決める活動にはしません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／新垣佳／「日本人の口にも合う！？ボリビアで食べた絶品料理5選」／記事表示日：2026-10-03\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat4017/239_5.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/3e7c96c2e798ae4ec7ea46379aead7c05cfecb24.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat4017/239_5.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/3e7c96c2e798ae4ec7ea46379aead7c05cfecb24.jpeg"
+      ],
+      "images": {
+        "1": "images/bo_01.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボリビア】朝食の写真に「いつ撮影したか」という情報がありません。紹介に適切な対応は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "記事の掲載日と、撮影日時の不明を区別する",
+      "choices": [
+        "掲載日を確認せず撮影日として書く",
+        "朝食なので撮影時刻は毎回７時とする",
+        "日付がないので現在の毎日の食事とする"
+      ],
+      "notes": "【解説】記事の掲載日と撮影日時は一致するとは限りません。分かることと分からないことを明記します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／新垣佳／「日本人の口にも合う！？ボリビアで食べた絶品料理5選」／記事表示日：2026-10-03\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat4017/239_5.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/3e7c96c2e798ae4ec7ea46379aead7c05cfecb24.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat4017/239_5.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/3e7c96c2e798ae4ec7ea46379aead7c05cfecb24.jpeg"
+      ],
+      "images": {
+        "1": "images/bo_01.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ボリビア】葉を開いたウミンタの写真を使い、包みの役割を調べます。確かめる問いは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "包む工程と、食べるときの開き方を教えてください",
+      "choices": [
+        "葉も中身と必ず同じように食べますよね",
+        "黄色い物は全て同じ料理ですよね",
+        "包みの大きさで作り手の年齢が分かりますよね"
+      ],
+      "notes": "【解説】包装のように見える物の役割は、作り手や資料に確認します。写真の形だけで食べ方を決めません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／岩元萌佳／「現地での活動と暮らし」／記事表示日：2025-07-01\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/e805e9a1dc115285026df692d02785baa7fcb495.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/e805e9a1dc115285026df692d02785baa7fcb495.jpg"
+      ],
+      "images": {
+        "1": "images/bo_02.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボリビア】ウミンタの包みの写真だけで「輸送中に崩れにくい」と結論付けました。必要な検証は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "同じ条件で運んだときの状態を比較する",
+      "choices": [
+        "包みの色を濃くした写真を作る",
+        "大きな文字で丈夫と書く",
+        "撮影者が好きな包みを選ぶ"
+      ],
+      "notes": "【解説】形から機能を予想できますが、性能の結論には条件をそろえた比較が必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／岩元萌佳／「現地での活動と暮らし」／記事表示日：2025-07-01\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/e805e9a1dc115285026df692d02785baa7fcb495.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/e805e9a1dc115285026df692d02785baa7fcb495.jpg"
+      ],
+      "images": {
+        "1": "images/bo_02.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ボリビア】タマレスの葉の包みと日本の弁当箱を比較します。暮らしの工夫を考える観点は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "食べ物を包んで持ち運ぶ役割",
+      "choices": [
+        "同じ素材でなければ比較しないこと",
+        "材料の値段が常に同じだとすること",
+        "違う名前の物には共通点がないとすること"
+      ],
+      "notes": "【解説】素材が違っても、使う目的から比較できます。共通する役割と、それぞれの条件を整理します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／杉浦里佳／「想像以上に大変だったタマレス（Tamales）作り！」／記事表示日：2025-08-11\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat4030/51_tamales.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/7b147d4c6130fd11ba97864f76d0189bf721e9a9.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat4030/51_tamales.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/7b147d4c6130fd11ba97864f76d0189bf721e9a9.jpeg"
+      ],
+      "images": {
+        "1": "images/bo_03.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボリビア】包まれたタマレスの写真を「調理前・調理後」の資料にしたい場合は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "この写真がどの段階か記事で確かめる",
+      "choices": [
+        "葉があれば必ず調理前とする",
+        "皿があれば必ず調理前とする",
+        "黄色い部分があれば加熱時間まで決める"
+      ],
+      "notes": "【解説】見た目だけで工程の段階を決めず、記事の説明と対応させます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／杉浦里佳／「想像以上に大変だったタマレス（Tamales）作り！」／記事表示日：2025-08-11\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat4030/51_tamales.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/7b147d4c6130fd11ba97864f76d0189bf721e9a9.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat4030/51_tamales.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/7b147d4c6130fd11ba97864f76d0189bf721e9a9.jpeg"
+      ],
+      "images": {
+        "1": "images/bo_03.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボリビア】網で焼く場面の写真から、共同作業を調べます。役割分担を知る資料は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "準備・調理・片付けを誰が担ったかの記録",
+      "choices": [
+        "網の形だけから決めた役職表",
+        "手前にいる人を全て責任者にした図",
+        "服の色で割り当てた作業一覧"
+      ],
+      "notes": "【解説】写る瞬間の姿と、活動全体の役割は違います。前後の工程も確かめます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長谷川祐／「日本とは色々違う！ボリビアのお祝い文化」／記事表示日：2026-08-29\nhttps://world-diary.jica.go.jp/JICA_Bolivia/life/225.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/ba9bea5add38ddad73c6e9f4c9b309b057101c78.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/life/225.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/ba9bea5add38ddad73c6e9f4c9b309b057101c78.jpg"
+      ],
+      "images": {
+        "1": "images/bo_04.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ボリビア】調理写真のキャプションで、道具と作業を対応させた説明は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "網の上に食材を置いて焼く場面",
+      "choices": [
+        "織機で糸を交差させて布を作る場面",
+        "はかりで野菜の重さを比べる場面",
+        "黒板の文字を教室で書き写す場面"
+      ],
+      "notes": "【解説】道具の形と食材の位置を組み合わせて、写っている作業を読み取ります。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長谷川祐／「日本とは色々違う！ボリビアのお祝い文化」／記事表示日：2026-08-29\nhttps://world-diary.jica.go.jp/JICA_Bolivia/life/225.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/ba9bea5add38ddad73c6e9f4c9b309b057101c78.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/life/225.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/ba9bea5add38ddad73c6e9f4c9b309b057101c78.jpg"
+      ],
+      "images": {
+        "1": "images/bo_04.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボリビア】はかりを使う市場で、同じ野菜の値段を比べる記録を作ります。そろえる項目は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "品目と品質の条件、重さ、通貨、記録日",
+      "choices": [
+        "店の名前の文字数だけ",
+        "写真の縦横比だけ",
+        "買い手の服の色だけ"
+      ],
+      "notes": "【解説】価格は何をどれだけ買うか、いつの記録かで変わります。比較条件を明示します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／竹下／「青空市場の八百屋さん」／記事表示日：2026-09-12\nhttps://world-diary.jica.go.jp/JICA_Bolivia/life/234_1.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/82db9187e5ae9a7d5690cbd1a1d40a2111cb05b4.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/life/234_1.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/82db9187e5ae9a7d5690cbd1a1d40a2111cb05b4.jpg"
+      ],
+      "images": {
+        "1": "images/bo_05.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボリビア】【架空の計量】写真のはかりを参考に、容器込みで750g、空の容器が150gでした。中身は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "600g",
+      "choices": [
+        "900g",
+        "750g",
+        "150g"
+      ],
+      "notes": "【解説】750−150＝600gです。容器の重さを引く考え方を学ぶ架空設定で、写真の実測値ではありません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／竹下／「青空市場の八百屋さん」／記事表示日：2026-09-12\nhttps://world-diary.jica.go.jp/JICA_Bolivia/life/234_1.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/82db9187e5ae9a7d5690cbd1a1d40a2111cb05b4.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/life/234_1.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/82db9187e5ae9a7d5690cbd1a1d40a2111cb05b4.jpg"
+      ],
+      "images": {
+        "1": "images/bo_05.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ボリビア】そろいの服の集合写真を学校行事の資料と比べます。共通点として確かめられるのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "服装をそろえる場面があること",
+      "choices": [
+        "参加者全員が同じ学年であること",
+        "どの国でも同じ行事名であること",
+        "同じ色なら活動目的も同じであること"
+      ],
+      "notes": "【解説】服装の共通性は観察できますが、学年や行事の意味は別に調べます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長谷川祐／「日本とは色々違う！ボリビアのお祝い文化」／記事表示日：2026-08-29\nhttps://world-diary.jica.go.jp/JICA_Bolivia/life/225.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/af3455335019ce467747bdb99afa833036a15b5c.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/life/225.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/af3455335019ce467747bdb99afa833036a15b5c.jpg"
+      ],
+      "images": {
+        "1": "images/bo_06.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボリビア】集合写真の活動を人数で評価しました。人数以外に確かめたいのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "参加者が何を経験し、どう受け止めたか",
+      "choices": [
+        "服の色の種類だけ",
+        "写真を拡大した倍率だけ",
+        "並び順の左右だけ"
+      ],
+      "notes": "【解説】参加人数は規模の情報です。活動の学びや満足度には本人の声や記録も必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長谷川祐／「日本とは色々違う！ボリビアのお祝い文化」／記事表示日：2026-08-29\nhttps://world-diary.jica.go.jp/JICA_Bolivia/life/225.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/af3455335019ce467747bdb99afa833036a15b5c.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/life/225.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/af3455335019ce467747bdb99afa833036a15b5c.jpg"
+      ],
+      "images": {
+        "1": "images/bo_06.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボリビア】ごみ分別の活動写真を見て、授業後の変化を調べます。追跡する記録は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "数日後も分類できるか、同じ課題で確かめる",
+      "choices": [
+        "当日の写真の枚数だけを増やす",
+        "黒板の色を毎日比べる",
+        "説明の文字数だけを長くする"
+      ],
+      "notes": "【解説】活動直後の反応と、学びが続くことは別です。同じ観点で時間を置いて確かめます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／岩元萌佳／「現地での活動と暮らし」／記事表示日：2025-07-01\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/e7ef8bd7583ceda3ea6bfda1e1a8a8e2bab3d603.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/e7ef8bd7583ceda3ea6bfda1e1a8a8e2bab3d603.jpg"
+      ],
+      "images": {
+        "1": "images/bo_07.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "japanConnection",
+      "type": "photoText4",
+      "prompt": "【ボリビア】分別の授業を別の学校でも行いたいと考えます。先に現地の先生と確認することは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "地域の回収方法に教材の分類が合うか",
+      "choices": [
+        "日本の分類を説明なく全て使えるか",
+        "全学校で同じごみが同量出るか",
+        "教材の日本語を残すだけでよいか"
+      ],
+      "notes": "【解説】分別は回収や処理の仕組みと結び付きます。教材を使う地域の実情に合わせて相談します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／岩元萌佳／「現地での活動と暮らし」／記事表示日：2025-07-01\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/e7ef8bd7583ceda3ea6bfda1e1a8a8e2bab3d603.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/e7ef8bd7583ceda3ea6bfda1e1a8a8e2bab3d603.jpg"
+      ],
+      "images": {
+        "1": "images/bo_07.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボリビア】容器を利用したごみ箱を教室に置く計画です。試作品を評価する進め方は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "利用者に試してもらい、困った点を集めて直す",
+      "choices": [
+        "作り手の第一印象だけで完成とする",
+        "使う人には完成まで見せない",
+        "写真の見栄えだけで採点する"
+      ],
+      "notes": "【解説】実際の使い方を確かめると、入れ口や表示の改善点を見つけられます。写真から完成品の安全性を断定しません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／岩元萌佳／「現地での活動と暮らし」／記事表示日：2025-07-01\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/0d658d5640abce26c54704f7c4cff083e9192203.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/0d658d5640abce26c54704f7c4cff083e9192203.jpg"
+      ],
+      "images": {
+        "1": "images/bo_08.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ボリビア】写真の容器を新しい用途に使う活動です。材料の流れを説明する組合せは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "元の用途、加工した点、新しい用途",
+      "choices": [
+        "制作者の好きな色、好きな動物、好きな歌",
+        "撮影場所の名前の長さだけ",
+        "製品名を消した画像だけ"
+      ],
+      "notes": "【解説】物がどのように使われ直すかを、加工の前後で整理する問いです。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／岩元萌佳／「現地での活動と暮らし」／記事表示日：2025-07-01\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/0d658d5640abce26c54704f7c4cff083e9192203.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/0d658d5640abce26c54704f7c4cff083e9192203.jpg"
+      ],
+      "images": {
+        "1": "images/bo_08.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "japanConnection",
+      "type": "photoText4",
+      "prompt": "【ボリビア】協働の写真を「支援を受ける人」の一言だけで説明しました。加えたい視点は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "現地の人が提案し実行したことも調べる",
+      "choices": [
+        "全ての判断を外から来た人だけの成果とする",
+        "現地の人の発言を記録しない",
+        "写った人数だけで役割を決める"
+      ],
+      "notes": "【解説】国際協力では複数の人が担い手になります。誰が何を考え実行したかを確かめます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／岩元萌佳／「現地での活動と暮らし」／記事表示日：2025-07-01\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/d40b2bab8caa6579253294f728a6512609e68ea1.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/d40b2bab8caa6579253294f728a6512609e68ea1.jpg"
+      ],
+      "images": {
+        "1": "images/bo_09.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボリビア】協働する人々の写真に合う、活動を振り返る問いは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "うまくいった点と次に変えたい点を各担当者に聞く",
+      "choices": [
+        "一番前に立つ人だけの意見で決める",
+        "笑顔の数を活動の全成果とする",
+        "全員が同じ意見だったと先に書く"
+      ],
+      "notes": "【解説】振り返りでは異なる役割の声を集めます。写真の表情だけでは改善点は分かりません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／岩元萌佳／「現地での活動と暮らし」／記事表示日：2025-07-01\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/d40b2bab8caa6579253294f728a6512609e68ea1.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/d40b2bab8caa6579253294f728a6512609e68ea1.jpg"
+      ],
+      "images": {
+        "1": "images/bo_09.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボリビア】ウミンタを紹介する２つの記事で材料が異なりました。調べ方として適切なのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "地域や家庭、作り手の違いを確かめる",
+      "choices": [
+        "片方の写真が黄色なら必ず誤りとする",
+        "どちらかの出典を隠して一つにまとめる",
+        "同名なら材料が違うことはないとする"
+      ],
+      "notes": "【解説】同じ料理名にも作り方の違いがあり得ます。資料の範囲を確かめて並べます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／岩元萌佳／「現地での活動と暮らし」／記事表示日：2025-07-01\nhttps://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/e805e9a1dc115285026df692d02785baa7fcb495.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/cat3964/38.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/e805e9a1dc115285026df692d02785baa7fcb495.jpg"
+      ],
+      "images": {
+        "1": "images/bo_02.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bo",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ボリビア】市場のはかりを初めて使う人に、数字の読み方を教えます。説明に必要なのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "目盛りや表示の単位と、指している値",
+      "choices": [
+        "市場の名前の文字数",
+        "撮影者の出身地だけ",
+        "商品の色の好みだけ"
+      ],
+      "notes": "【解説】測定値は単位と一緒に読みます。写真で読めない表示は推測せず確認します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／竹下／「青空市場の八百屋さん」／記事表示日：2026-09-12\nhttps://world-diary.jica.go.jp/JICA_Bolivia/life/234_1.php\n【原画像】https://world-diary.jica.go.jp/JICA_Bolivia/82db9187e5ae9a7d5690cbd1a1d40a2111cb05b4.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Bolivia/life/234_1.php",
+        "https://world-diary.jica.go.jp/JICA_Bolivia/82db9187e5ae9a7d5690cbd1a1d40a2111cb05b4.jpg"
+      ],
+      "images": {
+        "1": "images/bo_05.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "place",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】ロバの台車の写真から、地域の運搬を地図にまとめます。調べたい経路は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "荷物の出発地、行き先、途中の道",
+      "choices": [
+        "台車の色だけを並べた経路",
+        "写真を見た順に結ぶだけの線",
+        "国名の五十音順だけの経路"
+      ],
+      "notes": "【解説】運ぶ物がどこからどこへ動くかを調べると、交通と暮らしを結び付けられます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／平石守／「ボツワナの乗り物や公共交通機関について」／記事表示日：2025-06-17\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/post_30.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/IMG-20250820-WA0050.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/post_30.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/IMG-20250820-WA0050.jpg"
+      ],
+      "images": {
+        "1": "images/bw_01.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】台車の写真を見て「自動車が使われていない地域」と説明しました。根拠を見直すなら？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "この場面以外の交通手段も調べる",
+      "choices": [
+        "ロバが一頭でもいれば自動車はないとする",
+        "道路の色で自動車の有無を決める",
+        "写真の背景を消して説明を強める"
+      ],
+      "notes": "【解説】一つの移動手段の存在は、ほかの手段の不在を意味しません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／平石守／「ボツワナの乗り物や公共交通機関について」／記事表示日：2025-06-17\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/post_30.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/IMG-20250820-WA0050.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/post_30.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/IMG-20250820-WA0050.jpg"
+      ],
+      "images": {
+        "1": "images/bw_01.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】コンビを初めて使う人への案内を考えます。利用方法を伝える情報の組合せは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "行き先、乗る場所、支払い方法",
+      "choices": [
+        "車体の色と撮影者の好物",
+        "窓の形と国名の文字数",
+        "運転手の服と写真の解像度"
+      ],
+      "notes": "【解説】利用者が移動を判断するための情報を整理します。現行の利用案内を作る場合は、最新の運行情報の確認が必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／平石守／「ボツワナの乗り物や公共交通機関について」／記事表示日：2025-06-17\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/post_30.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/PXL_20250616_073840261.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/post_30.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/PXL_20250616_073840261.jpg"
+      ],
+      "images": {
+        "1": "images/bw_02.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】【架空の調査】コンビ利用者30人中18人が通学目的でした。通学以外は何人？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "12人",
+      "choices": [
+        "18人",
+        "48人",
+        "８人"
+      ],
+      "notes": "【解説】30−18＝12です。写真の乗客や実際の交通調査の人数ではありません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／平石守／「ボツワナの乗り物や公共交通機関について」／記事表示日：2025-06-17\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/post_30.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/PXL_20250616_073840261.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/post_30.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/PXL_20250616_073840261.jpg"
+      ],
+      "images": {
+        "1": "images/bw_02.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】木の道具で料理を扱う写真から、調理技術を記録します。動画で追加すると役立つ情報は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "手の動かし方や力をかける方向",
+      "choices": [
+        "料理と関係のない背景音だけ",
+        "撮影者の靴の大きさだけ",
+        "鍋を見えなくした映像だけ"
+      ],
+      "notes": "【解説】静止画で分かる形に、動きの情報を加えると道具の使い方を理解しやすくなります。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／井上日南子／「ボツワナのイチオシグルメ」／記事表示日：2024-07-22\nhttps://world-diary.jica.go.jp/JICA_Botswana/culture/post_1.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/P1013390.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/culture/post_1.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/P1013390.JPG"
+      ],
+      "images": {
+        "1": "images/bw_03.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】木製の調理道具を別素材の道具と比較します。公平な比較条件は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "同じ作業と量で使い、使い手の感想も記録する",
+      "choices": [
+        "片方は調理し、もう片方は飾るだけにする",
+        "一方だけ料理の量を大きく増やす",
+        "材質の名前の長さで使いやすさを決める"
+      ],
+      "notes": "【解説】用途と条件をそろえた上で、操作のしやすさなどを比べます。写真だけで材質の優劣を決めません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／井上日南子／「ボツワナのイチオシグルメ」／記事表示日：2024-07-22\nhttps://world-diary.jica.go.jp/JICA_Botswana/culture/post_1.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/P1013390.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/culture/post_1.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/P1013390.JPG"
+      ],
+      "images": {
+        "1": "images/bw_03.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "place",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】細長い舟モコロの写真から、水辺の移動を考えます。陸の道路地図に加えたい情報は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "川や水路と、岸から利用できる地点",
+      "choices": [
+        "道路名の日本語の文字数",
+        "舟の色の人気順位",
+        "撮影者の好きな町だけ"
+      ],
+      "notes": "【解説】水上の移動を考えるには、水域と岸の位置関係が必要です。実際の航行可否や安全性は地図だけで判断しません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／谷村／「暮らしのそばにある伝統舟ータマラカネ川のモコロ」／記事表示日：2026-07-10\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/28492de52857258aab0a634c8889ce46cb597320.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/28492de52857258aab0a634c8889ce46cb597320.jpg"
+      ],
+      "images": {
+        "1": "images/bw_04.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】モコロの形をノートに描き、寸法も記したいと思いました。写真だけでは分からないのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "舟の正確な全長と幅",
+      "choices": [
+        "細長いという形の特徴",
+        "水面に浮かぶという配置",
+        "舟を使う場面であること"
+      ],
+      "notes": "【解説】形の比率は観察できますが、正確な寸法には尺度や実測値が必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／谷村／「暮らしのそばにある伝統舟ータマラカネ川のモコロ」／記事表示日：2026-07-10\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/28492de52857258aab0a634c8889ce46cb597320.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/28492de52857258aab0a634c8889ce46cb597320.jpg"
+      ],
+      "images": {
+        "1": "images/bw_04.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】持ち帰りランチ店と学校食堂を比べます。仕組みを比べる観点は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "選ぶ、支払う、受け取る流れ",
+      "choices": [
+        "看板の色が同じかだけ",
+        "店名と校名の文字数だけ",
+        "撮影方向が同じかだけ"
+      ],
+      "notes": "【解説】食事を受け取るまでの行動を同じ観点で記録すると、共通点と違いを説明できます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／藤井／「いつものボツワナランチ、Dijo」／記事表示日：2025-02-17\nhttps://world-diary.jica.go.jp/JICA_Botswana/culture/dijo.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/0f1b82561a0353737fc7c723a46e9d1c0cd138cf.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/culture/dijo.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/0f1b82561a0353737fc7c723a46e9d1c0cd138cf.jpeg"
+      ],
+      "images": {
+        "1": "images/bw_05.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】ランチ店の写真を使い、待ち時間の改善を考えます。必要な記録は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "注文から受け取りまでの時間と、そのときの客数",
+      "choices": [
+        "写真に写る色の種類だけ",
+        "店員の身長を推測した値",
+        "看板の文字の太さだけ"
+      ],
+      "notes": "【解説】改善の判断には、時間と混雑などの条件を組み合わせた記録が役立ちます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／藤井／「いつものボツワナランチ、Dijo」／記事表示日：2025-02-17\nhttps://world-diary.jica.go.jp/JICA_Botswana/culture/dijo.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/0f1b82561a0353737fc7c723a46e9d1c0cd138cf.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/culture/dijo.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/0f1b82561a0353737fc7c723a46e9d1c0cd138cf.jpeg"
+      ],
+      "images": {
+        "1": "images/bw_05.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "japanConnection",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】日本語が残る車を調べます。「物の移動」と「人の移動」を区別する説明は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "日本語の表示は車の経歴の手がかりで、運転手の出身は別に確認する",
+      "choices": [
+        "日本語の車なら運転手も必ず日本出身とする",
+        "日本語の文字数で乗客の国籍を決める",
+        "表示が消えれば車の経歴もなくなるとする"
+      ],
+      "notes": "【解説】物に残る表示から、現在使っている人の国籍や経歴までは分かりません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／加地／「ボツワナで活躍する日本車」／記事表示日：2025-08-07\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/post_34.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/IMG_2911.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/post_34.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/IMG_2911.jpeg"
+      ],
+      "images": {
+        "1": "images/bw_06.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】車の日本語を読んで現地の人に説明します。読み取れない部分がある場合は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "読めた文字と不明な文字を区別して示す",
+      "choices": [
+        "見えない部分を想像で完成させる",
+        "似た会社名を確認せず当てはめる",
+        "読めないので全て意味のない模様とする"
+      ],
+      "notes": "【解説】原画像で確かめられる範囲を示すことが、誤った情報を広げない説明につながります。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／加地／「ボツワナで活躍する日本車」／記事表示日：2025-08-07\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/post_34.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/IMG_2911.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/post_34.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/IMG_2911.jpeg"
+      ],
+      "images": {
+        "1": "images/bw_06.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "japanConnection",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】日本向けGPSの画面を教材に、地域に合う製品を考えます。使用場面の調査は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "使う場所で必要な情報を利用者に聞く",
+      "choices": [
+        "日本で人気ならどこでも同じ機能でよいとする",
+        "画面を大きくすれば地図の地域は関係ないとする",
+        "文字を増やせば必ず使いやすいとする"
+      ],
+      "notes": "【解説】使いやすさは利用する地域と言語、目的に関係します。必要な場面を先に確かめます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／加地／「ボツワナで活躍する日本車」／記事表示日：2025-08-07\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/post_34.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/IMG_5322.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/post_34.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/IMG_5322.jpeg"
+      ],
+      "images": {
+        "1": "images/bw_07.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】画面の日本語が読めない人向けに操作案内を作ります。評価方法は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "利用者に実際の課題を試してもらい迷う点を記録する",
+      "choices": [
+        "日本語が読める作り手の感想だけで決める",
+        "案内文を長くした回数だけを数える",
+        "画面の色の多さだけで判断する"
+      ],
+      "notes": "【解説】案内の理解度は、対象となる人が目的を達成できるかを見て確かめます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／加地／「ボツワナで活躍する日本車」／記事表示日：2025-08-07\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/post_34.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/IMG_5322.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/post_34.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/IMG_5322.jpeg"
+      ],
+      "images": {
+        "1": "images/bw_07.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】ランチの写真を「一日の食生活」の資料として使います。不足しているのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "朝食や夕食、間食を含む別の記録",
+      "choices": [
+        "昼食の写真をもう一度拡大すること",
+        "皿の色を変えた画像",
+        "料理名の文字数を数えた表"
+      ],
+      "notes": "【解説】一食の写真では一日の食生活全体は分かりません。対象となる時間の範囲をそろえます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／藤井／「いつものボツワナランチ、Dijo」／記事表示日：2025-02-17\nhttps://world-diary.jica.go.jp/JICA_Botswana/culture/dijo.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/7D134BAB-7A5E-4223-9829-A228A4DE422C_1_102_a.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/culture/dijo.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/7D134BAB-7A5E-4223-9829-A228A4DE422C_1_102_a.jpeg"
+      ],
+      "images": {
+        "1": "images/bw_08.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】ランチの盛り付けを写真で紹介します。見た目を正確に伝える編集は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "元の写真を保ち、説明の矢印などを区別して添える",
+      "choices": [
+        "料理を増やした合成を実際の一皿とする",
+        "色を変えた物を元の食材の色と説明する",
+        "別の皿を重ねて一人分と説明する"
+      ],
+      "notes": "【解説】説明の補助と、記録自体の変更を区別します。加工した場合は元写真と異なる点を明示します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／藤井／「いつものボツワナランチ、Dijo」／記事表示日：2025-02-17\nhttps://world-diary.jica.go.jp/JICA_Botswana/culture/dijo.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/7D134BAB-7A5E-4223-9829-A228A4DE422C_1_102_a.jpeg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/culture/dijo.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/7D134BAB-7A5E-4223-9829-A228A4DE422C_1_102_a.jpeg"
+      ],
+      "images": {
+        "1": "images/bw_08.jpeg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "place",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】水中に木が見える写真を地理の資料にします。水の広がりを調べる資料は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "撮影地点と時期が分かる地図や水位の記録",
+      "choices": [
+        "木の葉の好きな色だけ",
+        "別の国の人口だけ",
+        "写真を回転した角度だけ"
+      ],
+      "notes": "【解説】写真の場面を位置と時点に結び付けると、地形や水の変化を調べる入口になります。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／谷村／「暮らしのそばにある伝統舟ータマラカネ川のモコロ」／記事表示日：2026-07-10\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/481cbfdb16ea2122c1544701fe4090a963135eeb.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/481cbfdb16ea2122c1544701fe4090a963135eeb.jpg"
+      ],
+      "images": {
+        "1": "images/bw_09.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】写真の木を見て「水の量が増えた」と考えました。増減の判断に必要なのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "同じ地点の以前の状態を示す比較資料",
+      "choices": [
+        "この写真をもう一度見ることだけ",
+        "木の名前を当てることだけ",
+        "写真の明るさを調節することだけ"
+      ],
+      "notes": "【解説】増えた、減ったという変化には、比べる基準の時点が必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／谷村／「暮らしのそばにある伝統舟ータマラカネ川のモコロ」／記事表示日：2026-07-10\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/481cbfdb16ea2122c1544701fe4090a963135eeb.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/481cbfdb16ea2122c1544701fe4090a963135eeb.jpg"
+      ],
+      "images": {
+        "1": "images/bw_09.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】水面の葉や花を観察する授業です。正確な観察メモは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "形、色、水面との位置を記し、種類名は未確認とする",
+      "choices": [
+        "見たことのある花の名前を確定して書く",
+        "花が一つ見えれば一年中咲くとする",
+        "葉の数から川全体の植物数を決める"
+      ],
+      "notes": "【解説】観察できる特徴と分類の確認を分けることで、次に調べる問いが明確になります。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／谷村／「暮らしのそばにある伝統舟ータマラカネ川のモコロ」／記事表示日：2026-07-10\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/24663d07526fa5af83445b54b65084278dbca3b9.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/24663d07526fa5af83445b54b65084278dbca3b9.jpg"
+      ],
+      "images": {
+        "1": "images/bw_10.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "bw",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ボツワナ】舟から見える植物を調べる資料カードを作ります。再確認しやすくする情報は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "元写真、出典、撮影場所や時期の分かる範囲",
+      "choices": [
+        "自分の予想だけを残した名前",
+        "写真を切り抜いた後の番号だけ",
+        "参考にした記事名を消した感想"
+      ],
+      "notes": "【解説】調べた過程をたどれる記録にします。場所や時期が不明な場合は、不明のまま区別して書きます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／谷村／「暮らしのそばにある伝統舟ータマラカネ川のモコロ」／記事表示日：2026-07-10\nhttps://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php\n【原画像】https://world-diary.jica.go.jp/JICA_Botswana/24663d07526fa5af83445b54b65084278dbca3b9.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Botswana/life/content_5.php",
+        "https://world-diary.jica.go.jp/JICA_Botswana/24663d07526fa5af83445b54b65084278dbca3b9.jpg"
+      ],
+      "images": {
+        "1": "images/bw_10.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ラオス】市場の野菜や果物を、日本の売り場と比べる観察表です。適切な項目は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "品物の分け方、置き方、値段の示し方",
+      "choices": [
+        "国の豊かさを写真一枚で順位にする欄",
+        "全ての野菜の味を外見だけで決める欄",
+        "売り手の年齢を顔で確定する欄"
+      ],
+      "notes": "【解説】売り場の仕組みを同じ観点で比べます。値段や品種が読み取れない場合は未確認とします。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「08 ローカルお買い物スタイル」／記事表示日：2023-07-07\nhttps://world-diary.jica.go.jp/nagasawayumiko/08.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/a751cb2ea136b63f85a5202addd91f108743d458.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/08.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/a751cb2ea136b63f85a5202addd91f108743d458.jpg"
+      ],
+      "images": {
+        "1": "images/la_01.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ラオス】市場写真に写る品物の名前を交流相手に聞きます。確認の仕方は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "写真の位置を示し、現地での呼び名や使い方を聞く",
+      "choices": [
+        "自分の知る日本語名だけを正解にする",
+        "色が同じ品物は全て同じ名前とする",
+        "形が違えば食べられないと決める"
+      ],
+      "notes": "【解説】写真のどの品物かを共通に確かめてから、名前や用途を尋ねます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「08 ローカルお買い物スタイル」／記事表示日：2023-07-07\nhttps://world-diary.jica.go.jp/nagasawayumiko/08.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/a751cb2ea136b63f85a5202addd91f108743d458.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/08.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/a751cb2ea136b63f85a5202addd91f108743d458.jpg"
+      ],
+      "images": {
+        "1": "images/la_01.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ラオス】米の売り場に複数の容器があります。品種別の販売量を知るために必要なのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "容器ごとの品種名と一定期間の販売記録",
+      "choices": [
+        "容器の数だけ",
+        "写真を拡大した倍率だけ",
+        "山の高さを目で比べた順番だけ"
+      ],
+      "notes": "【解説】陳列されている量と、一定期間に売れた量は別です。品種と期間をそろえた記録が必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「08 ローカルお買い物スタイル」／記事表示日：2023-07-07\nhttps://world-diary.jica.go.jp/nagasawayumiko/08.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/264ba8b199240df6206347558d65988fb483153c.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/08.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/264ba8b199240df6206347558d65988fb483153c.jpg"
+      ],
+      "images": {
+        "1": "images/la_02.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ラオス】米の売り場を紹介する写真で、読み取れない値札がありました。教材での扱いは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "不鮮明な数字は補わず、記事などで確認する",
+      "choices": [
+        "近くの値札と同じ値段にする",
+        "数字に見える模様を価格として使う",
+        "日本の米の値段を現地価格として入れる"
+      ],
+      "notes": "【解説】読める情報と推測を混ぜません。値段の単位や時点も確認して扱います。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「08 ローカルお買い物スタイル」／記事表示日：2023-07-07\nhttps://world-diary.jica.go.jp/nagasawayumiko/08.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/264ba8b199240df6206347558d65988fb483153c.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/08.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/264ba8b199240df6206347558d65988fb483153c.jpg"
+      ],
+      "images": {
+        "1": "images/la_02.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ラオス】袋入りカットフルーツと丸ごとの果物を比較します。買う人の選び方を知る問いは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "食べる場所や量によって、どちらを選びますか",
+      "choices": [
+        "袋入りなら誰でも必ず同じ理由で買いますよね",
+        "丸ごとの果物を買う人はいませんよね",
+        "写真の果物以外は売っていませんよね"
+      ],
+      "notes": "【解説】商品の形と、利用する場面を結び付けて聞きます。便利さの感じ方を全員同じとは決めません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「08 ローカルお買い物スタイル」／記事表示日：2023-07-07\nhttps://world-diary.jica.go.jp/nagasawayumiko/08.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/596c2c931cde3be21a9ce889aa00d7625f6dba86.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/08.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/596c2c931cde3be21a9ce889aa00d7625f6dba86.jpg"
+      ],
+      "images": {
+        "1": "images/la_03.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ラオス】透明な袋の果物写真を、素材の資料として紹介します。外見だけでは分からないことは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "袋の正確な材質や厚さ",
+      "choices": [
+        "中身が外から見えること",
+        "袋の中に切った果物があること",
+        "持ち帰る場面として紹介されていること"
+      ],
+      "notes": "【解説】透明という観察から、素材の種類や強度までは特定できません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「08 ローカルお買い物スタイル」／記事表示日：2023-07-07\nhttps://world-diary.jica.go.jp/nagasawayumiko/08.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/596c2c931cde3be21a9ce889aa00d7625f6dba86.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/08.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/596c2c931cde3be21a9ce889aa00d7625f6dba86.jpg"
+      ],
+      "images": {
+        "1": "images/la_03.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ラオス】複数の具が並ぶナムワーンの注文を体験活動にします。全員が選べるようにする工夫は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "具に番号と写真を付け、指しても伝えられるようにする",
+      "choices": [
+        "具の名前を知っている人しか注文できなくする",
+        "同じ色の具は全て同じ番号にする",
+        "選択肢を見せずに一つだけ決める"
+      ],
+      "notes": "【解説】写真や番号を併用すると、言葉に不慣れな人も希望を伝えやすくなります。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「08 ローカルお買い物スタイル」／記事表示日：2023-07-07\nhttps://world-diary.jica.go.jp/nagasawayumiko/08.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/b5f3745d8669394641e23052a7092a55798ead63.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/08.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/b5f3745d8669394641e23052a7092a55798ead63.jpg"
+      ],
+      "images": {
+        "1": "images/la_05.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ラオス】【架空の注文】写真の売り場を参考に、具を３種類から２種類選びます。順番を区別しない組合せは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "３通り",
+      "choices": [
+        "２通り",
+        "６通り",
+        "９通り"
+      ],
+      "notes": "【解説】具をA・B・CとするとAB、AC、BCの３通りです。実際の売り場の品数や注文規則ではありません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「08 ローカルお買い物スタイル」／記事表示日：2023-07-07\nhttps://world-diary.jica.go.jp/nagasawayumiko/08.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/b5f3745d8669394641e23052a7092a55798ead63.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/08.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/b5f3745d8669394641e23052a7092a55798ead63.jpg"
+      ],
+      "images": {
+        "1": "images/la_05.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "place",
+      "type": "photoText4",
+      "prompt": "【ラオス】大学の建物と木の写真を、校内案内に使います。写真に足すと位置が分かりやすいのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "校内地図に撮影地点と向きを示す",
+      "choices": [
+        "写真の緑を濃くする",
+        "建物の名前を消す",
+        "別の大学の地図を説明なく置く"
+      ],
+      "notes": "【解説】写真と地図を対応させることで、見えている建物の位置関係を確かめやすくなります。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「04 ラオスの学校いろいろ」／記事表示日：2023-05-16\nhttps://world-diary.jica.go.jp/nagasawayumiko/post.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/BDD0DA7C-9F44-4DCA-9BF1-B7B22B88C031.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/post.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/BDD0DA7C-9F44-4DCA-9BF1-B7B22B88C031.jpg"
+      ],
+      "images": {
+        "1": "images/la_06.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ラオス】大学の写真から「静かな学習環境」と説明しました。確かめるべき追加情報は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "授業時間帯の音や、利用者の感じ方",
+      "choices": [
+        "樹木が写るという一点だけ",
+        "建物の窓の数だけ",
+        "写真の余白の大きさだけ"
+      ],
+      "notes": "【解説】静止画には音や時間の変化が記録されません。環境についての評価には別の観察も必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「04 ラオスの学校いろいろ」／記事表示日：2023-05-16\nhttps://world-diary.jica.go.jp/nagasawayumiko/post.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/BDD0DA7C-9F44-4DCA-9BF1-B7B22B88C031.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/post.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/BDD0DA7C-9F44-4DCA-9BF1-B7B22B88C031.jpg"
+      ],
+      "images": {
+        "1": "images/la_06.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ラオス】校庭の写真を日本の学校と比較します。似ている点と違う点をまとめる手順は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "写真で分かる施設を整理し、不明な用途は尋ねる",
+      "choices": [
+        "見たことのない施設は不要な物とする",
+        "同じ形なら全て同じ用途と決める",
+        "写らない施設は学校に存在しないとする"
+      ],
+      "notes": "【解説】写った範囲の観察と校内全体の情報を分けて比較します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「04 ラオスの学校いろいろ」／記事表示日：2023-05-16\nhttps://world-diary.jica.go.jp/nagasawayumiko/post.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/4EB4BDF5-05E3-47CD-8E8B-2EE692A7BB21.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/post.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/4EB4BDF5-05E3-47CD-8E8B-2EE692A7BB21.jpg"
+      ],
+      "images": {
+        "1": "images/la_07.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ラオス】校庭の使い方を知るため、休み時間の調査を考えます。偏りを減らす方法は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "複数の日や時間を観察し、利用者にも聞く",
+      "choices": [
+        "雨の日の一回だけを全ての代表とする",
+        "一人の好き嫌いだけで学校全体を決める",
+        "写真の中央だけを毎回見る"
+      ],
+      "notes": "【解説】利用は天候や時間などで変わり得ます。条件を記録し複数の場面を確かめます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「04 ラオスの学校いろいろ」／記事表示日：2023-05-16\nhttps://world-diary.jica.go.jp/nagasawayumiko/post.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/4EB4BDF5-05E3-47CD-8E8B-2EE692A7BB21.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/post.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/4EB4BDF5-05E3-47CD-8E8B-2EE692A7BB21.jpg"
+      ],
+      "images": {
+        "1": "images/la_07.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ラオス】長机を複数で使う教室を、グループ学習の題材にします。検討する問いは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "教材を共有し、話し合うときにどんな配置が使いやすいか",
+      "choices": [
+        "長机なら全員が必ず同じ意見になるか",
+        "机が長ければ教科の内容も全て同じか",
+        "写真だけで学力の順位が分かるか"
+      ],
+      "notes": "【解説】家具の配置から活動の工夫を考える問いです。実際の学習成果は写真だけでは判断できません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「04 ラオスの学校いろいろ」／記事表示日：2023-05-16\nhttps://world-diary.jica.go.jp/nagasawayumiko/post.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/719A92ED-728E-4778-9675-5EF340F4A659.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/post.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/719A92ED-728E-4778-9675-5EF340F4A659.jpg"
+      ],
+      "images": {
+        "1": "images/la_08.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ラオス】教室写真から一人分の机の幅を見積もりたいとき、何が必要ですか？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "机の実寸と、利用人数の確かな情報",
+      "choices": [
+        "児童の服の色だけ",
+        "黒板の明るさだけ",
+        "教室名の文字数だけ"
+      ],
+      "notes": "【解説】写真の遠近感や写る人数だけでは正確な幅を求められません。実測値を使って計算します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「04 ラオスの学校いろいろ」／記事表示日：2023-05-16\nhttps://world-diary.jica.go.jp/nagasawayumiko/post.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/719A92ED-728E-4778-9675-5EF340F4A659.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/post.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/719A92ED-728E-4778-9675-5EF340F4A659.jpg"
+      ],
+      "images": {
+        "1": "images/la_08.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ラオス】布の模様を交流授業で紹介します。自分の印象と事実を分けた文は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "私は華やかに感じた。模様の意味は担い手に確認したい",
+      "choices": [
+        "華やかなので全て祭り専用と分かる",
+        "同じ色があるので全て同じ作者と分かる",
+        "模様が細かいので必ず古い物と分かる"
+      ],
+      "notes": "【解説】感想は自分の感じ方として伝えられます。用途や作者、年代は別の根拠が必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／小池柚衣／「ラオスの民族衣装と織物を紹介します！」／記事表示日：2024-10-03\nhttps://world-diary.jica.go.jp/JICA_Lao/culture/post_2.php\n【原画像】https://world-diary.jica.go.jp/JICA_Lao/5c2f5c16705bc1c0dec7d5bd853737a898382e93.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Lao/culture/post_2.php",
+        "https://world-diary.jica.go.jp/JICA_Lao/5c2f5c16705bc1c0dec7d5bd853737a898382e93.jpg"
+      ],
+      "images": {
+        "1": "images/la_09.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ラオス】布を並べた写真から模様の共通点を探します。分類の基準にできるのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "線の向き、図形の繰り返し、色の組合せ",
+      "choices": [
+        "持ち主の性格を想像した順位",
+        "制作者の年収を推測した区分",
+        "国全体の優劣を決める点数"
+      ],
+      "notes": "【解説】目に見える特徴を同じ基準で分類します。分類結果から民族や由来を即断しません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／小池柚衣／「ラオスの民族衣装と織物を紹介します！」／記事表示日：2024-10-03\nhttps://world-diary.jica.go.jp/JICA_Lao/culture/post_2.php\n【原画像】https://world-diary.jica.go.jp/JICA_Lao/5c2f5c16705bc1c0dec7d5bd853737a898382e93.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Lao/culture/post_2.php",
+        "https://world-diary.jica.go.jp/JICA_Lao/5c2f5c16705bc1c0dec7d5bd853737a898382e93.jpg"
+      ],
+      "images": {
+        "1": "images/la_09.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ラオス】腰織の写真を使い、身体と道具の関係を学びます。観察する部分は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "糸が張る方向と、腰や足が道具を支える位置",
+      "choices": [
+        "完成品の値段だけ",
+        "撮影した端末の機種だけ",
+        "記事の文字数だけ"
+      ],
+      "notes": "【解説】姿勢と道具の配置を組み合わせて、技術の仕組みを考えます。正確な手順は実演や説明でも確認します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／小池柚衣／「ラオスの民族衣装と織物を紹介します！」／記事表示日：2024-10-03\nhttps://world-diary.jica.go.jp/JICA_Lao/culture/post_2.php\n【原画像】https://world-diary.jica.go.jp/JICA_Lao/5bc8f4da102f7abdb74127176b26bfbcedb91598.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Lao/culture/post_2.php",
+        "https://world-diary.jica.go.jp/JICA_Lao/5bc8f4da102f7abdb74127176b26bfbcedb91598.jpg"
+      ],
+      "images": {
+        "1": "images/la_14.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ラオス】織物体験の説明動画を作ります。作業を初めて見る人に必要な構成は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "全体の姿勢を示し、手元の動きを順に説明する",
+      "choices": [
+        "手元を隠して完成品だけを長く映す",
+        "全工程を逆順にして説明を省く",
+        "音楽だけで道具の名前を伝える"
+      ],
+      "notes": "【解説】全体と細部を行き来すると、道具の関係と動きを結び付けやすくなります。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／小池柚衣／「ラオスの民族衣装と織物を紹介します！」／記事表示日：2024-10-03\nhttps://world-diary.jica.go.jp/JICA_Lao/culture/post_2.php\n【原画像】https://world-diary.jica.go.jp/JICA_Lao/5bc8f4da102f7abdb74127176b26bfbcedb91598.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Lao/culture/post_2.php",
+        "https://world-diary.jica.go.jp/JICA_Lao/5bc8f4da102f7abdb74127176b26bfbcedb91598.jpg"
+      ],
+      "images": {
+        "1": "images/la_14.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "japanConnection",
+      "type": "photoText4",
+      "prompt": "【ラオス】学校交流で画面を一緒に見る写真です。字幕の効果を確かめる方法は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "見た児童に内容を説明してもらい、分かりにくい箇所を聞く",
+      "choices": [
+        "字幕の文字数だけを合計して成功とする",
+        "画面を見ていれば全員理解したとする",
+        "日本語字幕だけで両校の理解を判断する"
+      ],
+      "notes": "【解説】視聴した事実と理解したことは別です。双方の児童の理解や疑問を確かめます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「30 日本の小学校と交流」／記事表示日：2024-03-12\nhttps://world-diary.jica.go.jp/nagasawayumiko/cat2567/30.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/ea8370d3e2c6f7495695b3d290af569fa72e7447.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/cat2567/30.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/ea8370d3e2c6f7495695b3d290af569fa72e7447.jpg"
+      ],
+      "images": {
+        "1": "images/la_16.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "la",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ラオス】学校紹介の動画で、相手が知らない学校行事の名前が出ます。字幕に加える工夫は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "行事の目的や活動を短い説明や写真で補う",
+      "choices": [
+        "固有名詞を訳さず何度も繰り返す",
+        "意味が伝わらない部分を全て無関係な言葉にする",
+        "相手が質問しないよう説明を省く"
+      ],
+      "notes": "【解説】単語を別の言語にするだけでは背景が伝わらないことがあります。場面が分かる補足を加えます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／長澤由美子／「30 日本の小学校と交流」／記事表示日：2024-03-12\nhttps://world-diary.jica.go.jp/nagasawayumiko/cat2567/30.php\n【原画像】https://world-diary.jica.go.jp/nagasawayumiko/ea8370d3e2c6f7495695b3d290af569fa72e7447.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/nagasawayumiko/cat2567/30.php",
+        "https://world-diary.jica.go.jp/nagasawayumiko/ea8370d3e2c6f7495695b3d290af569fa72e7447.jpg"
+      ],
+      "images": {
+        "1": "images/la_16.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "place",
+      "type": "photoText4",
+      "prompt": "【ベトナム】夜市の入口写真を使って待ち合わせ案内を作ります。迷いを減らすため加える情報は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "入口の目印と、地図上の場所の対応",
+      "choices": [
+        "照明の好きな色だけ",
+        "写真の容量だけ",
+        "撮影者の出身校だけ"
+      ],
+      "notes": "【解説】写真の目印と位置情報を対応させます。実際の案内には現在の入口や場所の確認が必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯17 ダナン生活のご紹介②〜市場編〜」／記事表示日：2025-03-21\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/17.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/eb57735ceff591ad5d3d11582b9b0973d898e537.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/17.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/eb57735ceff591ad5d3d11582b9b0973d898e537.jpg"
+      ],
+      "images": {
+        "1": "images/vn_20.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ベトナム】夜市の入口の看板が明るく写っています。光の強さを別の夜市と正確に比べるには？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "撮影条件をそろえるか、明るさを測った記録を使う",
+      "choices": [
+        "明るく写った方を必ず光が強いとする",
+        "写真を拡大した方を明るいとする",
+        "看板の文字数で光の強さを決める"
+      ],
+      "notes": "【解説】写真の明るさはカメラの設定でも変わります。見え方と測定値を区別します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯17 ダナン生活のご紹介②〜市場編〜」／記事表示日：2025-03-21\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/17.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/eb57735ceff591ad5d3d11582b9b0973d898e537.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/17.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/eb57735ceff591ad5d3d11582b9b0973d898e537.jpg"
+      ],
+      "images": {
+        "1": "images/vn_20.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ベトナム】夜市の入口写真を見て、訪れる目的を調べます。多様な答えを聞ける質問は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "どんな目的で訪れ、どこを楽しみにしていますか",
+      "choices": [
+        "来場者は必ず買い物だけをしますよね",
+        "看板が明るいので全員観光客ですよね",
+        "入口を通る人は毎日同じ人ですよね"
+      ],
+      "notes": "【解説】来場の目的は写真だけでは分かりません。人による違いを答えられる問いにします。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯17 ダナン生活のご紹介②〜市場編〜」／記事表示日：2025-03-21\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/17.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/eb57735ceff591ad5d3d11582b9b0973d898e537.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/17.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/eb57735ceff591ad5d3d11582b9b0973d898e537.jpg"
+      ],
+      "images": {
+        "1": "images/vn_20.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ベトナム】夜市の案内板を、入口の写真を参考に作ります。読みやすさの評価は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "実際に使う大きさや距離で、必要な情報を探せるか試す",
+      "choices": [
+        "制作者の画面で拡大して読めるかだけを見る",
+        "色を増やした数だけで決める",
+        "文字を細かく詰めた方を優れているとする"
+      ],
+      "notes": "【解説】案内板は使う場面で読めることが大切です。遠くから見たときの情報の探しやすさを確かめます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯17 ダナン生活のご紹介②〜市場編〜」／記事表示日：2025-03-21\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/17.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/eb57735ceff591ad5d3d11582b9b0973d898e537.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/17.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/eb57735ceff591ad5d3d11582b9b0973d898e537.jpg"
+      ],
+      "images": {
+        "1": "images/vn_20.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "language",
+      "type": "photoText4",
+      "prompt": "【ベトナム】売り手と買い手が向き合う写真です。品物を指して数量を伝える場面を練習するなら？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "品物を確かめ、希望の数を言って相手の確認を待つ",
+      "choices": [
+        "数を言わず相手の意図を全て推測する",
+        "分からなくても確認を避ける",
+        "相手が何を言っても同じ返答だけをする"
+      ],
+      "notes": "【解説】写真を場面設定にした会話練習です。品物と数量を互いに確認する流れを作ります。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯17 ダナン生活のご紹介②〜市場編〜」／記事表示日：2025-03-21\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/17.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/912a05d897bb464423cb1c17ee72093b5a94a89b.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/17.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/912a05d897bb464423cb1c17ee72093b5a94a89b.jpg"
+      ],
+      "images": {
+        "1": "images/vn_21.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ベトナム】店先のやり取りを写真から説明します。「見える行動」に当たるのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "品物のそばで人が向き合っている",
+      "choices": [
+        "客が値段に不満を持っている",
+        "売り手が必ず売上目標を達成した",
+        "二人が以前から親しい友人である"
+      ],
+      "notes": "【解説】姿勢や配置は観察できます。感情、売上、関係性は別に確かめる情報です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯17 ダナン生活のご紹介②〜市場編〜」／記事表示日：2025-03-21\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/17.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/912a05d897bb464423cb1c17ee72093b5a94a89b.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/17.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/912a05d897bb464423cb1c17ee72093b5a94a89b.jpg"
+      ],
+      "images": {
+        "1": "images/vn_21.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ベトナム】市場の店を紹介する授業で、接客の工夫を調べます。売り手に聞く問いは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "初めて来た客に、品物の特徴をどう伝えていますか",
+      "choices": [
+        "客は全員同じ言語を話しますよね",
+        "商品の色だけで全て伝わりますよね",
+        "写真の店だけが国内唯一の店ですよね"
+      ],
+      "notes": "【解説】対面販売の写真を入口に、説明の方法や工夫を具体的に聞きます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯17 ダナン生活のご紹介②〜市場編〜」／記事表示日：2025-03-21\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/17.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/912a05d897bb464423cb1c17ee72093b5a94a89b.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/17.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/912a05d897bb464423cb1c17ee72093b5a94a89b.jpg"
+      ],
+      "images": {
+        "1": "images/vn_21.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ベトナム】市場写真を説明する二つの原稿で、会話の内容が違いました。対応は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "記事に書かれた内容と筆者の想像を分けて確かめる",
+      "choices": [
+        "長い原稿の方を無条件で事実とする",
+        "自分の好みに合う話を会話の記録とする",
+        "写真の色が濃い方の説明を正しいとする"
+      ],
+      "notes": "【解説】同じ写真にも複数の解釈が生まれます。会話の根拠となる記録の有無を調べます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯17 ダナン生活のご紹介②〜市場編〜」／記事表示日：2025-03-21\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/17.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/912a05d897bb464423cb1c17ee72093b5a94a89b.jpg\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/17.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/912a05d897bb464423cb1c17ee72093b5a94a89b.jpg"
+      ],
+      "images": {
+        "1": "images/vn_21.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ベトナム】ブンチャーの卓上写真から、料理紹介の順番を考えます。分かりやすい構成は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "全体の料理を示してから、写る各皿の説明をする",
+      "choices": [
+        "細部の名前を根拠なく先に並べる",
+        "写らない料理だけを説明する",
+        "食べたことのない味を自分の体験として話す"
+      ],
+      "notes": "【解説】全体像と部分を対応させると聞き手が追いやすくなります。材料や食べ方は記事で確認します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯6 ベトナム料理」／記事表示日：2024-09-20\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/6.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/8e448b94571bab4c28f62a29f4331936f8a76a56.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/6.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/8e448b94571bab4c28f62a29f4331936f8a76a56.JPG"
+      ],
+      "images": {
+        "1": "images/vn_26.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ベトナム】料理写真の葉物野菜を、別の写真の野菜と比較します。大きさを比べる条件は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "同じ尺度となる物や実測値を添える",
+      "choices": [
+        "画像の縦幅だけを同じにする",
+        "片方だけ大きく切り抜く",
+        "明るい写真の方を大きいとする"
+      ],
+      "notes": "【解説】写真内の見える大きさは距離や拡大率で変わります。実物の比較には尺度が必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯6 ベトナム料理」／記事表示日：2024-09-20\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/6.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/8e448b94571bab4c28f62a29f4331936f8a76a56.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/6.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/8e448b94571bab4c28f62a29f4331936f8a76a56.JPG"
+      ],
+      "images": {
+        "1": "images/vn_26.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ベトナム】ブンチャーの紹介を読んで、地域による食の違いを調べます。次の資料は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "地域や店が分かる複数の料理記録",
+      "choices": [
+        "この写真を別の色にした画像",
+        "料理名の日本語の文字数だけ",
+        "国旗の色を並べた表だけ"
+      ],
+      "notes": "【解説】地域差を調べるには、場所を特定した複数の事例が必要です。一食を全国の標準としません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯6 ベトナム料理」／記事表示日：2024-09-20\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/6.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/8e448b94571bab4c28f62a29f4331936f8a76a56.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/6.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/8e448b94571bab4c28f62a29f4331936f8a76a56.JPG"
+      ],
+      "images": {
+        "1": "images/vn_26.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ベトナム】料理写真を見て「残さず食べた」と説明しました。確かめるための資料は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "食後の記録や食べた人の説明",
+      "choices": [
+        "食前の皿の白さだけ",
+        "料理名の長さだけ",
+        "葉物野菜があることだけ"
+      ],
+      "notes": "【解説】食事が置かれた状態と食後の結果は別です。写真が示す時間の範囲を意識します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／林（ベトナム便り）／「♯6 ベトナム料理」／記事表示日：2024-09-20\nhttps://world-diary.jica.go.jp/JICA_Vietnam/life/6.php\n【原画像】https://world-diary.jica.go.jp/JICA_Vietnam/8e448b94571bab4c28f62a29f4331936f8a76a56.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/JICA_Vietnam/life/6.php",
+        "https://world-diary.jica.go.jp/JICA_Vietnam/8e448b94571bab4c28f62a29f4331936f8a76a56.JPG"
+      ],
+      "images": {
+        "1": "images/vn_26.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "place",
+      "type": "photoText4",
+      "prompt": "【ベトナム】舟が集まる水上市場の写真を、地域の流通の資料にします。調べる流れは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "商品を生産する場所から市場、買い手まで",
+      "choices": [
+        "舟の色を明るい順に並べた流れ",
+        "写真を保存した順番だけ",
+        "国名の読みやすさの順位だけ"
+      ],
+      "notes": "【解説】市場を物の移動の結節点として捉える問いです。写真にない経路は聞き取りや地図で確かめます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／河野文也／「カントーて何があるの？」／記事表示日：2018-08-27\nhttps://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php\n【原画像】https://world-diary.jica.go.jp/kawanofumiya/IMG_3095.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php",
+        "https://world-diary.jica.go.jp/kawanofumiya/IMG_3095.JPG"
+      ],
+      "images": {
+        "1": "images/vn_28.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ベトナム】水上市場の一枚から、全ての舟の積み荷の種類を一覧にできますか？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "見えない荷物があるため、別の記録も必要",
+      "choices": [
+        "舟が同じ水面にあれば全て同じ荷物と分かる",
+        "船体の大きさだけで全商品名が分かる",
+        "水の色を見れば積み荷の種類が分かる"
+      ],
+      "notes": "【解説】写る範囲と見えない部分を区別します。積み荷全体には売り手の説明などが必要です。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／河野文也／「カントーて何があるの？」／記事表示日：2018-08-27\nhttps://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php\n【原画像】https://world-diary.jica.go.jp/kawanofumiya/IMG_3095.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php",
+        "https://world-diary.jica.go.jp/kawanofumiya/IMG_3095.JPG"
+      ],
+      "images": {
+        "1": "images/vn_28.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ベトナム】水上市場と日本の移動販売を比べます。共通して考えられる役割は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "売る人や商品が移動し、買い手と出会うこと",
+      "choices": [
+        "どちらも全て同じ乗り物を使うこと",
+        "価格や品ぞろえが全て一致すること",
+        "どちらも固定した建物しか使わないこと"
+      ],
+      "notes": "【解説】乗り物が違っても、売買と移動の関係という観点で比較できます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／河野文也／「カントーて何があるの？」／記事表示日：2018-08-27\nhttps://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php\n【原画像】https://world-diary.jica.go.jp/kawanofumiya/IMG_3095.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php",
+        "https://world-diary.jica.go.jp/kawanofumiya/IMG_3095.JPG"
+      ],
+      "images": {
+        "1": "images/vn_28.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ベトナム】水上市場の舟の数を、別の日の写真と比べたいと思いました。先に確認するのは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "撮影範囲、時刻、写り方が比較できるか",
+      "choices": [
+        "写真のファイル名が同じ長さか",
+        "撮影者の趣味が同じか",
+        "水の青さが自分の好みか"
+      ],
+      "notes": "【解説】数の違いは撮影範囲や時刻でも生じます。市場全体の増減を一枚の差だけで決めません。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／河野文也／「カントーて何があるの？」／記事表示日：2018-08-27\nhttps://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php\n【原画像】https://world-diary.jica.go.jp/kawanofumiya/IMG_3095.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php",
+        "https://world-diary.jica.go.jp/kawanofumiya/IMG_3095.JPG"
+      ],
+      "images": {
+        "1": "images/vn_28.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "language",
+      "type": "photoText4",
+      "prompt": "【ベトナム】商品をつるす棒の写真を使い、言葉以外の伝達を考えます。手がかりは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "実物を見せて扱う品物を知らせること",
+      "choices": [
+        "全ての価格を同じ数字にすること",
+        "商品を水中に隠すこと",
+        "舟の名前を必ず同じにすること"
+      ],
+      "notes": "【解説】文字だけでなく、見える物も情報を伝えます。写真の記事では商品を示す目印として紹介されています。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／河野文也／「カントーて何があるの？」／記事表示日：2018-08-27\nhttps://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php\n【原画像】https://world-diary.jica.go.jp/kawanofumiya/IMG_1973.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php",
+        "https://world-diary.jica.go.jp/kawanofumiya/IMG_1973.JPG"
+      ],
+      "images": {
+        "1": "images/vn_29.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ベトナム】舟の目印を参考に、学校の販売会の表示を作ります。選ぶときの基準は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "離れた客にも商品と表示の対応が分かるか",
+      "choices": [
+        "制作者にだけ分かる暗号か",
+        "商品と無関係な物を付けたか",
+        "表示を見えにくい所に隠せるか"
+      ],
+      "notes": "【解説】事例の形をそのまままねるのでなく、相手に何が伝わるかという機能を応用します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／河野文也／「カントーて何があるの？」／記事表示日：2018-08-27\nhttps://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php\n【原画像】https://world-diary.jica.go.jp/kawanofumiya/IMG_1973.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php",
+        "https://world-diary.jica.go.jp/kawanofumiya/IMG_1973.JPG"
+      ],
+      "images": {
+        "1": "images/vn_29.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "lifeCulture",
+      "type": "photoText4",
+      "prompt": "【ベトナム】棒につるす商品が、日によって変わるか調べます。必要な記録は？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "同じ売り手の目印と品ぞろえを日付付きで確認する",
+      "choices": [
+        "一枚の写真を複数回印刷する",
+        "別の舟を同じ舟として数える",
+        "日付を消して並べる"
+      ],
+      "notes": "【解説】時間による変化を調べるには、対象の対応と日付を記録します。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／河野文也／「カントーて何があるの？」／記事表示日：2018-08-27\nhttps://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php\n【原画像】https://world-diary.jica.go.jp/kawanofumiya/IMG_1973.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php",
+        "https://world-diary.jica.go.jp/kawanofumiya/IMG_1973.JPG"
+      ],
+      "images": {
+        "1": "images/vn_29.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    },
+    {
+      "countryIso": "vn",
+      "domain": "thinkConnect",
+      "type": "photoText4",
+      "prompt": "【ベトナム】商品をつるす目印の写真を展示します。観察から探究へ進む問いは？\n\n一つ選び、写真の手がかりと、記事で確かめる情報を分けて話しましょう。",
+      "answer": "買い手はどの距離や角度から目印を見つけられるか",
+      "choices": [
+        "写真の文字数は自分の名前より多いか",
+        "記事の余白は何色が好みか",
+        "ファイル名は覚えやすいかだけ"
+      ],
+      "notes": "【解説】目印の働きを、相手の見え方や場所との関係から確かめる問いに広げます。\n【資料の読み方】写真で見える特徴と、記事の背景説明や自分の推測を分けます。応用・計算の問いは、実際の調査結果や現地の利用案内ではありません。\n【対話】選択した理由、別の見方、追加で知りたいことを話しましょう。\n【出典・写真】JICA海外協力隊の世界日記／河野文也／「カントーて何があるの？」／記事表示日：2018-08-27\nhttps://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php\n【原画像】https://world-diary.jica.go.jp/kawanofumiya/IMG_1973.JPG\n【範囲】記事の場所・時点の一例です。国全体や全住民の習慣と断定しません。\n【制作】記事掲載の実写１枚＋文章４択。写真の再利用はありますが、過去セットの問題はこの100問に数えていません。\n【公開状態】登録準備用。写真利用条件の最終確認は未了です。\n資料確認：2026年11月14日。",
+      "sources": [
+        "https://world-diary.jica.go.jp/kawanofumiya/culture/post_1.php",
+        "https://world-diary.jica.go.jp/kawanofumiya/IMG_1973.JPG"
+      ],
+      "images": {
+        "1": "images/vn_29.jpg"
+      },
+      "learning": {
+        "levels": [
+          "elementary",
+          "juniorHigh",
+          "highSchoolStandard"
+        ]
+      }
+    }
+  ]
+}

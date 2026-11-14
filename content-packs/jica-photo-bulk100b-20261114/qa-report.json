@@ -1,0 +1,20 @@
+{
+  "questions": 100,
+  "uniquePrompts": 100,
+  "fourDistinctChoicesEach": true,
+  "oneActualPhotoEach": true,
+  "decodedPhotos": 44,
+  "verifiedPhotoHashes": 44,
+  "zipCRC": "passed",
+  "creatorSchemaQuestionsValidated": 100,
+  "exactPromptDuplicatesAgainstSetA": 0,
+  "countryCounts": {
+    "bt": 20,
+    "bo": 20,
+    "bw": 20,
+    "la": 20,
+    "vn": 20
+  },
+  "registered": 0,
+  "published": 0
+}

@@ -11,7 +11,7 @@ function videoEmbedValid(video){return !!video&&/^[A-Za-z0-9_-]{11}$/.test(Strin
   Number.isInteger(Number(video.startSeconds||0))&&Number(video.startSeconds||0)>=0&&
   (!Number(video.endSeconds||0)||Number(video.endSeconds)>Number(video.startSeconds||0));}
 export function toPublishedMission(q){
-  if(!q||!/^[a-z]{2}$/.test(String(q.countryIso||''))||!['place','time','language','lifeCulture','japanConnection','thinkConnect'].includes(q.domain)||!['photo4','photoText4','text4','video4','videoReflect'].includes(q.type)||
+  if(!q||!/^[a-z]{2}$/.test(String(q.countryIso||''))||!['place','time','language','lifeCulture','japanConnection','thinkConnect'].includes(q.domain)||!['photo4','photoText4','text4','video4','videoReflect','photo1','free'].includes(q.type)||
      !/^[a-f0-9-]{36}$/i.test(String(q.id||''))||!String(q.prompt||'').trim())return null;
   const common={id:String(q.countryIso||'rw').toLowerCase()+'-mc-'+q.id,domain:q.domain,
     title:String(q.prompt).trim().split(/[\n。！？?]/)[0].slice(0,50),prompt:String(q.prompt).trim(),
@@ -20,6 +20,11 @@ export function toPublishedMission(q){
     explanation:String(q.explanation||'').slice(0,3500),sourceUrls:Array.isArray(q.sources)?q.sources:[]};
   if(['video4','videoReflect'].includes(q.type)&&!videoEmbedValid(q.video))return null;
   if(q.type==='videoReflect')return {...common,type:'creator-video-reflection',reflection:q.video};
+  if(['photo1','free'].includes(q.type)){
+    if(q.type==='photo1'&&!q.media?.some(m=>m.slot===1))return null;
+    return {...common,type:'creator-reflection',referenceAnswer:String(q.answer||'').slice(0,1500),
+      materials:q.type==='photo1'?[{id:'mc-media-'+q.id,type:'image',url:imageUrl(q.id,1,q.r2MediaBase),alt:'問題の資料となる写真'}]:[]};
+  }
   let choices,correctIndex;
   if(q.type==='photo4'){
     const match=String(q.answer||'').match(/写真スロット\s*([1-4])/i);

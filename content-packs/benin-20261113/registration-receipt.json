@@ -1,0 +1,56 @@
+{
+  "dateJst": "2026-11-13",
+  "countryIso": "bj",
+  "mode": "draft-only",
+  "batches": [
+    {
+      "file": "Benin_01.zip",
+      "success": 5,
+      "duplicateSkipped": 0,
+      "failed": 0
+    },
+    {
+      "file": "Benin_02.zip",
+      "success": 5,
+      "duplicateSkipped": 0,
+      "failed": 0
+    },
+    {
+      "file": "Benin_03.zip",
+      "success": 5,
+      "duplicateSkipped": 0,
+      "failed": 0
+    },
+    {
+      "file": "Benin_04.zip",
+      "success": 5,
+      "duplicateSkipped": 0,
+      "failed": 0
+    },
+    {
+      "file": "Benin_05.zip",
+      "success": 5,
+      "duplicateSkipped": 0,
+      "failed": 0
+    },
+    {
+      "file": "Benin_06.zip",
+      "success": 4,
+      "duplicateSkipped": 0,
+      "failed": 0
+    }
+  ],
+  "total": {
+    "success": 29,
+    "duplicateSkipped": 0,
+    "failed": 0
+  },
+  "finalBank": {
+    "draft": 52,
+    "approved": 16,
+    "published": 1139,
+    "needs_revision": 2,
+    "deleted": 13
+  },
+  "evidence": "Creator UI result headings for all six batches; final Mission Bank status buttons"
+}

@@ -18,7 +18,9 @@ test('admin can plan draft-only approvals; non-admin and unsupported states are 
 test('published scope is inferred from each question, without a ten-question publication ceiling', () => {
   assert.equal(eligibleForBulk(approved('a'),'publish'),true);
   assert.equal(eligibleForBulk({...approved('a'),countryIso:'jp',domain:'language'},'publish'),true);
-  assert.equal(eligibleForBulk({...approved('a'),type:'free'},'publish'),false);
+  assert.equal(eligibleForBulk({...approved('a'),type:'free'},'publish'),true);
+  assert.equal(eligibleForBulk({...approved('a'),type:'photo1'},'publish'),true);
+  assert.equal(eligibleForBulk({...approved('a'),type:'web'},'publish'),false);
   assert.throws(()=>createBulkPlan('publish',['a'],[draft('a')],'admin'),/状態/);
   assert.equal(createBulkPlan('publish',['a'],[approved('a'),...Array.from({length:10},(_,i)=>published('p'+i))],'admin').items.length,1);
   const jp={...approved('j'),countryIso:'jp',domain:'language'};

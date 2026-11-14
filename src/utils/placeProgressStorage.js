@@ -1,3 +1,4 @@
+import {learningStorage} from './classroomSession.js';
 const STORAGE_PREFIX = 'timepalette-place-progress-v1';
 
 
@@ -48,7 +49,7 @@ export function getPlaceProgress(
   if (
     typeof window ===
       'undefined' ||
-    !window.localStorage
+    !learningStorage()
   ) {
     return fallback;
   }
@@ -56,7 +57,7 @@ export function getPlaceProgress(
 
   try {
     const raw =
-      window.localStorage.getItem(
+      learningStorage().getItem(
         makeStorageKey(
           countryCode
         )
@@ -176,10 +177,10 @@ export function completePlaceMission(
   if (
     typeof window !==
       'undefined' &&
-    window.localStorage
+    learningStorage()
   ) {
     try {
-      window.localStorage.setItem(
+      learningStorage().setItem(
         makeStorageKey(
           countryCode
         ),
@@ -208,10 +209,10 @@ export function resetPlaceProgress(
   if (
     typeof window !==
       'undefined' &&
-    window.localStorage
+    learningStorage()
   ) {
     try {
-      window.localStorage.removeItem(
+      learningStorage().removeItem(
         makeStorageKey(
           countryCode
         )

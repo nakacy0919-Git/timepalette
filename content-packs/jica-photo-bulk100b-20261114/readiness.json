@@ -1,0 +1,23 @@
+{
+  "newQuestions": 100,
+  "countries": {
+    "bt": 20,
+    "bo": 20,
+    "bw": 20,
+    "la": 20,
+    "vn": 20
+  },
+  "domains": {
+    "thinkConnect": 53,
+    "lifeCulture": 32,
+    "place": 8,
+    "japanConnection": 5,
+    "language": 2
+  },
+  "distinctActualPhotos": 44,
+  "importCompatibilityBatches": 20,
+  "registered": 0,
+  "published": 0,
+  "status": "prepared-awaiting-Creator-import",
+  "archiveBytes": 70949076
+}

@@ -1,3 +1,4 @@
+import {learningStorage} from './classroomSession.js';
 const STORAGE_KEY = 'timepalette_world_learning_v1';
 
 const createEmptyProgress = () => ({
@@ -7,7 +8,7 @@ const createEmptyProgress = () => ({
 
 const canUseStorage = () =>
   typeof window !== 'undefined' &&
-  typeof window.localStorage !== 'undefined';
+  typeof learningStorage() !== 'undefined';
 
 export const getWorldProgress = () => {
   if (!canUseStorage()) {
@@ -15,7 +16,7 @@ export const getWorldProgress = () => {
   }
 
   try {
-    const raw = window.localStorage.getItem(
+    const raw = learningStorage().getItem(
       STORAGE_KEY
     );
 
@@ -45,7 +46,7 @@ const saveWorldProgress = (progress) => {
   }
 
   try {
-    window.localStorage.setItem(
+    learningStorage().setItem(
       STORAGE_KEY,
       JSON.stringify(progress)
     );

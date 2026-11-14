@@ -1,3 +1,4 @@
+import {learningStorage} from './classroomSession.js';
 const STORAGE_KEY = 'timepalette_world_adventure_v1';
 
 const createEmptyProgress = () => ({
@@ -7,13 +8,13 @@ const createEmptyProgress = () => ({
 
 const canUseStorage = () =>
   typeof window !== 'undefined' &&
-  typeof window.localStorage !== 'undefined';
+  typeof learningStorage() !== 'undefined';
 
 export const getWorldAdventureProgress = () => {
   if (!canUseStorage()) return createEmptyProgress();
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = learningStorage().getItem(STORAGE_KEY);
     if (!raw) return createEmptyProgress();
 
     const parsed = JSON.parse(raw);
@@ -31,7 +32,7 @@ const saveProgress = (progress) => {
   if (!canUseStorage()) return false;
 
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    learningStorage().setItem(STORAGE_KEY, JSON.stringify(progress));
     return true;
   } catch (error) {
     console.warn('World Adventure progress could not be saved:', error);

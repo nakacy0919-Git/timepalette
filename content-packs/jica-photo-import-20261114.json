@@ -1,0 +1,29 @@
+{
+  "status": "registered-as-unpublished-drafts",
+  "registeredQuestions": 200,
+  "sets": [
+    "jica-photo-bulk100-20261114",
+    "jica-photo-bulk100b-20261114"
+  ],
+  "questionsPerSet": 100,
+  "countries": {
+    "bt": 40,
+    "bo": 40,
+    "bw": 40,
+    "la": 40,
+    "vn": 40
+  },
+  "verifiedImportBatches": 40,
+  "successes": 200,
+  "duplicateSkips": 0,
+  "failures": 0,
+  "draftsBefore": 62,
+  "draftsAfterReload": 262,
+  "publishedBefore": 1139,
+  "publishedAfter": 1139,
+  "approvedBefore": 16,
+  "approvedAfter": 16,
+  "sourcePhotoPublicationRights": "pending-review-before-publication",
+  "verification": "Creator UI: all forty five-question imports succeeded; refreshed bank shows 262 drafts; sample photo decoded at 1200x1600.",
+  "supersedes": "Prepared-only registration counts in the two source packs describe their creation-time state; this receipt records the completed import."
+}
