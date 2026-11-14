@@ -1,0 +1,12 @@
+{
+  "dateJst": "2026-11-14",
+  "countryIso": "bw",
+  "prepared": 10,
+  "registered": 0,
+  "published": 0,
+  "status": "prepared-awaiting-Creator-import",
+  "categories": {"lifeCulture": 5, "japanConnection": 2, "thinkConnect": 3},
+  "format": "photoText4",
+  "distinctPhotographs": 10,
+  "batches": ["Botswana_JICA_Photo_01.zip", "Botswana_JICA_Photo_02.zip"]
+}
