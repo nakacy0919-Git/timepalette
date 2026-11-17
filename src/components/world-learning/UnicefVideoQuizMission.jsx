@@ -10,7 +10,8 @@ export default function UnicefVideoQuizMission({mission, alreadyCompleted, onClo
   const [confirmed, setConfirmed] = useState(false);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [choice, setChoice] = useState(null);
-  const [finished, setFinished] = useState(false);
+  const [recorded, setRecorded] = useState(alreadyCompleted);
+  const [newlyCompleted, setNewlyCompleted] = useState(false);
   const closeButton = useRef(null);
 
   const questions = useMemo(() => mission.questions.map(q => {
@@ -37,9 +38,10 @@ export default function UnicefVideoQuizMission({mission, alreadyCompleted, onClo
   const handleNext = () => {
     if (!correct) return;
     if (questionIndex === questions.length - 1) {
-      if (!finished) {
-        setFinished(true);
-        if (!alreadyCompleted) onComplete(mission);
+      if (!recorded) {
+        setRecorded(true);
+        setNewlyCompleted(true);
+        onComplete(mission);
       }
       setStep('complete');
       return;
@@ -53,7 +55,6 @@ export default function UnicefVideoQuizMission({mission, alreadyCompleted, onClo
     setConfirmed(false);
     setQuestionIndex(0);
     setChoice(null);
-    setFinished(false);
   };
 
   return createPortal(
@@ -129,7 +130,7 @@ export default function UnicefVideoQuizMission({mission, alreadyCompleted, onClo
         {step === 'complete' && <div className="space-y-5 p-6 text-center sm:p-9" role="status">
           <CheckCircle2 className="mx-auto text-emerald-600" size={64}/>
           <h3 className="text-2xl font-black text-emerald-800">VIDEO MISSION CLEAR!</h3>
-          <p className="text-slate-800">全{questions.length}問正解しました。{alreadyCompleted ? '復習完了です。' : '学習記録にクリアを保存しました。'}</p>
+          <p className="text-slate-800">全{questions.length}問正解しました。{newlyCompleted ? '学習記録にクリアを保存しました。' : '復習完了です。'}</p>
           <div className="flex flex-wrap justify-center gap-3">
             <button type="button" onClick={restart} className="rounded-xl border-2 border-slate-300 px-5 py-3 font-bold text-slate-800">もう一度学ぶ</button>
             <button type="button" onClick={onClose} className="rounded-xl bg-blue-700 px-5 py-3 font-bold text-white">一覧へ戻る</button>
