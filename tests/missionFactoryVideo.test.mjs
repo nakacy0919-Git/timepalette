@@ -10,21 +10,21 @@ const sample = () => ({version:FACTORY_VERSION,questions:[{
   answer:'水をくみに行く',choices:['魚を捕る','登山する','畑を耕す'],
   notes:'UNICEF公式の動画。視聴して内容を確認する。',
   sources:['https://www.unicef.or.jp/kodomo/'],
-  video:{youtubeUrl:'https://www.youtube.com/watch?v=PP0IvKmLfRY',startSeconds:0,endSeconds:0},
+  video:{youtubeUrl:'https://www.youtube.com/watch?v=7PiPkZzpLO8',startSeconds:0,endSeconds:0},
   learning:{levels:['elementary','juniorHigh','highSchoolStandard']}
 }]});
 
 test('video4 is validated and stays a non-published Mission Creator draft',()=>{
   const [item]=validateFactoryManifest(sample());
   assert.equal(item.question.type,'video4');
-  assert.equal(item.question.video.youtubeId,'PP0IvKmLfRY');
+  assert.equal(item.question.video.youtubeId,'7PiPkZzpLO8');
   assert.equal(item.question.video.startSeconds,0);
   assert.deepEqual(item.images,[]);
   assert.equal(item.question.status,undefined);
   assert.equal(item.question.id,undefined);
 });
 test('video4 rejects arbitrary hosts, malformed IDs, and invalid time ranges',()=>{
-  for(const url of ['https://fake-youtube.com/watch?v=PP0IvKmLfRY','javascript:alert(1)','https://www.youtube.com/watch?v=not-valid']){
+  for(const url of ['https://fake-youtube.com/watch?v=7PiPkZzpLO8','javascript:alert(1)','https://www.youtube.com/watch?v=not-valid']){
     const a=sample(); a.questions[0].video.youtubeUrl=url;
     assert.throws(()=>validateFactoryManifest(a),/YouTube URL/);
   }
@@ -45,5 +45,5 @@ test('video4 JSON-only ZIP is parsed without image assets',async()=>{
   data.name='unicef-video.zip';data.size=data.byteLength;
   const result=await readMissionFactoryZip(data);
   assert.equal(result.items.length,1);
-  assert.equal(result.items[0].question.video.youtubeId,'PP0IvKmLfRY');
+  assert.equal(result.items[0].question.video.youtubeId,'7PiPkZzpLO8');
 });
