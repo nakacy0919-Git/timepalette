@@ -22,6 +22,6 @@ The existing Mission Creator `video4` format currently contains **one four-choic
 
 Example: "13歳のアイシャの1日～水を得るために～" (Japan Committee for UNICEF).
 - Official video gallery: https://www.unicef.or.jp/children/station.html
-- Official YouTube video: https://www.youtube.com/watch?v=PP0IvKmLfRY
+- Official YouTube video: https://www.youtube.com/watch?v=7PiPkZzpLO8
 
 Before publishing, confirm that the video and subtitles are still available, that the video permits embedding, and that quiz wording is faithful to the footage.
