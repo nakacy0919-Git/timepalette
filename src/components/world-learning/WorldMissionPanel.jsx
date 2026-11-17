@@ -16,6 +16,8 @@ import LanguageAdventureLauncher from './LanguageAdventureLauncher';
 import { getWorldAdventureDomainProgress } from '../../utils/worldAdventureProgress';
 import {getAvailableExchangeLanguages,getExchangeLanguageMissionCount} from '../../utils/multilingualExchange.js';
 import MissionPlayer from './MissionPlayer';
+import UnicefVideoQuizMission from './UnicefVideoQuizMission.jsx';
+import {getUnicefVideoMissions} from '../../data/unicefVideoMissions.js';
 
 const levels=[['elementary','小学生'],['juniorHigh','中学生'],['highSchoolStandard','高校生'],['highSchoolAdvanced','Challenge']];
 const categoryDesign=[{Icon:Globe,tone:'#def5fc',ink:'#216c85',hint:'地図をひらいて、世界を探検！'},{Icon:Clock,tone:'#eee6ff',ink:'#685196',hint:'世界の「いま」をのぞいてみよう'},{Icon:MessagesSquare,tone:'#ffe7ee',ink:'#95485f',hint:'ことばでつながる、世界の仲間'},{Icon:House,tone:'#e0f5e9',ink:'#2e7256',hint:'暮らしの中の発見を集めよう'},{Icon:Handshake,tone:'#fff0ce',ink:'#875b20',hint:'日本と世界、つながりを探そう'},{Icon:Scale,tone:'#e3edff',ink:'#46659b',hint:'比べて考える、新しい見方'}];
@@ -29,6 +31,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
   const [domain,setDomain]=useState(null);
   const [adventure,setAdventure]=useState(null);
   const [active,setActive]=useState(null);
+  const [activeVideo,setActiveVideo]=useState(null);
   const [pendingStart,setPendingStart]=useState(null);
   const [catalog,setCatalog]=useState([]);
   const [loading,setLoading]=useState(true);
@@ -50,6 +53,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
   const meta=MISSION_DOMAINS.find(d=>d.id===domain);
   const levelCatalog=catalog.filter(m=>m.domain!=='time'||!getTimePackage(countryCode)).map(m=>forCreatorLearningLevel(m,level)).filter(Boolean);
   const missions=levelCatalog.filter(m=>m.domain===domain);
+  const curatedVideos=domain?getUnicefVideoMissions(countryCode,domain):[];
   // Start once after the chosen category's published catalog is ready.
   // Clearing the request lets learners close the player and use the list normally.
   useEffect(()=>{
@@ -72,12 +76,14 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     : ((id==='place'&&(geo||countryCode==='rw'))||(id==='time'&&getTimePackage(countryCode)))?10:0;
   const pick=id=>{
     setActive(null);
+    setActiveVideo(null);
     setPendingStart(null);
     if(id==='place'&&adventureCount(id)>0){setDomain(null);setAdventure('place');return;}
     if(id==='time'&&adventureCount(id)>0){setDomain(null);setAdventure('time');return;}
     if(id==='language'&&adventureCount(id)>0){setDomain(null);setAdventure('language');return;}
     setDomain(id);
-    setPendingStart(id);
+    // Show video choices before launching a published mission.
+    if(!getUnicefVideoMissions(countryCode,id).length)setPendingStart(id);
   };
   return <section className="rounded-3xl bg-white p-4 shadow-sm md:p-6" data-testid="country-missions">
     <header className="mb-4 flex items-center gap-3">
@@ -88,17 +94,32 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     <div className="mb-5 flex flex-wrap gap-2" aria-label="学習レベル">{levels.map(([id,label])=><button key={id} type="button" aria-pressed={level===id} onClick={()=>setLevel(id)} className={'rounded-full border px-4 py-2 font-bold '+(level===id?'bg-slate-900 text-white':'bg-white text-slate-700')}>{label}</button>)}</div>
     {!domain?<div className="tp-category-grid">{MISSION_DOMAINS.map((d,i)=>{
       const available=adventureCount(d.id)+levelCatalog.filter(m=>m.domain===d.id).length;
+      const videos=getUnicefVideoMissions(countryCode,d.id);
       const adventureDone=d.id==='time'?getWorldAdventureDomainProgress(countryCode,'time').completedMissionIds.filter(id=>id.startsWith(countryCode+'-time-')).length:d.id==='place'?[...placeDone].filter(id=>id.startsWith(countryCode+'-place-')).length:d.id==='time'?[...completed].filter(id=>id.startsWith(countryCode+'-time-')).length:d.id==='language'?getWorldAdventureDomainProgress(countryCode,'language').completedMissionIds.filter(id=>languageMissionPrefixes.some(prefix=>id.startsWith(prefix))).length:0;
       const done=Math.min(adventureDone,adventureCount(d.id))+levelCatalog.filter(m=>m.domain===d.id&&completed.has(m.id)).length;
       const {Icon,tone,ink,hint}=categoryDesign[i];
       return <button key={d.id} type="button" data-domain={d.id} onClick={()=>pick(d.id)} className="tp-world-category tp-category-pass" style={{'--category-accent':colors[i],'--category-tone':tone,'--category-ink':ink}}>
         <span className="tp-category-art" aria-hidden="true"><span className="tp-category-orbit"/><span className="tp-category-icon"><Icon size={38} strokeWidth={2.1}/></span><span className="tp-category-spark">✧</span></span>
         <span className="tp-category-body"><span className="tp-category-kicker">WORLD DISCOVERY · {String(i+1).padStart(2,'0')}</span><h3>{d.labelJa}</h3><span className="tp-category-english">{d.labelEn}</span><span className="tp-category-hint">{hint}</span></span>
-        <span className="tp-category-bottom"><span className="tp-category-progress">{loading?'公開数を確認中…':error?'公開数を取得できません':`${Math.min(done,available)} / ${available} 問クリア`}{!loading&&!error&&<span className="tp-category-meter" aria-hidden="true"><span style={{width:`${available?Math.min(done,available)/available*100:0}%`}}/></span>}</span><span className="tp-category-go" aria-hidden="true"><ArrowUpRight size={21}/></span></span>
+        <span className="tp-category-bottom"><span className="tp-category-progress">{loading?'公開数を確認中…':error?'公開数を取得できません':`${Math.min(done,available)} / ${available} 問クリア`}{!loading&&!error&&<span className="tp-category-meter" aria-hidden="true"><span style={{width:`${available?Math.min(done,available)/available*100:0}%`}}/></span>}</span>{videos.length>0&&<span className="text-xs font-bold" style={{color:ink}}>🎬 動画 {videos.filter(m=>completed.has(m.id)).length}/{videos.length}</span>}<span className="tp-category-go" aria-hidden="true"><ArrowUpRight size={21}/></span></span>
       </button>;
     })}</div>:<>
       <button type="button" onClick={()=>{setPendingStart(null);setDomain(null);}} className="mb-4 rounded-full border px-4 py-2 font-bold">← 6つのカテゴリーへ</button>
       <h3 className="mb-3 text-xl font-black">{meta?.icon} {meta?.labelJa}</h3>
+      {curatedVideos.length>0&&<section aria-label="UNICEF動画ミッション" className="mb-6 rounded-2xl border border-sky-200 bg-sky-50 p-4 sm:p-5">
+        <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
+          <div><p className="text-xs font-bold tracking-widest text-sky-700">WORLD STORIES · UNICEF</p><h4 className="mt-1 text-lg font-black text-slate-900">🎬 動画を見て、3問に挑戦！</h4><p className="mt-1 text-sm text-slate-700">公式YouTube動画を視聴してから、日本語の4択クイズに答えよう。</p></div>
+          <span className="rounded-full bg-white px-3 py-2 text-sm font-black text-sky-800">{curatedVideos.filter(m=>completed.has(m.id)).length} / {curatedVideos.length} 動画クリア</span>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {curatedVideos.map(m=><button key={m.id} type="button" onClick={()=>{setActive(null);setPendingStart(null);setActiveVideo(m);}}
+            className="flex min-h-28 flex-col items-start justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-4 text-left shadow-sm transition-colors hover:border-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-600">
+            <span className="text-xs font-bold text-sky-700">{m.duration} · {m.languageSupport}</span>
+            <span className="text-base font-black leading-snug text-slate-900">{m.title}</span>
+            <span className="text-sm font-bold text-blue-700">{completed.has(m.id)?'✓ クリア済み・もう一度学ぶ':'▶ 動画を見る・クイズに進む'}</span>
+          </button>)}
+        </div>
+      </section>}
       {domain!=='place'&&adventureCount(domain)>0&&<button type="button" className="mb-5 rounded-2xl bg-blue-600 px-6 py-4 font-bold text-white" onClick={()=>setAdventure(domain)}>{domain==='place'?'地理':'時間・時差'}アドベンチャーを始める（10ミッション）</button>}
       <>
         {loading?<p role="status">公開問題を読み込み中…</p>:error?<div role="alert">公開問題を取得できませんでした。<button className="ml-3 underline" onClick={retry}>再試行</button></div>:<p className="mb-4 text-sm text-slate-600">Mission Creatorから公開中：{missions.length}問{!missions.length?'。公開問題を準備中です。':''}</p>}
@@ -112,6 +133,7 @@ function CountryMissions({countryCode,countryNameEn,countryNameJa,flagUrl}){
     </>}
     {error&&!domain&&<button type="button" className="mt-3 text-sm underline" onClick={retry}>公開問題の読み込みを再試行</button>}
     {active?.type==='single-choice'?<CreatorChoicePlayer key={active.id} mission={active} position={missions.findIndex(m=>m.id===active.id)+1} total={missions.length} alreadyCompleted={completed.has(active.id)} onClose={()=>setActive(null)} onComplete={m=>{completeWorldMission(countryCode,m.id);revise(n=>n+1);}} onNext={missions.findIndex(m=>m.id===active.id)<missions.length-1?()=>setActive(missions[missions.findIndex(m=>m.id===active.id)+1]):null}/>:active&&<MissionPlayer key={active.id} mission={{...active,learningLevelId:level,learningLevelLabel:levels.find(l=>l[0]===level)?.[1]}} domain={meta} alreadyCompleted={completed.has(active.id)} onClose={()=>setActive(null)} onBackToList={()=>setActive(null)} onComplete={m=>{completeWorldMission(countryCode,m?.id||active.id);revise(n=>n+1);}} missionPosition={missions.findIndex(m=>m.id===active.id)+1} totalMissions={missions.length}/>}
+    {activeVideo&&<UnicefVideoQuizMission key={activeVideo.id} mission={activeVideo} alreadyCompleted={completed.has(activeVideo.id)} onClose={()=>setActiveVideo(null)} onComplete={m=>{completeWorldMission(countryCode,m.id);revise(n=>n+1);}}/>}
     <PlaceAdventureLauncher open={adventure==='place'} countryCode={countryCode} learningLevel={level} onClose={()=>{setAdventure(null);syncPlace();}} onProgressChange={syncPlace}/>
     <TimeAdventureLauncher open={adventure==='time'} countryCode={countryCode} learningLevel={level} onClose={()=>{setAdventure(null);revise(n=>n+1);}} onProgressChange={()=>revise(n=>n+1)}/>
     <LanguageAdventureLauncher open={adventure==='language'} countryCode={countryCode} learningLevel={level} creatorMissionCount={levelCatalog.filter(m=>m.domain==='language').length} onOpenCreatorMissions={()=>{setAdventure(null);setDomain('language');}} onClose={()=>{setAdventure(null);revise(n=>n+1);}} onProgressChange={()=>revise(n=>n+1)}/>
