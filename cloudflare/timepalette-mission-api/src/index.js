@@ -387,11 +387,8 @@ async function publicCatalog(env,url){
  const qmap=new Map(rows.map(q=>[q.id,q]));const media=(await env.DB.prepare(`SELECT m.question_id,m.slot FROM media m JOIN questions q ON q.id=m.question_id WHERE q.country_iso=? AND q.domain=? AND q.status='published' AND m.r2_status='ready'`).bind(iso,domain).all()).results;
  const byQ=new Map();for(const m of media){if(!byQ.has(m.question_id))byQ.set(m.question_id,[]);byQ.get(m.question_id).push({slot:m.slot});}
  const questions=ids.filter(id=>qmap.has(id)).map(id=>{const q=qmap.get(id);const diaryUrls=worldDiaryUrlsFromRow(q);
-  if(diaryUrls.length)return {id:q.id,countryIso:q.country_iso,domain:q.domain,type:'diaryReflection',
-   prompt:'JICA世界日記を読んで、自分の感想を書こう',answer:'',choices:[],explanation:'',
-   sources:diaryUrls,media:[],video:null,learning:{levels:cleanLearning(parseObject(q.learning_json)).levels},
-   creator:{name:'教材協力者',school:'',region:'',bio:'',consent:false}};
-  return {id:q.id,countryIso:q.country_iso,domain:q.domain,type:logicalQuestionType(q),prompt:q.prompt.slice(0,2000),answer:q.answer.slice(0,1500),choices:parseArray(q.choices_json),explanation:q.notes.slice(0,3500),sources:parseArray(q.sources_json).filter(s=>/^https?:\/\//i.test(String(s))).slice(0,2),media:byQ.get(q.id)||[],video:parseObject(q.video_json),learning:cleanLearning(parseObject(q.learning_json)),
+  // Keep the original text question, but do not expose diary-derived photos.
+  return {id:q.id,countryIso:q.country_iso,domain:q.domain,type:logicalQuestionType(q),prompt:q.prompt.slice(0,2000),answer:q.answer.slice(0,1500),choices:parseArray(q.choices_json),explanation:q.notes.slice(0,3500),sources:parseArray(q.sources_json).filter(s=>/^https?:\/\//i.test(String(s))).slice(0,2),media:diaryUrls.length?[]:(byQ.get(q.id)||[]),video:parseObject(q.video_json),learning:cleanLearning(parseObject(q.learning_json)),
  creator:q.author_profile_verified===1&&parseObject(q.author_profile_json).consent===true?cleanProfile(parseObject(q.author_profile_json)):{name:'教材協力者',school:'',region:'',bio:'',consent:false}};});
  return new Response(JSON.stringify({ok:true,questions}),{headers:{...corsHeaders,'Content-Type':'application/json'}});
 }
