@@ -27,3 +27,40 @@
   .tp-creator-diary-question .tp-creator-answers button{min-height:66px;padding:8px 10px;font-size:15px;}
   .tp-creator-diary-notice{padding:10px;}
 }
+
+/* Fullscreen article reader: the iframe is resized in place, so scrolling
+   inside JICA's original page is not lost when the student returns to the quiz. */
+.tp-creator-player.tp-creator-diary-expanded{overflow:visible;}
+.tp-creator-diary-expanded .tp-creator-diary-evidence{overflow:visible;}
+.tp-creator-diary-evidence .tp-creator-diary-reader.tp-source-study-fullscreen{
+  position:fixed!important;
+  inset:8px!important;
+  width:calc(100vw - 16px)!important;
+  height:calc(100dvh - 16px)!important;
+  max-width:none!important;
+  min-height:0!important;
+  z-index:20000!important;
+  flex:none!important;
+  border:2px solid #8cbdd1!important;
+  border-radius:18px!important;
+  box-shadow:0 20px 85px #07152b88!important;
+  background:white;
+}
+.tp-source-study-fullscreen>div:first-child{
+  flex-shrink:0;
+  padding:12px 18px;
+}
+.tp-source-study-fullscreen iframe{background:white;}
+@media(max-width:650px){
+  .tp-creator-diary-evidence .tp-creator-diary-reader.tp-source-study-fullscreen{
+    inset:0!important;
+    width:100vw!important;
+    height:100dvh!important;
+    border:0!important;
+    border-radius:0!important;
+  }
+  .tp-source-study-fullscreen>div:first-child{
+    padding:9px 11px;
+    gap:8px;
+  }
+}
