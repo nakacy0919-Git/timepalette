@@ -25,7 +25,8 @@ export function toPublishedMission(q){
     // Do not forward the old prompt, explanation, image or answer options.
     return {...common,type:'world-diary-reflection',title:'JICA 世界日記',
       prompt:'世界日記を読んで、感じたことを書こう',explanation:'',
-      sourceUrls:diaryUrls,materials:[],video:null,voice:null};
+      sourceUrls:diaryUrls,materials:[],video:null,voice:null,
+      learning:{levels:q.learning?.levels||['elementary','juniorHigh','highSchoolStandard']}};
   }
   if(q.type==='diaryReflection')return null;
   if(['video4','videoReflect'].includes(q.type)&&!videoEmbedValid(q.video))return null;
