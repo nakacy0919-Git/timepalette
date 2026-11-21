@@ -1,0 +1,29 @@
+/* JICA World Diary reading + four-choice mode. The article stays on its original host. */
+.tp-creator-player.tp-creator-diary-mode{width:min(1560px,100%);}
+.tp-creator-player .tp-creator-task.tp-creator-diary-task{
+  display:grid;grid-template-columns:minmax(0,1.17fr) minmax(360px,1fr);grid-template-rows:minmax(0,1fr);gap:16px;min-height:0;
+}
+.tp-creator-diary-evidence{display:flex;flex-direction:column;min-height:0;overflow:hidden;border:1px solid #c8dce7;border-radius:18px;background:white;}
+.tp-creator-diary-evidence .tp-creator-diary-reader{flex:1;min-height:0!important;overflow:hidden;border:none!important;border-radius:0!important;box-shadow:none!important;}
+.tp-creator-diary-question{display:flex;flex-direction:column;min-height:0;gap:11px;overflow:auto;}
+.tp-creator-diary-question .tp-creator-answers{flex:1;min-height:340px;}
+.tp-creator-choice-area{display:contents;}
+.tp-creator-diary-notice{margin:0;padding:12px 15px;border-radius:14px;border:2px solid #dfbd75;background:#fff5d9;color:#594516;font-size:clamp(12px,1.15vw,14px);line-height:1.65;font-weight:700;}
+.tp-creator-diary-notice strong{display:block;font-size:14px;margin-bottom:4px;}
+.tp-creator-diary-feedback-warning{padding:10px 13px;border:1px solid #dfbd75;border-radius:10px;background:#fff4d5;font-weight:700;color:#6b4e1b;font-size:14px;line-height:1.6;margin-bottom:12px!important;}
+@media(max-width:950px) {
+  .tp-creator-player.tp-creator-diary-mode{height:calc(100dvh - 12px);max-height:none;}
+  .tp-creator-player .tp-creator-task.tp-creator-diary-task{display:flex;flex-direction:column;overflow-y:auto;}
+  .tp-creator-diary-evidence{height:43dvh;min-height:240px;flex:none;}
+  .tp-creator-diary-question{overflow:visible;flex:none;}
+  .tp-creator-diary-question .tp-creator-answers{min-height:340px;}
+  .tp-creator-diary-notice{font-size:13px;}
+}
+@media(max-width:560px){
+  .tp-creator-player.tp-creator-diary-mode{height:100dvh;border-radius:0;}
+  .tp-creator-player .tp-creator-task.tp-creator-diary-task{padding:10px;gap:12px;}
+  .tp-creator-diary-evidence{height:46dvh;min-height:220px;}
+  .tp-creator-diary-question .tp-creator-answers{grid-template-columns:1fr;grid-template-rows:repeat(4,minmax(66px,auto));min-height:0;gap:8px;}
+  .tp-creator-diary-question .tp-creator-answers button{min-height:66px;padding:8px 10px;font-size:15px;}
+  .tp-creator-diary-notice{padding:10px;}
+}
