@@ -1,0 +1,45 @@
+.tp-diary-overlay{position:fixed;inset:0;z-index:21000;display:flex;align-items:center;justify-content:center;padding:12px;background:rgba(8,26,44,.84);font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:#183449}
+.tp-diary-dialog{display:flex;flex-direction:column;width:min(1500px,100%);height:min(960px,calc(100dvh - 24px));min-height:0;background:#f5f9fb;border-radius:24px;box-shadow:0 28px 90px #06182788;overflow:hidden}
+.tp-diary-header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:17px 24px;background:linear-gradient(110deg,#e8f8ff,#fff4d4);border-bottom:2px solid #b8dbe6}
+.tp-diary-header span{color:#316e87;font-size:11px;letter-spacing:.13em;font-weight:900}
+.tp-diary-header h2{font-size:clamp(18px,2vw,25px);font-weight:900;line-height:1.35;margin:5px 0}
+.tp-diary-header p{margin:0;color:#526c7a;font-size:13px;line-height:1.6}
+.tp-diary-header>button{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:50%;border:1px solid #aecfd9;background:white;color:#173e55}
+.tp-diary-columns{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(340px,.85fr);flex:1;min-height:0;gap:16px;padding:16px}
+.tp-diary-left,.tp-diary-right{display:flex;min-height:0;flex-direction:column;gap:12px;border:1px solid #d6e4eb;border-radius:18px;background:white;padding:16px;overflow:hidden}
+.tp-diary-section-title{display:flex;align-items:center;gap:9px;color:#225a77;font-size:16px}
+.tp-diary-section-title strong{font-weight:900}
+.tp-diary-source-reader{flex:1;min-height:0!important;border-radius:14px!important}
+.tp-diary-source-note{font-size:12px;line-height:1.65;color:#596d79;margin:0}
+.tp-diary-source-note a{display:inline-flex;align-items:center;gap:3px;color:#176788;text-decoration:underline;font-weight:800}
+.tp-diary-source-select{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:800}
+.tp-diary-source-select select{min-width:0;max-width:230px;padding:8px 12px;border:1px solid #aac9d7;border-radius:9px;background:white}
+.tp-diary-right{overflow-y:auto}
+.tp-diary-guide{padding:13px;border-radius:12px;background:#eef7fb;color:#315267;font-size:13px;line-height:1.75;margin:0}
+.tp-diary-right label{font-size:14px;font-weight:900;color:#234f69}
+.tp-diary-right textarea{display:block;width:100%;min-height:95px;resize:vertical;border:1.5px solid #bfd4df;border-radius:13px;background:#fff;padding:13px;font:500 15px/1.75 inherit;color:#183449}
+.tp-diary-right textarea:focus-visible,.tp-diary-actions button:focus-visible{outline:3px solid #75bde2;outline-offset:2px}
+.tp-diary-right textarea::placeholder{color:#8b9ca5}
+.tp-diary-save,.tp-diary-privacy{font-size:11px;line-height:1.65;color:#6a7e89;margin:0}
+.tp-diary-error{font-size:13px;color:#a12b2b;margin:0;font-weight:800}
+.tp-diary-complete{display:flex;align-items:center;gap:6px;background:#e8f8ed;color:#1d6842;padding:10px;border-radius:10px;font-size:13px;font-weight:800;margin:0}
+.tp-diary-actions{display:flex;flex-wrap:wrap;gap:9px}
+.tp-diary-actions button{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid #9cb9c8;background:#f1f8fc;color:#235470;border-radius:11px;padding:11px 13px;font-size:13px;font-weight:900;min-height:44px}
+.tp-diary-actions button.tp-diary-primary{background:#17617f;color:white;border-color:#17617f}
+.tp-diary-print-page{display:none}
+@media(max-width:900px){.tp-diary-overlay{padding:0}.tp-diary-dialog{height:100dvh;width:100%;border-radius:0}.tp-diary-header{padding:10px 14px}.tp-diary-header p{font-size:12px}.tp-diary-columns{display:flex;flex-direction:column;overflow:auto;gap:12px;padding:10px}.tp-diary-left,.tp-diary-right{overflow:visible;flex:none;padding:12px}.tp-diary-source-reader{height:58dvh;min-height:330px!important;flex:none}.tp-diary-right textarea{min-height:130px}}
+@media print{
+  @page{size:A4 portrait;margin:14mm}
+  body{background:white!important}
+  body>:not(.tp-diary-overlay){display:none!important}
+  .tp-diary-overlay{display:block!important;position:static!important;padding:0!important;background:white!important;color:black!important}
+  .tp-diary-dialog{display:none!important}
+  .tp-diary-print-page{display:block!important;font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.8;color:#171717;font-size:11pt}
+  .tp-diary-print-eyebrow{font-weight:700;font-size:9pt;letter-spacing:.1em;color:#3c6274}
+  .tp-diary-print-page h1{font-size:21pt;margin:8px 0 16px}
+  .tp-diary-print-page h2{font-size:12pt;border-bottom:1px solid #777;padding:0 0 4px;margin:20px 0 8px}
+  .tp-diary-print-page p{margin:8px 0}
+  .tp-diary-print-url{overflow-wrap:anywhere;font-size:9pt}
+  .tp-diary-print-answer{min-height:46mm;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.85;padding:5px;border-bottom:1px solid #aaa}
+  .tp-diary-print-footer{font-size:9pt;color:#555;margin-top:25px}
+}
