@@ -1,12 +1,16 @@
 import {
   ExternalLink,
+  Maximize2,
+  X,
   Minus,
   Plus,
   RotateCcw,
 } from 'lucide-react';
 
 import {
+  useEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react';
 
@@ -19,14 +23,59 @@ const STEP = 0.1;
 export default function SourceStudyReader({
   source,
   className = '',
+  allowFullscreen = false,
+  defaultZoom = 1,
+  onFullscreenChange,
 }) {
   const [
     zoom,
     setZoom,
   ] = useState(
-    1
+    defaultZoom
   );
+  const [fullscreen, setFullscreen] = useState(false);
+  const readerRef = useRef(null);
+  const expandButtonRef = useRef(null);
+  const closeButtonRef = useRef(null);
 
+
+  // Expand the existing iframe instead of remounting it: its scroll position
+  // and the learner's place in the article are preserved on return.
+  useEffect(() => {
+    onFullscreenChange?.(fullscreen);
+  }, [fullscreen, onFullscreenChange]);
+
+  useEffect(() => {
+    if (!fullscreen) return undefined;
+    const previousFocus = document.activeElement;
+    closeButtonRef.current?.focus();
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
+        setFullscreen(false);
+      }
+      if (event.key !== 'Tab' || !readerRef.current) return;
+      const items = [...readerRef.current.querySelectorAll('button:not([disabled]), a[href]')];
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown, true);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown, true);
+      // The original expand button is recreated when the viewer collapses.
+      if (expandButtonRef.current) expandButtonRef.current.focus();
+      else if (previousFocus instanceof HTMLElement) previousFocus.focus();
+    };
+  }, [fullscreen]);
 
   const percent =
     Math.round(
@@ -99,6 +148,10 @@ export default function SourceStudyReader({
 
   return (
     <section
+      ref={readerRef}
+      role={fullscreen ? 'dialog' : undefined}
+      aria-modal={fullscreen ? 'true' : undefined}
+      aria-label={fullscreen ? '世界日記を全画面で読む' : undefined}
       className={`
         flex
         min-h-0
@@ -109,6 +162,7 @@ export default function SourceStudyReader({
         border-slate-200
         bg-white
         shadow-[0_18px_50px_rgba(15,23,42,0.10)]
+        ${fullscreen ? 'tp-source-study-fullscreen' : ''}
         ${className}
       `}
     >
@@ -292,32 +346,41 @@ export default function SourceStudyReader({
           </div>
 
 
-          <a
-            href={
-              source.url
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              inline-flex
-              items-center
-              gap-1.5
-              rounded-xl
-              bg-violet-500
-              px-3
-              py-2
-              text-[10px]
-              font-black
-              text-white
-              transition
-              hover:bg-violet-400
-            "
-          >
-            原文
-            <ExternalLink
-              size={13}
-            />
-          </a>
+          {allowFullscreen && !fullscreen ? (
+            <button
+              ref={expandButtonRef}
+              type="button"
+              onClick={() => setFullscreen(true)}
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-xl bg-violet-500 px-3 py-2 text-xs font-black text-white transition hover:bg-violet-400"
+              aria-label="世界日記を全画面で表示"
+              aria-haspopup="dialog"
+            >
+              <Maximize2 size={16} />
+              全画面
+            </button>
+          ) : (
+            <a
+              href={source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-xl bg-violet-500 px-3 py-2 text-xs font-black text-white transition hover:bg-violet-400"
+            >
+              {fullscreen ? '元記事' : '原文'}
+              <ExternalLink size={14} />
+            </a>
+          )}
+          {fullscreen && (
+            <button
+              ref={closeButtonRef}
+              type="button"
+              onClick={() => setFullscreen(false)}
+              aria-label="全画面を閉じて4択に戻る"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-xl border border-white/30 bg-white/15 px-3 py-2 text-xs font-black text-white hover:bg-white/25"
+            >
+              <X size={18} />
+              閉じる
+            </button>
+          )}
         </div>
       </div>
 

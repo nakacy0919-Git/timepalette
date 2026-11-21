@@ -10,6 +10,7 @@ import {getJicaWorldDiaryUrls} from '../../utils/jicaWorldDiary.js';
 import './worldDiaryChoice.css';
 export default function CreatorChoicePlayer({mission,position,total,alreadyCompleted,onClose,onComplete,onNext}){
  const [source,setSource]=useState(null);
+ const [diaryFullscreen,setDiaryFullscreen]=useState(false);
  const diaryUrl=mission.jicaDiarySourceUrl||getJicaWorldDiaryUrls(mission)[0]||null;
  const [completedOnEntry]=useState(alreadyCompleted);
  const [feedback,setFeedback]=useState(null),[muted,setMuted]=useState(false);
@@ -26,10 +27,10 @@ export default function CreatorChoicePlayer({mission,position,total,alreadyCompl
  const video=diaryUrl?null:videoEmbedUrl(mission.video);
  const choose=index=>{if(submitted.current||feedback||correct||failed||!choicesReady||photo&&!loaded)return;setSelected(index);const success=index===mission.challenge.correctIndex;sound(success);if(success){submitted.current=true;setCorrect(true);if(!completedOnEntry)onComplete(mission);}setFeedback(success?'correct':'wrong');};
 
- return createPortal(<div className="tp-creator-overlay"><section className={'tp-creator-player'+(diaryUrl?' tp-creator-diary-mode':'')} role="dialog" aria-modal="true" aria-label="ミッション">
+ return createPortal(<div className="tp-creator-overlay"><section className={'tp-creator-player'+(diaryUrl?' tp-creator-diary-mode':'')+(diaryFullscreen?' tp-creator-diary-expanded':'')} role="dialog" aria-modal="true" aria-label="ミッション">
   <header inert={feedback||source?true:undefined} className="tp-creator-heading"><div><span className="tp-creator-eyebrow">WORLD ADVENTURE · MISSION {String(position).padStart(2,'0')} / {total}</span><h1>{mission.prompt}</h1></div><button type="button" aria-label="ミッションを閉じる" onClick={onClose}>×</button></header>
   <main inert={feedback||source?true:undefined} className={'tp-creator-task '+(diaryUrl?'tp-creator-diary-task':(!photo&&!video?'text-only':''))}>
-   {diaryUrl&&<div className="tp-creator-diary-evidence" aria-label="世界日記の原文"><SourceStudyReader source={{title:'JICA海外協力隊 世界日記',organization:'JICA · 隊員による体験談',url:diaryUrl}} className="tp-creator-diary-reader"/></div>}
+   {diaryUrl&&<div className="tp-creator-diary-evidence" aria-label="世界日記の原文"><SourceStudyReader source={{title:'JICA海外協力隊 世界日記',organization:'JICA · 隊員による体験談',url:diaryUrl}} className="tp-creator-diary-reader" allowFullscreen defaultZoom={0.75} onFullscreenChange={setDiaryFullscreen}/></div>}
    {(photo||video)&&<div className="tp-creator-evidence">{photo&&<img src={photo} alt="問題の手がかりとなる写真" onLoad={()=>setLoaded(true)} onError={()=>setFailed(true)}/>} {video&&<CreatorVideoEmbed video={mission.video}/>} {failed&&<p role="alert">写真を読み込めません。一覧から開き直してください。</p>}</div>}
    <div className={diaryUrl?'tp-creator-diary-question':'tp-creator-choice-area'}>
    {diaryUrl&&<p className="tp-creator-diary-notice" role="note" data-testid="jica-diary-subjective-notice"><strong>資料の読み方（必ず確認）</strong>これはJICA海外協力隊員が自身の体験や見解をもとに書いた「世界日記」です。隊員個人の主観が含まれており、記事の内容がその国や地域全体に当てはまるとは限りません。この4択の答えは記事の記述に基づいています。</p>}
