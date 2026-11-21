@@ -49,18 +49,16 @@ export default function WorldDiaryReflectionPlayer({
   const sourceUrl = urls[selectedSource] || urls[0];
   const hasReflection = draft.reaction.trim().length > 0;
   const updateDraft = (field, value) => {
-    setDraft((old) => ({ ...old, [field]: value }));
+    const updated = { ...draft, [field]: value };
+    setDraft(updated);
     setError('');
-  };
-
-  useEffect(() => {
     try {
-      window.localStorage.setItem(storageKey(mission.id), JSON.stringify(draft));
+      window.localStorage.setItem(storageKey(mission.id), JSON.stringify(updated));
       setSaveState('このブラウザに下書きを一時保存しました');
     } catch {
       setSaveState('一時保存できません。必ず印刷・ファイル保存してください');
     }
-  }, [draft, mission.id]);
+  };
 
   useEffect(() => {
     const handleKey = (event) => {
