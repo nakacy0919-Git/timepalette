@@ -41,3 +41,8 @@ export function getJicaWorldDiaryUrls(mission) {
 export function isJicaWorldDiaryChoice(mission) {
   return mission?.type === 'single-choice' && getJicaWorldDiaryUrls(mission).length > 0;
 }
+
+// Includes the sanitized, non-quiz public catalog format.
+export function isJicaWorldDiaryStudy(mission) {
+  return mission?.type === 'world-diary-reflection' || isJicaWorldDiaryChoice(mission);
+}
