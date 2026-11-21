@@ -7,6 +7,8 @@ export function forCreatorLearningLevel(mission, level) {
   const meta = mission.learning && typeof mission.learning==='object' ? mission.learning : {};
   const levels = Array.isArray(meta.levels) ? meta.levels : DEFAULT_CREATOR_LEVELS;
   if (!levels.includes(level)) return null;
+  // Reading and reflection do not require a translated multiple-choice answer.
+  if (mission.type === 'world-diary-reflection') return mission;
   if (level !== 'highSchoolAdvanced') return mission;
   const en = meta.challenge && typeof meta.challenge==='object' ? meta.challenge : {};
   const prompt = String(en.promptEn || '').trim();
