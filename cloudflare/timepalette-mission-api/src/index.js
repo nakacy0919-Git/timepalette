@@ -9,6 +9,21 @@ const corsHeaders={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'
 function statusCode(err){return err instanceof ApiFault?err.status:500;}
 function errResponse(err){return response({ok:false,error:err instanceof ApiFault?err.message:'サーバー処理に失敗しました。'},statusCode(err));}
 function parseObject(value){try {const x=JSON.parse(value||'{}');return x&&typeof x==='object'&&!Array.isArray(x)?x:{};} catch {return {};}}
+// Public JICA World Diary material is a reading resource, not a scored quiz.
+// Keep the original blog URL only; never serve its old questions or photos.
+function worldDiaryUrlsFromRow(q){
+ const inputs=[...parseArray(q.sources_json),...(String(q.notes||'').match(/https?:\/\/[^\s<>"'「」『』]+/gi)||[])];
+ const urls=new Set();
+ for(const raw of inputs){
+  try{
+   const clean=String(raw||'').trim().replace(/[、。，．;；!！?？）)\]}]+$/g,'');
+   const url=new URL(clean);
+   if(url.protocol==='https:'&&url.hostname.toLowerCase()==='world-diary.jica.go.jp'&&
+      url.pathname!=='/'&&!url.username&&!url.password)urls.add(url.href);
+  }catch{/* ignore unrelated or invalid URLs */}
+ }
+ return [...urls];
+}
 function cleanProfile(input){
  const p=input&&typeof input==='object'?input:{};
  return {name:String(p.name||'').replace(/[<>\r\n]/g,'').trim().slice(0,60),
@@ -371,7 +386,9 @@ async function publicCatalog(env,url){
  const rows=(await env.DB.prepare("SELECT * FROM questions WHERE country_iso=? AND domain=? AND status='published'").bind(iso,domain).all()).results;
  const qmap=new Map(rows.map(q=>[q.id,q]));const media=(await env.DB.prepare(`SELECT m.question_id,m.slot FROM media m JOIN questions q ON q.id=m.question_id WHERE q.country_iso=? AND q.domain=? AND q.status='published' AND m.r2_status='ready'`).bind(iso,domain).all()).results;
  const byQ=new Map();for(const m of media){if(!byQ.has(m.question_id))byQ.set(m.question_id,[]);byQ.get(m.question_id).push({slot:m.slot});}
- const questions=ids.filter(id=>qmap.has(id)).map(id=>{const q=qmap.get(id);return {id:q.id,countryIso:q.country_iso,domain:q.domain,type:logicalQuestionType(q),prompt:q.prompt.slice(0,2000),answer:q.answer.slice(0,1500),choices:parseArray(q.choices_json),explanation:q.notes.slice(0,3500),sources:parseArray(q.sources_json).filter(s=>/^https?:\/\//i.test(String(s))).slice(0,2),media:byQ.get(q.id)||[],video:parseObject(q.video_json),learning:cleanLearning(parseObject(q.learning_json)),
+ const questions=ids.filter(id=>qmap.has(id)).map(id=>{const q=qmap.get(id);const diaryUrls=worldDiaryUrlsFromRow(q);
+  // Keep the original text question, but do not expose diary-derived photos.
+  return {id:q.id,countryIso:q.country_iso,domain:q.domain,type:logicalQuestionType(q),prompt:q.prompt.slice(0,2000),answer:q.answer.slice(0,1500),choices:parseArray(q.choices_json),explanation:q.notes.slice(0,3500),sources:parseArray(q.sources_json).filter(s=>/^https?:\/\//i.test(String(s))).slice(0,2),media:diaryUrls.length?[]:(byQ.get(q.id)||[]),video:parseObject(q.video_json),learning:cleanLearning(parseObject(q.learning_json)),
  creator:q.author_profile_verified===1&&parseObject(q.author_profile_json).consent===true?cleanProfile(parseObject(q.author_profile_json)):{name:'教材協力者',school:'',region:'',bio:'',consent:false}};});
  return new Response(JSON.stringify({ok:true,questions}),{headers:{...corsHeaders,'Content-Type':'application/json'}});
 }
@@ -379,7 +396,9 @@ async function publicImage(env,url){
  const id=String(url.searchParams.get('questionId')||''),slot=Number(url.searchParams.get('slot'));
  requireThat(UUID.test(id)&&[1,2,3,4].includes(slot),'画像を確認してください。');
  const m=await env.DB.prepare(`SELECT m.r2_object_key,m.size_bytes FROM media m JOIN questions q ON q.id=m.question_id
-  WHERE q.id=? AND q.status='published' AND m.slot=? AND m.r2_status='ready'`).bind(id,slot).first();
+  WHERE q.id=? AND q.status='published' AND m.slot=? AND m.r2_status='ready'
+   AND lower(q.sources_json) NOT LIKE '%world-diary.jica.go.jp%'
+   AND lower(q.notes) NOT LIKE '%world-diary.jica.go.jp%'`).bind(id,slot).first();
  requireThat(m&&m.r2_object_key,'画像は公開されていません。',404);
  const obj=await env.MEDIA.get(m.r2_object_key);requireThat(obj&&obj.size>=16&&obj.size<=IMAGE_MAX,'画像が見つかりません。',404);
  return new Response(obj.body,{headers:{...corsHeaders,'Content-Type':'image/webp'}});
