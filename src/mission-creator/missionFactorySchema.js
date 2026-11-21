@@ -1,5 +1,6 @@
 // TimePalette Mission Factory v1: pure, browser- and Node-compatible validation.
 // No data is uploaded or published by this module.
+import {parseYouTubeId} from '../utils/creatorVideo.js';
 export const FACTORY_VERSION = 'timepalette-mission-factory/v1';
 export const FACTORY_MAX_QUESTIONS = 5;
 export const FACTORY_MAX_ZIP_BYTES = 40 * 1024 * 1024;
@@ -7,7 +8,7 @@ export const FACTORY_MAX_IMAGE_BYTES = 15 * 1024 * 1024;
 export const FACTORY_MAX_UNPACKED_BYTES = 85 * 1024 * 1024;
 
 const DOMAINS = new Set(['place','time','language','lifeCulture','japanConnection','thinkConnect']);
-const TYPES = new Set(['text4','photoText4','photo4']);
+const TYPES = new Set(['text4','photoText4','photo4','video4']);
 const LEVELS = new Set(['elementary','juniorHigh','highSchoolStandard','highSchoolAdvanced']);
 const DEFAULT_LEVELS = ['elementary','juniorHigh','highSchoolStandard'];
 const IMAGE_FILE = /^images\/[a-zA-Z0-9][a-zA-Z0-9._-]{0,95}\.(?:png|jpe?g|webp)$/i;
@@ -60,7 +61,7 @@ export function validateFactoryManifest(manifest,existingQuestions=[]) {
     const domain=stringField(raw.domain,`${label} domain`,30,{required:true});
     if(!DOMAINS.has(domain))throw new Error(`${label}: カテゴリーが不正です。`);
     const type=stringField(raw.type,`${label} type`,20,{required:true});
-    if(!TYPES.has(type))throw new Error(`${label}: 対応形式は text4 / photoText4 / photo4 です。`);
+    if(!TYPES.has(type))throw new Error(`${label}: 対応形式は text4 / photoText4 / photo4 / video4 です。`);
     const prompt=stringField(raw.prompt,`${label} prompt`,2000,{required:true});
     const answer=stringField(raw.answer,`${label} answer`,1500,{required:true});
     const choices=type==='photo4'?['','','']:stringArray(raw.choices,`${label} choices`,3,600);
@@ -100,9 +101,21 @@ export function validateFactoryManifest(manifest,existingQuestions=[]) {
       const alternatives=stringArray(rawVoice.alternatives||[],`${label} voice.alternatives`,5,180,{required:false});
       voice={enabled,lang,target,prompt:promptVoice,alternatives};
     }
+    let video;
+    if(type==='video4'){
+      if(!raw.video||typeof raw.video!=='object'||Array.isArray(raw.video))
+        throw new Error(`${label}: YouTube動画のvideo設定が必要です。`);
+      const youtubeId=parseYouTubeId(raw.video.youtubeUrl||raw.video.youtubeId);
+      if(!youtubeId)throw new Error(`${label}: 正しいYouTube URLまたは動画IDを指定してください。`);
+      const start=Number(raw.video.startSeconds??0),end=Number(raw.video.endSeconds??0);
+      if(!Number.isInteger(start)||start<0||start>21600||!Number.isInteger(end)||end<0||end>21600||
+        (end!==0&&(end<=start||end-start>1800)))
+        throw new Error(`${label}: 動画の開始・終了時刻を確認してください（最大30分）。`);
+      video={youtubeId,youtubeUrl:`https://www.youtube.com/watch?v=${youtubeId}`,startSeconds:start,endSeconds:end};
+    }else if(raw.video!==undefined)throw new Error(`${label}: video設定はvideo4にだけ指定できます。`);
     const images=normalizedImages(raw.images,type,label);
     const question={countryIso,domain,type,prompt,answer,choices,
-      notes,sources,learning:{levels:[...levels],challenge,...(voice?{voice}:{})},
+      notes,sources,...(video?{video}:{}),learning:{levels:[...levels],challenge,...(voice?{voice}:{})},
       authorProfile:{name:'',school:'',region:'',bio:'',consent:false}};
     const key=normalizedFactoryPrompt(question);
     if(seen.has(key))throw new Error(`${label}: ZIP内で問題文が重複しています。`);

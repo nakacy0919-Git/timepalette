@@ -31,10 +31,10 @@ export default function MissionFactoryImport({session,questions,user,demo,onDone
   }
   return <div className="mc-stack">
     <section className="mc-card mc-section">
-      <div className="mc-section-top"><div><div className="mc-eyebrow">MISSION FACTORY</div><h2>AI教材を5問まとめて取り込む</h2></div></div>
-      <p>他のChatGPTチャットやWorkで作成した <strong>questions.json ＋ 個別画像</strong> のZIPを読み込み、Cloudflare D1とR2に下書き登録します。</p>
-      <p className="mc-hint">対応形式：文章4択、写真1枚＋文章4択、写真4枚の4択。1〜5問、ZIP最大40MB。小・中・高・Challengeの複数レベル指定も保持します。</p>
-      <p className="mc-hint">公開は行いません。先生が正答・出典・画像の権利・レベルを確認してから、従来の承認・公開操作をしてください。</p>
+      <div className="mc-section-top"><div><div className="mc-eyebrow">MISSION FACTORY</div><h2>AI教材・YouTube動画を5問まとめて取り込む</h2></div></div>
+      <p>他のChatGPTチャットやWorkで作成した <strong>questions.json（必要な場合のみ個別画像）</strong> のZIPを読み込み、Cloudflare D1とR2に下書き登録します。</p>
+      <p className="mc-hint">対応形式：文章4択、写真1枚＋文章4択、写真4枚の4択、YouTube動画＋4択。1〜5問、ZIP最大40MB。動画はURLだけを登録し、映像自体は保存しません。小・中・高・Challengeの複数レベル指定も保持します。</p>
+      <p className="mc-hint">公開は行いません。動画もMission Creatorの下書きとして保存されます。先生が正答・出典・動画の内容と埋め込み可否・レベルを確認してから、従来の承認・公開操作をしてください。各国×カテゴリーの制作目標10問に対する空き状況も確認してください。</p>
       <label style={{display:'block',maxWidth:480,marginTop:15}}>教材ZIPファイル
         <input type="file" accept=".zip,application/zip" onChange={selectZip} disabled={loading||demo}/>
       </label>
@@ -45,7 +45,7 @@ export default function MissionFactoryImport({session,questions,user,demo,onDone
         <h3>登録前の確認：{plan.items.length}問</h3>
         <div style={{display:'grid',gap:8}}>{plan.items.map((item,i)=><div key={i} style={{padding:12,border:'1px solid #cbd5e1',borderRadius:10}}>
           <strong>{i+1}. {item.question.prompt}</strong>
-          <p className="mc-hint">国：{item.question.countryIso.toUpperCase()} ／ カテゴリー：{item.question.domain} ／ {item.question.type} ／ 写真：{item.images.length}枚 ／ 対象レベル：{item.question.learning.levels.join('、')}</p>
+          <p className="mc-hint">国：{item.question.countryIso.toUpperCase()} ／ カテゴリー：{item.question.domain} ／ {item.question.type} ／ 写真：{item.images.length}枚{item.question.video ? ` ／ YouTube: ${item.question.video.youtubeId}` : ''} ／ 対象レベル：{item.question.learning.levels.join('、')}</p>
           {item.duplicate&&<p style={{color:'#b45309'}}>既存問題と重複：自動スキップ</p>}
         </div>)}</div>
         <button type="button" className="mc-primary" disabled={loading||demo||plan.items.every(item=>item.duplicate)} onClick={startImport}>確認して下書き登録する（自動公開なし）</button>
