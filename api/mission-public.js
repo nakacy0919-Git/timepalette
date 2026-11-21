@@ -1,4 +1,5 @@
 import {liveEnabled,markCatalogReady} from '../lib/r2-live-media.js';
+import {sanitizeWorldDiaryCatalog} from '../lib/jicaDiaryPublic.js';
 import {cloudflarePublic} from '../lib/timepalette-cloudflare-proxy.js';
 // Read-only published questions and photos. No Sheets ID, Drive file ID or teacher session leaks.
 import {isPreviewR2Request,readPreviewR2IfPublished,PREVIEW_CDN_TTL_SECONDS} from '../lib/r2-preview-photo.js';
@@ -75,7 +76,7 @@ export function createMissionPublicHandler({r2Reader=readPreviewR2IfPublished}={
       if(!Array.isArray(payload?.data?.questions))throw new Error('Invalid catalog');
       const questions=liveEnabled()?await markCatalogReady(payload.data.questions).catch(()=>payload.data.questions):payload.data.questions;
       res.setHeader('Cache-Control','public, s-maxage=5, max-age=0');
-      return res.status(200).json({ok:true,questions});
+      return res.status(200).json({ok:true,questions:sanitizeWorldDiaryCatalog(questions)});
     }
     const data=payload?.data;
     if(!data||data.mime!=='image/webp'||typeof data.base64!=='string'||
