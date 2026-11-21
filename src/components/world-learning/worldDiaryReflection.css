@@ -17,7 +17,7 @@
 .tp-diary-right{overflow-y:auto}
 .tp-diary-guide{padding:13px;border-radius:12px;background:#eef7fb;color:#315267;font-size:13px;line-height:1.75;margin:0}
 .tp-diary-right label{font-size:14px;font-weight:900;color:#234f69}
-.tp-diary-right textarea{display:block;width:100%;min-height:95px;resize:vertical;border:1.5px solid #bfd4df;border-radius:13px;background:#fff;padding:13px;font:500 15px/1.75 inherit;color:#183449}
+.tp-diary-right textarea{display:block;width:100%;min-height:95px;resize:vertical;border:1.5px solid #bfd4df;border-radius:13px;background:#fff;padding:13px;font-family:inherit;font-size:15px;font-weight:500;line-height:1.75;color:#183449}
 .tp-diary-right textarea:focus-visible,.tp-diary-actions button:focus-visible{outline:3px solid #75bde2;outline-offset:2px}
 .tp-diary-right textarea::placeholder{color:#8b9ca5}
 .tp-diary-save,.tp-diary-privacy{font-size:11px;line-height:1.65;color:#6a7e89;margin:0}
