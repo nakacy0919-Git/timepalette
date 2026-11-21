@@ -1,3 +1,4 @@
+import {getJicaWorldDiaryUrls} from './jicaWorldDiary.js';
 // Transform only validated, published Mission Creator questions into playable missions.
 function imageUrl(questionId,slot,r2MediaBase){
   // Catalog-controlled R2 URL; unknown origins cannot become media URLs.
@@ -11,13 +12,22 @@ function videoEmbedValid(video){return !!video&&/^[A-Za-z0-9_-]{11}$/.test(Strin
   Number.isInteger(Number(video.startSeconds||0))&&Number(video.startSeconds||0)>=0&&
   (!Number(video.endSeconds||0)||Number(video.endSeconds)>Number(video.startSeconds||0));}
 export function toPublishedMission(q){
-  if(!q||!/^[a-z]{2}$/.test(String(q.countryIso||''))||!['place','time','language','lifeCulture','japanConnection','thinkConnect'].includes(q.domain)||!['photo4','photoText4','text4','video4','videoReflect'].includes(q.type)||
+  if(!q||!/^[a-z]{2}$/.test(String(q.countryIso||''))||!['place','time','language','lifeCulture','japanConnection','thinkConnect'].includes(q.domain)||!['photo4','photoText4','text4','video4','videoReflect','diaryReflection'].includes(q.type)||
      !/^[a-f0-9-]{36}$/i.test(String(q.id||''))||!String(q.prompt||'').trim())return null;
   const common={id:String(q.countryIso||'rw').toLowerCase()+'-mc-'+q.id,domain:q.domain,
     title:String(q.prompt).trim().split(/[\n。！？?]/)[0].slice(0,50),prompt:String(q.prompt).trim(),
     points:10,requiredForMastery:false,creatorQuestionId:q.id,author:q.creator||null,video:q.video||null,learning:q.learning||null,
     voice:q.learning?.voice||null,
     explanation:String(q.explanation||'').slice(0,3500),sourceUrls:Array.isArray(q.sources)?q.sources:[]};
+  const diaryUrls=getJicaWorldDiaryUrls({sourceUrls:q.sources,explanation:q.explanation});
+  if(diaryUrls.length){
+    // Never turn an individual diary account into a scored national-facts quiz.
+    // Do not forward the old prompt, explanation, image or answer options.
+    return {...common,type:'world-diary-reflection',title:'JICA 世界日記',
+      prompt:'世界日記を読んで、感じたことを書こう',explanation:'',
+      sourceUrls:diaryUrls,materials:[],video:null,voice:null};
+  }
+  if(q.type==='diaryReflection')return null;
   if(['video4','videoReflect'].includes(q.type)&&!videoEmbedValid(q.video))return null;
   if(q.type==='videoReflect')return {...common,type:'creator-video-reflection',reflection:q.video};
   let choices,correctIndex;
