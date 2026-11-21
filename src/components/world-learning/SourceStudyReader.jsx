@@ -71,7 +71,9 @@ export default function SourceStudyReader({
     document.addEventListener('keydown', onKeyDown, true);
     return () => {
       document.removeEventListener('keydown', onKeyDown, true);
-      if (previousFocus instanceof HTMLElement) previousFocus.focus();
+      // The original expand button is recreated when the viewer collapses.
+      if (expandButtonRef.current) expandButtonRef.current.focus();
+      else if (previousFocus instanceof HTMLElement) previousFocus.focus();
     };
   }, [fullscreen]);
 
