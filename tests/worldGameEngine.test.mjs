@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validQuestion,questionPool,balancedDeck,createGame,selectTerritory,rollJourney,answerGame,advanceGame,standings,missedQuestions,teamRank,playableLimit,availableTerritories} from '../src/utils/worldGameEngine.js';
+import {validQuestion,questionPool,balancedDeck,createGame,selectTerritory,rollJourney,answerGame,advanceGame,standings,missedQuestions,teamRank,playableLimit,availableTerritories,buySouvenir} from '../src/utils/worldGameEngine.js';
 import {makeLocalGameBank,approvedStandaloneQuestions} from '../src/utils/worldGameBank.js';
 const random=()=>0.4;
 const q=(id,country='az')=>({id,country,domain:'place',prompt:'Question '+id,choices:['A','B','C','D'],correctIndex:0,explanation:'A'});
@@ -70,4 +70,37 @@ test('journey passport records distinct visited countries even if an answer is w
  g=answerGame(g,-1);assert.deepEqual(g.teams[0].visits,[iso]);assert.equal(g.teams[0].money,0);
  g=advanceGame(g);assert.equal(g.history.length,1);
  assert.ok(availableTerritories(g).length>0);
+});
+
+import {buildJourneyRoute,territoryChoices,journeyAssets} from '../src/utils/worldGameStrategy.js';
+
+const geo={az:{center:[48,40],region:'Asia',neighbors:['ge']},ge:{center:[44,42],region:'Asia',neighbors:['az']},uz:{center:[64,41],region:'Asia',neighbors:[]}};
+test('strategic territory limits expansion to eligible neighbors, then permits expeditions',()=>{
+ const bank=[q('a','az'),q('b','ge'),q('c','uz'),q('d','uz'),q('e','az'),q('f','ge')];
+ let g=createGame({mode:'territory',pool:bank,limit:6,geo,strategy:true,random});
+ g=selectTerritory(g,'az',random);g=answerGame(g,g.question.correctIndex);g=advanceGame(g);
+ g=selectTerritory(g,'uz',random);g=answerGame(g,g.question.correctIndex);g=advanceGame(g);
+ assert.equal(territoryChoices(g).kind,'neighbor');assert.deepEqual(availableTerritories(g),['ge']);
+ assert.equal(selectTerritory(g,'uz',random),g);
+ g=selectTerritory(g,'ge',random);g=answerGame(g,g.question.correctIndex);g=advanceGame(g);
+ g=selectTerritory(g,'az',random);g=answerGame(g,-1);g=advanceGame(g);
+ assert.equal(territoryChoices(g).kind,'expedition');
+});
+test('region badge is awarded once when the selected region is completed',()=>{
+ let g=createGame({mode:'territory',pool:[q('a','az'),q('b','ge'),q('c','az'),q('d','ge')],limit:4,geo,strategy:true,random});
+ g=selectTerritory(g,'az',random);g=answerGame(g,g.question.correctIndex);g=advanceGame(g);
+ g=selectTerritory(g,'az',random);g=answerGame(g,-1);g=advanceGame(g);
+ g=selectTerritory(g,'ge',random);g=answerGame(g,g.question.correctIndex);
+ assert.equal(g.teams[0].score,400);assert.deepEqual(g.teams[0].regionsEarned,['Asia']);assert.equal(g.last.newRegions.length,1);
+});
+test('travel route, paid passes, souvenir purchase and total asset accounting',()=>{
+ assert.deepEqual(buildJourneyRoute(['uz','ge','az'],geo,'az'),['az','ge','uz']);
+ let g=createGame({mode:'journey',pool:[q('a','az'),q('b','ge'),q('c','uz'),q('d','uz'),q('e','az'),q('f','ge')],limit:6,geo,travelEconomy:true,random});
+ assert.equal(rollJourney(g,1,random,'air'),g);
+ g=rollJourney(g,1,random);g=answerGame(g,g.question.correctIndex);
+ assert.equal(g.teams[0].money,300);
+ g=buySouvenir(g,'postcard');assert.equal(g.teams[0].money,200);assert.equal(journeyAssets(g.teams[0]),300);
+ assert.equal(buySouvenir(g,'postcard'),g);
+ g=advanceGame(g);g=rollJourney(g,1,random);g=answerGame(g,-1);g=advanceGame(g);
+ g=rollJourney(g,1,random,'rail');assert.equal(g.teams[0].money,100);assert.equal(g.travel,'rail');assert.equal(g.phase,'question');
 });
