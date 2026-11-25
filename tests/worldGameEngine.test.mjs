@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validQuestion,questionPool,balancedDeck,createGame,selectTerritory,rollJourney,answerGame,advanceGame,standings} from '../src/utils/worldGameEngine.js';
+import {validQuestion,questionPool,balancedDeck,createGame,selectTerritory,rollJourney,answerGame,advanceGame,standings,missedQuestions,teamRank,playableLimit,availableTerritories} from '../src/utils/worldGameEngine.js';
 import {makeLocalGameBank,approvedStandaloneQuestions} from '../src/utils/worldGameBank.js';
 const random=()=>0.4;
 const q=(id,country='az')=>({id,country,domain:'place',prompt:'Question '+id,choices:['A','B','C','D'],correctIndex:0,explanation:'A'});
@@ -46,4 +46,28 @@ test('real AZ and UZ bank only has self-contained four-choice geography/time que
 test('AIA/other contributed records require rights, review, source and explicit standalone eligibility',()=>{
  const item={...q('aia'),gameEligible:true,rightsConfirmed:true,reviewStatus:'approved',sources:['https://example.org/']};
  assert.equal(approvedStandaloneQuestions([item,{...item,id:'bad',rightsConfirmed:false},{...item,id:'diary',requiresReading:true}]).length,1);
+});
+
+test('custom team names, ties, fair turns and insufficient question guard',()=>{
+ assert.equal(playableLimit('territory',5,20,3),3);
+ assert.equal(playableLimit('journey',5,2,3),0);
+ assert.throws(()=>start('journey',{teamCount:5}),/各チーム/);
+ const g=start('battle',{teamNames:[' Blue ','Red']});
+ assert.equal(g.teams[0].name,'Blue');
+ assert.ok(standings(g).every(t=>teamRank(g,t)===1));
+});
+test('skip counts as an attempt, history retains answers, replay includes mistakes only',()=>{
+ let g=start('shuffle');
+ g=answerGame(g,-1);assert.equal(g.teams[0].attempts,1);assert.equal(g.teams[0].score,0);
+ g=advanceGame(g);const missed=g.history[0].question.id;
+ g=answerGame(g,g.question.correctIndex);g=advanceGame(g);
+ assert.deepEqual(missedQuestions(g).map(q=>q.id),[missed]);assert.equal(g.teams[0].streak,1);
+ g=answerGame(g,g.question.correctIndex);g=advanceGame(g);
+ assert.equal(g.teams[0].bestStreak,2);
+});
+test('journey passport records distinct visited countries even if an answer is wrong',()=>{
+ let g=start('journey');g=rollJourney(g,1,random);const iso=g.question.country;
+ g=answerGame(g,-1);assert.deepEqual(g.teams[0].visits,[iso]);assert.equal(g.teams[0].money,0);
+ g=advanceGame(g);assert.equal(g.history.length,1);
+ assert.ok(availableTerritories(g).length>0);
 });
