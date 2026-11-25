@@ -1,4 +1,4 @@
-import {getGeography197Profile} from './geography197.js';
+import {getGeography197Profile,getGeography197CountryCodes} from './geography197.js';
 import {getTimePackage} from './time197.js';
 import {validQuestion} from './worldGameEngine.js';
 
@@ -8,7 +8,7 @@ export function approvedStandaloneQuestions(records){
  return (Array.isArray(records)?records:[]).filter(q=>q?.gameEligible===true&&q?.reviewStatus==='approved'&&q?.rightsConfirmed===true&&Array.isArray(q.sources)&&q.sources.length>0&&validQuestion(q));
 }
 export function makeLocalGameBank(countries,approved=[]){
- const profiles=countries.map(c=>getGeography197Profile(c.iso)).filter(Boolean);
+ const profiles=getGeography197CountryCodes().map(getGeography197Profile).filter(Boolean);
  const allCapitals=[...new Set(profiles.map(p=>p.capitalNameJa).filter(Boolean))];
  const bank=[];
  for(const c of countries){
