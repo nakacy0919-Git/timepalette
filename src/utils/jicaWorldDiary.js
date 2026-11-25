@@ -16,8 +16,9 @@ function validDiaryUrl(value) {
 }
 
 function fromValue(value) {
+  if (Array.isArray(value)) return value.flatMap(fromValue);
   if (value && typeof value === 'object') {
-    return fromValue(value.sourceUrl || value.url || '');
+    return [value.sourceUrl, value.url, value.source, value.attribution].flatMap(fromValue);
   }
   const raw = String(value || '').trim();
   if (!raw) return [];
@@ -28,12 +29,15 @@ function fromValue(value) {
 export function getJicaWorldDiaryUrls(mission) {
   if (!mission) return [];
   const fields = [
-    ...(Array.isArray(mission.sourceUrls) ? mission.sourceUrls : []),
-    ...(Array.isArray(mission.sources) ? mission.sources : []),
+    mission.sourceUrls,
+    mission.sources,
     mission.sourceUrl,
+    mission.jicaDiarySourceUrl,
+    mission.notes,
     // Some older records put the original URL in the explanation instead.
     mission.explanation,
     ...(Array.isArray(mission.materials) ? mission.materials.map(item => item?.sourceUrl) : []),
+    ...(Array.isArray(mission.media) ? mission.media.flatMap(item => [item?.sourceUrl, item?.source, item?.attribution]) : []),
   ];
   return [...new Set(fields.flatMap(fromValue))];
 }
