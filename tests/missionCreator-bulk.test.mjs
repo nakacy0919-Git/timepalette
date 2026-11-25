@@ -3,16 +3,19 @@ import assert from 'node:assert/strict';
 import { BULK_LIMIT, eligibleForBulk, createBulkPlan, executeBulkPlan } from '../src/mission-creator/bulkActions.js';
 
 const draft = (id) => ({id, status:'draft', countryIso:'rw', domain:'lifeCulture', type:'text4', prompt:'問題 '+id});
+const submitted = (id) => ({...draft(id), status:'submitted'});
 const approved = (id) => ({...draft(id), status:'approved'});
 const published = (id) => ({...draft(id), status:'published'});
 
-test('admin can plan draft-only approvals; non-admin and unsupported states are rejected', () => {
-  assert.equal(eligibleForBulk(draft('a'),'approve'),true);
+test('admin can approve submitted teacher questions, never unsubmitted drafts', () => {
+  assert.equal(eligibleForBulk(draft('a'),'approve'),false);
+  assert.throws(()=>createBulkPlan('approve',['a'],[draft('a')],'admin'),/状態/);
+  assert.equal(eligibleForBulk(submitted('a'),'approve'),true);
   assert.equal(eligibleForBulk(approved('a'),'approve'),false);
-  assert.deepEqual(createBulkPlan('approve',['a'],[draft('a')],'admin').items.map(x=>x.id),['a']);
-  assert.throws(()=>createBulkPlan('approve',['a'],[draft('a')],'teacher'),/管理者/);
+  assert.deepEqual(createBulkPlan('approve',['a'],[submitted('a')],'admin').items.map(x=>x.id),['a']);
+  assert.throws(()=>createBulkPlan('approve',['a'],[submitted('a')],'teacher'),/管理者/);
   assert.throws(()=>createBulkPlan('approve',['a'],[approved('a')],'admin'),/状態/);
-  assert.throws(()=>createBulkPlan('approve',['a','a'],[draft('a')],'admin'),/重複/);
+  assert.throws(()=>createBulkPlan('approve',['a','a'],[submitted('a')],'admin'),/重複/);
 });
 
 test('published scope is inferred from each question, without a ten-question publication ceiling', () => {
@@ -28,13 +31,13 @@ test('published scope is inferred from each question, without a ten-question pub
 });
 
 test('selection is bounded to protect sequential API usage',()=>{
-  const qs=Array.from({length:BULK_LIMIT+1},(_,i)=>draft(String(i)));
+  const qs=Array.from({length:BULK_LIMIT+1},(_,i)=>submitted(String(i)));
   assert.throws(()=>createBulkPlan('approve',qs.map(q=>q.id),qs,'admin'),/選択/);
 });
 
 test('approval only calls the review endpoint and records per-item failures', async()=>{
   const calls=[];const progresses=[];
-  const plan=createBulkPlan('approve',['a','b'],[draft('a'),draft('b')],'admin');
+  const plan=createBulkPlan('approve',['a','b'],[submitted('a'),submitted('b')],'admin');
   const result=await executeBulkPlan(plan,async(action,payload)=>{
     calls.push({action,payload});
     if(payload.questionId==='b')throw Error('画像が不足しています');
@@ -62,7 +65,7 @@ test('unknown or empty plans do not call backend',async()=>{
 
 test('a failed first operation does not block later items or silently retry', async()=>{
   const calls=[];
-  const plan=createBulkPlan('approve',['a','b'],[draft('a'),draft('b')],'admin');
+  const plan=createBulkPlan('approve',['a','b'],[submitted('a'),submitted('b')],'admin');
   const result=await executeBulkPlan(plan,async(_action,payload)=>{
     calls.push(payload.questionId);
     if(payload.questionId==='a')throw Error('通信タイムアウト');

@@ -413,25 +413,43 @@ function QuestionBank({
   onPrefetch, onDelete, onRestore, onPublication, onEditPublished,
   selectedCountry, countryNames, busy, reviewingIds,
   filter, onFilterChange, search, onSearchChange,
-  onBulkAction, bulkProgress, bulkReport
+  onBulkAction, bulkProgress, bulkReport, onRefresh
 }) {
 
   const [authorFilter,setAuthorFilter]=useState('');
+  const [countryFilter,setCountryFilter]=useState('');
+  const [domainFilter,setDomainFilter]=useState('');
   const [typeFilter,setTypeFilter]=useState('');
   const [sortMode,setSortMode]=useState('latest');
+  const [shownCount,setShownCount]=useState(100);
   const [authorDetails,setAuthorDetails]=useState(null);
   const authors=[...new Set(questions.map(q=>q.authorName).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ja'));
+  const countryOptions=[...new Map(questions.filter(q=>q.countryIso).map(q=>
+    [q.countryIso,countryNames[q.countryIso]||q.countryName||q.countryIso]))]
+    .sort((a,b)=>a[1].localeCompare(b[1],'ja'));
   const statusCounts=Object.fromEntries(Object.keys(statusJa).map(key=>[key,questions.filter(q=>q.status===key).length]));
-  const visible=filterBankQuestions(questions,{filter,search,selectedCountry}).filter(q=>
+  const visible=filterBankQuestions(questions,{
+    filter,search,selectedCountry:countryFilter||selectedCountry,selectedDomain:domainFilter
+  }).filter(q=>
      (!authorFilter||q.authorName===authorFilter)&&(!typeFilter||q.type===typeFilter))
     .sort((a,b)=>sortMode==='oldest'?String(a.updatedAt).localeCompare(String(b.updatedAt)):String(b.updatedAt).localeCompare(String(a.updatedAt)));
   const [bulkMode, setBulkMode] = useState('approve');
   const [selectedIds, setSelectedIds] = useState(() => new Set());
-  const eligibleVisible = visible.slice(0, 200).filter(q => eligibleForBulk(q, bulkMode));
-  const eligibleIds = eligibleVisible.slice(0, BULK_LIMIT).map(q => q.id);
-  const checkedIds = eligibleIds.filter(id => selectedIds.has(id));
-  const allChecked = eligibleIds.length > 0 && eligibleIds.every(id => selectedIds.has(id));
-  useEffect(() => { setSelectedIds(new Set()); }, [filter, search]);
+  const shown=visible.slice(0,shownCount);
+  const eligibleVisible=shown.filter(q=>eligibleForBulk(q,bulkMode));
+  const eligibleIds=eligibleVisible.map(q=>q.id);
+  const checkedIds=eligibleIds.filter(id=>selectedIds.has(id)).slice(0,BULK_LIMIT);
+  const allChecked=eligibleIds.length>0&&eligibleIds.slice(0,BULK_LIMIT).every(id=>selectedIds.has(id));
+  const selectStage=status=>{
+    if(status==='submitted')setBulkMode('approve');
+    if(status==='approved')setBulkMode('publish');
+    onFilterChange(status);
+    setSelectedIds(new Set());
+  };
+  useEffect(()=>{
+    setSelectedIds(new Set());
+    setShownCount(100);
+  },[filter,search,authorFilter,countryFilter,domainFilter,typeFilter,sortMode]);
   useEffect(() => {
     setSelectedIds(previous => {
       const fresh = new Set([...previous].filter(id => eligibleVisible.some(q => q.id === id)));
@@ -458,16 +476,33 @@ function QuestionBank({
       <div className="mc-section-top">
         <div>
           <div className="mc-eyebrow">MISSION BANK</div>
-          <h2>集まった問題</h2>
+          <h2>{user?.role==='admin'?'先生からの投稿を確認・承認・公開':'集まった問題'}</h2>
         </div>
         <span className="mc-count">
           {formatNumber(visible.length)} 件
         </span>
       </div>
 
-       {user?.role==='admin' && <div className="mc-filter-row" aria-label="状態ごとの問題件数" style={{gap:8,flexWrap:'wrap'}}>
-         {Object.entries(statusCounts).map(([status,count])=><button key={status} type="button" className="mc-outline mc-small" onClick={()=>onFilterChange(status)}>{statusJa[status]}：{count}</button>)}
-       </div>}
+       {user?.role==='admin' && <>
+         <section className="mc-review-stages" aria-label="管理者の審査・公開ワークフロー">
+           {[
+             ['submitted','1. 投稿を確認','先生が提出した問題を審査'],
+             ['approved','2. 公開待ち','承認済みの問題をまとめて公開'],
+             ['published','3. 公開中','公開済みの問題を確認']
+           ].map(([status,label,description])=><button type="button" key={status}
+             className={'mc-review-stage'+(filter===status?' active':'')}
+             aria-pressed={filter===status} disabled={busy} onClick={()=>selectStage(status)}>
+             <span className="mc-review-stage-count">{statusCounts[status]||0}件</span>
+             <strong>{label}</strong><small>{description}</small>
+           </button>)}
+         </section>
+         <div className="mc-filter-row" aria-label="その他の問題状態" style={{gap:8,flexWrap:'wrap'}}>
+           {Object.entries(statusCounts).filter(([status])=>!['submitted','approved','published'].includes(status))
+             .map(([status,count])=><button key={status} type="button" className="mc-outline mc-small"
+             disabled={busy} onClick={()=>selectStage(status)}>{statusJa[status]}：{count}</button>)}
+           <button type="button" className="mc-outline mc-small" disabled={busy} onClick={onRefresh}>新しい投稿を取得</button>
+         </div>
+       </>}
        <div className="mc-filter-row">
          <label className="mc-search">
           <Search size={18}/>
@@ -480,7 +515,7 @@ function QuestionBank({
         <select
           aria-label="問題の状態で絞り込み"
           value={filter}
-          onChange={e => onFilterChange(e.target.value)}
+          onChange={e => selectStage(e.target.value)}
         >
           <option value="all">すべての状態</option>
           {Object.entries(statusJa)
@@ -494,6 +529,12 @@ function QuestionBank({
       </div>
 
        <div className="mc-filter-row" style={{gap:8,flexWrap:'wrap'}}>
+         <label>国<select aria-label="国で絞り込む" value={countryFilter} onChange={e=>setCountryFilter(e.target.value)}>
+           <option value="">すべての国</option>{countryOptions.map(([iso,name])=><option key={iso} value={iso}>{name}</option>)}
+         </select></label>
+         <label>カテゴリー<select aria-label="カテゴリーで絞り込む" value={domainFilter} onChange={e=>setDomainFilter(e.target.value)}>
+           <option value="">すべてのカテゴリー</option>{DOMAINS.map(([id,label])=><option key={id} value={id}>{label}</option>)}
+         </select></label>
          <label>作成者<select aria-label="作成者で絞り込む" value={authorFilter} onChange={e=>setAuthorFilter(e.target.value)}><option value="">すべて</option>{authors.map(a=><option key={a} value={a}>{a}</option>)}</select></label>
          <label>形式<select aria-label="問題形式で絞り込む" value={typeFilter} onChange={e=>setTypeFilter(e.target.value)}><option value="">すべて</option>{TYPES.map(([id,label])=><option key={id} value={id}>{label}</option>)}</select></label>
          <label>更新順<select aria-label="並び替え" value={sortMode} onChange={e=>setSortMode(e.target.value)}><option value="latest">新しい順</option><option value="oldest">古い順</option></select></label>
@@ -501,15 +542,15 @@ function QuestionBank({
        {user?.role === 'admin' && (
          <section className="mc-bulk-panel" aria-label="管理者の一括処理">
           <div className="mc-bulk-top">
-            <div><strong>一括管理</strong><p>問題を確認して選択し、承認と公開は別々に実行します。</p></div>
+            <div><strong>まとめて承認・公開</strong><p>問題の内容・写真・出典を詳細確認し、対象にチェックを入れてください。承認と公開は別の操作です。</p></div>
             <label className="mc-bulk-mode-label">操作
               <select value={bulkMode} disabled={busy} onChange={event => {
                 const mode = event.target.value;
                 setBulkMode(mode);
                 setSelectedIds(new Set());
-                onFilterChange(mode === 'approve' ? 'draft' : 'approved');
+                onFilterChange(mode === 'approve' ? 'submitted' : 'approved');
               }}>
-                <option value="approve">下書きを一括承認</option>
+                <option value="approve">先生の提出済み問題を一括承認</option>
                 <option value="publish">承認済みを一括公開（国・カテゴリー自動判定）</option>
               </select>
             </label>
@@ -517,14 +558,16 @@ function QuestionBank({
           <div className="mc-bulk-controls">
             <label className="mc-bulk-checkall">
               <input type="checkbox" checked={allChecked} disabled={busy || eligibleIds.length===0}
-                onChange={event=>setSelectedIds(event.target.checked ? new Set(eligibleIds) : new Set())}/>
+                onChange={event=>setSelectedIds(event.target.checked ? new Set(eligibleIds.slice(0,BULK_LIMIT)) : new Set())}/>
               表示中の対象を選択（最大{BULK_LIMIT}件）
             </label>
             <span className="mc-bulk-count">対象 {eligibleVisible.length}件・選択 {checkedIds.length}件</span>
             <button type="button" className="mc-primary mc-small" disabled={busy || checkedIds.length===0}
-              onClick={submitBulk}>{bulkMode==='approve' ? '選択した下書きを一括承認' : '選択した承認済みを一括公開'}</button>
+              onClick={submitBulk}>{bulkMode==='approve' ? '選択した提出済みを一括承認' : '選択した承認済みを一括公開'}</button>
           </div>
-          {bulkMode === 'publish' && <p className="mc-bulk-note">国・カテゴリーは問題に登録された情報から自動判定します。写真・出典・公開権利を確認してから実行してください。</p>}
+          <p className="mc-bulk-note">{bulkMode==='approve'
+            ? '未提出の下書きは一括承認しません。先生が「提出」した問題だけが対象です。'
+            : '公開先の国・カテゴリーは各問題の登録情報から自動判定します。写真・出典・公開利用権を必ず確認してください。'}</p>
           {bulkProgress && <p className="mc-save-progress" role="status" aria-live="polite">{bulkProgress}</p>}
           {bulkReport && <div className="mc-bulk-result" role="status">
             <strong>{bulkReport.mode==='approve'?'一括承認':'一括公開'}：成功 {bulkReport.done.length}件 / 失敗 {bulkReport.failed.length}件</strong>
@@ -532,6 +575,10 @@ function QuestionBank({
               <p>失敗した問題は自動再送していません。一覧の最新状態を確認してください。</p>
               <ul>{bulkReport.failed.map(x=><li key={x.id}>{x.title || x.id}：{x.reason}</li>)}</ul>
             </>}
+            {bulkReport.mode==='approve' && bulkReport.done.length>0 && <button type="button"
+              className="mc-primary mc-small" disabled={busy} onClick={()=>selectStage('approved')}>
+              次へ：承認済みの問題を公開
+            </button>}
             {!bulkReport.refreshed && <p>一覧の再取得に失敗しました。画面を更新して結果を確認してください。</p>}
           </div>}
         </section>
@@ -543,7 +590,7 @@ function QuestionBank({
         </p>
       ) : (
         <div className="mc-bank-list">
-          {visible.slice(0, 200).map(q => (
+          {shown.map(q => (
             <article className="mc-question-row" key={q.id}>
               {user?.role === 'admin' && eligibleForBulk(q, bulkMode) && (
                 <label className="mc-bulk-item-select">
@@ -652,12 +699,12 @@ function QuestionBank({
          <p style={{whiteSpace:'pre-wrap'}}>{authorDetails.authorProfile?.bio||'紹介文は登録されていません。'}</p>
          <small>公開同意：{authorDetails.authorProfile?.consent?'あり':'未確認'}・本番公開確認：{authorDetails.authorProfileVerified?'済み':'未確認'}</small></div>
        </section></div>}
-       {visible.length > 200 && (
-         <p className="mc-hint">
-          先頭200件まで表示しています。
-          検索条件を絞ってください。
-        </p>
-      )}
+       {visible.length > shown.length && <div className="mc-bank-more-results">
+         <p className="mc-hint">{visible.length}件中 {shown.length}件を表示中</p>
+         <button className="mc-outline" type="button" onClick={()=>setShownCount(previous=>previous+100)}>
+           さらに100件を表示
+         </button>
+       </div>}
     </section>
   );
 }
@@ -850,7 +897,7 @@ export default function MissionCreator() {
 
     let disposed=false;
     const currentFilter = bankFilter ??
-      (user?.role === 'admin' ? 'draft' : 'all');
+      (user?.role === 'admin' ? 'submitted' : 'all');
     const candidates = filterBankQuestions(questions, {
       filter: currentFilter,
       search: bankSearch
@@ -1069,7 +1116,7 @@ export default function MissionCreator() {
     catch(e){ setError(e?.message||'一括処理を開始できませんでした。'); return false; }
     const label=mode==='approve'?'一括承認':'一括公開';
     const message=mode==='approve'
-      ? '選択した' + plan.items.length + '件の下書きを承認済みにします。個々の問題内容と写真を確認済みですか？\n公開はまだ行いません。'
+      ? '先生が提出した' + plan.items.length + '件を承認済みにします。問題・正解・出典・写真を確認済みですか？\n公開はまだ行いません。'
       : '選択した' + plan.items.length + '件をTimePaletteに公開します。\n全件の写真・出典・解答・公開利用権を確認済みですか？';
     if(!window.confirm(message))return false;
     setBusy(true);setBulkRunning(true);setBulkReport(null);setBulkProgress('');setError('');
@@ -1084,6 +1131,13 @@ export default function MissionCreator() {
       return true;
     }catch(e){setError(e?.message||label+'に失敗しました。');return false;}
     finally{setBusy(false);setBulkRunning(false);setBulkProgress('');}
+  };
+  const refreshBank=async()=>{
+    if(busy||demo)return;
+    setBusy(true);setError('');
+    try{await reload();}
+    catch(e){setError(e?.message||'投稿一覧を更新できませんでした。');}
+    finally{setBusy(false);}
   };
   const archiveQuestion=async(q)=>{
     if(user?.role!=='admin'||busy)return;
@@ -1103,11 +1157,11 @@ export default function MissionCreator() {
     {!active ? (session ? <div className="mc-access-wrap"><div role="status" className="mc-card mc-access">前回のログインを確認しています…</div></div> : <Access cloudflare={cloudflare} onLogin={login} onRegister={register} registrationToken={cloudflare?'':registrationToken} onBack={()=>{setRegistrationToken('');setError('');}} busy={busy} error={error}/>) : <>
       <header className="mc-header"><div className="mc-header-brand"><Compass size={24}/> <strong>TimePalette</strong><span>MISSION CREATOR</span></div><div className="mc-header-user"><span>{demo?'デモ（保存不可）':`${user.name} ／ ${user.role==='admin'?'管理者':'参加教師'}`}</span><button type="button" className="mc-quiet" onClick={logout}><LogOut size={17}/>終了</button></div></header>
       <div className="mc-app"><aside className="mc-sidebar"><nav>
-        {[['dashboard',LayoutDashboard,'制作進捗'],['bank',BookOpen,'みんなの問題'],['publication',ShieldCheck,'公開ミッション管理'],['factory',UploadCloud,'AI 5問一括登録'],['editor',FilePlus2,'問題を作る']].filter(([id])=>id!=='publication'||user?.role==='admin').map(([id,Icon,label])=><button key={id} className={page===id?'active':''} type="button" onClick={()=>id==='editor'?startNew(): (setPage(id),setError(''))}><Icon size={18}/>{label}</button>)}
+        {[['dashboard',LayoutDashboard,'制作進捗'],['bank',BookOpen,user?.role==='admin'?'投稿の審査・公開':'みんなの問題'],['publication',ShieldCheck,'公開ミッション管理'],['factory',UploadCloud,'AI 5問一括登録'],['editor',FilePlus2,'問題を作る']].filter(([id])=>id!=='publication'||user?.role==='admin').map(([id,Icon,label])=><button key={id} className={page===id?'active':''} type="button" onClick={()=>id==='editor'?startNew(): (setPage(id),setError(''))}><Icon size={18}/>{label}</button>)}
         {user?.role==='admin' && <div className="mc-admin-hint"><ShieldCheck size={17}/>問題一覧で問題の編集・承認・削除・復元ができます。</div>}
       </nav><p>{cloudflare?'Cloudflare D1 ＋ R2':'Google Sheets ＋ Drive'} 連携<br/>Chrome / Edge 推奨</p></aside><main className="mc-main">
         {demo && <div className="mc-demo-banner"><CircleHelp size={18}/>これは操作確認用の画面です。写真のWebP変換とプレビューを試せますが、保存・承認はできません。</div>}
-        <div className="mc-main-heading"><div><div className="mc-eyebrow">GLOBAL COLLABORATION</div><h1>{page==='dashboard'?'制作進捗':page==='bank'?'みんなの問題':page==='publication'?'公開ミッション管理':page==='factory'?'AI 5問一括登録':'問題を作る'}</h1><p>197か国 × 6カテゴリー × 各10問を、世界の先生たちと作る。</p></div>{page!=='editor'&&<button className="mc-primary" type="button" onClick={startNew}><FilePlus2 size={18}/>新しく作成</button>}</div>
+        <div className="mc-main-heading"><div><div className="mc-eyebrow">GLOBAL COLLABORATION</div><h1>{page==='dashboard'?'制作進捗':page==='bank'?(user?.role==='admin'?'投稿の審査・公開':'みんなの問題'):page==='publication'?'公開ミッション管理':page==='factory'?'AI 5問一括登録':'問題を作る'}</h1><p>197か国 × 6カテゴリー × 各10問を、世界の先生たちと作る。</p></div>{page!=='editor'&&<button className="mc-primary" type="button" onClick={startNew}><FilePlus2 size={18}/>新しく作成</button>}</div>
         {error && page!=='editor' && <p role="alert" className="mc-error">{error}</p>}
         {loadingData && <div role="status" aria-live="polite" className="mc-save-progress">ログインしました。問題一覧・写真情報・進捗を読み込んでいます…</div>}
         {!loadingData && page==='factory'&&<MissionFactoryImport session={session} questions={questions} user={user} demo={demo} onDone={reload}/>}
@@ -1116,9 +1170,9 @@ export default function MissionCreator() {
           <PublishedMissionManager cloudflare={cloudflare} countries={countries} questions={questions} session={session}
             busy={busy||demo} onPublication={publication} onInspect={inspect}
             onEditPublished={async q=>{const ok=await publication(q,'unpublish');if(ok)startEdit({...q,status:'approved'});}}/>}
-        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} onPublication={publication} onBulkAction={bulkAction} bulkProgress={bulkProgress} bulkReport={bulkReport} selectedCountry="" countryNames={countryNames} busy={busy||demo||bulkRunning} reviewingIds={reviewingIds}
+        {!loadingData && page==='bank'&&<QuestionBank questions={questions} user={user} onEdit={startEdit} onReview={review} onInspect={inspect} onPrefetch={prefetchPhotos} onDelete={archiveQuestion} onRestore={restoreQuestion} onPublication={publication} onBulkAction={bulkAction} bulkProgress={bulkProgress} bulkReport={bulkReport} onRefresh={refreshBank} selectedCountry="" countryNames={countryNames} busy={busy||demo||bulkRunning} reviewingIds={reviewingIds}
           onEditPublished={async q=>{const ok=await publication(q,'unpublish');if(ok)startEdit({...q,status:'approved'});}}
-          filter={bankFilter ?? (user?.role === 'admin' ? 'draft' : 'all')}
+          filter={bankFilter ?? (user?.role === 'admin' ? 'submitted' : 'all')}
           onFilterChange={setBankFilter}
           search={bankSearch}
           onSearchChange={setBankSearch}/>}
