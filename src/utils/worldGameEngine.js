@@ -29,14 +29,21 @@ export function shuffleOptions(q,random=Math.random){
  const options=shuffled(q.choices.map((label,i)=>({label,i})),random);
  return {...q,choices:options.map(x=>x.label),correctIndex:options.findIndex(x=>x.i===q.correctIndex)};
 }
+// Turn-based games must give every team the same number of opportunities.
+export function playableLimit(mode,requested,available,teams){
+ const max=Math.max(0,Math.min(requested,available));
+ return ['territory','journey'].includes(mode)?Math.floor(max/teams)*teams:max;
+}
 export function createGame({mode,pool,limit,teamCount=2,teamNames=[],random=Math.random}){
  if(!GAME_MODES.includes(mode)||!Number.isInteger(limit)||limit<1||!pool.length)throw Error('出題可能な問題がありません。');
  const teamMode=mode!=='shuffle';
  const n=teamMode?Math.min(8,Math.max(2,Number(teamCount)||2)):1;
  const teams=Array.from({length:n},(_,i)=>({id:i,name:teamMode?(String(teamNames[i]||'').trim().slice(0,24)||'TEAM '+(i+1)):'PLAYER',color:TEAM_COLORS[i],score:0,money:0,position:0,correctCount:0,attempts:0,streak:0,bestStreak:0,visits:[]}));
+ const actualLimit=playableLimit(mode,limit,pool.length,n);
+ if(actualLimit<1)throw Error('各チームが1回以上挑戦できる問題数を選んでください。');
  const route=shuffled([...new Set(pool.map(q=>q.country))],random);
- const deck=balancedDeck(pool,limit,random);
- return {mode,teams,route,deck,pool,limit:Math.min(limit,pool.length),round:0,turn:0,used:[],history:[],owners:{},answers:{},phase:['territory','journey'].includes(mode)?'select':'question',question:['territory','journey'].includes(mode)?null:deck[0],target:null,dice:null,last:null};
+ const deck=balancedDeck(pool,actualLimit,random);
+ return {mode,teams,route,deck,pool,limit:actualLimit,round:0,turn:0,used:[],history:[],owners:{},answers:{},phase:['territory','journey'].includes(mode)?'select':'question',question:['territory','journey'].includes(mode)?null:deck[0],target:null,dice:null,last:null};
 }
 export function availableTerritories(game){
  const used=new Set(game.used);
