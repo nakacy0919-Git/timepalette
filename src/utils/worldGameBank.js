@@ -1,11 +1,12 @@
 import {getGeography197Profile,getGeography197CountryCodes} from './geography197.js';
 import {getTimePackage} from './time197.js';
+import {getJicaWorldDiaryUrls} from './jicaWorldDiary.js';
 import {validQuestion} from './worldGameEngine.js';
 
 // Explicit eligibility boundary: only self-contained, reviewed questions enter games.
 // AIA-derived original questions will use this same contract after rights/editorial review.
 export function approvedStandaloneQuestions(records){
- return (Array.isArray(records)?records:[]).filter(q=>q?.gameEligible===true&&q?.reviewStatus==='approved'&&q?.rightsConfirmed===true&&Array.isArray(q.sources)&&q.sources.length>0&&validQuestion(q));
+ return (Array.isArray(records)?records:[]).filter(q=>q?.gameEligible===true&&q?.reviewStatus==='approved'&&q?.rightsConfirmed===true&&Array.isArray(q.sources)&&q.sources.length>0&&!getJicaWorldDiaryUrls(q).length&&validQuestion(q));
 }
 export function makeLocalGameBank(countries,approved=[]){
  const profiles=getGeography197CountryCodes().map(getGeography197Profile).filter(Boolean);
