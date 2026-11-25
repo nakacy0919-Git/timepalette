@@ -65,6 +65,7 @@ export function selectTerritory(game,country,random=Math.random){
 }
 export function rollJourney(game,die,random=Math.random,travel='standard'){
  if(game.mode!=='journey'||game.phase!=='select'||!Number.isInteger(die)||die<1||die>6)return game;
+ if(!Object.hasOwn(TRAVEL_MODES,travel))return game;
  const team=game.teams[game.turn],ticket=TRAVEL_MODES[travel];
  if(!ticket||(!game.travelEconomy&&travel!=='standard')||team.money<ticket.cost)return game;
  let position=(team.position+die+ticket.extra)%game.route.length;
