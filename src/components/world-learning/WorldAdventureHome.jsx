@@ -572,7 +572,9 @@ export default function WorldAdventureHome({
               </button>
 
             </div>
-
+            <button type="button" onClick={() => onOpenTool?.('worldGames')} className="relative mt-4 inline-flex w-fit items-center gap-3 rounded-2xl border border-cyan-200/50 bg-slate-950/65 px-5 py-3 text-left font-bold text-white shadow-lg backdrop-blur-xl hover:bg-blue-900/80 focus-visible:outline focus-visible:outline-cyan-300">
+              <span aria-hidden="true" className="text-2xl">🎮</span><span>World Games <span className="block text-xs text-cyan-200">世界クイズ・対戦・陣取り・すごろく</span></span><ArrowRight size={18}/>
+            </button>
           </div>
 
 
