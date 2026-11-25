@@ -22,3 +22,5 @@
 .wg-review{border-top:1px solid #395771;margin-top:20px;padding-top:15px}.wg-review summary{cursor:pointer;font-weight:850;color:#b1e9fa;padding:10px 0}.wg-review article{border-top:1px solid #304b63;padding:14px 0;display:grid;gap:7px}.wg-review article p{color:#9cf0cc}.wg-review small{color:#c6d7e4;line-height:1.7}
 .wg-journey-map{margin-top:10px}.wg-journey-map svg{max-height:33vh}.wg-dice{color:#fce092}.wg-score strong{overflow-wrap:anywhere}.wg-question.teacher .wg-options button{min-height:90px}.wg-question.teacher h2{font-size:clamp(24px,3.5vw,44px)}
 @media(max-width:850px){.wg-modes button{min-height:120px}}@media(max-width:540px){.wg-question.teacher .wg-options button{min-height:66px}.wg-handoff{padding:28px 12px}.wg-timer strong{font-size:22px}}
+
+.wg-game-progress{height:8px;border-radius:999px;background:#31465d;margin-bottom:16px;overflow:hidden}.wg-game-progress i{display:block;height:100%;background:linear-gradient(90deg,#38bdf8,#6ee7b7);border-radius:999px;transition:width .25s ease}.wg-question button:focus-visible{outline-offset:4px}
