@@ -1,0 +1,43 @@
+{
+  "checkedOn": "2026-11-25",
+  "status": "draft_reference_comparison",
+  "note": "Original PDF text verified; page images unavailable. Old and new providers may differ; do not treat as a harmonized time series.",
+  "comparisons": [
+    {
+      "country": "UZ",
+      "indicator": "SP.POP.TOTL",
+      "original": {
+        "value": 27800000,
+        "year": 2008,
+        "printedPage": 39,
+        "pdfPage": 42,
+        "source": "UNFPA as cited by AIA",
+        "url": "https://www2.aia.pref.aichi.jp/koryu/j/kyouzai/PDF/H20/uzbekistan.pdf"
+      },
+      "replacement": {
+        "value": 37053428,
+        "year": 2025,
+        "source": "World Bank WDI",
+        "url": "https://data.worldbank.org/country/uzbekistan"
+      }
+    },
+    {
+      "country": "BD",
+      "indicator": "SP.POP.TOTL",
+      "original": {
+        "value": 162221000,
+        "year": 2009,
+        "printedPage": 35,
+        "pdfPage": 38,
+        "source": "UNICEF as cited by AIA",
+        "url": "https://www2.aia.pref.aichi.jp/koryu/j/kyouzai/PDF/H23/Bangladesh.pdf"
+      },
+      "replacement": {
+        "value": 175686899,
+        "year": 2025,
+        "source": "World Bank WDI",
+        "url": "https://data.worldbank.org/country/bangladesh"
+      }
+    }
+  ]
+}
