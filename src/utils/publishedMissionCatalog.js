@@ -19,7 +19,7 @@ export function toPublishedMission(q){
     points:10,requiredForMastery:false,creatorQuestionId:q.id,author:q.creator||null,video:q.video||null,learning:q.learning||null,
     voice:q.learning?.voice||null,
     explanation:String(q.explanation||'').slice(0,3500),sourceUrls:Array.isArray(q.sources)?q.sources:[]};
-  const diaryUrls=getJicaWorldDiaryUrls({sourceUrls:q.sources,explanation:q.explanation});
+  const diaryUrls=getJicaWorldDiaryUrls(q);
   // Photo-only questions cannot be restored until independently licensed
   // replacements are supplied. Their old JICA photos must not be reused.
   if(diaryUrls.length && q.type==='photo4')return {...common,
