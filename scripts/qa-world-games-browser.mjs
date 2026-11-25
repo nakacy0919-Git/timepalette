@@ -45,6 +45,20 @@ try{
   await shell.locator('.wg-options button').first().click();
   await shell.locator('.wg-feedback').waitFor();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'page overflow');
+  // Exercise the actual English display and scoring in the same browser.
+  page.once('dialog',d=>d.accept());
+  await shell.getByRole('button',{name:'← ゲーム設定',exact:true}).click();
+  await shell.getByRole('button',{name:/World Shuffle/}).click();
+  await shell.getByRole('button',{name:'English',exact:true}).click();
+  await shell.getByRole('button',{name:'ゲーム開始 →'}).click();
+  const quiz=shell.locator('.wg-question');
+  await quiz.waitFor();
+  assert.equal(await quiz.getAttribute('lang'),'en');
+  const quizText=await quiz.locator('h2,.wg-options').allTextContents();
+  assert.equal(/[\u3040-\u30ff\u3400-\u9fff]/.test(quizText.join(' ')),false);
+  await quiz.locator('.wg-options button').first().click();
+  await quiz.locator('.wg-feedback').waitFor();
+  await quiz.getByRole('button',{name:'Next',exact:true}).waitFor();
   assert.deepEqual(errors,[]);
   console.log('PASS: all four modes at '+viewport.width+'x'+viewport.height);
   await context.close();
