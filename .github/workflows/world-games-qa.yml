@@ -8,6 +8,9 @@ on:
       - 'src/App.jsx'
       - 'scripts/qa-world-games-browser.mjs'
       - 'tests/worldGameEngine.test.mjs'
+      - 'tests/worldBattleRoom.test.mjs'
+      - 'src/utils/worldBattleRoom.js'
+      - 'src/data/world-games/**'
       - '.github/workflows/world-games-qa.yml'
 permissions:
   contents: read
@@ -23,6 +26,6 @@ jobs:
         with:
           node-version: '24'
       - run: npm ci
-      - run: node --test tests/worldGameEngine.test.mjs
+      - run: node --test tests/worldGameEngine.test.mjs tests/worldBattleRoom.test.mjs
       - run: npx playwright install --with-deps chromium
       - run: node scripts/qa-world-games-browser.mjs
