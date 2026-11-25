@@ -18,7 +18,9 @@ function startQuestion(room,now){
 // Only the host assigns teams; the transport authenticates the actor identity.
 export function applyBattleAction(room,actor,action,now){
  if(!room||!action||!Number.isFinite(now)||typeof actor!=='string')return room;
- if(action.revision!==room.revision)return room;
+ // Host commands are revision-guarded; concurrent team answers use round identity instead.
+ if(action.type==='answer'){if(action.round!==room.round+1||action.questionId!==room.deck[room.round]?.id)return room;}
+ else if(action.revision!==room.revision)return room;
  if(action.type==='assign'){
   if(!hostOnly(room,actor)||room.phase!=='lobby'||!Number.isInteger(action.teamId)||typeof action.actorId!=='string'||!action.actorId||action.actorId===room.hostId||!room.teams.some(t=>t.id===action.teamId)||room.teams.some(t=>t.id!==action.teamId&&t.actorId===action.actorId))return room;
   return changed(room,{teams:room.teams.map(t=>t.id===action.teamId?{...t,actorId:action.actorId}:t)});
