@@ -104,3 +104,8 @@ test('travel route, paid passes, souvenir purchase and total asset accounting',(
  g=advanceGame(g);g=rollJourney(g,1,random);g=answerGame(g,-1);g=advanceGame(g);
  g=rollJourney(g,1,random,'rail');assert.equal(g.teams[0].money,100);assert.equal(g.travel,'rail');assert.equal(g.phase,'question');
 });
+
+test('AIA records require a real official PDF URL, reference page, review date and explicit rights',()=>{
+ const item={...q('aia-test'),origin:'AIA',gameEligible:true,rightsConfirmed:true,reviewStatus:'approved',sources:['https://www2.aia.pref.aichi.jp/koryu/j/kyouzai/PDF/H20/uzbekistan.pdf'],sourcePages:[12],verifiedOn:'2026-11-25'};
+ assert.deepEqual(approvedStandaloneQuestions([item,item,{...item,id:'aia-missing',sourcePages:[]},{...item,id:'aia-fake',sources:['https://www2.aia.pref.aichi.jp.example.com/fake.pdf']},{...item,id:'aia-draft',reviewStatus:'draft'}]),[item]);
+});
