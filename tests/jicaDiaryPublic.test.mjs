@@ -56,3 +56,21 @@ test('A JICA organization URL is not an individual World Diary and remains a nor
   assert.deepEqual(sanitizeWorldDiaryCatalog([jicaReport]),[jicaReport]);
   assert.equal(toPublishedMission(jicaReport)?.type,'single-choice');
 });
+
+test('legacy World Diary metadata is recognized in both public and player paths', () => {
+  for (const metadata of [
+    {sourceUrls:[blog]}, {sources:blog}, {notes:'出典: '+blog},
+    {media:[{slot:1,sourceUrl:blog}]}, {jicaDiarySourceUrl:blog},
+  ]) {
+    const legacy={...base,sources:[],...metadata};
+    const [clean]=sanitizeWorldDiaryCatalog([legacy]);
+    assert.deepEqual(clean.media,[]);
+    assert.deepEqual(clean.sourceUrls,[blog]);
+    for (const item of [legacy,clean]) {
+      const mission=toPublishedMission(item);
+      assert.deepEqual(mission?.materials,[]);
+      assert.equal(mission?.jicaDiarySourceUrl,blog);
+      assert.deepEqual(mission?.challenge?.choices,[base.answer,...base.choices]);
+    }
+  }
+});
