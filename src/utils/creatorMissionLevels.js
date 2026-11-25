@@ -1,3 +1,4 @@
+import {removeJicaWorldDiaryAssetLinks} from './jicaWorldDiary.js';
 // Only teacher-published missions are scoped by this metadata.
 export const LEARNING_LEVEL_IDS = Object.freeze(['elementary','juniorHigh','highSchoolStandard','highSchoolAdvanced']);
 export const DEFAULT_CREATOR_LEVELS = Object.freeze(['elementary','juniorHigh','highSchoolStandard']);
@@ -15,7 +16,7 @@ export function forCreatorLearningLevel(mission, level) {
   if (!prompt) return null;
   const localized = {...mission,
     title:prompt.split(/[\n.!?]/)[0].slice(0,50), prompt,
-    explanation:String(en.explanationEn || '').trim()};
+    explanation:removeJicaWorldDiaryAssetLinks(en.explanationEn).trim()};
   if (mission.type === 'single-choice' &&
       Array.isArray(mission.challenge?.choices) &&
       mission.challenge.choices.every(choice => typeof choice === 'string')) {

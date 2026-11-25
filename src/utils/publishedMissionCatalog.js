@@ -1,4 +1,4 @@
-import {getJicaWorldDiaryUrls} from './jicaWorldDiary.js';
+import {getJicaWorldDiaryUrls,hasJicaWorldDiaryReference,isJicaWorldDiaryAssetUrl,removeJicaWorldDiaryAssetLinks} from './jicaWorldDiary.js';
 // Transform only validated, published Mission Creator questions into playable missions.
 function imageUrl(questionId,slot,r2MediaBase){
   // Catalog-controlled R2 URL; unknown origins cannot become media URLs.
@@ -20,14 +20,17 @@ export function toPublishedMission(q){
     voice:q.learning?.voice||null,
     explanation:String(q.explanation||'').slice(0,3500),sourceUrls:Array.isArray(q.sources)?q.sources:[]};
   const diaryUrls=getJicaWorldDiaryUrls(q);
-  // Photo-only questions cannot be restored until independently licensed
-  // replacements are supplied. Their old JICA photos must not be reused.
-  if(diaryUrls.length && q.type==='photo4')return {...common,
+  const diaryReading=()=>({...common,
     type:'world-diary-reflection',title:'JICA 世界日記',
     prompt:'世界日記を読んで、感じたことを書こう',
     explanation:'',sourceUrls:diaryUrls,materials:[],video:null,voice:null,
-    learning:{levels:q.learning?.levels||['elementary','juniorHigh','highSchoolStandard']}};
-  if(['video4','videoReflect'].includes(q.type)&&!videoEmbedValid(q.video))return null;
+    learning:{levels:q.learning?.levels||['elementary','juniorHigh','highSchoolStandard']},
+    ...(!diaryUrls.length?{jicaDiaryMissingSource:true}: {})});
+  if(hasJicaWorldDiaryReference(q)&&!diaryUrls.length)return diaryReading();
+  // Photo-only questions cannot be restored until independently licensed
+  // replacements are supplied. Their old JICA photos must not be reused.
+  if(diaryUrls.length && ['photo4','videoReflect'].includes(q.type))return diaryReading();
+  if(!diaryUrls.length&&['video4','videoReflect'].includes(q.type)&&!videoEmbedValid(q.video))return null;
   if(q.type==='videoReflect')return {...common,type:'creator-video-reflection',reflection:q.video};
   let choices,correctIndex;
   if(q.type==='photo4'){
@@ -39,7 +42,7 @@ export function toPublishedMission(q){
   }else{
     const wrong=Array.isArray(q.choices)?q.choices:[];
     choices=[q.answer,...wrong].map(x=>String(x||'').trim());
-    if(choices.length!==4||choices.some(x=>!x)||new Set(choices).size!==4)return null;
+    if(choices.length!==4||choices.some(x=>!x)||new Set(choices).size!==4)return diaryUrls.length?diaryReading():null;
     correctIndex=0;
     if(q.type==='photoText4'&&!diaryUrls.length&&!q.media?.some(m=>m.slot===1))return null;
   }
@@ -48,12 +51,12 @@ export function toPublishedMission(q){
     title:String(q.prompt).trim().split(/[\n。！？?]/)[0].slice(0,50),
     prompt:String(q.prompt).trim(),points:10,requiredForMastery:false,
     challenge:{choices,correctIndex},
-    explanation:String(q.explanation||'').slice(0,3500),
+    explanation:removeJicaWorldDiaryAssetLinks(q.explanation).slice(0,3500),
     materials:q.type==='photoText4'&&!diaryUrls.length?[{id:'mc-media-'+q.id,type:'image',
       url:imageUrl(q.id,1,q.r2MediaBase),role:'primary',alt:'問題を考えるための写真',
       display:{placement:'beforeChallenge',aspectRatio:'16:9'}}]:[],
-    sourceUrls:Array.isArray(q.sources)?q.sources:[],creatorQuestionId:q.id,
-    ...(diaryUrls.length?{jicaDiarySourceUrl:diaryUrls[0]}:{})
+    sourceUrls:[...new Set([...(Array.isArray(q.sources)?q.sources:[]).filter(s=>typeof s==='string'&&!isJicaWorldDiaryAssetUrl(s)),...diaryUrls])],creatorQuestionId:q.id,
+    ...(diaryUrls.length?{jicaDiarySourceUrl:diaryUrls[0],video:null}:{})
   };
 }
 export function normalizePublishedCatalog(questions){

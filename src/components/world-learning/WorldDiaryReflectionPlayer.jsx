@@ -90,7 +90,7 @@ export default function WorldDiaryReflectionPlayer({
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
-  if (!sourceUrl) return null;
+  if (!sourceUrl) return createPortal(<div className="tp-diary-overlay"><section className="tp-diary-dialog" role="dialog" aria-modal="true" aria-label="世界日記の出典確認"><header className="tp-diary-header"><div><h2>世界日記・出典確認中</h2><p>この教材の元記事URLを確認しています。</p></div><button type="button" aria-label="学習画面を閉じる" onClick={onClose}><X size={23}/></button></header><div className="tp-diary-columns"><div className="tp-diary-left"><p>元記事へのリンクが未登録のため、ここに資料を表示できません。世界日記の写真は転載しません。</p><a href="https://world-diary.jica.go.jp/" target="_blank" rel="noopener noreferrer">JICA 世界日記の公式サイトを開く</a></div><div className="tp-diary-right"><p>出典を確認できるまで、このミッションは採点しません。</p><button type="button" onClick={onClose}>一覧に戻る</button></div></div></section></div>,document.body);
 
   return createPortal(
     <div className="tp-diary-overlay">
@@ -120,6 +120,9 @@ export default function WorldDiaryReflectionPlayer({
               key={sourceUrl}
               source={{ title: 'JICA 海外協力隊 世界日記', organization: 'JICA（原文）', url: sourceUrl }}
               className="tp-diary-source-reader"
+              allowFullscreen
+              defaultZoom={0.75}
+              fullscreenReturnLabel="全画面を閉じて発見ノートに戻る"
             />
             <p className="tp-diary-source-note">
               JICA公式サイトの原文をそのまま表示します。サイト側の制限で表示できない場合は、

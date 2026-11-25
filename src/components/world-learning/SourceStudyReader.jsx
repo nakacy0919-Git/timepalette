@@ -26,6 +26,7 @@ export default function SourceStudyReader({
   allowFullscreen = false,
   defaultZoom = 1,
   onFullscreenChange,
+  fullscreenReturnLabel = '全画面を閉じて4択に戻る',
 }) {
   const [
     zoom,
@@ -374,7 +375,7 @@ export default function SourceStudyReader({
               ref={closeButtonRef}
               type="button"
               onClick={() => setFullscreen(false)}
-              aria-label="全画面を閉じて4択に戻る"
+              aria-label={fullscreenReturnLabel}
               className="inline-flex min-h-11 items-center gap-1.5 rounded-xl border border-white/30 bg-white/15 px-3 py-2 text-xs font-black text-white hover:bg-white/25"
             >
               <X size={18} />

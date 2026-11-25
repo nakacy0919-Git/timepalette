@@ -10,6 +10,7 @@
 .tp-diary-section-title{display:flex;align-items:center;gap:9px;color:#225a77;font-size:16px}
 .tp-diary-section-title strong{font-weight:900}
 .tp-diary-source-reader{flex:1;min-height:0!important;border-radius:14px!important}
+.tp-diary-source-reader.tp-source-study-fullscreen{position:fixed!important;inset:8px!important;width:calc(100vw - 16px)!important;height:calc(100dvh - 16px)!important;z-index:22000!important;flex:none!important;border-radius:14px!important;background:white;box-shadow:0 20px 85px #07152b88!important}
 .tp-diary-source-note{font-size:12px;line-height:1.65;color:#596d79;margin:0}
 .tp-diary-source-note a{display:inline-flex;align-items:center;gap:3px;color:#176788;text-decoration:underline;font-weight:800}
 .tp-diary-source-select{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:800}

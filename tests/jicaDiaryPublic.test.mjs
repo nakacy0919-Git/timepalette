@@ -74,3 +74,38 @@ test('legacy World Diary metadata is recognized in both public and player paths'
     }
   }
 });
+
+test('all country/domain combinations use the same diary conversion and retain multiple article links', () => {
+  const otherBlog='https://world-diary.jica.go.jp/another/culture/post_20.php';
+  const oldPhoto='https://world-diary.jica.go.jp/another/assets_c/2025/old.jpg';
+  for (const countryIso of ['uz','np','ke','br','rw']) {
+    for (const domain of ['place','time','language','lifeCulture','japanConnection','thinkConnect']) {
+      const raw={...base,countryIso,domain,sources:[blog],notes:`資料 ${otherBlog} 写真 ${oldPhoto}`};
+      const mission=toPublishedMission(sanitizeWorldDiaryCatalog([raw])[0]);
+      assert.equal(mission.type,'single-choice');
+      assert.deepEqual(mission.materials,[]);
+      assert.deepEqual(mission.sourceUrls,[blog,otherBlog]);
+      assert.equal(mission.jicaDiarySourceUrl,blog);
+      assert.ok(!mission.explanation.includes(oldPhoto));
+    }
+  }
+});
+
+test('an old photo-only URL never becomes an article iframe or a copied quiz photo', () => {
+  const raw={...base,sources:[],media:[{slot:1,sourceUrl:'https://world-diary.jica.go.jp/author/assets_c/2025/old.jpg'}]};
+  const [clean]=sanitizeWorldDiaryCatalog([raw]);
+  assert.equal(clean.jicaDiaryMissingSource,true);
+  assert.deepEqual(clean.media,[]);
+  const mission=toPublishedMission(clean);
+  assert.equal(mission.type,'world-diary-reflection');
+  assert.deepEqual(mission.sourceUrls,[]);
+  assert.equal(mission.jicaDiaryMissingSource,true);
+});
+
+test('diary-backed video reflections or incomplete choices remain available as article reading', () => {
+  for(const raw of [{...base,type:'videoReflect'},{...base,choices:[]}]) {
+    const mission=toPublishedMission(raw);
+    assert.equal(mission.type,'world-diary-reflection');
+    assert.deepEqual(mission.sourceUrls,[blog]);
+  }
+});

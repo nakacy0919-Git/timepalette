@@ -4,6 +4,10 @@
   display:grid;grid-template-columns:minmax(0,1.17fr) minmax(360px,1fr);grid-template-rows:minmax(0,1fr);gap:16px;min-height:0;
 }
 .tp-creator-diary-evidence{display:flex;flex-direction:column;min-height:0;overflow:hidden;border:1px solid #c8dce7;border-radius:18px;background:white;}
+.tp-creator-diary-source-select{display:flex;align-items:center;gap:10px;padding:8px 12px;background:#eaf4fb;font-size:13px;font-weight:700;flex:none;}
+.tp-creator-diary-source-select select{flex:1;min-width:0;border:1px solid #a9c5d4;border-radius:8px;background:white;padding:6px;}
+.tp-creator-diary-source-fallback{margin:0;padding:5px 10px;color:#526c7a;font-size:11px;line-height:1.4;flex:none;}
+.tp-creator-diary-source-fallback a{color:#176788;font-weight:800;text-decoration:underline;}
 .tp-creator-diary-evidence .tp-creator-diary-reader{flex:1;min-height:0!important;overflow:hidden;border:none!important;border-radius:0!important;box-shadow:none!important;}
 .tp-creator-diary-question{display:flex;flex-direction:column;min-height:0;gap:11px;overflow:auto;}
 .tp-creator-diary-question .tp-creator-answers{flex:1;min-height:340px;}
