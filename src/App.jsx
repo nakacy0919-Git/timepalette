@@ -1,4 +1,6 @@
 import {
+  lazy,
+  Suspense,
   useRef,
   useState,
 } from 'react';
@@ -44,6 +46,8 @@ import {
 import {
   playUiSound,
 } from './utils/uiSound';
+
+const WorldGameHub = lazy(() => import('./components/world-games/WorldGameHub.jsx'));
 
 const Placeholder = ({
   title,
@@ -233,6 +237,9 @@ export default function App() {
             />
           );
 
+        case 'worldGames':
+          return <Suspense fallback={<div role="status" className="p-8 text-center">World Gamesを読み込み中…</div>}><WorldGameHub onBackHome={goHome}/></Suspense>;
+
         case 'explore':
           return (
             <ExploreWorld onBackHome={goHome}/>
@@ -295,7 +302,7 @@ export default function App() {
     };
 
   const isFullWidth =
-    activeTab === 'home' ||
+    activeTab === 'home' || activeTab === 'worldGames' ||
     activeTab ===
       'explore';
 
