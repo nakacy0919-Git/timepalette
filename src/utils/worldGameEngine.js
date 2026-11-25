@@ -29,14 +29,22 @@ export function shuffleOptions(q,random=Math.random){
  const options=shuffled(q.choices.map((label,i)=>({label,i})),random);
  return {...q,choices:options.map(x=>x.label),correctIndex:options.findIndex(x=>x.i===q.correctIndex)};
 }
-export function createGame({mode,pool,limit,teamCount=2,random=Math.random}){
+export function createGame({mode,pool,limit,teamCount=2,teamNames=[],random=Math.random}){
  if(!GAME_MODES.includes(mode)||!Number.isInteger(limit)||limit<1||!pool.length)throw Error('出題可能な問題がありません。');
  const teamMode=mode!=='shuffle';
  const n=teamMode?Math.min(8,Math.max(2,Number(teamCount)||2)):1;
- const teams=Array.from({length:n},(_,i)=>({id:i,name:teamMode?'TEAM '+(i+1):'PLAYER',color:TEAM_COLORS[i],score:0,money:0,position:0}));
+ const teams=Array.from({length:n},(_,i)=>({id:i,name:teamMode?(String(teamNames[i]||'').trim().slice(0,24)||'TEAM '+(i+1)):'PLAYER',color:TEAM_COLORS[i],score:0,money:0,position:0,correctCount:0,attempts:0,streak:0,bestStreak:0,visits:[]}));
  const route=shuffled([...new Set(pool.map(q=>q.country))],random);
  const deck=balancedDeck(pool,limit,random);
- return {mode,teams,route,deck,pool,limit:Math.min(limit,pool.length),round:0,turn:0,used:[],owners:{},answers:{},phase:['territory','journey'].includes(mode)?'select':'question',question:['territory','journey'].includes(mode)?null:deck[0],target:null,dice:null,last:null};
+ return {mode,teams,route,deck,pool,limit:Math.min(limit,pool.length),round:0,turn:0,used:[],history:[],owners:{},answers:{},phase:['territory','journey'].includes(mode)?'select':'question',question:['territory','journey'].includes(mode)?null:deck[0],target:null,dice:null,last:null};
+}
+export function availableTerritories(game){
+ const used=new Set(game.used);
+ return game.route.filter(country=>game.pool.some(q=>q.country===country&&!used.has(q.id)));
+}
+function withAnswer(t,correct,journey=false){
+ const streak=correct?t.streak+1:0;
+ return {...t,score:t.score+(correct?100:0),money:t.money+(correct&&journey?300:0),attempts:t.attempts+1,correctCount:t.correctCount+Number(correct),streak,bestStreak:Math.max(t.bestStreak,streak)};
 }
 function nextQuestion(game,country,random){
  const available=game.pool.filter(q=>q.country===country&&!game.used.includes(q.id));
@@ -58,26 +66,37 @@ export function rollJourney(game,die,random=Math.random){
  return {...game,phase:'finished'};
 }
 export function answerGame(game,index){
- if(game.phase!=='question'||!game.question||!Number.isInteger(index)||index<0||index>3)return game;
+ if(game.phase!=='question'||!game.question||!Number.isInteger(index)||index< -1||index>3)return game;
  const q=game.question, correct=index===q.correctIndex, id=game.turn;
  if(game.mode==='battle'){
   const answers={...game.answers,[id]:index};
   if(id+1<game.teams.length)return {...game,answers,turn:id+1};
-  const teams=game.teams.map(t=>({...t,score:t.score+(answers[t.id]===q.correctIndex?100:0)}));
+  const teams=game.teams.map(t=>withAnswer(t,answers[t.id]===q.correctIndex));
   return {...game,answers,teams,turn:0,phase:'review',last:{correct:null}};
  }
- const teams=game.teams.map(t=>t.id!==id?t:{...t,score:t.score+(correct?100:0),money:t.money+(correct&&game.mode==='journey'?300:0)});
+ const teams=game.teams.map(t=>{if(t.id!==id)return t;const next=withAnswer(t,correct,game.mode==='journey');return game.mode==='journey'?{...next,visits:[...new Set([...t.visits,q.country])]}:next;});
  const owners=correct&&game.mode==='territory'?{...game.owners,[game.target]:id}:game.owners;
  return {...game,teams,owners,answers:{[id]:index},phase:'review',last:{correct}};
 }
 export function advanceGame(game){
  if(game.phase!=='review')return game;
  const round=game.round+1,used=[...game.used,game.question.id];
- if(round>=game.limit)return {...game,round,used,phase:'finished',question:null};
+ const history=[...game.history,{question:game.question,answers:{...game.answers},turn:game.turn,target:game.target,dice:game.dice}];
+ if(round>=game.limit)return {...game,round,used,history,phase:'finished',question:null};
  const turn=['territory','journey'].includes(game.mode)?(game.turn+1)%game.teams.length:0;
  const selection=['territory','journey'].includes(game.mode);
- return {...game,round,used,turn,answers:{},phase:selection?'select':'question',question:selection?null:game.deck[round],target:null,dice:null,last:null};
+ return {...game,round,used,history,turn,answers:{},phase:selection?'select':'question',question:selection?null:game.deck[round],target:null,dice:null,last:null};
 }
 export function standings(game){
  return game.teams.map(t=>({...t,territories:Object.values(game.owners).filter(id=>id===t.id).length})).sort((a,b)=>game.mode==='territory'?b.territories-a.territories||b.score-a.score:game.mode==='journey'?b.money-a.money||b.score-a.score:b.score-a.score);
+}
+
+// Review keeps original questions and correct indices, never only the displayed letters.
+export function missedQuestions(game){
+ return (game.history||[]).filter(row=>Object.values(row.answers).some(answer=>answer!==row.question.correctIndex)).map(row=>row.question);
+}
+export function teamRank(game,t){
+ const rankValue=x=>game.mode==='territory'?[x.territories,x.score]:game.mode==='journey'?[x.money,x.score]:[x.score,0];
+ const a=rankValue(t);
+ return 1+standings(game).filter(other=>{const b=rankValue(other);return b[0]>a[0]||(b[0]===a[0]&&b[1]>a[1]);}).length;
 }
