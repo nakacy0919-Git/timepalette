@@ -8,12 +8,12 @@ import {validQuestion} from './worldGameEngine.js';
 // AIA-derived original questions will use this same contract after rights/editorial review.
 export function approvedStandaloneQuestions(records){
  const seen=new Set();
- const officialAia=url=>{try{const u=new URL(url);return u.protocol==='https:'&&u.hostname==='www2.aia.pref.aichi.jp'&&u.pathname.startsWith('/koryu/j/kyouzai/')&&/\\.pdf$/i.test(u.pathname);}catch{return false;}};
+ const officialAia=url=>{try{const u=new URL(url);return u.protocol==='https:'&&u.hostname==='www2.aia.pref.aichi.jp'&&u.pathname.startsWith('/koryu/j/kyouzai/')&&/\.pdf$/i.test(u.pathname);}catch{return false;}};
  return (Array.isArray(records)?records:[]).filter(q=>{
   if(!q||q.gameEligible!==true||q.reviewStatus!=='approved'||q.rightsConfirmed!==true||!Array.isArray(q.sources)||!q.sources.length||getJicaWorldDiaryUrls(q).length||!validQuestion(q)||seen.has(q.id))return false;
   if(!['place','time','language','lifeCulture','japanConnection','thinkConnect'].includes(q.domain)||typeof q.explanation!=='string'||!q.explanation.trim())return false;
   if(q.origin==='AIA'||q.id.startsWith('aia-')){
-   if(!q.sources.some(officialAia)||!Array.isArray(q.sourcePages)||!q.sourcePages.length||!q.sourcePages.every(n=>Number.isInteger(n)&&n>0)||!/^\\d{4}-\\d{2}-\\d{2}$/.test(q.verifiedOn||''))return false;
+   if(!q.sources.some(officialAia)||!Array.isArray(q.sourcePages)||!q.sourcePages.length||!q.sourcePages.every(n=>Number.isInteger(n)&&n>0)||!/^\d{4}-\d{2}-\d{2}$/.test(q.verifiedOn||''))return false;
   }
   seen.add(q.id);return true;
  });
