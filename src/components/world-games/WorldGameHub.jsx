@@ -4,6 +4,7 @@ import worldAtlas from 'world-atlas/countries-110m.json';
 import {getLiveWorldLearningCountries} from '../../utils/worldLearningRegistry';
 import {getGeography197Profile} from '../../utils/geography197';
 import {makeLocalGameBank} from '../../utils/worldGameBank';
+import {localizeQuestion} from '../../utils/worldGameLanguage';
 import {questionPool,createGame,selectTerritory,rollJourney,answerGame,advanceGame,standings,missedQuestions,teamRank,availableTerritories,playableLimit,buySouvenir} from '../../utils/worldGameEngine';
 import {getUiSoundEnabled,setUiSoundEnabled,playUiSound} from '../../utils/uiSound';
 import {TRAVEL_MODES,SOUVENIRS,territoryChoices,regionalCollections,journeyAssets} from '../../utils/worldGameStrategy';
@@ -20,6 +21,7 @@ const countries=getLiveWorldLearningCountries();
 const byIso=Object.fromEntries(countries.map(c=>[c.iso,c]));
 const byAtlas=Object.fromEntries(countries.map(c=>[c.atlasName,c.iso]));
 const bank=makeLocalGameBank(countries);
+const domainEn={place:'Geography',time:'Time & Time Zones',language:'Language',lifeCulture:'Life & Culture',japanConnection:'Connections with Japan',thinkConnect:'Think & Connect'};
 const geo=Object.fromEntries(countries.map(c=>{const p=getGeography197Profile(c.iso);return [c.iso,{center:p?.center,neighbors:(p?.neighbors||[]).map(n=>n.iso),region:c.region}];}));
 const PRESET_KEY='timepalette.worldgames.settings.v2';
 function readPreset(){try{return JSON.parse(localStorage.getItem(PRESET_KEY)||'null')||{};}catch{return {};}}
@@ -70,6 +72,8 @@ function JourneyBoard({game,onRoll}){
  <small>正解で300 TPM。未出題の問題がない国は次の停留所へ進みます。移動パスと旅行ルートは学習ゲーム上の設定です。</small></div>;
 }
 function QuizCard({game,setGame,teacher,timer}){
+ const english=game.question?.language==='en';
+ const tr=(ja,en)=>english?en:ja;
  const [choice,setChoice]=useState(null);
  const [ready,setReady]=useState(game.mode!=='battle'||game.phase==='review');
  const [seconds,setSeconds]=useState(timer);
@@ -90,20 +94,20 @@ function QuizCard({game,setGame,teacher,timer}){
  const choose=i=>{if(review)return;playUiSound('tap');if(teacher)setChoice(i);else record(i);};
  const submit=()=>{if(choice!==null)record(choice);};
  const correct=q.correctIndex;
- if(!ready&&!review)return <section className="wg-question wg-handoff"><div aria-hidden="true">🛡️</div><h2>{game.teams[game.turn].name} の番です</h2><p>他のチームから回答が見えないように端末を渡してください。</p><button className="wg-primary" onClick={()=>setReady(true)}>回答を始める</button></section>;
- return <section className={'wg-question '+(teacher?'teacher':'')} aria-label="クイズ">
- <header><span>{flag(q.country)} {name(q.country)} · {DOMAINS.find(d=>d[0]===q.domain)?.[1]}</span><span>{game.round+1} / {game.limit}</span></header>
- {game.mode==='battle'&&!review&&<p className="wg-turn">回答者：{game.teams[game.turn].name}（他チームは回答を見ないようにしてください）</p>}
- {active&&<div className="wg-timer"><div><strong>{seconds}秒</strong><span>{seconds===0?'時間終了':paused?'一時停止中':'考える時間'}</span>{teacher&&seconds>0&&<button onClick={()=>setPaused(p=>!p)}>{paused?'再開':'一時停止'}</button>}</div><div className="wg-timer-track"><i style={{width:(seconds/timer*100)+'%'}}/></div></div>}
+ if(!ready&&!review)return <section className="wg-question wg-handoff"><div aria-hidden="true">🛡️</div><h2>{english?game.teams[game.turn].name+"'s turn":game.teams[game.turn].name+' の番です'}</h2><p>{tr('他のチームから回答が見えないように端末を渡してください。','Pass the device to the next team without revealing your answer.')}</p><button className="wg-primary" onClick={()=>setReady(true)}>{tr('回答を始める','Start answering')}</button></section>;
+ return <section className={'wg-question '+(teacher?'teacher':'')} aria-label={tr("クイズ","Quiz")} lang={english?"en":"ja"}>
+ <header><span>{flag(q.country)} {english?(byIso[q.country]?.nameEn||q.country):name(q.country)} · {english?domainEn[q.domain]:DOMAINS.find(d=>d[0]===q.domain)?.[1]}</span><span>{game.round+1} / {game.limit}</span></header>
+ {game.mode==='battle'&&!review&&<p className="wg-turn">{tr('回答者：','Answering team: ')}{game.teams[game.turn].name}{tr('（他チームは回答を見ないようにしてください）',' (Keep your answer private.)')}</p>}
+ {active&&<div className="wg-timer"><div><strong>{seconds}{tr('秒',' sec')}</strong><span>{seconds===0?tr('時間終了','Time is up'):paused?tr('一時停止中','Paused'):tr('考える時間','Time to think')}</span>{teacher&&seconds>0&&<button onClick={()=>setPaused(p=>!p)}>{paused?tr('再開','Resume'):tr('一時停止','Pause')}</button>}</div><div className="wg-timer-track"><i style={{width:(seconds/timer*100)+'%'}}/></div></div>}
  <h2>{q.prompt}</h2><div className="wg-options">{q.choices.map((label,i)=><button key={i} disabled={review} aria-pressed={!review&&choice===i} className={review?(i===correct?'correct':Object.values(game.answers).includes(i)?'wrong':''):choice===i?'selected':''} onClick={()=>choose(i)}><b>{'ABCD'[i]}</b><span>{label}</span></button>)}</div>
- {teacher&&!review&&<div className="wg-row"><button className="wg-primary" disabled={choice===null} onClick={submit}>{game.mode==='battle'?'回答を確定':'正解を発表'}</button><button onClick={()=>record(-1)}>パス・正解を確認</button></div>}
- {review&&<div className="wg-feedback" role="status"><h3>{game.mode==='battle'?'正解発表':game.last.correct?'正解！':'正解を確認しよう'}</h3><strong>{q.choices[correct]}</strong><p>{q.explanation}</p>
+ {teacher&&!review&&<div className="wg-row"><button className="wg-primary" disabled={choice===null} onClick={submit}>{game.mode==='battle'?tr('回答を確定','Submit answer'):tr('正解を発表','Reveal answer')}</button><button onClick={()=>record(-1)}>{tr('パス・正解を確認','Pass / reveal')}</button></div>}
+ {review&&<div className="wg-feedback" role="status"><h3>{game.mode==='battle'?tr('正解発表','Answer reveal'):game.last.correct?tr('正解！','Correct!'):tr('正解を確認しよう','Let’s check the answer')}</h3><strong>{q.choices[correct]}</strong><p>{q.explanation}</p>
  {game.last?.transfer&&<p className="wg-reward">🏳️ エリア獲得！</p>}{game.last?.newRegions?.map(r=><p key={r.region} className="wg-reward">🏅 {regionLabels[r.region]||r.region} 選択範囲達成 · +200 pts</p>)}
  {game.mode==='journey'&&game.last?.correct&&<p className="wg-reward">🪙 +300 TPM 獲得！</p>}
  {game.mode==='journey'&&game.travelEconomy&&<div className="wg-shop"><h4>🎁 {name(q.country)} の旅の記念品</h4><p>保有 {game.teams[game.turn].money} TPM · 記念品は資産として計上（購入額と同額）</p><div className="wg-travel-options">{SOUVENIRS.map(item=>{const team=game.teams[game.turn],owned=team.souvenirs.some(x=>x.id===item.id&&x.country===q.country);return <button key={item.id} disabled={owned||team.money<item.cost} onClick={()=>{playUiSound('tap');setGame(g=>g.question?.id===q.id&&g.turn===game.turn?buySouvenir(g,item.id):g);}}><b>{item.icon} {item.label}</b><small>{owned?'購入済み':item.cost+' TPM'}</small></button>})}</div></div>}
- {game.mode==='battle'&&<p>{game.teams.map(t=>t.name+'：'+(game.answers[t.id]===correct?'正解':game.answers[t.id]===-1?'未回答':'不正解')).join(' ／ ')}</p>}
- <small>教材：{q.origin||'TimePalette'}{q.sources?.filter(s=>typeof s==='string'&&s.startsWith('https://')).map(s=><a key={s} href={s} target="_blank" rel="noreferrer"> · 出典</a>)}</small>
- <button className="wg-primary" onClick={()=>setGame(advanceGame)}>{game.round+1===game.limit?'結果を見る':'次へ'}</button></div>}
+ {game.mode==='battle'&&<p>{game.teams.map(t=>t.name+'：'+(game.answers[t.id]===correct?tr('正解','Correct'):game.answers[t.id]===-1?tr('未回答','No answer'):tr('不正解','Incorrect'))).join(' ／ ')}</p>}
+ <small>{tr('教材：','Source: ')}{q.origin||'TimePalette'}{q.sources?.filter(s=>typeof s==='string'&&s.startsWith('https://')).map(s=><a key={s} href={s} target="_blank" rel="noreferrer"> · {tr('出典','Reference')}</a>)}</small>
+ <button className="wg-primary" onClick={()=>setGame(advanceGame)}>{game.round+1===game.limit?tr('結果を見る','See results'):tr('次へ','Next')}</button></div>}
  </section>;
 }
 export default function WorldGameHub({onBackHome}){
@@ -111,8 +115,10 @@ export default function WorldGameHub({onBackHome}){
  const [mode,setMode]=useState(MODES.some(m=>m.id===preset.mode)?preset.mode:'shuffle'),[selected,setSelected]=useState(()=>Array.isArray(preset.selected)?preset.selected.filter(iso=>byIso[iso]):countries.map(c=>c.iso)),[domains,setDomains]=useState(()=>Array.isArray(preset.domains)?preset.domains.filter(id=>DOMAINS.some(d=>d[0]===id)):['place','time']);
  const [search,setSearch]=useState(''),[limit,setLimit]=useState([5,10,20,30,50].includes(preset.limit)?preset.limit:10),[teams,setTeams]=useState(Number.isInteger(preset.teams)&&preset.teams>=2&&preset.teams<=8?preset.teams:2),[teacher,setTeacher]=useState(preset.teacher===true),[game,setGame]=useState(null);
  const [timer,setTimer]=useState([0,15,30,60].includes(preset.timer)?preset.timer:0),[teamNames,setTeamNames]=useState(Array.isArray(preset.teamNames)?preset.teamNames.slice(0,8):[]),[saved,setSaved]=useState('');
+ const [questionLanguage,setQuestionLanguage]=useState(preset.questionLanguage==='en'?'en':'ja');
  const regions=useMemo(()=>[...new Set(countries.map(c=>c.region))].sort(),[]);
- const pool=useMemo(()=>questionPool(bank,selected,domains),[selected,domains]);
+ const rawPool=useMemo(()=>questionPool(bank,selected,domains),[selected,domains]);
+ const pool=useMemo(()=>rawPool.map(q=>localizeQuestion(q,questionLanguage)).filter(Boolean),[rawPool,questionLanguage]);
  const selectedSet=new Set(selected);
  const actualLimit=playableLimit(mode,limit,pool.length,teams);
  const [sound,setSound]=useState(getUiSoundEnabled);
@@ -120,7 +126,7 @@ export default function WorldGameHub({onBackHome}){
  const toggle=iso=>setSelected(s=>s.includes(iso)?s.filter(x=>x!==iso):[...s,iso]);
  const toggleRegion=region=>{const ids=countries.filter(c=>c.region===region).map(c=>c.iso);setSelected(s=>ids.every(x=>s.includes(x))?s.filter(x=>!ids.includes(x)):[...new Set([...s,...ids])]);};
  const start=()=>{if(actualLimit){playUiSound('open');setGame(createGame({mode,pool,limit,teamCount:teams,teamNames,geo,strategy,travelEconomy}));}};
- const save=()=>setSaved(persistPreset({mode,selected,domains,limit,teams,teacher,timer,teamNames,strategy,travelEconomy})?'この端末に設定を保存しました。':'設定を保存できませんでした。');
+ const save=()=>setSaved(persistPreset({mode,selected,domains,limit,teams,teacher,timer,teamNames,strategy,travelEconomy,questionLanguage})?'この端末に設定を保存しました。':'設定を保存できませんでした。');
  const replay=()=>{const missed=missedQuestions(game);if(missed.length)setGame(createGame({mode:'shuffle',pool:missed,limit:missed.length}));};
  const exit=()=>{if(!game||game.phase==='finished'||window.confirm('現在のゲームを終了しますか？'))setGame(null);};
  return <main className="wg-shell">
@@ -131,7 +137,7 @@ export default function WorldGameHub({onBackHome}){
  <div className="wg-row">{regions.map(r=>{const all=countries.filter(c=>c.region===r);const n=all.filter(c=>selectedSet.has(c.iso)).length;return <button key={r} aria-pressed={n===all.length} onClick={()=>toggleRegion(r)}>{regionLabels[r]||r} {n}/{all.length}</button>;})}</div>
  <label className="wg-label">個別の国を選ぶ<input value={search} onChange={e=>setSearch(e.target.value)} placeholder="国名・英語名・国コード"/></label>
  <div className="wg-country-grid">{countries.filter(c=>(c.nameJa+' '+c.nameEn+' '+c.iso).toLowerCase().includes(search.toLowerCase())).map(c=><button key={c.iso} aria-pressed={selectedSet.has(c.iso)} onClick={()=>toggle(c.iso)}>{c.flagEmoji} {c.nameJa}</button>)}</div>
- <h3>カテゴリー</h3><div className="wg-row">{DOMAINS.map(([id,label])=>{const available=bank.some(q=>q.domain===id);return <button key={id} disabled={!available} aria-pressed={domains.includes(id)} onClick={()=>setDomains(d=>d.includes(id)?d.filter(x=>x!==id):[...d,id])}>{label}{!available?'（準備中）':''}</button>;})}</div>
+ <h3>出題言語 / Question language</h3><div className="wg-row" aria-label="出題言語"><button aria-pressed={questionLanguage==='ja'} onClick={()=>setQuestionLanguage('ja')}>日本語</button><button aria-pressed={questionLanguage==='en'} onClick={()=>setQuestionLanguage('en')}>English</button><small>{questionLanguage==='en'?'English questions, choices and explanations. 未翻訳 '+(rawPool.length-pool.length)+'問は除外。':'問題・選択肢・解説を日本語で表示'}</small></div><h3>カテゴリー</h3><div className="wg-row">{DOMAINS.map(([id,label])=>{const available=bank.some(q=>q.domain===id);return <button key={id} disabled={!available} aria-pressed={domains.includes(id)} onClick={()=>setDomains(d=>d.includes(id)?d.filter(x=>x!==id):[...d,id])}>{label}{!available?'（準備中）':''}</button>;})}</div>
  <div className="wg-config"><label>出題数<select value={limit} onChange={e=>setLimit(Number(e.target.value))}>{[5,10,20,30,50].map(n=><option key={n}>{n}</option>)}</select></label>
  {mode!=='shuffle'&&<label>チーム数<select value={teams} onChange={e=>setTeams(Number(e.target.value))}>{[2,3,4,5,6,7,8].map(n=><option key={n}>{n}</option>)}</select></label>}
  <label>考える時間<select value={timer} onChange={e=>setTimer(Number(e.target.value))}>{[0,15,30,60].map(n=><option key={n} value={n}>{n?n+'秒':'制限なし'}</option>)}</select></label>
@@ -144,7 +150,7 @@ export default function WorldGameHub({onBackHome}){
  {['territory','journey'].includes(mode)&&<p className="wg-note">公平な対戦のため全チームのターン数を同じに調整します。{actualLimit?('各チーム '+actualLimit/teams+' ターン。'):'問題数を増やすかチーム数を減らしてください。'}</p>}
  <p className="wg-note">現在は地理・時差の独立した問題を使用します。JICA世界日記は出題対象外です。AIA教材由来の独自問題は利用条件・内容確認後に追加します。複数端末オンライン対戦は未実装です。</p></section></>:<>
  <div className="wg-game-title"><h1>{MODES.find(m=>m.id===game.mode)?.name}</h1><span>{Math.min(game.round+1,game.limit)} / {game.limit}</span></div><div className="wg-game-progress" role="progressbar" aria-label="ゲーム進捗" aria-valuemin={0} aria-valuemax={game.limit} aria-valuenow={game.round}><i style={{width:game.round/game.limit*100+'%'}}/></div><Scoreboard game={game}/>
- {game.phase==='finished'?<section className="wg-settings"><h2>🏆 GAME COMPLETE</h2>{standings(game).map(t=><div key={t.id} className="wg-result"><div><strong>{teamRank(game,t)}位 · {t.name}</strong><small>{t.correctCount}/{t.attempts} 正解 · 最大{t.bestStreak}連続正解</small>{game.mode==='journey'&&<small>{t.visits.map(iso=>flag(iso)+' '+name(iso)).join(' · ')||'訪問なし'} · 現金{t.money} TPM · 記念品{t.souvenirs.length}個</small>}</div><span>{game.mode==='territory'?t.territories+'か国':game.mode==='journey'?t.assets+' TPM（総資産）':t.score+' pts'}</span></div>)}<div className="wg-row"><button className="wg-primary" onClick={()=>setGame(null)}>設定に戻る</button>{missedQuestions(game).length>0&&<button onClick={replay}>間違えた{missedQuestions(game).length}問を復習</button>}</div><details className="wg-review"><summary>今回の全問題と解説（{game.history.length}問）</summary>{game.history.map((row,i)=><article key={row.question.id}><b>{i+1}. {row.question.prompt}</b><p>正解：{row.question.choices[row.question.correctIndex]}</p><small>{row.question.explanation}</small></article>)}</details></section>:<>
+ {game.phase==='finished'?<section className="wg-settings"><h2>🏆 GAME COMPLETE</h2>{standings(game).map(t=><div key={t.id} className="wg-result"><div><strong>{teamRank(game,t)}位 · {t.name}</strong><small>{t.correctCount}/{t.attempts} 正解 · 最大{t.bestStreak}連続正解</small>{game.mode==='journey'&&<small>{t.visits.map(iso=>flag(iso)+' '+name(iso)).join(' · ')||'訪問なし'} · 現金{t.money} TPM · 記念品{t.souvenirs.length}個</small>}</div><span>{game.mode==='territory'?t.territories+'か国':game.mode==='journey'?t.assets+' TPM（総資産）':t.score+' pts'}</span></div>)}<div className="wg-row"><button className="wg-primary" onClick={()=>setGame(null)}>設定に戻る</button>{missedQuestions(game).length>0&&<button onClick={replay}>間違えた{missedQuestions(game).length}問を復習</button>}</div><details className="wg-review"><summary>今回の全問題と解説（{game.history.length}問）</summary>{game.history.map((row,i)=><article key={row.question.id}><b>{i+1}. {row.question.prompt}</b><p>{row.question.language==='en'?'Answer: ':'正解：'}{row.question.choices[row.question.correctIndex]}</p><small>{row.question.explanation}</small></article>)}</details></section>:<>
  {game.mode==='territory'&&<><h2 className="wg-turn">{game.teams[game.turn].name} のターン</h2><TerritoryMap game={game} onPick={iso=>setGame(g=>selectTerritory(g,iso))}/></>}
  {game.mode==='journey'&&<JourneyBoard game={game} onRoll={travel=>setGame(g=>rollJourney(g,1+Math.floor(Math.random()*6),Math.random,g.travelEconomy?travel:'standard'))}/>}
  {game.question&&<QuizCard key={game.question.id+'-'+(game.mode==='battle'&&game.phase==='question'?game.turn:'review')} game={game} setGame={setGame} teacher={teacher} timer={timer}/>}
