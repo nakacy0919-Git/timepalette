@@ -1,4 +1,5 @@
 import {TRAVEL_MODES,SOUVENIRS,buildJourneyRoute,territoryChoices,regionalCollections,journeyAssets} from './worldGameStrategy.js';
+import {buildJourneyStops} from './worldJourneyStops.js';
 // Pure rules shared by local play and a future authoritative room server.
 export const GAME_MODES = ['shuffle','battle','territory','journey'];
 export const TEAM_COLORS = ['#2563eb','#dc2626','#059669','#d97706','#7c3aed','#0891b2','#db2777','#475569'];
@@ -45,7 +46,7 @@ export function createGame({mode,pool,limit,teamCount=2,teamNames=[],geo={},stra
  const ids=shuffled([...new Set(pool.map(q=>q.country))],random);
  const route=mode==='journey'&&travelEconomy?buildJourneyRoute(ids,geo,ids.includes('jp')?'jp':ids[0]):ids;
  const deck=balancedDeck(pool,actualLimit,random);
- return {mode,teams,route,deck,pool,geo,strategy,travelEconomy,travel:null,limit:actualLimit,round:0,turn:0,used:[],history:[],owners:{},answers:{},phase:['territory','journey'].includes(mode)?'select':'question',question:['territory','journey'].includes(mode)?null:deck[0],target:null,dice:null,last:null};
+ return {mode,teams,route,journeyStops:mode==='journey'?buildJourneyStops(route):null,deck,pool,geo,strategy,travelEconomy,travel:null,limit:actualLimit,round:0,turn:0,used:[],history:[],owners:{},answers:{},phase:['territory','journey'].includes(mode)?'select':'question',question:['territory','journey'].includes(mode)?null:deck[0],target:null,dice:null,last:null};
 }
 export function availableTerritories(game){
  return territoryChoices(game).countries;
@@ -68,11 +69,12 @@ export function rollJourney(game,die,random=Math.random,travel='standard'){
  if(!Object.hasOwn(TRAVEL_MODES,travel))return game;
  const team=game.teams[game.turn],ticket=TRAVEL_MODES[travel];
  if(!ticket||(!game.travelEconomy&&travel!=='standard')||team.money<ticket.cost)return game;
- let position=(team.position+die+ticket.extra)%game.route.length;
+ const stops=game.journeyStops||buildJourneyStops(game.route);
+ let position=(team.position+die+ticket.extra)%stops.length;
  // Skip exhausted stops, without repeating questions or charging extra moves.
- for(let i=0;i<game.route.length;i++,position=(position+1)%game.route.length){
-  const target=game.route[position], question=nextQuestion(game,target,random);
-  if(question)return {...game,teams:game.teams.map(t=>t.id===team.id?{...t,position,money:t.money-ticket.cost}:t),target,question,dice:die,travel,phase:'question',last:null};
+ for(let i=0;i<stops.length;i++,position=(position+1)%stops.length){
+  const target=stops[position].country, question=nextQuestion(game,target,random);
+  if(question)return {...game,teams:game.teams.map(t=>t.id===team.id?{...t,position,money:t.money-ticket.cost}:t),target,question,dice:die,travel,journeySkipped:i,phase:'question',last:null};
  }
  return {...game,phase:'finished'};
 }
@@ -98,7 +100,7 @@ export function advanceGame(game){
  if(round>=game.limit)return {...game,round,used,history,phase:'finished',question:null};
  const turn=['territory','journey'].includes(game.mode)?(game.turn+1)%game.teams.length:0;
  const selection=['territory','journey'].includes(game.mode);
- return {...game,round,used,history,turn,answers:{},phase:selection?'select':'question',question:selection?null:game.deck[round],target:null,dice:null,travel:null,last:null};
+ return {...game,round,used,history,turn,answers:{},phase:selection?'select':'question',question:selection?null:game.deck[round],target:null,dice:null,travel:null,journeySkipped:0,last:null};
 }
 export function standings(game){
  return game.teams.map(t=>({...t,territories:Object.values(game.owners).filter(id=>id===t.id).length,assets:journeyAssets(t)})).sort((a,b)=>game.mode==='territory'?b.territories-a.territories||b.score-a.score:game.mode==='journey'?b.assets-a.assets||b.score-a.score:b.score-a.score);

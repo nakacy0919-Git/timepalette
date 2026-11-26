@@ -47,17 +47,23 @@ try{
   await home.waitFor();
   for(const mode of ['battle','territory','journey']){
    await home.locator('[data-activity="'+mode+'"]').click();
-   await page.locator('.wg-modes button[aria-pressed=true]').waitFor();
-   const label=await page.locator('.wg-modes button[aria-pressed=true] strong').textContent();
-   assert.equal(label,{battle:'World Quiz Battle',territory:'World Territory',journey:'World Journey'}[mode]);
+   const label={battle:'World Quiz Battle',territory:'World Territory',journey:'World Journey'}[mode];
+   await page.getByRole('dialog',{name:label+' の設定'}).waitFor();
+   assert.equal(await page.locator('.wg-modes').count(),0);
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollHeight>innerHeight+2),false,'settings page must not scroll');
    await page.getByRole('button',{name:'← ホーム',exact:true}).click();
    await home.waitFor();
   }
   await home.locator('[data-activity="shuffle"]').click();
   const shell=page.locator('.wg-shell');await shell.waitFor();
   await shell.getByRole('button',{name:'すべて解除',exact:true}).click();
+  await shell.getByLabel('個別の国を選ぶ').fill('アゼルバイジャン');
   await shell.getByRole('button',{name:/アゼルバイジャン/}).click();
+  await shell.getByLabel('個別の国を選ぶ').fill('ウズベキスタン');
   await shell.getByRole('button',{name:/ウズベキスタン/}).click();
+  const next=()=>shell.getByRole('button',{name:'次へ →',exact:true}).click();
+  await next();await next();
+  await shell.getByRole('button',{name:'この授業の設定を保存'}).click();
   await shell.getByRole('button',{name:'ゲーム開始 →'}).click();
   for(let i=0;i<8;i++){
    await shell.locator('.wg-options button').first().click();
@@ -80,7 +86,9 @@ try{
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'classroom report overflow');
 
   await shell.getByRole('button',{name:'設定に戻る',exact:true}).click();
-  await shell.getByRole('button',{name:/World Quiz Battle/}).click();
+  await shell.getByRole('button',{name:'← ホーム',exact:true}).click();
+  await home.locator('[data-activity="battle"]').click();
+  await next();await next();
   await shell.getByRole('button',{name:'ゲーム開始 →'}).click();
   await shell.getByRole('button',{name:'回答を始める',exact:true}).click();
   await shell.locator('.wg-options button').first().click();
@@ -89,24 +97,36 @@ try{
   await shell.locator('.wg-feedback').waitFor();
   page.once('dialog',d=>d.accept());
   await shell.getByRole('button',{name:'← ゲーム設定',exact:true}).click();
-  await shell.getByRole('button',{name:/World Territory/}).click();
+  await shell.getByRole('button',{name:'← ホーム',exact:true}).click();
+  await home.locator('[data-activity="territory"]').click();
+  await next();await next();
   await shell.getByRole('button',{name:'ゲーム開始 →'}).click();
+  await shell.getByRole('button',{name:'国を選ぶ',exact:true}).click();
   await shell.locator('.wg-country-grid button').first().click();
   await shell.locator('.wg-options button').first().click();
   await shell.locator('.wg-feedback').waitFor();
   page.once('dialog',d=>d.accept());
   await shell.getByRole('button',{name:'← ゲーム設定',exact:true}).click();
-  await shell.getByRole('button',{name:/World Journey/}).click();
+  await shell.getByRole('button',{name:'← ホーム',exact:true}).click();
+  await home.locator('[data-activity="journey"]').click();
+  await next();await next();
   await shell.getByRole('button',{name:'ゲーム開始 →'}).click();
+  assert.equal(await shell.locator('.wj-node').count(),6);
   await shell.getByRole('button',{name:/サイコロを振る/}).click();
+  await shell.getByRole('dialog',{name:'サイコロ',exact:true}).waitFor();
+  await shell.locator('.wj-dice-cube .wj-face').nth(5).waitFor({state:'attached'});
+  await shell.getByRole('dialog',{name:'サイコロ',exact:true}).waitFor({state:'hidden'});
   await shell.locator('.wg-options button').first().click();
   await shell.locator('.wg-feedback').waitFor();
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'page overflow');
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2||document.documentElement.scrollHeight>innerHeight+2),false,'page overflow');
   // Exercise the actual English display and scoring in the same browser.
   page.once('dialog',d=>d.accept());
   await shell.getByRole('button',{name:'← ゲーム設定',exact:true}).click();
-  await shell.getByRole('button',{name:/World Shuffle/}).click();
+  await shell.getByRole('button',{name:'← ホーム',exact:true}).click();
+  await home.locator('[data-activity="shuffle"]').click();
+  await next();
   await shell.getByRole('button',{name:'English',exact:true}).click();
+  await next();
   await shell.getByRole('button',{name:'ゲーム開始 →'}).click();
   const quiz=shell.locator('.wg-question');
   await quiz.waitFor();

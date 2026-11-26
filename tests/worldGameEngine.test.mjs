@@ -132,3 +132,16 @@ test('classroom CSV preserves displayed option text and escapes unsafe spreadshe
  const csv=classroomReportCsv(report);
  assert.ok(csv.includes('"A ""quote"", here"'));assert.ok(csv.includes('"\'  @SUM(1)"'));assert.ok(csv.includes('"Line 1\nLine 2"'));
 });
+
+import {buildJourneyStops,journeyStop} from '../src/utils/worldJourneyStops.js';
+test('journey moves through domestic city stops before crossing country boundary',()=>{
+ const stops=buildJourneyStops(['jp','kr','in','fi','nz']);
+ assert.equal(stops.length,30);
+ assert.deepEqual(stops.slice(0,6).map(s=>s.country),Array(6).fill('jp'));
+ assert.equal(stops[6].label,'ソウル');assert.equal(stops[12].label,'ニューデリー');assert.equal(stops[18].label,'ヘルシンキ');
+ assert.equal(stops[24].named,false);
+ let g=createGame({mode:'journey',pool:[q('a','jp'),q('b','jp'),q('c','kr'),q('d','kr')],limit:4,teamCount:2,travelEconomy:true,random});
+ g=rollJourney(g,2,random);
+ assert.equal(g.teams[0].position,2);assert.equal(journeyStop(g,2).country,'jp');assert.equal(g.question.country,'jp');
+ assert.equal(g.dice,2);
+});
