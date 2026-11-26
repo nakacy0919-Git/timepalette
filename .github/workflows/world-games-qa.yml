@@ -5,6 +5,7 @@ on:
       - 'src/components/world-games/**'
       - 'src/utils/worldGame*.js'
       - 'src/components/world-learning/WorldAdventureHome.jsx'
+      - 'src/components/world-learning/worldActivityHome.css'
       - 'src/App.jsx'
       - 'scripts/qa-world-games-browser.mjs'
       - 'scripts/qa-world-battle-online.mjs'
@@ -39,3 +40,10 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: node scripts/qa-world-games-browser.mjs
       - run: node scripts/qa-world-battle-online.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: timepalette-five-activity-home
+          path: artifacts/world-games-home/
+          if-no-files-found: ignore
+          retention-days: 7
