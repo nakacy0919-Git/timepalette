@@ -17,23 +17,23 @@ export default function OnlineBattle({endpoint,config,onBack}){
  const [offset,setOffset]=useState(0),[now,setNow]=useState(clock),[choice,setChoice]=useState(null);
  const lock=useRef(false),active=useRef(null),epoch=useRef(0),mounted=useRef(false);
  useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;epoch.current++;active.current?.abort();};},[]);
- const update=data=>{if(data?.view)setView(old=>acceptBattleView(old,data.view));if(Number.isFinite(data?.serverTime))setOffset(data.serverTime-clock());};
+ const update=data=>{if(data?.view)setView(old=>acceptBattleView(old,data.view));if(Number.isFinite(data?.serverTime)){const local=clock();setOffset(data.serverTime-local);setNow(local);}};
  useEffect(()=>{
   if(!client||!session)return;
   let stopped=false,timer,controller;
   const poll=async()=>{
    if(stopped)return;
    if(lock.current){timer=setTimeout(poll,400);return;}
-   controller=new AbortController();
+   controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),10000);
    try{
     const data=await client.view(session.code,session.token,controller.signal);
     if(stopped)return;
     update(data);setNetwork('online');
    }catch(e){
-    if(stopped||e.name==='AbortError')return;
+    if(stopped)return;
     if(e.status===404||e.status===403){setNetwork('ended');setError(message(e));return;}
     setNetwork('offline');
-   }
+   }finally{clearTimeout(timeout);}
    if(!stopped)timer=setTimeout(poll,document.hidden?5000:1500);
   };
   timer=setTimeout(poll,1500);
@@ -44,10 +44,10 @@ export default function OnlineBattle({endpoint,config,onBack}){
  const execute=async fn=>{
   if(lock.current||!client)return;
   lock.current=true;setBusy(true);setError('');setNotice('');
-  const current=epoch.current,controller=new AbortController();active.current=controller;
+  const current=epoch.current,controller=new AbortController();active.current=controller;const timeout=setTimeout(()=>controller.abort(),15000);
   const alive=()=>mounted.current&&current===epoch.current;
-  try{await fn(controller.signal,alive);}catch(e){if(alive()&&e.name!=='AbortError')setError(message(e));}
-  finally{if(alive()){lock.current=false;setBusy(false);active.current=null;}}
+  try{await fn(controller.signal,alive);}catch(e){if(alive())setError(message(e));}
+  finally{clearTimeout(timeout);if(alive()){lock.current=false;setBusy(false);active.current=null;}}
  };
  const enter=role=>execute(async(signal,alive)=>{
   const data=role==='host'?await client.create(config,key,signal):await client.join(cleanCode(code),teamToken.trim(),signal);
