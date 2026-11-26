@@ -50,7 +50,6 @@ try{
    const label={battle:'World Quiz Battle',territory:'World Territory',journey:'World Journey'}[mode];
    await page.getByRole('dialog',{name:label+' の設定'}).waitFor();
    assert.equal(await page.locator('.wg-modes').count(),0);
-   await page.getByRole('button',{name:'次へ →',exact:true}).click();
    assert.equal(await page.locator('.wg-country-flag').count(),12);
    await page.locator('.wg-country-flag').evaluateAll(images=>Promise.all(images.map(img=>img.decode())));
    assert.equal(await page.evaluate(()=>document.documentElement.scrollHeight>innerHeight+2),false,'settings page must not scroll');
@@ -61,15 +60,13 @@ try{
   const shell=page.locator('.wg-shell');await shell.waitFor();
   const next=()=>shell.getByRole('button',{name:'次へ →',exact:true}).click();
   const finishSetup=async()=>{for(let i=0;i<20;i++){if(await shell.getByRole('button',{name:/ゲーム開始/}).count())return;await next();}throw Error('Setup did not finish');};
-  await next();
   await shell.getByRole('button',{name:'すべて解除',exact:true}).click();
   await shell.getByLabel('個別の国を選ぶ').fill('アゼルバイジャン');
   await shell.getByRole('button',{name:/アゼルバイジャン/}).click();
   await shell.getByLabel('個別の国を選ぶ').fill('ウズベキスタン');
   await shell.getByRole('button',{name:/ウズベキスタン/}).click();
-  await next();await next();
-  await shell.getByRole('button',{name:/小学生/}).waitFor();
   await next();
+  await shell.getByRole('button',{name:/小学生/}).waitFor();
   await shell.getByText('118か国・4,720問の日英対応補足問題',{exact:false}).waitFor();
   assert.equal(await shell.locator('.wg-domain-cards button:enabled').count(),6);
   await shell.getByRole('button',{name:'📚 追加学習問題 ON'}).click();
@@ -121,11 +118,11 @@ try{
   await shell.getByRole('button',{name:'← ホーム',exact:true}).click();
   await home.locator('[data-activity="journey"]').click();
   await shell.getByRole('button',{name:/全世界/}).click();
-  await next();await next();await next();await next();
+  await next();
   assert.equal(await shell.locator('.wg-domain-cards button').count(),6);
-  for(let i=0;i<12;i++){if(await shell.getByRole('heading',{name:/サイコロはいくつ/}).count())break;await next();}
+  await next();
   await shell.getByRole('button',{name:/2個 サイコロ/}).click();
-  await next();await shell.getByRole('button',{name:/スピード テンポ/}).click();await finishSetup();
+  await shell.getByRole('button',{name:/スピード テンポ/}).click();await finishSetup();
   await shell.getByRole('button',{name:/ゲーム開始/}).click();
   await shell.locator('.wj-atlas svg').waitFor();
   assert.equal(await shell.locator('.wg-top').count(),0);
@@ -155,7 +152,7 @@ try{
   await shell.getByRole('button',{name:'← ゲームを終了',exact:true}).click();
   await shell.getByRole('button',{name:'← ホーム',exact:true}).click();
   await home.locator('[data-activity="shuffle"]').click();
-  await next();await next();
+  await next();
   await shell.getByRole('button',{name:/English Questions/}).click();
   await finishSetup();
   await shell.getByRole('button',{name:/ゲーム開始/}).click();
