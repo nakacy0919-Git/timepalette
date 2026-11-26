@@ -253,6 +253,21 @@ function scheduleSound(
       createTone(context,{frequency:293.66,endFrequency:293.66,start:0.14,duration:0.24,gain:0.014,type:'sine'});
       break;
 
+    case 'journeyReward':
+      // Bright arcade fanfare with short metallic coin chimes.
+      [523.25,659.25,783.99,1046.5].forEach((f,i)=>{createTone(context,{frequency:f,start:i*.105,duration:.42,gain:.042,type:'triangle',attack:.012});createTone(context,{frequency:f*2,start:i*.105,duration:.18,gain:.012,type:'sine',attack:.006});});
+      [523.25,659.25,783.99].forEach(f=>createTone(context,{frequency:f,start:.45,duration:.62,gain:.023,type:'triangle'}));
+      [1318.5,1568,2093,1568,2093].forEach((f,i)=>createTone(context,{frequency:f,start:.49+i*.09,duration:.13,gain:.027,attack:.006,type:'sine'}));
+      break;
+    case 'coin':
+      [1046.5,1568,2093].forEach((f,i)=>createTone(context,{frequency:f,start:i*.07,duration:.22,gain:.032,attack:.008,type:'triangle'}));
+      break;
+    case 'diceRoll':
+      [180,245,200,285,240,310,265,340].forEach((f,i)=>createTone(context,{frequency:f,endFrequency:f*.68,start:i*.15,duration:.07,gain:.028,attack:.005,type:'triangle'}));
+      break;
+    case 'diceReveal':
+      [659.25,880,1174.66].forEach((f,i)=>createTone(context,{frequency:f,start:i*.08,duration:.28,gain:.036,type:'triangle',attack:.01}));
+      break;
     case 'correct':
       // A short, clear two-note bell for an intermediate correct action.
       createTone(context,{frequency:587.33,start:0,duration:.3,gain:.045,attack:.012});
