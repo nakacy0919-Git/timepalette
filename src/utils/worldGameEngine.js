@@ -121,3 +121,35 @@ export function buySouvenir(game,itemId){
  if(!item||team.money<item.cost||team.souvenirs.some(x=>x.id===itemId&&x.country===country))return game;
  return {...game,teams:game.teams.map(t=>t.id===team.id?{...t,money:t.money-item.cost,souvenirs:[...t.souvenirs,{id:item.id,country,value:item.value}]}:t)};
 }
+
+
+// A report counts actual answer opportunities: all teams in battle, only the
+// answering team in territory/journey, and one player in shuffle.
+export function classroomReport(game){
+ const teams=(game.teams||[]).map(t=>({id:t.id,name:t.name,attempts:0,correct:0,incorrect:0,unanswered:0}));
+ const questions=[],domains=new Map();
+ const count=(s,value,correct)=>{s.attempts++;if(value===correct)s.correct++;else if(value===-1||value===undefined||value===null)s.unanswered++;else s.incorrect++;};
+ const rate=s=>s.attempts?Math.round(100*s.correct/s.attempts):null;
+ for(const [i,row] of (game.history||[]).entries()){
+  const q=row.question;
+  const item={round:i+1,id:q.id,country:q.country,domain:q.domain,language:q.language||'ja',prompt:q.prompt,correctAnswer:q.choices[q.correctIndex],explanation:q.explanation,attempts:0,correct:0,incorrect:0,unanswered:0,responses:[]};
+  if(!domains.has(q.domain))domains.set(q.domain,{domain:q.domain,attempts:0,correct:0,incorrect:0,unanswered:0});
+  const domain=domains.get(q.domain);
+  for(const team of teams){
+   if(game.mode!=='battle'&&!Object.hasOwn(row.answers,team.id))continue;
+   const value=row.answers[team.id];count(team,value,q.correctIndex);count(item,value,q.correctIndex);count(domain,value,q.correctIndex);
+   item.responses.push({teamId:team.id,teamName:team.name,answer:Number.isInteger(value)&&value>=0?q.choices[value]||'':'',status:value===q.correctIndex?'correct':value===-1||value===undefined||value===null?'unanswered':'incorrect'});
+  }
+  questions.push({...item,rate:rate(item)});
+ }
+ const total=teams.reduce((s,t)=>{for(const k of ['attempts','correct','incorrect','unanswered'])s[k]+=t[k];return s;},{attempts:0,correct:0,incorrect:0,unanswered:0});
+ return {total:{...total,rate:rate(total)},teams:teams.map(t=>({...t,rate:rate(t)})),domains:[...domains.values()].map(d=>({...d,rate:rate(d)})),questions,review:[...questions].filter(q=>q.rate!==null&&q.rate<100).sort((a,b)=>a.rate-b.rate||a.round-b.round)};
+}
+// Neutralize spreadsheet formula injection (including leading whitespace) and
+// preserve commas, quotes and line breaks. UTF-8 BOM supports Japanese Excel.
+export function classroomReportCsv(report){
+ const cell=v=>{let s=String(v??'');if(/^[\s\uFEFF]*[=+\-@]|^[\t\r\n]/.test(s))s="'"+s;return '"'+s.replaceAll('"','""')+'"';};
+ const rows=[['Round','Question ID','Country','Category','Language','Question','Team','Response','Status','Correct answer','Explanation']];
+ for(const q of report.questions)for(const r of q.responses)rows.push([q.round,q.id,q.country,q.domain,q.language,q.prompt,r.teamName,r.answer,r.status,q.correctAnswer,q.explanation]);
+ return '\uFEFF'+rows.map(row=>row.map(cell).join(',')).join('\r\n')+'\r\n';
+}
