@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';
-import {mkdir,access} from 'node:fs/promises';
+import {mkdir} from 'node:fs/promises';
 import {createServer} from 'vite';
 import {chromium} from 'playwright';
 const server=await createServer({server:{host:'127.0.0.1',port:4189,strictPort:true}});await server.listen();
 let browser;
 try{
  browser=await chromium.launch({headless:true});
- for(const viewport of [{width:1024,height:768},{width:820,height:1180},{width:390,height:844}]){
+ for(const viewport of [{width:1461,height:800},{width:1180,height:820},{width:1024,height:768},{width:820,height:1180},{width:390,height:844}]){
   const context=await browser.newContext({viewport,hasTouch:true});
   await context.addInitScript(()=>{sessionStorage.setItem('timepalette_opening_seen_v1','true');localStorage.setItem('timepalette_ui_sound_v1','off');});
   const page=await context.newPage();page.setDefaultTimeout(15000);const errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -18,13 +18,15 @@ try{
   assert.equal(await home.locator('#journey').count(),0,'progress belongs inside Adventure');
   assert.equal(await home.getByRole('button',{name:'ゲームを始める',exact:true}).count(),0);
   assert.equal(await home.getByRole('button',{name:'設定を見る',exact:true}).count(),0);
-  const hasAssets=await Promise.all(['adventure','shuffle','battle','territory','journey'].map(id=>access('public/world-activities/'+id+'.webp').then(()=>true,()=>false)));
-  if(hasAssets.every(Boolean)){
-   await home.locator('.tp-home-card-image').first().waitFor();
-   assert.equal(await home.locator('.tp-home-card-image').count(),5);
-   await home.locator('.tp-home-card-image').evaluateAll(images=>Promise.all(images.map(img=>img.decode())));
-  }else console.warn('Activity illustration asset pack not yet installed: testing the fallback icons instead.');
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'home overflow');
+  await home.locator('.tp-home-card-image').first().waitFor();
+  assert.equal(await home.locator('.tp-home-card-image').count(),5,'all five original illustrations must render');
+  await home.locator('.tp-home-card-image').evaluateAll(images=>Promise.all(images.map(img=>img.decode())));
+  assert.equal(await home.locator('.tp-home-card-image').evaluateAll(images=>images.every(img=>img.naturalWidth===800&&img.naturalHeight===600)),true,'original WebP dimensions');
+  const rects=await home.locator('[data-activity]').evaluateAll(nodes=>nodes.map(n=>({x:n.getBoundingClientRect().x,y:n.getBoundingClientRect().y,width:n.getBoundingClientRect().width,height:n.getBoundingClientRect().height})));
+  if(viewport.width>=900){
+   assert.ok(rects.every(r=>Math.abs(r.y-rects[0].y)<2&&r.width<=250&&r.height<=310),'compact equal-row cards');
+   assert.ok(rects.slice(1).every((r,i)=>r.x-(rects[i].x+rects[i].width)>=13),'card spacing');
+  }
   if(viewport.width>=820){
    const boxes=await home.locator('[data-activity]').evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().bottom));
    assert.ok(boxes.every(bottom=>bottom<=viewport.height),'all five activities visible');
