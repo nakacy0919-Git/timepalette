@@ -74,7 +74,7 @@ export function rollJourney(game,die,random=Math.random,travel='standard'){
  // Skip exhausted stops, without repeating questions or charging extra moves.
  for(let i=0;i<stops.length;i++,position=(position+1)%stops.length){
   const target=stops[position].country, question=nextQuestion(game,target,random);
-  if(question)return {...game,teams:game.teams.map(t=>t.id===team.id?{...t,position,money:t.money-ticket.cost}:t),target,question,dice:die,travel,phase:'question',last:null};
+  if(question)return {...game,teams:game.teams.map(t=>t.id===team.id?{...t,position,money:t.money-ticket.cost}:t),target,question,dice:die,travel,journeySkipped:i,phase:'question',last:null};
  }
  return {...game,phase:'finished'};
 }
@@ -100,7 +100,7 @@ export function advanceGame(game){
  if(round>=game.limit)return {...game,round,used,history,phase:'finished',question:null};
  const turn=['territory','journey'].includes(game.mode)?(game.turn+1)%game.teams.length:0;
  const selection=['territory','journey'].includes(game.mode);
- return {...game,round,used,history,turn,answers:{},phase:selection?'select':'question',question:selection?null:game.deck[round],target:null,dice:null,travel:null,last:null};
+ return {...game,round,used,history,turn,answers:{},phase:selection?'select':'question',question:selection?null:game.deck[round],target:null,dice:null,travel:null,journeySkipped:0,last:null};
 }
 export function standings(game){
  return game.teams.map(t=>({...t,territories:Object.values(game.owners).filter(id=>id===t.id).length,assets:journeyAssets(t)})).sort((a,b)=>game.mode==='territory'?b.territories-a.territories||b.score-a.score:game.mode==='journey'?b.assets-a.assets||b.score-a.score:b.score-a.score);
