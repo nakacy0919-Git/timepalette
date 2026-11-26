@@ -10,3 +10,30 @@
 /* Full-width desktop workspace and direct map gestures. */
 .tp-geo-adventure-body{max-width:none}.tp-geo-map{touch-action:none;user-select:none;cursor:grab}.tp-geo-map:active{cursor:grabbing}.tp-geo-map-wrap .tp-geo-map-controls{display:flex;gap:5px;top:10px;right:10px}.tp-geo-map-controls button:last-child{width:44px}.tp-geo-gesture-hint{position:absolute;left:10px;bottom:9px;background:#ffffffdb;color:#30556d;border-radius:16px;padding:5px 10px;font-size:11px;font-weight:800;pointer-events:none}.tp-geo-sound-toggle{margin-left:auto;flex:none;font-size:12px;border:1px solid #475569;border-radius:10px;padding:8px;min-height:44px;background:#1e293b}.tp-geo-adventure-header label{margin-left:0}.tp-geo-answer-feedback{position:fixed;inset:0;z-index:14900;display:grid;place-items:center;pointer-events:none;background:#edf7ff28}.tp-geo-answer-feedback>div{max-width:min(620px,80vw);padding:28px 40px;background:#fff7e7f5;border:3px solid #e8b660;border-radius:28px;box-shadow:0 20px 70px #1e3a5f40;color:#704215;text-align:center;animation:tp-geo-pop .35s ease-out}.tp-geo-answer-feedback.correct>div{background:#e5fff4f5;border-color:#6dccab;color:#21604c}.tp-geo-answer-feedback span{display:block;font-size:56px;line-height:1.2}.tp-geo-answer-feedback strong{display:block;font-size:30px;font-weight:900}.tp-geo-answer-feedback p{font-size:19px;line-height:1.6;margin:10px 0 0;font-weight:800}.tp-geo-success>div{animation:tp-geo-pop .4s ease-out;border:3px solid #a3e2ce;background:linear-gradient(145deg,#f0fff9,#fffdf2)}.tp-geo-confetti{position:fixed;inset:0;z-index:15001;overflow:hidden;pointer-events:none}.tp-geo-confetti i{position:absolute;top:-25px;width:11px;height:18px;border-radius:3px;opacity:0;animation:tp-geo-confetti 3s ease-in forwards}@keyframes tp-geo-pop{from{opacity:0;transform:scale(.8) translateY(15px)}to{opacity:1;transform:none}}@keyframes tp-geo-confetti{0%{opacity:1;transform:translateY(-20px) rotate(0)}90%{opacity:1}100%{opacity:0;transform:translateY(110vh) rotate(620deg)}}@media(min-width:1300px){.tp-geo-adventure-body{grid-template-columns:280px minmax(0,1fr);padding:18px 24px;gap:22px}.tp-geo-sidebar nav button>span:last-child{font-size:16px}.tp-geo-sidebar nav small{font-size:11px}.tp-geo-nav-icon{width:40px;height:40px;font-size:22px}.tp-geo-progress{padding:20px}.tp-geo-progress>span{font-size:13px}.tp-geo-progress strong{font-size:36px}.tp-geo-workspace .tp-geo-question h1{font-size:26px}.tp-geo-workspace .tp-geo-question p{font-size:20px}.tp-geo-workspace .tp-geo-question small{font-size:13px}.tp-geo-stage>span:not(.tp-geo-stage-dots){font-size:18px}.tp-geo-adventure-header h1{font-size:25px}.tp-geo-workspace .tp-geo-feedback{font-size:14px}}@media(min-width:1700px){.tp-geo-adventure-body{grid-template-columns:310px minmax(0,1fr)}.tp-geo-sidebar nav button>span:last-child{font-size:18px}.tp-geo-sidebar nav small{font-size:12px}.tp-geo-sidebar nav button{gap:12px}}@media(prefers-reduced-motion:reduce){.tp-geo-answer-feedback>div,.tp-geo-success>div{animation:none}.tp-geo-confetti{display:none}}
 .tp-geo-adventure-header .tp-geo-sound-toggle[aria-pressed=true]{background:#1e293b;color:#fff;border-color:#64748b}
+
+
+/* Keep the draft notice inside the workspace's available height, rather than
+   adding it above a full-height mission screen (notably on portrait iPads). */
+.tp-geo-workspace{display:flex;flex-direction:column}
+.tp-geo-workspace>.tp-geo-preview{flex:none;align-self:stretch;margin:0 0 8px;max-width:none}
+.tp-geo-workspace>.tp-geo-screen{flex:1;min-height:0;height:auto;width:100%}
+/* P03: reference and four silhouette buttons must fit their grid tracks. */
+.tp-geo-split:has(>div>.tp-geo-note+svg):has(>.tp-geo-choice-grid)>div:first-child{height:100%;display:flex;flex-direction:column;justify-content:center;min-height:0}
+.tp-geo-split:has(>div>.tp-geo-note+svg):has(>.tp-geo-choice-grid)>div:first-child>svg{flex:1;min-height:0;width:100%;max-height:100%}
+.tp-geo-split>.tp-geo-choice-grid:has(>button>svg){height:100%;grid-template-rows:repeat(2,minmax(0,1fr))}
+.tp-geo-split>.tp-geo-choice-grid:has(>button>svg)>button{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0;padding:4px}
+.tp-geo-split>.tp-geo-choice-grid:has(>button>svg)>button>span{flex:none}
+.tp-geo-split>.tp-geo-choice-grid:has(>button>svg)>button>svg{flex:1;min-height:0;max-height:145px}
+@media(max-width:850px) and (orientation:portrait){
+  .tp-geo-split:has(>.tp-geo-choice-grid>button>svg){grid-template-rows:minmax(0,2fr) minmax(0,3fr)}
+}
+/* P02: countries with many borders (e.g. Brazil) need denser grids,
+   without shrinking the 44px interactive targets or covering the feedback. */
+@media(orientation:landscape) and (max-height:900px){
+  .tp-geo-split:has(.tp-geo-neighbor-cards>button:nth-child(7)){grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}
+  .tp-geo-puzzle:has(.tp-geo-neighbor-cards>button:nth-child(7)){align-self:stretch;display:flex;flex-direction:column;justify-content:center;min-width:0}
+  .tp-geo-puzzle:has(.tp-geo-neighbor-cards>button:nth-child(7)) .tp-geo-neighbor-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+  .tp-geo-puzzle:has(.tp-geo-neighbor-cards>button:nth-child(7)) .tp-geo-neighbor-cards svg{height:25px}
+  .tp-geo-puzzle:has(.tp-geo-neighbor-cards>button:nth-child(7)) .tp-geo-slots{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;margin-top:6px}
+  .tp-geo-puzzle:has(.tp-geo-neighbor-cards>button:nth-child(7)) .tp-geo-slots button{min-height:44px;overflow-wrap:anywhere}
+}

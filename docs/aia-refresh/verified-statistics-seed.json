@@ -1,0 +1,574 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-11-25",
+  "status": "partial_verified_reference_only",
+  "source": "World Bank WDI country profiles",
+  "sourceLicense": "CC BY 4.0; check indicator-specific terms",
+  "scope": [
+    "IN",
+    "ID",
+    "KH",
+    "SG",
+    "LK",
+    "TH",
+    "KR",
+    "CN",
+    "NP",
+    "PK",
+    "BD",
+    "BT",
+    "PH",
+    "BN",
+    "VN",
+    "MY",
+    "MN",
+    "LA",
+    "US",
+    "CA",
+    "AR",
+    "EC",
+    "SV",
+    "CU",
+    "GT",
+    "CR",
+    "DO",
+    "NI",
+    "PA",
+    "VE",
+    "BZ",
+    "PE",
+    "BO",
+    "HN",
+    "MX",
+    "IS",
+    "IE",
+    "AZ",
+    "AM",
+    "IT",
+    "UA",
+    "UZ",
+    "GB",
+    "AT",
+    "NL",
+    "KZ",
+    "GR",
+    "KG",
+    "GE",
+    "HR",
+    "CH",
+    "SE",
+    "ES",
+    "TJ",
+    "CZ",
+    "DK",
+    "DE",
+    "NO",
+    "FI",
+    "FR",
+    "BG",
+    "BE",
+    "PL",
+    "BA",
+    "PT",
+    "LT",
+    "RO",
+    "RU",
+    "AU",
+    "KI",
+    "WS",
+    "SB",
+    "TV",
+    "TO",
+    "NZ",
+    "VU",
+    "PG",
+    "PW",
+    "FJ",
+    "MH",
+    "FM",
+    "YE",
+    "IR",
+    "QA",
+    "SA",
+    "TR",
+    "JO",
+    "AO",
+    "UG",
+    "EG",
+    "ET",
+    "ER",
+    "GH",
+    "GA",
+    "CM",
+    "GN",
+    "KE",
+    "CI",
+    "CG",
+    "CD",
+    "ST",
+    "ZM",
+    "DJ",
+    "ZW",
+    "SD",
+    "SN",
+    "TZ",
+    "TD",
+    "TN",
+    "NG",
+    "BF",
+    "BI",
+    "BJ",
+    "MG",
+    "ML",
+    "ZA",
+    "MR",
+    "MA",
+    "LY",
+    "RW"
+  ],
+  "indicators": {
+    "SP.POP.TOTL": "people",
+    "SP.DYN.LE00.IN": "years",
+    "SP.POP.GROW": "%",
+    "NY.GDP.PCAP.CD": "USD",
+    "IT.NET.USER.ZS": "%",
+    "SP.URB.TOTL.IN.ZS": "%",
+    "EG.ELC.ACCS.ZS": "%",
+    "SE.PRM.ENRR": "%",
+    "EG.FEC.RNEW.ZS": "%",
+    "SP.DYN.IMRT.IN": "per 1000 live births"
+  },
+  "countries": {
+    "AZ": {
+      "SP.POP.TOTL": {
+        "value": 10246996,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/azerbaijan",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=AZ",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 75,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/azerbaijan",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AZ",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 0.4,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/azerbaijan",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=AZ",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "UZ": {
+      "SP.POP.TOTL": {
+        "value": 37053428,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/uzbekistan",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=UZ",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 73,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/uzbekistan",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=UZ",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 1.9,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/uzbekistan",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=UZ",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "IN": {
+      "SP.POP.TOTL": {
+        "value": 1460000000,
+        "year": 2025,
+        "unit": "people",
+        "precision": "rounded_0.01_billion",
+        "source": "https://data.worldbank.org/country/india",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=IN",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 72,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/india",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=IN",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 0.9,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/india",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=IN",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "BD": {
+      "SP.POP.TOTL": {
+        "value": 175686899,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/bangladesh",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=BD",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 75,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/bangladesh",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BD",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 1.2,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/bangladesh",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=BD",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "US": {
+      "SP.POP.TOTL": {
+        "value": 341784857,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/united-states",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=US",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 79,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/united-states",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=US",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 0.5,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/united-states",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=US",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "AU": {
+      "SP.POP.TOTL": {
+        "value": 27614411,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/Australia",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=AU",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 83,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/Australia",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AU",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 1.5,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/Australia",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=AU",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "TR": {
+      "SP.POP.TOTL": {
+        "value": 85878556,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/turkiye",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=TR",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 77,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/turkiye",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TR",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 0.4,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/turkiye",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=TR",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "RW": {
+      "SP.POP.TOTL": {
+        "value": 14569341,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/rwanda",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=RW",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 68,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/rwanda",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=RW",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 2.2,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/rwanda",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=RW",
+        "verifiedOn": "2026-11-25"
+      },
+      "NY.GDP.PCAP.CD": {
+        "value": 1123.7,
+        "year": 2025,
+        "unit": "USD",
+        "precision": "displayed_0.1_usd",
+        "source": "https://data.worldbank.org/country/rwanda",
+        "indicatorUrl": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=RW",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "KI": {
+      "SP.POP.TOTL": {
+        "value": 136488,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/kiribati",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=KI",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 67,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/kiribati",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=KI",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 1.5,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/kiribati",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=KI",
+        "verifiedOn": "2026-11-25"
+      },
+      "NY.GDP.PCAP.CD": {
+        "value": 2558.7,
+        "year": 2025,
+        "unit": "USD",
+        "precision": "displayed_0.1_usd",
+        "source": "https://data.worldbank.org/country/kiribati",
+        "indicatorUrl": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=KI",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "QA": {
+      "SP.POP.TOTL": {
+        "value": 2972215,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/qatar",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=QA",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 83,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/qatar",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=QA",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 3.9,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/qatar",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=QA",
+        "verifiedOn": "2026-11-25"
+      },
+      "NY.GDP.PCAP.CD": {
+        "value": 72524.9,
+        "year": 2025,
+        "unit": "USD",
+        "precision": "displayed_0.1_usd",
+        "source": "https://data.worldbank.org/country/qatar",
+        "indicatorUrl": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=QA",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "DJ": {
+      "SP.POP.TOTL": {
+        "value": 1184076,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/djibouti",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=DJ",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 66,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/djibouti",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=DJ",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 1.3,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/djibouti",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=DJ",
+        "verifiedOn": "2026-11-25"
+      },
+      "NY.GDP.PCAP.CD": {
+        "value": 3905.6,
+        "year": 2025,
+        "unit": "USD",
+        "precision": "displayed_0.1_usd",
+        "source": "https://data.worldbank.org/country/djibouti",
+        "indicatorUrl": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=DJ",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "BZ": {
+      "SP.POP.TOTL": {
+        "value": 422924,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/belize",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=BZ",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 74,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/belize",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BZ",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 1.4,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/belize",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=BZ",
+        "verifiedOn": "2026-11-25"
+      },
+      "NY.GDP.PCAP.CD": {
+        "value": 7865.5,
+        "year": 2025,
+        "unit": "USD",
+        "precision": "displayed_0.1_usd",
+        "source": "https://data.worldbank.org/country/belize",
+        "indicatorUrl": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=BZ",
+        "verifiedOn": "2026-11-25"
+      }
+    },
+    "DK": {
+      "SP.POP.TOTL": {
+        "value": 6009169,
+        "year": 2025,
+        "unit": "people",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/denmark",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=DK",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.DYN.LE00.IN": {
+        "value": 82,
+        "year": 2024,
+        "unit": "years",
+        "precision": "displayed_integer",
+        "source": "https://data.worldbank.org/country/denmark",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=DK",
+        "verifiedOn": "2026-11-25"
+      },
+      "SP.POP.GROW": {
+        "value": 0.5,
+        "year": 2025,
+        "unit": "%",
+        "precision": "displayed_0.1_percent",
+        "source": "https://data.worldbank.org/country/denmark",
+        "indicatorUrl": "https://data.worldbank.org/indicator/SP.POP.GROW?locations=DK",
+        "verifiedOn": "2026-11-25"
+      },
+      "NY.GDP.PCAP.CD": {
+        "value": 76970.2,
+        "year": 2025,
+        "unit": "USD",
+        "precision": "displayed_0.1_usd",
+        "source": "https://data.worldbank.org/country/denmark",
+        "indicatorUrl": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=DK",
+        "verifiedOn": "2026-11-25"
+      }
+    }
+  }
+}

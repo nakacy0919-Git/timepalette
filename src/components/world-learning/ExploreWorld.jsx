@@ -1,3 +1,6 @@
+import {lazy,Suspense} from 'react';
+import {buildLearnerJourney} from '../../utils/learnerJourneyProgress.js';
+const MyWorldJourney = lazy(() => import('./MyWorldJourney.jsx'));
 import countryFlags from '../../data/exploreCountryFlags.json';
 import './exploreWorldToolbar.css';
 import {
@@ -989,7 +992,12 @@ function CountryCard({
 function CountrySelectionLanding({
   onChooseMode,
   onBackHome,
+  initialShowJourney=false,
+  onDismissJourney,
 }) {
+  const [showJourney,setShowJourney]=useState(initialShowJourney);
+  const dismissJourney=()=>{setShowJourney(false);onDismissJourney?.();};
+  const journey=buildLearnerJourney(liveCountries);
   return (
     <div
       className="
@@ -1176,6 +1184,8 @@ function CountrySelectionLanding({
       />
 
 
+      {showJourney&&<Suspense fallback={<div role="status" className="fixed inset-0 z-[100] flex items-center justify-center bg-[#061123] text-cyan-100">進捗を読み込み中…</div>}><MyWorldJourney summary={journey} onClose={dismissJourney} onExplore={dismissJourney}/></Suspense>}
+
       {/* CONTENT */}
 
       <div
@@ -1222,44 +1232,12 @@ lg:px-6
           />
 
 
-          <div
-            className="
-              flex
-              items-center
-              gap-3
-              rounded-full
-              border
-              border-white/20
-              bg-slate-950/30
-              px-4
-              py-2.5
-              shadow-lg
-              backdrop-blur-xl
-            "
-          >
-
-            <Globe2
-              size={16}
-              className="
-                text-cyan-300
-              "
-            />
-
-
-            <span
-              className="
-                text-xs
-                font-black
-                tracking-[0.10em]
-                text-white/85
-              "
-            >
-              {
-                liveCountries.length
-              } COUNTRIES
-            </span>
-
-          </div>
+          <button id="journey" type="button" onClick={()=>setShowJourney(true)} aria-label="My World Journey：自分の世界探究の進捗を見る" className="relative max-w-[48%] shrink-0 rounded-2xl border border-cyan-100/35 bg-[#07172c]/85 px-3 py-3 text-left text-white shadow-lg backdrop-blur-xl transition hover:border-cyan-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-200 sm:px-4">
+            <span className="flex items-center gap-1.5 text-[9px] font-black tracking-wider text-cyan-200 sm:text-[11px]"><Compass size={14}/> MY WORLD JOURNEY</span>
+            <span className="mt-1 block text-xs font-black sm:text-sm">世界探究のあしあと</span>
+            <span className="mt-1 flex items-center justify-between gap-2 text-xs font-bold text-cyan-100"><span>{journey.exploredCountries} / {journey.totalCountries} か国</span><ArrowRight size={15}/></span>
+            <span className="mt-2 block h-1.5 overflow-hidden rounded-full bg-white/15"><span className="block h-full rounded-full bg-cyan-300" style={{width:(journey.totalCountries?100*journey.exploredCountries/journey.totalCountries:0)+'%'}}/></span>
+          </button>
 
         </div>
 
@@ -1474,7 +1452,7 @@ function CountryHoverFlag({country}){
  return failed?<span aria-label={country.nameJa+'の国旗'} className="text-2xl">{country.flagEmoji}</span>:<img src={countryFlags.flags[country.iso]||country.flagUrl||`https://flagcdn.com/w80/${country.iso}.png`} alt={country.nameJa+'の国旗'} width="48" height="32" className="tp-explore-flag" onError={()=>setFailed(true)}/>;
 }
 
-export default function ExploreWorld({onBackHome}={}) {
+export default function ExploreWorld({onBackHome,initialShowJourney=false,onDismissJourney}={}) {
   const [
     activeCountry,
     setActiveCountry,
@@ -1830,7 +1808,7 @@ if (
   !activeMode
 ) {
   return (
-    <CountrySelectionLanding onBackHome={onBackHome}
+    <CountrySelectionLanding onBackHome={onBackHome} initialShowJourney={initialShowJourney} onDismissJourney={onDismissJourney}
       onChooseMode={
         chooseMode
       }

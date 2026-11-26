@@ -1,4 +1,6 @@
 import {
+  lazy,
+  Suspense,
   useRef,
   useState,
 } from 'react';
@@ -45,6 +47,8 @@ import {
   playUiSound,
 } from './utils/uiSound';
 
+const WorldGameHub = lazy(() => import('./components/world-games/WorldGameHub.jsx'));
+
 const Placeholder = ({
   title,
 }) => (
@@ -76,6 +80,8 @@ function hasMeetingLink() {
 }
 
 export default function App() {
+  const [initialGameMode,setInitialGameMode]=useState(null);
+  const [initialShowJourney,setInitialShowJourney]=useState(false);
   const themeMusicRef =
     useRef(null);
 
@@ -169,6 +175,7 @@ export default function App() {
 
   const goExplore =
     () => {
+      setInitialShowJourney(false);
       playUiSound(
         'open'
       );
@@ -178,32 +185,9 @@ export default function App() {
       );
     };
 
-  const goJourney =
-    () => {
-      playUiSound(
-        'tap'
-      );
+  const goJourney = () => {playUiSound('tap');setInitialShowJourney(true);navigateTo('explore');};
 
-      setActiveTab(
-        'home'
-      );
-
-      window.setTimeout(
-        () => {
-          document
-            .getElementById(
-              'journey'
-            )
-            ?.scrollIntoView({
-              behavior:
-                'smooth',
-              block:
-                'center',
-            });
-        },
-        80
-      );
-    };
+  const openGame = mode => {setInitialGameMode(mode);playUiSound('tap');navigateTo('worldGames');};
 
   const openTool =
     (toolId) => {
@@ -211,6 +195,7 @@ export default function App() {
         'tap'
       );
 
+      if(toolId==='worldGames')setInitialGameMode(null);
       navigateTo(
         toolId
       );
@@ -224,6 +209,7 @@ export default function App() {
         case 'home':
           return (
             <WorldAdventureHome
+              onOpenGame={openGame}
               onExploreWorld={
                 goExplore
               }
@@ -233,9 +219,12 @@ export default function App() {
             />
           );
 
+        case 'worldGames':
+          return <Suspense fallback={<div role="status" className="p-8 text-center">World Gamesを読み込み中…</div>}><WorldGameHub key={initialGameMode||'default'} initialMode={initialGameMode} onBackHome={goHome}/></Suspense>;
+
         case 'explore':
           return (
-            <ExploreWorld onBackHome={goHome}/>
+            <ExploreWorld onBackHome={goHome} initialShowJourney={initialShowJourney} onDismissJourney={()=>setInitialShowJourney(false)}/>
           );
 
         case 'timer':
@@ -283,6 +272,7 @@ export default function App() {
         default:
           return (
             <WorldAdventureHome
+              onOpenGame={openGame}
               onExploreWorld={
                 goExplore
               }
@@ -295,7 +285,7 @@ export default function App() {
     };
 
   const isFullWidth =
-    activeTab === 'home' ||
+    activeTab === 'home' || activeTab === 'worldGames' ||
     activeTab ===
       'explore';
 

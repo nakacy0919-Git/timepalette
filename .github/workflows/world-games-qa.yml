@@ -1,0 +1,49 @@
+name: World Games browser QA
+on:
+  pull_request:
+    paths:
+      - 'src/components/world-games/**'
+      - 'src/utils/worldGame*.js'
+      - 'src/components/world-learning/WorldAdventureHome.jsx'
+      - 'src/components/world-learning/worldActivityHome.css'
+      - 'src/App.jsx'
+      - 'scripts/qa-world-games-browser.mjs'
+      - 'scripts/qa-world-battle-online.mjs'
+      - 'tests/worldGameEngine.test.mjs'
+      - 'tests/worldGameLanguage.test.mjs'
+      - 'tests/worldGameAiaAuthoring.test.mjs'
+      - 'scripts/qa-aia-bilingual.mjs'
+      - 'docs/aia-refresh/**'
+      - 'tests/worldBattleRoom.test.mjs'
+      - 'tests/worldBattleService.test.mjs'
+      - 'cloudflare/timepalette-battle-api/**'
+      - 'src/utils/worldBattleRoom.js'
+      - 'src/data/world-games/**'
+      - '.github/workflows/world-games-qa.yml'
+permissions:
+  contents: read
+jobs:
+  world-games:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - run: npm ci
+      - run: node --test tests/worldGameEngine.test.mjs tests/worldBattleRoom.test.mjs tests/worldBattleService.test.mjs tests/worldGameLanguage.test.mjs tests/worldGameAiaAuthoring.test.mjs
+      - run: node --check cloudflare/timepalette-battle-api/src/index.js
+      - run: node scripts/qa-aia-bilingual.mjs --plan
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/qa-world-games-browser.mjs
+      - run: node scripts/qa-world-battle-online.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: timepalette-five-activity-home
+          path: artifacts/world-games-home/
+          if-no-files-found: ignore
+          retention-days: 7

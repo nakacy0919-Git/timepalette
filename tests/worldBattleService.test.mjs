@@ -1,0 +1,75 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createRecord,roomRequest,digest,token,roomCode,validateConfig,ROOM_TTL} from '../cloudflare/timepalette-battle-api/src/roomService.js';
+const question=id=>({id,country:'jp',domain:'place',prompt:'Question '+id,choices:['A','B','C','D'],correctIndex:0,explanation:'A'});
+const config={teamNames:['Red','Blue'],limit:2,seconds:15,language:'ja',countries:['jp'],domains:['place']};
+async function setup(){
+ const made=await createRecord(config,[question('q1'),question('q2')],1000);
+ const host=await digest(made.credentials.hostToken),red=await digest(made.credentials.teams[0].token),blue=await digest(made.credentials.teams[1].token);
+ let record=made.record;
+ const call=(actor,op,body={},now=2000)=>{const out=roomRequest(record,actor,op,body,now);record=out.record;return out;};
+ return {made,host,red,blue,call,get record(){return record;}};
+}
+test('cryptographic credentials, no raw tokens in storage, and strict creation config',async()=>{
+ const {made}=await setup();
+ assert.match(token(),/^[0-9a-f]{48}$/);assert.match(roomCode(),/^[0-9A-F]{8}$/);
+ assert.equal(new Set([made.credentials.hostToken,...made.credentials.teams.map(t=>t.token)]).size,3);
+ assert.ok(!JSON.stringify(made.record).includes(made.credentials.hostToken));
+ assert.ok(made.credentials.teams.every(t=>!JSON.stringify(made.record).includes(t.token)));
+ assert.deepEqual(validateConfig(config),config);
+ assert.equal(validateConfig({...config,teamNames:['Red',' red ']}),null);
+ assert.equal(validateConfig({...config,limit:51}),null);
+ assert.equal(validateConfig({...config,countries:['../']}),null);
+});
+test('join/reconnect, simultaneous answers, secret views and host controls',async()=>{
+ const s=await setup(),{host,red,blue,call}=s;
+ assert.equal(call('stranger','view').status,403);
+ assert.equal(call(red,'view').status,403);
+ assert.equal(call(red,'join').status,200);
+ const rev=s.record.room.revision;
+ assert.equal(call(red,'join').data.view.revision,rev);
+ assert.equal(call(host,'action',{type:'start',revision:rev}).status,409);
+ assert.equal(call(blue,'join').status,200);
+ assert.equal(call(host,'action',{type:'start',revision:s.record.room.revision}).status,200);
+ const view=call(red,'view').data.view;
+ assert.equal(view.question.correctIndex,undefined);assert.equal(view.question.explanation,undefined);
+ assert.equal(view.deck,undefined);assert.equal(view.teams[0].actorId,undefined);
+ assert.equal(call(red,'action',{type:'reveal',revision:view.revision}).status,403);
+ const answer={type:'answer',round:view.round,questionId:view.question.id,index:s.record.room.deck[0].correctIndex};
+ assert.equal(call(red,'action',answer).status,200);
+ assert.equal(call(red,'action',answer).status,409);
+ const other=call(blue,'view').data.view;
+ assert.equal(other.ownAnswer,null);assert.equal(other.answers,undefined);
+ assert.equal(call(blue,'action',answer).status,200);
+ assert.equal(call(host,'action',{type:'reveal',revision:s.record.room.revision}).status,200);
+ assert.equal(call(blue,'view').data.view.question.correctIndex,answer.index);
+ assert.equal(s.record.room.teams[1].score,100);
+ assert.equal(call(host,'action',{type:'next',revision:s.record.room.revision}).status,200);
+ assert.equal(call(red,'action',answer).status,409);
+});
+test('server deadline, expiry and explicit room deletion',async()=>{
+ const s=await setup(),{host,red,blue,call}=s;
+ call(red,'join');call(blue,'join');call(host,'action',{type:'start',revision:s.record.room.revision});
+ const q=s.record.room.deck[0];
+ assert.equal(call(red,'action',{type:'answer',round:1,questionId:q.id,index:0},17000).status,409);
+ assert.equal(call(red,'close').status,403);
+ assert.equal(call(red,'view',{},1000+ROOM_TTL).status,404);
+ assert.equal(call(host,'close').status,200);
+ assert.equal(s.record,null);
+ assert.equal(call(host,'view').status,404);
+});
+
+import {createBattleClient,acceptBattleView} from '../src/utils/worldGameOnlineClient.js';
+test('client keeps credentials in headers and rejects obsolete revisions',async()=>{
+ const seen=[];const fetcher=async(url,options)=>{seen.push({url,options});return Response.json({view:{revision:3}});};
+ const client=createBattleClient('https://example.org/',fetcher),secret=token();
+ await client.join('AB12CD34',secret);
+ assert.equal(seen[0].url,'https://example.org/rooms/AB12CD34/join');
+ assert.equal(seen[0].options.headers.Authorization,'Bearer '+secret);
+ assert.equal(seen[0].options.credentials,'omit');assert.equal(seen[0].options.redirect,'error');
+ assert.ok(!seen[0].url.includes(secret));
+ assert.throws(()=>client.view('../x',secret));
+ assert.throws(()=>createBattleClient('http://example.org'));
+ assert.equal(acceptBattleView({revision:4},{revision:3}).revision,4);
+ assert.equal(acceptBattleView({revision:4},{revision:5}).revision,5);
+});
