@@ -111,7 +111,11 @@ try{
   await home.locator('[data-activity="journey"]').click();
   await next();await next();
   await shell.getByRole('button',{name:'ゲーム開始 →'}).click();
-  assert.equal(await shell.locator('.wj-node').count(),6);
+  await shell.locator('.wj-atlas svg').waitFor();
+  assert.ok([3,6,9].includes(await shell.locator('.wj-atlas-node').count()));
+  assert.equal(await shell.locator('.wj-atlas-node[data-current="true"]').count(),1);
+  assert.ok(await shell.locator('.wj-atlas-train').count()>=1);
+  await page.screenshot({path:'artifacts/world-games-home/journey-'+viewport.width+'x'+viewport.height+'.png',animations:'disabled'});
   await shell.getByRole('button',{name:/サイコロを振る/}).click();
   await shell.getByRole('dialog',{name:'サイコロ',exact:true}).waitFor();
   await shell.locator('.wj-dice-cube .wj-face').nth(5).waitFor({state:'attached'});
