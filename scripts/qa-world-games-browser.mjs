@@ -24,9 +24,11 @@ try{
   assert.equal(await home.locator('.tp-home-card-image').evaluateAll(images=>images.every(img=>img.naturalWidth===800&&img.naturalHeight===600)),true,'original WebP dimensions');
   const rects=await home.locator('[data-activity]').evaluateAll(nodes=>nodes.map(n=>({x:n.getBoundingClientRect().x,y:n.getBoundingClientRect().y,width:n.getBoundingClientRect().width,height:n.getBoundingClientRect().height})));
   if(viewport.width>=900){
-   assert.ok(rects.every(r=>Math.abs(r.y-rects[0].y)<2&&r.width<=250&&r.height<=310),'compact equal-row cards');
+   assert.ok(rects.every(r=>Math.abs(r.y-rects[0].y)<2&&r.width<=260&&r.height<=350),'balanced equal-row cinematic cards');
    assert.ok(rects.slice(1).every((r,i)=>r.x-(rects[i].x+rects[i].width)>=13),'card spacing');
   }
+  const artLayout=await home.locator('[data-activity]').evaluateAll(nodes=>nodes.map(n=>{const card=n.getBoundingClientRect(),art=n.querySelector('.tp-home-tile-art'),copy=n.querySelector('.tp-home-tile-copy').getBoundingClientRect();return {artHeight:art.getBoundingClientRect().height/card.height,mask:getComputedStyle(art).maskImage,copyBottom:copy.bottom,cardBottom:card.bottom};}));
+  assert.ok(artLayout.every(r=>r.artHeight>.6&&r.artHeight<.72&&r.mask.includes('linear-gradient')&&r.copyBottom<=r.cardBottom),'integrated artwork and readable text');
   if(viewport.width>=820){
    const boxes=await home.locator('[data-activity]').evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().bottom));
    assert.ok(boxes.every(bottom=>bottom<=viewport.height),'all five activities visible');
