@@ -1,0 +1,17 @@
+/* School-level selection and readable Japanese ruby. */
+.wg-school-choices{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.wg-school-choices button{min-height:clamp(105px,17vh,140px)}
+.wg-school-choices button:nth-child(2){background:linear-gradient(145deg,#fff9e0,#ffedb3)}
+.wg-school-choices button:nth-child(3){background:linear-gradient(145deg,#fff,#d6f6e8)}
+.wg-school-choices button:nth-child(4){background:linear-gradient(145deg,#fff,#eaddff)}
+.wg-school-choices button[aria-pressed=true]{border-color:#0789ed;box-shadow:0 5px 0 #70b4ef,0 0 0 2px #0ba2ff33}
+.wg-school-choices button span{font-size:clamp(27px,4vw,46px)}
+.wg-school-choices button strong{font-size:clamp(19px,2.6vw,29px)}
+.wg-furigana-question ruby{ruby-position:over;ruby-align:center;white-space:nowrap;line-height:1.5}
+.wg-furigana-question rt{font-size:.43em;font-weight:750;letter-spacing:.025em;color:#355d87;line-height:1.1}
+.wg-furigana-question h2{line-height:1.6!important}
+.wg-furigana-question .wg-options button{min-height:clamp(76px,11vh,112px);line-height:1.55}
+.wg-furigana-question .wg-options button>span{white-space:normal;overflow-wrap:anywhere}
+.wg-furigana-question .wg-feedback p,.wg-furigana-question .wj-explanation p{line-height:1.8}
+@media(max-height:710px){.wg-school-choices button{min-height:94px;padding:7px}.wg-school-choices button span{font-size:31px}.wg-school-choices button strong{font-size:20px}.wg-furigana-question .wg-options button{min-height:68px}}
+@media(max-width:600px){.wg-school-choices{gap:8px}.wg-school-choices button{min-height:100px}.wg-school-choices button small{font-size:11px}.wg-furigana-question .wg-options button{min-height:58px}}
