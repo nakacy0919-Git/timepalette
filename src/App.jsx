@@ -81,6 +81,7 @@ function hasMeetingLink() {
 
 export default function App() {
   const [initialGameMode,setInitialGameMode]=useState(null);
+  const [initialShowJourney,setInitialShowJourney]=useState(false);
   const themeMusicRef =
     useRef(null);
 
@@ -174,6 +175,7 @@ export default function App() {
 
   const goExplore =
     () => {
+      setInitialShowJourney(false);
       playUiSound(
         'open'
       );
@@ -183,32 +185,7 @@ export default function App() {
       );
     };
 
-  const goJourney =
-    () => {
-      playUiSound(
-        'tap'
-      );
-
-      setActiveTab(
-        'home'
-      );
-
-      window.setTimeout(
-        () => {
-          document
-            .getElementById(
-              'journey'
-            )
-            ?.scrollIntoView({
-              behavior:
-                'smooth',
-              block:
-                'center',
-            });
-        },
-        80
-      );
-    };
+  const goJourney = () => {playUiSound('tap');setInitialShowJourney(true);navigateTo('explore');};
 
   const openGame = mode => {setInitialGameMode(mode);playUiSound('tap');navigateTo('worldGames');};
 
@@ -247,7 +224,7 @@ export default function App() {
 
         case 'explore':
           return (
-            <ExploreWorld onBackHome={goHome}/>
+            <ExploreWorld onBackHome={goHome} initialShowJourney={initialShowJourney}/>
           );
 
         case 'timer':
