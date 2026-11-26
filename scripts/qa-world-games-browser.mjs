@@ -118,10 +118,12 @@ try{
   await shell.getByLabel('サイコロの数').selectOption('2');
   await shell.getByRole('button',{name:'ゲーム開始 →'}).click();
   await shell.locator('.wj-atlas svg').waitFor();
-  assert.ok(await shell.locator('.wj-atlas-node').count()>9);
+  assert.equal(await shell.getByRole('button',{name:'都市を拡大',exact:true}).getAttribute('aria-pressed'),'true');
+  assert.ok(await shell.locator('.wj-atlas-node[data-current="true"]').count()===1);
   assert.equal(await shell.locator('.wj-score-chip').count(),2);
   await shell.getByRole('button',{name:'都市を拡大',exact:true}).click();
   await shell.getByRole('button',{name:'アジア全体',exact:true}).click();
+  assert.ok(await shell.locator('.wj-atlas-node').count()>9);
   assert.equal(await shell.locator('.wj-atlas-node[data-current="true"]').count(),1);
   assert.ok(await shell.locator('.wj-atlas-train').count()>=1);
   await page.screenshot({path:'artifacts/world-games-home/journey-'+viewport.width+'x'+viewport.height+'.png',animations:'disabled'});
