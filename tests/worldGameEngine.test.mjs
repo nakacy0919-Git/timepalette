@@ -109,3 +109,26 @@ test('AIA records require a real official PDF URL, reference page, review date a
  const item={...q('aia-test'),origin:'AIA',subcategory:'地理',translations:{en:{prompt:'Which location is correct?',choices:['A','B','C','D'],explanation:'A is correct.',subcategory:'Geography'}},translationReviewStatus:'approved',requiresReading:false,gameEligible:true,rightsConfirmed:true,reviewStatus:'approved',sources:['https://www2.aia.pref.aichi.jp/koryu/j/kyouzai/PDF/H20/uzbekistan.pdf'],sourcePages:[12],verifiedOn:'2026-11-25'};
  assert.deepEqual(approvedStandaloneQuestions([item,item,{...item,id:'aia-missing',sourcePages:[]},{...item,id:'aia-fake',sources:['https://www2.aia.pref.aichi.jp.example.com/fake.pdf']},{...item,id:'aia-draft',reviewStatus:'draft'}]),[item]);
 });
+
+
+import {classroomReport,classroomReportCsv} from '../src/utils/worldGameEngine.js';
+test('classroom analytics distinguish correct, incorrect, unanswered and unassigned turns',()=>{
+ let g=start('battle',{teamNames:['=1+1','Red']});
+ g=answerGame(g,g.question.correctIndex);g=answerGame(g,-1);g=advanceGame(g);
+ g=answerGame(g,(g.question.correctIndex+1)%4);g=answerGame(g,g.question.correctIndex);g=advanceGame(g);
+ const report=classroomReport(g);
+ assert.deepEqual(report.total,{attempts:4,correct:2,incorrect:1,unanswered:1,rate:50});
+ assert.deepEqual(report.teams.map(t=>[t.correct,t.incorrect,t.unanswered]),[[1,1,0],[1,0,1]]);
+ assert.equal(report.domains[0].rate,50);assert.equal(report.review.length,2);
+ const csv=classroomReportCsv(report);
+ assert.ok(csv.startsWith('\uFEFF'));assert.ok(csv.includes('"\'=1+1"'));assert.ok(csv.includes('"unanswered"'));
+ let t=start('territory');t=selectTerritory(t,'az',random);t=answerGame(t,-1);t=advanceGame(t);
+ const tr=classroomReport(t);
+ assert.equal(tr.total.attempts,1);assert.equal(tr.total.unanswered,1);assert.equal(tr.teams[1].attempts,0);assert.equal(tr.teams[1].rate,null);
+ assert.equal(classroomReport(start('shuffle')).total.rate,null);
+});
+test('classroom CSV preserves displayed option text and escapes unsafe spreadsheet values',()=>{
+ const report={questions:[{round:1,id:'q',country:'az',domain:'place',language:'en',prompt:'A "quote", here',correctAnswer:'A',explanation:'Line 1\nLine 2',responses:[{teamName:'  @SUM(1)',answer:'A',status:'correct'}]}]};
+ const csv=classroomReportCsv(report);
+ assert.ok(csv.includes('"A ""quote"", here"'));assert.ok(csv.includes('"\'  @SUM(1)"'));assert.ok(csv.includes('"Line 1\nLine 2"'));
+});
