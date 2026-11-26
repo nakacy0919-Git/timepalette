@@ -1,0 +1,14 @@
+/* Illustrated 2D World Express. All geometry is SVG and scales cleanly on classroom screens. */
+.wj-atlas{flex:1;min-height:0;min-width:0;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:20px;background:linear-gradient(155deg,#91eaff,#1b94d0);border:2px solid #fff;box-shadow:0 7px 20px #0f568e35,inset 0 0 0 1px #49b3ec;position:relative}
+.wj-atlas svg{display:block;width:100%;height:100%;min-height:0;overflow:hidden}
+.wj-atlas-node text{font-family:system-ui,-apple-system,'Noto Sans JP',sans-serif;paint-order:stroke fill}
+.wj-atlas-train{transition:transform .29s cubic-bezier(.2,.6,.35,1);transform-origin:0 0;filter:drop-shadow(0 3px 3px #144b5b4a)}
+.wj-atlas-halo{animation:wj-atlas-pulse 1.6s ease-in-out infinite;transform-origin:0 0;transform-box:fill-box}
+@keyframes wj-atlas-pulse{0%,100%{opacity:.9}50%{opacity:.45}}
+.wg-theme-journey .wj-board{background:linear-gradient(135deg,#fffdf1,#ffefc7);padding:clamp(8px,1vw,15px);border:2px solid #fff;box-shadow:0 9px 30px #17669a2a}
+.wg-theme-journey .wj-board-head{padding:0 4px}
+.wg-theme-journey .wj-board-head h2{color:#14578b;text-shadow:0 1px #fff}
+.wg-theme-journey .wj-roll{background:linear-gradient(180deg,#ffbe38,#f58b16 65%,#ed6b0b);border:2px solid #fff;color:#fff;text-shadow:0 2px 1px #9e4b08;box-shadow:0 4px 0 #b7631c,0 0 18px #ffcf5d80;border-radius:18px;padding:9px 28px;font-weight:950}
+.wg-theme-journey .wj-roll:hover{filter:brightness(1.08)}
+@media(max-width:600px){.wj-atlas{border-radius:12px}.wg-theme-journey .wj-roll{padding:7px 12px}.wg-theme-journey .wj-board-head h2{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.wj-atlas-train,.wj-atlas-halo{transition:none;animation:none}}
