@@ -133,15 +133,24 @@ test('classroom CSV preserves displayed option text and escapes unsafe spreadshe
  assert.ok(csv.includes('"A ""quote"", here"'));assert.ok(csv.includes('"\'  @SUM(1)"'));assert.ok(csv.includes('"Line 1\nLine 2"'));
 });
 
-import {buildJourneyStops,journeyStop} from '../src/utils/worldJourneyStops.js';
+import {getGeography197CountryCodes} from '../src/utils/geography197.js';
+import {buildJourneyStops,journeyStop,journeyPage} from '../src/utils/worldJourneyStops.js';
 test('journey moves through domestic city stops before crossing country boundary',()=>{
  const stops=buildJourneyStops(['jp','kr','in','fi','nz']);
- assert.equal(stops.length,30);
- assert.deepEqual(stops.slice(0,6).map(s=>s.country),Array(6).fill('jp'));
- assert.equal(stops[6].label,'ソウル');assert.equal(stops[12].label,'ニューデリー');assert.equal(stops[18].label,'ヘルシンキ');
- assert.equal(stops[24].named,false);
+ assert.equal(stops.length,15);
+ assert.deepEqual(stops.slice(0,3).map(s=>s.country),Array(3).fill('jp'));
+ assert.equal(stops[3].label,'ソウル');assert.equal(stops[6].label,'ニューデリー');assert.equal(stops[9].label,'ヘルシンキ');
+ assert.equal(stops[12].named,true);
+ assert.deepEqual(stops.slice(0,3).map(s=>s.label),['東京','大阪','福岡']);
  let g=createGame({mode:'journey',pool:[q('a','jp'),q('b','jp'),q('c','kr'),q('d','kr')],limit:4,teamCount:2,travelEconomy:true,random});
  g=rollJourney(g,2,random);
  assert.equal(g.teams[0].position,2);assert.equal(journeyStop(g,2).country,'jp');assert.equal(g.question.country,'jp');
  assert.equal(g.dice,2);
+});
+
+test('world atlas covers all 197 profiles with three distinct named places and pages safely',()=>{
+ const route=getGeography197CountryCodes(),stops=buildJourneyStops(route);
+ assert.equal(route.length,197);assert.equal(stops.length,591);assert.equal(new Set(stops.map(s=>s.id)).size,591);
+ assert.ok(stops.every(s=>s.named&&s.label&&s.labelEn));
+ for(let i=0;i<stops.length;i++)for(const compact of [true,false]){const page=journeyPage({journeyStops:stops},i,compact);assert.ok(page.stops.includes(stops[i]));assert.ok(page.stops.length<= (compact?3:9));assert.ok(page.next);}
 });
