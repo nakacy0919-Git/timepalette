@@ -33,7 +33,8 @@ export function makeLocalGameBank(countries,approved=approvedCatalog.questions){
    bank.push({id:'game-capital-'+c.iso,country:c.iso,domain:'place',prompt:c.nameJa+'の'+p.capitalRoleJa+'はどこですか？',choices:options,correctIndex:0,explanation:c.nameJa+'の'+p.capitalRoleJa+'は'+p.capitalNameJa+'です。'+(p.capitalNote||''),sources:p.sources||[],origin:'TimePalette Geography',translations:{en}});
   }
   // Only time questions whose stem includes all necessary dates/times.
-  const missions=getTimePackage(c.iso)?.missions||[];
+  // Japan-to-Tokyo comparisons are tautological; Japan has dedicated school questions.
+  const missions=c.iso==='jp'?[]:(getTimePackage(c.iso)?.missions||[]);
   for(const m of missions.slice(0,3)){
    const opts=m.options||[];
    bank.push({id:'game-'+m.id,country:c.iso,domain:'time',prompt:m.prompt.replace('練習用の時計も動かせます。',''),choices:opts.map(o=>o.label),correctIndex:opts.findIndex(o=>o.correct),explanation:m.explanation,sources:m.sourceIds||[],origin:'TimePalette Time',translations:{en:englishTime(m,TIME_COUNTRIES[c.iso])}});
