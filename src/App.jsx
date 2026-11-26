@@ -224,7 +224,7 @@ export default function App() {
 
         case 'explore':
           return (
-            <ExploreWorld onBackHome={goHome} initialShowJourney={initialShowJourney}/>
+            <ExploreWorld onBackHome={goHome} initialShowJourney={initialShowJourney} onDismissJourney={()=>setInitialShowJourney(false)}/>
           );
 
         case 'timer':
