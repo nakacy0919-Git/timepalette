@@ -10,7 +10,23 @@ try{
   await context.addInitScript(()=>{sessionStorage.setItem('timepalette_opening_seen_v1','true');localStorage.setItem('timepalette_ui_sound_v1','off');});
   const page=await context.newPage();page.setDefaultTimeout(15000);const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto('http://127.0.0.1:4189/',{waitUntil:'domcontentloaded'});
-  await page.getByRole('button',{name:/World Games/}).click();
+  const home=page.locator('.tp-activity-home');
+  await home.waitFor();
+  assert.equal(await home.locator('[data-activity]').count(),5);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'home overflow');
+  if(viewport.width>=820){
+   const boxes=await home.locator('[data-activity]').evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().bottom));
+   assert.ok(boxes.every(bottom=>bottom<=viewport.height),'all five activities visible');
+  }
+  for(const mode of ['battle','territory','journey']){
+   await home.locator('[data-activity="'+mode+'"]').click();
+   await page.locator('.wg-modes button[aria-pressed=true]').waitFor();
+   const label=await page.locator('.wg-modes button[aria-pressed=true] strong').textContent();
+   assert.equal(label,{battle:'World Quiz Battle',territory:'World Territory',journey:'World Journey'}[mode]);
+   await page.getByRole('button',{name:'← ホーム',exact:true}).click();
+   await home.waitFor();
+  }
+  await home.locator('[data-activity="shuffle"]').click();
   const shell=page.locator('.wg-shell');await shell.waitFor();
   await shell.getByRole('button',{name:'すべて解除',exact:true}).click();
   await shell.getByRole('button',{name:/アゼルバイジャン/}).click();
