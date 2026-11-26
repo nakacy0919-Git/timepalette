@@ -1,3 +1,4 @@
+import countrySouvenirCatalog from '../data/world-games/journeySouvenirs.json' with {type:'json'};
 // Platform-neutral educational geography and game economy rules.
 export const TRAVEL_MODES=Object.freeze({
  standard:{label:'普通旅行',icon:'🎒',cost:0,extra:0},
@@ -9,6 +10,11 @@ export const SOUVENIRS=Object.freeze([
  {id:'atlas',label:'世界地図コレクション',icon:'🗺️',cost:300,value:300},
  {id:'globe',label:'記念地球儀',icon:'🌐',cost:500,value:500},
 ]);
+// Preserve the three purchase slots and their prices; labels and learning notes are country-specific.
+export function souvenirsForCountry(country){
+ const items=countrySouvenirCatalog[country];
+ return SOUVENIRS.map((item,i)=>items?.[i]?{...item,label:items[i][0],icon:items[i][1],description:items[i][2]}:{...item,description:'旅の記念品を集めよう。'});
+}
 export function geographicDistance(a,b){
  if(!Array.isArray(a)||!Array.isArray(b)||a.length!==2||b.length!==2||![...a,...b].every(Number.isFinite))return Infinity;
  const rad=Math.PI/180,dlat=(b[1]-a[1])*rad,dlon=(b[0]-a[0])*rad;
