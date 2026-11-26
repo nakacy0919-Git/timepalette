@@ -1,4 +1,4 @@
-import {TRAVEL_MODES,SOUVENIRS,buildJourneyRoute,territoryChoices,regionalCollections,journeyAssets} from './worldGameStrategy.js';
+import {TRAVEL_MODES,souvenirsForCountry,buildJourneyRoute,territoryChoices,regionalCollections,journeyAssets} from './worldGameStrategy.js';
 import {buildJourneyStops} from './worldJourneyStops.js';
 // Pure rules shared by local play and a future authoritative room server.
 export const GAME_MODES = ['shuffle','battle','territory','journey'];
@@ -121,7 +121,7 @@ export function teamRank(game,t){
 // Purchase is voluntary and only possible during the active team's review, once per item type per country.
 export function buySouvenir(game,itemId){
  if(game.mode!=='journey'||!game.travelEconomy||game.phase!=='review'||!game.question)return game;
- const item=SOUVENIRS.find(x=>x.id===itemId),team=game.teams[game.turn],country=game.question.country;
+ const country=game.question.country,team=game.teams[game.turn],item=souvenirsForCountry(country).find(x=>x.id===itemId);
  if(!item||team.money<item.cost||team.souvenirs.some(x=>x.id===itemId&&x.country===country))return game;
  return {...game,teams:game.teams.map(t=>t.id===team.id?{...t,money:t.money-item.cost,souvenirs:[...t.souvenirs,{id:item.id,country,value:item.value}]}:t)};
 }
