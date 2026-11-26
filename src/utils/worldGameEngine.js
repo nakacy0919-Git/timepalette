@@ -44,7 +44,7 @@ export function createGame({mode,pool,limit,teamCount=2,teamNames=[],geo={},stra
  const actualLimit=playableLimit(mode,limit,pool.length,n);
  if(actualLimit<1)throw Error('各チームが1回以上挑戦できる問題数を選んでください。');
  const ids=shuffled([...new Set(pool.map(q=>q.country))],random);
- const route=mode==='journey'&&travelEconomy?buildJourneyRoute(ids,geo,ids.includes('jp')?'jp':ids[0]):ids;
+ const route=mode==='journey'?buildJourneyRoute(ids,geo,ids.includes('jp')?'jp':ids[0]):ids;
  const deck=balancedDeck(pool,actualLimit,random);
  return {mode,teams,route,diceCount:[1,2,3].includes(diceCount)?diceCount:1,journeyStops:mode==='journey'?buildJourneyStops(route):null,deck,pool,geo,strategy,travelEconomy,travel:null,limit:actualLimit,round:0,turn:0,used:[],history:[],owners:{},answers:{},phase:['territory','journey'].includes(mode)?'select':'question',question:['territory','journey'].includes(mode)?null:deck[0],target:null,dice:null,last:null};
 }
