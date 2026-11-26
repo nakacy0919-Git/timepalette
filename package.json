@@ -20,16 +20,17 @@
   "dependencies": {
     "@aws-sdk/client-s3": "3.1142.0",
     "d3-geo": "^3.1.1",
+    "d3-selection": "2.0.0",
+    "d3-zoom": "2.0.0",
     "jszip": "3.10.1",
     "lucide-react": "^1.27.0",
+    "peerjs": "1.5.5",
     "prop-types": "^15.8.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-simple-maps": "^3.0.0",
     "topojson-client": "^3.1.0",
-    "world-atlas": "^2.0.2",
-    "d3-selection": "2.0.0",
-    "d3-zoom": "2.0.0"
+    "world-atlas": "^2.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
