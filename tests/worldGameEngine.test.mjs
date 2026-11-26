@@ -137,28 +137,28 @@ import {getGeography197CountryCodes} from '../src/utils/geography197.js';
 import {buildJourneyStops,journeyStop,journeyPage} from '../src/utils/worldJourneyStops.js';
 test('journey moves through domestic city stops before crossing country boundary',()=>{
  const stops=buildJourneyStops(['jp','kr','in','fi','nz']);
- assert.equal(stops.length,15);
- assert.deepEqual(stops.slice(0,3).map(s=>s.country),Array(3).fill('jp'));
- assert.equal(stops[3].label,'ソウル');assert.equal(stops[6].label,'ニューデリー');assert.equal(stops[9].label,'ヘルシンキ');
- assert.equal(stops[12].named,true);
- assert.deepEqual(stops.slice(0,3).map(s=>s.label),['東京','大阪','福岡']);
+ assert.equal(stops.length,23);
+ assert.deepEqual(stops.slice(0,11).map(s=>s.country),Array(11).fill('jp'));
+ assert.equal(stops[11].label,'ソウル');assert.equal(stops[14].label,'ニューデリー');assert.equal(stops[17].label,'ヘルシンキ');
+ assert.equal(stops[20].named,true);
+ assert.deepEqual(stops.slice(0,11).map(s=>s.label),['札幌','青森','仙台','新潟','金沢','長野','東京','名古屋','大阪','広島','福岡']);
  let g=createGame({mode:'journey',pool:[q('a','jp'),q('b','jp'),q('c','kr'),q('d','kr')],limit:4,teamCount:2,travelEconomy:true,random});
  g=rollJourney(g,2,random);
  assert.equal(g.teams[0].position,2);assert.equal(journeyStop(g,2).country,'jp');assert.equal(g.question.country,'jp');
  assert.equal(g.dice,2);
 });
 
-test('world atlas covers all 197 profiles with three distinct named places and pages safely',()=>{
+test('world atlas covers all 197 profiles with extended Japan and three other named places and pages safely',()=>{
  const route=getGeography197CountryCodes(),stops=buildJourneyStops(route);
- assert.equal(route.length,197);assert.equal(stops.length,591);assert.equal(new Set(stops.map(s=>s.id)).size,591);
+ assert.equal(route.length,197);assert.equal(stops.length,599);assert.equal(new Set(stops.map(s=>s.id)).size,599);
  assert.ok(stops.every(s=>s.named&&s.label&&s.labelEn));
- for(let i=0;i<stops.length;i++)for(const compact of [true,false]){const page=journeyPage({journeyStops:stops},i,compact);assert.ok(page.stops.includes(stops[i]));assert.ok(page.stops.length<= (compact?3:9));assert.ok(page.next);}
+ for(let i=0;i<stops.length;i++)for(const compact of [true,false]){const page=journeyPage({journeyStops:stops},i,compact);assert.ok(page.stops.includes(stops[i]));assert.ok(page.stops.length<= (compact?11:17));assert.ok(page.next);}
 });
 
 test('geographic city coordinates and multi-dice rolls stay consistent',()=>{
  const stops=buildJourneyStops(getGeography197CountryCodes());assert.ok(stops.every(s=>s.coordinates?.length===2&&s.coordinates.every(Number.isFinite)));
- const [tokyo,osaka,fukuoka]=buildJourneyStops(['jp']);assert.ok(tokyo.coordinates[0]>osaka.coordinates[0]&&osaka.coordinates[0]>fukuoka.coordinates[0]);
+ const jp=buildJourneyStops(['jp']),[tokyo,osaka,fukuoka]=['東京','大阪','福岡'].map(name=>jp.find(s=>s.label===name));assert.ok(tokyo.coordinates[0]>osaka.coordinates[0]&&osaka.coordinates[0]>fukuoka.coordinates[0]);
  let g=createGame({mode:'journey',pool:[q('a','jp'),q('b','jp'),q('c','kr'),q('d','kr')],limit:4,teamCount:2,travelEconomy:true,diceCount:2,random});
  assert.equal(rollJourney(g,[1,7],random),g);assert.equal(rollJourney(g,3,random),g);
- g=rollJourney(g,[1,2],random);assert.equal(g.dice,3);assert.deepEqual(g.diceFaces,[1,2]);assert.equal(g.teams[0].position,3);assert.equal(g.question.country,'kr');
+ g=rollJourney(g,[1,2],random);assert.equal(g.dice,3);assert.deepEqual(g.diceFaces,[1,2]);assert.equal(g.teams[0].position,3);assert.equal(g.question.country,'jp');
 });
