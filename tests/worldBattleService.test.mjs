@@ -58,3 +58,18 @@ test('server deadline, expiry and explicit room deletion',async()=>{
  assert.equal(s.record,null);
  assert.equal(call(host,'view').status,404);
 });
+
+import {createBattleClient,acceptBattleView} from '../src/utils/worldGameOnlineClient.js';
+test('client keeps credentials in headers and rejects obsolete revisions',async()=>{
+ const seen=[];const fetcher=async(url,options)=>{seen.push({url,options});return Response.json({view:{revision:3}});};
+ const client=createBattleClient('https://example.org/',fetcher),secret=token();
+ await client.join('AB12CD34',secret);
+ assert.equal(seen[0].url,'https://example.org/rooms/AB12CD34/join');
+ assert.equal(seen[0].options.headers.Authorization,'Bearer '+secret);
+ assert.equal(seen[0].options.credentials,'omit');assert.equal(seen[0].options.redirect,'error');
+ assert.ok(!seen[0].url.includes(secret));
+ assert.throws(()=>client.view('../x',secret));
+ assert.throws(()=>createBattleClient('http://example.org'));
+ assert.equal(acceptBattleView({revision:4},{revision:3}).revision,4);
+ assert.equal(acceptBattleView({revision:4},{revision:5}).revision,5);
+});
