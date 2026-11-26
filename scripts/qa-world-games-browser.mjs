@@ -22,6 +22,20 @@ try{
    await shell.locator('.wg-feedback .wg-primary').click();
   }
   await shell.getByText('GAME COMPLETE',{exact:false}).waitFor();
+  const report=shell.getByRole('region',{name:'授業結果分析'});
+  await report.waitFor();
+  assert.equal(await report.locator('.wg-report-metrics>div').count(),4);
+  await report.getByRole('button',{name:'全問題（8）',exact:true}).click();
+  assert.equal(await report.locator('details').count(),8);
+  await report.locator('summary').first().click();
+  assert.equal(await report.locator('details[open] .wg-report-responses>div').count(),1);
+  const downloadEvent=page.waitForEvent('download');
+  await report.getByRole('button',{name:'CSVを保存',exact:true}).click();
+  const download=await downloadEvent;
+  assert.match(download.suggestedFilename(),/^timepalette-world-games-.*\.csv$/);
+  assert.equal(await download.failure(),null);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'classroom report overflow');
+
   await shell.getByRole('button',{name:'設定に戻る',exact:true}).click();
   await shell.getByRole('button',{name:/World Quiz Battle/}).click();
   await shell.getByRole('button',{name:'ゲーム開始 →'}).click();
