@@ -17,9 +17,10 @@ function ActivityTile({activity,onSelect}){
  const {id,name,ja,description,Icon}=activity;
  const [artFailed,setArtFailed]=useState(false);
  return <button type="button" data-activity={id} className={'tp-home-tile tp-home-tile-'+id} onClick={()=>onSelect(id)}>
-  {!artFailed&&<img className="tp-home-card-image" src={import.meta.env.BASE_URL+'world-activities/'+id+'.webp'} alt="" aria-hidden="true" onError={()=>setArtFailed(true)} draggable="false"/>}
-  <span className="tp-home-card-shade" aria-hidden="true"/>
-  {artFailed&&<span className="tp-home-tile-art" aria-hidden="true"><Globe2 className="tp-tile-orbit"/><Icon className="tp-tile-icon" strokeWidth={1.7}/></span>}
+  <span className="tp-home-tile-art" aria-hidden="true">
+   {!artFailed?<img className="tp-home-card-image" src={import.meta.env.BASE_URL+'world-activities/'+id+'.webp'} alt="" onError={()=>setArtFailed(true)} draggable="false" width={800} height={600}/>:<><Globe2 className="tp-tile-orbit"/><Icon className="tp-tile-icon" strokeWidth={1.7}/></>}
+   <span className="tp-home-card-shade"/>
+  </span>
   <span className="tp-home-tile-copy"><strong>World <span>{name}</span></strong><span className="tp-home-tile-ja">{ja}</span><small>{description}</small></span>
   <span className="tp-home-tile-arrow" aria-hidden="true"><ArrowRight size={19}/></span>
  </button>;
