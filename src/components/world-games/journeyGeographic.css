@@ -1,0 +1,46 @@
+/* Geographic Express: an edge-to-edge map, compact broadcast-style HUD and colorful setup. */
+.wg-bright.wg-playing.wg-theme-journey{background:linear-gradient(155deg,#d9f8ff,#edf7e3);padding:8px clamp(8px,1vw,16px);gap:5px}
+.wg-theme-journey.wg-playing .wg-game-title{display:flex;align-items:center;justify-content:space-between;margin:0 auto;min-height:28px}
+.wg-theme-journey.wg-playing .wg-game-title h1{font-size:clamp(19px,2vw,27px);font-weight:950;margin:0;color:#14598c}
+.wg-theme-journey.wg-playing .wg-game-title span{font-weight:850}
+.wg-theme-journey.wg-playing .wg-game-progress{height:4px}
+.wj-scoreboard{display:flex;justify-content:center;align-items:stretch;gap:7px;flex-wrap:wrap;flex:none;margin:0 auto;padding:3px 0;max-width:1600px}
+.wj-score-chip{display:flex;align-items:center;gap:8px;min-width:0;width:clamp(142px,20vw,238px);padding:7px 10px;border:2px solid color-mix(in srgb,var(--team) 54%,white);border-radius:14px;background:linear-gradient(145deg,#fff,color-mix(in srgb,var(--team) 13%,white));box-shadow:0 3px 0 #1c547326;position:relative}
+.wj-score-chip.active{border-color:var(--team);box-shadow:0 0 0 2px color-mix(in srgb,var(--team) 21%,transparent),0 3px 0 #1c547326}
+.wj-score-rank{display:grid;place-items:center;flex:none;width:27px;height:27px;background:var(--team);color:#fff;font-weight:950;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 5px #0002}
+.wj-score-copy{display:flex;flex-direction:column;min-width:0;flex:1;line-height:1.08}
+.wj-score-copy strong{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#254961}
+.wj-score-copy span{white-space:nowrap;font-size:10px;color:var(--team)}.wj-score-copy span b{font-size:clamp(17px,2vw,26px);font-variant-numeric:tabular-nums}
+.wj-score-money{display:flex;flex-direction:column;align-items:center;line-height:1.1;color:#9b5b12}.wj-score-money b{font-size:14px}.wj-score-money small{font-size:9px;font-weight:800}
+.wj-score-chip>img{width:29px;height:20px;object-fit:contain;flex:none;border-radius:2px;filter:drop-shadow(0 1px 2px #0003)}
+.wg-theme-journey .wj-board{flex:1;min-height:0;max-width:none!important;border:0;border-radius:12px;background:transparent;box-shadow:none;padding:0;gap:5px}
+.wg-theme-journey .wj-board-head{padding:1px 9px;min-height:36px}
+.wg-theme-journey .wj-board-head h2{font-size:clamp(19px,2.5vw,28px);display:flex;align-items:center;gap:7px;line-height:1.12}
+.wg-theme-journey .wj-board-head span{font-size:10px;line-height:1.1}
+.wj-header-flag{width:34px;height:23px;object-fit:contain;border-radius:3px;filter:drop-shadow(0 2px 2px #2342)}
+.wj-destination b{font-size:clamp(14px,2vw,22px)}
+.wj-geo-atlas{border:1px solid #72b5ca;border-radius:12px;box-shadow:0 4px 12px #17557c28}
+.wj-geo-atlas svg{touch-action:none;cursor:grab}.wj-geo-atlas svg:active{cursor:grabbing}
+.wj-map-tools{position:absolute;top:8px;left:8px;right:8px;display:flex;justify-content:center;gap:5px;flex-wrap:wrap;pointer-events:none}
+.wj-map-tools button{pointer-events:auto;background:linear-gradient(180deg,#fff,#e5f5ff);border:1px solid #579bc4;box-shadow:0 2px 4px #184d6b26;border-radius:9px;color:#164c76;font-size:12px;font-weight:850;padding:7px 12px;min-height:36px}
+.wj-map-tools button[aria-pressed=true]{background:linear-gradient(145deg,#0ca6d9,#086bb3);color:#fff;border-color:white}
+.wj-map-credit{position:absolute;bottom:4px;right:8px;font-size:9px;background:#ffffffe0;border-radius:5px;padding:2px 5px;color:#34596a;pointer-events:none}
+.wg-theme-journey .wj-controls{padding:2px 6px;min-height:42px}
+.wg-theme-journey .wj-roll{min-height:42px;padding:7px 18px;border-radius:13px;font-size:clamp(13px,1.5vw,19px)}
+.wj-multi-dice{display:flex;align-items:center;justify-content:center;gap:6px}.wj-dice-cell{flex:1;min-width:0;text-align:center}.wj-dice-cell .wj-dice-stage{height:clamp(140px,29vh,250px)}.wj-dice-cell .wj-dice-cube{--size:clamp(45px,10vh,100px)}.wj-dice-cell b{font-size:25px;color:#155d9b}.wj-dice-cell:nth-child(2) .wj-dice-cube{animation-delay:.03s}.wj-dice-cell:nth-child(3) .wj-dice-cube{animation-delay:.06s}
+.wg-bright .wg-setup-overlay .wg-wizard{width:min(96vw,1160px);max-height:100%;padding:clamp(12px,2.2vw,30px)!important;box-shadow:0 18px 60px #154c8355;gap:12px}
+.wg-bright .wg-wizard-head h2{font-size:clamp(23px,3vw,34px);font-weight:950}
+.wg-bright .wg-wizard-body .wg-country-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.wg-bright .wg-wizard-body .wg-country-grid button{display:flex;align-items:center;gap:8px;text-align:left;padding:8px 9px;min-height:52px;font-size:clamp(11px,1.2vw,15px);font-weight:800;background:linear-gradient(145deg,#fff,#f1f8ff);border-color:#b7d8ef}
+.wg-bright .wg-wizard-body .wg-country-grid button[aria-pressed=true]{background:linear-gradient(145deg,#fff,var(--wg-pale));border-color:var(--wg-accent);box-shadow:0 2px 0 color-mix(in srgb,var(--wg-accent) 18%,transparent)}
+.wg-country-flag{width:38px;height:26px;flex:none;object-fit:contain;border-radius:3px;filter:drop-shadow(0 2px 2px #2242)}
+.wg-country-grid button>span:nth-child(2){flex:1;min-width:0;overflow-wrap:anywhere}
+.wg-country-selected{font-size:15px;color:var(--wg-accent);font-weight:950;flex:none}
+.wg-region-choices button{font-weight:800}.wg-region-choices button span{font-size:17px}
+.wg-domain-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.wg-domain-cards button{position:relative;display:flex;align-items:center;flex-direction:column;gap:4px;min-height:104px;justify-content:center;background:linear-gradient(145deg,#fff,#ecf7ff);border:1px solid #b8d7e9;border-radius:15px;color:#264966;font-weight:800;padding:9px}
+.wg-domain-cards button[aria-pressed=true]{background:linear-gradient(150deg,#fff,var(--wg-pale));border:2px solid var(--wg-accent);box-shadow:0 3px 0 color-mix(in srgb,var(--wg-accent) 22%,transparent)}
+.wg-domain-cards button:disabled{opacity:.55;cursor:default}.wg-domain-icon{font-size:28px}.wg-domain-cards strong{font-size:clamp(12px,1.5vw,17px)}.wg-domain-cards small{color:#47728d;font-size:12px}.wg-domain-check{position:absolute;top:8px;right:9px;color:var(--wg-accent)}
+@media(max-width:850px){.wj-score-chip{width:clamp(130px,23vw,200px);padding:5px 7px;gap:5px}.wj-score-rank{width:22px;height:22px}.wj-score-chip>img{width:23px;height:15px}.wg-bright .wg-wizard-body .wg-country-grid button{min-height:43px;padding:6px}.wg-country-flag{width:29px;height:20px}}
+@media(max-width:600px){.wj-scoreboard{gap:4px}.wj-score-chip{width:calc(50% - 3px);max-width:180px;padding:4px 5px;gap:4px}.wj-score-chip:nth-child(n+5){width:calc(25% - 4px)}.wj-score-chip:nth-child(n+5) .wj-score-money,.wj-score-chip:nth-child(n+5)>img{display:none}.wj-scoreboard:has(.wj-score-chip:nth-child(5)) .wj-score-chip{width:calc(25% - 4px);padding:4px 2px}.wj-scoreboard:has(.wj-score-chip:nth-child(5)) .wj-score-money,.wj-scoreboard:has(.wj-score-chip:nth-child(5)) .wj-score-chip>img{display:none}.wj-score-copy span b{font-size:16px}.wj-score-copy strong{font-size:10px}.wj-score-rank{width:18px;height:18px;font-size:10px}.wj-map-tools{gap:3px;top:5px;left:3px;right:3px}.wj-map-tools button{padding:4px 7px;font-size:10px;min-height:30px}.wj-board-head h2 small{display:none}.wg-bright .wg-wizard-body .wg-country-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.wg-bright .wg-wizard-body .wg-country-grid button{font-size:10px;gap:4px;padding:4px;min-height:38px}.wg-country-flag{width:22px;height:16px}.wg-country-selected{font-size:11px}.wg-domain-cards{gap:5px}.wg-domain-cards button{min-height:83px;padding:6px}.wg-domain-icon{font-size:22px}.wg-domain-cards small{font-size:10px}.wg-bright .wg-setup-overlay .wg-wizard{gap:7px;padding:10px!important}.wj-dice-cell .wj-dice-flight{scale:.8}.wj-map-credit{font-size:8px}}
+@media(max-height:700px) and (min-width:601px){.wg-bright .wg-wizard-body .wg-country-grid button{min-height:40px;padding:5px 8px}.wg-country-flag{height:21px}.wg-bright .wg-setup-overlay .wg-wizard{gap:7px;padding:15px!important}.wg-domain-cards button{min-height:82px}}
