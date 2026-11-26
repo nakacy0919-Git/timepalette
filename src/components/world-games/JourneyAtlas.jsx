@@ -22,8 +22,8 @@ export default function JourneyAtlas({game,cursor,countryName,countryFlag}){
  const current=game.journeyStops[cursor],center=current?.coordinates||[105,30],{w,h}=size;
  useEffect(()=>{const el=ref.current;if(!el)return;const ob=new ResizeObserver(([e])=>{const {width,height}=e.contentRect;if(width>0&&height>0)setSize({w:Math.round(width),h:Math.round(height)});});ob.observe(el);return()=>ob.disconnect();},[]);
  useEffect(()=>{setPan([0,0]);},[current?.country,view]);
- const base=view==='world'?[center[0],10]:view==='region'&&isAsia(current)?[105,28]:center;
- const factor=view==='world'?Math.min(w/6.45,h/3.25):view==='region'?Math.min(w/2.05,h/1.25):Math.min(w/.42,h/.33);
+ const base=view==='world'?[center[0],10]:view==='region'&&isAsia(current)?[clamp(center[0],84,110),clamp(center[1],20,34)]:center;
+ const factor=view==='world'?Math.min(w/6.45,h/5.8):view==='region'?Math.min(w/2.6,h/1.75):Math.min(w/.42,h/.33);
  const projection=useMemo(()=>geoMercator().rotate([-base[0],0]).center([0,clamp(base[1],-75,75)]).scale(factor*zoom).translate([w/2+pan[0],h/2+pan[1]]).clipExtent([[0,0],[w,h]]),[base[0],base[1],factor,zoom,w,h,pan]);
  const path=useMemo(()=>geoPath(projection),[projection]);
  const visible=(p,margin=0)=>p&&p[0]>=-margin&&p[0]<=w+margin&&p[1]>=-margin&&p[1]<=h+margin;
