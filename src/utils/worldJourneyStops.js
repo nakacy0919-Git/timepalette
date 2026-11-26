@@ -11,7 +11,7 @@ const featured={
  it:[['ローマ','Rome'],['フィレンツェ','Florence'],['ヴェネツィア','Venice']],
  au:[['シドニー','Sydney'],['メルボルン','Melbourne'],['パース','Perth']],
  ca:[['オタワ','Ottawa'],['トロント','Toronto'],['バンクーバー','Vancouver']],
- us:[['ワシントンD.C.','Washington D.C.'],['ニューヨーク','New York'],['ロサンゼルス','Los Angeles']],
+ us:[['ワシントン・ディーシー','Washington D.C.'],['ニューヨーク','New York'],['ロサンゼルス','Los Angeles']],
  eg:[['カイロ','Cairo'],['アレクサンドリア','Alexandria'],['ルクソール','Luxor']],
  br:[['ブラジリア','Brasília'],['リオデジャネイロ','Rio de Janeiro'],['サンパウロ','São Paulo']],
  cn:[['北京','Beijing'],['上海','Shanghai'],['西安','Xi’an']],
@@ -34,3 +34,7 @@ export function journeyPage(game,cursor,compact=false){
  const groups=compact?1:3,chapter=Math.floor(cursor/3),start=Math.floor(chapter/groups)*groups*3;
  return {start,chapter,stops:game.journeyStops.slice(start,start+groups*3),next:game.journeyStops[((chapter+1)*3)%game.journeyStops.length]};
 }
+
+// Japanese kana readings for every stop label that includes kanji.
+const journeyReadings={"東京":"とうきょう","大阪":"おおさか","福岡":"ふくおか","釜山":"プサン","済州":"チェジュ","北京":"ペキン","上海":"シャンハイ","西安":"シーアン","咸興":"ハムフン","南浦":"ナムポ","新北市":"しんほくし","台中":"たいちゅう","台北":"たいぺい","平壌":"ピョンヤン","セントポール教区":"セントポールきょうく","セントジョージ教区":"セントジョージきょうく","南ダブリン":"みなみダブリン","西エルサレム":"にしエルサレム","ビケニベウ村":"ビケニベウむら","テアオラエレケ村":"テアオラエレケむら","第3地区":"だいさんちく","ハルツーム北部":"ハルツームほくぶ","セナラ村":"セナラむら","アラピ村":"アラピむら","ボルジアの間・ラファエロの間":"ボルジアのま・ラファエロのま","ベルヴェデーレの中庭":"ベルヴェデーレのなかにわ","ジブチ市":"ジブチし","南タラワ":"みなみタラワ","クウェート市":"クウェートし","ヤレン地区":"ヤレンちく","東エルサレム":"ひがしエルサレム","サンマリノ市":"サンマリノし","ムババーネ（行政）／ロバンバ（王室・立法）":"ムババーネ（ぎょうせい）／ロバンバ（おうしつ・りっぽう）","バチカン市":"バチカンし","ワシントンD.C.":"ワシントン・ディーシー"};
+export const journeyReading=label=>journeyReadings[label]||'';
