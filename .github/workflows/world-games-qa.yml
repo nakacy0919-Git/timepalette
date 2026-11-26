@@ -13,6 +13,8 @@ on:
       - 'scripts/qa-aia-bilingual.mjs'
       - 'docs/aia-refresh/**'
       - 'tests/worldBattleRoom.test.mjs'
+      - 'tests/worldBattleService.test.mjs'
+      - 'cloudflare/timepalette-battle-api/**'
       - 'src/utils/worldBattleRoom.js'
       - 'src/data/world-games/**'
       - '.github/workflows/world-games-qa.yml'
@@ -30,7 +32,8 @@ jobs:
         with:
           node-version: '24'
       - run: npm ci
-      - run: node --test tests/worldGameEngine.test.mjs tests/worldBattleRoom.test.mjs tests/worldGameLanguage.test.mjs tests/worldGameAiaAuthoring.test.mjs
+      - run: node --test tests/worldGameEngine.test.mjs tests/worldBattleRoom.test.mjs tests/worldBattleService.test.mjs tests/worldGameLanguage.test.mjs tests/worldGameAiaAuthoring.test.mjs
+      - run: node --check cloudflare/timepalette-battle-api/src/index.js
       - run: node scripts/qa-aia-bilingual.mjs --plan
       - run: npx playwright install --with-deps chromium
       - run: node scripts/qa-world-games-browser.mjs
