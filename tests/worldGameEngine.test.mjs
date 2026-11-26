@@ -154,3 +154,11 @@ test('world atlas covers all 197 profiles with three distinct named places and p
  assert.ok(stops.every(s=>s.named&&s.label&&s.labelEn));
  for(let i=0;i<stops.length;i++)for(const compact of [true,false]){const page=journeyPage({journeyStops:stops},i,compact);assert.ok(page.stops.includes(stops[i]));assert.ok(page.stops.length<= (compact?3:9));assert.ok(page.next);}
 });
+
+test('geographic city coordinates and multi-dice rolls stay consistent',()=>{
+ const stops=buildJourneyStops(getGeography197CountryCodes());assert.ok(stops.every(s=>s.coordinates?.length===2&&s.coordinates.every(Number.isFinite)));
+ const [tokyo,osaka,fukuoka]=buildJourneyStops(['jp']);assert.ok(tokyo.coordinates[0]>osaka.coordinates[0]&&osaka.coordinates[0]>fukuoka.coordinates[0]);
+ let g=createGame({mode:'journey',pool:[q('a','jp'),q('b','jp'),q('c','kr'),q('d','kr')],limit:4,teamCount:2,travelEconomy:true,diceCount:2,random});
+ assert.equal(rollJourney(g,[1,7],random),g);assert.equal(rollJourney(g,3,random),g);
+ g=rollJourney(g,[1,2],random);assert.equal(g.dice,3);assert.deepEqual(g.diceFaces,[1,2]);assert.equal(g.teams[0].position,3);assert.equal(g.question.country,'kr');
+});
