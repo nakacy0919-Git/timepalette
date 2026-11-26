@@ -64,7 +64,11 @@ try{
   await shell.getByLabel('個別の国を選ぶ').fill('ウズベキスタン');
   await shell.getByRole('button',{name:/ウズベキスタン/}).click();
   const next=()=>shell.getByRole('button',{name:'次へ →',exact:true}).click();
-  await next();await next();
+  await next();
+  await shell.getByText('118か国・4,720問の日英対応補足問題',{exact:false}).waitFor();
+  assert.equal(await shell.locator('.wg-domain-cards button:enabled').count(),6);
+  await shell.getByRole('button',{name:'📚 追加学習問題 ON'}).click();
+  await next();
   await shell.getByRole('button',{name:'この授業の設定を保存'}).click();
   await shell.getByRole('button',{name:'ゲーム開始 →'}).click();
   for(let i=0;i<8;i++){
