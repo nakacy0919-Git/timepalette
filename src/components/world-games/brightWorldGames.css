@@ -85,3 +85,17 @@
 @keyframes wj-shadow{0%{opacity:.15;transform:translateX(-180%) scale(.5)}45%{opacity:.6;transform:translateX(20%) scale(1.2)}100%{opacity:1;transform:translateX(-50%) scale(1)}}
 @media(max-width:600px){.wg-bright{gap:5px;padding:8px}.wg-bright .wg-top{gap:5px;font-size:9px}.wg-bright .wg-top button{padding:5px;min-height:36px}.wg-wizard-body .wg-country-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.wg-bright .wg-config{flex-direction:row;flex-wrap:wrap;gap:6px}.wg-bright .wg-score{padding:5px}.wg-bright .wg-score small{font-size:10px}.wg-bright .wg-scores{grid-template-columns:repeat(4,minmax(0,1fr))}.wg-bright .wg-score strong{font-size:11px}.wg-bright .wg-score span{font-size:15px}.wg-bright .wg-options button{min-height:52px;padding:7px}.wg-bright .wg-options b{width:25px;height:25px}.wj-board-head,.wj-controls{flex-wrap:wrap;gap:5px}.wj-board-head span,.wj-controls small{font-size:10px}.wj-node{width:28%;min-height:70px}.wj-node b{font-size:11px}.wj-pawns span{width:18px;height:18px}.wj-controls .wj-roll{min-height:40px}.wg-bright .wg-travel-options{grid-template-columns:repeat(3,minmax(0,1fr))}.wg-bright .wg-travel-options b,.wg-bright .wg-travel-options small{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.wg-bright *{animation:none!important;transition:none!important}}
+
+/* Keep the back controls above the dimmed stage; dialogs stay inside the viewport. */
+.wg-bright .wg-top{z-index:40}
+.wg-bright>.wg-overlay{max-width:none;margin:0}
+.wg-bright .wg-map-section{display:flex;flex-direction:column;overflow:hidden;gap:8px}
+.wg-bright .wg-map-section>.wg-map{flex:1;min-height:0;display:grid;place-items:center}
+.wg-bright .wg-map-section>.wg-map svg{height:100%;max-height:100%;width:100%}
+.wg-bright .wg-map-section>.wg-strategy{margin:0;padding:8px;flex:none}
+.wg-bright .wg-map-section>p{font-size:11px;margin:0;flex:none}
+.wg-territory-footer{display:flex;justify-content:space-between;align-items:center;gap:8px;flex:none}
+.wg-bright .wg-row .wg-primary{background:linear-gradient(135deg,var(--wg-accent),#1963b8);color:#fff;border-color:#fff}
+.wg-theme-journey .wg-row .wg-primary{background:linear-gradient(135deg,#e38c14,#bc540c)}
+.wj-landscape:before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 8% 20%,#68c37d 0 6%,transparent 7%),radial-gradient(ellipse at 93% 18%,#66bd8b 0 10%,transparent 11%),radial-gradient(ellipse at 5% 94%,#72c4f0 0 12%,transparent 13%),radial-gradient(ellipse at 50% 50%,#f8e59f 0 11%,transparent 12%);opacity:.6;pointer-events:none}
+@media(max-width:600px){.wg-bright .wg-scores{grid-template-columns:repeat(2,minmax(0,1fr))}.wg-bright .wg-scores:has(.wg-score:nth-child(5)){grid-template-columns:repeat(4,minmax(0,1fr))}.wg-bright .wg-wizard-body .wg-row button{min-height:36px;padding:6px 9px}.wg-bright .wg-country-grid button{min-height:36px}.wg-bright .wg-wizard-body{gap:4px}.wg-bright .wg-wizard-body .wg-country-grid{gap:4px}}
