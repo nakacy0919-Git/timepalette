@@ -43,8 +43,10 @@ function TerritoryMap({game,onPick}){
  const playable=availableTerritories(game);
  const enabled=new Set(playable);
  const selected=new Set(game.route);
- const [query,setQuery]=useState('');
- const choose=iso=>{if(game.phase==='select'&&enabled.has(iso))onPick(iso);};
+ const [query,setQuery]=useState(''),[page,setPage]=useState(0),[picker,setPicker]=useState(false);
+ const filtered=playable.filter(iso=>name(iso).includes(query)||byIso[iso]?.nameEn.toLowerCase().includes(query.toLowerCase()));
+ const maxPage=Math.max(0,Math.ceil(filtered.length/12)-1),currentPage=Math.min(page,maxPage);
+ const choose=iso=>{if(game.phase==='select'&&enabled.has(iso)){setPicker(false);onPick(iso);}};
  return <div className="wg-map-section">
  <div className="wg-map"><ComposableMap projectionConfig={{scale:125}} width={800} height={400}><Geographies geography={worldAtlas}>{({geographies})=>geographies.map(geo=>{
   const iso=byAtlas[geo.properties?.name],owner=game.owners[iso],active=selected.has(iso),pickable=game.phase==='select'&&enabled.has(iso);
@@ -52,9 +54,8 @@ function TerritoryMap({game,onPick}){
  })}</Geographies></ComposableMap></div>
  <div className="wg-strategy"><strong>{choiceInfo.kind==='neighbor'?'隣接国へ進出':choiceInfo.kind==='expedition'?'特別遠征':choiceInfo.kind==='start'?'出発地点を選択':'自由探索'}</strong><span>{choiceInfo.kind==='neighbor'?'獲得済みの国と陸で接する候補国へ進めます。':choiceInfo.kind==='expedition'?'隣接する未出題の候補がないため、離れた国にも挑戦できます。':choiceInfo.kind==='start'?'最初の拠点は自由に選べます。':'正解で国を獲得。相手の国にも挑戦できます。'}</span></div>
  {game.strategy&&<p>選択範囲内の同じ地域の国（2か国以上）をすべて獲得すると、その地域につき初回200 pts。実際の国境を変えるものではなく、知識を集めるゲームです。</p>}
- <p>挑戦可能：{playable.length}か国・地域</p>
- <label className="wg-label">国を検索<input value={query} onChange={e=>setQuery(e.target.value)} placeholder="国名で検索"/></label>
- <div className="wg-country-grid">{playable.filter(iso=>name(iso).includes(query)||byIso[iso]?.nameEn.toLowerCase().includes(query.toLowerCase())).map(iso=><button key={iso} disabled={game.phase!=='select'} onClick={()=>choose(iso)} style={{borderColor:game.owners[iso]!==undefined?game.teams[game.owners[iso]].color:undefined}}>{flag(iso)} {name(iso)}{game.owners[iso]!==undefined&&<small> · {game.teams[game.owners[iso]].name}</small>}</button>)}</div>
+ <div className="wg-territory-footer"><b>挑戦可能：{playable.length}か国・地域</b><button className="wg-primary" disabled={game.phase!=='select'} onClick={()=>setPicker(true)}>国を選ぶ</button></div>
+ {picker&&game.phase==='select'&&<div className="wg-overlay" role="dialog" aria-modal="true" aria-label="挑戦する国"><section className="wg-settings wg-wizard"><header className="wg-wizard-head"><h2>挑戦する国を選ぼう</h2><button className="wg-back" onClick={()=>setPicker(false)}>閉じる</button></header><label className="wg-label">国を検索<input value={query} onChange={e=>{setQuery(e.target.value);setPage(0);}} placeholder="国名で検索"/></label><div className="wg-country-grid">{filtered.slice(currentPage*12,(currentPage+1)*12).map(iso=><button key={iso} onClick={()=>choose(iso)}>{flag(iso)} {name(iso)}</button>)}</div><div className="wg-page-controls"><button disabled={currentPage===0} onClick={()=>setPage(currentPage-1)}>← 前</button><span>{currentPage+1} / {maxPage+1}</span><button disabled={currentPage===maxPage} onClick={()=>setPage(currentPage+1)}>次 →</button></div></section></div>}
  </div>;
 }
 function QuizCard({game,setGame,teacher,timer}){
@@ -158,8 +159,9 @@ export default function WorldGameHub({onBackHome,initialMode}){
  return <main className={"wg-shell wg-bright wg-theme-"+(game?.mode||mode)+(game?" wg-playing":" wg-setup")}>
  <header className="wg-top"><button className="wg-back" onClick={game?exit:onBackHome}>← {game?'ゲーム設定':'ホーム'}</button><span>TIMEPALETTE / WORLD GAMES</span><button className="wg-back" aria-pressed={sound} onClick={()=>{setUiSoundEnabled(!sound);setSound(!sound);}}> {sound?'🔊 効果音 ON':'🔇 効果音 OFF'}</button></header>
  {!game?<><div className="wg-mode-splash"><img src={import.meta.env.BASE_URL+'world-activities/'+mode+'.webp'} alt=""/><div><span>LET'S PLAY</span><h1>{selectedMode.name}</h1><p>{selectedMode.desc}</p></div></div>
- {!initialMode&&<div className="wg-row wg-mode-switch">{MODES.map(m=><button key={m.id} aria-pressed={mode===m.id} onClick={()=>{setMode(m.id);setStep(0);}}>{m.name}</button>)}</div>}
+ 
  <div className="wg-overlay wg-setup-overlay"><section className="wg-settings wg-wizard" role="dialog" aria-modal="true" aria-label={selectedMode.name+' の設定'}><header className="wg-wizard-head"><div><small>{selectedMode.name} · STEP {step+1} / 3</small><h2>{['出題範囲を設定','問題を選ぼう','プレイ設定'][step]}</h2></div><button className="wg-back" onClick={onBackHome}>× ホーム</button></header><div className="wg-wizard-steps" aria-hidden="true">{[0,1,2].map(i=><i key={i} className={i<=step?'active':''}/>)}</div><div className="wg-wizard-body">
+ {!initialMode&&step===0&&<label className="wg-label">ゲーム<select value={mode} onChange={e=>setMode(e.target.value)}>{MODES.map(m=><option key={m.id} value={m.id}>{m.name}</option>)}</select></label>}
  {step===0&&<>{mode==='battle'&&ONLINE_ENDPOINT&&<div className="wg-row"><button onClick={()=>setOnline(true)}>オンライン対戦（限定テスト）</button><small>下の出題範囲・チーム設定を使用します。参加だけの場合は設定不要です。</small></div>}<div className="wg-row"><button onClick={()=>setSelected(countries.map(c=>c.iso))}>全世界</button><button onClick={()=>setSelected([])}>すべて解除</button><b>{selected.length}か国・地域</b></div>
  <div className="wg-row">{regions.map(r=>{const all=countries.filter(c=>c.region===r);const n=all.filter(c=>selectedSet.has(c.iso)).length;return <button key={r} aria-pressed={n===all.length} onClick={()=>toggleRegion(r)}>{regionLabels[r]||r} {n}/{all.length}</button>;})}</div>
  <label className="wg-label">個別の国を選ぶ<input value={search} onChange={e=>{setSearch(e.target.value);setCountryPage(0);}} placeholder="国名・英語名・国コード"/></label>
