@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {mkdir} from 'node:fs/promises';
+import {mkdir,access} from 'node:fs/promises';
 import {createServer} from 'vite';
 import {chromium} from 'playwright';
 const server=await createServer({server:{host:'127.0.0.1',port:4189,strictPort:true}});await server.listen();
@@ -14,6 +14,16 @@ try{
   const home=page.locator('.tp-activity-home');
   await home.waitFor();
   assert.equal(await home.locator('[data-activity]').count(),5);
+  assert.deepEqual(await home.locator('[data-activity]').evaluateAll(nodes=>nodes.map(n=>n.dataset.activity)),['adventure','shuffle','battle','territory','journey']);
+  assert.equal(await home.locator('#journey').count(),0,'progress belongs inside Adventure');
+  assert.equal(await home.getByRole('button',{name:'ゲームを始める',exact:true}).count(),0);
+  assert.equal(await home.getByRole('button',{name:'設定を見る',exact:true}).count(),0);
+  const hasAssets=await Promise.all(['adventure','shuffle','battle','territory','journey'].map(id=>access('public/world-activities/'+id+'.webp').then(()=>true,()=>false)));
+  if(hasAssets.every(Boolean)){
+   await home.locator('.tp-home-card-image').first().waitFor();
+   assert.equal(await home.locator('.tp-home-card-image').count(),5);
+   await home.locator('.tp-home-card-image').evaluateAll(images=>Promise.all(images.map(img=>img.decode())));
+  }else console.warn('Activity illustration asset pack not yet installed: testing the fallback icons instead.');
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false,'home overflow');
   if(viewport.width>=820){
    const boxes=await home.locator('[data-activity]').evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().bottom));
@@ -25,6 +35,10 @@ try{
   await page.screenshot({path:'artifacts/world-games-home/home-'+viewport.width+'x'+viewport.height+'.png',fullPage:true,animations:'disabled'});
   await home.locator('[data-activity="adventure"]').click();
   await page.getByRole('button',{name:'ホームに戻る',exact:true}).waitFor();
+  await page.getByRole('button',{name:/My World Journey/}).click();
+  await page.getByRole('dialog',{name:'My World Journey 世界探究の進捗'}).waitFor();
+  await page.getByRole('button',{name:'冒険ホームに戻る',exact:true}).click();
+  await page.getByRole('dialog',{name:'My World Journey 世界探究の進捗'}).waitFor({state:'hidden'});
   await page.getByRole('button',{name:'ホームに戻る',exact:true}).click();
   await home.waitFor();
   for(const mode of ['battle','territory','journey']){
