@@ -80,6 +80,7 @@ function hasMeetingLink() {
 }
 
 export default function App() {
+  const [initialGameMode,setInitialGameMode]=useState(null);
   const themeMusicRef =
     useRef(null);
 
@@ -209,12 +210,15 @@ export default function App() {
       );
     };
 
+  const openGame = mode => {setInitialGameMode(mode);playUiSound('tap');navigateTo('worldGames');};
+
   const openTool =
     (toolId) => {
       playUiSound(
         'tap'
       );
 
+      if(toolId==='worldGames')setInitialGameMode(null);
       navigateTo(
         toolId
       );
@@ -228,6 +232,7 @@ export default function App() {
         case 'home':
           return (
             <WorldAdventureHome
+              onOpenGame={openGame}
               onExploreWorld={
                 goExplore
               }
@@ -238,7 +243,7 @@ export default function App() {
           );
 
         case 'worldGames':
-          return <Suspense fallback={<div role="status" className="p-8 text-center">World Gamesを読み込み中…</div>}><WorldGameHub onBackHome={goHome}/></Suspense>;
+          return <Suspense fallback={<div role="status" className="p-8 text-center">World Gamesを読み込み中…</div>}><WorldGameHub key={initialGameMode||'default'} initialMode={initialGameMode} onBackHome={goHome}/></Suspense>;
 
         case 'explore':
           return (
@@ -290,6 +295,7 @@ export default function App() {
         default:
           return (
             <WorldAdventureHome
+              onOpenGame={openGame}
               onExploreWorld={
                 goExplore
               }
