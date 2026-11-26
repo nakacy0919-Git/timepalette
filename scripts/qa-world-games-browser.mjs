@@ -68,13 +68,15 @@ try{
   await shell.getByLabel('個別の国を選ぶ').fill('ウズベキスタン');
   await shell.getByRole('button',{name:/ウズベキスタン/}).click();
   await next();await next();
+  await shell.getByRole('button',{name:/小学生/}).waitFor();
+  await next();
   await shell.getByText('118か国・4,720問の日英対応補足問題',{exact:false}).waitFor();
   assert.equal(await shell.locator('.wg-domain-cards button:enabled').count(),6);
   await shell.getByRole('button',{name:'📚 追加学習問題 ON'}).click();
   await finishSetup();
   await shell.getByRole('button',{name:'この授業の設定を保存'}).click();
   await shell.getByRole('button',{name:/ゲーム開始/}).click();
-  for(let i=0;i<8;i++){
+  for(let i=0;i<10;i++){
    await shell.locator('.wg-options button').first().click();
    await shell.locator('.wg-feedback').waitFor();
    await shell.locator('.wg-feedback .wg-primary').click();
@@ -83,8 +85,8 @@ try{
   const report=shell.getByRole('region',{name:'授業結果分析'});
   await report.waitFor();
   assert.equal(await report.locator('.wg-report-metrics>div').count(),4);
-  await report.getByRole('button',{name:'全問題（8）',exact:true}).click();
-  assert.equal(await report.locator('details').count(),8);
+  await report.getByRole('button',{name:'全問題（10）',exact:true}).click();
+  assert.equal(await report.locator('details').count(),10);
   await report.locator('summary').first().click();
   assert.equal(await report.locator('details[open] .wg-report-responses>div').count(),1);
   const downloadEvent=page.waitForEvent('download');
@@ -119,7 +121,7 @@ try{
   await shell.getByRole('button',{name:'← ホーム',exact:true}).click();
   await home.locator('[data-activity="journey"]').click();
   await shell.getByRole('button',{name:/全世界/}).click();
-  await next();await next();await next();
+  await next();await next();await next();await next();
   assert.equal(await shell.locator('.wg-domain-cards button').count(),6);
   for(let i=0;i<12;i++){if(await shell.getByRole('heading',{name:/サイコロはいくつ/}).count())break;await next();}
   await shell.getByRole('button',{name:/2個 サイコロ/}).click();
