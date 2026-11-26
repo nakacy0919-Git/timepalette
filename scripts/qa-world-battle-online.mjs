@@ -18,7 +18,9 @@ const routeApi=async route=>{
  }
  const op=path.split('/').at(-1),secret=req.headers().authorization?.slice(7);
  if(!secret)return reply(403,{error:'invalid_credentials'});
- const out=roomRequest(record,await digest(secret),op,req.postDataJSON()||{},Date.now());
+ const actor=await digest(secret);
+ // Read current state after async authentication, not before it: emulate serialized room mutations.
+ const out=roomRequest(record,actor,op,req.postDataJSON()||{},Date.now());
  record=out.record;
  return reply(out.status,out.data);
 };
@@ -32,8 +34,7 @@ try{
   const page=await ctx.newPage();page.setDefaultTimeout(20000);
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(base+'/',{waitUntil:'domcontentloaded'});
-  await page.getByRole('button',{name:/World Games/}).click();
-  await page.getByRole('button',{name:/World Quiz Battle/}).click();
+  await page.locator('[data-activity="battle"]').click();
   await page.getByRole('button',{name:'オンライン対戦（限定テスト）'}).click();
   pages.push({ctx,page,errors});
  }
