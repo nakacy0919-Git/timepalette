@@ -56,6 +56,6 @@ export function battleRoomView(room,actor){
  const reveal=room.phase==='review'||room.phase==='finished';
  return {revision:room.revision,phase:room.phase,round:room.round+1,total:room.deck.length,deadline:room.deadline,role:host?'host':'team',teamId:team?.id??null,
  teams:room.teams.map(t=>({id:t.id,name:t.name,score:t.score,correct:t.correct,attempts:t.attempts,joined:!!t.actorId,answered:Object.hasOwn(room.answers,t.id)})),
- question:room.phase==='lobby'?null:{id:q.id,country:q.country,domain:q.domain,prompt:q.prompt,choices:[...q.choices],...(reveal?{correctIndex:q.correctIndex,explanation:q.explanation}: {})},
+ question:room.phase==='lobby'?null:{id:q.id,country:q.country,domain:q.domain,language:q.language==='en'?'en':'ja',prompt:q.prompt,choices:[...q.choices],...(reveal?{correctIndex:q.correctIndex,explanation:q.explanation}: {})},
  ownAnswer:team?(room.answers[team.id]??null):null,...(reveal?{answers:{...room.answers}}:{})};
 }
