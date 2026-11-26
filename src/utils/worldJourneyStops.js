@@ -1,3 +1,4 @@
+import {JAPAN_STATIONS} from './worldJourneyJapan.js';
 // Illustrative board stops, not actual roads or travel distances. Questions remain country-level.
 const landmarks={
  jp:['東京','鎌倉','箱根','名古屋','京都','大阪'],
@@ -16,6 +17,6 @@ const landmarks={
 const generic=['到着ゲート','街の広場','文化探究','自然探究','交流スポット','出発ゲート'];
 const icons=['🛬','🏘️','🏛️','🌳','📸','🚉'];
 export function buildJourneyStops(route){
- return route.flatMap(country=>(landmarks[country]||generic).map((label,index)=>({id:country+'-'+index,country,label,icon:icons[index],named:!!landmarks[country],index})));
+ return route.flatMap(country=>(country==='jp'?JAPAN_STATIONS:(landmarks[country]||generic).map((label,index)=>({label,icon:icons[index],named:!!landmarks[country]}))).map((stop,index)=>({...stop,id:country+'-'+index,country,index})));
 }
 export function journeyStop(game,position){return game.journeyStops?.[position]||{country:game.route[position],label:'',index:0};}
