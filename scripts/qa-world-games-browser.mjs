@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {mkdir} from 'node:fs/promises';
 import {createServer} from 'vite';
 import {chromium} from 'playwright';
 const server=await createServer({server:{host:'127.0.0.1',port:4189,strictPort:true}});await server.listen();
@@ -18,6 +19,14 @@ try{
    const boxes=await home.locator('[data-activity]').evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().bottom));
    assert.ok(boxes.every(bottom=>bottom<=viewport.height),'all five activities visible');
   }
+  await mkdir('artifacts/world-games-home',{recursive:true});
+  await home.locator('.tp-home-brand img').evaluate(img=>img.decode());
+  await home.locator('.tp-home-background').evaluate(img=>img.decode());
+  await page.screenshot({path:'artifacts/world-games-home/home-'+viewport.width+'x'+viewport.height+'.png',fullPage:true,animations:'disabled'});
+  await home.locator('[data-activity="adventure"]').click();
+  await page.getByRole('button',{name:'ホームに戻る',exact:true}).waitFor();
+  await page.getByRole('button',{name:'ホームに戻る',exact:true}).click();
+  await home.waitFor();
   for(const mode of ['battle','territory','journey']){
    await home.locator('[data-activity="'+mode+'"]').click();
    await page.locator('.wg-modes button[aria-pressed=true]').waitFor();
