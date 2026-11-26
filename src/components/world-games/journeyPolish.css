@@ -1,0 +1,70 @@
+/* World Journey: full-height, smooth atlas and arcade reward stage. */
+.wg-arcade.wg-theme-journey.wg-playing{gap:3px;padding:6px clamp(6px,1vw,13px);height:100dvh}
+.wg-arcade.wg-theme-journey.wg-playing .wg-game-title,.wg-arcade.wg-theme-journey.wg-playing .wg-game-progress{display:none}
+.wg-arcade.wg-theme-journey .wj-board{flex:1;min-height:0;padding:5px;gap:4px}
+.wg-arcade.wg-theme-journey .wj-board-head{min-height:35px;padding:0 8px}
+.wg-arcade.wg-theme-journey .wj-controls{min-height:46px;padding:2px 6px;gap:6px}
+.wg-arcade.wg-theme-journey .wj-geo-atlas{flex:1;min-height:0}
+.wj-sea-waves{animation:wj-wave-drift 7s linear infinite;pointer-events:none}
+@keyframes wj-wave-drift{from{transform:translate(0,0)}to{transform:translate(70px,45px)}}
+.wj-moving .wj-atlas-train{transition:none}
+.wj-speed-setting{grid-column:1/-1}
+.wj-speed-setting .wg-setting-pills button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:58px}
+.wj-speed-setting .wg-setting-pills button small{font-size:12px;font-weight:700}
+.wj-dice-popup{width:min(95vw,920px);border:3px solid #fff;box-shadow:0 0 0 3px #ffd66e,0 10px 0 #ad691a,0 25px 80px #0a2f68aa;background:radial-gradient(ellipse at 50% 38%,#fffdf3,#fff2ba 55%,#ffcf58);padding:clamp(12px,2.5vw,30px)}
+.wj-dice-popup h2{color:#975213;text-shadow:0 2px #fff;font-size:clamp(24px,4vw,48px);line-height:1.1;margin:0}
+.wj-dice-total{display:inline-block;color:#d46c08;line-height:.92;font-size:clamp(56px,9vw,112px);font-weight:950;text-shadow:0 3px 0 #fff,0 5px 0 #a65016;animation:wj-dice-pop .5s cubic-bezier(.2,.75,.25,1.35)}
+.wj-dice-cell .wj-dice-result-number{display:inline-grid;place-items:center;min-width:66px;height:66px;border-radius:16px;border:3px solid white;background:linear-gradient(#fef08e,#ffb935);color:#874706;font-size:clamp(35px,5vw,56px);font-weight:950;box-shadow:0 5px 0 #b9791d;animation:wj-dice-pop .42s both}
+@keyframes wj-dice-pop{from{transform:scale(.45);opacity:0}to{transform:scale(1);opacity:1}}
+/* A compact horizontal result: no long page or giant full-width controls. */
+.wg-arcade.wg-theme-journey .wg-question.wj-review-stage{width:min(96vw,1180px);padding:clamp(10px,1.7vw,22px);overflow:hidden;max-height:100%;border:3px solid #fff;box-shadow:0 0 0 2px #ffc968,0 8px 0 #b76b18,0 22px 65px #173e6680}
+.wg-arcade .wj-review-stage>header{margin:0 0 7px}
+.wg-arcade .wg-feedback.wj-celebration{display:flex;flex-direction:column;gap:10px;margin:0;padding:clamp(9px,1.5vw,18px);background:linear-gradient(145deg,#fffdf0,#fff3c4);border:2px solid #ffd77a;box-shadow:none;color:#513611;min-width:0}
+.wg-arcade .wj-celebration.wj-learn{background:linear-gradient(145deg,#fff,#e2f2ff);border-color:#9ed5fb;color:#28577d}
+.wj-review-top{display:flex;justify-content:space-between;align-items:center;gap:8px;color:#a76513;font-weight:950;letter-spacing:.06em;font-size:clamp(12px,1.5vw,18px)}
+.wj-result-country{display:flex;align-items:center;gap:7px;color:#36577c;font-size:clamp(14px,1.5vw,19px)}
+.wj-result-country img{width:clamp(36px,5vw,60px);height:32px;object-fit:contain;border-radius:4px;border:1px solid #cfdded}
+.wj-review-grid{display:grid;grid-template-columns:minmax(220px,.88fr) minmax(0,1.45fr);gap:clamp(10px,1.5vw,23px);align-items:stretch}
+.wj-reward-panel{min-width:0;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:14px 9px;background:radial-gradient(circle at 50% 35%,#fffce2,#ffe6a0 55%,#ffcc63);border:2px solid #eec061;border-radius:17px;text-align:center;isolation:isolate}
+.wj-learn .wj-reward-panel{background:radial-gradient(circle at 50% 35%,#fff,#d7efff 65%,#b7ddff);border-color:#96c9f4}
+.wj-star-medal{display:grid;place-items:center;width:clamp(58px,8vw,110px);height:clamp(58px,8vw,110px);font-size:clamp(32px,5.3vw,74px);border-radius:50%;background:linear-gradient(145deg,#fff5b6,#ffcb3a 55%,#e89108);border:4px solid white;color:#fff;box-shadow:0 4px 0 #be861c,inset 0 0 0 3px #ffe895,0 8px 22px #bc761643;text-shadow:0 3px 0 #b87612;animation:wj-dice-pop .55s both;z-index:1}
+.wj-learn .wj-star-medal{background:#e1f2ff;box-shadow:0 4px 0 #94c3eb;border-color:#fff;text-shadow:none}
+.wg-arcade .wj-celebration h3{font-size:clamp(26px,4.4vw,58px);font-weight:950;line-height:1.17;margin:7px 0;color:#a45a0c;text-shadow:0 2px #fff}
+.wg-arcade .wj-celebration.wj-learn h3{font-size:clamp(23px,3.2vw,42px);color:#2465a5}
+.wj-tpm-reward{display:flex;align-items:center;gap:5px;font-weight:950;color:#98500b;line-height:1}
+.wj-tpm-reward span{font-size:clamp(25px,3.4vw,42px)}.wj-tpm-reward b{font-size:clamp(37px,6.2vw,76px);letter-spacing:-.04em;text-shadow:0 2px #fff}.wj-tpm-reward small{font-size:clamp(14px,1.8vw,23px)}
+.wg-arcade .wj-reward-panel p{font-size:clamp(11px,1.35vw,16px);margin:6px 0 0;font-weight:850}
+.wj-coin-burst{position:absolute;inset:0;pointer-events:none;z-index:3}
+.wj-coin-burst i{position:absolute;left:calc(50% - 15px);top:48%;width:30px;height:30px;border:2px solid #fff4a8;border-radius:50%;background:radial-gradient(circle at 28% 22%,#fffbd4,#ffdc55 49%,#dd9211);box-shadow:0 3px 0 #ba7314;color:#a56c0d;font-style:normal;font-weight:950;display:grid;place-items:center;opacity:0;animation:wj-coin-flight 1.15s cubic-bezier(.14,.7,.35,1) both;animation-delay:calc(var(--i)*.048s)}
+@keyframes wj-coin-flight{0%{opacity:0;transform:translate(0,20px) scale(.35)}24%{opacity:1}63%{opacity:1;transform:translate(var(--x),var(--y)) rotateY(360deg) scale(1)}100%{opacity:0;transform:translate(calc(var(--x)*1.30),90px) rotateY(720deg) scale(.6)}}
+.wj-explanation{display:flex;flex-direction:column;justify-content:center;gap:7px;min-width:0;padding:clamp(10px,1.7vw,22px);background:linear-gradient(135deg,#fff,#fffef8);border:2px solid #ead9a5;border-radius:17px;overflow:hidden}
+.wj-explanation>small{font-size:clamp(11px,1.2vw,15px);color:#8e6b23;font-weight:850}
+.wj-explanation>strong{display:block;font-size:clamp(19px,2.7vw,36px);font-weight:950;color:#177c4e;line-height:1.25;overflow-wrap:anywhere}
+.wg-arcade .wj-explanation p{font-size:clamp(13px,1.65vw,20px);line-height:1.55;margin:0;color:#304b64;overflow-wrap:anywhere}
+.wj-full-explain{align-self:flex-start}
+.wj-review-actions{display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap}
+.wj-wallet{margin-right:auto;min-width:0;color:#88530e;font-weight:850;font-size:clamp(13px,1.7vw,21px)}
+.wj-wallet b{font-size:clamp(18px,2.4vw,28px);font-variant-numeric:tabular-nums}
+.wg-arcade .wj-review-actions .wg-primary{min-width:132px;width:auto;justify-self:auto;flex:none;padding:8px 25px;min-height:46px;margin:0}
+.wj-shop-launch{min-height:46px;min-width:130px;padding:7px 14px;font-size:clamp(13px,1.5vw,18px);font-weight:950;border:2px solid #d6b4ff;border-radius:13px;background:linear-gradient(#fff,#eadeff);color:#6d42a9;box-shadow:0 4px 0 #c4a3f0}
+.wj-shop-overlay{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:#14336199;backdrop-filter:blur(5px);padding:12px;isolation:isolate}
+.wj-shop-modal{width:min(95vw,1050px);max-height:calc(100dvh - 24px);display:flex;flex-direction:column;gap:10px;padding:clamp(11px,2vw,25px);background:linear-gradient(145deg,#fff,#fff1d1);color:#375271;border:3px solid white;border-radius:23px;box-shadow:0 0 0 3px #ffc95b,0 9px 0 #ad771d,0 20px 65px #0e316f90;overflow:auto}
+.wg-arcade .wj-shop-modal>header{margin:0;background:linear-gradient(130deg,#dc841a,#f6b62e);display:flex;align-items:center;justify-content:space-between;padding:10px 15px;border:2px solid #fff5d9;border-radius:14px;gap:10px;color:#fff;box-shadow:0 3px 0 #b87518}
+.wj-shop-modal header small{font-size:12px;font-weight:900;color:#fff4b8}
+.wg-arcade .wj-shop-modal header h2{display:flex;align-items:center;gap:9px;font-size:clamp(21px,3vw,37px);line-height:1.1;margin:1px 0;color:#fff;text-shadow:0 2px #b87518}
+.wj-shop-modal header h2 img{width:clamp(40px,5vw,65px);height:35px;object-fit:contain;border:2px solid white;border-radius:5px}
+.wj-shop-modal header button{width:42px;height:42px;border:2px solid white;border-radius:50%;background:#fff9;color:#8d4d09;font-size:28px;font-weight:900}
+.wj-shop-balance{display:flex;align-items:center;flex-wrap:wrap;gap:6px;color:#89540c;font-size:clamp(14px,1.7vw,22px);font-weight:900}.wj-shop-balance b{font-size:clamp(20px,2.8vw,34px)}.wj-shop-balance small{margin-left:auto;color:#796549;font-size:11px}
+.wj-shop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(7px,1.2vw,14px);min-height:0}
+.wj-shop-grid article{display:flex;flex-direction:column;min-width:0;align-items:center;text-align:center;gap:7px;padding:clamp(7px,1.2vw,15px);border:2px solid #e5cd94;border-radius:17px;background:linear-gradient(145deg,#fff,#fff9e7);box-shadow:0 4px 0 #e5c886}
+.wj-item-art{display:grid;place-items:center;flex:none;width:100%;height:clamp(65px,15vh,140px);border:2px solid #f2dca5;background:radial-gradient(circle at 50% 45%,#fff,#ffedb8);border-radius:14px;font-size:clamp(39px,7vw,88px);filter:drop-shadow(0 3px 1px #ad6b131a)}
+.wj-shop-grid h3{font-size:clamp(15px,1.7vw,23px);font-weight:950;line-height:1.2;color:#6d4916;margin:0;overflow-wrap:anywhere}
+.wj-shop-grid p{font-size:clamp(11px,1.2vw,16px);line-height:1.45;margin:0;text-align:left;color:#4b6378}
+.wj-shop-grid article button{margin-top:auto;min-height:43px;width:100%;border:2px solid #fff2be;border-radius:11px;background:linear-gradient(#ffe894,#ffbf36);font-size:clamp(12px,1.4vw,18px);font-weight:950;color:#855006;box-shadow:0 3px 0 #d59b26;padding:6px}
+.wg-arcade .wj-shop-modal .wj-shop-close{align-self:flex-end;width:auto;min-width:140px;margin-top:3px}
+.wj-reading-modal{width:min(92vw,750px)}.wj-reading-modal p{font-size:clamp(16px,2vw,24px);line-height:1.6;white-space:pre-wrap}
+@media(min-width:601px) and (max-height:720px){.wg-arcade .wj-celebration{gap:6px}.wj-reward-panel{padding:8px}.wj-star-medal{width:62px;height:62px;font-size:43px}.wj-review-grid{gap:8px}.wj-explanation{padding:10px}.wj-tpm-reward b{font-size:46px}.wj-shop-grid p{font-size:12px}.wj-shop-modal{gap:7px;padding:12px}.wj-item-art{height:80px}.wj-dice-popup .wj-dice-stage{height:clamp(110px,27vh,210px)}}
+@media(max-width:600px){.wg-arcade .wj-review-stage{padding:8px}.wj-review-grid{grid-template-columns:1fr;gap:6px}.wj-reward-panel{flex-direction:row;flex-wrap:wrap;gap:6px;padding:7px}.wj-star-medal{width:40px;height:40px;font-size:23px;border-width:2px}.wg-arcade .wj-celebration h3{font-size:23px;margin:0}.wj-tpm-reward b{font-size:32px}.wg-arcade .wj-reward-panel p{display:none}.wj-explanation{padding:8px;gap:4px}.wg-arcade .wj-explanation p{font-size:13px}.wj-review-actions{gap:6px}.wg-arcade .wj-review-actions .wg-primary,.wj-shop-launch{min-width:0;min-height:39px;font-size:13px;padding:6px 9px}.wj-wallet{font-size:12px}.wj-wallet b{font-size:17px}.wj-shop-grid{gap:5px}.wj-shop-grid article{padding:5px;gap:4px}.wj-shop-grid h3{font-size:12px}.wj-shop-grid p{font-size:10px}.wj-item-art{height:65px;font-size:36px}.wj-shop-grid article button{font-size:10px;min-height:34px}.wj-shop-balance small{display:none}.wj-shop-modal{padding:9px;gap:6px}}
+@media(prefers-reduced-motion:reduce){.wj-sea-waves,.wj-coin-burst i,.wj-dice-total,.wj-star-medal,.wj-dice-result-number{animation:none!important}.wj-coin-burst{display:none}}
+
+@media(min-width:850px){.wg-arcade.wg-theme-journey .wg-config{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.wg-arcade.wg-theme-journey .wg-setting-tile{padding:7px 9px}.wg-arcade.wg-theme-journey .wg-dice-choice,.wg-arcade.wg-theme-journey .wj-speed-setting{grid-column:auto}.wg-arcade.wg-theme-journey .wg-dice-choice select{min-height:34px;margin-top:7px}.wg-arcade.wg-theme-journey .wg-setting-pills{gap:4px}.wg-arcade.wg-theme-journey .wg-setting-pills button{min-height:40px;font-size:16px;padding:4px;min-width:34px}.wg-arcade.wg-theme-journey .wg-dice-choice button span{font-size:20px;letter-spacing:-3px}.wg-arcade.wg-theme-journey .wg-dice-choice button{flex-direction:column;gap:2px}.wg-arcade.wg-theme-journey .wg-team-names{grid-template-columns:repeat(4,minmax(0,1fr))}.wg-arcade.wg-theme-journey .wg-team-names label{padding:6px 8px}.wg-arcade.wg-theme-journey .wg-team-names input{min-height:44px;font-size:18px}}
