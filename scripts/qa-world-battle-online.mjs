@@ -27,7 +27,7 @@ try{
  const pages=[];
  for(const viewport of [{width:1024,height:768},{width:820,height:1180},{width:390,height:844}]){
   const ctx=await browser.newContext({viewport});
-  await ctx.route('**/battle-test/rooms**',routeApi);
+  await ctx.route(/\/battle-test\/rooms(?:\/.*)?$/,routeApi);
   await ctx.addInitScript(()=>{sessionStorage.setItem('timepalette_opening_seen_v1','true');localStorage.setItem('timepalette_ui_sound_v1','off');});
   const page=await ctx.newPage();page.setDefaultTimeout(20000);
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
