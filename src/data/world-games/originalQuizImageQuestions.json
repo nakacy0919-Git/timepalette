@@ -928,5 +928,253 @@
   },
   "observationJa": "チョコレートで おおわれた ケーキが あります。",
   "observationEn": "A cake is covered with chocolate."
+ },
+ {
+  "id": "tp-original-image-v1-fr-31",
+  "country": "fr",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-editorial-v1-fr-baguette",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baguettes.jpg",
+  "prompt": "しゃしんの ながい パンは どれ？",
+  "choices": [
+   "バゲット",
+   "ベーグル",
+   "クロワッサン",
+   "ピタ"
+  ],
+  "correctIndex": 0,
+  "explanation": "バゲットは ほそながい フランスの パンです。",
+  "translations": {
+   "en": {
+    "prompt": "Which long loaf of bread is shown?",
+    "choices": [
+     "Baguette",
+     "Bagel",
+     "Croissant",
+     "Pita"
+    ],
+    "explanation": "A baguette is a long, narrow French loaf."
+   }
+  },
+  "observationJa": "ほそながい パンが ならんでいます。",
+  "observationEn": "Long, narrow loaves of bread are shown."
+ },
+ {
+  "id": "tp-original-image-v1-tr-32",
+  "country": "tr",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-tr-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baklava.jpg",
+  "prompt": "しゃしんの おかしは どれ？",
+  "choices": [
+   "マカロン",
+   "バクラヴァ",
+   "プリン",
+   "ドーナツ"
+  ],
+  "correctIndex": 1,
+  "explanation": "バクラヴァは うすい きじを かさねて つくる おかしです。",
+  "translations": {
+   "en": {
+    "prompt": "Which sweet is shown in the photograph?",
+    "choices": [
+     "Macaron",
+     "Baklava",
+     "Custard pudding",
+     "Doughnut"
+    ],
+    "explanation": "Baklava is a pastry made with layers of thin dough."
+   }
+  },
+  "observationJa": "うすい きじが かさなった おかしです。",
+  "observationEn": "The pastry has layers of thin dough."
+ },
+ {
+  "id": "tp-original-image-v1-cn-33",
+  "country": "cn",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-cn-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chinese_dumplings_(Jiaozi)_(2195217717).jpg",
+  "prompt": "しゃしんの りょうりは どれ？",
+  "choices": [
+   "シュウマイ",
+   "ラーメン",
+   "ギョウザ",
+   "チャーハン"
+  ],
+  "correctIndex": 2,
+  "explanation": "ギョウザは ぐを うすい かわで つつむ りょうりです。",
+  "translations": {
+   "en": {
+    "prompt": "Which Chinese dish is shown?",
+    "choices": [
+     "Shumai",
+     "Ramen",
+     "Jiaozi dumplings",
+     "Fried rice"
+    ],
+    "explanation": "Jiaozi are dumplings with filling enclosed in a wrapper."
+   }
+  },
+  "observationJa": "ちょうりする まえの ギョウザです。",
+  "observationEn": "The photograph shows uncooked jiaozi."
+ },
+ {
+  "id": "tp-original-image-v1-ua-34",
+  "country": "ua",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-ua-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ukrainian_borscht.jpg",
+  "prompt": "写真のボルシチについて、この写真だけでは確かめられない情報はどれ？",
+  "choices": [
+   "料理のおおまかな色",
+   "器に入った料理の外観",
+   "料理の盛り付け",
+   "スープに含まれる塩の正確な量"
+  ],
+  "correctIndex": 3,
+  "explanation": "写真で色や盛り付けは観察できるが、塩の正確な量は材料やレシピなどを調べなければ分からない。",
+  "translations": {
+   "en": {
+    "prompt": "Which fact about the borscht cannot be established from this photo alone?",
+    "choices": [
+     "Its general colour",
+     "Its appearance in the dish",
+     "How it is presented",
+     "The exact amount of salt in the soup"
+    ],
+    "explanation": "The photo shows appearance and presentation, not the exact amount of salt. A recipe or ingredient measurement is needed."
+   }
+  },
+  "observationJa": "ウクライナのボルシチの外観が写っている。",
+  "observationEn": "The photograph shows the appearance of Ukrainian borscht."
+ },
+ {
+  "id": "tp-original-image-v1-lb-35",
+  "country": "lb",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-lb-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tabbouleh_before_adding_bulgur.jpg",
+  "prompt": "写真はブルグルを加える前のタッブーレである。この料理の説明として適切なのはどれ？",
+  "choices": [
+   "刻んだ野菜やハーブを合わせるサラダ",
+   "米を炒めて作る料理",
+   "パン生地を焼いて作る料理",
+   "魚を揚げて作る料理"
+  ],
+  "correctIndex": 0,
+  "explanation": "タッブーレはハーブや野菜などを細かく刻んで合わせるサラダ。写真はブルグルを加える前の状態である。",
+  "translations": {
+   "en": {
+    "prompt": "The photo shows tabbouleh before bulgur is added. Which description fits this dish?",
+    "choices": [
+     "A salad of chopped herbs and vegetables",
+     "A dish of fried rice",
+     "A dish made by baking bread dough",
+     "A dish of fried fish"
+    ],
+    "explanation": "Tabbouleh is a salad made with finely chopped herbs and vegetables, among other ingredients. The photo shows it before bulgur is added."
+   }
+  },
+  "observationJa": "ブルグルを加える前のタッブーレが写っている。",
+  "observationEn": "The photo shows tabbouleh before bulgur is added."
+ },
+ {
+  "id": "tp-original-image-v1-mt-36",
+  "country": "mt",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-mt-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Traditional_Maltese_pastry_-_pastizzi.jpg",
+  "prompt": "しゃしんの マルタの やきものの おかしは どれ？",
+  "choices": [
+   "エクレア",
+   "パスティッツィ",
+   "マカロン",
+   "バウムクーヘン"
+  ],
+  "correctIndex": 1,
+  "explanation": "パスティッツィは マルタの ぐが はいった パイの ような たべものです。",
+  "translations": {
+   "en": {
+    "prompt": "Which Maltese baked pastry is shown?",
+    "choices": [
+     "Éclair",
+     "Pastizzi",
+     "Macaron",
+     "Baumkuchen"
+    ],
+    "explanation": "Pastizzi are traditional Maltese filled pastries."
+   }
+  },
+  "observationJa": "やきあげた パスティッツィです。",
+  "observationEn": "The photograph shows baked pastizzi."
+ },
+ {
+  "id": "tp-original-image-v1-lt-37",
+  "country": "lt",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-lt-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cepelinai_1%2C_Vilnius%2C_Lithuania_-_Diliff.jpg",
+  "prompt": "写真のツェペリナイのような具入りの料理について、中身を確かめるために最も適切な方法は？",
+  "choices": [
+   "外側の色だけで判断する",
+   "皿の形から判断する",
+   "切った断面や材料表示を確認する",
+   "料理名の長さで判断する"
+  ],
+  "correctIndex": 2,
+  "explanation": "外見だけでは包まれた具の種類を断定できない。断面や材料表示、レシピを確かめるとよい。",
+  "translations": {
+   "en": {
+    "prompt": "What is the best way to identify the filling of a dish such as the cepelinai shown?",
+    "choices": [
+     "Judge only from its outer colour",
+     "Judge from the shape of the plate",
+     "Inspect a cut section or an ingredient list",
+     "Judge from the length of its name"
+    ],
+    "explanation": "The exterior alone cannot establish the filling. A cut section, ingredient list or recipe provides better evidence."
+   }
+  },
+  "observationJa": "ビリニュスで提供されたツェペリナイが写っている。",
+  "observationEn": "The photograph shows cepelinai served in Vilnius."
+ },
+ {
+  "id": "tp-original-image-v1-sa-38",
+  "country": "sa",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-sa-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kabsa_1.JPG",
+  "prompt": "しゃしんの カブサは どんな りょうり？",
+  "choices": [
+   "くだものの サラダ",
+   "パンの サンドイッチ",
+   "めんの スープ",
+   "にくと ごはんの りょうり"
+  ],
+  "correctIndex": 3,
+  "explanation": "カブサは スパイスで あじを つけた ごはんと にくなどを あわせる りょうりです。",
+  "translations": {
+   "en": {
+    "prompt": "What kind of dish is the kabsa shown?",
+    "choices": [
+     "A fruit salad",
+     "A bread sandwich",
+     "A noodle soup",
+     "A meat and rice dish"
+    ],
+    "explanation": "Kabsa combines spiced rice with meat or other ingredients."
+   }
+  },
+  "observationJa": "にくと ごはんの カブサです。",
+  "observationEn": "The photo shows kabsa with meat and rice."
  }
 ]
