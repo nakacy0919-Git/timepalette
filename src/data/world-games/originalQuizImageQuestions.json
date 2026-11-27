@@ -1091,12 +1091,12 @@
   "domain": "lifeCulture",
   "parentId": "tp-original-hand-v1-mt-primary",
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Traditional_Maltese_pastry_-_pastizzi.jpg",
-  "prompt": "しゃしんの マルタの やきものの おかしは どれ？",
+  "prompt": "しゃしんの マルタの パイの ような たべものは どれ？",
   "choices": [
-   "エクレア",
+   "クロワッサン",
    "パスティッツィ",
-   "マカロン",
-   "バウムクーヘン"
+   "プレッツェル",
+   "ベーグル"
   ],
   "correctIndex": 1,
   "explanation": "パスティッツィは マルタの ぐが はいった パイの ような たべものです。",
@@ -1104,10 +1104,10 @@
    "en": {
     "prompt": "Which Maltese baked pastry is shown?",
     "choices": [
-     "Éclair",
+     "Croissant",
      "Pastizzi",
-     "Macaron",
-     "Baumkuchen"
+     "Pretzel",
+     "Bagel"
     ],
     "explanation": "Pastizzi are traditional Maltese filled pastries."
    }
