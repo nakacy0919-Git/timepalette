@@ -1548,5 +1548,378 @@
   },
   "observationJa": "バニツァとヨーグルト飲料が写っている。",
   "observationEn": "The image shows banitsa and a yogurt drink."
+ },
+ {
+  "id": "tp-original-image-v1-ls-51",
+  "country": "ls",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-ls-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mokorotlo.jpg",
+  "prompt": "しゃしんの レソトの ぼうしは、どんな かたちを している？",
+  "choices": [
+   "つつの かたち",
+   "うえが ほそくなる かたち",
+   "たいらな しかく",
+   "まるい ボールの かたち"
+  ],
+  "correctIndex": 1,
+  "explanation": "モコロトロは くさなどを あんで つくる、うえが ほそくなる かたちの ぼうしです。",
+  "translations": {
+   "en": {
+    "prompt": "What is the shape of the traditional Lesotho hat in the photo?",
+    "choices": [
+     "A cylinder",
+     "A cone that narrows towards the top",
+     "A flat square",
+     "A sphere"
+    ],
+    "explanation": "The mokorotlo is a woven hat with a conical shape."
+   }
+  },
+  "observationJa": "うえが ほそく、したが ひろい あみものの ぼうしです。",
+  "observationEn": "The woven hat has a wide base and a narrow top."
+ },
+ {
+  "id": "tp-original-image-v1-gt-52",
+  "country": "gt",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-gt-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marimba_MET_MUS805A.jpg",
+  "prompt": "写真のマリンバで、上に並ぶ木の音板の下にある共鳴器にはどのような役割がある？",
+  "choices": [
+   "音板を冷やす",
+   "楽器の色を変える",
+   "音板の響きを豊かにする",
+   "音板を回転させる"
+  ],
+  "correctIndex": 2,
+  "explanation": "共鳴器は音板の振動による音を響かせる。写真はメトロポリタン美術館所蔵の、グアテマラ製と推定されるマリンバ。",
+  "translations": {
+   "en": {
+    "prompt": "What is the function of the resonators below the wooden bars in the pictured marimba?",
+    "choices": [
+     "Cool the bars",
+     "Change the instrument's colour",
+     "Enhance the resonance of the bars",
+     "Rotate the bars"
+    ],
+    "explanation": "Resonators reinforce the sound of the vibrating bars. This museum instrument is identified as possibly Guatemalan."
+   }
+  },
+  "observationJa": "木の音板の下に長さの異なる共鳴器が並ぶ。",
+  "observationEn": "Resonators of different lengths sit below the wooden bars."
+ },
+ {
+  "id": "tp-original-image-v1-br-53",
+  "country": "br",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-br-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Feijoada.JPG",
+  "prompt": "しゃしんの ブラジルの フェイジョアーダは、どんな りょうり？",
+  "choices": [
+   "くだものの ケーキ",
+   "さかなの すし",
+   "たまごの サンドイッチ",
+   "まめと にくの にこみ"
+  ],
+  "correctIndex": 3,
+  "explanation": "フェイジョアーダは まめと にくを にこんだ ブラジルの りょうりです。",
+  "translations": {
+   "en": {
+    "prompt": "What kind of dish is the Brazilian feijoada shown?",
+    "choices": [
+     "A fruit cake",
+     "Fish sushi",
+     "An egg sandwich",
+     "A bean and meat stew"
+    ],
+    "explanation": "Feijoada is a Brazilian stew of beans and meat."
+   }
+  },
+  "observationJa": "まめと にくの にこみりょうりが うつっています。",
+  "observationEn": "The photo shows a stew of beans and meat."
+ },
+ {
+  "id": "tp-original-image-v1-cy-54",
+  "country": "cy",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-cy-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Halloumi.jpg",
+  "prompt": "写真のハルーミは加熱前のチーズである。加熱したときに形を保ちやすいか調べる方法として最も適切なのは？",
+  "choices": [
+   "同じ条件で別のチーズと加熱し、形の変化を比べる",
+   "包装の色だけを比べる",
+   "冷蔵庫に入れたまま重さを比べる",
+   "産地の名前の長さを比べる"
+  ],
+  "correctIndex": 0,
+  "explanation": "同じ温度と時間で加熱し、形の変化を比較すると、加熱時の性質を調べられる。",
+  "translations": {
+   "en": {
+    "prompt": "The halloumi shown is uncooked. How could you test whether it holds its shape when heated?",
+    "choices": [
+     "Heat it and another cheese under equal conditions and compare their shapes",
+     "Compare only the packaging colours",
+     "Compare their weights while refrigerated",
+     "Compare the lengths of their place names"
+    ],
+    "explanation": "Heating both cheeses at the same temperature for the same time makes their changes in shape comparable."
+   }
+  },
+  "observationJa": "加熱前のハルーミが写っている。",
+  "observationEn": "The photo shows uncooked halloumi."
+ },
+ {
+  "id": "tp-original-image-v1-ge-55",
+  "country": "ge",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-ge-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Khachapuri.jpg",
+  "prompt": "しゃしんの ジョージアの パンりょうりの なまえは？",
+  "choices": [
+   "ピエロギ",
+   "ハチャプリ",
+   "モモ",
+   "バゲット"
+  ],
+  "correctIndex": 1,
+  "explanation": "ハチャプリは チーズを つかった ジョージアの パンりょうりです。",
+  "translations": {
+   "en": {
+    "prompt": "Which Georgian bread dish is shown?",
+    "choices": [
+     "Pierogi",
+     "Khachapuri",
+     "Momo",
+     "Baguette"
+    ],
+    "explanation": "Khachapuri is a Georgian bread dish made with cheese."
+   }
+  },
+  "observationJa": "イメレティふうの ハチャプリです。",
+  "observationEn": "The image shows Imeretian-style khachapuri."
+ },
+ {
+  "id": "tp-original-image-v1-il-56",
+  "country": "il",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-il-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hummus.jpg",
+  "prompt": "写真のフムスのように豆をなめらかなペースト状にするには、どのような調理操作が適している？",
+  "choices": [
+   "豆を丸ごと乾燥させる",
+   "豆を凍らせるだけ",
+   "柔らかくした豆をすりつぶす",
+   "豆を水に浮かべるだけ"
+  ],
+  "correctIndex": 2,
+  "explanation": "フムスは柔らかくしたひよこ豆をすりつぶし、タヒニなどと合わせて作る。",
+  "translations": {
+   "en": {
+    "prompt": "Which technique is suitable for turning beans into a smooth paste like the hummus shown?",
+    "choices": [
+     "Dry the beans whole",
+     "Only freeze the beans",
+     "Purée the softened beans",
+     "Only float the beans in water"
+    ],
+    "explanation": "Hummus is made by puréeing softened chickpeas and combining them with ingredients such as tahini."
+   }
+  },
+  "observationJa": "フムスのペーストが写っている。",
+  "observationEn": "The photograph shows hummus paste."
+ },
+ {
+  "id": "tp-original-image-v1-ma-57",
+  "country": "ma",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-editorial-v1-ma-couscous",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Couscous.jpg",
+  "prompt": "しゃしんの クスクスの ちいさな つぶと いっしょに もりつけている ものは？",
+  "choices": [
+   "チョコレート",
+   "アイスクリーム",
+   "パンケーキ",
+   "やさい"
+  ],
+  "correctIndex": 3,
+  "explanation": "クスクスは ちいさな つぶを むして、やさいや にくなどと たべる ことが あります。",
+  "translations": {
+   "en": {
+    "prompt": "What is served with the small grains of couscous in this photograph?",
+    "choices": [
+     "Chocolate",
+     "Ice cream",
+     "Pancakes",
+     "Vegetables"
+    ],
+    "explanation": "Couscous consists of small grains that are steamed and may be served with vegetables or meat."
+   }
+  },
+  "observationJa": "つぶの ちいさな クスクスと やさいが あります。",
+  "observationEn": "Small grains of couscous are served with vegetables."
+ },
+ {
+  "id": "tp-original-image-v1-eg-58",
+  "country": "eg",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-eg-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:20221211_135722_Original.jpg",
+  "prompt": "写真のコシャリについて、料理がどの程度栄養を含むかを調べるのに必要な情報は？",
+  "choices": [
+   "材料の種類とそれぞれの量",
+   "皿の直径だけ",
+   "写真の撮影時刻だけ",
+   "料理名の文字数"
+  ],
+  "correctIndex": 0,
+  "explanation": "栄養量は材料の種類と分量に左右される。料理の写真だけから正確な栄養量は判断できない。",
+  "translations": {
+   "en": {
+    "prompt": "What information is needed to estimate the nutritional content of the koshari shown?",
+    "choices": [
+     "The types and amounts of its ingredients",
+     "Only the plate diameter",
+     "Only the time of photography",
+     "The number of letters in the dish's name"
+    ],
+    "explanation": "Nutritional content depends on ingredients and quantities, which cannot be precisely determined from the photograph alone."
+   }
+  },
+  "observationJa": "エジプトのコシャリが写っている。",
+  "observationEn": "The photograph shows Egyptian koshari."
+ },
+ {
+  "id": "tp-original-image-v1-gr-59",
+  "country": "gr",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-gr-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mousakas.jpg",
+  "prompt": "しゃしんの ギリシャの ムサカは どんな りょうり？",
+  "choices": [
+   "くだものの ジュース",
+   "やさいや にくを かさねて やく りょうり",
+   "こおらせた おかし",
+   "パンに ジャムを ぬる りょうり"
+  ],
+  "correctIndex": 1,
+  "explanation": "ギリシャの ムサカは ナスや ひきにくなどを かさねて やく ことが おおいです。",
+  "translations": {
+   "en": {
+    "prompt": "What kind of dish is Greek moussaka, shown here?",
+    "choices": [
+     "Fruit juice",
+     "A baked dish with layers of vegetables and meat",
+     "A frozen dessert",
+     "Bread spread with jam"
+    ],
+    "explanation": "Greek moussaka is often baked with layers of aubergine and minced meat."
+   }
+  },
+  "observationJa": "ナスを つかった ムサカです。",
+  "observationEn": "The photo shows moussaka made with aubergine."
+ },
+ {
+  "id": "tp-original-image-v1-ie-60",
+  "country": "ie",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-ie-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Irish_brown_soda_bread.JPG",
+  "prompt": "写真のアイルランドのソーダブレッドを膨らませる反応で、重曹と酸性の材料が反応すると主に何が発生する？",
+  "choices": [
+   "酸素",
+   "窒素",
+   "二酸化炭素",
+   "水素"
+  ],
+  "correctIndex": 2,
+  "explanation": "重曹と酸性の材料が反応すると二酸化炭素が発生し、生地の中に気泡ができる。",
+  "translations": {
+   "en": {
+    "prompt": "Which gas is mainly released when baking soda reacts with an acidic ingredient to raise soda bread like the one shown?",
+    "choices": [
+     "Oxygen",
+     "Nitrogen",
+     "Carbon dioxide",
+     "Hydrogen"
+    ],
+    "explanation": "Baking soda reacts with an acid to release carbon dioxide, forming bubbles in the dough."
+   }
+  },
+  "observationJa": "アイルランドのブラウンソーダブレッドが写っている。",
+  "observationEn": "The photo shows Irish brown soda bread."
+ },
+ {
+  "id": "tp-original-image-v1-np-61",
+  "country": "np",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-np-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Momo_2.jpg",
+  "prompt": "しゃしんの ネパールの つつんだ りょうりは どれ？",
+  "choices": [
+   "クスクス",
+   "パエリア",
+   "バクラヴァ",
+   "モモ"
+  ],
+  "correctIndex": 3,
+  "explanation": "モモは かわで ぐを つつんで つくる りょうりです。",
+  "translations": {
+   "en": {
+    "prompt": "Which Nepalese dumplings are shown?",
+    "choices": [
+     "Couscous",
+     "Paella",
+     "Baklava",
+     "Momo"
+    ],
+    "explanation": "Momo are dumplings made by wrapping a filling in dough."
+   }
+  },
+  "observationJa": "ネパールの モモが うつっています。",
+  "observationEn": "The photo shows Nepalese momo."
+ },
+ {
+  "id": "tp-original-image-v1-ht-62",
+  "country": "ht",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-ht-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Soup_Joumou.jpg",
+  "prompt": "写真のスープ・ジュムはハイチの食文化を伝える料理である。ユネスコが登録した無形文化遺産について正しい説明はどれ？",
+  "choices": [
+   "料理を作り分かち合う知識や習慣も受け継ぐ対象となる",
+   "写真の皿だけが保護の対象となる",
+   "料理を食べる人の人数を制限する制度である",
+   "レシピを世界中で一つに統一する制度である"
+  ],
+  "correctIndex": 0,
+  "explanation": "無形文化遺産は知識、技能、習慣などを受け継ぐことを重視する。スープ・ジュムは2021年にユネスコの代表一覧表に登録された。",
+  "translations": {
+   "en": {
+    "prompt": "Joumou soup represents Haitian food culture. Which statement about UNESCO's intangible cultural heritage is correct?",
+    "choices": [
+     "Knowledge and customs of preparing and sharing food can be safeguarded",
+     "Only the plate in the photo is protected",
+     "The system limits the number of people who eat the dish",
+     "The system standardizes recipes worldwide"
+    ],
+    "explanation": "Intangible cultural heritage safeguarding includes transmitting knowledge, skills and practices. Joumou soup was inscribed on UNESCO's Representative List in 2021."
+   }
+  },
+  "observationJa": "ハイチのスープ・ジュムが写っている。",
+  "observationEn": "The photo shows Haitian joumou soup.",
+  "factSourceUrl": "https://ich.unesco.org/en/RL/joumou-soup-01853"
  }
 ]
