@@ -16,7 +16,7 @@ export function withOriginalQuizPhoto(q){
  const assets=geographyPhotos[q.country]||[];
  const context=localPhoto(assets.find(validAsset),'context');
  const explicit=topicPhotos[q.id];
- const slot=q.id==='tp-original-hand-v1-'+q.country+'-primary'?[q.country,primarySlots[q.country]]:editorialSlots[q.id];
+ const slot=Number.isInteger(q.photoSlot)?[q.country,q.photoSlot]:q.id==='tp-original-hand-v1-'+q.country+'-primary'?[q.country,primarySlots[q.country]]:editorialSlots[q.id];
  const localSubject=slot&&Number.isInteger(slot[1])?localPhoto(geographyPhotos[slot[0]]?.[slot[1]],'subject'):null;
  // Only promote an atlas photo if it is the exact same Commons file AND matching caption.
  const candidate=q.imageCandidate;

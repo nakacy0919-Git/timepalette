@@ -4,6 +4,7 @@ import worldAtlas from 'world-atlas/countries-110m.json';
 import {getLiveWorldLearningCountries,getOriginalQuizAtlasCountries} from '../../utils/worldLearningRegistry';
 import {buildOriginalAtlasDrafts,buildHandAuthoredOriginals,originalBankReport} from '../../utils/worldOriginalQuizBank.js';
 import {withOriginalQuizPhoto,quizPhotoForPhase,originalPhotoCoverage} from '../../utils/worldOriginalQuizPhotos.js';
+import {buildPhotoWave2,buildOriginalDataWave} from '../../utils/worldOriginalQuizWave2.js';
 import {getGeography197Profile} from '../../utils/geography197';
 import {makeLocalGameBank} from '../../utils/worldGameBank';
 import {loadAiaPracticeBank} from '../../utils/aiaPracticeBank.js';
@@ -42,8 +43,8 @@ const baseBank=makeLocalGameBank(countries).map(withOriginalQuizPhoto);
 const originalAtlasCountries=getOriginalQuizAtlasCountries();
 const originalReviewed=baseBank.filter(q=>q.origin==='TimePalette original editorial quiz');
 let originalDraftCache;
-const getOriginalDrafts=()=>originalDraftCache??=([...buildHandAuthoredOriginals(originalAtlasCountries),...buildOriginalAtlasDrafts(originalAtlasCountries)].map(withOriginalQuizPhoto));
-const originalDraftEstimate=originalAtlasCountries.reduce((n,c)=>n+(c.culture?.length||0)+(c.heritage?.length||0),0)+originalAtlasCountries.length;
+const getOriginalDrafts=()=>originalDraftCache??=([...buildHandAuthoredOriginals(originalAtlasCountries),...buildPhotoWave2(originalAtlasCountries),...buildOriginalDataWave(originalAtlasCountries),...buildOriginalAtlasDrafts(originalAtlasCountries)].map(withOriginalQuizPhoto));
+const originalDraftEstimate=originalAtlasCountries.reduce((n,c)=>n+(c.culture?.length||0)+(c.heritage?.length||0),0)+originalAtlasCountries.length*3;
 const domainEn={place:'Geography',time:'Time & Time Zones',language:'Language',lifeCulture:'Life & Culture',japanConnection:'Connections with Japan',thinkConnect:'Think & Connect'};
 const geo=Object.fromEntries(countries.map(c=>{const p=getGeography197Profile(c.iso);return [c.iso,{center:p?.center,neighbors:(p?.neighbors||[]).map(n=>n.iso),region:c.region}];}));
 const PRESET_KEY='timepalette.worldgames.settings.v3';
@@ -110,7 +111,7 @@ function QuizCard({game,setGame,teacher,timer,roomAction,canControl=true,hostTim
  {!journeyReview&&<div className="ws-country-banner"><div className="ws-flag-frame"><img className="ws-quiz-flag" src={'https://flagcdn.com/w320/'+q.country.toLowerCase()+'.png'} onError={e=>{const fallback=countryFlags.flags[q.country];if(fallback&&e.currentTarget.src!==fallback)e.currentTarget.src=fallback;}} alt={english?(byIso[q.country]?.nameEn||q.country)+' flag':name(q.country)+'の国旗'}/><span className="ws-flag-badge">✦</span></div><div className="ws-country-copy"><small>NOW EXPLORING / 冒険先</small><strong>{english?(byIso[q.country]?.nameEn||q.country):name(q.country)}</strong><span>{english?name(q.country):(byIso[q.country]?.nameEn||q.country)}</span></div><div className="ws-quiz-score"><span>★ SCORE</span><b>{game.teams[game.turn]?.score||0}</b><small>{tr('連続正解','STREAK')} {game.teams[game.turn]?.streak||0} 🔥</small></div></div>}
  {game.mode==='battle'&&!review&&<p className="wg-turn">{tr('回答者：','Answering team: ')}{game.teams[game.turn].name}{tr('（他チームは回答を見ないようにしてください）',' (Keep your answer private.)')}</p>}
  {active&&<div className="wg-timer"><div><strong>{seconds}{tr('秒',' sec')}</strong><span>{seconds===0?tr('時間終了','Time is up'):paused?tr('一時停止中','Paused'):tr('考える時間','Time to think')}</span>{teacher&&seconds>0&&<button onClick={()=>setPaused(p=>!p)}>{paused?tr('再開','Resume'):tr('一時停止','Pause')}</button>}</div><div className="wg-timer-track"><i style={{width:(seconds/timer*100)+'%'}}/></div></div>}
- {!journeyReview&&<h2>{read(q.prompt)}</h2>}{!review&&quizPhotoForPhase(q,false)&&<QuizPhoto key={q.id+'-question'} photo={quizPhotoForPhase(q,false)} english={english} review={false}/>}{q.originalDraft&&<small className="wg-original-review-note">{tr('オリジナル試用問題（出典・内容の確認中）','Original preview — source and content review pending')}</small>}{q.practiceDraft&&!q.originalDraft&&<small style={{display:'block',color:'#496783',fontSize:'12px',margin:'3px 0'}}>{tr('追加学習問題（内容・翻訳確認中）','Supplementary practice (content and translation under review)')}</small>}{!review&&<div className="wg-options">{q.choices.map((label,i)=><button key={i} disabled={review||!canControl} aria-pressed={!review&&choice===i} className={review?(i===correct?'correct':Object.values(game.answers).includes(i)?'wrong':''):choice===i?'selected':''} onClick={()=>choose(i)}><b>{'ABCD'[i]}</b><span>{read(label)}</span>{<i className="ws-answer-arrow" aria-hidden="true">›</i>}</button>)}</div>}
+ {!journeyReview&&<h2>{read(q.prompt)}</h2>}{!review&&q.dataVisual&&<QuizDataVisual data={q.dataVisual} english={english}/>}{!review&&quizPhotoForPhase(q,false)&&<QuizPhoto key={q.id+'-question'} photo={quizPhotoForPhase(q,false)} english={english} review={false}/>}{q.originalDraft&&<small className="wg-original-review-note">{tr('オリジナル試用問題（出典・内容の確認中）','Original preview — source and content review pending')}</small>}{q.practiceDraft&&!q.originalDraft&&<small style={{display:'block',color:'#496783',fontSize:'12px',margin:'3px 0'}}>{tr('追加学習問題（内容・翻訳確認中）','Supplementary practice (content and translation under review)')}</small>}{!review&&<div className="wg-options">{q.choices.map((label,i)=><button key={i} disabled={review||!canControl} aria-pressed={!review&&choice===i} className={review?(i===correct?'correct':Object.values(game.answers).includes(i)?'wrong':''):choice===i?'selected':''} onClick={()=>choose(i)}><b>{'ABCD'[i]}</b><span>{read(label)}</span>{<i className="ws-answer-arrow" aria-hidden="true">›</i>}</button>)}</div>}
  {teacher&&!review&&<div className="wg-row"><button className="wg-primary" disabled={choice===null||!canControl} onClick={submit}>{game.mode==='battle'?tr('回答を確定','Submit answer'):tr('正解を発表','Reveal answer')}</button><button disabled={!canControl} onClick={()=>record(-1)}>{tr('パス・正解を確認','Pass / reveal')}</button></div>}
  {review&&!journeyReview&&<div className={'wg-feedback '+(game.last?.correct?'ws-success':'ws-try-again')} role="status"><h3>{game.mode==='shuffle'&&<span aria-hidden="true">{game.last?.correct?'⭐ ':'💡 '}</span>}{game.mode==='battle'?tr('正解発表','Answer reveal'):game.last.correct?tr('正解！','Correct!'):tr('正解を確認しよう','Let’s check the answer')}</h3><strong className="wg-correct-answer">✓ {read(q.choices[correct])}</strong><p>{read(q.explanation)}</p>{q.image&&<QuizPhoto key={q.id+'-review'} photo={q.image} fallback={q.fallbackImage} english={english} review={true}/>} {game.mode!=='battle'&&!game.last?.correct&&<small>{tr('あなたの回答：','Your answer: ')}{game.answers[game.turn]===-1?tr('未回答','No answer'):read(q.choices[game.answers[game.turn]])}</small>}
  {game.last?.transfer&&<p className="wg-reward">🏳️ エリア獲得！</p>}{game.last?.newRegions?.map(r=><p key={r.region} className="wg-reward">🏅 {regionLabels[r.region]||r.region} 選択範囲達成 · +200 pts</p>)}
@@ -130,6 +131,19 @@ function QuizCard({game,setGame,teacher,timer,roomAction,canControl=true,hostTim
  </section>;
 }
 
+function QuizDataVisual({data,english}){
+ const labels=english?data.labelsEn:data.labelsJa;
+ if(data.type==='distance')return <div className="wg-data-visual" role="group" aria-label={english?'Distance comparison':'距離の比較'}>{data.values.map((v,i)=><div key={i} className="wg-data-row"><span>{labels[i]}</span><div className="wg-data-track"><i style={{width:Math.max(1,100*v/Math.max(...data.values,1))+'%'}}/></div><b>{v.toFixed(1)} km</b></div>)}</div>;
+ const p=data.places||[];if(!p.length)return null;
+ const min=Math.min(...p.map(c=>c.lat)),max=Math.max(...p.map(c=>c.lat));
+ const left=24,right=260,top=20,bottom=130,range=Math.max(max-min,.001);
+ // Coordinates are given in the prompt; labels and data remain readable without the graphic.
+ return <div className="wg-data-visual wg-data-coordinate"><svg viewBox="0 0 300 154" role="img" aria-label={english?'Latitude positions of four places':'4地点の緯度の位置関係'}>
+ <text x="5" y="12" fontSize="10" fill="currentColor">N ↑</text><text x="5" y="149" fontSize="10" fill="currentColor">S ↓</text>
+ {[0,1,2].map(j=><line key={j} x1={left} x2={right+15} y1={top+j*(bottom-top)/2} y2={top+j*(bottom-top)/2} stroke="currentColor" opacity=".16"/>)}
+ {p.map((c,i)=>{const x=left+42+i*64,y=bottom-(c.lat-min)/range*(bottom-top);return <g key={i}><circle cx={x} cy={y} r="8" fill="#2563eb"/><text x={x} y={y+3} fontSize="9" textAnchor="middle" fill="#fff">{c.letter}</text><text x={x} y={Math.max(12,y-12)} textAnchor="middle" fontSize="9" fill="currentColor">{c.lat.toFixed(3)}°</text></g>;})}
+ </svg><div className="wg-data-legend">{p.map(c=><span key={c.letter}><b>{c.letter}</b> {english?c.labelEn:c.labelJa}</span>)}</div></div>;
+}
 function QuizPhoto({photo,fallback,english,review}){
  const [failed,setFailed]=useState(0);
  const selected=failed===0?photo:failed===1&&review?fallback:null;
