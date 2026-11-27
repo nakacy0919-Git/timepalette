@@ -1,0 +1,21 @@
+.wj-map-corner{position:absolute;right:clamp(8px,1.5vw,20px);top:clamp(63px,8vh,86px);z-index:11;display:grid;gap:6px;padding:5px;background:#f6fcffba;border:1px solid #fff;border-radius:13px;box-shadow:0 4px 14px #0b426844}
+.wj-map-corner button{display:grid;place-items:center;min-width:38px;min-height:38px;border:1px solid #8ac7ed;border-radius:9px;background:linear-gradient(#fff,#e0f4ff);font-size:21px;font-weight:900;color:#165d93;box-shadow:0 2px 0 #7db4d7}
+.wj-map-corner button[aria-pressed=true]{background:#167ec9;color:white}
+.wj-city-label{cursor:pointer;outline:none}
+.wj-city-label:hover rect,.wj-city-label:focus-visible rect{stroke:#087dcc;stroke-width:3}
+.wj-city-label image,.wj-city-label text,.wj-city-label path{pointer-events:none}
+.wj-city-flag{width:clamp(42px,7vw,70px);height:42px;object-fit:contain;vertical-align:middle;border-radius:5px;filter:drop-shadow(0 2px 3px #0002)}
+.wj-city-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;background:#deefff;padding:12px;border:1px solid #acdafe;border-radius:12px;color:#27547b}
+.wj-city-panel iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:14px;background:#10283d}
+.wj-city-panel p{margin:4px 0;font-weight:700}
+.wj-video-launch{display:grid;gap:6px;place-items:center;padding:20px 12px;border-radius:16px;border:2px solid white;background:linear-gradient(135deg,#d41f35,#f96356);color:white;font-size:clamp(16px,3vw,24px);font-weight:900;box-shadow:0 4px 0 #9d1b2b}
+.wj-video-launch small{font-size:12px;color:white}
+.wj-city-close{align-self:end;font-weight:800;padding:9px 14px;border-radius:12px;background:#ffcf58;color:#724500;border:2px solid white}
+.wj-vehicle-select{grid-column:1/-1}
+.wj-vehicle-select h3{margin:0 0 8px;color:#255c87}
+.wj-vehicle-select>div{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.wj-vehicle-select button{display:grid!important;justify-items:center;gap:5px;padding:8px 2px!important;min-height:70px!important;border-radius:12px!important}
+.wj-vehicle-select button span{font-size:32px;line-height:1.1}
+.wj-vehicle-select button small{font-size:10px;line-height:1.2;white-space:normal}
+.wj-vehicle-select p{margin:8px 0;font-size:11px;color:#37678b}
+@media(max-width:600px){.wj-map-corner{right:5px;top:46px;padding:3px;gap:4px}.wj-map-corner button{min-width:34px;min-height:34px;font-size:18px}.wj-vehicle-select button span{font-size:26px}.wj-vehicle-select button small{font-size:9px}.wj-map-corner{z-index:11}}
