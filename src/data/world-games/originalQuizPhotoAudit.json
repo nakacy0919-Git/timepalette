@@ -4281,6 +4281,54 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-tw-primary": {
+   "country": "tw",
+   "prompt": "たいわんの ニュウロウミェンという めんりょうりに のせる おもな にくは？",
+   "enPrompt": "Which meat is central to Taiwanese niurou mian?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taiwanese_Beef_Noodle_Soup.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened the Commons file description and exact 960px preview on 2026-11-28; verified depicted dish, author and file-specific commercial-use license. The source caption identifies the dish; ingredients cannot be inferred solely from appearance.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taiwanese_Beef_Noodle_Soup.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Taiwanese_Beef_Noodle_Soup.jpg/960px-Taiwanese_Beef_Noodle_Soup.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taiwanese_Beef_Noodle_Soup.jpg",
+    "title": "Taiwanese Beef Noodle Soup.jpg",
+    "author": "Jjj84206",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "台北で撮影された台湾の牛肉麺",
+    "altEn": "Taiwanese beef noodle soup photographed in Taipei",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-cz-primary": {
+   "country": "cz",
+   "prompt": "チェコの スヴィーチコヴァーで、クリームソースを かける おもな にくは？",
+   "enPrompt": "Which meat is traditionally served with cream sauce in Czech svíčková?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sv%C3%AD%C4%8Dkov%C3%A1.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened the Commons file description and exact 960px preview on 2026-11-28; verified depicted dish, author and file-specific commercial-use license. The source caption identifies the dish; ingredients cannot be inferred solely from appearance.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sv%C3%AD%C4%8Dkov%C3%A1.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Sv%C3%AD%C4%8Dkov%C3%A1.jpg/960px-Sv%C3%AD%C4%8Dkov%C3%A1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sv%C3%AD%C4%8Dkov%C3%A1.jpg",
+    "title": "Svíčková.jpg",
+    "author": "Karelj",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "牛肉とクリームソース、クネドリーキを盛り付けたチェコ料理",
+    "altEn": "Czech svíčková with roast beef, cream sauce and dumplings",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -4417,6 +4465,14 @@
     "tp-original-hand-v1-lt-primary",
     "tp-original-hand-v1-mt-primary",
     "tp-original-hand-v1-sa-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened original file descriptions and exact 960px images. Verified authors and commercial-use copyright licenses; excluded identifiable-person photo from this batch.",
+   "ids": [
+    "tp-original-hand-v1-tw-primary",
+    "tp-original-hand-v1-cz-primary"
    ]
   }
  ]
