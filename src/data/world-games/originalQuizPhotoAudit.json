@@ -4065,6 +4065,126 @@
     "verifiedOn": "2026-11-27",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-sg-primary": {
+   "country": "sg",
+   "prompt": "シンガポールの ホーカーセンターでは、どんな ことが できる？",
+   "enPrompt": "What can people do at a Singapore hawker centre?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hawker_Center%2C_Singapore.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and exact original or thumbnail on 2026-11-27. Actual topic matches question; commercial-use file license checked. Image illustrates the subject, not proof of unseen processes.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hawker_Center%2C_Singapore.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Hawker_Center%2C_Singapore.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hawker_Center%2C_Singapore.jpg",
+    "title": "Hawker Center, Singapore.jpg",
+    "author": "Kagenlim",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "シンガポールのホーカーセンターの食事風景",
+    "altEn": "Dining area of Tampines Round Market and Food Centre, Singapore",
+    "stage": "review",
+    "changes": "Displayed uncropped; original or source thumbnail",
+    "verifiedOn": "2026-11-27",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-in-primary": {
+   "country": "in",
+   "prompt": "インドの ホーリーの まつりで、ひとびとが かけあう ものは？",
+   "enPrompt": "What do people throw during Holi in India?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Holi_colorpowder01.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and exact original or thumbnail on 2026-11-27. Actual topic matches question; commercial-use file license checked. Image illustrates the subject, not proof of unseen processes.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Holi_colorpowder01.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Holi_colorpowder01.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Holi_colorpowder01.jpg",
+    "title": "Holi colorpowder01.jpg",
+    "author": "Miya.m",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "インドのホーリー祭で使う色粉",
+    "altEn": "Colored powders used for Holi in India",
+    "stage": "review",
+    "changes": "Displayed uncropped; original or source thumbnail",
+    "verifiedOn": "2026-11-27",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-es-primary": {
+   "country": "es",
+   "prompt": "スペインの パエリアを つくる なべの とくちょうは？",
+   "enPrompt": "What shape is a traditional Spanish paella pan?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paella_(0690).jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and exact original or thumbnail on 2026-11-27. Actual topic matches question; commercial-use file license checked. Image illustrates the subject, not proof of unseen processes.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paella_(0690).jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Paella_(0690).jpg/960px-Paella_(0690).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paella_(0690).jpg",
+    "title": "Paella (0690).jpg",
+    "author": "Slick",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "altJa": "スペインで撮影された丸く浅いパエリア鍋",
+    "altEn": "Round, shallow paella pan photographed in Spain",
+    "stage": "review",
+    "changes": "Displayed uncropped; original or source thumbnail",
+    "verifiedOn": "2026-11-27",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-mw-primary": {
+   "country": "mw",
+   "prompt": "マラウイこの みずの なかで、たくさんの しゅるいが しられている さかなの なかまは？",
+   "enPrompt": "Which group of fish is especially diverse in Lake Malawi?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Malawi_Cichlid_blue.JPG",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and exact original or thumbnail on 2026-11-27. Actual topic matches question; commercial-use file license checked. Image illustrates the subject, not proof of unseen processes.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Malawi_Cichlid_blue.JPG?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Lake_Malawi_Cichlid_blue.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Malawi_Cichlid_blue.JPG",
+    "title": "Lake Malawi Cichlid blue.JPG",
+    "author": "Toby Hudson",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "マラウイ湖原産のシクリッド（米国の水族館で撮影）",
+    "altEn": "Lake Malawi cichlid photographed at the California Academy of Sciences",
+    "stage": "review",
+    "changes": "Displayed uncropped; original or source thumbnail",
+    "verifiedOn": "2026-11-27",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-fi-primary": {
+   "country": "fi",
+   "prompt": "フィンランドの サウナで いしに みずを かけると、なにが でる？",
+   "enPrompt": "What is produced when water is thrown onto hot stones in a Finnish sauna?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sauna_stones_on_heater.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and exact original or thumbnail on 2026-11-27. Actual topic matches question; commercial-use file license checked. Image illustrates the subject, not proof of unseen processes.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sauna_stones_on_heater.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Sauna_stones_on_heater.jpg/960px-Sauna_stones_on_heater.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sauna_stones_on_heater.jpg",
+    "title": "Sauna stones on heater.jpg",
+    "author": "Santeri Viinamäki",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "サウナのヒーターに積まれた石",
+    "altEn": "Sauna stones on a heater",
+    "stage": "review",
+    "changes": "Displayed uncropped; original or source thumbnail",
+    "verifiedOn": "2026-11-27",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -4180,6 +4300,17 @@
     "tp-original-hand-v1-dz-primary",
     "tp-original-photo-v2-cd",
     "tp-original-photo-v2-dz"
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "method": "Checked exact Commons file pages and actual images. Preserved concurrent additions without overwriting them. Aquarium location explicitly indicated; public hawker centre scene used only as factual educational illustration, not endorsement. Omitted sweater photo with personality-rights warning.",
+   "ids": [
+    "tp-original-hand-v1-sg-primary",
+    "tp-original-hand-v1-in-primary",
+    "tp-original-hand-v1-es-primary",
+    "tp-original-hand-v1-mw-primary",
+    "tp-original-hand-v1-fi-primary"
    ]
   }
  ]
