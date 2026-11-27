@@ -317,3 +317,5 @@ export function getWorldLearningCountry(
 export {
   REQUIRED_DOMAINS,
 };
+// Raw original atlas records for the editorial quiz workbench; not a source-approval flag.
+export function getOriginalQuizAtlasCountries(){return Object.entries(countryModules).flatMap(([path,module])=>Object.entries(unwrapModule(module)).map(([iso,data])=>({...data,iso,fileLetter:getFileLetterFromPath(path)})));}
