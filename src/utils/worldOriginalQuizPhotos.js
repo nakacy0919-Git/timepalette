@@ -7,14 +7,16 @@ const validLicense=p=>!!p&&(/^(?:CC0(?: 1\.0)?|Public domain|CC BY(?:-SA)? \d\.\
 const validAsset=p=>!!p&&/^\/geography\/photos(?:197)?\/[a-z]{2}(?:-\d+)?\.(?:jpg|jpeg|png|webp)$/.test(p.deliveryUrl||'')&&/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/i.test(p.sourceUrl||'')&&!!p.credit&&!!p.captionJa&&!!p.captionEn&&!!p.sha256&&validLicense(p);
 // Prefer a directly inspected Wikimedia file when its filename matches the source.
 function checkedDelivery(p){
+ if(p.visualReview!=='actual-image-viewed')return p.url;
  try{
-  const u=new URL(p.verifiedImageUrl);
-  const source=new URL(p.sourceUrl);
-  const name=decodeURIComponent(source.pathname.split('/wiki/File:')[1]||'').replaceAll(' ','_');
-  const parts=u.pathname.split('/').map(decodeURIComponent);
-  if(u.protocol==='https:'&&['upload.wikimedia.org','thumb.wikimedia.org'].includes(u.hostname)&&parts.includes(name)&&p.visualReview==='actual-image-viewed')return u.href;
+  const src=/^https:\/\/commons\.wikimedia\.org\/wiki\/File:([^?#]+)$/.exec(p.sourceUrl||'');
+  const name=src&&decodeURIComponent(src[1]).replaceAll(' ','_');
+  const url=p.verifiedImageUrl||'';
+  const direct=/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/[a-f0-9]\/[a-f0-9]{2}\/([^/?#]+)$/.exec(url);
+  const thumb=/^https:\/\/thumb\.wikimedia\.org\/wikipedia\/commons\/thumb\/[a-f0-9]\/[a-f0-9]{2}\/([^/?#]+)\/\d+px-([^/?#]+)$/.exec(url);
+  if(name&&((direct&&decodeURIComponent(direct[1])===name)||(thumb&&decodeURIComponent(thumb[1])===name&&decodeURIComponent(thumb[2])===name)))return url;
  }catch{}
- return p.url;
+ return null;
 }
 function localPhoto(p,kind){
  if(!validAsset(p))return null;
@@ -33,7 +35,7 @@ export function withOriginalQuizPhoto(q){
   const p=audit.photo;
   if(p?.sourceUrl===audit.sourceUrl&&p.author&&p.altJa&&p.altEn&&p.url?.startsWith('https://commons.wikimedia.org/wiki/Special:FilePath/')&&validLicense(p))image={...p,url:checkedDelivery(p),licenseUrl:p.licenseUrl||p.sourceUrl,kind:audit.kind,stage:'review'};
  }
- if(!image)return base;
+ if(!image?.url)return base;
  return {...base,image:{...image,stage:'review',auditStatus:'topic-metadata-reviewed',auditDate:photoAudit.reviewedOn,auditReason:audit.reason}};
 }
 export function quizPhotoForPhase(q,review){
