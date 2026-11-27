@@ -40,5 +40,5 @@ export function makeLocalGameBank(countries,approved=approvedCatalog.questions){
    bank.push({id:'game-'+m.id,country:c.iso,domain:'time',prompt:m.prompt.replace('練習用の時計も動かせます。',''),choices:opts.map(o=>o.label),correctIndex:opts.findIndex(o=>o.correct),explanation:m.explanation,sources:m.sourceIds||[],origin:'TimePalette Time',translations:{en:englishTime(m,TIME_COUNTRIES[c.iso])}});
   }
  }
- return [...bank.filter(validQuestion),...approvedStandaloneQuestions(approved)];
+ return [...bank.filter(validQuestion),...approvedStandaloneQuestions(approved).filter(q=>countries.some(c=>c.iso===q.country))];
 }

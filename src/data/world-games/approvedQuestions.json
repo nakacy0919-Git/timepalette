@@ -1,4 +1,1353 @@
 {
   "schemaVersion": 1,
-  "questions": []
+  "questions": [
+    {
+      "id": "tp-editorial-v1-kr-kimjang",
+      "country": "kr",
+      "domain": "lifeCulture",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "慣習・行事",
+      "prompt": "韓国の「キムジャン」では、冬にそなえて、みんなで何をする？",
+      "choices": [
+        "もちをつく",
+        "キムチを作って分ける",
+        "お茶の葉をつむ",
+        "魚をほす"
+      ],
+      "correctIndex": 1,
+      "explanation": "キムジャンは、冬の食事にそなえてキムチを作り、家族や近所の人と分け合う習慣です。",
+      "translations": {
+        "en": {
+          "prompt": "In South Korea, what do people do together during kimjang to prepare for winter?",
+          "choices": [
+            "Pound rice cakes",
+            "Make and share kimchi",
+            "Pick tea leaves",
+            "Dry fish"
+          ],
+          "explanation": "Kimjang brings people together to make and share kimchi for the winter.",
+          "subcategory": "Customs"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/RL/kimjang-making-and-sharing-kimchi-in-the-republic-of-korea-00881"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "韓国": "かんこく",
+        "冬": "ふゆ",
+        "何": "なに",
+        "作": "つく",
+        "分": "わ",
+        "合": "あ",
+        "食事": "しょくじ",
+        "家族": "かぞく",
+        "近所": "きんじょ",
+        "人": "ひと",
+        "習慣": "しゅうかん",
+        "茶": "ちゃ",
+        "葉": "は",
+        "魚": "さかな",
+        "家": "いえ",
+        "国": "くに",
+        "食": "た",
+        "近": "ちか",
+        "分け": "わけ",
+        "分け合": "わけあ"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-mn-ger",
+      "country": "mn",
+      "domain": "lifeCulture",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "住文化",
+      "prompt": "モンゴルの「ゲル」という家は、どんな工夫がある？",
+      "choices": [
+        "屋根が開いて雨をためる",
+        "水にうかべてくらす",
+        "地下に部屋を広げる",
+        "分解して運び、また組み立てられる"
+      ],
+      "correctIndex": 3,
+      "explanation": "ゲルは、移動するくらしに合わせて、分解して運べるように作られた家です。",
+      "translations": {
+        "en": {
+          "prompt": "What is special about a traditional Mongolian ger?",
+          "choices": [
+            "Its roof opens to collect rain",
+            "It floats on water",
+            "Its rooms extend underground",
+            "It can be taken apart, moved and rebuilt"
+          ],
+          "explanation": "A ger can be packed up and carried, which suits a mobile way of life.",
+          "subcategory": "Homes"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/RL/traditional-craftsmanship-of-the-mongol-ger-and-its-associated-customs-00872"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "作": "つく",
+        "分": "わ",
+        "合": "あ",
+        "家": "いえ",
+        "工夫": "くふう",
+        "屋根": "やね",
+        "開": "ひら",
+        "雨": "あめ",
+        "水": "みず",
+        "地下": "ちか",
+        "部屋": "へや",
+        "広": "ひろ",
+        "分解": "ぶんかい",
+        "運": "はこ",
+        "組": "く",
+        "立": "た",
+        "移動": "いどう",
+        "動": "うご",
+        "組み立て": "くみたて"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-mx-maize",
+      "country": "mx",
+      "domain": "lifeCulture",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "食文化",
+      "prompt": "メキシコの伝統料理で、豆やとうがらしとともに大切な食材は？",
+      "choices": [
+        "とうもろこし",
+        "大麦",
+        "じゃがいも",
+        "さつまいも"
+      ],
+      "correctIndex": 0,
+      "explanation": "とうもろこしは、豆やとうがらしとともにメキシコの伝統料理を支える食材です。",
+      "translations": {
+        "en": {
+          "prompt": "Which food is central to traditional Mexican cooking, along with beans and chilies?",
+          "choices": [
+            "Corn",
+            "Barley",
+            "Potatoes",
+            "Sweet potatoes"
+          ],
+          "explanation": "Corn, beans and chilies form a foundation of traditional Mexican cuisine.",
+          "subcategory": "Food"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/rl/traditional-mexican-cuisine-ancestral-ongoing-community-culture-the-milpa-system-00400"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "伝統料理": "でんとうりょうり",
+        "豆": "まめ",
+        "大切": "たいせつ",
+        "食材": "しょくざい",
+        "大麦": "おおむぎ",
+        "支": "ささ",
+        "料理": "りょうり",
+        "食": "た",
+        "切": "き"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-fr-baguette",
+      "country": "fr",
+      "domain": "lifeCulture",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "食文化",
+      "prompt": "フランスのパン「バゲット」の基本の生地に入るものは？",
+      "choices": [
+        "小麦粉・牛乳・バター・砂糖",
+        "米粉・水・塩・油",
+        "小麦粉・水・塩・酵母",
+        "小麦粉・卵・牛乳・砂糖"
+      ],
+      "correctIndex": 2,
+      "explanation": "伝統的なバゲットは、小麦粉、水、塩、酵母などの発酵のもとで作ります。",
+      "translations": {
+        "en": {
+          "prompt": "Which ingredients are used in traditional French baguette dough?",
+          "choices": [
+            "Wheat flour, milk, butter and sugar",
+            "Rice flour, water, salt and oil",
+            "Wheat flour, water, salt and yeast",
+            "Wheat flour, eggs, milk and sugar"
+          ],
+          "explanation": "A traditional baguette uses flour, water, salt and yeast or leaven.",
+          "subcategory": "Food"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/RL/artisanal-know-how-and-culture-of-baguette-bread-01883"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "作": "つく",
+        "水": "みず",
+        "基本": "きほん",
+        "生地": "きじ",
+        "入": "はい",
+        "小麦粉": "こむぎこ",
+        "牛乳": "ぎゅうにゅう",
+        "砂糖": "さとう",
+        "米粉": "こめこ",
+        "塩": "しお",
+        "油": "あぶら",
+        "酵母": "こうぼ",
+        "卵": "たまご",
+        "伝統的": "でんとうてき",
+        "発酵": "はっこう",
+        "生": "なま",
+        "粉": "こな"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-pe-ceviche",
+      "country": "pe",
+      "domain": "lifeCulture",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "食文化",
+      "prompt": "ペルーの料理「セビーチェ」は、魚を何につけて作ることが多い？",
+      "choices": [
+        "レモンなどのしぼり汁",
+        "牛乳",
+        "しょうゆ",
+        "ココナッツミルク"
+      ],
+      "correctIndex": 0,
+      "explanation": "セビーチェは、生の魚をレモンなどのしぼり汁につけ、とうがらしや塩で味をつける料理です。",
+      "translations": {
+        "en": {
+          "prompt": "In Peruvian ceviche, what is the fish usually marinated in?",
+          "choices": [
+            "Citrus juice",
+            "Milk",
+            "Soy sauce",
+            "Coconut milk"
+          ],
+          "explanation": "Peruvian ceviche is made with raw fish marinated in citrus juice and seasoned with chili and salt.",
+          "subcategory": "Food"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/RL/ceviche-an-expression-of-traditional-peruvian-cuisine-01952"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "何": "なに",
+        "作": "つく",
+        "魚": "さかな",
+        "牛乳": "ぎゅうにゅう",
+        "塩": "しお",
+        "料理": "りょうり",
+        "汁": "しる",
+        "生": "なま",
+        "味": "あじ",
+        "多": "おお"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-id-batik",
+      "country": "id",
+      "domain": "lifeCulture",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "衣文化",
+      "prompt": "インドネシアのぬの「バティック」は、色をつける前に、何でもようをかく？",
+      "choices": [
+        "小麦粉",
+        "塩",
+        "ろう",
+        "石けん"
+      ],
+      "correctIndex": 2,
+      "explanation": "ろうをぬったところには色がつきにくくなります。この仕組みで美しいもようを作ります。",
+      "translations": {
+        "en": {
+          "prompt": "What is used to draw patterns before dyeing Indonesian batik cloth?",
+          "choices": [
+            "Flour",
+            "Salt",
+            "Wax",
+            "Soap"
+          ],
+          "explanation": "Wax protects parts of the cloth from the dye, creating patterns.",
+          "subcategory": "Clothing"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/RL/batik-00170"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "何": "なに",
+        "作": "つく",
+        "組": "く",
+        "小麦粉": "こむぎこ",
+        "塩": "しお",
+        "色": "いろ",
+        "前": "まえ",
+        "仕組": "しく",
+        "美": "うつく",
+        "粉": "こな",
+        "石": "せっ",
+        "石けん": "せっけん"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-ir-nowruz",
+      "country": "ir",
+      "domain": "lifeCulture",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "慣習・行事",
+      "prompt": "イランなどでお祝いする「ノウルーズ」は、どの季節の始まりを祝う？",
+      "choices": [
+        "夏",
+        "春",
+        "秋",
+        "冬"
+      ],
+      "correctIndex": 1,
+      "explanation": "ノウルーズは、春の始まりと新しい年を祝う行事です。多くの国や地域で受けつがれています。",
+      "translations": {
+        "en": {
+          "prompt": "Nowruz is celebrated in Iran and other countries. Which season does it welcome?",
+          "choices": [
+            "Summer",
+            "Spring",
+            "Autumn",
+            "Winter"
+          ],
+          "explanation": "Nowruz celebrates a new year and the arrival of spring across several countries and communities.",
+          "subcategory": "Customs"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/decisions/4.COM/13.03"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "冬": "ふゆ",
+        "祝": "いわ",
+        "季節": "きせつ",
+        "始": "はじ",
+        "夏": "なつ",
+        "春": "はる",
+        "秋": "あき",
+        "新": "あたら",
+        "年": "とし",
+        "行事": "ぎょうじ",
+        "多": "おお",
+        "国": "くに",
+        "地域": "ちいき",
+        "行": "い",
+        "受": "う",
+        "受け": "うけ"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-fi-lunch",
+      "country": "fi",
+      "domain": "lifeCulture",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "学校・教育",
+      "prompt": "フィンランドの小学校で、学校が毎日の授業日に用意するものは？",
+      "choices": [
+        "有料のおやつ",
+        "持ち帰り用の夕食",
+        "週に一度の朝食",
+        "無料の給食"
+      ],
+      "correctIndex": 3,
+      "explanation": "フィンランドでは、小学校などで毎日の授業日にバランスのよい給食が無料で提供されます。",
+      "translations": {
+        "en": {
+          "prompt": "What do primary schools in Finland provide on each school day?",
+          "choices": [
+            "A paid snack",
+            "A takeaway dinner",
+            "A weekly breakfast",
+            "A free school meal"
+          ],
+          "explanation": "Finland provides pupils in basic education with a free, balanced meal each school day.",
+          "subcategory": "Education"
+        }
+      },
+      "sources": [
+        "https://www.oph.fi/en/education-and-qualifications/school-meals-finland"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "小学校": "しょうがっこう",
+        "学校": "がっこう",
+        "毎日": "まいにち",
+        "授業日": "じゅぎょうび",
+        "用意": "ようい",
+        "有料": "ゆうりょう",
+        "持": "も",
+        "帰": "かえ",
+        "夕食": "ゆうしょく",
+        "週": "しゅう",
+        "一度": "いちど",
+        "朝食": "ちょうしょく",
+        "無料": "むりょう",
+        "給食": "きゅうしょく",
+        "提供": "ていきょう",
+        "一": "ひと",
+        "食": "た",
+        "用": "よう",
+        "毎日の": "まいにちの",
+        "持ち帰り": "もちかえり"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-ca-languages",
+      "country": "ca",
+      "domain": "language",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "言語",
+      "prompt": "カナダの国の公用語は、英語ともう一つ、何語？",
+      "choices": [
+        "スペイン語",
+        "フランス語",
+        "ドイツ語",
+        "ポルトガル語"
+      ],
+      "correctIndex": 1,
+      "explanation": "カナダの公用語は英語とフランス語です。ほかにも多くの言葉が話されています。",
+      "translations": {
+        "en": {
+          "prompt": "Canada has two official languages. What is the other one besides English?",
+          "choices": [
+            "Spanish",
+            "French",
+            "German",
+            "Portuguese"
+          ],
+          "explanation": "Canada's official languages are English and French. Many other languages are spoken there too.",
+          "subcategory": "Languages"
+        }
+      },
+      "sources": [
+        "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/language-skills.html"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "何": "なに",
+        "葉": "は",
+        "多": "おお",
+        "国": "くに",
+        "公用語": "こうようご",
+        "英語": "えいご",
+        "語": "ご",
+        "言葉": "ことば",
+        "話": "はな",
+        "一": "ひと",
+        "用": "よう",
+        "一つ": "ひとつ"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-ch-romansh",
+      "country": "ch",
+      "domain": "language",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "言語",
+      "prompt": "スイスの国語はドイツ語、フランス語、イタリア語と、もう一つは？",
+      "choices": [
+        "オランダ語",
+        "スウェーデン語",
+        "ロマンシュ語",
+        "ポーランド語"
+      ],
+      "correctIndex": 2,
+      "explanation": "スイスには四つの国語があります。ロマンシュ語もその一つです。",
+      "translations": {
+        "en": {
+          "prompt": "Switzerland has German, French and Italian as national languages. What is the fourth?",
+          "choices": [
+            "Dutch",
+            "Swedish",
+            "Romansh",
+            "Polish"
+          ],
+          "explanation": "Romansh is one of Switzerland's four national languages.",
+          "subcategory": "Languages"
+        }
+      },
+      "sources": [
+        "https://www.aboutswitzerland.eda.admin.ch/en/language"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "国": "くに",
+        "語": "ご",
+        "国語": "こくご",
+        "四": "よっ",
+        "一": "ひと",
+        "四つ": "よっつ",
+        "一つ": "ひとつ"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-pa-oceans",
+      "country": "pa",
+      "domain": "place",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "地理・自然",
+      "prompt": "パナマ運河を通ると、太平洋とどの海を行き来できる？",
+      "choices": [
+        "大西洋",
+        "インド洋",
+        "北極海",
+        "南極海"
+      ],
+      "correctIndex": 0,
+      "explanation": "パナマ運河は太平洋と大西洋をつなぎ、船が行き来するための大切な水路です。",
+      "translations": {
+        "en": {
+          "prompt": "The Panama Canal connects the Pacific Ocean with which ocean?",
+          "choices": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Southern Ocean"
+          ],
+          "explanation": "The canal provides a shipping route between the Pacific and Atlantic oceans.",
+          "subcategory": "Geography"
+        }
+      },
+      "sources": [
+        "https://pancanal.com/en/history-of-the-panama-canal/"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "水": "みず",
+        "運": "はこ",
+        "大切": "たいせつ",
+        "運河": "うんが",
+        "通": "とお",
+        "太平洋": "たいへいよう",
+        "海": "うみ",
+        "行": "い",
+        "来": "き",
+        "大西洋": "たいせいよう",
+        "インド洋": "インドよう",
+        "北極海": "ほっきょくかい",
+        "南極海": "なんきょくかい",
+        "船": "ふね",
+        "水路": "すいろ",
+        "切": "き",
+        "北": "きた",
+        "行き来": "いきき"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-nl-dikes",
+      "country": "nl",
+      "domain": "lifeCulture",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "住文化",
+      "prompt": "オランダでは、海や川の水が町に入るのをふせぐため、何を使っている？",
+      "choices": [
+        "風車だけ",
+        "トンネルだけ",
+        "井戸だけ",
+        "堤防や砂丘"
+      ],
+      "correctIndex": 3,
+      "explanation": "堤防や砂丘は、海や川から水があふれるのをふせぎ、人々のくらしを守ります。",
+      "translations": {
+        "en": {
+          "prompt": "What helps protect Dutch towns from flooding by the sea and rivers?",
+          "choices": [
+            "Windmills alone",
+            "Tunnels alone",
+            "Wells alone",
+            "Dikes and dunes"
+          ],
+          "explanation": "Dikes and dunes form important flood defenses in the Netherlands.",
+          "subcategory": "Homes and environment"
+        }
+      },
+      "sources": [
+        "https://www.government.nl/themes/nature-and-the-environment/water-management/water-management-in-the-netherlands"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "何": "なに",
+        "人": "ひと",
+        "水": "みず",
+        "入": "はい",
+        "海": "うみ",
+        "川": "かわ",
+        "町": "まち",
+        "風車": "ふうしゃ",
+        "井戸": "いど",
+        "堤防": "ていぼう",
+        "砂丘": "さきゅう",
+        "人々": "ひとびと",
+        "守": "まも",
+        "使": "つか"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-pe-inca",
+      "country": "pe",
+      "domain": "place",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "歴史",
+      "prompt": "ペルーのマチュピチュは、どの文明の人々が作った？",
+      "choices": [
+        "マヤ文明",
+        "インカ文明",
+        "エジプト文明",
+        "ローマ文明"
+      ],
+      "correctIndex": 1,
+      "explanation": "マチュピチュは、アンデスの山々に残るインカ文明の大切な遺跡です。",
+      "translations": {
+        "en": {
+          "prompt": "Which civilization built Machu Picchu in Peru?",
+          "choices": [
+            "Maya",
+            "Inca",
+            "Ancient Egyptian",
+            "Roman"
+          ],
+          "explanation": "Machu Picchu is an important Inca site in the Andes.",
+          "subcategory": "History"
+        }
+      },
+      "sources": [
+        "https://whc.unesco.org/en/list/274/"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "作": "つく",
+        "人": "ひと",
+        "大切": "たいせつ",
+        "人々": "ひとびと",
+        "文明": "ぶんめい",
+        "山々": "やまやま",
+        "残": "のこ",
+        "遺跡": "いせき",
+        "切": "き"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-ma-couscous",
+      "country": "ma",
+      "domain": "lifeCulture",
+      "gradeBand": "elementary",
+      "gradeReview": "editorial_checked",
+      "subcategory": "食文化",
+      "prompt": "モロッコなどで食べられるクスクスは、何から作る小さなつぶの料理？",
+      "choices": [
+        "くだいた豆",
+        "ほぐした魚",
+        "こまかく切った野菜",
+        "ひいた穀物"
+      ],
+      "correctIndex": 3,
+      "explanation": "クスクスは、穀物をひいた粉を小さなつぶにし、むして作ります。北アフリカの複数の国で親しまれています。",
+      "translations": {
+        "en": {
+          "prompt": "Couscous, eaten in Morocco and nearby countries, is made into tiny grains from what?",
+          "choices": [
+            "Crushed beans",
+            "Flaked fish",
+            "Chopped vegetables",
+            "Ground cereal"
+          ],
+          "explanation": "Couscous is made by rolling cereal semolina into small grains and steaming them.",
+          "subcategory": "Food"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/RL/knowledge-know-how-and-practices-pertaining-to-the-production-and-consumption-of-couscous-01602"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false,
+      "readings": {
+        "何": "なに",
+        "作": "つく",
+        "魚": "さかな",
+        "豆": "まめ",
+        "料理": "りょうり",
+        "国": "くに",
+        "食": "た",
+        "切": "き",
+        "野菜": "やさい",
+        "穀物": "こくもつ",
+        "粉": "こな",
+        "北": "きた",
+        "複数": "ふくすう",
+        "親": "した",
+        "北アフリカ": "きたアフリカ",
+        "食べ": "たべ",
+        "小さ": "ちいさ"
+      }
+    },
+    {
+      "id": "tp-editorial-v1-kr-kimjang-community",
+      "country": "kr",
+      "domain": "lifeCulture",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "慣習・行事",
+      "prompt": "韓国のキムジャンが、食料の準備以外にも持つ社会的な役割は？",
+      "choices": [
+        "地域の人が協力し、食べ物を分け合う",
+        "地域ごとの料理を同じ味に統一する",
+        "食材の輸入量を国が決める",
+        "農家の土地を共同所有に変える"
+      ],
+      "correctIndex": 0,
+      "explanation": "一緒にキムチを作って分ける活動は、家族や地域の協力を育む機会にもなります。",
+      "translations": {
+        "en": {
+          "prompt": "Beyond preparing food, what social role does kimjang play in South Korea?",
+          "choices": [
+            "Helping communities cooperate and share food",
+            "Making regional recipes taste identical",
+            "Setting national food import limits",
+            "Turning farms into collectively owned land"
+          ],
+          "explanation": "Working together and sharing kimchi strengthens community relationships.",
+          "subcategory": "Customs"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/RL/kimjang-making-and-sharing-kimchi-in-the-republic-of-korea-00881"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-mn-ger-design",
+      "country": "mn",
+      "domain": "lifeCulture",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "住文化",
+      "prompt": "モンゴルのゲルの構造は、伝統的な移動生活にどのように適しているか。",
+      "choices": [
+        "石造りの壁で土地に固定する",
+        "地下に部屋を作り寒さを避ける",
+        "軽量な部材を分解して再利用できる",
+        "建物を水に浮かべて移動する"
+      ],
+      "correctIndex": 2,
+      "explanation": "木の骨組みやフェルトなどの部材を組み立てて使い、移動時にはたたんで運ぶことができます。",
+      "translations": {
+        "en": {
+          "prompt": "How does the structure of a Mongolian ger suit traditional mobile life?",
+          "choices": [
+            "Stone walls anchor it permanently",
+            "Underground rooms avoid cold weather",
+            "Light components can be dismantled and reused",
+            "The building moves by floating on water"
+          ],
+          "explanation": "Its portable framework and felt covering can be taken apart, carried and assembled again.",
+          "subcategory": "Homes"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/RL/traditional-craftsmanship-of-the-mongol-ger-and-its-associated-customs-00872"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-id-wax-resist",
+      "country": "id",
+      "domain": "lifeCulture",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "衣文化",
+      "prompt": "バティックの染色工程で、布の一部分にろうを塗るのはなぜ？",
+      "choices": [
+        "布全体を均一に染めるため",
+        "その部分が染料で染まるのを防ぐため",
+        "糸を縮ませて模様を立体化するため",
+        "染料を布の奥へ浸透させるため"
+      ],
+      "correctIndex": 1,
+      "explanation": "ろうが染料をはじくため、ろうで覆った部分と染まった部分に色の違いが生まれます。",
+      "translations": {
+        "en": {
+          "prompt": "Why is wax applied to selected areas of batik fabric before dyeing?",
+          "choices": [
+            "To dye the whole cloth evenly",
+            "To keep those areas from absorbing dye",
+            "To shrink threads into raised patterns",
+            "To make dye penetrate more deeply"
+          ],
+          "explanation": "Wax resists the dye, allowing artisans to create contrasting patterns.",
+          "subcategory": "Clothing"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/RL/batik-00170"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-nz-maori-1987",
+      "country": "nz",
+      "domain": "language",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "言語・社会",
+      "prompt": "ニュージーランドのマオリ語法（1987年）の重要な内容は？",
+      "choices": [
+        "英語を唯一の公用語とする",
+        "マオリ語を公的な場から除外する",
+        "全ての学校をマオリ語のみで運営する",
+        "マオリ語を公用語として認める"
+      ],
+      "correctIndex": 3,
+      "explanation": "1987年の法律でマオリ語が公用語として認められ、言語の復興を支える重要な一歩となりました。",
+      "translations": {
+        "en": {
+          "prompt": "What was an important provision of New Zealand's Māori Language Act of 1987?",
+          "choices": [
+            "Making English the sole official language",
+            "Removing Māori from public settings",
+            "Requiring all schools to teach only in Māori",
+            "Recognizing Māori as an official language"
+          ],
+          "explanation": "The 1987 Act recognized Māori as an official language, an important step in language revitalization.",
+          "subcategory": "Language and society"
+        }
+      },
+      "sources": [
+        "https://www.tpk.govt.nz/en/nga-putea-me-nga-ratonga/te-reo-maori"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-ee-digital-id",
+      "country": "ee",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "IT・科学",
+      "prompt": "エストニアの電子居住制度（e-Residency）が、海外に住む起業家に提供するものは？",
+      "choices": [
+        "オンラインで行政サービスを利用するためのデジタルID",
+        "エストニアへの自動的な永住許可",
+        "国政選挙の投票資格",
+        "国内企業への自動的な採用保証"
+      ],
+      "correctIndex": 0,
+      "explanation": "電子居住制度はデジタルIDを利用して事業関連の電子サービスにアクセスする仕組みで、居住権や国籍を与える制度ではありません。",
+      "translations": {
+        "en": {
+          "prompt": "What does Estonia's e-Residency program provide to entrepreneurs living abroad?",
+          "choices": [
+            "A digital ID for online government services",
+            "Automatic permanent residence in Estonia",
+            "The right to vote in national elections",
+            "A guaranteed job at an Estonian company"
+          ],
+          "explanation": "E-Residency provides digital access to business-related services; it is not citizenship or physical residence.",
+          "subcategory": "Technology"
+        }
+      },
+      "sources": [
+        "https://www.e-resident.gov.ee/"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-pa-locks",
+      "country": "pa",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "IT・科学",
+      "prompt": "パナマ運河には海面より高い湖があります。船はどのような仕組みで水面の高さの違いを乗り越える？",
+      "choices": [
+        "船をクレーンで持ち上げる",
+        "湖の水を毎回海に排出する",
+        "水門で区切った区画の水位を変える",
+        "船を陸上の線路に載せる"
+      ],
+      "correctIndex": 2,
+      "explanation": "閘門（こうもん）は、水を出し入れして区画内の水位を調節し、船を上げ下げする仕組みです。",
+      "translations": {
+        "en": {
+          "prompt": "How do ships in the Panama Canal move between sea level and a higher lake?",
+          "choices": [
+            "Cranes lift the ships",
+            "The lake is emptied into the ocean each time",
+            "Water levels change inside lock chambers",
+            "Ships travel on railway tracks"
+          ],
+          "explanation": "Locks raise or lower ships by adjusting the water level in enclosed chambers.",
+          "subcategory": "Engineering"
+        }
+      },
+      "sources": [
+        "https://pancanal.com/en/history-of-the-panama-canal/"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-au-levels",
+      "country": "au",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "政治・社会",
+      "prompt": "オーストラリアの連邦制度では、政府の役割は主にどのように分かれている？",
+      "choices": [
+        "連邦政府と裁判所の二つだけ",
+        "連邦・州や準州・地方の三つのレベル",
+        "州政府だけが全国を統治する",
+        "地方自治体だけが国の法律を作る"
+      ],
+      "correctIndex": 1,
+      "explanation": "オーストラリアは連邦・州や準州・地方のレベルで行政を担い、役割を分担しています。",
+      "translations": {
+        "en": {
+          "prompt": "What are the three main levels of government in Australia?",
+          "choices": [
+            "Federal government and courts only",
+            "Federal, state or territory, and local",
+            "State governments alone govern the country",
+            "Local councils alone make national laws"
+          ],
+          "explanation": "Australia distributes responsibilities among federal, state or territory, and local governments.",
+          "subcategory": "Government"
+        }
+      },
+      "sources": [
+        "https://peo.gov.au/understand-our-parliament/how-parliament-works/three-levels-of-government/three-levels-of-government-governing-australia"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-za-law",
+      "country": "za",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "政治・社会",
+      "prompt": "南アフリカの議会が、憲法に基づいて担う主な役割はどれ？",
+      "choices": [
+        "裁判で個別事件の判決を出す",
+        "中央銀行の金融政策を実行する",
+        "地方の学校を直接運営する",
+        "国の法律を制定する"
+      ],
+      "correctIndex": 3,
+      "explanation": "議会は立法機関であり、憲法に沿って法律を制定し、政府の活動を監視する役割も担います。",
+      "translations": {
+        "en": {
+          "prompt": "What is a central role of South Africa's Parliament under the Constitution?",
+          "choices": [
+            "Judging individual court cases",
+            "Implementing central bank monetary policy",
+            "Directly running local schools",
+            "Making national laws"
+          ],
+          "explanation": "Parliament is the legislative authority and also plays an oversight role.",
+          "subcategory": "Government"
+        }
+      },
+      "sources": [
+        "https://www.gov.za/about-government/government-system/national-legislature-parliament"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-br-kasato-maru",
+      "country": "br",
+      "domain": "japanConnection",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "歴史・日本との関係",
+      "prompt": "1908年、笠戸丸がブラジルのサントス港に到着したことは、何の歴史と特に関係が深い？",
+      "choices": [
+        "日本からブラジルへの移住",
+        "ブラジルから日本への石油輸出",
+        "日本とブラジルの航空便開設",
+        "ブラジルでの日本語公用語化"
+      ],
+      "correctIndex": 0,
+      "explanation": "笠戸丸は日本からの移住者を運びました。ブラジルの日系社会と日本との交流につながる歴史です。",
+      "translations": {
+        "en": {
+          "prompt": "The Kasato Maru arrived in Santos, Brazil, in 1908. What history is this closely connected to?",
+          "choices": [
+            "Japanese migration to Brazil",
+            "Brazilian oil exports to Japan",
+            "The start of flights between Japan and Brazil",
+            "Making Japanese an official language in Brazil"
+          ],
+          "explanation": "The ship carried Japanese migrants, an important event in the history of Brazil's Nikkei communities.",
+          "subcategory": "History and Japan"
+        }
+      },
+      "sources": [
+        "https://www.jica.go.jp/english/information/topics/2026/p20260723_01.html"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-ch-web-origin",
+      "country": "ch",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "IT・科学",
+      "prompt": "スイスとフランスの国境付近にあるCERNで1989年に提案された技術はどれ？",
+      "choices": [
+        "GPS",
+        "Bluetooth",
+        "World Wide Web",
+        "QRコード"
+      ],
+      "correctIndex": 2,
+      "explanation": "CERNで働いていたティム・バーナーズ＝リーが、研究者間の情報共有を目的にWebを提案しました。",
+      "translations": {
+        "en": {
+          "prompt": "Which technology was proposed at CERN near the Swiss-French border in 1989?",
+          "choices": [
+            "GPS",
+            "Bluetooth",
+            "World Wide Web",
+            "QR code"
+          ],
+          "explanation": "Tim Berners-Lee proposed the Web at CERN to help researchers share information.",
+          "subcategory": "Technology"
+        }
+      },
+      "sources": [
+        "https://home.cern/science/computing/the-birth-of-the-web/"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-ke-mobile-money",
+      "country": "ke",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "経済・産業",
+      "prompt": "ケニアで広まったM-Pesaというサービスの主な用途は？",
+      "choices": [
+        "農作物の自動収穫",
+        "携帯電話を使った送金や支払い",
+        "衛星による気象観測",
+        "外国語の自動翻訳"
+      ],
+      "correctIndex": 1,
+      "explanation": "M-Pesaは携帯電話を使ってお金を送受信できるサービスです。現金や銀行窓口に頼らない取引の選択肢を広げました。",
+      "translations": {
+        "en": {
+          "prompt": "What is a main use of M-Pesa, a service that spread in Kenya?",
+          "choices": [
+            "Automated crop harvesting",
+            "Sending money and paying by mobile phone",
+            "Satellite weather observation",
+            "Automatic language translation"
+          ],
+          "explanation": "M-Pesa is a mobile money service that enables transfers and payments using phones.",
+          "subcategory": "Economy"
+        }
+      },
+      "sources": [
+        "https://documents1.worldbank.org/curated/en/099835105172221271/pdf/P164770087f3b90c20b0940940e7944a13a.pdf"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-fi-education",
+      "country": "fi",
+      "domain": "lifeCulture",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "学校・教育",
+      "prompt": "フィンランドの基礎教育で無料の給食を毎日提供する制度から、直接期待できることは？",
+      "choices": [
+        "全員が同じ成績を取ること",
+        "学校間の学力差が必ず消えること",
+        "各家庭の食文化が統一されること",
+        "家庭の所得に左右されにくい食事の機会"
+      ],
+      "correctIndex": 3,
+      "explanation": "給食が無料であれば、家庭の所得に関係なく学校で食事を得やすくなります。ただし成績や食文化の均一化を保証する制度ではありません。",
+      "translations": {
+        "en": {
+          "prompt": "What direct benefit can free daily meals in Finnish basic education offer?",
+          "choices": [
+            "Identical grades for all pupils",
+            "Guaranteed elimination of achievement gaps",
+            "Identical food cultures in all homes",
+            "Access to a meal regardless of family income"
+          ],
+          "explanation": "Providing meals without charge reduces the role of household income in access to food at school.",
+          "subcategory": "Education"
+        }
+      },
+      "sources": [
+        "https://www.oph.fi/en/education-and-qualifications/school-meals-finland"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-pa-trade",
+      "country": "pa",
+      "domain": "thinkConnect",
+      "gradeBand": "high",
+      "gradeReview": "editorial_checked",
+      "subcategory": "経済・産業",
+      "prompt": "太平洋側の港から大西洋側の港へ向かう船がパナマ運河を利用する場合、南米南端を回る航路と比べて一般に期待できる効果は？",
+      "choices": [
+        "輸送距離や燃料消費を減らせる可能性",
+        "船の積載重量が必ず増える",
+        "両港の関税が自動的に撤廃される",
+        "海上輸送の天候リスクがなくなる"
+      ],
+      "correctIndex": 0,
+      "explanation": "運河は大陸を回り込む必要を減らすため、航路や船舶条件によって距離・燃料・時間を節約できます。通行料や水位などの制約もあります。",
+      "translations": {
+        "en": {
+          "prompt": "Compared with sailing around southern South America, what potential benefit can using the Panama Canal offer a ship traveling between Pacific and Atlantic ports?",
+          "choices": [
+            "Reduced sailing distance and fuel use",
+            "A guaranteed increase in cargo capacity",
+            "Automatic removal of tariffs at both ports",
+            "Elimination of maritime weather risks"
+          ],
+          "explanation": "The canal can shorten voyages, potentially reducing fuel use and travel time; canal fees and operating constraints still matter.",
+          "subcategory": "Trade"
+        }
+      },
+      "sources": [
+        "https://pancanal.com/en/history-of-the-panama-canal/"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v1-ca-bilingual-services",
+      "country": "ca",
+      "domain": "thinkConnect",
+      "gradeBand": "high",
+      "gradeReview": "editorial_checked",
+      "subcategory": "政治・社会",
+      "prompt": "カナダで英語とフランス語が連邦政府の公用語であることから、適切に導ける理解は？",
+      "choices": [
+        "全住民に二言語の習得義務がある",
+        "各州で全く同じ言語制度が適用される",
+        "連邦機関の言語サービスと個人の使用言語は区別して考える必要がある",
+        "公用語以外の言語を家庭で使うことは認められない"
+      ],
+      "correctIndex": 2,
+      "explanation": "連邦政府の公用語制度は公的機関での言語の扱いに関するもので、住民全員が二言語を話すことを意味しません。州や地域による違いにも注意が必要です。",
+      "translations": {
+        "en": {
+          "prompt": "What is a sound conclusion from English and French being Canada's federal official languages?",
+          "choices": [
+            "Every resident must learn both languages",
+            "All provinces have identical language laws",
+            "Federal language services must be distinguished from individuals' language use",
+            "Other languages cannot be used at home"
+          ],
+          "explanation": "Federal official-language status concerns public institutions and does not require every individual to speak both languages.",
+          "subcategory": "Language rights"
+        }
+      },
+      "sources": [
+        "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/language-skills.html"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    }
+  ]
 }
