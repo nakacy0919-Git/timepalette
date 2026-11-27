@@ -4665,6 +4665,102 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-pw-primary": {
+   "country": "pw",
+   "prompt": "パラオの バイという でんとうてきな たてものは、なにに つかわれてきた？",
+   "enPrompt": "What was a traditional Palauan bai used for?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_bai_in_Palau.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened the Commons file description and exact linked image on 2026-11-28. Verified author, subject and file-level license. Source identifies the museum building as a traditional meeting house.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_bai_in_Palau.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/A_bai_in_Palau.jpg/960px-A_bai_in_Palau.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_bai_in_Palau.jpg",
+    "title": "A bai in Palau.jpg",
+    "author": "ctsnow",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "パラオ国立博物館の装飾された伝統集会所バイ",
+    "altEn": "Decorated traditional bai at the National Museum of Palau",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-ug-primary": {
+   "country": "ug",
+   "prompt": "ウガンダの ロレックスという たべものは、なにを チャパティで まく？",
+   "enPrompt": "What is rolled in chapati to make a Ugandan rolex?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_bitten_off_Ugandan_rolex.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened the Commons file description and exact linked image on 2026-11-28. Verified author, subject and file-level license. Source identifies eggs and vegetables; photograph shows rolled layers.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_bitten_off_Ugandan_rolex.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/A_bitten_off_Ugandan_rolex.jpg/960px-A_bitten_off_Ugandan_rolex.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_bitten_off_Ugandan_rolex.jpg",
+    "title": "A bitten off Ugandan rolex.jpg",
+    "author": "B722N",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "チャパティで卵などを巻いたウガンダのロレックスの断面",
+    "altEn": "Cross-section of a Ugandan rolex with egg rolled in chapati",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-tl-primary": {
+   "country": "tl",
+   "prompt": "ひがしティモールの タイスとは、なにを おって つくる でんとうてきな もの？",
+   "enPrompt": "What is tais, a traditional craft of Timor-Leste?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tais.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened the Commons file description and exact linked image on 2026-11-28. Verified author, subject and file-level license. Retain visible photographer watermark; uncropped image. The source identifies traditional woven cloth.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tais.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Tais.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tais.jpg",
+    "title": "Tais.jpg",
+    "author": "Nuno Marques",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "東ティモールのトゥトゥアラに飾られた伝統織物タイス",
+    "altEn": "Traditional tais textiles displayed in Tutuala, Timor-Leste",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-is-primary": {
+   "country": "is",
+   "prompt": "アイスランドの ロパペイサという セーターに つかう でんとうてきな ざいりょうは？",
+   "enPrompt": "What material is traditionally used for Icelandic lopapeysa sweaters?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Islandpullover_004.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened the Commons file description and exact linked image on 2026-11-28. Verified author, subject and file-level license. Source identifies Icelandic sweater; fibre cannot be determined from image alone. No person pictured.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Islandpullover_004.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Islandpullover_004.jpg/960px-Islandpullover_004.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Islandpullover_004.jpg",
+    "title": "Islandpullover 004.jpg",
+    "author": "Freimut Bahlo",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "襟周辺に模様が入ったアイスランドのセーター",
+    "altEn": "Icelandic sweater with patterned circular yoke",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -4841,6 +4937,16 @@
     "tp-original-hand-v1-ki-primary",
     "tp-original-hand-v1-lk-primary",
     "tp-original-hand-v1-hn-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Visually inspected exact source images and verified source-specific license and author; preferred clothing photo without a person and retained original watermark.",
+   "ids": [
+    "tp-original-hand-v1-pw-primary",
+    "tp-original-hand-v1-ug-primary",
+    "tp-original-hand-v1-tl-primary",
+    "tp-original-hand-v1-is-primary"
    ]
   }
  ]
