@@ -4377,6 +4377,150 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-sk-primary": {
+   "country": "sk",
+   "prompt": "スロバキアの ハルシュキに よく あわせる ブリンザは、なにから つくる チーズ？",
+   "enPrompt": "What milk is traditionally used for bryndza cheese in Slovak halušky?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:BryndzoveHalusky.JPG",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened file-specific Commons source page and visually inspected the exact 960px thumbnail on 2026-11-28. Checked author and file-level license. Photograph shows the dish, not the milk species.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BryndzoveHalusky.JPG?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/BryndzoveHalusky.JPG/960px-BryndzoveHalusky.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:BryndzoveHalusky.JPG",
+    "title": "BryndzoveHalusky.JPG",
+    "author": "Jessica Schmidt",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:BryndzoveHalusky.JPG",
+    "altJa": "チーズソースを合わせたスロバキアのハルシュキ",
+    "altEn": "Slovak bryndzové halušky with cheese sauce",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-md-primary": {
+   "country": "md",
+   "prompt": "モルドバの ママリガは、なにの こなを にて かためた りょうり？",
+   "enPrompt": "What grain is used in Moldovan mămăligă?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C4%83m%C4%83lig%C4%832020-02-12.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened file-specific Commons source page and visually inspected the exact 960px thumbnail on 2026-11-28. Checked author and file-level license. Source identifies maize flour; photo alone does not establish ingredients.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/M%C4%83m%C4%83lig%C4%832020-02-12.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/M%C4%83m%C4%83lig%C4%832020-02-12.jpg/960px-M%C4%83m%C4%83lig%C4%832020-02-12.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C4%83m%C4%83lig%C4%832020-02-12.jpg",
+    "title": "Mămăligă2020-02-12.jpg",
+    "author": "NicolaS961",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "左手前の黄色いモルドバのママリガ",
+    "altEn": "Yellow Moldovan mămăligă in the lower left",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-sv-primary": {
+   "country": "sv",
+   "prompt": "エルサルバドルの ププサでは、まめや チーズを どんな きじで つつむことが おおい？",
+   "enPrompt": "What dough commonly surrounds the filling of Salvadoran pupusas?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dos_Pupusas_en_El_Salvador.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened file-specific Commons source page and visually inspected the exact 960px thumbnail on 2026-11-28. Checked author and file-level license. The exterior is visible; filling and dough composition cannot be proven from the photo.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dos_Pupusas_en_El_Salvador.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Dos_Pupusas_en_El_Salvador.jpg/960px-Dos_Pupusas_en_El_Salvador.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dos_Pupusas_en_El_Salvador.jpg",
+    "title": "Dos Pupusas en El Salvador.jpg",
+    "author": "Ll1324",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "altJa": "エルサルバドルのオロクイルタで撮影されたププサ2枚",
+    "altEn": "Two pupusas photographed in Olocuilta, El Salvador",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-mm-primary": {
+   "country": "mm",
+   "prompt": "ミャンマーの モヒンガーは、さかなの スープに なにを あわせる？",
+   "enPrompt": "What is served in the fish broth of Myanmar's mohinga?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mohinga_at_A_Nyar_Tar.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened file-specific Commons source page and visually inspected the exact 960px thumbnail on 2026-11-28. Checked author and file-level license. The source specifies Australia, not Myanmar, as the photo location; noodles are visible.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mohinga_at_A_Nyar_Tar.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Mohinga_at_A_Nyar_Tar.jpg/960px-Mohinga_at_A_Nyar_Tar.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mohinga_at_A_Nyar_Tar.jpg",
+    "title": "Mohinga at A Nyar Tar.jpg",
+    "author": "Orderinchaos",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "西オーストラリアのミャンマー料理店で提供されたモヒンガー",
+    "altEn": "Mohinga served in a Burmese restaurant in Western Australia",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-mu-primary": {
+   "country": "mu",
+   "prompt": "モーリシャスに むかし すんでいた ドードーは、どんな どうぶつ？",
+   "enPrompt": "What kind of animal was the dodo of Mauritius?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_Unique_complete_Skeleton_of_the_Dodo%2C_Louis_Etienne_Thirioux%2C_1904.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened file-specific Commons source page and visually inspected the exact 960px thumbnail on 2026-11-28. Checked author and file-level license. Shows museum skeleton, not a living animal.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_Unique_complete_Skeleton_of_the_Dodo%2C_Louis_Etienne_Thirioux%2C_1904.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/A_Unique_complete_Skeleton_of_the_Dodo%2C_Louis_Etienne_Thirioux%2C_1904.jpg/960px-A_Unique_complete_Skeleton_of_the_Dodo%2C_Louis_Etienne_Thirioux%2C_1904.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_Unique_complete_Skeleton_of_the_Dodo%2C_Louis_Etienne_Thirioux%2C_1904.jpg",
+    "title": "A Unique complete Skeleton of the Dodo, Louis Etienne Thirioux, 1904.jpg",
+    "author": "Richard N Horne",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "altJa": "モーリシャスのポートルイス自然史博物館のドードー骨格標本",
+    "altEn": "Dodo skeleton at the Natural History Museum, Port Louis, Mauritius",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-la-primary": {
+   "country": "la",
+   "prompt": "ラオスの ルアンパバーンの まちの そばを ながれる おおきな かわは？",
+   "enPrompt": "Which major river flows beside Luang Prabang in Laos?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:20191213_Luang_Prabang_Mekong_River-5.jpg",
+   "kind": "place",
+   "sourceType": "external",
+   "reason": "Opened file-specific Commons source page and visually inspected the exact 960px thumbnail on 2026-11-28. Checked author and file-level license. Source caption and coordinates identify the specific river; no generic national image.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20191213_Luang_Prabang_Mekong_River-5.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/20191213_Luang_Prabang_Mekong_River-5.jpg/960px-20191213_Luang_Prabang_Mekong_River-5.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:20191213_Luang_Prabang_Mekong_River-5.jpg",
+    "title": "20191213 Luang Prabang Mekong River-5.jpg",
+    "author": "Balon Greyjoy",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "altJa": "ルアンパバーンから見たメコン川",
+    "altEn": "Mekong River viewed from Luang Prabang",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -4529,6 +4673,18 @@
    "ids": [
     "tp-original-hand-v1-ls-primary",
     "tp-original-hand-v1-gt-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened exact Commons source pages and 960px previews; confirmed file names, depicted subject, authors and commercial-use copyright terms. Kept explanatory photos at review stage.",
+   "ids": [
+    "tp-original-hand-v1-sk-primary",
+    "tp-original-hand-v1-md-primary",
+    "tp-original-hand-v1-sv-primary",
+    "tp-original-hand-v1-mm-primary",
+    "tp-original-hand-v1-mu-primary",
+    "tp-original-hand-v1-la-primary"
    ]
   }
  ]
