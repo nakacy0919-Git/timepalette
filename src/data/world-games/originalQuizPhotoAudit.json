@@ -4761,6 +4761,150 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-it-primary": {
+   "country": "it",
+   "prompt": "イタリアの ナポリピッツァは、どうやって やくのが でんとうてき？",
+   "enPrompt": "How is traditional Neapolitan pizza cooked?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pizza-oven.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and exact linked image on 2026-11-28. Verified depicted subject, author and file-level license. Shows wood-fired cooking; does not establish the pizza's origin or style.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza-oven.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Pizza-oven.jpg/960px-Pizza-oven.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pizza-oven.jpg",
+    "title": "Pizza-oven.jpg",
+    "author": "Lotus Head",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "薪の炎が見える窯でピザを焼く様子",
+    "altEn": "Pizza baking in a wood-burning oven",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-hu-primary": {
+   "country": "hu",
+   "prompt": "ハンガリーの グヤーシュの あかい いろと かおりに かかわる スパイスは？",
+   "enPrompt": "Which spice gives Hungarian goulash its characteristic red color and flavor?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Guly%C3%A1s_soup.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and exact linked image on 2026-11-28. Verified depicted subject, author and file-level license. Red colour is visible; the photograph alone does not prove the spice used.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guly%C3%A1s_soup.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Guly%C3%A1s_soup.jpg/960px-Guly%C3%A1s_soup.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Guly%C3%A1s_soup.jpg",
+    "title": "Gulyás soup.jpg",
+    "author": "Top Budapest",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "大きな鍋で煮込まれた赤いグヤーシュ",
+    "altEn": "Red Hungarian goulash soup in a kettle",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-ro-primary": {
+   "country": "ro",
+   "prompt": "ルーマニアの サルマーレでは、ひきにくや おこめを なにで つつむことが ある？",
+   "enPrompt": "Which leaf is often used to wrap Romanian sarmale?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Romanian_Sarmale.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and exact linked image on 2026-11-28. Verified depicted subject, author and file-level license. Original is 556 × 613; leaf wrapping visible.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Romanian_Sarmale.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Romanian_Sarmale.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Romanian_Sarmale.jpg",
+    "title": "Romanian Sarmale.jpg",
+    "author": "Ionescu Razvan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "葉で包んだルーマニアのサルマーレ",
+    "altEn": "Romanian sarmale, stuffed cabbage rolls",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-ru-primary": {
+   "country": "ru",
+   "prompt": "ロシアなどで たべられる ブリヌイは、どんな たべもの？",
+   "enPrompt": "What are blini, enjoyed in Russia and nearby regions?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russian_blini.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and exact linked image on 2026-11-28. Verified depicted subject, author and file-level license. Thin pancakes are shown rolled rather than flat.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Russian_blini.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Russian_blini.jpg/960px-Russian_blini.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russian_blini.jpg",
+    "title": "Russian blini.jpg",
+    "author": "Ninaras",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "altJa": "イチゴを添えた巻いたブリヌイ",
+    "altEn": "Rolled Russian blini served with strawberries",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-sn-primary": {
+   "country": "sn",
+   "prompt": "セネガルの チェブジェンでは、さかなや やさいと いっしょに なにを たく？",
+   "enPrompt": "What is cooked with fish and vegetables in Senegalese ceebu jën?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thieboudiene.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and exact linked image on 2026-11-28. Verified depicted subject, author and file-level license. Rice and fish are visible; only a hand appears.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thieboudiene.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Thieboudiene.jpg/960px-Thieboudiene.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thieboudiene.jpg",
+    "title": "Thieboudiene.jpg",
+    "author": "Khadim pmp",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "魚と米を盛り付けたセネガルのチェブジェン",
+    "altEn": "Senegalese thieboudienne with fish and rice",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-uz-primary": {
+   "country": "uz",
+   "prompt": "ウズベキスタンの プロフで、おこめや にくに よく あわせる オレンジいろの やさいは？",
+   "enPrompt": "Which vegetable is commonly cooked with rice and meat in Uzbek plov?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Uzbekistan_style_plov_in_Japan.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and exact linked image on 2026-11-28. Verified depicted subject, author and file-level license. Source identifies a restaurant in Tokyo; carrots are visible.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Uzbekistan_style_plov_in_Japan.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Uzbekistan_style_plov_in_Japan.jpg/960px-Uzbekistan_style_plov_in_Japan.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Uzbekistan_style_plov_in_Japan.jpg",
+    "title": "Uzbekistan style plov in Japan.jpg",
+    "author": "赤猫法師",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "東京のウズベキスタン料理店のニンジン入りプロフ",
+    "altEn": "Uzbek-style plov with carrots served in Tokyo, Japan",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -4947,6 +5091,18 @@
     "tp-original-hand-v1-ug-primary",
     "tp-original-hand-v1-tl-primary",
     "tp-original-hand-v1-is-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened original Commons source pages and actual linked images. Selected subject-accurate commercially reusable photos; rejected pale soup for a question about red goulash, and selected a pizza oven image without identifiable people.",
+   "ids": [
+    "tp-original-hand-v1-it-primary",
+    "tp-original-hand-v1-hu-primary",
+    "tp-original-hand-v1-ro-primary",
+    "tp-original-hand-v1-ru-primary",
+    "tp-original-hand-v1-sn-primary",
+    "tp-original-hand-v1-uz-primary"
    ]
   }
  ]
