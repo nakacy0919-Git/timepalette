@@ -1452,6 +1452,486 @@
       "rightsConfirmed": true,
       "gameEligible": true,
       "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-sg-newater",
+      "country": "sg",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "IT・科学",
+      "prompt": "シンガポールのNEWaterは、何を原料とした水資源ですか？",
+      "choices": [
+        "処理した使用済みの水",
+        "海水を凍らせた氷",
+        "輸入した地下水",
+        "雨水をそのまま集めた水"
+      ],
+      "correctIndex": 0,
+      "explanation": "NEWaterは処理済みの使用水を膜ろ過や紫外線処理などでさらに浄化した再生水です。水源を多様化する技術の一つです。",
+      "translations": {
+        "en": {
+          "prompt": "What is the source of Singapore's NEWater?",
+          "choices": [
+            "Treated used water",
+            "Ice made from seawater",
+            "Imported groundwater",
+            "Rainwater collected without treatment"
+          ],
+          "explanation": "NEWater is reclaimed water purified further using membrane technologies and ultraviolet disinfection.",
+          "subcategory": "Water technology"
+        }
+      },
+      "sources": [
+        "https://www.pub.gov.sg/Public/WaterLoop/Water-Quality/NEWater"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-sg-water-resilience",
+      "country": "sg",
+      "domain": "thinkConnect",
+      "gradeBand": "high",
+      "gradeReview": "editorial_checked",
+      "subcategory": "経済・社会",
+      "prompt": "シンガポールが貯水、輸入水、再生水、海水淡水化を組み合わせる利点として最も適切なものは？",
+      "choices": [
+        "水の利用量にかかわらずコストを一定にする",
+        "水源を分散し、一つの水源の不足に対応しやすくする",
+        "全ての水処理設備を不要にする",
+        "すべての水源を同一の河川に統合する"
+      ],
+      "correctIndex": 1,
+      "explanation": "複数の水源を持つことで一つの供給源への依存を抑えられます。ただし処理設備、費用、水の需要管理は引き続き必要です。",
+      "translations": {
+        "en": {
+          "prompt": "Why does Singapore combine local catchment, imported water, reclaimed water and desalination?",
+          "choices": [
+            "To keep costs fixed regardless of consumption",
+            "To reduce dependence on any single water source",
+            "To eliminate all water-treatment equipment",
+            "To combine every source into one river"
+          ],
+          "explanation": "A diversified supply reduces dependence on any one source, while treatment and demand management remain important.",
+          "subcategory": "Resource policy"
+        }
+      },
+      "sources": [
+        "https://www.mse.gov.sg/policies/water/"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-nz-mmp-votes",
+      "country": "nz",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "政治・社会",
+      "prompt": "ニュージーランドの国政選挙のMMP方式で、有権者が持つ二つの票は何ですか？",
+      "choices": [
+        "首相と大統領への票",
+        "地方議会と市長への票",
+        "政党への票と選挙区の候補者への票",
+        "上院と下院の候補者への票"
+      ],
+      "correctIndex": 2,
+      "explanation": "MMPでは政党票と選挙区票を投じます。政党票は各政党の議席配分に関係し、選挙区票は地域の代表者を選ぶためのものです。",
+      "translations": {
+        "en": {
+          "prompt": "Which two votes do voters cast under New Zealand's MMP electoral system?",
+          "choices": [
+            "A prime minister and a president vote",
+            "A local council and a mayoral vote",
+            "A party vote and an electorate vote",
+            "An upper-house and a lower-house vote"
+          ],
+          "explanation": "The party vote helps determine party representation; the electorate vote selects a local representative.",
+          "subcategory": "Elections"
+        }
+      },
+      "sources": [
+        "https://www3.parliament.nz/en/get-involved/have-your-say/vote-in-elections/"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-nz-mmp-representation",
+      "country": "nz",
+      "domain": "thinkConnect",
+      "gradeBand": "high",
+      "gradeReview": "editorial_checked",
+      "subcategory": "政治・社会",
+      "prompt": "ニュージーランドのMMPで、ある政党が選挙区で得た議席だけでは政党票に基づく配分に足りない場合、原則としてどう調整しますか？",
+      "choices": [
+        "選挙区で選ばれた議員を全員取り消す",
+        "次の総選挙まで空席にする",
+        "他党の選挙区議員をその党へ移す",
+        "党の名簿から議員を補う"
+      ],
+      "correctIndex": 3,
+      "explanation": "MMPでは選挙区議員に加え、党名簿から議員を選ぶことで政党票に応じた議席配分を実現する仕組みです。",
+      "translations": {
+        "en": {
+          "prompt": "Under New Zealand's MMP system, how are a party's seats generally topped up when electorate seats alone fall short of its party-vote allocation?",
+          "choices": [
+            "By removing all elected electorate members",
+            "By leaving the seats empty until the next election",
+            "By transferring electorate members from other parties",
+            "By selecting members from the party list"
+          ],
+          "explanation": "List members supplement electorate members to make overall representation more proportional to the party vote.",
+          "subcategory": "Representation"
+        }
+      },
+      "sources": [
+        "https://www3.parliament.nz/en/visit-and-learn/how-parliament-works/parliamentary-practice-in-new-zealand-2023-by-chapter/chapter-2-electing-members-of-parliament/"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-bd-garments",
+      "country": "bd",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "経済・産業",
+      "prompt": "バングラデシュの輸出産業で、世界銀行が重要な産業として取り上げているものは？",
+      "choices": [
+        "既製服の製造",
+        "大型旅客機の製造",
+        "原油の採掘",
+        "高級腕時計の製造"
+      ],
+      "correctIndex": 0,
+      "explanation": "既製服産業はバングラデシュの雇用と輸出に大きく関わっています。世界銀行は他産業への輸出の多角化も支援しています。",
+      "translations": {
+        "en": {
+          "prompt": "Which export industry is particularly important to Bangladesh, according to the World Bank?",
+          "choices": [
+            "Ready-made garment manufacturing",
+            "Large passenger aircraft manufacturing",
+            "Crude oil extraction",
+            "Luxury watch manufacturing"
+          ],
+          "explanation": "Garments are central to exports and employment; diversification into other sectors is also a development priority.",
+          "subcategory": "Trade"
+        }
+      },
+      "sources": [
+        "https://www.worldbank.org/en/results/2026/02/26/diversifying-exports-for-better-jobs-in-bangladesh"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-bd-export-diversification",
+      "country": "bd",
+      "domain": "thinkConnect",
+      "gradeBand": "high",
+      "gradeReview": "editorial_checked",
+      "subcategory": "経済・産業",
+      "prompt": "世界銀行はバングラデシュの既製服以外の輸出を支援しています。輸出の多角化がもたらし得る利点は？",
+      "choices": [
+        "輸出先の関税を自動的に廃止する",
+        "一つの産業への依存を減らし、需要変化への耐性を高める",
+        "特定産業への依存をさらに強める",
+        "世界市場での価格変動を完全に防ぐ"
+      ],
+      "correctIndex": 1,
+      "explanation": "異なる製品や市場を開拓することは、特定の産業や市場への集中に伴うリスクを下げる可能性があります。景気変動をなくすわけではありません。",
+      "translations": {
+        "en": {
+          "prompt": "What potential benefit comes from supporting Bangladesh's exports beyond ready-made garments?",
+          "choices": [
+            "Automatically removing foreign tariffs",
+            "Reducing reliance on one industry and improving resilience to demand changes",
+            "Increasing dependence on a single industry",
+            "Eliminating global price fluctuations entirely"
+          ],
+          "explanation": "Diversification can reduce concentration risk, though it cannot eliminate market volatility.",
+          "subcategory": "Trade and risk"
+        }
+      },
+      "sources": [
+        "https://www.worldbank.org/en/results/2026/02/26/diversifying-exports-for-better-jobs-in-bangladesh"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-br-pix-payments",
+      "country": "br",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "IT・経済",
+      "prompt": "ブラジル中央銀行のPixは、主に何をするための仕組みですか？",
+      "choices": [
+        "海外旅行用の旅券を発行する",
+        "会社の株価を予測する",
+        "口座間でお金を即時に送る",
+        "紙幣を印刷する"
+      ],
+      "correctIndex": 2,
+      "explanation": "Pixは即時決済の仕組みで、口座間で電子的に資金を送るために使われます。",
+      "translations": {
+        "en": {
+          "prompt": "What is the main purpose of Brazil's Pix system?",
+          "choices": [
+            "Issuing international passports",
+            "Predicting company share prices",
+            "Transferring money instantly between accounts",
+            "Printing banknotes"
+          ],
+          "explanation": "Pix enables real-time electronic transfers between accounts.",
+          "subcategory": "Digital payments"
+        }
+      },
+      "sources": [
+        "https://www.bcb.gov.br/estabilidadefinanceira/pix/perguntas-frequentes"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-nl-room-for-river",
+      "country": "nl",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "科学・環境",
+      "prompt": "オランダでは川の洪水対策として、堤防以外にどのような工夫を行っていますか？",
+      "choices": [
+        "川幅を狭くして流れを集中させる",
+        "河口の水路をすべて埋め立てる",
+        "川のそばのすべての土地を舗装する",
+        "氾濫原を低くしたり、川の分流を設けたりする"
+      ],
+      "correctIndex": 3,
+      "explanation": "川の水が増えたときに流れる空間を確保することで、洪水対策につなげています。",
+      "translations": {
+        "en": {
+          "prompt": "Besides dikes, which method is used in Dutch river flood management?",
+          "choices": [
+            "Narrowing rivers to concentrate the flow",
+            "Filling all channels at river mouths",
+            "Paving all land along rivers",
+            "Lowering floodplains and creating side channels"
+          ],
+          "explanation": "Creating more room for water helps manage river flooding.",
+          "subcategory": "Flood management"
+        }
+      },
+      "sources": [
+        "https://www.government.nl/themes/nature-and-the-environment/water-management/water-management-in-the-netherlands"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-gb-parliament-scrutiny",
+      "country": "gb",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "政治・社会",
+      "prompt": "イギリス議会の二つの院が共に担う役割はどれですか？",
+      "choices": [
+        "法律の制定と政府の活動の審査",
+        "裁判で有罪か無罪かを決定する",
+        "中央銀行の政策金利を直接決める",
+        "地方の学校を日常的に運営する"
+      ],
+      "correctIndex": 0,
+      "explanation": "庶民院と貴族院は法律の審議や制定、政府の活動の監視などを行います。両院の構成や権限は同一ではありません。",
+      "translations": {
+        "en": {
+          "prompt": "Which function is shared by the two Houses of the UK Parliament?",
+          "choices": [
+            "Making laws and scrutinizing government",
+            "Deciding guilt or innocence in trials",
+            "Directly setting central bank policy rates",
+            "Running local schools day to day"
+          ],
+          "explanation": "Both Houses make laws and scrutinize government, although their composition and powers differ.",
+          "subcategory": "Parliament"
+        }
+      },
+      "sources": [
+        "https://www.parliament.uk/about/how/role/system/"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-au-reef-heat",
+      "country": "au",
+      "domain": "thinkConnect",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "地理・自然",
+      "prompt": "オーストラリアのグレート・バリア・リーフで広い範囲のサンゴの白化を引き起こす大きな要因は？",
+      "choices": [
+        "海鳥の渡りの時期が変わること",
+        "海水温が長期間高くなること",
+        "海底の砂の色が変わること",
+        "昼夜の潮の満ち引きだけ"
+      ],
+      "correctIndex": 1,
+      "explanation": "海洋熱波による高い水温が続くと、多くのサンゴに熱ストレスがかかり、大規模な白化につながることがあります。",
+      "translations": {
+        "en": {
+          "prompt": "What is a major cause of mass coral bleaching on Australia's Great Barrier Reef?",
+          "choices": [
+            "Changes in seabird migration timing",
+            "Prolonged high sea temperatures",
+            "Changes in the color of seabed sand",
+            "The daily tidal cycle alone"
+          ],
+          "explanation": "Marine heatwaves can expose corals across large areas to severe heat stress and bleaching.",
+          "subcategory": "Marine environment"
+        }
+      },
+      "sources": [
+        "https://www.gbrmpa.gov.au/learn/reef-health/coral-bleaching"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-ht-joumou-history",
+      "country": "ht",
+      "domain": "place",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "歴史・文化",
+      "prompt": "ハイチのスープ・ジュムが独立記念日に食べられる理由と最も深く関係するものは？",
+      "choices": [
+        "他国との通貨統合が行われた記念",
+        "冬至の日に収穫を祝う習慣",
+        "かつての支配から解放され、自由を手にした記憶",
+        "新しい農業技術が発明された記念"
+      ],
+      "correctIndex": 2,
+      "explanation": "フランスからの独立後、スープ・ジュムは新たに得た自由を表す食文化となりました。料理を通じて歴史を受け継いでいます。",
+      "translations": {
+        "en": {
+          "prompt": "Why is joumou soup closely associated with Haiti's Independence Day?",
+          "choices": [
+            "It marks a monetary union with another country",
+            "It celebrates a winter-solstice harvest",
+            "It represents the memory of gaining freedom from colonial rule",
+            "It commemorates the invention of a farming technique"
+          ],
+          "explanation": "After independence from France, the soup became a symbol of newly gained freedom and dignity.",
+          "subcategory": "History and food"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/RL/joumou-soup-01853"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
+    },
+    {
+      "id": "tp-editorial-v2-vu-sand-knowledge",
+      "country": "vu",
+      "domain": "lifeCulture",
+      "gradeBand": "middle",
+      "gradeReview": "editorial_checked",
+      "subcategory": "慣習・文化",
+      "prompt": "バヌアツの伝統的な砂絵は、美術作品として楽しむ以外にどのような役割を持ちますか？",
+      "choices": [
+        "海の水位を常に測る",
+        "文字をすべて同じ形に置き換える",
+        "気温を自動で記録する",
+        "物語や知識を伝える"
+      ],
+      "correctIndex": 3,
+      "explanation": "砂絵には、物語や知識を記憶し、共有する役割もあります。一つの模様が複数の意味を持つこともあります。",
+      "translations": {
+        "en": {
+          "prompt": "Besides being artworks, what role do traditional Vanuatu sand drawings play?",
+          "choices": [
+            "Continuously measuring sea level",
+            "Replacing every letter with one shape",
+            "Automatically recording temperatures",
+            "Passing on stories and knowledge"
+          ],
+          "explanation": "Sand drawings can carry information, stories and several layers of meaning.",
+          "subcategory": "Knowledge transmission"
+        }
+      },
+      "sources": [
+        "https://ich.unesco.org/en/RL/vanuatu-sand-drawings-00073"
+      ],
+      "origin": "TimePalette original editorial quiz",
+      "verifiedOn": "2026-11-27",
+      "reviewStatus": "approved",
+      "translationReviewStatus": "approved",
+      "rightsConfirmed": true,
+      "gameEligible": true,
+      "requiresReading": false
     }
   ]
 }

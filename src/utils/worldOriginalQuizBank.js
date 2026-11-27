@@ -49,12 +49,12 @@ const photoCandidate=(item)=>{
  if(!/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/i.test(clean(item.imageSource))||!/^https:\/\/commons\.wikimedia\.org\/wiki\/Special:FilePath\//i.test(clean(item.image))||!clean(item.imageCredit)||!(/^(CC0(?: 1\.0)?|Public domain|CC BY(?:-SA)? [234]\.0)$/i.test(license))||!/^https:\/\//.test(clean(item.imageLicenseUrl)))return null;
  return {url:item.image,sourceUrl:item.imageSource,author:item.imageCredit,license,licenseUrl:item.imageLicenseUrl,title:item.titleEn,altJa:item.title,altEn:item.titleEn,stage:'review',licenseReviewStatus:'pending',changes:'Proposed uncropped display'};
 };
-function buildRecord(r,others,countries){
+function buildRecord(r,others){
  const x=r.item,c=r.country,labelsFor=labels[r.family],id='tp-original-atlas-v1-'+c.iso+'-'+r.kind+'-'+r.index;
  const title=clean(x.title),titleEn=clean(x.titleEn),desc=clean(x.description),descEn=clean(x.descriptionEn);
  const same=others.filter(o=>o!==r&&o.family===r.family&&norm(o.item.title)!==norm(title)&&norm(o.item.titleEn)!==norm(titleEn));
- const nameSafe=!contains(desc,title)&&!contains(descEn,titleEn)&&!countryCue(title,'ja',countries)&&!countryCue(titleEn,'en',countries);
- const nameOptions=same.filter(o=>!countryCue(o.item.title,'ja',countries)&&!countryCue(o.item.titleEn,'en',countries)&&!contains(desc,o.item.title)&&!contains(descEn,o.item.titleEn));
+ const nameSafe=!contains(desc,title)&&!contains(descEn,titleEn)&&!r.titleCue;
+ const nameOptions=same.filter(o=>!o.titleCue&&!contains(desc,o.item.title)&&!contains(descEn,o.item.titleEn));
  const choose=(pool,ja,en)=>{const seenJa=new Set([norm(ja(r))]),seenEn=new Set([norm(en(r))]),result=[];const ranked=[...pool].sort((a,b)=>((a.country.iso===c.iso?0:1)-(b.country.iso===c.iso?0:1))||Math.abs(ja(a).length-ja(r).length)-Math.abs(ja(b).length-ja(r).length)||hash(id+a.key)-hash(id+b.key));for(const o of ranked){const j=norm(ja(o)),e=norm(en(o));if(!j||!e||seenJa.has(j)||seenEn.has(e))continue;seenJa.add(j);seenEn.add(e);result.push(o);if(result.length===3)break;}return result;};
  const getTitle=o=>clean(o.item.title),getTitleEn=o=>clean(o.item.titleEn),getDesc=o=>clean(o.item.description),getDescEn=o=>clean(o.item.descriptionEn);
  let ds=nameSafe?choose(nameOptions,getTitle,getTitleEn):[];
@@ -65,8 +65,8 @@ function buildRecord(r,others,countries){
   choices=[title,...ds.map(getTitle)];ec=[titleEn,...ds.map(getTitleEn)];style='clue_to_name';
  }else{
   // A country name in the answer would reveal it in all four games. Reverse the task instead.
-  const compatible=same.filter(o=>!contains(o.item.description,title)&&!contains(o.item.descriptionEn,titleEn)&&!countryCue(o.item.description,'ja',countries)&&!countryCue(o.item.descriptionEn,'en',countries)&&!contains(o.item.description,o.item.title)&&!contains(o.item.descriptionEn,o.item.titleEn)&&Math.abs(clean(o.item.description).length-desc.length)<=55&&Math.abs(clean(o.item.descriptionEn).length-descEn.length)<=125);
-  if(countryCue(desc,'ja',countries)||countryCue(descEn,'en',countries)||contains(desc,title)||contains(descEn,titleEn))return null;
+  const compatible=same.filter(o=>!contains(o.item.description,title)&&!contains(o.item.descriptionEn,titleEn)&&!o.descCue&&!contains(o.item.description,o.item.title)&&!contains(o.item.descriptionEn,o.item.titleEn)&&Math.abs(clean(o.item.description).length-desc.length)<=55&&Math.abs(clean(o.item.descriptionEn).length-descEn.length)<=125);
+  if(r.descCue||contains(desc,title)||contains(descEn,titleEn))return null;
   ds=choose(compatible,getDesc,getDescEn);
   if(ds.length!==3)return null;
   prompt='「'+title+'」について、正しい説明はどれ？';ep='Which description correctly matches '+titleEn+'?';
@@ -83,10 +83,10 @@ export function buildOriginalAtlasDrafts(countries){
    if(![item.title,item.titleEn,item.description,item.descriptionEn].every(v=>clean(v)))continue;
    const key=c.iso+'-'+norm(item.title);
    if(seen.has(key))continue;seen.add(key);
-   records.push({country:c,item,index,kind,key,family:family(item,kind)});
+   records.push({country:c,item,index,kind,key,family:family(item,kind),titleCue:countryCue(item.title,'ja',countries)||countryCue(item.titleEn,'en',countries),descCue:countryCue(item.description,'ja',countries)||countryCue(item.descriptionEn,'en',countries)});
   }
  }
- const bank=records.map(r=>buildRecord(r,records,countries)).filter(Boolean);
+ const bank=records.map(r=>buildRecord(r,records)).filter(Boolean);
  const unique=new Set();return bank.filter(q=>!unique.has(q.id)&&unique.add(q.id));
 }
 export function buildHandAuthoredOriginals(countries){
