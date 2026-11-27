@@ -4185,6 +4185,102 @@
     "verifiedOn": "2026-11-27",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-mk-primary": {
+   "country": "mk",
+   "prompt": "きたマケドニアの タフチェ・グラフチェの おもな ざいりょうは？",
+   "enPrompt": "What is the main ingredient of North Macedonia's tavče gravče?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grav%C4%8De_na_tav%C4%8De.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons original file page and 960px image on 2026-11-28. File-level license and author confirmed. Depicts named dish; photograph does not independently prove ingredients.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grav%C4%8De_na_tav%C4%8De.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Grav%C4%8De_na_tav%C4%8De.jpg/960px-Grav%C4%8De_na_tav%C4%8De.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grav%C4%8De_na_tav%C4%8De.jpg",
+    "title": "Gravče na tavče.jpg",
+    "author": "August Dominus",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "altJa": "北マケドニア・スコピエの豆料理（右側の陶器の皿）",
+    "altEn": "Gravče na tavče served in Skopje, in the earthenware dish on the right",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-lt-primary": {
+   "country": "lt",
+   "prompt": "リトアニアの ツェペリナイは、どんな ざいりょうの きじで にくなどを つつむ？",
+   "enPrompt": "What is the dough of Lithuanian cepelinai made from?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cepelinai_1%2C_Vilnius%2C_Lithuania_-_Diliff.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons original file page and 960px image on 2026-11-28. File-level license and author confirmed. Depicts named dish; photograph does not independently prove ingredients.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cepelinai_1%2C_Vilnius%2C_Lithuania_-_Diliff.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Cepelinai_1%2C_Vilnius%2C_Lithuania_-_Diliff.jpg/960px-Cepelinai_1%2C_Vilnius%2C_Lithuania_-_Diliff.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cepelinai_1%2C_Vilnius%2C_Lithuania_-_Diliff.jpg",
+    "title": "Cepelinai 1, Vilnius, Lithuania - Diliff.jpg",
+    "author": "David Iliff",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "リトアニア・ビリニュスのツェペリナイ",
+    "altEn": "Cepelinai served in Vilnius, Lithuania",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-mt-primary": {
+   "country": "mt",
+   "prompt": "マルタの パスティッツィの きじに はさむ ぐの ひとつは？",
+   "enPrompt": "Which is a traditional filling in Maltese pastizzi?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Traditional_Maltese_pastry_-_pastizzi.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons original file page and 960px image on 2026-11-28. File-level license and author confirmed. Depicts named dish; photograph does not independently prove ingredients.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Traditional_Maltese_pastry_-_pastizzi.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Traditional_Maltese_pastry_-_pastizzi.jpg/960px-Traditional_Maltese_pastry_-_pastizzi.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Traditional_Maltese_pastry_-_pastizzi.jpg",
+    "title": "Traditional Maltese pastry - pastizzi.jpg",
+    "author": "Renata Apan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "マルタのパスティッツィ",
+    "altEn": "Traditional Maltese pastizzi",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-sa-primary": {
+   "country": "sa",
+   "prompt": "サウジアラビアの カブサは、スパイスで あじを つけた なにに にくを そえる？",
+   "enPrompt": "What is served with meat in Saudi Arabian kabsa?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kabsa_1.JPG",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons original file page and 960px image on 2026-11-28. File-level license and author confirmed. Depicts named dish; photograph does not independently prove ingredients.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kabsa_1.JPG?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Kabsa_1.JPG/960px-Kabsa_1.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kabsa_1.JPG",
+    "title": "Kabsa 1.JPG",
+    "author": "Miansari66",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "altJa": "肉と米のカブサ",
+    "altEn": "Kabsa with rice and meat",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -4311,6 +4407,16 @@
     "tp-original-hand-v1-es-primary",
     "tp-original-hand-v1-mw-primary",
     "tp-original-hand-v1-fi-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened original file pages and exact 960px previews; checked author and license at file level. Excluded low-resolution and unclear authorship alternatives.",
+   "ids": [
+    "tp-original-hand-v1-mk-primary",
+    "tp-original-hand-v1-lt-primary",
+    "tp-original-hand-v1-mt-primary",
+    "tp-original-hand-v1-sa-primary"
    ]
   }
  ]
