@@ -7,6 +7,9 @@ test('counts only actual answer phrases, including readings',()=>{
  assert.deepEqual(parseVoiceVotes('Ａ、ビー！ シー。ディー エーエー',choices,readings),[0,0,0,0]);
  assert.deepEqual(parseVoiceVotes('答えはAです',choices,readings),[0,0,0,0]);
  assert.deepEqual(parseVoiceVotes('英語、えいご。オロモ語！',choices,readings),[1,2,0,0]);
+ assert.deepEqual(parseVoiceVotes('英語英語オロモ語',choices,readings),[1,2,0,0]);
+ assert.deepEqual(parseVoiceVotes('English, French, English',['English','French','Spanish','Chinese']),[2,1,0,0]);
+ assert.deepEqual(parseVoiceVotes('The answer is English',['English','French','Spanish','Chinese']),[1,0,0,0]);
  assert.deepEqual(parseVoiceVotes('答えは英語です',choices,readings),[0,1,0,0]);
  assert.deepEqual(parseVoiceVotes('クレオール語',choices,readings),[0,0,0,0]);
  assert.deepEqual(parseVoiceVotes('NEW YORK CITY!', ['New York City','York','London','Paris']),[1,0,0,0]);

@@ -1,0 +1,44 @@
+/* Both classroom stages use the browser's dynamic visible height. */
+.wg-shell>.wst-stage{box-sizing:border-box;height:100vh;height:100dvh;bottom:auto;overflow-y:hidden;padding:clamp(8px,1.1dvh,18px);gap:clamp(5px,1dvh,10px)}
+.wg-shell .wst-body{flex:none;margin:auto;width:100%;gap:clamp(6px,1dvh,12px)}
+.wg-shell .wst-media{max-height:none;overflow:visible;width:min(33%,430px)}
+.wg-shell .wst-media .wg-editorial-photo{margin:0;width:100%}
+.wg-shell .wst-media .wg-editorial-photo-frame{max-height:clamp(55px,18dvh,200px);min-height:0}
+.wg-shell .wst-media .wg-editorial-photo-frame img{height:100%;max-height:none}
+.wg-shell .wst-media figcaption{font-size:10px;line-height:1.2}
+.wg-shell .wst-media .wg-photo-type,.wg-shell .wst-media .wg-photo-caption,.wg-shell .wst-media .wg-photo-credit{font-size:10px;line-height:1.2}
+.wg-shell .wst-reviewbar{flex:none}
+.wg-shell .wst-dictation{display:flex;gap:6px;align-items:center;width:100%}
+.wg-shell .wst-dictation input{flex:1;min-width:0;color:white;background:#132f52;border:1px solid #6ba8dd;border-radius:8px;padding:6px 9px;font-size:16px}
+.wg-shell .wst-transcript{overflow-wrap:anywhere;color:#b6f5f3}
+.wg-arcade.wg-theme-journey .wg-quiz-overlay{height:100vh;height:100dvh;bottom:auto;padding:10px!important;overflow:hidden;box-sizing:border-box}
+.wg-arcade.wg-theme-journey .wg-question.wj-fit-question{max-height:none;overflow:visible;margin:0;width:min(100%,1230px);box-sizing:border-box;padding:clamp(10px,1.5dvh,22px);display:flex;flex-direction:column;gap:clamp(5px,1dvh,12px)}
+.wg-arcade.wg-theme-journey .wj-fit-question>header{margin:0}
+.wj-question-media-row{display:flex;align-items:center;gap:clamp(10px,2vw,24px);min-width:0;background:linear-gradient(135deg,#fff,#e6f4ff);padding:clamp(8px,1.5dvh,18px);border:1px solid #add5f0;border-radius:16px}
+.wj-question-prompt{flex:1;min-width:0}.wj-question-media{width:min(34%,400px);flex:none;min-width:0}
+.wg-arcade.wg-theme-journey .wj-question-prompt h2{margin:0;font-size:clamp(20px,min(3.2vw,4.5dvh),42px)}
+.wj-question-media .wg-editorial-photo{margin:0;width:100%}.wj-question-media .wg-editorial-photo-frame{max-height:20dvh;min-height:0}.wj-question-media .wg-editorial-photo-frame img{max-height:none}
+.wg-arcade.wg-theme-journey .wj-fit-question .ws-country-banner{margin:0;min-height:0;padding:8px 12px}
+.wg-arcade.wg-theme-journey .wj-fit-question .ws-flag-frame{width:clamp(65px,12vw,145px);height:clamp(42px,10dvh,90px);min-height:0}
+.wg-arcade.wg-theme-journey .wj-fit-question .ws-quiz-flag{max-height:100%;object-fit:contain}
+.wg-arcade.wg-theme-journey .wj-fit-question .wg-options{margin:0;gap:9px}
+.wg-arcade.wg-theme-journey .wj-fit-question .wg-options button{min-height:clamp(48px,10dvh,85px);padding:8px 12px;font-size:clamp(16px,min(2.5vw,3.4dvh),29px)}
+.wg-arcade.wg-theme-journey .wj-fit-question .wg-feedback{margin:0}
+@media(min-width:600px){
+ .wg-shell .wst-country img{height:clamp(42px,8dvh,100px)}
+ .wg-shell .wst-country strong{font-size:clamp(23px,min(3.6vw,5.5dvh),52px)}
+ .wg-shell .wst-country,.wg-shell .wst-round,.wg-shell .wst-score,.wg-shell .wst-clock{padding:clamp(6px,1dvh,13px)}
+ .wg-shell .wst-round b,.wg-shell .wst-score b,.wg-shell .wst-clock b{font-size:clamp(26px,5.5dvh,52px)}
+ .wg-shell .wst-question-area{padding:clamp(8px,1.8dvh,24px)}
+ .wg-shell .wst-prompt h2{font-size:clamp(22px,min(3.5vw,5.2dvh),54px);line-height:1.23}
+ .wg-shell .wst-options{gap:clamp(6px,1.2dvh,14px)}
+ .wg-shell .wst-option{min-height:clamp(52px,10.5dvh,125px)}
+ .wg-shell .wst-answer{padding:clamp(7px,1.2dvh,16px);gap:clamp(7px,1.5vw,18px)}
+ .wg-shell .wst-answer>b{width:clamp(36px,7dvh,70px);font-size:clamp(24px,4.7dvh,52px)}
+ .wg-shell .wst-answer>span{font-size:clamp(18px,min(2.65vw,3.8dvh),39px);line-height:1.22}
+ .wg-shell .wst-vote-num{font-size:clamp(18px,4dvh,42px)!important}
+ .wg-shell .wst-voicebar{padding:6px 10px;gap:4px}
+ .wg-shell .wst-gold,.wg-shell .wst-mic{padding:7px 13px}
+ .wg-shell .wst-reviewbar{padding:8px 12px}
+}
+@media(max-width:599px){.wg-shell .wst-media{width:100%}.wj-question-media-row{align-items:center;gap:7px}.wj-question-media{width:38%}}
