@@ -2587,6 +2587,116 @@
    "sourceType": "local",
    "sha256": "882b497c5050500e967d4e2d3f6df18adee2d7b2b5c689d7a1817f3c7871af74",
    "deliveryUrl": "/geography/photos/au.jpg"
+  },
+  "tp-original-photo-v2-tw": {
+   "country": "tw",
+   "prompt": "台北101の巨大な制振装置が高層建築で果たす役割は？",
+   "enPrompt": "What does Taipei 101's large tuned mass damper help do?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taipei_101_tuned_mass_damper_01.jpg",
+   "kind": "subject",
+   "reason": "Replacement: Wikimedia Commons file description and license rechecked 2026-11-27; photo depicts the actual named topic.",
+   "sourceType": "external",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_101_tuned_mass_damper_01.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taipei_101_tuned_mass_damper_01.jpg",
+    "title": "Taipei 101 tuned mass damper 01.jpg",
+    "author": "Johan Jönsson (Julle)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "台北101の制振装置そのもの",
+    "altEn": "The tuned mass damper inside Taipei 101",
+    "stage": "review",
+    "changes": "Resized, uncropped",
+    "verifiedOn": "2026-11-27"
+   }
+  },
+  "tp-original-photo-v2-ca": {
+   "country": "ca",
+   "prompt": "カナディアン・ロッキーの湖が青緑色に見える原因の一つは？",
+   "enPrompt": "What helps give glacier-fed lakes in the Canadian Rockies their turquoise color?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Louise%2C_Banff%2C_Canada._(54056720075).jpg",
+   "kind": "subject",
+   "reason": "Replacement: Wikimedia Commons file description and license rechecked 2026-11-27; photo depicts the actual named topic.",
+   "sourceType": "external",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Louise%2C_Banff%2C_Canada._(54056720075).jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Louise%2C_Banff%2C_Canada._(54056720075).jpg",
+    "title": "Lake Louise, Banff, Canada. (54056720075).jpg",
+    "author": "Bernard Spragg. NZ",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:Lake_Louise%2C_Banff%2C_Canada._(54056720075).jpg",
+    "altJa": "青緑色のルイーズ湖",
+    "altEn": "Turquoise waters of Lake Louise",
+    "stage": "review",
+    "changes": "Resized, uncropped",
+    "verifiedOn": "2026-11-27"
+   }
+  },
+  "tp-original-hand-v1-kr-primary": {
+   "country": "kr",
+   "prompt": "かんこくの ハンボクとは、どんな もの？",
+   "enPrompt": "What is hanbok in South Korea?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Female_Hanbok_From_South_Korea.jpg",
+   "kind": "subject",
+   "reason": "Replacement: Wikimedia Commons file description and license rechecked 2026-11-27; photo depicts the actual named topic.",
+   "sourceType": "external",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Female_Hanbok_From_South_Korea.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Female_Hanbok_From_South_Korea.jpg",
+    "title": "Female Hanbok From South Korea.jpg",
+    "author": "IssamBarhoumi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "韓服を着た人々",
+    "altEn": "People wearing traditional Korean hanbok",
+    "stage": "review",
+    "changes": "Resized, uncropped",
+    "verifiedOn": "2026-11-27"
+   }
+  },
+  "tp-original-hand-v1-jp-primary": {
+   "country": "jp",
+   "prompt": "にほんの しらかわごうに ある かやぶきやねが きゅうな さかに なっている わけは？",
+   "enPrompt": "Why do traditional thatched roofs in Shirakawa-go, Japan, have steep slopes?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shirakawa-go_Full_view.jpg",
+   "kind": "subject",
+   "reason": "Replacement: Wikimedia Commons file description and license rechecked 2026-11-27; photo depicts the actual named topic.",
+   "sourceType": "external",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shirakawa-go_Full_view.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shirakawa-go_Full_view.jpg",
+    "title": "Shirakawa-go Full view.jpg",
+    "author": "MaedaAkihiko",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "白川郷の合掌造り集落",
+    "altEn": "Gassho-zukuri houses in Shirakawa-go",
+    "stage": "review",
+    "changes": "Resized, uncropped",
+    "verifiedOn": "2026-11-27"
+   }
+  },
+  "tp-original-hand-v1-be-primary": {
+   "country": "be",
+   "prompt": "ベルギーで したしまれる ワッフルの うわがわに ある もようは？",
+   "enPrompt": "What pattern is typical on a Belgian waffle?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Waffles_(Belgium).jpg",
+   "kind": "subject",
+   "reason": "Replacement: Wikimedia Commons file description and license rechecked 2026-11-27; photo depicts the actual named topic.",
+   "sourceType": "external",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Waffles_(Belgium).jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Waffles_(Belgium).jpg",
+    "title": "Waffles (Belgium).jpg",
+    "author": "Tamorlan",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "altJa": "ベルギーのワッフル",
+    "altEn": "Belgian waffles",
+    "stage": "review",
+    "changes": "Resized, uncropped",
+    "verifiedOn": "2026-11-27"
+   }
   }
  },
  "withheld": {
@@ -2595,7 +2705,6 @@
    "am",
    "bi",
    "bo",
-   "ca",
    "cd",
    "cg",
    "ch",
@@ -2617,14 +2726,11 @@
    "sl",
    "sm",
    "sn",
-   "tw",
    "ua",
    "ug",
    "vc"
   ],
-  "handExternal": [
-   "kr"
-  ],
+  "handExternal": [],
   "allDataWave": "Use the generated data visual, no unrelated photo",
   "atlas": "No automatic publication until individually reviewed"
  }
