@@ -2702,5 +2702,2423 @@
    ],
    "explanation": "Architecture reflects changing periods of urban history."
   }
+ },
+ {
+  "iso": "km",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "カルタラ火山の噴火後、新しい溶岩の上で土壌や植物群落が形成される過程は？",
+  "choices": [
+   "二次遷移",
+   "生物濃縮",
+   "遺伝的浮動",
+   "一次遷移"
+  ],
+  "correctIndex": 3,
+  "explanation": "土壌のない新しい地表から始まる生態系の変化を一次遷移と呼びます。",
+  "en": {
+   "prompt": "What process begins when soil and plant communities develop on fresh lava at Mount Karthala?",
+   "choices": [
+    "Secondary succession",
+    "Biomagnification",
+    "Genetic drift",
+    "Primary succession"
+   ],
+   "explanation": "Primary succession begins on newly exposed surfaces without soil."
+  }
+ },
+ {
+  "iso": "lu",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ルクセンブルクの旧市街に大規模な要塞が築かれた背景は？",
+  "choices": [
+   "地中海の島としての海上交通",
+   "北極圏の漁業基地",
+   "アルプスの氷河観測",
+   "ヨーロッパ諸勢力の間にある戦略的な位置"
+  ],
+  "correctIndex": 3,
+  "explanation": "谷と高台を利用した要塞はヨーロッパの政治・軍事史を伝えます。",
+  "en": {
+   "prompt": "Why were extensive fortifications built in Luxembourg City?",
+   "choices": [
+    "Its position as a Mediterranean island",
+    "Its role as an Arctic fishing base",
+    "Its Alpine glacier research",
+    "Its strategic position among European powers"
+   ],
+   "explanation": "The fortifications reflect European political and military history."
+  }
+ },
+ {
+  "iso": "lv",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "リガの歴史地区は中世の商業都市であり、後にどの建築様式でも知られるようになった？",
+  "choices": [
+   "ムガル様式",
+   "縄文建築",
+   "アール・ヌーヴォー",
+   "アステカ様式"
+  ],
+  "correctIndex": 2,
+  "explanation": "リガにはアール・ヌーヴォーの建築が多く残ります。",
+  "en": {
+   "prompt": "Besides medieval commerce, which architectural style is Riga's historic center known for?",
+   "choices": [
+    "Mughal",
+    "Jomon architecture",
+    "Art Nouveau",
+    "Aztec"
+   ],
+   "explanation": "Riga preserves many Art Nouveau buildings."
+  }
+ },
+ {
+  "iso": "ly",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "レプティス・マグナの遺跡が示す古代ローマの都市活動は？",
+  "choices": [
+   "北欧のバイキング航海",
+   "地中海を通じた交易と公共施設の整備",
+   "インカの山岳農業",
+   "漢王朝の長城建設"
+  ],
+  "correctIndex": 1,
+  "explanation": "劇場や公共施設の遺構は地中海沿岸都市の繁栄を伝えます。",
+  "en": {
+   "prompt": "What does Leptis Magna reveal about Roman urban life?",
+   "choices": [
+    "Norse Viking voyages",
+    "Mediterranean trade and public infrastructure",
+    "Inca mountain farming",
+    "Han dynasty wall building"
+   ],
+   "explanation": "Its public buildings reflect a prosperous Mediterranean city."
+  }
+ },
+ {
+  "iso": "ma",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "lifeCulture",
+  "subcategory": "住文化",
+  "prompt": "アイット・ベン・ハドゥのような土造りの建築を保存する際、特に注意すべき自然の影響は？",
+  "choices": [
+   "地球磁場の変化",
+   "雨による土壁の侵食",
+   "潮汐による海底の変化",
+   "氷河による海面上昇"
+  ],
+  "correctIndex": 1,
+  "explanation": "土造りの壁は降雨や風化に対する定期的な維持管理が必要です。",
+  "en": {
+   "prompt": "Which natural process is especially important when conserving earthen buildings at Aït Ben Haddou?",
+   "choices": [
+    "Changes in Earth's magnetic field",
+    "Erosion of earthen walls by rain",
+    "Tidal change on the seabed",
+    "Glacial sea-level rise"
+   ],
+   "explanation": "Earthen architecture needs regular maintenance against rainfall and weathering."
+  }
+ },
+ {
+  "iso": "mc",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "政治・社会",
+  "prompt": "モナコの大公宮殿が象徴する国家体制は？",
+  "choices": [
+   "立憲君主制",
+   "連邦共和国",
+   "大統領制共和国",
+   "絶対的な軍事政権"
+  ],
+  "correctIndex": 0,
+  "explanation": "モナコは公を元首とする立憲君主国です。",
+  "en": {
+   "prompt": "What political system is symbolized by Monaco's Prince's Palace?",
+   "choices": [
+    "Constitutional monarchy",
+    "Federal republic",
+    "Presidential republic",
+    "Absolute military rule"
+   ],
+   "explanation": "Monaco is a constitutional monarchy headed by a prince."
+  }
+ },
+ {
+  "iso": "md",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "オルヘイ・ヴェキの岩窟修道院が示す建築上の特徴は？",
+  "choices": [
+   "浮かぶ木造住宅",
+   "地上に積んだ氷の壁",
+   "鉄骨による高層建築",
+   "自然の岩壁を利用した空間"
+  ],
+  "correctIndex": 3,
+  "explanation": "岩壁を利用した宗教施設が文化的景観を形作っています。",
+  "en": {
+   "prompt": "What architectural feature distinguishes the cave monastery at Orheiul Vechi?",
+   "choices": [
+    "Floating wooden houses",
+    "Ice walls built above ground",
+    "Steel-framed towers",
+    "Spaces made within natural rock"
+   ],
+   "explanation": "Rock-cut religious spaces form part of the cultural landscape."
+  }
+ },
+ {
+  "iso": "me",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "経済・産業",
+  "prompt": "コトル湾の歴史的な町が海上交易の拠点として発展できた理由は？",
+  "choices": [
+   "砂漠の地下水が豊富だった",
+   "国境を越える鉄道だけがあった",
+   "入り組んだ湾が船の停泊地になった",
+   "内陸の氷河に港があった"
+  ],
+  "correctIndex": 2,
+  "explanation": "湾の地形は船の停泊と交易に適した環境を提供しました。",
+  "en": {
+   "prompt": "What helped historic Kotor develop as a maritime trading center?",
+   "choices": [
+    "Abundant desert groundwater",
+    "Only a cross-border railway",
+    "Its sheltered bay provided anchorage",
+    "A port on an inland glacier"
+   ],
+   "explanation": "The bay provided shelter for ships and commerce."
+  }
+ },
+ {
+  "iso": "mg",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "ツィンギの鋭い石灰岩の地形が発達する主な化学的作用は？",
+  "choices": [
+   "海水の凍結",
+   "水に含まれる弱い酸による石灰岩の溶食",
+   "鉄鉱石の磁化",
+   "花こう岩の融解"
+  ],
+  "correctIndex": 1,
+  "explanation": "石灰岩は二酸化炭素を含む水で徐々に溶け、カルスト地形を作ります。",
+  "en": {
+   "prompt": "What chemical process helps form Tsingy's sharp limestone formations?",
+   "choices": [
+    "Freezing of seawater",
+    "Dissolution of limestone by mildly acidic water",
+    "Magnetization of iron ore",
+    "Melting of granite"
+   ],
+   "explanation": "Water containing dissolved carbon dioxide gradually dissolves limestone."
+  }
+ },
+ {
+  "iso": "mh",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ビキニ環礁の核実験の歴史を学ぶ上で重要な人権上のテーマは？",
+  "choices": [
+   "住民の移住と環境への長期的影響",
+   "観光客の入国手続きの簡素化",
+   "漁船の航行速度",
+   "公用語の統一"
+  ],
+  "correctIndex": 0,
+  "explanation": "核実験は住民の移住と環境への影響を残しました。",
+  "en": {
+   "prompt": "Which human-rights issue is important when studying Bikini Atoll's nuclear testing history?",
+   "choices": [
+    "Displacement of residents and long-term environmental effects",
+    "Simplified tourist entry",
+    "Fishing boat speed",
+    "Unifying official languages"
+   ],
+   "explanation": "The tests caused displacement and enduring environmental impacts."
+  }
+ },
+ {
+  "iso": "mk",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "オフリド湖のように長い歴史を持つ湖で固有種が生まれる理由として適切なのは？",
+  "choices": [
+   "毎年すべての生物が入れ替わる",
+   "水温が全世界と同じになる",
+   "生物が遺伝子を失う",
+   "隔離された環境で長期に進化する"
+  ],
+  "correctIndex": 3,
+  "explanation": "隔離と長い時間が独自の進化を促すことがあります。",
+  "en": {
+   "prompt": "Why can ancient lakes such as Lake Ohrid develop endemic species?",
+   "choices": [
+    "All organisms are replaced annually",
+    "Water temperature becomes globally identical",
+    "Organisms lose their genes",
+    "Long-term evolution in an isolated environment"
+   ],
+   "explanation": "Isolation over long periods can promote distinctive evolution."
+  }
+ },
+ {
+  "iso": "ml",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "トンブクトゥが中世に学問の中心として栄えた証拠の一つは？",
+  "choices": [
+   "ローマの水道橋",
+   "インカの結縄記録",
+   "歴史的な写本や学術文書",
+   "近代の新聞印刷工場"
+  ],
+  "correctIndex": 2,
+  "explanation": "写本は西アフリカの学問と知識の交流を伝えます。",
+  "en": {
+   "prompt": "What is one sign of Timbuktu's historical importance as a center of learning?",
+   "choices": [
+    "Roman aqueducts",
+    "Inca knot records",
+    "Historical manuscripts and scholarly texts",
+    "Modern newspaper factories"
+   ],
+   "explanation": "Manuscripts preserve a tradition of scholarship and exchange."
+  }
+ },
+ {
+  "iso": "mm",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "バガンに数多くの寺院や仏塔が建てられた背景にある信仰は？",
+  "choices": [
+   "シク教",
+   "仏教",
+   "ヒンドゥー教のみ",
+   "イスラム教"
+  ],
+  "correctIndex": 1,
+  "explanation": "バガンの遺跡は仏教文化と歴史的な王国の発展を示します。",
+  "en": {
+   "prompt": "Which religious tradition primarily shaped Bagan's many temples and stupas?",
+   "choices": [
+    "Sikhism",
+    "Buddhism",
+    "Hinduism alone",
+    "Islam"
+   ],
+   "explanation": "Bagan preserves Buddhist monuments and the history of a kingdom."
+  }
+ },
+ {
+  "iso": "mn",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "経済・産業",
+  "prompt": "オルホン渓谷のような草原で移動牧畜が営まれる理由は？",
+  "choices": [
+   "季節に応じて家畜の水や牧草を確保するため",
+   "すべての家畜を海で育てるため",
+   "同じ土地の草を常に使い続けるため",
+   "家畜を固定した工場で飼うため"
+  ],
+  "correctIndex": 0,
+  "explanation": "移動牧畜は季節ごとの資源の変化に対応します。",
+  "en": {
+   "prompt": "Why is mobile pastoralism practiced in grasslands such as the Orkhon Valley?",
+   "choices": [
+    "To find seasonal water and pasture",
+    "To raise all livestock at sea",
+    "To use only one pasture permanently",
+    "To keep livestock in fixed factories"
+   ],
+   "explanation": "Herders move to adapt to seasonal changes in resources."
+  }
+ },
+ {
+  "iso": "mr",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "シンゲッティのようなサハラの歴史都市が交易の拠点になった理由は？",
+  "choices": [
+   "大規模な天然港があった",
+   "海底トンネルが交差した",
+   "極地航路が開通した",
+   "隊商が休息し水や物資を得る地点だった"
+  ],
+  "correctIndex": 3,
+  "explanation": "オアシス都市は砂漠を横断する交易や巡礼を支えました。",
+  "en": {
+   "prompt": "Why did Saharan towns such as Chinguetti become trading centers?",
+   "choices": [
+    "They had large natural seaports",
+    "Undersea tunnels met there",
+    "Polar routes opened there",
+    "They provided caravan stops with water and supplies"
+   ],
+   "explanation": "Oasis towns supported caravan trade and pilgrimage."
+  }
+ },
+ {
+  "iso": "mt",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ヴァレッタの城壁と計画的な街路が形成された背景は？",
+  "choices": [
+   "シルクロードのオアシス農業",
+   "近代の石炭鉱業",
+   "聖ヨハネ騎士団による防衛都市の建設",
+   "マヤ王国の神殿都市建設"
+  ],
+  "correctIndex": 2,
+  "explanation": "騎士団は地中海の戦略的な位置に要塞都市を建設しました。",
+  "en": {
+   "prompt": "What shaped Valletta's walls and planned streets?",
+   "choices": [
+    "Silk Road oasis farming",
+    "Modern coal mining",
+    "Construction of a fortified city by the Knights of St John",
+    "Maya temple-city construction"
+   ],
+   "explanation": "The knights built a fortified city at a strategic Mediterranean location."
+  }
+ },
+ {
+  "iso": "mu",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ル・モーンの文化的景観が伝える歴史は？",
+  "choices": [
+   "近代の宇宙観測",
+   "奴隷制から逃れた人々の抵抗と自由",
+   "古代ローマの造船",
+   "大西洋の捕鯨技術"
+  ],
+  "correctIndex": 1,
+  "explanation": "山は逃亡した奴隷の避難と抵抗の記憶に結びつきます。",
+  "en": {
+   "prompt": "What historical memory is associated with Le Morne's cultural landscape?",
+   "choices": [
+    "Modern space observation",
+    "Resistance and freedom of people escaping slavery",
+    "Roman shipbuilding",
+    "Atlantic whaling technology"
+   ],
+   "explanation": "The mountain is associated with refuge and resistance to slavery."
+  }
+ },
+ {
+  "iso": "mv",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "バア環礁のような低いサンゴ島で海面上昇が起こると、淡水資源にどのような影響があり得る？",
+  "choices": [
+   "地下水への塩水の侵入",
+   "地下水がすべて氷になる",
+   "海水が自然に蒸留される",
+   "降水が必ず倍になる"
+  ],
+  "correctIndex": 0,
+  "explanation": "低い島では塩水侵入が地下水の利用に影響することがあります。",
+  "en": {
+   "prompt": "How can sea-level rise affect freshwater on low coral islands such as Baa Atoll?",
+   "choices": [
+    "Saltwater intrusion into groundwater",
+    "All groundwater freezing",
+    "Automatic seawater distillation",
+    "Rainfall always doubling"
+   ],
+   "explanation": "Saltwater intrusion can threaten island freshwater supplies."
+  }
+ },
+ {
+  "iso": "mw",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "ムランジェ山の森林を守ることが周辺地域の水資源にも役立つ理由は？",
+  "choices": [
+   "雨雲を完全に固定する",
+   "地下水をすべて海に流す",
+   "河川の流れを永久に止める",
+   "流出や土壌侵食を抑え水循環を支える"
+  ],
+  "correctIndex": 3,
+  "explanation": "山地の森林は水循環と土壌保全に関わります。",
+  "en": {
+   "prompt": "How can protecting Mount Mulanje's forests benefit nearby water resources?",
+   "choices": [
+    "By fixing all rain clouds in place",
+    "By draining all groundwater to the sea",
+    "By permanently stopping rivers",
+    "By moderating runoff and erosion and supporting the water cycle"
+   ],
+   "explanation": "Mountain forests support soil and water conservation."
+  }
+ },
+ {
+  "iso": "mx",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "チチェン・イッツァの建築から学べる古代マヤの知識の一つは？",
+  "choices": [
+   "電波通信の設計",
+   "近代の航空管制",
+   "天体の観測と暦",
+   "蒸気機関の設計"
+  ],
+  "correctIndex": 2,
+  "explanation": "マヤは天体観測と暦に関する知識を発達させました。",
+  "en": {
+   "prompt": "What knowledge of the ancient Maya is reflected in Chichén Itzá's architecture?",
+   "choices": [
+    "Radio communication",
+    "Modern air traffic control",
+    "Astronomical observation and calendars",
+    "Steam engine design"
+   ],
+   "explanation": "The Maya developed sophisticated astronomical and calendrical knowledge."
+  }
+ },
+ {
+  "iso": "my",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "マラッカの歴史的な街並みに多様な文化が見られる背景は？",
+  "choices": [
+   "単一の農村集落の拡大",
+   "海峡を通じた国際交易と移住",
+   "周辺地域との交流を禁じた政策",
+   "内陸の氷河観測"
+  ],
+  "correctIndex": 1,
+  "explanation": "海峡の港町は多様な商人や移住者を引きつけました。",
+  "en": {
+   "prompt": "Why does historic Melaka reflect diverse cultures?",
+   "choices": [
+    "Expansion of a single farming village",
+    "International trade and migration through the strait",
+    "Policies banning regional contact",
+    "Inland glacier research"
+   ],
+   "explanation": "The port attracted traders and migrants from many regions."
+  }
+ },
+ {
+  "iso": "mz",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "モザンビーク島の歴史的建築が示す地域間交流は？",
+  "choices": [
+   "アフリカとインド洋・ヨーロッパの交易",
+   "北極海だけの交易",
+   "アンデスの陸上交易",
+   "バルト海の氷上交易"
+  ],
+  "correctIndex": 0,
+  "explanation": "島はインド洋の海上交易網に組み込まれていました。",
+  "en": {
+   "prompt": "What exchange is reflected in the historic architecture of Mozambique Island?",
+   "choices": [
+    "Trade linking Africa, the Indian Ocean and Europe",
+    "Only Arctic trade",
+    "Andean overland trade",
+    "Baltic ice routes"
+   ],
+   "explanation": "The island formed part of Indian Ocean trading networks."
+  }
+ },
+ {
+  "iso": "na",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "ナミブ砂漠沿岸の乾燥した気候に関係する冷たい海流は？",
+  "choices": [
+   "ベンゲラ海流",
+   "黒潮",
+   "メキシコ湾流",
+   "ブラジル海流"
+  ],
+  "correctIndex": 0,
+  "explanation": "冷たいベンゲラ海流は沿岸の乾燥した環境に影響します。",
+  "en": {
+   "prompt": "Which cold ocean current influences the dry Namib coastal climate?",
+   "choices": [
+    "Benguela Current",
+    "Kuroshio",
+    "Gulf Stream",
+    "Brazil Current"
+   ],
+   "explanation": "The cold Benguela Current influences coastal aridity."
+  }
+ },
+ {
+  "iso": "ne",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "アイル・テネレ自然保護区の衛星画像は、どのような環境変化の調査に活用できる？",
+  "choices": [
+   "個々の動物の遺伝子配列",
+   "住民の会話の内容",
+   "地下の鉱石の純度の直接測定",
+   "植生の分布や砂漠化の進行"
+  ],
+  "correctIndex": 3,
+  "explanation": "繰り返し撮影された衛星画像から地表の変化を比較できます。",
+  "en": {
+   "prompt": "How can satellite images of Aïr and Ténéré help environmental research?",
+   "choices": [
+    "Reading individual animals' DNA",
+    "Recording residents' conversations",
+    "Directly measuring underground ore purity",
+    "Monitoring vegetation patterns and desertification"
+   ],
+   "explanation": "Repeated images allow researchers to compare land-surface changes."
+  }
+ },
+ {
+  "iso": "ng",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "経済・産業",
+  "prompt": "スクルの文化的景観に残る鉄生産の跡は、どんな歴史を考える資料になる？",
+  "choices": [
+   "原子力発電の開始",
+   "蒸気船による捕鯨",
+   "地域の技術と経済活動",
+   "現代の半導体製造"
+  ],
+  "correctIndex": 2,
+  "explanation": "鉄生産の遺構は歴史的な技術と地域社会を伝えます。",
+  "en": {
+   "prompt": "What can traces of iron production in the Sukur Cultural Landscape reveal?",
+   "choices": [
+    "The start of nuclear power",
+    "Steam-powered whaling",
+    "Local technology and economic activity",
+    "Modern semiconductor production"
+   ],
+   "explanation": "Ironworking remains illuminate historical technology and society."
+  }
+ },
+ {
+  "iso": "ni",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "レオン大聖堂のような歴史的宗教建築を保存する価値は？",
+  "choices": [
+   "観光収入を必ず倍増させる",
+   "都市の歴史と建築技術を次世代に伝える",
+   "全ての新築を禁止する",
+   "住民の信仰を一つに限定する"
+  ],
+  "correctIndex": 1,
+  "explanation": "建築遺産の保存は文化的な記憶と技術の継承につながります。",
+  "en": {
+   "prompt": "Why conserve historical religious buildings such as León Cathedral?",
+   "choices": [
+    "To guarantee doubled tourism revenue",
+    "To transmit urban history and architectural knowledge",
+    "To ban all new construction",
+    "To impose one religion"
+   ],
+   "explanation": "Heritage conservation helps transmit cultural memory and knowledge."
+  }
+ },
+ {
+  "iso": "nl",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "アムステルダムの運河網が歴史的な都市の発展に役立った理由は？",
+  "choices": [
+   "物資輸送と水の管理を支えた",
+   "すべての地下水をなくした",
+   "都市から商人を排除した",
+   "農村との交流を止めた"
+  ],
+  "correctIndex": 0,
+  "explanation": "運河は交通と水管理に関わり、都市の発展を支えました。",
+  "en": {
+   "prompt": "How did Amsterdam's canal network support its historic growth?",
+   "choices": [
+    "It supported transport and water management",
+    "It removed all groundwater",
+    "It excluded merchants",
+    "It ended contact with rural areas"
+   ],
+   "explanation": "Canals supported movement of goods and water management."
+  }
+ },
+ {
+  "iso": "no",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "ノルウェーのフィヨルドに多いU字形の谷は、主にどの作用で形成された？",
+  "choices": [
+   "風による砂丘の堆積",
+   "サンゴの成長",
+   "溶岩の急冷",
+   "氷河の侵食"
+  ],
+  "correctIndex": 3,
+  "explanation": "氷河が谷を削り、その後に海水が入り込んだ地形です。",
+  "en": {
+   "prompt": "Which process formed the U-shaped valleys of Norwegian fjords?",
+   "choices": [
+    "Wind deposition of dunes",
+    "Coral growth",
+    "Rapid cooling of lava",
+    "Glacial erosion"
+   ],
+   "explanation": "Glaciers carved valleys later flooded by seawater."
+  }
+ },
+ {
+  "iso": "np",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "カトマンズの谷の王宮広場や寺院の建築は、特にどの地域文化の技術を伝える？",
+  "choices": [
+   "マオリ文化",
+   "ナバホ文化",
+   "ネワール文化",
+   "イヌイット文化"
+  ],
+  "correctIndex": 2,
+  "explanation": "ネワールの職人たちの建築や装飾技術が歴史都市に残ります。",
+  "en": {
+   "prompt": "Which regional culture is especially reflected in Kathmandu Valley's historic palaces and temples?",
+   "choices": [
+    "Māori",
+    "Navajo",
+    "Newar",
+    "Inuit"
+   ],
+   "explanation": "The historic cities preserve Newar craftsmanship and architecture."
+  }
+ },
+ {
+  "iso": "nr",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "ナウルのブアダ・ラグーンのような内陸の水域を守る理由として適切なのは？",
+  "choices": [
+   "すべての雨を止めるため",
+   "島の限られた水環境と生息地を保全するため",
+   "大洋を直接淡水化するため",
+   "島の標高を上げるため"
+  ],
+  "correctIndex": 1,
+  "explanation": "小さな島では水域の保全が生態系に重要です。",
+  "en": {
+   "prompt": "Why is conserving inland waters such as Nauru's Buada Lagoon important?",
+   "choices": [
+    "To stop all rainfall",
+    "To conserve limited island aquatic habitats",
+    "To directly desalinate the ocean",
+    "To raise the island's elevation"
+   ],
+   "explanation": "Inland waters are valuable parts of small-island ecosystems."
+  }
+ },
+ {
+  "iso": "nz",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "トンガリロ国立公園が自然遺産だけでなく文化的にも重要なのは？",
+  "choices": [
+   "山々がマオリの精神文化と深く結びつくから",
+   "すべての山が人工的に造られたから",
+   "全域に近代工場があるから",
+   "文化財が存在しないから"
+  ],
+  "correctIndex": 0,
+  "explanation": "山々はマオリにとって深い文化的・精神的な意味を持ちます。",
+  "en": {
+   "prompt": "Why is Tongariro National Park culturally significant as well as natural?",
+   "choices": [
+    "Its mountains have deep Māori spiritual significance",
+    "All its mountains were artificially built",
+    "Modern factories cover the area",
+    "It has no cultural values"
+   ],
+   "explanation": "The mountains carry deep cultural and spiritual meanings for Māori."
+  }
+ },
+ {
+  "iso": "om",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "バハラ城塞の大きな土造りの壁は、歴史的に何を守るためのものだった？",
+  "choices": [
+   "オアシス集落とその政治的中心",
+   "外洋の捕鯨船",
+   "氷河の研究施設",
+   "地下鉄の車庫"
+  ],
+  "correctIndex": 0,
+  "explanation": "内陸の要塞は歴史的な集落と権力の拠点を守りました。",
+  "en": {
+   "prompt": "What did the earthen walls of Bahla Fort historically protect?",
+   "choices": [
+    "An oasis settlement and center of power",
+    "Ocean whaling vessels",
+    "Glacier research facilities",
+    "Subway depots"
+   ],
+   "explanation": "The inland fort defended a historic settlement and center of authority."
+  }
+ },
+ {
+  "iso": "pa",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "パナマ・ビエホの歴史は、スペイン植民地期のどのような活動と関係が深い？",
+  "choices": [
+   "アメリカ大陸の海上交易と物資移送",
+   "北極海の航路開拓",
+   "中央アジアの遊牧",
+   "南極の観測"
+  ],
+  "correctIndex": 0,
+  "explanation": "パナマは大陸を横断する物流と海上交易の要地でした。",
+  "en": {
+   "prompt": "What activity shaped Panama Viejo during the Spanish colonial period?",
+   "choices": [
+    "Maritime trade and movement of goods in the Americas",
+    "Arctic route exploration",
+    "Central Asian pastoralism",
+    "Antarctic observation"
+   ],
+   "explanation": "Panama was important to trans-isthmus and maritime trade."
+  }
+ },
+ {
+  "iso": "pe",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ナスカの地上絵を保護する必要がある理由は？",
+  "choices": [
+   "地上絵が毎年自然に描き直されるから",
+   "海中のサンゴが絵を覆うから",
+   "絵が金属でできていて必ず溶けるから",
+   "地表の石の配置が踏み荒らしなどで損なわれるから"
+  ],
+  "correctIndex": 3,
+  "explanation": "乾燥した地表に残る地上絵は人為的な損傷に弱い文化遺産です。",
+  "en": {
+   "prompt": "Why must the Nazca Lines be protected from damage?",
+   "choices": [
+    "They naturally redraw themselves every year",
+    "Underwater coral covers them",
+    "They are metal that always melts",
+    "Their surface patterns can be disturbed by trampling"
+   ],
+   "explanation": "The desert geoglyphs are vulnerable to disturbance of the ground."
+  }
+ },
+ {
+  "iso": "pg",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "クックの初期農耕遺跡に残る排水路は、何を示す証拠になる？",
+  "choices": [
+   "石油精製技術",
+   "近代の水力発電",
+   "湿地で農業を行うための水管理技術",
+   "遠洋漁業の帆船建造"
+  ],
+  "correctIndex": 2,
+  "explanation": "古い排水路や畑の跡は農業の発達を伝えます。",
+  "en": {
+   "prompt": "What do ancient drainage channels at Kuk Early Agricultural Site reveal?",
+   "choices": [
+    "Petroleum refining",
+    "Modern hydroelectricity",
+    "Water management for wetland farming",
+    "Ocean fishing shipbuilding"
+   ],
+   "explanation": "Channels and field remains document the development of agriculture."
+  }
+ },
+ {
+  "iso": "ph",
+  "slot": 1,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "プエルト・プリンセサの地下河川の洞窟を形成する主な作用は？",
+  "choices": [
+   "溶岩の堆積のみ",
+   "水による石灰岩の溶食",
+   "風で砂が積み重なる作用",
+   "氷河が海に浮く作用"
+  ],
+  "correctIndex": 1,
+  "explanation": "石灰岩が長期間にわたり水で溶けることで洞窟が形成されます。",
+  "en": {
+   "prompt": "What process mainly formed Puerto Princesa's underground river cave?",
+   "choices": [
+    "Lava deposition alone",
+    "Dissolution of limestone by water",
+    "Wind deposition of sand",
+    "Glaciers floating at sea"
+   ],
+   "explanation": "Long-term dissolution of limestone creates karst caves."
+  }
+ },
+ {
+  "iso": "pk",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "モヘンジョダロの計画的な街路と排水路は、何を示す？",
+  "choices": [
+   "都市全体の計画と公共衛生への工夫",
+   "古代の飛行機の利用",
+   "海底の石油開発",
+   "移動式住居だけの生活"
+  ],
+  "correctIndex": 0,
+  "explanation": "都市遺跡はインダス文明の計画的な都市づくりを伝えます。",
+  "en": {
+   "prompt": "What do Mohenjo-daro's planned streets and drains demonstrate?",
+   "choices": [
+    "Urban planning and sanitation engineering",
+    "Ancient aircraft use",
+    "Offshore oil development",
+    "Only mobile housing"
+   ],
+   "explanation": "The ruins reveal the Indus civilization's urban planning."
+  }
+ },
+ {
+  "iso": "pl",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "経済・産業",
+  "prompt": "ヴィエリチカの岩塩坑が歴史的な経済において重要だった理由は？",
+  "choices": [
+   "岩塩が唯一の燃料だったから",
+   "塩で全ての衣服を作ったから",
+   "岩塩が航空機の材料だったから",
+   "塩が食品保存や交易に使われたから"
+  ],
+  "correctIndex": 3,
+  "explanation": "冷蔵技術が普及する以前、塩は保存と交易に重要でした。",
+  "en": {
+   "prompt": "Why were the Wieliczka salt mines historically economically important?",
+   "choices": [
+    "Rock salt was the only fuel",
+    "All clothing was made of salt",
+    "Aircraft were made from rock salt",
+    "Salt was valuable for preservation and trade"
+   ],
+   "explanation": "Salt was valuable for food preservation and commerce."
+  }
+ },
+ {
+  "iso": "ps",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ベツレヘムの降誕教会が世界各地から人々を引きつけてきた主な理由は？",
+  "choices": [
+   "近代の工業展示",
+   "高山の登山競技",
+   "キリスト教の聖地としての巡礼",
+   "海上貿易の積み替え"
+  ],
+  "correctIndex": 2,
+  "explanation": "教会はイエスの誕生に関する伝統と結びつく巡礼地です。",
+  "en": {
+   "prompt": "Why has the Church of the Nativity in Bethlehem attracted visitors from around the world?",
+   "choices": [
+    "Modern industrial exhibitions",
+    "Mountain sports",
+    "Christian pilgrimage",
+    "Maritime cargo transfer"
+   ],
+   "explanation": "The church is a pilgrimage site linked to the tradition of Jesus's birth."
+  }
+ },
+ {
+  "iso": "pt",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ベレンの塔がテージョ川河口に建てられた理由は？",
+  "choices": [
+   "海底の石油を掘るため",
+   "港への航路を防衛するため",
+   "高山の雪を観測するため",
+   "農村に水を供給するため"
+  ],
+  "correctIndex": 1,
+  "explanation": "河口の要塞はリスボンへの海上交通の防衛に関わりました。",
+  "en": {
+   "prompt": "Why was Belém Tower built near the mouth of the Tagus River?",
+   "choices": [
+    "To drill for offshore oil",
+    "To defend maritime approaches to the port",
+    "To observe mountain snow",
+    "To supply rural irrigation"
+   ],
+   "explanation": "The fortress helped defend approaches to Lisbon."
+  }
+ },
+ {
+  "iso": "pw",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "パラオのジェリーフィッシュレイクのような海とつながりの限られた湖で生物が独自に進化する要因は？",
+  "choices": [
+   "隔離と異なる環境条件",
+   "常に外洋と完全に混合すること",
+   "全生物の毎年の消滅",
+   "水温が地球全体と同じになること"
+  ],
+  "correctIndex": 0,
+  "explanation": "限られた水域では外部との交流や環境条件が異なることがあります。",
+  "en": {
+   "prompt": "What can promote distinctive evolution in an isolated marine lake such as Palau's Jellyfish Lake?",
+   "choices": [
+    "Isolation and different environmental conditions",
+    "Complete continuous mixing with the open ocean",
+    "Annual disappearance of all organisms",
+    "Globally identical water temperatures"
+   ],
+   "explanation": "Limited exchange can create distinctive ecological conditions."
+  }
+ },
+ {
+  "iso": "py",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ラ・サンティシマ・トリニダ・デ・パラナの遺跡が伝える歴史は？",
+  "choices": [
+   "古代ギリシャの都市国家",
+   "北欧のバイキング集落",
+   "清朝の宮廷文化",
+   "イエズス会とグアラニーの共同体"
+  ],
+  "correctIndex": 3,
+  "explanation": "遺跡は宣教活動と先住民グアラニーの歴史に関わります。",
+  "en": {
+   "prompt": "What history is preserved at La Santísima Trinidad de Paraná?",
+   "choices": [
+    "Ancient Greek city-states",
+    "Norse Viking settlements",
+    "Qing court culture",
+    "Jesuit missions and Guaraní communities"
+   ],
+   "explanation": "The ruins are linked to missionary activity and Guaraní history."
+  }
+ },
+ {
+  "iso": "qa",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "アル・ズバラの遺跡から研究できる18〜19世紀の経済活動は？",
+  "choices": [
+   "現代の半導体製造",
+   "高速鉄道の輸出",
+   "航空機の整備",
+   "真珠採取と海上交易"
+  ],
+  "correctIndex": 3,
+  "explanation": "湾岸の歴史都市は真珠産業と交易で発展しました。",
+  "en": {
+   "prompt": "What eighteenth- and nineteenth-century economic activity can be studied at Al Zubarah?",
+   "choices": [
+    "Modern semiconductor manufacturing",
+    "High-speed rail exports",
+    "Aircraft servicing",
+    "Pearling and maritime trade"
+   ],
+   "explanation": "The town prospered through pearling and maritime trade."
+  }
+ },
+ {
+  "iso": "ro",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "ドナウ・デルタの湿地に多くの鳥が集まる理由は？",
+  "choices": [
+   "水が全て凍っている",
+   "流れが速い岩場しかない",
+   "森林が全く存在しないから",
+   "浅い水域や葦原が採食・繁殖環境になる"
+  ],
+  "correctIndex": 3,
+  "explanation": "デルタの多様な水辺環境は鳥類の生息を支えます。",
+  "en": {
+   "prompt": "Why does the Danube Delta support many bird species?",
+   "choices": [
+    "All water is frozen",
+    "Only fast rocky streams exist",
+    "No vegetation exists",
+    "Shallow water and reeds provide feeding and breeding habitats"
+   ],
+   "explanation": "Diverse wetland habitats support birdlife."
+  }
+ },
+ {
+  "iso": "rs",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ストゥデニツァ修道院のフレスコ画は、どの伝統を理解する資料になる？",
+  "choices": [
+   "アステカの彫刻文化",
+   "マオリの航海文化",
+   "中世セルビアの正教文化",
+   "古代エジプトの象形文字"
+  ],
+  "correctIndex": 2,
+  "explanation": "修道院の絵画は中世の宗教と芸術を伝えます。",
+  "en": {
+   "prompt": "Which tradition do the frescoes at Studenica Monastery help us understand?",
+   "choices": [
+    "Aztec sculpture",
+    "Māori navigation",
+    "Medieval Serbian Orthodox culture",
+    "Ancient Egyptian hieroglyphics"
+   ],
+   "explanation": "The paintings preserve medieval religious art."
+  }
+ },
+ {
+  "iso": "ru",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "バイカル湖の水環境を長期的に守る際、特に重要な視点は？",
+  "choices": [
+   "湖の深さを人工的に一定にする対策",
+   "流入河川や集水域を含めた汚染対策",
+   "湖面だけを掃除する対策",
+   "固有種をすべて外来種に置き換える対策"
+  ],
+  "correctIndex": 1,
+  "explanation": "湖の水質は周囲の流域の活動にも影響されます。",
+  "en": {
+   "prompt": "What is important for long-term protection of Lake Baikal's water environment?",
+   "choices": [
+    "Keeping its depth artificially constant",
+    "Preventing pollution throughout its watershed",
+    "Cleaning only the surface",
+    "Replacing endemic species with introduced species"
+   ],
+   "explanation": "Activities throughout a lake's drainage basin affect water quality."
+  }
+ },
+ {
+  "iso": "rw",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "ニュングウェの森林で生物多様性を保つため、森の分断を減らす利点は？",
+  "choices": [
+   "動物の移動や個体群間の交流を支える",
+   "全ての種を同じ遺伝子にする",
+   "森林を農地へ転換しやすくする",
+   "雨量を必ず一定にする"
+  ],
+  "correctIndex": 0,
+  "explanation": "生息地のつながりは動物の移動と遺伝的交流に役立ちます。",
+  "en": {
+   "prompt": "Why reduce habitat fragmentation in Nyungwe Forest?",
+   "choices": [
+    "To support animal movement and exchange between populations",
+    "To give all species identical genes",
+    "To make conversion to farmland easier",
+    "To guarantee constant rainfall"
+   ],
+   "explanation": "Connected habitats support movement and genetic exchange."
+  }
+ },
+ {
+  "iso": "sa",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ヘグラの岩壁に彫られた墓を造った人々と深く関係する古代文明は？",
+  "choices": [
+   "ナバテア人",
+   "マヤ人",
+   "ヴァイキング",
+   "インカ人"
+  ],
+  "correctIndex": 0,
+  "explanation": "ヘグラはナバテア王国の重要な遺跡です。",
+  "en": {
+   "prompt": "Which ancient people are particularly associated with Hegra's rock-cut tombs?",
+   "choices": [
+    "Nabataeans",
+    "Maya",
+    "Vikings",
+    "Inca"
+   ],
+   "explanation": "Hegra was a major Nabataean site."
+  }
+ },
+ {
+  "iso": "sb",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "東レンネルのような隆起サンゴ島は、どのような地質変化で形成される？",
+  "choices": [
+   "氷河が海に浮かぶ",
+   "砂丘が海底に沈むだけ",
+   "河川が火山灰を運ぶだけ",
+   "サンゴ礁が形成された土地が隆起する"
+  ],
+  "correctIndex": 3,
+  "explanation": "海底のサンゴ礁由来の石灰岩が隆起して陸地になります。",
+  "en": {
+   "prompt": "How can a raised coral island such as East Rennell form?",
+   "choices": [
+    "A glacier floats at sea",
+    "Only dunes sink offshore",
+    "Only rivers transport volcanic ash",
+    "Land containing reef limestone is uplifted"
+   ],
+   "explanation": "Reef-derived limestone becomes exposed through uplift."
+  }
+ },
+ {
+  "iso": "sc",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "ヴァレ・ド・メのような固有植物の多い森で外来種対策が重要なのは？",
+  "choices": [
+   "森の標高を下げるため",
+   "降雨量をゼロにするため",
+   "在来種との競争や生態系の変化を抑えるため",
+   "すべての在来植物を輸入植物に変えるため"
+  ],
+  "correctIndex": 2,
+  "explanation": "外来種が在来種の生存を脅かす場合があります。",
+  "en": {
+   "prompt": "Why is invasive-species management important in forests such as Vallée de Mai?",
+   "choices": [
+    "To lower the forest's elevation",
+    "To eliminate rainfall",
+    "To limit competition with native species and ecosystem disruption",
+    "To replace all native plants"
+   ],
+   "explanation": "Introduced invasive species can threaten native biodiversity."
+  }
+ },
+ {
+  "iso": "sd",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "メロエのピラミッド群から分かる古代アフリカの歴史は？",
+  "choices": [
+   "マヤの都市計画",
+   "クシュ王国の政治と葬送文化",
+   "ローマ帝国の海軍基地",
+   "インカの農耕技術"
+  ],
+  "correctIndex": 1,
+  "explanation": "メロエはクシュ王国の歴史を伝える重要な遺跡です。",
+  "en": {
+   "prompt": "What history is reflected in the pyramids at Meroë?",
+   "choices": [
+    "Maya urban planning",
+    "Politics and burial traditions of Kush",
+    "Roman naval bases",
+    "Inca farming technology"
+   ],
+   "explanation": "Meroë preserves the history of the Kingdom of Kush."
+  }
+ },
+ {
+  "iso": "se",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ドロットニングホルム王領地の宮殿や劇場は、何を伝える文化遺産？",
+  "choices": [
+   "ヨーロッパの王室生活と芸術文化",
+   "古代インダスの農村生活",
+   "サハラの遊牧文化",
+   "近代の鉱山労働"
+  ],
+  "correctIndex": 0,
+  "explanation": "宮殿と劇場はスウェーデン王室の文化と建築の歴史を伝えます。",
+  "en": {
+   "prompt": "What does the Royal Domain of Drottningholm preserve?",
+   "choices": [
+    "European royal life and artistic culture",
+    "Ancient Indus village life",
+    "Saharan pastoralism",
+    "Modern mining labor"
+   ],
+   "explanation": "Its palace and theater reflect Swedish royal culture."
+  }
+ },
+ {
+  "iso": "sg",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "シンガポール植物園のような植物園が生物多様性の保全に果たす役割は？",
+  "choices": [
+   "野生植物の生息地を全てなくすこと",
+   "全植物の遺伝子を統一すること",
+   "植物の成長を永久に止めること",
+   "植物の研究・教育・域外保全"
+  ],
+  "correctIndex": 3,
+  "explanation": "植物園は研究と教育、栽培による保全を担います。",
+  "en": {
+   "prompt": "How can botanical gardens such as Singapore Botanic Gardens support biodiversity?",
+   "choices": [
+    "Removing all wild plant habitats",
+    "Making all plant genes identical",
+    "Permanently stopping plant growth",
+    "Plant research, education and ex situ conservation"
+   ],
+   "explanation": "Botanic gardens contribute to research, education and conservation."
+  }
+ },
+ {
+  "iso": "si",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "ブレッド湖のような景勝地で持続可能な観光を進める対策は？",
+  "choices": [
+   "ごみを湖に直接捨てる",
+   "全ての観光を水上に集中させる",
+   "水質を守り来訪者の環境負荷を管理する",
+   "湖岸の植生を全て取り除く"
+  ],
+  "correctIndex": 2,
+  "explanation": "自然環境を保全することは観光資源の持続性にもつながります。",
+  "en": {
+   "prompt": "What would support sustainable tourism at scenic Lake Bled?",
+   "choices": [
+    "Dumping waste into the lake",
+    "Concentrating all tourism on the water",
+    "Protecting water quality and managing visitor impacts",
+    "Removing all shoreline vegetation"
+   ],
+   "explanation": "Environmental protection supports long-term tourism."
+  }
+ },
+ {
+  "iso": "sk",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "経済・産業",
+  "prompt": "バンスカー・シュチャヴニツァの歴史地区が伝える産業は？",
+  "choices": [
+   "大規模な綿花栽培",
+   "鉱業と鉱山技術",
+   "サンゴ礁の養殖",
+   "航空機の製造"
+  ],
+  "correctIndex": 1,
+  "explanation": "歴史的な鉱山都市には採掘や水管理の技術が残ります。",
+  "en": {
+   "prompt": "Which industry shaped historic Banská Štiavnica?",
+   "choices": [
+    "Large-scale cotton farming",
+    "Mining and mining technology",
+    "Coral farming",
+    "Aircraft manufacturing"
+   ],
+   "explanation": "The mining town preserves historical mining and water-management technology."
+  }
+ },
+ {
+  "iso": "sl",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "バンス島の歴史的な要塞跡を保存することは、何を学ぶために重要？",
+  "choices": [
+   "奴隷貿易とその人間的影響",
+   "古代ギリシャの哲学",
+   "シルクロードの陶磁器交易",
+   "南極の気候観測"
+  ],
+  "correctIndex": 0,
+  "explanation": "要塞跡は大西洋奴隷貿易の歴史を伝える記憶の場所です。",
+  "en": {
+   "prompt": "Why is preserving the historical remains of Bunce Island important?",
+   "choices": [
+    "To study the slave trade and its human impact",
+    "To study ancient Greek philosophy",
+    "Silk Road porcelain trade",
+    "Antarctic climate observation"
+   ],
+   "explanation": "The remains preserve memory of the transatlantic slave trade."
+  }
+ },
+ {
+  "iso": "sm",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "サンマリノのティターノ山の尾根に要塞や塔が置かれた地形上の理由は？",
+  "choices": [
+   "海底の鉱業に適していた",
+   "河口の水運に適していた",
+   "氷河が谷を埋めていた",
+   "周囲の監視に有利だった"
+  ],
+  "correctIndex": 3,
+  "explanation": "高い尾根は周囲を見渡すことができ、防衛上有利でした。",
+  "en": {
+   "prompt": "Why were towers built along Mount Titano's ridge in San Marino?",
+   "choices": [
+    "It favored seabed mining",
+    "It favored river-mouth transport",
+    "Glaciers filled its valleys",
+    "Its height provided good visibility for defense"
+   ],
+   "explanation": "The elevated ridge provided visibility over surrounding areas."
+  }
+ },
+ {
+  "iso": "sn",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ゴレ島が歴史教育の場として重視される理由は？",
+  "choices": [
+   "ヨーロッパのスキー技術を保存するため",
+   "古代マヤの暦を伝えるため",
+   "奴隷貿易の記憶を伝え人権について考えるため",
+   "海底の地震予知技術を伝えるため"
+  ],
+  "correctIndex": 2,
+  "explanation": "島は大西洋奴隷貿易を記憶する象徴的な場所です。",
+  "en": {
+   "prompt": "Why is Gorée Island valued for historical education?",
+   "choices": [
+    "It preserves European ski technology",
+    "It records the Maya calendar",
+    "It preserves memory of the slave trade and encourages reflection on human rights",
+    "It teaches earthquake prediction"
+   ],
+   "explanation": "The island is a symbolic place of remembrance of the slave trade."
+  }
+ },
+ {
+  "iso": "so",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ラス・ゲールの岩絵に牛が描かれていることは、過去の何を考える手がかりになる？",
+  "choices": [
+   "海底ケーブルの設置",
+   "牧畜と人々の生活",
+   "蒸気機関車の普及",
+   "近代の株式市場"
+  ],
+  "correctIndex": 1,
+  "explanation": "牛などの岩絵は過去の人間と動物の関係を示します。",
+  "en": {
+   "prompt": "What can cattle depicted in the Laas Geel rock art help researchers study?",
+   "choices": [
+    "Undersea cable installation",
+    "Pastoralism and past ways of life",
+    "The spread of steam trains",
+    "Modern stock markets"
+   ],
+   "explanation": "The paintings provide clues about relationships between people and animals."
+  }
+ },
+ {
+  "iso": "sr",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "パラマリボの歴史地区に見られる建築が示す文化交流は？",
+  "choices": [
+   "ヨーロッパの都市計画と現地の建築材料・技術",
+   "インカの山岳都市計画のみ",
+   "北極の氷造りの住宅のみ",
+   "モンゴルの移動式住居のみ"
+  ],
+  "correctIndex": 0,
+  "explanation": "歴史地区には植民地期の計画と地域の建築文化が重なっています。",
+  "en": {
+   "prompt": "What cultural exchange is reflected in historic Paramaribo?",
+   "choices": [
+    "European urban planning adapted to local building materials and techniques",
+    "Only Inca mountain planning",
+    "Only Arctic ice houses",
+    "Only Mongolian mobile dwellings"
+   ],
+   "explanation": "The historic city combines colonial planning with local building traditions."
+  }
+ },
+ {
+  "iso": "ss",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "スッド湿地が白ナイルの水の流れに影響する理由は？",
+  "choices": [
+   "水が全て火山岩に変わるから",
+   "海の潮汐で水が全て逆流するから",
+   "水が永久に凍るから",
+   "広い湿地に水が広がり一部が蒸発するから"
+  ],
+  "correctIndex": 3,
+  "explanation": "広い湿地では貯留や蒸発散が河川の流れに影響します。",
+  "en": {
+   "prompt": "How does the Sudd wetland influence White Nile flows?",
+   "choices": [
+    "All water becomes volcanic rock",
+    "Ocean tides reverse all flow",
+    "Water freezes permanently",
+    "Water spreads across the wetland and some evaporates"
+   ],
+   "explanation": "Storage and evapotranspiration affect river flow."
+  }
+ },
+ {
+  "iso": "st",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "ピコ・カン・グランデのような火山岩の岩峰が周囲から突出して残る理由の一つは？",
+  "choices": [
+   "海水が岩を永久に支えるため",
+   "氷河が毎年岩を積み増したため",
+   "周囲より侵食されにくい岩が残ったため",
+   "岩が植物のように毎年伸びたため"
+  ],
+  "correctIndex": 2,
+  "explanation": "岩石の性質によって侵食の速さが異なるため地形に差が生まれます。",
+  "en": {
+   "prompt": "What can explain a volcanic rock tower such as Pico Cão Grande standing above its surroundings?",
+   "choices": [
+    "Seawater permanently supported it",
+    "Glaciers added rock each year",
+    "More resistant rock remained as surrounding material eroded",
+    "The rock grew like a plant"
+   ],
+   "explanation": "Different resistance to erosion can shape prominent rock formations."
+  }
+ },
+ {
+  "iso": "sv",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ホヤ・デ・セレン遺跡が古代の一般の人々の生活を知る手がかりになる理由は？",
+  "choices": [
+   "近代に全てを再建した",
+   "火山灰が住居や生活用品を保存した",
+   "王宮の記録だけが残った",
+   "住民が写真を大量に残した"
+  ],
+  "correctIndex": 1,
+  "explanation": "火山灰に埋もれた集落は日常生活の痕跡を伝えます。",
+  "en": {
+   "prompt": "Why is Joya de Cerén valuable for studying ordinary ancient life?",
+   "choices": [
+    "Everything was reconstructed recently",
+    "Volcanic ash preserved dwellings and everyday objects",
+    "Only royal records survived",
+    "Residents left many photographs"
+   ],
+   "explanation": "Ash preserved evidence of everyday village life."
+  }
+ },
+ {
+  "iso": "sy",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ダマスカス旧市街が歴史上重要な都市として発展した背景は？",
+  "choices": [
+   "西アジアの交易路や文化交流の結節点だった",
+   "北極の観測基地だった",
+   "大洋の無人島だった",
+   "アルプスの鉱山だけがあった"
+  ],
+  "correctIndex": 0,
+  "explanation": "長い都市の歴史は交易や地域間交流と結びついています。",
+  "en": {
+   "prompt": "What helped historic Damascus develop into an important city?",
+   "choices": [
+    "Its role as a crossroads of West Asian trade and culture",
+    "Its role as an Arctic observatory",
+    "Its location on an uninhabited ocean island",
+    "Only Alpine mining"
+   ],
+   "explanation": "Trade routes and cultural exchange shaped its long urban history."
+  }
+ },
+ {
+  "iso": "sz",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "ムリルワネのような野生生物保護区で自然な個体群を維持するために大切なのは？",
+  "choices": [
+   "全ての肉食動物を必ず排除する",
+   "動物を同じ種類に統一する",
+   "植生をすべて除去する",
+   "生息地と餌資源を適切に管理する"
+  ],
+  "correctIndex": 3,
+  "explanation": "保護区では生息地と野生動物の関係を考えて管理します。",
+  "en": {
+   "prompt": "What is important for maintaining wildlife populations in reserves such as Mlilwane?",
+   "choices": [
+    "Always removing all predators",
+    "Making all animals one species",
+    "Removing all vegetation",
+    "Managing habitats and food resources"
+   ],
+   "explanation": "Conservation management considers wildlife and habitat together."
+  }
+ },
+ {
+  "iso": "td",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "エネディ山地の岩の間にある水場は乾燥地域の生態系でなぜ重要？",
+  "choices": [
+   "地下の全水資源が塩水になるから",
+   "すべての砂丘を固定するから",
+   "気温を常に一定にするから",
+   "乾季にも水を得られる場所となるから"
+  ],
+  "correctIndex": 3,
+  "explanation": "天然の水場は乾燥地域の動物の生存を支えます。",
+  "en": {
+   "prompt": "Why are natural pools in the Ennedi important to arid ecosystems?",
+   "choices": [
+    "They turn all groundwater salty",
+    "They fix all dunes in place",
+    "They keep temperatures constant",
+    "They can provide water during dry periods"
+   ],
+   "explanation": "Natural water sources support wildlife in dry environments."
+  }
+ },
+ {
+  "iso": "tg",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "lifeCulture",
+  "subcategory": "住文化",
+  "prompt": "クタマクの伝統的な塔状土造家屋の保存には、建物だけでなく何の継承が重要？",
+  "choices": [
+   "すべての住民の職業の統一",
+   "近代の交通信号の規則",
+   "地域の建築技術や暮らしの知識",
+   "輸入した建材の規格だけ"
+  ],
+  "correctIndex": 2,
+  "explanation": "建物を維持する技術と地域の生活文化が一体となった遺産です。",
+  "en": {
+   "prompt": "What besides buildings is important to preserve at Koutammakou?",
+   "choices": [
+    "One occupation for all residents",
+    "Modern traffic-signal rules",
+    "Local building skills and knowledge of ways of life",
+    "Only imported material standards"
+   ],
+   "explanation": "The heritage includes the skills and living traditions behind the architecture."
+  }
+ },
+ {
+  "iso": "th",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "アユタヤに残る仏教遺跡が伝える歴史は？",
+  "choices": [
+   "北欧の航海技術",
+   "かつての王国の都市と宗教文化",
+   "近代の航空機工場",
+   "古代エジプトの葬送文化"
+  ],
+  "correctIndex": 1,
+  "explanation": "アユタヤは歴史的な王国の中心地で仏教建築が残ります。",
+  "en": {
+   "prompt": "What history do the Buddhist remains at Ayutthaya reflect?",
+   "choices": [
+    "Norse sailing technology",
+    "The historic kingdom's urban and religious culture",
+    "Modern aircraft factories",
+    "Ancient Egyptian funerary culture"
+   ],
+   "explanation": "Ayutthaya was a royal center with extensive Buddhist architecture."
+  }
+ },
+ {
+  "iso": "tj",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "イスカンデルクル湖のような山岳湖で気候変動が水環境に影響する理由は？",
+  "choices": [
+   "雪解けや降水の時期・量が変わる可能性がある",
+   "標高が毎年ゼロに戻る",
+   "地球の自転が止まる",
+   "湖水が全て海水になる"
+  ],
+  "correctIndex": 0,
+  "explanation": "山岳湖の水量は降水や雪解けなどに影響されます。",
+  "en": {
+   "prompt": "Why can climate change affect mountain lakes such as Iskanderkul?",
+   "choices": [
+    "The timing and amount of snowmelt and precipitation can change",
+    "Elevation resets to zero annually",
+    "Earth stops rotating",
+    "All lake water becomes seawater"
+   ],
+   "explanation": "Mountain lakes depend on precipitation and snowmelt."
+  }
+ },
+ {
+  "iso": "tl",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ディリ湾を見下ろすクリスト・レイ像は、東ティモールのどの宗教文化と関係する？",
+  "choices": [
+   "仏教",
+   "ヒンドゥー教",
+   "神道",
+   "キリスト教"
+  ],
+  "correctIndex": 3,
+  "explanation": "キリスト像はキリスト教文化に関係する建造物です。",
+  "en": {
+   "prompt": "Which religious tradition is associated with the Cristo Rei statue overlooking Dili Bay?",
+   "choices": [
+    "Buddhism",
+    "Hinduism",
+    "Shinto",
+    "Christianity"
+   ],
+   "explanation": "The statue represents Christ and relates to Christian culture."
+  }
+ },
+ {
+  "iso": "tm",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "メルブのような中央アジアのオアシス都市がシルクロードで果たした役割は？",
+  "choices": [
+   "遠洋漁業の拠点",
+   "熱帯のサンゴ礁の保護",
+   "商人への水・物資の供給と文化交流",
+   "北極海の航路の管理"
+  ],
+  "correctIndex": 2,
+  "explanation": "オアシス都市は長距離の陸上交易を支えました。",
+  "en": {
+   "prompt": "What role did Central Asian oasis cities such as Merv play on the Silk Road?",
+   "choices": [
+    "Supporting deep-sea fisheries",
+    "Protecting tropical coral reefs",
+    "Supplying travelers and enabling cultural exchange",
+    "Managing Arctic shipping"
+   ],
+   "explanation": "Oasis cities supported long-distance overland trade."
+  }
+ },
+ {
+  "iso": "tn",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "カルタゴが古代ローマと争った戦争は一般に何と呼ばれる？",
+  "choices": [
+   "三十年戦争",
+   "ポエニ戦争",
+   "ペルシア戦争",
+   "百年戦争"
+  ],
+  "correctIndex": 1,
+  "explanation": "ポエニ戦争はローマとカルタゴの間で起きました。",
+  "en": {
+   "prompt": "What were the wars between ancient Rome and Carthage called?",
+   "choices": [
+    "Thirty Years' War",
+    "Punic Wars",
+    "Persian Wars",
+    "Hundred Years' War"
+   ],
+   "explanation": "The Punic Wars were fought between Rome and Carthage."
+  }
+ },
+ {
+  "iso": "to",
+  "slot": 1,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "トンガのマプアアヴァエアで波が岩の穴から高く噴き出す仕組みは？",
+  "choices": [
+   "波が海水と空気を岩の通路へ押し込む",
+   "地下のマグマが毎回噴出する",
+   "太陽光が海水を瞬時に蒸発させる",
+   "雨水が岩の上で凍る"
+  ],
+  "correctIndex": 0,
+  "explanation": "波の圧力によって海水が岩の開口部から噴き出します。",
+  "en": {
+   "prompt": "What causes seawater to spout from Tonga's Mapuʻa ʻa Vaea blowholes?",
+   "choices": [
+    "Wave pressure forces water and air through rock channels",
+    "Magma erupts with each wave",
+    "Sunlight instantly evaporates seawater",
+    "Rain freezes on the rocks"
+   ],
+   "explanation": "Wave pressure forces seawater through openings in coastal rock."
+  }
+ },
+ {
+  "iso": "tr",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "カッパドキアの奇岩ができた理由として適切なのは？",
+  "choices": [
+   "海中のサンゴが成長した",
+   "氷河が海に浮かんだ",
+   "人がすべての岩を積んだ",
+   "火山性の岩石が風雨で異なる速さで侵食された"
+  ],
+  "correctIndex": 3,
+  "explanation": "岩石の硬さの違いと侵食が独特の地形を作りました。",
+  "en": {
+   "prompt": "How did many unusual rock formations in Cappadocia develop?",
+   "choices": [
+    "Underwater coral grew",
+    "Glaciers floated out to sea",
+    "People stacked every rock",
+    "Volcanic rocks eroded at different rates"
+   ],
+   "explanation": "Differential erosion shaped the volcanic landscape."
+  }
+ },
+ {
+  "iso": "tt",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "経済・産業",
+  "prompt": "トリニダードのピッチ湖から得られる天然資源は、主に何に利用される？",
+  "choices": [
+   "綿織物の原料",
+   "食用の塩",
+   "道路の舗装材料など",
+   "紙の原料"
+  ],
+  "correctIndex": 2,
+  "explanation": "天然アスファルトは舗装材などに使われます。",
+  "en": {
+   "prompt": "What is a major use of the natural resource from Trinidad's Pitch Lake?",
+   "choices": [
+    "Cotton textiles",
+    "Edible salt",
+    "Road paving materials",
+    "Paper production"
+   ],
+   "explanation": "Natural asphalt can be used in paving materials."
+  }
+ },
+ {
+  "iso": "tv",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "フナフティ環礁のように低い島が海面上昇の影響を受けやすい理由は？",
+  "choices": [
+   "地表の温度が常に氷点下だから",
+   "陸地の標高が低く浸水の危険が増すから",
+   "山岳氷河が海に流れるから",
+   "島が海底から急速に隆起するから"
+  ],
+  "correctIndex": 1,
+  "explanation": "低い陸地では高潮や浸水の危険が高まります。",
+  "en": {
+   "prompt": "Why are low atolls such as Funafuti vulnerable to rising sea levels?",
+   "choices": [
+    "Surface temperature is always below freezing",
+    "Low elevation increases flooding risk",
+    "Mountain glaciers flow to the sea",
+    "The islands rise rapidly from the seabed"
+   ],
+   "explanation": "Low elevation increases vulnerability to inundation."
+  }
+ },
+ {
+  "iso": "tw",
+  "slot": 1,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "台北101の巨大な制振装置が高層建築で果たす役割は？",
+  "choices": [
+   "強風などによる建物の揺れを抑える",
+   "建物を発電所に変える",
+   "すべての地震を予知する",
+   "建物の高さを毎日変える"
+  ],
+  "correctIndex": 0,
+  "explanation": "制振装置は建物の振動を低減するために使われます。",
+  "en": {
+   "prompt": "What does Taipei 101's large tuned mass damper help do?",
+   "choices": [
+    "Reduce building motion caused by strong winds and other forces",
+    "Turn the building into a power station",
+    "Predict every earthquake",
+    "Change the building's height daily"
+   ],
+   "explanation": "Damping systems reduce structural vibrations."
+  }
+ },
+ {
+  "iso": "tz",
+  "slot": 1,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "赤道付近のキリマンジャロ山で標高によって植生が異なる主な理由は？",
+  "choices": [
+   "地球の磁場がなくなるから",
+   "山頂ほど常に酸素が多くなるから",
+   "海水が山頂まで流れるから",
+   "標高により気温や水分条件が変わるから"
+  ],
+  "correctIndex": 3,
+  "explanation": "標高差により異なる気候帯や生息環境が生じます。",
+  "en": {
+   "prompt": "Why does vegetation change with elevation on Mount Kilimanjaro near the equator?",
+   "choices": [
+    "Earth's magnetic field disappears",
+    "Oxygen always increases toward the summit",
+    "Seawater flows to the summit",
+    "Temperature and moisture conditions vary with altitude"
+   ],
+   "explanation": "Elevation produces distinct environmental zones."
+  }
+ },
+ {
+  "iso": "ua",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "キーウの聖ソフィア大聖堂のモザイクや壁画は、何を知る資料になる？",
+  "choices": [
+   "古代インカの神殿建築",
+   "近代の電子産業",
+   "エジプトのピラミッド建設",
+   "中世のキーウ・ルーシの宗教と芸術"
+  ],
+  "correctIndex": 3,
+  "explanation": "大聖堂の芸術は中世の宗教文化を伝えます。",
+  "en": {
+   "prompt": "What do the mosaics and frescoes of Saint Sophia Cathedral in Kyiv help us study?",
+   "choices": [
+    "Inca temple architecture",
+    "Modern electronics",
+    "Egyptian pyramid construction",
+    "Religion and art of medieval Kyivan Rus"
+   ],
+   "explanation": "The cathedral preserves medieval religious art."
+  }
+ },
+ {
+  "iso": "ug",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "ブウィンディ原生国立公園でゴリラ観察の人数や距離を管理する理由は？",
+  "choices": [
+   "すべての森林を観光施設にするため",
+   "動物の移動を完全に止めるため",
+   "感染やストレスの危険を減らすため",
+   "ゴリラを人間に慣れさせることだけが目的だから"
+  ],
+  "correctIndex": 2,
+  "explanation": "観察ルールは動物の健康や自然な行動を守るために重要です。",
+  "en": {
+   "prompt": "Why manage visitor numbers and distances during gorilla watching in Bwindi?",
+   "choices": [
+    "To turn all forest into tourist facilities",
+    "To stop all animal movement",
+    "To reduce infection and stress risks",
+    "Only to habituate gorillas to people"
+   ],
+   "explanation": "Visitor rules help protect animal health and behavior."
+  }
+ },
+ {
+  "iso": "us",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "グランド・キャニオンの地層が地球の歴史を研究する上で重要な理由は？",
+  "choices": [
+   "すべての化石が同じ種類である",
+   "異なる時代の岩石や堆積の記録を観察できる",
+   "すべての地層が同じ日に形成された",
+   "岩石がすべて人工物である"
+  ],
+  "correctIndex": 1,
+  "explanation": "侵食によって露出した地層から長い地質史を学べます。",
+  "en": {
+   "prompt": "Why are the Grand Canyon's exposed rock layers useful for studying Earth's history?",
+   "choices": [
+    "All fossils belong to one species",
+    "They preserve records from different geological periods",
+    "All layers formed on one day",
+    "All rocks are artificial"
+   ],
+   "explanation": "Erosion exposes rock layers recording a long geological history."
+  }
+ },
+ {
+  "iso": "uy",
+  "slot": 1,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "経済・産業",
+  "prompt": "フライ・ベントスの産業景観は、ウルグアイが歴史的に発展させた何の輸出産業を伝える？",
+  "choices": [
+   "食肉加工",
+   "自動車製造",
+   "半導体製造",
+   "航空機組立"
+  ],
+  "correctIndex": 0,
+  "explanation": "食肉加工と輸出に関わる工場や施設が残っています。",
+  "en": {
+   "prompt": "Which historic export industry is reflected in the Fray Bentos Industrial Landscape?",
+   "choices": [
+    "Meat processing",
+    "Automobile production",
+    "Semiconductor manufacturing",
+    "Aircraft assembly"
+   ],
+   "explanation": "The industrial landscape preserves meat-processing and export facilities."
+  }
+ },
+ {
+  "iso": "uz",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "サマルカンドのレギスタン広場にあるマドラサは、歴史的に何のための施設？",
+  "choices": [
+   "船舶の修理",
+   "石油の精製",
+   "航空管制",
+   "学問や宗教教育"
+  ],
+  "correctIndex": 3,
+  "explanation": "マドラサはイスラム世界の学問や教育と関係する施設です。",
+  "en": {
+   "prompt": "What was the historical purpose of the madrasas at Samarkand's Registan?",
+   "choices": [
+    "Ship repair",
+    "Oil refining",
+    "Air traffic control",
+    "Scholarship and religious education"
+   ],
+   "explanation": "Madrasas were institutions associated with Islamic learning."
+  }
+ },
+ {
+  "iso": "va",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "lifeCulture",
+  "subcategory": "芸術",
+  "prompt": "システィーナ礼拝堂の天井画などを描いたルネサンスの芸術家は？",
+  "choices": [
+   "レンブラント",
+   "モネ",
+   "ゴッホ",
+   "ミケランジェロ"
+  ],
+  "correctIndex": 3,
+  "explanation": "ミケランジェロは天井画や最後の審判を制作しました。",
+  "en": {
+   "prompt": "Which Renaissance artist painted the Sistine Chapel ceiling?",
+   "choices": [
+    "Rembrandt",
+    "Monet",
+    "Van Gogh",
+    "Michelangelo"
+   ],
+   "explanation": "Michelangelo created its famous ceiling paintings."
+  }
+ },
+ {
+  "iso": "vc",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "ラ・スフリエールのような活火山の近くで住民の安全を守る取り組みは？",
+  "choices": [
+   "危険区域への居住を無条件に増やす",
+   "噴火の前兆を公表しない",
+   "火山活動の監視と避難計画",
+   "地震計をすべて撤去する"
+  ],
+  "correctIndex": 2,
+  "explanation": "観測と避難計画は噴火による災害のリスクを減らします。",
+  "en": {
+   "prompt": "What helps protect communities near an active volcano such as La Soufrière?",
+   "choices": [
+    "Unconditionally increasing settlement in hazard zones",
+    "Withholding warnings",
+    "Monitoring volcanic activity and evacuation planning",
+    "Removing all seismometers"
+   ],
+   "explanation": "Monitoring and evacuation planning help reduce volcanic risk."
+  }
+ },
+ {
+  "iso": "ve",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "カナイマ国立公園のテーブルマウンテンの頂上に独自の生物が見られる理由の一つは？",
+  "choices": [
+   "毎年山の高さがゼロになるから",
+   "周囲から隔離された生息環境があるから",
+   "海水が頂上に常に流れるから",
+   "すべての動物が移入されたから"
+  ],
+  "correctIndex": 1,
+  "explanation": "孤立した高地では独特の環境が生じます。",
+  "en": {
+   "prompt": "Why can the table mountains of Canaima support distinctive species?",
+   "choices": [
+    "Their height resets annually",
+    "Their summits contain isolated habitats",
+    "Seawater constantly flows across their tops",
+    "All animals were introduced"
+   ],
+   "explanation": "Isolated highland habitats can support distinctive species."
+  }
+ },
+ {
+  "iso": "vn",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "ハロン湾の石灰岩の島々が形成された主要な作用は？",
+  "choices": [
+   "水による石灰岩の溶食と長期の侵食",
+   "サンゴが一夜で成長する作用",
+   "氷河が砂を積む作用だけ",
+   "人が岩を組み立てる作用"
+  ],
+  "correctIndex": 0,
+  "explanation": "石灰岩の溶食や侵食が独特のカルスト景観を作ります。",
+  "en": {
+   "prompt": "What major process shaped Ha Long Bay's limestone islands?",
+   "choices": [
+    "Limestone dissolution and long-term erosion",
+    "Coral growing overnight",
+    "Only glacial sand deposition",
+    "People assembling rocks"
+   ],
+   "explanation": "Dissolution and erosion shaped the karst landscape."
+  }
+ },
+ {
+  "iso": "vu",
+  "slot": 1,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "ヤスール山のような火山を観測するとき、活動の変化を調べる手がかりは？",
+  "choices": [
+   "星座の名前",
+   "海の魚の体色",
+   "周辺の道路の色",
+   "地震活動や火山ガスの変化"
+  ],
+  "correctIndex": 3,
+  "explanation": "地震やガスの観測は火山活動を理解するために使われます。",
+  "en": {
+   "prompt": "What observations help scientists track changes at volcanoes such as Mount Yasur?",
+   "choices": [
+    "Names of constellations",
+    "Fish body colors",
+    "Road colors",
+    "Seismic activity and volcanic gas changes"
+   ],
+   "explanation": "Seismic and gas monitoring helps track volcanic activity."
+  }
+ },
+ {
+  "iso": "ws",
+  "slot": 0,
+  "grade": "high",
+  "domain": "thinkConnect",
+  "subcategory": "科学・技術",
+  "prompt": "ト・スアの天然の海水プールが海とつながっていることから、どの現象の影響を受けると考えられる？",
+  "choices": [
+   "砂漠の砂嵐だけ",
+   "高山の雪崩だけ",
+   "地球の磁極の毎日の逆転",
+   "潮位の変化"
+  ],
+  "correctIndex": 3,
+  "explanation": "海とつながる水域では潮の満ち引きが水位に影響します。",
+  "en": {
+   "prompt": "What process can affect To Sua's natural saltwater pool because it connects to the sea?",
+   "choices": [
+    "Only desert sandstorms",
+    "Only mountain avalanches",
+    "Daily magnetic-pole reversals",
+    "Tidal changes"
+   ],
+   "explanation": "Ocean-connected pools can respond to tides."
+  }
+ },
+ {
+  "iso": "ye",
+  "slot": 1,
+  "grade": "middle",
+  "domain": "lifeCulture",
+  "subcategory": "住文化",
+  "prompt": "シバームの高層泥れんが住宅の維持に必要な対策は？",
+  "choices": [
+   "外壁を定期的に補修して雨や風化から守る",
+   "排水をすべて塞ぐ",
+   "土壁に常に水をかける",
+   "すべての窓を海水で洗う"
+  ],
+  "correctIndex": 0,
+  "explanation": "泥れんが建築では風化と水への対策が大切です。",
+  "en": {
+   "prompt": "What maintenance is important for Shibam's tall mud-brick houses?",
+   "choices": [
+    "Regular wall repairs against rain and weathering",
+    "Blocking all drainage",
+    "Constantly soaking the walls",
+    "Washing all windows with seawater"
+   ],
+   "explanation": "Earthen buildings require protection from moisture and weathering."
+  }
+ },
+ {
+  "iso": "za",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "ロベン島が南アフリカの歴史教育で重要な場所である理由は？",
+  "choices": [
+   "アパルトヘイトに対する抵抗と人権の歴史を伝える",
+   "古代ローマの航路を伝える",
+   "南極観測の始まりを伝える",
+   "近代航空の発明を伝える"
+  ],
+  "correctIndex": 0,
+  "explanation": "政治犯が収容された島は自由と人権の歴史を伝えます。",
+  "en": {
+   "prompt": "Why is Robben Island important in South African historical education?",
+   "choices": [
+    "It preserves the history of resistance to apartheid and human rights",
+    "It documents Roman shipping routes",
+    "It marks the beginning of Antarctic research",
+    "It preserves the invention of modern aviation"
+   ],
+   "explanation": "The former prison is a place of remembrance of struggles for freedom."
+  }
+ },
+ {
+  "iso": "zm",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "地理・自然",
+  "prompt": "ヴィクトリアの滝の生態系や水資源を守るため、ザンビアとジンバブエが協力する理由は？",
+  "choices": [
+   "両国のすべての川が別々だから",
+   "片方の国だけに雨が降るから",
+   "滝が海底にあるから",
+   "滝や河川が国境を越えてつながるから"
+  ],
+  "correctIndex": 3,
+  "explanation": "共有する河川と自然遺産の保全には国境を越える協力が役立ちます。",
+  "en": {
+   "prompt": "Why is cooperation between Zambia and Zimbabwe valuable for conserving Victoria Falls?",
+   "choices": [
+    "All rivers in the two countries are separate",
+    "Rain falls in only one country",
+    "The falls are underwater",
+    "The falls and river are shared across a border"
+   ],
+   "explanation": "Shared natural heritage benefits from cross-border cooperation."
+  }
+ },
+ {
+  "iso": "zw",
+  "slot": 0,
+  "grade": "middle",
+  "domain": "place",
+  "subcategory": "歴史・建築",
+  "prompt": "グレート・ジンバブエの石造遺跡は、どんな歴史を示す？",
+  "choices": [
+   "北極の氷上交通",
+   "中世ヨーロッパの大聖堂建設",
+   "南部アフリカの都市形成と広域交易",
+   "古代ギリシャの民主政治"
+  ],
+  "correctIndex": 2,
+  "explanation": "石造建築は南部アフリカの歴史的な都市と交易を伝えます。",
+  "en": {
+   "prompt": "What history does Great Zimbabwe's stone architecture demonstrate?",
+   "choices": [
+    "Arctic ice transport",
+    "Medieval European cathedral building",
+    "Urban development and long-distance trade in southern Africa",
+    "Ancient Greek democracy"
+   ],
+   "explanation": "The ruins preserve evidence of historic urban development and trade."
+  }
  }
 ]
