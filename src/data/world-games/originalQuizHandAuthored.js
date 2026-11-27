@@ -1182,23 +1182,23 @@ export const HAND_AUTHORED_ORIGINALS = [
   "elementary",
   "lifeCulture",
   "伝統工芸",
-  "「パナマハット」という ぼうしの でんとうてきな つくりかたで ゆうめいな くには？",
+  "エクアドルの パナマハットを つくる とき、でんとうてきに なにを あむ？",
   [
-   "エクアドル",
-   "パナマ",
-   "ペルー",
-   "チリ"
+   "トキヤそうの せんい",
+   "ひつじの け",
+   "きぬの いと",
+   "こむぎの わら"
   ],
   0,
-  "なまえは パナマでも、でんとうてきな ぼうしづくりは エクアドルで うまれました。",
-  "Which country is the traditional home of Panama hat weaving?",
+  "トキヤそうの せんいを こまかく あんで ぼうしを つくります。",
+  "What material is traditionally woven to make Ecuadorian Panama hats?",
   [
-   "Ecuador",
-   "Panama",
-   "Peru",
-   "Chile"
+   "Toquilla palm fibers",
+   "Sheep's wool",
+   "Silk thread",
+   "Wheat straw"
   ],
-  "Despite its name, traditional Panama hat weaving comes from Ecuador."
+  "The hats are woven from fine fibers of the toquilla plant."
  ],
  [
   "ee",
@@ -3239,5 +3239,1493 @@ export const HAND_AUTHORED_ORIGINALS = [
    "Money calculations"
   ],
   "Haka can express welcome, pride, challenge and other emotions."
+ ],
+ [
+  "om",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "オマーンの おいわいの りょうり シュワでは、にくを どこで ながい じかん やく？",
+  [
+   "じめんの なかの ろ",
+   "こおりの うえ",
+   "かわの みずの なか",
+   "やねの うえ"
+  ],
+  0,
+  "にくを はで つつんで じめんの なかの ろで じっくり やきます。",
+  "Where is meat traditionally slow-cooked for Omani shuwa?",
+  [
+   "An underground oven",
+   "On ice",
+   "In a river",
+   "On a roof"
+  ],
+  "The wrapped meat cooks slowly in an earth oven."
+ ],
+ [
+  "pa",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "伝統工芸",
+  "パナマの グナの ひとびとの モラという ぬのの もようは、どうやって つくる？",
+  [
+   "ぬのを みずで あらうだけ",
+   "いろの ちがう ぬのを かさねて きりぬく",
+   "ぬのに いしを うめる",
+   "ぬのに きの はを はるだけ"
+  ],
+  1,
+  "ぬのを かさねて きりぬき、いろいろな もようを つくります。",
+  "How are traditional Guna mola designs in Panama made?",
+  [
+   "Only washing cloth",
+   "Layering and cutting colored cloth",
+   "Embedding stones in cloth",
+   "Only attaching leaves"
+  ],
+  "Layers of fabric are cut and sewn to reveal patterns."
+ ],
+ [
+  "pe",
+  "primary",
+  "elementary",
+  "place",
+  "歴史",
+  "ペルーの マチュ・ピチュの まちは、どんな ばしょに つくられた？",
+  [
+   "ひろい こおりの うえ",
+   "たかい やまの うえ",
+   "うみの そこ",
+   "さばくの すなの なか"
+  ],
+  1,
+  "アンデスの やまの うえに いしづくりの まちが のこります。",
+  "Where was Machu Picchu in Peru built?",
+  [
+   "On a sheet of ice",
+   "High in the mountains",
+   "Under the sea",
+   "Buried in desert sand"
+  ],
+  "The Inca stone city sits high in the Andes."
+ ],
+ [
+  "pg",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "慣習・行事",
+  "パプアニューギニアの シンシンという あつまりで、いろいろな ちいきの ひとが みせるものは？",
+  [
+   "おなじ じどうしゃ",
+   "おなじ がっこうの テスト",
+   "おなじ りょうりだけ",
+   "うたや おどり、いしょう"
+  ],
+  3,
+  "いろいろな ちいきの ぶんかを うたや おどりで しょうかいします。",
+  "What do groups showcase at a sing-sing in Papua New Guinea?",
+  [
+   "Identical cars",
+   "The same school tests",
+   "Only one shared dish",
+   "Songs, dances and costumes"
+  ],
+  "Groups present the traditions of their own communities."
+ ],
+ [
+  "ph",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "住文化",
+  "フィリピンの やまの しゃめんに ある たなだで、おもに なにを そだてる？",
+  [
+   "おこめ",
+   "コーヒーだけ",
+   "りんご",
+   "ぶどう"
+  ],
+  0,
+  "やまの しゃめんに だんを つくって いねを そだてます。",
+  "What is mainly grown in the famous mountain terraces of the Philippine Cordilleras?",
+  [
+   "Rice",
+   "Only coffee",
+   "Apples",
+   "Grapes"
+  ],
+  "Terraces allow rice farming on mountain slopes."
+ ],
+ [
+  "pk",
+  "primary",
+  "elementary",
+  "place",
+  "歴史",
+  "パキスタンの モヘンジョダロには、むかしから まちの みずを ながす ための どんな しくみが あった？",
+  [
+   "ロケット",
+   "でんしゃの トンネル",
+   "エレベーター",
+   "はいすいろ"
+  ],
+  3,
+  "インダスぶんめいの まちには はいすいの しくみが ありました。",
+  "What system did the ancient city of Mohenjo-daro in Pakistan have to carry away wastewater?",
+  [
+   "Rockets",
+   "Railway tunnels",
+   "Elevators",
+   "Drains"
+  ],
+  "The Indus city had a sophisticated drainage system."
+ ],
+ [
+  "pl",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "ポーランドの ピエロギは、ぐを こむぎの かわで つつんだ あと、よく どうする？",
+  [
+   "ゆでる",
+   "こおらせて そのまま たべる",
+   "ほして こなに する",
+   "ひを とおさず たべる"
+  ],
+  0,
+  "にくや チーズ、じゃがいもなどを つつんで ゆでます。",
+  "How are Polish pierogi commonly cooked after filling the dough?",
+  [
+   "Boiled",
+   "Eaten frozen",
+   "Dried and ground",
+   "Eaten raw"
+  ],
+  "Filled dumplings are commonly boiled."
+ ],
+ [
+  "ps",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "パレスチナなどの マクルーバは、なべで たいた あと どうやって おさらに もる？",
+  [
+   "ひとつずつ くしに さす",
+   "こなに くだく",
+   "スープに ぜんぶ まぜる",
+   "なべを さかさに する"
+  ],
+  3,
+  "おこめや にく、やさいを かさねて たき、なべを さかさに します。",
+  "How is maqluba, a dish enjoyed in Palestine and nearby areas, served?",
+  [
+   "By putting pieces on skewers",
+   "By grinding it into flour",
+   "By mixing it all into soup",
+   "By turning the pot upside down"
+  ],
+  "The layers of rice, meat and vegetables are turned out onto a plate."
+ ],
+ [
+  "pt",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "ポルトガルの パステル・デ・ナタは、きじに なにを いれて やく おかし？",
+  [
+   "カスタード",
+   "トマトソース",
+   "ツナ",
+   "チーズだけ"
+  ],
+  0,
+  "たまごを つかった カスタードを パイきじに いれて やきます。",
+  "What filling goes inside Portuguese pastéis de nata?",
+  [
+   "Custard",
+   "Tomato sauce",
+   "Tuna",
+   "Only cheese"
+  ],
+  "Egg custard is baked inside flaky pastry."
+ ],
+ [
+  "pw",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "住文化",
+  "パラオの バイという でんとうてきな たてものは、なにに つかわれてきた？",
+  [
+   "ひこうきの せいび",
+   "こおりの せいぞう",
+   "くるまの きょうそう",
+   "むらの はなしあい"
+  ],
+  3,
+  "もようや ほりものの ある たてものに ひとびとが あつまります。",
+  "What was a traditional Palauan bai used for?",
+  [
+   "Aircraft maintenance",
+   "Ice production",
+   "Car racing",
+   "Community meetings"
+  ],
+  "A bai is a decorated traditional meeting house."
+ ],
+ [
+  "py",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "慣習・行事",
+  "パラグアイの テレレは、マテの はを ふつう どんな みずで いれる？",
+  [
+   "しおみず",
+   "つめたい みず",
+   "あつい おゆ",
+   "こおって かたまった みずだけ"
+  ],
+  1,
+  "マテの はに つめたい みずを いれ、すいくちで のみます。",
+  "What is traditionally used to prepare Paraguayan tereré?",
+  [
+   "Saltwater",
+   "Cold water",
+   "Hot water",
+   "Only solid ice"
+  ],
+  "Tereré is a cold infusion of yerba mate."
+ ],
+ [
+  "qa",
+  "primary",
+  "elementary",
+  "thinkConnect",
+  "経済・産業",
+  "カタールの アル・ズバラは、むかし どんな うみの たからものの ぼうえきで さかえた？",
+  [
+   "ルビー",
+   "エメラルド",
+   "しんじゅ",
+   "ダイヤモンド"
+  ],
+  2,
+  "しんじゅを あつめる しごとや うみの ぼうえきで さかえた まちです。",
+  "Which marine treasure was historically traded in Al Zubarah in Qatar?",
+  [
+   "Rubies",
+   "Emeralds",
+   "Pearls",
+   "Diamonds"
+  ],
+  "The town was a center of pearling and maritime trade."
+ ],
+ [
+  "ro",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "ルーマニアの サルマーレでは、ひきにくや おこめを なにで つつむことが ある？",
+  [
+   "ヤシの は",
+   "キャベツの は",
+   "マツの は",
+   "サクラの は"
+  ],
+  1,
+  "キャベツや ぶどうの はで ぐを つつんで にこみます。",
+  "Which leaf is often used to wrap Romanian sarmale?",
+  [
+   "Palm",
+   "Cabbage",
+   "Pine",
+   "Cherry"
+  ],
+  "The filling is wrapped in cabbage or grape leaves."
+ ],
+ [
+  "rs",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "慣習・行事",
+  "セルビアの スラヴァは、かぞくで なにを いわう しゅうかん？",
+  [
+   "せかいの すいえいの ひ",
+   "かぞくを まもる せいじんの ひ",
+   "なつの スキーの ひ",
+   "うちゅうりょこうの ひ"
+  ],
+  1,
+  "かぞくごとに たいせつな せいじんの ひを いわい、しょくじを わけあいます。",
+  "What do Serbian families celebrate during slava?",
+  [
+   "A world swimming day",
+   "Their patron saint's day",
+   "A summer skiing day",
+   "A space travel day"
+  ],
+  "Families share food and celebrate their patron saint."
+ ],
+ [
+  "ru",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "ロシアなどで たべられる ブリヌイは、どんな たべもの？",
+  [
+   "あつい ステーキ",
+   "しおづけの さかな",
+   "まるい アイス",
+   "うすい パンケーキ"
+  ],
+  3,
+  "うすく やいて、クリームや はちみつなどと たべます。",
+  "What are blini, enjoyed in Russia and nearby regions?",
+  [
+   "Thick steaks",
+   "Salted fish",
+   "Round ice cream scoops",
+   "Thin pancakes"
+  ],
+  "Blini are thin pancakes served with varied toppings."
+ ],
+ [
+  "rw",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "伝統工芸",
+  "ルワンダの イミゴンゴは、くろや しろなどで なにを つくる でんとうてきな びじゅつ？",
+  [
+   "いしの はし",
+   "もりあがった きかがくもよう",
+   "とうめいな ガラスの びん",
+   "きの がっき"
+  ],
+  1,
+  "でこぼこした もようを いろで かざる びじゅつです。",
+  "What is characteristic of Rwanda's imigongo art?",
+  [
+   "Stone bridges",
+   "Raised geometric patterns",
+   "Clear glass bottles",
+   "Wooden instruments"
+  ],
+  "Raised designs are decorated with contrasting colors."
+ ],
+ [
+  "sa",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "サウジアラビアの カブサは、スパイスで あじを つけた なにに にくを そえる？",
+  [
+   "ごはん",
+   "パンケーキ",
+   "アイスクリーム",
+   "フルーツゼリー"
+  ],
+  0,
+  "かおりの ある ごはんと とりにくや ひつじにくを あわせます。",
+  "What is served with meat in Saudi Arabian kabsa?",
+  [
+   "Spiced rice",
+   "Pancakes",
+   "Ice cream",
+   "Fruit jelly"
+  ],
+  "Kabsa combines seasoned rice with meat."
+ ],
+ [
+  "sb",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "音楽・芸能",
+  "ソロモンしょとうの パンパイプで、ちがう たかさの おとを だす ための くふうは？",
+  [
+   "おなじ かたちの いし",
+   "ながさの ちがう くだ",
+   "おなじ ながさの げん",
+   "おなじ おおきさの たいこ"
+  ],
+  1,
+  "ながさの ちがう たけの くだを ふいて おとを だします。",
+  "How do Solomon Islands panpipes produce different pitches?",
+  [
+   "Stones of the same shape",
+   "Tubes of different lengths",
+   "Strings of the same length",
+   "Drums of the same size"
+  ],
+  "Bamboo tubes of different lengths make different notes."
+ ],
+ [
+  "sc",
+  "primary",
+  "elementary",
+  "place",
+  "地理・自然",
+  "セーシェルの ココ・デ・メールという ヤシは、なにが とても おおきい ことで ゆうめい？",
+  [
+   "ねの け",
+   "えだの とげ",
+   "たね",
+   "はなの かふん"
+  ],
+  2,
+  "ココ・デ・メールは とても おおきな たねを つける ヤシです。",
+  "What is unusually large on the coco de mer palm of Seychelles?",
+  [
+   "Its root hairs",
+   "Its thorns",
+   "Its seed",
+   "Its pollen"
+  ],
+  "The palm produces an exceptionally large seed."
+ ],
+ [
+  "sd",
+  "primary",
+  "elementary",
+  "place",
+  "歴史",
+  "スーダンの メロエには、どんな かたちの むかしの はかが たくさん のこる？",
+  [
+   "ドームの たいいくかん",
+   "ふうしゃ",
+   "きょうかいの かね",
+   "ピラミッド"
+  ],
+  3,
+  "クシュおうこくの れきしを つたえる とがった ピラミッドが あります。",
+  "What kind of ancient tombs can be seen at Meroë in Sudan?",
+  [
+   "Domed stadiums",
+   "Windmills",
+   "Church bells",
+   "Pyramids"
+  ],
+  "The steep pyramids preserve the history of the Kingdom of Kush."
+ ],
+ [
+  "se",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "慣習・行事",
+  "スウェーデンの フィーカでは、コーヒーや おかしと ともに なにを たのしむ？",
+  [
+   "ひととの かいわ",
+   "ひとりで かけっこ",
+   "はやおきの きょうそう",
+   "しごとの しけん"
+  ],
+  0,
+  "ひといき ついて ひとと はなす じかんを たいせつに します。",
+  "What is enjoyed alongside coffee and snacks during Swedish fika?",
+  [
+   "Conversation",
+   "Solo races",
+   "Early-rising contests",
+   "Work exams"
+  ],
+  "Fika values a break and time to talk together."
+ ],
+ [
+  "sg",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "慣習・行事",
+  "シンガポールの ホーカーセンターでは、どんな ことが できる？",
+  [
+   "ゆきやまで スキーを する",
+   "えいがを さつえいする だけ",
+   "いろいろな ぶんかの りょうりを たべる",
+   "ひこうきの そうじゅうを する"
+  ],
+  2,
+  "いろいろな りょうりの みせが あつまる しょくじの ばしょです。",
+  "What can people do at a Singapore hawker centre?",
+  [
+   "Ski on snowy peaks",
+   "Only make movies",
+   "Enjoy foods from different cultures",
+   "Fly aircraft"
+  ],
+  "Food stalls bring different culinary traditions together."
+ ],
+ [
+  "si",
+  "primary",
+  "elementary",
+  "place",
+  "地理・自然",
+  "スロベニアの シュコツィアンどうくつの なかを ながれる ものは？",
+  [
+   "かわ",
+   "ようがんだけ",
+   "うみの おおなみ",
+   "くもの かたまり"
+  ],
+  0,
+  "ちかを ながれる かわが おおきな たにを つくりました。",
+  "What flows through Slovenia's Škocjan Caves?",
+  [
+   "A river",
+   "Only lava",
+   "Large ocean waves",
+   "A mass of clouds"
+  ],
+  "An underground river has carved a huge canyon."
+ ],
+ [
+  "sk",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "スロバキアの ハルシュキに よく あわせる ブリンザは、なにから つくる チーズ？",
+  [
+   "とうにゅう",
+   "アーモンドミルク",
+   "ひつじの ちち",
+   "ココナツミルク"
+  ],
+  2,
+  "ちいさな だんごに ひつじの チーズなどを あわせます。",
+  "What milk is traditionally used for bryndza cheese in Slovak halušky?",
+  [
+   "Soy milk",
+   "Almond milk",
+   "Sheep's milk",
+   "Coconut milk"
+  ],
+  "The potato dumplings are traditionally served with sheep cheese."
+ ],
+ [
+  "sl",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "シエラレオネで にこみりょうりに つかう キャッサバの はは、どう りょうりする？",
+  [
+   "こおらせて そのまま たべる",
+   "ジュースに するだけ",
+   "さとうがしに する",
+   "こまかくして にこむ"
+  ],
+  3,
+  "キャッサバの はを こまかくして、にくや さかななどと にこみます。",
+  "How are cassava leaves commonly prepared in Sierra Leonean stew?",
+  [
+   "Frozen and eaten raw",
+   "Made only into juice",
+   "Made into candy",
+   "Chopped or pounded and cooked"
+  ],
+  "The leaves are cooked with other ingredients."
+ ],
+ [
+  "sm",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "サンマリノの トルタ・トレ・モンティでは、うすい ワッフルと なにを かさねる？",
+  [
+   "チョコレートクリーム",
+   "レタス",
+   "やきざかな",
+   "トマトソース"
+  ],
+  0,
+  "ワッフルと チョコレートクリームを かさねた おかしです。",
+  "What is layered between wafers in San Marino's Torta Tre Monti?",
+  [
+   "Chocolate cream",
+   "Lettuce",
+   "Grilled fish",
+   "Tomato sauce"
+  ],
+  "It is a layered wafer and chocolate dessert."
+ ],
+ [
+  "sn",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "セネガルの チェブジェンでは、さかなや やさいと いっしょに なにを たく？",
+  [
+   "そば",
+   "おこめ",
+   "うどん",
+   "パン"
+  ],
+  1,
+  "さかな、やさい、おこめを あわせる りょうりです。",
+  "What is cooked with fish and vegetables in Senegalese ceebu jën?",
+  [
+   "Buckwheat noodles",
+   "Rice",
+   "Udon",
+   "Bread"
+  ],
+  "The dish combines fish, vegetables and rice."
+ ],
+ [
+  "so",
+  "primary",
+  "elementary",
+  "place",
+  "歴史",
+  "ソマリアの ラス・ゲールの むかしの いわえに えがかれている どうぶつの ひとつは？",
+  [
+   "ホッキョクグマ",
+   "カンガルー",
+   "ウシ",
+   "ペンギン"
+  ],
+  2,
+  "いわには ウシや ひとなどが えがかれています。",
+  "Which animal is depicted in the ancient Laas Geel rock art of Somalia?",
+  [
+   "Polar bears",
+   "Kangaroos",
+   "Cattle",
+   "Penguins"
+  ],
+  "The rock paintings include cattle and people."
+ ],
+ [
+  "sr",
+  "primary",
+  "elementary",
+  "language",
+  "言語",
+  "スリナムの こうようごは、どの ことば？",
+  [
+   "フランスご",
+   "オランダご",
+   "スペインご",
+   "ポルトガルご"
+  ],
+  1,
+  "みなみアメリカに あり、オランダごが こうようごです。",
+  "What is the official language of Suriname?",
+  [
+   "French",
+   "Dutch",
+   "Spanish",
+   "Portuguese"
+  ],
+  "Suriname is a South American country with Dutch as its official language."
+ ],
+ [
+  "ss",
+  "primary",
+  "elementary",
+  "place",
+  "地理・自然",
+  "みなみスーダンの スッドでは、しろナイルがわの みずが ひろがって なにを つくる？",
+  [
+   "しおの さばく",
+   "かざんの かこう",
+   "ひろい しっち",
+   "おおきな ひょうが"
+  ],
+  2,
+  "かわの みずが ひろがる しっちは さかなや とりの すみかです。",
+  "What does the White Nile form in South Sudan's Sudd region?",
+  [
+   "A salt desert",
+   "A volcanic crater",
+   "A vast wetland",
+   "A large glacier"
+  ],
+  "The wetland supports fish, birds and livelihoods."
+ ],
+ [
+  "st",
+  "primary",
+  "elementary",
+  "thinkConnect",
+  "経済・産業",
+  "サントメ・プリンシペで そだてられてきた、チョコレートの もとに なる しょくぶつは？",
+  [
+   "コーヒー",
+   "バニラ",
+   "ナツメグ",
+   "カカオ"
+  ],
+  3,
+  "カカオの たねは チョコレートの ざいりょうに なります。",
+  "Which crop grown in São Tomé and Príncipe is used to make chocolate?",
+  [
+   "Coffee",
+   "Vanilla",
+   "Nutmeg",
+   "Cacao"
+  ],
+  "Cacao seeds are processed to make chocolate."
+ ],
+ [
+  "sv",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "エルサルバドルの ププサでは、まめや チーズを どんな きじで つつむことが おおい？",
+  [
+   "チョコの きじ",
+   "とうもろこしの きじ",
+   "パイの きじ",
+   "そばの きじ"
+  ],
+  1,
+  "あつめの とうもろこしの きじに ぐを いれて やきます。",
+  "What dough commonly surrounds the filling of Salvadoran pupusas?",
+  [
+   "Chocolate dough",
+   "Corn dough",
+   "Puff pastry",
+   "Buckwheat dough"
+  ],
+  "Thick corn dough encloses the filling."
+ ],
+ [
+  "sy",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "シリアなどの キッベは、ひきにくに どんな こくもつを あわせる りょうり？",
+  [
+   "ブルグルという こむぎ",
+   "オートミール",
+   "おこめだけ",
+   "ポップコーン"
+  ],
+  0,
+  "こむぎを くだいた ブルグルと にくを あわせます。",
+  "Which grain is typically combined with minced meat in Syrian kibbeh?",
+  [
+   "Bulgur wheat",
+   "Oatmeal",
+   "Only rice",
+   "Popcorn"
+  ],
+  "Bulgur is a cracked wheat used in kibbeh."
+ ],
+ [
+  "sz",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "慣習・行事",
+  "エスワティニの ウムランガの おまつりで、さんかする じょせいたちが はこぶ しょくぶつは？",
+  [
+   "たけのこ",
+   "あし",
+   "サボテン",
+   "マツの えだ"
+  ],
+  1,
+  "あしを はこび、うたや おどりを おこなう でんとうぎょうじです。",
+  "What plant do participants traditionally carry during Eswatini's Umhlanga festival?",
+  [
+   "Bamboo shoots",
+   "Reeds",
+   "Cacti",
+   "Pine branches"
+  ],
+  "The Reed Dance involves carrying reeds, singing and dancing."
+ ],
+ [
+  "td",
+  "primary",
+  "elementary",
+  "place",
+  "地理・自然",
+  "チャドの エネディの さばくの いわばに ある しぜんの みずばが たいせつなのは なぜ？",
+  [
+   "どうぶつや ひとが みずを えられるから",
+   "ゆきが とけなく なるから",
+   "うみの なみを つくるから",
+   "いわが ぜんぶ とけるから"
+  ],
+  0,
+  "かわいた ちいきでは みずばが いのちを ささえます。",
+  "Why are natural water pools important in Chad's Ennedi desert landscape?",
+  [
+   "They supply water to people and animals",
+   "They prevent snow from melting",
+   "They create ocean waves",
+   "They dissolve all rocks"
+  ],
+  "Water sources support life in the dry environment."
+ ],
+ [
+  "tg",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "住文化",
+  "トーゴの クタマクの でんとうてきな いえには、どんな かたちの たてものが ある？",
+  [
+   "ガラスの きゅうたい",
+   "こおりの どうくつ",
+   "きの うえの いえ",
+   "つちで つくった とう"
+  ],
+  3,
+  "バタマリバの ひとびとの つちづくりの いえは、とうのような かたちが とくちょうです。",
+  "What is a feature of traditional houses in Koutammakou, Togo?",
+  [
+   "Glass spheres",
+   "Ice caves",
+   "Tree houses",
+   "Earthen towers"
+  ],
+  "Batammariba houses are known for their earthen tower structures."
+ ],
+ [
+  "th",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "タイの パッタイの めんは、なにから つくることが おおい？",
+  [
+   "おこめ",
+   "そば",
+   "とうもろこし",
+   "じゃがいも"
+  ],
+  0,
+  "おこめの めんを たまごや やさいなどと いためます。",
+  "What are the noodles in Thai pad thai usually made from?",
+  [
+   "Rice",
+   "Buckwheat",
+   "Corn",
+   "Potatoes"
+  ],
+  "Rice noodles are stir-fried with ingredients such as eggs and vegetables."
+ ],
+ [
+  "tj",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "タジキスタンの オシという プロフで、にくや にんじんと たく しゅしょくは？",
+  [
+   "うどん",
+   "じゃがいも",
+   "おこめ",
+   "パン"
+  ],
+  2,
+  "おおきな なべで おこめを たき、ひとびとと わけあいます。",
+  "What staple is cooked with meat and carrots in Tajik oshi palav?",
+  [
+   "Udon",
+   "Potatoes",
+   "Rice",
+   "Bread"
+  ],
+  "The shared dish is cooked in a large pot."
+ ],
+ [
+  "tl",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "伝統工芸",
+  "ひがしティモールの タイスとは、なにを おって つくる でんとうてきな もの？",
+  [
+   "いろや もようの ある ぬの",
+   "ガラスの びん",
+   "てつの くぎ",
+   "いしの かべ"
+  ],
+  0,
+  "いろいろな もようを おった ぬのを おいわいや おくりものに つかいます。",
+  "What is tais, a traditional craft of Timor-Leste?",
+  [
+   "Patterned woven cloth",
+   "Glass bottles",
+   "Iron nails",
+   "Stone walls"
+  ],
+  "Woven cloth is used for ceremonies and gifts."
+ ],
+ [
+  "tm",
+  "primary",
+  "elementary",
+  "place",
+  "歴史",
+  "トルクメニスタンの メルブは、むかし どんな こうりゅうで さかえた まち？",
+  [
+   "こおりの うみの りょこう",
+   "シルクロードの ぼうえき",
+   "うちゅうりょこう",
+   "きんだいの ひこうきりょこう"
+  ],
+  1,
+  "さばくの オアシスに しょうにんが あつまった まちです。",
+  "What kind of exchange helped ancient Merv in Turkmenistan flourish?",
+  [
+   "Polar ice voyages",
+   "Silk Road trade",
+   "Space travel",
+   "Modern air travel"
+  ],
+  "The oasis city was an important center of trade."
+ ],
+ [
+  "tn",
+  "primary",
+  "elementary",
+  "place",
+  "歴史",
+  "チュニジアの カルタゴは、むかし どの うみの ぼうえきで さかえた？",
+  [
+   "バルトかい",
+   "ベーリングかい",
+   "ちちゅうかい",
+   "カリブかい"
+  ],
+  2,
+  "カルタゴは ちちゅうかいの こうえきで さかえた まちです。",
+  "Which sea was central to ancient Carthage's trade in Tunisia?",
+  [
+   "Baltic Sea",
+   "Bering Sea",
+   "Mediterranean Sea",
+   "Caribbean Sea"
+  ],
+  "Carthage was an important Mediterranean trading city."
+ ],
+ [
+  "to",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "トンガの ルー・プルは、にくと ココナツミルクを どんな はで つつむ？",
+  [
+   "マツの は",
+   "サクラの は",
+   "もみじの は",
+   "タロイモの は"
+  ],
+  3,
+  "タロイモの はで つつみ、じめんの なかの ろなどで むしやきに します。",
+  "Which leaves wrap meat and coconut milk in Tongan lu pulu?",
+  [
+   "Pine needles",
+   "Cherry leaves",
+   "Maple leaves",
+   "Taro leaves"
+  ],
+  "The food is wrapped in taro leaves and cooked."
+ ],
+ [
+  "tr",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "テュルキエの バクラヴァは、うすい きじに ナッツと なにを あわせる おかし？",
+  [
+   "トマトソース",
+   "しょうゆ",
+   "あまい シロップ",
+   "しおみず"
+  ],
+  2,
+  "うすい きじを かさね、ナッツと あまい シロップを あわせます。",
+  "What is added to layers of pastry and nuts in Turkish baklava?",
+  [
+   "Tomato sauce",
+   "Soy sauce",
+   "Sweet syrup",
+   "Saltwater"
+  ],
+  "Baklava is a layered pastry sweetened with syrup."
+ ],
+ [
+  "tt",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "音楽・芸能",
+  "トリニダード・トバゴの スティールパンは、もともと なにを かこうして つくられた がっき？",
+  [
+   "きんぞくの ドラムかん",
+   "きの えだ",
+   "かいがら",
+   "ぬのの ふくろ"
+  ],
+  0,
+  "きんぞくの ドラムかんを かこうして、いろいろな おとを だす がっきが うまれました。",
+  "What material was used to develop the steelpan in Trinidad and Tobago?",
+  [
+   "Metal drums",
+   "Tree branches",
+   "Seashells",
+   "Cloth bags"
+  ],
+  "Metal drums were shaped to produce different musical notes."
+ ],
+ [
+  "tv",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "ツバルの プラカという いもを そだてる とき、どんな くふうが ある？",
+  [
+   "うみの すいめんに うかべる",
+   "こおりの なかで そだてる",
+   "みずに ちかい ふかい あなで そだてる",
+   "たかい きの うえで そだてる"
+  ],
+  2,
+  "みずに ちかい じめんの あなを つかう のうぎょうです。",
+  "How is pulaka traditionally grown on Tuvalu's low-lying islands?",
+  [
+   "Floating on the sea",
+   "Inside ice",
+   "In pits near groundwater",
+   "High in trees"
+  ],
+  "Pits allow the root crop to grow near freshwater."
+ ],
+ [
+  "tw",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "たいわんの ニュウロウミェンという めんりょうりに のせる おもな にくは？",
+  [
+   "ぶたにく",
+   "とりにく",
+   "ひつじにく",
+   "ぎゅうにく"
+  ],
+  3,
+  "ぎゅうにくを にこんだ スープで めんを たべます。",
+  "Which meat is central to Taiwanese niurou mian?",
+  [
+   "Pork",
+   "Chicken",
+   "Lamb",
+   "Beef"
+  ],
+  "It is a noodle dish with beef and broth."
+ ],
+ [
+  "tz",
+  "primary",
+  "elementary",
+  "place",
+  "地理・自然",
+  "タンザニアの セレンゲティで、ヌーや シマウマが おおぜいで いどうする おもな わけは？",
+  [
+   "うみに もぐるため",
+   "いえを たてるため",
+   "くさや みずを さがすため",
+   "ゆきを さがすため"
+  ],
+  2,
+  "あめや くさの じょうきょうに あわせて いどうします。",
+  "Why do wildebeest and zebras migrate across Tanzania's Serengeti?",
+  [
+   "To dive in the sea",
+   "To build houses",
+   "To find grass and water",
+   "To find snow"
+  ],
+  "The migration follows seasonal rain and grazing opportunities."
+ ],
+ [
+  "ua",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "ウクライナの ボルシチの あかい いろの もとに なる ことが おおい やさいは？",
+  [
+   "レタス",
+   "もやし",
+   "ビーツ",
+   "きゅうり"
+  ],
+  2,
+  "ビーツを つかうと スープが あかく なります。",
+  "Which vegetable often gives Ukrainian borscht its red color?",
+  [
+   "Lettuce",
+   "Bean sprouts",
+   "Beetroot",
+   "Cucumber"
+  ],
+  "Beetroot gives many versions of borscht their red color."
+ ],
+ [
+  "ug",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "ウガンダの ロレックスという たべものは、なにを チャパティで まく？",
+  [
+   "うすやき たまごと やさい",
+   "アイスクリーム",
+   "バナナと チョコ",
+   "やきりんご"
+  ],
+  0,
+  "たまごや やさいを チャパティで まく やたいりょうりです。",
+  "What is rolled in chapati to make a Ugandan rolex?",
+  [
+   "Egg omelet and vegetables",
+   "Ice cream",
+   "Banana and chocolate",
+   "Baked apple"
+  ],
+  "The popular street food wraps eggs and vegetables in chapati."
+ ],
+ [
+  "us",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "音楽・芸能",
+  "アメリカの ニューオーリンズなどで はってんした ジャズで、えんそうしながら おんがくを つくりだす ことを なんという？",
+  [
+   "そっきょう えんそう",
+   "おんがくの ろくおん",
+   "がっきの せいぞう",
+   "おんぷの いんさつ"
+  ],
+  0,
+  "ジャズでは そのばで おんがくを つくる そっきょう えんそうが たいせつです。",
+  "What is creating music on the spot during jazz performances called?",
+  [
+   "Improvisation",
+   "Recording",
+   "Instrument manufacturing",
+   "Printing music"
+  ],
+  "Improvisation is a key feature of jazz, which developed in the United States."
+ ],
+ [
+  "uy",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "慣習・行事",
+  "ウルグアイで マテちゃを のむ とき、ボンビージャという どうぐは なにに つかう？",
+  [
+   "はを きる",
+   "おゆを わかす",
+   "おちゃを すって のむ",
+   "おちゃを こおらせる"
+  ],
+  2,
+  "ボンビージャは はを こしながら おちゃを のむ すいくちです。",
+  "What is a bombilla used for when drinking mate in Uruguay?",
+  [
+   "Cutting leaves",
+   "Boiling water",
+   "Sipping the tea",
+   "Freezing the tea"
+  ],
+  "The metal straw filters the leaves while drinking."
+ ],
+ [
+  "uz",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "ウズベキスタンの プロフで、おこめや にくに よく あわせる オレンジいろの やさいは？",
+  [
+   "かぼちゃ",
+   "トマト",
+   "パプリカ",
+   "にんじん"
+  ],
+  3,
+  "にんじんや たまねぎを おこめ、にくと いっしょに たきます。",
+  "Which vegetable is commonly cooked with rice and meat in Uzbek plov?",
+  [
+   "Pumpkin",
+   "Tomatoes",
+   "Bell peppers",
+   "Carrots"
+  ],
+  "Carrots and onions are cooked together with rice and meat."
+ ],
+ [
+  "va",
+  "primary",
+  "elementary",
+  "place",
+  "歴史",
+  "バチカンの システィーナれいはいどうで、ミケランジェロの えが ある たかい ばしょは？",
+  [
+   "ゆか",
+   "かいだんの うら",
+   "そとの どうろ",
+   "てんじょう"
+  ],
+  3,
+  "てんじょうに たくさんの えが えがかれています。",
+  "Where are Michelangelo's famous paintings in the Sistine Chapel?",
+  [
+   "On the floor",
+   "Under the stairs",
+   "On the road outside",
+   "On the ceiling"
+  ],
+  "Michelangelo painted the chapel ceiling."
+ ],
+ [
+  "vc",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "セントビンセントとグレナディーンしょとうの りょうりで、さかなと いっしょに やいて たべる きの みは？",
+  [
+   "さくらんぼ",
+   "パンノキの み",
+   "りんご",
+   "ぶどう"
+  ],
+  1,
+  "パンノキの みを やいて さかなに あわせます。",
+  "Which tree fruit is traditionally roasted and served with fish in Saint Vincent and the Grenadines?",
+  [
+   "Cherries",
+   "Breadfruit",
+   "Apple",
+   "Grapes"
+  ],
+  "Roasted breadfruit is a traditional accompaniment to fish."
+ ],
+ [
+  "ve",
+  "primary",
+  "elementary",
+  "place",
+  "地理・自然",
+  "ベネズエラの エンジェルフォールは、なにが とても たかい ことで ゆうめい？",
+  [
+   "きの たかさ",
+   "なみの たかさ",
+   "さとうの やまの たかさ",
+   "たきの おちる たかさ"
+  ],
+  3,
+  "たかい だんがいから みずが おちる たきです。",
+  "What is Angel Falls in Venezuela famous for?",
+  [
+   "The height of its trees",
+   "The height of its waves",
+   "The height of sugar piles",
+   "Its great vertical drop"
+  ],
+  "Water plunges from a high cliff."
+ ],
+ [
+  "vn",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "ベトナムの フォーで つかう めんは、ふつう なにから つくる？",
+  [
+   "おこめ",
+   "こむぎ",
+   "そば",
+   "とうもろこし"
+  ],
+  0,
+  "おこめの めんを かおりの よい スープで たべます。",
+  "What are the noodles in Vietnamese phở normally made from?",
+  [
+   "Rice",
+   "Wheat",
+   "Buckwheat",
+   "Corn"
+  ],
+  "Rice noodles are served in a fragrant broth."
+ ],
+ [
+  "vu",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "伝統工芸",
+  "バヌアツの すなえは、どんな ばしょに せんを かいて つくる？",
+  [
+   "こおりの うえ",
+   "ガラスの なか",
+   "うみの すいめん",
+   "すなや かざんばいの うえ"
+  ],
+  3,
+  "すななどに せんを かき、おはなしや ちしきを つたえます。",
+  "On what surface is traditional Vanuatu sand drawing made?",
+  [
+   "Sheets of ice",
+   "Inside glass",
+   "The sea surface",
+   "Sand or volcanic ash"
+  ],
+  "Continuous patterns can carry stories and knowledge."
+ ],
+ [
+  "ws",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "住文化",
+  "サモアの ファレという でんとうてきな いえは、かべが すくない ことが あります。どんな よさが ある？",
+  [
+   "ちかに もぐりやすい",
+   "みずが たまりやすい",
+   "かぜが とおりやすい",
+   "ゆきが たまりやすい"
+  ],
+  2,
+  "あけはなした つくりで かぜが とおりやすく なります。",
+  "Why can a traditional Samoan fale have open sides?",
+  [
+   "To go underground",
+   "To collect water",
+   "To let air flow through",
+   "To collect snow"
+  ],
+  "Open sides allow ventilation in the warm climate."
+ ],
+ [
+  "ye",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "住文化",
+  "イエメンの サナアの ふるい いえでは、かべに なにを つかった ものが おおい？",
+  [
+   "とうめいな ガラス",
+   "プラスチックの いた",
+   "ひぼし レンガ",
+   "こおりの ブロック"
+  ],
+  2,
+  "つちを かわかした レンガなどで たかい いえを つくりました。",
+  "What material was commonly used in traditional houses in old Sana'a, Yemen?",
+  [
+   "Clear glass",
+   "Plastic sheets",
+   "Sun-dried bricks",
+   "Ice blocks"
+  ],
+  "Earthen bricks are a traditional building material."
+ ],
+ [
+  "za",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "慣習・行事",
+  "みなみアフリカの ブラーイでは、かぞくや ともだちと なにを たのしむ？",
+  [
+   "こおりの うえの スキー",
+   "うみでの つりだけ",
+   "ひこうきの りょこう",
+   "ひで やいた にくなど"
+  ],
+  3,
+  "ブラーイは ひを かこんで りょうりや かいわを たのしむ ぶんかです。",
+  "What do friends and family enjoy together at a South African braai?",
+  [
+   "Skiing on ice",
+   "Only fishing at sea",
+   "Air travel",
+   "Food cooked over a fire"
+  ],
+  "A braai is a social gathering around grilled food."
+ ],
+ [
+  "zm",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "食文化",
+  "ザンビアの ンシマは、ふつう どの こくもつの こなを おゆで ねる？",
+  [
+   "こむぎ",
+   "そば",
+   "オーツむぎ",
+   "とうもろこし"
+  ],
+  3,
+  "とうもろこしの こなで つくり、やさいや にくなどと たべます。",
+  "Which grain is usually used to make Zambian nshima?",
+  [
+   "Wheat",
+   "Buckwheat",
+   "Oats",
+   "Maize"
+  ],
+  "Maize meal is cooked into a thick staple."
+ ],
+ [
+  "zw",
+  "primary",
+  "elementary",
+  "lifeCulture",
+  "音楽・芸能",
+  "ジンバブエの ムビラは、どんな ぶぶんを ゆびで はじいて おとを だす？",
+  [
+   "きの たいこ",
+   "きんぞくの けんばん",
+   "ぬのの ひも",
+   "ガラスの びん"
+  ],
+  1,
+  "きの いたに つけた きんぞくの けんばんを はじく がっきです。",
+  "Which parts of Zimbabwe's mbira are plucked to make sound?",
+  [
+   "Wooden drums",
+   "Metal keys",
+   "Cloth cords",
+   "Glass bottles"
+  ],
+  "Metal tines attached to a wooden board are plucked."
  ]
 ];
