@@ -39,7 +39,7 @@ export function withOriginalQuizPhoto(q){
  return {...base,image:{...image,stage:'review',auditStatus:'topic-metadata-reviewed',auditDate:photoAudit.reviewedOn,auditReason:audit.reason}};
 }
 export function quizPhotoForPhase(q,review){
- if(/^tp-(?:original-|editorial-)/.test(q?.id||''))return review&&q.image?.auditStatus==='topic-metadata-reviewed'?q.image:null;
+ if(/^tp-(?:original-|editorial-)/.test(q?.id||''))return q.image?.auditStatus==='topic-metadata-reviewed'&&(review||(q.photoQuestion===true&&q.image.stage==='question'&&q.image.observationJa&&q.image.observationEn))?q.image:null;
  return review?q?.image:(q?.previewImage||(q?.image?.stage==='question'?q.image:null));
 }
 export function originalPhotoCoverage(questions){

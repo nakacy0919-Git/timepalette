@@ -33,3 +33,6 @@ Country-context substitutions and automatic atlas photo publication are disabled
 
 ### Actual-image visual review batch
 16 previously withheld original questions now use individually viewed Commons photographs. The source description and license were inspected, and the actual file was viewed before inclusion. A direct Wikimedia delivery URL is used only when its filename equals the file page's filename and the visual-review flag is present. All retain post-answer display; no generic photo substitutions. The rest of the historical metadata audit is not represented as a complete visual audit.
+
+## Photo-first observation quiz bank
+30 separately authored bilingual questions use existing exact-source visually reviewed assets. The image is shown during the question; the descriptive caption and file title are shown after answering. A descriptive accessibility alternative also appears if the image cannot load. The questions are available in the local games' dedicated photo bank and the original preview bank. Existing photo-review questions retain their previous reveal timing. The sources and licensing are inherited from the pinned existing audit entry, not independently reverified in this authoring batch. No new external assets were added.

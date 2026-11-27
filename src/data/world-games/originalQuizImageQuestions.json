@@ -1,0 +1,932 @@
+[
+ {
+  "id": "tp-original-image-v1-am-1",
+  "country": "am",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-am-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lavash_arm%C3%A9nien.jpg",
+  "prompt": "しゃしんの ような うすい パンは どれ？",
+  "choices": [
+   "ラヴァシュ",
+   "ベーグル",
+   "クロワッサン",
+   "バゲット"
+  ],
+  "correctIndex": 0,
+  "explanation": "ラヴァシュは アルメニアの うすく たいらな パンです。",
+  "translations": {
+   "en": {
+    "prompt": "Which flatbread is shown in the photo?",
+    "choices": [
+     "Lavash",
+     "Bagel",
+     "Croissant",
+     "Baguette"
+    ],
+    "explanation": "Lavash is a thin, flat bread associated with Armenia."
+   }
+  },
+  "observationJa": "うすく たいらに のばした パンが あります。",
+  "observationEn": "Thin, flat sheets of bread are shown."
+ },
+ {
+  "id": "tp-original-image-v1-ch-2",
+  "country": "ch",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-ch-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Swiss_cheese_fondue.JPG",
+  "prompt": "しゃしんの なべを かこんで たべる りょうりは どれ？",
+  "choices": [
+   "ポテトサラダ",
+   "チーズフォンデュ",
+   "チョコレートケーキ",
+   "ミートパイ"
+  ],
+  "correctIndex": 1,
+  "explanation": "チーズフォンデュは あたたかい チーズに パンなどを つけて たべます。",
+  "translations": {
+   "en": {
+    "prompt": "Which dish is served in the pot shown?",
+    "choices": [
+     "Potato salad",
+     "Cheese fondue",
+     "Chocolate cake",
+     "Meat pie"
+    ],
+    "explanation": "Cheese fondue is eaten by dipping bread or other foods into warm melted cheese."
+   }
+  },
+  "observationJa": "なべに とろりとした たべものが あり、パンが そえられています。",
+  "observationEn": "A pot of a melted food is shown with bread."
+ },
+ {
+  "id": "tp-original-image-v1-fr-3",
+  "country": "fr",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-fr-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Macarons.jpg",
+  "prompt": "しゃしんの おかしの なまえは？",
+  "choices": [
+   "フィナンシェ",
+   "カヌレ",
+   "マカロン",
+   "クレープ"
+  ],
+  "correctIndex": 2,
+  "explanation": "マカロンは まるい きじで クリームなどを はさんだ おかしです。",
+  "translations": {
+   "en": {
+    "prompt": "What are the sweets in the photo called?",
+    "choices": [
+     "Financiers",
+     "Canelés",
+     "Macarons",
+     "Crêpes"
+    ],
+    "explanation": "Macarons have two round shells with a filling between them."
+   }
+  },
+  "observationJa": "まるい きじを ふたつ あわせた いろの ある おかしです。",
+  "observationEn": "Small, round, colored sweets have two shells joined by a filling."
+ },
+ {
+  "id": "tp-original-image-v1-de-4",
+  "country": "de",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-de-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pretzel_01-14.jpg",
+  "prompt": "しゃしんの パンの なまえは？",
+  "choices": [
+   "フォカッチャ",
+   "ピタ",
+   "バゲット",
+   "プレッツェル"
+  ],
+  "correctIndex": 3,
+  "explanation": "プレッツェルは ひも のような きじを むすんで やく パンです。",
+  "translations": {
+   "en": {
+    "prompt": "What is the bread shown called?",
+    "choices": [
+     "Focaccia",
+     "Pita",
+     "Baguette",
+     "Pretzel"
+    ],
+    "explanation": "A pretzel is made by twisting dough into a knot-like shape before baking."
+   }
+  },
+  "observationJa": "パンが わを つくる ように まがっています。",
+  "observationEn": "The bread is twisted into a looped, knot-like shape."
+ },
+ {
+  "id": "tp-original-image-v1-ma-5",
+  "country": "ma",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-ma-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tagine.jpg",
+  "prompt": "しゃしんの どうぐは なんに つかう？",
+  "choices": [
+   "りょうりを にこむ",
+   "おちゃを のむ",
+   "こむぎを ひく",
+   "パンを きる"
+  ],
+  "correctIndex": 0,
+  "explanation": "タジンは ふたを して たべものを むしにする りょうりにも つかわれます。",
+  "translations": {
+   "en": {
+    "prompt": "What is the pictured utensil used for?",
+    "choices": [
+     "Slow-cooking food",
+     "Drinking tea",
+     "Grinding wheat",
+     "Slicing bread"
+    ],
+    "explanation": "A tagine is a covered vessel used for slow-cooking food."
+   }
+  },
+  "observationJa": "ひらたい そこに とがった ふたが ついています。",
+  "observationEn": "A shallow base is covered by a tall conical lid."
+ },
+ {
+  "id": "tp-original-image-v1-pt-6",
+  "country": "pt",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-pt-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pastel_De_Nata.jpg",
+  "prompt": "しゃしんの こがたの タルトは どれ？",
+  "choices": [
+   "ブラウニー",
+   "パステル・デ・ナタ",
+   "マカロン",
+   "チュロス"
+  ],
+  "correctIndex": 1,
+  "explanation": "パステル・デ・ナタは ポルトガルの カスタードタルトです。",
+  "translations": {
+   "en": {
+    "prompt": "Which small tart is shown?",
+    "choices": [
+     "Brownie",
+     "Pastel de nata",
+     "Macaron",
+     "Churro"
+    ],
+    "explanation": "Pastel de nata is a Portuguese custard tart."
+   }
+  },
+  "observationJa": "まるい パイの きじに やきいろの ついた なかみが はいっています。",
+  "observationEn": "Small round pastry shells contain a baked, browned filling."
+ },
+ {
+  "id": "tp-original-image-v1-ar-7",
+  "country": "ar",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-ar-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asado_(argentine_meat)_2019.jpg",
+  "prompt": "写真の調理法では、肉の下にある熱源から主にどのように熱が伝わる？",
+  "choices": [
+   "氷からの熱伝導",
+   "冷たい空気だけ",
+   "放射と熱い空気",
+   "水の対流だけ"
+  ],
+  "correctIndex": 2,
+  "explanation": "アサードでは炭火などからの放射熱と熱い空気で肉を加熱する。",
+  "translations": {
+   "en": {
+    "prompt": "In the cooking method shown, how is heat transferred mainly from the heat source beneath the meat?",
+    "choices": [
+     "Conduction from ice",
+     "Cold air only",
+     "Radiation and hot air",
+     "Convection in water only"
+    ],
+    "explanation": "In asado, radiation and hot air from the fire or coals heat the meat."
+   }
+  },
+  "observationJa": "肉が火の上の焼き網に置かれている。",
+  "observationEn": "Meat is arranged on a grill above a fire."
+ },
+ {
+  "id": "tp-original-image-v1-dk-8",
+  "country": "dk",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-dk-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Smorrebrod.jpg",
+  "prompt": "しゃしんの サンドイッチの とくちょうは？",
+  "choices": [
+   "パンが まるい ドーナツがた",
+   "ぐが スープに はいっている",
+   "パンが ふたの ない カップがた",
+   "パンの うえの ぐが みえる"
+  ],
+  "correctIndex": 3,
+  "explanation": "スモーブローは パンの うえに ぐを のせる オープンサンドです。",
+  "translations": {
+   "en": {
+    "prompt": "What is distinctive about these sandwiches?",
+    "choices": [
+     "The bread is doughnut-shaped",
+     "The filling is in soup",
+     "The bread forms an open cup",
+     "The toppings are visible on the bread"
+    ],
+    "explanation": "Smørrebrød is an open sandwich with toppings on a slice of bread."
+   }
+  },
+  "observationJa": "パンの うえに いろいろな ぐが のっています。",
+  "observationEn": "Various toppings are arranged on slices of bread."
+ },
+ {
+  "id": "tp-original-image-v1-ec-9",
+  "country": "ec",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-ec-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panama_hat.jpg",
+  "prompt": "しゃしんの ぼうしを かぶると なにを さえぎれる？",
+  "choices": [
+   "ひざし",
+   "おとの ひびき",
+   "じめんの ゆれ",
+   "みずの ながれ"
+  ],
+  "correctIndex": 0,
+  "explanation": "つばの ある パナマぼうは かおへの ひざしを やわらげます。",
+  "translations": {
+   "en": {
+    "prompt": "What can wearing the pictured hat help block?",
+    "choices": [
+     "Sunlight",
+     "Echoes",
+     "Ground shaking",
+     "Water currents"
+    ],
+    "explanation": "The brim of a Panama hat helps shade the face from sunlight."
+   }
+  },
+  "observationJa": "ひろい つばが ある あみものの ぼうしです。",
+  "observationEn": "A woven hat with a wide brim is shown."
+ },
+ {
+  "id": "tp-original-image-v1-tt-10",
+  "country": "tt",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-tt-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steelpan.jpeg",
+  "prompt": "しゃしんの がっきの なまえは？",
+  "choices": [
+   "アコーディオン",
+   "スティールパン",
+   "マラカス",
+   "トランペット"
+  ],
+  "correctIndex": 1,
+  "explanation": "スティールパンは トリニダード・トバゴで うまれた きんぞくの がっきです。",
+  "translations": {
+   "en": {
+    "prompt": "What is the instrument shown?",
+    "choices": [
+     "Accordion",
+     "Steelpan",
+     "Maracas",
+     "Trumpet"
+    ],
+    "explanation": "The steelpan is a metal instrument developed in Trinidad and Tobago."
+   }
+  },
+  "observationJa": "まるい きんぞくの めんに おとの ちがう くぼみが あります。",
+  "observationEn": "A round metal playing surface has separate indented note areas."
+ },
+ {
+  "id": "tp-original-image-v1-zw-11",
+  "country": "zw",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-zw-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mbira_dzavadzimu.jpg",
+  "prompt": "しゃしんの がっきの なまえは？",
+  "choices": [
+   "フルート",
+   "タンバリン",
+   "ムビラ",
+   "カスタネット"
+  ],
+  "correctIndex": 2,
+  "explanation": "ムビラは ゆびで きんぞくの いたを はじいて おとを だす がっきです。",
+  "translations": {
+   "en": {
+    "prompt": "What is the instrument in the photo called?",
+    "choices": [
+     "Flute",
+     "Tambourine",
+     "Mbira",
+     "Castanets"
+    ],
+    "explanation": "A mbira produces sound when its metal tines are plucked."
+   }
+  },
+  "observationJa": "いたの うえに ほそい きんぞくの いたが ならんでいます。",
+  "observationEn": "Narrow metal tines are arranged on a board."
+ },
+ {
+  "id": "tp-original-image-v1-gn-12",
+  "country": "gn",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-gn-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beating_a_Djemb%C3%A9.jpg",
+  "prompt": "写真のようなジャンベは、楽器の分類では何に当たる？",
+  "choices": [
+   "弦楽器",
+   "木管楽器",
+   "金管楽器",
+   "打楽器"
+  ],
+  "correctIndex": 3,
+  "explanation": "ジャンベは皮を張った面を打って音を出す打楽器である。写真はコートジボワールで撮影された演奏例。",
+  "translations": {
+   "en": {
+    "prompt": "What type of instrument is the djembe shown?",
+    "choices": [
+     "String instrument",
+     "Woodwind instrument",
+     "Brass instrument",
+     "Percussion instrument"
+    ],
+    "explanation": "A djembe is a percussion instrument with a drumhead that is struck. The photo shows a performance in Côte d'Ivoire."
+   }
+  },
+  "observationJa": "手で太鼓の張られた面を打っている。",
+  "observationEn": "Hands strike the stretched head of a drum."
+ },
+ {
+  "id": "tp-original-image-v1-kg-13",
+  "country": "kg",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-kg-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Traditional_Kyrgyz_nomadic_Yurt.jpg",
+  "prompt": "しゃしんの まるい すまいは どれ？",
+  "choices": [
+   "ユルタ",
+   "ログハウス",
+   "たかゆかの いえ",
+   "れんがの いえ"
+  ],
+  "correctIndex": 0,
+  "explanation": "ユルタは キルギスなどで みられる いどうできる すまいです。",
+  "translations": {
+   "en": {
+    "prompt": "Which dwelling is shown?",
+    "choices": [
+     "Yurt",
+     "Log cabin",
+     "Stilt house",
+     "Brick house"
+    ],
+    "explanation": "A yurt is a portable dwelling found in Kyrgyzstan and elsewhere."
+   }
+  },
+  "observationJa": "まるい かべと まるく もりあがった やねの すまいです。",
+  "observationEn": "A dwelling has round walls and a rounded roof."
+ },
+ {
+  "id": "tp-original-image-v1-ws-14",
+  "country": "ws",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-ws-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Samoan_fale%2C_Lelepa_village%2C_Savaii%2C_Samoa_2009.JPG",
+  "prompt": "写真のサモアのファレで、日差しを防ぎながら外の風を通す部分はどれ？",
+  "choices": [
+   "閉じた金属製の外壁",
+   "屋根と開放的な側面",
+   "密閉した地下室",
+   "分厚い窓ガラス"
+  ],
+  "correctIndex": 1,
+  "explanation": "屋根が日差しを遮り、開放的な側面から空気が通る。",
+  "translations": {
+   "en": {
+    "prompt": "Which feature of the Samoan fale in the photo combines shade with ventilation?",
+    "choices": [
+     "Closed metal exterior walls",
+     "Roof and open sides",
+     "Sealed basement",
+     "Thick window glass"
+    ],
+    "explanation": "The roof provides shade while open sides allow air to circulate."
+   }
+  },
+  "observationJa": "屋根を柱が支え、側面は開放されている。",
+  "observationEn": "Posts support a roof, and the sides are open."
+ },
+ {
+  "id": "tp-original-image-v1-mg-15",
+  "country": "mg",
+  "gradeBand": "elementary",
+  "domain": "place",
+  "parentId": "tp-original-hand-v1-mg-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ring_Tailed_Lemur_in_Lemur%27s_Park.jpg",
+  "prompt": "しゃしんの どうぶつの とくちょうは どれ？",
+  "choices": [
+   "ながい つのが ある",
+   "つばさが ある",
+   "しっぽに しまが ある",
+   "せなかに こうらが ある"
+  ],
+  "correctIndex": 2,
+  "explanation": "ワオキツネザルには しろと くろの しまもようの しっぽが あります。",
+  "translations": {
+   "en": {
+    "prompt": "Which feature is visible on the animal?",
+    "choices": [
+     "Long horns",
+     "Wings",
+     "A striped tail",
+     "A shell on its back"
+    ],
+    "explanation": "Ring-tailed lemurs have a black-and-white striped tail."
+   }
+  },
+  "observationJa": "ながい しっぽに しろと くろの もようが あります。",
+  "observationEn": "A long tail has alternating black and white markings."
+ },
+ {
+  "id": "tp-original-image-v1-st-16",
+  "country": "st",
+  "gradeBand": "elementary",
+  "domain": "place",
+  "parentId": "tp-original-hand-v1-st-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cabosse_de_cacao_%C3%A0_S%C3%A3o_Tom%C3%A9_%2810%29.jpg",
+  "prompt": "しゃしんの みは きの どこに ついている？",
+  "choices": [
+   "きの はの さき",
+   "つちの なか",
+   "きの ねの さき",
+   "みきの ちかく"
+  ],
+  "correctIndex": 3,
+  "explanation": "カカオの みは みきや ふとい えだに つくことが あります。",
+  "translations": {
+   "en": {
+    "prompt": "Where on the tree are the fruits shown growing?",
+    "choices": [
+     "At leaf tips",
+     "Underground",
+     "At the ends of roots",
+     "Near the trunk"
+    ],
+    "explanation": "Cacao pods can grow directly from the trunk and large branches."
+   }
+  },
+  "observationJa": "おおきな みが きの ふとい ぶぶんに ついています。",
+  "observationEn": "Large pods grow close to a thick part of the tree."
+ },
+ {
+  "id": "tp-original-image-v1-bd-17",
+  "country": "bd",
+  "gradeBand": "middle",
+  "domain": "place",
+  "parentId": "tp-original-hand-v1-bd-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mangrove_forests.jpg",
+  "prompt": "写真のマングローブ林のように、潮の満ち引きがある場所で暮らす植物に必要な性質は？",
+  "choices": [
+   "塩分や冠水への耐性",
+   "永久凍土だけに適応する性質",
+   "完全な乾燥を必要とする性質",
+   "淡水にしか耐えない性質"
+  ],
+  "correctIndex": 0,
+  "explanation": "マングローブは潮間帯の塩分や水に浸る環境に適応している。",
+  "translations": {
+   "en": {
+    "prompt": "What adaptation is especially important for plants living in tidal mangrove forests like this one?",
+    "choices": [
+     "Tolerance of salt and inundation",
+     "Adaptation only to permafrost",
+     "A need for complete dryness",
+     "Tolerance of freshwater only"
+    ],
+    "explanation": "Mangroves are adapted to salty conditions and periodic flooding in tidal areas."
+   }
+  },
+  "observationJa": "水辺に樹木が生えている森林の景観。",
+  "observationEn": "A forest of trees growing beside water."
+ },
+ {
+  "id": "tp-original-image-v1-cd-18",
+  "country": "cd",
+  "gradeBand": "middle",
+  "domain": "place",
+  "parentId": "tp-original-hand-v1-cd-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Virunga_National_Park_Gorilla.jpg",
+  "prompt": "写真のマウンテンゴリラを観察するとき、保護のために適切な行動はどれ？",
+  "choices": [
+   "体に触れる",
+   "定められた距離を保つ",
+   "食べ物を直接与える",
+   "大声で呼び寄せる"
+  ],
+  "correctIndex": 1,
+  "explanation": "距離を保つことは感染やストレスのリスクを抑える。現地のガイドの指示に従う。",
+  "translations": {
+   "en": {
+    "prompt": "When observing mountain gorillas like the one shown, which behavior helps protect them?",
+    "choices": [
+     "Touch them",
+     "Keep the required distance",
+     "Feed them directly",
+     "Call them over loudly"
+    ],
+    "explanation": "Keeping the required distance helps reduce infection and stress risks. Follow the guide's instructions."
+   }
+  },
+  "observationJa": "森林にいる大型の霊長類。",
+  "observationEn": "A large primate is shown in a forest habitat."
+ },
+ {
+  "id": "tp-original-image-v1-sc-19",
+  "country": "sc",
+  "gradeBand": "elementary",
+  "domain": "place",
+  "parentId": "tp-original-hand-v1-sc-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coco_de_M%C3%A8r_710-1353.jpg",
+  "prompt": "しゃしんは ヤシの どの ぶぶん？",
+  "choices": [
+   "はな",
+   "ねっこ",
+   "たね",
+   "はっぱ"
+  ],
+  "correctIndex": 2,
+  "explanation": "ココ・デ・メールは とても おおきな たねを つくる ヤシです。",
+  "translations": {
+   "en": {
+    "prompt": "Which part of a palm is pictured?",
+    "choices": [
+     "Flower",
+     "Root",
+     "Seed",
+     "Leaf"
+    ],
+    "explanation": "Coco de mer is a palm that produces exceptionally large seeds."
+   }
+  },
+  "observationJa": "おおきく ふたつに ふくらんだ かたい かたちの ものです。",
+  "observationEn": "A large, hard-looking object has two rounded lobes."
+ },
+ {
+  "id": "tp-original-image-v1-gd-20",
+  "country": "gd",
+  "gradeBand": "middle",
+  "domain": "place",
+  "parentId": "tp-original-hand-v1-gd-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nutmeg_01.jpg",
+  "prompt": "写真のナツメグの種を包む赤い網状の部分から作る香辛料は？",
+  "choices": [
+   "シナモン",
+   "クローブ",
+   "カルダモン",
+   "メース"
+  ],
+  "correctIndex": 3,
+  "explanation": "メースはナツメグの種を包む仮種皮から作る。種から作る香辛料はナツメグである。",
+  "translations": {
+   "en": {
+    "prompt": "Which spice is made from the red, net-like covering around the nutmeg seed in the photo?",
+    "choices": [
+     "Cinnamon",
+     "Clove",
+     "Cardamom",
+     "Mace"
+    ],
+    "explanation": "Mace is made from the aril around the nutmeg seed; the seed itself yields nutmeg."
+   }
+  },
+  "observationJa": "開いた果実の中に、赤い網状の部分が見える。",
+  "observationEn": "An opened fruit shows a red, net-like covering."
+ },
+ {
+  "id": "tp-original-image-v1-au-21",
+  "country": "au",
+  "gradeBand": "high",
+  "domain": "thinkConnect",
+  "parentId": "tp-original-hand-v1-au-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coral_community_at_Norman_Reef.jpg",
+  "prompt": "写真のサンゴ群集を調査する際、白化の進行を判断するのに最も有効な方法は？",
+  "choices": [
+   "同じ地点を定期撮影し白化した面積の割合を比較する",
+   "一枚の写真だけから年間の変化を決める",
+   "別の海域の写真だけで判断する",
+   "魚の種類だけを数え白化率とする"
+  ],
+  "correctIndex": 0,
+  "explanation": "同じ条件で繰り返し観察すると、白化の変化を比較できる。一枚の写真だけでは時間変化を測れない。",
+  "translations": {
+   "en": {
+    "prompt": "Which method would best determine whether bleaching is progressing in the coral community shown?",
+    "choices": [
+     "Repeatedly photograph the same site and compare the proportion bleached",
+     "Infer annual change from one photo",
+     "Use photos only from another reef",
+     "Count fish species and treat that as the bleaching rate"
+    ],
+    "explanation": "Repeated observations under comparable conditions can reveal change. A single image cannot measure a trend."
+   }
+  },
+  "observationJa": "海中のサンゴ群集が写っている。",
+  "observationEn": "An underwater coral community is shown."
+ },
+ {
+  "id": "tp-original-image-v1-dz-22",
+  "country": "dz",
+  "gradeBand": "high",
+  "domain": "thinkConnect",
+  "parentId": "tp-original-hand-v1-dz-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eheren2.jpg",
+  "prompt": "写真の岩絵から古代の環境を調べるとき、最も科学的な進め方は？",
+  "choices": [
+   "絵の大きさだけで年間降水量を推定する",
+   "描かれた動物と年代・堆積物などの証拠を照合する",
+   "描かれた動物だけで当時の個体数を確定する",
+   "現在の気温だけで制作年代を決める"
+  ],
+  "correctIndex": 1,
+  "explanation": "岩絵は古環境の手がかりだが、年代や他の証拠と組み合わせて検証する必要がある。",
+  "translations": {
+   "en": {
+    "prompt": "Which approach is most scientifically sound when studying the ancient environment using the rock art shown?",
+    "choices": [
+     "Estimate annual rainfall from the size of the artwork alone",
+     "Compare depicted animals with dating and sediment evidence",
+     "Determine animal population sizes from the artwork alone",
+     "Date the artwork using only today's temperature"
+    ],
+    "explanation": "Rock art can provide clues about past environments, but should be evaluated alongside dating and other evidence."
+   }
+  },
+  "observationJa": "岩の表面に動物のような形が描かれている。",
+  "observationEn": "Animal-like figures appear on a rock surface."
+ },
+ {
+  "id": "tp-original-image-v1-sg-23",
+  "country": "sg",
+  "gradeBand": "high",
+  "domain": "thinkConnect",
+  "parentId": "tp-original-hand-v1-sg-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hawker_Center%2C_Singapore.jpg",
+  "prompt": "写真のホーカーセンターについて、この一枚の写真だけから確かめられることはどれ？",
+  "choices": [
+   "全店舗の原価率が同じである",
+   "国民全員が毎日ここを利用する",
+   "複数の人が共用の食事空間を利用している",
+   "年間の売上が増加している"
+  ],
+  "correctIndex": 2,
+  "explanation": "写真からは食事空間の利用状況の一部が分かる。売上や利用頻度には別の統計が必要である。",
+  "translations": {
+   "en": {
+    "prompt": "Which conclusion about the hawker centre can be supported by this photo alone?",
+    "choices": [
+     "All stalls have the same cost ratio",
+     "Every resident eats here daily",
+     "Several people use a shared dining area",
+     "Annual sales are increasing"
+    ],
+    "explanation": "The photograph shows part of how a shared dining space is used. Sales and frequency require other data."
+   }
+  },
+  "observationJa": "テーブルやいすが並ぶ食事空間を複数の人が使っている。",
+  "observationEn": "Several people use a dining area with tables and chairs."
+ },
+ {
+  "id": "tp-original-image-v1-in-24",
+  "country": "in",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-in-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Holi_colorpowder01.jpg",
+  "prompt": "しゃしんの ような いろの ついた こなを つかう おまつりは？",
+  "choices": [
+   "ディワリ",
+   "オンナム",
+   "ポンガル",
+   "ホーリー"
+  ],
+  "correctIndex": 3,
+  "explanation": "ホーリーは インドなどで いろの こなを つかって たのしむ おまつりです。",
+  "translations": {
+   "en": {
+    "prompt": "Which festival uses colored powder like that shown?",
+    "choices": [
+     "Diwali",
+     "Onam",
+     "Pongal",
+     "Holi"
+    ],
+    "explanation": "Holi is a festival celebrated with colored powder in India and elsewhere."
+   }
+  },
+  "observationJa": "あざやかな いろの こなが ならんでいます。",
+  "observationEn": "Piles of brightly colored powders are shown."
+ },
+ {
+  "id": "tp-original-image-v1-es-25",
+  "country": "es",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-es-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paella_(0690).jpg",
+  "prompt": "写真のようなパエリア鍋が浅く広いことには、どのような調理上の利点がある？",
+  "choices": [
+   "米を薄く広げて水分を蒸発させやすい",
+   "米を水中に深く沈めやすい",
+   "水分の蒸発を完全に止める",
+   "鍋の中央だけに熱を集中できる"
+  ],
+  "correctIndex": 0,
+  "explanation": "広い面積に米を薄く広げる形は、加熱や水分の蒸発を助ける。",
+  "translations": {
+   "en": {
+    "prompt": "What cooking advantage does a wide, shallow paella pan like this offer?",
+    "choices": [
+     "Spread rice in a shallow layer and encourage evaporation",
+     "Submerge rice deeply in water",
+     "Completely stop evaporation",
+     "Concentrate heat only at the center"
+    ],
+    "explanation": "A broad surface lets rice spread in a thin layer and encourages evaporation during cooking."
+   }
+  },
+  "observationJa": "丸く広く、浅い鍋に料理が入っている。",
+  "observationEn": "Food is shown in a broad, round, shallow pan."
+ },
+ {
+  "id": "tp-original-image-v1-mw-26",
+  "country": "mw",
+  "gradeBand": "high",
+  "domain": "thinkConnect",
+  "parentId": "tp-original-hand-v1-mw-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Malawi_Cichlid_blue.JPG",
+  "prompt": "写真のマラウイ湖原産シクリッドについて、撮影場所が水族館である場合、この写真だけでは判断できないのは？",
+  "choices": [
+   "写真で見える体色",
+   "野生のマラウイ湖での個体数の推移",
+   "写っている個体の見た目",
+   "写っている個体のひれの形"
+  ],
+  "correctIndex": 1,
+  "explanation": "水族館の一個体の写真だけでは、野生の個体数やその変化は分からない。",
+  "translations": {
+   "en": {
+    "prompt": "The Lake Malawi cichlid was photographed in an aquarium. What cannot be determined from this photo alone?",
+    "choices": [
+     "The body color shown in the image",
+     "The population trend in the wild in Lake Malawi",
+     "The pictured fish's appearance",
+     "The visible shape of its fins"
+    ],
+    "explanation": "An aquarium photo of one fish cannot establish wild population trends."
+   }
+  },
+  "observationJa": "青い体色の魚が写っている。撮影場所は米国の水族館。",
+  "observationEn": "A blue fish is shown; the photo was taken in a US aquarium."
+ },
+ {
+  "id": "tp-original-image-v1-fi-27",
+  "country": "fi",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-fi-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sauna_stones_on_heater.jpg",
+  "prompt": "写真のサウナヒーターで石が使われる理由として適切なのは？",
+  "choices": [
+   "室内の酸素を取り除くため",
+   "室内を低温に保つため",
+   "熱を蓄えて水をかけると蒸気を生じさせるため",
+   "石自体を燃料として燃やすため"
+  ],
+  "correctIndex": 2,
+  "explanation": "加熱した石は熱を蓄え、水をかけると蒸気を生じさせる。",
+  "translations": {
+   "en": {
+    "prompt": "Why are stones used on a sauna heater like the one shown?",
+    "choices": [
+     "To remove oxygen from the room",
+     "To keep the room cold",
+     "To store heat and produce steam when water is added",
+     "To burn the stones as fuel"
+    ],
+    "explanation": "Heated stones store thermal energy and produce steam when water is poured onto them."
+   }
+  },
+  "observationJa": "ヒーターの上に石が積まれている。",
+  "observationEn": "Stones are piled on top of a heater."
+ },
+ {
+  "id": "tp-original-image-v1-gb-28",
+  "country": "gb",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-gb-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scones_and_tea.jpg",
+  "prompt": "しゃしんの スコーンと いっしょに のむ ものは どれ？",
+  "choices": [
+   "トマトジュース",
+   "ココア",
+   "みそしる",
+   "こうちゃ"
+  ],
+  "correctIndex": 3,
+  "explanation": "スコーンは こうちゃと いっしょに たのしむことが あります。",
+  "translations": {
+   "en": {
+    "prompt": "Which drink is served with the scones in this photo?",
+    "choices": [
+     "Tomato juice",
+     "Cocoa",
+     "Miso soup",
+     "Tea"
+    ],
+    "explanation": "Scones are often enjoyed with tea."
+   }
+  },
+  "observationJa": "やいた おかしの そばに カップが あり、こうちゃの ような いろの のみものが はいっています。",
+  "observationEn": "Baked goods are accompanied by a cup containing an amber-colored drink."
+ },
+ {
+  "id": "tp-original-image-v1-vn-29",
+  "country": "vn",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-vn-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:T%C3%B4_ph%E1%BB%9F_b%C3%B2_t%C3%A1i_%E1%BB%9F_Q1_(Ph%E1%BB%9F_24)_ng25th9n2023_(4).jpg",
+  "prompt": "しゃしんの どんぶりの りょうりは どれ？",
+  "choices": [
+   "フォー",
+   "パッタイ",
+   "ビビンバ",
+   "ナシレマ"
+  ],
+  "correctIndex": 0,
+  "explanation": "フォーは ベトナムの こめの めんを つかった りょうりです。",
+  "translations": {
+   "en": {
+    "prompt": "Which dish is shown in the bowl?",
+    "choices": [
+     "Pho",
+     "Pad Thai",
+     "Bibimbap",
+     "Nasi lemak"
+    ],
+    "explanation": "Pho is a Vietnamese dish made with rice noodles."
+   }
+  },
+  "observationJa": "どんぶりに スープと めん、にくが はいっています。",
+  "observationEn": "A bowl contains broth, noodles and meat."
+ },
+ {
+  "id": "tp-original-image-v1-at-30",
+  "country": "at",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-at-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Original_sacher_torte.jpg",
+  "prompt": "しゃしんの チョコレートケーキは どれ？",
+  "choices": [
+   "フルーツタルト",
+   "ザッハトルテ",
+   "アップルパイ",
+   "チーズケーキ"
+  ],
+  "correctIndex": 1,
+  "explanation": "ザッハトルテは オーストリアの チョコレートケーキです。",
+  "translations": {
+   "en": {
+    "prompt": "Which chocolate cake is shown?",
+    "choices": [
+     "Fruit tart",
+     "Sachertorte",
+     "Apple pie",
+     "Cheesecake"
+    ],
+    "explanation": "Sachertorte is an Austrian chocolate cake."
+   }
+  },
+  "observationJa": "チョコレートで おおわれた ケーキが あります。",
+  "observationEn": "A cake is covered with chocolate."
+ }
+]
