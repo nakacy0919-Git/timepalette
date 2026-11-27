@@ -1176,5 +1176,377 @@
   },
   "observationJa": "にくと ごはんの カブサです。",
   "observationEn": "The photo shows kabsa with meat and rice."
+ },
+ {
+  "id": "tp-original-image-v1-tw-39",
+  "country": "tw",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-tw-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taiwanese_Beef_Noodle_Soup.jpg",
+  "prompt": "しゃしんの りょうりには、なにが はいっている？",
+  "choices": [
+   "めんと にく",
+   "パンと ジャム",
+   "ごはんと のり",
+   "ポテトと チーズ"
+  ],
+  "correctIndex": 0,
+  "explanation": "たいわんの ニュウロウミェンは、ぎゅうにくと めんを スープで たべる りょうりです。",
+  "translations": {
+   "en": {
+    "prompt": "What is in the dish shown?",
+    "choices": [
+     "Noodles and meat",
+     "Bread and jam",
+     "Rice and seaweed",
+     "Potatoes and cheese"
+    ],
+    "explanation": "Taiwanese beef noodle soup contains beef and noodles in broth."
+   }
+  },
+  "observationJa": "スープに めんと おおきな にくが はいっています。",
+  "observationEn": "Noodles and large pieces of meat are visible in the soup."
+ },
+ {
+  "id": "tp-original-image-v1-cz-40",
+  "country": "cz",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-cz-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sv%C3%AD%C4%8Dkov%C3%A1.jpg",
+  "prompt": "しゃしんの チェコの りょうりには、なにが そえられている？",
+  "choices": [
+   "ほそい めん",
+   "まるく きった クネドリーキ",
+   "フライドポテト",
+   "サラダの は"
+  ],
+  "correctIndex": 1,
+  "explanation": "スヴィーチコヴァーには、パンの ような クネドリーキを そえる ことが おおいです。",
+  "translations": {
+   "en": {
+    "prompt": "What is served beside the meat in this Czech dish?",
+    "choices": [
+     "Thin noodles",
+     "Round slices of dumplings",
+     "French fries",
+     "Salad leaves"
+    ],
+    "explanation": "Svíčková is often served with sliced bread dumplings."
+   }
+  },
+  "observationJa": "にくと ソースの となりに まるく きった クネドリーキが あります。",
+  "observationEn": "Round slices of dumplings sit beside the meat and sauce."
+ },
+ {
+  "id": "tp-original-image-v1-nl-41",
+  "country": "nl",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-nl-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stroopwafels.jpg",
+  "prompt": "しゃしんの オランダの ワッフルは どれ？",
+  "choices": [
+   "ベルギーワッフル",
+   "パンケーキ",
+   "ストロープワッフル",
+   "クレープ"
+  ],
+  "correctIndex": 2,
+  "explanation": "ストロープワッフルは うすい ワッフルで シロップを はさんだ おかしです。",
+  "translations": {
+   "en": {
+    "prompt": "Which Dutch waffle is shown?",
+    "choices": [
+     "Belgian waffle",
+     "Pancake",
+     "Stroopwafel",
+     "Crêpe"
+    ],
+    "explanation": "Stroopwafels consist of thin waffles with syrup between them."
+   }
+  },
+  "observationJa": "うすい ストロープワッフルです。",
+  "observationEn": "The photo shows thin stroopwafels."
+ },
+ {
+  "id": "tp-original-image-v1-et-42",
+  "country": "et",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-et-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Injera.jpg",
+  "prompt": "写真のエチオピアのインジェラを、付け合わせと一緒に食べる方法として伝統的なのはどれ？",
+  "choices": [
+   "丸ごと飲み込む",
+   "パンを細かく削って飲み物にする",
+   "先にすべて焼き直す",
+   "パンをちぎって付け合わせをすくう"
+  ],
+  "correctIndex": 3,
+  "explanation": "インジェラはちぎって料理を包んだりすくったりして食べることが多い。",
+  "translations": {
+   "en": {
+    "prompt": "How is injera traditionally eaten with the dishes served alongside it?",
+    "choices": [
+     "Swallow the whole flatbread",
+     "Grate it into a drink",
+     "Bake it all again before eating",
+     "Tear off pieces to scoop up food"
+    ],
+    "explanation": "Pieces of injera are commonly used to scoop up accompanying dishes."
+   }
+  },
+  "observationJa": "インジェラと付け合わせの料理が写っている。",
+  "observationEn": "Injera is shown with accompanying dishes."
+ },
+ {
+  "id": "tp-original-image-v1-cr-43",
+  "country": "cr",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-cr-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gallo_pinto_cr.jpg",
+  "prompt": "しゃしんの まんなかの ガジョ・ピントは、どんな りょうり？",
+  "choices": [
+   "ごはんと まめを あわせた りょうり",
+   "パンと チーズの りょうり",
+   "めんと たまごの りょうり",
+   "くだものと ヨーグルトの りょうり"
+  ],
+  "correctIndex": 0,
+  "explanation": "ガジョ・ピントは ごはんと まめを あわせた りょうりで、コスタリカの あさごはんにも よく でます。",
+  "translations": {
+   "en": {
+    "prompt": "What is the gallo pinto in the centre of the photo?",
+    "choices": [
+     "A dish of rice and beans",
+     "A dish of bread and cheese",
+     "A dish of noodles and eggs",
+     "A dish of fruit and yogurt"
+    ],
+    "explanation": "Gallo pinto combines rice and beans and is a common Costa Rican breakfast dish."
+   }
+  },
+  "observationJa": "あさごはんの まんなかに ごはんと まめが あります。",
+  "observationEn": "Rice and beans are visible in the centre of the breakfast plate."
+ },
+ {
+  "id": "tp-original-image-v1-co-44",
+  "country": "co",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-co-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arepas_2.jpg",
+  "prompt": "しゃしんの コロンビアの たべものは どれ？",
+  "choices": [
+   "バゲット",
+   "アレパ",
+   "クロワッサン",
+   "ベーグル"
+  ],
+  "correctIndex": 1,
+  "explanation": "アレパは とうもろこしの きじで つくる たいらな たべものです。",
+  "translations": {
+   "en": {
+    "prompt": "Which Colombian food is shown?",
+    "choices": [
+     "Baguette",
+     "Arepa",
+     "Croissant",
+     "Bagel"
+    ],
+    "explanation": "Arepas are flat corn cakes."
+   }
+  },
+  "observationJa": "コロンビアで うられている アレパです。",
+  "observationEn": "Arepas are shown for sale in Colombia."
+ },
+ {
+  "id": "tp-original-image-v1-th-45",
+  "country": "th",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-th-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pad_Thai_in_Thailand.jpg",
+  "prompt": "しゃしんの パッタイは、どんな りょうり？",
+  "choices": [
+   "ごはんの スープ",
+   "パンの サンドイッチ",
+   "めんを いためた りょうり",
+   "くだものの サラダ"
+  ],
+  "correctIndex": 2,
+  "explanation": "パッタイは タイの めんを いためた りょうりです。",
+  "translations": {
+   "en": {
+    "prompt": "What kind of dish is pad Thai, shown here?",
+    "choices": [
+     "Rice soup",
+     "A bread sandwich",
+     "A stir-fried noodle dish",
+     "A fruit salad"
+    ],
+    "explanation": "Pad Thai is a Thai stir-fried noodle dish."
+   }
+  },
+  "observationJa": "タイの パッタイが うつっています。",
+  "observationEn": "The photo shows pad Thai in Thailand."
+ },
+ {
+  "id": "tp-original-image-v1-cu-46",
+  "country": "cu",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-cu-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cubanfood.jpg",
+  "prompt": "写真左側のロパ・ビエハでは、肉はどのような形になっている？",
+  "choices": [
+   "大きな球形",
+   "薄い円盤状",
+   "四角いブロック状",
+   "細く裂かれた形"
+  ],
+  "correctIndex": 3,
+  "explanation": "ロパ・ビエハは肉を細く裂いて煮込む料理。写真左側にその形状が見える。",
+  "translations": {
+   "en": {
+    "prompt": "What shape is the meat in the ropa vieja on the left of the photograph?",
+    "choices": [
+     "Large balls",
+     "Thin discs",
+     "Square blocks",
+     "Shredded strands"
+    ],
+    "explanation": "Ropa vieja uses shredded meat; the strands are visible on the left."
+   }
+  },
+  "observationJa": "左側に細く裂いた肉の料理が見える。",
+  "observationEn": "A dish of shredded meat appears on the left."
+ },
+ {
+  "id": "tp-original-image-v1-pe-47",
+  "country": "pe",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-editorial-v1-pe-ceviche",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ceviche_at_Peru.jpg",
+  "prompt": "写真のセビーチェについて、魚が生の状態からどのような処理を受けたか確認するには、何が必要？",
+  "choices": [
+   "調理手順や材料を確認する",
+   "皿の模様を確認する",
+   "撮影時刻だけを確認する",
+   "写真の横幅を測る"
+  ],
+  "correctIndex": 0,
+  "explanation": "セビーチェは一般に魚を柑橘果汁などでマリネするが、写真だけでは実際の調理手順を断定できない。",
+  "translations": {
+   "en": {
+    "prompt": "How can you establish how the fish in the pictured ceviche was prepared?",
+    "choices": [
+     "Check the recipe or preparation steps",
+     "Check the pattern on the plate",
+     "Check only the time of the photo",
+     "Measure the width of the image"
+    ],
+    "explanation": "Ceviche is typically marinated in citrus juice, but a photograph alone cannot establish its actual preparation steps."
+   }
+  },
+  "observationJa": "ペルーのリマで提供されたセビーチェが写っている。",
+  "observationEn": "The image shows ceviche served in Lima, Peru."
+ },
+ {
+  "id": "tp-original-image-v1-pl-48",
+  "country": "pl",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-pl-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pierogi_07-01.JPG",
+  "prompt": "しゃしんの ポーランドの つつんだ りょうりは どれ？",
+  "choices": [
+   "ラザニア",
+   "ピエロギ",
+   "ピザ",
+   "リゾット"
+  ],
+  "correctIndex": 1,
+  "explanation": "ピエロギは かわで ぐを つつんだ りょうりです。ゆでて たべる ことが おおいです。",
+  "translations": {
+   "en": {
+    "prompt": "Which Polish filled dumplings are shown?",
+    "choices": [
+     "Lasagna",
+     "Pierogi",
+     "Pizza",
+     "Risotto"
+    ],
+    "explanation": "Pierogi are filled dumplings that are often boiled."
+   }
+  },
+  "observationJa": "ゆでた ピエロギが うつっています。",
+  "observationEn": "The photo shows boiled pierogi."
+ },
+ {
+  "id": "tp-original-image-v1-mk-49",
+  "country": "mk",
+  "gradeBand": "elementary",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-mk-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grav%C4%8De_na_tav%C4%8De.jpg",
+  "prompt": "しゃしんの みぎがわの うつわに はいった りょうりは、なにを つかった もの？",
+  "choices": [
+   "めん",
+   "パン",
+   "まめ",
+   "くだもの"
+  ],
+  "correctIndex": 2,
+  "explanation": "タフチェ・グラフチェは まめを つかう きたマケドニアの りょうりです。",
+  "translations": {
+   "en": {
+    "prompt": "What is the main ingredient of the dish in the earthenware bowl on the right?",
+    "choices": [
+     "Noodles",
+     "Bread",
+     "Beans",
+     "Fruit"
+    ],
+    "explanation": "Tavče gravče is a North Macedonian bean dish."
+   }
+  },
+  "observationJa": "みぎがわの うつわに まめの りょうりが あります。",
+  "observationEn": "A bean dish is visible in the earthenware bowl on the right."
+ },
+ {
+  "id": "tp-original-image-v1-bg-50",
+  "country": "bg",
+  "gradeBand": "middle",
+  "domain": "lifeCulture",
+  "parentId": "tp-original-hand-v1-bg-primary",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Banitsa_and_yogurt.jpg",
+  "prompt": "写真のブルガリアのバニツァについて、層状の生地に具を入れて焼く調理法に最も近いものはどれ？",
+  "choices": [
+   "米を蒸して成形する",
+   "野菜を煮て裏ごしする",
+   "豆を水に浸して発芽させる",
+   "薄い生地を重ねて焼く"
+  ],
+  "correctIndex": 3,
+  "explanation": "バニツァは薄い生地にチーズなどを合わせて焼く伝統的な料理である。",
+  "translations": {
+   "en": {
+    "prompt": "Which preparation method best matches Bulgarian banitsa in the photograph?",
+    "choices": [
+     "Steam and shape rice",
+     "Boil and purée vegetables",
+     "Soak beans until they sprout",
+     "Layer and bake thin sheets of dough"
+    ],
+    "explanation": "Banitsa is traditionally made by baking thin dough with fillings such as cheese."
+   }
+  },
+  "observationJa": "バニツァとヨーグルト飲料が写っている。",
+  "observationEn": "The image shows banitsa and a yogurt drink."
  }
 ]
