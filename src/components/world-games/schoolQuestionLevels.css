@@ -18,3 +18,6 @@
 
 /* Licensed real-world quiz photography: compact, uncropped and optional. */
 .wg-editorial-photo{margin:8px auto 12px;width:min(100%,680px);text-align:center;min-width:0}.wg-editorial-photo img{display:block;width:100%;height:auto;max-height:clamp(120px,25vh,220px);object-fit:contain;border-radius:10px;background:rgba(100,116,139,.08)}.wg-editorial-photo figcaption{font-size:10px;line-height:1.4;overflow-wrap:anywhere;margin-top:4px;color:inherit;opacity:.88}.wg-editorial-photo figcaption a{color:inherit;text-decoration:underline}.wj-celebration .wg-editorial-photo img{max-height:clamp(100px,19vh,165px)}
+
+/* 16:9 stage, retain original photograph bounds and full attribution. */
+.wg-editorial-photo-frame{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;max-height:clamp(120px,27vh,240px);border-radius:12px;background:rgba(100,116,139,.09);overflow:hidden}.wg-editorial-photo-frame img{width:100%;height:100%;object-fit:contain;max-height:none}.wg-photo-type,.wg-photo-caption,.wg-photo-credit{display:block}.wg-photo-type{font-weight:700;font-size:11px}.wg-photo-caption{font-size:12px;font-weight:600}.wg-photo-credit{font-size:10px}.wj-celebration .wg-editorial-photo-frame{max-height:clamp(100px,19vh,165px)}

@@ -16,7 +16,8 @@
     "qa:assets": "node scripts/qa-geography-assets.mjs",
     "qa:release:a": "node scripts/qa-place-geography.mjs --group=A --release && node scripts/qa-geography-assets.mjs && node scripts/qa-geography-acceptance.mjs",
     "test:language": "node --test tests/shared-language-data.test.mjs tests/multilingual-wave1.test.mjs tests/speechDiagnostics.test.mjs tests/languageLayout.test.mjs tests/languageVisualRefresh.test.mjs tests/languageClearReplay.test.mjs",
-    "qa:original-quiz": "node --test tests/worldOriginalQuizBank.test.mjs"
+    "qa:original-quiz": "node --test tests/worldOriginalQuizBank.test.mjs",
+    "qa:original-photos": "node --test tests/worldOriginalQuizPhotos.test.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "3.1142.0",
