@@ -6,6 +6,9 @@ const browser=await chromium.launch({headless:true,executablePath:process.env.CH
 try{
  const host=await browser.newPage(),guest=await browser.newPage();
  for(const page of [host,guest]){
+  if(process.env.RELAY_API_URL)await page.route('**/api/journey-room',async route=>{
+   try{const r=await fetch(process.env.RELAY_API_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:route.request().postData()});const body=await r.text(),data=JSON.parse(body),request=route.request().postDataJSON();console.log('relay',request.op,r.status,data.error||'',data.snapshot?.seq||request.snapshot?.seq||'');await route.fulfill({status:r.status,contentType:'application/json',body});}catch{await route.abort();}
+  });
   await page.goto(base);
   const skip=page.getByRole('button',{name:/SKIP/});
   if(await skip.isVisible())await skip.click();
@@ -19,7 +22,7 @@ try{
  await next();
  await host.getByRole('button',{name:/端末対戦ルームを作成/}).click();
  await host.getByText(/参加受付中/).waitFor({timeout:20000});
- const code=await host.getByLabel('ルームコード',{exact:true}).innerText();
+ const code=await host.locator('.wj-room-code').innerText();
  assert.match(code,/^\d{6}$/);
  await guest.getByRole('button',{name:/ルームに参加/}).click();
  await guest.getByLabel('ルームコード').fill(code);

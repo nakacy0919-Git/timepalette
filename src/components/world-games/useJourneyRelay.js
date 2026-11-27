@@ -6,7 +6,7 @@ import {publicGame,restoreGame,acceptsJourneyAction,applyJourneyAction} from '..
 const messages={room_unavailable:'ルームが終了したか、コードが違います。',room_full:'満員、またはゲーム開始済みです。',room_not_ready:'参加者を確認してください。',stale_action:'ゲームの進行が更新されました。',relay_unavailable:'通信サービスに接続できません。再試行してください。'};
 const token=()=>Array.from(crypto.getRandomValues(new Uint8Array(32)),x=>x.toString(16).padStart(2,'0')).join('');
 async function request(op,session,extra={}){
- const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),30000);
  try{
   const response=await fetch('/api/journey-room',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({op,...session,...extra}),signal:controller.signal,cache:'no-store'});
   const data=await response.json();if(!response.ok||!data.ok){const e=Error(messages[data.error]||'通信に失敗しました。再試行してください。');e.status=response.status;e.code=data.error;throw e;}
@@ -15,11 +15,11 @@ async function request(op,session,extra={}){
 }
 export function useJourneyRoom({game,setGame,config,onGuestGame}){
  const [room,setRoom]=useState(null),[notice,setNotice]=useState(''),[roll,setRoll]=useState(null),[busy,setBusy]=useState(false);
- const session=useRef(null),epoch=useRef(0),roomRef=useRef(null),gameRef=useRef(game),configRef=useRef(config),guestRef=useRef(onGuestGame),rollRef=useRef(null),timer=useRef(null),pollTimer=useRef(null),seq=useRef(0),guestSeq=useRef(-1),seen=useRef(new Set()),pending=useRef(null),publishing=useRef(false),acting=useRef(false);
+ const session=useRef(null),epoch=useRef(0),roomRef=useRef(null),gameRef=useRef(game),configRef=useRef(config),guestRef=useRef(onGuestGame),rollRef=useRef(null),timer=useRef(null),pollTimer=useRef(null),seq=useRef(0),guestSeq=useRef(-1),seen=useRef(new Set()),pending=useRef(null),publishing=useRef(false),acting=useRef(false),afterPublish=useRef(null);
  gameRef.current=game;configRef.current=config;guestRef.current=onGuestGame;
  const update=value=>{roomRef.current=value;setRoom(value);};
  const reset=()=>{
-  epoch.current++;clearTimeout(timer.current);clearTimeout(pollTimer.current);session.current=null;rollRef.current=null;pending.current=null;publishing.current=false;acting.current=false;seen.current.clear();guestSeq.current=-1;seq.current=0;
+  epoch.current++;clearTimeout(timer.current);clearTimeout(pollTimer.current);session.current=null;rollRef.current=null;pending.current=null;afterPublish.current=null;publishing.current=false;acting.current=false;seen.current.clear();guestSeq.current=-1;seq.current=0;
   setRoll(null);update(null);setNotice('');setBusy(false);
  };
  const close=()=>{const s=session.current,r=roomRef.current;if(s)request(r?.role==='host'?'close':'leave',s).catch(()=>{});reset();};
@@ -42,6 +42,7 @@ export function useJourneyRoom({game,setGame,config,onGuestGame}){
     const next=pending.current;await request('publish',s,{snapshot:next});
     if(epoch.current!==id)return;
     if(pending.current===next)pending.current=null;
+    if(next.roll&&afterPublish.current?.id===next.roll.id){const done=afterPublish.current.run;afterPublish.current=null;done();}
    }
   }catch(e){if(epoch.current===id)setNotice('同期を再試行中…');}
   finally{if(epoch.current===id)publishing.current=false;}
@@ -55,10 +56,11 @@ export function useJourneyRoom({game,setGame,config,onGuestGame}){
    if(g.phase!=='select'||!Object.hasOwn(TRAVEL_MODES,travel)||!ticket||g.teams[g.turn].money<ticket.cost)return;
    const values=Array.from({length:g.diceCount||1},()=>1+Math.floor(Math.random()*6)),next=rollJourney(g,values,Math.random,travel);
    if(next===g)return;
-   const plan={id:++seq.current,values,travel,round:g.round,startAt:Date.now()+1800};
-   rollRef.current=plan;setRoll(plan);publish();
+   const plan={id:++seq.current,values,travel,round:g.round,startAt:Date.now()+2800};
+   rollRef.current=plan;setRoll(plan);
    const steps=values.reduce((a,b)=>a+b,0)+ticket.extra;
-   timer.current=setTimeout(()=>{rollRef.current=null;setRoll(null);gameRef.current=next;setGame(next);},1800+2440+1600+steps*(configRef.current.speed==='fast'?230:850)+400);
+   afterPublish.current={id:plan.id,run:()=>{timer.current=setTimeout(()=>{rollRef.current=null;setRoll(null);gameRef.current=next;setGame(next);},Math.max(2800,plan.startAt-Date.now())+2440+1600+steps*(configRef.current.speed==='fast'?230:850)+600);}};
+   publish();
    return;
   }
   const next=applyJourneyAction(g,action,team);if(next!==g){gameRef.current=next;setGame(next);}
