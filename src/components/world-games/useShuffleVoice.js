@@ -1,7 +1,7 @@
 import {useEffect,useRef,useState} from 'react';
 import {parseVoiceVotes} from '../../utils/shuffleVoiceVotes.js';
 const empty=()=>[0,0,0,0];
-export function useShuffleVoice(enabled,language){
+export function useShuffleVoice(enabled,language,choices,readings){
  const [counts,setCounts]=useState(empty),[listening,setListening]=useState(false),[status,setStatus]=useState('');
  const recognition=useRef(null),wanted=useRef(false),restart=useRef(null),generation=useRef(0);
  const supported=typeof window!=='undefined'&&!!(window.SpeechRecognition||window.webkitSpeechRecognition);
@@ -16,13 +16,13 @@ export function useShuffleVoice(enabled,language){
    try{
     r=new Constructor();recognition.current=r;r.lang=language==='en'?'en-US':'ja-JP';r.continuous=true;r.interimResults=false;r.maxAlternatives=1;
     const seen=new Set();
-    r.onstart=()=>{if(generation.current===id)setStatus(language==='en'?'Listening…':'受付中：A・B・C・D を順番に発言');};
+    r.onstart=()=>{if(generation.current===id)setStatus(language==='en'?'Listening: say the full answer, not its letter.':'受付中：記号ではなく選択肢の内容を発言');};
     r.onresult=e=>{
      if(!wanted.current||generation.current!==id)return;
      const add=empty();
      for(let i=e.resultIndex;i<e.results.length;i++){
       const result=e.results[i];if(!result.isFinal||seen.has(i))continue;seen.add(i);
-      const v=parseVoiceVotes(result[0]?.transcript);v.forEach((n,j)=>add[j]+=n);
+      const v=parseVoiceVotes(result[0]?.transcript,choices,readings);v.forEach((n,j)=>add[j]+=n);
      }
      if(add.some(Boolean))setCounts(old=>old.map((n,i)=>n+add[i]));
     };
