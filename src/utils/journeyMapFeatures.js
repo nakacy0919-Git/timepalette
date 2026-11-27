@@ -4,7 +4,7 @@ import land from 'world-atlas/land-110m.json' with {type:'json'};
 import detailedLand from 'world-atlas/land-50m.json' with {type:'json'};
 
 function polygonsFor(atlas){const geometry=feature(atlas,atlas.objects.land);return (geometry.features||[geometry]).flatMap(f=>f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).map(coordinates=>{const polygon={type:'Polygon',coordinates};return {polygon,bounds:geoBounds(polygon)};});}
-const polygons=polygonsFor(land),coastalPolygons=polygonsFor(detailedLand);
+let polygons,coastalPolygons;
 function inRing(ring,x,y){
  let inside=false;
  for(let i=0,j=ring.length-1;i<ring.length;j=i++){
@@ -14,7 +14,8 @@ function inRing(ring,x,y){
  return inside;
 }
 function onLand([lon,lat],detailed){
- return (detailed?coastalPolygons:polygons).some(({polygon,bounds:[[west,south],[east,north]]})=>{
+ const candidates=detailed?(coastalPolygons??=polygonsFor(detailedLand)):(polygons??=polygonsFor(land));
+ return candidates.some(({polygon,bounds:[[west,south],[east,north]]})=>{
   if(lat<south||lat>north||!(west<=east?lon>=west&&lon<=east:lon>=west||lon<=east))return false;
   // Use spherical containment for dateline/polar polygons, fast ray casting elsewhere.
   if(west>east||east-west>180||Math.abs(lat)>75)return geoContains(polygon,[lon,lat]);

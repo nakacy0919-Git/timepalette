@@ -1,5 +1,5 @@
 import {useEffect,useId,useMemo,useRef,useState} from 'react';
-import {geoMercator,geoPath,geoGraticule10} from 'd3-geo';
+import {geoMercator,geoPath,geoGraticule10,geoBounds} from 'd3-geo';
 import {feature} from 'topojson-client';
 import atlas from 'world-atlas/countries-50m.json';
 import {getGeography197Profile,getGeography197CountryCodes} from '../../utils/geography197.js';
@@ -7,8 +7,9 @@ import {journeyReading} from '../../utils/worldJourneyStops.js';
 import flags from '../../data/exploreCountryFlags.json';
 import './journeyAtlas.css';
 import './journeyMapExtras.css';
-import {VEHICLES,journeyEdges,cityVideos,extraLandmarks} from '../../utils/journeyMapFeatures.js';
-const features=feature(atlas,atlas.objects.countries).features;
+import {VEHICLES,crossesSea,cityVideos,extraLandmarks} from '../../utils/journeyMapFeatures.js';
+const features=feature(atlas,atlas.objects.countries).features.map((f,i)=>({f,i,bounds:geoBounds(f)}));
+const overlapLon=(west,east,center,radius)=>{if(radius>=180)return true;const segments=west<=east?[[west,east]]:[[west,180],[-180,east]];return segments.some(([a,b])=>[-360,0,360].some(offset=>a+offset<=center+radius&&b+offset>=center-radius));};
 const profiles=getGeography197CountryCodes().map(getGeography197Profile);
 const aliases={'United States of America':'us','South Korea':'kr','North Korea':'kp','Taiwan':'tw','Russia':'ru','Vietnam':'vn','Laos':'la','Myanmar':'mm','Czechia':'cz','United Kingdom':'gb','Ivory Coast':'ci','Dem. Rep. Congo':'cd','Congo':'cg','Central African Rep.':'cf','Dominican Rep.':'do','Bosnia and Herz.':'ba','S. Sudan':'ss','Solomon Is.':'sb','eSwatini':'sz','Palestine':'ps'};
 const isoByName=Object.fromEntries(profiles.flatMap(p=>[[p.name,p.iso],[p.nameEn,p.iso],[p.atlasName,p.iso]]));
@@ -62,7 +63,7 @@ function Train({x,y,color,number,active,vehicle='car'}){
 export default function JourneyAtlas({game,cursor,countryName,countryFlag,moving=false,stepMs=850,settingsOpen=false,onCloseSettings,settingsContent,vehicles={},seaMoving=false}){
  const ref=useRef(null),uid=useId().replace(/[^a-zA-Z0-9_-]/g,''),[size,setSize]=useState({w:1200,h:600}),[view,setView]=useState('local'),[zoom,setZoom]=useState(1),[pan,setPan]=useState([0,0]),[spot,setSpot]=useState(null),[city,setCity]=useState(null),[watch,setWatch]=useState(false),drag=useRef(null);
  const current=game.journeyStops[cursor],center=current?.coordinates||[105,30],{w,h}=size;
- useEffect(()=>{const el=ref.current;if(!el)return;const ob=new ResizeObserver(([e])=>{const {width,height}=e.contentRect;if(width>0&&height>0)setSize({w:Math.round(width),h:Math.round(height)});});ob.observe(el);return()=>ob.disconnect();},[]);
+ useEffect(()=>{const el=ref.current;if(!el)return;const ob=new ResizeObserver(([e])=>{const {width,height}=e.contentRect;if(width>0&&height>0)setSize(old=>old.w===Math.round(width)&&old.h===Math.round(height)?old:{w:Math.round(width),h:Math.round(height)});});ob.observe(el);return()=>ob.disconnect();},[]);
  useEffect(()=>{setPan([0,0]);setSpot(null);setCity(null);setWatch(false);},[cursor,view]);
  useEffect(()=>{setView('local');setZoom(1);},[game.turn]);
  useEffect(()=>{if(moving){setView('local');setZoom(1);setPan([0,0]);setSpot(null);setCity(null);setWatch(false);}},[moving]);
@@ -71,16 +72,20 @@ export default function JourneyAtlas({game,cursor,countryName,countryFlag,moving
  const camRef=useRef(camera);
  const duration=moving?Math.max(120,stepMs-35):330;
  useEffect(()=>{const from=camRef.current,to=target;let id,last=0;const start=performance.now(),reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const lon=((to[0]-from[0]+540)%360)-180;
+  const lon=((to[0]-from[0]+540)%360)-180;if(Math.abs(lon)<.00001&&Math.abs(to[1]-from[1])<.00001)return;
   const tick=now=>{const p=reduced?1:Math.min(1,(now-start)/duration);if(p<1&&now-last<30){id=requestAnimationFrame(tick);return;}last=now;const t=p*p*(3-2*p);const v=[from[0]+lon*t,from[1]+(to[1]-from[1])*t];camRef.current=v;setCamera(v);if(p<1)id=requestAnimationFrame(tick);};id=requestAnimationFrame(tick);return()=>cancelAnimationFrame(id);
  },[target[0],target[1]]);
  const base=camera;
  const factor=view==='world'?Math.min(w/6.45,h/5.8):view==='region'?Math.min(w/2.6,h/1.75):Math.min(w/.40,h/.30);
  const projection=useMemo(()=>geoMercator().rotate([-base[0],0]).center([0,clamp(base[1],-75,75)]).scale(factor*zoom).translate([w/2+pan[0],h/2+pan[1]]).clipExtent([[0,0],[w,h]]),[base[0],base[1],factor,zoom,w,h,pan]);
  const path=useMemo(()=>geoPath(projection),[projection]);
+ const mapCenter=projection.invert([w/2,h/2])||base;
+ const north=projection.invert([w/2,0])?.[1]??90,south=projection.invert([w/2,h])?.[1]??-90;
+ const lonRadius=w/(2*factor*zoom)*180/Math.PI+4;
+ const visibleFeatures=features.filter(({bounds:[[west,low],[east,high]]})=>high>=south-4&&low<=north+4&&overlapLon(west,east,mapCenter[0],lonRadius));
  const visible=(p,margin=0)=>p&&p[0]>=-margin&&p[0]<=w+margin&&p[1]>=-margin&&p[1]<=h+margin;
  const routeSet=new Set(game.route);
- const edges=useMemo(()=>journeyEdges(game.journeyStops),[game.journeyStops]);
+ const edges=useMemo(()=>game.journeyStops.map((a,i)=>({a,b:game.journeyStops[(i+1)%game.journeyStops.length],i})).filter(e=>valid(e.a.coordinates)&&valid(e.b.coordinates)&&e.a!==e.b),[game.journeyStops]);
  const places=game.journeyStops.map((s,i)=>({s,i,p:valid(s.coordinates)?projection(s.coordinates):null})).filter(o=>o.p&&o.p.every(Number.isFinite));
  const onMap=places.filter(o=>visible(o.p,20));
  const priority=o=>o.i===cursor?0:game.teams.some(t=>t.position===o.i)?1:2+Math.min((o.i-cursor+game.journeyStops.length)%game.journeyStops.length,100);
@@ -96,14 +101,27 @@ export default function JourneyAtlas({game,cursor,countryName,countryFlag,moving
   if(labels.length>=(view==='local'?Math.max(6,Math.floor(w*h/35000)):Math.max(10,Math.floor(w*h/48000))))break;
  }
  const shownLandmarks=[];
- const rails=edges.map(e=>({d:path({type:'LineString',coordinates:[e.a.coordinates,e.b.coordinates]}),sea:e.sea,cross:e.a.country!==e.b.country,active:e.i>=cursor&&e.i<cursor+18})).filter(e=>e.d);
+ // Clip projected route segments before classifying them; do not calculate all 599
+ // sea crossings or stream all geographic lines on every camera frame.
+ const circumference=2*Math.PI*factor*zoom;
+ const rails=[];
+ for(const e of edges){
+  const a=projection(e.a.coordinates),b=projection(e.b.coordinates);
+  if(!a?.every(Number.isFinite)||!b?.every(Number.isFinite))continue;
+  let bx=b[0];while(bx-a[0]>circumference/2)bx-=circumference;while(bx-a[0]<-circumference/2)bx+=circumference;
+  for(const shift of [-circumference,0,circumference]){
+   const x1=a[0]+shift,x2=bx+shift;
+   if(Math.max(x1,x2)<-12||Math.min(x1,x2)>w+12||Math.max(a[1],b[1])<-12||Math.min(a[1],b[1])>h+12)continue;
+   rails.push({d:`M${x1} ${a[1]}L${x2} ${b[1]}`,sea:crossesSea(e.a,e.b),cross:e.a.country!==e.b.country,active:e.i>=cursor&&e.i<cursor+18});
+  }
+ }
  const changeView=v=>{setView(v);setZoom(1);setPan([0,0]);setSpot(null);setCity(null);setWatch(false);};
  return <div className={"wj-atlas wj-geo-atlas"+(moving?" wj-moving":"")} ref={ref}>
  <svg viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="none" role="group" aria-label="実際の国土と都市位置を使った世界旅行すごろく" onPointerDown={e=>{if(e.button!==0)return;drag.current={x:e.clientX,y:e.clientY,pan};e.currentTarget.setPointerCapture(e.pointerId);}} onPointerMove={e=>{if(drag.current)setPan([drag.current.pan[0]+e.clientX-drag.current.x,drag.current.pan[1]+e.clientY-drag.current.y]);}} onPointerUp={()=>{drag.current=null;}} onPointerCancel={()=>{drag.current=null;}}>
  <defs><linearGradient id={uid+'sea'} x2="0" y2="1"><stop stopColor="#c5f7ff"/><stop offset=".46" stopColor="#6ed7f4"/><stop offset="1" stopColor="#268fc9"/></linearGradient><filter id={uid+'shadow'} x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.2" floodColor="#184b56" floodOpacity=".25"/></filter><pattern id={uid+'waves'} width="70" height="45" patternUnits="userSpaceOnUse"><path d="M8 10q7-4 14 0t14 0M35 33q7-4 14 0" fill="none" stroke="#fff" opacity=".17" strokeWidth="1.5"/></pattern><linearGradient id={uid+'land'} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#e1f6a1"/><stop offset=".48" stopColor="#b3db79"/><stop offset="1" stopColor="#81b877"/></linearGradient></defs>
  <rect width={w} height={h} fill={`url(#${uid}sea)`}/><rect width={w+140} height={h+90} x="-70" y="-45" className="wj-sea-waves" fill={`url(#${uid}waves)`}/>
  <path d={path(geoGraticule10())||''} fill="none" stroke="#fff" strokeOpacity=".14" strokeWidth=".7"/>
- {features.map((f,i)=>{const iso=aliases[f.properties.name]||isoByName[f.properties.name],d=path(f);return d?<path key={i} d={d} fill={iso===current?.country?`url(#${uid}land)`:routeSet.has(iso)?landColors[i%landColors.length]:'#c7d9bf'} stroke="#f6fff2" strokeWidth={iso===current?.country?2.5:1} strokeLinejoin="round"/>:null;})}
+ {visibleFeatures.map(({f,i})=>{const iso=aliases[f.properties.name]||isoByName[f.properties.name],d=path(f);return d?<path key={i} d={d} fill={iso===current?.country?`url(#${uid}land)`:routeSet.has(iso)?landColors[i%landColors.length]:'#c7d9bf'} stroke="#f6fff2" strokeWidth={iso===current?.country?2.5:1} strokeLinejoin="round"/>:null;})}
  {!moving&&profiles.filter(p=>valid(p.center)).map(p=>{const pt=projection(p.center);if(!visible(pt,0)||!routeSet.has(p.iso)||view==='local')return null;const [x,y]=pt;return <g key={p.iso} opacity={p.iso===current?.country?1:.8}><image href={flags.flags[p.iso]} x={x-11} y={y-33} width="22" height="14" preserveAspectRatio="xMidYMid meet"/><text x={x} y={y-5} textAnchor="middle" fontSize="11" fontWeight="850" fill="#345e46" stroke="#f3ffdc" strokeWidth="2.5" paintOrder="stroke">{countryName(p.iso)}</text></g>;})}
  {rails.map((r,i)=><g key={i} opacity={r.sea ? .92 : r.active ? 1 : .52}><path d={r.d} stroke={r.sea?'#0768ad':'#24465f'} strokeWidth={r.sea?4:r.cross?4:8} fill="none" strokeLinecap="round"/><path d={r.d} stroke={r.sea?'#fff5b5':r.cross?'#f9e6a2':'#fff'} strokeWidth={r.sea?2.5:r.cross?2.2:5} strokeDasharray={r.sea?'10 7':r.cross?'5 5':'3 4'} fill="none" strokeLinecap="round"/></g>)}
  {onMap.map(({s,i,p:[x,y]})=><g key={s.id} className="wj-atlas-node wj-city-label" role="button" aria-label={s.label+'の地点'} tabIndex={moving?-1:0} onPointerDown={e=>e.stopPropagation()} onClick={e=>{if(!moving){e.stopPropagation();setCity(s);setWatch(false);}}} onKeyDown={e=>{if(!moving&&(e.key==='Enter'||e.key===' ')){e.preventDefault();setCity(s);setWatch(false);}}} data-stop={s.id} data-current={i===cursor} transform={`translate(${x} ${y})`}><title>{s.label} · {countryName(s.country)}</title>{i===cursor&&<circle r="15" fill="#ffef82" stroke="#fff" strokeWidth="2" className="wj-atlas-halo"/>}<rect x="-5" y="-5" width="10" height="10" rx="2.5" fill={['#1488e8','#aa57d8','#f0a326'][s.index%3]} stroke="#fff" strokeWidth="1.6"/></g>)}
