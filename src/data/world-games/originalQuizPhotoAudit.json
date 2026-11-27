@@ -4329,6 +4329,54 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-ls-primary": {
+   "country": "ls",
+   "prompt": "レソトの モコロトロという ぼうしは、どんな ものを あんで つくる？",
+   "enPrompt": "What is woven to make a traditional Basotho mokorotlo hat in Lesotho?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mokorotlo.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons original file description and exact image on 2026-11-28; verified subject, source and file license.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mokorotlo.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Mokorotlo.jpg/960px-Mokorotlo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mokorotlo.jpg",
+    "title": "Mokorotlo.jpg",
+    "author": "Vanellus Foto",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "編み上げた円すい形のバソトの伝統帽子モコロトロ",
+    "altEn": "Woven conical Basotho mokorotlo hat",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-gt-primary": {
+   "country": "gt",
+   "prompt": "グアテマラで したしまれる マリンバは、どんな ぶぶんを たたいて おとを だす？",
+   "enPrompt": "What part of the marimba, popular in Guatemala, is struck to make sound?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marimba_MET_MUS805A.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons original file description and exact image on 2026-11-28; verified subject, source and file license. Museum attribution is possibly Guatemalan; image illustrates instrument construction, not proven national origin.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marimba_MET_MUS805A.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Marimba_MET_MUS805A.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marimba_MET_MUS805A.jpg",
+    "title": "Marimba MET MUS805A.jpg",
+    "author": "The Metropolitan Museum of Art (Crosby Brown Collection, 1889)",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "altJa": "メトロポリタン美術館所蔵の木製マリンバ（グアテマラ製と推定）",
+    "altEn": "Wooden marimba in the Metropolitan Museum of Art, possibly Guatemalan",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -4473,6 +4521,14 @@
    "ids": [
     "tp-original-hand-v1-tw-primary",
     "tp-original-hand-v1-cz-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened file-level Commons license and author details and viewed exact image; no identifiable people. Museum instrument origin explicitly qualified.",
+   "ids": [
+    "tp-original-hand-v1-ls-primary",
+    "tp-original-hand-v1-gt-primary"
    ]
   }
  ]
