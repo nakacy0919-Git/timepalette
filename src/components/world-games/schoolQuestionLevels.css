@@ -15,3 +15,6 @@
 .wg-furigana-question .wg-feedback p,.wg-furigana-question .wj-explanation p{line-height:1.8}
 @media(max-height:710px){.wg-school-choices button{min-height:94px;padding:7px}.wg-school-choices button span{font-size:31px}.wg-school-choices button strong{font-size:20px}.wg-furigana-question .wg-options button{min-height:68px}}
 @media(max-width:600px){.wg-school-choices{gap:8px}.wg-school-choices button{min-height:100px}.wg-school-choices button small{font-size:11px}.wg-furigana-question .wg-options button{min-height:58px}}
+
+/* Licensed real-world quiz photography: compact, uncropped and optional. */
+.wg-editorial-photo{margin:8px auto 12px;width:min(100%,680px);text-align:center;min-width:0}.wg-editorial-photo img{display:block;width:100%;height:auto;max-height:clamp(120px,25vh,220px);object-fit:contain;border-radius:10px;background:rgba(100,116,139,.08)}.wg-editorial-photo figcaption{font-size:10px;line-height:1.4;overflow-wrap:anywhere;margin-top:4px;color:inherit;opacity:.88}.wg-editorial-photo figcaption a{color:inherit;text-decoration:underline}.wj-celebration .wg-editorial-photo img{max-height:clamp(100px,19vh,165px)}

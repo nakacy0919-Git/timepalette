@@ -61,6 +61,19 @@
         "近": "ちか",
         "分け": "わけ",
         "分け合": "わけあ"
+      },
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_making_of_Kimchi.jpg?width=960",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_making_of_Kimchi.jpg",
+        "title": "The making of Kimchi.jpg",
+        "author": "Manju Shakya",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "altJa": "韓国でキムチを作る人々",
+        "altEn": "People making kimchi in South Korea",
+        "stage": "review",
+        "changes": "Uncropped, resized for display",
+        "verifiedOn": "2026-11-27"
       }
     },
     {
@@ -122,6 +135,19 @@
         "移動": "いどう",
         "動": "うご",
         "組み立て": "くみたて"
+      },
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mongolia_Ger.jpg?width=960",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mongolia_Ger.jpg",
+        "title": "Mongolia Ger.jpg",
+        "author": "Yosemite (contrast/colors: Latebird)",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "altJa": "モンゴルの草原に立つ二つのゲル",
+        "altEn": "Two gers on the Mongolian steppe",
+        "stage": "question",
+        "changes": "Uncropped, resized for display",
+        "verifiedOn": "2026-11-27"
       }
     },
     {
@@ -338,6 +364,19 @@
         "粉": "こな",
         "石": "せっ",
         "石けん": "せっけん"
+      },
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Batik_Artisan_Applying_Wax_with_Canting_in_Trusmi_Cirebon_Indonesia.jpg?width=960",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Batik_Artisan_Applying_Wax_with_Canting_in_Trusmi_Cirebon_Indonesia.jpg",
+        "title": "Batik Artisan Applying Wax with Canting in Trusmi Cirebon Indonesia.jpg",
+        "author": "Ahaetulla",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "altJa": "インドネシアのバティック制作の様子",
+        "altEn": "A batik artisan at work in Indonesia",
+        "stage": "review",
+        "changes": "Uncropped, resized for display",
+        "verifiedOn": "2026-11-27"
       }
     },
     {
@@ -827,7 +866,20 @@
       "translationReviewStatus": "approved",
       "rightsConfirmed": true,
       "gameEligible": true,
-      "requiresReading": false
+      "requiresReading": false,
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_making_of_Kimchi.jpg?width=960",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_making_of_Kimchi.jpg",
+        "title": "The making of Kimchi.jpg",
+        "author": "Manju Shakya",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "altJa": "韓国でキムチを作る人々",
+        "altEn": "People making kimchi in South Korea",
+        "stage": "review",
+        "changes": "Uncropped, resized for display",
+        "verifiedOn": "2026-11-27"
+      }
     },
     {
       "id": "tp-editorial-v1-mn-ger-design",
@@ -867,7 +919,20 @@
       "translationReviewStatus": "approved",
       "rightsConfirmed": true,
       "gameEligible": true,
-      "requiresReading": false
+      "requiresReading": false,
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mongolia_Ger.jpg?width=960",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mongolia_Ger.jpg",
+        "title": "Mongolia Ger.jpg",
+        "author": "Yosemite (contrast/colors: Latebird)",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "altJa": "モンゴルの草原に立つ二つのゲル",
+        "altEn": "Two gers on the Mongolian steppe",
+        "stage": "question",
+        "changes": "Uncropped, resized for display",
+        "verifiedOn": "2026-11-27"
+      }
     },
     {
       "id": "tp-editorial-v1-id-wax-resist",
@@ -907,7 +972,20 @@
       "translationReviewStatus": "approved",
       "rightsConfirmed": true,
       "gameEligible": true,
-      "requiresReading": false
+      "requiresReading": false,
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Batik_Artisan_Applying_Wax_with_Canting_in_Trusmi_Cirebon_Indonesia.jpg?width=960",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Batik_Artisan_Applying_Wax_with_Canting_in_Trusmi_Cirebon_Indonesia.jpg",
+        "title": "Batik Artisan Applying Wax with Canting in Trusmi Cirebon Indonesia.jpg",
+        "author": "Ahaetulla",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "altJa": "インドネシアのバティック制作の様子",
+        "altEn": "A batik artisan at work in Indonesia",
+        "stage": "review",
+        "changes": "Uncropped, resized for display",
+        "verifiedOn": "2026-11-27"
+      }
     },
     {
       "id": "tp-editorial-v1-nz-maori-1987",
@@ -1027,7 +1105,20 @@
       "translationReviewStatus": "approved",
       "rightsConfirmed": true,
       "gameEligible": true,
-      "requiresReading": false
+      "requiresReading": false,
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agua_Clara_Locks_09_2019_0822.jpg?width=960",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agua_Clara_Locks_09_2019_0822.jpg",
+        "title": "Agua Clara Locks 09 2019 0822.jpg",
+        "author": "Mariordo (Mario Roberto Durán Ortiz)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "altJa": "パナマ運河のアグア・クララ閘門を通る船",
+        "altEn": "A ship passing through Agua Clara Locks in Panama",
+        "stage": "question",
+        "changes": "Uncropped, resized for display",
+        "verifiedOn": "2026-11-27"
+      }
     },
     {
       "id": "tp-editorial-v1-au-levels",
@@ -1307,7 +1398,20 @@
       "translationReviewStatus": "approved",
       "rightsConfirmed": true,
       "gameEligible": true,
-      "requiresReading": false
+      "requiresReading": false,
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agua_Clara_Locks_09_2019_0822.jpg?width=960",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agua_Clara_Locks_09_2019_0822.jpg",
+        "title": "Agua Clara Locks 09 2019 0822.jpg",
+        "author": "Mariordo (Mario Roberto Durán Ortiz)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "altJa": "パナマ運河のアグア・クララ閘門を通る船",
+        "altEn": "A ship passing through Agua Clara Locks in Panama",
+        "stage": "question",
+        "changes": "Uncropped, resized for display",
+        "verifiedOn": "2026-11-27"
+      }
     },
     {
       "id": "tp-editorial-v1-ca-bilingual-services",

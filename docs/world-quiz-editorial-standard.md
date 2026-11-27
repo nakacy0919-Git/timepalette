@@ -9,3 +9,7 @@
 - Categories: customs, culture, food, homes, clothing, languages, history, geography/nature, technology, economy, government/society, education, Japan connections. Map to the existing six game domains to avoid breaking game filters.
 - Source-based original writing, not copied questions. Automated checks do not substitute for editorial verification. Review existing questions individually and flag or replace weak template families; do not silently delete existing material.
 - Wave 1: 28 new questions; source links and editorial review are included. Browser, build and deployment checks must be performed separately.
+
+## Licensed photography pilot
+
+Prefer real photos from Wikimedia Commons or other original repositories, with file-level permission confirmed. Prefer CC0/public domain or CC BY; CC BY-SA is acceptable with attribution and same-license treatment of image adaptations. Reject NC/ND, unclear rights and misleading images. Record author, title, file page, license and link, display changes, localized alt text and verification date. Protect privacy and check other rights separately. Show answer-revealing images only after submission; never make an image mandatory until fallback and accessibility are designed. This pilot links Wikimedia-hosted images without local copies; verify browser rendering and consider licensed local caching before scaling. Four photographs are associated with eight existing questions.
