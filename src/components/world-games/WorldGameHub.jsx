@@ -135,13 +135,17 @@ function QuizDataVisual({data,english}){
  const labels=english?data.labelsEn:data.labelsJa;
  if(data.type==='distance')return <div className="wg-data-visual" role="group" aria-label={english?'Distance comparison':'距離の比較'}>{data.values.map((v,i)=><div key={i} className="wg-data-row"><span>{labels[i]}</span><div className="wg-data-track"><i style={{width:Math.max(1,100*v/Math.max(...data.values,1))+'%'}}/></div><b>{v.toFixed(1)} km</b></div>)}</div>;
  const p=data.places||[];if(!p.length)return null;
- const min=Math.min(...p.map(c=>c.lat)),max=Math.max(...p.map(c=>c.lat));
+ const longitude=data.axis==='longitude';
+ // Unwrap longitudes relative to the first city for a local, dateline-safe plot.
+ const value=c=>longitude?p[0].lon+((c.lon-p[0].lon+540)%360)-180:c.lat;
+ const min=Math.min(...p.map(value)),max=Math.max(...p.map(value));
  const left=24,right=260,top=20,bottom=130,range=Math.max(max-min,.001);
- // Coordinates are given in the prompt; labels and data remain readable without the graphic.
- return <div className="wg-data-visual wg-data-coordinate"><svg viewBox="0 0 300 154" role="img" aria-label={english?'Latitude positions of four places':'4地点の緯度の位置関係'}>
- <text x="5" y="12" fontSize="10" fill="currentColor">N ↑</text><text x="5" y="149" fontSize="10" fill="currentColor">S ↓</text>
+ const name=longitude?(english?'Longitude positions (relative)':'4地点の経度の位置関係（相対表示）'):(english?'Latitude positions of four places':'4地点の緯度の位置関係');
+ const degrees=c=>{const v=longitude?c.lon:c.lat;return Math.abs(v).toFixed(3)+'°'+(longitude?(v>=0?'E':'W'):(v>=0?'N':'S'));};
+ return <div className="wg-data-visual wg-data-coordinate"><svg viewBox="0 0 300 154" role="img" aria-label={name}>
+ <text x="5" y="12" fontSize="10" fill="currentColor">{longitude?'E ↑':'N ↑'}</text><text x="5" y="149" fontSize="10" fill="currentColor">{longitude?'W ↓':'S ↓'}</text>
  {[0,1,2].map(j=><line key={j} x1={left} x2={right+15} y1={top+j*(bottom-top)/2} y2={top+j*(bottom-top)/2} stroke="currentColor" opacity=".16"/>)}
- {p.map((c,i)=>{const x=left+42+i*64,y=bottom-(c.lat-min)/range*(bottom-top);return <g key={i}><circle cx={x} cy={y} r="8" fill="#2563eb"/><text x={x} y={y+3} fontSize="9" textAnchor="middle" fill="#fff">{c.letter}</text><text x={x} y={Math.max(12,y-12)} textAnchor="middle" fontSize="9" fill="currentColor">{c.lat.toFixed(3)}°</text></g>;})}
+ {p.map((c,i)=>{const x=left+42+i*64,y=bottom-(value(c)-min)/range*(bottom-top);return <g key={i}><circle cx={x} cy={y} r="8" fill="#2563eb"/><text x={x} y={y+3} fontSize="9" textAnchor="middle" fill="#fff">{c.letter}</text><text x={x} y={Math.max(12,y-12)} textAnchor="middle" fontSize="9" fill="currentColor">{degrees(c)}</text></g>;})}
  </svg><div className="wg-data-legend">{p.map(c=><span key={c.letter}><b>{c.letter}</b> {english?c.labelEn:c.labelJa}</span>)}</div></div>;
 }
 function QuizPhoto({photo,fallback,english,review}){

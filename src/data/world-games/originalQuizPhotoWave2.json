@@ -163,9 +163,9 @@
   "subcategory": "地理・自然",
   "prompt": "カランドゥーラ滝のような滝で、水の力が長い時間をかけて岩を削る作用は何という？",
   "choices": [
-   "蒸発",
-   "凝結",
-   "堆積だけ",
+   "風化",
+   "堆積",
+   "溶解",
    "侵食"
   ],
   "correctIndex": 3,
@@ -173,9 +173,9 @@
   "en": {
    "prompt": "What process wears away rock over time at waterfalls such as Kalandula Falls?",
    "choices": [
-    "Evaporation",
-    "Condensation",
-    "Deposition alone",
+    "Weathering",
+    "Deposition",
+    "Dissolution",
     "Erosion"
    ],
    "explanation": "Moving water can erode rock and reshape a valley."
@@ -189,20 +189,20 @@
   "subcategory": "地理・自然",
   "prompt": "イグアスの滝を囲む森林を保護することは、なぜ重要なのか？",
   "choices": [
-   "森林をすべて農地に変えるため",
-   "岩を人工的に着色するため",
+   "木材の採取量を増やすため",
+   "滝の落差を大きくするため",
    "多くの生物の生息地を守るため",
-   "滝の水をすべて止めるため"
+   "周辺の降水量を一定に保つため"
   ],
   "correctIndex": 2,
   "explanation": "滝だけでなく周囲の森林も生物多様性を支えます。",
   "en": {
    "prompt": "Why is protecting the forest surrounding Iguazú Falls important?",
    "choices": [
-    "To turn all forest into farmland",
-    "To artificially color the rocks",
+    "To increase timber extraction",
+    "To increase the waterfall's vertical drop",
     "To preserve habitats for many species",
-    "To stop all water flow"
+    "To keep local rainfall constant"
    ],
    "explanation": "The surrounding forest supports biodiversity."
   }
@@ -242,9 +242,9 @@
   "prompt": "グレート・バリア・リーフの魚がサンゴ礁に集まる理由として適切なものは？",
   "choices": [
    "餌や隠れ場所を得られる",
-   "海水がすべて淡水になる",
-   "海の中に酸素が存在しない",
-   "全ての魚が同じ種類になる"
+   "水温が一年中変化しない",
+   "波がサンゴ礁の内部に届かない",
+   "どの魚も同じ餌だけを食べられる"
   ],
   "correctIndex": 0,
   "explanation": "サンゴ礁の複雑な構造は多くの海洋生物に生息環境を提供します。",
@@ -252,9 +252,9 @@
    "prompt": "Why do many reef fish live around the Great Barrier Reef?",
    "choices": [
     "It provides food and shelter",
-    "All seawater becomes fresh water",
-    "There is no oxygen in the sea",
-    "All fish become one species"
+    "Water temperature never changes",
+    "Waves never reach the reef",
+    "Every fish can eat only one kind of food"
    ],
    "explanation": "Reef structures provide diverse marine habitats."
   }
@@ -345,20 +345,20 @@
   "subcategory": "地理・自然",
   "prompt": "シュンドルボンのマングローブ林が沿岸地域に果たす役割は？",
   "choices": [
-   "海底の地震をなくす",
+   "河川の洪水をすべて防ぐ",
    "高潮や波の影響を和らげる",
-   "海水をすべて淡水化する",
-   "台風の発生を完全に止める"
+   "海水を飲料水に変える",
+   "熱帯低気圧の進路を変える"
   ],
   "correctIndex": 1,
   "explanation": "マングローブは沿岸を守り、生物の生息地にもなります。",
   "en": {
    "prompt": "How can Sundarbans mangrove forests help coastal communities?",
    "choices": [
-    "By eliminating seabed earthquakes",
+    "Preventing every river flood",
     "By buffering storm surges and waves",
-    "By desalinating all seawater",
-    "By preventing every cyclone"
+    "Turning seawater into drinking water",
+    "Changing the tracks of tropical cyclones"
    ],
    "explanation": "Mangroves help buffer coastal hazards and support wildlife."
   }
@@ -476,9 +476,9 @@
   "prompt": "タンガニーカ湖に多くの固有種がいることは、何を意味する？",
   "choices": [
    "その湖や周辺に限って自然に分布する種が多い",
-   "全ての種が海に移動する",
-   "全ての魚が同じ大きさである",
-   "人間がすべての種を作った"
+   "その湖を繁殖地とする渡り鳥が多い",
+   "世界中に広く分布する種が多い",
+   "人為的に導入された種が多い"
   ],
   "correctIndex": 0,
   "explanation": "固有種は限られた地域に自然に分布する生物です。",
@@ -486,9 +486,9 @@
    "prompt": "What does it mean that Lake Tanganyika has many endemic species?",
    "choices": [
     "Many occur naturally only in the lake or its region",
-    "Every species migrates to the ocean",
-    "All fish are the same size",
-    "People created every species"
+    "Many migratory birds breed there",
+    "Many species occur worldwide",
+    "Many species were introduced by humans"
    ],
    "explanation": "Endemic species are naturally restricted to particular areas."
   }
@@ -527,20 +527,20 @@
   "subcategory": "住文化",
   "prompt": "水上集落カンポン・アイールで建物を柱で支えることには、どんな利点がある？",
   "choices": [
-   "川の水を凍らせられる",
-   "建物を水中に沈められる",
+   "川底を平らにする",
+   "建物の断熱性を高める",
    "床を水面より高く保てる",
-   "川の流れを完全に止められる"
+   "川幅を狭くする"
   ],
   "correctIndex": 2,
   "explanation": "高床式の構造は水上で暮らすための工夫です。",
   "en": {
    "prompt": "What is an advantage of supporting Kampong Ayer's buildings on stilts?",
    "choices": [
-    "Freezing river water",
-    "Submerging the buildings",
+    "Leveling the riverbed",
+    "Improving building insulation",
     "Keeping floors above the water",
-    "Stopping the river completely"
+    "Narrowing the river"
    ],
    "explanation": "Raised floors are adapted to living over water."
   }
@@ -553,20 +553,20 @@
   "subcategory": "科学・技術",
   "prompt": "ウユニ塩原が雨季に空を鏡のように映すのはなぜ？",
   "choices": [
-   "地面がガラスに変化するから",
+   "塩の結晶が水を吸収して発光するから",
    "平らな地面に浅い水が広がり光を反射するから",
-   "塩が空気中に光を放つから",
-   "氷河が空を青く染めるから"
+   "地下水が空の色を染料のように変えるから",
+   "水の深さが増して海と同じ色になるから"
   ],
   "correctIndex": 1,
   "explanation": "浅く静かな水面が空からの光を反射します。",
   "en": {
    "prompt": "Why can Salar de Uyuni reflect the sky like a mirror after rain?",
    "choices": [
-    "The ground turns into glass",
+    "Salt crystals absorb water and emit light",
     "Shallow water spreads across the flat surface and reflects light",
-    "Salt emits light into the air",
-    "Glaciers dye the sky blue"
+    "Groundwater changes the sky's color like a dye",
+    "Deeper water becomes the same color as the ocean"
    ],
    "explanation": "A shallow, calm water surface reflects the sky."
   }
@@ -709,9 +709,9 @@
   "subcategory": "科学・技術",
   "prompt": "グレート・ブルーホールの中央が周辺の浅い海より濃い青に見える主な理由は？",
   "choices": [
-   "中央だけ海水が凍る",
-   "海底が金属で覆われている",
-   "中央だけ太陽が当たらない",
+   "中央の水温が周辺より高い",
+   "中央の塩分濃度が必ず高い",
+   "中央の海流が周辺より速い",
    "中央の水深が大きい"
   ],
   "correctIndex": 3,
@@ -719,9 +719,9 @@
   "en": {
    "prompt": "Why does the center of Belize's Great Blue Hole appear darker than the surrounding shallow water?",
    "choices": [
-    "Only the center freezes",
-    "The seabed is covered in metal",
-    "Only the center receives no sunlight",
+    "The water is warmer in the center",
+    "Salinity must be higher in the center",
+    "Currents are faster in the center",
     "The water is much deeper there"
    ],
    "explanation": "Deep water reduces light reflected from the seabed."
@@ -735,9 +735,9 @@
   "subcategory": "科学・技術",
   "prompt": "カナディアン・ロッキーの湖が青緑色に見える原因の一つは？",
   "choices": [
-   "海から運ばれたサンゴだけ",
-   "溶けた銅の板",
-   "人工的な青い照明",
+   "淡水に含まれる海塩の結晶",
+   "湖底の海洋性サンゴ",
+   "水に溶けた大量の鉄による赤褐色の着色",
    "氷河が削った細かな岩の粒子"
   ],
   "correctIndex": 3,
@@ -745,9 +745,9 @@
   "en": {
    "prompt": "What helps give glacier-fed lakes in the Canadian Rockies their turquoise color?",
    "choices": [
-    "Only coral carried from the sea",
-    "Dissolved copper sheets",
-    "Artificial blue lighting",
+    "Sea-salt crystals in freshwater",
+    "Marine coral on the lakebed",
+    "Reddish coloration from abundant dissolved iron",
     "Fine rock particles ground by glaciers"
    ],
    "explanation": "Fine glacial rock flour scatters light in the water."
@@ -1152,9 +1152,9 @@
   "prompt": "アッサル湖のように流出する水が少なく蒸発が盛んな湖では、塩分濃度はどうなりやすい？",
   "choices": [
    "高くなる",
-   "必ずゼロになる",
-   "常に海水と同じになる",
-   "気温だけで瞬時に変わる"
+   "低くなる",
+   "水の量に関係なく一定になる",
+   "必ず河川と同じになる"
   ],
   "correctIndex": 0,
   "explanation": "水が蒸発しても溶けていた塩は残るため、塩分が濃くなります。",
@@ -1162,9 +1162,9 @@
    "prompt": "What tends to happen to salinity in a lake like Lake Assal with limited outflow and strong evaporation?",
    "choices": [
     "It increases",
-    "It always falls to zero",
-    "It always equals seawater",
-    "It changes instantly with temperature alone"
+    "It decreases",
+    "It remains constant regardless of water volume",
+    "It always equals river salinity"
    ],
    "explanation": "Evaporation leaves dissolved salts behind."
   }
@@ -1282,9 +1282,9 @@
   "prompt": "ガラパゴス諸島の生き物の違いは、ダーウィンのどの考えと関係が深い？",
   "choices": [
    "自然選択による進化",
-   "大陸が全く動かない説",
-   "すべての生物が同じ環境で育つ説",
-   "地球が宇宙の中心にある説"
+   "獲得形質の遺伝だけによる進化",
+   "生物の種が永久に変化しないという考え",
+   "生物の分布が環境に左右されないという考え"
   ],
   "correctIndex": 0,
   "explanation": "島ごとに異なる環境への適応は進化を考える重要な手がかりでした。",
@@ -1292,9 +1292,9 @@
    "prompt": "Which idea is closely associated with Darwin's observations of Galápagos wildlife?",
    "choices": [
     "Evolution by natural selection",
-    "Continents never move",
-    "All organisms grow in identical environments",
-    "Earth is the center of the universe"
+    "Evolution solely by inheritance of acquired traits",
+    "The idea that species never change",
+    "The idea that environment never affects species distribution"
    ],
    "explanation": "Differences among island organisms helped inform thinking about adaptation and evolution."
   }
@@ -1541,9 +1541,9 @@
   "subcategory": "科学・技術",
   "prompt": "モン・サン＝ミシェルの周囲が海に囲まれたり陸地が現れたりするのは、主に何のため？",
   "choices": [
-   "火山噴火",
-   "砂嵐",
-   "氷河の移動",
+   "季節による海水温の変化",
+   "河川の長期的な堆積",
+   "海岸線の地殻変動",
    "潮の満ち引き"
   ],
   "correctIndex": 3,
@@ -1551,9 +1551,9 @@
   "en": {
    "prompt": "What causes the changing appearance of the sea around Mont-Saint-Michel?",
    "choices": [
-    "Volcanic eruptions",
-    "Sandstorms",
-    "Glacier movement",
+    "Seasonal changes in seawater temperature",
+    "Long-term river sediment deposition",
+    "Tectonic movement of the coastline",
     "Tides"
    ],
    "explanation": "Changing tidal levels alter the surrounding landscape."
@@ -2010,9 +2010,9 @@
   "prompt": "ニューグレンジの通路に朝日が差し込むことで知られる季節の節目は？",
   "choices": [
    "冬至",
-   "夏至",
+   "秋分",
    "春分",
-   "秋分"
+   "夏至"
   ],
   "correctIndex": 0,
   "explanation": "冬至の朝日が内部に差し込むよう設計されています。",
@@ -2020,9 +2020,9 @@
    "prompt": "At which seasonal event is Newgrange famous for admitting sunrise into its passage?",
    "choices": [
     "Winter solstice",
-    "Summer solstice",
+    "Autumn equinox",
     "Spring equinox",
-    "Autumn equinox"
+    "Summer solstice"
    ],
    "explanation": "Sunrise enters the passage around the winter solstice."
   }
@@ -2139,9 +2139,9 @@
   "subcategory": "科学・技術",
   "prompt": "シンクヴェトリルで見られる大地の裂け目は、どんな地球の運動と関係する？",
   "choices": [
-   "地球の自転の停止",
-   "氷が必ず海へ流れる運動",
-   "地球の重力の消失",
+   "プレートが衝突する運動",
+   "プレートが沈み込む運動",
+   "プレートが横方向にずれ合う運動だけ",
    "プレートが離れる運動"
   ],
   "correctIndex": 3,
@@ -2149,9 +2149,9 @@
   "en": {
    "prompt": "Which Earth process is associated with the rifts at Þingvellir?",
    "choices": [
-    "Earth stopping its rotation",
-    "Ice always flowing to the sea",
-    "Earth losing gravity",
+    "Plates colliding",
+    "One plate subducting",
+    "Only plates sliding past each other",
     "Tectonic plates moving apart"
    ],
    "explanation": "Iceland lies across a divergent plate boundary."
@@ -2555,20 +2555,20 @@
   "subcategory": "科学・技術",
   "prompt": "ピトンのような火山性の岩山の形成と最も関係が深いものは？",
   "choices": [
-   "樹木の落葉",
-   "砂浜の波だけ",
+   "河川による土砂の堆積",
+   "サンゴ礁の成長",
    "地下のマグマの活動",
-   "潮の満ち引きだけ"
+   "氷河による侵食"
   ],
   "correctIndex": 2,
   "explanation": "火山活動によって岩石が形成され、地形が発達します。",
   "en": {
    "prompt": "Which process is most closely related to the formation of Saint Lucia's volcanic Pitons?",
    "choices": [
-    "Leaves falling from trees",
-    "Only beach waves",
+    "River sediment deposition",
+    "Coral reef growth",
     "Magma activity beneath the surface",
-    "Only tides"
+    "Glacial erosion"
    ],
    "explanation": "Volcanism creates rock formations and landscapes."
   }
@@ -2919,20 +2919,20 @@
   "subcategory": "科学・技術",
   "prompt": "ツィンギの鋭い石灰岩の地形が発達する主な化学的作用は？",
   "choices": [
-   "海水の凍結",
+   "風による砂の堆積",
    "水に含まれる弱い酸による石灰岩の溶食",
-   "鉄鉱石の磁化",
-   "花こう岩の融解"
+   "氷の体積変化による岩石の破砕だけ",
+   "鉄の酸化による赤色化"
   ],
   "correctIndex": 1,
   "explanation": "石灰岩は二酸化炭素を含む水で徐々に溶け、カルスト地形を作ります。",
   "en": {
    "prompt": "What chemical process helps form Tsingy's sharp limestone formations?",
    "choices": [
-    "Freezing of seawater",
+    "Wind deposition of sand",
     "Dissolution of limestone by mildly acidic water",
-    "Magnetization of iron ore",
-    "Melting of granite"
+    "Only rock fragmentation from freezing water",
+    "Red coloration from iron oxidation"
    ],
    "explanation": "Water containing dissolved carbon dioxide gradually dissolves limestone."
   }
@@ -3413,9 +3413,9 @@
   "subcategory": "科学・技術",
   "prompt": "ノルウェーのフィヨルドに多いU字形の谷は、主にどの作用で形成された？",
   "choices": [
-   "風による砂丘の堆積",
-   "サンゴの成長",
-   "溶岩の急冷",
+   "河川の侵食によるV字谷",
+   "風による砂の堆積",
+   "サンゴ礁の成長",
    "氷河の侵食"
   ],
   "correctIndex": 3,
@@ -3423,9 +3423,9 @@
   "en": {
    "prompt": "Which process formed the U-shaped valleys of Norwegian fjords?",
    "choices": [
-    "Wind deposition of dunes",
-    "Coral growth",
-    "Rapid cooling of lava",
+    "River erosion forming V-shaped valleys",
+    "Wind deposition of sand",
+    "Coral reef growth",
     "Glacial erosion"
    ],
    "explanation": "Glaciers carved valleys later flooded by seawater."
@@ -3621,20 +3621,20 @@
   "subcategory": "科学・技術",
   "prompt": "プエルト・プリンセサの地下河川の洞窟を形成する主な作用は？",
   "choices": [
-   "溶岩の堆積のみ",
+   "溶岩が冷えてできるトンネル",
    "水による石灰岩の溶食",
-   "風で砂が積み重なる作用",
-   "氷河が海に浮く作用"
+   "海岸の波による砂丘の形成",
+   "氷河の移動によるU字谷の形成"
   ],
   "correctIndex": 1,
   "explanation": "石灰岩が長期間にわたり水で溶けることで洞窟が形成されます。",
   "en": {
    "prompt": "What process mainly formed Puerto Princesa's underground river cave?",
    "choices": [
-    "Lava deposition alone",
+    "Tunnels formed by cooling lava",
     "Dissolution of limestone by water",
-    "Wind deposition of sand",
-    "Glaciers floating at sea"
+    "Dunes formed by coastal waves",
+    "U-shaped valleys carved by glaciers"
    ],
    "explanation": "Long-term dissolution of limestone creates karst caves."
   }
@@ -3959,9 +3959,9 @@
   "subcategory": "科学・技術",
   "prompt": "東レンネルのような隆起サンゴ島は、どのような地質変化で形成される？",
   "choices": [
-   "氷河が海に浮かぶ",
-   "砂丘が海底に沈むだけ",
-   "河川が火山灰を運ぶだけ",
+   "サンゴ礁の形成後に地盤が沈降する",
+   "火山灰が海面上に堆積するだけ",
+   "河川が三角州を作る",
    "サンゴ礁が形成された土地が隆起する"
   ],
   "correctIndex": 3,
@@ -3969,9 +3969,9 @@
   "en": {
    "prompt": "How can a raised coral island such as East Rennell form?",
    "choices": [
-    "A glacier floats at sea",
-    "Only dunes sink offshore",
-    "Only rivers transport volcanic ash",
+    "Land subsides after reef formation",
+    "Only volcanic ash accumulates above sea level",
+    "A river builds a delta",
     "Land containing reef limestone is uplifted"
    ],
    "explanation": "Reef-derived limestone becomes exposed through uplift."
@@ -4609,9 +4609,9 @@
   "subcategory": "科学・技術",
   "prompt": "カッパドキアの奇岩ができた理由として適切なのは？",
   "choices": [
-   "海中のサンゴが成長した",
-   "氷河が海に浮かんだ",
-   "人がすべての岩を積んだ",
+   "石灰岩が地下水に溶ける作用だけ",
+   "サンゴ礁が隆起する作用",
+   "河川が砂を堆積させる作用だけ",
    "火山性の岩石が風雨で異なる速さで侵食された"
   ],
   "correctIndex": 3,
@@ -4619,9 +4619,9 @@
   "en": {
    "prompt": "How did many unusual rock formations in Cappadocia develop?",
    "choices": [
-    "Underwater coral grew",
-    "Glaciers floated out to sea",
-    "People stacked every rock",
+    "Only limestone dissolution by groundwater",
+    "Uplift of coral reefs",
+    "Only river deposition of sand",
     "Volcanic rocks eroded at different rates"
    ],
    "explanation": "Differential erosion shaped the volcanic landscape."
@@ -4688,9 +4688,9 @@
   "prompt": "台北101の巨大な制振装置が高層建築で果たす役割は？",
   "choices": [
    "強風などによる建物の揺れを抑える",
-   "建物を発電所に変える",
-   "すべての地震を予知する",
-   "建物の高さを毎日変える"
+   "建物全体の重量を減らす",
+   "空調設備の熱を回収する",
+   "基礎にかかる静的な荷重を取り除く"
   ],
   "correctIndex": 0,
   "explanation": "制振装置は建物の振動を低減するために使われます。",
@@ -4698,9 +4698,9 @@
    "prompt": "What does Taipei 101's large tuned mass damper help do?",
    "choices": [
     "Reduce building motion caused by strong winds and other forces",
-    "Turn the building into a power station",
-    "Predict every earthquake",
-    "Change the building's height daily"
+    "Reducing the entire building's weight",
+    "Recovering heat from air-conditioning",
+    "Removing static foundation loads"
    ],
    "explanation": "Damping systems reduce structural vibrations."
   }
@@ -4948,9 +4948,9 @@
   "prompt": "ハロン湾の石灰岩の島々が形成された主要な作用は？",
   "choices": [
    "水による石灰岩の溶食と長期の侵食",
-   "サンゴが一夜で成長する作用",
-   "氷河が砂を積む作用だけ",
-   "人が岩を組み立てる作用"
+   "火山噴火による溶岩の堆積",
+   "風が運んだ砂による砂丘形成",
+   "氷河が岩盤を削る作用"
   ],
   "correctIndex": 0,
   "explanation": "石灰岩の溶食や侵食が独特のカルスト景観を作ります。",
@@ -4958,9 +4958,9 @@
    "prompt": "What major process shaped Ha Long Bay's limestone islands?",
    "choices": [
     "Limestone dissolution and long-term erosion",
-    "Coral growing overnight",
-    "Only glacial sand deposition",
-    "People assembling rocks"
+    "Lava deposition from eruptions",
+    "Dunes formed by windblown sand",
+    "Glacial erosion of bedrock"
    ],
    "explanation": "Dissolution and erosion shaped the karst landscape."
   }

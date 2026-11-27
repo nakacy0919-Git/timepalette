@@ -48,7 +48,7 @@ function buildDataQuestion(country,i){
    ja=country.nameJa+'の次の4地点で、'+(kind==='latspan'?'緯度差が最も大きい':'経度差（180°以下の短い方）が最も大きい')+'組み合わせは？ '+lines(cities,'ja',true);
    en='Which pair of places in '+country.nameEn+' has the largest '+(kind==='latspan'?'latitude difference':'longitude difference (the shorter angle, at most 180°)')+'? '+lines(cities,'en',true);
    ex=opts[correct]+'です。差は約'+v[correct].toFixed(3)+'°です。';exEn=optsEn[correct]+' have the greatest difference, about '+v[correct].toFixed(3)+'°.';
-   visual={type:'coordinates',places:cities.map((c,j)=>({labelJa:c.ja,labelEn:c.en,lat:c.lat,lon:c.lon,letter:'ABCD'[j]}))};
+   visual={type:'coordinates',axis:kind==='eastwest'?'longitude':'latitude',places:cities.map((c,j)=>({labelJa:c.ja,labelEn:c.en,lat:c.lat,lon:c.lon,letter:'ABCD'[j]}))};
   }else{
    // Four explicitly displayed computed distances between distinct pairs.
    const pairs=[[0,1],[0,2],[1,3],[2,3]],v=pairs.map(([a,b])=>Math.round(km(cities[a],cities[b])*10)/10);
