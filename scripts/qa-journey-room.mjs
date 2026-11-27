@@ -1,4 +1,4 @@
-// Opt-in live check: two browser contexts connect via the configured PeerServer.
+// Opt-in live check: two browser contexts connect via the HTTPS room relay.
 import {chromium} from '@playwright/test';
 import assert from 'node:assert/strict';
 const base=process.env.BASE_URL||'http://127.0.0.1:4178';
@@ -10,9 +10,10 @@ try{
   const skip=page.getByRole('button',{name:/SKIP/});
   if(await skip.isVisible())await skip.click();
   await page.getByRole('button',{name:/World Journey/}).click({timeout:30000});
-  await page.getByRole('button',{name:/コードで参加/}).waitFor();
+  await page.getByRole('button',{name:/複数端末で遊ぶ/}).click();
  }
  const next=()=>host.getByRole('button',{name:'次へ →',exact:true}).click();
+ await host.getByRole('button',{name:/ホストになる/}).click();
  await next();await next();
  await host.getByRole('button',{name:/スピード テンポ/}).click();
  await next();
@@ -20,9 +21,8 @@ try{
  await host.getByText(/参加受付中/).waitFor({timeout:20000});
  const code=await host.getByLabel('ルームコード',{exact:true}).innerText();
  assert.match(code,/^\d{6}$/);
- await guest.getByRole('button',{name:/コードで参加/}).click();
+ await guest.getByRole('button',{name:/ルームに参加/}).click();
  await guest.getByLabel('ルームコード').fill(code);
- await guest.getByLabel(/チーム・端末/).fill('QAチーム');
  await guest.getByRole('button',{name:/接続する/}).click();
  await host.getByRole('button',{name:'参加を許可'}).click({timeout:25000});
  await guest.getByText(/チーム2で参加しました/).waitFor({timeout:10000});

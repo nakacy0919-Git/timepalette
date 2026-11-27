@@ -50,7 +50,16 @@ export default function JourneyBoard({game,onRoll,countryName,countryFlag,speed=
   },reduced?0:2440);
  };
  
- useEffect(()=>{if(remoteRoll&&remoteRoll.round===game.round)roll(remoteRoll);},[remoteRoll?.id]);
+ useEffect(()=>{
+  if(!remoteRoll||remoteRoll.round!==game.round)return;
+  const t=setTimeout(()=>roll(remoteRoll),Math.max(0,(remoteRoll.startAt||Date.now())-Date.now()));
+  return()=>clearTimeout(t);
+ },[remoteRoll?.id]);
+ useEffect(()=>{
+  if(onRequestRoll&&!remoteRoll&&game.phase!=='select'){
+   timers.current.forEach(clearTimeout);timers.current=[];rollRef.current=false;setPopup(false);setRolling(false);setMoving(false);setCursor(team.position);
+  }
+ },[remoteRoll?.id,game.phase,team.position]);
  return <section ref={boardRef} className="wj-board" aria-label="世界旅行すごろく">
   {roomLabel&&<div className="wj-room-badge" role="status">{roomLabel}</div>}
   <JourneyAtlas game={game} cursor={cursor} moving={moving&&!popup} stepMs={stepMs} countryName={countryName} countryFlag={countryFlag} settingsOpen={settingsOpen} onCloseSettings={()=>setSettingsOpen(false)} settingsContent={<div className="wj-settings-extra"><button aria-pressed={sound} onClick={onToggleSound}>{sound?'🔊 効果音 ON':'🔇 効果音 OFF'}</button><button onClick={onFullscreen}>{full?'全画面解除':'⛶ 全画面'}</button><button aria-pressed={speed==='slow'} disabled={!!onRequestRoll} onClick={()=>onSpeedChange('slow')}>🐢 ゆっくり</button><button aria-pressed={speed==='fast'} disabled={!!onRequestRoll} onClick={()=>onSpeedChange('fast')}>⚡ 高速</button><button className="wj-exit-button" onClick={onExit}>← ゲームを終了</button></div>}/>

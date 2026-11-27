@@ -1,0 +1,35 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createRoom,roomRequest,TTL} from '../lib/journey-relay-core.js';
+const host='a'.repeat(64),guest='b'.repeat(64),stranger='c'.repeat(64),now=1000;
+const made=()=>createRoom('089267',host,2,now);
+const apply=(r,op,token,extra={})=>roomRequest(r,{op,token,...extra},now+1);
+test('join with leading zero, approval, snapshot and authenticated actions',()=>{
+ let r=made(),out=apply(r,'join',guest);
+ assert.equal(out.data.status,'waiting');r=out.record;
+ assert.equal(apply(r,'poll',stranger).status,403);
+ assert.equal(apply(r,'approve',guest,{id:1}).status,403);
+ r=apply(r,'approve',host,{id:1}).record;
+ assert.equal(apply(r,'poll',guest).data.team,1);
+ const snap={seq:1,game:{mode:'journey',teams:[{},{}],route:['jp'],turn:1,round:0,phase:'select'},config:{speed:'fast'},roll:null};
+ assert.equal(apply(r,'publish',guest,{snapshot:snap}).status,403);
+ r=apply(r,'publish',host,{snapshot:snap}).record;
+ assert.deepEqual(apply(r,'poll',guest).data.snapshot,snap);
+ assert.equal(apply(r,'join',stranger).status,409);
+ const action={type:'roll',round:0,phase:'select',travel:'standard'};
+ r=apply(r,'action',guest,{id:'test-id-1',action}).record;
+ assert.equal(apply(r,'poll',host).data.actions.length,1);
+ assert.equal(apply(r,'action',guest,{id:'test-id-1',action}).record,undefined);
+ r=apply(r,'ack',host,{ids:['test-id-1']}).record;
+ assert.equal(apply(r,'poll',host).data.actions.length,0);
+ r=apply(r,'close',host).record;
+ assert.equal(apply(r,'poll',guest).status,404);
+});
+test('room expires and unauthorized or out of turn actions are rejected',()=>{
+ let r=made();
+ assert.equal(roomRequest(r,{op:'poll',token:host},now+TTL).status,404);
+ r=apply(r,'join',guest).record;r=apply(r,'approve',host,{id:1}).record;
+ r=apply(r,'publish',host,{snapshot:{seq:1,game:{mode:'journey',teams:[{},{}],route:['jp'],turn:0,round:0,phase:'select'},config:{},roll:null}}).record;
+ assert.equal(apply(r,'action',guest,{id:'invalid-1',action:{type:'roll',round:0,phase:'select',travel:'standard'}}).status,409);
+ assert.equal(apply(r,'publish',host,{snapshot:{seq:1,game:{mode:'journey',teams:[{},{}],route:['jp']}}}).record,undefined);
+});
