@@ -4521,6 +4521,150 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-id-primary": {
+   "country": "id",
+   "prompt": "インドネシアの ワヤン・クリでは、にんぎょうに ひかりを あてて なにを みせる？",
+   "enPrompt": "What is projected when light shines on Indonesian wayang kulit puppets?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shadow_puppets.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and visually inspected the exact delivery image on 2026-11-28; verified author and file-level license. Photo shows the actual shadow play; original file is 640 × 480.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shadow_puppets.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/Shadow_puppets.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shadow_puppets.jpg",
+    "title": "Shadow puppets.jpg",
+    "author": "frank wouters",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "ジャカルタのワヤン・クリのスクリーンに映った人形の影",
+    "altEn": "Shadow puppets projected onto a screen in Jakarta",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-iq-primary": {
+   "country": "iq",
+   "prompt": "イラクの マスグーフでは、なにを ひらいて ひで やく？",
+   "enPrompt": "What is opened and grilled in Iraqi masgouf?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masgouf_(30364994954).jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and visually inspected the exact delivery image on 2026-11-28; verified author and file-level license. Source describes split carp; photograph shows the grilling method.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masgouf_(30364994954).jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Masgouf_%2830364994954%29.jpg/960px-Masgouf_%2830364994954%29.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masgouf_(30364994954).jpg",
+    "title": "Masgouf (30364994954).jpg",
+    "author": "David Stanley",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "イラクのバスラで火の周囲に並べて焼く魚",
+    "altEn": "Fish grilled around a fire in Basra, Iraq",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-py-primary": {
+   "country": "py",
+   "prompt": "パラグアイの テレレは、マテの はを ふつう どんな みずで いれる？",
+   "enPrompt": "What is traditionally used to prepare Paraguayan tereré?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Terer%C3%A9.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and visually inspected the exact delivery image on 2026-11-28; verified author and file-level license. Ice visible; a blurred background person is incidental. Original file is 695 × 626.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Terer%C3%A9.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Terer%C3%A9.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Terer%C3%A9.jpg",
+    "title": "Tereré.jpg",
+    "author": "Overkill53",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "氷入りの容器と金属製の飲用器具が並ぶテレレ",
+    "altEn": "Tereré with ice in a pitcher and a metal drinking vessel",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-ki-primary": {
+   "country": "ki",
+   "prompt": "キリバスの マネアバは、むらの ひとが なにを する ばしょ？",
+   "enPrompt": "What is a maneaba used for in Kiribati?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maneaba_in_South_Tarawa%2C_Kiribati.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and visually inspected the exact delivery image on 2026-11-28; verified author and file-level license. Exact file visually shows exterior despite its description saying interior. Community function is not proven from image alone.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maneaba_in_South_Tarawa%2C_Kiribati.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Maneaba_in_South_Tarawa%2C_Kiribati.jpg/960px-Maneaba_in_South_Tarawa%2C_Kiribati.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maneaba_in_South_Tarawa%2C_Kiribati.jpg",
+    "title": "Maneaba in South Tarawa, Kiribati.jpg",
+    "author": "Rafael Ávila Coya",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "南タラワの大きな屋根を持つマネアバ",
+    "altEn": "A maneaba with a large thatched roof in South Tarawa",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-lk-primary": {
+   "country": "lk",
+   "prompt": "スリランカの ホッパーは、やくと どんな かたちに なる？",
+   "enPrompt": "What shape are traditional Sri Lankan hoppers?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Egg_hoppers_sri_Lanka.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and visually inspected the exact delivery image on 2026-11-28; verified author and file-level license. Bowl shape is visible.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Egg_hoppers_sri_Lanka.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Egg_hoppers_sri_Lanka.jpg/960px-Egg_hoppers_sri_Lanka.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Egg_hoppers_sri_Lanka.jpg",
+    "title": "Egg hoppers sri Lanka.jpg",
+    "author": "Z thomas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "スリランカの器のような形のホッパーと卵入りホッパー",
+    "altEn": "Bowl-shaped plain and egg hoppers in Sri Lanka",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-hn-primary": {
+   "country": "hn",
+   "prompt": "ホンジュラスの バレアダは、うすい パンに どんな ぐを はさむ ことが おおい？",
+   "enPrompt": "What is a common filling in a Honduran baleada?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cross-section_of_baleada_with_beef%2C_beans%2C_queso%2C_and_crema.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file page and visually inspected the exact delivery image on 2026-11-28; verified author and file-level license. Source identifies ingredients; photo was taken in the United States, not Honduras.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cross-section_of_baleada_with_beef%2C_beans%2C_queso%2C_and_crema.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Cross-section_of_baleada_with_beef%2C_beans%2C_queso%2C_and_crema.jpg/960px-Cross-section_of_baleada_with_beef%2C_beans%2C_queso%2C_and_crema.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cross-section_of_baleada_with_beef%2C_beans%2C_queso%2C_and_crema.jpg",
+    "title": "Cross-section of baleada with beef, beans, queso, and crema.jpg",
+    "author": "Ser Amantio di Nicolao",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "牛肉・豆・チーズなどを包んだバレアダの断面",
+    "altEn": "Cross-section of baleada with beef, beans, cheese and crema",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -4685,6 +4829,18 @@
     "tp-original-hand-v1-mm-primary",
     "tp-original-hand-v1-mu-primary",
     "tp-original-hand-v1-la-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened Commons file pages and exact linked image previews/original files, visually inspected subject and verified author/license. Excluded ambiguous instrument and unrelated dance photo; retained accurate captions and photo locations.",
+   "ids": [
+    "tp-original-hand-v1-id-primary",
+    "tp-original-hand-v1-iq-primary",
+    "tp-original-hand-v1-py-primary",
+    "tp-original-hand-v1-ki-primary",
+    "tp-original-hand-v1-lk-primary",
+    "tp-original-hand-v1-hn-primary"
    ]
   }
  ]
