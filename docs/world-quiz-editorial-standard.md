@@ -30,3 +30,6 @@ Reuse the previously reviewed 197-country geography catalog (394 local assets, r
 
 ## Photo integrity audit (2026-11-27)
 Country-context substitutions and automatic atlas photo publication are disabled. Original photos are now explicitly bound to the exact bilingual prompt and reviewed asset identity in `originalQuizPhotoAudit.json`. All photos are answer-review only. Data questions use their actual charts, not unrelated country photos. Missing or failed images remain hidden. The audit checks prior catalog metadata and external source descriptions/licensing; it is not a new visual inspection of every local file. New verified topic photos replace the building exterior for Taipei 101, frozen Lake Louise, hanbok museum display, Japanese generic castles and Belgian cityscapes. Do not reinstate a photo on the basis of country code alone.
+
+### Actual-image visual review batch
+16 previously withheld original questions now use individually viewed Commons photographs. The source description and license were inspected, and the actual file was viewed before inclusion. A direct Wikimedia delivery URL is used only when its filename equals the file page's filename and the visual-review flag is present. All retain post-answer display; no generic photo substitutions. The rest of the historical metadata audit is not represented as a complete visual audit.
