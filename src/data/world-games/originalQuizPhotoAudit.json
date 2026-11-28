@@ -5577,6 +5577,174 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-mx-primary": {
+   "country": "mx",
+   "prompt": "メキシコの ししゃの ひに かぞくが そなえる ものの ひとつは？",
+   "enPrompt": "What is commonly placed on a Day of the Dead altar in Mexico?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Altardediademuertos.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altardediademuertos.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Altardediademuertos.jpg/960px-Altardediademuertos.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Altardediademuertos.jpg",
+    "title": "Altardediademuertos.jpg",
+    "author": "Eneas de Troya",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "死者の日の祭壇に飾られた花、ろうそく、供え物",
+    "altEn": "Day of the Dead altar with flowers, candles and offerings",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-za-primary": {
+   "country": "za",
+   "prompt": "みなみアフリカの ブラーイでは、かぞくや ともだちと なにを たのしむ？",
+   "enPrompt": "What do friends and family enjoy together at a South African braai?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:South_African_Braai.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/South_African_Braai.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/South_African_Braai.jpg/960px-South_African_Braai.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:South_African_Braai.jpg",
+    "title": "South African Braai.jpg",
+    "author": "Thulani Godfrey Timba",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "南アフリカのブラーイで肉を焼く様子",
+    "altEn": "Meat grilled at a South African braai",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-zm-primary": {
+   "country": "zm",
+   "prompt": "ザンビアの ンシマは、ふつう どの こくもつの こなを おゆで ねる？",
+   "enPrompt": "Which grain is usually used to make Zambian nshima?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lunch_Time_(79104).jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. Caption identifies Lusaka; embedded coordinates do not reliably identify the location.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lunch_Time_(79104).jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Lunch_Time_(79104).jpg/960px-Lunch_Time_(79104).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lunch_Time_(79104).jpg",
+    "title": "Lunch Time (79104).jpg",
+    "author": "Mike Mweetwa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "白いンシマとおかずを盛り付けた食事",
+    "altEn": "White nshima served with side dishes",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-pg-primary": {
+   "country": "pg",
+   "prompt": "パプアニューギニアの シンシンという あつまりで、いろいろな ちいきの ひとが みせるものは？",
+   "enPrompt": "What do groups showcase at a sing-sing in Papua New Guinea?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_Sing_Sing._(48986244873).jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. Cultural event documentation; no endorsement implied.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Papua_New_Guinea_Sing_Sing._(48986244873).jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Papua_New_Guinea_Sing_Sing._(48986244873).jpg/960px-Papua_New_Guinea_Sing_Sing._(48986244873).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_Sing_Sing._(48986244873).jpg",
+    "title": "Papua New Guinea Sing Sing. (48986244873).jpg",
+    "author": "gailhampshire",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "マウントハーゲンのシンシンの伝統衣装",
+    "altEn": "Traditional attire at the Mount Hagen sing-sing",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-nz-primary": {
+   "country": "nz",
+   "prompt": "ニュージーランドの マオリの ハカでは、こえと からだの うごきで なにを つたえる ことが ある？",
+   "enPrompt": "What can a Māori haka in New Zealand express?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maori_dancers_performing_Haka.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maori_dancers_performing_Haka.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Maori_dancers_performing_Haka.jpg/960px-Maori_dancers_performing_Haka.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maori_dancers_performing_Haka.jpg",
+    "title": "Maori dancers performing Haka.jpg",
+    "author": "Raymonst3",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "ハカを披露するマオリの踊り手",
+    "altEn": "Māori dancers performing haka",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-qa-primary": {
+   "country": "qa",
+   "prompt": "カタールの アル・ズバラは、むかし どんな うみの たからものの ぼうえきで さかえた？",
+   "enPrompt": "Which marine treasure was historically traded in Al Zubarah in Qatar?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:3.Al_Zubarah_Fort_qatar.jpg",
+   "kind": "place",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. Shows the named site, not historical pearl trading itself.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/3.Al_Zubarah_Fort_qatar.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/3.Al_Zubarah_Fort_qatar.jpg/960px-3.Al_Zubarah_Fort_qatar.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:3.Al_Zubarah_Fort_qatar.jpg",
+    "title": "3.Al Zubarah Fort qatar.jpg",
+    "author": "Antony Satheesh",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "カタールのアル・ズバラの砦",
+    "altEn": "Al Zubarah Fort in Qatar",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-vu-primary": {
+   "country": "vu",
+   "prompt": "バヌアツの すなえは、どんな ばしょに せんを かいて つくる？",
+   "enPrompt": "On what surface is traditional Vanuatu sand drawing made?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sand_drawing%2C_Vanuatu.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sand_drawing%2C_Vanuatu.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Sand_drawing%2C_Vanuatu.jpg/960px-Sand_drawing%2C_Vanuatu.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sand_drawing%2C_Vanuatu.jpg",
+    "title": "Sand drawing, Vanuatu.jpg",
+    "author": "PhillipC",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "砂の上に描かれるバヌアツの伝統的な幾何学模様",
+    "altEn": "Traditional geometric sand drawing in Vanuatu",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -5821,6 +5989,19 @@
     "tp-original-hand-v1-kn-primary",
     "tp-original-hand-v1-bb-primary",
     "tp-original-hand-v1-bs-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened exact Commons source pages and actual linked images; checked subject, author and commercial-use copyright license.",
+   "ids": [
+    "tp-original-hand-v1-mx-primary",
+    "tp-original-hand-v1-za-primary",
+    "tp-original-hand-v1-zm-primary",
+    "tp-original-hand-v1-pg-primary",
+    "tp-original-hand-v1-nz-primary",
+    "tp-original-hand-v1-qa-primary",
+    "tp-original-hand-v1-vu-primary"
    ]
   }
  ]
