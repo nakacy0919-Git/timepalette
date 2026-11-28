@@ -6681,6 +6681,150 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-editorial-v1-ir-nowruz": {
+   "country": "ir",
+   "prompt": "イランなどでお祝いする「ノウルーズ」は、どの季節の始まりを祝う？",
+   "enPrompt": "Nowruz is celebrated in Iran and other countries. Which season does it welcome?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haft_Seen_1393.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "File-specific Commons description, author and commercial-use license checked 2026-11-28. Source explicitly identifies the Nowruz table. Image binary retrieval failed in this session; visual and browser delivery verification remain pending. Not included in actual-image-viewed batches.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Haft_Seen_1393.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haft_Seen_1393.jpg",
+    "title": "Haft Seen 1393.jpg",
+    "author": "Mandana Asadi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "ノウルーズの伝統的なハフト・スィーンの飾り",
+    "altEn": "Traditional Haft-Seen table for Nowruz",
+    "stage": "review",
+    "changes": "Original file served via Commons thumbnail; no intentional crop",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-description-reviewed",
+    "deliveryReview": "pending"
+   }
+  },
+  "tp-original-photo-v2-ch": {
+   "country": "ch",
+   "prompt": "ベルン旧市街に残るアーケードは、歩行者にどのような利点をもたらす？",
+   "enPrompt": "What practical advantage do Bern's historic arcades provide to pedestrians?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Berne_Arcades.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "File-specific Commons description, author and commercial-use license checked 2026-11-28. Source identifies the arcades directly. Image binary retrieval failed in this session; visual and browser delivery verification remain pending. Not included in actual-image-viewed batches.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berne_Arcades.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Berne_Arcades.jpg",
+    "title": "Berne Arcades.jpg",
+    "author": "Attila Terbócs (Pasztilla)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "ベルン旧市街のアーケード",
+    "altEn": "Arcades of Bern",
+    "stage": "review",
+    "changes": "Original file served via Commons thumbnail; no intentional crop",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-description-reviewed",
+    "deliveryReview": "pending"
+   }
+  },
+  "tp-editorial-v2-sg-newater": {
+   "country": "sg",
+   "prompt": "シンガポールのNEWaterは、何を原料とした水資源ですか？",
+   "enPrompt": "What is the source of Singapore's NEWater?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:NEWater.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "File-specific Commons description, author and commercial-use license checked 2026-11-28. Depicts product, not treatment process. Image binary retrieval failed in this session; visual and browser delivery verification remain pending. Not included in actual-image-viewed batches.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NEWater.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:NEWater.jpg",
+    "title": "NEWater.jpg",
+    "author": "Huaiwei",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+    "altJa": "2005年のシンガポールの展示会で配布されたNEWaterのボトル",
+    "altEn": "Bottles of NEWater at a Singapore exhibition in 2005",
+    "stage": "review",
+    "changes": "Original file served via Commons thumbnail; no intentional crop",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-description-reviewed",
+    "deliveryReview": "pending"
+   }
+  },
+  "tp-editorial-v2-bd-garments": {
+   "country": "bd",
+   "prompt": "バングラデシュの輸出産業で、世界銀行が重要な産業として取り上げているものは？",
+   "enPrompt": "Which export industry is particularly important to Bangladesh, according to the World Bank?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dress_Shirt_sewing_in_a_RMG_factory_of_Bangladesh.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "File-specific Commons description, author and commercial-use license checked 2026-11-28. Source explicitly identifies the production activity. Image binary retrieval failed in this session; visual and browser delivery verification remain pending. Not included in actual-image-viewed batches.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dress_Shirt_sewing_in_a_RMG_factory_of_Bangladesh.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dress_Shirt_sewing_in_a_RMG_factory_of_Bangladesh.jpg",
+    "title": "Dress Shirt sewing in a RMG factory of Bangladesh.jpg",
+    "author": "Fahad Faisal",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "バングラデシュの既製服工場でのシャツの縫製",
+    "altEn": "Dress shirt sewing in a ready-made garment factory in Bangladesh",
+    "stage": "review",
+    "changes": "Original file served via Commons thumbnail; no intentional crop",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-description-reviewed",
+    "deliveryReview": "pending"
+   }
+  },
+  "tp-original-photo-v2-ae": {
+   "country": "ae",
+   "prompt": "アル・アインのオアシスでは、乾燥した土地で農作物を育てるために伝統的に何を利用してきた？",
+   "enPrompt": "Which traditional technology supported farming in the Al Ain oasis?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Date_palm_tree_irrigation.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "File-specific Commons description, author and commercial-use license checked 2026-11-28. Source identifies the exact irrigation system and location. Image binary retrieval failed in this session; visual and browser delivery verification remain pending. Not included in actual-image-viewed batches.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Date_palm_tree_irrigation.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Date_palm_tree_irrigation.jpg",
+    "title": "Date palm tree irrigation.jpg",
+    "author": "Okhtyartist",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "アル・アインのオアシスでナツメヤシを灌漑するファラジ",
+    "altEn": "Falaj irrigation of date palms in Al Ain Oasis",
+    "stage": "review",
+    "changes": "Original file served via Commons thumbnail; no intentional crop",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-description-reviewed",
+    "deliveryReview": "pending"
+   }
+  },
+  "tp-editorial-v2-vu-sand-knowledge": {
+   "country": "vu",
+   "prompt": "バヌアツの伝統的な砂絵は、美術作品として楽しむ以外にどのような役割を持ちますか？",
+   "enPrompt": "Besides being artworks, what role do traditional Vanuatu sand drawings play?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sand_drawing%2C_Vanuatu.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "File-specific Commons description, author and commercial-use license checked 2026-11-28. Same source file already linked to the hand-authored sand drawing question. Its role in transmitting knowledge is explained by the question's factual sources. Image binary retrieval failed in this session; visual and browser delivery verification remain pending. Not included in actual-image-viewed batches.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sand_drawing%2C_Vanuatu.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sand_drawing%2C_Vanuatu.jpg",
+    "title": "Sand drawing, Vanuatu.jpg",
+    "author": "PhillipC",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "バヌアツの伝統的な砂絵",
+    "altEn": "Traditional sand drawing from Vanuatu",
+    "stage": "review",
+    "changes": "Original file served via Commons thumbnail; no intentional crop",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-description-reviewed",
+    "deliveryReview": "pending"
+   }
   }
  },
  "withheld": {
@@ -7013,6 +7157,20 @@
     "tp-original-photo-v2-cy",
     "tp-editorial-v1-ch-web-origin",
     "tp-editorial-v1-mx-maize"
+   ]
+  }
+ ],
+ "metadataReviewBatches": [
+  {
+   "date": "2026-11-28",
+   "method": "File-specific descriptions and attribution/license verified; original binary retrieval unavailable; pending visual/browser check. No actual-image-viewed claims.",
+   "ids": [
+    "tp-editorial-v1-ir-nowruz",
+    "tp-original-photo-v2-ch",
+    "tp-editorial-v2-sg-newater",
+    "tp-editorial-v2-bd-garments",
+    "tp-original-photo-v2-ae",
+    "tp-editorial-v2-vu-sand-knowledge"
    ]
   }
  ]
