@@ -6441,6 +6441,54 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-om-primary": {
+   "country": "om",
+   "prompt": "オマーンの おいわいの りょうり シュワでは、にくを どこで ながい じかん やく？",
+   "enPrompt": "Where is meat traditionally slow-cooked for Omani shuwa?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_underground_oven_for_Zarb.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author, license and actual image checked on 2026-11-28. Photograph is of a Jordanian oven, not the Omani dish or oven. It illustrates the concept of underground cooking. Shuwa-specific food photograph featuring a child was not selected.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_underground_oven_for_Zarb.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/The_underground_oven_for_Zarb.jpg/960px-The_underground_oven_for_Zarb.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_underground_oven_for_Zarb.jpg",
+    "title": "The underground oven for Zarb.jpg",
+    "author": "فيصل العدناني",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "ヨルダンのザルブ用地下炉（シュワの地下調理法を理解する参考）",
+    "altEn": "Underground oven for Jordanian zarb, a regional example of pit cooking; not Omani shuwa",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-pa-primary": {
+   "country": "pa",
+   "prompt": "パナマの グナの ひとびとの モラという ぬのの もようは、どうやって つくる？",
+   "enPrompt": "How are traditional Guna mola designs in Panama made?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Reverse_applique_on_linen_dress.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author, license and actual image checked on 2026-11-28. Selected the sewing-technique example because the commercial rights of candidate museum mola works were not sufficiently clear. The Smithsonian NMAI catalogue confirms reverse applique as a mola technique.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Reverse_applique_on_linen_dress.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Reverse_applique_on_linen_dress.jpg/960px-Reverse_applique_on_linen_dress.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Reverse_applique_on_linen_dress.jpg",
+    "title": "Reverse applique on linen dress.jpg",
+    "author": "kelly hogaboom",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "altJa": "布を重ねて上の布を切り抜く逆アップリケの参考（グナのモラ作品ではない）",
+    "altEn": "Reverse applique on a linen dress, a technique example; not an original Guna mola",
+    "stage": "review",
+    "changes": "Displayed uncropped; source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -6745,6 +6793,14 @@
     "tp-original-hand-v1-sz-primary",
     "tp-original-hand-v1-to-primary",
     "tp-original-hand-v1-vc-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened exact source and actual preview; verified commercial-use copyright terms. Related technique photos explicitly labelled rather than presenting them as original national artefacts.",
+   "ids": [
+    "tp-original-hand-v1-om-primary",
+    "tp-original-hand-v1-pa-primary"
    ]
   }
  ]
