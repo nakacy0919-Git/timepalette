@@ -6489,6 +6489,126 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-editorial-v1-fi-lunch": {
+   "country": "fi",
+   "prompt": "フィンランドの小学校で、学校が毎日の授業日に用意するものは？",
+   "enPrompt": "What do primary schools in Finland provide on each school day?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:School_lunch_in_yl%C3%A4st%C3%B6_school.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file-level description and visually inspected exact original image on 2026-11-28. The image shows a school meal; the free-meal policy is established by the question's factual sources, not the photo.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/School_lunch_in_yl%C3%A4st%C3%B6_school.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/School_lunch_in_yl%C3%A4st%C3%B6_school.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:School_lunch_in_yl%C3%A4st%C3%B6_school.jpg",
+    "title": "School lunch in ylästö school.jpg",
+    "author": "Jukajuha",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "altJa": "フィンランド・ヴァンターの小中学校で提供された魚のスープ、パンと水の給食（2024年）",
+    "altEn": "School lunch of fish soup, bread and water at Ylästö school, Vantaa, Finland, 2024",
+    "stage": "review",
+    "changes": "Uncropped original; displayed at responsive size",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-editorial-v1-fi-education": {
+   "country": "fi",
+   "prompt": "フィンランドの基礎教育で無料の給食を毎日提供する制度から、直接期待できることは？",
+   "enPrompt": "What direct benefit can free daily meals in Finnish basic education offer?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Finnish_school_lunch.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file-level description and visually inspected exact original image on 2026-11-28. The photo illustrates the meal, not proof of its price or policy impact.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Finnish_school_lunch.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Finnish_school_lunch.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Finnish_school_lunch.jpg",
+    "title": "Finnish school lunch.jpg",
+    "author": "Vkem",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "フィンランドの給食の例：野菜、ジャガイモ、パン、飲み物など",
+    "altEn": "Example of a Finnish school meal with vegetables, potatoes, crispbread and drinks",
+    "stage": "review",
+    "changes": "Uncropped original; displayed at responsive size",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-editorial-v1-br-kasato-maru": {
+   "country": "br",
+   "prompt": "1908年、笠戸丸がブラジルのサントス港に到着したことは、何の歴史と特に関係が深い？",
+   "enPrompt": "The Kasato Maru arrived in Santos, Brazil, in 1908. What history is this closely connected to?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kasato-maru.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file-level description and visually inspected exact original image on 2026-11-28. Historical photo; Commons labels public domain in Brazil and the US.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kasato-maru.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Kasato-maru.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kasato-maru.jpg",
+    "title": "Kasato-maru.jpg",
+    "author": "Brazilian Institute of Geography and Statistics (source credit)",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "altJa": "1908年サントス港に停泊する笠戸丸",
+    "altEn": "Kasato Maru moored at Santos, Brazil, in 1908",
+    "stage": "review",
+    "changes": "Uncropped original; displayed at responsive size",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-editorial-v1-nl-dikes": {
+   "country": "nl",
+   "prompt": "オランダでは、海や川の水が町に入るのをふせぐため、何を使っている？",
+   "enPrompt": "What helps protect Dutch towns from flooding by the sea and rivers?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Afsluitdijk.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file-level description and visually inspected exact original image on 2026-11-28. Author released photo into public domain worldwide.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Afsluitdijk.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Afsluitdijk.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Afsluitdijk.jpg",
+    "title": "Afsluitdijk.jpg",
+    "author": "BenTheWikiMan",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "altJa": "海とアイセル湖を隔てるオランダのアフシュライトダイク（1987年）",
+    "altEn": "Afsluitdijk separating the sea from IJsselmeer, Netherlands, 1987",
+    "stage": "review",
+    "changes": "Uncropped original; displayed at responsive size",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-photo-v2-bo": {
+   "country": "bo",
+   "prompt": "ウユニ塩原が雨季に空を鏡のように映すのはなぜ？",
+   "enPrompt": "Why can Salar de Uyuni reflect the sky like a mirror after rain?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Reflection_Salar_de_Uyuni.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file-level description and visually inspected exact original image on 2026-11-28. Directly illustrates reflection; distant incidental figures are not identifiable.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Reflection_Salar_de_Uyuni.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Reflection_Salar_de_Uyuni.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Reflection_Salar_de_Uyuni.jpg",
+    "title": "Reflection Salar de Uyuni.jpg",
+    "author": "Marquex bol",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "浅い水面に雲と空が映るボリビアのウユニ塩原",
+    "altEn": "Clouds and sky reflected on shallow water at Salar de Uyuni, Bolivia",
+    "stage": "review",
+    "changes": "Uncropped original; displayed at responsive size",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -6801,6 +6921,17 @@
    "ids": [
     "tp-original-hand-v1-om-primary",
     "tp-original-hand-v1-pa-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened Commons descriptions and original binary images; checked copyright permissions and actual pictured subject. Excluded image fetch failures.",
+   "ids": [
+    "tp-editorial-v1-fi-lunch",
+    "tp-editorial-v1-fi-education",
+    "tp-editorial-v1-br-kasato-maru",
+    "tp-editorial-v1-nl-dikes",
+    "tp-original-photo-v2-bo"
    ]
   }
  ]
