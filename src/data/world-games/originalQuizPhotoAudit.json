@@ -5337,6 +5337,246 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-lv-primary": {
+   "country": "lv",
+   "prompt": "ラトビアの ふゆの りょうりで、はいいろの エンドウまめに よく あわせる ものは？",
+   "enPrompt": "What is commonly served with Latvian grey peas?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grey_peas_at_restaurant_Milda_in_Riga.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates the topic; ingredients, methods and practices are not proven by appearance alone. Actual capture location stated where different.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grey_peas_at_restaurant_Milda_in_Riga.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Grey_peas_at_restaurant_Milda_in_Riga.jpg/960px-Grey_peas_at_restaurant_Milda_in_Riga.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grey_peas_at_restaurant_Milda_in_Riga.jpg",
+    "title": "Grey peas at restaurant Milda in Riga.jpg",
+    "author": "JIP",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "リガで提供された灰色エンドウ豆とベーコン",
+    "altEn": "Grey peas with bacon served in Riga",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-eh-primary": {
+   "country": "eh",
+   "prompt": "にしサハラの サハラウィの もてなしでは、なにを ゆっくり わけあう？",
+   "enPrompt": "What drink is shared slowly in Sahrawi hospitality in Western Sahara?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:TeaSeremonyWS.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates the topic; ingredients, methods and practices are not proven by appearance alone. Actual capture location stated where different.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TeaSeremonyWS.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/TeaSeremonyWS.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TeaSeremonyWS.jpg",
+    "title": "TeaSeremonyWS.jpg",
+    "author": "Kathrine Sund-Henriksen",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "ティファリティで茶を注ぐサハラウィの茶文化",
+    "altEn": "Sahrawi tea ceremony in Tifariti",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-er-primary": {
+   "country": "er",
+   "prompt": "エリトリアの コーヒーの もてなしは、まず なにを することが ある？",
+   "enPrompt": "What may be the first step of an Eritrean coffee ceremony?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coffee_ceremony_of_Ethiopia_and_Eritrea_3.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates the topic; ingredients, methods and practices are not proven by appearance alone. Actual capture location stated where different.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coffee_ceremony_of_Ethiopia_and_Eritrea_3.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Coffee_ceremony_of_Ethiopia_and_Eritrea_3.jpg/960px-Coffee_ceremony_of_Ethiopia_and_Eritrea_3.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coffee_ceremony_of_Ethiopia_and_Eritrea_3.jpg",
+    "title": "Coffee ceremony of Ethiopia and Eritrea 3.jpg",
+    "author": "ProtoplasmaKid",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "エチオピア・エリトリアに共通するコーヒー豆の焙煎と香炉（アディスアベバ撮影）",
+    "altEn": "Coffee roasting and incense in the shared Ethiopian and Eritrean tradition, photographed in Addis Ababa",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-ir-primary": {
+   "country": "ir",
+   "prompt": "イランの ペルシャじゅうたんの もようは、どのように つくる？",
+   "enPrompt": "How are patterns made in traditional Persian pile carpets from Iran?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Persian_Carpet%2C_Ravar%2C_Kerman_Province_(27806393657).jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates the topic; ingredients, methods and practices are not proven by appearance alone. Actual capture location stated where different.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Persian_Carpet%2C_Ravar%2C_Kerman_Province_(27806393657).jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Persian_Carpet%2C_Ravar%2C_Kerman_Province_(27806393657).jpg/960px-Persian_Carpet%2C_Ravar%2C_Kerman_Province_(27806393657).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Persian_Carpet%2C_Ravar%2C_Kerman_Province_(27806393657).jpg",
+    "title": "Persian Carpet, Ravar, Kerman Province (27806393657).jpg",
+    "author": "Ninara",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "イランのラヴァルで絨毯を織る作業と色糸",
+    "altEn": "Carpet weaving and coloured yarn in Ravar, Iran",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-ee-primary": {
+   "country": "ee",
+   "prompt": "エストニアの うたの まつりでは、たくさんの ひとが なにを する？",
+   "enPrompt": "What do large groups do at Estonia's song festival?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Laulupidu_07072019.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates the topic; ingredients, methods and practices are not proven by appearance alone. Actual capture location stated where different.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Laulupidu_07072019.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Laulupidu_07072019.jpg/960px-Laulupidu_07072019.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Laulupidu_07072019.jpg",
+    "title": "Laulupidu 07072019.jpg",
+    "author": "Metsavend",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "2019年エストニア歌の祭典の合唱会場",
+    "altEn": "2019 Estonian Song Celebration",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-li-primary": {
+   "country": "li",
+   "prompt": "リヒテンシュタインの ケーゼクネプフレで、ちいさな めんに あわせる ものは？",
+   "enPrompt": "What is added to the small noodles in Liechtenstein's Käsknöpfle?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:K%C3%A4skn%C3%B6pfle.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates the topic; ingredients, methods and practices are not proven by appearance alone. Actual capture location stated where different.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/K%C3%A4skn%C3%B6pfle.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/K%C3%A4skn%C3%B6pfle.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:K%C3%A4skn%C3%B6pfle.jpg",
+    "title": "Käsknöpfle.jpg",
+    "author": "Abigela 1234",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "チーズと小さな麺の料理ケーゼクネプフレ",
+    "altEn": "Käsknöpfle, small noodles with cheese",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-mc-primary": {
+   "country": "mc",
+   "prompt": "モナコの バルバジュアンは、どんな りょうり？",
+   "enPrompt": "How is Monaco's barbajuan traditionally prepared?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Farandole_mon%C3%A9gasque_5.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates the topic; ingredients, methods and practices are not proven by appearance alone. Actual capture location stated where different.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Farandole_mon%C3%A9gasque_5.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Farandole_mon%C3%A9gasque_5.jpg/960px-Farandole_mon%C3%A9gasque_5.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Farandole_mon%C3%A9gasque_5.jpg",
+    "title": "Farandole monégasque 5.jpg",
+    "author": "Mx. Granger",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "altJa": "モナコのレストランで提供されたバルバジュアン",
+    "altEn": "Barbajuan served at a restaurant in Monaco",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-kn-primary": {
+   "country": "kn",
+   "prompt": "セントクリストファー・ネービスの ゴート・ウォーターに つかう にくは？",
+   "enPrompt": "Which meat is used in goat water, a stew from Saint Kitts and Nevis?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goat_Water.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates the topic; ingredients, methods and practices are not proven by appearance alone. Actual capture location stated where different.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Goat_Water.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Goat_Water.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goat_Water.jpg",
+    "title": "Goat Water.jpg",
+    "author": "Cbeanstudies",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "セントクリストファー・ネービスのゴート・ウォーター",
+    "altEn": "Goat water stew from Saint Kitts and Nevis; original is 275 × 183",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-bb-primary": {
+   "country": "bb",
+   "prompt": "バルバドスで よく りょうりに つかう、うみの うえを とぶように すすむ さかなは？",
+   "enPrompt": "Which fish, known for gliding above the sea, is used in Barbadian cuisine?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flying_fish_for_sale_in_local_fish_market.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates the topic; ingredients, methods and practices are not proven by appearance alone. Actual capture location stated where different.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flying_fish_for_sale_in_local_fish_market.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Flying_fish_for_sale_in_local_fish_market.jpg/960px-Flying_fish_for_sale_in_local_fish_market.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flying_fish_for_sale_in_local_fish_market.jpg",
+    "title": "Flying fish for sale in local fish market.jpg",
+    "author": "Variation 25.2",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "バングラデシュの市場のトビウオ（中央、魚種の例）",
+    "altEn": "Flying fish in the centre at a market in Bangladesh; species example, not a Barbados photograph",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-bs-primary": {
+   "country": "bs",
+   "prompt": "バハマの コンクサラダの コンクとは どんな いきもの？",
+   "enPrompt": "What kind of sea animal is used in Bahamian conch salad?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Queen_conch_quary_and_shell_heap._Nassau_(38869939351).jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates the topic; ingredients, methods and practices are not proven by appearance alone. Actual capture location stated where different.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Queen_conch_quary_and_shell_heap._Nassau_(38869939351).jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Queen_conch_quary_and_shell_heap._Nassau_(38869939351).jpg/960px-Queen_conch_quary_and_shell_heap._Nassau_(38869939351).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Queen_conch_quary_and_shell_heap._Nassau_(38869939351).jpg",
+    "title": "Queen conch quary and shell heap. Nassau (38869939351).jpg",
+    "author": "Dr Mary Gillham Archive Project",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "ナッソーの港のコンク貝漁と貝殻",
+    "altEn": "Queen conch fishery and shells at Nassau harbour",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -5565,6 +5805,22 @@
     "tp-original-hand-v1-ci-primary",
     "tp-original-hand-v1-cm-primary",
     "tp-original-hand-v1-ae-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Inspected linked images and file-level authorship and licenses; actual capture locations distinguished from quiz countries. Lovo excluded because image retrieval failed.",
+   "ids": [
+    "tp-original-hand-v1-lv-primary",
+    "tp-original-hand-v1-eh-primary",
+    "tp-original-hand-v1-er-primary",
+    "tp-original-hand-v1-ir-primary",
+    "tp-original-hand-v1-ee-primary",
+    "tp-original-hand-v1-li-primary",
+    "tp-original-hand-v1-mc-primary",
+    "tp-original-hand-v1-kn-primary",
+    "tp-original-hand-v1-bb-primary",
+    "tp-original-hand-v1-bs-primary"
    ]
   }
  ]
