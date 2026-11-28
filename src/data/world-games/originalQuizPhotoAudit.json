@@ -7396,6 +7396,106 @@
     "deliveryReview": "source-preview-viewed-app-untested",
     "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Grenada_Under_Water_-_panoramio_-_Stefan_und_Bille_%285%29.jpg/960px-Grenada_Under_Water_-_panoramio_-_Stefan_und_Bille_%285%29.jpg"
    }
+  },
+  "tp-editorial-v1-ca-languages": {
+   "country": "ca",
+   "prompt": "カナダの国の公用語は、英語ともう一つ、何語？",
+   "enPrompt": "Canada has two official languages. What is the other one besides English?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bilingualstopsign.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Exact source preview and Commons license checked 2026-11-28. Exact image shows STOP and ARRÊT on one sign; illustrates bilingual usage, not the legal scope of official languages. App runtime not tested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bilingualstopsign.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bilingualstopsign.jpg",
+    "title": "Bilingualstopsign.jpg",
+    "author": "Ibagli (Steven Spell)",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:Bilingualstopsign.jpg",
+    "altJa": "オタワの英語・フランス語併記の一時停止標識",
+    "altEn": "English–French bilingual stop sign in Ottawa",
+    "stage": "review",
+    "changes": "Uncropped source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed",
+    "deliveryReview": "source-preview-viewed-app-untested",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Bilingualstopsign.jpg"
+   }
+  },
+  "tp-editorial-v2-sg-water-resilience": {
+   "country": "sg",
+   "prompt": "シンガポールが貯水、輸入水、再生水、海水淡水化を組み合わせる利点として最も適切なものは？",
+   "enPrompt": "Why does Singapore combine local catchment, imported water, reclaimed water and desalination?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:NEWater_Bedok_plant.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Exact source preview and Commons license checked 2026-11-28. Exact image shows the facility exterior; illustrates one of the four water sources, not all four or the treatment process. App runtime not tested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NEWater_Bedok_plant.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:NEWater_Bedok_plant.jpg",
+    "title": "NEWater Bedok plant.jpg",
+    "author": "Z22",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "シンガポールのベドックにあるNEWater再生水処理施設の外観",
+    "altEn": "Exterior of the NEWater water treatment plant in Bedok, Singapore",
+    "stage": "review",
+    "changes": "Uncropped source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed",
+    "deliveryReview": "source-preview-viewed-app-untested",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/NEWater_Bedok_plant.jpg/960px-NEWater_Bedok_plant.jpg"
+   }
+  },
+  "tp-editorial-v1-ke-mobile-money": {
+   "country": "ke",
+   "prompt": "ケニアで広まったM-Pesaというサービスの主な用途は？",
+   "enPrompt": "What is a main use of M-Pesa, a service that spread in Kenya?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kiosk_in_Nairobi%2C_Chaka_Rd.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Exact source preview and Commons license checked 2026-11-28. Exact image shows M-Pesa signage on a kiosk; source identifies mobile money service. No claim about the pictured person's transaction. App runtime not tested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiosk_in_Nairobi%2C_Chaka_Rd.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kiosk_in_Nairobi%2C_Chaka_Rd.jpg",
+    "title": "Kiosk in Nairobi, Chaka Rd.jpg",
+    "author": "Punkkatz",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "altJa": "ナイロビでM-Pesaを取り扱う小売店",
+    "altEn": "A kiosk offering M-Pesa in Nairobi",
+    "stage": "review",
+    "changes": "Uncropped source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed",
+    "deliveryReview": "source-preview-viewed-app-untested",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Kiosk_in_Nairobi%2C_Chaka_Rd.jpg/500px-Kiosk_in_Nairobi%2C_Chaka_Rd.jpg"
+   }
+  },
+  "tp-editorial-v2-nl-room-for-river": {
+   "country": "nl",
+   "prompt": "オランダでは川の洪水対策として、堤防以外にどのような工夫を行っていますか？",
+   "enPrompt": "Besides dikes, which method is used in Dutch river flood management?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:New_digged_extra_river_bed_for_high_waterlevels_in_the_Waal_river_near_Nijmegen_with_traffic_bridges_-_panoramio.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Exact source preview and Commons license checked 2026-11-28. Exact image shows channel and bridge; source explicitly identifies an additional channel for high water. App runtime not tested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_digged_extra_river_bed_for_high_waterlevels_in_the_Waal_river_near_Nijmegen_with_traffic_bridges_-_panoramio.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:New_digged_extra_river_bed_for_high_waterlevels_in_the_Waal_river_near_Nijmegen_with_traffic_bridges_-_panoramio.jpg",
+    "title": "New digged extra river bed for high waterlevels in the Waal river near Nijmegen with traffic bridges - panoramio.jpg",
+    "author": "Henk Monster",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "altJa": "ナイメーヘン近郊のワール川に増水対策として設けられた追加水路",
+    "altEn": "Additional river channel near Nijmegen for high water levels on the Waal",
+    "stage": "review",
+    "changes": "Uncropped source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed",
+    "deliveryReview": "source-preview-viewed-app-untested",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/New_digged_extra_river_bed_for_high_waterlevels_in_the_Waal_river_near_Nijmegen_with_traffic_bridges_-_panoramio.jpg/960px-New_digged_extra_river_bed_for_high_waterlevels_in_the_Waal_river_near_Nijmegen_with_traffic_bridges_-_panoramio.jpg"
+   }
   }
  },
  "withheld": {
@@ -7827,6 +7927,23 @@
    ],
    "sourcePreviewsViewed": [
     "tp-original-photo-v2-gd"
+   ],
+   "visualReviewPending": []
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Visually checked four exact source files and confirmed authorship and license. Kept photos in answer review to avoid answer leakage.",
+   "ids": [
+    "tp-editorial-v1-ca-languages",
+    "tp-editorial-v2-sg-water-resilience",
+    "tp-editorial-v1-ke-mobile-money",
+    "tp-editorial-v2-nl-room-for-river"
+   ],
+   "sourcePreviewsViewed": [
+    "tp-editorial-v1-ca-languages",
+    "tp-editorial-v2-sg-water-resilience",
+    "tp-editorial-v1-ke-mobile-money",
+    "tp-editorial-v2-nl-room-for-river"
    ],
    "visualReviewPending": []
   }
