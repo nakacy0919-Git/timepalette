@@ -6971,6 +6971,131 @@
     "visualReview": "source-description-reviewed",
     "deliveryReview": "pending"
    }
+  },
+  "tp-original-photo-v2-co": {
+   "country": "co",
+   "prompt": "カルタヘナの港町に大きな要塞が造られた理由は？",
+   "enPrompt": "Why were major fortifications built in Cartagena?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Castillo_de_San_Felipe_de_Barajas.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author and license checked 2026-11-28. The preview shows the large stone defensive structure; purpose is not proved by the photo alone. App delivery untested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castillo_de_San_Felipe_de_Barajas.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Castillo_de_San_Felipe_de_Barajas.jpg",
+    "title": "Castillo de San Felipe de Barajas.jpg",
+    "author": "KenWalker",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "カルタヘナのサン・フェリペ・デ・バラハス要塞",
+    "altEn": "San Felipe de Barajas fortress in Cartagena",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-image-viewed-delivery-pending",
+    "deliveryReview": "pending",
+    "inspectedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Castillo_de_San_Felipe_de_Barajas.jpg/960px-Castillo_de_San_Felipe_de_Barajas.jpg"
+   }
+  },
+  "tp-original-photo-v2-cu": {
+   "country": "cu",
+   "prompt": "ハバナ旧市街の要塞は、かつて何を守るための施設だった？",
+   "enPrompt": "What were Old Havana's fortifications built to protect?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Morro_Castle%2C_Havana.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author and license checked 2026-11-28. The preview shows the fort walls and Havana Bay. App delivery untested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Morro_Castle%2C_Havana.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Morro_Castle%2C_Havana.jpg",
+    "title": "Morro Castle, Havana.jpg",
+    "author": "Cheng keun li",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "ハバナ湾入口のモロ要塞と湾内の景色",
+    "altEn": "Morro Castle and Havana Bay",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-image-viewed-delivery-pending",
+    "deliveryReview": "pending",
+    "inspectedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Morro_Castle%2C_Havana.jpg/960px-Morro_Castle%2C_Havana.jpg"
+   }
+  },
+  "tp-original-photo-v2-kr": {
+   "country": "kr",
+   "prompt": "昌徳宮の庭園や建物の配置で特徴的な考え方は？",
+   "enPrompt": "What is characteristic of Changdeokgung's palace and garden layout?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Biwon_Huwon_of_Changdeokgung.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author and license checked 2026-11-28. The preview shows buildings, pond and vegetation together. App delivery untested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biwon_Huwon_of_Changdeokgung.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Biwon_Huwon_of_Changdeokgung.jpg",
+    "title": "Biwon Huwon of Changdeokgung.jpg",
+    "author": "Christian Bolz",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "昌徳宮後苑の池・樹木・伝統建築",
+    "altEn": "Pond, trees and buildings in Changdeokgung's Secret Garden",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-image-viewed-delivery-pending",
+    "deliveryReview": "pending",
+    "inspectedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Biwon_Huwon_of_Changdeokgung.jpg/960px-Biwon_Huwon_of_Changdeokgung.jpg"
+   }
+  },
+  "tp-original-photo-v2-sm": {
+   "country": "sm",
+   "prompt": "サンマリノのティターノ山の尾根に要塞や塔が置かれた地形上の理由は？",
+   "enPrompt": "Why were towers built along Mount Titano's ridge in San Marino?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fortress_of_Guaita_on_Titan_mount_-_San_Marino.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author and license checked 2026-11-28. The preview clearly shows the elevated ridge and fortress; the source is a stitched panorama. App delivery untested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fortress_of_Guaita_on_Titan_mount_-_San_Marino.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fortress_of_Guaita_on_Titan_mount_-_San_Marino.jpg",
+    "title": "Fortress of Guaita on Titan mount - San Marino.jpg",
+    "author": "Gio Terra (Terragio67)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "ティターノ山の岩の尾根に建つグアイタ要塞",
+    "altEn": "Guaita fortress on the rocky ridge of Mount Titano",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail; original is a stitched panorama",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-image-viewed-delivery-pending",
+    "deliveryReview": "pending",
+    "inspectedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Fortress_of_Guaita_on_Titan_mount_-_San_Marino.jpg/960px-Fortress_of_Guaita_on_Titan_mount_-_San_Marino.jpg"
+   }
+  },
+  "tp-original-photo-v2-pa": {
+   "country": "pa",
+   "prompt": "パナマ・ビエホの歴史は、スペイン植民地期のどのような活動と関係が深い？",
+   "enPrompt": "What activity shaped Panama Viejo during the Spanish colonial period?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panama_viejo_torre_y_ruina.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author and license checked 2026-11-28. The original shows the ruined tower; a historical site illustration, not direct evidence of colonial trade. App delivery untested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panama_viejo_torre_y_ruina.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panama_viejo_torre_y_ruina.jpg",
+    "title": "Panama viejo torre y ruina.jpg",
+    "author": "Editorpana",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "altJa": "パナマ・ビエホの大聖堂の塔と石造遺構",
+    "altEn": "Cathedral tower and stone ruins at Panama Viejo",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-image-viewed-delivery-pending",
+    "deliveryReview": "pending",
+    "inspectedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Panama_viejo_torre_y_ruina.jpg"
+   }
   }
  },
  "withheld": {
@@ -7340,6 +7465,25 @@
     "tp-editorial-v2-gb-parliament-scrutiny",
     "tp-original-photo-v2-am"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Checked author, license, and exact source previews for five heritage photographs; matched Japanese and English prompts; delivery pending.",
+   "ids": [
+    "tp-original-photo-v2-co",
+    "tp-original-photo-v2-cu",
+    "tp-original-photo-v2-kr",
+    "tp-original-photo-v2-sm",
+    "tp-original-photo-v2-pa"
+   ],
+   "sourcePreviewsViewed": [
+    "tp-original-photo-v2-co",
+    "tp-original-photo-v2-cu",
+    "tp-original-photo-v2-kr",
+    "tp-original-photo-v2-sm",
+    "tp-original-photo-v2-pa"
+   ],
+   "visualReviewPending": []
   }
  ]
 }
