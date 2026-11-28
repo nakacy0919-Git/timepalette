@@ -5,6 +5,8 @@ import JourneyAtlas from './JourneyAtlas.jsx';
 import {VEHICLES,crossesSea} from '../../utils/journeyMapFeatures.js';
 import {playUiSound} from '../../utils/uiSound.js';
 import flags from '../../data/exploreCountryFlags.json';
+import {journeyDiceCount,journeyRemaining,journeyAnimationSteps} from '../../utils/journeyRace.js';
+import './journeyRace.css';
 
 const patterns=[[],[4],[0,8],[0,4,8],[0,2,6,8],[0,2,4,6,8],[0,2,3,5,6,8]];
 const faces=[1,6,2,5,3,4];
@@ -20,6 +22,10 @@ function MapDice({value,rolling,origin,index,count,spacing}){
 }
 export default function JourneyBoard({game,onRoll,countryName,countryFlag,speed='slow',scoreboard,onExit,sound,onToggleSound,full,onFullscreen,onSpeedChange,canControl=true,remoteRoll,onRequestRoll,roomLabel}){
  const team=game.teams[game.turn],stops=game.journeyStops;
+ const goal=stops[game.goalIndex],diceCount=journeyDiceCount(game);
+ const [goalOpen,setGoalOpen]=useState(()=>!!goal&&game.round===0),[rouletteTick,setRouletteTick]=useState(0),[goalReady,setGoalReady]=useState(false);
+ useEffect(()=>{if(!goalOpen)return;let tick=0;const id=setInterval(()=>{tick++;setRouletteTick(tick);if(tick>=22){clearInterval(id);setGoalReady(true);playUiSound('diceReveal');}},115);return()=>clearInterval(id);},[goalOpen]);
+ const rouletteStop=goalReady?goal:stops[(rouletteTick*7+game.goalIndex)%stops.length];
  const [settingsOpen,setSettingsOpen]=useState(false);
  const [vehicles,setVehicles]=useState(()=>{try{return JSON.parse(localStorage.getItem('timepalette-journey-vehicles')||'{}')||{};}catch{return {};}});
  const [seaMoving,setSeaMoving]=useState(false);
@@ -35,11 +41,11 @@ export default function JourneyBoard({game,onRoll,countryName,countryFlag,speed=
  const stepMs=speed==='fast'?230:850;
  const later=(fn,ms)=>{const t=setTimeout(fn,ms);timers.current.push(t);};
  const roll=(plan=null)=>{
-  if(rollRef.current||game.phase!=='select'||(!plan&&(settingsOpen||!canControl)))return;
+  if(rollRef.current||game.phase!=='select'||(!plan&&(goalOpen||settingsOpen||!canControl)))return;
   if(!plan&&onRequestRoll){onRequestRoll(travel);return;}
-  if(plan)setSettingsOpen(false);
+  if(plan){setSettingsOpen(false);setGoalOpen(false);}
   rollRef.current=true;
-  const selectedTravel=plan?.travel||travel,values=plan?.values||Array.from({length:game.diceCount||1},()=>1+Math.floor(Math.random()*6)),value=values.reduce((a,b)=>a+b,0),extra=TRAVEL_MODES[selectedTravel].extra;
+  const selectedTravel=plan?.travel||travel,values=plan?.values||Array.from({length:diceCount},()=>1+Math.floor(Math.random()*6)),value=values.reduce((a,b)=>a+b,0),extra=TRAVEL_MODES[selectedTravel].extra;
   const reduced=!plan&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const board=boardRef.current?.getBoundingClientRect(),button=buttonRef.current?.getBoundingClientRect();if(board&&button)setThrowOrigin({x:button.left+button.width*.18-board.left-board.width/2,y:button.top+button.height/2-board.top-board.height*.50,spacing:Math.min(172,Math.max(76,board.width*.21))});
   playUiSound('diceRoll');setDice(values);setMoving(true);setPopup(true);setRolling(true);
@@ -47,7 +53,7 @@ export default function JourneyBoard({game,onRoll,countryName,countryFlag,speed=
    setRolling(false);playUiSound('diceReveal');
    later(()=>{
     setPopup(false);
-    const count=value+extra;
+    const count=plan?.steps??journeyAnimationSteps(game,value,extra);
     for(let i=1;i<=count;i++)later(()=>{const from=(team.position+i-1)%stops.length,to=(team.position+i)%stops.length;setSeaMoving(crossesSea(stops[from],stops[to]));setCursor(to);},(i-1)*(reduced?0:stepMs));
     later(()=>{rollRef.current=false;setMoving(false);setSeaMoving(false);if(!plan)callback.current(selectedTravel,values);},count*(reduced?0:stepMs)+120);
    },1600);
@@ -66,10 +72,12 @@ export default function JourneyBoard({game,onRoll,countryName,countryFlag,speed=
  },[remoteRoll?.id,game.phase,team.position]);
  return <section ref={boardRef} className="wj-board" aria-label="世界旅行すごろく">
   {roomLabel&&<div className="wj-room-badge" role="status">{roomLabel}</div>}
+  {goal&&<aside className="wj-goal-hud" aria-label="目的地"><img src={flags.flags[goal.country]} alt=""/><div><small>🏁 DESTINATION · {countryName(goal.country)}</small><strong>{goal.label}</strong></div><div className="wj-goal-distances">{game.teams.map(t=><span key={t.id} style={{'--runner':t.color}}>{t.name} <b>{t.arrivalRank?`${t.arrivalRank}位 到着`:`あと${journeyRemaining(game,t)}マス`}</b></span>)}</div></aside>}
   <JourneyAtlas game={game} vehicles={vehicles} seaMoving={seaMoving} cursor={cursor} moving={moving&&!popup} stepMs={stepMs} countryName={countryName} countryFlag={countryFlag} settingsOpen={settingsOpen} onCloseSettings={()=>setSettingsOpen(false)} settingsContent={<div className="wj-settings-extra"><div className="wj-vehicle-select"><h3>🚗 {team.name} の乗り物</h3><div>{VEHICLES.map(([id,icon,label])=><button key={id} aria-pressed={(vehicles[team.id]||'car')===id} onClick={()=>chooseVehicle(id)}><span>{icon}</span><small>{label}</small></button>)}</div><p>海を渡るときは自動で飛行機に変わります。</p></div><button aria-pressed={sound} onClick={onToggleSound}>{sound?'🔊 効果音 ON':'🔇 効果音 OFF'}</button><button onClick={onFullscreen}>{full?'全画面解除':'⛶ 全画面'}</button><button aria-pressed={speed==='slow'} disabled={!!onRequestRoll} onClick={()=>onSpeedChange('slow')}>🐢 ゆっくり</button><button aria-pressed={speed==='fast'} disabled={!!onRequestRoll} onClick={()=>onSpeedChange('fast')}>⚡ 高速</button><button className="wj-exit-button" onClick={onExit}>← ゲームを終了</button></div>}/>
   <div className={"wj-stage-hud"+(moving&&!popup?" wj-stage-traveling":"")}><div className="wj-stage-location" aria-hidden={moving&&!popup}><img src={flags.flags[stop.country]} alt=""/><div><small>{countryName(stop.country)} · {chapter+1}/{game.route.length}か国</small><strong>{journeyReading(stop.label)?<ruby>{stop.label}<rt>{journeyReading(stop.label)}</rt></ruby>:stop.label}</strong></div><span className="wj-stage-round">{Math.min(game.round+1,game.limit)}/{game.limit}</span></div><div className="wj-stage-scores">{scoreboard}</div></div>
   <button className="wj-stage-settings" type="button" aria-label="ゲーム設定" aria-expanded={settingsOpen} disabled={moving||popup||game.phase!=='select'} onClick={()=>setSettingsOpen(v=>!v)}>⚙️ <span>設定</span></button>
-  <div className="wj-stage-footer"><div className="wj-stage-turn" style={{'--turn-color':team.color}}><span className="wj-turn-dot"/><div><b>{team.name} のターン</b><small>{moving?(seaMoving?'✈️ 空の旅へ！':'移動中…'):game.phase==='select'?(canControl?'サイコロを振って出発！':'ほかのチームのターンです'):'クイズに挑戦！'}</small></div></div><div className="wj-stage-actions">{game.phase==='select'&&<>{game.travelEconomy&&<select aria-label="移動パス" value={travel} disabled={!canControl||moving||popup||settingsOpen} onChange={e=>setTravel(e.target.value)}>{Object.entries(TRAVEL_MODES).map(([id,o])=><option key={id} value={id} disabled={team.money<o.cost}>{o.icon} {o.label} · {o.cost} TPM</option>)}</select>}<button ref={buttonRef} className="wg-primary wj-roll" disabled={!canControl||moving||popup||settingsOpen} onClick={()=>roll()}><DicePreview/><span><small>{moving?'移動中':'タップして出発！'}</small><strong>サイコロを振る</strong></span><b>{game.diceCount||1}個</b></button></>}{game.phase!=='select'&&game.dice!==null&&<strong className="wj-last-roll">🎲 {game.dice} → {journeyStop(game,team.position).label}</strong>}</div></div>
+  <div className="wj-stage-footer"><div className="wj-stage-turn" style={{'--turn-color':team.color}}><span className="wj-turn-dot"/><div><b>{team.name} のターン</b>{game.skipped?.length>0&&<small>☕ {game.skipped.join('・')} はお休み</small>}<small>{moving?(seaMoving?'✈️ 空の旅へ！':'移動中…'):game.phase==='select'?(canControl?'サイコロを振って出発！':'ほかのチームのターンです'):'クイズに挑戦！'}</small></div></div><div className="wj-stage-actions">{game.phase==='select'&&<>{game.travelEconomy&&<select aria-label="移動パス" value={travel} disabled={!canControl||moving||popup||settingsOpen} onChange={e=>setTravel(e.target.value)}>{Object.entries(TRAVEL_MODES).map(([id,o])=><option key={id} value={id} disabled={team.money<o.cost}>{o.icon} {o.label} · {o.cost} TPM</option>)}</select>}<button ref={buttonRef} className="wg-primary wj-roll" disabled={!canControl||moving||popup||settingsOpen||goalOpen} onClick={()=>roll()}><DicePreview/><span><small>{moving?'移動中':team.extraDice?'🚄 特急カード発動！':'タップして出発！'}</small><strong>サイコロを振る</strong></span><b>{diceCount}個</b></button></>}{game.phase!=='select'&&game.dice!==null&&<strong className="wj-last-roll">🎲 {game.dice} → {journeyStop(game,team.position).label}</strong>}</div></div>
+  {goalOpen&&goal&&<div className="wj-goal-overlay" role="dialog" aria-modal="true" aria-label="目的地ルーレット"><section className="wj-goal-roulette"><div className="wj-roulette-kicker">WORLD JOURNEY · DESTINATION</div><h2>{goalReady?'目的地 決定！':'次の冒険先は…？'}</h2><div className={'wj-roulette-window '+(goalReady?'revealed':'')}><div className="wj-roulette-glow"/><img src={flags.flags[rouletteStop.country]} alt=""/><div><small>{countryName(rouletteStop.country)}</small><strong>{rouletteStop.label}</strong></div></div><p>{goalReady?`出発地：${stops[0].label}　🏁 ${game.goalIndex}マス先`:'世界をめぐるルーレット！'}</p><button className="wg-primary" disabled={!goalReady} onClick={()=>setGoalOpen(false)}>🚀 出発！</button></section></div>}
   {popup&&<div className="wj-dice-map-overlay" role="dialog" aria-modal="true" aria-label="サイコロ">
    {!rolling&&<div className="wj-dice-map-result wj-dice-landed-title" role="status"><small>{team.name} のターン</small><div><span>合計</span><b>{dice.reduce((sum,n)=>sum+n,0)}</b><span>マス！</span></div></div>}
    {dice.map((value,i)=><MapDice key={i} value={value} rolling={rolling} origin={throwOrigin} index={i} count={dice.length} spacing={throwOrigin.spacing}/>)}

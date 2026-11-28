@@ -1,5 +1,6 @@
 import {useEffect,useRef,useState} from 'react';
 import {rollJourney} from '../../utils/worldGameEngine.js';
+import {journeyDiceCount} from '../../utils/journeyRace.js';
 import {TRAVEL_MODES} from '../../utils/worldGameStrategy.js';
 import {publicGame,restoreGame,acceptsJourneyAction,applyJourneyAction} from '../../utils/journeyRoomProtocol.js';
 
@@ -54,11 +55,11 @@ export function useJourneyRoom({game,setGame,config,onGuestGame}){
   if(action.type==='roll'){
    const travel=g.travelEconomy?action.travel:'standard',ticket=TRAVEL_MODES[travel];
    if(g.phase!=='select'||!Object.hasOwn(TRAVEL_MODES,travel)||!ticket||g.teams[g.turn].money<ticket.cost)return;
-   const values=Array.from({length:g.diceCount||1},()=>1+Math.floor(Math.random()*6)),next=rollJourney(g,values,Math.random,travel);
+   const values=Array.from({length:journeyDiceCount(g)},()=>1+Math.floor(Math.random()*6)),next=rollJourney(g,values,Math.random,travel);
    if(next===g)return;
-   const plan={id:++seq.current,values,travel,round:g.round,startAt:Date.now()+2800};
+   const plan={id:++seq.current,values,travel,round:g.round,startAt:Date.now()+2800,steps:next.moveSteps??values.reduce((a,b)=>a+b,0)+ticket.extra};
    rollRef.current=plan;setRoll(plan);
-   const steps=values.reduce((a,b)=>a+b,0)+ticket.extra;
+   const steps=plan.steps;
    afterPublish.current={id:plan.id,run:()=>{timer.current=setTimeout(()=>{rollRef.current=null;setRoll(null);gameRef.current=next;setGame(next);},Math.max(2800,plan.startAt-Date.now())+2440+1600+steps*(configRef.current.speed==='fast'?230:850)+600);}};
    publish();
    return;

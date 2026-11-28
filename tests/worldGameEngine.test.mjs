@@ -31,11 +31,11 @@ test('territory claims and transfers only on correct answers, rotates turns',()=
  g=advanceGame(g);assert.equal(selectTerritory(g,'az',random),g);assert.equal(standings(g)[0].id,1);
 });
 test('journey rolls within rules, awards TPM once and finishes without repeating',()=>{
- let g=start('journey');assert.equal(rollJourney(g,7,random),g);
+ let g={...start('journey'),goalIndex:null};assert.equal(rollJourney(g,7,random),g);
  g=rollJourney(g,6,random);assert.equal(g.dice,6);assert.ok(g.question);assert.equal(rollJourney(g,1,random),g);
- g=answerGame(g,g.question.correctIndex);assert.equal(g.teams[0].money,300);assert.equal(answerGame(g,0),g);
+ g=answerGame(g,g.question.correctIndex,random);assert.equal(g.teams[0].money,300);assert.equal(answerGame(g,0),g);
  g=advanceGame(g);assert.equal(g.turn,1);
- for(let i=1;i<4;i++){g=rollJourney(g,1,random);assert.ok(g.question);g=answerGame(g,g.question.correctIndex);g=advanceGame(g);}
+ for(let i=1;i<4;i++){g=rollJourney(g,1,random);assert.ok(g.question);g=answerGame(g,g.question.correctIndex,random);g=advanceGame(g);}
  assert.equal(g.phase,'finished');assert.equal(new Set(g.used).size,4);assert.equal(g.teams.reduce((n,t)=>n+t.money,0),1200);
 });
 test('real AZ and UZ bank only has self-contained four-choice geography/time questions',()=>{
@@ -67,7 +67,7 @@ test('skip counts as an attempt, history retains answers, replay includes mistak
 });
 test('journey passport records distinct visited countries even if an answer is wrong',()=>{
  let g=start('journey');g=rollJourney(g,1,random);const iso=g.question.country;
- g=answerGame(g,-1);assert.deepEqual(g.teams[0].visits,[iso]);assert.equal(g.teams[0].money,0);
+ g=answerGame(g,-1,random);assert.deepEqual(g.teams[0].visits,[iso]);assert.equal(g.teams[0].money,50);
  g=advanceGame(g);assert.equal(g.history.length,1);
  assert.ok(availableTerritories(g).length>0);
 });
@@ -97,11 +97,11 @@ test('travel route, paid passes, souvenir purchase and total asset accounting',(
  assert.deepEqual(buildJourneyRoute(['uz','ge','az'],geo,'az'),['az','ge','uz']);
  let g=createGame({mode:'journey',pool:[q('a','az'),q('b','ge'),q('c','uz'),q('d','uz'),q('e','az'),q('f','ge')],limit:6,geo,travelEconomy:true,random});
  assert.equal(rollJourney(g,1,random,'air'),g);
- g=rollJourney(g,1,random);g=answerGame(g,g.question.correctIndex);
+ g=rollJourney(g,1,random);g=answerGame(g,g.question.correctIndex,random);
  assert.equal(g.teams[0].money,300);
  g=buySouvenir(g,'postcard');assert.equal(g.teams[0].money,200);assert.equal(journeyAssets(g.teams[0]),300);
  assert.equal(buySouvenir(g,'postcard'),g);
- g=advanceGame(g);g=rollJourney(g,1,random);g=answerGame(g,-1);g=advanceGame(g);
+ g=advanceGame(g);g=rollJourney(g,1,random);g=answerGame(g,-1,random);g=advanceGame(g);
  g=rollJourney(g,1,random,'rail');assert.equal(g.teams[0].money,100);assert.equal(g.travel,'rail');assert.equal(g.phase,'question');
 });
 

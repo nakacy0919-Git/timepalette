@@ -1,5 +1,6 @@
 import {TRAVEL_MODES,souvenirsForCountry,buildJourneyRoute,territoryChoices,regionalCollections,journeyAssets} from './worldGameStrategy.js';
 import {buildJourneyStops} from './worldJourneyStops.js';
+import {journeyDiceCount,chooseJourneyGoal,journeyRemaining,journeyMoveSteps,arrivalReward,journeyCard} from './journeyRace.js';
 // Pure rules shared by local play and a future authoritative room server.
 export const GAME_MODES = ['shuffle','battle','territory','journey'];
 export const TEAM_COLORS = ['#2563eb','#dc2626','#059669','#d97706','#7c3aed','#0891b2','#db2777','#475569'];
@@ -46,14 +47,16 @@ export function createGame({mode,pool,limit,teamCount=2,teamNames=[],geo={},stra
  const ids=shuffled([...new Set(pool.map(q=>q.country))],random);
  const route=mode==='journey'?buildJourneyRoute(ids,geo,ids.includes('jp')?'jp':ids[0]):ids;
  const deck=balancedDeck(pool,actualLimit,random);
- return {mode,teams,route,diceCount:[1,2,3].includes(diceCount)?diceCount:1,journeyStops:mode==='journey'?buildJourneyStops(route):null,deck,pool,geo,strategy,travelEconomy,travel:null,limit:actualLimit,round:0,turn:0,used:[],history:[],owners:{},answers:{},phase:['territory','journey'].includes(mode)?'select':'question',question:['territory','journey'].includes(mode)?null:deck[0],target:null,dice:null,last:null};
+ const stops=mode==='journey'?buildJourneyStops(route):null;
+ const goalIndex=stops?chooseJourneyGoal(stops,actualLimit,n,diceCount,random):null;
+ return {mode,teams,route,diceCount:[1,2,3].includes(diceCount)?diceCount:1,journeyStops:stops,goalIndex,arrivals:[],deck,pool,geo,strategy,travelEconomy,travel:null,limit:actualLimit,round:0,turn:0,used:[],history:[],owners:{},answers:{},phase:['territory','journey'].includes(mode)?'select':'question',question:['territory','journey'].includes(mode)?null:deck[0],target:null,dice:null,last:null};
 }
 export function availableTerritories(game){
  return territoryChoices(game).countries;
 }
 function withAnswer(t,correct,journey=false){
  const streak=correct?t.streak+1:0;
- return {...t,score:t.score+(correct?100:0),money:t.money+(correct&&journey?300:0),attempts:t.attempts+1,correctCount:t.correctCount+Number(correct),streak,bestStreak:Math.max(t.bestStreak,streak)};
+ return {...t,score:t.score+(correct?100:0),money:t.money+(journey?(correct?300:50):0),attempts:t.attempts+1,correctCount:t.correctCount+Number(correct),streak,bestStreak:Math.max(t.bestStreak,streak)};
 }
 function nextQuestion(game,country,random){
  const available=game.pool.filter(q=>q.country===country&&!game.used.includes(q.id));
@@ -66,21 +69,27 @@ export function selectTerritory(game,country,random=Math.random){
 }
 export function rollJourney(game,die,random=Math.random,travel='standard'){
  const dice=Array.isArray(die)?die:[die];
- if(game.mode!=='journey'||game.phase!=='select'||dice.length!==(game.diceCount||1)||dice.some(n=>!Number.isInteger(n)||n<1||n>6))return game;
+ if(game.mode!=='journey'||game.phase!=='select'||dice.length!==journeyDiceCount(game)||dice.some(n=>!Number.isInteger(n)||n<1||n>6))return game;
  die=dice.reduce((a,b)=>a+b,0);
  if(!Object.hasOwn(TRAVEL_MODES,travel))return game;
  const team=game.teams[game.turn],ticket=TRAVEL_MODES[travel];
  if(!ticket||(!game.travelEconomy&&travel!=='standard')||team.money<ticket.cost)return game;
  const stops=game.journeyStops||buildJourneyStops(game.route);
- let position=(team.position+die+ticket.extra)%stops.length;
+ const steps=journeyMoveSteps(game,die,ticket.extra),remaining=journeyRemaining({...game,journeyStops:stops},team);
+ let position=(team.position+steps)%stops.length;
  // Skip exhausted stops, without repeating questions or charging extra moves.
  for(let i=0;i<stops.length;i++,position=(position+1)%stops.length){
   const target=stops[position].country, question=nextQuestion(game,target,random);
-  if(question)return {...game,teams:game.teams.map(t=>t.id===team.id?{...t,position,money:t.money-ticket.cost}:t),target,question,dice:die,diceFaces:dice,travel,journeySkipped:i,phase:'question',last:null};
+  if(question){const arrivals=game.arrivals||[],arrived=!team.arrivalRank&&remaining!=null&&remaining>0&&steps+i>=remaining,rank=arrived?arrivals.length+1:0,bonus=rank?arrivalReward(rank):0;
+   return {...game,teams:game.teams.map(t=>t.id===team.id?{...t,position,money:t.money-ticket.cost+bonus,extraDice:0,...(rank?{arrivalRank:rank,arrivalBonus:bonus}:{})}:t),arrivals:rank?[...arrivals,team.id]:arrivals,arrivalEvent:rank?{rank,bonus}:null,moveSteps:steps+i,target,question,dice:die,diceFaces:dice,travel,journeySkipped:i,phase:'question',last:null};}
  }
- return {...game,phase:'finished'};
+ return finishGame(game);
 }
-export function answerGame(game,index){
+function finishGame(game){
+ if(game.mode!=='journey')return {...game,phase:'finished',question:null};
+ return {...game,phase:'finished',question:null,teams:game.teams.map(t=>{const sale=(t.souvenirs||[]).reduce((sum,item)=>sum+item.value,0);return {...t,cashBeforeSale:t.money,souvenirSale:sale,soldSouvenirs:t.souvenirs,money:t.money+sale,souvenirs:[]};})};
+}
+export function answerGame(game,index,random=Math.random){
  if(game.phase!=='question'||!game.question||!Number.isInteger(index)||index< -1||index>3)return game;
  const q=game.question, correct=index===q.correctIndex, id=game.turn;
  if(game.mode==='battle'){
@@ -89,20 +98,23 @@ export function answerGame(game,index){
   const teams=game.teams.map(t=>withAnswer(t,answers[t.id]===q.correctIndex));
   return {...game,answers,teams,turn:0,phase:'review',last:{correct:null}};
  }
- let teams=game.teams.map(t=>{if(t.id!==id)return t;const next=withAnswer(t,correct,game.mode==='journey');return game.mode==='journey'?{...next,visits:[...new Set([...t.visits,q.country])]}:next;});
+ const card=game.mode==='journey'?journeyCard(random):null;
+ let teams=game.teams.map(t=>{if(t.id!==id)return t;const next=withAnswer(t,correct,game.mode==='journey');return game.mode==='journey'?{...next,money:next.money+(card?.money||0),extraDice:card?.extraDice||0,skip:card?.skip||0,visits:[...new Set([...t.visits,q.country])]}:next;});
  const owners=correct&&game.mode==='territory'?{...game.owners,[game.target]:id}:game.owners;
  const newRegions=correct&&game.mode==='territory'&&game.strategy?regionalCollections({...game,owners},id).filter(x=>!teams[id].regionsEarned.includes(x.region)):[];
  if(newRegions.length)teams=teams.map(t=>t.id===id?{...t,score:t.score+newRegions.length*200,regionsEarned:[...t.regionsEarned,...newRegions.map(x=>x.region)]}:t);
- return {...game,teams,owners,answers:{[id]:index},phase:'review',last:{correct,newRegions,transfer:correct&&game.mode==='territory'&&game.owners[game.target]!==undefined&&game.owners[game.target]!==id}};
+ return {...game,teams,owners,answers:{[id]:index},phase:'review',last:{correct,card,reward:game.mode==='journey'?(correct?300:50):0,newRegions,transfer:correct&&game.mode==='territory'&&game.owners[game.target]!==undefined&&game.owners[game.target]!==id}};
 }
 export function advanceGame(game){
  if(game.phase!=='review')return game;
  const round=game.round+1,used=[...game.used,game.question.id];
  const history=[...game.history,{question:game.question,answers:{...game.answers},turn:game.turn,target:game.target,dice:game.dice}];
- if(round>=game.limit)return {...game,round,used,history,phase:'finished',question:null};
- const turn=['territory','journey'].includes(game.mode)?(game.turn+1)%game.teams.length:0;
+ if(round>=game.limit||(game.mode==='journey'&&game.arrivals?.length===game.teams.length))return finishGame({...game,round,used,history});
+ let turn=['territory','journey'].includes(game.mode)?(game.turn+1)%game.teams.length:0;
+ const teams=game.teams.map(t=>({...t})),skipped=[];
+ if(game.mode==='journey')while(teams[turn].skip>0){teams[turn].skip--;skipped.push(teams[turn].name);turn=(turn+1)%teams.length;}
  const selection=['territory','journey'].includes(game.mode);
- return {...game,round,used,history,turn,answers:{},phase:selection?'select':'question',question:selection?null:game.deck[round],target:null,dice:null,diceFaces:null,travel:null,journeySkipped:0,last:null};
+ return {...game,teams,skipped,round,used,history,turn,answers:{},phase:selection?'select':'question',question:selection?null:game.deck[round],target:null,dice:null,diceFaces:null,travel:null,journeySkipped:0,arrivalEvent:null,last:null};
 }
 export function standings(game){
  return game.teams.map(t=>({...t,territories:Object.values(game.owners).filter(id=>id===t.id).length,assets:journeyAssets(t)})).sort((a,b)=>game.mode==='territory'?b.territories-a.territories||b.score-a.score:game.mode==='journey'?b.assets-a.assets||b.score-a.score:b.score-a.score);
