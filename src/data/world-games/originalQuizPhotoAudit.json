@@ -7371,6 +7371,31 @@
     "deliveryReview": "source-preview-viewed-app-untested",
     "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/La_Soufri%C3%A8re_volcano-_before-and-after_ESA23259245.jpeg/960px-La_Soufri%C3%A8re_volcano-_before-and-after_ESA23259245.jpeg"
    }
+  },
+  "tp-original-photo-v2-gd": {
+   "country": "gd",
+   "prompt": "グレナダの海岸でサンゴ礁や海草を守ることが重要な理由は？",
+   "enPrompt": "Why is protecting coral reefs and seagrass near Grenada's coasts important?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grenada_Under_Water_-_panoramio_-_Stefan_und_Bille_%285%29.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Exact 960-pixel preview visually inspected on 2026-11-28. Source identifies Grenada, photographer Stefan_und_Bille, CC BY-SA 3.0 verified by Panoramio upload bot. The reef scene shows sea fans, reef corals and other organisms; seagrass is not established by this image. Taken 2004-04-07; historical habitat illustration, not current reef condition. Application delivery not tested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grenada_Under_Water_-_panoramio_-_Stefan_und_Bille_%285%29.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grenada_Under_Water_-_panoramio_-_Stefan_und_Bille_%285%29.jpg",
+    "title": "Grenada Under Water - panoramio - Stefan und Bille (5).jpg",
+    "author": "Stefan_und_Bille",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "2004年にグレナダ沖で撮影されたサンゴ礁の水中風景（海草は確認できない）",
+    "altEn": "Underwater reef scene photographed off Grenada in 2004 (seagrass not identified)",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed",
+    "deliveryReview": "source-preview-viewed-app-untested",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Grenada_Under_Water_-_panoramio_-_Stefan_und_Bille_%285%29.jpg/960px-Grenada_Under_Water_-_panoramio_-_Stefan_und_Bille_%285%29.jpg"
+   }
   }
  },
  "withheld": {
@@ -7793,6 +7818,17 @@
    "deliveryPending": [
     "tp-original-photo-v2-rs"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Compared exact Wikimedia previews and selected a clearly visible reef community. Verified authorship and CC BY-SA 3.0; historical capture and seagrass limitation explicitly recorded.",
+   "ids": [
+    "tp-original-photo-v2-gd"
+   ],
+   "sourcePreviewsViewed": [
+    "tp-original-photo-v2-gd"
+   ],
+   "visualReviewPending": []
   }
  ]
 }
