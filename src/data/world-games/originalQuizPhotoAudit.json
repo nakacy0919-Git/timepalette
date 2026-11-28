@@ -4905,6 +4905,150 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-gm-primary": {
+   "country": "gm",
+   "prompt": "ガンビアなどで えんそうされる コラは、どんな がっき？",
+   "enPrompt": "What kind of instrument is the kora, played in The Gambia and nearby countries?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kora_(African_lute_instrument).jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file description and inspected exact linked image on 2026-11-28; verified author and file-specific license. Instrument identified by source; location not asserted.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kora_(African_lute_instrument).jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Kora_(African_lute_instrument).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kora_(African_lute_instrument).jpg",
+    "title": "Kora (African lute instrument).jpg",
+    "author": "Steve Evans",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "西アフリカの弦楽器コラの胴と弦",
+    "altEn": "Body and strings of the West African kora",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-tz-primary": {
+   "country": "tz",
+   "prompt": "タンザニアの セレンゲティで、ヌーや シマウマが おおぜいで いどうする おもな わけは？",
+   "enPrompt": "Why do wildebeest and zebras migrate across Tanzania's Serengeti?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wildebeest_Migration_in_Serengeti_National_Park%2C_Tanzania.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file description and inspected exact linked image on 2026-11-28; verified author and file-specific license. Shows migration; its ecological causes are not established solely by the photograph.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wildebeest_Migration_in_Serengeti_National_Park%2C_Tanzania.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Wildebeest_Migration_in_Serengeti_National_Park,_Tanzania.jpg/960px-Wildebeest_Migration_in_Serengeti_National_Park,_Tanzania.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wildebeest_Migration_in_Serengeti_National_Park%2C_Tanzania.jpg",
+    "title": "Wildebeest Migration in Serengeti National Park, Tanzania.jpg",
+    "author": "Daniel Rosengren",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "altJa": "セレンゲティの草原を移動するヌーの大群",
+    "altEn": "Large herd of migrating wildebeest in the Serengeti",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-ml-primary": {
+   "country": "ml",
+   "prompt": "マリの ボゴランぬのの もようを つくる ために つかう ものの ひとつは？",
+   "enPrompt": "Which material is used to create patterns on Malian bogolanfini cloth?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bogolan_cloth_in_market_of_End%C3%A9%2C_Mali.JPG",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file description and inspected exact linked image on 2026-11-28; verified author and file-specific license. Shows finished textiles and patterns, not the dyeing process; distant people incidental.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogolan_cloth_in_market_of_End%C3%A9%2C_Mali.JPG?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Bogolan_cloth_in_market_of_End%C3%A9,_Mali.JPG/960px-Bogolan_cloth_in_market_of_End%C3%A9,_Mali.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bogolan_cloth_in_market_of_End%C3%A9%2C_Mali.JPG",
+    "title": "Bogolan cloth in market of Endé, Mali.JPG",
+    "author": "Taguelmoust",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "マリのエンデの市場に並ぶボゴランの布",
+    "altEn": "Bogolan cloth displayed at the market in Endé, Mali",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-kh-primary": {
+   "country": "kh",
+   "prompt": "カンボジアの フィッシュ・アモックで、さかなを むす ときに つかう はは？",
+   "enPrompt": "Which leaf may be used as a wrapper or cup for Cambodian fish amok?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fish_amok_amok_trei_Khmer_Cambodian_food.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file description and inspected exact linked image on 2026-11-28; verified author and file-specific license. Leaf cups visible and identified by source caption.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fish_amok_amok_trei_Khmer_Cambodian_food.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Fish_amok_amok_trei_Khmer_Cambodian_food.jpg/500px-Fish_amok_amok_trei_Khmer_Cambodian_food.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fish_amok_amok_trei_Khmer_Cambodian_food.jpg",
+    "title": "Fish amok amok trei Khmer Cambodian food.jpg",
+    "author": "MoonsMoon",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "altJa": "バナナの葉の器に盛ったカンボジアの魚料理アモック",
+    "altEn": "Cambodian fish amok served in banana-leaf cups",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-mv-primary": {
+   "country": "mv",
+   "prompt": "モルディブの マスフニは、ツナに どんな くだものを すりおろして あわせる？",
+   "enPrompt": "What fruit is commonly grated and mixed with tuna in Maldivian mas huni?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mas_huni-roshi087.JPG",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file description and inspected exact linked image on 2026-11-28; verified author and file-specific license. Source identifies dish; image alone cannot establish ingredients. Source has an implausible date, so no capture date asserted.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mas_huni-roshi087.JPG?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Mas_huni-roshi087.JPG/960px-Mas_huni-roshi087.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mas_huni-roshi087.JPG",
+    "title": "Mas huni-roshi087.JPG",
+    "author": "Xavier Romero-Frias",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "ロシを添えたモルディブ料理マスフニ",
+    "altEn": "Maldivian mas huni served with roshi",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-uy-primary": {
+   "country": "uy",
+   "prompt": "ウルグアイで マテちゃを のむ とき、ボンビージャという どうぐは なにに つかう？",
+   "enPrompt": "What is a bombilla used for when drinking mate in Uruguay?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mate_y_bombilla_uruguayos.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file description and inspected exact linked image on 2026-11-28; verified author and file-specific license. Original 375 × 500; straw clearly visible.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mate_y_bombilla_uruguayos.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Mate_y_bombilla_uruguayos.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mate_y_bombilla_uruguayos.jpg",
+    "title": "Mate y bombilla uruguayos.jpg",
+    "author": "Beatrice Murch (Blmurch)",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "altJa": "マテ茶の容器と金属製のボンビージャ",
+    "altEn": "Uruguayan mate vessel with metal bombilla",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -5103,6 +5247,18 @@
     "tp-original-hand-v1-ru-primary",
     "tp-original-hand-v1-sn-primary",
     "tp-original-hand-v1-uz-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened exact source pages and actual linked images; checked author, license and filename. Excluded amok photo without leaf cups and did not register modern imigongo artwork pending underlying artwork rights review.",
+   "ids": [
+    "tp-original-hand-v1-gm-primary",
+    "tp-original-hand-v1-tz-primary",
+    "tp-original-hand-v1-ml-primary",
+    "tp-original-hand-v1-kh-primary",
+    "tp-original-hand-v1-mv-primary",
+    "tp-original-hand-v1-uy-primary"
    ]
   }
  ]
