@@ -6609,6 +6609,78 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-photo-v2-cy": {
+   "country": "cy",
+   "prompt": "パフォスの遺跡で見られるモザイクは、どのように図柄を作る技法？",
+   "enPrompt": "How are mosaics, such as those at Paphos, made?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mosaic-House_of_Dionysos-Paphos.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file-level description and visually inspected exact original image on 2026-11-28. Individual mosaic tesserae are visible. Commons declares the photograph released worldwide into public domain.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosaic-House_of_Dionysos-Paphos.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Mosaic-House_of_Dionysos-Paphos.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mosaic-House_of_Dionysos-Paphos.jpg",
+    "title": "Mosaic-House of Dionysos-Paphos.jpg",
+    "author": "Anonymous (Shonagon, uploader and rights release)",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "altJa": "キプロスのパフォス遺跡、ディオニュソスの館の幾何学模様のモザイク",
+    "altEn": "Geometric mosaic in the House of Dionysos at Paphos, Cyprus",
+    "stage": "review",
+    "changes": "Uncropped source file; displayed at responsive size. ",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-editorial-v1-ch-web-origin": {
+   "country": "ch",
+   "prompt": "スイスとフランスの国境付近にあるCERNで1989年に提案された技術はどれ？",
+   "enPrompt": "Which technology was proposed at CERN near the Swiss-French border in 1989?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:First_Web_Server.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file-level description and visually inspected exact original image on 2026-11-28. Commons file history notes contrast and clarity adjustments by other editors. Photo depicts hardware used for WWW, not the 1989 proposal alone.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/First_Web_Server.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/First_Web_Server.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:First_Web_Server.jpg",
+    "title": "First Web Server.jpg",
+    "author": "Coolcaesar at English Wikipedia; later Commons editors (see file history)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "CERNで使われた最初のWebサーバー（NeXTcubeとモニター）",
+    "altEn": "First Web server used at CERN, NeXTcube and monitor",
+    "stage": "review",
+    "changes": "Uncropped source file; displayed at responsive size. Source version includes prior contrast and clarity adjustments.",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-editorial-v1-mx-maize": {
+   "country": "mx",
+   "prompt": "メキシコの伝統料理で、豆やとうがらしとともに大切な食材は？",
+   "enPrompt": "Which food is central to traditional Mexican cooking, along with beans and chilies?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mexican_Corn_Cob.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Opened Commons file-level description and visually inspected exact original image on 2026-11-28. Clearly shows maize as food, photographed in Mexico. Background people are blurred.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mexican_Corn_Cob.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Mexican_Corn_Cob.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mexican_Corn_Cob.jpg",
+    "title": "Mexican Corn Cob.jpg",
+    "author": "Alexisromeromar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "メキシコのトウモロコシ料理エローテ",
+    "altEn": "Mexican corn-on-the-cob street food, elote",
+    "stage": "review",
+    "changes": "Uncropped source file; displayed at responsive size. ",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -6932,6 +7004,15 @@
     "tp-editorial-v1-br-kasato-maru",
     "tp-editorial-v1-nl-dikes",
     "tp-original-photo-v2-bo"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened exact Commons file descriptions and original binary images; checked license, depicted subject, author and exact image URL.",
+   "ids": [
+    "tp-original-photo-v2-cy",
+    "tp-editorial-v1-ch-web-origin",
+    "tp-editorial-v1-mx-maize"
    ]
   }
  ]
