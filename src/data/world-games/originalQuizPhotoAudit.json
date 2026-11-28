@@ -6825,6 +6825,152 @@
     "visualReview": "source-description-reviewed",
     "deliveryReview": "pending"
    }
+  },
+  "tp-original-photo-v2-ir": {
+   "country": "ir",
+   "prompt": "ペルセポリスの浮彫に各地からの使節が描かれていることから、何がうかがえる？",
+   "enPrompt": "What do reliefs of delegations from different regions at Persepolis suggest?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Persepolis_stairs_of_the_Apadana_relief.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author and license checked 2026-11-28. Actual preview shows gift-bearing figures; the source identifies the delegation. Exact source preview inspected; app delivery URL remains untested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Persepolis_stairs_of_the_Apadana_relief.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Persepolis_stairs_of_the_Apadana_relief.jpg",
+    "title": "Persepolis stairs of the Apadana relief.jpg",
+    "author": "Phillip Maiwald (Nikopol)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "ペルセポリスのアパダナ東階段に彫られたリュディア使節の浮彫",
+    "altEn": "Relief of the Lydian delegation on the eastern stairs of the Apadana at Persepolis",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-image-viewed-delivery-pending",
+    "deliveryReview": "pending",
+    "inspectedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Persepolis_stairs_of_the_Apadana_relief.jpg/960px-Persepolis_stairs_of_the_Apadana_relief.jpg"
+   }
+  },
+  "tp-original-photo-v2-hn": {
+   "country": "hn",
+   "prompt": "コパンの石碑に刻まれた文字から、研究者は何を知ることができる？",
+   "enPrompt": "What can researchers learn from inscriptions on monuments at Copán?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Copan_St_H.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author and license checked 2026-11-28. Actual preview shows a carved monument. The particular inscription text is not established by this view. Exact source preview inspected; app delivery URL remains untested.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Copan_St_H.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Copan_St_H.jpg",
+    "title": "Copan St H.jpg",
+    "author": "HJPD",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "altJa": "ホンジュラスのコパン遺跡の石碑H",
+    "altEn": "Stela H at Copán, Honduras",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-image-viewed-delivery-pending",
+    "deliveryReview": "pending",
+    "inspectedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Copan_St_H.jpg/330px-Copan_St_H.jpg"
+   }
+  },
+  "tp-original-photo-v2-sl": {
+   "country": "sl",
+   "prompt": "バンス島の歴史的な要塞跡を保存することは、何を学ぶために重要？",
+   "enPrompt": "Why is preserving the historical remains of Bunce Island important?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bunce_Island_Fortress_Wall_03.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author and license checked 2026-11-28. Original description identifies the historic slave-trading fort. Image retrieval failed; visual check pending.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bunce_Island_Fortress_Wall_03.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bunce_Island_Fortress_Wall_03.jpg",
+    "title": "Bunce Island Fortress Wall 03.jpg",
+    "author": "Pierre Chrzanowski",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "altJa": "シエラレオネのバンス島の要塞跡",
+    "altEn": "Remains of the fortress on Bunce Island, Sierra Leone",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-description-reviewed",
+    "deliveryReview": "pending"
+   }
+  },
+  "tp-original-photo-v2-ug": {
+   "country": "ug",
+   "prompt": "ブウィンディ原生国立公園でゴリラ観察の人数や距離を管理する理由は？",
+   "enPrompt": "Why manage visitor numbers and distances during gorilla watching in Bwindi?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bwindi_National_Park_Gorillas.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author and license checked 2026-11-28. Original description identifies the location and animals; the photo does not establish visitor rules. Image retrieval failed; visual check pending.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bwindi_National_Park_Gorillas.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bwindi_National_Park_Gorillas.jpg",
+    "title": "Bwindi National Park Gorillas.jpg",
+    "author": "Yakov Fedorov",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "ウガンダのブウィンディ国立公園のゴリラ",
+    "altEn": "Gorillas in Bwindi National Park, Uganda",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-description-reviewed",
+    "deliveryReview": "pending"
+   }
+  },
+  "tp-editorial-v2-gb-parliament-scrutiny": {
+   "country": "gb",
+   "prompt": "イギリス議会の二つの院が共に担う役割はどれですか？",
+   "enPrompt": "Which function is shared by the two Houses of the UK Parliament?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palace_of_Westminster%2C_London%2C_UK.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author and license checked 2026-11-28. Shows the named parliamentary building; legislative functions are established separately. Image retrieval failed; visual check pending.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_Westminster%2C_London%2C_UK.jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palace_of_Westminster%2C_London%2C_UK.jpg",
+    "title": "Palace of Westminster, London, UK.jpg",
+    "author": "CivArmy",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "ロンドンの英国議会議事堂ウェストミンスター宮殿",
+    "altEn": "Palace of Westminster, home of the UK Parliament, London",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-description-reviewed",
+    "deliveryReview": "pending"
+   }
+  },
+  "tp-original-photo-v2-am": {
+   "country": "am",
+   "prompt": "ゲガルド修道院では、礼拝空間の一部をどのように造った？",
+   "enPrompt": "How were some worship spaces at Geghard Monastery created?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Geghard_Monastery%2C_interior_(1).jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, author and license checked 2026-11-28. Source identifies the monastery interior, but rock-cut construction is not visually confirmed. Image retrieval failed; visual check pending.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Geghard_Monastery%2C_interior_(1).jpg?width=960",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Geghard_Monastery%2C_interior_(1).jpg",
+    "title": "Geghard Monastery, interior (1).jpg",
+    "author": "Palickap",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "altJa": "アルメニアのゲガルド修道院内部",
+    "altEn": "Interior of Geghard Monastery, Armenia",
+    "stage": "review",
+    "changes": "Uncropped source thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "source-description-reviewed",
+    "deliveryReview": "pending"
+   }
   }
  },
  "withheld": {
@@ -7171,6 +7317,28 @@
     "tp-editorial-v2-bd-garments",
     "tp-original-photo-v2-ae",
     "tp-editorial-v2-vu-sand-knowledge"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened specific source descriptions and verified authorship/license. Two exact previews visually inspected, but their thumbnail host is not supported by existing strict delivery matcher; Special:FilePath delivery remains untested. Four binary retrievals failed; no visual check claimed for those.",
+   "ids": [
+    "tp-original-photo-v2-ir",
+    "tp-original-photo-v2-hn",
+    "tp-original-photo-v2-sl",
+    "tp-original-photo-v2-ug",
+    "tp-editorial-v2-gb-parliament-scrutiny",
+    "tp-original-photo-v2-am"
+   ],
+   "sourcePreviewsViewed": [
+    "tp-original-photo-v2-ir",
+    "tp-original-photo-v2-hn"
+   ],
+   "visualReviewPending": [
+    "tp-original-photo-v2-sl",
+    "tp-original-photo-v2-ug",
+    "tp-editorial-v2-gb-parliament-scrutiny",
+    "tp-original-photo-v2-am"
    ]
   }
  ]
