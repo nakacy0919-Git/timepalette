@@ -162,3 +162,27 @@ test('geographic city coordinates and multi-dice rolls stay consistent',()=>{
  assert.equal(rollJourney(g,[1,7],random),g);assert.equal(rollJourney(g,3,random),g);
  g=rollJourney(g,[1,2],random);assert.equal(g.dice,3);assert.deepEqual(g.diceFaces,[1,2]);assert.equal(g.teams[0].position,3);assert.equal(g.question.country,'jp');
 });
+
+test('journey prioritizes illustrated original questions for its actual landing country, then other originals, then regular questions',()=>{
+ const illustrated=(id,country)=>({...q(id,country),image:{auditStatus:'topic-metadata-reviewed'}});
+ const bank=[q('regular-jp','jp'),q('tp-original-hand-v1-jp-primary','jp'),illustrated('tp-original-photo-v2-jp','jp'),illustrated('tp-original-photo-v2-kr','kr'),q('regular-kr','kr')];
+ const initial=createGame({mode:'journey',pool:bank,limit:4,random});
+ const first=rollJourney(initial,1,random);
+ assert.equal(journeyStop(first,first.teams[0].position).country,'jp');
+ assert.equal(first.target,'jp');
+ assert.equal(first.question.id,'tp-original-photo-v2-jp');
+ const second=rollJourney({...initial,used:[first.question.id]},1,random);
+ assert.equal(second.question.id,'tp-original-hand-v1-jp-primary');
+ const third=rollJourney({...initial,used:[first.question.id,second.question.id]},1,random);
+ assert.equal(third.question.id,'regular-jp');
+ const korea=rollJourney({...initial,teams:initial.teams.map(t=>({...t,position:10}))},1,random);
+ assert.equal(korea.target,'kr');assert.equal(korea.question.id,'tp-original-photo-v2-kr');
+ const exhausted=rollJourney({...initial,used:[first.question.id,second.question.id,third.question.id]},1,random);
+ assert.equal(exhausted.question.country,journeyStop(exhausted,exhausted.teams[0].position).country);
+ assert.equal(exhausted.target,exhausted.question.country);
+});
+test('shuffle still uses the ordinary balanced random deck with no original-photo preference',()=>{
+ const bank=[q('regular-jp','jp'),q('tp-original-photo-v2-jp','jp'),q('regular-kr','kr'),q('tp-original-photo-v2-kr','kr')];
+ const g=createGame({mode:'shuffle',pool:bank,limit:4,random});
+ assert.deepEqual(g.deck,balancedDeck(bank,4,random));
+});

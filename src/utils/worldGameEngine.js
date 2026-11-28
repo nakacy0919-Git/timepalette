@@ -60,7 +60,17 @@ function withAnswer(t,correct,journey=false){
 }
 function nextQuestion(game,country,random){
  const available=game.pool.filter(q=>q.country===country&&!game.used.includes(q.id));
- return available.length?shuffleOptions(shuffled(available,random)[0],random):null;
+ if(!available.length)return null;
+ // Journey uses the newly authored country questions first, within the
+ // selected question bank, grade and language. Never borrow another country's quiz.
+ // Shuffle, Battle and Territory keep their existing selection rules.
+ if(game.mode==='journey'){
+  const originals=available.filter(q=>/^tp-(?:original-|editorial-)/.test(q.id));
+  const illustrated=originals.filter(q=>q.image?.auditStatus==='topic-metadata-reviewed'||q.photoQuestion===true);
+  const candidates=illustrated.length?illustrated:originals.length?originals:available;
+  return shuffleOptions(shuffled(candidates,random)[0],random);
+ }
+ return shuffleOptions(shuffled(available,random)[0],random);
 }
 export function selectTerritory(game,country,random=Math.random){
  if(game.mode!=='territory'||game.phase!=='select'||!availableTerritories(game).includes(country))return game;
