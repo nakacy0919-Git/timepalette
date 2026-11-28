@@ -5745,6 +5745,198 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-ne-primary": {
+   "country": "ne",
+   "prompt": "ニジェールなどの トゥアレグの かざりには、どんな きんぞくが よく つかわれる？",
+   "enPrompt": "Which metal is traditionally used in Tuareg jewelry in Niger and nearby areas?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Zilveren_kruis_dient_als_talisman_TMnr_5485-18.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/COLLECTIE_TROPENMUSEUM_Zilveren_kruis_dient_als_talisman_TMnr_5485-18.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/COLLECTIE_TROPENMUSEUM_Zilveren_kruis_dient_als_talisman_TMnr_5485-18.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Zilveren_kruis_dient_als_talisman_TMnr_5485-18.jpg",
+    "title": "COLLECTIE TROPENMUSEUM Zilveren kruis dient als talisman TMnr 5485-18.jpg",
+    "author": "Collectie Wereldmuseum (v/h Tropenmuseum), part of the National Museum of World Cultures",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "ニジェールのトゥアレグの銀合金製装飾品",
+    "altEn": "Tuareg silver-alloy ornament from Niger",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-rs-primary": {
+   "country": "rs",
+   "prompt": "セルビアの スラヴァは、かぞくで なにを いわう しゅうかん？",
+   "enPrompt": "What do Serbian families celebrate during slava?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Serbian_Slava_Candle_and_Bread.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serbian_Slava_Candle_and_Bread.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Serbian_Slava_Candle_and_Bread.jpg/500px-Serbian_Slava_Candle_and_Bread.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Serbian_Slava_Candle_and_Bread.jpg",
+    "title": "Serbian Slava Candle and Bread.jpg",
+    "author": "Sadko, Wikipedia",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "スラヴァの儀礼用パンとろうそく",
+    "altEn": "Ritual bread and candle for Serbian Slava",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-ni-primary": {
+   "country": "ni",
+   "prompt": "ニカラグアの ガジョ・ピントは、なにと なにを いためあわせる？",
+   "enPrompt": "What two ingredients are cooked together in Nicaraguan gallo pinto?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nicaraguan_gallo_pinto.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. Photographed at a Nicaraguan restaurant in Florida.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicaraguan_gallo_pinto.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Nicaraguan_gallo_pinto.jpg/960px-Nicaraguan_gallo_pinto.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nicaraguan_gallo_pinto.jpg",
+    "title": "Nicaraguan gallo pinto.jpg",
+    "author": "Xaymacan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "ニカラグア料理ガジョ・ピント（米と豆）",
+    "altEn": "Nicaraguan gallo pinto (rice and beans)",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-mz-primary": {
+   "country": "mz",
+   "prompt": "モザンビークの マタパには、どの しょくぶつの はを つかう？",
+   "enPrompt": "Which plant's leaves are used in Mozambican matapa?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matapa.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Matapa.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Matapa.jpg/960px-Matapa.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matapa.jpg",
+    "title": "Matapa.jpg",
+    "author": "PrestigiousSwazi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "モザンビークのマタパとご飯",
+    "altEn": "Mozambican matapa served with rice",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-mr-primary": {
+   "country": "mr",
+   "prompt": "モーリタニアで きゃくを もてなす とき、なんばいも ゆっくり だす ことが ある のみものは？",
+   "enPrompt": "What drink may be served in several rounds to welcome guests in Mauritania?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tea_ceremony%2C_Mauritania.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tea_ceremony%2C_Mauritania.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Tea_ceremony%2C_Mauritania.jpg/330px-Tea_ceremony%2C_Mauritania.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tea_ceremony%2C_Mauritania.jpg",
+    "title": "Tea ceremony, Mauritania.jpg",
+    "author": "Valerian Guillot",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "モーリタニアで茶を注ぐ様子",
+    "altEn": "Tea pouring in Mauritania",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-se-primary": {
+   "country": "se",
+   "prompt": "スウェーデンの フィーカでは、コーヒーや おかしと ともに なにを たのしむ？",
+   "enPrompt": "What is enjoyed alongside coffee and snacks during Swedish fika?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fika_kaffe_bulle.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. Original CC license is irrevocable; Commons notes later licensing changes.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fika_kaffe_bulle.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Fika_kaffe_bulle.jpg/960px-Fika_kaffe_bulle.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fika_kaffe_bulle.jpg",
+    "title": "Fika kaffe bulle.jpg",
+    "author": "Johannes Jansson/norden.org",
+    "license": "CC BY 2.5 DK",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5/dk/",
+    "altJa": "フィーカのコーヒーとシナモンロール",
+    "altEn": "Coffee and a cinnamon bun for fika",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-tv-primary": {
+   "country": "tv",
+   "prompt": "ツバルの プラカという いもを そだてる とき、どんな くふうが ある？",
+   "enPrompt": "How is pulaka traditionally grown on Tuvalu's low-lying islands?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pulaka_pit_(2570411598).jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pulaka_pit_(2570411598).jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Pulaka_pit_(2570411598).jpg/960px-Pulaka_pit_(2570411598).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pulaka_pit_(2570411598).jpg",
+    "title": "Pulaka pit (2570411598).jpg",
+    "author": "Luigi Guarino",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "プラカを栽培するくぼ地",
+    "altEn": "Traditional pulaka cultivation pit",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-sb-primary": {
+   "country": "sb",
+   "prompt": "ソロモンしょとうの パンパイプで、ちがう たかさの おとを だす ための くふうは？",
+   "enPrompt": "How do Solomon Islands panpipes produce different pitches?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flute_de_pan_MHNT_ETH_AC_NH_31_Sav%C3%A8s.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. Museum specimen in Toulouse, France.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flute_de_pan_MHNT_ETH_AC_NH_31_Sav%C3%A8s.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Flute_de_pan_MHNT_ETH_AC_NH_31_Sav%C3%A8s.jpg/960px-Flute_de_pan_MHNT_ETH_AC_NH_31_Sav%C3%A8s.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flute_de_pan_MHNT_ETH_AC_NH_31_Sav%C3%A8s.jpg",
+    "title": "Flute de pan MHNT ETH AC NH 31 Savès.jpg",
+    "author": "Didier Descouens",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "ソロモン諸島の19世紀のパンパイプ",
+    "altEn": "19th-century Solomon Islands pan flute",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -6002,6 +6194,20 @@
     "tp-original-hand-v1-nz-primary",
     "tp-original-hand-v1-qa-primary",
     "tp-original-hand-v1-vu-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened exact Commons source pages and actual linked images; checked subject, author and commercial-use copyright license.",
+   "ids": [
+    "tp-original-hand-v1-ne-primary",
+    "tp-original-hand-v1-rs-primary",
+    "tp-original-hand-v1-ni-primary",
+    "tp-original-hand-v1-mz-primary",
+    "tp-original-hand-v1-mr-primary",
+    "tp-original-hand-v1-se-primary",
+    "tp-original-hand-v1-tv-primary",
+    "tp-original-hand-v1-sb-primary"
    ]
   }
  ]
