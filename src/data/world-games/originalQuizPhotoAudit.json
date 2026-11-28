@@ -5937,6 +5937,198 @@
     "verifiedOn": "2026-11-28",
     "visualReview": "actual-image-viewed"
    }
+  },
+  "tp-original-hand-v1-ad-primary": {
+   "country": "ad",
+   "prompt": "アンドラの「エスクデリャ」は、どんな たべもの？",
+   "enPrompt": "What is Andorran escudella?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Escudella_catalana_plato_de_cuchara_con_carne%2C_verduras_y_pasta_(Castellet_i_la_Gornal).jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. Catalan version of the shared regional dish; photographed in Spain.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Escudella_catalana_plato_de_cuchara_con_carne%2C_verduras_y_pasta_(Castellet_i_la_Gornal).jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Escudella_catalana_plato_de_cuchara_con_carne%2C_verduras_y_pasta_(Castellet_i_la_Gornal).jpg/960px-Escudella_catalana_plato_de_cuchara_con_carne%2C_verduras_y_pasta_(Castellet_i_la_Gornal).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Escudella_catalana_plato_de_cuchara_con_carne%2C_verduras_y_pasta_(Castellet_i_la_Gornal).jpg",
+    "title": "Escudella catalana plato de cuchara con carne, verduras y pasta (Castellet i la Gornal).jpg",
+    "author": "Juan Emilio Prades Bel",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "altJa": "肉と野菜、パスタの入ったエスクデリャ",
+    "altEn": "Escudella with meat, vegetables and pasta",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-cg-primary": {
+   "country": "cg",
+   "prompt": "コンゴきょうわこくの サカサカに つかう しょくぶつの ぶぶんは？",
+   "enPrompt": "Which plant part is used in saka saka in the Republic of the Congo?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saka-saka_-_pounded_and_cooked_cassava_leaves.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. Shared Central African dish; source calls it saka-saka in DR Congo, not a confirmed Republic of Congo location.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saka-saka_-_pounded_and_cooked_cassava_leaves.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Saka-saka_-_pounded_and_cooked_cassava_leaves.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saka-saka_-_pounded_and_cooked_cassava_leaves.jpg",
+    "title": "Saka-saka - pounded and cooked cassava leaves.jpg",
+    "author": "T.K. Naliaka",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "調理したキャッサバの葉のサカサカ",
+    "altEn": "Cooked cassava leaves, saka-saka",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-kw-primary": {
+   "country": "kw",
+   "prompt": "クウェートで せきゆの さんぎょうが さかんに なる まえ、うみで とっていた かちの ある ものは？",
+   "enPrompt": "Before oil became important, which valuable item was collected from the sea in Kuwait?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pearls_1.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. Specimens illustrate the commodity, not Kuwait-specific origin.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pearls_1.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Pearls_1.jpg/960px-Pearls_1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pearls_1.jpg",
+    "title": "Pearls 1.jpg",
+    "author": "Tyler Houck (photo), James St. John (Flickr source)",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "真珠の見本",
+    "altEn": "Pearl specimens",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-mn-primary": {
+   "country": "mn",
+   "prompt": "モンゴルの ホーミーという うたいかたでは、ひとりで どんな おとを だす？",
+   "enPrompt": "What is distinctive about Mongolian khöömei throat singing?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mongolian_Armed_Forces_share_culture_during_KQ14_140627-M-UY849-115.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mongolian_Armed_Forces_share_culture_during_KQ14_140627-M-UY849-115.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Mongolian_Armed_Forces_share_culture_during_KQ14_140627-M-UY849-115.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mongolian_Armed_Forces_share_culture_during_KQ14_140627-M-UY849-115.jpg",
+    "title": "Mongolian Armed Forces share culture during KQ14 140627-M-UY849-115.jpg",
+    "author": "Cpl. Alyssa N. Gunton, U.S. Marine Corps",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "altJa": "モンゴルの祭典で披露されるホーミー",
+    "altEn": "Mongolian throat-singing performance at a mini-Naadam festival",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-sr-primary": {
+   "country": "sr",
+   "prompt": "スリナムの こうようごは、どの ことば？",
+   "enPrompt": "What is the official language of Suriname?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Street_sign_in_Paramaribo_II.JPG",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. Dutch-derived place names provide context, not proof of official-language status.",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Street_sign_in_Paramaribo_II.JPG?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Street_sign_in_Paramaribo_II.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Street_sign_in_Paramaribo_II.JPG",
+    "title": "Street sign in Paramaribo II.JPG",
+    "author": "Mark Ahsmann",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "altJa": "パラマリボの地名案内標識",
+    "altEn": "Place-name signs in Paramaribo",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-us-primary": {
+   "country": "us",
+   "prompt": "アメリカの ニューオーリンズなどで はってんした ジャズで、えんそうしながら おんがくを つくりだす ことを なんという？",
+   "enPrompt": "What is creating music on the spot during jazz performances called?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jean_Lafitte_National_Historical_Park_-_Jazz_Band_at_French_Market%2C_New_Orleans.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean_Lafitte_National_Historical_Park_-_Jazz_Band_at_French_Market%2C_New_Orleans.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Jean_Lafitte_National_Historical_Park_-_Jazz_Band_at_French_Market%2C_New_Orleans.jpg/960px-Jean_Lafitte_National_Historical_Park_-_Jazz_Band_at_French_Market%2C_New_Orleans.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jean_Lafitte_National_Historical_Park_-_Jazz_Band_at_French_Market%2C_New_Orleans.jpg",
+    "title": "Jean Lafitte National Historical Park - Jazz Band at French Market, New Orleans.jpg",
+    "author": "Uncredited for U.S. National Park Service",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "altJa": "ニューオーリンズのフレンチマーケットのジャズバンド",
+    "altEn": "Jazz band at the French Market in New Orleans",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-bf-primary": {
+   "country": "bf",
+   "prompt": "ブルキナファソの モシの まつりの おどりで、かおや あたまに つけるものは？",
+   "enPrompt": "What is worn on the face or head in some Mossi ritual dances in Burkina Faso?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:MossiMask.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MossiMask.jpg?width=960",
+    "verifiedImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/MossiMask.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:MossiMask.jpg",
+    "title": "MossiMask.jpg",
+    "author": "cliff1066",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "altJa": "ブルキナファソのモシの儀礼用仮面（博物館収蔵品）",
+    "altEn": "Ceremonial Mossi mask from Burkina Faso (museum specimen)",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
+  },
+  "tp-original-hand-v1-ng-primary": {
+   "country": "ng",
+   "prompt": "ナイジェリアの ノリウッドと よばれる さかんな さんぎょうは？",
+   "enPrompt": "Which industry in Nigeria is known as Nollywood?",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_film_set_in_Nollywood_Awka.jpg",
+   "kind": "subject",
+   "sourceType": "external",
+   "reason": "Commons file description, named subject, author, license and exact linked image checked on 2026-11-28. Photo illustrates topic; does not independently prove facts. ",
+   "photo": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_film_set_in_Nollywood_Awka.jpg?width=960",
+    "verifiedImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/A_film_set_in_Nollywood_Awka.jpg/960px-A_film_set_in_Nollywood_Awka.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_film_set_in_Nollywood_Awka.jpg",
+    "title": "A film set in Nollywood Awka.jpg",
+    "author": "Bestvillage",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "altJa": "ナイジェリアのアウカでの映画制作現場",
+    "altEn": "Film production in Awka, Nigeria",
+    "stage": "review",
+    "changes": "Displayed uncropped; source image or thumbnail",
+    "verifiedOn": "2026-11-28",
+    "visualReview": "actual-image-viewed"
+   }
   }
  },
  "withheld": {
@@ -6208,6 +6400,20 @@
     "tp-original-hand-v1-se-primary",
     "tp-original-hand-v1-tv-primary",
     "tp-original-hand-v1-sb-primary"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "method": "Opened exact Commons source pages and actual linked images; checked subject, author and commercial-use copyright license.",
+   "ids": [
+    "tp-original-hand-v1-ad-primary",
+    "tp-original-hand-v1-cg-primary",
+    "tp-original-hand-v1-kw-primary",
+    "tp-original-hand-v1-mn-primary",
+    "tp-original-hand-v1-sr-primary",
+    "tp-original-hand-v1-us-primary",
+    "tp-original-hand-v1-bf-primary",
+    "tp-original-hand-v1-ng-primary"
    ]
   }
  ]
